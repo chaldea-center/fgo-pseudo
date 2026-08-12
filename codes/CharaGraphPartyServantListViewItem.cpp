@@ -17,11 +17,11 @@ void CharaGraphPartyServantListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_5937932 & 1) == 0 )
+  if ( (byte_596FA95 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_long___);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5937932 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_long___);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_596FA95 = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -31,7 +31,7 @@ void CharaGraphPartyServantListViewItem___ctor(
     (const MethodInfo *)partyUserServantList);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   v15 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
   v16 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
   v17 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
@@ -40,11 +40,11 @@ void CharaGraphPartyServantListViewItem___ctor(
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v12, v13);
   v19 = v20;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v19, 0);
+  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v19, 0);
   this->fields._PartyIndex_k__BackingField = System_Array__IndexOf_long_(
                                                partyUserServantList,
                                                v18,
-                                               (const MethodInfo_39FB0D4 *)Method_System_Array_IndexOf_long___);
+                                               (const MethodInfo_3A2E664 *)Method_System_Array_IndexOf_long___);
 }
 
 

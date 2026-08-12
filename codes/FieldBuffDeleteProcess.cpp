@@ -16,7 +16,7 @@ void FieldBuffDeleteProcess__Init(
   bool v7; // w7
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)fieldEnvData,
     (System_String_o *)method,
@@ -48,7 +48,7 @@ void FieldBuffDeleteProcess__set_FieldEnvData(
   bool v7; // w7
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

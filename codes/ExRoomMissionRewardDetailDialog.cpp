@@ -19,7 +19,7 @@ void ExRoomMissionRewardDetailDialog___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.sourceMission = sourceMission;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)sourceMission, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)sourceMission, v7, v8, v9, v10, v11, v12);
   if ( !selectedGiftEntity )
   {
     if ( sourceMission )
@@ -28,7 +28,7 @@ void ExRoomMissionRewardDetailDialog___ctor(
       selectedGiftEntity = 0;
   }
   this->fields.selectedGiftEntity = selectedGiftEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectedGiftEntity,
     (int32_t)selectedGiftEntity,
     v13,
@@ -91,7 +91,7 @@ int32_t ExRoomMissionRewardDetailDialog__ResolveDetailKind(
                                                                   0)) == 0
         || (RewardResolvedReward = *(ExRoomMissionListOutput_o **)&RewardResolvedReward->fields._ProgressType_k__BackingField) == 0 )
       {
-        sub_21FFECC(RewardResolvedReward, v6);
+        sub_2213CDC(RewardResolvedReward, v6);
       }
       if ( ServantEntity__get_IsServantEquip((ServantEntity_o *)RewardResolvedReward, 0) )
         LODWORD(sourceMission) = 3;

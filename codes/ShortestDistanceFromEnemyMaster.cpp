@@ -31,11 +31,11 @@ float ShortestDistanceFromEnemyMaster__GetRatingBase(
   float v24; // s0
 
   v10 = this;
-  if ( (byte_5935F2A & 1) == 0 )
+  if ( (byte_596E084 & 1) == 0 )
   {
-    sub_21FFC50(&AStarSearch_TypeInfo);
-    this = (ShortestDistanceFromEnemyMaster_o *)sub_21FFC50(&WarBoardAIManager_TypeInfo);
-    byte_5935F2A = 1;
+    sub_2213A60(&AStarSearch_TypeInfo);
+    this = (ShortestDistanceFromEnemyMaster_o *)sub_2213A60(&WarBoardAIManager_TypeInfo);
+    byte_596E084 = 1;
   }
   if ( !targetSquare )
     goto LABEL_20;
@@ -76,7 +76,7 @@ float ShortestDistanceFromEnemyMaster__GetRatingBase(
               return 0.0;
           }
 LABEL_20:
-          sub_21FFECC(this, *(_QWORD *)&forceId);
+          sub_2213CDC(this, *(_QWORD *)&forceId);
         }
       }
     }

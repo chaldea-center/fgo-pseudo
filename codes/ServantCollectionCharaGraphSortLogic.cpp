@@ -41,7 +41,7 @@ void ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
       goto LABEL_13;
     }
 LABEL_15:
-    sub_21FFECC(ListViewItem, v4);
+    sub_2213CDC(ListViewItem, v4);
   }
   if ( sortKind != 13 )
     return;
@@ -72,10 +72,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   ServantCollectionCharaGraphSortLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_593799D & 1) == 0 )
+  if ( (byte_596FB00 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    byte_593799D = 1;
+    sub_2213A60(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_596FB00 = 1;
   }
   p_listViewItem = (MissionNaviTransitionBoardItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -89,10 +89,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   {
     item = this->fields.item;
     p_listViewItem->klass = (MissionNaviTransitionBoardItem_c *)listViewItem;
-    sub_21FFBF4(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_listViewItem, (int32_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_220024C(this->fields.item, CharaGraphServantCollectionListViewItem_TypeInfo, v2, v3);
+  sub_221405C(this->fields.item, CharaGraphServantCollectionListViewItem_TypeInfo, v2, v3);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v14, v15);
   return result;
 }

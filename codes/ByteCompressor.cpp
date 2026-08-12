@@ -9,11 +9,11 @@ void ByteCompressor___ctor(ByteCompressor_o *this, System_Byte_array *inputBytes
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Bytes_k__BackingField = inputBytes;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)inputBytes, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)inputBytes, v5, v6, v7, v8, v9, v10);
 }
 
 
-void ByteCompressor___ctor_45306684(ByteCompressor_o *this, System_String_o *inputStr, const MethodInfo *method)
+void ByteCompressor___ctor_45330948(ByteCompressor_o *this, System_String_o *inputStr, const MethodInfo *method)
 {
   System_String_o *v5; // x2
   System_String_o *v6; // x3
@@ -24,7 +24,7 @@ void ByteCompressor___ctor_45306684(ByteCompressor_o *this, System_String_o *inp
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Str_k__BackingField = inputStr;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Str_k__BackingField,
     (int32_t)inputStr,
     v5,
@@ -48,10 +48,10 @@ ByteCompressor_o *ByteCompressor__AsBase64StrToBytes(ByteCompressor_o *this, con
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_59363CF & 1) == 0 )
+  if ( (byte_596E529 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_59363CF = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596E529 = 1;
   }
   Str_k__BackingField = this->fields._Str_k__BackingField;
   if ( Str_k__BackingField )
@@ -60,7 +60,7 @@ ByteCompressor_o *ByteCompressor__AsBase64StrToBytes(ByteCompressor_o *this, con
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method, v2);
     v5 = System_Convert__FromBase64String(Str_k__BackingField, 0);
     this->fields._Bytes_k__BackingField = v5;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   }
   return this;
 }
@@ -84,23 +84,23 @@ ByteCompressor_o *ByteCompressor__AsGzipToBytes(ByteCompressor_o *this, const Me
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_59363D1 & 1) == 0 )
+  if ( (byte_596E52B & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&System_IO_Compression_GZipStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    byte_59363D1 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&System_IO_Compression_GZipStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    byte_596E52B = 1;
   }
   Bytes_k__BackingField = this->fields._Bytes_k__BackingField;
   if ( Bytes_k__BackingField )
   {
-    v4 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-    System_IO_MemoryStream___ctor_76663240(v4, Bytes_k__BackingField, 0);
-    v5 = (System_IO_Compression_GZipStream_o *)sub_21FFEBC(System_IO_Compression_GZipStream_TypeInfo);
+    v4 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+    System_IO_MemoryStream___ctor_76876544(v4, Bytes_k__BackingField, 0);
+    v5 = (System_IO_Compression_GZipStream_o *)sub_2213CCC(System_IO_Compression_GZipStream_TypeInfo);
     System_IO_Compression_GZipStream___ctor(v5, (System_IO_Stream_o *)v4, 0, 0);
-    v6 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+    v6 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
     System_IO_MemoryStream___ctor(v6, 0);
-    v7 = sub_21FFD10(byte___TypeInfo, 1024);
+    v7 = sub_2213B20(byte___TypeInfo, 1024);
     if ( !v7 || !v5 )
       goto LABEL_13;
     v9 = v7;
@@ -132,7 +132,7 @@ ByteCompressor_o *ByteCompressor__AsGzipToBytes(ByteCompressor_o *this, const Me
           goto LABEL_10;
       }
 LABEL_13:
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     }
 LABEL_10:
     if ( !v6 )
@@ -141,7 +141,7 @@ LABEL_10:
                                         v6,
                                         v6->klass->vtable._40_ToArray.method);
     this->fields._Bytes_k__BackingField = v11;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   }
   return this;
 }
@@ -149,7 +149,7 @@ LABEL_10:
 
 ByteCompressor_o *ByteCompressor__ImportMiniMessagePack___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o miniMessagePackData,
-        const MethodInfo_37E8E90 *method)
+        const MethodInfo_381C240 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
@@ -171,17 +171,17 @@ ByteCompressor_o *ByteCompressor__ImportMiniMessagePack___Il2CppFullySharedGener
   v14[0] = miniMessagePackData.klass;
   if ( !v4 )
   {
-    sub_21FFC50(&ByteCompressor_TypeInfo);
-    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_2213A60(&ByteCompressor_TypeInfo);
+    sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
     v4 = monitor[7];
     if ( !v4 )
     {
-      sub_2237B54(monitor);
+      sub_224B964(monitor);
       v4 = monitor[7];
     }
   }
   v5 = *(unsigned int *)(*(_QWORD *)v4 + 252LL);
-  v6 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v6 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v6, 0);
   v7 = *(_QWORD *)monitor[7];
   if ( *(int *)(v7 + 40) >= 0 )
@@ -191,9 +191,9 @@ ByteCompressor_o *ByteCompressor__ImportMiniMessagePack___Il2CppFullySharedGener
   memcpy((char *)v14 - ((v5 + 15) & 0x1FFFFFFF0LL), v8, v5);
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(v7, (char *)v14 - ((v5 + 15) & 0x1FFFFFFF0LL));
   if ( !v6 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   v11 = MiniMessagePack_MiniMessagePacker__PackClass(v6, v9, 0);
-  v12 = (ByteCompressor_o *)sub_21FFEBC(ByteCompressor_TypeInfo);
+  v12 = (ByteCompressor_o *)sub_2213CCC(ByteCompressor_TypeInfo);
   ByteCompressor___ctor(v12, v11, 0);
   return v12;
 }
@@ -201,7 +201,7 @@ ByteCompressor_o *ByteCompressor__ImportMiniMessagePack___Il2CppFullySharedGener
 
 ByteCompressor_o *ByteCompressor__ImportMiniMessagePack_object_(
         Il2CppObject *miniMessagePackData,
-        const MethodInfo_37E8DEC *method)
+        const MethodInfo_381C19C *method)
 {
   MiniMessagePack_MiniMessagePacker_o *v3; // x20
   __int64 v4; // x0
@@ -209,18 +209,18 @@ ByteCompressor_o *ByteCompressor__ImportMiniMessagePack_object_(
   System_Byte_array *v6; // x19
   ByteCompressor_o *v7; // x20
 
-  if ( (byte_593DDFA & 1) == 0 )
+  if ( (byte_59760D2 & 1) == 0 )
   {
-    sub_21FFC50(&ByteCompressor_TypeInfo);
-    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    byte_593DDFA = 1;
+    sub_2213A60(&ByteCompressor_TypeInfo);
+    sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    byte_59760D2 = 1;
   }
-  v3 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v3 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v3, 0);
   if ( !v3 )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   v6 = MiniMessagePack_MiniMessagePacker__PackClass(v3, miniMessagePackData, 0);
-  v7 = (ByteCompressor_o *)sub_21FFEBC(ByteCompressor_TypeInfo);
+  v7 = (ByteCompressor_o *)sub_2213CCC(ByteCompressor_TypeInfo);
   ByteCompressor___ctor(v7, v6, 0);
   return v7;
 }
@@ -238,10 +238,10 @@ ByteCompressor_o *ByteCompressor__ToBase64Str(ByteCompressor_o *this, const Meth
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_59363CE & 1) == 0 )
+  if ( (byte_596E528 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_59363CE = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596E528 = 1;
   }
   Bytes_k__BackingField = this->fields._Bytes_k__BackingField;
   if ( Bytes_k__BackingField )
@@ -250,7 +250,7 @@ ByteCompressor_o *ByteCompressor__ToBase64Str(ByteCompressor_o *this, const Meth
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method, v2);
     v5 = System_Convert__ToBase64String(Bytes_k__BackingField, 0);
     this->fields._Str_k__BackingField = v5;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._Str_k__BackingField,
       (int32_t)v5,
       v6,
@@ -288,23 +288,23 @@ ByteCompressor_o *ByteCompressor__ToGzip(ByteCompressor_o *this, const MethodInf
   int32_t *v22; // x10
   __int64 v23; // x0
 
-  if ( (byte_59363D0 & 1) == 0 )
+  if ( (byte_596E52A & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_Compression_GZipStream_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    byte_59363D0 = 1;
+    sub_2213A60(&System_IO_Compression_GZipStream_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    byte_596E52A = 1;
   }
   p_fields = &this->fields;
   if ( this->fields._Bytes_k__BackingField )
   {
-    v4 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+    v4 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
     System_IO_MemoryStream___ctor(v4, 0);
-    v5 = (System_IO_Compression_GZipStream_o *)sub_21FFEBC(System_IO_Compression_GZipStream_TypeInfo);
-    System_IO_Compression_GZipStream___ctor_82256812(v5, (System_IO_Stream_o *)v4, 0, 0);
+    v5 = (System_IO_Compression_GZipStream_o *)sub_2213CCC(System_IO_Compression_GZipStream_TypeInfo);
+    System_IO_Compression_GZipStream___ctor_82470116(v5, (System_IO_Stream_o *)v4, 0, 0);
     Bytes_k__BackingField = p_fields->_Bytes_k__BackingField;
     if ( !p_fields->_Bytes_k__BackingField || !v5 )
-      sub_21FFECC(v6, Bytes_k__BackingField);
+      sub_2213CDC(v6, Bytes_k__BackingField);
     ((void (__fastcall *)(System_IO_Compression_GZipStream_o *, struct System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v5->klass->vtable._34_Write.methodPtr)(
       v5,
       Bytes_k__BackingField,
@@ -328,16 +328,16 @@ ByteCompressor_o *ByteCompressor__ToGzip(ByteCompressor_o *this, const MethodInf
     else
     {
 LABEL_10:
-      v11 = sub_2237E2C(v5, System_IDisposable_TypeInfo, 0);
+      v11 = sub_224BC3C(v5, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_Compression_GZipStream_o *, _QWORD))v11)(v5, *(_QWORD *)(v11 + 8));
     if ( !v4 )
-      sub_21FFECC(0, v12);
+      sub_2213CDC(0, v12);
     v13 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v4->klass->vtable._40_ToArray.methodPtr)(
             v4,
             v4->klass->vtable._40_ToArray.method);
     p_fields->_Bytes_k__BackingField = (struct System_Byte_array *)v13;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v13, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, v13, v14, v15, v16, v17, v18, v19);
     v20 = v4->klass;
     v21 = *(unsigned __int16 *)&v4->klass->_2.rank;
     if ( *(_WORD *)&v4->klass->_2.rank )
@@ -355,7 +355,7 @@ LABEL_10:
     else
     {
 LABEL_20:
-      v23 = sub_2237E2C(v4, System_IDisposable_TypeInfo, 0);
+      v23 = sub_224BC3C(v4, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v23)(v4, *(_QWORD *)(v23 + 8));
   }
@@ -363,7 +363,7 @@ LABEL_20:
 }
 
 
-Il2CppObject *ByteCompressor__UnpackMiniMessagePack_object_(ByteCompressor_o *this, const MethodInfo_37E8FDC *method)
+Il2CppObject *ByteCompressor__UnpackMiniMessagePack_object_(ByteCompressor_o *this, const MethodInfo_381C38C *method)
 {
   MiniMessagePack_MiniMessagePacker_o *v4; // x21
   __int64 v5; // x0
@@ -371,18 +371,18 @@ Il2CppObject *ByteCompressor__UnpackMiniMessagePack_object_(ByteCompressor_o *th
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
     if ( !method->rgctx_data )
-      sub_2237B54(method);
+      sub_224B964(method);
   }
-  v4 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v4 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v4, 0);
   if ( !v4 )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   return MiniMessagePack_MiniMessagePacker__UnpackClass_object_(
            v4,
            this->fields._Bytes_k__BackingField,
-           (const MethodInfo_38B9CF0 *)method->rgctx_data->_0_MiniMessagePack_MiniMessagePacker_UnpackClass_T_);
+           (const MethodInfo_38ED1B8 *)method->rgctx_data->_0_MiniMessagePack_MiniMessagePacker_UnpackClass_T_);
 }
 
 
@@ -407,7 +407,7 @@ void ByteCompressor__set_Bytes(ByteCompressor_o *this, System_Byte_array *value,
   bool v7; // w7
 
   this->fields._Bytes_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -428,7 +428,7 @@ void ByteCompressor__set_Str(ByteCompressor_o *this, System_String_o *value, con
   bool v7; // w7
 
   this->fields._Str_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Str_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

@@ -1,13 +1,13 @@
 void BattleBgMaster___ctor(BattleBgMaster_o *this, const MethodInfo *method)
 {
-  const MethodInfo_3EDFBF4 *v3; // x2
+  const MethodInfo_3F1339C *v3; // x2
 
-  if ( (byte_593829C & 1) == 0 )
+  if ( (byte_5970444 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string___ctor__);
-    byte_593829C = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string___ctor__);
+    byte_5970444 = 1;
   }
-  v3 = (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string___ctor__;
+  v3 = (const MethodInfo_3F1339C *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string___ctor__;
   this->fields.DefaultBgShadowImageId = 1;
   DataMasterBase_object__object__object____ctor((DataMasterBase_TMaster__TEntity__PKType__o *)this, 135, v3);
 }
@@ -26,7 +26,7 @@ bool BattleBgMaster__GetBeAcceptedOverwriteShadow(
   if ( BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, v4) )
   {
     if ( !entity )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     return BattleBgEntity__IsAcceptedOverwrittenShadow(entity, v5);
   }
   else
@@ -45,10 +45,10 @@ System_String_o *BattleBgMaster__GetBgAssetPath(
   System_ValueTuple_int__int__o v7; // x1
   int32_t Item1; // w19
 
-  if ( (byte_59382A0 & 1) == 0 )
+  if ( (byte_5970448 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDataDefine_TypeInfo);
-    byte_59382A0 = 1;
+    sub_2213A60(&BattleDataDefine_TypeInfo);
+    byte_5970448 = 1;
   }
   Item1 = BattleBgMaster__GetBgResourceIdType(this, bgId, bgType, method).fields.Item1;
   if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )
@@ -69,10 +69,10 @@ System_Int32_array *BattleBgMaster__GetBgIndividuality(
   System_Int32_array *result; // x0
   BattleBgEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593829D & 1) == 0 )
+  if ( (byte_5970445 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    byte_593829D = 1;
+    sub_2213A60(&int___TypeInfo);
+    byte_5970445 = 1;
   }
   entity = 0;
   v9 = BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, v4);
@@ -80,10 +80,10 @@ System_Int32_array *BattleBgMaster__GetBgIndividuality(
   if ( v9 )
   {
     if ( !entity )
-      sub_21FFECC(0, v8);
+      sub_2213CDC(0, v8);
     result = *(System_Int32_array **)((char *)&qword_28 + (_QWORD)entity);
     if ( !result )
-      return (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+      return (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
   }
   return result;
 }
@@ -100,41 +100,38 @@ System_ValueTuple_int__int__o BattleBgMaster__GetBgResourceIdType(
   __int64 v9; // x1
   int v10; // w1
   int32_t v11; // w2
-  const MethodInfo_3CBA4BC *v12; // x3
-  System_ValueTuple_int__int__o v13; // x0
+  const MethodInfo_3CEDC64 *v12; // x3
   BattleBgEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  System_ValueTuple_int__int__o v16; // [xsp+18h] [xbp-28h] BYREF
+  System_ValueTuple_int__int__o v14; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_593829F & 1) == 0 )
+  if ( (byte_5970447 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_ValueTuple_int__int___ctor__);
-    byte_593829F = 1;
+    sub_2213A60(&Method_System_ValueTuple_int__int___ctor__);
+    byte_5970447 = 1;
   }
   entity = 0;
   v8 = BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, v4);
   if ( !v8 )
     goto LABEL_7;
   if ( !entity )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   v10 = *(_DWORD *)((char *)off_18 + (_QWORD)entity);
   if ( v10 > 0 )
   {
     v11 = *(_DWORD *)((char *)off_18 + (_QWORD)entity + 4);
-    v12 = (const MethodInfo_3CBA4BC *)Method_System_ValueTuple_int__int___ctor__;
-    v13 = (System_ValueTuple_int__int__o)&v16;
-    v16 = 0;
+    v12 = (const MethodInfo_3CEDC64 *)Method_System_ValueTuple_int__int___ctor__;
+    v14 = 0;
   }
   else
   {
 LABEL_7:
-    v12 = (const MethodInfo_3CBA4BC *)Method_System_ValueTuple_int__int___ctor__;
-    v16 = 0;
-    v13 = (System_ValueTuple_int__int__o)&v16;
+    v12 = (const MethodInfo_3CEDC64 *)Method_System_ValueTuple_int__int___ctor__;
+    v14 = 0;
     v10 = bgId;
     v11 = bgType;
   }
-  System_ValueTuple_int__int____ctor(v13, v10, v11, v12);
-  return v16;
+  System_ValueTuple_int__int____ctor((System_ValueTuple_int__int__o)&v14, v10, v11, v12);
+  return v14;
 }
 
 
@@ -153,7 +150,7 @@ int32_t BattleBgMaster__GetBgShadowImageId(
   if ( !BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, method) )
     return this->fields.DefaultBgShadowImageId;
   if ( !entity )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   return BattleBgEntity__GetShadowImage(entity, isEnemy, v8);
 }
 
@@ -177,7 +174,7 @@ int32_t BattleBgMaster__GetBgSpecialShadowEffectId(
   if ( BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, *(const MethodInfo **)&defId) )
   {
     if ( !entity )
-      sub_21FFECC(0, v8);
+      sub_2213CDC(0, v8);
     return BattleBgEntity__GetSpecialShadowEffectId(entity, isEnemy, v7, v9);
   }
   return v7;
@@ -195,16 +192,16 @@ BattleBgEntity_o *BattleBgMaster__GetEntity(BattleBgMaster_o *this, int32_t id, 
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_593829A & 1) == 0 )
+  if ( (byte_5970442 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__GetEntity__);
-    byte_593829A = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__GetEntity__);
+    byte_5970442 = 1;
   }
   PK = (Il2CppObject *)BattleBgEntity__CreatePK(id, type, *(const MethodInfo **)&type);
   return (BattleBgEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_3EE2044 *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__GetEntity__);
+                               (const MethodInfo_3F157EC *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__GetEntity__);
 }
 
 
@@ -221,7 +218,7 @@ int32_t BattleBgMaster__GetInvalidOverwrite(
   if ( !BattleBgMaster__TryGetEntity(this, &entity, bgId, bgType, v4) )
     return 0;
   if ( !entity )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return BattleBgEntity__GetInvalidOverwrite(entity, v5);
 }
 
@@ -236,17 +233,17 @@ bool BattleBgMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_593829B & 1) == 0 )
+  if ( (byte_5970443 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__TryGetEntity__);
-    byte_593829B = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__TryGetEntity__);
+    byte_5970443 = 1;
   }
   PK = (Il2CppObject *)BattleBgEntity__CreatePK(id, type, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_BattleBgMaster__BattleBgEntity__string__TryGetEntity__);
 }
 
 
@@ -314,30 +311,30 @@ bool BattleBgMaster__preProcess(BattleBgMaster_o *this, const MethodInfo *method
   __int64 v63; // [xsp+20h] [xbp-70h]
   __int64 v64; // [xsp+28h] [xbp-68h]
 
-  if ( (byte_593829E & 1) == 0 )
+  if ( (byte_5970446 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Cast_BattleBgEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_BattleBgEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_int__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_BattleBgEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_int__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_593829E = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Cast_BattleBgEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_BattleBgEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_int__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_BattleBgEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_int__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_5970446 = 1;
   }
-  v3 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v3 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v3,
-    (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   v4 = System_Linq_Enumerable__Cast_object_(
          (System_Collections_IEnumerable_o *)this->fields.list,
-         (const MethodInfo_38355E8 *)Method_System_Linq_Enumerable_Cast_BattleBgEntity___);
+         (const MethodInfo_3868AB0 *)Method_System_Linq_Enumerable_Cast_BattleBgEntity___);
   if ( !v4 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   klass = v4->klass;
   v7 = v4;
   v8 = *(unsigned __int16 *)&v4->klass->_2.rank;
@@ -356,14 +353,14 @@ bool BattleBgMaster__preProcess(BattleBgMaster_o *this, const MethodInfo *method
   else
   {
 LABEL_8:
-    v10 = sub_2237E2C(v4, System_Collections_Generic_IEnumerable_BattleBgEntity__TypeInfo, 0);
+    v10 = sub_224BC3C(v4, System_Collections_Generic_IEnumerable_BattleBgEntity__TypeInfo, 0);
   }
   v11 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v10)(
           v7,
           *(_QWORD *)(v10 + 8));
   v64 = v11;
   if ( !v11 )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   for ( i = v11; ; i = v64 )
   {
     v14 = *(_QWORD *)i;
@@ -383,13 +380,13 @@ LABEL_8:
     else
     {
 LABEL_16:
-      v17 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v17 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v18 = (*(__int64 (__fastcall **)(__int64, _QWORD))v17)(i, *(_QWORD *)(v17 + 8));
     if ( (v18 & 1) == 0 )
       break;
     if ( !v64 )
-      sub_21FFECC(v18, v19);
+      sub_2213CDC(v18, v19);
     v20 = *(_QWORD *)v64;
     v21 = *(unsigned __int16 *)(*(_QWORD *)v64 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v64 + 302LL) )
@@ -407,15 +404,15 @@ LABEL_16:
     else
     {
 LABEL_24:
-      v23 = sub_2237E2C(v64, System_Collections_Generic_IEnumerator_BattleBgEntity__TypeInfo, 0);
+      v23 = sub_224BC3C(v64, System_Collections_Generic_IEnumerator_BattleBgEntity__TypeInfo, 0);
     }
     v24 = (BattleBgEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v64, *(_QWORD *)(v23 + 8));
     if ( !v24 )
-      sub_21FFECC(0, v25);
+      sub_2213CDC(0, v25);
     AllSpecialShadowEffectIds = BattleBgEntity__GetAllSpecialShadowEffectIds(v24, 0, v26);
     v29 = AllSpecialShadowEffectIds;
     if ( !AllSpecialShadowEffectIds )
-      sub_21FFECC(0, v28);
+      sub_2213CDC(0, v28);
     v30 = AllSpecialShadowEffectIds->klass;
     v31 = *(unsigned __int16 *)&AllSpecialShadowEffectIds->klass->_2.rank;
     if ( *(_WORD *)&AllSpecialShadowEffectIds->klass->_2.rank )
@@ -433,14 +430,14 @@ LABEL_24:
     else
     {
 LABEL_32:
-      v33 = sub_2237E2C(AllSpecialShadowEffectIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
+      v33 = sub_224BC3C(AllSpecialShadowEffectIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
     }
     v35 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))v33)(
             v29,
             *(_QWORD *)(v33 + 8));
     v63 = v35;
     if ( !v35 )
-      sub_21FFECC(0, v34);
+      sub_2213CDC(0, v34);
     while ( 1 )
     {
       v36 = *(_QWORD *)v35;
@@ -460,13 +457,13 @@ LABEL_32:
       else
       {
 LABEL_39:
-        v39 = sub_2237E2C(v35, System_Collections_IEnumerator_TypeInfo, 0);
+        v39 = sub_224BC3C(v35, System_Collections_IEnumerator_TypeInfo, 0);
       }
       v40 = (*(__int64 (__fastcall **)(__int64, _QWORD))v39)(v35, *(_QWORD *)(v39 + 8));
       if ( (v40 & 1) == 0 )
         break;
       if ( !v63 )
-        sub_21FFECC(v40, v41);
+        sub_2213CDC(v40, v41);
       v42 = *(_QWORD *)v63;
       v43 = *(unsigned __int16 *)(*(_QWORD *)v63 + 302LL);
       if ( *(_WORD *)(*(_QWORD *)v63 + 302LL) )
@@ -484,17 +481,17 @@ LABEL_39:
       else
       {
 LABEL_47:
-        v45 = sub_2237E2C(v63, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+        v45 = sub_224BC3C(v63, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
       }
       v46 = (*(__int64 (__fastcall **)(__int64, _QWORD))v45)(v63, *(_QWORD *)(v45 + 8));
       if ( (int)v46 > 0 )
       {
         if ( !v3 )
-          sub_21FFECC(v46, (unsigned int)v46);
+          sub_2213CDC(v46, (unsigned int)v46);
         System_Collections_Generic_HashSet_int___Add(
           v3,
           v46,
-          (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+          (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
       }
       v35 = v63;
     }
@@ -517,7 +514,7 @@ LABEL_47:
       else
       {
 LABEL_59:
-        v50 = sub_2237E2C(v63, System_IDisposable_TypeInfo, 0);
+        v50 = sub_224BC3C(v63, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v50)(v63, *(_QWORD *)(v50 + 8));
     }
@@ -541,15 +538,15 @@ LABEL_59:
     else
     {
 LABEL_70:
-      v54 = sub_2237E2C(v64, System_IDisposable_TypeInfo, 0);
+      v54 = sub_224BC3C(v64, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v54)(v64, *(_QWORD *)(v54 + 8));
   }
   v55 = System_Linq_Enumerable__ToArray_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-          (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
   this->fields.bgSpecialShadowEffectIdArray = v55;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.bgSpecialShadowEffectIdArray,
     (int32_t)v55,
     v56,

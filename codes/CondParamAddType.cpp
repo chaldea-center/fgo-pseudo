@@ -21,16 +21,16 @@ int32_t CondParamAddType__GetAddValue(
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_5937429 & 1) == 0 )
+  if ( (byte_596F584 & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_21FFC50(&System_Math_TypeInfo);
-    byte_5937429 = 1;
+    dataVals = (DataVals_o *)sub_2213A60(&System_Math_TypeInfo);
+    byte_596F584 = 1;
   }
   param = 0;
   if ( classStatisticsInfos )
   {
     if ( !v6 )
-      sub_21FFECC(dataVals, *(_QWORD *)&kind);
+      sub_2213CDC(dataVals, *(_QWORD *)&kind);
     ParamArray = DataVals__GetParamArray(v6, 226, 0);
     Num = CondParamAddType__GetNum(kind, classStatisticsInfos, ParamArray, v8);
     if ( Num < 1 )
@@ -45,7 +45,7 @@ int32_t CondParamAddType__GetAddValue(
         v12 = param;
         if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v10, v11);
-        LODWORD(classStatisticsInfos) = System_Math__Min_76940304((int64_t)classStatisticsInfos, v12, 0);
+        LODWORD(classStatisticsInfos) = System_Math__Min_77153608((int64_t)classStatisticsInfos, v12, 0);
       }
     }
   }
@@ -75,13 +75,13 @@ int64_t CondParamAddType__GetNum(
   System_Predicate_int__o *v18; // x25
 
   v6 = type;
-  if ( (byte_593742B & 1) == 0 )
+  if ( (byte_596F586 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Exists_int___);
-    sub_21FFC50(&System_Predicate_int__TypeInfo);
-    sub_21FFC50(&Method_CondParamAddType___c__DisplayClass2_0__GetNum_b__0__);
-    *(_QWORD *)&type = sub_21FFC50(&CondParamAddType___c__DisplayClass2_0_TypeInfo);
-    byte_593742B = 1;
+    sub_2213A60(&Method_System_Array_Exists_int___);
+    sub_2213A60(&System_Predicate_int__TypeInfo);
+    sub_2213A60(&Method_CondParamAddType___c__DisplayClass2_0__GetNum_b__0__);
+    *(_QWORD *)&type = sub_2213A60(&CondParamAddType___c__DisplayClass2_0_TypeInfo);
+    byte_596F586 = 1;
   }
   if ( !classStatisticsInfos )
     goto LABEL_17;
@@ -91,21 +91,21 @@ int64_t CondParamAddType__GetNum(
     v8 = 0;
     while ( 1 )
     {
-      v9 = sub_21FFEBC(CondParamAddType___c__DisplayClass2_0_TypeInfo);
+      v9 = sub_2213CCC(CondParamAddType___c__DisplayClass2_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v9, 0);
       if ( v8 >= LODWORD(classStatisticsInfos->max_length) )
-        sub_21FFED4(*(_QWORD *)&type);
+        sub_2213CE4(*(_QWORD *)&type);
       if ( !v9 )
         break;
       v16 = classStatisticsInfos->m_Items[v8];
       *(_QWORD *)(v9 + 16) = v16;
       v17 = v9 + 16;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       if ( !*(_QWORD *)(v9 + 16) )
         break;
       if ( *(_DWORD *)(*(_QWORD *)(v9 + 16) + 20LL) == v6 )
       {
-        v18 = (System_Predicate_int__o *)sub_21FFEBC(System_Predicate_int__TypeInfo);
+        v18 = (System_Predicate_int__o *)sub_2213CCC(System_Predicate_int__TypeInfo);
         System_Predicate_int____ctor(
           v18,
           (Il2CppObject *)v9,
@@ -114,7 +114,7 @@ int64_t CondParamAddType__GetNum(
         *(_QWORD *)&type = System_Array__Exists_int_(
                              targetIds,
                              (System_Predicate_T__o *)v18,
-                             (const MethodInfo_3976B80 *)Method_System_Array_Exists_int___);
+                             (const MethodInfo_39A886C *)Method_System_Array_Exists_int___);
         if ( (type & 1) != 0 )
         {
           if ( !*(_QWORD *)v17 )
@@ -126,7 +126,7 @@ int64_t CondParamAddType__GetNum(
         return v7;
     }
 LABEL_17:
-    sub_21FFECC(*(_QWORD *)&type, classStatisticsInfos);
+    sub_2213CDC(*(_QWORD *)&type, classStatisticsInfos);
   }
   return 0;
 }
@@ -154,16 +154,16 @@ int32_t CondParamAddType__GetRangeRateValue(
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_593742A & 1) == 0 )
+  if ( (byte_596F585 & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_21FFC50(&System_Math_TypeInfo);
-    byte_593742A = 1;
+    dataVals = (DataVals_o *)sub_2213A60(&System_Math_TypeInfo);
+    byte_596F585 = 1;
   }
   param = 0;
   if ( !classStatisticsInfos )
     return 0;
   if ( !v6 )
-    sub_21FFECC(dataVals, *(_QWORD *)&kind);
+    sub_2213CDC(dataVals, *(_QWORD *)&kind);
   v7 = DataVals__TryGetParam(v6, 228, &param, 0);
   result = 0;
   if ( v7 && param >= 1 )
@@ -173,12 +173,12 @@ int32_t CondParamAddType__GetRangeRateValue(
     v14 = param;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v11, v12);
-    v15 = System_Math__Min_76940304(Num, v14, 0);
+    v15 = System_Math__Min_77153608(Num, v14, 0);
     if ( v15 >= 1 )
     {
       v16 = v15;
       v17 = DataVals__GetParam(v6, 229, 0, 0);
-      return BattleUtility__FloorToInt_53467356((double)v16 / (double)param * (double)v17, 0);
+      return BattleUtility__FloorToInt_53557880((double)v16 / (double)param * (double)v17, 0);
     }
     return 0;
   }
@@ -204,6 +204,6 @@ bool CondParamAddType___c__DisplayClass2_0___GetNum_b__0(
 
   info = this->fields.info;
   if ( !info )
-    sub_21FFECC(this, *(_QWORD *)&id);
+    sub_2213CDC(this, *(_QWORD *)&id);
   return info->fields.classId == id;
 }

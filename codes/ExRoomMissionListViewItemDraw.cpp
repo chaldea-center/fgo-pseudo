@@ -2,10 +2,10 @@ void ExRoomMissionListViewItemDraw___ctor(ExRoomMissionListViewItemDraw_o *this,
 {
   __int64 v2; // x2
 
-  if ( (byte_5932E0C & 1) == 0 )
+  if ( (byte_596AF12 & 1) == 0 )
   {
-    sub_21FFC50(&MissionListViewItemDraw_TypeInfo);
-    byte_5932E0C = 1;
+    sub_2213A60(&MissionListViewItemDraw_TypeInfo);
+    byte_596AF12 = 1;
   }
   if ( !*(&MissionListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo, method, v2);
@@ -26,7 +26,7 @@ void ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(
   {
     if ( !itemIcon )
       goto LABEL_9;
-    ItemIconComponent__SetItemImage_47939376(
+    ItemIconComponent__SetItemImage_47887472(
       itemIcon,
       drawInfo->fields._ItemImageId_k__BackingField,
       drawInfo->fields._Count_k__BackingField,
@@ -38,7 +38,7 @@ void ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(
   {
     if ( !itemIcon )
       goto LABEL_9;
-    ItemIconComponent__SetGift_47936840(
+    ItemIconComponent__SetGift_47884936(
       itemIcon,
       drawInfo->fields._GiftType_k__BackingField,
       drawInfo->fields._ObjectId_k__BackingField,
@@ -55,7 +55,7 @@ LABEL_4:
         return;
       }
 LABEL_9:
-      sub_21FFECC(itemIcon, drawInfo);
+      sub_2213CDC(itemIcon, drawInfo);
     }
   }
 }
@@ -102,7 +102,7 @@ void ExRoomMissionListViewItemDraw__ChangeNextRewardIcon(
           AlphaAnimCnt = MissionListViewManager__GetAlphaAnimCnt((MissionListViewManager_o *)manager, (int32_t)item, 0);
           RewardEntityForDisplay = ExRoomMissionListViewItem__GetRewardEntityForDisplay(v5, AlphaAnimCnt, v9);
           v5->fields.currentDisplayRewardGiftEntity = RewardEntityForDisplay;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v5->fields.currentDisplayRewardGiftEntity,
             (int32_t)RewardEntityForDisplay,
             v11,
@@ -117,7 +117,7 @@ void ExRoomMissionListViewItemDraw__ChangeNextRewardIcon(
           return;
         }
 LABEL_8:
-        sub_21FFECC(this, item);
+        sub_2213CDC(this, item);
       }
     }
   }
@@ -145,11 +145,11 @@ void ExRoomMissionListViewItemDraw__InitDispResTime(
   bool v18; // w8
   UnityEngine_GameObject_o *timeOverInfo; // x0
 
-  if ( (byte_5932E07 & 1) == 0 )
+  if ( (byte_596AF0D & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewItem_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5932E07 = 1;
+    sub_2213A60(&ExRoomMissionListViewItem_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596AF0D = 1;
   }
   if ( missionListviewItem )
   {
@@ -204,7 +204,7 @@ LABEL_14:
 LABEL_25:
       timeOverInfo = this->fields.timeOverInfo;
       if ( !timeOverInfo )
-        sub_21FFECC(0, v12);
+        sub_2213CDC(0, v12);
       UnityEngine_GameObject__SetActive(timeOverInfo, v12, 0);
       BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.resTimeLb, this->fields.isDispTime, 0);
       ((void (__fastcall *)(ExRoomMissionListViewItemDraw_o *, MissionListViewItem_o *, int64_t, const MethodInfo *))this->klass->vtable._9_UpdateDispResTime.methodPtr)(
@@ -227,10 +227,10 @@ void ExRoomMissionListViewItemDraw__OnChangeAlphaAnim(
 {
   const MethodInfo *v9; // x3
 
-  if ( (byte_5932E0B & 1) == 0 )
+  if ( (byte_596AF11 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E0B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF11 = 1;
   }
   if ( item && mode )
   {
@@ -255,12 +255,12 @@ bool ExRoomMissionListViewItemDraw__SetItem(
   __int64 v12; // x10
   const MethodInfo *v13; // x3
 
-  if ( (byte_5932E06 & 1) == 0 )
+  if ( (byte_596AF0C & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewItem_TypeInfo);
-    sub_21FFC50(&ExRoomMissionListViewManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E06 = 1;
+    sub_2213A60(&ExRoomMissionListViewItem_TypeInfo);
+    sub_2213A60(&ExRoomMissionListViewManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF0C = 1;
   }
   if ( !MissionListViewItemDraw__SetItem(
           (MissionListViewItemDraw_o *)this,
@@ -324,12 +324,13 @@ void ExRoomMissionListViewItemDraw__SetRewardItemIcon(
         ExRoomMissionListViewManager_o *manager,
         const MethodInfo *method)
 {
-  struct GiftEntity_array *rewardDisplayGiftEntities; // x9
+  ExRoomMissionListViewItemDraw_o *v6; // x19
+  struct GiftEntity_array *rewardDisplayGiftEntities; // x8
   int32_t max_length; // w22
-  UnityEngine_Object_c *v9; // x0
-  int v10; // w8
-  _BOOL8 v11; // x0
-  __int64 v12; // x1
+  int32_t completedImg_high; // w1
+  bool v10; // cc
+  char v11; // w8
+  UnityEngine_Object_c *v12; // x0
   const MethodInfo *v13; // x2
   const MethodInfo *v14; // x3
   int32_t AlphaAnimCnt; // w23
@@ -350,37 +351,72 @@ void ExRoomMissionListViewItemDraw__SetRewardItemIcon(
   __int64 v30; // [xsp+30h] [xbp-40h]
   int32_t ObjectId_k__BackingField; // [xsp+38h] [xbp-38h]
 
-  if ( (byte_5932E0A & 1) == 0 )
+  v6 = this;
+  if ( (byte_596AF10 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E0A = 1;
+    sub_2213A60(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_int___ctor__);
+    sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    this = (ExRoomMissionListViewItemDraw_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF10 = 1;
   }
   ObjectId_k__BackingField = 0;
   v30 = 0;
   v28 = 0;
   v29 = 0;
-  if ( item && (rewardDisplayGiftEntities = item->fields.rewardDisplayGiftEntities) != 0 )
+  if ( !item )
+  {
+    max_length = 0;
+LABEL_15:
+    v11 = 1;
+    goto LABEL_16;
+  }
+  rewardDisplayGiftEntities = item->fields.rewardDisplayGiftEntities;
+  if ( rewardDisplayGiftEntities )
     max_length = rewardDisplayGiftEntities->max_length;
   else
     max_length = 0;
-  v9 = UnityEngine_Object_TypeInfo;
-  v10 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
-  this->fields.isMultipleReward = max_length > 1;
-  if ( !v10 )
-    j_il2cpp_runtime_class_init_0(v9, item, manager);
-  v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)manager, 0, 0);
+  this = (ExRoomMissionListViewItemDraw_o *)MissionListViewItem__get_EventMissionEntity(
+                                              (MissionListViewItem_o *)item,
+                                              0);
+  if ( !this )
+    goto LABEL_15;
+  completedImg_high = HIDWORD(this->fields.completedImg);
+  *(_QWORD *)&v27.fields._ItemImageId_k__BackingField = 0;
+  System_Nullable_int____ctor(
+    (System_Nullable_int__o)&v27,
+    completedImg_high,
+    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( LOBYTE(v27.fields._ItemImageId_k__BackingField) )
+    v10 = v27.fields._GiftType_k__BackingField < 1;
+  else
+    v10 = 1;
+  v11 = v10;
+LABEL_16:
+  if ( !v6 )
+    goto LABEL_27;
+  v12 = UnityEngine_Object_TypeInfo;
+  v6->fields.isMultipleReward = v11 & (max_length > 1);
+  if ( !*(&v12->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v12, item, manager);
+  this = (ExRoomMissionListViewItemDraw_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)manager, 0, 0);
   AlphaAnimCnt = 0;
-  if ( v11 && max_length >= 1 )
+  if ( ((unsigned __int8)this & 1) != 0 && max_length >= 1 )
   {
-    if ( !manager )
-      sub_21FFECC(v11, v12);
-    AlphaAnimCnt = MissionListViewManager__GetAlphaAnimCnt((MissionListViewManager_o *)manager, max_length, 0);
+    if ( manager )
+    {
+      AlphaAnimCnt = MissionListViewManager__GetAlphaAnimCnt((MissionListViewManager_o *)manager, max_length, 0);
+      goto LABEL_23;
+    }
+LABEL_27:
+    sub_2213CDC(this, item);
   }
+LABEL_23:
   if ( item )
   {
     RewardEntityForDisplay = ExRoomMissionListViewItem__GetRewardEntityForDisplay(item, AlphaAnimCnt, v13);
     item->fields.currentDisplayRewardGiftEntity = RewardEntityForDisplay;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&item->fields.currentDisplayRewardGiftEntity,
       (int32_t)RewardEntityForDisplay,
       v17,
@@ -412,7 +448,7 @@ void ExRoomMissionListViewItemDraw__SetRewardItemIcon(
   v26.fields._Count_k__BackingField = Count_k__BackingField;
   *(_WORD *)(&v26.fields._ShouldUseSetItemImage_k__BackingField + 1) = v28;
   *(&v26.fields._ShouldUseSetItemImage_k__BackingField + 3) = v29;
-  ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(this, &v26, 1, v14);
+  ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(v6, &v26, 1, v14);
 }
 
 
@@ -436,12 +472,12 @@ void ExRoomMissionListViewItemDraw__UpdateDispResTime(
   System_String_o *RestTime; // x20
   System_String_o *TimeText; // x1
 
-  if ( (byte_5932E08 & 1) == 0 )
+  if ( (byte_596AF0E & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewItem_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&MissionListViewItemDraw_TypeInfo);
-    byte_5932E08 = 1;
+    sub_2213A60(&ExRoomMissionListViewItem_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&MissionListViewItemDraw_TypeInfo);
+    byte_596AF0E = 1;
   }
   if ( missionListViewItem )
   {
@@ -496,12 +532,12 @@ void ExRoomMissionListViewItemDraw__UpdateItem(
   int64_t oldTime; // x23
   MissionListViewItemDraw_c *v16; // x8
 
-  if ( (byte_5932E09 & 1) == 0 )
+  if ( (byte_596AF0F & 1) == 0 )
   {
-    sub_21FFC50(&MissionListViewItemDraw_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E09 = 1;
+    sub_2213A60(&MissionListViewItemDraw_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF0F = 1;
   }
   if ( item && mode )
   {
@@ -548,6 +584,6 @@ void ExRoomMissionListViewItemDraw__UpdateItem(
       return;
     }
 LABEL_20:
-    sub_21FFECC(gameObject, v11);
+    sub_2213CDC(gameObject, v11);
   }
 }

@@ -13,17 +13,11 @@ void MoveObject__Awake(MoveObject_o *this, const MethodInfo *method)
 
 UnityEngine_Vector3_o MoveObject__Now(MoveObject_o *this, const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  x = this->fields.mNow.fields.x;
-  y = this->fields.mNow.fields.y;
-  z = this->fields.mNow.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.mNow.fields.x;
+  result.fields.y = this->fields.mNow.fields.y;
+  result.fields.z = this->fields.mNow.fields.z;
   return result;
 }
 
@@ -63,7 +57,7 @@ void MoveObject__Play(
   bool v25; // w6
   bool v26; // w7
   System_Action_o *mProcessAct; // x0
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:kr00_12.12
 
   this->fields.mIsMoving = 1;
   this->fields.mFrom = from;
@@ -75,11 +69,11 @@ void MoveObject__Play(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
   v28 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
   this->fields.mProcessAct = procAct;
   this->fields.mNow = v28;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mProcessAct,
     (int32_t)procAct,
     v21,
@@ -148,7 +142,7 @@ void MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
   float v8; // s8
   struct System_Action_o *mProcessAct; // x8
   struct System_Action_o *mEndAct; // x8
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:kr00_12.12
 
   if ( this->fields.mIsMoving && !this->fields.mIsPause )
   {

@@ -17,23 +17,23 @@ void EventCraftAssetManager___ctor(EventCraftAssetManager_o *this, const MethodI
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_59323EC & 1) == 0 )
+  if ( (byte_596A4EB & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_6520/*"EventUI/Prefabs/"*/);
-    byte_59323EC = 1;
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_6532/*"EventUI/Prefabs/"*/);
+    byte_596A4EB = 1;
   }
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   v11 = (struct System_String_array *)v3;
   if ( !*(_DWORD *)(v3 + 24) )
-    sub_21FFED4(v3);
-  v12 = StringLiteral_6520/*"EventUI/Prefabs/"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_6520/*"EventUI/Prefabs/"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+    sub_2213CE4(v3);
+  v12 = StringLiteral_6532/*"EventUI/Prefabs/"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_6532/*"EventUI/Prefabs/"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
   this->fields.loadAssetNames = v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetNames,
     (int32_t)v11,
     v13,
@@ -75,22 +75,22 @@ void EventCraftAssetManager__LoadAssets(
   __int64 v27; // x1
   __int64 v28; // x2
 
-  if ( (byte_59323EA & 1) == 0 )
+  if ( (byte_596A4E9 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__0__);
-    sub_21FFC50(&EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
-    byte_59323EA = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__0__);
+    sub_2213A60(&EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
+    byte_596A4E9 = 1;
   }
-  v7 = sub_21FFEBC(EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
+  v7 = sub_2213CCC(EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
         *(_DWORD *)(v7 + 24) = eventId,
         *(_QWORD *)(v7 + 32) = finishCallback,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v7 + 32),
           (int32_t)finishCallback,
           v16,
@@ -101,14 +101,14 @@ void EventCraftAssetManager__LoadAssets(
           v21),
         (loadAssetNames = this->fields.loadAssetNames) == 0) )
   {
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
   if ( !LODWORD(loadAssetNames->max_length) )
-    sub_21FFED4(v8);
+    sub_2213CE4(v8);
   v23 = loadAssetNames->m_Items[0];
   v24 = System_Int32__ToString((int)v7 + 24, 0);
-  v25 = System_String__Concat_75438412(v23, v24, 0);
-  v26 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v25 = System_String__Concat_75651716(v23, v24, 0);
+  v26 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v26,
     (Il2CppObject *)v7,
@@ -160,18 +160,18 @@ void EventCraftAssetManager__Release(EventCraftAssetManager_o *this, int32_t eve
   bool v39; // w6
   bool v40; // w7
 
-  if ( (byte_59323EB & 1) == 0 )
+  if ( (byte_596A4EA & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    byte_59323EB = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    byte_596A4EA = 1;
   }
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&eventId, method);
-  AtlasManager__ReleaseEventUI_47538200(eventId, 0);
+  AtlasManager__ReleaseEventUI_47569360(eventId, 0);
   this->fields._CraftItemNumConfirmDialog_k__BackingField = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v5, v6, v7, v8, v9, v10);
   this->fields._CraftItemWithdrawConfirmDialog_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     0,
     v11,
@@ -181,7 +181,7 @@ void EventCraftAssetManager__Release(EventCraftAssetManager_o *this, int32_t eve
     v15,
     v16);
   this->fields._CraftRewardDialog_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftRewardDialog_k__BackingField,
     0,
     v17,
@@ -191,7 +191,7 @@ void EventCraftAssetManager__Release(EventCraftAssetManager_o *this, int32_t eve
     v21,
     v22);
   this->fields._CraftButtonBlinkEffect_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftButtonBlinkEffect_k__BackingField,
     0,
     v23,
@@ -201,7 +201,7 @@ void EventCraftAssetManager__Release(EventCraftAssetManager_o *this, int32_t eve
     v27,
     v28);
   this->fields._CraftUseSupportToolDialog_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftUseSupportToolDialog_k__BackingField,
     0,
     v29,
@@ -211,7 +211,7 @@ void EventCraftAssetManager__Release(EventCraftAssetManager_o *this, int32_t eve
     v33,
     v34);
   this->fields._CraftFirstTimeSupportToolDialog_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
     0,
     v35,
@@ -283,7 +283,7 @@ void EventCraftAssetManager__set_CraftButtonBlinkEffect(
   bool v7; // w7
 
   this->fields._CraftButtonBlinkEffect_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftButtonBlinkEffect_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -307,7 +307,7 @@ void EventCraftAssetManager__set_CraftFirstTimeSupportToolDialog(
   bool v7; // w7
 
   this->fields._CraftFirstTimeSupportToolDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -331,7 +331,7 @@ void EventCraftAssetManager__set_CraftItemNumConfirmDialog(
   bool v7; // w7
 
   this->fields._CraftItemNumConfirmDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -355,7 +355,7 @@ void EventCraftAssetManager__set_CraftItemWithdrawConfirmDialog(
   bool v7; // w7
 
   this->fields._CraftItemWithdrawConfirmDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -379,7 +379,7 @@ void EventCraftAssetManager__set_CraftRewardDialog(
   bool v7; // w7
 
   this->fields._CraftRewardDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftRewardDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -403,7 +403,7 @@ void EventCraftAssetManager__set_CraftUseSupportToolDialog(
   bool v7; // w7
 
   this->fields._CraftUseSupportToolDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CraftUseSupportToolDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -483,40 +483,40 @@ void EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
   bool v56; // w7
 
   v4 = this;
-  if ( (byte_59323ED & 1) == 0 )
+  if ( (byte_596A4EC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__);
-    sub_21FFC50(&StringLiteral_17891/*"bit_craft_blink"*/);
-    sub_21FFC50(&StringLiteral_6453/*"EventCraftItemNumConfirmDialog"*/);
-    sub_21FFC50(&StringLiteral_6456/*"EventCraftUseSupportToolDialog"*/);
-    sub_21FFC50(&StringLiteral_6455/*"EventCraftRewardDialog"*/);
-    sub_21FFC50(&StringLiteral_6452/*"EventCraftFirstTimeSupportToolDialog"*/);
-    this = (EventCraftAssetManager___c__DisplayClass25_0_o *)sub_21FFC50(&StringLiteral_6454/*"EventCraftItemWithdrawConfirmDialog"*/);
-    byte_59323ED = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__);
+    sub_2213A60(&StringLiteral_17929/*"bit_craft_blink"*/);
+    sub_2213A60(&StringLiteral_6465/*"EventCraftItemNumConfirmDialog"*/);
+    sub_2213A60(&StringLiteral_6468/*"EventCraftUseSupportToolDialog"*/);
+    sub_2213A60(&StringLiteral_6467/*"EventCraftRewardDialog"*/);
+    sub_2213A60(&StringLiteral_6464/*"EventCraftFirstTimeSupportToolDialog"*/);
+    this = (EventCraftAssetManager___c__DisplayClass25_0_o *)sub_2213A60(&StringLiteral_6466/*"EventCraftItemWithdrawConfirmDialog"*/);
+    byte_596A4EC = 1;
   }
   if ( !assetData )
     goto LABEL_15;
   _4__this = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6453/*"EventCraftItemNumConfirmDialog"*/,
-                                                             (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                             (System_String_o *)StringLiteral_6465/*"EventCraftItemNumConfirmDialog"*/,
+                                                             (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !_4__this )
     goto LABEL_15;
   _4__this->fields._CraftItemNumConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_4__this->fields, (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields, (int32_t)this, v6, v7, v8, v9, v10, v11);
   v12 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6454/*"EventCraftItemWithdrawConfirmDialog"*/,
-                                                             (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                             (System_String_o *)StringLiteral_6466/*"EventCraftItemWithdrawConfirmDialog"*/,
+                                                             (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !v12 )
     goto LABEL_15;
   v12->fields._CraftItemWithdrawConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v12->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     (int32_t)this,
     v13,
@@ -526,14 +526,14 @@ void EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
     v17,
     v18);
   v19 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6455/*"EventCraftRewardDialog"*/,
-                                                             (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                             (System_String_o *)StringLiteral_6467/*"EventCraftRewardDialog"*/,
+                                                             (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !v19 )
     goto LABEL_15;
   v19->fields._CraftRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v19->fields._CraftRewardDialog_k__BackingField,
     (int32_t)this,
     v20,
@@ -543,14 +543,14 @@ void EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
     v24,
     v25);
   v26 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6456/*"EventCraftUseSupportToolDialog"*/,
-                                                             (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                             (System_String_o *)StringLiteral_6468/*"EventCraftUseSupportToolDialog"*/,
+                                                             (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !v26 )
     goto LABEL_15;
   v26->fields._CraftUseSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v26->fields._CraftUseSupportToolDialog_k__BackingField,
     (int32_t)this,
     v27,
@@ -560,13 +560,13 @@ void EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
     v31,
     v32);
   v33 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6452/*"EventCraftFirstTimeSupportToolDialog"*/,
-                                                             (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                             (System_String_o *)StringLiteral_6464/*"EventCraftFirstTimeSupportToolDialog"*/,
+                                                             (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !v33
     || (v33->fields._CraftFirstTimeSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v33->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
           (int32_t)this,
           v34,
@@ -576,17 +576,17 @@ void EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
           v38,
           v39),
         v40 = v4->fields.__4__this,
-        this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58323140(
+        this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__58532980(
                                                                    assetData,
-                                                                   (System_String_o *)StringLiteral_17891/*"bit_craft_blink"*/,
-                                                                   (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112),
+                                                                   (System_String_o *)StringLiteral_17929/*"bit_craft_blink"*/,
+                                                                   (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320),
         !v40) )
   {
 LABEL_15:
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   }
   v40->fields._CraftButtonBlinkEffect_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v40->fields._CraftButtonBlinkEffect_k__BackingField,
     (int32_t)this,
     v41,
@@ -599,18 +599,18 @@ LABEL_15:
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__,
       0);
     v4->fields.__9__1 = _9__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v51, v52, v53, v54, v55, v56);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v51, v52, v53, v54, v55, v56);
   }
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v47, v48);
-  AtlasManager__LoadEventUI_47538036(eventId, _9__1, 1, 0);
+  AtlasManager__LoadEventUI_47569188(eventId, _9__1, 1, 0);
 }
 
 

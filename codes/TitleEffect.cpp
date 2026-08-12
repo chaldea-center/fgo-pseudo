@@ -10,9 +10,9 @@ void TitleEffect__Start(TitleEffect_o *this, const MethodInfo *method)
 
   titlePsLeft = this->fields.titlePsLeft;
   if ( !titlePsLeft
-    || (UnityEngine_ParticleSystem__Play_83623692(titlePsLeft, 0), (titlePsLeft = this->fields.titlePsRight) == 0) )
+    || (UnityEngine_ParticleSystem__Play_83836996(titlePsLeft, 0), (titlePsLeft = this->fields.titlePsRight) == 0) )
   {
-    sub_21FFECC(titlePsLeft, method);
+    sub_2213CDC(titlePsLeft, method);
   }
-  UnityEngine_ParticleSystem__Play_83623692(titlePsLeft, 0);
+  UnityEngine_ParticleSystem__Play_83836996(titlePsLeft, 0);
 }

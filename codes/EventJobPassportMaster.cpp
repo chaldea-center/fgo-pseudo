@@ -1,14 +1,14 @@
 void EventJobPassportMaster___ctor(EventJobPassportMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593876B & 1) == 0 )
+  if ( (byte_5970835 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string___ctor__);
-    byte_593876B = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string___ctor__);
+    byte_5970835 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     562,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string___ctor__);
 }
 
 
@@ -44,16 +44,16 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
   bool v29; // w6
   bool v30; // w7
 
-  if ( (byte_593876A & 1) == 0 )
+  if ( (byte_5970834 & 1) == 0 )
   {
-    sub_21FFC50(&System_Comparison_EventJobPassportEntity__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity__FindAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity__Sort__);
-    sub_21FFC50(&System_Predicate_EventJobPassportEntity__TypeInfo);
-    sub_21FFC50(&Method_EventJobPassportMaster___c__GetDisplayPassportEntityList_b__1_0__);
-    sub_21FFC50(&Method_EventJobPassportMaster___c__GetDisplayPassportEntityList_b__1_1__);
-    sub_21FFC50(&EventJobPassportMaster___c_TypeInfo);
-    byte_593876A = 1;
+    sub_2213A60(&System_Comparison_EventJobPassportEntity__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity__FindAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity__Sort__);
+    sub_2213A60(&System_Predicate_EventJobPassportEntity__TypeInfo);
+    sub_2213A60(&Method_EventJobPassportMaster___c__GetDisplayPassportEntityList_b__1_0__);
+    sub_2213A60(&Method_EventJobPassportMaster___c__GetDisplayPassportEntityList_b__1_1__);
+    sub_2213A60(&EventJobPassportMaster___c_TypeInfo);
+    byte_5970834 = 1;
   }
   EntityListByEventId = (System_Collections_Generic_List_object__o *)EventJobPassportMaster__GetEntityListByEventId(
                                                                        this,
@@ -76,7 +76,7 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
       static_fields = EventJobPassportMaster___c_TypeInfo->static_fields;
     }
     v11 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_EventJobPassportEntity__TypeInfo);
+    _9__1_0 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_EventJobPassportEntity__TypeInfo);
     System_Predicate_object____ctor(
       _9__1_0,
       v11,
@@ -84,14 +84,14 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
       0);
     v12 = EventJobPassportMaster___c_TypeInfo->static_fields;
     v12->__9__1_0 = (struct System_Predicate_EventJobPassportEntity__o *)_9__1_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__1_0, (int32_t)_9__1_0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__1_0, (int32_t)_9__1_0, v13, v14, v15, v16, v17, v18);
   }
   if ( !v8 )
     goto LABEL_18;
   EntityListByEventId = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___FindAll(
                                                                        v8,
                                                                        (System_Predicate_T__o *)_9__1_0,
-                                                                       (const MethodInfo_4450234 *)Method_System_Collections_Generic_List_EventJobPassportEntity__FindAll__);
+                                                                       (const MethodInfo_448436C *)Method_System_Collections_Generic_List_EventJobPassportEntity__FindAll__);
   v19 = EventJobPassportMaster___c_TypeInfo;
   v20 = EntityListByEventId;
   if ( !*(&EventJobPassportMaster___c_TypeInfo->_2.cctor_finished + 1) )
@@ -109,7 +109,7 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
       v21 = EventJobPassportMaster___c_TypeInfo->static_fields;
     }
     v23 = (Il2CppObject *)v21->__9;
-    _9__1_1 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventJobPassportEntity__TypeInfo);
+    _9__1_1 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventJobPassportEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__1_1,
       v23,
@@ -117,15 +117,15 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
       0);
     v24 = EventJobPassportMaster___c_TypeInfo->static_fields;
     v24->__9__1_1 = (struct System_Comparison_EventJobPassportEntity__o *)_9__1_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24->__9__1_1, (int32_t)_9__1_1, v25, v26, v27, v28, v29, v30);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24->__9__1_1, (int32_t)_9__1_1, v25, v26, v27, v28, v29, v30);
   }
   if ( !v20 )
 LABEL_18:
-    sub_21FFECC(EntityListByEventId, v6);
-  System_Collections_Generic_List_object___Sort_71636404(
+    sub_2213CDC(EntityListByEventId, v6);
+  System_Collections_Generic_List_object___Sort_71849708(
     v20,
     _9__1_1,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventJobPassportEntity__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventJobPassportEntity__Sort__);
   return (System_Collections_Generic_List_EventJobPassportEntity__o *)v20;
 }
 
@@ -139,16 +139,16 @@ EventJobPassportEntity_o *EventJobPassportMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_593876C & 1) == 0 )
+  if ( (byte_5970836 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__GetEntity__);
-    byte_593876C = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__GetEntity__);
+    byte_5970836 = 1;
   }
   PK = (Il2CppObject *)EventJobPassportEntity__CreatePK(eventId, jobId, *(const MethodInfo **)&jobId);
   return (EventJobPassportEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__GetEntity__);
+                                       (const MethodInfo_3F157EC *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__GetEntity__);
 }
 
 
@@ -174,25 +174,25 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_5938769 & 1) == 0 )
+  if ( (byte_5970833 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventJobPassportEntity__TypeInfo);
-    byte_5938769 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventJobPassportEntity__TypeInfo);
+    byte_5970833 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventJobPassportEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventJobPassportEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventJobPassportEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventJobPassportEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Count__);
+            (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -205,7 +205,7 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v10,
-                                                                 (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Item__);
+                                                                 (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventJobPassportEntity__get_Item__);
       if ( list )
       {
         v6 = list;
@@ -224,14 +224,14 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               (Il2CppObject *)list,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v6;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v6, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -239,7 +239,7 @@ System_Collections_Generic_List_EventJobPassportEntity__o *EventJobPassportMaste
         return (System_Collections_Generic_List_EventJobPassportEntity__o *)v5;
     }
 LABEL_16:
-    sub_21FFECC(list, v6);
+    sub_2213CDC(list, v6);
   }
   return (System_Collections_Generic_List_EventJobPassportEntity__o *)v5;
 }
@@ -255,17 +255,17 @@ bool EventJobPassportMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_593876D & 1) == 0 )
+  if ( (byte_5970837 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__TryGetEntity__);
-    byte_593876D = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__TryGetEntity__);
+    byte_5970837 = 1;
   }
   PK = (Il2CppObject *)EventJobPassportEntity__CreatePK(eventId, jobId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventJobPassportMaster__EventJobPassportEntity__string__TryGetEntity__);
 }
 
 
@@ -279,15 +279,15 @@ void EventJobPassportMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593876E & 1) == 0 )
+  if ( (byte_5970838 & 1) == 0 )
   {
-    sub_21FFC50(&EventJobPassportMaster___c_TypeInfo);
-    byte_593876E = 1;
+    sub_2213A60(&EventJobPassportMaster___c_TypeInfo);
+    byte_5970838 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventJobPassportMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventJobPassportMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventJobPassportMaster___c_TypeInfo->static_fields->__9 = (struct EventJobPassportMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventJobPassportMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -313,7 +313,7 @@ bool EventJobPassportMaster___c___GetDisplayPassportEntityList_b__1_0(
   const MethodInfo *v4; // x1
 
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return EventJobPassportEntity__IsDisplayOpen(entity, (const MethodInfo *)entity)
       || EventJobPassportEntity__IsOpenPassport(entity, v4);
 }
@@ -338,14 +338,14 @@ int32_t EventJobPassportMaster___c___GetDisplayPassportEntityList_b__1_1(
     return -1;
   IsOpenPassport = EventJobPassportEntity__IsOpenPassport(right, (const MethodInfo *)left);
   v8 = EventJobPassportEntity__IsOpenPassport(left, v6);
-  if ( !*(_DWORD *)(qword_594C050 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C050, v7);
-  result = System_Boolean__CompareTo_76441708((bool)&IsOpenPassport, v8, 0);
+  if ( !*(_DWORD *)(qword_5984328 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984328, v7);
+  result = System_Boolean__CompareTo_76655012((bool)&IsOpenPassport, v8, 0);
   if ( !result )
   {
-    result = System_Int32__CompareTo_76925088((_DWORD)right + 24, left->fields.priority, 0);
+    result = System_Int32__CompareTo_77138392((_DWORD)right + 24, left->fields.priority, 0);
     if ( !result )
-      return System_Int32__CompareTo_76925088((_DWORD)left + 20, right->fields.jobId, 0);
+      return System_Int32__CompareTo_77138392((_DWORD)left + 20, right->fields.jobId, 0);
   }
   return result;
 }

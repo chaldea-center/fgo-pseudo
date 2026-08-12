@@ -12,12 +12,12 @@ void ActiveGrandBoardConfirmDialog___ctor(ActiveGrandBoardConfirmDialog_o *this,
   __int64 v12; // x1
   __int64 v13; // x2
 
-  if ( (byte_5933CA7 & 1) == 0 )
+  if ( (byte_596BDC0 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&GrandServantListServantFaceIcon___TypeInfo);
-    byte_5933CA7 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&GrandServantListServantFaceIcon___TypeInfo);
+    byte_596BDC0 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -25,11 +25,11 @@ void ActiveGrandBoardConfirmDialog___ctor(ActiveGrandBoardConfirmDialog_o *this,
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct GrandServantListServantFaceIcon_array *)sub_21FFD10(
+  v5 = (struct GrandServantListServantFaceIcon_array *)sub_2213B20(
                                                          GrandServantListServantFaceIcon___TypeInfo,
                                                          (unsigned int)(v4->static_fields->DeckMemberMax - 1));
   this->fields.faceIcons = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.faceIcons, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.faceIcons, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, v12, v13);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -49,45 +49,45 @@ void ActiveGrandBoardConfirmDialog__Awake(ActiveGrandBoardConfirmDialog_o *this,
   UILabel_o *cancelLabel; // x20
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_5933CA3 & 1) == 0 )
+  if ( (byte_596BDBC & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_11326/*"QUEST_CONFIRM_START"*/);
-    sub_21FFC50(&StringLiteral_10495/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_2"*/);
-    sub_21FFC50(&StringLiteral_10494/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_1"*/);
-    sub_21FFC50(&StringLiteral_10496/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_5933CA3 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_11346/*"QUEST_CONFIRM_START"*/);
+    sub_2213A60(&StringLiteral_10508/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_2"*/);
+    sub_2213A60(&StringLiteral_10507/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_1"*/);
+    sub_2213A60(&StringLiteral_10509/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_TITLE"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_596BDBC = 1;
   }
   BaseDialog__Awake((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v3, v4);
-  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10496/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_TITLE"*/, 0);
+  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10509/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_12;
   UILabel__set_text(titleLabel, cancelBtn, 0);
   messageLabel1 = this->fields.messageLabel1;
-  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10494/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_1"*/, 0);
+  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10507/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_1"*/, 0);
   if ( !messageLabel1 )
     goto LABEL_12;
   UILabel__set_text(messageLabel1, cancelBtn, 0);
   messageLabel2 = this->fields.messageLabel2;
-  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10495/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_2"*/, 0);
+  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_10508/*"PARTY_ORGANIZATION_ACTIVE_GRAND_BOARD_CONFIRM_MESSAGE_2"*/, 0);
   if ( !messageLabel2 )
     goto LABEL_12;
   UILabel__set_text(messageLabel2, cancelBtn, 0);
   decideLabel = this->fields.decideLabel;
-  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_11326/*"QUEST_CONFIRM_START"*/, 0);
+  cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_11346/*"QUEST_CONFIRM_START"*/, 0);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, cancelBtn, 0),
         cancelLabel = this->fields.cancelLabel,
-        cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        cancelBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, cancelBtn, 0), (cancelBtn = (System_String_o *)this->fields.cancelBtn) == 0) )
   {
 LABEL_12:
-    sub_21FFECC(cancelBtn, v7);
+    sub_2213CDC(cancelBtn, v7);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)cancelBtn, 0);
   AndroidBackKeyManager__AddBackBtn(gameObject, 0);
@@ -100,21 +100,21 @@ void ActiveGrandBoardConfirmDialog__OnClickCancel(ActiveGrandBoardConfirmDialog_
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_5933CA6 & 1) == 0 )
+  if ( (byte_596BDBF & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ActiveGrandBoardConfirmDialog_OnClickCancel__);
-    sub_21FFC50(&Method_ActiveGrandBoardConfirmDialog__OnClickCancel_b__12_0__);
-    byte_5933CA6 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ActiveGrandBoardConfirmDialog_OnClickCancel__);
+    sub_2213A60(&Method_ActiveGrandBoardConfirmDialog__OnClickCancel_b__12_0__);
+    byte_596BDBF = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_ActiveGrandBoardConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ActiveGrandBoardConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ActiveGrandBoardConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ActiveGrandBoardConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_ActiveGrandBoardConfirmDialog__OnClickCancel_b__12_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -127,21 +127,21 @@ void ActiveGrandBoardConfirmDialog__OnClickDecide(ActiveGrandBoardConfirmDialog_
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_5933CA5 & 1) == 0 )
+  if ( (byte_596BDBE & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ActiveGrandBoardConfirmDialog_OnClickDecide__);
-    sub_21FFC50(&Method_ActiveGrandBoardConfirmDialog__OnClickDecide_b__11_0__);
-    byte_5933CA5 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ActiveGrandBoardConfirmDialog_OnClickDecide__);
+    sub_2213A60(&Method_ActiveGrandBoardConfirmDialog__OnClickDecide_b__11_0__);
+    byte_596BDBE = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_ActiveGrandBoardConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ActiveGrandBoardConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ActiveGrandBoardConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ActiveGrandBoardConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_ActiveGrandBoardConfirmDialog__OnClickDecide_b__11_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -181,18 +181,18 @@ void ActiveGrandBoardConfirmDialog__Open(
   struct GrandServantListServantFaceIcon_array *v32; // x8
   GrandServantListServantFaceIcon_o *v33; // x23
 
-  if ( (byte_5933CA4 & 1) == 0 )
+  if ( (byte_596BDBD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_GrandServantListServantFaceIcon__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListServantFaceIcon___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
-    sub_21FFC50(&Method_ActiveGrandBoardConfirmDialog___c__Open_b__10_0__);
-    sub_21FFC50(&ActiveGrandBoardConfirmDialog___c_TypeInfo);
-    byte_5933CA4 = 1;
+    sub_2213A60(&System_Action_GrandServantListServantFaceIcon__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_GrandServantListServantFaceIcon___);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+    sub_2213A60(&Method_ActiveGrandBoardConfirmDialog___c__Open_b__10_0__);
+    sub_2213A60(&ActiveGrandBoardConfirmDialog___c_TypeInfo);
+    byte_596BDBD = 1;
   }
   this->fields.closeCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallback,
     (int32_t)callback,
     (System_String_o *)info,
@@ -218,16 +218,16 @@ void ActiveGrandBoardConfirmDialog__Open(
       static_fields = ActiveGrandBoardConfirmDialog___c_TypeInfo->static_fields;
     }
     v18 = (Il2CppObject *)static_fields->__9;
-    _9__10_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_GrandServantListServantFaceIcon__TypeInfo);
+    _9__10_0 = (System_Action_object__o *)sub_2213CCC(System_Action_GrandServantListServantFaceIcon__TypeInfo);
     System_Action_object____ctor(_9__10_0, v18, Method_ActiveGrandBoardConfirmDialog___c__Open_b__10_0__, 0);
     v19 = ActiveGrandBoardConfirmDialog___c_TypeInfo->static_fields;
     v19->__9__10_0 = (struct System_Action_GrandServantListServantFaceIcon__o *)_9__10_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->__9__10_0, (int32_t)_9__10_0, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->__9__10_0, (int32_t)_9__10_0, v20, v21, v22, v23, v24, v25);
   }
   BasicHelper__ForEach_object_(
     faceIcons,
     (System_Action_T__o *)_9__10_0,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListServantFaceIcon___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_GrandServantListServantFaceIcon___);
   if ( !confirmSvtList )
     goto LABEL_23;
   if ( confirmSvtList->fields._size >= 1 )
@@ -244,7 +244,7 @@ void ActiveGrandBoardConfirmDialog__Open(
         goto LABEL_21;
       if ( v31 >= max_length )
 LABEL_24:
-        sub_21FFED4(gameObject);
+        sub_2213CE4(gameObject);
       gameObject = (UnityEngine_Component_o *)*((_QWORD *)&v29->obj.klass + v28);
       if ( !gameObject )
         break;
@@ -261,7 +261,7 @@ LABEL_24:
       gameObject = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)confirmSvtList,
                                                 v31,
-                                                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
+                                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserServantEntity__get_Item__);
       if ( !v33 )
         break;
       GrandServantListServantFaceIcon__Setup(v33, (UserServantEntity_o *)gameObject, info, 0);
@@ -269,7 +269,7 @@ LABEL_24:
         goto LABEL_21;
     }
 LABEL_23:
-    sub_21FFECC(gameObject, v27);
+    sub_2213CDC(gameObject, v27);
   }
 LABEL_21:
   gameObject = (UnityEngine_Component_o *)this->fields.grid;
@@ -288,7 +288,7 @@ void ActiveGrandBoardConfirmDialog___OnClickCancel_b__12_0(
 
   closeCallback = this->fields.closeCallback;
   if ( !closeCallback )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))closeCallback->fields.invoke_impl)(
     closeCallback->fields.method_code,
     0,
@@ -304,7 +304,7 @@ void ActiveGrandBoardConfirmDialog___OnClickDecide_b__11_0(
 
   closeCallback = this->fields.closeCallback;
   if ( !closeCallback )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))closeCallback->fields.invoke_impl)(
     closeCallback->fields.method_code,
     1,
@@ -322,15 +322,15 @@ void ActiveGrandBoardConfirmDialog___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5933CA8 & 1) == 0 )
+  if ( (byte_596BDC1 & 1) == 0 )
   {
-    sub_21FFC50(&ActiveGrandBoardConfirmDialog___c_TypeInfo);
-    byte_5933CA8 = 1;
+    sub_2213A60(&ActiveGrandBoardConfirmDialog___c_TypeInfo);
+    byte_596BDC1 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ActiveGrandBoardConfirmDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ActiveGrandBoardConfirmDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ActiveGrandBoardConfirmDialog___c_TypeInfo->static_fields->__9 = (struct ActiveGrandBoardConfirmDialog___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ActiveGrandBoardConfirmDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -358,7 +358,7 @@ void ActiveGrandBoardConfirmDialog___c___Open_b__10_0(
                                                         (UnityEngine_Component_o *)x,
                                                         0)) == 0 )
   {
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }

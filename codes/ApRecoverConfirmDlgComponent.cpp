@@ -2,10 +2,10 @@ void ApRecoverConfirmDlgComponent___ctor(ApRecoverConfirmDlgComponent_o *this, c
 {
   __int64 v2; // x2
 
-  if ( (byte_5932699 & 1) == 0 )
+  if ( (byte_596A8A6 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5932699 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596A8A6 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -33,7 +33,7 @@ void ApRecoverConfirmDlgComponent__CallOnClose(ApRecoverConfirmDlgComponent_o *t
   if ( onClose )
   {
     this->fields.onClose = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClose, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onClose, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))onClose->fields.invoke_impl)(
       onClose->fields.method_code,
       onClose->fields.method);
@@ -54,14 +54,14 @@ void ApRecoverConfirmDlgComponent__Close(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_5932694 & 1) == 0 )
+  if ( (byte_596A8A1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ApRecoverConfirmDlgComponent_EndClose__);
-    byte_5932694 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ApRecoverConfirmDlgComponent_EndClose__);
+    byte_596A8A1 = 1;
   }
   this->fields.onClose = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClose,
     (int32_t)callback,
     (System_String_o *)method,
@@ -72,7 +72,7 @@ void ApRecoverConfirmDlgComponent__Close(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ApRecoverConfirmDlgComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -87,7 +87,7 @@ void ApRecoverConfirmDlgComponent__EndClose(ApRecoverConfirmDlgComponent_o *this
   ApRecoverConfirmDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   ApRecoverConfirmDlgComponent__CallOnClose(this, v5);
 }
@@ -116,28 +116,28 @@ int32_t ApRecoverConfirmDlgComponent__GetItemSliderMax(ApRecoverConfirmDlgCompon
   int32_t v16; // [xsp+4h] [xbp-3Ch] BYREF
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5932693 & 1) == 0 )
+  if ( (byte_596A8A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_26423/*"{0:N0}"*/);
-    byte_5932693 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_26474/*"{0:N0}"*/);
+    byte_596A8A0 = 1;
   }
   entity = 0;
   RecoverVal = ApRecoverConfirmDlgComponent__GetRecoverVal(this, method);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -158,15 +158,15 @@ int32_t ApRecoverConfirmDlgComponent__GetItemSliderMax(ApRecoverConfirmDlgCompon
     num = entity->fields.num;
     currentNumLb = this->fields.currentNumLb;
     v16 = num;
-    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v16);
-    Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_26423/*"{0:N0}"*/, v10, 0);
+    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
+    Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v10, 0);
     if ( currentNumLb )
     {
       UILabel__set_text(currentNumLb, (System_String_o *)Instance, 0);
       goto LABEL_15;
     }
 LABEL_22:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   num = 0;
 LABEL_15:
@@ -203,10 +203,10 @@ int32_t ApRecoverConfirmDlgComponent__GetItemSliderMin(
     v8 = (float)(needAp - this->fields.userCurrentAp) / (float)RecoverVal;
   else
     v8 = 1.0;
-  if ( !byte_5931FBB )
+  if ( !byte_596A15B )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5931FBB = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A15B = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v7);
@@ -238,10 +238,10 @@ int32_t ApRecoverConfirmDlgComponent__GetRecoverVal(ApRecoverConfirmDlgComponent
   {
     v6 = (float)value / 1000.0;
     userMaxAp = (float)this->fields.userMaxAp;
-    if ( !byte_5931FBB )
+    if ( !byte_596A15B )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_5931FBB = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A15B = 1;
     }
     v8 = v6 * userMaxAp;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -263,7 +263,7 @@ void ApRecoverConfirmDlgComponent__Init(ApRecoverConfirmDlgComponent_o *this, co
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -281,10 +281,10 @@ int64_t ApRecoverConfirmDlgComponent__ItemMaxOverCheck(
   int64_t UserItemMax; // x8
 
   v5 = count;
-  if ( (byte_5932697 & 1) == 0 )
+  if ( (byte_596A8A4 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_5932697 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596A8A4 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -322,22 +322,22 @@ void ApRecoverConfirmDlgComponent__OnClickCancel(ApRecoverConfirmDlgComponent_o 
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5932696 & 1) == 0 )
+  if ( (byte_596A8A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ApRecoverConfirmDlgComponent_OnClickCancel__);
-    byte_5932696 = 1;
+    sub_2213A60(&Method_ApRecoverConfirmDlgComponent_OnClickCancel__);
+    byte_596A8A3 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ApRecoverConfirmDlgComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_ApRecoverConfirmDlgComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ApRecoverConfirmDlgComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ApRecoverConfirmDlgComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     UISliderWithButton__grayMode(itemSlider, 0);
     clickFunc = this->fields.clickFunc;
     p_clickFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc;
@@ -350,7 +350,7 @@ void ApRecoverConfirmDlgComponent__OnClickCancel(ApRecoverConfirmDlgComponent_o 
         0,
         v7->fields.method);
       p_clickFunc->klass = 0;
-      sub_21FFBF4(p_clickFunc, 0, v10, v11, v12, v13, v14, v15);
+      sub_2213A04(p_clickFunc, 0, v10, v11, v12, v13, v14, v15);
     }
   }
 }
@@ -371,22 +371,22 @@ void ApRecoverConfirmDlgComponent__OnClickDecide(ApRecoverConfirmDlgComponent_o 
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5932695 & 1) == 0 )
+  if ( (byte_596A8A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ApRecoverConfirmDlgComponent_OnClickDecide__);
-    byte_5932695 = 1;
+    sub_2213A60(&Method_ApRecoverConfirmDlgComponent_OnClickDecide__);
+    byte_596A8A2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ApRecoverConfirmDlgComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_ApRecoverConfirmDlgComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ApRecoverConfirmDlgComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ApRecoverConfirmDlgComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     itemSlider->fields.isTouchEnable = 0;
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -397,7 +397,7 @@ void ApRecoverConfirmDlgComponent__OnClickDecide(ApRecoverConfirmDlgComponent_o 
         (unsigned int)this->fields.useCount,
         clickFunc->fields.method);
       this->fields.clickFunc = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v9, v10, v11, v12, v13, v14);
     }
   }
 }
@@ -441,30 +441,30 @@ void ApRecoverConfirmDlgComponent__Open(
   System_Action_o *v36; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593268F & 1) == 0 )
+  if ( (byte_596A89C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ApRecoverConfirmDlgComponent_EndOpen__);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_RecoverMaster___);
-    sub_21FFC50(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_2130/*"AP_RECOVER_TITLE"*/);
-    sub_21FFC50(&StringLiteral_4075/*"CURRENT_NUM_TXT"*/);
-    sub_21FFC50(&StringLiteral_12540/*"SHOP_BULK_WINDOW_MIN_LABEL"*/);
-    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_12539/*"SHOP_BULK_WINDOW_MAX_LABEL"*/);
-    byte_593268F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ApRecoverConfirmDlgComponent_EndOpen__);
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_RecoverMaster___);
+    sub_2213A60(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_2131/*"AP_RECOVER_TITLE"*/);
+    sub_2213A60(&StringLiteral_4080/*"CURRENT_NUM_TXT"*/);
+    sub_2213A60(&StringLiteral_12566/*"SHOP_BULK_WINDOW_MIN_LABEL"*/);
+    sub_2213A60(&StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_12565/*"SHOP_BULK_WINDOW_MAX_LABEL"*/);
+    byte_596A89C = 1;
   }
   state = this->fields.state;
   entity = 0;
   if ( !state )
   {
     this->fields.clickFunc = clickFunc;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
       (int32_t)clickFunc,
       *(System_String_o **)&needAp,
@@ -479,38 +479,38 @@ void ApRecoverConfirmDlgComponent__Open(
       UnityEngine_GameObject__SetActive(gameObject, 1, 0);
       BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0);
       this->fields.useCount = 1;
-      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( gameObject )
       {
         gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)gameObject,
-                                                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_RecoverMaster___);
+                                                   (const MethodInfo_385636C *)Method_DataManager_GetMasterData_RecoverMaster___);
         if ( gameObject )
         {
           gameObject = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                                      &entity,
                                                      recoverId,
-                                                     (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int__TryGetEntity__);
+                                                     (const MethodInfo_3F10B80 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)gameObject & 1) != 0 )
           {
             if ( !entity )
               goto LABEL_29;
             this->fields.recoverItemId = (int32_t)entity[2].klass;
           }
-          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( gameObject )
           {
             gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)gameObject,
-                                                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                       (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
             if ( gameObject )
             {
               gameObject = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                          (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                                          (Il2CppObject **)&this->fields.recovItemEnt,
                                                          this->fields.recoverItemId,
-                                                         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                                         (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
               if ( ((unsigned __int8)gameObject & 1) != 0 )
               {
                 recovItemEnt = this->fields.recovItemEnt;
@@ -519,7 +519,7 @@ void ApRecoverConfirmDlgComponent__Open(
                 gameObject = (UnityEngine_GameObject_o *)this->fields.itemIcon;
                 if ( !gameObject )
                   goto LABEL_29;
-                ItemIconComponent__SetItemImage_47934504(
+                ItemIconComponent__SetItemImage_47882600(
                   (ItemIconComponent_o *)gameObject,
                   recovItemEnt->fields.imageId,
                   recovItemEnt->fields.bgImageId,
@@ -555,48 +555,48 @@ void ApRecoverConfirmDlgComponent__Open(
                 if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v28, v29);
                 gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_2130/*"AP_RECOVER_TITLE"*/,
+                                                           (System_String_o *)StringLiteral_2131/*"AP_RECOVER_TITLE"*/,
                                                            0);
                 if ( titleLb )
                 {
                   UILabel__set_text(titleLb, (System_String_o *)gameObject, 0);
                   currentInfoLb = this->fields.currentInfoLb;
                   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_4075/*"CURRENT_NUM_TXT"*/,
+                                                             (System_String_o *)StringLiteral_4080/*"CURRENT_NUM_TXT"*/,
                                                              0);
                   if ( currentInfoLb )
                   {
                     UILabel__set_text(currentInfoLb, (System_String_o *)gameObject, 0);
                     maxLabel = this->fields.maxLabel;
                     gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                               (System_String_o *)StringLiteral_12539/*"SHOP_BULK_WINDOW_MAX_LABEL"*/,
+                                                               (System_String_o *)StringLiteral_12565/*"SHOP_BULK_WINDOW_MAX_LABEL"*/,
                                                                0);
                     if ( maxLabel )
                     {
                       UILabel__set_text(maxLabel, (System_String_o *)gameObject, 0);
                       minLabel = this->fields.minLabel;
                       gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_12540/*"SHOP_BULK_WINDOW_MIN_LABEL"*/,
+                                                                 (System_String_o *)StringLiteral_12566/*"SHOP_BULK_WINDOW_MIN_LABEL"*/,
                                                                  0);
                       if ( minLabel )
                       {
                         UILabel__set_text(minLabel, (System_String_o *)gameObject, 0);
                         decideButtonLb = this->fields.decideButtonLb;
                         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/,
+                                                                   (System_String_o *)StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/,
                                                                    0);
                         if ( decideButtonLb )
                         {
                           UILabel__set_text(decideButtonLb, (System_String_o *)gameObject, 0);
                           cancelButtonLb = this->fields.cancelButtonLb;
                           gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                     (System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                     (System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/,
                                                                      0);
                           if ( cancelButtonLb )
                           {
                             UILabel__set_text(cancelButtonLb, (System_String_o *)gameObject, 0);
                             this->fields.state = 1;
-                            v36 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                            v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                             System_Action___ctor(
                               v36,
                               (Il2CppObject *)this,
@@ -617,7 +617,7 @@ void ApRecoverConfirmDlgComponent__Open(
       }
     }
 LABEL_29:
-    sub_21FFECC(gameObject, v14);
+    sub_2213CDC(gameObject, v14);
   }
 }
 
@@ -630,23 +630,23 @@ void ApRecoverConfirmDlgComponent__SetConfirmMessageLb(ApRecoverConfirmDlgCompon
   __int64 v6; // x1
   struct ItemEntity_o *recovItemEnt; // x8
 
-  if ( (byte_5932691 & 1) == 0 )
+  if ( (byte_596A89E & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2125/*"AP_RECOVER_CONFIRM_TXT"*/);
-    byte_5932691 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2126/*"AP_RECOVER_CONFIRM_TXT"*/);
+    byte_596A89E = 1;
   }
   if ( this->fields.recovItemEnt )
   {
     confirmMessageLb = this->fields.confirmMessageLb;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2125/*"AP_RECOVER_CONFIRM_TXT"*/, 0);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2126/*"AP_RECOVER_CONFIRM_TXT"*/, 0);
     recovItemEnt = this->fields.recovItemEnt;
     if ( !recovItemEnt
       || (v5 = System_String__Format(v5, (Il2CppObject *)recovItemEnt->fields.name, 0), !confirmMessageLb) )
     {
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
     UILabel__set_text(confirmMessageLb, v5, 0);
   }
@@ -678,20 +678,20 @@ void ApRecoverConfirmDlgComponent__SetItemDetailLb(ApRecoverConfirmDlgComponent_
   int32_t v23; // [xsp+8h] [xbp-38h] BYREF
   int v24; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5932692 & 1) == 0 )
+  if ( (byte_596A89F & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_15382/*"UNIT_INFO"*/);
-    sub_21FFC50(&StringLiteral_2001/*"ADD_RECOVER_NUM_TXT"*/);
-    sub_21FFC50(&StringLiteral_2126/*"AP_RECOVER_NUM_TXT"*/);
-    byte_5932692 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_15412/*"UNIT_INFO"*/);
+    sub_2213A60(&StringLiteral_2002/*"ADD_RECOVER_NUM_TXT"*/);
+    sub_2213A60(&StringLiteral_2127/*"AP_RECOVER_NUM_TXT"*/);
+    byte_596A89F = 1;
   }
   RecoverVal = ApRecoverConfirmDlgComponent__GetRecoverVal(this, method);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v3, v4);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15382/*"UNIT_INFO"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_15412/*"UNIT_INFO"*/, 0);
   v24 = 1;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
   v8 = System_String__Format(v6, v7, 0);
   recovItemEnt = this->fields.recovItemEnt;
   if ( recovItemEnt )
@@ -707,12 +707,12 @@ void ApRecoverConfirmDlgComponent__SetItemDetailLb(ApRecoverConfirmDlgComponent_
         v15 = (int)v14;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2126/*"AP_RECOVER_NUM_TXT"*/, 0);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2127/*"AP_RECOVER_NUM_TXT"*/, 0);
       v24 = v15;
-      v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
+      v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
       v23 = RecoverVal;
-      v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v23);
-      v19 = System_String__Format_75484644(v16, v12, v17, v18, 0);
+      v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v23);
+      v19 = System_String__Format_75697948(v16, v12, v17, v18, 0);
       if ( !itemDetailLb )
         goto LABEL_13;
     }
@@ -721,13 +721,13 @@ void ApRecoverConfirmDlgComponent__SetItemDetailLb(ApRecoverConfirmDlgComponent_
       itemDetailLb = this->fields.itemDetailLb;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2001/*"ADD_RECOVER_NUM_TXT"*/, 0);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2002/*"ADD_RECOVER_NUM_TXT"*/, 0);
       v24 = RecoverVal;
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-      v19 = System_String__Format_75484576(v21, v12, v22, 0);
+      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+      v19 = System_String__Format_75697880(v21, v12, v22, 0);
       if ( !itemDetailLb )
 LABEL_13:
-        sub_21FFECC(v19, v20);
+        sub_2213CDC(v19, v20);
     }
     UILabel__set_text(itemDetailLb, v19, 0);
   }
@@ -769,7 +769,7 @@ void ApRecoverConfirmDlgComponent__SetItemSlider(
       goto LABEL_12;
     }
 LABEL_13:
-    sub_21FFECC(itemSlider, *(_QWORD *)&minCount);
+    sub_2213CDC(itemSlider, *(_QWORD *)&minCount);
   }
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
@@ -839,14 +839,14 @@ void ApRecoverConfirmDlgComponent__SetResultApLb(ApRecoverConfirmDlgComponent_o 
   int32_t userCurrentAp; // [xsp+8h] [xbp-48h] BYREF
   int32_t userMaxAp; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_5932690 & 1) == 0 )
+  if ( (byte_596A89D & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_2127/*"AP_RECOVER_RESULT"*/);
-    sub_21FFC50(&StringLiteral_2131/*"AP_RECOVER_TXT"*/);
-    sub_21FFC50(&StringLiteral_2128/*"AP_RECOVER_RESULT_OVER"*/);
-    byte_5932690 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_2128/*"AP_RECOVER_RESULT"*/);
+    sub_2213A60(&StringLiteral_2132/*"AP_RECOVER_TXT"*/);
+    sub_2213A60(&StringLiteral_2129/*"AP_RECOVER_RESULT_OVER"*/);
+    byte_596A89D = 1;
   }
   if ( this->fields.recovItemEnt )
   {
@@ -858,28 +858,28 @@ void ApRecoverConfirmDlgComponent__SetResultApLb(ApRecoverConfirmDlgComponent_o 
     {
       if ( !v8 )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-      v9 = &StringLiteral_2127/*"AP_RECOVER_RESULT"*/;
+      v9 = &StringLiteral_2128/*"AP_RECOVER_RESULT"*/;
     }
     else
     {
       if ( !v8 )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-      v9 = &StringLiteral_2128/*"AP_RECOVER_RESULT_OVER"*/;
+      v9 = &StringLiteral_2129/*"AP_RECOVER_RESULT_OVER"*/;
     }
     v10 = LocalizationManager__Get((System_String_o *)*v9, 0);
     userMaxAp = this->fields.userMaxAp;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &userMaxAp);
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &userMaxAp);
     userCurrentAp = v7;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &userCurrentAp);
-    v13 = System_String__Format_75484576(v10, v11, v12, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &userCurrentAp);
+    v13 = System_String__Format_75697880(v10, v11, v12, 0);
     if ( !resultApLb2 )
       goto LABEL_31;
     UILabel__set_text(resultApLb2, v13, 0);
     resultApLb1 = this->fields.resultApLb1;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v16);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2131/*"AP_RECOVER_TXT"*/, 0);
-    v13 = (System_String_o *)sub_21FFD10(object___TypeInfo, 4);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2132/*"AP_RECOVER_TXT"*/, 0);
+    v13 = (System_String_o *)sub_2213B20(object___TypeInfo, 4);
     recovItemEnt = this->fields.recovItemEnt;
     if ( !recovItemEnt )
       goto LABEL_31;
@@ -887,39 +887,39 @@ void ApRecoverConfirmDlgComponent__SetResultApLb(ApRecoverConfirmDlgComponent_o 
     if ( !v13 )
       goto LABEL_31;
     name = recovItemEnt->fields.name;
-    if ( !name || (v13 = (System_String_o *)sub_21FFDA4(name, v13->klass->_1.element_class)) != 0 )
+    if ( !name || (v13 = (System_String_o *)sub_2213BB4(name, v13->klass->_1.element_class)) != 0 )
     {
       if ( !LODWORD(v26[1].klass) )
         goto LABEL_32;
       v26[1].monitor = name;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26[1].monitor, (int32_t)name, v19, v20, v21, v22, v23, v24);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[1].monitor, (int32_t)name, v19, v20, v21, v22, v23, v24);
       userMaxAp = this->fields.useCount;
-      v13 = (System_String_o *)j_il2cpp_value_box_0(qword_594C070, &userMaxAp);
+      v13 = (System_String_o *)j_il2cpp_value_box_0(qword_5984348, &userMaxAp);
       v35 = v13;
-      if ( !v13 || (v13 = (System_String_o *)sub_21FFDA4(v13, v26->klass->_1.element_class)) != 0 )
+      if ( !v13 || (v13 = (System_String_o *)sub_2213BB4(v13, v26->klass->_1.element_class)) != 0 )
       {
         if ( ((__int64)v26[1].klass & 0xFFFFFFFE) == 0 )
           goto LABEL_32;
         v26[1].fields = (System_String_Fields)v35;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26[1].fields, (int32_t)v35, v29, v30, v31, v32, v33, v34);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[1].fields, (int32_t)v35, v29, v30, v31, v32, v33, v34);
         userCurrentAp = this->fields.userCurrentAp;
-        v13 = (System_String_o *)j_il2cpp_value_box_0(qword_594C070, &userCurrentAp);
+        v13 = (System_String_o *)j_il2cpp_value_box_0(qword_5984348, &userCurrentAp);
         v42 = v13;
-        if ( !v13 || (v13 = (System_String_o *)sub_21FFDA4(v13, v26->klass->_1.element_class)) != 0 )
+        if ( !v13 || (v13 = (System_String_o *)sub_2213BB4(v13, v26->klass->_1.element_class)) != 0 )
         {
           if ( LODWORD(v26[1].klass) <= 2 )
             goto LABEL_32;
           v26[2].klass = (System_String_c *)v42;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26[2], (int32_t)v42, v36, v37, v38, v39, v40, v41);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[2], (int32_t)v42, v36, v37, v38, v39, v40, v41);
           v51 = this->fields.userMaxAp;
-          v13 = (System_String_o *)j_il2cpp_value_box_0(qword_594C070, &v51);
+          v13 = (System_String_o *)j_il2cpp_value_box_0(qword_5984348, &v51);
           v49 = v13;
-          if ( !v13 || (v13 = (System_String_o *)sub_21FFDA4(v13, v26->klass->_1.element_class)) != 0 )
+          if ( !v13 || (v13 = (System_String_o *)sub_2213BB4(v13, v26->klass->_1.element_class)) != 0 )
           {
             if ( ((__int64)v26[1].klass & 0xFFFFFFFC) != 0 )
             {
               v26[2].monitor = v49;
-              sub_21FFBF4(
+              sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&v26[2].monitor,
                 (int32_t)v49,
                 v43,
@@ -928,23 +928,23 @@ void ApRecoverConfirmDlgComponent__SetResultApLb(ApRecoverConfirmDlgComponent_o 
                 v46,
                 v47,
                 v48);
-              v13 = System_String__Format_75484712(v18, (System_Object_array *)v26, 0);
+              v13 = System_String__Format_75698016(v18, (System_Object_array *)v26, 0);
               if ( resultApLb1 )
               {
                 UILabel__set_text(resultApLb1, v13, 0);
                 return;
               }
 LABEL_31:
-              sub_21FFECC(v13, v14);
+              sub_2213CDC(v13, v14);
             }
 LABEL_32:
-            sub_21FFED4(v13);
+            sub_2213CE4(v13);
           }
         }
       }
     }
-    v50 = sub_21FFEF0(v13, v28);
-    sub_21FFD90(v50, 0);
+    v50 = sub_2213D00(v13, v28);
+    sub_2213BA0(v50, 0);
   }
 }
 
@@ -959,7 +959,7 @@ void ApRecoverConfirmDlgComponent__SliderValueChange(ApRecoverConfirmDlgComponen
 
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   v4 = (ApRecoverConfirmDlgComponent_o *)UISliderWithButton__sliderValueChange(itemSlider, 0);
   this->fields.useCount = ApRecoverConfirmDlgComponent__ItemMaxOverCheck(v4, (int)v4, this->fields.maxCount, v5);
   ApRecoverConfirmDlgComponent__SetResultApLb(this, v6);
@@ -976,10 +976,10 @@ UnityEngine_GameObject_o *ApRecoverConfirmDlgComponent__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5932698 & 1) == 0 )
+  if ( (byte_596A8A5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932698 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A8A5 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -988,6 +988,6 @@ UnityEngine_GameObject_o *ApRecoverConfirmDlgComponent__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }

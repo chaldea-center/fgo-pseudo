@@ -2,10 +2,10 @@ void MaterialEventLogListViewObject___ctor(MaterialEventLogListViewObject_o *thi
 {
   __int64 v2; // x2
 
-  if ( (byte_5933678 & 1) == 0 )
+  if ( (byte_596B780 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5933678 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596B780 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -27,11 +27,11 @@ void MaterialEventLogListViewObject__AttachedIconSetupDisp(
   const MethodInfo *v10; // x2
   MaterialEventLogListViewItemDraw_o *v11; // x0
 
-  if ( (byte_5933676 & 1) == 0 )
+  if ( (byte_596B77E & 1) == 0 )
   {
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933676 = 1;
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B77E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -55,7 +55,7 @@ LABEL_8:
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     MaterialEventLogListViewItemDraw__SetLastTimeIcon(v11, (MaterialEventLogListViewItem_o *)linkItem, v10);
   }
 }
@@ -73,20 +73,20 @@ void MaterialEventLogListViewObject__Awake(MaterialEventLogListViewObject_o *thi
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593366F & 1) == 0 )
+  if ( (byte_596B777 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewItemDraw___);
-    byte_593366F = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewItemDraw___);
+    byte_596B777 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MaterialEventLogListViewItemDraw___);
   this->fields.itemDraw = (struct MaterialEventLogListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -105,10 +105,10 @@ MaterialEventLogListViewItem_o *MaterialEventLogListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5933671 & 1) == 0 )
+  if ( (byte_596B779 & 1) == 0 )
   {
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    byte_5933671 = 1;
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    byte_596B779 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -130,7 +130,7 @@ void MaterialEventLogListViewObject__Init(
 {
   const MethodInfo *v4; // x4
 
-  MaterialEventLogListViewObject__Init_40038064(this, initMode, 0, limitCount, v4);
+  MaterialEventLogListViewObject__Init_40039472(this, initMode, 0, limitCount, v4);
 }
 
 
@@ -148,19 +148,18 @@ void MaterialEventLogListViewObject__InitPosition(MaterialEventLogListViewObject
 
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v4 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v4 )
-    sub_21FFECC(transform, v3);
+    sub_2213CDC(transform, v3);
   UnityEngine_Transform__set_localPosition(v4, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void MaterialEventLogListViewObject__Init_40038064(
+void MaterialEventLogListViewObject__Init_40039472(
         MaterialEventLogListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -168,25 +167,24 @@ void MaterialEventLogListViewObject__Init_40038064(
         const MethodInfo *method)
 {
   float v5; // s0
-  int v6; // s1 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
+  UnityEngine_Vector3_o v13; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  MaterialEventLogListViewObject__Init_40038156(
-    this,
-    initMode,
-    callbackFunc,
-    v5,
-    *(UnityEngine_Vector3_o *)&v6,
-    limitCount,
-    method);
+  v13.fields.x = v6;
+  v13.fields.y = v7;
+  v13.fields.z = v8;
+  MaterialEventLogListViewObject__Init_40039564(this, initMode, callbackFunc, v5, v13, limitCount, method);
 }
 
 
-void MaterialEventLogListViewObject__Init_40038156(
+void MaterialEventLogListViewObject__Init_40039564(
         MaterialEventLogListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -221,10 +219,10 @@ void MaterialEventLogListViewObject__Init_40038156(
   bool v34; // w7
   struct System_Action_o *v35; // x19
 
-  if ( (byte_5933674 & 1) == 0 )
+  if ( (byte_596B77C & 1) == 0 )
   {
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    byte_5933674 = 1;
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    byte_596B77C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -253,12 +251,12 @@ void MaterialEventLogListViewObject__Init_40038156(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v18);
+    sub_2213CDC(transform, v18);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v20,
@@ -269,8 +267,8 @@ void MaterialEventLogListViewObject__Init_40038156(
     v25);
   if ( v14 <= 3 )
   {
-    v28 = dword_E93D00[v14];
-    this->fields.dispMode = *((_DWORD *)&xmmword_E93450 + v14);
+    v28 = dword_E9CE90[v14];
+    this->fields.dispMode = *((_DWORD *)&xmmword_E9C5F0 + v14);
     this->fields.state = v28;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -280,7 +278,7 @@ void MaterialEventLogListViewObject__Init_40038156(
   if ( v35 )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v29, v30, v31, v32, v33, v34);
+    sub_2213A04(p_callbackFunc, 0, v29, v30, v31, v32, v33, v34);
     ((void (__fastcall *)(intptr_t, intptr_t))v35->fields.invoke_impl)(v35->fields.method_code, v35->fields.method);
   }
 }
@@ -293,10 +291,10 @@ void MaterialEventLogListViewObject__LateUpdate(MaterialEventLogListViewObject_o
   __int64 naturalAligment; // x10
   MaterialEventLogListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_5933677 & 1) == 0 )
+  if ( (byte_596B77F & 1) == 0 )
   {
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    byte_5933677 = 1;
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    byte_596B77F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -307,7 +305,7 @@ void MaterialEventLogListViewObject__LateUpdate(MaterialEventLogListViewObject_o
     {
       itemDraw = this->fields.itemDraw;
       if ( !itemDraw )
-        sub_21FFECC(0, linkItem);
+        sub_2213CDC(0, linkItem);
       MaterialEventLogListViewItemDraw__LateUpdateItem(
         itemDraw,
         (MaterialEventLogListViewItem_o *)linkItem,
@@ -334,11 +332,11 @@ void MaterialEventLogListViewObject__OnDestroy(MaterialEventLogListViewObject_o 
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5933670 & 1) == 0 )
+  if ( (byte_596B778 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933670 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B778 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -352,7 +350,7 @@ void MaterialEventLogListViewObject__OnDestroy(MaterialEventLogListViewObject_o 
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -371,11 +369,11 @@ void MaterialEventLogListViewObject__SetEnableSelect(
   __int64 v10; // x2
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_5933673 & 1) == 0 )
+  if ( (byte_596B77B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933673 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B77B = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -388,7 +386,7 @@ void MaterialEventLogListViewObject__SetEnableSelect(
     MaterialEventLogListViewItemDraw__SetEnableSelect(v8, isSelect, v7);
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIButton___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
     v8 = (MaterialEventLogListViewItemDraw_o *)UnityEngine_Object__op_Inequality(
@@ -403,7 +401,7 @@ void MaterialEventLogListViewObject__SetEnableSelect(
         return;
       }
 LABEL_13:
-      sub_21FFECC(v8, v6);
+      sub_2213CDC(v8, v6);
     }
   }
 }
@@ -420,11 +418,11 @@ void MaterialEventLogListViewObject__SetInput(
   _BOOL8 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_5933672 & 1) == 0 )
+  if ( (byte_596B77A & 1) == 0 )
   {
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933672 = 1;
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B77A = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -432,7 +430,7 @@ void MaterialEventLogListViewObject__SetInput(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   v8 = UnityEngine_Object__op_Inequality(itemDraw, 0, 0);
   if ( v8 && !this->fields.itemDraw )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
 }
 
 
@@ -442,12 +440,12 @@ void MaterialEventLogListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void MaterialEventLogListViewObject__SetItem_40037880(
+void MaterialEventLogListViewObject__SetItem_40039288(
         MaterialEventLogListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -475,12 +473,12 @@ void MaterialEventLogListViewObject__SetupDisp(
   __int64 v15; // x2
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_5933675 & 1) == 0 )
+  if ( (byte_596B77D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_21FFC50(&MaterialEventLogListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933675 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_2213A60(&MaterialEventLogListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B77D = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -513,7 +511,7 @@ LABEL_8:
       v12);
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIButton___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -534,7 +532,7 @@ LABEL_8:
         }
       }
 LABEL_20:
-      sub_21FFECC(IsEnableSelect, v11);
+      sub_2213CDC(IsEnableSelect, v11);
     }
   }
 }
@@ -545,7 +543,7 @@ void MaterialEventLogListViewObject__Start(MaterialEventLogListViewObject_o *thi
   const MethodInfo *v2; // x4
 
   if ( !this->fields.state )
-    MaterialEventLogListViewObject__Init_40038064(this, 2, 0, -1, v2);
+    MaterialEventLogListViewObject__Init_40039472(this, 2, 0, -1, v2);
 }
 
 
@@ -566,10 +564,10 @@ void MaterialEventLogListViewObject__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_593366D & 1) == 0 )
+  if ( (byte_596B775 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593366D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596B775 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -582,13 +580,13 @@ void MaterialEventLogListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (MaterialEventLogListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (MaterialEventLogListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   MaterialEventLogListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -609,10 +607,10 @@ void MaterialEventLogListViewObject__remove_callbackFunc(
   MaterialEventLogListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_593366E & 1) == 0 )
+  if ( (byte_596B776 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593366E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596B776 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -625,12 +623,12 @@ void MaterialEventLogListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (MaterialEventLogListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (MaterialEventLogListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   MaterialEventLogListViewObject__Awake(v13, v14);
 }

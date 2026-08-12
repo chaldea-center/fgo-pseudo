@@ -38,12 +38,12 @@ void CommandAssistLvUpListViewItem___ctor(
   bool v41; // w7
 
   v17 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v17->fields._Name_k__BackingField,
     (int32_t)name,
     v18,
@@ -53,7 +53,7 @@ void CommandAssistLvUpListViewItem___ctor(
     v22,
     v23);
   v17->fields._Detail_k__BackingField = detail;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v17->fields._Detail_k__BackingField,
     (int32_t)detail,
     v24,
@@ -63,7 +63,7 @@ void CommandAssistLvUpListViewItem___ctor(
     v28,
     v29);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v17->fields._BeforeName_k__BackingField,
     (int32_t)beforeName,
     v30,
@@ -74,7 +74,7 @@ void CommandAssistLvUpListViewItem___ctor(
     v35);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 160);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v17, (int32_t)beforeDetail, v36, v37, v38, v39, v40, v41);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v17, (int32_t)beforeDetail, v36, v37, v38, v39, v40, v41);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -156,7 +156,7 @@ void CommandAssistLvUpListViewItem__set_BeforeDetail(
   bool v7; // w7
 
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BeforeDetail_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -180,7 +180,7 @@ void CommandAssistLvUpListViewItem__set_BeforeName(
   bool v7; // w7
 
   this->fields._BeforeName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BeforeName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -204,7 +204,7 @@ void CommandAssistLvUpListViewItem__set_Detail(
   bool v7; // w7
 
   this->fields._Detail_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Detail_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -255,7 +255,7 @@ void CommandAssistLvUpListViewItem__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

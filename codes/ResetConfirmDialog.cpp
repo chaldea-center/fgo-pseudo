@@ -8,15 +8,15 @@ void ResetConfirmDialog___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5937A1F & 1) == 0 )
+  if ( (byte_596FC16 & 1) == 0 )
   {
-    sub_21FFC50(&ResetConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_433/*"#494949"*/);
-    byte_5937A1F = 1;
+    sub_2213A60(&ResetConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_433/*"#494949"*/);
+    byte_596FC16 = 1;
   }
   v7 = StringLiteral_433/*"#494949"*/;
   ResetConfirmDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_433/*"#494949"*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ResetConfirmDialog_TypeInfo->static_fields,
     v7,
     v1,
@@ -30,15 +30,13 @@ void ResetConfirmDialog___cctor(const MethodInfo *method)
 
 void ResetConfirmDialog___ctor(ResetConfirmDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_5937A1E & 1) == 0 )
+  if ( (byte_596FC15 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5937A1E = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596FC15 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
@@ -53,11 +51,11 @@ void ResetConfirmDialog__Close(ResetConfirmDialog_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  ResetConfirmDialog__Close_47817032(this, 0, v2);
+  ResetConfirmDialog__Close_47917828(this, 0, v2);
 }
 
 
-void ResetConfirmDialog__Close_47817032(
+void ResetConfirmDialog__Close_47917828(
         ResetConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -69,14 +67,14 @@ void ResetConfirmDialog__Close_47817032(
   bool v7; // w7
   System_Action_o *v10; // x20
 
-  if ( (byte_5937A1A & 1) == 0 )
+  if ( (byte_596FC11 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ResetConfirmDialog_EndClose__);
-    byte_5937A1A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ResetConfirmDialog_EndClose__);
+    byte_596FC11 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -85,7 +83,7 @@ void ResetConfirmDialog__Close_47817032(
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ResetConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -110,7 +108,7 @@ void ResetConfirmDialog__EndClose(ResetConfirmDialog_o *this, const MethodInfo *
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -120,10 +118,10 @@ void ResetConfirmDialog__Init(ResetConfirmDialog_o *this, const MethodInfo *meth
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_5937A17 & 1) == 0 )
+  if ( (byte_596FC0E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5937A17 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596FC0E = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -139,7 +137,7 @@ void ResetConfirmDialog__Init(ResetConfirmDialog_o *this, const MethodInfo *meth
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_9:
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -161,31 +159,31 @@ void ResetConfirmDialog__OnClickCancel(ResetConfirmDialog_o *this, const MethodI
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5937A1C & 1) == 0 )
+  if ( (byte_596FC13 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ResetConfirmDialog_OnClickCancel__);
-    byte_5937A1C = 1;
+    sub_2213A60(&Method_ResetConfirmDialog_OnClickCancel__);
+    byte_596FC13 = 1;
   }
   if ( !this->fields.isEnd )
   {
     this->fields.isEnd = 1;
     v3 = Method_ResetConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ResetConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ResetConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ResetConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     if ( this->fields.clickFunc )
     {
-      ResetConfirmDialog__Close_47817032(this, 0, v5);
+      ResetConfirmDialog__Close_47917828(this, 0, v5);
       clickFunc = this->fields.clickFunc;
       if ( !clickFunc )
-        sub_21FFECC(v6, v7);
+        sub_2213CDC(v6, v7);
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))clickFunc->fields.invoke_impl)(
         clickFunc->fields.method_code,
         0,
         clickFunc->fields.method);
       this->fields.clickFunc = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v9, v10, v11, v12, v13, v14);
     }
   }
 }
@@ -207,10 +205,10 @@ void ResetConfirmDialog__OnClickDecide(ResetConfirmDialog_o *this, const MethodI
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5937A1B & 1) == 0 )
+  if ( (byte_596FC12 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ResetConfirmDialog_OnClickDecide__);
-    byte_5937A1B = 1;
+    sub_2213A60(&Method_ResetConfirmDialog_OnClickDecide__);
+    byte_596FC12 = 1;
   }
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
@@ -219,8 +217,8 @@ void ResetConfirmDialog__OnClickDecide(ResetConfirmDialog_o *this, const MethodI
   {
     v4 = Method_ResetConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ResetConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_21FFC68(Method_ResetConfirmDialog_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, v4[4]);
+      v4 = (_QWORD *)sub_2213A78(Method_ResetConfirmDialog_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
     return;
   }
@@ -229,12 +227,12 @@ void ResetConfirmDialog__OnClickDecide(ResetConfirmDialog_o *this, const MethodI
     this->fields.isEnd = 1;
     v6 = Method_ResetConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ResetConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_21FFC68(Method_ResetConfirmDialog_OnClickDecide__);
-    v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+      v6 = (_QWORD *)sub_2213A78(Method_ResetConfirmDialog_OnClickDecide__);
+    v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0);
     if ( this->fields.clickFunc )
     {
-      ResetConfirmDialog__Close_47817032(this, 0, v8);
+      ResetConfirmDialog__Close_47917828(this, 0, v8);
       clickFunc = this->fields.clickFunc;
       if ( clickFunc )
       {
@@ -243,11 +241,11 @@ void ResetConfirmDialog__OnClickDecide(ResetConfirmDialog_o *this, const MethodI
           1,
           clickFunc->fields.method);
         this->fields.clickFunc = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v10, v11, v12, v13, v14, v15);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, 0, v10, v11, v12, v13, v14, v15);
         return;
       }
 LABEL_15:
-      sub_21FFECC(checkSlider, method);
+      sub_2213CDC(checkSlider, method);
     }
   }
 }
@@ -257,13 +255,13 @@ void ResetConfirmDialog__OnEnable(ResetConfirmDialog_o *this, const MethodInfo *
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_5937A1D & 1) == 0 )
+  if ( (byte_596FC14 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_5937A1D = 1;
+    sub_2213A60(&StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_596FC14 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -286,7 +284,7 @@ void ResetConfirmDialog__OnSliderDragFinished(ResetConfirmDialog_o *this, const 
     if ( checkSlider )
       goto LABEL_4;
 LABEL_6:
-    sub_21FFECC(checkSlider, method);
+    sub_2213CDC(checkSlider, method);
   }
   v5 = 1.0;
   if ( !checkSlider )
@@ -308,38 +306,36 @@ void ResetConfirmDialog__Open(
 {
   UILabel_o *titleLabel; // x0
   __int64 v12; // x1
-  __int64 v13; // x2
   UILabel_o *cancelButtonLabel; // x22
-  int v15; // w8
-  __int64 *v16; // x8
-  __int64 v17; // x1
-  __int64 v18; // x2
+  int v14; // w8
+  __int64 *v15; // x8
+  __int64 v16; // x1
   UILabel_o *decideButtonLabel; // x21
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
   struct UISlider_o *checkSlider; // x20
-  UIProgressBar_OnDragFinished_o *v27; // x21
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  const MethodInfo *v34; // x2
+  UIProgressBar_OnDragFinished_o *v25; // x21
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  const MethodInfo *v32; // x2
 
-  if ( (byte_5937A18 & 1) == 0 )
+  if ( (byte_596FC0F & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_21FFC50(&Method_ResetConfirmDialog_OnSliderDragFinished__);
-    sub_21FFC50(&StringLiteral_5778/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_5777/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_BACK"*/);
-    sub_21FFC50(&StringLiteral_5779/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_DECIDE"*/);
-    byte_5937A18 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_2213A60(&Method_ResetConfirmDialog_OnSliderDragFinished__);
+    sub_2213A60(&StringLiteral_5790/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_5789/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_BACK"*/);
+    sub_2213A60(&StringLiteral_5791/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_DECIDE"*/);
+    byte_596FC0F = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -350,58 +346,58 @@ void ResetConfirmDialog__Open(
     goto LABEL_19;
   WrapControlText__fontSizeAdjust(titleLabel, message, titleLabel->fields.mFontSize, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v15 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+  v14 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   if ( isBack )
   {
-    if ( !v15 )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
-    v16 = &StringLiteral_5777/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_BACK"*/;
+    if ( !v14 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
+    v15 = &StringLiteral_5789/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_BACK"*/;
   }
   else
   {
-    if ( !v15 )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
-    v16 = &StringLiteral_5778/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_CANCEL"*/;
+    if ( !v14 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
+    v15 = &StringLiteral_5790/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_CANCEL"*/;
   }
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)*v16, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)*v15, 0);
   if ( !cancelButtonLabel )
     goto LABEL_19;
   UILabel__set_text(cancelButtonLabel, (System_String_o *)titleLabel, 0);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5779/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_DECIDE"*/, 0);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5791/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_DECIDE"*/, 0);
   if ( !decideButtonLabel )
     goto LABEL_19;
   UILabel__set_text(decideButtonLabel, (System_String_o *)titleLabel, 0);
   this->fields.clickFunc = func;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v18, v19, v20, v21, v22, v23);
   titleLabel = (UILabel_o *)this->fields.checkSlider;
   if ( !titleLabel
     || (UIProgressBar__set_value((UIProgressBar_o *)titleLabel, 0.0, 0),
         checkSlider = this->fields.checkSlider,
-        v27 = (UIProgressBar_OnDragFinished_o *)sub_21FFEBC(UIProgressBar_OnDragFinished_TypeInfo),
+        v25 = (UIProgressBar_OnDragFinished_o *)sub_2213CCC(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(
-          v27,
+          v25,
           (Il2CppObject *)this,
           Method_ResetConfirmDialog_OnSliderDragFinished__,
           0),
         !checkSlider) )
   {
 LABEL_19:
-    sub_21FFECC(titleLabel, title);
+    sub_2213CDC(titleLabel, title);
   }
-  checkSlider->fields.onDragFinished = v27;
-  sub_21FFBF4(
+  checkSlider->fields.onDragFinished = v25;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&checkSlider->fields.onDragFinished,
-    (int32_t)v27,
+    (int32_t)v25,
+    v26,
+    v27,
     v28,
     v29,
     v30,
-    v31,
-    v32,
-    v33);
-  ResetConfirmDialog__SetSlider(this, 0, v34);
+    v31);
+  ResetConfirmDialog__SetSlider(this, 0, v32);
   this->fields.isEnd = 0;
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
@@ -413,49 +409,50 @@ void ResetConfirmDialog__SetSlider(ResetConfirmDialog_o *this, bool sliderOn, co
   UISprite_o *sliderSprite; // x0
   __int64 *v6; // x8
   __int64 v7; // x1
-  __int64 v8; // x2
-  ResetConfirmDialog_c *v9; // x0
-  UnityEngine_Color_o v10; // kr00_16
-  UnityEngine_Color_o v11; // [xsp+0h] [xbp-30h] BYREF
+  ResetConfirmDialog_c *v8; // x0
+  UnityEngine_Color_o v12; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5937A19 & 1) == 0 )
+  if ( (byte_596FC10 & 1) == 0 )
   {
-    sub_21FFC50(&ResetConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_21535/*"img_slider_thumb_locked"*/);
-    sub_21FFC50(&StringLiteral_21534/*"img_slider_thumb"*/);
-    byte_5937A19 = 1;
+    sub_2213A60(&ResetConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_21576/*"img_slider_thumb_locked"*/);
+    sub_2213A60(&StringLiteral_21575/*"img_slider_thumb"*/);
+    byte_596FC10 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
-  *(_QWORD *)&v11.fields.r = 0;
-  *(_QWORD *)&v11.fields.b = 0;
+  *(_QWORD *)&v12.fields.r = 0;
+  *(_QWORD *)&v12.fields.b = 0;
   if ( !sliderSprite )
     goto LABEL_14;
-  v6 = &StringLiteral_21534/*"img_slider_thumb"*/;
+  v6 = &StringLiteral_21575/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = &StringLiteral_21535/*"img_slider_thumb_locked"*/;
+    v6 = &StringLiteral_21576/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, (System_String_o *)*v6, 0);
-  v9 = ResetConfirmDialog_TypeInfo;
+  v8 = ResetConfirmDialog_TypeInfo;
   if ( !*(&ResetConfirmDialog_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ResetConfirmDialog_TypeInfo, v7, v8);
-    v9 = ResetConfirmDialog_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ResetConfirmDialog_TypeInfo, v7);
+    v8 = ResetConfirmDialog_TypeInfo;
   }
-  UnityEngine_ColorUtility__TryParseHtmlString(v9->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v11, 0);
+  UnityEngine_ColorUtility__TryParseHtmlString(v8->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v12, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   if ( !sliderSprite )
     goto LABEL_14;
   sliderSprite->klass->vtable._14_OnEnable.methodPtr();
+  v13.fields.a = 1.0;
+  v13.fields.b = 1.0;
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  *(_QWORD *)&v10.fields.r = __PAIR64__(1.0, 1.0);
-  *(_QWORD *)&v10.fields.b = __PAIR64__(1.0, 1.0);
+  v13.fields.g = 1.0;
+  v13.fields.r = 1.0;
   if ( !sliderOn )
-    v10 = v11;
+    v13 = v12;
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v10, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v13, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_14:
-    sub_21FFECC(sliderSprite, sliderOn);
+    sub_2213CDC(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
     sliderSprite,
@@ -483,7 +480,7 @@ void ResetConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -494,12 +491,12 @@ void ResetConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -511,9 +508,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFA144;
+  this->fields.invoke_impl = (intptr_t)sub_200D1B4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FFA0FC;
+  this->fields.extra_arg = (intptr_t)sub_200D16C;
 }
 
 
@@ -529,8 +526,8 @@ System_IAsyncResult_o *ResetConfirmDialog_ClickDelegate__BeginInvoke(
 
   v10[0] = isDecide;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -539,7 +536,7 @@ void ResetConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

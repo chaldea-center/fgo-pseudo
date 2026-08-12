@@ -12,26 +12,26 @@ WarBoardUserTreasureData_o *WarBoardUserTreasureData__FromJson(System_String_o *
   WarBoardUserTreasureData_o *result; // x0
   WarBoardUserTreasureData_c *klass; // x8
 
-  if ( (byte_593618A & 1) == 0 )
+  if ( (byte_596E2E4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_16616/*"[{0}]"*/);
-    byte_593618A = 1;
+    sub_2213A60(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&StringLiteral_16648/*"[{0}]"*/);
+    byte_596E2E4 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16616/*"[{0}]"*/, (Il2CppObject *)json, 0);
+  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16648/*"[{0}]"*/, (Il2CppObject *)json, 0);
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v3, v4);
   result = (WarBoardUserTreasureData_o *)JsonManager__DeserializeArray_object_(
                                            v5,
-                                           (const MethodInfo_38A056C *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
+                                           (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
   if ( result )
   {
     klass = result[1].klass;
     if ( klass )
     {
       if ( !(_DWORD)klass )
-        sub_21FFED4(result);
+        sub_2213CE4(result);
       return (WarBoardUserTreasureData_o *)result[1].monitor;
     }
     else
@@ -47,10 +47,10 @@ System_String_o *WarBoardUserTreasureData__ToJson(WarBoardUserTreasureData_o *th
 {
   __int64 v2; // x2
 
-  if ( (byte_5936189 & 1) == 0 )
+  if ( (byte_596E2E3 & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    byte_5936189 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    byte_596E2E3 = 1;
   }
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, method, v2);

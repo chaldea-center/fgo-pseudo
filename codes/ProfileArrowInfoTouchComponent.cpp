@@ -43,25 +43,25 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
   ConnectMark_o *connectMark; // x0
   System_Reflection_MethodBase_o *v20; // x0
 
-  if ( (byte_5932677 & 1) == 0 )
+  if ( (byte_596A884 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
-    byte_5932677 = 1;
+    sub_2213A60(&Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
+    byte_596A884 = 1;
   }
-  if ( !byte_593271E )
+  if ( !byte_596A92B )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_593271E = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_596A92B = 1;
   }
   x = this->fields.vec.fields.x;
   y = this->fields.vec.fields.y;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
   v7 = static_fields->upVector.fields.x;
   v8 = static_fields->upVector.fields.y;
-  if ( !byte_593271F )
+  if ( !byte_596A92C )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593271F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A92C = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method, v2);
@@ -86,8 +86,8 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
       if ( this->fields.vec.fields.x < 0.0 )
       {
         if ( (*((_BYTE *)Method_ProfileArrowInfoTouchComponent_OnDragEnd__ + 83) & 2) != 0 )
-          v16 = (_QWORD *)sub_21FFC68(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
-        v17 = (System_Reflection_MethodBase_o *)sub_21FFC34(v16, v16[4]);
+          v16 = (_QWORD *)sub_2213A78(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
+        v17 = (System_Reflection_MethodBase_o *)sub_2213A44(v16, v16[4]);
         OverwriteAssetSoundName__PlaySystemSe(v17, 7, 0, 0);
         connectMark = this->fields.connectMark;
         if ( connectMark )
@@ -96,11 +96,11 @@ void ProfileArrowInfoTouchComponent__OnDragEnd(ProfileArrowInfoTouchComponent_o 
           return;
         }
 LABEL_32:
-        sub_21FFECC(connectMark, v18);
+        sub_2213CDC(connectMark, v18);
       }
       if ( (*((_BYTE *)Method_ProfileArrowInfoTouchComponent_OnDragEnd__ + 83) & 2) != 0 )
-        v16 = (_QWORD *)sub_21FFC68(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
-      v20 = (System_Reflection_MethodBase_o *)sub_21FFC34(v16, v16[4]);
+        v16 = (_QWORD *)sub_2213A78(Method_ProfileArrowInfoTouchComponent_OnDragEnd__);
+      v20 = (System_Reflection_MethodBase_o *)sub_2213A44(v16, v16[4]);
       OverwriteAssetSoundName__PlaySystemSe(v20, 7, 0, 0);
       connectMark = this->fields.connectMark;
       if ( !connectMark )
@@ -113,10 +113,10 @@ LABEL_32:
 
 void ProfileArrowInfoTouchComponent__OnDragStart(ProfileArrowInfoTouchComponent_o *this, const MethodInfo *method)
 {
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   this->fields.vec = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
 }

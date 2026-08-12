@@ -25,11 +25,11 @@ void WebViewSpotComponent__DestroyWebView(WebViewSpotComponent_o *this, bool isW
   __int64 v20; // x2
   Il2CppObject *Instance; // x19
 
-  if ( (byte_5935A3A & 1) == 0 )
+  if ( (byte_596DB7C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
-    byte_5935A3A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    byte_596DB7C = 1;
   }
   spotWebWindow = this->fields.spotWebWindow;
   p_spotWebWindow = (MissionNaviTransitionBoardItem_o *)&this->fields.spotWebWindow;
@@ -45,23 +45,23 @@ void WebViewSpotComponent__DestroyWebView(WebViewSpotComponent_o *this, bool isW
     v12 = (UnityEngine_Object_o *)p_spotWebWindow->klass;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
-    UnityEngine_Object__Destroy_83246496(v12, 0);
+    UnityEngine_Object__Destroy_83459800(v12, 0);
     p_spotWebWindow->klass = 0;
-    sub_21FFBF4(p_spotWebWindow, 0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04(p_spotWebWindow, 0, v13, v14, v15, v16, v17, v18);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    klass = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    klass = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
     if ( klass )
     {
       WebViewManager__DestroyWebView((WebViewManager_o *)klass, 0);
       return;
     }
 LABEL_17:
-    sub_21FFECC(klass, v8);
+    sub_2213CDC(klass, v8);
   }
 }
 
@@ -74,10 +74,10 @@ void WebViewSpotComponent__EndSpotWebViewClose(WebViewSpotComponent_o *this, con
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Transform_o *v7; // x20
 
-  if ( (byte_5935A39 & 1) == 0 )
+  if ( (byte_596DB7B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935A39 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596DB7B = 1;
   }
   spotWebWindow = (UnityEngine_Object_o *)this->fields.spotWebWindow;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -89,10 +89,10 @@ void WebViewSpotComponent__EndSpotWebViewClose(WebViewSpotComponent_o *this, con
       goto LABEL_14;
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
     v7 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v7
       || (UnityEngine_Transform__set_localScale(v7, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0),
@@ -100,7 +100,7 @@ void WebViewSpotComponent__EndSpotWebViewClose(WebViewSpotComponent_o *this, con
       || (transform = UnityEngine_GameObject__get_gameObject(transform, 0)) == 0 )
     {
 LABEL_14:
-      sub_21FFECC(transform, v5);
+      sub_2213CDC(transform, v5);
     }
     UnityEngine_GameObject__SetActive(transform, 0, 0);
   }
@@ -127,34 +127,34 @@ void WebViewSpotComponent__OnClickSpotWebViewClose(
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
-  const MethodInfo_476E8C0 *v20; // x0
+  const MethodInfo_47A29F8 *v20; // x0
   Il2CppObject *Instance; // x0
   UnityEngine_GameObject_o *spotWebWindow; // x19
   WebViewManager_o *v23; // x20
   System_Action_o *v24; // x22
 
-  if ( (byte_5935A38 & 1) == 0 )
+  if ( (byte_596DB7A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
-    sub_21FFC50(&Method_WebViewSpotComponent___c__DisplayClass12_0__OnClickSpotWebViewClose_b__0__);
-    sub_21FFC50(&WebViewSpotComponent___c__DisplayClass12_0_TypeInfo);
-    byte_5935A38 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    sub_2213A60(&Method_WebViewSpotComponent___c__DisplayClass12_0__OnClickSpotWebViewClose_b__0__);
+    sub_2213A60(&WebViewSpotComponent___c__DisplayClass12_0_TypeInfo);
+    byte_596DB7A = 1;
   }
-  v5 = sub_21FFEBC(WebViewSpotComponent___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_2213CCC(WebViewSpotComponent___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_6;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callBack;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callBack, v14, v15, v16, v17, v18, v19);
-  v20 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callBack, v14, v15, v16, v17, v18, v19);
+  v20 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__;
   this->fields.isClosing = 1;
   Instance = SingletonMonoBehaviour_object___get_Instance(v20);
   spotWebWindow = this->fields.spotWebWindow;
   v23 = (WebViewManager_o *)Instance;
-  v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v24,
     (Il2CppObject *)v5,
@@ -162,7 +162,7 @@ void WebViewSpotComponent__OnClickSpotWebViewClose(
     0);
   if ( !v23 )
 LABEL_6:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   WebViewManager__SmallOut(v23, spotWebWindow, v24, 0);
 }
 
@@ -219,24 +219,24 @@ void WebViewSpotComponent__OpenView(
   z = viewPos.fields.z;
   y = viewPos.fields.y;
   x = viewPos.fields.x;
-  if ( (byte_5935A36 & 1) == 0 )
+  if ( (byte_596DB78 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_WebViewSpotComponent___c__DisplayClass10_0__OpenView_b__0__);
-    sub_21FFC50(&WebViewSpotComponent___c__DisplayClass10_0_TypeInfo);
-    sub_21FFC50(&WebViewManager_TypeInfo);
-    byte_5935A36 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_WebViewSpotComponent___c__DisplayClass10_0__OpenView_b__0__);
+    sub_2213A60(&WebViewSpotComponent___c__DisplayClass10_0_TypeInfo);
+    sub_2213A60(&WebViewManager_TypeInfo);
+    byte_596DB78 = 1;
   }
-  v17 = sub_21FFEBC(WebViewSpotComponent___c__DisplayClass10_0_TypeInfo);
+  v17 = sub_2213CCC(WebViewSpotComponent___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
     goto LABEL_18;
   *(_QWORD *)(v17 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v17 + 24) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)callback, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)callback, v26, v27, v28, v29, v30, v31);
   p_spotWebWindow = &this->fields.spotWebWindow;
   spotWebWindow = (UnityEngine_Object_o *)this->fields.spotWebWindow;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -245,12 +245,12 @@ void WebViewSpotComponent__OpenView(
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36, v37);
-    v38 = UnityEngine_Object__Instantiate_object__59506996(
+    v38 = UnityEngine_Object__Instantiate_object__59717116(
             (Il2CppObject *)prefab,
             parent,
-            (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+            (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
     *p_spotWebWindow = (UnityEngine_GameObject_o *)v38;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.spotWebWindow,
       (int32_t)v38,
       v39,
@@ -272,21 +272,21 @@ void WebViewSpotComponent__OpenView(
   this->fields.isOpening = 1;
   if ( !v18 )
 LABEL_18:
-    sub_21FFECC(v18, v19);
+    sub_2213CDC(v18, v19);
   UnityEngine_GameObject__SetActive(v18, 1, 0);
   v50.fields.x = x;
   v50.fields.y = y;
   v50.fields.z = z;
   GameObjectExtensions__SetLocalPosition(*p_spotWebWindow, v50, 0);
   v46 = *p_spotWebWindow;
-  v47 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v47 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v47, (Il2CppObject *)v17, Method_WebViewSpotComponent___c__DisplayClass10_0__OpenView_b__0__, 0);
   if ( !*(&WebViewManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo, v48, v49);
   v51.fields.y = y;
   v51.fields.z = z;
   v51.fields.x = x;
-  WebViewManager__OpenView_48481972(v46, path, v51, v47, isLoadedNonDisp, 0);
+  WebViewManager__OpenView_48535136(v46, path, v51, v47, isLoadedNonDisp, 0);
 }
 
 
@@ -320,29 +320,29 @@ void WebViewSpotComponent__SetVisibilityWebView(
   UnityEngine_GameObject_o *v28; // x20
   System_Action_o *v29; // x19
 
-  if ( (byte_5935A37 & 1) == 0 )
+  if ( (byte_596DB79 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
-    sub_21FFC50(&Method_WebViewSpotComponent___c__DisplayClass11_0__SetVisibilityWebView_b__0__);
-    sub_21FFC50(&WebViewSpotComponent___c__DisplayClass11_0_TypeInfo);
-    byte_5935A37 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    sub_2213A60(&Method_WebViewSpotComponent___c__DisplayClass11_0__SetVisibilityWebView_b__0__);
+    sub_2213A60(&WebViewSpotComponent___c__DisplayClass11_0_TypeInfo);
+    byte_596DB79 = 1;
   }
-  v7 = sub_21FFEBC(WebViewSpotComponent___c__DisplayClass11_0_TypeInfo);
+  v7 = sub_2213CCC(WebViewSpotComponent___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_17;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callBack;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callBack, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callBack, v16, v17, v18, v19, v20, v21);
   spotWebWindow = (UnityEngine_Object_o *)this->fields.spotWebWindow;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
   if ( !UnityEngine_Object__op_Equality(spotWebWindow, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WebViewManager__get_Instance__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25, v26);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -351,7 +351,7 @@ void WebViewSpotComponent__SetVisibilityWebView(
       {
         v28 = this->fields.spotWebWindow;
         this->fields.isOpening = 1;
-        v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
           v29,
           (Il2CppObject *)v7,
@@ -363,7 +363,7 @@ void WebViewSpotComponent__SetVisibilityWebView(
           return;
         }
 LABEL_17:
-        sub_21FFECC(v8, v9);
+        sub_2213CDC(v8, v9);
       }
       v8 = this->fields.spotWebWindow;
       *(_WORD *)&this->fields.isOpening = 0;
@@ -393,17 +393,11 @@ bool WebViewSpotComponent__get_IsOpening(WebViewSpotComponent_o *this, const Met
 
 UnityEngine_Vector3_o WebViewSpotComponent__get_ViewPosition(WebViewSpotComponent_o *this, const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  x = this->fields.viewPosition.fields.x;
-  y = this->fields.viewPosition.fields.y;
-  z = this->fields.viewPosition.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.viewPosition.fields.x;
+  result.fields.y = this->fields.viewPosition.fields.y;
+  result.fields.z = this->fields.viewPosition.fields.z;
   return result;
 }
 
@@ -425,7 +419,7 @@ void WebViewSpotComponent___c__DisplayClass10_0___OpenView_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = this->fields.callback;
   _4__this->fields.isOpening = 0;
   ActionExtensions__Call(callback, 0);
@@ -452,16 +446,16 @@ void WebViewSpotComponent___c__DisplayClass11_0___SetVisibilityWebView_b__0(
   if ( !_4__this )
     goto LABEL_6;
   spotWebWindow = _4__this->fields.spotWebWindow;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   GameObjectExtensions__SetLocalScale(spotWebWindow, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   v5 = this->fields.__4__this;
   if ( !v5 )
 LABEL_6:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   *(_WORD *)&v5->fields.isOpening = 0;
   ActionExtensions__Call(this->fields.callBack, 0);
 }
@@ -488,7 +482,7 @@ void WebViewSpotComponent___c__DisplayClass12_0___OnClickSpotWebViewClose_b__0(
         WebViewSpotComponent__EndSpotWebViewClose(_4__this, method),
         (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_21FFECC(_4__this, method);
+    sub_2213CDC(_4__this, method);
   }
   WebViewSpotComponent__DestroyWebView(_4__this, 1, v4);
   ActionExtensions__Call(this->fields.callBack, 0);

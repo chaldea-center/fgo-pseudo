@@ -12,7 +12,7 @@ void SkillValueUpApplierPlayerMaster___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)data, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)data, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -62,14 +62,14 @@ void SkillValueUpApplierPlayerMaster__ApplyTo(
   __int64 v42; // [xsp+18h] [xbp-28h]
 
   v4 = this;
-  if ( (byte_593B6C8 & 1) == 0 )
+  if ( (byte_59738C8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_ExcludeNull_DataVals___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo);
-    this = (SkillValueUpApplierPlayerMaster_o *)sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_593B6C8 = 1;
+    sub_2213A60(&Method_BasicHelper_ExcludeNull_DataVals___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_DataVals__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_DataVals__TypeInfo);
+    this = (SkillValueUpApplierPlayerMaster_o *)sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59738C8 = 1;
   }
   if ( !funcUnit )
     goto LABEL_42;
@@ -86,16 +86,16 @@ void SkillValueUpApplierPlayerMaster__ApplyTo(
          v4->klass->vtable._6_CreateFuncParamValueUpInfo.method);
   dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField = (struct FuncParamValueUpInfoBase_o *)v6;
   p_FuncParamValueUpInfo_k__BackingField = (MissionNaviTransitionBoardItem_o *)&dataVals_k__BackingField->fields._FuncParamValueUpInfo_k__BackingField;
-  sub_21FFBF4(p_FuncParamValueUpInfo_k__BackingField, v6, v8, v9, v10, v11, v12, v13);
+  sub_2213A04(p_FuncParamValueUpInfo_k__BackingField, v6, v8, v9, v10, v11, v12, v13);
   ClosedMessage_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)p_FuncParamValueUpInfo_k__BackingField[-1].fields._ClosedMessage_k__BackingField;
   if ( !ClosedMessage_k__BackingField )
     return;
   this = (SkillValueUpApplierPlayerMaster_o *)BasicHelper__ExcludeNull_object_(
                                                 ClosedMessage_k__BackingField,
-                                                (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_DataVals___);
+                                                (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_DataVals___);
   if ( !this )
 LABEL_42:
-    sub_21FFECC(this, funcUnit);
+    sub_2213CDC(this, funcUnit);
   klass = this->klass;
   v16 = this;
   v17 = *(unsigned __int16 *)&this->klass->_2.rank;
@@ -114,14 +114,14 @@ LABEL_42:
   else
   {
 LABEL_13:
-    v19 = sub_2237E2C(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0);
+    v19 = sub_224BC3C(this, System_Collections_Generic_IEnumerable_DataVals__TypeInfo, 0);
   }
   v20 = (*(__int64 (__fastcall **)(SkillValueUpApplierPlayerMaster_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   v42 = v20;
   while ( 1 )
   {
     if ( !v42 )
-      sub_21FFECC(v20, v21);
+      sub_2213CDC(v20, v21);
     v22 = *(_QWORD *)v42;
     v23 = *(unsigned __int16 *)(*(_QWORD *)v42 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v42 + 302LL) )
@@ -139,7 +139,7 @@ LABEL_13:
     else
     {
 LABEL_21:
-      v25 = sub_2237E2C(v42, System_Collections_IEnumerator_TypeInfo, 0);
+      v25 = sub_224BC3C(v42, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v25)(v42, *(_QWORD *)(v25 + 8)) & 1) == 0 )
       break;
@@ -160,7 +160,7 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v29 = sub_2237E2C(v42, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0);
+      v29 = sub_224BC3C(v42, System_Collections_Generic_IEnumerator_DataVals__TypeInfo, 0);
     }
     v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v42, *(_QWORD *)(v29 + 8));
     v31 = ((__int64 (__fastcall *)(SkillValueUpApplierPlayerMaster_o *, __int64, const MethodInfo *))v4->klass->vtable._6_CreateFuncParamValueUpInfo.methodPtr)(
@@ -168,9 +168,9 @@ LABEL_28:
             v30,
             v4->klass->vtable._6_CreateFuncParamValueUpInfo.method);
     if ( !v30 )
-      sub_21FFECC(v31, v31);
+      sub_2213CDC(v31, v31);
     *(_QWORD *)(v30 + 104) = v31;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 104), v31, v32, v33, v34, v35, v36, v37);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 104), v31, v32, v33, v34, v35, v36, v37);
   }
   v38 = *(_QWORD *)v42;
   v39 = *(unsigned __int16 *)(*(_QWORD *)v42 + 302LL);
@@ -189,7 +189,7 @@ LABEL_28:
   else
   {
 LABEL_36:
-    v41 = sub_2237E2C(v42, System_IDisposable_TypeInfo, 0);
+    v41 = sub_224BC3C(v42, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v41)(v42, *(_QWORD *)(v41 + 8));
 }
@@ -224,16 +224,16 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
   BattleBuffData_CheckIndividualitiesData_o *v25; // x23
   BattleBuffData_ActValueRequest_o *v26; // x22
 
-  if ( (byte_593B6CA & 1) == 0 )
+  if ( (byte_59738CA & 1) == 0 )
   {
-    sub_21FFC50(&BattleBuffData_ActValueRequest_TypeInfo);
-    sub_21FFC50(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_21FFC50(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_21FFC50(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__);
-    sub_21FFC50(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
-    byte_593B6CA = 1;
+    sub_2213A60(&BattleBuffData_ActValueRequest_TypeInfo);
+    sub_2213A60(&BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_2213A60(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_2213A60(&Method_SkillValueUpApplierPlayerMaster___c__CalcSkillValueUpRate_b__5_0__);
+    sub_2213A60(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_59738CA = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -256,7 +256,7 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
       static_fields = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
     }
     v10 = (Il2CppObject *)static_fields->__9;
-    _9__5_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BattleServantData__bool__TypeInfo);
+    _9__5_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__5_0,
       v10,
@@ -264,21 +264,21 @@ int32_t SkillValueUpApplierPlayerMaster__CalcSkillValueUpRate(
       0);
     v11 = SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields;
     v11->__9__5_0 = (struct System_Func_BattleServantData__bool__o *)_9__5_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->__9__5_0, (int32_t)_9__5_0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->__9__5_0, (int32_t)_9__5_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = System_Linq_Enumerable__Where_object_(
           v7,
           (System_Func_TSource__bool__o *)_9__5_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   data = (BattleData_o *)System_Linq_Enumerable__ToArray_object_(
                            v18,
-                           (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                           (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
   v19 = this->fields.data;
   if ( !v19
     || (v20 = data, BattleData__SetUseOnlyHighestValueBuffInGroup(v19, 113, (BattleServantData_array *)data, 0, 0), !v20) )
   {
 LABEL_24:
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   m_CancellationTokenSource = (int)v20->fields.m_CancellationTokenSource;
   if ( m_CancellationTokenSource < 1 )
@@ -288,11 +288,11 @@ LABEL_24:
   do
   {
     if ( v22 >= (unsigned int)m_CancellationTokenSource )
-      sub_21FFED4(data);
+      sub_2213CE4(data);
     v24 = (BattleServantData_o *)*((_QWORD *)&v20->fields.rootfsm + v22);
-    v25 = (BattleBuffData_CheckIndividualitiesData_o *)sub_21FFEBC(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    BattleBuffData_CheckIndividualitiesData___ctor_52746792(v25, v24, 0, 0, 0, 0, 0, 1, 0);
-    v26 = (BattleBuffData_ActValueRequest_o *)sub_21FFEBC(BattleBuffData_ActValueRequest_TypeInfo);
+    v25 = (BattleBuffData_CheckIndividualitiesData_o *)sub_2213CCC(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor_52826232(v25, v24, 0, 0, 0, 0, 0, 1, 0);
+    v26 = (BattleBuffData_ActValueRequest_o *)sub_2213CCC(BattleBuffData_ActValueRequest_TypeInfo);
     BattleBuffData_ActValueRequest___ctor(v26, 113, v25, 0, 0);
     if ( !v24 )
       goto LABEL_24;
@@ -322,10 +322,10 @@ FuncParamValueUpInfoBase_o *SkillValueUpApplierPlayerMaster__CreateFuncParamValu
 {
   int32_t valueUpRate; // w20
 
-  if ( (byte_593B6C9 & 1) == 0 )
+  if ( (byte_59738C9 & 1) == 0 )
   {
-    sub_21FFC50(&FuncParamValueUpInfoDefault_TypeInfo);
-    byte_593B6C9 = 1;
+    sub_2213A60(&FuncParamValueUpInfoDefault_TypeInfo);
+    byte_59738C9 = 1;
   }
   valueUpRate = this->fields.valueUpRate;
   if ( !*(&FuncParamValueUpInfoDefault_TypeInfo->_2.cctor_finished + 1) )
@@ -352,15 +352,15 @@ void SkillValueUpApplierPlayerMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593B6CB & 1) == 0 )
+  if ( (byte_59738CB & 1) == 0 )
   {
-    sub_21FFC50(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
-    byte_593B6CB = 1;
+    sub_2213A60(&SkillValueUpApplierPlayerMaster___c_TypeInfo);
+    byte_59738CB = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(SkillValueUpApplierPlayerMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(SkillValueUpApplierPlayerMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields->__9 = (struct SkillValueUpApplierPlayerMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SkillValueUpApplierPlayerMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

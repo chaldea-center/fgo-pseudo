@@ -21,16 +21,16 @@ System_Collections_IEnumerator_o *WarBoardChangeWinConditionTask__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936231 & 1) == 0 )
+  if ( (byte_596E38B & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
-    byte_5936231 = 1;
+    sub_2213A60(&WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
+    byte_596E38B = 1;
   }
-  v3 = sub_21FFEBC(WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
+  v3 = sub_2213CCC(WarBoardChangeWinConditionTask__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -53,28 +53,28 @@ bool WarBoardChangeWinConditionTask__Execute_d__2__MoveNext(
   WarBoardManager_o *Instance; // x0
   __int64 v5; // x1
   struct WarBoardData_o *warBoardData_k__BackingField; // x8
-  const MethodInfo_476E8C0 *v7; // x0
+  const MethodInfo_47A29F8 *v7; // x0
 
-  if ( (byte_5936232 & 1) == 0 )
+  if ( (byte_596E38C & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_5936232 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E38C = 1;
   }
   if ( !this->fields.__1__state )
   {
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
-    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !Instance
       || !_4__this
       || (warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField) == 0
-      || (v7 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__,
+      || (v7 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__,
           warBoardData_k__BackingField->fields.winCondId = *(_DWORD *)(&_4__this->fields._isPause_k__BackingField + 3),
           (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance(v7)) == 0)
       || (WarBoardManager__UpdateRuleButton(Instance, 0),
-          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
+          (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0) )
     {
-      sub_21FFECC(Instance, v5);
+      sub_2213CDC(Instance, v5);
     }
     WarBoardManager__JudgmentGameSet(Instance, 0);
   }
@@ -98,11 +98,11 @@ void __noreturn WarBoardChangeWinConditionTask__Execute_d__2__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardChangeWinConditionTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardChangeWinConditionTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

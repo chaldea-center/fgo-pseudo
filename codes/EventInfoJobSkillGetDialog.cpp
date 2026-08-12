@@ -16,16 +16,16 @@ void EventInfoJobSkillGetDialog___cctor(const MethodInfo *method)
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59386CE & 1) == 0 )
+  if ( (byte_5970A29 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobSkillGetDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_5850/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_59386CE = 1;
+    sub_2213A60(&EventInfoJobSkillGetDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_5862/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_5970A29 = 1;
   }
-  v7 = StringLiteral_5850/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/;
-  EventInfoJobSkillGetDialog_TypeInfo->static_fields->ClearQuestDescKey = (struct System_String_o *)StringLiteral_5850/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_5862/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/;
+  EventInfoJobSkillGetDialog_TypeInfo->static_fields->ClearQuestDescKey = (struct System_String_o *)StringLiteral_5862/*"EVENT_JOB_SKILL_GET_DIALOG_CLEAR_QUEST_DESC_FORMAT"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoJobSkillGetDialog_TypeInfo->static_fields,
     v7,
     v1,
@@ -34,10 +34,10 @@ void EventInfoJobSkillGetDialog___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/;
+  v8 = StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/;
   static_fields = EventInfoJobSkillGetDialog_TypeInfo->static_fields;
-  static_fields->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/;
-  sub_21FFBF4(
+  static_fields->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->CloseButtonLocalizationKey,
     v8,
     v10,
@@ -51,10 +51,10 @@ void EventInfoJobSkillGetDialog___cctor(const MethodInfo *method)
 
 void EventInfoJobSkillGetDialog___ctor(EventInfoJobSkillGetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_59386CD & 1) == 0 )
+  if ( (byte_5970A28 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59386CD = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5970A28 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -74,20 +74,20 @@ void EventInfoJobSkillGetDialog__Init(EventInfoJobSkillGetDialog_o *this, const 
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_59386CA & 1) == 0 )
+  if ( (byte_5970A25 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_59386CA = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_5970A25 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.basePanel,
     (int32_t)Component_object,
     v6,
@@ -104,17 +104,17 @@ void EventInfoJobSkillGetDialog__OnClickClose(EventInfoJobSkillGetDialog_o *this
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_59386CC & 1) == 0 )
+  if ( (byte_5970A27 & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoJobSkillGetDialog_OnClickClose__);
-    byte_59386CC = 1;
+    sub_2213A60(&Method_EventInfoJobSkillGetDialog_OnClickClose__);
+    byte_5970A27 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoJobSkillGetDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_EventInfoJobSkillGetDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoJobSkillGetDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoJobSkillGetDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, this->fields.closeAction, 0);
   }
@@ -144,12 +144,12 @@ void EventInfoJobSkillGetDialog__Open(
   bool v22; // w6
   bool v23; // w7
 
-  if ( (byte_59386CB & 1) == 0 )
+  if ( (byte_5970A26 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&EventInfoJobSkillGetDialog_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_59386CB = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&EventInfoJobSkillGetDialog_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5970A26 = 1;
   }
   v9 = EventInfoJobSkillGetDialog_TypeInfo;
   clearQuestDescLabel = this->fields.clearQuestDescLabel;
@@ -176,7 +176,7 @@ void EventInfoJobSkillGetDialog__Open(
   if ( !skillNameLabel
     || (UILabel__set_text((UILabel_o *)skillNameLabel, skillEntity->fields.name, 0), !skillLvEntity)
     || (skillDescLabel = this->fields.skillDescLabel,
-        skillNameLabel = SkillLvEntity__getDetail_49837896(skillLvEntity, skillLvEntity->fields.lv, 0, 0),
+        skillNameLabel = SkillLvEntity__getDetail_49901180(skillLvEntity, skillLvEntity->fields.lv, 0, 0),
         !skillDescLabel)
     || (UILabel__set_text(skillDescLabel, skillNameLabel, 0),
         closeButtonLabel = this->fields.closeButtonLabel,
@@ -186,11 +186,11 @@ void EventInfoJobSkillGetDialog__Open(
         !closeButtonLabel) )
   {
 LABEL_16:
-    sub_21FFECC(skillNameLabel, v13);
+    sub_2213CDC(skillNameLabel, v13);
   }
   UILabel__set_text(closeButtonLabel, skillNameLabel, 0);
   this->fields.closeAction = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)callback,
     v18,
@@ -211,10 +211,10 @@ UnityEngine_GameObject_o *EventInfoJobSkillGetDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_59386C9 & 1) == 0 )
+  if ( (byte_5970A24 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386C9 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A24 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -223,6 +223,6 @@ UnityEngine_GameObject_o *EventInfoJobSkillGetDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

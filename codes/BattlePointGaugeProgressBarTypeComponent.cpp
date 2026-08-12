@@ -2,8 +2,16 @@ void BattlePointGaugeProgressBarTypeComponent___ctor(
         BattlePointGaugeProgressBarTypeComponent_o *this,
         const MethodInfo *method)
 {
-  this->fields.lastUpPhaseInTween = -1;
-  *(_QWORD *)&this->fields.lastStepUpEffectIdInTween = -1;
+  if ( (byte_5974163 & 1) == 0 )
+  {
+    sub_2213A60(&BattlePointGaugeComponent_TypeInfo);
+    byte_5974163 = 1;
+  }
+  if ( !*(&BattlePointGaugeComponent_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(BattlePointGaugeComponent_TypeInfo, method);
+  this->fields.lastStepUpEffectIdInTween = -1;
+  *(_QWORD *)&this->fields.currentMaxValueCache = 0x8000000080000000LL;
+  *(_QWORD *)&this->fields.firstPhaseInTween = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -25,7 +33,7 @@ void BattlePointGaugeProgressBarTypeComponent__UpdateProgressGauge(
                              method),
         !barFrontProgressBar) )
   {
-    sub_21FFECC(this, entity);
+    sub_2213CDC(this, entity);
   }
   UIProgressBar__set_value(barFrontProgressBar, BarProgressValue, 0);
 }
@@ -39,6 +47,6 @@ void BattlePointGaugeProgressBarTypeComponent__ValidateSerializedField(
 
   setting = this->fields.setting;
   if ( !setting )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   BattlePointGaugeSetting__ValidateSerializedField(setting, method);
 }

@@ -1,14 +1,14 @@
 void EventEquipSkillReleaseMaster___ctor(EventEquipSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938610 & 1) == 0 )
+  if ( (byte_59707C3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
-    byte_5938610 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
+    byte_59707C3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     275,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ EventEquipSkillReleaseEntity_o *EventEquipSkillReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_593860E & 1) == 0 )
+  if ( (byte_59707C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
-    byte_593860E = 1;
+    sub_2213A60(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
+    byte_59707C1 = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -37,7 +37,7 @@ EventEquipSkillReleaseEntity_o *EventEquipSkillReleaseMaster__GetEntity(
   return (EventEquipSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
+                                             (const MethodInfo_3F157EC *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ bool EventEquipSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_593860F & 1) == 0 )
+  if ( (byte_59707C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
-    byte_593860F = 1;
+    sub_2213A60(&Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
+    byte_59707C2 = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -68,7 +68,7 @@ bool EventEquipSkillReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -113,16 +113,16 @@ bool EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEntity(
   __int64 v39; // x0
   System_Collections_Generic_IEnumerator_T__o *v41; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_5938611 & 1) == 0 )
+  if ( (byte_59707C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_5938611 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59707C4 = 1;
   }
   *outEnt = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)outEnt,
     0,
     (System_String_o *)outEnt,
@@ -133,13 +133,13 @@ bool EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEntity(
     v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, v11);
+    sub_2213CDC(0, v11);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
   v41 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v14);
+    sub_2213CDC(Enumerator, v14);
   v15 = Enumerator;
   priority = -1;
   while ( 1 )
@@ -161,7 +161,7 @@ bool EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEntity(
     else
     {
 LABEL_10:
-      v20 = sub_2237E2C(v15, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_224BC3C(v15, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             v15,
@@ -169,7 +169,7 @@ LABEL_10:
     if ( (v21 & 1) == 0 )
       break;
     if ( !v41 )
-      sub_21FFECC(v21, v22);
+      sub_2213CDC(v21, v22);
     v23 = v41->klass;
     v24 = *(unsigned __int16 *)&v41->klass->_2.rank;
     if ( *(_WORD *)&v41->klass->_2.rank )
@@ -187,20 +187,20 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v26 = sub_2237E2C(v41, System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, 0);
+      v26 = sub_224BC3C(v41, System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, 0);
     }
     v27 = (EventEquipSkillReleaseEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
                                               v41,
                                               *(_QWORD *)(v26 + 8));
     v29 = v27;
     if ( !v27 )
-      sub_21FFECC(0, v28);
+      sub_2213CDC(0, v28);
     if ( v27->fields.eventId == eventId
       && EventEquipSkillReleaseEntity__isOpen(v27, v28)
       && priority < v29->fields.priority )
     {
       *outEnt = v29;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)outEnt, (int32_t)v29, v30, v31, v32, v33, v34, v35);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)outEnt, (int32_t)v29, v30, v31, v32, v33, v34, v35);
       v15 = v41;
       priority = v29->fields.priority;
     }
@@ -228,7 +228,7 @@ LABEL_18:
     else
     {
 LABEL_35:
-      v39 = sub_2237E2C(v41, System_IDisposable_TypeInfo, 0);
+      v39 = sub_224BC3C(v41, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(v41, *(_QWORD *)(v39 + 8));
   }

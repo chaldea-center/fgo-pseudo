@@ -12,20 +12,20 @@ void CommandCodeAttachRequest__beginRequest(
         int64_t attachedUserCommandCodeId,
         const MethodInfo *method)
 {
-  if ( (byte_593A1C3 & 1) == 0 )
+  if ( (byte_59723A0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25091/*"svtId"*/);
-    sub_21FFC50(&StringLiteral_25810/*"userCommandCodeId"*/);
-    sub_21FFC50(&StringLiteral_21205/*"idx"*/);
-    sub_21FFC50(&StringLiteral_17607/*"attachedUserCommandCodeId"*/);
-    byte_593A1C3 = 1;
+    sub_2213A60(&StringLiteral_25139/*"svtId"*/);
+    sub_2213A60(&StringLiteral_25858/*"userCommandCodeId"*/);
+    sub_2213A60(&StringLiteral_21246/*"idx"*/);
+    sub_2213A60(&StringLiteral_17644/*"attachedUserCommandCodeId"*/);
+    byte_59723A0 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25091/*"svtId"*/, servantId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21205/*"idx"*/, idx, 0);
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_25810/*"userCommandCodeId"*/, userCommandCodeId, 0);
-  RequestBase__addField_51200900(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25139/*"svtId"*/, servantId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21246/*"idx"*/, idx, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_25858/*"userCommandCodeId"*/, userCommandCodeId, 0);
+  RequestBase__addField_51256716(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17607/*"attachedUserCommandCodeId"*/,
+    (System_String_o *)StringLiteral_17644/*"attachedUserCommandCodeId"*/,
     attachedUserCommandCodeId,
     0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
@@ -36,16 +36,16 @@ System_String_o *CommandCodeAttachRequest__getURL(CommandCodeAttachRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A1C2 & 1) == 0 )
+  if ( (byte_597239F & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18924/*"commandCode/attach"*/);
-    byte_593A1C2 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18962/*"commandCode/attach"*/);
+    byte_597239F = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18924/*"commandCode/attach"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_18962/*"commandCode/attach"*/, 0);
 }
 
 
@@ -60,17 +60,17 @@ void CommandCodeAttachRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_593A1C4 & 1) == 0 )
+  if ( (byte_59723A1 & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A1C4 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_59723A1 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(77, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_51257228(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
@@ -79,7 +79,7 @@ void CommandCodeAttachRequest__requestCompleted(
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_23290/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_23336/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

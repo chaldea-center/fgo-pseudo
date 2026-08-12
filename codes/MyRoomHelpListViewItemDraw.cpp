@@ -24,23 +24,19 @@ void MyRoomHelpListViewItemDraw__SetItem(
   int klass; // w8
   float x; // s8
   float z; // s9
-  float v20; // s1 OVERLAPPED
-  float v21; // s0
-  float v22; // s2
-  float y; // s8
-  float v24; // s9
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v21; // 0:kr14_12.12
+  UnityEngine_Vector3_o v22; // 0:kr20_12.12
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5933C26 & 1) == 0 )
+  if ( (byte_596BD3F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_21406/*"img_menuboard_01"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_21561/*"img_tutorial_txtbg"*/);
-    byte_5933C26 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_21447/*"img_menuboard_01"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_21602/*"img_tutorial_txtbg"*/);
+    byte_596BD3F = 1;
   }
   if ( item )
   {
@@ -70,7 +66,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_42;
-        imageName = (System_String_o *)StringLiteral_21406/*"img_menuboard_01"*/;
+        imageName = (System_String_o *)StringLiteral_21447/*"img_menuboard_01"*/;
         v13 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
@@ -121,7 +117,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
                   gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                   if ( !gameObject )
                     goto LABEL_42;
-                  v20 = -12.0;
+                  v23.fields.y = -12.0;
                 }
                 else
                 {
@@ -134,46 +130,41 @@ void MyRoomHelpListViewItemDraw__SetItem(
                   gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                   if ( !gameObject )
                     goto LABEL_42;
-                  v26 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+                  v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
                   gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                   if ( !gameObject )
                     goto LABEL_42;
-                  x = v26.fields.x;
-                  z = v26.fields.z;
+                  x = v21.fields.x;
+                  z = v21.fields.z;
                   gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                   if ( !gameObject )
                     goto LABEL_42;
-                  v20 = -18.0;
+                  v23.fields.y = -18.0;
                 }
-                v21 = x;
-                v22 = z;
-                UnityEngine_Transform__set_localPosition(
-                  (UnityEngine_Transform_o *)gameObject,
-                  *(UnityEngine_Vector3_o *)(&v20 - 1),
-                  0);
+                v23.fields.x = x;
+                v23.fields.z = z;
+                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v23, 0);
                 gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
                 if ( gameObject )
                 {
-                  UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_21561/*"img_tutorial_txtbg"*/, 0);
+                  UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_21602/*"img_tutorial_txtbg"*/, 0);
                   gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                   if ( gameObject )
                   {
                     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                     if ( gameObject )
                     {
-                      v27 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+                      v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
                       gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                       if ( gameObject )
                       {
-                        y = v27.fields.y;
-                        v24 = v27.fields.z;
                         gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0);
                         if ( gameObject )
                         {
-                          v28.fields.x = 284.0;
-                          v28.fields.y = y;
-                          v28.fields.z = v24;
-                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v28, 0);
+                          v24.fields.x = 284.0;
+                          v24.fields.y = v22.fields.y;
+                          v24.fields.z = v22.fields.z;
+                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v24, 0);
                           return;
                         }
                       }
@@ -186,7 +177,7 @@ void MyRoomHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_42:
-      sub_21FFECC(gameObject, v9);
+      sub_2213CDC(gameObject, v9);
     }
   }
 }

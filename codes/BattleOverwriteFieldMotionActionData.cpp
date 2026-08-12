@@ -12,7 +12,7 @@ void BattleOverwriteFieldMotionActionData___ctor(
 
   ExecInActionData___ctor((ExecInActionData_o *)this, (const MethodInfo *)motionIds);
   this->fields.overwriteMotionIds = motionIds;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteMotionIds,
     (int32_t)motionIds,
     v5,
@@ -30,6 +30,6 @@ void BattleOverwriteFieldMotionActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   BattlePerformance__SetOverwriteFieldMotion(perf, this->fields.overwriteMotionIds, 1, 0);
 }

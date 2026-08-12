@@ -9,17 +9,17 @@ void UIPlaySystemSe__OnClick(UIPlaySystemSe_o *this, const MethodInfo *method)
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_5939FF3 & 1) == 0 )
+  if ( (byte_59721C7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UIPlaySystemSe_OnClick__);
-    byte_5939FF3 = 1;
+    sub_2213A60(&Method_UIPlaySystemSe_OnClick__);
+    byte_59721C7 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.trigger )
   {
     v3 = Method_UIPlaySystemSe_OnClick__;
     if ( (*((_BYTE *)Method_UIPlaySystemSe_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_UIPlaySystemSe_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_UIPlaySystemSe_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.kind, 0, 0);
   }
 }
@@ -31,10 +31,10 @@ void UIPlaySystemSe__OnHover(UIPlaySystemSe_o *this, bool isOver, const MethodIn
   _QWORD *v6; // x0
   System_Reflection_MethodBase_o *v7; // x0
 
-  if ( (byte_5939FF1 & 1) == 0 )
+  if ( (byte_59721C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UIPlaySystemSe_OnHover__);
-    byte_5939FF1 = 1;
+    sub_2213A60(&Method_UIPlaySystemSe_OnHover__);
+    byte_59721C5 = 1;
   }
   if ( this->fields.trigger == 1 )
   {
@@ -56,8 +56,8 @@ void UIPlaySystemSe__OnHover(UIPlaySystemSe_o *this, bool isOver, const MethodIn
     }
     v6 = Method_UIPlaySystemSe_OnHover__;
     if ( (*((_BYTE *)Method_UIPlaySystemSe_OnHover__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_21FFC68(Method_UIPlaySystemSe_OnHover__);
-    v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+      v6 = (_QWORD *)sub_2213A78(Method_UIPlaySystemSe_OnHover__);
+    v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, this->fields.kind, 0, 0);
   }
 }
@@ -69,10 +69,10 @@ void UIPlaySystemSe__OnPress(UIPlaySystemSe_o *this, bool isPressed, const Metho
   _QWORD *v6; // x0
   System_Reflection_MethodBase_o *v7; // x0
 
-  if ( (byte_5939FF2 & 1) == 0 )
+  if ( (byte_59721C6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UIPlaySystemSe_OnPress__);
-    byte_5939FF2 = 1;
+    sub_2213A60(&Method_UIPlaySystemSe_OnPress__);
+    byte_59721C6 = 1;
   }
   if ( this->fields.trigger == 3 )
   {
@@ -94,8 +94,8 @@ void UIPlaySystemSe__OnPress(UIPlaySystemSe_o *this, bool isPressed, const Metho
     }
     v6 = Method_UIPlaySystemSe_OnPress__;
     if ( (*((_BYTE *)Method_UIPlaySystemSe_OnPress__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_21FFC68(Method_UIPlaySystemSe_OnPress__);
-    v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+      v6 = (_QWORD *)sub_2213A78(Method_UIPlaySystemSe_OnPress__);
+    v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, this->fields.kind, 0, 0);
   }
 }
@@ -107,10 +107,10 @@ void UIPlaySystemSe__OnSelect(UIPlaySystemSe_o *this, bool isSelected, const Met
   const MethodInfo *v6; // x2
   UICamera_c *v7; // x0
 
-  if ( (byte_5939FF4 & 1) == 0 )
+  if ( (byte_59721C8 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FF4 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721C8 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -134,14 +134,14 @@ void UIPlaySystemSe__Play(UIPlaySystemSe_o *this, const MethodInfo *method)
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_5939FF5 & 1) == 0 )
+  if ( (byte_59721C9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UIPlaySystemSe_Play__);
-    byte_5939FF5 = 1;
+    sub_2213A60(&Method_UIPlaySystemSe_Play__);
+    byte_59721C9 = 1;
   }
   v3 = Method_UIPlaySystemSe_Play__;
   if ( (*((_BYTE *)Method_UIPlaySystemSe_Play__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_UIPlaySystemSe_Play__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_UIPlaySystemSe_Play__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.kind, 0, 0);
 }

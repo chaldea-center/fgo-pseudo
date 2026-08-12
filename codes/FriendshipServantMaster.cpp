@@ -1,14 +1,14 @@
 void FriendshipServantMaster___ctor(FriendshipServantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939A80 & 1) == 0 )
+  if ( (byte_5971B63 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string___ctor__);
-    byte_5939A80 = 1;
+    sub_2213A60(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string___ctor__);
+    byte_5971B63 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     532,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ FriendshipServantEntity_o *FriendshipServantMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5939A81 & 1) == 0 )
+  if ( (byte_5971B64 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__GetEntity__);
-    byte_5939A81 = 1;
+    sub_2213A60(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__GetEntity__);
+    byte_5971B64 = 1;
   }
   PK = (Il2CppObject *)FriendshipServantEntity__CreatePK(svtId, rank, *(const MethodInfo **)&rank);
   return (FriendshipServantEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_3EE2044 *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__GetEntity__);
+                                        (const MethodInfo_3F157EC *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool FriendshipServantMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5939A82 & 1) == 0 )
+  if ( (byte_5971B65 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__TryGetEntity__);
-    byte_5939A82 = 1;
+    sub_2213A60(&Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__TryGetEntity__);
+    byte_5971B65 = 1;
   }
   PK = (Il2CppObject *)FriendshipServantEntity__CreatePK(svtId, rank, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_FriendshipServantMaster__FriendshipServantEntity__string__TryGetEntity__);
 }

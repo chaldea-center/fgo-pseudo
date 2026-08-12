@@ -17,18 +17,18 @@ void BattleMotionSkipManager___ctor(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593B35A & 1) == 0 )
+  if ( (byte_5973549 & 1) == 0 )
   {
-    sub_21FFC50(&BaseMotionSkip_TypeInfo);
-    byte_593B35A = 1;
+    sub_2213A60(&BaseMotionSkip_TypeInfo);
+    byte_5973549 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(BaseMotionSkip_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(BaseMotionSkip_TypeInfo);
   System_Object___ctor(v5, 0);
   this->fields.defaultMotionSkip = (struct BaseMotionSkip_o *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Perf_k__BackingField = perf;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Perf_k__BackingField,
     (int32_t)perf,
     v12,
@@ -57,13 +57,13 @@ void BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManager_o *this,
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, const MethodInfo *))mainMotionSkip->klass->vtable._7_Release.methodPtr)(
     mainMotionSkip,
     mainMotionSkip->klass->vtable._7_Release.method);
   p_mainMotionSkip->klass = 0;
-  sub_21FFBF4(p_mainMotionSkip, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04(p_mainMotionSkip, 0, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -88,7 +88,7 @@ void BattleMotionSkipManager__SetMotionSkip(
                                           skillInfo,
                                           skillInfo->klass->vtable._16_MakeSkillSkip.method),
         this->fields.mainMotionSkip = v7,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.mainMotionSkip,
           (int32_t)v7,
           v8,
@@ -100,7 +100,7 @@ void BattleMotionSkipManager__SetMotionSkip(
         (mainMotionSkip = this->fields.mainMotionSkip) == 0)
     && (mainMotionSkip = this->fields.defaultMotionSkip) == 0 )
   {
-    sub_21FFECC(mainMotionSkip, v6);
+    sub_2213CDC(mainMotionSkip, v6);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, const MethodInfo *))mainMotionSkip->klass->vtable._6_Init.methodPtr)(
     mainMotionSkip,
@@ -138,7 +138,7 @@ void BattleMotionSkipManager__set_Current(
   bool v7; // w7
 
   this->fields.mainMotionSkip = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mainMotionSkip,
     (int32_t)value,
     (System_String_o *)method,
@@ -162,7 +162,7 @@ void BattleMotionSkipManager__set_Perf(
   bool v7; // w7
 
   this->fields._Perf_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Perf_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

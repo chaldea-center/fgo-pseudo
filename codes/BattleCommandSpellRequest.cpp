@@ -21,19 +21,19 @@ void BattleCommandSpellRequest__beginRequest(
 {
   __int64 v13; // x1
 
-  if ( (byte_593A142 & 1) == 0 )
+  if ( (byte_597231F & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_25797/*"usedTurnList"*/);
-    sub_21FFC50(&StringLiteral_19030/*"continueNum"*/);
-    sub_21FFC50(&StringLiteral_18932/*"commandSpellId"*/);
-    sub_21FFC50(&StringLiteral_17769/*"battleId"*/);
-    byte_593A142 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_25845/*"usedTurnList"*/);
+    sub_2213A60(&StringLiteral_19070/*"continueNum"*/);
+    sub_2213A60(&StringLiteral_18970/*"commandSpellId"*/);
+    sub_2213A60(&StringLiteral_17807/*"battleId"*/);
+    byte_597231F = 1;
   }
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_17769/*"battleId"*/, battleId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18932/*"commandSpellId"*/, commandSpellId, 0);
-  RequestBase__addField_51191900((RequestBase_o *)this, (System_String_o *)StringLiteral_25797/*"usedTurnList"*/, &usedTurnArray->obj, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19030/*"continueNum"*/, continueCount, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_17807/*"battleId"*/, battleId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18970/*"commandSpellId"*/, commandSpellId, 0);
+  RequestBase__addField_51259092((RequestBase_o *)this, (System_String_o *)StringLiteral_25845/*"usedTurnList"*/, &usedTurnArray->obj, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19070/*"continueNum"*/, continueCount, 0);
   if ( bt_continue )
   {
     RequestBase__addBaseField((RequestBase_o *)this, 0);
@@ -51,15 +51,15 @@ void BattleCommandSpellRequest__beginRequest(
 
 System_String_o *BattleCommandSpellRequest__getMockData(BattleCommandSpellRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A141 & 1) == 0 )
+  if ( (byte_597231E & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_9496/*"MockBattleCommandSpellRequest"*/);
-    byte_593A141 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_9509/*"MockBattleCommandSpellRequest"*/);
+    byte_597231E = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9496/*"MockBattleCommandSpellRequest"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9509/*"MockBattleCommandSpellRequest"*/, 0);
 }
 
 
@@ -71,12 +71,12 @@ System_String_o *BattleCommandSpellRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_593A143 & 1) == 0 )
+  if ( (byte_5972320 & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&DatFileName_TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_593A143 = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&DatFileName_TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_5972320 = 1;
   }
   if ( !*(&AndroidUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo, method);
@@ -84,7 +84,7 @@ System_String_o *BattleCommandSpellRequest__getParameterFileName(
   if ( !*(&DatFileName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo, v2);
   FileName = DatFileName__getFileName(3, 0);
-  return System_String__Concat_75481624(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0);
+  return System_String__Concat_75694928(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0);
 }
 
 
@@ -92,16 +92,16 @@ System_String_o *BattleCommandSpellRequest__getURL(BattleCommandSpellRequest_o *
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A140 & 1) == 0 )
+  if ( (byte_597231D & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_17743/*"battle/commandSpell"*/);
-    byte_593A140 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_17780/*"battle/commandSpell"*/);
+    byte_597231D = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_17743/*"battle/commandSpell"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_17780/*"battle/commandSpell"*/, 0);
 }
 
 
@@ -114,19 +114,19 @@ void BattleCommandSpellRequest__requestCompleted(
   ResponseData_o *v6; // x20
   __int64 *v7; // x8
 
-  if ( (byte_593A144 & 1) == 0 )
+  if ( (byte_5972321 & 1) == 0 )
   {
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A144 = 1;
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972321 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(23, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) && v6->fields.success )
-    v7 = &StringLiteral_23468/*"ok"*/;
+  if ( v5 && (v6 = v5, ResponseData__checkError_51257228(v5, 0)) && v6->fields.success )
+    v7 = &StringLiteral_23515/*"ok"*/;
   else
-    v7 = &StringLiteral_23290/*"ng"*/;
+    v7 = &StringLiteral_23336/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v7, 0);
 }

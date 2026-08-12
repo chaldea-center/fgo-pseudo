@@ -10,7 +10,7 @@ void ServantNpCommandCardComponent__Clear(ServantNpCommandCardComponent_o *this,
 
   cardSprite = (UnityEngine_Behaviour_o *)this->fields.cardSprite;
   if ( !cardSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UnityEngine_Behaviour__set_enabled(cardSprite, 0, 0);
 }
 
@@ -24,10 +24,10 @@ void ServantNpCommandCardComponent__Set(
   UISprite_o *cardSprite; // x19
 
   v3 = tdInfo;
-  if ( (byte_5937BBD & 1) == 0 )
+  if ( (byte_596FD20 & 1) == 0 )
   {
-    sub_21FFC50(&BattleCommand_TypeInfo);
-    byte_5937BBD = 1;
+    sub_2213A60(&BattleCommand_TypeInfo);
+    byte_596FD20 = 1;
   }
   if ( v3 )
     LODWORD(v3) = v3->fields.cardId;

@@ -3,18 +3,16 @@ System_Collections_IEnumerator_o *WarBoardWaitNonBlockingTaskEnd__Execute(
         const MethodInfo *method)
 {
   __int64 v2; // x19
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_5936270 & 1) == 0 )
+  if ( (byte_596E3CA & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
-    byte_5936270 = 1;
+    sub_2213A60(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+    byte_596E3CA = 1;
   }
-  v2 = sub_21FFEBC(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+  v2 = sub_2213CCC(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
-  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return result;
+  return (System_Collections_IEnumerator_o *)v2;
 }
 
 
@@ -54,13 +52,13 @@ bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
   bool v22; // w6
   bool v23; // w7
 
-  if ( (byte_5936273 & 1) == 0 )
+  if ( (byte_596E3CD & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__);
-    sub_21FFC50(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    byte_5936273 = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__);
+    sub_2213A60(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    byte_596E3CD = 1;
   }
   _1__state = this->fields.__1__state;
   if ( !_1__state )
@@ -82,16 +80,16 @@ bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
         static_fields = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields;
       }
       v9 = (Il2CppObject *)static_fields->__9;
-      _9__0_0 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+      _9__0_0 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(_9__0_0, v9, Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__, 0);
       v10 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields;
       v10->__9__0_0 = _9__0_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->__9__0_0, (int32_t)_9__0_0, v11, v12, v13, v14, v15, v16);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->__9__0_0, (int32_t)_9__0_0, v11, v12, v13, v14, v15, v16);
     }
-    v17 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v17 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v17, _9__0_0, 0);
     this->fields.__2__current = (Il2CppObject *)v17;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
       (int32_t)v17,
       v18,
@@ -129,11 +127,11 @@ void __noreturn WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -163,15 +161,15 @@ void WarBoardWaitNonBlockingTaskEnd___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5936271 & 1) == 0 )
+  if ( (byte_596E3CB & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-    byte_5936271 = 1;
+    sub_2213A60(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    byte_596E3CB = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields->__9 = (struct WarBoardWaitNonBlockingTaskEnd___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -196,13 +194,13 @@ bool WarBoardWaitNonBlockingTaskEnd___c___Execute_b__0_0(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_5936272 & 1) == 0 )
+  if ( (byte_596E3CC & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_5936272 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E3CC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return WarBoardManager__IsNonBlockTaskEnmpty((WarBoardManager_o *)Instance, 0);
 }

@@ -11,9 +11,9 @@ void ExRoomQuestBoardListViewItem___ctor(
   bool v10; // w6
   bool v11; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._QuestInfo_k__BackingField = questInfo;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._QuestInfo_k__BackingField,
     (int32_t)questInfo,
     v6,
@@ -45,7 +45,7 @@ void ExRoomQuestBoardListViewItem__set_QuestInfo(
   bool v7; // w7
 
   this->fields._QuestInfo_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._QuestInfo_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

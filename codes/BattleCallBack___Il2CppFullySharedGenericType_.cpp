@@ -2,7 +2,7 @@ void BattleCallBack___Il2CppFullySharedGenericType____ctor(
         BattleCallBack_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o argument,
         System_Action_T__o *callBack,
-        const MethodInfo_3E398B8 *method)
+        const MethodInfo_3E6D060 *method)
 {
   void *monitor; // x20
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
@@ -25,12 +25,12 @@ void BattleCallBack___Il2CppFullySharedGenericType____ctor(
   else
     v11 = klass;
   memcpy((char *)v12 - ((v9 + 15) & 0x1FFFFFFF0LL), v11, v9);
-  sub_21FFC7C(this, *((_QWORD *)v10->_1.gc_desc + 16), (char *)v12 - ((v9 + 15) & 0x1FFFFFFF0LL), (unsigned int)v9);
-  sub_2007EEC(this, *((_QWORD *)callBack->fields.m_target[12].klass->_1.gc_desc + 16) + 32LL, monitor);
+  sub_2213A8C(this, *((_QWORD *)v10->_1.gc_desc + 16), (char *)v12 - ((v9 + 15) & 0x1FFFFFFF0LL), (unsigned int)v9);
+  sub_201B1D4(this, *((_QWORD *)callBack->fields.m_target[12].klass->_1.gc_desc + 16) + 32LL, monitor);
 }
 
 
-void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *this, const MethodInfo_3E399B0 *method)
+void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *this, const MethodInfo_3E6D158 *method)
 {
   BattleCallBack_T__RGCTXs *rgctx_data; // x8
   size_t actualSize; // x22
@@ -49,11 +49,11 @@ void BattleCallBack___Il2CppFullySharedGenericType___call(BattleCallBack_T__o *t
   rgctx_data = method->klass->rgctx_data;
   actualSize = rgctx_data->_0_T->_2.actualSize;
   v6 = (_QWORD *)((char *)v15 - ((actualSize + 15) & 0x1FFFFFFF0LL));
-  v7 = *(_QWORD *)sub_21FFC78(this, (char *)rgctx_data->_1_BattleCallBack_T_->_1.fields + 32);
-  v8 = (const void *)sub_21FFC78(this, method->klass->rgctx_data->_1_BattleCallBack_T_->_1.fields);
+  v7 = *(_QWORD *)sub_2213A88(this, (char *)rgctx_data->_1_BattleCallBack_T_->_1.fields + 32);
+  v8 = (const void *)sub_2213A88(this, method->klass->rgctx_data->_1_BattleCallBack_T_->_1.fields);
   v9 = memcpy(v6, v8, actualSize);
   if ( !v7 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   v11 = method->klass->rgctx_data;
   _3_System_Action_T__Invoke = v11->_3_System_Action_T__Invoke;
   methodPointer = _3_System_Action_T__Invoke->methodPointer;

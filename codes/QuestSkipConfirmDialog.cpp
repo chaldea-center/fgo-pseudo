@@ -2,10 +2,10 @@ void QuestSkipConfirmDialog___ctor(QuestSkipConfirmDialog_o *this, const MethodI
 {
   __int64 v2; // x2
 
-  if ( (byte_59352CE & 1) == 0 )
+  if ( (byte_596D410 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59352CE = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596D410 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -21,10 +21,10 @@ void QuestSkipConfirmDialog__Awake(QuestSkipConfirmDialog_o *this, const MethodI
   __int64 v6; // x1
   struct UILabel_o *v7; // x8
 
-  if ( (byte_59352C6 & 1) == 0 )
+  if ( (byte_596D408 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59352C6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D408 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -34,7 +34,7 @@ void QuestSkipConfirmDialog__Awake(QuestSkipConfirmDialog_o *this, const MethodI
   {
     v7 = this->fields.messageLabel;
     if ( !v7 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     this->fields.defaultFontSize = v7->fields.mFontSize;
   }
 }
@@ -44,11 +44,11 @@ void QuestSkipConfirmDialog__Close(QuestSkipConfirmDialog_o *this, const MethodI
 {
   const MethodInfo *v2; // x2
 
-  QuestSkipConfirmDialog__Close_43404744(this, 0, v2);
+  QuestSkipConfirmDialog__Close_43425340(this, 0, v2);
 }
 
 
-void QuestSkipConfirmDialog__Close_43404744(
+void QuestSkipConfirmDialog__Close_43425340(
         QuestSkipConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -60,14 +60,14 @@ void QuestSkipConfirmDialog__Close_43404744(
   bool v7; // w7
   System_Action_o *v10; // x20
 
-  if ( (byte_59352C9 & 1) == 0 )
+  if ( (byte_596D40B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_EndClose__);
-    byte_59352C9 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_QuestSkipConfirmDialog_EndClose__);
+    byte_596D40B = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -76,7 +76,7 @@ void QuestSkipConfirmDialog__Close_43404744(
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_QuestSkipConfirmDialog_EndClose__, 0);
   BaseDialog__SafeClose((BaseDialog_o *)this, v10, 0);
 }
@@ -98,7 +98,7 @@ void QuestSkipConfirmDialog__EndClose(QuestSkipConfirmDialog_o *this, const Meth
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc;
@@ -106,7 +106,7 @@ void QuestSkipConfirmDialog__EndClose(QuestSkipConfirmDialog_o *this, const Meth
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -118,17 +118,17 @@ void QuestSkipConfirmDialog__OnClickClose(QuestSkipConfirmDialog_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct QuestSkipConfirmDialog_ClickDelegate_o *decideFunc; // x8
 
-  if ( (byte_59352CC & 1) == 0 )
+  if ( (byte_596D40E & 1) == 0 )
   {
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickClose__);
-    byte_59352CC = 1;
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickClose__);
+    byte_596D40E = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_QuestSkipConfirmDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_QuestSkipConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_QuestSkipConfirmDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_QuestSkipConfirmDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     decideFunc = this->fields.decideFunc;
     if ( decideFunc )
@@ -146,17 +146,17 @@ void QuestSkipConfirmDialog__OnClickDecide(QuestSkipConfirmDialog_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   struct QuestSkipConfirmDialog_ClickDelegate_o *decideFunc; // x8
 
-  if ( (byte_59352CA & 1) == 0 )
+  if ( (byte_596D40C & 1) == 0 )
   {
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickDecide__);
-    byte_59352CA = 1;
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickDecide__);
+    byte_596D40C = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_QuestSkipConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_QuestSkipConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_QuestSkipConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_QuestSkipConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     decideFunc = this->fields.decideFunc;
     if ( decideFunc )
@@ -174,17 +174,17 @@ void QuestSkipConfirmDialog__OnClickSkip(QuestSkipConfirmDialog_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_o *skipCallbackFunc; // x8
 
-  if ( (byte_59352CB & 1) == 0 )
+  if ( (byte_596D40D & 1) == 0 )
   {
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickSkip__);
-    byte_59352CB = 1;
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickSkip__);
+    byte_596D40D = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_QuestSkipConfirmDialog_OnClickSkip__;
     if ( (*((_BYTE *)Method_QuestSkipConfirmDialog_OnClickSkip__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_QuestSkipConfirmDialog_OnClickSkip__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_QuestSkipConfirmDialog_OnClickSkip__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     skipCallbackFunc = this->fields.skipCallbackFunc;
     if ( skipCallbackFunc )
@@ -200,16 +200,16 @@ void QuestSkipConfirmDialog__OnEnable(QuestSkipConfirmDialog_o *this, const Meth
   UnityEngine_Transform_o *transform; // x0
   UnityEngine_Transform_o *v4; // x0
 
-  if ( (byte_59352CD & 1) == 0 )
+  if ( (byte_596D40F & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4818/*"ConfirmWindow/CancelButton"*/);
-    sub_21FFC50(&StringLiteral_16227/*"Window/CancelButton"*/);
-    byte_59352CD = 1;
+    sub_2213A60(&StringLiteral_4826/*"ConfirmWindow/CancelButton"*/);
+    sub_2213A60(&StringLiteral_16259/*"Window/CancelButton"*/);
+    byte_596D40F = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16227/*"Window/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16259/*"Window/CancelButton"*/, 0);
   v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(v4, (System_String_o *)StringLiteral_4818/*"ConfirmWindow/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(v4, (System_String_o *)StringLiteral_4826/*"ConfirmWindow/CancelButton"*/, 0);
 }
 
 
@@ -259,26 +259,26 @@ void QuestSkipConfirmDialog__Open(
   QuestMessageEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Color_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_59352C7 & 1) == 0 )
+  if ( (byte_596D409 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_QuestMessageMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickClose__);
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickDecide__);
-    sub_21FFC50(&Method_QuestSkipConfirmDialog_OnClickSkip__);
-    sub_21FFC50(&StringLiteral_11338/*"QUEST_MESSAGE_DLG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_11337/*"QUEST_MESSAGE_DLG_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_11353/*"QUEST_MESSAGE_DLG_SKIP"*/);
-    byte_59352C7 = 1;
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_QuestMessageMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickClose__);
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickDecide__);
+    sub_2213A60(&Method_QuestSkipConfirmDialog_OnClickSkip__);
+    sub_2213A60(&StringLiteral_11358/*"QUEST_MESSAGE_DLG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_11357/*"QUEST_MESSAGE_DLG_CANCEL"*/);
+    sub_2213A60(&StringLiteral_11373/*"QUEST_MESSAGE_DLG_SKIP"*/);
+    byte_596D409 = 1;
   }
   entity = 0;
   this->fields.decideFunc = delegateFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.decideFunc,
     (int32_t)delegateFunc,
     *(System_String_o **)&phase,
@@ -288,7 +288,7 @@ void QuestSkipConfirmDialog__Open(
     v6,
     v7);
   this->fields.skipCallbackFunc = skipFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.skipCallbackFunc,
     (int32_t)skipFunc,
     v13,
@@ -299,7 +299,7 @@ void QuestSkipConfirmDialog__Open(
     v18);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v19, v20);
-  Master_object = (QuestMessageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestMessageMaster___);
+  Master_object = (QuestMessageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_QuestMessageMaster___);
   if ( !Master_object )
     goto LABEL_28;
   Master_object = (QuestMessageMaster_o *)QuestMessageMaster__TryGetEntity(Master_object, &entity, questId, phase, 0, 0);
@@ -319,7 +319,7 @@ void QuestSkipConfirmDialog__Open(
       goto LABEL_28;
     Master_object = (QuestMessageMaster_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)Master_object,
-                                              (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
     if ( !Master_object )
       goto LABEL_28;
     ((void (__fastcall *)(QuestMessageMaster_o *, _QWORD, const MethodInfo *))Master_object->klass->vtable._5_preProcess.methodPtr)(
@@ -331,7 +331,7 @@ void QuestSkipConfirmDialog__Open(
       goto LABEL_28;
     Master_object = (QuestMessageMaster_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)Master_object,
-                                              (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !Master_object )
       goto LABEL_28;
     v46.fields.r = 0.5;
@@ -341,15 +341,15 @@ void QuestSkipConfirmDialog__Open(
     UIWidget__set_color((UIWidget_o *)Master_object, v46, 0);
   }
   decideBtn = this->fields.decideBtn;
-  v28 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+  v28 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v28, (Il2CppObject *)this, (intptr_t)Method_QuestSkipConfirmDialog_OnClickDecide__, 0);
   QuestSkipConfirmDialog__SetButtonEvent(v29, decideBtn, v28, v30);
   skipBtn = this->fields.skipBtn;
-  v32 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+  v32 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v32, (Il2CppObject *)this, (intptr_t)Method_QuestSkipConfirmDialog_OnClickSkip__, 0);
   QuestSkipConfirmDialog__SetButtonEvent(v33, skipBtn, v32, v34);
   cancelBtn = this->fields.cancelBtn;
-  v36 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+  v36 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v36, (Il2CppObject *)this, (intptr_t)Method_QuestSkipConfirmDialog_OnClickClose__, 0);
   QuestSkipConfirmDialog__SetButtonEvent(v37, cancelBtn, v36, v38);
   if ( !entity )
@@ -361,22 +361,22 @@ void QuestSkipConfirmDialog__Open(
   decideBtnLabel = this->fields.decideBtnLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39, v40);
-  Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11338/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
+  Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11358/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0);
   if ( !decideBtnLabel )
     goto LABEL_28;
   UILabel__set_text(decideBtnLabel, (System_String_o *)Master_object, 0);
   skipBtnLabel = this->fields.skipBtnLabel;
-  Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11353/*"QUEST_MESSAGE_DLG_SKIP"*/, 0);
+  Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11373/*"QUEST_MESSAGE_DLG_SKIP"*/, 0);
   if ( !skipBtnLabel
     || (UILabel__set_text(skipBtnLabel, (System_String_o *)Master_object, 0),
         cancelBtnLabel = this->fields.cancelBtnLabel,
-        Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11337/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0),
+        Master_object = (QuestMessageMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11357/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0),
         !cancelBtnLabel)
     || (UILabel__set_text(cancelBtnLabel, (System_String_o *)Master_object, 0),
         (Master_object = (QuestMessageMaster_o *)this->fields.messageLabel) == 0) )
   {
 LABEL_28:
-    sub_21FFECC(Master_object, v22);
+    sub_2213CDC(Master_object, v22);
   }
   v44 = 192;
   if ( this->fields.fontSizeForceChangeQuestId == questId )
@@ -401,13 +401,13 @@ void QuestSkipConfirmDialog__SetButtonEvent(
   __int64 v12; // x2
   int v13; // w8
 
-  if ( (byte_59352C8 & 1) == 0 )
+  if ( (byte_596D40A & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIButton___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59352C8 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIButton___);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D40A = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, btnObj, callback);
@@ -418,7 +418,7 @@ void QuestSkipConfirmDialog__SetButtonEvent(
       goto LABEL_18;
     Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  btnObj,
-                                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
+                                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
     v6 = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -445,7 +445,7 @@ void QuestSkipConfirmDialog__SetButtonEvent(
         }
       }
 LABEL_18:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
   }
 }
@@ -470,7 +470,7 @@ void QuestSkipConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -481,12 +481,12 @@ void QuestSkipConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -498,9 +498,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF4D10;
+  this->fields.invoke_impl = (intptr_t)sub_2007D1C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FF4CC8;
+  this->fields.extra_arg = (intptr_t)&loc_2007CD4;
 }
 
 
@@ -516,8 +516,8 @@ System_IAsyncResult_o *QuestSkipConfirmDialog_ClickDelegate__BeginInvoke(
 
   v10[0] = isDecide;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -526,7 +526,7 @@ void QuestSkipConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

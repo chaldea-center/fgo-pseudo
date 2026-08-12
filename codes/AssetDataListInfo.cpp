@@ -29,27 +29,27 @@ void AssetDataListInfo___ctor(AssetDataListInfo_o *this, const MethodInfo *metho
   bool v29; // w6
   bool v30; // w7
 
-  if ( (byte_59375D9 & 1) == 0 )
+  if ( (byte_596F73D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_AssetData__TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59375D9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_AssetData__TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596F73D = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.masterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   v10 = (int)StringLiteral_1/*""*/;
   this->fields.dateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dateVersion, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dateVersion, v10, v11, v12, v13, v14, v15, v16);
   v17 = (int)StringLiteral_1/*""*/;
   this->fields.buildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.buildVersion, v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_AssetData__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.buildVersion, v17, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_AssetData___ctor__);
   this->fields.dataList = (struct System_Collections_Generic_List_AssetData__o *)v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dataList, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dataList, (int32_t)v24, v25, v26, v27, v28, v29, v30);
   System_Object___ctor((Il2CppObject *)this, 0);
 }

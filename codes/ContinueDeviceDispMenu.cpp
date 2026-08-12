@@ -2,10 +2,10 @@ void ContinueDeviceDispMenu___ctor(ContinueDeviceDispMenu_o *this, const MethodI
 {
   __int64 v2; // x2
 
-  if ( (byte_5933344 & 1) == 0 )
+  if ( (byte_596B44B & 1) == 0 )
   {
-    sub_21FFC50(&BaseMenu_TypeInfo);
-    byte_5933344 = 1;
+    sub_2213A60(&BaseMenu_TypeInfo);
+    byte_596B44B = 1;
   }
   if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, method, v2);
@@ -30,7 +30,7 @@ void ContinueDeviceDispMenu__Callback(ContinueDeviceDispMenu_o *this, bool resul
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -43,11 +43,11 @@ void ContinueDeviceDispMenu__Close(ContinueDeviceDispMenu_o *this, const MethodI
 {
   const MethodInfo *v2; // x2
 
-  ContinueDeviceDispMenu__Close_39757196(this, 0, v2);
+  ContinueDeviceDispMenu__Close_39758604(this, 0, v2);
 }
 
 
-void ContinueDeviceDispMenu__Close_39757196(
+void ContinueDeviceDispMenu__Close_39758604(
         ContinueDeviceDispMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -60,14 +60,14 @@ void ContinueDeviceDispMenu__Close_39757196(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_593333F & 1) == 0 )
+  if ( (byte_596B446 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_EndClose__);
-    byte_593333F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ContinueDeviceDispMenu_EndClose__);
+    byte_596B446 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -78,7 +78,7 @@ void ContinueDeviceDispMenu__Close_39757196(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ContinueDeviceDispMenu_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v11, 0);
 }
@@ -101,7 +101,7 @@ void ContinueDeviceDispMenu__EndClose(ContinueDeviceDispMenu_o *this, const Meth
   ContinueDeviceDispMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc;
@@ -109,7 +109,7 @@ void ContinueDeviceDispMenu__EndClose(ContinueDeviceDispMenu_o *this, const Meth
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -120,14 +120,14 @@ void ContinueDeviceDispMenu__EndCopyDialog(ContinueDeviceDispMenu_o *this, bool 
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5933341 & 1) == 0 )
+  if ( (byte_596B448 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5933341 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596B448 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -142,10 +142,10 @@ void ContinueDeviceDispMenu__Init(ContinueDeviceDispMenu_o *this, const MethodIn
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_593333D & 1) == 0 )
+  if ( (byte_596B444 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593333D = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B444 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -156,7 +156,7 @@ void ContinueDeviceDispMenu__Init(ContinueDeviceDispMenu_o *this, const MethodIn
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
@@ -170,18 +170,18 @@ void ContinueDeviceDispMenu__OnClickCancel(ContinueDeviceDispMenu_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933343 & 1) == 0 )
+  if ( (byte_596B44A & 1) == 0 )
   {
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_OnClickCancel__);
-    byte_5933343 = 1;
+    sub_2213A60(&Method_ContinueDeviceDispMenu_OnClickCancel__);
+    byte_596B44A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ContinueDeviceDispMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_ContinueDeviceDispMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ContinueDeviceDispMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ContinueDeviceDispMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ContinueDeviceDispMenu__Callback(this, 0, v5);
   }
@@ -203,37 +203,37 @@ void ContinueDeviceDispMenu__OnClickCopy(ContinueDeviceDispMenu_o *this, const M
   __int64 v13; // x0
   __int64 v14; // x1
 
-  if ( (byte_5933340 & 1) == 0 )
+  if ( (byte_596B447 & 1) == 0 )
   {
-    sub_21FFC50(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_EndCopyDialog__);
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_OnClickCopy__);
-    sub_21FFC50(&UnityEngine_GUIUtility_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_3944/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/);
-    byte_5933340 = 1;
+    sub_2213A60(&NotificationDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ContinueDeviceDispMenu_EndCopyDialog__);
+    sub_2213A60(&Method_ContinueDeviceDispMenu_OnClickCopy__);
+    sub_2213A60(&UnityEngine_GUIUtility_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_3949/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/);
+    byte_596B447 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ContinueDeviceDispMenu_OnClickCopy__;
     if ( (*((_BYTE *)Method_ContinueDeviceDispMenu_OnClickCopy__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ContinueDeviceDispMenu_OnClickCopy__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ContinueDeviceDispMenu_OnClickCopy__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     code = this->fields.code;
     if ( !*(&UnityEngine_GUIUtility_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUIUtility_TypeInfo, v5, v6);
     UnityEngine_GUIUtility__set_systemCopyBuffer(code, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v9);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3944/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/, 0);
-    v12 = (NotificationDialog_ClickDelegate_o *)sub_21FFEBC(NotificationDialog_ClickDelegate_TypeInfo);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3949/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/, 0);
+    v12 = (NotificationDialog_ClickDelegate_o *)sub_2213CCC(NotificationDialog_ClickDelegate_TypeInfo);
     NotificationDialog_ClickDelegate___ctor(v12, (Il2CppObject *)this, Method_ContinueDeviceDispMenu_EndCopyDialog__, 0);
     if ( !Instance )
-      sub_21FFECC(v13, v14);
-    CommonUI__OpenNotificationDialog_37294692(
+      sub_2213CDC(v13, v14);
+    CommonUI__OpenNotificationDialog_37376108(
       (CommonUI_o *)Instance,
       0,
       v11,
@@ -264,18 +264,18 @@ void ContinueDeviceDispMenu__OnClickDecide(ContinueDeviceDispMenu_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933342 & 1) == 0 )
+  if ( (byte_596B449 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_OnClickDecide__);
-    byte_5933342 = 1;
+    sub_2213A60(&Method_ContinueDeviceDispMenu_OnClickDecide__);
+    byte_596B449 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ContinueDeviceDispMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_ContinueDeviceDispMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ContinueDeviceDispMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ContinueDeviceDispMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ContinueDeviceDispMenu__Callback(this, 1, v5);
   }
@@ -313,26 +313,26 @@ void ContinueDeviceDispMenu__Open(
   System_Action_o *v29; // x20
   struct ContinueDeviceDispMenu_CallbackFunc_o **p_callbackFunc; // x19
 
-  if ( (byte_593333E & 1) == 0 )
+  if ( (byte_596B445 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ContinueDeviceDispMenu_EndOpen__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_3949/*"CONTINUE_DEVICE_DISP_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3945/*"CONTINUE_DEVICE_DISP_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_3948/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/);
-    sub_21FFC50(&StringLiteral_3947/*"CONTINUE_DEVICE_DISP_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3946/*"CONTINUE_DEVICE_DISP_COPY"*/);
-    sub_21FFC50(&StringLiteral_3962/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
-    byte_593333E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ContinueDeviceDispMenu_EndOpen__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_3954/*"CONTINUE_DEVICE_DISP_TITLE"*/);
+    sub_2213A60(&StringLiteral_3950/*"CONTINUE_DEVICE_DISP_CANCEL"*/);
+    sub_2213A60(&StringLiteral_3953/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/);
+    sub_2213A60(&StringLiteral_3952/*"CONTINUE_DEVICE_DISP_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3951/*"CONTINUE_DEVICE_DISP_COPY"*/);
+    sub_2213A60(&StringLiteral_3967/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/);
+    byte_596B445 = 1;
   }
   state = this->fields.state;
   if ( state == 3 )
   {
     this->fields.callbackFunc = callback;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)p_callbackFunc,
       (int32_t)callback,
       (System_String_o *)callback,
@@ -346,7 +346,7 @@ void ContinueDeviceDispMenu__Open(
   else if ( !state )
   {
     this->fields.code = code;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.code,
       (int32_t)code,
       (System_String_o *)callback,
@@ -356,7 +356,7 @@ void ContinueDeviceDispMenu__Open(
       v6,
       v7);
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v12,
@@ -368,38 +368,38 @@ void ContinueDeviceDispMenu__Open(
     titleLabel = this->fields.titleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
-    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3949/*"CONTINUE_DEVICE_DISP_TITLE"*/, 0);
+    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3954/*"CONTINUE_DEVICE_DISP_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, continueCodeLabel, 0);
     explanation2Label = this->fields.explanation2Label;
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3948/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/, 0);
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3962/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, 0);
-    continueCodeLabel = System_String__Concat_75481624(v24, (System_String_o *)StringLiteral_43/*"\n"*/, v25, 0);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3953/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/, 0);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3967/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, 0);
+    continueCodeLabel = System_String__Concat_75694928(v24, (System_String_o *)StringLiteral_43/*"\n"*/, v25, 0);
     if ( !explanation2Label )
       goto LABEL_16;
     UILabel__set_text(explanation2Label, continueCodeLabel, 0);
     copyLabel = this->fields.copyLabel;
-    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3946/*"CONTINUE_DEVICE_DISP_COPY"*/, 0);
+    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3951/*"CONTINUE_DEVICE_DISP_COPY"*/, 0);
     if ( !copyLabel )
       goto LABEL_16;
     UILabel__set_text(copyLabel, continueCodeLabel, 0);
     decideLabel = this->fields.decideLabel;
-    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3947/*"CONTINUE_DEVICE_DISP_DECIDE"*/, 0);
+    continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3952/*"CONTINUE_DEVICE_DISP_DECIDE"*/, 0);
     if ( !decideLabel
       || (UILabel__set_text(decideLabel, continueCodeLabel, 0),
           cancelLabel = this->fields.cancelLabel,
-          continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3945/*"CONTINUE_DEVICE_DISP_CANCEL"*/, 0),
+          continueCodeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3950/*"CONTINUE_DEVICE_DISP_CANCEL"*/, 0),
           !cancelLabel)
       || (UILabel__set_text(cancelLabel, continueCodeLabel, 0),
           (continueCodeLabel = (System_String_o *)this->fields.continueCodeLabel) == 0) )
     {
 LABEL_16:
-      sub_21FFECC(continueCodeLabel, v22);
+      sub_2213CDC(continueCodeLabel, v22);
     }
     UILabel__set_text((UILabel_o *)continueCodeLabel, this->fields.code, 0);
     this->fields.state = 1;
-    v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v29, (Il2CppObject *)this, Method_ContinueDeviceDispMenu_EndOpen__, 0);
     BaseMenu__Open((BaseMenu_o *)this, v29, 0);
   }
@@ -423,10 +423,10 @@ void ContinueDeviceDispMenu__add_callbackFunc(
   ContinueDeviceDispMenu_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_593333B & 1) == 0 )
+  if ( (byte_596B442 & 1) == 0 )
   {
-    sub_21FFC50(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
-    byte_593333B = 1;
+    sub_2213A60(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    byte_596B442 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -439,13 +439,13 @@ void ContinueDeviceDispMenu__add_callbackFunc(
       if ( (ContinueDeviceDispMenu_CallbackFunc_c *)v8->klass != ContinueDeviceDispMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ContinueDeviceDispMenu_o *)sub_220024C(v8, ContinueDeviceDispMenu_CallbackFunc_TypeInfo, v9, v10);
+  v13 = (ContinueDeviceDispMenu_o *)sub_221405C(v8, ContinueDeviceDispMenu_CallbackFunc_TypeInfo, v9, v10);
   ContinueDeviceDispMenu__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -466,10 +466,10 @@ void ContinueDeviceDispMenu__remove_callbackFunc(
   ContinueDeviceDispMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_593333C & 1) == 0 )
+  if ( (byte_596B443 & 1) == 0 )
   {
-    sub_21FFC50(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
-    byte_593333C = 1;
+    sub_2213A60(&ContinueDeviceDispMenu_CallbackFunc_TypeInfo);
+    byte_596B443 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -482,13 +482,13 @@ void ContinueDeviceDispMenu__remove_callbackFunc(
       if ( (ContinueDeviceDispMenu_CallbackFunc_c *)v8->klass != ContinueDeviceDispMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ContinueDeviceDispMenu_o *)sub_220024C(v8, ContinueDeviceDispMenu_CallbackFunc_TypeInfo, v9, v10);
+  v13 = (ContinueDeviceDispMenu_o *)sub_221405C(v8, ContinueDeviceDispMenu_CallbackFunc_TypeInfo, v9, v10);
   ContinueDeviceDispMenu__EndOpen(v13, v14);
 }
 
@@ -512,7 +512,7 @@ void ContinueDeviceDispMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -523,12 +523,12 @@ void ContinueDeviceDispMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -540,9 +540,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FEED38;
+  this->fields.invoke_impl = (intptr_t)sub_2001C24;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FEECF0;
+  this->fields.extra_arg = (intptr_t)sub_2001BDC;
 }
 
 
@@ -558,8 +558,8 @@ System_IAsyncResult_o *ContinueDeviceDispMenu_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -568,7 +568,7 @@ void ContinueDeviceDispMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

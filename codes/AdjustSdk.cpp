@@ -14,10 +14,10 @@ void AdjustSdk_Adjust__AddGlobalCallbackParameter(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_5930411 & 1) == 0 )
+  if ( (byte_59685B1 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930411 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B1 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, value, method);
@@ -30,10 +30,10 @@ void AdjustSdk_Adjust__AddGlobalPartnerParameter(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_5930410 & 1) == 0 )
+  if ( (byte_59685B0 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930410 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B0 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, value, method);
@@ -67,51 +67,50 @@ void AdjustSdk_Adjust__Awake(AdjustSdk_Adjust_o *this, const MethodInfo *method)
   int32_t logLevel; // w23
   __int64 v25; // x20
   const MethodInfo *v26; // x4
-  System_Nullable_Int32Enum__o v27; // x0
-  int32_t v28; // w1
-  __int16 *v29; // x0
-  const MethodInfo_45AC808 *v30; // x2
-  __int16 *v31; // x0
+  int32_t v27; // w1
+  __int16 *v28; // x0
+  const MethodInfo_45E0940 *v29; // x2
+  __int16 *v30; // x0
   struct System_String_o *defaultTracker; // x1
   bool coppaCompliance; // w1
-  __int16 *v34; // x0
-  const MethodInfo_45AC808 *v35; // x2
-  __int16 *v36; // x0
-  const MethodInfo_45AC808 *v37; // x2
-  __int16 *v38; // x0
+  __int16 *v33; // x0
+  const MethodInfo_45E0940 *v34; // x2
+  __int16 *v35; // x0
+  const MethodInfo_45E0940 *v36; // x2
+  __int16 *v37; // x0
   struct System_String_o *preinstallFilePath; // x1
   bool adServices; // w1
-  __int16 *v41; // x0
-  const MethodInfo_45AC808 *v42; // x2
-  __int16 *v43; // x0
-  const MethodInfo_45AC808 *v44; // x2
-  __int16 *v45; // x0
-  const MethodInfo_45AC808 *v46; // x2
-  __int16 *v47; // x0
-  const MethodInfo *v48; // x1
-  __int16 v49; // [xsp+4h] [xbp-5Ch] BYREF
-  __int16 v50; // [xsp+8h] [xbp-58h] BYREF
-  __int16 v51; // [xsp+Ch] [xbp-54h] BYREF
-  __int16 v52; // [xsp+10h] [xbp-50h] BYREF
-  __int16 v53; // [xsp+14h] [xbp-4Ch] BYREF
-  __int16 v54; // [xsp+18h] [xbp-48h] BYREF
-  __int16 v55; // [xsp+1Ch] [xbp-44h] BYREF
-  __int16 v56; // [xsp+20h] [xbp-40h] BYREF
-  __int16 v57; // [xsp+24h] [xbp-3Ch] BYREF
-  __int64 v58; // [xsp+28h] [xbp-38h] BYREF
+  __int16 *v40; // x0
+  const MethodInfo_45E0940 *v41; // x2
+  __int16 *v42; // x0
+  const MethodInfo_45E0940 *v43; // x2
+  __int16 *v44; // x0
+  const MethodInfo_45E0940 *v45; // x2
+  __int16 *v46; // x0
+  const MethodInfo *v47; // x1
+  __int16 v48; // [xsp+4h] [xbp-5Ch] BYREF
+  __int16 v49; // [xsp+8h] [xbp-58h] BYREF
+  __int16 v50; // [xsp+Ch] [xbp-54h] BYREF
+  __int16 v51; // [xsp+10h] [xbp-50h] BYREF
+  __int16 v52; // [xsp+14h] [xbp-4Ch] BYREF
+  __int16 v53; // [xsp+18h] [xbp-48h] BYREF
+  __int16 v54; // [xsp+1Ch] [xbp-44h] BYREF
+  __int16 v55; // [xsp+20h] [xbp-40h] BYREF
+  __int16 v56; // [xsp+24h] [xbp-3Ch] BYREF
+  __int64 v57; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_5930405 & 1) == 0 )
+  if ( (byte_59685A5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_string__TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustConfig_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustDeeplink_TypeInfo);
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_bool___ctor__);
-    sub_21FFC50(&Method_System_Nullable_AdjustLogLevel___ctor__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_Adjust___c__Awake_b__18_0__);
-    sub_21FFC50(&AdjustSdk_Adjust___c_TypeInfo);
-    byte_5930405 = 1;
+    sub_2213A60(&System_Action_string__TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustConfig_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustDeeplink_TypeInfo);
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_bool___ctor__);
+    sub_2213A60(&Method_System_Nullable_AdjustLogLevel___ctor__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_Adjust___c__Awake_b__18_0__);
+    sub_2213A60(&AdjustSdk_Adjust___c_TypeInfo);
+    byte_59685A5 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -136,11 +135,11 @@ void AdjustSdk_Adjust__Awake(AdjustSdk_Adjust_o *this, const MethodInfo *method)
       static_fields = AdjustSdk_Adjust___c_TypeInfo->static_fields;
     }
     v14 = (Il2CppObject *)static_fields->__9;
-    _9__18_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_string__TypeInfo);
+    _9__18_0 = (System_Action_object__o *)sub_2213CCC(System_Action_string__TypeInfo);
     System_Action_object____ctor(_9__18_0, v14, Method_AdjustSdk_Adjust___c__Awake_b__18_0__, 0);
     v15 = AdjustSdk_Adjust___c_TypeInfo->static_fields;
     v15->__9__18_0 = (struct System_Action_string__o *)_9__18_0;
-    sub_21FFBF4(&v15->__9__18_0, _9__18_0);
+    sub_2213A04(&v15->__9__18_0, _9__18_0);
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v9, v10);
@@ -151,10 +150,10 @@ void AdjustSdk_Adjust__Awake(AdjustSdk_Adjust_o *this, const MethodInfo *method)
     if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v17, v18);
     v19 = UnityEngine_Application__get_absoluteURL(0);
-    v20 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustDeeplink_TypeInfo);
+    v20 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustDeeplink_TypeInfo);
     System_Object___ctor(v20, 0);
     v20[1].klass = (Il2CppClass *)v19;
-    sub_21FFBF4(&v20[1], v19);
+    sub_2213A04(&v20[1], v19);
     AdjustSdk_Adjust__ProcessDeeplink((AdjustSdk_AdjustDeeplink_o *)v20, v21);
   }
   if ( !this->fields.startManually )
@@ -162,82 +161,81 @@ void AdjustSdk_Adjust__Awake(AdjustSdk_Adjust_o *this, const MethodInfo *method)
     appToken = this->fields.appToken;
     environment = this->fields.environment;
     logLevel = this->fields.logLevel;
-    v25 = sub_21FFEBC(AdjustSdk_AdjustConfig_TypeInfo);
-    AdjustSdk_AdjustConfig___ctor_36641860((AdjustSdk_AdjustConfig_o *)v25, appToken, environment, logLevel == 7, v26);
-    v27 = (System_Nullable_Int32Enum__o)&v58;
-    v28 = this->fields.logLevel;
-    v58 = 0;
+    v25 = sub_2213CCC(AdjustSdk_AdjustConfig_TypeInfo);
+    AdjustSdk_AdjustConfig___ctor_36723276((AdjustSdk_AdjustConfig_o *)v25, appToken, environment, logLevel == 7, v26);
+    v27 = this->fields.logLevel;
+    v57 = 0;
     System_Nullable_Int32Enum____ctor(
+      (System_Nullable_Int32Enum__o)&v57,
       v27,
-      v28,
-      (const MethodInfo_45B0560 *)Method_System_Nullable_AdjustLogLevel___ctor__);
+      (const MethodInfo_45E4698 *)Method_System_Nullable_AdjustLogLevel___ctor__);
     if ( v25 )
     {
-      v29 = &v57;
-      v57 = 0;
-      *(_QWORD *)(v25 + 80) = v58;
-      System_Nullable_bool____ctor(
-        (System_Nullable_bool__o)v29,
-        this->fields.sendInBackground,
-        (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
-      v30 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v31 = &v56;
+      v28 = &v56;
       v56 = 0;
-      *(_WORD *)(v25 + 42) = v57;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v31, this->fields.launchDeferredDeeplink, v30);
-      *(_WORD *)(v25 + 48) = v56;
+      *(_QWORD *)(v25 + 80) = v57;
+      System_Nullable_bool____ctor(
+        (System_Nullable_bool__o)v28,
+        this->fields.sendInBackground,
+        (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+      v29 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v30 = &v55;
+      v55 = 0;
+      *(_WORD *)(v25 + 42) = v56;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v30, this->fields.launchDeferredDeeplink, v29);
+      *(_WORD *)(v25 + 48) = v55;
       defaultTracker = this->fields.defaultTracker;
       *(_QWORD *)(v25 + 24) = defaultTracker;
-      sub_21FFBF4(v25 + 24, defaultTracker);
+      sub_2213A04(v25 + 24, defaultTracker);
       coppaCompliance = this->fields.coppaCompliance;
-      v34 = &v55;
-      v55 = 0;
-      System_Nullable_bool____ctor(
-        (System_Nullable_bool__o)v34,
-        coppaCompliance,
-        (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
-      v35 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v36 = &v54;
+      v33 = &v54;
       v54 = 0;
-      *(_WORD *)(v25 + 40) = v55;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v36, this->fields.costDataInAttribution, v35);
-      v37 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v38 = &v53;
+      System_Nullable_bool____ctor(
+        (System_Nullable_bool__o)v33,
+        coppaCompliance,
+        (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+      v34 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v35 = &v53;
       v53 = 0;
-      *(_WORD *)(v25 + 44) = v54;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v38, this->fields.preinstallTracking, v37);
-      *(_WORD *)(v25 + 182) = v53;
+      *(_WORD *)(v25 + 40) = v54;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v35, this->fields.costDataInAttribution, v34);
+      v36 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v37 = &v52;
+      v52 = 0;
+      *(_WORD *)(v25 + 44) = v53;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v37, this->fields.preinstallTracking, v36);
+      *(_WORD *)(v25 + 182) = v52;
       preinstallFilePath = this->fields.preinstallFilePath;
       *(_QWORD *)(v25 + 184) = preinstallFilePath;
-      sub_21FFBF4(v25 + 184, preinstallFilePath);
+      sub_2213A04(v25 + 184, preinstallFilePath);
       adServices = this->fields.adServices;
-      v41 = &v52;
-      v52 = 0;
-      System_Nullable_bool____ctor(
-        (System_Nullable_bool__o)v41,
-        adServices,
-        (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
-      v42 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v43 = &v51;
+      v40 = &v51;
       v51 = 0;
-      *(_WORD *)(v25 + 160) = v52;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v43, this->fields.idfaReading, v42);
-      v44 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v45 = &v50;
+      System_Nullable_bool____ctor(
+        (System_Nullable_bool__o)v40,
+        adServices,
+        (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+      v41 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v42 = &v50;
       v50 = 0;
-      *(_WORD *)(v25 + 162) = v51;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v45, this->fields.linkMe, v44);
-      v46 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
-      v47 = &v49;
+      *(_WORD *)(v25 + 160) = v51;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v42, this->fields.idfaReading, v41);
+      v43 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v44 = &v49;
       v49 = 0;
-      *(_WORD *)(v25 + 168) = v50;
-      System_Nullable_bool____ctor((System_Nullable_bool__o)v47, this->fields.skanAttribution, v46);
-      *(_WORD *)(v25 + 166) = v49;
-      AdjustSdk_Adjust__InitSdk((AdjustSdk_AdjustConfig_o *)v25, v48);
+      *(_WORD *)(v25 + 162) = v50;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v44, this->fields.linkMe, v43);
+      v45 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
+      v46 = &v48;
+      v48 = 0;
+      *(_WORD *)(v25 + 168) = v49;
+      System_Nullable_bool____ctor((System_Nullable_bool__o)v46, this->fields.skanAttribution, v45);
+      *(_WORD *)(v25 + 166) = v48;
+      AdjustSdk_Adjust__InitSdk((AdjustSdk_AdjustConfig_o *)v25, v47);
       return;
     }
 LABEL_22:
-    sub_21FFECC(transform, v4, v5);
+    sub_2213CDC(transform, v4, v5);
   }
 }
 
@@ -248,10 +246,10 @@ void AdjustSdk_Adjust__Disable(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_5930409 & 1) == 0 )
+  if ( (byte_59685A9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930409 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685A9 = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -266,10 +264,10 @@ void AdjustSdk_Adjust__DisableCoppaComplianceInDelay(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593042D & 1) == 0 )
+  if ( (byte_59685CD & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042D = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CD = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -284,10 +282,10 @@ void AdjustSdk_Adjust__DisablePlayStoreKidsComplianceInDelay(const MethodInfo *m
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593042F & 1) == 0 )
+  if ( (byte_59685CF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CF = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -302,10 +300,10 @@ void AdjustSdk_Adjust__Enable(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_5930408 & 1) == 0 )
+  if ( (byte_59685A8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930408 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685A8 = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -320,10 +318,10 @@ void AdjustSdk_Adjust__EnableCoppaComplianceInDelay(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593042C & 1) == 0 )
+  if ( (byte_59685CC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042C = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CC = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -338,10 +336,10 @@ void AdjustSdk_Adjust__EnablePlayStoreKidsComplianceInDelay(const MethodInfo *me
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593042E & 1) == 0 )
+  if ( (byte_59685CE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CE = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -356,10 +354,10 @@ void AdjustSdk_Adjust__EndFirstSessionDelay(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593042B & 1) == 0 )
+  if ( (byte_59685CB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042B = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CB = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -374,10 +372,10 @@ void AdjustSdk_Adjust__GdprForgetMe(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593040E & 1) == 0 )
+  if ( (byte_59685AE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AE = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -390,10 +388,10 @@ void AdjustSdk_Adjust__GetAdid(System_Action_string__o *callback, const MethodIn
 {
   __int64 v2; // x2
 
-  if ( (byte_593041E & 1) == 0 )
+  if ( (byte_59685BE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593041E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685BE = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -405,10 +403,10 @@ void AdjustSdk_Adjust__GetAmazonAdId(System_Action_string__o *callback, const Me
 {
   __int64 v2; // x2
 
-  if ( (byte_5930423 & 1) == 0 )
+  if ( (byte_59685C3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930423 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C3 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -421,15 +419,15 @@ int32_t AdjustSdk_Adjust__GetAppTrackingAuthorizationStatus(const MethodInfo *me
   __int64 v1; // x1
   __int64 v2; // x2
 
-  if ( (byte_593041D & 1) == 0 )
+  if ( (byte_59685BD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16474/*"[Adjust]: Error! App tracking authorization status is only supported for iOS platform."*/);
-    byte_593041D = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16506/*"[Adjust]: Error! App tracking authorization status is only supported for iOS platform."*/);
+    byte_59685BD = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v1, v2);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16474/*"[Adjust]: Error! App tracking authorization status is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16506/*"[Adjust]: Error! App tracking authorization status is only supported for iOS platform."*/, 0);
   return -1;
 }
 
@@ -438,10 +436,10 @@ void AdjustSdk_Adjust__GetAttribution(System_Action_AdjustAttribution__o *callba
 {
   __int64 v2; // x2
 
-  if ( (byte_593041F & 1) == 0 )
+  if ( (byte_59685BF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593041F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685BF = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -453,10 +451,10 @@ void AdjustSdk_Adjust__GetGoogleAdId(System_Action_string__o *callback, const Me
 {
   __int64 v2; // x2
 
-  if ( (byte_5930422 & 1) == 0 )
+  if ( (byte_59685C2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930422 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C2 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -468,15 +466,15 @@ void AdjustSdk_Adjust__GetIdfa(System_Action_string__o *callback, const MethodIn
 {
   __int64 v2; // x2
 
-  if ( (byte_5930420 & 1) == 0 )
+  if ( (byte_59685C0 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16475/*"[Adjust]: Error! IDFA is not available on Android platform."*/);
-    byte_5930420 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16507/*"[Adjust]: Error! IDFA is not available on Android platform."*/);
+    byte_59685C0 = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16475/*"[Adjust]: Error! IDFA is not available on Android platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16507/*"[Adjust]: Error! IDFA is not available on Android platform."*/, 0);
 }
 
 
@@ -484,15 +482,15 @@ void AdjustSdk_Adjust__GetIdfv(System_Action_string__o *callback, const MethodIn
 {
   __int64 v2; // x2
 
-  if ( (byte_5930421 & 1) == 0 )
+  if ( (byte_59685C1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16476/*"[Adjust]: Error! IDFV is not available on Android platform."*/);
-    byte_5930421 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16508/*"[Adjust]: Error! IDFV is not available on Android platform."*/);
+    byte_59685C1 = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16476/*"[Adjust]: Error! IDFV is not available on Android platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16508/*"[Adjust]: Error! IDFV is not available on Android platform."*/, 0);
 }
 
 
@@ -500,10 +498,10 @@ void AdjustSdk_Adjust__GetLastDeeplink(System_Action_string__o *callback, const 
 {
   __int64 v2; // x2
 
-  if ( (byte_5930425 & 1) == 0 )
+  if ( (byte_59685C5 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930425 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C5 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -515,10 +513,10 @@ void AdjustSdk_Adjust__GetSdkVersion(System_Action_string__o *callback, const Me
 {
   __int64 v2; // x2
 
-  if ( (byte_5930424 & 1) == 0 )
+  if ( (byte_59685C4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930424 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C4 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -530,12 +528,12 @@ void AdjustSdk_Adjust__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, const Met
 {
   __int64 v2; // x2
 
-  if ( (byte_5930406 & 1) == 0 )
+  if ( (byte_59685A6 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16477/*"[Adjust]: Missing config to start."*/);
-    byte_5930406 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16509/*"[Adjust]: Missing config to start."*/);
+    byte_59685A6 = 1;
   }
   if ( adjustConfig )
   {
@@ -547,7 +545,7 @@ void AdjustSdk_Adjust__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, const Met
   {
     if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-    UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16477/*"[Adjust]: Missing config to start."*/, 0);
+    UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16509/*"[Adjust]: Missing config to start."*/, 0);
   }
 }
 
@@ -562,10 +560,10 @@ void AdjustSdk_Adjust__IsEnabled(System_Action_bool__o *callback, const MethodIn
 {
   __int64 v2; // x2
 
-  if ( (byte_593040A & 1) == 0 )
+  if ( (byte_59685AA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AA = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -578,10 +576,10 @@ void AdjustSdk_Adjust__ProcessAndResolveDeeplink(
         System_Action_string__o *callback,
         const MethodInfo *method)
 {
-  if ( (byte_5930428 & 1) == 0 )
+  if ( (byte_59685C8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930428 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C8 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, callback, method);
@@ -593,10 +591,10 @@ void AdjustSdk_Adjust__ProcessDeeplink(AdjustSdk_AdjustDeeplink_o *deeplink, con
 {
   __int64 v2; // x2
 
-  if ( (byte_593040F & 1) == 0 )
+  if ( (byte_59685AF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AF = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -608,10 +606,10 @@ void AdjustSdk_Adjust__RemoveGlobalCallbackParameter(System_String_o *key, const
 {
   __int64 v2; // x2
 
-  if ( (byte_5930413 & 1) == 0 )
+  if ( (byte_59685B3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930413 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B3 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -625,10 +623,10 @@ void AdjustSdk_Adjust__RemoveGlobalCallbackParameters(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_5930415 & 1) == 0 )
+  if ( (byte_59685B5 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930415 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B5 = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -641,10 +639,10 @@ void AdjustSdk_Adjust__RemoveGlobalPartnerParameter(System_String_o *key, const 
 {
   __int64 v2; // x2
 
-  if ( (byte_5930412 & 1) == 0 )
+  if ( (byte_59685B2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930412 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B2 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -658,10 +656,10 @@ void AdjustSdk_Adjust__RemoveGlobalPartnerParameters(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_5930414 & 1) == 0 )
+  if ( (byte_59685B4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930414 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B4 = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -674,15 +672,15 @@ void AdjustSdk_Adjust__RequestAppTrackingAuthorization(System_Action_int__o *cal
 {
   __int64 v2; // x2
 
-  if ( (byte_593041B & 1) == 0 )
+  if ( (byte_59685BB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16479/*"[Adjust]: Requesting tracking authorization is only supported for iOS platform."*/);
-    byte_593041B = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16511/*"[Adjust]: Requesting tracking authorization is only supported for iOS platform."*/);
+    byte_59685BB = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16479/*"[Adjust]: Requesting tracking authorization is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16511/*"[Adjust]: Requesting tracking authorization is only supported for iOS platform."*/, 0);
 }
 
 
@@ -690,10 +688,10 @@ void AdjustSdk_Adjust__SetExternalDeviceIdInDelay(System_String_o *externalDevic
 {
   __int64 v2; // x2
 
-  if ( (byte_5930430 & 1) == 0 )
+  if ( (byte_59685D0 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930430 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685D0 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -705,10 +703,10 @@ void AdjustSdk_Adjust__SetPushToken(System_String_o *pushToken, const MethodInfo
 {
   __int64 v2; // x2
 
-  if ( (byte_593040D & 1) == 0 )
+  if ( (byte_59685AD & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040D = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AD = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -722,10 +720,10 @@ void AdjustSdk_Adjust__SetTestOptions(
 {
   __int64 v2; // x2
 
-  if ( (byte_5930431 & 1) == 0 )
+  if ( (byte_59685D1 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930431 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685D1 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -739,10 +737,10 @@ void AdjustSdk_Adjust__SwitchBackToOnlineMode(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593040C & 1) == 0 )
+  if ( (byte_59685AC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040C = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AC = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -757,10 +755,10 @@ void AdjustSdk_Adjust__SwitchToOfflineMode(const MethodInfo *method)
   __int64 v2; // x2
   AdjustSdk_AdjustAndroid_c *inited; // x0
 
-  if ( (byte_593040B & 1) == 0 )
+  if ( (byte_59685AB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593040B = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685AB = 1;
   }
   inited = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -773,10 +771,10 @@ void AdjustSdk_Adjust__TrackAdRevenue(AdjustSdk_AdjustAdRevenue_o *adRevenue, co
 {
   __int64 v2; // x2
 
-  if ( (byte_5930416 & 1) == 0 )
+  if ( (byte_59685B6 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930416 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B6 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -790,15 +788,15 @@ void AdjustSdk_Adjust__TrackAppStoreSubscription(
 {
   __int64 v2; // x2
 
-  if ( (byte_5930417 & 1) == 0 )
+  if ( (byte_59685B7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16473/*"[Adjust]: App Store subscription tracking is only supported for iOS platform."*/);
-    byte_5930417 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16505/*"[Adjust]: App Store subscription tracking is only supported for iOS platform."*/);
+    byte_59685B7 = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16473/*"[Adjust]: App Store subscription tracking is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16505/*"[Adjust]: App Store subscription tracking is only supported for iOS platform."*/, 0);
 }
 
 
@@ -806,12 +804,12 @@ void AdjustSdk_Adjust__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, const Me
 {
   __int64 v2; // x2
 
-  if ( (byte_5930407 & 1) == 0 )
+  if ( (byte_59685A7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16478/*"[Adjust]: Missing event to track."*/);
-    byte_5930407 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16510/*"[Adjust]: Missing event to track."*/);
+    byte_59685A7 = 1;
   }
   if ( adjustEvent )
   {
@@ -823,7 +821,7 @@ void AdjustSdk_Adjust__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, const Me
   {
     if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, method, v2);
-    UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16478/*"[Adjust]: Missing event to track."*/, 0);
+    UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16510/*"[Adjust]: Missing event to track."*/, 0);
   }
 }
 
@@ -832,10 +830,10 @@ void AdjustSdk_Adjust__TrackMeasurementConsent(bool measurementConsent, const Me
 {
   __int64 v2; // x2
 
-  if ( (byte_593041A & 1) == 0 )
+  if ( (byte_59685BA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593041A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685BA = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -849,10 +847,10 @@ void AdjustSdk_Adjust__TrackPlayStoreSubscription(
 {
   __int64 v2; // x2
 
-  if ( (byte_5930418 & 1) == 0 )
+  if ( (byte_59685B8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930418 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B8 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -866,10 +864,10 @@ void AdjustSdk_Adjust__TrackThirdPartySharing(
 {
   __int64 v2; // x2
 
-  if ( (byte_5930419 & 1) == 0 )
+  if ( (byte_59685B9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930419 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685B9 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, method, v2);
@@ -885,15 +883,15 @@ void AdjustSdk_Adjust__UpdateSkanConversionValue(
         System_Action_string__o *callback,
         const MethodInfo *method)
 {
-  if ( (byte_593041C & 1) == 0 )
+  if ( (byte_59685BC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16480/*"[Adjust]: Updating SKAdNetwork conversion value is only supported for iOS platform."*/);
-    byte_593041C = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16512/*"[Adjust]: Updating SKAdNetwork conversion value is only supported for iOS platform."*/);
+    byte_59685BC = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, coarseValue, lockWindow);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16480/*"[Adjust]: Updating SKAdNetwork conversion value is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16512/*"[Adjust]: Updating SKAdNetwork conversion value is only supported for iOS platform."*/, 0);
 }
 
 
@@ -902,15 +900,15 @@ void AdjustSdk_Adjust__VerifyAndTrackAppStorePurchase(
         System_Action_AdjustPurchaseVerificationResult__o *callback,
         const MethodInfo *method)
 {
-  if ( (byte_5930429 & 1) == 0 )
+  if ( (byte_59685C9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16472/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/);
-    byte_5930429 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16504/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/);
+    byte_59685C9 = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, callback, method);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16472/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16504/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/, 0);
 }
 
 
@@ -919,10 +917,10 @@ void AdjustSdk_Adjust__VerifyAndTrackPlayStorePurchase(
         System_Action_AdjustPurchaseVerificationResult__o *verificationResultCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593042A & 1) == 0 )
+  if ( (byte_59685CA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_593042A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685CA = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, verificationResultCallback, method);
@@ -935,15 +933,15 @@ void AdjustSdk_Adjust__VerifyAppStorePurchase(
         System_Action_AdjustPurchaseVerificationResult__o *callback,
         const MethodInfo *method)
 {
-  if ( (byte_5930426 & 1) == 0 )
+  if ( (byte_59685C6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&StringLiteral_16472/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/);
-    byte_5930426 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&StringLiteral_16504/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/);
+    byte_59685C6 = 1;
   }
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, callback, method);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16472/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_16504/*"[Adjust]: App Store purchase verification is only supported for iOS platform."*/, 0);
 }
 
 
@@ -952,10 +950,10 @@ void AdjustSdk_Adjust__VerifyPlayStorePurchase(
         System_Action_AdjustPurchaseVerificationResult__o *verificationResultCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930427 & 1) == 0 )
+  if ( (byte_59685C7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    byte_5930427 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    byte_59685C7 = 1;
   }
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, verificationResultCallback, method);
@@ -967,15 +965,15 @@ void AdjustSdk_Adjust___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_5930432 & 1) == 0 )
+  if ( (byte_59685D2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_Adjust___c_TypeInfo);
-    byte_5930432 = 1;
+    sub_2213A60(&AdjustSdk_Adjust___c_TypeInfo);
+    byte_59685D2 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_Adjust___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(AdjustSdk_Adjust___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AdjustSdk_Adjust___c_TypeInfo->static_fields->__9 = (struct AdjustSdk_Adjust___c_o *)v1;
-  sub_21FFBF4(AdjustSdk_Adjust___c_TypeInfo->static_fields, v1);
+  sub_2213A04(AdjustSdk_Adjust___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -993,15 +991,15 @@ void AdjustSdk_Adjust___c___Awake_b__18_0(
   Il2CppObject *v4; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_5930433 & 1) == 0 )
+  if ( (byte_59685D3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustDeeplink_TypeInfo);
-    byte_5930433 = 1;
+    sub_2213A60(&AdjustSdk_AdjustDeeplink_TypeInfo);
+    byte_59685D3 = 1;
   }
-  v4 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustDeeplink_TypeInfo);
+  v4 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustDeeplink_TypeInfo);
   System_Object___ctor(v4, 0);
   v4[1].klass = (Il2CppClass *)deeplink;
-  sub_21FFBF4(&v4[1], deeplink);
+  sub_2213A04(&v4[1], deeplink);
   AdjustSdk_Adjust__ProcessDeeplink((AdjustSdk_AdjustDeeplink_o *)v4, v5);
 }
 
@@ -1013,7 +1011,7 @@ void AdjustSdk_AdjustAdRevenue___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Source_k__BackingField = source;
-  sub_21FFBF4(&this->fields._Source_k__BackingField, source);
+  sub_2213A04(&this->fields._Source_k__BackingField, source);
 }
 
 
@@ -1037,24 +1035,24 @@ void AdjustSdk_AdjustAdRevenue__AddCallbackParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_5930437 & 1) == 0 )
+  if ( (byte_59685D7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_5930437 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_59685D7 = 1;
   }
   innerCallbackParameters = this->fields.innerCallbackParameters;
   p_fields = &this->fields;
   v7 = (System_Collections_Generic_List_object__o *)innerCallbackParameters;
   if ( !innerCallbackParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     p_fields->innerCallbackParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_fields, v10);
+    sub_2213A04(p_fields, v10);
     v7 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
     if ( !p_fields->innerCallbackParameters )
       goto LABEL_14;
@@ -1070,14 +1068,14 @@ void AdjustSdk_AdjustAdRevenue__AddCallbackParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
   if ( !p_fields->innerCallbackParameters
@@ -1087,7 +1085,7 @@ void AdjustSdk_AdjustAdRevenue__AddCallbackParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key, value);
+    sub_2213CDC(v7, key, value);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -1095,14 +1093,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -1127,24 +1125,24 @@ void AdjustSdk_AdjustAdRevenue__AddPartnerParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_5930438 & 1) == 0 )
+  if ( (byte_59685D8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_5930438 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_59685D8 = 1;
   }
   innerPartnerParameters = this->fields.innerPartnerParameters;
   p_innerPartnerParameters = &this->fields.innerPartnerParameters;
   v7 = (System_Collections_Generic_List_object__o *)innerPartnerParameters;
   if ( !innerPartnerParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     *p_innerPartnerParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_innerPartnerParameters, v10);
+    sub_2213A04(p_innerPartnerParameters, v10);
     v7 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
     if ( !*p_innerPartnerParameters )
       goto LABEL_14;
@@ -1160,14 +1158,14 @@ void AdjustSdk_AdjustAdRevenue__AddPartnerParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
   if ( !*p_innerPartnerParameters
@@ -1177,7 +1175,7 @@ void AdjustSdk_AdjustAdRevenue__AddPartnerParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key, value);
+    sub_2213CDC(v7, key, value);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -1185,14 +1183,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -1207,19 +1205,19 @@ void AdjustSdk_AdjustAdRevenue__SetRevenue(
   struct System_Nullable_double__o v8; // [xsp+0h] [xbp-40h] BYREF
   System_Nullable_double__o v9; // 0:x0.16
 
-  if ( (byte_5930436 & 1) == 0 )
+  if ( (byte_59685D6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    byte_5930436 = 1;
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    byte_59685D6 = 1;
   }
   *(_QWORD *)&v9.fields.value = Method_System_Nullable_double___ctor__;
   *(_QWORD *)&v9.fields.hasValue = &v8;
   v8 = (struct System_Nullable_double__o)0LL;
-  System_Nullable_double____ctor(v9, revenue, (const MethodInfo_45AEEEC *)method);
+  System_Nullable_double____ctor(v9, revenue, (const MethodInfo_45E3024 *)method);
   v7 = v8;
   this->fields._Currency_k__BackingField = currency;
   this->fields._Revenue_k__BackingField = v7;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, currency);
+  sub_2213A04(&this->fields._Currency_k__BackingField, currency);
 }
 
 
@@ -1261,16 +1259,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustAdR
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_5930434 & 1) == 0 )
+  if ( (byte_59685D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_5930434 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_59685D4 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerCallbackParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -1287,33 +1285,28 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustAdR
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_5930435 & 1) == 0 )
+  if ( (byte_59685D5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_5930435 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_59685D5 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerPartnerParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Nullable_double__o AdjustSdk_AdjustAdRevenue__get_Revenue(
         AdjustSdk_AdjustAdRevenue_o *this,
         const MethodInfo *method)
 {
-  double value; // x1
-  __int64 v3; // x0
   System_Nullable_double__o result; // 0:x0.16
 
-  value = this->fields._Revenue_k__BackingField.fields.value;
-  v3 = *(_QWORD *)&this->fields._Revenue_k__BackingField.fields.hasValue;
-  result.fields.value = value;
-  *(_QWORD *)&result.fields.hasValue = v3;
+  result.fields.value = this->fields._Revenue_k__BackingField.fields.value;
+  *(_QWORD *)&result.fields.hasValue = *(_QWORD *)&this->fields._Revenue_k__BackingField.fields.hasValue;
   return result;
 }
 
@@ -1339,7 +1332,7 @@ void AdjustSdk_AdjustAdRevenue__set_AdRevenueNetwork(
         const MethodInfo *method)
 {
   this->fields._AdRevenueNetwork_k__BackingField = value;
-  sub_21FFBF4(&this->fields._AdRevenueNetwork_k__BackingField, value);
+  sub_2213A04(&this->fields._AdRevenueNetwork_k__BackingField, value);
 }
 
 
@@ -1349,7 +1342,7 @@ void AdjustSdk_AdjustAdRevenue__set_AdRevenuePlacement(
         const MethodInfo *method)
 {
   this->fields._AdRevenuePlacement_k__BackingField = value;
-  sub_21FFBF4(&this->fields._AdRevenuePlacement_k__BackingField, value);
+  sub_2213A04(&this->fields._AdRevenuePlacement_k__BackingField, value);
 }
 
 
@@ -1359,7 +1352,7 @@ void AdjustSdk_AdjustAdRevenue__set_AdRevenueUnit(
         const MethodInfo *method)
 {
   this->fields._AdRevenueUnit_k__BackingField = value;
-  sub_21FFBF4(&this->fields._AdRevenueUnit_k__BackingField, value);
+  sub_2213A04(&this->fields._AdRevenueUnit_k__BackingField, value);
 }
 
 
@@ -1369,7 +1362,7 @@ void AdjustSdk_AdjustAdRevenue__set_Currency(
         const MethodInfo *method)
 {
   this->fields._Currency_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, value);
+  sub_2213A04(&this->fields._Currency_k__BackingField, value);
 }
 
 
@@ -1388,7 +1381,7 @@ void AdjustSdk_AdjustAdRevenue__set_Source(
         const MethodInfo *method)
 {
   this->fields._Source_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Source_k__BackingField, value);
+  sub_2213A04(&this->fields._Source_k__BackingField, value);
 }
 
 
@@ -1404,34 +1397,34 @@ void AdjustSdk_AdjustAndroid___cctor(const MethodInfo *method)
   Il2CppObject *Static_object; // x0
   struct AdjustSdk_AdjustAndroid_StaticFields *v9; // x8
 
-  if ( (byte_5930463 & 1) == 0 )
+  if ( (byte_5968603 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-    sub_21FFC50(&StringLiteral_18888/*"com.unity3d.player.UnityPlayer"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    sub_21FFC50(&StringLiteral_19193/*"currentActivity"*/);
-    byte_5930463 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+    sub_2213A60(&StringLiteral_18926/*"com.unity3d.player.UnityPlayer"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    sub_2213A60(&StringLiteral_19234/*"currentActivity"*/);
+    byte_5968603 = 1;
   }
   v1 = UnityEngine_AndroidJavaClass_TypeInfo;
   AdjustSdk_AdjustAndroid_TypeInfo->static_fields->isDeferredDeeplinkOpeningEnabled = 1;
-  v2 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(v1);
-  UnityEngine_AndroidJavaClass___ctor(v2, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+  v2 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(v1);
+  UnityEngine_AndroidJavaClass___ctor(v2, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
   static_fields = AdjustSdk_AdjustAndroid_TypeInfo->static_fields;
   static_fields->ajcAdjust = v2;
-  sub_21FFBF4(&static_fields->ajcAdjust, v2);
-  v4 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18888/*"com.unity3d.player.UnityPlayer"*/, 0);
+  sub_2213A04(&static_fields->ajcAdjust, v2);
+  v4 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18926/*"com.unity3d.player.UnityPlayer"*/, 0);
   if ( !v4 )
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
                     (UnityEngine_AndroidJavaObject_o *)v4,
-                    (System_String_o *)StringLiteral_19193/*"currentActivity"*/,
-                    (const MethodInfo_36D7798 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+                    (System_String_o *)StringLiteral_19234/*"currentActivity"*/,
+                    (const MethodInfo_3709708 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
   v9 = AdjustSdk_AdjustAndroid_TypeInfo->static_fields;
   v9->ajoCurrentActivity = (struct UnityEngine_AndroidJavaObject_o *)Static_object;
-  sub_21FFBF4(&v9->ajoCurrentActivity, Static_object);
+  sub_2213A04(&v9->ajoCurrentActivity, Static_object);
 }
 
 
@@ -1460,14 +1453,14 @@ void AdjustSdk_AdjustAndroid__AddGlobalCallbackParameter(
   __int64 v16; // x1
   __int64 v17; // x0
 
-  if ( (byte_5930446 & 1) == 0 )
+  if ( (byte_59685E6 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_17318/*"addGlobalCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    byte_5930446 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_17354/*"addGlobalCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    byte_59685E6 = 1;
   }
   v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1477,8 +1470,8 @@ void AdjustSdk_AdjustAndroid__AddGlobalCallbackParameter(
   }
   if ( !v5->static_fields->ajcAdjust )
   {
-    v6 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v6, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v6 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v6, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v9 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -1487,7 +1480,7 @@ void AdjustSdk_AdjustAndroid__AddGlobalCallbackParameter(
     }
     static_fields = v9->static_fields;
     static_fields->ajcAdjust = v6;
-    sub_21FFBF4(&static_fields->ajcAdjust, v6);
+    sub_2213A04(&static_fields->ajcAdjust, v6);
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v5->_2.cctor_finished + 1) )
@@ -1496,39 +1489,39 @@ void AdjustSdk_AdjustAndroid__AddGlobalCallbackParameter(
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v5->static_fields->ajcAdjust;
-  v12 = sub_21FFD10(object___TypeInfo, 2);
+  v12 = sub_2213B20(object___TypeInfo, 2);
   if ( !v12 )
 LABEL_20:
-    sub_21FFECC(v12, v13, v14);
+    sub_2213CDC(v12, v13, v14);
   v15 = (System_Object_array *)v12;
   if ( key )
   {
-    v12 = sub_21FFDA4(key, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
+    v12 = sub_2213BB4(key, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
     if ( !v12 )
       goto LABEL_22;
   }
   if ( !LODWORD(v15->max_length) )
     goto LABEL_21;
   v15->m_Items[0] = (Il2CppObject *)key;
-  v12 = sub_21FFBF4(v15->m_Items, key);
+  v12 = sub_2213A04(v15->m_Items, key);
   if ( value )
   {
-    v12 = sub_21FFDA4(value, v15->obj.klass->_1.element_class);
+    v12 = sub_2213BB4(value, v15->obj.klass->_1.element_class);
     if ( !v12 )
     {
 LABEL_22:
-      v17 = sub_21FFEF0(v12, v16);
-      sub_21FFD90(v17, 0);
+      v17 = sub_2213D00(v12, v16);
+      sub_2213BA0(v17, 0);
     }
   }
   if ( (v15->max_length & 0xFFFFFFFE) == 0 )
 LABEL_21:
-    sub_21FFED4(v12);
+    sub_2213CE4(v12);
   v15->m_Items[1] = (Il2CppObject *)value;
-  v12 = sub_21FFBF4(&v15->m_Items[1], value);
+  v12 = sub_2213A04(&v15->m_Items[1], value);
   if ( !ajcAdjust )
     goto LABEL_20;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_17318/*"addGlobalCallbackParameter"*/, v15, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_17354/*"addGlobalCallbackParameter"*/, v15, 0);
 }
 
 
@@ -1551,14 +1544,14 @@ void AdjustSdk_AdjustAndroid__AddGlobalPartnerParameter(
   __int64 v16; // x1
   __int64 v17; // x0
 
-  if ( (byte_5930445 & 1) == 0 )
+  if ( (byte_59685E5 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    sub_21FFC50(&StringLiteral_17319/*"addGlobalPartnerParameter"*/);
-    byte_5930445 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    sub_2213A60(&StringLiteral_17355/*"addGlobalPartnerParameter"*/);
+    byte_59685E5 = 1;
   }
   v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1568,8 +1561,8 @@ void AdjustSdk_AdjustAndroid__AddGlobalPartnerParameter(
   }
   if ( !v5->static_fields->ajcAdjust )
   {
-    v6 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v6, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v6 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v6, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v9 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -1578,7 +1571,7 @@ void AdjustSdk_AdjustAndroid__AddGlobalPartnerParameter(
     }
     static_fields = v9->static_fields;
     static_fields->ajcAdjust = v6;
-    sub_21FFBF4(&static_fields->ajcAdjust, v6);
+    sub_2213A04(&static_fields->ajcAdjust, v6);
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v5->_2.cctor_finished + 1) )
@@ -1587,39 +1580,39 @@ void AdjustSdk_AdjustAndroid__AddGlobalPartnerParameter(
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v5->static_fields->ajcAdjust;
-  v12 = sub_21FFD10(object___TypeInfo, 2);
+  v12 = sub_2213B20(object___TypeInfo, 2);
   if ( !v12 )
 LABEL_20:
-    sub_21FFECC(v12, v13, v14);
+    sub_2213CDC(v12, v13, v14);
   v15 = (System_Object_array *)v12;
   if ( key )
   {
-    v12 = sub_21FFDA4(key, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
+    v12 = sub_2213BB4(key, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
     if ( !v12 )
       goto LABEL_22;
   }
   if ( !LODWORD(v15->max_length) )
     goto LABEL_21;
   v15->m_Items[0] = (Il2CppObject *)key;
-  v12 = sub_21FFBF4(v15->m_Items, key);
+  v12 = sub_2213A04(v15->m_Items, key);
   if ( value )
   {
-    v12 = sub_21FFDA4(value, v15->obj.klass->_1.element_class);
+    v12 = sub_2213BB4(value, v15->obj.klass->_1.element_class);
     if ( !v12 )
     {
 LABEL_22:
-      v17 = sub_21FFEF0(v12, v16);
-      sub_21FFD90(v17, 0);
+      v17 = sub_2213D00(v12, v16);
+      sub_2213BA0(v17, 0);
     }
   }
   if ( (v15->max_length & 0xFFFFFFFE) == 0 )
 LABEL_21:
-    sub_21FFED4(v12);
+    sub_2213CE4(v12);
   v15->m_Items[1] = (Il2CppObject *)value;
-  v12 = sub_21FFBF4(&v15->m_Items[1], value);
+  v12 = sub_2213A04(&v15->m_Items[1], value);
   if ( !ajcAdjust )
     goto LABEL_20;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_17319/*"addGlobalPartnerParameter"*/, v15, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_17355/*"addGlobalPartnerParameter"*/, v15, 0);
 }
 
 
@@ -1634,12 +1627,12 @@ void AdjustSdk_AdjustAndroid__Disable(const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593043C & 1) == 0 )
+  if ( (byte_59685DC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19435/*"disable"*/);
-    byte_593043C = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19477/*"disable"*/);
+    byte_59685DC = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1652,22 +1645,22 @@ void AdjustSdk_AdjustAndroid__Disable(const MethodInfo *method)
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19435/*"disable"*/,
+    (System_String_o *)StringLiteral_19477/*"disable"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -1687,12 +1680,12 @@ void AdjustSdk_AdjustAndroid__DisableCoppaCompliance(const MethodInfo *method)
   __int64 v10; // x1
   __int64 v11; // x0
 
-  if ( (byte_5930440 & 1) == 0 )
+  if ( (byte_59685E0 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_19436/*"disableCoppaCompliance"*/);
-    byte_5930440 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_19478/*"disableCoppaCompliance"*/);
+    byte_59685E0 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1701,30 +1694,30 @@ void AdjustSdk_AdjustAndroid__DisableCoppaCompliance(const MethodInfo *method)
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
-  v5 = sub_21FFD10(object___TypeInfo, 1);
+  v5 = sub_2213B20(object___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_11;
   v8 = v5;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v5 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v11 = sub_21FFEF0(0, v10);
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00(0, v10);
+      sub_2213BA0(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v8 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_QWORD *)(v8 + 32) = ajoCurrentActivity;
-  v5 = sub_21FFBF4(v8 + 32, ajoCurrentActivity);
+  v5 = sub_2213A04(v8 + 32, ajoCurrentActivity);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19436/*"disableCoppaCompliance"*/,
+    (System_String_o *)StringLiteral_19478/*"disableCoppaCompliance"*/,
     (System_Object_array *)v8,
     0);
 }
@@ -1741,12 +1734,12 @@ void AdjustSdk_AdjustAndroid__DisableCoppaComplianceInDelay(const MethodInfo *me
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_5930457 & 1) == 0 )
+  if ( (byte_59685F7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19437/*"disableCoppaComplianceInDelay"*/);
-    byte_5930457 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19479/*"disableCoppaComplianceInDelay"*/);
+    byte_59685F7 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1759,22 +1752,22 @@ void AdjustSdk_AdjustAndroid__DisableCoppaComplianceInDelay(const MethodInfo *me
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19437/*"disableCoppaComplianceInDelay"*/,
+    (System_String_o *)StringLiteral_19479/*"disableCoppaComplianceInDelay"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -1794,12 +1787,12 @@ void AdjustSdk_AdjustAndroid__DisablePlayStoreKidsApp(const MethodInfo *method)
   __int64 v10; // x1
   __int64 v11; // x0
 
-  if ( (byte_5930442 & 1) == 0 )
+  if ( (byte_59685E2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_19440/*"disablePlayStoreKidsApp"*/);
-    byte_5930442 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_19482/*"disablePlayStoreKidsApp"*/);
+    byte_59685E2 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1808,30 +1801,30 @@ void AdjustSdk_AdjustAndroid__DisablePlayStoreKidsApp(const MethodInfo *method)
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
-  v5 = sub_21FFD10(object___TypeInfo, 1);
+  v5 = sub_2213B20(object___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_11;
   v8 = v5;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v5 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v11 = sub_21FFEF0(0, v10);
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00(0, v10);
+      sub_2213BA0(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v8 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_QWORD *)(v8 + 32) = ajoCurrentActivity;
-  v5 = sub_21FFBF4(v8 + 32, ajoCurrentActivity);
+  v5 = sub_2213A04(v8 + 32, ajoCurrentActivity);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19440/*"disablePlayStoreKidsApp"*/,
+    (System_String_o *)StringLiteral_19482/*"disablePlayStoreKidsApp"*/,
     (System_Object_array *)v8,
     0);
 }
@@ -1848,12 +1841,12 @@ void AdjustSdk_AdjustAndroid__DisablePlayStoreKidsComplianceInDelay(const Method
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593045F & 1) == 0 )
+  if ( (byte_59685FF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19441/*"disablePlayStoreKidsComplianceInDelay"*/);
-    byte_593045F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19483/*"disablePlayStoreKidsComplianceInDelay"*/);
+    byte_59685FF = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1866,22 +1859,22 @@ void AdjustSdk_AdjustAndroid__DisablePlayStoreKidsComplianceInDelay(const Method
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19441/*"disablePlayStoreKidsComplianceInDelay"*/,
+    (System_String_o *)StringLiteral_19483/*"disablePlayStoreKidsComplianceInDelay"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -1898,12 +1891,12 @@ void AdjustSdk_AdjustAndroid__Enable(const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593043B & 1) == 0 )
+  if ( (byte_59685DB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19820/*"enable"*/);
-    byte_593043B = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19862/*"enable"*/);
+    byte_59685DB = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1916,22 +1909,22 @@ void AdjustSdk_AdjustAndroid__Enable(const MethodInfo *method)
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19820/*"enable"*/,
+    (System_String_o *)StringLiteral_19862/*"enable"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -1951,12 +1944,12 @@ void AdjustSdk_AdjustAndroid__EnableCoppaCompliance(const MethodInfo *method)
   __int64 v10; // x1
   __int64 v11; // x0
 
-  if ( (byte_593043F & 1) == 0 )
+  if ( (byte_59685DF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_19823/*"enableCoppaCompliance"*/);
-    byte_593043F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_19865/*"enableCoppaCompliance"*/);
+    byte_59685DF = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -1965,30 +1958,30 @@ void AdjustSdk_AdjustAndroid__EnableCoppaCompliance(const MethodInfo *method)
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
-  v5 = sub_21FFD10(object___TypeInfo, 1);
+  v5 = sub_2213B20(object___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_11;
   v8 = v5;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v5 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v11 = sub_21FFEF0(0, v10);
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00(0, v10);
+      sub_2213BA0(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v8 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_QWORD *)(v8 + 32) = ajoCurrentActivity;
-  v5 = sub_21FFBF4(v8 + 32, ajoCurrentActivity);
+  v5 = sub_2213A04(v8 + 32, ajoCurrentActivity);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19823/*"enableCoppaCompliance"*/,
+    (System_String_o *)StringLiteral_19865/*"enableCoppaCompliance"*/,
     (System_Object_array *)v8,
     0);
 }
@@ -2005,12 +1998,12 @@ void AdjustSdk_AdjustAndroid__EnableCoppaComplianceInDelay(const MethodInfo *met
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_5930456 & 1) == 0 )
+  if ( (byte_59685F6 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19824/*"enableCoppaComplianceInDelay"*/);
-    byte_5930456 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19866/*"enableCoppaComplianceInDelay"*/);
+    byte_59685F6 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2023,22 +2016,22 @@ void AdjustSdk_AdjustAndroid__EnableCoppaComplianceInDelay(const MethodInfo *met
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19824/*"enableCoppaComplianceInDelay"*/,
+    (System_String_o *)StringLiteral_19866/*"enableCoppaComplianceInDelay"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -2058,12 +2051,12 @@ void AdjustSdk_AdjustAndroid__EnablePlayStoreKidsApp(const MethodInfo *method)
   __int64 v10; // x1
   __int64 v11; // x0
 
-  if ( (byte_5930441 & 1) == 0 )
+  if ( (byte_59685E1 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_19833/*"enablePlayStoreKidsApp"*/);
-    byte_5930441 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_19875/*"enablePlayStoreKidsApp"*/);
+    byte_59685E1 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2072,30 +2065,30 @@ void AdjustSdk_AdjustAndroid__EnablePlayStoreKidsApp(const MethodInfo *method)
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
-  v5 = sub_21FFD10(object___TypeInfo, 1);
+  v5 = sub_2213B20(object___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_11;
   v8 = v5;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v5 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v11 = sub_21FFEF0(0, v10);
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00(0, v10);
+      sub_2213BA0(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v8 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_QWORD *)(v8 + 32) = ajoCurrentActivity;
-  v5 = sub_21FFBF4(v8 + 32, ajoCurrentActivity);
+  v5 = sub_2213A04(v8 + 32, ajoCurrentActivity);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19833/*"enablePlayStoreKidsApp"*/,
+    (System_String_o *)StringLiteral_19875/*"enablePlayStoreKidsApp"*/,
     (System_Object_array *)v8,
     0);
 }
@@ -2112,12 +2105,12 @@ void AdjustSdk_AdjustAndroid__EnablePlayStoreKidsComplianceInDelay(const MethodI
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593045E & 1) == 0 )
+  if ( (byte_59685FE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19835/*"enablePlayStoreKidsComplianceInDelay"*/);
-    byte_593045E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19877/*"enablePlayStoreKidsComplianceInDelay"*/);
+    byte_59685FE = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2130,22 +2123,22 @@ void AdjustSdk_AdjustAndroid__EnablePlayStoreKidsComplianceInDelay(const MethodI
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19835/*"enablePlayStoreKidsComplianceInDelay"*/,
+    (System_String_o *)StringLiteral_19877/*"enablePlayStoreKidsComplianceInDelay"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -2162,12 +2155,12 @@ void AdjustSdk_AdjustAndroid__EndFirstSessionDelay(const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_5930455 & 1) == 0 )
+  if ( (byte_59685F5 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_19858/*"endFirstSessionDelay"*/);
-    byte_5930455 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_19900/*"endFirstSessionDelay"*/);
+    byte_59685F5 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2180,22 +2173,22 @@ void AdjustSdk_AdjustAndroid__EndFirstSessionDelay(const MethodInfo *method)
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_19858/*"endFirstSessionDelay"*/,
+    (System_String_o *)StringLiteral_19900/*"endFirstSessionDelay"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -2214,12 +2207,12 @@ void AdjustSdk_AdjustAndroid__GdprForgetMe(const MethodInfo *method)
   struct UnityEngine_AndroidJavaObject_o *ajoCurrentActivity; // x21
   __int64 v10; // x0
 
-  if ( (byte_5930444 & 1) == 0 )
+  if ( (byte_59685E4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20646/*"gdprForgetMe"*/);
-    byte_5930444 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20687/*"gdprForgetMe"*/);
+    byte_59685E4 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2228,30 +2221,30 @@ void AdjustSdk_AdjustAndroid__GdprForgetMe(const MethodInfo *method)
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
-  v5 = sub_21FFD10(object___TypeInfo, 1);
+  v5 = sub_2213B20(object___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_11;
   v8 = v5;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v5 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+    v5 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
     if ( !v5 )
     {
-      v10 = sub_21FFEF0();
-      sub_21FFD90(v10, 0);
+      v10 = sub_2213D00();
+      sub_2213BA0(v10, 0);
     }
   }
   if ( !*(_DWORD *)(v8 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_QWORD *)(v8 + 32) = ajoCurrentActivity;
-  v5 = sub_21FFBF4(v8 + 32, ajoCurrentActivity);
+  v5 = sub_2213A04(v8 + 32, ajoCurrentActivity);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v5, v6, v7);
+    sub_2213CDC(v5, v6, v7);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_20646/*"gdprForgetMe"*/,
+    (System_String_o *)StringLiteral_20687/*"gdprForgetMe"*/,
     (System_Object_array *)v8,
     0);
 }
@@ -2272,15 +2265,15 @@ void AdjustSdk_AdjustAndroid__GetAdid(System_Action_string__o *onAdidRead, const
   __int64 v13; // x1
   __int64 v14; // x0
 
-  if ( (byte_5930451 & 1) == 0 )
+  if ( (byte_59685F1 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AdidReadListener_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20659/*"getAdid"*/);
-    byte_5930451 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AdidReadListener_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20700/*"getAdid"*/);
+    byte_59685F1 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_AdidReadListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AdidReadListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_AdidReadListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_AdidReadListener_TypeInfo);
   AdjustSdk_AdjustAndroid_AdidReadListener___ctor(v3, onAdidRead, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2289,29 +2282,29 @@ void AdjustSdk_AdjustAndroid__GetAdid(System_Action_string__o *onAdidRead, const
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 1);
+  v9 = sub_2213B20(object___TypeInfo, 1);
   if ( !v9 )
     goto LABEL_11;
   v12 = v9;
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
     {
-      v14 = sub_21FFEF0(0, v13);
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213D00(0, v13);
+      sub_2213BA0(v14, 0);
     }
   }
   if ( !*(_DWORD *)(v12 + 24) )
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   *(_QWORD *)(v12 + 32) = v3;
-  v9 = sub_21FFBF4(v12 + 32, v3);
+  v9 = sub_2213A04(v12 + 32, v3);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_20659/*"getAdid"*/,
+    (System_String_o *)StringLiteral_20700/*"getAdid"*/,
     (System_Object_array *)v12,
     0);
 }
@@ -2333,15 +2326,15 @@ void AdjustSdk_AdjustAndroid__GetAmazonAdId(System_Action_string__o *onAmazonAdI
   __int64 v14; // x1
   __int64 v15; // x0
 
-  if ( (byte_593045A & 1) == 0 )
+  if ( (byte_59685FA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20662/*"getAmazonAdId"*/);
-    byte_593045A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20703/*"getAmazonAdId"*/);
+    byte_59685FA = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_AmazonAdIdReadListener_TypeInfo);
   AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___ctor(v3, onAmazonAdIdRead, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2350,40 +2343,40 @@ void AdjustSdk_AdjustAndroid__GetAmazonAdId(System_Action_string__o *onAmazonAdI
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 2);
+  v9 = sub_2213B20(object___TypeInfo, 2);
   if ( !v9 )
 LABEL_14:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   v12 = (System_Object_array *)v9;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v9 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
       goto LABEL_16;
   }
   if ( !LODWORD(v12->max_length) )
     goto LABEL_15;
   v12->m_Items[0] = (Il2CppObject *)ajoCurrentActivity;
-  v9 = sub_21FFBF4(v12->m_Items, ajoCurrentActivity);
+  v9 = sub_2213A04(v12->m_Items, ajoCurrentActivity);
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, v12->obj.klass->_1.element_class);
+    v9 = sub_2213BB4(v3, v12->obj.klass->_1.element_class);
     if ( !v9 )
     {
 LABEL_16:
-      v15 = sub_21FFEF0(v9, v14);
-      sub_21FFD90(v15, 0);
+      v15 = sub_2213D00(v9, v14);
+      sub_2213BA0(v15, 0);
     }
   }
   if ( (v12->max_length & 0xFFFFFFFE) == 0 )
 LABEL_15:
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   v12->m_Items[1] = (Il2CppObject *)v3;
-  v9 = sub_21FFBF4(&v12->m_Items[1], v3);
+  v9 = sub_2213A04(&v12->m_Items[1], v3);
   if ( !ajcAdjust )
     goto LABEL_14;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20662/*"getAmazonAdId"*/, v12, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20703/*"getAmazonAdId"*/, v12, 0);
 }
 
 
@@ -2404,15 +2397,15 @@ void AdjustSdk_AdjustAndroid__GetAttribution(
   __int64 v13; // x1
   __int64 v14; // x0
 
-  if ( (byte_5930452 & 1) == 0 )
+  if ( (byte_59685F2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AttributionReadListener_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20665/*"getAttribution"*/);
-    byte_5930452 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AttributionReadListener_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20706/*"getAttribution"*/);
+    byte_59685F2 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_AttributionReadListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AttributionReadListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_AttributionReadListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_AttributionReadListener_TypeInfo);
   AdjustSdk_AdjustAndroid_AttributionReadListener___ctor(v3, onAttributionRead, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2421,29 +2414,29 @@ void AdjustSdk_AdjustAndroid__GetAttribution(
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 1);
+  v9 = sub_2213B20(object___TypeInfo, 1);
   if ( !v9 )
     goto LABEL_11;
   v12 = v9;
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
     {
-      v14 = sub_21FFEF0(0, v13);
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213D00(0, v13);
+      sub_2213BA0(v14, 0);
     }
   }
   if ( !*(_DWORD *)(v12 + 24) )
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   *(_QWORD *)(v12 + 32) = v3;
-  v9 = sub_21FFBF4(v12 + 32, v3);
+  v9 = sub_2213A04(v12 + 32, v3);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_20665/*"getAttribution"*/,
+    (System_String_o *)StringLiteral_20706/*"getAttribution"*/,
     (System_Object_array *)v12,
     0);
 }
@@ -2465,15 +2458,15 @@ void AdjustSdk_AdjustAndroid__GetGoogleAdId(System_Action_string__o *onDeviceIds
   __int64 v14; // x1
   __int64 v15; // x0
 
-  if ( (byte_5930459 & 1) == 0 )
+  if ( (byte_59685F9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20685/*"getGoogleAdId"*/);
-    byte_5930459 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20726/*"getGoogleAdId"*/);
+    byte_59685F9 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_GoogleAdIdReadListener_TypeInfo);
   AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___ctor(v3, onDeviceIdsRead, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2482,40 +2475,40 @@ void AdjustSdk_AdjustAndroid__GetGoogleAdId(System_Action_string__o *onDeviceIds
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 2);
+  v9 = sub_2213B20(object___TypeInfo, 2);
   if ( !v9 )
 LABEL_14:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   v12 = (System_Object_array *)v9;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v9 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
       goto LABEL_16;
   }
   if ( !LODWORD(v12->max_length) )
     goto LABEL_15;
   v12->m_Items[0] = (Il2CppObject *)ajoCurrentActivity;
-  v9 = sub_21FFBF4(v12->m_Items, ajoCurrentActivity);
+  v9 = sub_2213A04(v12->m_Items, ajoCurrentActivity);
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, v12->obj.klass->_1.element_class);
+    v9 = sub_2213BB4(v3, v12->obj.klass->_1.element_class);
     if ( !v9 )
     {
 LABEL_16:
-      v15 = sub_21FFEF0(v9, v14);
-      sub_21FFD90(v15, 0);
+      v15 = sub_2213D00(v9, v14);
+      sub_2213BA0(v15, 0);
     }
   }
   if ( (v12->max_length & 0xFFFFFFFE) == 0 )
 LABEL_15:
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   v12->m_Items[1] = (Il2CppObject *)v3;
-  v9 = sub_21FFBF4(&v12->m_Items[1], v3);
+  v9 = sub_2213A04(&v12->m_Items[1], v3);
   if ( !ajcAdjust )
     goto LABEL_14;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20685/*"getGoogleAdId"*/, v12, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20726/*"getGoogleAdId"*/, v12, 0);
 }
 
 
@@ -2535,15 +2528,15 @@ void AdjustSdk_AdjustAndroid__GetLastDeeplink(System_Action_string__o *onLastDee
   __int64 v14; // x1
   __int64 v15; // x0
 
-  if ( (byte_5930454 & 1) == 0 )
+  if ( (byte_59685F4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_LastDeeplinkListener_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20691/*"getLastDeeplink"*/);
-    byte_5930454 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_LastDeeplinkListener_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20732/*"getLastDeeplink"*/);
+    byte_59685F4 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_LastDeeplinkListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_LastDeeplinkListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_LastDeeplinkListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_LastDeeplinkListener_TypeInfo);
   AdjustSdk_AdjustAndroid_LastDeeplinkListener___ctor(v3, onLastDeeplinkRead, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2552,40 +2545,40 @@ void AdjustSdk_AdjustAndroid__GetLastDeeplink(System_Action_string__o *onLastDee
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 2);
+  v9 = sub_2213B20(object___TypeInfo, 2);
   if ( !v9 )
 LABEL_14:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   v12 = (System_Object_array *)v9;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v9 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
       goto LABEL_16;
   }
   if ( !LODWORD(v12->max_length) )
     goto LABEL_15;
   v12->m_Items[0] = (Il2CppObject *)ajoCurrentActivity;
-  v9 = sub_21FFBF4(v12->m_Items, ajoCurrentActivity);
+  v9 = sub_2213A04(v12->m_Items, ajoCurrentActivity);
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, v12->obj.klass->_1.element_class);
+    v9 = sub_2213BB4(v3, v12->obj.klass->_1.element_class);
     if ( !v9 )
     {
 LABEL_16:
-      v15 = sub_21FFEF0(v9, v14);
-      sub_21FFD90(v15, 0);
+      v15 = sub_2213D00(v9, v14);
+      sub_2213BA0(v15, 0);
     }
   }
   if ( (v12->max_length & 0xFFFFFFFE) == 0 )
 LABEL_15:
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   v12->m_Items[1] = (Il2CppObject *)v3;
-  v9 = sub_21FFBF4(&v12->m_Items[1], v3);
+  v9 = sub_2213A04(&v12->m_Items[1], v3);
   if ( !ajcAdjust )
     goto LABEL_14;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20691/*"getLastDeeplink"*/, v12, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_20732/*"getLastDeeplink"*/, v12, 0);
 }
 
 
@@ -2604,20 +2597,20 @@ void AdjustSdk_AdjustAndroid__GetSdkVersion(System_Action_string__o *onSdkVersio
   __int64 v13; // x1
   __int64 v14; // x0
 
-  if ( (byte_5930453 & 1) == 0 )
+  if ( (byte_59685F3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SdkVersionReadListener_TypeInfo);
-    sub_21FFC50(&StringLiteral_25682/*"unity5.4.2"*/);
-    sub_21FFC50(&StringLiteral_20729/*"getSdkVersion"*/);
-    byte_5930453 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SdkVersionReadListener_TypeInfo);
+    sub_2213A60(&StringLiteral_25730/*"unity5.4.2"*/);
+    sub_2213A60(&StringLiteral_20770/*"getSdkVersion"*/);
+    byte_59685F3 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_SdkVersionReadListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SdkVersionReadListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_SdkVersionReadListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_SdkVersionReadListener_TypeInfo);
   AdjustSdk_AdjustAndroid_SdkVersionReadListener___ctor(
     v3,
     onSdkVersionRead,
-    (System_String_o *)StringLiteral_25682/*"unity5.4.2"*/,
+    (System_String_o *)StringLiteral_25730/*"unity5.4.2"*/,
     v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -2626,29 +2619,29 @@ void AdjustSdk_AdjustAndroid__GetSdkVersion(System_Action_string__o *onSdkVersio
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 1);
+  v9 = sub_2213B20(object___TypeInfo, 1);
   if ( !v9 )
     goto LABEL_11;
   v12 = v9;
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(v3, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
     {
-      v14 = sub_21FFEF0(0, v13);
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213D00(0, v13);
+      sub_2213BA0(v14, 0);
     }
   }
   if ( !*(_DWORD *)(v12 + 24) )
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   *(_QWORD *)(v12 + 32) = v3;
-  v9 = sub_21FFBF4(v12 + 32, v3);
+  v9 = sub_2213A04(v12 + 32, v3);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_20729/*"getSdkVersion"*/,
+    (System_String_o *)StringLiteral_20770/*"getSdkVersion"*/,
     (System_Object_array *)v12,
     0);
 }
@@ -2678,272 +2671,272 @@ void AdjustSdk_AdjustAndroid__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, co
   bool Value; // w20
   AdjustSdk_AdjustAndroid_c *v22; // x0
   struct System_Nullable_AdjustLogLevel__o LogLevel_k__BackingField; // x8
-  System_Nullable_Int32Enum__o v24; // x0
-  int32_t v25; // w0
-  const MethodInfo *v26; // x1
-  System_String_o *v27; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  UnityEngine_AndroidJavaClass_o *v30; // x20
-  __int64 v31; // x0
-  __int64 v32; // x1
-  __int64 v33; // x2
+  int32_t v24; // w0
+  const MethodInfo *v25; // x1
+  System_String_o *v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x2
+  UnityEngine_AndroidJavaClass_o *v29; // x20
+  __int64 v30; // x0
+  __int64 v31; // x1
+  __int64 v32; // x2
   Il2CppObject *Static_object; // x0
-  UnityEngine_AndroidJavaClass_o *v35; // x20
-  System_Nullable_Int32Enum__o v36; // x0
-  int32_t v37; // w0
-  const MethodInfo *v38; // x1
-  System_String_o *v39; // x0
-  __int64 v40; // x2
-  Il2CppObject *v41; // x20
-  UnityEngine_AndroidJavaObject_o *v42; // x21
-  __int64 v43; // x0
-  __int64 v44; // x1
-  __int64 v45; // x2
-  __int64 v46; // x22
-  UnityEngine_AndroidJavaObject_o *v47; // x20
-  __int64 v48; // x0
-  __int64 v49; // x1
-  __int64 v50; // x2
-  __int64 v51; // x21
-  __int64 v52; // x1
-  __int64 v53; // x1
-  __int64 v54; // x2
+  UnityEngine_AndroidJavaClass_o *v34; // x20
+  int32_t v35; // w0
+  const MethodInfo *v36; // x1
+  System_String_o *v37; // x0
+  __int64 v38; // x2
+  Il2CppObject *v39; // x20
+  UnityEngine_AndroidJavaObject_o *v40; // x21
+  __int64 v41; // x0
+  __int64 v42; // x1
+  __int64 v43; // x2
+  __int64 v44; // x22
+  UnityEngine_AndroidJavaObject_o *v45; // x20
+  __int64 v46; // x0
+  __int64 v47; // x1
+  __int64 v48; // x2
+  __int64 v49; // x21
+  __int64 v50; // x1
+  __int64 v51; // x1
+  __int64 v52; // x2
   unsigned int IsDeviceIdsReadingOnceEnabled_k__BackingField; // w8
-  bool v56; // zf
-  UnityEngine_AndroidJavaObject_o *v57; // x20
-  _QWORD *v58; // x21
-  __int64 v59; // x8
-  __int64 v60; // x0
-  __int64 v61; // x0
+  bool v54; // zf
+  UnityEngine_AndroidJavaObject_o *v55; // x20
+  _QWORD *v56; // x21
+  __int64 v57; // x8
+  __int64 v58; // x0
+  __int64 v59; // x0
   unsigned int IsCoppaComplianceEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v63; // x20
-  _QWORD *v64; // x21
-  __int64 v65; // x8
-  __int64 v66; // x0
-  __int64 v67; // x0
+  UnityEngine_AndroidJavaObject_o *v61; // x20
+  _QWORD *v62; // x21
+  __int64 v63; // x8
+  __int64 v64; // x0
+  __int64 v65; // x0
   unsigned int IsPlayStoreKidsComplianceEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v69; // x20
-  _QWORD *v70; // x21
-  __int64 v71; // x8
-  __int64 v72; // x0
-  __int64 v73; // x0
+  UnityEngine_AndroidJavaObject_o *v67; // x20
+  _QWORD *v68; // x21
+  __int64 v69; // x8
+  __int64 v70; // x0
+  __int64 v71; // x0
   unsigned int IsSendingInBackgroundEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v75; // x20
-  _QWORD *v76; // x21
-  __int64 v77; // x8
-  __int64 v78; // x0
-  __int64 v79; // x0
+  UnityEngine_AndroidJavaObject_o *v73; // x20
+  _QWORD *v74; // x21
+  __int64 v75; // x8
+  __int64 v76; // x0
+  __int64 v77; // x0
   unsigned int IsCostDataInAttributionEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v81; // x20
-  _QWORD *v82; // x21
-  __int64 v83; // x8
-  __int64 v84; // x0
-  __int64 v85; // x0
+  UnityEngine_AndroidJavaObject_o *v79; // x20
+  _QWORD *v80; // x21
+  __int64 v81; // x8
+  __int64 v82; // x0
+  __int64 v83; // x0
   unsigned int IsPreinstallTrackingEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v87; // x20
-  _QWORD *v88; // x21
-  __int64 v89; // x8
-  __int64 v90; // x0
-  __int64 v91; // x0
+  UnityEngine_AndroidJavaObject_o *v85; // x20
+  _QWORD *v86; // x21
+  __int64 v87; // x8
+  __int64 v88; // x0
+  __int64 v89; // x0
   unsigned int IsFirstSessionDelayEnabled_k__BackingField; // w8
-  UnityEngine_AndroidJavaObject_o *v93; // x20
-  _QWORD *v94; // x21
-  __int64 v95; // x8
-  __int64 v96; // x0
+  UnityEngine_AndroidJavaObject_o *v91; // x20
+  _QWORD *v92; // x21
+  __int64 v93; // x8
+  __int64 v94; // x0
+  __int64 v95; // x0
+  UnityEngine_AndroidJavaObject_o *v96; // x20
   __int64 v97; // x0
-  UnityEngine_AndroidJavaObject_o *v98; // x20
-  __int64 v99; // x0
-  __int64 v100; // x1
-  __int64 v101; // x2
-  __int64 v102; // x21
+  __int64 v98; // x1
+  __int64 v99; // x2
+  __int64 v100; // x21
   struct System_String_o *PreinstallFilePath_k__BackingField; // x22
-  UnityEngine_AndroidJavaObject_o *v104; // x20
-  __int64 v105; // x0
-  __int64 v106; // x1
-  __int64 v107; // x2
-  __int64 v108; // x21
+  UnityEngine_AndroidJavaObject_o *v102; // x20
+  __int64 v103; // x0
+  __int64 v104; // x1
+  __int64 v105; // x2
+  __int64 v106; // x21
   struct System_String_o *FbAppId_k__BackingField; // x22
-  UnityEngine_AndroidJavaObject_o *v110; // x20
-  __int64 v111; // x0
-  __int64 v112; // x1
-  __int64 v113; // x2
-  __int64 v114; // x21
+  UnityEngine_AndroidJavaObject_o *v108; // x20
+  __int64 v109; // x0
+  __int64 v110; // x1
+  __int64 v111; // x2
+  __int64 v112; // x21
   struct System_String_o *DefaultTracker_k__BackingField; // x22
-  UnityEngine_AndroidJavaObject_o *v116; // x20
-  __int64 v117; // x0
-  __int64 v118; // x1
-  __int64 v119; // x2
-  __int64 v120; // x21
+  UnityEngine_AndroidJavaObject_o *v114; // x20
+  __int64 v115; // x0
+  __int64 v116; // x1
+  __int64 v117; // x2
+  __int64 v118; // x21
   struct System_String_o *ExternalDeviceId_k__BackingField; // x22
-  System_Object_array *v122; // x20
-  __int64 v123; // x0
-  __int64 v124; // x1
-  __int64 v125; // x2
-  Il2CppObject *v126; // x21
-  UnityEngine_AndroidJavaObject_o *v127; // x21
-  UnityEngine_AndroidJavaObject_o *v128; // x20
-  __int64 v129; // x0
-  __int64 v130; // x1
-  __int64 v131; // x2
-  __int64 v132; // x21
-  UnityEngine_AndroidJavaObject_o *v133; // x22
-  UnityEngine_AndroidJavaObject_o *v134; // x21
+  System_Object_array *v120; // x20
+  __int64 v121; // x0
+  __int64 v122; // x1
+  __int64 v123; // x2
+  Il2CppObject *v124; // x21
+  UnityEngine_AndroidJavaObject_o *v125; // x21
+  UnityEngine_AndroidJavaObject_o *v126; // x20
+  __int64 v127; // x0
+  __int64 v128; // x1
+  __int64 v129; // x2
+  __int64 v130; // x21
+  UnityEngine_AndroidJavaObject_o *v131; // x22
+  UnityEngine_AndroidJavaObject_o *v132; // x21
   UnityEngine_AndroidJavaObject_c *klass; // x8
-  __int64 v136; // x9
+  __int64 v134; // x9
   int *p_offset; // x10
-  __int64 v138; // x0
-  _QWORD *v139; // x20
-  __int64 v140; // x8
-  __int64 v141; // x0
-  __int64 v142; // x0
-  System_Object_array *v143; // x20
-  UnityEngine_AndroidJavaObject_o *v144; // x21
-  __int64 v145; // x1
-  __int64 v146; // x2
+  __int64 v136; // x0
+  _QWORD *v137; // x20
+  __int64 v138; // x8
+  __int64 v139; // x0
+  __int64 v140; // x0
+  System_Object_array *v141; // x20
+  UnityEngine_AndroidJavaObject_o *v142; // x21
+  __int64 v143; // x1
+  __int64 v144; // x2
   System_Collections_Generic_List_object__o *UrlStrategyDomains_k__BackingField; // x0
-  UnityEngine_AndroidJavaObject_o *v148; // x20
+  UnityEngine_AndroidJavaObject_o *v146; // x20
   Il2CppObject *current; // x22
-  __int64 v150; // x0
-  __int64 v151; // x1
-  __int64 v152; // x2
-  __int64 v153; // x21
-  UnityEngine_AndroidJavaObject_o *v154; // x20
-  __int64 v155; // x0
-  __int64 v156; // x1
-  __int64 v157; // x2
-  System_Object_array *v158; // x21
+  __int64 v148; // x0
+  __int64 v149; // x1
+  __int64 v150; // x2
+  __int64 v151; // x21
+  UnityEngine_AndroidJavaObject_o *v152; // x20
+  __int64 v153; // x0
+  __int64 v154; // x1
+  __int64 v155; // x2
+  System_Object_array *v156; // x21
+  Il2CppObject *v157; // x22
+  __int64 v158; // x0
   Il2CppObject *v159; // x22
   __int64 v160; // x0
   Il2CppObject *v161; // x22
   __int64 v162; // x0
-  Il2CppObject *v163; // x22
-  __int64 v164; // x0
-  __int64 v165; // x1
-  __int64 v166; // x2
-  UnityEngine_AndroidJavaObject_o *v167; // x20
-  UnityEngine_AndroidJavaObject_c *v168; // x8
-  __int64 v169; // x9
-  int *v170; // x10
-  __int64 v171; // x0
+  __int64 v163; // x1
+  __int64 v164; // x2
+  UnityEngine_AndroidJavaObject_o *v165; // x20
+  UnityEngine_AndroidJavaObject_c *v166; // x8
+  __int64 v167; // x9
+  int *v168; // x10
+  __int64 v169; // x0
   struct AdjustSdk_AdjustStoreInfo_o *StoreInfo_k__BackingField; // x8
-  __int64 v173; // x0
-  __int64 v174; // x1
-  __int64 v175; // x2
-  struct AdjustSdk_AdjustStoreInfo_o *v176; // x8
-  __int64 v177; // x21
+  __int64 v171; // x0
+  __int64 v172; // x1
+  __int64 v173; // x2
+  struct AdjustSdk_AdjustStoreInfo_o *v174; // x8
+  __int64 v175; // x21
   struct System_String_o *StoreName_k__BackingField; // x20
-  UnityEngine_AndroidJavaObject_o *v179; // x20
-  __int64 v180; // x0
-  __int64 v181; // x1
-  __int64 v182; // x2
-  struct AdjustSdk_AdjustStoreInfo_o *v183; // x8
-  __int64 v184; // x0
-  __int64 v185; // x1
-  __int64 v186; // x2
-  struct AdjustSdk_AdjustStoreInfo_o *v187; // x8
-  __int64 v188; // x21
+  UnityEngine_AndroidJavaObject_o *v177; // x20
+  __int64 v178; // x0
+  __int64 v179; // x1
+  __int64 v180; // x2
+  struct AdjustSdk_AdjustStoreInfo_o *v181; // x8
+  __int64 v182; // x0
+  __int64 v183; // x1
+  __int64 v184; // x2
+  struct AdjustSdk_AdjustStoreInfo_o *v185; // x8
+  __int64 v186; // x21
   struct System_String_o *StoreAppId_k__BackingField; // x22
-  UnityEngine_AndroidJavaObject_o *v190; // x20
-  __int64 v191; // x0
-  __int64 v192; // x1
-  __int64 v193; // x2
-  __int64 v194; // x21
-  UnityEngine_AndroidJavaObject_o *v195; // x22
-  UnityEngine_AndroidJavaObject_o *v196; // x21
-  UnityEngine_AndroidJavaObject_c *v197; // x8
-  __int64 v198; // x9
-  int *v199; // x10
-  __int64 v200; // x0
+  UnityEngine_AndroidJavaObject_o *v188; // x20
+  __int64 v189; // x0
+  __int64 v190; // x1
+  __int64 v191; // x2
+  __int64 v192; // x21
+  UnityEngine_AndroidJavaObject_o *v193; // x22
+  UnityEngine_AndroidJavaObject_o *v194; // x21
+  UnityEngine_AndroidJavaObject_c *v195; // x8
+  __int64 v196; // x9
+  int *v197; // x10
+  __int64 v198; // x0
   System_Action_AdjustAttribution__o *AttributionChangedDelegate_k__BackingField; // x21
-  AdjustSdk_AdjustAndroid_AttributionChangedListener_o *v202; // x20
-  const MethodInfo *v203; // x2
-  __int64 v204; // x1
-  __int64 v205; // x2
-  AdjustSdk_AdjustAndroid_c *v206; // x0
+  AdjustSdk_AdjustAndroid_AttributionChangedListener_o *v200; // x20
+  const MethodInfo *v201; // x2
+  __int64 v202; // x1
+  __int64 v203; // x2
+  AdjustSdk_AdjustAndroid_c *v204; // x0
   struct AdjustSdk_AdjustAndroid_StaticFields *static_fields; // x0
-  UnityEngine_AndroidJavaObject_o *v208; // x20
-  __int64 v209; // x0
-  __int64 v210; // x1
-  __int64 v211; // x2
-  __int64 v212; // x21
+  UnityEngine_AndroidJavaObject_o *v206; // x20
+  __int64 v207; // x0
+  __int64 v208; // x1
+  __int64 v209; // x2
+  __int64 v210; // x21
   struct AdjustSdk_AdjustAndroid_AttributionChangedListener_o *onAttributionChangedListener; // x22
   System_Action_AdjustEventSuccess__o *EventSuccessDelegate_k__BackingField; // x21
-  AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_o *v215; // x20
-  const MethodInfo *v216; // x2
-  __int64 v217; // x1
-  __int64 v218; // x2
-  AdjustSdk_AdjustAndroid_c *v219; // x0
-  struct AdjustSdk_AdjustAndroid_StaticFields *v220; // x0
-  UnityEngine_AndroidJavaObject_o *v221; // x20
-  __int64 v222; // x0
-  __int64 v223; // x1
-  __int64 v224; // x2
-  __int64 v225; // x21
+  AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_o *v213; // x20
+  const MethodInfo *v214; // x2
+  __int64 v215; // x1
+  __int64 v216; // x2
+  AdjustSdk_AdjustAndroid_c *v217; // x0
+  struct AdjustSdk_AdjustAndroid_StaticFields *v218; // x0
+  UnityEngine_AndroidJavaObject_o *v219; // x20
+  __int64 v220; // x0
+  __int64 v221; // x1
+  __int64 v222; // x2
+  __int64 v223; // x21
   struct AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_o *onEventTrackingSucceededListener; // x22
   System_Action_AdjustEventFailure__o *EventFailureDelegate_k__BackingField; // x21
-  AdjustSdk_AdjustAndroid_EventTrackingFailedListener_o *v228; // x20
-  const MethodInfo *v229; // x2
-  __int64 v230; // x1
-  __int64 v231; // x2
-  AdjustSdk_AdjustAndroid_c *v232; // x0
-  struct AdjustSdk_AdjustAndroid_StaticFields *v233; // x0
-  UnityEngine_AndroidJavaObject_o *v234; // x20
-  __int64 v235; // x0
-  __int64 v236; // x1
-  __int64 v237; // x2
-  __int64 v238; // x21
+  AdjustSdk_AdjustAndroid_EventTrackingFailedListener_o *v226; // x20
+  const MethodInfo *v227; // x2
+  __int64 v228; // x1
+  __int64 v229; // x2
+  AdjustSdk_AdjustAndroid_c *v230; // x0
+  struct AdjustSdk_AdjustAndroid_StaticFields *v231; // x0
+  UnityEngine_AndroidJavaObject_o *v232; // x20
+  __int64 v233; // x0
+  __int64 v234; // x1
+  __int64 v235; // x2
+  __int64 v236; // x21
   struct AdjustSdk_AdjustAndroid_EventTrackingFailedListener_o *onEventTrackingFailedListener; // x22
   System_Action_AdjustSessionSuccess__o *SessionSuccessDelegate_k__BackingField; // x21
-  AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_o *v241; // x20
-  const MethodInfo *v242; // x2
-  __int64 v243; // x1
-  __int64 v244; // x2
-  AdjustSdk_AdjustAndroid_c *v245; // x0
-  struct AdjustSdk_AdjustAndroid_StaticFields *v246; // x0
-  UnityEngine_AndroidJavaObject_o *v247; // x20
-  __int64 v248; // x0
-  __int64 v249; // x1
-  __int64 v250; // x2
-  __int64 v251; // x21
+  AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_o *v239; // x20
+  const MethodInfo *v240; // x2
+  __int64 v241; // x1
+  __int64 v242; // x2
+  AdjustSdk_AdjustAndroid_c *v243; // x0
+  struct AdjustSdk_AdjustAndroid_StaticFields *v244; // x0
+  UnityEngine_AndroidJavaObject_o *v245; // x20
+  __int64 v246; // x0
+  __int64 v247; // x1
+  __int64 v248; // x2
+  __int64 v249; // x21
   struct AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_o *onSessionTrackingSucceededListener; // x22
   System_Action_AdjustSessionFailure__o *SessionFailureDelegate_k__BackingField; // x21
-  AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_o *v254; // x20
-  const MethodInfo *v255; // x2
-  __int64 v256; // x1
-  __int64 v257; // x2
-  AdjustSdk_AdjustAndroid_c *v258; // x0
-  struct AdjustSdk_AdjustAndroid_StaticFields *v259; // x0
-  UnityEngine_AndroidJavaObject_o *v260; // x20
-  __int64 v261; // x0
-  __int64 v262; // x1
-  __int64 v263; // x2
-  __int64 v264; // x21
+  AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_o *v252; // x20
+  const MethodInfo *v253; // x2
+  __int64 v254; // x1
+  __int64 v255; // x2
+  AdjustSdk_AdjustAndroid_c *v256; // x0
+  struct AdjustSdk_AdjustAndroid_StaticFields *v257; // x0
+  UnityEngine_AndroidJavaObject_o *v258; // x20
+  __int64 v259; // x0
+  __int64 v260; // x1
+  __int64 v261; // x2
+  __int64 v262; // x21
   struct AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_o *onSessionTrackingFailedListener; // x22
   System_Action_string__o *DeferredDeeplinkDelegate_k__BackingField; // x20
-  AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_o *v267; // x19
-  const MethodInfo *v268; // x2
-  __int64 v269; // x1
-  __int64 v270; // x2
-  AdjustSdk_AdjustAndroid_c *v271; // x0
-  struct AdjustSdk_AdjustAndroid_StaticFields *v272; // x0
-  UnityEngine_AndroidJavaObject_o *v273; // x19
-  __int64 v274; // x0
-  __int64 v275; // x1
-  __int64 v276; // x2
-  __int64 v277; // x20
+  AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_o *v265; // x19
+  const MethodInfo *v266; // x2
+  __int64 v267; // x1
+  __int64 v268; // x2
+  AdjustSdk_AdjustAndroid_c *v269; // x0
+  struct AdjustSdk_AdjustAndroid_StaticFields *v270; // x0
+  UnityEngine_AndroidJavaObject_o *v271; // x19
+  __int64 v272; // x0
+  __int64 v273; // x1
+  __int64 v274; // x2
+  __int64 v275; // x20
   struct AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_o *onDeferredDeeplinkListener; // x21
-  AdjustSdk_AdjustAndroid_c *v279; // x0
+  AdjustSdk_AdjustAndroid_c *v277; // x0
   UnityEngine_AndroidJavaObject_o *ajcAdjust; // x19
-  __int64 v281; // x0
-  __int64 v282; // x1
-  __int64 v283; // x2
-  __int64 v284; // x20
-  UnityEngine_AndroidJavaObject_o *v285; // x21
-  UnityEngine_AndroidJavaObject_o *v286; // x19
-  UnityEngine_AndroidJavaObject_c *v287; // x8
-  __int64 v288; // x9
-  int *v289; // x10
+  __int64 v279; // x0
+  __int64 v280; // x1
+  __int64 v281; // x2
+  __int64 v282; // x20
+  UnityEngine_AndroidJavaObject_o *v283; // x21
+  UnityEngine_AndroidJavaObject_o *v284; // x19
+  UnityEngine_AndroidJavaObject_c *v285; // x8
+  __int64 v286; // x9
+  int *v287; // x10
+  __int64 v288; // x0
+  __int64 v289; // x0
   __int64 v290; // x0
   __int64 v291; // x0
   __int64 v292; // x0
@@ -2966,105 +2959,103 @@ void AdjustSdk_AdjustAndroid__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, co
   __int64 v309; // x0
   __int64 v310; // x0
   __int64 v311; // x0
-  __int64 v312; // x0
-  __int64 v313; // x0
   struct System_Nullable_bool__o IsDataResidency_k__BackingField; // [xsp+Ch] [xbp-E4h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v315; // [xsp+10h] [xbp-E0h] BYREF
-  __int64 v316; // [xsp+28h] [xbp-C8h]
-  UnityEngine_AndroidJavaObject_o **v317; // [xsp+30h] [xbp-C0h]
-  __int64 v318; // [xsp+38h] [xbp-B8h]
-  UnityEngine_AndroidJavaObject_o **v319; // [xsp+40h] [xbp-B0h]
-  UnityEngine_AndroidJavaObject_o *v320; // [xsp+48h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v321; // [xsp+50h] [xbp-A0h] BYREF
-  UnityEngine_AndroidJavaObject_o *v322; // [xsp+68h] [xbp-88h] BYREF
-  UnityEngine_AndroidJavaObject_o *v323; // [xsp+70h] [xbp-80h] BYREF
-  struct System_Nullable_AdjustLogLevel__o v324; // [xsp+78h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v313; // [xsp+10h] [xbp-E0h] BYREF
+  __int64 v314; // [xsp+28h] [xbp-C8h]
+  UnityEngine_AndroidJavaObject_o **v315; // [xsp+30h] [xbp-C0h]
+  __int64 v316; // [xsp+38h] [xbp-B8h]
+  UnityEngine_AndroidJavaObject_o **v317; // [xsp+40h] [xbp-B0h]
+  UnityEngine_AndroidJavaObject_o *v318; // [xsp+48h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v319; // [xsp+50h] [xbp-A0h] BYREF
+  UnityEngine_AndroidJavaObject_o *v320; // [xsp+68h] [xbp-88h] BYREF
+  UnityEngine_AndroidJavaObject_o *v321; // [xsp+70h] [xbp-80h] BYREF
+  struct System_Nullable_AdjustLogLevel__o v322; // [xsp+78h] [xbp-78h] BYREF
   __int16 ShouldUseSubdomains_k__BackingField; // [xsp+84h] [xbp-6Ch] BYREF
-  UnityEngine_AndroidJavaObject_o *v326; // [xsp+88h] [xbp-68h] BYREF
+  UnityEngine_AndroidJavaObject_o *v324; // [xsp+88h] [xbp-68h] BYREF
 
   v3 = adjustConfig;
-  if ( (byte_5930439 & 1) == 0 )
+  if ( (byte_59685D9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_bool____91478528);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AttributionChangedListener_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_EventTrackingFailedListener_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Nullable_bool__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_bool__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_AdjustLogLevel__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_AdjustLogLevel__get_Value__);
-    sub_21FFC50(&Method_System_Nullable_bool__get_Value__);
-    sub_21FFC50(&System_Nullable_bool__TypeInfo);
-    sub_21FFC50(&System_Nullable_int__TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_TypeInfo);
-    sub_21FFC50(&StringLiteral_24533/*"setOnDeferredDeeplinkResponseListener"*/);
-    sub_21FFC50(&StringLiteral_19840/*"enableSendingInBackground"*/);
-    sub_21FFC50(&StringLiteral_24511/*"setEventDeduplicationIdsMaxSize"*/);
-    sub_21FFC50(&StringLiteral_19823/*"enableCoppaCompliance"*/);
-    sub_21FFC50(&StringLiteral_24515/*"setFbAppId"*/);
-    sub_21FFC50(&StringLiteral_24560/*"setStoreInfo"*/);
-    sub_21FFC50(&StringLiteral_23928/*"production"*/);
-    sub_21FFC50(&StringLiteral_18839/*"com.adjust.sdk.LogLevel"*/);
-    sub_21FFC50(&StringLiteral_19836/*"enablePreinstallTracking"*/);
-    sub_21FFC50(&StringLiteral_19834/*"enablePlayStoreKidsCompliance"*/);
-    sub_21FFC50(&StringLiteral_19828/*"enableFirstSessionDelay"*/);
-    sub_21FFC50(&StringLiteral_19826/*"enableDeviceIdsReadingOnce"*/);
-    sub_21FFC50(&StringLiteral_24521/*"setLogLevel"*/);
-    sub_21FFC50(&StringLiteral_19825/*"enableCostDataInAttribution"*/);
-    sub_21FFC50(&StringLiteral_17313/*"add"*/);
-    sub_21FFC50(&StringLiteral_24539/*"setPreinstallFilePath"*/);
-    sub_21FFC50(&StringLiteral_18831/*"com.adjust.sdk.AdjustConfig"*/);
-    sub_21FFC50(&StringLiteral_25682/*"unity5.4.2"*/);
-    sub_21FFC50(&StringLiteral_24551/*"setSdkPrefix"*/);
-    sub_21FFC50(&StringLiteral_24507/*"setDefaultTracker"*/);
-    sub_21FFC50(&StringLiteral_24566/*"setUrlStrategy"*/);
-    sub_21FFC50(&StringLiteral_18836/*"com.adjust.sdk.AdjustStoreInfo"*/);
-    sub_21FFC50(&StringLiteral_24536/*"setOnSessionTrackingFailedListener"*/);
-    sub_21FFC50(&StringLiteral_24535/*"setOnEventTrackingSucceededListener"*/);
-    sub_21FFC50(&StringLiteral_21756/*"initSdk"*/);
-    sub_21FFC50(&StringLiteral_13072/*"SUPPRESS"*/);
-    sub_21FFC50(&StringLiteral_22070/*"java.util.ArrayList"*/);
-    sub_21FFC50(&StringLiteral_24532/*"setOnAttributionChangedListener"*/);
-    sub_21FFC50(&StringLiteral_24345/*"sandbox"*/);
-    sub_21FFC50(&StringLiteral_24537/*"setOnSessionTrackingSucceededListener"*/);
-    sub_21FFC50(&StringLiteral_22059/*"java.lang.Integer"*/);
-    sub_21FFC50(&StringLiteral_24534/*"setOnEventTrackingFailedListener"*/);
-    sub_21FFC50(&StringLiteral_24559/*"setStoreAppId"*/);
-    adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_21FFC50(&StringLiteral_24512/*"setExternalDeviceId"*/);
-    byte_5930439 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_bool____91704720);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AttributionChangedListener_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_EventTrackingFailedListener_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Nullable_bool__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_bool__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_AdjustLogLevel__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_AdjustLogLevel__get_Value__);
+    sub_2213A60(&Method_System_Nullable_bool__get_Value__);
+    sub_2213A60(&System_Nullable_bool__TypeInfo);
+    sub_2213A60(&System_Nullable_int__TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_TypeInfo);
+    sub_2213A60(&StringLiteral_24581/*"setOnDeferredDeeplinkResponseListener"*/);
+    sub_2213A60(&StringLiteral_19882/*"enableSendingInBackground"*/);
+    sub_2213A60(&StringLiteral_24559/*"setEventDeduplicationIdsMaxSize"*/);
+    sub_2213A60(&StringLiteral_19865/*"enableCoppaCompliance"*/);
+    sub_2213A60(&StringLiteral_24563/*"setFbAppId"*/);
+    sub_2213A60(&StringLiteral_24608/*"setStoreInfo"*/);
+    sub_2213A60(&StringLiteral_23975/*"production"*/);
+    sub_2213A60(&StringLiteral_18877/*"com.adjust.sdk.LogLevel"*/);
+    sub_2213A60(&StringLiteral_19878/*"enablePreinstallTracking"*/);
+    sub_2213A60(&StringLiteral_19876/*"enablePlayStoreKidsCompliance"*/);
+    sub_2213A60(&StringLiteral_19870/*"enableFirstSessionDelay"*/);
+    sub_2213A60(&StringLiteral_19868/*"enableDeviceIdsReadingOnce"*/);
+    sub_2213A60(&StringLiteral_24569/*"setLogLevel"*/);
+    sub_2213A60(&StringLiteral_19867/*"enableCostDataInAttribution"*/);
+    sub_2213A60(&StringLiteral_17349/*"add"*/);
+    sub_2213A60(&StringLiteral_24587/*"setPreinstallFilePath"*/);
+    sub_2213A60(&StringLiteral_18869/*"com.adjust.sdk.AdjustConfig"*/);
+    sub_2213A60(&StringLiteral_25730/*"unity5.4.2"*/);
+    sub_2213A60(&StringLiteral_24599/*"setSdkPrefix"*/);
+    sub_2213A60(&StringLiteral_24555/*"setDefaultTracker"*/);
+    sub_2213A60(&StringLiteral_24614/*"setUrlStrategy"*/);
+    sub_2213A60(&StringLiteral_18874/*"com.adjust.sdk.AdjustStoreInfo"*/);
+    sub_2213A60(&StringLiteral_24584/*"setOnSessionTrackingFailedListener"*/);
+    sub_2213A60(&StringLiteral_24583/*"setOnEventTrackingSucceededListener"*/);
+    sub_2213A60(&StringLiteral_21798/*"initSdk"*/);
+    sub_2213A60(&StringLiteral_13098/*"SUPPRESS"*/);
+    sub_2213A60(&StringLiteral_22113/*"java.util.ArrayList"*/);
+    sub_2213A60(&StringLiteral_24580/*"setOnAttributionChangedListener"*/);
+    sub_2213A60(&StringLiteral_24393/*"sandbox"*/);
+    sub_2213A60(&StringLiteral_24585/*"setOnSessionTrackingSucceededListener"*/);
+    sub_2213A60(&StringLiteral_22102/*"java.lang.Integer"*/);
+    sub_2213A60(&StringLiteral_24582/*"setOnEventTrackingFailedListener"*/);
+    sub_2213A60(&StringLiteral_24607/*"setStoreAppId"*/);
+    adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_2213A60(&StringLiteral_24560/*"setExternalDeviceId"*/);
+    byte_59685D9 = 1;
   }
-  v326 = 0;
-  ShouldUseSubdomains_k__BackingField = 0;
-  v323 = 0;
   v324 = 0;
+  ShouldUseSubdomains_k__BackingField = 0;
+  v321 = 0;
   v322 = 0;
-  memset(&v321, 0, sizeof(v321));
   v320 = 0;
+  memset(&v319, 0, sizeof(v319));
+  v318 = 0;
   if ( !v3 )
     goto LABEL_333;
-  v4 = &StringLiteral_23928/*"production"*/;
+  v4 = &StringLiteral_23975/*"production"*/;
   AllowSuppressLogLevel_k__BackingField = v3->fields._AllowSuppressLogLevel_k__BackingField;
   if ( v3->fields._Environment_k__BackingField != 1 )
-    v4 = (__int64 *)&StringLiteral_24345/*"sandbox"*/;
+    v4 = (__int64 *)&StringLiteral_24393/*"sandbox"*/;
   v6 = *v4;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._AllowSuppressLogLevel_k__BackingField;
   if ( AllowSuppressLogLevel_k__BackingField.fields.hasValue )
   {
-    adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_21FFD10(object___TypeInfo, 4);
+    adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_2213B20(object___TypeInfo, 4);
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
     v8 = adjustConfig;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -3078,29 +3069,29 @@ void AdjustSdk_AdjustAndroid__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, co
     if ( v8 )
     {
       ajoCurrentActivity = (struct System_String_o *)v7->static_fields->ajoCurrentActivity;
-      if ( !ajoCurrentActivity || sub_21FFDA4(ajoCurrentActivity, v8->klass->_1.element_class) )
+      if ( !ajoCurrentActivity || sub_2213BB4(ajoCurrentActivity, v8->klass->_1.element_class) )
       {
         if ( !LODWORD(v8->fields._DefaultTracker_k__BackingField) )
           goto LABEL_331;
         v8->fields._ExternalDeviceId_k__BackingField = ajoCurrentActivity;
-        sub_21FFBF4(&v8->fields._ExternalDeviceId_k__BackingField, ajoCurrentActivity);
+        sub_2213A04(&v8->fields._ExternalDeviceId_k__BackingField, ajoCurrentActivity);
         AppToken_k__BackingField = v3->fields._AppToken_k__BackingField;
-        if ( !AppToken_k__BackingField || sub_21FFDA4(v3->fields._AppToken_k__BackingField, v8->klass->_1.element_class) )
+        if ( !AppToken_k__BackingField || sub_2213BB4(v3->fields._AppToken_k__BackingField, v8->klass->_1.element_class) )
         {
           if ( ((__int64)v8->fields._DefaultTracker_k__BackingField & 0xFFFFFFFE) == 0 )
             goto LABEL_331;
           *(_QWORD *)&v8->fields._IsCoppaComplianceEnabled_k__BackingField.fields.hasValue = AppToken_k__BackingField;
-          sub_21FFBF4(&v8->fields._IsCoppaComplianceEnabled_k__BackingField, AppToken_k__BackingField);
-          if ( !v6 || sub_21FFDA4(v6, v8->klass->_1.element_class) )
+          sub_2213A04(&v8->fields._IsCoppaComplianceEnabled_k__BackingField, AppToken_k__BackingField);
+          if ( !v6 || sub_2213BB4(v6, v8->klass->_1.element_class) )
           {
             if ( LODWORD(v8->fields._DefaultTracker_k__BackingField) <= 2 )
               goto LABEL_331;
             *(_QWORD *)&v8->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField.fields.hasValue = v6;
-            sub_21FFBF4(&v8->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField, v6);
-            LOWORD(v315.fields._list) = v3->fields._AllowSuppressLogLevel_k__BackingField;
-            v11 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &v315);
+            sub_2213A04(&v8->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField, v6);
+            LOWORD(v313.fields._list) = v3->fields._AllowSuppressLogLevel_k__BackingField;
+            v11 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &v313);
             v6 = v11;
-            if ( !v11 || sub_21FFDA4(v11, v8->klass->_1.element_class) )
+            if ( !v11 || sub_2213BB4(v11, v8->klass->_1.element_class) )
             {
               if ( ((__int64)v8->fields._DefaultTracker_k__BackingField & 0xFFFFFFFC) != 0 )
               {
@@ -3109,19 +3100,19 @@ void AdjustSdk_AdjustAndroid__InitSdk(AdjustSdk_AdjustConfig_o *adjustConfig, co
                 goto LABEL_36;
               }
 LABEL_331:
-              sub_21FFED4();
+              sub_2213CE4();
             }
           }
         }
       }
 LABEL_332:
-      v292 = sub_21FFEF0();
-      sub_21FFD90(v292, 0);
+      v290 = sub_2213D00();
+      sub_2213BA0(v290, 0);
     }
 LABEL_333:
-    sub_21FFECC(adjustConfig, method, v2);
+    sub_2213CDC(adjustConfig, method, v2);
   }
-  adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_21FFD10(object___TypeInfo, 3);
+  adjustConfig = (AdjustSdk_AdjustConfig_o *)sub_2213B20(object___TypeInfo, 3);
   v13 = AdjustSdk_AdjustAndroid_TypeInfo;
   v8 = adjustConfig;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -3135,25 +3126,25 @@ LABEL_333:
   if ( !v8 )
     goto LABEL_333;
   v14 = (struct System_String_o *)v13->static_fields->ajoCurrentActivity;
-  if ( v14 && !sub_21FFDA4(v14, v8->klass->_1.element_class) )
+  if ( v14 && !sub_2213BB4(v14, v8->klass->_1.element_class) )
     goto LABEL_332;
   if ( !LODWORD(v8->fields._DefaultTracker_k__BackingField) )
     goto LABEL_331;
   v8->fields._ExternalDeviceId_k__BackingField = v14;
-  sub_21FFBF4(&v8->fields._ExternalDeviceId_k__BackingField, v14);
+  sub_2213A04(&v8->fields._ExternalDeviceId_k__BackingField, v14);
   v15 = v3->fields._AppToken_k__BackingField;
   if ( v15 )
   {
-    if ( !sub_21FFDA4(v3->fields._AppToken_k__BackingField, v8->klass->_1.element_class) )
+    if ( !sub_2213BB4(v3->fields._AppToken_k__BackingField, v8->klass->_1.element_class) )
       goto LABEL_332;
   }
   if ( ((__int64)v8->fields._DefaultTracker_k__BackingField & 0xFFFFFFFE) == 0 )
     goto LABEL_331;
   *(_QWORD *)&v8->fields._IsCoppaComplianceEnabled_k__BackingField.fields.hasValue = v15;
-  sub_21FFBF4(&v8->fields._IsCoppaComplianceEnabled_k__BackingField, v15);
+  sub_2213A04(&v8->fields._IsCoppaComplianceEnabled_k__BackingField, v15);
   if ( v6 )
   {
-    if ( !sub_21FFDA4(v6, v8->klass->_1.element_class) )
+    if ( !sub_2213BB4(v6, v8->klass->_1.element_class) )
       goto LABEL_332;
   }
   if ( LODWORD(v8->fields._DefaultTracker_k__BackingField) <= 2 )
@@ -3161,17 +3152,17 @@ LABEL_333:
   *(_QWORD *)&v8->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField.fields.hasValue = v6;
   p_IsDataResidency_k__BackingField = &v8->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField;
 LABEL_36:
-  sub_21FFBF4(p_IsDataResidency_k__BackingField, v6);
-  v16 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(p_IsDataResidency_k__BackingField, v6);
+  v16 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v16,
-    (System_String_o *)StringLiteral_18831/*"com.adjust.sdk.AdjustConfig"*/,
+    (System_String_o *)StringLiteral_18869/*"com.adjust.sdk.AdjustConfig"*/,
     (System_Object_array *)v8,
     0);
   IsDeferredDeeplinkOpeningEnabled_k__BackingField = v3->fields._IsDeferredDeeplinkOpeningEnabled_k__BackingField;
-  v326 = v16;
-  v318 = 0;
-  v319 = &v326;
+  v324 = v16;
+  v316 = 0;
+  v317 = &v324;
   ShouldUseSubdomains_k__BackingField = (__int16)IsDeferredDeeplinkOpeningEnabled_k__BackingField;
   if ( IsDeferredDeeplinkOpeningEnabled_k__BackingField.fields.hasValue )
   {
@@ -3179,7 +3170,7 @@ LABEL_36:
     v18 = &ShouldUseSubdomains_k__BackingField;
     Value = System_Nullable_bool___get_Value(
               (System_Nullable_bool__o)v18,
-              (const MethodInfo_45AC820 *)Method_System_Nullable_bool__get_Value__);
+              (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
     v22 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -3189,982 +3180,980 @@ LABEL_36:
     v22->static_fields->isDeferredDeeplinkOpeningEnabled = Value;
   }
   LogLevel_k__BackingField = v3->fields._LogLevel_k__BackingField;
-  v324 = LogLevel_k__BackingField;
+  v322 = LogLevel_k__BackingField;
   if ( LogLevel_k__BackingField.fields.hasValue )
   {
-    v324 = LogLevel_k__BackingField;
-    v24 = (System_Nullable_Int32Enum__o)&v324;
-    v25 = System_Nullable_Int32Enum___get_Value(
-            v24,
-            (const MethodInfo_45B0578 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
-    v27 = AdjustSdk_AdjustLogLevelExtension__ToUppercaseString(v25, v26);
-    if ( !v27 )
-      sub_21FFECC(0, v28, v29);
-    if ( System_String__Equals_75473208(v27, (System_String_o *)StringLiteral_13072/*"SUPPRESS"*/, 0) )
+    v322 = LogLevel_k__BackingField;
+    v24 = System_Nullable_Int32Enum___get_Value(
+            (System_Nullable_Int32Enum__o)&v322,
+            (const MethodInfo_45E46B0 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
+    v26 = AdjustSdk_AdjustLogLevelExtension__ToUppercaseString(v24, v25);
+    if ( !v26 )
+      sub_2213CDC(0, v27, v28);
+    if ( System_String__Equals_75686512(v26, (System_String_o *)StringLiteral_13098/*"SUPPRESS"*/, 0) )
     {
-      v30 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-      UnityEngine_AndroidJavaClass___ctor(v30, (System_String_o *)StringLiteral_18839/*"com.adjust.sdk.LogLevel"*/, 0);
-      if ( !v30 )
-        sub_21FFECC(v31, v32, v33);
+      v29 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+      UnityEngine_AndroidJavaClass___ctor(v29, (System_String_o *)StringLiteral_18877/*"com.adjust.sdk.LogLevel"*/, 0);
+      if ( !v29 )
+        sub_2213CDC(v30, v31, v32);
       Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
-                        (UnityEngine_AndroidJavaObject_o *)v30,
-                        (System_String_o *)StringLiteral_13072/*"SUPPRESS"*/,
-                        (const MethodInfo_36D7798 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+                        (UnityEngine_AndroidJavaObject_o *)v29,
+                        (System_String_o *)StringLiteral_13098/*"SUPPRESS"*/,
+                        (const MethodInfo_3709708 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
     }
     else
     {
-      v35 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-      UnityEngine_AndroidJavaClass___ctor(v35, (System_String_o *)StringLiteral_18839/*"com.adjust.sdk.LogLevel"*/, 0);
-      v324 = v3->fields._LogLevel_k__BackingField;
-      v36 = (System_Nullable_Int32Enum__o)&v324;
-      v37 = System_Nullable_Int32Enum___get_Value(
-              v36,
-              (const MethodInfo_45B0578 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
-      v39 = AdjustSdk_AdjustLogLevelExtension__ToUppercaseString(v37, v38);
-      if ( !v35 )
-        sub_21FFECC(v39, v39, v40);
+      v34 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+      UnityEngine_AndroidJavaClass___ctor(v34, (System_String_o *)StringLiteral_18877/*"com.adjust.sdk.LogLevel"*/, 0);
+      v322 = v3->fields._LogLevel_k__BackingField;
+      v35 = System_Nullable_Int32Enum___get_Value(
+              (System_Nullable_Int32Enum__o)&v322,
+              (const MethodInfo_45E46B0 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
+      v37 = AdjustSdk_AdjustLogLevelExtension__ToUppercaseString(v35, v36);
+      if ( !v34 )
+        sub_2213CDC(v37, v37, v38);
       Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
-                        (UnityEngine_AndroidJavaObject_o *)v35,
-                        v39,
-                        (const MethodInfo_36D7798 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+                        (UnityEngine_AndroidJavaObject_o *)v34,
+                        v37,
+                        (const MethodInfo_3709708 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
     }
-    v41 = Static_object;
+    v39 = Static_object;
     if ( Static_object )
     {
-      v42 = v326;
-      v43 = sub_21FFD10(object___TypeInfo, 1);
-      v46 = v43;
-      if ( !v43 )
+      v40 = v324;
+      v41 = sub_2213B20(object___TypeInfo, 1);
+      v44 = v41;
+      if ( !v41 )
         goto LABEL_349;
-      if ( !sub_21FFDA4(v41, *(_QWORD *)(*(_QWORD *)v43 + 64LL)) )
+      if ( !sub_2213BB4(v39, *(_QWORD *)(*(_QWORD *)v41 + 64LL)) )
       {
-        v295 = sub_21FFEF0();
-        sub_21FFD90(v295, 0);
+        v293 = sub_2213D00();
+        sub_2213BA0(v293, 0);
       }
-      if ( !*(_DWORD *)(v46 + 24) )
-        sub_21FFED4();
-      *(_QWORD *)(v46 + 32) = v41;
-      v43 = sub_21FFBF4(v46 + 32, v41);
-      if ( !v42 )
+      if ( !*(_DWORD *)(v44 + 24) )
+        sub_2213CE4();
+      *(_QWORD *)(v44 + 32) = v39;
+      v41 = sub_2213A04(v44 + 32, v39);
+      if ( !v40 )
 LABEL_349:
-        sub_21FFECC(v43, v44, v45);
-      UnityEngine_AndroidJavaObject__Call(v42, (System_String_o *)StringLiteral_24521/*"setLogLevel"*/, (System_Object_array *)v46, 0);
+        sub_2213CDC(v41, v42, v43);
+      UnityEngine_AndroidJavaObject__Call(v40, (System_String_o *)StringLiteral_24569/*"setLogLevel"*/, (System_Object_array *)v44, 0);
     }
   }
-  v47 = v326;
-  v48 = sub_21FFD10(object___TypeInfo, 1);
-  v51 = v48;
-  if ( !v48 )
+  v45 = v324;
+  v46 = sub_2213B20(object___TypeInfo, 1);
+  v49 = v46;
+  if ( !v46 )
     goto LABEL_334;
-  if ( StringLiteral_25682/*"unity5.4.2"*/ && !sub_21FFDA4(StringLiteral_25682/*"unity5.4.2"*/, *(_QWORD *)(*(_QWORD *)v48 + 64LL)) )
+  if ( StringLiteral_25730/*"unity5.4.2"*/ && !sub_2213BB4(StringLiteral_25730/*"unity5.4.2"*/, *(_QWORD *)(*(_QWORD *)v46 + 64LL)) )
   {
-    v293 = sub_21FFEF0();
-    sub_21FFD90(v293, 0);
+    v291 = sub_2213D00();
+    sub_2213BA0(v291, 0);
   }
-  if ( !*(_DWORD *)(v51 + 24) )
-    sub_21FFED4();
-  v52 = StringLiteral_25682/*"unity5.4.2"*/;
-  *(_QWORD *)(v51 + 32) = StringLiteral_25682/*"unity5.4.2"*/;
-  v48 = sub_21FFBF4(v51 + 32, v52);
-  if ( !v47 )
+  if ( !*(_DWORD *)(v49 + 24) )
+    sub_2213CE4();
+  v50 = StringLiteral_25730/*"unity5.4.2"*/;
+  *(_QWORD *)(v49 + 32) = StringLiteral_25730/*"unity5.4.2"*/;
+  v46 = sub_2213A04(v49 + 32, v50);
+  if ( !v45 )
 LABEL_334:
-    sub_21FFECC(v48, v49, v50);
-  UnityEngine_AndroidJavaObject__Call(v47, (System_String_o *)StringLiteral_24551/*"setSdkPrefix"*/, (System_Object_array *)v51, 0);
+    sub_2213CDC(v46, v47, v48);
+  UnityEngine_AndroidJavaObject__Call(v45, (System_String_o *)StringLiteral_24599/*"setSdkPrefix"*/, (System_Object_array *)v49, 0);
   IsDeviceIdsReadingOnceEnabled_k__BackingField = (unsigned __int16)v3->fields._IsDeviceIdsReadingOnceEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsDeviceIdsReadingOnceEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsDeviceIdsReadingOnceEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsDeviceIdsReadingOnceEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsDeviceIdsReadingOnceEnabled_k__BackingField;
     if ( IsDeviceIdsReadingOnceEnabled_k__BackingField >= 0x100 )
     {
-      v57 = v326;
-      v58 = Method_System_Array_Empty_object___;
-      v59 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v59 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v59 = v58[7];
-      }
-      v60 = *(_QWORD *)(v59 + 16);
-      if ( (*(_WORD *)(v60 + 309) & 1) == 0 )
-        v60 = sub_2237AF8();
-      if ( !*(_DWORD *)(v60 + 228) )
-        j_il2cpp_runtime_class_init_0(v60, v53, v54);
-      v61 = *(_QWORD *)(v58[7] + 16LL);
-      if ( (*(_WORD *)(v61 + 309) & 1) == 0 )
-        v61 = sub_2237AF8();
+      v55 = v324;
+      v56 = Method_System_Array_Empty_object___;
+      v57 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v57 )
-        sub_21FFECC(v61, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v57 = v56[7];
+      }
+      v58 = *(_QWORD *)(v57 + 16);
+      if ( (*(_WORD *)(v58 + 309) & 1) == 0 )
+        v58 = sub_224B908();
+      if ( !*(_DWORD *)(v58 + 228) )
+        j_il2cpp_runtime_class_init_0(v58, v51, v52);
+      v59 = *(_QWORD *)(v56[7] + 16LL);
+      if ( (*(_WORD *)(v59 + 309) & 1) == 0 )
+        v59 = sub_224B908();
+      if ( !v55 )
+        sub_2213CDC(v59, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v57,
-        (System_String_o *)StringLiteral_19826/*"enableDeviceIdsReadingOnce"*/,
-        **(System_Object_array ***)(v61 + 184),
+        v55,
+        (System_String_o *)StringLiteral_19868/*"enableDeviceIdsReadingOnce"*/,
+        **(System_Object_array ***)(v59 + 184),
         0);
     }
   }
   IsCoppaComplianceEnabled_k__BackingField = (unsigned __int16)v3->fields._IsCoppaComplianceEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsCoppaComplianceEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsCoppaComplianceEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsCoppaComplianceEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsCoppaComplianceEnabled_k__BackingField;
     if ( IsCoppaComplianceEnabled_k__BackingField >= 0x100 )
     {
-      v63 = v326;
-      v64 = Method_System_Array_Empty_object___;
-      v65 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v65 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v65 = v64[7];
-      }
-      v66 = *(_QWORD *)(v65 + 16);
-      if ( (*(_WORD *)(v66 + 309) & 1) == 0 )
-        v66 = sub_2237AF8();
-      if ( !*(_DWORD *)(v66 + 228) )
-        j_il2cpp_runtime_class_init_0(v66, v53, v54);
-      v67 = *(_QWORD *)(v64[7] + 16LL);
-      if ( (*(_WORD *)(v67 + 309) & 1) == 0 )
-        v67 = sub_2237AF8();
+      v61 = v324;
+      v62 = Method_System_Array_Empty_object___;
+      v63 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v63 )
-        sub_21FFECC(v67, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v63 = v62[7];
+      }
+      v64 = *(_QWORD *)(v63 + 16);
+      if ( (*(_WORD *)(v64 + 309) & 1) == 0 )
+        v64 = sub_224B908();
+      if ( !*(_DWORD *)(v64 + 228) )
+        j_il2cpp_runtime_class_init_0(v64, v51, v52);
+      v65 = *(_QWORD *)(v62[7] + 16LL);
+      if ( (*(_WORD *)(v65 + 309) & 1) == 0 )
+        v65 = sub_224B908();
+      if ( !v61 )
+        sub_2213CDC(v65, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v63,
-        (System_String_o *)StringLiteral_19823/*"enableCoppaCompliance"*/,
-        **(System_Object_array ***)(v67 + 184),
+        v61,
+        (System_String_o *)StringLiteral_19865/*"enableCoppaCompliance"*/,
+        **(System_Object_array ***)(v65 + 184),
         0);
     }
   }
   IsPlayStoreKidsComplianceEnabled_k__BackingField = (unsigned __int16)v3->fields._IsPlayStoreKidsComplianceEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsPlayStoreKidsComplianceEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsPlayStoreKidsComplianceEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsPlayStoreKidsComplianceEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsPlayStoreKidsComplianceEnabled_k__BackingField;
     if ( IsPlayStoreKidsComplianceEnabled_k__BackingField >= 0x100 )
     {
-      v69 = v326;
-      v70 = Method_System_Array_Empty_object___;
-      v71 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v71 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v71 = v70[7];
-      }
-      v72 = *(_QWORD *)(v71 + 16);
-      if ( (*(_WORD *)(v72 + 309) & 1) == 0 )
-        v72 = sub_2237AF8();
-      if ( !*(_DWORD *)(v72 + 228) )
-        j_il2cpp_runtime_class_init_0(v72, v53, v54);
-      v73 = *(_QWORD *)(v70[7] + 16LL);
-      if ( (*(_WORD *)(v73 + 309) & 1) == 0 )
-        v73 = sub_2237AF8();
+      v67 = v324;
+      v68 = Method_System_Array_Empty_object___;
+      v69 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v69 )
-        sub_21FFECC(v73, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v69 = v68[7];
+      }
+      v70 = *(_QWORD *)(v69 + 16);
+      if ( (*(_WORD *)(v70 + 309) & 1) == 0 )
+        v70 = sub_224B908();
+      if ( !*(_DWORD *)(v70 + 228) )
+        j_il2cpp_runtime_class_init_0(v70, v51, v52);
+      v71 = *(_QWORD *)(v68[7] + 16LL);
+      if ( (*(_WORD *)(v71 + 309) & 1) == 0 )
+        v71 = sub_224B908();
+      if ( !v67 )
+        sub_2213CDC(v71, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v69,
-        (System_String_o *)StringLiteral_19834/*"enablePlayStoreKidsCompliance"*/,
-        **(System_Object_array ***)(v73 + 184),
+        v67,
+        (System_String_o *)StringLiteral_19876/*"enablePlayStoreKidsCompliance"*/,
+        **(System_Object_array ***)(v71 + 184),
         0);
     }
   }
   IsSendingInBackgroundEnabled_k__BackingField = (unsigned __int16)v3->fields._IsSendingInBackgroundEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsSendingInBackgroundEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsSendingInBackgroundEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsSendingInBackgroundEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsSendingInBackgroundEnabled_k__BackingField;
     if ( IsSendingInBackgroundEnabled_k__BackingField >= 0x100 )
     {
-      v75 = v326;
-      v76 = Method_System_Array_Empty_object___;
-      v77 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v77 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v77 = v76[7];
-      }
-      v78 = *(_QWORD *)(v77 + 16);
-      if ( (*(_WORD *)(v78 + 309) & 1) == 0 )
-        v78 = sub_2237AF8();
-      if ( !*(_DWORD *)(v78 + 228) )
-        j_il2cpp_runtime_class_init_0(v78, v53, v54);
-      v79 = *(_QWORD *)(v76[7] + 16LL);
-      if ( (*(_WORD *)(v79 + 309) & 1) == 0 )
-        v79 = sub_2237AF8();
+      v73 = v324;
+      v74 = Method_System_Array_Empty_object___;
+      v75 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v75 )
-        sub_21FFECC(v79, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v75 = v74[7];
+      }
+      v76 = *(_QWORD *)(v75 + 16);
+      if ( (*(_WORD *)(v76 + 309) & 1) == 0 )
+        v76 = sub_224B908();
+      if ( !*(_DWORD *)(v76 + 228) )
+        j_il2cpp_runtime_class_init_0(v76, v51, v52);
+      v77 = *(_QWORD *)(v74[7] + 16LL);
+      if ( (*(_WORD *)(v77 + 309) & 1) == 0 )
+        v77 = sub_224B908();
+      if ( !v73 )
+        sub_2213CDC(v77, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v75,
-        (System_String_o *)StringLiteral_19840/*"enableSendingInBackground"*/,
-        **(System_Object_array ***)(v79 + 184),
+        v73,
+        (System_String_o *)StringLiteral_19882/*"enableSendingInBackground"*/,
+        **(System_Object_array ***)(v77 + 184),
         0);
     }
   }
   IsCostDataInAttributionEnabled_k__BackingField = (unsigned __int16)v3->fields._IsCostDataInAttributionEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsCostDataInAttributionEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsCostDataInAttributionEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsCostDataInAttributionEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsCostDataInAttributionEnabled_k__BackingField;
     if ( IsCostDataInAttributionEnabled_k__BackingField >= 0x100 )
     {
-      v81 = v326;
-      v82 = Method_System_Array_Empty_object___;
-      v83 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v83 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v83 = v82[7];
-      }
-      v84 = *(_QWORD *)(v83 + 16);
-      if ( (*(_WORD *)(v84 + 309) & 1) == 0 )
-        v84 = sub_2237AF8();
-      if ( !*(_DWORD *)(v84 + 228) )
-        j_il2cpp_runtime_class_init_0(v84, v53, v54);
-      v85 = *(_QWORD *)(v82[7] + 16LL);
-      if ( (*(_WORD *)(v85 + 309) & 1) == 0 )
-        v85 = sub_2237AF8();
+      v79 = v324;
+      v80 = Method_System_Array_Empty_object___;
+      v81 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v81 )
-        sub_21FFECC(v85, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v81 = v80[7];
+      }
+      v82 = *(_QWORD *)(v81 + 16);
+      if ( (*(_WORD *)(v82 + 309) & 1) == 0 )
+        v82 = sub_224B908();
+      if ( !*(_DWORD *)(v82 + 228) )
+        j_il2cpp_runtime_class_init_0(v82, v51, v52);
+      v83 = *(_QWORD *)(v80[7] + 16LL);
+      if ( (*(_WORD *)(v83 + 309) & 1) == 0 )
+        v83 = sub_224B908();
+      if ( !v79 )
+        sub_2213CDC(v83, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v81,
-        (System_String_o *)StringLiteral_19825/*"enableCostDataInAttribution"*/,
-        **(System_Object_array ***)(v85 + 184),
+        v79,
+        (System_String_o *)StringLiteral_19867/*"enableCostDataInAttribution"*/,
+        **(System_Object_array ***)(v83 + 184),
         0);
     }
   }
   IsPreinstallTrackingEnabled_k__BackingField = (unsigned __int16)v3->fields._IsPreinstallTrackingEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsPreinstallTrackingEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsPreinstallTrackingEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsPreinstallTrackingEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsPreinstallTrackingEnabled_k__BackingField;
     if ( IsPreinstallTrackingEnabled_k__BackingField >= 0x100 )
     {
-      v87 = v326;
-      v88 = Method_System_Array_Empty_object___;
-      v89 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v89 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v89 = v88[7];
-      }
-      v90 = *(_QWORD *)(v89 + 16);
-      if ( (*(_WORD *)(v90 + 309) & 1) == 0 )
-        v90 = sub_2237AF8();
-      if ( !*(_DWORD *)(v90 + 228) )
-        j_il2cpp_runtime_class_init_0(v90, v53, v54);
-      v91 = *(_QWORD *)(v88[7] + 16LL);
-      if ( (*(_WORD *)(v91 + 309) & 1) == 0 )
-        v91 = sub_2237AF8();
+      v85 = v324;
+      v86 = Method_System_Array_Empty_object___;
+      v87 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v87 )
-        sub_21FFECC(v91, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v87 = v86[7];
+      }
+      v88 = *(_QWORD *)(v87 + 16);
+      if ( (*(_WORD *)(v88 + 309) & 1) == 0 )
+        v88 = sub_224B908();
+      if ( !*(_DWORD *)(v88 + 228) )
+        j_il2cpp_runtime_class_init_0(v88, v51, v52);
+      v89 = *(_QWORD *)(v86[7] + 16LL);
+      if ( (*(_WORD *)(v89 + 309) & 1) == 0 )
+        v89 = sub_224B908();
+      if ( !v85 )
+        sub_2213CDC(v89, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v87,
-        (System_String_o *)StringLiteral_19836/*"enablePreinstallTracking"*/,
-        **(System_Object_array ***)(v91 + 184),
+        v85,
+        (System_String_o *)StringLiteral_19878/*"enablePreinstallTracking"*/,
+        **(System_Object_array ***)(v89 + 184),
         0);
     }
   }
   IsFirstSessionDelayEnabled_k__BackingField = (unsigned __int16)v3->fields._IsFirstSessionDelayEnabled_k__BackingField;
-  v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsFirstSessionDelayEnabled_k__BackingField == 0;
+  v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsFirstSessionDelayEnabled_k__BackingField == 0;
   ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsFirstSessionDelayEnabled_k__BackingField;
-  if ( !v56 )
+  if ( !v54 )
   {
     ShouldUseSubdomains_k__BackingField = IsFirstSessionDelayEnabled_k__BackingField;
     if ( IsFirstSessionDelayEnabled_k__BackingField >= 0x100 )
     {
-      v93 = v326;
-      v94 = Method_System_Array_Empty_object___;
-      v95 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-      if ( !v95 )
-      {
-        sub_2237B54(Method_System_Array_Empty_object___);
-        v95 = v94[7];
-      }
-      v96 = *(_QWORD *)(v95 + 16);
-      if ( (*(_WORD *)(v96 + 309) & 1) == 0 )
-        v96 = sub_2237AF8();
-      if ( !*(_DWORD *)(v96 + 228) )
-        j_il2cpp_runtime_class_init_0(v96, v53, v54);
-      v97 = *(_QWORD *)(v94[7] + 16LL);
-      if ( (*(_WORD *)(v97 + 309) & 1) == 0 )
-        v97 = sub_2237AF8();
+      v91 = v324;
+      v92 = Method_System_Array_Empty_object___;
+      v93 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v93 )
-        sub_21FFECC(v97, v53, v54);
+      {
+        sub_224B964(Method_System_Array_Empty_object___);
+        v93 = v92[7];
+      }
+      v94 = *(_QWORD *)(v93 + 16);
+      if ( (*(_WORD *)(v94 + 309) & 1) == 0 )
+        v94 = sub_224B908();
+      if ( !*(_DWORD *)(v94 + 228) )
+        j_il2cpp_runtime_class_init_0(v94, v51, v52);
+      v95 = *(_QWORD *)(v92[7] + 16LL);
+      if ( (*(_WORD *)(v95 + 309) & 1) == 0 )
+        v95 = sub_224B908();
+      if ( !v91 )
+        sub_2213CDC(v95, v51, v52);
       UnityEngine_AndroidJavaObject__Call(
-        v93,
-        (System_String_o *)StringLiteral_19828/*"enableFirstSessionDelay"*/,
-        **(System_Object_array ***)(v97 + 184),
+        v91,
+        (System_String_o *)StringLiteral_19870/*"enableFirstSessionDelay"*/,
+        **(System_Object_array ***)(v95 + 184),
         0);
     }
   }
   if ( v3->fields._PreinstallFilePath_k__BackingField )
   {
-    v98 = v326;
-    v99 = sub_21FFD10(object___TypeInfo, 1);
-    v102 = v99;
-    if ( !v99 )
+    v96 = v324;
+    v97 = sub_2213B20(object___TypeInfo, 1);
+    v100 = v97;
+    if ( !v97 )
       goto LABEL_336;
     PreinstallFilePath_k__BackingField = v3->fields._PreinstallFilePath_k__BackingField;
     if ( PreinstallFilePath_k__BackingField
-      && !sub_21FFDA4(v3->fields._PreinstallFilePath_k__BackingField, *(_QWORD *)(*(_QWORD *)v99 + 64LL)) )
+      && !sub_2213BB4(v3->fields._PreinstallFilePath_k__BackingField, *(_QWORD *)(*(_QWORD *)v97 + 64LL)) )
     {
-      v296 = sub_21FFEF0();
-      sub_21FFD90(v296, 0);
+      v294 = sub_2213D00();
+      sub_2213BA0(v294, 0);
     }
-    if ( !*(_DWORD *)(v102 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v102 + 32) = PreinstallFilePath_k__BackingField;
-    v99 = sub_21FFBF4(v102 + 32, PreinstallFilePath_k__BackingField);
-    if ( !v98 )
+    if ( !*(_DWORD *)(v100 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v100 + 32) = PreinstallFilePath_k__BackingField;
+    v97 = sub_2213A04(v100 + 32, PreinstallFilePath_k__BackingField);
+    if ( !v96 )
 LABEL_336:
-      sub_21FFECC(v99, v100, v101);
-    UnityEngine_AndroidJavaObject__Call(v98, (System_String_o *)StringLiteral_24539/*"setPreinstallFilePath"*/, (System_Object_array *)v102, 0);
+      sub_2213CDC(v97, v98, v99);
+    UnityEngine_AndroidJavaObject__Call(v96, (System_String_o *)StringLiteral_24587/*"setPreinstallFilePath"*/, (System_Object_array *)v100, 0);
   }
   if ( v3->fields._FbAppId_k__BackingField )
   {
-    v104 = v326;
-    v105 = sub_21FFD10(object___TypeInfo, 1);
-    v108 = v105;
-    if ( !v105 )
+    v102 = v324;
+    v103 = sub_2213B20(object___TypeInfo, 1);
+    v106 = v103;
+    if ( !v103 )
       goto LABEL_337;
     FbAppId_k__BackingField = v3->fields._FbAppId_k__BackingField;
     if ( FbAppId_k__BackingField
-      && !sub_21FFDA4(v3->fields._FbAppId_k__BackingField, *(_QWORD *)(*(_QWORD *)v105 + 64LL)) )
+      && !sub_2213BB4(v3->fields._FbAppId_k__BackingField, *(_QWORD *)(*(_QWORD *)v103 + 64LL)) )
     {
-      v297 = sub_21FFEF0();
-      sub_21FFD90(v297, 0);
+      v295 = sub_2213D00();
+      sub_2213BA0(v295, 0);
     }
-    if ( !*(_DWORD *)(v108 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v108 + 32) = FbAppId_k__BackingField;
-    v105 = sub_21FFBF4(v108 + 32, FbAppId_k__BackingField);
-    if ( !v104 )
+    if ( !*(_DWORD *)(v106 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v106 + 32) = FbAppId_k__BackingField;
+    v103 = sub_2213A04(v106 + 32, FbAppId_k__BackingField);
+    if ( !v102 )
 LABEL_337:
-      sub_21FFECC(v105, v106, v107);
-    UnityEngine_AndroidJavaObject__Call(v104, (System_String_o *)StringLiteral_24515/*"setFbAppId"*/, (System_Object_array *)v108, 0);
+      sub_2213CDC(v103, v104, v105);
+    UnityEngine_AndroidJavaObject__Call(v102, (System_String_o *)StringLiteral_24563/*"setFbAppId"*/, (System_Object_array *)v106, 0);
   }
   if ( v3->fields._DefaultTracker_k__BackingField )
   {
-    v110 = v326;
-    v111 = sub_21FFD10(object___TypeInfo, 1);
-    v114 = v111;
-    if ( !v111 )
+    v108 = v324;
+    v109 = sub_2213B20(object___TypeInfo, 1);
+    v112 = v109;
+    if ( !v109 )
       goto LABEL_338;
     DefaultTracker_k__BackingField = v3->fields._DefaultTracker_k__BackingField;
     if ( DefaultTracker_k__BackingField
-      && !sub_21FFDA4(v3->fields._DefaultTracker_k__BackingField, *(_QWORD *)(*(_QWORD *)v111 + 64LL)) )
+      && !sub_2213BB4(v3->fields._DefaultTracker_k__BackingField, *(_QWORD *)(*(_QWORD *)v109 + 64LL)) )
     {
-      v298 = sub_21FFEF0();
-      sub_21FFD90(v298, 0);
+      v296 = sub_2213D00();
+      sub_2213BA0(v296, 0);
     }
-    if ( !*(_DWORD *)(v114 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v114 + 32) = DefaultTracker_k__BackingField;
-    v111 = sub_21FFBF4(v114 + 32, DefaultTracker_k__BackingField);
-    if ( !v110 )
+    if ( !*(_DWORD *)(v112 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v112 + 32) = DefaultTracker_k__BackingField;
+    v109 = sub_2213A04(v112 + 32, DefaultTracker_k__BackingField);
+    if ( !v108 )
 LABEL_338:
-      sub_21FFECC(v111, v112, v113);
-    UnityEngine_AndroidJavaObject__Call(v110, (System_String_o *)StringLiteral_24507/*"setDefaultTracker"*/, (System_Object_array *)v114, 0);
+      sub_2213CDC(v109, v110, v111);
+    UnityEngine_AndroidJavaObject__Call(v108, (System_String_o *)StringLiteral_24555/*"setDefaultTracker"*/, (System_Object_array *)v112, 0);
   }
   if ( v3->fields._ExternalDeviceId_k__BackingField )
   {
-    v116 = v326;
-    v117 = sub_21FFD10(object___TypeInfo, 1);
-    v120 = v117;
-    if ( !v117 )
+    v114 = v324;
+    v115 = sub_2213B20(object___TypeInfo, 1);
+    v118 = v115;
+    if ( !v115 )
       goto LABEL_339;
     ExternalDeviceId_k__BackingField = v3->fields._ExternalDeviceId_k__BackingField;
     if ( ExternalDeviceId_k__BackingField
-      && !sub_21FFDA4(v3->fields._ExternalDeviceId_k__BackingField, *(_QWORD *)(*(_QWORD *)v117 + 64LL)) )
+      && !sub_2213BB4(v3->fields._ExternalDeviceId_k__BackingField, *(_QWORD *)(*(_QWORD *)v115 + 64LL)) )
     {
-      v299 = sub_21FFEF0();
-      sub_21FFD90(v299, 0);
+      v297 = sub_2213D00();
+      sub_2213BA0(v297, 0);
     }
-    if ( !*(_DWORD *)(v120 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v120 + 32) = ExternalDeviceId_k__BackingField;
-    v117 = sub_21FFBF4(v120 + 32, ExternalDeviceId_k__BackingField);
-    if ( !v116 )
+    if ( !*(_DWORD *)(v118 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v118 + 32) = ExternalDeviceId_k__BackingField;
+    v115 = sub_2213A04(v118 + 32, ExternalDeviceId_k__BackingField);
+    if ( !v114 )
 LABEL_339:
-      sub_21FFECC(v117, v118, v119);
-    UnityEngine_AndroidJavaObject__Call(v116, (System_String_o *)StringLiteral_24512/*"setExternalDeviceId"*/, (System_Object_array *)v120, 0);
+      sub_2213CDC(v115, v116, v117);
+    UnityEngine_AndroidJavaObject__Call(v114, (System_String_o *)StringLiteral_24560/*"setExternalDeviceId"*/, (System_Object_array *)v118, 0);
   }
   if ( v3->fields._EventDeduplicationIdsMaxSize_k__BackingField.fields.hasValue )
   {
-    v122 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
-    v315.fields._list = (struct System_Collections_Generic_List_T__o *)v3->fields._EventDeduplicationIdsMaxSize_k__BackingField;
-    v123 = j_il2cpp_value_box_0(System_Nullable_int__TypeInfo, &v315);
-    if ( !v122 )
-      sub_21FFECC(v123, v124, v125);
-    v126 = (Il2CppObject *)v123;
-    if ( v123 && !sub_21FFDA4(v123, v122->obj.klass->_1.element_class) )
+    v120 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
+    v313.fields._list = (struct System_Collections_Generic_List_T__o *)v3->fields._EventDeduplicationIdsMaxSize_k__BackingField;
+    v121 = j_il2cpp_value_box_0(System_Nullable_int__TypeInfo, &v313);
+    if ( !v120 )
+      sub_2213CDC(v121, v122, v123);
+    v124 = (Il2CppObject *)v121;
+    if ( v121 && !sub_2213BB4(v121, v120->obj.klass->_1.element_class) )
     {
-      v300 = sub_21FFEF0();
-      sub_21FFD90(v300, 0);
+      v298 = sub_2213D00();
+      sub_2213BA0(v298, 0);
     }
-    if ( !LODWORD(v122->max_length) )
-      sub_21FFED4();
-    v122->m_Items[0] = v126;
-    sub_21FFBF4(v122->m_Items, v126);
-    v127 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v127, (System_String_o *)StringLiteral_22059/*"java.lang.Integer"*/, v122, 0);
-    v128 = v326;
-    v323 = v127;
-    v315.fields._list = 0;
-    *(_QWORD *)&v315.fields._index = &v323;
-    v129 = sub_21FFD10(object___TypeInfo, 1);
-    v132 = v129;
-    if ( !v129 )
+    if ( !LODWORD(v120->max_length) )
+      sub_2213CE4();
+    v120->m_Items[0] = v124;
+    sub_2213A04(v120->m_Items, v124);
+    v125 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v125, (System_String_o *)StringLiteral_22102/*"java.lang.Integer"*/, v120, 0);
+    v126 = v324;
+    v321 = v125;
+    v313.fields._list = 0;
+    *(_QWORD *)&v313.fields._index = &v321;
+    v127 = sub_2213B20(object___TypeInfo, 1);
+    v130 = v127;
+    if ( !v127 )
       goto LABEL_340;
-    v133 = v323;
-    if ( v323 && !sub_21FFDA4(v323, *(_QWORD *)(*(_QWORD *)v129 + 64LL)) )
+    v131 = v321;
+    if ( v321 && !sub_2213BB4(v321, *(_QWORD *)(*(_QWORD *)v127 + 64LL)) )
     {
-      v301 = sub_21FFEF0();
-      sub_21FFD90(v301, 0);
+      v299 = sub_2213D00();
+      sub_2213BA0(v299, 0);
     }
-    if ( !*(_DWORD *)(v132 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v132 + 32) = v133;
-    v129 = sub_21FFBF4(v132 + 32, v133);
-    if ( !v128 )
+    if ( !*(_DWORD *)(v130 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v130 + 32) = v131;
+    v127 = sub_2213A04(v130 + 32, v131);
+    if ( !v126 )
 LABEL_340:
-      sub_21FFECC(v129, v130, v131);
-    UnityEngine_AndroidJavaObject__Call(v128, (System_String_o *)StringLiteral_24511/*"setEventDeduplicationIdsMaxSize"*/, (System_Object_array *)v132, 0);
-    v134 = v323;
-    if ( v323 )
+      sub_2213CDC(v127, v128, v129);
+    UnityEngine_AndroidJavaObject__Call(v126, (System_String_o *)StringLiteral_24559/*"setEventDeduplicationIdsMaxSize"*/, (System_Object_array *)v130, 0);
+    v132 = v321;
+    if ( v321 )
     {
-      klass = v323->klass;
-      v136 = *(unsigned __int16 *)&v323->klass->_2.rank;
-      if ( *(_WORD *)&v323->klass->_2.rank )
+      klass = v321->klass;
+      v134 = *(unsigned __int16 *)&v321->klass->_2.rank;
+      if ( *(_WORD *)&v321->klass->_2.rank )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          --v136;
+          --v134;
           p_offset += 4;
-          if ( !v136 )
+          if ( !v134 )
             goto LABEL_185;
         }
-        v138 = (__int64)&klass->vtable + 16 * *p_offset;
+        v136 = (__int64)&klass->vtable + 16 * *p_offset;
       }
       else
       {
 LABEL_185:
-        v138 = sub_2237E2C(v323, System_IDisposable_TypeInfo, 0);
+        v136 = sub_224BC3C(v321, System_IDisposable_TypeInfo, 0);
       }
-      (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v138)(v134, *(_QWORD *)(v138 + 8));
+      (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v136)(v132, *(_QWORD *)(v136 + 8));
     }
   }
   if ( v3->fields._UrlStrategyDomains_k__BackingField )
   {
-    v56 = (unsigned __int8)*(_WORD *)&v3->fields._ShouldUseSubdomains_k__BackingField == 0;
+    v54 = (unsigned __int8)*(_WORD *)&v3->fields._ShouldUseSubdomains_k__BackingField == 0;
     ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._ShouldUseSubdomains_k__BackingField;
-    if ( !v56 )
+    if ( !v54 )
     {
-      v56 = (unsigned __int8)*(_WORD *)&v3->fields._IsDataResidency_k__BackingField == 0;
+      v54 = (unsigned __int8)*(_WORD *)&v3->fields._IsDataResidency_k__BackingField == 0;
       ShouldUseSubdomains_k__BackingField = (__int16)v3->fields._IsDataResidency_k__BackingField;
-      if ( !v56 )
+      if ( !v54 )
       {
-        v139 = Method_System_Array_Empty_object___;
-        v140 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
-        if ( !v140 )
+        v137 = Method_System_Array_Empty_object___;
+        v138 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
+        if ( !v138 )
         {
-          sub_2237B54(Method_System_Array_Empty_object___);
-          v140 = v139[7];
+          sub_224B964(Method_System_Array_Empty_object___);
+          v138 = v137[7];
         }
-        v141 = *(_QWORD *)(v140 + 16);
-        if ( (*(_WORD *)(v141 + 309) & 1) == 0 )
-          v141 = sub_2237AF8();
-        if ( !*(_DWORD *)(v141 + 228) )
-          j_il2cpp_runtime_class_init_0(v141, v53, v54);
-        v142 = *(_QWORD *)(v139[7] + 16LL);
-        if ( (*(_WORD *)(v142 + 309) & 1) == 0 )
-          v142 = sub_2237AF8();
-        v143 = **(System_Object_array ***)(v142 + 184);
-        v144 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-        UnityEngine_AndroidJavaObject___ctor_82839756(v144, (System_String_o *)StringLiteral_22070/*"java.util.ArrayList"*/, v143, 0);
+        v139 = *(_QWORD *)(v138 + 16);
+        if ( (*(_WORD *)(v139 + 309) & 1) == 0 )
+          v139 = sub_224B908();
+        if ( !*(_DWORD *)(v139 + 228) )
+          j_il2cpp_runtime_class_init_0(v139, v51, v52);
+        v140 = *(_QWORD *)(v137[7] + 16LL);
+        if ( (*(_WORD *)(v140 + 309) & 1) == 0 )
+          v140 = sub_224B908();
+        v141 = **(System_Object_array ***)(v140 + 184);
+        v142 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+        UnityEngine_AndroidJavaObject___ctor_83053060(v142, (System_String_o *)StringLiteral_22113/*"java.util.ArrayList"*/, v141, 0);
         UrlStrategyDomains_k__BackingField = (System_Collections_Generic_List_object__o *)v3->fields._UrlStrategyDomains_k__BackingField;
-        v322 = v144;
-        v316 = 0;
-        v317 = &v322;
+        v320 = v142;
+        v314 = 0;
+        v315 = &v320;
         if ( !UrlStrategyDomains_k__BackingField )
-          sub_21FFECC(0, v145, v146);
+          sub_2213CDC(0, v143, v144);
         System_Collections_Generic_List_object___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v315,
+          (System_Collections_Generic_List_Enumerator_T__o *)&v313,
           UrlStrategyDomains_k__BackingField,
-          (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
-        v321 = v315;
-        v315.fields._list = 0;
-        *(_QWORD *)&v315.fields._index = &v321;
+          (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+        v319 = v313;
+        v313.fields._list = 0;
+        *(_QWORD *)&v313.fields._index = &v319;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  &v321,
-                  (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+                  &v319,
+                  (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
         {
-          current = v321.fields._current;
-          v148 = v322;
-          v150 = sub_21FFD10(object___TypeInfo, 1);
-          v153 = v150;
-          if ( !v150 )
-            goto LABEL_328;
-          if ( current && !sub_21FFDA4(current, *(_QWORD *)(*(_QWORD *)v150 + 64LL)) )
-          {
-            v291 = sub_21FFEF0();
-            sub_21FFD90(v291, 0);
-          }
-          if ( !*(_DWORD *)(v153 + 24) )
-            sub_21FFED4();
-          *(_QWORD *)(v153 + 32) = current;
-          v150 = sub_21FFBF4(v153 + 32, current);
+          current = v319.fields._current;
+          v146 = v320;
+          v148 = sub_2213B20(object___TypeInfo, 1);
+          v151 = v148;
           if ( !v148 )
+            goto LABEL_328;
+          if ( current && !sub_2213BB4(current, *(_QWORD *)(*(_QWORD *)v148 + 64LL)) )
+          {
+            v289 = sub_2213D00();
+            sub_2213BA0(v289, 0);
+          }
+          if ( !*(_DWORD *)(v151 + 24) )
+            sub_2213CE4();
+          *(_QWORD *)(v151 + 32) = current;
+          v148 = sub_2213A04(v151 + 32, current);
+          if ( !v146 )
 LABEL_328:
-            sub_21FFECC(v150, v151, v152);
+            sub_2213CDC(v148, v149, v150);
           UnityEngine_AndroidJavaObject__Call_bool_(
-            v148,
-            (System_String_o *)StringLiteral_17313/*"add"*/,
-            (System_Object_array *)v153,
-            (const MethodInfo_36D5468 *)Method_UnityEngine_AndroidJavaObject_Call_bool____91478528);
+            v146,
+            (System_String_o *)StringLiteral_17349/*"add"*/,
+            (System_Object_array *)v151,
+            (const MethodInfo_37073D8 *)Method_UnityEngine_AndroidJavaObject_Call_bool____91704720);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v321,
-          (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-        v154 = v326;
-        v155 = sub_21FFD10(object___TypeInfo, 3);
-        v158 = (System_Object_array *)v155;
-        if ( !v155 )
-          sub_21FFECC(0, v156, v157);
-        v159 = (Il2CppObject *)v322;
-        if ( v322 && !sub_21FFDA4(v322, *(_QWORD *)(*(_QWORD *)v155 + 64LL)) )
+          &v319,
+          (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+        v152 = v324;
+        v153 = sub_2213B20(object___TypeInfo, 3);
+        v156 = (System_Object_array *)v153;
+        if ( !v153 )
+          sub_2213CDC(0, v154, v155);
+        v157 = (Il2CppObject *)v320;
+        if ( v320 && !sub_2213BB4(v320, *(_QWORD *)(*(_QWORD *)v153 + 64LL)) )
         {
-          v311 = sub_21FFEF0();
-          sub_21FFD90(v311, 0);
+          v309 = sub_2213D00();
+          sub_2213BA0(v309, 0);
         }
-        if ( !LODWORD(v158->max_length) )
-          sub_21FFED4();
-        v158->m_Items[0] = v159;
-        sub_21FFBF4(v158->m_Items, v159);
-        LOWORD(v315.fields._list) = v3->fields._ShouldUseSubdomains_k__BackingField;
-        v160 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &v315);
-        v161 = (Il2CppObject *)v160;
-        if ( v160 && !sub_21FFDA4(v160, v158->obj.klass->_1.element_class) )
+        if ( !LODWORD(v156->max_length) )
+          sub_2213CE4();
+        v156->m_Items[0] = v157;
+        sub_2213A04(v156->m_Items, v157);
+        LOWORD(v313.fields._list) = v3->fields._ShouldUseSubdomains_k__BackingField;
+        v158 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &v313);
+        v159 = (Il2CppObject *)v158;
+        if ( v158 && !sub_2213BB4(v158, v156->obj.klass->_1.element_class) )
         {
-          v312 = sub_21FFEF0();
-          sub_21FFD90(v312, 0);
+          v310 = sub_2213D00();
+          sub_2213BA0(v310, 0);
         }
-        if ( (v158->max_length & 0xFFFFFFFE) == 0 )
-          sub_21FFED4();
-        v158->m_Items[1] = v161;
-        sub_21FFBF4(&v158->m_Items[1], v161);
+        if ( (v156->max_length & 0xFFFFFFFE) == 0 )
+          sub_2213CE4();
+        v156->m_Items[1] = v159;
+        sub_2213A04(&v156->m_Items[1], v159);
         IsDataResidency_k__BackingField = v3->fields._IsDataResidency_k__BackingField;
-        v162 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &IsDataResidency_k__BackingField);
-        v163 = (Il2CppObject *)v162;
-        if ( v162 && !sub_21FFDA4(v162, v158->obj.klass->_1.element_class) )
+        v160 = j_il2cpp_value_box_0(System_Nullable_bool__TypeInfo, &IsDataResidency_k__BackingField);
+        v161 = (Il2CppObject *)v160;
+        if ( v160 && !sub_2213BB4(v160, v156->obj.klass->_1.element_class) )
         {
-          v313 = sub_21FFEF0();
-          sub_21FFD90(v313, 0);
+          v311 = sub_2213D00();
+          sub_2213BA0(v311, 0);
         }
-        if ( LODWORD(v158->max_length) <= 2 )
-          sub_21FFED4();
-        v158->m_Items[2] = v163;
-        v164 = sub_21FFBF4(&v158->m_Items[2], v163);
-        if ( !v154 )
-          sub_21FFECC(v164, v165, v166);
-        UnityEngine_AndroidJavaObject__Call(v154, (System_String_o *)StringLiteral_24566/*"setUrlStrategy"*/, v158, 0);
-        v167 = *v317;
-        if ( *v317 )
+        if ( LODWORD(v156->max_length) <= 2 )
+          sub_2213CE4();
+        v156->m_Items[2] = v161;
+        v162 = sub_2213A04(&v156->m_Items[2], v161);
+        if ( !v152 )
+          sub_2213CDC(v162, v163, v164);
+        UnityEngine_AndroidJavaObject__Call(v152, (System_String_o *)StringLiteral_24614/*"setUrlStrategy"*/, v156, 0);
+        v165 = *v315;
+        if ( *v315 )
         {
-          v168 = v167->klass;
-          v169 = *(unsigned __int16 *)&v167->klass->_2.rank;
-          if ( *(_WORD *)&v167->klass->_2.rank )
+          v166 = v165->klass;
+          v167 = *(unsigned __int16 *)&v165->klass->_2.rank;
+          if ( *(_WORD *)&v165->klass->_2.rank )
           {
-            v170 = &v168->_1.interfaceOffsets->offset;
-            while ( *((System_IDisposable_c **)v170 - 1) != System_IDisposable_TypeInfo )
+            v168 = &v166->_1.interfaceOffsets->offset;
+            while ( *((System_IDisposable_c **)v168 - 1) != System_IDisposable_TypeInfo )
             {
-              --v169;
-              v170 += 4;
-              if ( !v169 )
+              --v167;
+              v168 += 4;
+              if ( !v167 )
                 goto LABEL_224;
             }
-            v171 = (__int64)&v168->vtable + 16 * *v170;
+            v169 = (__int64)&v166->vtable + 16 * *v168;
           }
           else
           {
 LABEL_224:
-            v171 = sub_2237E2C(*v317, System_IDisposable_TypeInfo, 0);
+            v169 = sub_224BC3C(*v315, System_IDisposable_TypeInfo, 0);
           }
-          (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v171)(v167, *(_QWORD *)(v171 + 8));
+          (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v169)(v165, *(_QWORD *)(v169 + 8));
         }
-        if ( v316 )
-          sub_21FFEC4(v316);
+        if ( v314 )
+          sub_2213CD4(v314);
       }
     }
   }
   StoreInfo_k__BackingField = v3->fields._StoreInfo_k__BackingField;
   if ( StoreInfo_k__BackingField && StoreInfo_k__BackingField->fields._StoreName_k__BackingField )
   {
-    v173 = sub_21FFD10(object___TypeInfo, 1);
-    v176 = v3->fields._StoreInfo_k__BackingField;
-    if ( !v176 )
-      sub_21FFECC(v173, v174, v175);
-    v177 = v173;
-    if ( !v173 )
-      sub_21FFECC(0, v174, v175);
-    StoreName_k__BackingField = v176->fields._StoreName_k__BackingField;
-    if ( StoreName_k__BackingField && !sub_21FFDA4(StoreName_k__BackingField, *(_QWORD *)(*(_QWORD *)v173 + 64LL)) )
+    v171 = sub_2213B20(object___TypeInfo, 1);
+    v174 = v3->fields._StoreInfo_k__BackingField;
+    if ( !v174 )
+      sub_2213CDC(v171, v172, v173);
+    v175 = v171;
+    if ( !v171 )
+      sub_2213CDC(0, v172, v173);
+    StoreName_k__BackingField = v174->fields._StoreName_k__BackingField;
+    if ( StoreName_k__BackingField && !sub_2213BB4(StoreName_k__BackingField, *(_QWORD *)(*(_QWORD *)v171 + 64LL)) )
     {
-      v308 = sub_21FFEF0();
-      sub_21FFD90(v308, 0);
+      v306 = sub_2213D00();
+      sub_2213BA0(v306, 0);
     }
-    if ( !*(_DWORD *)(v177 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v177 + 32) = StoreName_k__BackingField;
-    sub_21FFBF4(v177 + 32, StoreName_k__BackingField);
-    v179 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(
-      v179,
-      (System_String_o *)StringLiteral_18836/*"com.adjust.sdk.AdjustStoreInfo"*/,
-      (System_Object_array *)v177,
+    if ( !*(_DWORD *)(v175 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v175 + 32) = StoreName_k__BackingField;
+    sub_2213A04(v175 + 32, StoreName_k__BackingField);
+    v177 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(
+      v177,
+      (System_String_o *)StringLiteral_18874/*"com.adjust.sdk.AdjustStoreInfo"*/,
+      (System_Object_array *)v175,
       0);
-    v183 = v3->fields._StoreInfo_k__BackingField;
-    v320 = v179;
-    v315.fields._list = 0;
-    *(_QWORD *)&v315.fields._index = &v320;
-    if ( !v183 )
-      sub_21FFECC(v180, v181, v182);
-    if ( v183->fields._StoreAppId_k__BackingField )
+    v181 = v3->fields._StoreInfo_k__BackingField;
+    v318 = v177;
+    v313.fields._list = 0;
+    *(_QWORD *)&v313.fields._index = &v318;
+    if ( !v181 )
+      sub_2213CDC(v178, v179, v180);
+    if ( v181->fields._StoreAppId_k__BackingField )
     {
-      v184 = sub_21FFD10(object___TypeInfo, 1);
-      v187 = v3->fields._StoreInfo_k__BackingField;
-      if ( !v187 )
-        sub_21FFECC(v184, v185, v186);
-      v188 = v184;
-      if ( !v184 )
+      v182 = sub_2213B20(object___TypeInfo, 1);
+      v185 = v3->fields._StoreInfo_k__BackingField;
+      if ( !v185 )
+        sub_2213CDC(v182, v183, v184);
+      v186 = v182;
+      if ( !v182 )
         goto LABEL_376;
-      StoreAppId_k__BackingField = v187->fields._StoreAppId_k__BackingField;
-      if ( StoreAppId_k__BackingField && !sub_21FFDA4(StoreAppId_k__BackingField, *(_QWORD *)(*(_QWORD *)v184 + 64LL)) )
+      StoreAppId_k__BackingField = v185->fields._StoreAppId_k__BackingField;
+      if ( StoreAppId_k__BackingField && !sub_2213BB4(StoreAppId_k__BackingField, *(_QWORD *)(*(_QWORD *)v182 + 64LL)) )
       {
-        v310 = sub_21FFEF0();
-        sub_21FFD90(v310, 0);
+        v308 = sub_2213D00();
+        sub_2213BA0(v308, 0);
       }
-      if ( !*(_DWORD *)(v188 + 24) )
-        sub_21FFED4();
-      *(_QWORD *)(v188 + 32) = StoreAppId_k__BackingField;
-      v184 = sub_21FFBF4(v188 + 32, StoreAppId_k__BackingField);
-      if ( !v179 )
+      if ( !*(_DWORD *)(v186 + 24) )
+        sub_2213CE4();
+      *(_QWORD *)(v186 + 32) = StoreAppId_k__BackingField;
+      v182 = sub_2213A04(v186 + 32, StoreAppId_k__BackingField);
+      if ( !v177 )
 LABEL_376:
-        sub_21FFECC(v184, v185, v186);
-      UnityEngine_AndroidJavaObject__Call(v179, (System_String_o *)StringLiteral_24559/*"setStoreAppId"*/, (System_Object_array *)v188, 0);
+        sub_2213CDC(v182, v183, v184);
+      UnityEngine_AndroidJavaObject__Call(v177, (System_String_o *)StringLiteral_24607/*"setStoreAppId"*/, (System_Object_array *)v186, 0);
     }
-    v190 = v326;
-    v191 = sub_21FFD10(object___TypeInfo, 1);
-    v194 = v191;
-    if ( !v191 )
+    v188 = v324;
+    v189 = sub_2213B20(object___TypeInfo, 1);
+    v192 = v189;
+    if ( !v189 )
       goto LABEL_360;
-    v195 = v320;
-    if ( v320 && !sub_21FFDA4(v320, *(_QWORD *)(*(_QWORD *)v191 + 64LL)) )
+    v193 = v318;
+    if ( v318 && !sub_2213BB4(v318, *(_QWORD *)(*(_QWORD *)v189 + 64LL)) )
     {
-      v309 = sub_21FFEF0();
-      sub_21FFD90(v309, 0);
+      v307 = sub_2213D00();
+      sub_2213BA0(v307, 0);
     }
-    if ( !*(_DWORD *)(v194 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v194 + 32) = v195;
-    v191 = sub_21FFBF4(v194 + 32, v195);
-    if ( !v190 )
+    if ( !*(_DWORD *)(v192 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v192 + 32) = v193;
+    v189 = sub_2213A04(v192 + 32, v193);
+    if ( !v188 )
 LABEL_360:
-      sub_21FFECC(v191, v192, v193);
-    UnityEngine_AndroidJavaObject__Call(v190, (System_String_o *)StringLiteral_24560/*"setStoreInfo"*/, (System_Object_array *)v194, 0);
-    v196 = v320;
-    if ( v320 )
+      sub_2213CDC(v189, v190, v191);
+    UnityEngine_AndroidJavaObject__Call(v188, (System_String_o *)StringLiteral_24608/*"setStoreInfo"*/, (System_Object_array *)v192, 0);
+    v194 = v318;
+    if ( v318 )
     {
-      v197 = v320->klass;
-      v198 = *(unsigned __int16 *)&v320->klass->_2.rank;
-      if ( *(_WORD *)&v320->klass->_2.rank )
+      v195 = v318->klass;
+      v196 = *(unsigned __int16 *)&v318->klass->_2.rank;
+      if ( *(_WORD *)&v318->klass->_2.rank )
       {
-        v199 = &v197->_1.interfaceOffsets->offset;
-        while ( *((System_IDisposable_c **)v199 - 1) != System_IDisposable_TypeInfo )
+        v197 = &v195->_1.interfaceOffsets->offset;
+        while ( *((System_IDisposable_c **)v197 - 1) != System_IDisposable_TypeInfo )
         {
-          --v198;
-          v199 += 4;
-          if ( !v198 )
+          --v196;
+          v197 += 4;
+          if ( !v196 )
             goto LABEL_254;
         }
-        v200 = (__int64)&v197->vtable + 16 * *v199;
+        v198 = (__int64)&v195->vtable + 16 * *v197;
       }
       else
       {
 LABEL_254:
-        v200 = sub_2237E2C(v320, System_IDisposable_TypeInfo, 0);
+        v198 = sub_224BC3C(v318, System_IDisposable_TypeInfo, 0);
       }
-      (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v200)(v196, *(_QWORD *)(v200 + 8));
+      (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v198)(v194, *(_QWORD *)(v198 + 8));
     }
   }
   AttributionChangedDelegate_k__BackingField = v3->fields._AttributionChangedDelegate_k__BackingField;
   if ( AttributionChangedDelegate_k__BackingField )
   {
-    v202 = (AdjustSdk_AdjustAndroid_AttributionChangedListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AttributionChangedListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_AttributionChangedListener___ctor(v202, AttributionChangedDelegate_k__BackingField, v203);
-    v206 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v200 = (AdjustSdk_AdjustAndroid_AttributionChangedListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_AttributionChangedListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_AttributionChangedListener___ctor(v200, AttributionChangedDelegate_k__BackingField, v201);
+    v204 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v204, v205);
-      v206 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v202, v203);
+      v204 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    static_fields = v206->static_fields;
-    static_fields->onAttributionChangedListener = v202;
-    sub_21FFBF4(&static_fields->onAttributionChangedListener, v202);
-    v208 = v326;
-    v209 = sub_21FFD10(object___TypeInfo, 1);
-    v212 = v209;
-    if ( !v209 )
+    static_fields = v204->static_fields;
+    static_fields->onAttributionChangedListener = v200;
+    sub_2213A04(&static_fields->onAttributionChangedListener, v200);
+    v206 = v324;
+    v207 = sub_2213B20(object___TypeInfo, 1);
+    v210 = v207;
+    if ( !v207 )
       goto LABEL_343;
     onAttributionChangedListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onAttributionChangedListener;
-    if ( onAttributionChangedListener && !sub_21FFDA4(onAttributionChangedListener, *(_QWORD *)(*(_QWORD *)v209 + 64LL)) )
+    if ( onAttributionChangedListener && !sub_2213BB4(onAttributionChangedListener, *(_QWORD *)(*(_QWORD *)v207 + 64LL)) )
     {
-      v302 = sub_21FFEF0();
-      sub_21FFD90(v302, 0);
+      v300 = sub_2213D00();
+      sub_2213BA0(v300, 0);
     }
-    if ( !*(_DWORD *)(v212 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v212 + 32) = onAttributionChangedListener;
-    v209 = sub_21FFBF4(v212 + 32, onAttributionChangedListener);
-    if ( !v208 )
+    if ( !*(_DWORD *)(v210 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v210 + 32) = onAttributionChangedListener;
+    v207 = sub_2213A04(v210 + 32, onAttributionChangedListener);
+    if ( !v206 )
 LABEL_343:
-      sub_21FFECC(v209, v210, v211);
-    UnityEngine_AndroidJavaObject__Call(v208, (System_String_o *)StringLiteral_24532/*"setOnAttributionChangedListener"*/, (System_Object_array *)v212, 0);
+      sub_2213CDC(v207, v208, v209);
+    UnityEngine_AndroidJavaObject__Call(v206, (System_String_o *)StringLiteral_24580/*"setOnAttributionChangedListener"*/, (System_Object_array *)v210, 0);
   }
   EventSuccessDelegate_k__BackingField = v3->fields._EventSuccessDelegate_k__BackingField;
   if ( EventSuccessDelegate_k__BackingField )
   {
-    v215 = (AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___ctor(v215, EventSuccessDelegate_k__BackingField, v216);
-    v219 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v213 = (AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_EventTrackingSucceededListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___ctor(v213, EventSuccessDelegate_k__BackingField, v214);
+    v217 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v217, v218);
-      v219 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v215, v216);
+      v217 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    v220 = v219->static_fields;
-    v220->onEventTrackingSucceededListener = v215;
-    sub_21FFBF4(&v220->onEventTrackingSucceededListener, v215);
-    v221 = v326;
-    v222 = sub_21FFD10(object___TypeInfo, 1);
-    v225 = v222;
-    if ( !v222 )
+    v218 = v217->static_fields;
+    v218->onEventTrackingSucceededListener = v213;
+    sub_2213A04(&v218->onEventTrackingSucceededListener, v213);
+    v219 = v324;
+    v220 = sub_2213B20(object___TypeInfo, 1);
+    v223 = v220;
+    if ( !v220 )
       goto LABEL_344;
     onEventTrackingSucceededListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onEventTrackingSucceededListener;
     if ( onEventTrackingSucceededListener
-      && !sub_21FFDA4(onEventTrackingSucceededListener, *(_QWORD *)(*(_QWORD *)v222 + 64LL)) )
+      && !sub_2213BB4(onEventTrackingSucceededListener, *(_QWORD *)(*(_QWORD *)v220 + 64LL)) )
     {
-      v303 = sub_21FFEF0();
-      sub_21FFD90(v303, 0);
+      v301 = sub_2213D00();
+      sub_2213BA0(v301, 0);
     }
-    if ( !*(_DWORD *)(v225 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v225 + 32) = onEventTrackingSucceededListener;
-    v222 = sub_21FFBF4(v225 + 32, onEventTrackingSucceededListener);
-    if ( !v221 )
+    if ( !*(_DWORD *)(v223 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v223 + 32) = onEventTrackingSucceededListener;
+    v220 = sub_2213A04(v223 + 32, onEventTrackingSucceededListener);
+    if ( !v219 )
 LABEL_344:
-      sub_21FFECC(v222, v223, v224);
-    UnityEngine_AndroidJavaObject__Call(v221, (System_String_o *)StringLiteral_24535/*"setOnEventTrackingSucceededListener"*/, (System_Object_array *)v225, 0);
+      sub_2213CDC(v220, v221, v222);
+    UnityEngine_AndroidJavaObject__Call(v219, (System_String_o *)StringLiteral_24583/*"setOnEventTrackingSucceededListener"*/, (System_Object_array *)v223, 0);
   }
   EventFailureDelegate_k__BackingField = v3->fields._EventFailureDelegate_k__BackingField;
   if ( EventFailureDelegate_k__BackingField )
   {
-    v228 = (AdjustSdk_AdjustAndroid_EventTrackingFailedListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_EventTrackingFailedListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_EventTrackingFailedListener___ctor(v228, EventFailureDelegate_k__BackingField, v229);
-    v232 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v226 = (AdjustSdk_AdjustAndroid_EventTrackingFailedListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_EventTrackingFailedListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_EventTrackingFailedListener___ctor(v226, EventFailureDelegate_k__BackingField, v227);
+    v230 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v230, v231);
-      v232 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v228, v229);
+      v230 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    v233 = v232->static_fields;
-    v233->onEventTrackingFailedListener = v228;
-    sub_21FFBF4(&v233->onEventTrackingFailedListener, v228);
-    v234 = v326;
-    v235 = sub_21FFD10(object___TypeInfo, 1);
-    v238 = v235;
-    if ( !v235 )
+    v231 = v230->static_fields;
+    v231->onEventTrackingFailedListener = v226;
+    sub_2213A04(&v231->onEventTrackingFailedListener, v226);
+    v232 = v324;
+    v233 = sub_2213B20(object___TypeInfo, 1);
+    v236 = v233;
+    if ( !v233 )
       goto LABEL_345;
     onEventTrackingFailedListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onEventTrackingFailedListener;
     if ( onEventTrackingFailedListener
-      && !sub_21FFDA4(onEventTrackingFailedListener, *(_QWORD *)(*(_QWORD *)v235 + 64LL)) )
+      && !sub_2213BB4(onEventTrackingFailedListener, *(_QWORD *)(*(_QWORD *)v233 + 64LL)) )
     {
-      v304 = sub_21FFEF0();
-      sub_21FFD90(v304, 0);
+      v302 = sub_2213D00();
+      sub_2213BA0(v302, 0);
     }
-    if ( !*(_DWORD *)(v238 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v238 + 32) = onEventTrackingFailedListener;
-    v235 = sub_21FFBF4(v238 + 32, onEventTrackingFailedListener);
-    if ( !v234 )
+    if ( !*(_DWORD *)(v236 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v236 + 32) = onEventTrackingFailedListener;
+    v233 = sub_2213A04(v236 + 32, onEventTrackingFailedListener);
+    if ( !v232 )
 LABEL_345:
-      sub_21FFECC(v235, v236, v237);
-    UnityEngine_AndroidJavaObject__Call(v234, (System_String_o *)StringLiteral_24534/*"setOnEventTrackingFailedListener"*/, (System_Object_array *)v238, 0);
+      sub_2213CDC(v233, v234, v235);
+    UnityEngine_AndroidJavaObject__Call(v232, (System_String_o *)StringLiteral_24582/*"setOnEventTrackingFailedListener"*/, (System_Object_array *)v236, 0);
   }
   SessionSuccessDelegate_k__BackingField = v3->fields._SessionSuccessDelegate_k__BackingField;
   if ( SessionSuccessDelegate_k__BackingField )
   {
-    v241 = (AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___ctor(v241, SessionSuccessDelegate_k__BackingField, v242);
-    v245 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v239 = (AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___ctor(v239, SessionSuccessDelegate_k__BackingField, v240);
+    v243 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v243, v244);
-      v245 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v241, v242);
+      v243 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    v246 = v245->static_fields;
-    v246->onSessionTrackingSucceededListener = v241;
-    sub_21FFBF4(&v246->onSessionTrackingSucceededListener, v241);
-    v247 = v326;
-    v248 = sub_21FFD10(object___TypeInfo, 1);
-    v251 = v248;
-    if ( !v248 )
+    v244 = v243->static_fields;
+    v244->onSessionTrackingSucceededListener = v239;
+    sub_2213A04(&v244->onSessionTrackingSucceededListener, v239);
+    v245 = v324;
+    v246 = sub_2213B20(object___TypeInfo, 1);
+    v249 = v246;
+    if ( !v246 )
       goto LABEL_346;
     onSessionTrackingSucceededListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onSessionTrackingSucceededListener;
     if ( onSessionTrackingSucceededListener
-      && !sub_21FFDA4(onSessionTrackingSucceededListener, *(_QWORD *)(*(_QWORD *)v248 + 64LL)) )
+      && !sub_2213BB4(onSessionTrackingSucceededListener, *(_QWORD *)(*(_QWORD *)v246 + 64LL)) )
     {
-      v305 = sub_21FFEF0();
-      sub_21FFD90(v305, 0);
+      v303 = sub_2213D00();
+      sub_2213BA0(v303, 0);
     }
-    if ( !*(_DWORD *)(v251 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v251 + 32) = onSessionTrackingSucceededListener;
-    v248 = sub_21FFBF4(v251 + 32, onSessionTrackingSucceededListener);
-    if ( !v247 )
+    if ( !*(_DWORD *)(v249 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v249 + 32) = onSessionTrackingSucceededListener;
+    v246 = sub_2213A04(v249 + 32, onSessionTrackingSucceededListener);
+    if ( !v245 )
 LABEL_346:
-      sub_21FFECC(v248, v249, v250);
-    UnityEngine_AndroidJavaObject__Call(v247, (System_String_o *)StringLiteral_24537/*"setOnSessionTrackingSucceededListener"*/, (System_Object_array *)v251, 0);
+      sub_2213CDC(v246, v247, v248);
+    UnityEngine_AndroidJavaObject__Call(v245, (System_String_o *)StringLiteral_24585/*"setOnSessionTrackingSucceededListener"*/, (System_Object_array *)v249, 0);
   }
   SessionFailureDelegate_k__BackingField = v3->fields._SessionFailureDelegate_k__BackingField;
   if ( SessionFailureDelegate_k__BackingField )
   {
-    v254 = (AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___ctor(v254, SessionFailureDelegate_k__BackingField, v255);
-    v258 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v252 = (AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_SessionTrackingFailedListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___ctor(v252, SessionFailureDelegate_k__BackingField, v253);
+    v256 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v256, v257);
-      v258 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v254, v255);
+      v256 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    v259 = v258->static_fields;
-    v259->onSessionTrackingFailedListener = v254;
-    sub_21FFBF4(&v259->onSessionTrackingFailedListener, v254);
-    v260 = v326;
-    v261 = sub_21FFD10(object___TypeInfo, 1);
-    v264 = v261;
-    if ( !v261 )
+    v257 = v256->static_fields;
+    v257->onSessionTrackingFailedListener = v252;
+    sub_2213A04(&v257->onSessionTrackingFailedListener, v252);
+    v258 = v324;
+    v259 = sub_2213B20(object___TypeInfo, 1);
+    v262 = v259;
+    if ( !v259 )
       goto LABEL_347;
     onSessionTrackingFailedListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onSessionTrackingFailedListener;
     if ( onSessionTrackingFailedListener
-      && !sub_21FFDA4(onSessionTrackingFailedListener, *(_QWORD *)(*(_QWORD *)v261 + 64LL)) )
+      && !sub_2213BB4(onSessionTrackingFailedListener, *(_QWORD *)(*(_QWORD *)v259 + 64LL)) )
     {
-      v306 = sub_21FFEF0();
-      sub_21FFD90(v306, 0);
+      v304 = sub_2213D00();
+      sub_2213BA0(v304, 0);
     }
-    if ( !*(_DWORD *)(v264 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v264 + 32) = onSessionTrackingFailedListener;
-    v261 = sub_21FFBF4(v264 + 32, onSessionTrackingFailedListener);
-    if ( !v260 )
+    if ( !*(_DWORD *)(v262 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v262 + 32) = onSessionTrackingFailedListener;
+    v259 = sub_2213A04(v262 + 32, onSessionTrackingFailedListener);
+    if ( !v258 )
 LABEL_347:
-      sub_21FFECC(v261, v262, v263);
-    UnityEngine_AndroidJavaObject__Call(v260, (System_String_o *)StringLiteral_24536/*"setOnSessionTrackingFailedListener"*/, (System_Object_array *)v264, 0);
+      sub_2213CDC(v259, v260, v261);
+    UnityEngine_AndroidJavaObject__Call(v258, (System_String_o *)StringLiteral_24584/*"setOnSessionTrackingFailedListener"*/, (System_Object_array *)v262, 0);
   }
   DeferredDeeplinkDelegate_k__BackingField = v3->fields._DeferredDeeplinkDelegate_k__BackingField;
   if ( DeferredDeeplinkDelegate_k__BackingField )
   {
-    v267 = (AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_TypeInfo);
-    AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___ctor(v267, DeferredDeeplinkDelegate_k__BackingField, v268);
-    v271 = AdjustSdk_AdjustAndroid_TypeInfo;
+    v265 = (AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_DeferredDeeplinkListener_TypeInfo);
+    AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___ctor(v265, DeferredDeeplinkDelegate_k__BackingField, v266);
+    v269 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v269, v270);
-      v271 = AdjustSdk_AdjustAndroid_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v267, v268);
+      v269 = AdjustSdk_AdjustAndroid_TypeInfo;
     }
-    v272 = v271->static_fields;
-    v272->onDeferredDeeplinkListener = v267;
-    sub_21FFBF4(&v272->onDeferredDeeplinkListener, v267);
-    v273 = v326;
-    v274 = sub_21FFD10(object___TypeInfo, 1);
-    v277 = v274;
-    if ( !v274 )
+    v270 = v269->static_fields;
+    v270->onDeferredDeeplinkListener = v265;
+    sub_2213A04(&v270->onDeferredDeeplinkListener, v265);
+    v271 = v324;
+    v272 = sub_2213B20(object___TypeInfo, 1);
+    v275 = v272;
+    if ( !v272 )
       goto LABEL_348;
     onDeferredDeeplinkListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onDeferredDeeplinkListener;
-    if ( onDeferredDeeplinkListener && !sub_21FFDA4(onDeferredDeeplinkListener, *(_QWORD *)(*(_QWORD *)v274 + 64LL)) )
+    if ( onDeferredDeeplinkListener && !sub_2213BB4(onDeferredDeeplinkListener, *(_QWORD *)(*(_QWORD *)v272 + 64LL)) )
     {
-      v307 = sub_21FFEF0();
-      sub_21FFD90(v307, 0);
+      v305 = sub_2213D00();
+      sub_2213BA0(v305, 0);
     }
-    if ( !*(_DWORD *)(v277 + 24) )
-      sub_21FFED4();
-    *(_QWORD *)(v277 + 32) = onDeferredDeeplinkListener;
-    v274 = sub_21FFBF4(v277 + 32, onDeferredDeeplinkListener);
-    if ( !v273 )
+    if ( !*(_DWORD *)(v275 + 24) )
+      sub_2213CE4();
+    *(_QWORD *)(v275 + 32) = onDeferredDeeplinkListener;
+    v272 = sub_2213A04(v275 + 32, onDeferredDeeplinkListener);
+    if ( !v271 )
 LABEL_348:
-      sub_21FFECC(v274, v275, v276);
-    UnityEngine_AndroidJavaObject__Call(v273, (System_String_o *)StringLiteral_24533/*"setOnDeferredDeeplinkResponseListener"*/, (System_Object_array *)v277, 0);
+      sub_2213CDC(v272, v273, v274);
+    UnityEngine_AndroidJavaObject__Call(v271, (System_String_o *)StringLiteral_24581/*"setOnDeferredDeeplinkResponseListener"*/, (System_Object_array *)v275, 0);
   }
-  v279 = AdjustSdk_AdjustAndroid_TypeInfo;
+  v277 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v53, v54);
-    v279 = AdjustSdk_AdjustAndroid_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustAndroid_TypeInfo, v51, v52);
+    v277 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
-  ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v279->static_fields->ajcAdjust;
-  v281 = sub_21FFD10(object___TypeInfo, 1);
-  v284 = v281;
-  if ( !v281 )
+  ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v277->static_fields->ajcAdjust;
+  v279 = sub_2213B20(object___TypeInfo, 1);
+  v282 = v279;
+  if ( !v279 )
     goto LABEL_335;
-  v285 = v326;
-  if ( v326 && !sub_21FFDA4(v326, *(_QWORD *)(*(_QWORD *)v281 + 64LL)) )
+  v283 = v324;
+  if ( v324 && !sub_2213BB4(v324, *(_QWORD *)(*(_QWORD *)v279 + 64LL)) )
   {
-    v294 = sub_21FFEF0();
-    sub_21FFD90(v294, 0);
+    v292 = sub_2213D00();
+    sub_2213BA0(v292, 0);
   }
-  if ( !*(_DWORD *)(v284 + 24) )
-    sub_21FFED4();
-  *(_QWORD *)(v284 + 32) = v285;
-  v281 = sub_21FFBF4(v284 + 32, v285);
+  if ( !*(_DWORD *)(v282 + 24) )
+    sub_2213CE4();
+  *(_QWORD *)(v282 + 32) = v283;
+  v279 = sub_2213A04(v282 + 32, v283);
   if ( !ajcAdjust )
 LABEL_335:
-    sub_21FFECC(v281, v282, v283);
+    sub_2213CDC(v279, v280, v281);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_21756/*"initSdk"*/,
-    (System_Object_array *)v284,
+    (System_String_o *)StringLiteral_21798/*"initSdk"*/,
+    (System_Object_array *)v282,
     0);
-  v286 = *v319;
-  if ( *v319 )
+  v284 = *v317;
+  if ( *v317 )
   {
-    v287 = v286->klass;
-    v288 = *(unsigned __int16 *)&v286->klass->_2.rank;
-    if ( *(_WORD *)&v286->klass->_2.rank )
+    v285 = v284->klass;
+    v286 = *(unsigned __int16 *)&v284->klass->_2.rank;
+    if ( *(_WORD *)&v284->klass->_2.rank )
     {
-      v289 = &v287->_1.interfaceOffsets->offset;
-      while ( *((System_IDisposable_c **)v289 - 1) != System_IDisposable_TypeInfo )
+      v287 = &v285->_1.interfaceOffsets->offset;
+      while ( *((System_IDisposable_c **)v287 - 1) != System_IDisposable_TypeInfo )
       {
-        --v288;
-        v289 += 4;
-        if ( !v288 )
+        --v286;
+        v287 += 4;
+        if ( !v286 )
           goto LABEL_323;
       }
-      v290 = (__int64)&v287->vtable + 16 * *v289;
+      v288 = (__int64)&v285->vtable + 16 * *v287;
     }
     else
     {
 LABEL_323:
-      v290 = sub_2237E2C(*v319, System_IDisposable_TypeInfo, 0);
+      v288 = sub_224BC3C(*v317, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v290)(v286, *(_QWORD *)(v290 + 8));
+    (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v288)(v284, *(_QWORD *)(v288 + 8));
   }
-  if ( v318 )
-    sub_21FFEC4(v318);
+  if ( v316 )
+    sub_2213CD4(v316);
 }
 
 
@@ -4183,15 +4172,15 @@ void AdjustSdk_AdjustAndroid__IsEnabled(System_Action_bool__o *onIsEnabled, cons
   struct UnityEngine_AndroidJavaObject_o *ajoCurrentActivity; // x22
   __int64 v14; // x0
 
-  if ( (byte_5930450 & 1) == 0 )
+  if ( (byte_59685F0 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_IsEnabledListener_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_21883/*"isEnabled"*/);
-    byte_5930450 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_IsEnabledListener_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_21925/*"isEnabled"*/);
+    byte_59685F0 = 1;
   }
-  v3 = (AdjustSdk_AdjustAndroid_IsEnabledListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_IsEnabledListener_TypeInfo);
+  v3 = (AdjustSdk_AdjustAndroid_IsEnabledListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_IsEnabledListener_TypeInfo);
   AdjustSdk_AdjustAndroid_IsEnabledListener___ctor(v3, onIsEnabled, v4);
   v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -4200,40 +4189,40 @@ void AdjustSdk_AdjustAndroid__IsEnabled(System_Action_bool__o *onIsEnabled, cons
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v7->static_fields->ajcAdjust;
-  v9 = sub_21FFD10(object___TypeInfo, 2);
+  v9 = sub_2213B20(object___TypeInfo, 2);
   if ( !v9 )
 LABEL_14:
-    sub_21FFECC(v9, v10, v11);
+    sub_2213CDC(v9, v10, v11);
   v12 = (System_Object_array *)v9;
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v9 = sub_21FFDA4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(ajoCurrentActivity, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
       goto LABEL_16;
   }
   if ( !LODWORD(v12->max_length) )
     goto LABEL_15;
   v12->m_Items[0] = (Il2CppObject *)ajoCurrentActivity;
-  v9 = sub_21FFBF4(v12->m_Items, ajoCurrentActivity);
+  v9 = sub_2213A04(v12->m_Items, ajoCurrentActivity);
   if ( v3 )
   {
-    v9 = sub_21FFDA4(v3, v12->obj.klass->_1.element_class);
+    v9 = sub_2213BB4(v3, v12->obj.klass->_1.element_class);
     if ( !v9 )
     {
 LABEL_16:
-      v14 = sub_21FFEF0();
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213D00();
+      sub_2213BA0(v14, 0);
     }
   }
   if ( (v12->max_length & 0xFFFFFFFE) == 0 )
 LABEL_15:
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   v12->m_Items[1] = (Il2CppObject *)v3;
-  v9 = sub_21FFBF4(&v12->m_Items[1], v3);
+  v9 = sub_2213A04(&v12->m_Items[1], v3);
   if ( !ajcAdjust )
     goto LABEL_14;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_21883/*"isEnabled"*/, v12, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_21925/*"isEnabled"*/, v12, 0);
 }
 
 
@@ -4248,15 +4237,15 @@ void AdjustSdk_AdjustAndroid__OnPause(System_String_o *testingArgument, const Me
   __int64 v9; // x0
   __int64 v10; // x0
 
-  if ( (byte_5930462 & 1) == 0 )
+  if ( (byte_5968602 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_25268/*"test"*/);
-    sub_21FFC50(&StringLiteral_23505/*"onPause"*/);
-    byte_5930462 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_25316/*"test"*/);
+    sub_2213A60(&StringLiteral_23552/*"onPause"*/);
+    byte_5968602 = 1;
   }
-  if ( System_String__op_Equality(testingArgument, (System_String_o *)StringLiteral_25268/*"test"*/, 0) )
+  if ( System_String__op_Equality(testingArgument, (System_String_o *)StringLiteral_25316/*"test"*/, 0) )
   {
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -4269,22 +4258,22 @@ void AdjustSdk_AdjustAndroid__OnPause(System_String_o *testingArgument, const Me
     ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v5->static_fields->ajcAdjust;
     if ( !v7 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v7 = v6[7];
     }
     v9 = *(_QWORD *)(v7 + 16);
     if ( (*(_WORD *)(v9 + 309) & 1) == 0 )
-      v9 = sub_2237AF8();
+      v9 = sub_224B908();
     if ( !*(_DWORD *)(v9 + 228) )
       j_il2cpp_runtime_class_init_0(v9, v3, v4);
     v10 = *(_QWORD *)(v6[7] + 16LL);
     if ( (*(_WORD *)(v10 + 309) & 1) == 0 )
-      v10 = sub_2237AF8();
+      v10 = sub_224B908();
     if ( !ajcAdjust )
-      sub_21FFECC(v10, v3, v4);
+      sub_2213CDC(v10, v3, v4);
     UnityEngine_AndroidJavaObject__CallStatic(
       ajcAdjust,
-      (System_String_o *)StringLiteral_23505/*"onPause"*/,
+      (System_String_o *)StringLiteral_23552/*"onPause"*/,
       **(System_Object_array ***)(v10 + 184),
       0);
   }
@@ -4302,15 +4291,15 @@ void AdjustSdk_AdjustAndroid__OnResume(System_String_o *testingArgument, const M
   __int64 v9; // x0
   __int64 v10; // x0
 
-  if ( (byte_5930461 & 1) == 0 )
+  if ( (byte_5968601 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_23511/*"onResume"*/);
-    sub_21FFC50(&StringLiteral_25268/*"test"*/);
-    byte_5930461 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_23558/*"onResume"*/);
+    sub_2213A60(&StringLiteral_25316/*"test"*/);
+    byte_5968601 = 1;
   }
-  if ( System_String__op_Equality(testingArgument, (System_String_o *)StringLiteral_25268/*"test"*/, 0) )
+  if ( System_String__op_Equality(testingArgument, (System_String_o *)StringLiteral_25316/*"test"*/, 0) )
   {
     v5 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -4323,22 +4312,22 @@ void AdjustSdk_AdjustAndroid__OnResume(System_String_o *testingArgument, const M
     ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v5->static_fields->ajcAdjust;
     if ( !v7 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v7 = v6[7];
     }
     v9 = *(_QWORD *)(v7 + 16);
     if ( (*(_WORD *)(v9 + 309) & 1) == 0 )
-      v9 = sub_2237AF8();
+      v9 = sub_224B908();
     if ( !*(_DWORD *)(v9 + 228) )
       j_il2cpp_runtime_class_init_0(v9, v3, v4);
     v10 = *(_QWORD *)(v6[7] + 16LL);
     if ( (*(_WORD *)(v10 + 309) & 1) == 0 )
-      v10 = sub_2237AF8();
+      v10 = sub_224B908();
     if ( !ajcAdjust )
-      sub_21FFECC(v10, v3, v4);
+      sub_2213CDC(v10, v3, v4);
     UnityEngine_AndroidJavaObject__CallStatic(
       ajcAdjust,
-      (System_String_o *)StringLiteral_23511/*"onResume"*/,
+      (System_String_o *)StringLiteral_23558/*"onResume"*/,
       **(System_Object_array ***)(v10 + 184),
       0);
   }
@@ -4426,23 +4415,23 @@ void AdjustSdk_AdjustAndroid__ProcessAndResolveDeeplink(
   Il2CppObject *v78; // [xsp+58h] [xbp-58h]
   UnityEngine_AndroidJavaObject_o *v79; // [xsp+68h] [xbp-48h]
 
-  if ( (byte_593045C & 1) == 0 )
+  if ( (byte_59685FC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_18832/*"com.adjust.sdk.AdjustDeeplink"*/);
-    sub_21FFC50(&StringLiteral_24549/*"setReferrer"*/);
-    sub_21FFC50(&StringLiteral_23752/*"parse"*/);
-    sub_21FFC50(&StringLiteral_23920/*"processAndResolveDeeplink"*/);
-    sub_21FFC50(&StringLiteral_17433/*"android.net.Uri"*/);
-    byte_593045C = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_18870/*"com.adjust.sdk.AdjustDeeplink"*/);
+    sub_2213A60(&StringLiteral_24597/*"setReferrer"*/);
+    sub_2213A60(&StringLiteral_23799/*"parse"*/);
+    sub_2213A60(&StringLiteral_23967/*"processAndResolveDeeplink"*/);
+    sub_2213A60(&StringLiteral_17469/*"android.net.Uri"*/);
+    byte_59685FC = 1;
   }
-  v5 = (AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_TypeInfo);
+  v5 = (AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_DeeplinkResolutionListener_TypeInfo);
   AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___ctor(v5, resolvedLinkCallback, v6);
   v9 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -4452,111 +4441,111 @@ void AdjustSdk_AdjustAndroid__ProcessAndResolveDeeplink(
   }
   static_fields = v9->static_fields;
   static_fields->onDeeplinkResolvedListener = v5;
-  sub_21FFBF4(&static_fields->onDeeplinkResolvedListener, v5);
-  v11 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v11, (System_String_o *)StringLiteral_17433/*"android.net.Uri"*/, 0);
+  sub_2213A04(&static_fields->onDeeplinkResolvedListener, v5);
+  v11 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v11, (System_String_o *)StringLiteral_17469/*"android.net.Uri"*/, 0);
   v79 = (UnityEngine_AndroidJavaObject_o *)v11;
-  v12 = sub_21FFD10(object___TypeInfo, 1);
+  v12 = sub_2213B20(object___TypeInfo, 1);
   if ( !deeplink )
-    sub_21FFECC(v12, v13, v14);
+    sub_2213CDC(v12, v13, v14);
   v15 = v12;
   if ( !v12 )
     goto LABEL_72;
   Deeplink_k__BackingField = deeplink->fields._Deeplink_k__BackingField;
   if ( Deeplink_k__BackingField )
   {
-    v12 = sub_21FFDA4(deeplink->fields._Deeplink_k__BackingField, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
+    v12 = sub_2213BB4(deeplink->fields._Deeplink_k__BackingField, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
     if ( !v12 )
     {
-      v69 = sub_21FFEF0(0, v17);
-      sub_21FFD90(v69, 0);
+      v69 = sub_2213D00(0, v17);
+      sub_2213BA0(v69, 0);
     }
   }
   if ( !*(_DWORD *)(v15 + 24) )
-    sub_21FFED4(v12);
+    sub_2213CE4(v12);
   *(_QWORD *)(v15 + 32) = Deeplink_k__BackingField;
-  v12 = sub_21FFBF4(v15 + 32, Deeplink_k__BackingField);
+  v12 = sub_2213A04(v15 + 32, Deeplink_k__BackingField);
   if ( !v11 )
 LABEL_72:
-    sub_21FFECC(v12, v13, v14);
+    sub_2213CDC(v12, v13, v14);
   v78 = UnityEngine_AndroidJavaObject__CallStatic_object_(
           (UnityEngine_AndroidJavaObject_o *)v11,
-          (System_String_o *)StringLiteral_23752/*"parse"*/,
+          (System_String_o *)StringLiteral_23799/*"parse"*/,
           (System_Object_array *)v15,
-          (const MethodInfo_36D5FD0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-  v18 = sub_21FFD10(object___TypeInfo, 1);
+          (const MethodInfo_3707F40 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+  v18 = sub_2213B20(object___TypeInfo, 1);
   v21 = v18;
   if ( !v18 )
-    sub_21FFECC(0, v19, v20);
+    sub_2213CDC(0, v19, v20);
   if ( v78 )
   {
-    v18 = sub_21FFDA4(v78, *(_QWORD *)(*(_QWORD *)v18 + 64LL));
+    v18 = sub_2213BB4(v78, *(_QWORD *)(*(_QWORD *)v18 + 64LL));
     if ( !v18 )
     {
-      v70 = sub_21FFEF0(0, v22);
-      sub_21FFD90(v70, 0);
+      v70 = sub_2213D00(0, v22);
+      sub_2213BA0(v70, 0);
     }
   }
   if ( !*(_DWORD *)(v21 + 24) )
-    sub_21FFED4(v18);
+    sub_2213CE4(v18);
   *(_QWORD *)(v21 + 32) = v78;
-  sub_21FFBF4(v21 + 32, v78);
-  v23 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(v21 + 32, v78);
+  v23 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v23,
-    (System_String_o *)StringLiteral_18832/*"com.adjust.sdk.AdjustDeeplink"*/,
+    (System_String_o *)StringLiteral_18870/*"com.adjust.sdk.AdjustDeeplink"*/,
     (System_Object_array *)v21,
     0);
   v77 = v23;
   if ( deeplink->fields._Referrer_k__BackingField )
   {
-    v26 = sub_21FFD10(object___TypeInfo, 1);
+    v26 = sub_2213B20(object___TypeInfo, 1);
     v29 = v26;
     if ( !v26 )
       goto LABEL_73;
     Referrer_k__BackingField = deeplink->fields._Referrer_k__BackingField;
     if ( Referrer_k__BackingField )
     {
-      v26 = sub_21FFDA4(Referrer_k__BackingField, *(_QWORD *)(*(_QWORD *)v26 + 64LL));
+      v26 = sub_2213BB4(Referrer_k__BackingField, *(_QWORD *)(*(_QWORD *)v26 + 64LL));
       if ( !v26 )
       {
-        v74 = sub_21FFEF0(0, v31);
-        sub_21FFD90(v74, 0);
+        v74 = sub_2213D00(0, v31);
+        sub_2213BA0(v74, 0);
       }
     }
     if ( !*(_DWORD *)(v29 + 24) )
-      sub_21FFED4(v26);
+      sub_2213CE4(v26);
     *(_QWORD *)(v29 + 32) = Referrer_k__BackingField;
-    v26 = sub_21FFBF4(v29 + 32, Referrer_k__BackingField);
+    v26 = sub_2213A04(v29 + 32, Referrer_k__BackingField);
     if ( !v79 )
 LABEL_73:
-      sub_21FFECC(v26, v27, v28);
+      sub_2213CDC(v26, v27, v28);
     v76 = UnityEngine_AndroidJavaObject__CallStatic_object_(
             v79,
-            (System_String_o *)StringLiteral_23752/*"parse"*/,
+            (System_String_o *)StringLiteral_23799/*"parse"*/,
             (System_Object_array *)v29,
-            (const MethodInfo_36D5FD0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-    v32 = sub_21FFD10(object___TypeInfo, 1);
+            (const MethodInfo_3707F40 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+    v32 = sub_2213B20(object___TypeInfo, 1);
     v35 = v32;
     if ( !v32 )
       goto LABEL_74;
     if ( v76 )
     {
-      v32 = sub_21FFDA4(v76, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
+      v32 = sub_2213BB4(v76, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
       if ( !v32 )
       {
-        v75 = sub_21FFEF0(0, v36);
-        sub_21FFD90(v75, 0);
+        v75 = sub_2213D00(0, v36);
+        sub_2213BA0(v75, 0);
       }
     }
     if ( !*(_DWORD *)(v35 + 24) )
-      sub_21FFED4(v32);
+      sub_2213CE4(v32);
     *(_QWORD *)(v35 + 32) = v76;
-    v32 = sub_21FFBF4(v35 + 32, v76);
+    v32 = sub_2213A04(v35 + 32, v76);
     if ( !v77 )
 LABEL_74:
-      sub_21FFECC(v32, v33, v34);
-    UnityEngine_AndroidJavaObject__Call(v77, (System_String_o *)StringLiteral_24549/*"setReferrer"*/, (System_Object_array *)v35, 0);
+      sub_2213CDC(v32, v33, v34);
+    UnityEngine_AndroidJavaObject__Call(v77, (System_String_o *)StringLiteral_24597/*"setReferrer"*/, (System_Object_array *)v35, 0);
     if ( v76 )
     {
       klass = v76->klass;
@@ -4576,7 +4565,7 @@ LABEL_74:
       else
       {
 LABEL_31:
-        v40 = sub_2237E2C(v76, System_IDisposable_TypeInfo, 0);
+        v40 = sub_224BC3C(v76, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(Il2CppObject *, _QWORD))v40)(v76, *(_QWORD *)(v40 + 8));
     }
@@ -4588,54 +4577,54 @@ LABEL_31:
     v41 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v41->static_fields->ajcAdjust;
-  v43 = sub_21FFD10(object___TypeInfo, 3);
+  v43 = sub_2213B20(object___TypeInfo, 3);
   v46 = (System_Object_array *)v43;
   if ( !v43 )
-    sub_21FFECC(0, v44, v45);
+    sub_2213CDC(0, v44, v45);
   if ( v77 )
   {
-    v43 = sub_21FFDA4(v77, *(_QWORD *)(*(_QWORD *)v43 + 64LL));
+    v43 = sub_2213BB4(v77, *(_QWORD *)(*(_QWORD *)v43 + 64LL));
     if ( !v43 )
     {
-      v71 = sub_21FFEF0(0, v47);
-      sub_21FFD90(v71, 0);
+      v71 = sub_2213D00(0, v47);
+      sub_2213BA0(v71, 0);
     }
   }
   if ( !LODWORD(v46->max_length) )
-    sub_21FFED4(v43);
+    sub_2213CE4(v43);
   v46->m_Items[0] = (Il2CppObject *)v77;
-  v48 = sub_21FFBF4(v46->m_Items, v77);
+  v48 = sub_2213A04(v46->m_Items, v77);
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v48 = sub_21FFDA4(ajoCurrentActivity, v46->obj.klass->_1.element_class);
+    v48 = sub_2213BB4(ajoCurrentActivity, v46->obj.klass->_1.element_class);
     if ( !v48 )
     {
-      v72 = sub_21FFEF0(0, v50);
-      sub_21FFD90(v72, 0);
+      v72 = sub_2213D00(0, v50);
+      sub_2213BA0(v72, 0);
     }
   }
   if ( (v46->max_length & 0xFFFFFFFE) == 0 )
-    sub_21FFED4(v48);
+    sub_2213CE4(v48);
   v46->m_Items[1] = (Il2CppObject *)ajoCurrentActivity;
-  v51 = sub_21FFBF4(&v46->m_Items[1], ajoCurrentActivity);
+  v51 = sub_2213A04(&v46->m_Items[1], ajoCurrentActivity);
   onDeeplinkResolvedListener = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->onDeeplinkResolvedListener;
   if ( onDeeplinkResolvedListener )
   {
-    v51 = sub_21FFDA4(onDeeplinkResolvedListener, v46->obj.klass->_1.element_class);
+    v51 = sub_2213BB4(onDeeplinkResolvedListener, v46->obj.klass->_1.element_class);
     if ( !v51 )
     {
-      v73 = sub_21FFEF0(0, v53);
-      sub_21FFD90(v73, 0);
+      v73 = sub_2213D00(0, v53);
+      sub_2213BA0(v73, 0);
     }
   }
   if ( LODWORD(v46->max_length) <= 2 )
-    sub_21FFED4(v51);
+    sub_2213CE4(v51);
   v46->m_Items[2] = (Il2CppObject *)onDeeplinkResolvedListener;
-  v54 = sub_21FFBF4(&v46->m_Items[2], onDeeplinkResolvedListener);
+  v54 = sub_2213A04(&v46->m_Items[2], onDeeplinkResolvedListener);
   if ( !ajcAdjust )
-    sub_21FFECC(v54, v55, v56);
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_23920/*"processAndResolveDeeplink"*/, v46, 0);
+    sub_2213CDC(v54, v55, v56);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_23967/*"processAndResolveDeeplink"*/, v46, 0);
   if ( v77 )
   {
     v57 = v77->klass;
@@ -4655,7 +4644,7 @@ LABEL_31:
     else
     {
 LABEL_52:
-      v60 = sub_2237E2C(v77, System_IDisposable_TypeInfo, 0);
+      v60 = sub_224BC3C(v77, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v60)(v77, *(_QWORD *)(v60 + 8));
   }
@@ -4678,7 +4667,7 @@ LABEL_52:
     else
     {
 LABEL_60:
-      v64 = sub_2237E2C(v78, System_IDisposable_TypeInfo, 0);
+      v64 = sub_224BC3C(v78, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(Il2CppObject *, _QWORD))v64)(v78, *(_QWORD *)(v64 + 8));
   }
@@ -4701,7 +4690,7 @@ LABEL_60:
     else
     {
 LABEL_68:
-      v68 = sub_2237E2C(v79, System_IDisposable_TypeInfo, 0);
+      v68 = sub_224BC3C(v79, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v68)(v79, *(_QWORD *)(v68 + 8));
   }
@@ -4773,125 +4762,125 @@ void AdjustSdk_AdjustAndroid__ProcessDeeplink(AdjustSdk_AdjustDeeplink_o *deepli
   Il2CppObject *v63; // [xsp+50h] [xbp-50h]
   UnityEngine_AndroidJavaObject_o *v64; // [xsp+58h] [xbp-48h]
 
-  if ( (byte_593044B & 1) == 0 )
+  if ( (byte_59685EB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_23922/*"processDeeplink"*/);
-    sub_21FFC50(&StringLiteral_18832/*"com.adjust.sdk.AdjustDeeplink"*/);
-    sub_21FFC50(&StringLiteral_24549/*"setReferrer"*/);
-    sub_21FFC50(&StringLiteral_23752/*"parse"*/);
-    sub_21FFC50(&StringLiteral_17433/*"android.net.Uri"*/);
-    byte_593044B = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_23969/*"processDeeplink"*/);
+    sub_2213A60(&StringLiteral_18870/*"com.adjust.sdk.AdjustDeeplink"*/);
+    sub_2213A60(&StringLiteral_24597/*"setReferrer"*/);
+    sub_2213A60(&StringLiteral_23799/*"parse"*/);
+    sub_2213A60(&StringLiteral_17469/*"android.net.Uri"*/);
+    byte_59685EB = 1;
   }
-  v3 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v3, (System_String_o *)StringLiteral_17433/*"android.net.Uri"*/, 0);
+  v3 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v3, (System_String_o *)StringLiteral_17469/*"android.net.Uri"*/, 0);
   v64 = (UnityEngine_AndroidJavaObject_o *)v3;
-  v4 = sub_21FFD10(object___TypeInfo, 1);
+  v4 = sub_2213B20(object___TypeInfo, 1);
   if ( !deeplink )
-    sub_21FFECC(v4, v5, v6);
+    sub_2213CDC(v4, v5, v6);
   v7 = v4;
   if ( !v4 )
     goto LABEL_67;
   Deeplink_k__BackingField = deeplink->fields._Deeplink_k__BackingField;
   if ( Deeplink_k__BackingField )
   {
-    v4 = sub_21FFDA4(deeplink->fields._Deeplink_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
+    v4 = sub_2213BB4(deeplink->fields._Deeplink_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
     if ( !v4 )
     {
-      v55 = ((__int64 (*)(void))sub_21FFEF0)();
-      sub_21FFD90(v55, 0);
+      v55 = ((__int64 (*)(void))sub_2213D00)();
+      sub_2213BA0(v55, 0);
     }
   }
   if ( !*(_DWORD *)(v7 + 24) )
-    sub_21FFED4(v4);
+    sub_2213CE4(v4);
   *(_QWORD *)(v7 + 32) = Deeplink_k__BackingField;
-  v4 = sub_21FFBF4(v7 + 32, Deeplink_k__BackingField);
+  v4 = sub_2213A04(v7 + 32, Deeplink_k__BackingField);
   if ( !v3 )
 LABEL_67:
-    sub_21FFECC(v4, v5, v6);
+    sub_2213CDC(v4, v5, v6);
   v63 = UnityEngine_AndroidJavaObject__CallStatic_object_(
           (UnityEngine_AndroidJavaObject_o *)v3,
-          (System_String_o *)StringLiteral_23752/*"parse"*/,
+          (System_String_o *)StringLiteral_23799/*"parse"*/,
           (System_Object_array *)v7,
-          (const MethodInfo_36D5FD0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-  v9 = sub_21FFD10(object___TypeInfo, 1);
+          (const MethodInfo_3707F40 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+  v9 = sub_2213B20(object___TypeInfo, 1);
   v12 = v9;
   if ( !v9 )
-    sub_21FFECC(0, v10, v11);
+    sub_2213CDC(0, v10, v11);
   if ( v63 )
   {
-    v9 = sub_21FFDA4(v63, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_2213BB4(v63, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
     {
-      v56 = ((__int64 (*)(void))sub_21FFEF0)();
-      sub_21FFD90(v56, 0);
+      v56 = ((__int64 (*)(void))sub_2213D00)();
+      sub_2213BA0(v56, 0);
     }
   }
   if ( !*(_DWORD *)(v12 + 24) )
-    sub_21FFED4(v9);
+    sub_2213CE4(v9);
   *(_QWORD *)(v12 + 32) = v63;
-  sub_21FFBF4(v12 + 32, v63);
-  v13 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(v12 + 32, v63);
+  v13 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v13,
-    (System_String_o *)StringLiteral_18832/*"com.adjust.sdk.AdjustDeeplink"*/,
+    (System_String_o *)StringLiteral_18870/*"com.adjust.sdk.AdjustDeeplink"*/,
     (System_Object_array *)v12,
     0);
   v62 = v13;
   if ( deeplink->fields._Referrer_k__BackingField )
   {
-    v16 = sub_21FFD10(object___TypeInfo, 1);
+    v16 = sub_2213B20(object___TypeInfo, 1);
     v19 = v16;
     if ( !v16 )
       goto LABEL_68;
     Referrer_k__BackingField = deeplink->fields._Referrer_k__BackingField;
     if ( Referrer_k__BackingField )
     {
-      v16 = sub_21FFDA4(Referrer_k__BackingField, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+      v16 = sub_2213BB4(Referrer_k__BackingField, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
       if ( !v16 )
       {
-        v59 = ((__int64 (*)(void))sub_21FFEF0)();
-        sub_21FFD90(v59, 0);
+        v59 = ((__int64 (*)(void))sub_2213D00)();
+        sub_2213BA0(v59, 0);
       }
     }
     if ( !*(_DWORD *)(v19 + 24) )
-      sub_21FFED4(v16);
+      sub_2213CE4(v16);
     *(_QWORD *)(v19 + 32) = Referrer_k__BackingField;
-    v16 = sub_21FFBF4(v19 + 32, Referrer_k__BackingField);
+    v16 = sub_2213A04(v19 + 32, Referrer_k__BackingField);
     if ( !v64 )
 LABEL_68:
-      sub_21FFECC(v16, v17, v18);
+      sub_2213CDC(v16, v17, v18);
     v61 = UnityEngine_AndroidJavaObject__CallStatic_object_(
             v64,
-            (System_String_o *)StringLiteral_23752/*"parse"*/,
+            (System_String_o *)StringLiteral_23799/*"parse"*/,
             (System_Object_array *)v19,
-            (const MethodInfo_36D5FD0 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91478632);
-    v21 = sub_21FFD10(object___TypeInfo, 1);
+            (const MethodInfo_3707F40 *)Method_UnityEngine_AndroidJavaObject_CallStatic_AndroidJavaObject____91704824);
+    v21 = sub_2213B20(object___TypeInfo, 1);
     v24 = v21;
     if ( !v21 )
       goto LABEL_69;
     if ( v61 )
     {
-      v21 = sub_21FFDA4(v61, *(_QWORD *)(*(_QWORD *)v21 + 64LL));
+      v21 = sub_2213BB4(v61, *(_QWORD *)(*(_QWORD *)v21 + 64LL));
       if ( !v21 )
       {
-        v60 = sub_21FFEF0(0, v25);
-        sub_21FFD90(v60, 0);
+        v60 = sub_2213D00(0, v25);
+        sub_2213BA0(v60, 0);
       }
     }
     if ( !*(_DWORD *)(v24 + 24) )
-      sub_21FFED4(v21);
+      sub_2213CE4(v21);
     *(_QWORD *)(v24 + 32) = v61;
-    v21 = sub_21FFBF4(v24 + 32, v61);
+    v21 = sub_2213A04(v24 + 32, v61);
     if ( !v62 )
 LABEL_69:
-      sub_21FFECC(v21, v22, v23);
-    UnityEngine_AndroidJavaObject__Call(v62, (System_String_o *)StringLiteral_24549/*"setReferrer"*/, (System_Object_array *)v24, 0);
+      sub_2213CDC(v21, v22, v23);
+    UnityEngine_AndroidJavaObject__Call(v62, (System_String_o *)StringLiteral_24597/*"setReferrer"*/, (System_Object_array *)v24, 0);
     if ( v61 )
     {
       klass = v61->klass;
@@ -4911,7 +4900,7 @@ LABEL_69:
       else
       {
 LABEL_29:
-        v29 = sub_2237E2C(v61, System_IDisposable_TypeInfo, 0);
+        v29 = sub_224BC3C(v61, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(Il2CppObject *, _QWORD))v29)(v61, *(_QWORD *)(v29 + 8));
     }
@@ -4923,40 +4912,40 @@ LABEL_29:
     v30 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v30->static_fields->ajcAdjust;
-  v32 = sub_21FFD10(object___TypeInfo, 2);
+  v32 = sub_2213B20(object___TypeInfo, 2);
   v35 = (System_Object_array *)v32;
   if ( !v32 )
-    sub_21FFECC(0, v33, v34);
+    sub_2213CDC(0, v33, v34);
   if ( v62 )
   {
-    v32 = sub_21FFDA4(v62, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
+    v32 = sub_2213BB4(v62, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
     if ( !v32 )
     {
-      v57 = sub_21FFEF0(0, v36);
-      sub_21FFD90(v57, 0);
+      v57 = sub_2213D00(0, v36);
+      sub_2213BA0(v57, 0);
     }
   }
   if ( !LODWORD(v35->max_length) )
-    sub_21FFED4(v32);
+    sub_2213CE4(v32);
   v35->m_Items[0] = (Il2CppObject *)v62;
-  v37 = sub_21FFBF4(v35->m_Items, v62);
+  v37 = sub_2213A04(v35->m_Items, v62);
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v37 = sub_21FFDA4(ajoCurrentActivity, v35->obj.klass->_1.element_class);
+    v37 = sub_2213BB4(ajoCurrentActivity, v35->obj.klass->_1.element_class);
     if ( !v37 )
     {
-      v58 = sub_21FFEF0(0, v39);
-      sub_21FFD90(v58, 0);
+      v58 = sub_2213D00(0, v39);
+      sub_2213BA0(v58, 0);
     }
   }
   if ( (v35->max_length & 0xFFFFFFFE) == 0 )
-    sub_21FFED4(v37);
+    sub_2213CE4(v37);
   v35->m_Items[1] = (Il2CppObject *)ajoCurrentActivity;
-  v40 = sub_21FFBF4(&v35->m_Items[1], ajoCurrentActivity);
+  v40 = sub_2213A04(&v35->m_Items[1], ajoCurrentActivity);
   if ( !ajcAdjust )
-    sub_21FFECC(v40, v41, v42);
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_23922/*"processDeeplink"*/, v35, 0);
+    sub_2213CDC(v40, v41, v42);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_23969/*"processDeeplink"*/, v35, 0);
   if ( v62 )
   {
     v43 = v62->klass;
@@ -4976,7 +4965,7 @@ LABEL_29:
     else
     {
 LABEL_47:
-      v46 = sub_2237E2C(v62, System_IDisposable_TypeInfo, 0);
+      v46 = sub_224BC3C(v62, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v46)(v62, *(_QWORD *)(v46 + 8));
   }
@@ -4999,7 +4988,7 @@ LABEL_47:
     else
     {
 LABEL_55:
-      v50 = sub_2237E2C(v63, System_IDisposable_TypeInfo, 0);
+      v50 = sub_224BC3C(v63, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(Il2CppObject *, _QWORD))v50)(v63, *(_QWORD *)(v50 + 8));
   }
@@ -5022,7 +5011,7 @@ LABEL_55:
     else
     {
 LABEL_63:
-      v54 = sub_2237E2C(v64, System_IDisposable_TypeInfo, 0);
+      v54 = sub_224BC3C(v64, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v54)(v64, *(_QWORD *)(v54 + 8));
   }
@@ -5046,14 +5035,14 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameter(System_String_o *key
   __int64 v15; // x1
   __int64 v16; // x0
 
-  if ( (byte_5930448 & 1) == 0 )
+  if ( (byte_59685E8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_24183/*"removeGlobalCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    byte_5930448 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24231/*"removeGlobalCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    byte_59685E8 = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5063,8 +5052,8 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameter(System_String_o *key
   }
   if ( !v4->static_fields->ajcAdjust )
   {
-    v5 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v5 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v8 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -5073,7 +5062,7 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameter(System_String_o *key
     }
     static_fields = v8->static_fields;
     static_fields->ajcAdjust = v5;
-    sub_21FFBF4(&static_fields->ajcAdjust, v5);
+    sub_2213A04(&static_fields->ajcAdjust, v5);
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v4->_2.cctor_finished + 1) )
@@ -5082,29 +5071,29 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameter(System_String_o *key
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v4->static_fields->ajcAdjust;
-  v11 = sub_21FFD10(object___TypeInfo, 1);
+  v11 = sub_2213B20(object___TypeInfo, 1);
   if ( !v11 )
     goto LABEL_17;
   v14 = v11;
   if ( key )
   {
-    v11 = sub_21FFDA4(key, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v11 = sub_2213BB4(key, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v11 )
     {
-      v16 = sub_21FFEF0(0, v15);
-      sub_21FFD90(v16, 0);
+      v16 = sub_2213D00(0, v15);
+      sub_2213BA0(v16, 0);
     }
   }
   if ( !*(_DWORD *)(v14 + 24) )
-    sub_21FFED4(v11);
+    sub_2213CE4(v11);
   *(_QWORD *)(v14 + 32) = key;
-  v11 = sub_21FFBF4(v14 + 32, key);
+  v11 = sub_2213A04(v14 + 32, key);
   if ( !ajcAdjust )
 LABEL_17:
-    sub_21FFECC(v11, v12, v13);
+    sub_2213CDC(v11, v12, v13);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24183/*"removeGlobalCallbackParameter"*/,
+    (System_String_o *)StringLiteral_24231/*"removeGlobalCallbackParameter"*/,
     (System_Object_array *)v14,
     0);
 }
@@ -5126,14 +5115,14 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameters(const MethodInfo *m
   __int64 v12; // x0
   __int64 v13; // x0
 
-  if ( (byte_593044A & 1) == 0 )
+  if ( (byte_59685EA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_24184/*"removeGlobalCallbackParameters"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    byte_593044A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_24232/*"removeGlobalCallbackParameters"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    byte_59685EA = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5143,8 +5132,8 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameters(const MethodInfo *m
   }
   if ( !v3->static_fields->ajcAdjust )
   {
-    v4 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v4 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -5153,7 +5142,7 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameters(const MethodInfo *m
     }
     static_fields = v7->static_fields;
     static_fields->ajcAdjust = v4;
-    sub_21FFBF4(&static_fields->ajcAdjust, v4);
+    sub_2213A04(&static_fields->ajcAdjust, v4);
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v3->_2.cctor_finished + 1) )
@@ -5166,22 +5155,22 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalCallbackParameters(const MethodInfo *m
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v10 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v10 = v9[7];
   }
   v12 = *(_QWORD *)(v10 + 16);
   if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
-    v12 = sub_2237AF8();
+    v12 = sub_224B908();
   if ( !*(_DWORD *)(v12 + 228) )
     j_il2cpp_runtime_class_init_0(v12, v1, v2);
   v13 = *(_QWORD *)(v9[7] + 16LL);
   if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
-    v13 = sub_2237AF8();
+    v13 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v13, v1, v2);
+    sub_2213CDC(v13, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24184/*"removeGlobalCallbackParameters"*/,
+    (System_String_o *)StringLiteral_24232/*"removeGlobalCallbackParameters"*/,
     **(System_Object_array ***)(v13 + 184),
     0);
 }
@@ -5204,14 +5193,14 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameter(System_String_o *key,
   __int64 v15; // x1
   __int64 v16; // x0
 
-  if ( (byte_5930447 & 1) == 0 )
+  if ( (byte_59685E7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_24185/*"removeGlobalPartnerParameter"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    byte_5930447 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24233/*"removeGlobalPartnerParameter"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    byte_59685E7 = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5221,8 +5210,8 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameter(System_String_o *key,
   }
   if ( !v4->static_fields->ajcAdjust )
   {
-    v5 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v5 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v8 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -5231,7 +5220,7 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameter(System_String_o *key,
     }
     static_fields = v8->static_fields;
     static_fields->ajcAdjust = v5;
-    sub_21FFBF4(&static_fields->ajcAdjust, v5);
+    sub_2213A04(&static_fields->ajcAdjust, v5);
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v4->_2.cctor_finished + 1) )
@@ -5240,29 +5229,29 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameter(System_String_o *key,
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v4->static_fields->ajcAdjust;
-  v11 = sub_21FFD10(object___TypeInfo, 1);
+  v11 = sub_2213B20(object___TypeInfo, 1);
   if ( !v11 )
     goto LABEL_17;
   v14 = v11;
   if ( key )
   {
-    v11 = sub_21FFDA4(key, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v11 = sub_2213BB4(key, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v11 )
     {
-      v16 = sub_21FFEF0(0, v15);
-      sub_21FFD90(v16, 0);
+      v16 = sub_2213D00(0, v15);
+      sub_2213BA0(v16, 0);
     }
   }
   if ( !*(_DWORD *)(v14 + 24) )
-    sub_21FFED4(v11);
+    sub_2213CE4(v11);
   *(_QWORD *)(v14 + 32) = key;
-  v11 = sub_21FFBF4(v14 + 32, key);
+  v11 = sub_2213A04(v14 + 32, key);
   if ( !ajcAdjust )
 LABEL_17:
-    sub_21FFECC(v11, v12, v13);
+    sub_2213CDC(v11, v12, v13);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24185/*"removeGlobalPartnerParameter"*/,
+    (System_String_o *)StringLiteral_24233/*"removeGlobalPartnerParameter"*/,
     (System_Object_array *)v14,
     0);
 }
@@ -5284,14 +5273,14 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameters(const MethodInfo *me
   __int64 v12; // x0
   __int64 v13; // x0
 
-  if ( (byte_5930449 & 1) == 0 )
+  if ( (byte_59685E9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_24186/*"removeGlobalPartnerParameters"*/);
-    sub_21FFC50(&StringLiteral_18829/*"com.adjust.sdk.Adjust"*/);
-    byte_5930449 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_24234/*"removeGlobalPartnerParameters"*/);
+    sub_2213A60(&StringLiteral_18867/*"com.adjust.sdk.Adjust"*/);
+    byte_59685E9 = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5301,8 +5290,8 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameters(const MethodInfo *me
   }
   if ( !v3->static_fields->ajcAdjust )
   {
-    v4 = (UnityEngine_AndroidJavaClass_o *)sub_21FFEBC(UnityEngine_AndroidJavaClass_TypeInfo);
-    UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18829/*"com.adjust.sdk.Adjust"*/, 0);
+    v4 = (UnityEngine_AndroidJavaClass_o *)sub_2213CCC(UnityEngine_AndroidJavaClass_TypeInfo);
+    UnityEngine_AndroidJavaClass___ctor(v4, (System_String_o *)StringLiteral_18867/*"com.adjust.sdk.Adjust"*/, 0);
     v7 = AdjustSdk_AdjustAndroid_TypeInfo;
     if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -5311,7 +5300,7 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameters(const MethodInfo *me
     }
     static_fields = v7->static_fields;
     static_fields->ajcAdjust = v4;
-    sub_21FFBF4(&static_fields->ajcAdjust, v4);
+    sub_2213A04(&static_fields->ajcAdjust, v4);
     v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   if ( !*(&v3->_2.cctor_finished + 1) )
@@ -5324,22 +5313,22 @@ void AdjustSdk_AdjustAndroid__RemoveGlobalPartnerParameters(const MethodInfo *me
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v10 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v10 = v9[7];
   }
   v12 = *(_QWORD *)(v10 + 16);
   if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
-    v12 = sub_2237AF8();
+    v12 = sub_224B908();
   if ( !*(_DWORD *)(v12 + 228) )
     j_il2cpp_runtime_class_init_0(v12, v1, v2);
   v13 = *(_QWORD *)(v9[7] + 16LL);
   if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
-    v13 = sub_2237AF8();
+    v13 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v13, v1, v2);
+    sub_2213CDC(v13, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24186/*"removeGlobalPartnerParameters"*/,
+    (System_String_o *)StringLiteral_24234/*"removeGlobalPartnerParameters"*/,
     **(System_Object_array ***)(v13 + 184),
     0);
 }
@@ -5357,12 +5346,12 @@ void AdjustSdk_AdjustAndroid__SetExternalDeviceIdInDelay(System_String_o *extern
   __int64 v10; // x1
   __int64 v11; // x0
 
-  if ( (byte_5930458 & 1) == 0 )
+  if ( (byte_59685F8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_24513/*"setExternalDeviceIdInDelay"*/);
-    byte_5930458 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24561/*"setExternalDeviceIdInDelay"*/);
+    byte_59685F8 = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5371,29 +5360,29 @@ void AdjustSdk_AdjustAndroid__SetExternalDeviceIdInDelay(System_String_o *extern
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v4->static_fields->ajcAdjust;
-  v6 = sub_21FFD10(object___TypeInfo, 1);
+  v6 = sub_2213B20(object___TypeInfo, 1);
   if ( !v6 )
     goto LABEL_11;
   v9 = v6;
   if ( externalDeviceId )
   {
-    v6 = sub_21FFDA4(externalDeviceId, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
+    v6 = sub_2213BB4(externalDeviceId, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
     if ( !v6 )
     {
-      v11 = sub_21FFEF0(0, v10);
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00(0, v10);
+      sub_2213BA0(v11, 0);
     }
   }
   if ( !*(_DWORD *)(v9 + 24) )
-    sub_21FFED4(v6);
+    sub_2213CE4(v6);
   *(_QWORD *)(v9 + 32) = externalDeviceId;
-  v6 = sub_21FFBF4(v9 + 32, externalDeviceId);
+  v6 = sub_2213A04(v9 + 32, externalDeviceId);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24513/*"setExternalDeviceIdInDelay"*/,
+    (System_String_o *)StringLiteral_24561/*"setExternalDeviceIdInDelay"*/,
     (System_Object_array *)v9,
     0);
 }
@@ -5411,12 +5400,12 @@ void AdjustSdk_AdjustAndroid__SetPushToken(System_String_o *pushToken, const Met
   struct UnityEngine_AndroidJavaObject_o *ajoCurrentActivity; // x19
   __int64 v11; // x0
 
-  if ( (byte_5930443 & 1) == 0 )
+  if ( (byte_59685E3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_24548/*"setPushToken"*/);
-    byte_5930443 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24596/*"setPushToken"*/);
+    byte_59685E3 = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5425,40 +5414,40 @@ void AdjustSdk_AdjustAndroid__SetPushToken(System_String_o *pushToken, const Met
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v4->static_fields->ajcAdjust;
-  v6 = sub_21FFD10(object___TypeInfo, 2);
+  v6 = sub_2213B20(object___TypeInfo, 2);
   if ( !v6 )
 LABEL_14:
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v9 = (System_Object_array *)v6;
   if ( pushToken )
   {
-    v6 = sub_21FFDA4(pushToken, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
+    v6 = sub_2213BB4(pushToken, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
     if ( !v6 )
       goto LABEL_16;
   }
   if ( !LODWORD(v9->max_length) )
     goto LABEL_15;
   v9->m_Items[0] = (Il2CppObject *)pushToken;
-  v6 = sub_21FFBF4(v9->m_Items, pushToken);
+  v6 = sub_2213A04(v9->m_Items, pushToken);
   ajoCurrentActivity = AdjustSdk_AdjustAndroid_TypeInfo->static_fields->ajoCurrentActivity;
   if ( ajoCurrentActivity )
   {
-    v6 = sub_21FFDA4(ajoCurrentActivity, v9->obj.klass->_1.element_class);
+    v6 = sub_2213BB4(ajoCurrentActivity, v9->obj.klass->_1.element_class);
     if ( !v6 )
     {
 LABEL_16:
-      v11 = sub_21FFEF0();
-      sub_21FFD90(v11, 0);
+      v11 = sub_2213D00();
+      sub_2213BA0(v11, 0);
     }
   }
   if ( (v9->max_length & 0xFFFFFFFE) == 0 )
 LABEL_15:
-    sub_21FFED4(v6);
+    sub_2213CE4(v6);
   v9->m_Items[1] = (Il2CppObject *)ajoCurrentActivity;
-  v6 = sub_21FFBF4(&v9->m_Items[1], ajoCurrentActivity);
+  v6 = sub_2213A04(&v9->m_Items[1], ajoCurrentActivity);
   if ( !ajcAdjust )
     goto LABEL_14;
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_24548/*"setPushToken"*/, v9, 0);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_24596/*"setPushToken"*/, v9, 0);
 }
 
 
@@ -5486,14 +5475,14 @@ void AdjustSdk_AdjustAndroid__SetTestOptions(
   __int64 v20; // x0
   UnityEngine_AndroidJavaObject_o *v21; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_5930460 & 1) == 0 )
+  if ( (byte_5968600 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_24565/*"setTestOptions"*/);
-    byte_5930460 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24613/*"setTestOptions"*/);
+    byte_5968600 = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5513,29 +5502,29 @@ void AdjustSdk_AdjustAndroid__SetTestOptions(
     v9 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v9->static_fields->ajcAdjust;
-  v11 = sub_21FFD10(object___TypeInfo, 1);
+  v11 = sub_2213B20(object___TypeInfo, 1);
   v14 = v11;
   if ( !v11 )
     goto LABEL_23;
   if ( v21 )
   {
-    v11 = sub_21FFDA4(v21, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
+    v11 = sub_2213BB4(v21, *(_QWORD *)(*(_QWORD *)v11 + 64LL));
     if ( !v11 )
     {
-      v20 = sub_21FFEF0(0, v15);
-      sub_21FFD90(v20, 0);
+      v20 = sub_2213D00(0, v15);
+      sub_2213BA0(v20, 0);
     }
   }
   if ( !*(_DWORD *)(v14 + 24) )
-    sub_21FFED4(v11);
+    sub_2213CE4(v11);
   *(_QWORD *)(v14 + 32) = v21;
-  v11 = sub_21FFBF4(v14 + 32, v21);
+  v11 = sub_2213A04(v14 + 32, v21);
   if ( !ajcAdjust )
 LABEL_23:
-    sub_21FFECC(v11, v12, v13);
+    sub_2213CDC(v11, v12, v13);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_24565/*"setTestOptions"*/,
+    (System_String_o *)StringLiteral_24613/*"setTestOptions"*/,
     (System_Object_array *)v14,
     0);
   if ( v21 )
@@ -5557,7 +5546,7 @@ LABEL_23:
     else
     {
 LABEL_19:
-      v19 = sub_2237E2C(v21, System_IDisposable_TypeInfo, 0);
+      v19 = sub_224BC3C(v21, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v19)(v21, *(_QWORD *)(v19 + 8));
   }
@@ -5575,12 +5564,12 @@ void AdjustSdk_AdjustAndroid__SwitchBackToOnlineMode(const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593043E & 1) == 0 )
+  if ( (byte_59685DE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_25107/*"switchBackToOnlineMode"*/);
-    byte_593043E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_25155/*"switchBackToOnlineMode"*/);
+    byte_59685DE = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5593,22 +5582,22 @@ void AdjustSdk_AdjustAndroid__SwitchBackToOnlineMode(const MethodInfo *method)
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25107/*"switchBackToOnlineMode"*/,
+    (System_String_o *)StringLiteral_25155/*"switchBackToOnlineMode"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -5625,12 +5614,12 @@ void AdjustSdk_AdjustAndroid__SwitchToOfflineMode(const MethodInfo *method)
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_593043D & 1) == 0 )
+  if ( (byte_59685DD & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&StringLiteral_25112/*"switchToOfflineMode"*/);
-    byte_593043D = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&StringLiteral_25160/*"switchToOfflineMode"*/);
+    byte_59685DD = 1;
   }
   v3 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -5643,22 +5632,22 @@ void AdjustSdk_AdjustAndroid__SwitchToOfflineMode(const MethodInfo *method)
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v3->static_fields->ajcAdjust;
   if ( !v5 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v5 = v4[7];
   }
   v7 = *(_QWORD *)(v5 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, v1, v2);
   v8 = *(_QWORD *)(v4[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   if ( !ajcAdjust )
-    sub_21FFECC(v8, v1, v2);
+    sub_2213CDC(v8, v1, v2);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25112/*"switchToOfflineMode"*/,
+    (System_String_o *)StringLiteral_25160/*"switchToOfflineMode"*/,
     **(System_Object_array ***)(v8 + 184),
     0);
 }
@@ -5827,55 +5816,55 @@ void AdjustSdk_AdjustAndroid__TrackAdRevenue(AdjustSdk_AdjustAdRevenue_o *adReve
   UnityEngine_AndroidJavaObject_o *v161; // [xsp+30h] [xbp-70h] BYREF
   UnityEngine_AndroidJavaObject_o *v162; // [xsp+38h] [xbp-68h] BYREF
 
-  if ( (byte_593044C & 1) == 0 )
+  if ( (byte_59685EC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
-    sub_21FFC50(&System_Nullable_double__TypeInfo);
-    sub_21FFC50(&System_Nullable_int__TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    sub_21FFC50(&StringLiteral_17327/*"addPartnerParameter"*/);
-    sub_21FFC50(&StringLiteral_24494/*"setAdRevenueNetwork"*/);
-    sub_21FFC50(&StringLiteral_25401/*"trackAdRevenue"*/);
-    sub_21FFC50(&StringLiteral_17314/*"addCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_18830/*"com.adjust.sdk.AdjustAdRevenue"*/);
-    sub_21FFC50(&StringLiteral_24496/*"setAdRevenueUnit"*/);
-    sub_21FFC50(&StringLiteral_24550/*"setRevenue"*/);
-    sub_21FFC50(&StringLiteral_22057/*"java.lang.Double"*/);
-    sub_21FFC50(&StringLiteral_24495/*"setAdRevenuePlacement"*/);
-    sub_21FFC50(&StringLiteral_24493/*"setAdImpressionsCount"*/);
-    sub_21FFC50(&StringLiteral_22059/*"java.lang.Integer"*/);
-    byte_593044C = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    sub_2213A60(&System_Nullable_double__TypeInfo);
+    sub_2213A60(&System_Nullable_int__TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    sub_2213A60(&StringLiteral_17363/*"addPartnerParameter"*/);
+    sub_2213A60(&StringLiteral_24542/*"setAdRevenueNetwork"*/);
+    sub_2213A60(&StringLiteral_25449/*"trackAdRevenue"*/);
+    sub_2213A60(&StringLiteral_17350/*"addCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_18868/*"com.adjust.sdk.AdjustAdRevenue"*/);
+    sub_2213A60(&StringLiteral_24544/*"setAdRevenueUnit"*/);
+    sub_2213A60(&StringLiteral_24598/*"setRevenue"*/);
+    sub_2213A60(&StringLiteral_22100/*"java.lang.Double"*/);
+    sub_2213A60(&StringLiteral_24543/*"setAdRevenuePlacement"*/);
+    sub_2213A60(&StringLiteral_24541/*"setAdImpressionsCount"*/);
+    sub_2213A60(&StringLiteral_22102/*"java.lang.Integer"*/);
+    byte_59685EC = 1;
   }
   v161 = 0;
   v162 = 0;
   v160 = 0;
-  v3 = sub_21FFD10(object___TypeInfo, 1);
+  v3 = sub_2213B20(object___TypeInfo, 1);
   if ( !adRevenue || (v6 = v3) == 0 )
-    sub_21FFECC(v3, v4, v5);
+    sub_2213CDC(v3, v4, v5);
   Source_k__BackingField = adRevenue->fields._Source_k__BackingField;
   if ( Source_k__BackingField )
   {
-    v3 = sub_21FFDA4(adRevenue->fields._Source_k__BackingField, *(_QWORD *)(*(_QWORD *)v3 + 64LL));
+    v3 = sub_2213BB4(adRevenue->fields._Source_k__BackingField, *(_QWORD *)(*(_QWORD *)v3 + 64LL));
     if ( !v3 )
     {
-      v147 = sub_21FFEF0(0, v8);
-      sub_21FFD90(v147, 0);
+      v147 = sub_2213D00(0, v8);
+      sub_2213BA0(v147, 0);
     }
   }
   if ( !*(_DWORD *)(v6 + 24) )
-    sub_21FFED4(v3);
+    sub_2213CE4(v3);
   *(_QWORD *)(v6 + 32) = Source_k__BackingField;
-  sub_21FFBF4(v6 + 32, Source_k__BackingField);
-  v9 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(v6 + 32, Source_k__BackingField);
+  v9 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v9,
-    (System_String_o *)StringLiteral_18830/*"com.adjust.sdk.AdjustAdRevenue"*/,
+    (System_String_o *)StringLiteral_18868/*"com.adjust.sdk.AdjustAdRevenue"*/,
     (System_Object_array *)v6,
     0);
   hasValue = adRevenue->fields._Revenue_k__BackingField.fields.hasValue;
@@ -5884,66 +5873,66 @@ void AdjustSdk_AdjustAndroid__TrackAdRevenue(AdjustSdk_AdjustAdRevenue_o *adReve
   v159 = &v162;
   if ( hasValue )
   {
-    v12 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v12 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     Revenue_k__BackingField = adRevenue->fields._Revenue_k__BackingField;
     v13 = j_il2cpp_value_box_0(System_Nullable_double__TypeInfo, &Revenue_k__BackingField);
     if ( !v12 )
-      sub_21FFECC(v13, v14, v15);
+      sub_2213CDC(v13, v14, v15);
     v16 = (Il2CppObject *)v13;
     if ( v13 )
     {
-      v13 = sub_21FFDA4(v13, v12->obj.klass->_1.element_class);
+      v13 = sub_2213BB4(v13, v12->obj.klass->_1.element_class);
       if ( !v13 )
       {
-        v149 = sub_21FFEF0(0, v17);
-        sub_21FFD90(v149, 0);
+        v149 = sub_2213D00(0, v17);
+        sub_2213BA0(v149, 0);
       }
     }
     if ( !LODWORD(v12->max_length) )
-      sub_21FFED4(v13);
+      sub_2213CE4(v13);
     v12->m_Items[0] = v16;
-    sub_21FFBF4(v12->m_Items, v16);
-    v18 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v18, (System_String_o *)StringLiteral_22057/*"java.lang.Double"*/, v12, 0);
+    sub_2213A04(v12->m_Items, v16);
+    v18 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v18, (System_String_o *)StringLiteral_22100/*"java.lang.Double"*/, v12, 0);
     v19 = v162;
     v161 = v18;
     *(_QWORD *)&Revenue_k__BackingField.fields.hasValue = 0;
     *(_QWORD *)&Revenue_k__BackingField.fields.value = &v161;
-    v20 = sub_21FFD10(object___TypeInfo, 2);
+    v20 = sub_2213B20(object___TypeInfo, 2);
     v23 = (System_Object_array *)v20;
     if ( !v20 )
-      sub_21FFECC(0, v21, v22);
+      sub_2213CDC(0, v21, v22);
     v24 = (Il2CppObject *)v161;
     if ( v161 )
     {
-      v20 = sub_21FFDA4(v161, *(_QWORD *)(*(_QWORD *)v20 + 64LL));
+      v20 = sub_2213BB4(v161, *(_QWORD *)(*(_QWORD *)v20 + 64LL));
       if ( !v20 )
       {
-        v150 = sub_21FFEF0(0, v25);
-        sub_21FFD90(v150, 0);
+        v150 = sub_2213D00(0, v25);
+        sub_2213BA0(v150, 0);
       }
     }
     if ( !LODWORD(v23->max_length) )
-      sub_21FFED4(v20);
+      sub_2213CE4(v20);
     v23->m_Items[0] = v24;
-    v26 = sub_21FFBF4(v23->m_Items, v24);
+    v26 = sub_2213A04(v23->m_Items, v24);
     Currency_k__BackingField = adRevenue->fields._Currency_k__BackingField;
     if ( Currency_k__BackingField )
     {
-      v26 = sub_21FFDA4(adRevenue->fields._Currency_k__BackingField, v23->obj.klass->_1.element_class);
+      v26 = sub_2213BB4(adRevenue->fields._Currency_k__BackingField, v23->obj.klass->_1.element_class);
       if ( !v26 )
       {
-        v152 = sub_21FFEF0(0, v28);
-        sub_21FFD90(v152, 0);
+        v152 = sub_2213D00(0, v28);
+        sub_2213BA0(v152, 0);
       }
     }
     if ( (v23->max_length & 0xFFFFFFFE) == 0 )
-      sub_21FFED4(v26);
+      sub_2213CE4(v26);
     v23->m_Items[1] = (Il2CppObject *)Currency_k__BackingField;
-    v29 = sub_21FFBF4(&v23->m_Items[1], Currency_k__BackingField);
+    v29 = sub_2213A04(&v23->m_Items[1], Currency_k__BackingField);
     if ( !v19 )
-      sub_21FFECC(v29, v30, v31);
-    UnityEngine_AndroidJavaObject__Call(v19, (System_String_o *)StringLiteral_24550/*"setRevenue"*/, v23, 0);
+      sub_2213CDC(v29, v30, v31);
+    UnityEngine_AndroidJavaObject__Call(v19, (System_String_o *)StringLiteral_24598/*"setRevenue"*/, v23, 0);
     v32 = v161;
     if ( v161 )
     {
@@ -5964,60 +5953,60 @@ void AdjustSdk_AdjustAndroid__TrackAdRevenue(AdjustSdk_AdjustAdRevenue_o *adReve
       else
       {
 LABEL_26:
-        v36 = sub_2237E2C(v161, System_IDisposable_TypeInfo, 0);
+        v36 = sub_224BC3C(v161, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v36)(v32, *(_QWORD *)(v36 + 8));
     }
   }
   if ( adRevenue->fields._AdImpressionsCount_k__BackingField.fields.hasValue )
   {
-    v37 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v37 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     *(struct System_Nullable_int__o *)&Revenue_k__BackingField.fields.hasValue = adRevenue->fields._AdImpressionsCount_k__BackingField;
     v38 = j_il2cpp_value_box_0(System_Nullable_int__TypeInfo, &Revenue_k__BackingField);
     if ( !v37 )
-      sub_21FFECC(v38, v39, v40);
+      sub_2213CDC(v38, v39, v40);
     v41 = (Il2CppObject *)v38;
     if ( v38 )
     {
-      v38 = sub_21FFDA4(v38, v37->obj.klass->_1.element_class);
+      v38 = sub_2213BB4(v38, v37->obj.klass->_1.element_class);
       if ( !v38 )
       {
-        v151 = sub_21FFEF0(0, v42);
-        sub_21FFD90(v151, 0);
+        v151 = sub_2213D00(0, v42);
+        sub_2213BA0(v151, 0);
       }
     }
     if ( !LODWORD(v37->max_length) )
-      sub_21FFED4(v38);
+      sub_2213CE4(v38);
     v37->m_Items[0] = v41;
-    sub_21FFBF4(v37->m_Items, v41);
-    v43 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v43, (System_String_o *)StringLiteral_22059/*"java.lang.Integer"*/, v37, 0);
+    sub_2213A04(v37->m_Items, v41);
+    v43 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v43, (System_String_o *)StringLiteral_22102/*"java.lang.Integer"*/, v37, 0);
     v44 = v162;
     v160 = v43;
     *(_QWORD *)&Revenue_k__BackingField.fields.hasValue = 0;
     *(_QWORD *)&Revenue_k__BackingField.fields.value = &v160;
-    v45 = sub_21FFD10(object___TypeInfo, 1);
+    v45 = sub_2213B20(object___TypeInfo, 1);
     v48 = v45;
     if ( !v45 )
       goto LABEL_135;
     v49 = v160;
     if ( v160 )
     {
-      v45 = sub_21FFDA4(v160, *(_QWORD *)(*(_QWORD *)v45 + 64LL));
+      v45 = sub_2213BB4(v160, *(_QWORD *)(*(_QWORD *)v45 + 64LL));
       if ( !v45 )
       {
-        v153 = sub_21FFEF0(0, v50);
-        sub_21FFD90(v153, 0);
+        v153 = sub_2213D00(0, v50);
+        sub_2213BA0(v153, 0);
       }
     }
     if ( !*(_DWORD *)(v48 + 24) )
-      sub_21FFED4(v45);
+      sub_2213CE4(v45);
     *(_QWORD *)(v48 + 32) = v49;
-    v45 = sub_21FFBF4(v48 + 32, v49);
+    v45 = sub_2213A04(v48 + 32, v49);
     if ( !v44 )
 LABEL_135:
-      sub_21FFECC(v45, v46, v47);
-    UnityEngine_AndroidJavaObject__Call(v44, (System_String_o *)StringLiteral_24493/*"setAdImpressionsCount"*/, (System_Object_array *)v48, 0);
+      sub_2213CDC(v45, v46, v47);
+    UnityEngine_AndroidJavaObject__Call(v44, (System_String_o *)StringLiteral_24541/*"setAdImpressionsCount"*/, (System_Object_array *)v48, 0);
     v51 = v160;
     if ( v160 )
     {
@@ -6038,7 +6027,7 @@ LABEL_135:
       else
       {
 LABEL_44:
-        v55 = sub_2237E2C(v160, System_IDisposable_TypeInfo, 0);
+        v55 = sub_224BC3C(v160, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v55)(v51, *(_QWORD *)(v55 + 8));
     }
@@ -6046,80 +6035,80 @@ LABEL_44:
   if ( adRevenue->fields._AdRevenueNetwork_k__BackingField )
   {
     v56 = v162;
-    v57 = sub_21FFD10(object___TypeInfo, 1);
+    v57 = sub_2213B20(object___TypeInfo, 1);
     v60 = v57;
     if ( !v57 )
       goto LABEL_138;
     AdRevenueNetwork_k__BackingField = adRevenue->fields._AdRevenueNetwork_k__BackingField;
     if ( AdRevenueNetwork_k__BackingField )
     {
-      v57 = sub_21FFDA4(adRevenue->fields._AdRevenueNetwork_k__BackingField, *(_QWORD *)(*(_QWORD *)v57 + 64LL));
+      v57 = sub_2213BB4(adRevenue->fields._AdRevenueNetwork_k__BackingField, *(_QWORD *)(*(_QWORD *)v57 + 64LL));
       if ( !v57 )
       {
-        v154 = sub_21FFEF0(0, v62);
-        sub_21FFD90(v154, 0);
+        v154 = sub_2213D00(0, v62);
+        sub_2213BA0(v154, 0);
       }
     }
     if ( !*(_DWORD *)(v60 + 24) )
-      sub_21FFED4(v57);
+      sub_2213CE4(v57);
     *(_QWORD *)(v60 + 32) = AdRevenueNetwork_k__BackingField;
-    v57 = sub_21FFBF4(v60 + 32, AdRevenueNetwork_k__BackingField);
+    v57 = sub_2213A04(v60 + 32, AdRevenueNetwork_k__BackingField);
     if ( !v56 )
 LABEL_138:
-      sub_21FFECC(v57, v58, v59);
-    UnityEngine_AndroidJavaObject__Call(v56, (System_String_o *)StringLiteral_24494/*"setAdRevenueNetwork"*/, (System_Object_array *)v60, 0);
+      sub_2213CDC(v57, v58, v59);
+    UnityEngine_AndroidJavaObject__Call(v56, (System_String_o *)StringLiteral_24542/*"setAdRevenueNetwork"*/, (System_Object_array *)v60, 0);
   }
   if ( adRevenue->fields._AdRevenueUnit_k__BackingField )
   {
     v63 = v162;
-    v64 = sub_21FFD10(object___TypeInfo, 1);
+    v64 = sub_2213B20(object___TypeInfo, 1);
     v67 = v64;
     if ( !v64 )
       goto LABEL_139;
     AdRevenueUnit_k__BackingField = adRevenue->fields._AdRevenueUnit_k__BackingField;
     if ( AdRevenueUnit_k__BackingField )
     {
-      v64 = sub_21FFDA4(adRevenue->fields._AdRevenueUnit_k__BackingField, *(_QWORD *)(*(_QWORD *)v64 + 64LL));
+      v64 = sub_2213BB4(adRevenue->fields._AdRevenueUnit_k__BackingField, *(_QWORD *)(*(_QWORD *)v64 + 64LL));
       if ( !v64 )
       {
-        v155 = sub_21FFEF0(0, v69);
-        sub_21FFD90(v155, 0);
+        v155 = sub_2213D00(0, v69);
+        sub_2213BA0(v155, 0);
       }
     }
     if ( !*(_DWORD *)(v67 + 24) )
-      sub_21FFED4(v64);
+      sub_2213CE4(v64);
     *(_QWORD *)(v67 + 32) = AdRevenueUnit_k__BackingField;
-    v64 = sub_21FFBF4(v67 + 32, AdRevenueUnit_k__BackingField);
+    v64 = sub_2213A04(v67 + 32, AdRevenueUnit_k__BackingField);
     if ( !v63 )
 LABEL_139:
-      sub_21FFECC(v64, v65, v66);
-    UnityEngine_AndroidJavaObject__Call(v63, (System_String_o *)StringLiteral_24496/*"setAdRevenueUnit"*/, (System_Object_array *)v67, 0);
+      sub_2213CDC(v64, v65, v66);
+    UnityEngine_AndroidJavaObject__Call(v63, (System_String_o *)StringLiteral_24544/*"setAdRevenueUnit"*/, (System_Object_array *)v67, 0);
   }
   if ( adRevenue->fields._AdRevenuePlacement_k__BackingField )
   {
     v70 = v162;
-    v71 = sub_21FFD10(object___TypeInfo, 1);
+    v71 = sub_2213B20(object___TypeInfo, 1);
     v74 = v71;
     if ( !v71 )
       goto LABEL_140;
     AdRevenuePlacement_k__BackingField = adRevenue->fields._AdRevenuePlacement_k__BackingField;
     if ( AdRevenuePlacement_k__BackingField )
     {
-      v71 = sub_21FFDA4(adRevenue->fields._AdRevenuePlacement_k__BackingField, *(_QWORD *)(*(_QWORD *)v71 + 64LL));
+      v71 = sub_2213BB4(adRevenue->fields._AdRevenuePlacement_k__BackingField, *(_QWORD *)(*(_QWORD *)v71 + 64LL));
       if ( !v71 )
       {
-        v156 = sub_21FFEF0(0, v76);
-        sub_21FFD90(v156, 0);
+        v156 = sub_2213D00(0, v76);
+        sub_2213BA0(v156, 0);
       }
     }
     if ( !*(_DWORD *)(v74 + 24) )
-      sub_21FFED4(v71);
+      sub_2213CE4(v71);
     *(_QWORD *)(v74 + 32) = AdRevenuePlacement_k__BackingField;
-    v71 = sub_21FFBF4(v74 + 32, AdRevenuePlacement_k__BackingField);
+    v71 = sub_2213A04(v74 + 32, AdRevenuePlacement_k__BackingField);
     if ( !v70 )
 LABEL_140:
-      sub_21FFECC(v71, v72, v73);
-    UnityEngine_AndroidJavaObject__Call(v70, (System_String_o *)StringLiteral_24495/*"setAdRevenuePlacement"*/, (System_Object_array *)v74, 0);
+      sub_2213CDC(v71, v72, v73);
+    UnityEngine_AndroidJavaObject__Call(v70, (System_String_o *)StringLiteral_24543/*"setAdRevenuePlacement"*/, (System_Object_array *)v74, 0);
   }
   if ( AdjustSdk_AdjustAdRevenue__get_CallbackParameters(adRevenue, v10) )
   {
@@ -6129,64 +6118,64 @@ LABEL_140:
                                                                                        adRevenue,
                                                                                        v77);
       if ( !CallbackParameters )
-        sub_21FFECC(0, v80, v81);
+        sub_2213CDC(0, v80, v81);
       if ( i >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   CallbackParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v82 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustAdRevenue__get_CallbackParameters(
                                                                         adRevenue,
                                                                         v77);
       if ( !v82 )
-        sub_21FFECC(0, v83, v84);
+        sub_2213CDC(0, v83, v84);
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v82,
                i,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v87 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustAdRevenue__get_CallbackParameters(
                                                                         adRevenue,
                                                                         v86);
       if ( !v87 )
-        sub_21FFECC(0, v88, v89);
+        sub_2213CDC(0, v88, v89);
       v90 = i + 1;
       v91 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v87,
               v90,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v92 = v162;
-      v93 = sub_21FFD10(object___TypeInfo, 2);
+      v93 = sub_2213B20(object___TypeInfo, 2);
       v96 = (System_Object_array *)v93;
       if ( !v93 )
-        sub_21FFECC(0, v94, v95);
+        sub_2213CDC(0, v94, v95);
       if ( Item )
       {
-        v93 = sub_21FFDA4(Item, *(_QWORD *)(*(_QWORD *)v93 + 64LL));
+        v93 = sub_2213BB4(Item, *(_QWORD *)(*(_QWORD *)v93 + 64LL));
         if ( !v93 )
         {
-          v144 = sub_21FFEF0(0, v97);
-          sub_21FFD90(v144, 0);
+          v144 = sub_2213D00(0, v97);
+          sub_2213BA0(v144, 0);
         }
       }
       if ( !LODWORD(v96->max_length) )
-        sub_21FFED4(v93);
+        sub_2213CE4(v93);
       v96->m_Items[0] = Item;
-      v98 = sub_21FFBF4(v96->m_Items, Item);
+      v98 = sub_2213A04(v96->m_Items, Item);
       if ( v91 )
       {
-        v98 = sub_21FFDA4(v91, v96->obj.klass->_1.element_class);
+        v98 = sub_2213BB4(v91, v96->obj.klass->_1.element_class);
         if ( !v98 )
         {
-          v143 = sub_21FFEF0(0, v99);
-          sub_21FFD90(v143, 0);
+          v143 = sub_2213D00(0, v99);
+          sub_2213BA0(v143, 0);
         }
       }
       if ( (v96->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v98);
+        sub_2213CE4(v98);
       v96->m_Items[1] = v91;
-      v100 = sub_21FFBF4(&v96->m_Items[1], v91);
+      v100 = sub_2213A04(&v96->m_Items[1], v91);
       if ( !v92 )
-        sub_21FFECC(v100, v101, v102);
-      UnityEngine_AndroidJavaObject__Call(v92, (System_String_o *)StringLiteral_17314/*"addCallbackParameter"*/, v96, 0);
+        sub_2213CDC(v100, v101, v102);
+      UnityEngine_AndroidJavaObject__Call(v92, (System_String_o *)StringLiteral_17350/*"addCallbackParameter"*/, v96, 0);
     }
   }
   if ( AdjustSdk_AdjustAdRevenue__get_PartnerParameters(adRevenue, v77) )
@@ -6197,64 +6186,64 @@ LABEL_140:
                                                                                       adRevenue,
                                                                                       v103);
       if ( !PartnerParameters )
-        sub_21FFECC(0, v107, v108);
+        sub_2213CDC(0, v107, v108);
       if ( j >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   PartnerParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v109 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustAdRevenue__get_PartnerParameters(
                                                                          adRevenue,
                                                                          v103);
       if ( !v109 )
-        sub_21FFECC(0, v110, v111);
+        sub_2213CDC(0, v110, v111);
       v112 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v109,
                j,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v114 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustAdRevenue__get_PartnerParameters(
                                                                          adRevenue,
                                                                          v113);
       if ( !v114 )
-        sub_21FFECC(0, v115, v116);
+        sub_2213CDC(0, v115, v116);
       v117 = j + 1;
       v118 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v114,
                v117,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v119 = v162;
-      v120 = sub_21FFD10(object___TypeInfo, 2);
+      v120 = sub_2213B20(object___TypeInfo, 2);
       v123 = (System_Object_array *)v120;
       if ( !v120 )
-        sub_21FFECC(0, v121, v122);
+        sub_2213CDC(0, v121, v122);
       if ( v112 )
       {
-        v120 = sub_21FFDA4(v112, *(_QWORD *)(*(_QWORD *)v120 + 64LL));
+        v120 = sub_2213BB4(v112, *(_QWORD *)(*(_QWORD *)v120 + 64LL));
         if ( !v120 )
         {
-          v146 = sub_21FFEF0(0, v124);
-          sub_21FFD90(v146, 0);
+          v146 = sub_2213D00(0, v124);
+          sub_2213BA0(v146, 0);
         }
       }
       if ( !LODWORD(v123->max_length) )
-        sub_21FFED4(v120);
+        sub_2213CE4(v120);
       v123->m_Items[0] = v112;
-      v125 = sub_21FFBF4(v123->m_Items, v112);
+      v125 = sub_2213A04(v123->m_Items, v112);
       if ( v118 )
       {
-        v125 = sub_21FFDA4(v118, v123->obj.klass->_1.element_class);
+        v125 = sub_2213BB4(v118, v123->obj.klass->_1.element_class);
         if ( !v125 )
         {
-          v145 = sub_21FFEF0(0, v126);
-          sub_21FFD90(v145, 0);
+          v145 = sub_2213D00(0, v126);
+          sub_2213BA0(v145, 0);
         }
       }
       if ( (v123->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v125);
+        sub_2213CE4(v125);
       v123->m_Items[1] = v118;
-      v127 = sub_21FFBF4(&v123->m_Items[1], v118);
+      v127 = sub_2213A04(&v123->m_Items[1], v118);
       if ( !v119 )
-        sub_21FFECC(v127, v128, v129);
-      UnityEngine_AndroidJavaObject__Call(v119, (System_String_o *)StringLiteral_17327/*"addPartnerParameter"*/, v123, 0);
+        sub_2213CDC(v127, v128, v129);
+      UnityEngine_AndroidJavaObject__Call(v119, (System_String_o *)StringLiteral_17363/*"addPartnerParameter"*/, v123, 0);
     }
   }
   v130 = AdjustSdk_AdjustAndroid_TypeInfo;
@@ -6264,30 +6253,30 @@ LABEL_140:
     v130 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v130->static_fields->ajcAdjust;
-  v132 = sub_21FFD10(object___TypeInfo, 1);
+  v132 = sub_2213B20(object___TypeInfo, 1);
   v135 = v132;
   if ( !v132 )
     goto LABEL_134;
   v136 = v162;
   if ( v162 )
   {
-    v132 = sub_21FFDA4(v162, *(_QWORD *)(*(_QWORD *)v132 + 64LL));
+    v132 = sub_2213BB4(v162, *(_QWORD *)(*(_QWORD *)v132 + 64LL));
     if ( !v132 )
     {
-      v148 = sub_21FFEF0(0, v137);
-      sub_21FFD90(v148, 0);
+      v148 = sub_2213D00(0, v137);
+      sub_2213BA0(v148, 0);
     }
   }
   if ( !*(_DWORD *)(v135 + 24) )
-    sub_21FFED4(v132);
+    sub_2213CE4(v132);
   *(_QWORD *)(v135 + 32) = v136;
-  v132 = sub_21FFBF4(v135 + 32, v136);
+  v132 = sub_2213A04(v135 + 32, v136);
   if ( !ajcAdjust )
 LABEL_134:
-    sub_21FFECC(v132, v133, v134);
+    sub_2213CDC(v132, v133, v134);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25401/*"trackAdRevenue"*/,
+    (System_String_o *)StringLiteral_25449/*"trackAdRevenue"*/,
     (System_Object_array *)v135,
     0);
   v138 = *v159;
@@ -6310,12 +6299,12 @@ LABEL_134:
     else
     {
 LABEL_110:
-      v142 = sub_2237E2C(*v159, System_IDisposable_TypeInfo, 0);
+      v142 = sub_224BC3C(*v159, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v142)(v138, *(_QWORD *)(v142 + 8));
   }
   if ( v158 )
-    sub_21FFEC4(v158);
+    sub_2213CD4(v158);
 }
 
 
@@ -6330,7 +6319,7 @@ void AdjustSdk_AdjustAndroid__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, c
   const MethodInfo *v9; // x1
   struct System_Nullable_double__o Revenue_k__BackingField; // q0
   System_Object_array *v11; // x21
-  const MethodInfo_45AEF04 *v12; // x2
+  const MethodInfo_45E303C *v12; // x2
   __int64 v13; // x0
   __int64 v14; // x1
   __int64 v15; // x2
@@ -6442,47 +6431,47 @@ void AdjustSdk_AdjustAndroid__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, c
   UnityEngine_AndroidJavaObject_o *v121; // [xsp+38h] [xbp-58h] BYREF
   System_Nullable_double__o v122; // 0:x0.16
 
-  if ( (byte_593043A & 1) == 0 )
+  if ( (byte_59685DA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_double__get_Value__);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    sub_21FFC50(&StringLiteral_17327/*"addPartnerParameter"*/);
-    sub_21FFC50(&StringLiteral_24506/*"setDeduplicationId"*/);
-    sub_21FFC50(&StringLiteral_24546/*"setPurchaseToken"*/);
-    sub_21FFC50(&StringLiteral_25406/*"trackEvent"*/);
-    sub_21FFC50(&StringLiteral_24498/*"setCallbackId"*/);
-    sub_21FFC50(&StringLiteral_24542/*"setProductId"*/);
-    sub_21FFC50(&StringLiteral_17314/*"addCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_18833/*"com.adjust.sdk.AdjustEvent"*/);
-    sub_21FFC50(&StringLiteral_24550/*"setRevenue"*/);
-    byte_593043A = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_double__get_Value__);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    sub_2213A60(&StringLiteral_17363/*"addPartnerParameter"*/);
+    sub_2213A60(&StringLiteral_24554/*"setDeduplicationId"*/);
+    sub_2213A60(&StringLiteral_24594/*"setPurchaseToken"*/);
+    sub_2213A60(&StringLiteral_25454/*"trackEvent"*/);
+    sub_2213A60(&StringLiteral_24546/*"setCallbackId"*/);
+    sub_2213A60(&StringLiteral_24590/*"setProductId"*/);
+    sub_2213A60(&StringLiteral_17350/*"addCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_18871/*"com.adjust.sdk.AdjustEvent"*/);
+    sub_2213A60(&StringLiteral_24598/*"setRevenue"*/);
+    byte_59685DA = 1;
   }
   v121 = 0;
   v120 = (struct System_Nullable_double__o)0LL;
-  v3 = sub_21FFD10(object___TypeInfo, 1);
+  v3 = sub_2213B20(object___TypeInfo, 1);
   if ( !adjustEvent || (v6 = v3) == 0 )
-    sub_21FFECC(v3, v4, v5);
+    sub_2213CDC(v3, v4, v5);
   EventToken_k__BackingField = adjustEvent->fields._EventToken_k__BackingField;
   if ( EventToken_k__BackingField
-    && !sub_21FFDA4(adjustEvent->fields._EventToken_k__BackingField, *(_QWORD *)(*(_QWORD *)v3 + 64LL)) )
+    && !sub_2213BB4(adjustEvent->fields._EventToken_k__BackingField, *(_QWORD *)(*(_QWORD *)v3 + 64LL)) )
   {
-    v111 = sub_21FFEF0();
-    sub_21FFD90(v111, 0);
+    v111 = sub_2213D00();
+    sub_2213BA0(v111, 0);
   }
   if ( !*(_DWORD *)(v6 + 24) )
-    ((void (__noreturn *)(void))sub_21FFED4)();
+    ((void (__noreturn *)(void))sub_2213CE4)();
   *(_QWORD *)(v6 + 32) = EventToken_k__BackingField;
-  sub_21FFBF4(v6 + 32, EventToken_k__BackingField);
-  v8 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(v6 + 32, EventToken_k__BackingField);
+  v8 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v8,
-    (System_String_o *)StringLiteral_18833/*"com.adjust.sdk.AdjustEvent"*/,
+    (System_String_o *)StringLiteral_18871/*"com.adjust.sdk.AdjustEvent"*/,
     (System_Object_array *)v6,
     0);
   Revenue_k__BackingField = adjustEvent->fields._Revenue_k__BackingField;
@@ -6492,41 +6481,41 @@ void AdjustSdk_AdjustAndroid__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, c
   v120 = Revenue_k__BackingField;
   if ( Revenue_k__BackingField.fields.hasValue )
   {
-    v11 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 2);
+    v11 = (System_Object_array *)sub_2213B20(object___TypeInfo, 2);
     *(_QWORD *)&v122.fields.value = Method_System_Nullable_double__get_Value__;
     v120 = adjustEvent->fields._Revenue_k__BackingField;
     *(_QWORD *)&v122.fields.hasValue = &v120;
     v119[0] = System_Nullable_double___get_Value(v122, v12);
-    v13 = j_il2cpp_value_box_0(qword_594C0A8, v119);
+    v13 = j_il2cpp_value_box_0(qword_5984380, v119);
     if ( !v11 )
-      sub_21FFECC(v13, v14, v15);
+      sub_2213CDC(v13, v14, v15);
     v16 = (Il2CppObject *)v13;
-    if ( v13 && !sub_21FFDA4(v13, v11->obj.klass->_1.element_class) )
+    if ( v13 && !sub_2213BB4(v13, v11->obj.klass->_1.element_class) )
     {
-      v113 = sub_21FFEF0();
-      sub_21FFD90(v113, 0);
+      v113 = sub_2213D00();
+      sub_2213BA0(v113, 0);
     }
     if ( !LODWORD(v11->max_length) )
-      ((void (__noreturn *)(void))sub_21FFED4)();
+      ((void (__noreturn *)(void))sub_2213CE4)();
     v11->m_Items[0] = v16;
-    v17 = sub_21FFBF4(v11->m_Items, v16);
+    v17 = sub_2213A04(v11->m_Items, v16);
     Currency_k__BackingField = adjustEvent->fields._Currency_k__BackingField;
     if ( Currency_k__BackingField )
     {
-      v17 = sub_21FFDA4(adjustEvent->fields._Currency_k__BackingField, v11->obj.klass->_1.element_class);
+      v17 = sub_2213BB4(adjustEvent->fields._Currency_k__BackingField, v11->obj.klass->_1.element_class);
       if ( !v17 )
       {
-        v114 = sub_21FFEF0();
-        sub_21FFD90(v114, 0);
+        v114 = sub_2213D00();
+        sub_2213BA0(v114, 0);
       }
     }
     if ( (v11->max_length & 0xFFFFFFFE) == 0 )
-      sub_21FFED4(v17);
+      sub_2213CE4(v17);
     v11->m_Items[1] = (Il2CppObject *)Currency_k__BackingField;
-    v19 = sub_21FFBF4(&v11->m_Items[1], Currency_k__BackingField);
+    v19 = sub_2213A04(&v11->m_Items[1], Currency_k__BackingField);
     if ( !v8 )
-      sub_21FFECC(v19, v20, v21);
-    UnityEngine_AndroidJavaObject__Call(v8, (System_String_o *)StringLiteral_24550/*"setRevenue"*/, v11, 0);
+      sub_2213CDC(v19, v20, v21);
+    UnityEngine_AndroidJavaObject__Call(v8, (System_String_o *)StringLiteral_24598/*"setRevenue"*/, v11, 0);
   }
   if ( AdjustSdk_AdjustEvent__get_CallbackParameters(adjustEvent, v9) )
   {
@@ -6536,64 +6525,64 @@ void AdjustSdk_AdjustAndroid__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, c
                                                                                        adjustEvent,
                                                                                        v22);
       if ( !CallbackParameters )
-        sub_21FFECC(0, v25, v26);
+        sub_2213CDC(0, v25, v26);
       if ( i >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   CallbackParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v27 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_CallbackParameters(
                                                                         adjustEvent,
                                                                         v22);
       if ( !v27 )
-        sub_21FFECC(0, v28, v29);
+        sub_2213CDC(0, v28, v29);
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v27,
                i,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v32 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_CallbackParameters(
                                                                         adjustEvent,
                                                                         v31);
       if ( !v32 )
-        sub_21FFECC(0, v33, v34);
+        sub_2213CDC(0, v33, v34);
       v35 = i + 1;
       v36 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v32,
               v35,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v37 = v121;
-      v38 = sub_21FFD10(object___TypeInfo, 2);
+      v38 = sub_2213B20(object___TypeInfo, 2);
       v41 = (System_Object_array *)v38;
       if ( !v38 )
-        sub_21FFECC(0, v39, v40);
+        sub_2213CDC(0, v39, v40);
       if ( Item )
       {
-        v38 = sub_21FFDA4(Item, *(_QWORD *)(*(_QWORD *)v38 + 64LL));
+        v38 = sub_2213BB4(Item, *(_QWORD *)(*(_QWORD *)v38 + 64LL));
         if ( !v38 )
         {
-          v108 = sub_21FFEF0();
-          sub_21FFD90(v108, 0);
+          v108 = sub_2213D00();
+          sub_2213BA0(v108, 0);
         }
       }
       if ( !LODWORD(v41->max_length) )
-        sub_21FFED4(v38);
+        sub_2213CE4(v38);
       v41->m_Items[0] = Item;
-      v42 = sub_21FFBF4(v41->m_Items, Item);
+      v42 = sub_2213A04(v41->m_Items, Item);
       if ( v36 )
       {
-        v42 = sub_21FFDA4(v36, v41->obj.klass->_1.element_class);
+        v42 = sub_2213BB4(v36, v41->obj.klass->_1.element_class);
         if ( !v42 )
         {
-          v107 = sub_21FFEF0();
-          sub_21FFD90(v107, 0);
+          v107 = sub_2213D00();
+          sub_2213BA0(v107, 0);
         }
       }
       if ( (v41->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v42);
+        sub_2213CE4(v42);
       v41->m_Items[1] = v36;
-      v43 = sub_21FFBF4(&v41->m_Items[1], v36);
+      v43 = sub_2213A04(&v41->m_Items[1], v36);
       if ( !v37 )
-        sub_21FFECC(v43, v44, v45);
-      UnityEngine_AndroidJavaObject__Call(v37, (System_String_o *)StringLiteral_17314/*"addCallbackParameter"*/, v41, 0);
+        sub_2213CDC(v43, v44, v45);
+      UnityEngine_AndroidJavaObject__Call(v37, (System_String_o *)StringLiteral_17350/*"addCallbackParameter"*/, v41, 0);
     }
   }
   if ( AdjustSdk_AdjustEvent__get_PartnerParameters(adjustEvent, v22) )
@@ -6604,169 +6593,169 @@ void AdjustSdk_AdjustAndroid__TrackEvent(AdjustSdk_AdjustEvent_o *adjustEvent, c
                                                                                       adjustEvent,
                                                                                       v46);
       if ( !PartnerParameters )
-        sub_21FFECC(0, v50, v51);
+        sub_2213CDC(0, v50, v51);
       if ( j >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   PartnerParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v52 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_PartnerParameters(
                                                                         adjustEvent,
                                                                         v46);
       if ( !v52 )
-        sub_21FFECC(0, v53, v54);
+        sub_2213CDC(0, v53, v54);
       v55 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v52,
               j,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v57 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_PartnerParameters(
                                                                         adjustEvent,
                                                                         v56);
       if ( !v57 )
-        sub_21FFECC(0, v58, v59);
+        sub_2213CDC(0, v58, v59);
       v60 = j + 1;
       v61 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v57,
               v60,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v62 = v121;
-      v63 = sub_21FFD10(object___TypeInfo, 2);
+      v63 = sub_2213B20(object___TypeInfo, 2);
       v66 = (System_Object_array *)v63;
       if ( !v63 )
-        sub_21FFECC(0, v64, v65);
+        sub_2213CDC(0, v64, v65);
       if ( v55 )
       {
-        v63 = sub_21FFDA4(v55, *(_QWORD *)(*(_QWORD *)v63 + 64LL));
+        v63 = sub_2213BB4(v55, *(_QWORD *)(*(_QWORD *)v63 + 64LL));
         if ( !v63 )
         {
-          v110 = sub_21FFEF0();
-          sub_21FFD90(v110, 0);
+          v110 = sub_2213D00();
+          sub_2213BA0(v110, 0);
         }
       }
       if ( !LODWORD(v66->max_length) )
-        sub_21FFED4(v63);
+        sub_2213CE4(v63);
       v66->m_Items[0] = v55;
-      v67 = sub_21FFBF4(v66->m_Items, v55);
+      v67 = sub_2213A04(v66->m_Items, v55);
       if ( v61 )
       {
-        v67 = sub_21FFDA4(v61, v66->obj.klass->_1.element_class);
+        v67 = sub_2213BB4(v61, v66->obj.klass->_1.element_class);
         if ( !v67 )
         {
-          v109 = sub_21FFEF0();
-          sub_21FFD90(v109, 0);
+          v109 = sub_2213D00();
+          sub_2213BA0(v109, 0);
         }
       }
       if ( (v66->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v67);
+        sub_2213CE4(v67);
       v66->m_Items[1] = v61;
-      v68 = sub_21FFBF4(&v66->m_Items[1], v61);
+      v68 = sub_2213A04(&v66->m_Items[1], v61);
       if ( !v62 )
-        sub_21FFECC(v68, v69, v70);
-      UnityEngine_AndroidJavaObject__Call(v62, (System_String_o *)StringLiteral_17327/*"addPartnerParameter"*/, v66, 0);
+        sub_2213CDC(v68, v69, v70);
+      UnityEngine_AndroidJavaObject__Call(v62, (System_String_o *)StringLiteral_17363/*"addPartnerParameter"*/, v66, 0);
     }
   }
   if ( adjustEvent->fields._DeduplicationId_k__BackingField )
   {
     v71 = v121;
-    v72 = sub_21FFD10(object___TypeInfo, 1);
+    v72 = sub_2213B20(object___TypeInfo, 1);
     v75 = v72;
     if ( !v72 )
       goto LABEL_112;
     DeduplicationId_k__BackingField = adjustEvent->fields._DeduplicationId_k__BackingField;
     if ( DeduplicationId_k__BackingField )
     {
-      v72 = sub_21FFDA4(adjustEvent->fields._DeduplicationId_k__BackingField, *(_QWORD *)(*(_QWORD *)v72 + 64LL));
+      v72 = sub_2213BB4(adjustEvent->fields._DeduplicationId_k__BackingField, *(_QWORD *)(*(_QWORD *)v72 + 64LL));
       if ( !v72 )
       {
-        v115 = sub_21FFEF0();
-        sub_21FFD90(v115, 0);
+        v115 = sub_2213D00();
+        sub_2213BA0(v115, 0);
       }
     }
     if ( !*(_DWORD *)(v75 + 24) )
-      sub_21FFED4(v72);
+      sub_2213CE4(v72);
     *(_QWORD *)(v75 + 32) = DeduplicationId_k__BackingField;
-    v72 = sub_21FFBF4(v75 + 32, DeduplicationId_k__BackingField);
+    v72 = sub_2213A04(v75 + 32, DeduplicationId_k__BackingField);
     if ( !v71 )
 LABEL_112:
-      sub_21FFECC(v72, v73, v74);
-    UnityEngine_AndroidJavaObject__Call(v71, (System_String_o *)StringLiteral_24506/*"setDeduplicationId"*/, (System_Object_array *)v75, 0);
+      sub_2213CDC(v72, v73, v74);
+    UnityEngine_AndroidJavaObject__Call(v71, (System_String_o *)StringLiteral_24554/*"setDeduplicationId"*/, (System_Object_array *)v75, 0);
   }
   if ( adjustEvent->fields._CallbackId_k__BackingField )
   {
     v77 = v121;
-    v78 = sub_21FFD10(object___TypeInfo, 1);
+    v78 = sub_2213B20(object___TypeInfo, 1);
     v81 = v78;
     if ( !v78 )
       goto LABEL_113;
     CallbackId_k__BackingField = adjustEvent->fields._CallbackId_k__BackingField;
     if ( CallbackId_k__BackingField )
     {
-      v78 = sub_21FFDA4(adjustEvent->fields._CallbackId_k__BackingField, *(_QWORD *)(*(_QWORD *)v78 + 64LL));
+      v78 = sub_2213BB4(adjustEvent->fields._CallbackId_k__BackingField, *(_QWORD *)(*(_QWORD *)v78 + 64LL));
       if ( !v78 )
       {
-        v116 = sub_21FFEF0();
-        sub_21FFD90(v116, 0);
+        v116 = sub_2213D00();
+        sub_2213BA0(v116, 0);
       }
     }
     if ( !*(_DWORD *)(v81 + 24) )
-      sub_21FFED4(v78);
+      sub_2213CE4(v78);
     *(_QWORD *)(v81 + 32) = CallbackId_k__BackingField;
-    v78 = sub_21FFBF4(v81 + 32, CallbackId_k__BackingField);
+    v78 = sub_2213A04(v81 + 32, CallbackId_k__BackingField);
     if ( !v77 )
 LABEL_113:
-      sub_21FFECC(v78, v79, v80);
-    UnityEngine_AndroidJavaObject__Call(v77, (System_String_o *)StringLiteral_24498/*"setCallbackId"*/, (System_Object_array *)v81, 0);
+      sub_2213CDC(v78, v79, v80);
+    UnityEngine_AndroidJavaObject__Call(v77, (System_String_o *)StringLiteral_24546/*"setCallbackId"*/, (System_Object_array *)v81, 0);
   }
   if ( adjustEvent->fields._ProductId_k__BackingField )
   {
     v83 = v121;
-    v84 = sub_21FFD10(object___TypeInfo, 1);
+    v84 = sub_2213B20(object___TypeInfo, 1);
     v87 = v84;
     if ( !v84 )
       goto LABEL_114;
     ProductId_k__BackingField = adjustEvent->fields._ProductId_k__BackingField;
     if ( ProductId_k__BackingField )
     {
-      v84 = sub_21FFDA4(adjustEvent->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v84 + 64LL));
+      v84 = sub_2213BB4(adjustEvent->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v84 + 64LL));
       if ( !v84 )
       {
-        v117 = sub_21FFEF0();
-        sub_21FFD90(v117, 0);
+        v117 = sub_2213D00();
+        sub_2213BA0(v117, 0);
       }
     }
     if ( !*(_DWORD *)(v87 + 24) )
-      sub_21FFED4(v84);
+      sub_2213CE4(v84);
     *(_QWORD *)(v87 + 32) = ProductId_k__BackingField;
-    v84 = sub_21FFBF4(v87 + 32, ProductId_k__BackingField);
+    v84 = sub_2213A04(v87 + 32, ProductId_k__BackingField);
     if ( !v83 )
 LABEL_114:
-      sub_21FFECC(v84, v85, v86);
-    UnityEngine_AndroidJavaObject__Call(v83, (System_String_o *)StringLiteral_24542/*"setProductId"*/, (System_Object_array *)v87, 0);
+      sub_2213CDC(v84, v85, v86);
+    UnityEngine_AndroidJavaObject__Call(v83, (System_String_o *)StringLiteral_24590/*"setProductId"*/, (System_Object_array *)v87, 0);
   }
   if ( adjustEvent->fields.PurchaseToken )
   {
     v89 = v121;
-    v90 = sub_21FFD10(object___TypeInfo, 1);
+    v90 = sub_2213B20(object___TypeInfo, 1);
     v93 = v90;
     if ( !v90 )
       goto LABEL_115;
     PurchaseToken = adjustEvent->fields.PurchaseToken;
     if ( PurchaseToken )
     {
-      v90 = sub_21FFDA4(PurchaseToken, *(_QWORD *)(*(_QWORD *)v90 + 64LL));
+      v90 = sub_2213BB4(PurchaseToken, *(_QWORD *)(*(_QWORD *)v90 + 64LL));
       if ( !v90 )
       {
-        v118 = sub_21FFEF0();
-        sub_21FFD90(v118, 0);
+        v118 = sub_2213D00();
+        sub_2213BA0(v118, 0);
       }
     }
     if ( !*(_DWORD *)(v93 + 24) )
-      sub_21FFED4(v90);
+      sub_2213CE4(v90);
     *(_QWORD *)(v93 + 32) = PurchaseToken;
-    v90 = sub_21FFBF4(v93 + 32, PurchaseToken);
+    v90 = sub_2213A04(v93 + 32, PurchaseToken);
     if ( !v89 )
 LABEL_115:
-      sub_21FFECC(v90, v91, v92);
-    UnityEngine_AndroidJavaObject__Call(v89, (System_String_o *)StringLiteral_24546/*"setPurchaseToken"*/, (System_Object_array *)v93, 0);
+      sub_2213CDC(v90, v91, v92);
+    UnityEngine_AndroidJavaObject__Call(v89, (System_String_o *)StringLiteral_24594/*"setPurchaseToken"*/, (System_Object_array *)v93, 0);
   }
   v95 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -6775,30 +6764,30 @@ LABEL_115:
     v95 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v95->static_fields->ajcAdjust;
-  v97 = sub_21FFD10(object___TypeInfo, 1);
+  v97 = sub_2213B20(object___TypeInfo, 1);
   v100 = v97;
   if ( !v97 )
     goto LABEL_111;
   v101 = v121;
   if ( v121 )
   {
-    v97 = sub_21FFDA4(v121, *(_QWORD *)(*(_QWORD *)v97 + 64LL));
+    v97 = sub_2213BB4(v121, *(_QWORD *)(*(_QWORD *)v97 + 64LL));
     if ( !v97 )
     {
-      v112 = sub_21FFEF0();
-      sub_21FFD90(v112, 0);
+      v112 = sub_2213D00();
+      sub_2213BA0(v112, 0);
     }
   }
   if ( !*(_DWORD *)(v100 + 24) )
-    sub_21FFED4(v97);
+    sub_2213CE4(v97);
   *(_QWORD *)(v100 + 32) = v101;
-  v97 = sub_21FFBF4(v100 + 32, v101);
+  v97 = sub_2213A04(v100 + 32, v101);
   if ( !ajcAdjust )
 LABEL_111:
-    sub_21FFECC(v97, v98, v99);
+    sub_2213CDC(v97, v98, v99);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25406/*"trackEvent"*/,
+    (System_String_o *)StringLiteral_25454/*"trackEvent"*/,
     (System_Object_array *)v100,
     0);
   v102 = v121;
@@ -6821,7 +6810,7 @@ LABEL_111:
     else
     {
 LABEL_88:
-      v106 = sub_2237E2C(v121, System_IDisposable_TypeInfo, 0);
+      v106 = sub_224BC3C(v121, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v106)(v102, *(_QWORD *)(v106 + 8));
   }
@@ -6843,12 +6832,12 @@ void AdjustSdk_AdjustAndroid__TrackMeasurementConsent(bool measurementConsent, c
   __int64 v13; // x0
   bool v14[4]; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593044F & 1) == 0 )
+  if ( (byte_59685EF & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_25409/*"trackMeasurementConsent"*/);
-    byte_593044F = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_25457/*"trackMeasurementConsent"*/);
+    byte_59685EF = 1;
   }
   v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   v5 = measurementConsent;
@@ -6858,29 +6847,29 @@ void AdjustSdk_AdjustAndroid__TrackMeasurementConsent(bool measurementConsent, c
     v4 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v4->static_fields->ajcAdjust;
-  v7 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+  v7 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
   v14[0] = v5;
-  v8 = j_il2cpp_value_box_0(qword_594C050, v14);
+  v8 = j_il2cpp_value_box_0(qword_5984328, v14);
   if ( !v7 )
     goto LABEL_11;
   v11 = (Il2CppObject *)v8;
   if ( v8 )
   {
-    v8 = sub_21FFDA4(v8, v7->obj.klass->_1.element_class);
+    v8 = sub_2213BB4(v8, v7->obj.klass->_1.element_class);
     if ( !v8 )
     {
-      v13 = sub_21FFEF0(0, v12);
-      sub_21FFD90(v13, 0);
+      v13 = sub_2213D00(0, v12);
+      sub_2213BA0(v13, 0);
     }
   }
   if ( !LODWORD(v7->max_length) )
-    sub_21FFED4(v8);
+    sub_2213CE4(v8);
   v7->m_Items[0] = v11;
-  v8 = sub_21FFBF4(v7->m_Items, v11);
+  v8 = sub_2213A04(v7->m_Items, v11);
   if ( !ajcAdjust )
 LABEL_11:
-    sub_21FFECC(v8, v9, v10);
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_25409/*"trackMeasurementConsent"*/, v7, 0);
+    sub_2213CDC(v8, v9, v10);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_25457/*"trackMeasurementConsent"*/, v7, 0);
 }
 
 
@@ -6989,140 +6978,140 @@ void AdjustSdk_AdjustAndroid__TrackPlayStoreSubscription(
   _QWORD v101[2]; // [xsp+10h] [xbp-70h] BYREF
   UnityEngine_AndroidJavaObject_o *v102; // [xsp+28h] [xbp-58h] BYREF
 
-  if ( (byte_593044D & 1) == 0 )
+  if ( (byte_59685ED & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    sub_21FFC50(&StringLiteral_17327/*"addPartnerParameter"*/);
-    sub_21FFC50(&StringLiteral_24545/*"setPurchaseTime"*/);
-    sub_21FFC50(&StringLiteral_18835/*"com.adjust.sdk.AdjustPlayStoreSubscription"*/);
-    sub_21FFC50(&StringLiteral_17314/*"addCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_25410/*"trackPlayStoreSubscription"*/);
-    byte_593044D = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    sub_2213A60(&StringLiteral_17363/*"addPartnerParameter"*/);
+    sub_2213A60(&StringLiteral_24593/*"setPurchaseTime"*/);
+    sub_2213A60(&StringLiteral_18873/*"com.adjust.sdk.AdjustPlayStoreSubscription"*/);
+    sub_2213A60(&StringLiteral_17350/*"addCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_25458/*"trackPlayStoreSubscription"*/);
+    byte_59685ED = 1;
   }
   v102 = 0;
-  v3 = sub_21FFD10(object___TypeInfo, 6);
+  v3 = sub_2213B20(object___TypeInfo, 6);
   if ( !subscription )
     goto LABEL_100;
   v6 = (System_Object_array *)v3;
   Price_k__BackingField = subscription->fields._Price_k__BackingField;
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v4, v5);
-  v101[0] = System_Convert__ToInt64_76476152(Price_k__BackingField, 0);
-  v3 = j_il2cpp_value_box_0(qword_594C090, v101);
+  v101[0] = System_Convert__ToInt64_76689456(Price_k__BackingField, 0);
+  v3 = j_il2cpp_value_box_0(qword_5984368, v101);
   if ( !v6 )
 LABEL_100:
-    sub_21FFECC(v3, v4, v5);
+    sub_2213CDC(v3, v4, v5);
   v8 = (Il2CppObject *)v3;
   if ( v3 )
   {
-    v3 = sub_21FFDA4(v3, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(v3, v6->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_99;
   }
   if ( !LODWORD(v6->max_length) )
     goto LABEL_98;
   v6->m_Items[0] = v8;
-  v3 = sub_21FFBF4(v6->m_Items, v8);
+  v3 = sub_2213A04(v6->m_Items, v8);
   Currency_k__BackingField = subscription->fields._Currency_k__BackingField;
   if ( Currency_k__BackingField )
   {
-    v3 = sub_21FFDA4(subscription->fields._Currency_k__BackingField, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(subscription->fields._Currency_k__BackingField, v6->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_99;
   }
   if ( (v6->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_98;
   v6->m_Items[1] = (Il2CppObject *)Currency_k__BackingField;
-  v3 = sub_21FFBF4(&v6->m_Items[1], Currency_k__BackingField);
+  v3 = sub_2213A04(&v6->m_Items[1], Currency_k__BackingField);
   ProductId_k__BackingField = subscription->fields._ProductId_k__BackingField;
   if ( ProductId_k__BackingField )
   {
-    v3 = sub_21FFDA4(subscription->fields._ProductId_k__BackingField, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(subscription->fields._ProductId_k__BackingField, v6->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_99;
   }
   if ( LODWORD(v6->max_length) <= 2 )
     goto LABEL_98;
   v6->m_Items[2] = (Il2CppObject *)ProductId_k__BackingField;
-  v3 = sub_21FFBF4(&v6->m_Items[2], ProductId_k__BackingField);
+  v3 = sub_2213A04(&v6->m_Items[2], ProductId_k__BackingField);
   OrderId_k__BackingField = subscription->fields._OrderId_k__BackingField;
   if ( OrderId_k__BackingField )
   {
-    v3 = sub_21FFDA4(subscription->fields._OrderId_k__BackingField, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(subscription->fields._OrderId_k__BackingField, v6->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_99;
   }
   if ( (v6->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_98;
   v6->m_Items[3] = (Il2CppObject *)OrderId_k__BackingField;
-  v3 = sub_21FFBF4(&v6->m_Items[3], OrderId_k__BackingField);
+  v3 = sub_2213A04(&v6->m_Items[3], OrderId_k__BackingField);
   Signature_k__BackingField = subscription->fields._Signature_k__BackingField;
   if ( Signature_k__BackingField )
   {
-    v3 = sub_21FFDA4(subscription->fields._Signature_k__BackingField, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(subscription->fields._Signature_k__BackingField, v6->obj.klass->_1.element_class);
     if ( !v3 )
       goto LABEL_99;
   }
   if ( LODWORD(v6->max_length) <= 4 )
     goto LABEL_98;
   v6->m_Items[4] = (Il2CppObject *)Signature_k__BackingField;
-  v3 = sub_21FFBF4(&v6->m_Items[4], Signature_k__BackingField);
+  v3 = sub_2213A04(&v6->m_Items[4], Signature_k__BackingField);
   PurchaseToken_k__BackingField = subscription->fields._PurchaseToken_k__BackingField;
   if ( PurchaseToken_k__BackingField )
   {
-    v3 = sub_21FFDA4(subscription->fields._PurchaseToken_k__BackingField, v6->obj.klass->_1.element_class);
+    v3 = sub_2213BB4(subscription->fields._PurchaseToken_k__BackingField, v6->obj.klass->_1.element_class);
     if ( !v3 )
     {
 LABEL_99:
-      v97 = sub_21FFEF0(v3, v9);
-      sub_21FFD90(v97, 0);
+      v97 = sub_2213D00(v3, v9);
+      sub_2213BA0(v97, 0);
     }
   }
   if ( LODWORD(v6->max_length) <= 5 )
 LABEL_98:
-    sub_21FFED4(v3);
+    sub_2213CE4(v3);
   v6->m_Items[5] = (Il2CppObject *)PurchaseToken_k__BackingField;
-  sub_21FFBF4(&v6->m_Items[5], PurchaseToken_k__BackingField);
-  v15 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(v15, (System_String_o *)StringLiteral_18835/*"com.adjust.sdk.AdjustPlayStoreSubscription"*/, v6, 0);
+  sub_2213A04(&v6->m_Items[5], PurchaseToken_k__BackingField);
+  v15 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(v15, (System_String_o *)StringLiteral_18873/*"com.adjust.sdk.AdjustPlayStoreSubscription"*/, v6, 0);
   PurchaseTime_k__BackingField = subscription->fields._PurchaseTime_k__BackingField;
   v102 = v15;
   v101[0] = 0;
   v101[1] = &v102;
   if ( PurchaseTime_k__BackingField )
   {
-    v20 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v20 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     v21 = subscription->fields._PurchaseTime_k__BackingField;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v18, v19);
-    v100 = System_Convert__ToInt64_76476152(v21, 0);
-    v22 = j_il2cpp_value_box_0(qword_594C090, &v100);
+    v100 = System_Convert__ToInt64_76689456(v21, 0);
+    v22 = j_il2cpp_value_box_0(qword_5984368, &v100);
     if ( !v20 )
       goto LABEL_102;
     v25 = (Il2CppObject *)v22;
     if ( v22 )
     {
-      v22 = sub_21FFDA4(v22, v20->obj.klass->_1.element_class);
+      v22 = sub_2213BB4(v22, v20->obj.klass->_1.element_class);
       if ( !v22 )
       {
-        v99 = sub_21FFEF0(0, v26);
-        sub_21FFD90(v99, 0);
+        v99 = sub_2213D00(0, v26);
+        sub_2213BA0(v99, 0);
       }
     }
     if ( !LODWORD(v20->max_length) )
-      sub_21FFED4(v22);
+      sub_2213CE4(v22);
     v20->m_Items[0] = v25;
-    v22 = sub_21FFBF4(v20->m_Items, v25);
+    v22 = sub_2213A04(v20->m_Items, v25);
     if ( !v15 )
 LABEL_102:
-      sub_21FFECC(v22, v23, v24);
-    UnityEngine_AndroidJavaObject__Call(v15, (System_String_o *)StringLiteral_24545/*"setPurchaseTime"*/, v20, 0);
+      sub_2213CDC(v22, v23, v24);
+    UnityEngine_AndroidJavaObject__Call(v15, (System_String_o *)StringLiteral_24593/*"setPurchaseTime"*/, v20, 0);
   }
   if ( AdjustSdk_AdjustPlayStoreSubscription__get_CallbackParameters(subscription, v16) )
   {
@@ -7132,64 +7121,64 @@ LABEL_102:
                                                                                        subscription,
                                                                                        v27);
       if ( !CallbackParameters )
-        sub_21FFECC(0, v30, v31);
+        sub_2213CDC(0, v30, v31);
       if ( i >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   CallbackParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v32 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustPlayStoreSubscription__get_CallbackParameters(
                                                                         subscription,
                                                                         v27);
       if ( !v32 )
-        sub_21FFECC(0, v33, v34);
+        sub_2213CDC(0, v33, v34);
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v32,
                i,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v37 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustPlayStoreSubscription__get_CallbackParameters(
                                                                         subscription,
                                                                         v36);
       if ( !v37 )
-        sub_21FFECC(0, v38, v39);
+        sub_2213CDC(0, v38, v39);
       v40 = i + 1;
       v41 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v37,
               v40,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v42 = v102;
-      v43 = sub_21FFD10(object___TypeInfo, 2);
+      v43 = sub_2213B20(object___TypeInfo, 2);
       v46 = (System_Object_array *)v43;
       if ( !v43 )
-        sub_21FFECC(0, v44, v45);
+        sub_2213CDC(0, v44, v45);
       if ( Item )
       {
-        v43 = sub_21FFDA4(Item, *(_QWORD *)(*(_QWORD *)v43 + 64LL));
+        v43 = sub_2213BB4(Item, *(_QWORD *)(*(_QWORD *)v43 + 64LL));
         if ( !v43 )
         {
-          v94 = sub_21FFEF0(0, v47);
-          sub_21FFD90(v94, 0);
+          v94 = sub_2213D00(0, v47);
+          sub_2213BA0(v94, 0);
         }
       }
       if ( !LODWORD(v46->max_length) )
-        sub_21FFED4(v43);
+        sub_2213CE4(v43);
       v46->m_Items[0] = Item;
-      v48 = sub_21FFBF4(v46->m_Items, Item);
+      v48 = sub_2213A04(v46->m_Items, Item);
       if ( v41 )
       {
-        v48 = sub_21FFDA4(v41, v46->obj.klass->_1.element_class);
+        v48 = sub_2213BB4(v41, v46->obj.klass->_1.element_class);
         if ( !v48 )
         {
-          v93 = sub_21FFEF0(0, v49);
-          sub_21FFD90(v93, 0);
+          v93 = sub_2213D00(0, v49);
+          sub_2213BA0(v93, 0);
         }
       }
       if ( (v46->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v48);
+        sub_2213CE4(v48);
       v46->m_Items[1] = v41;
-      v50 = sub_21FFBF4(&v46->m_Items[1], v41);
+      v50 = sub_2213A04(&v46->m_Items[1], v41);
       if ( !v42 )
-        sub_21FFECC(v50, v51, v52);
-      UnityEngine_AndroidJavaObject__Call(v42, (System_String_o *)StringLiteral_17314/*"addCallbackParameter"*/, v46, 0);
+        sub_2213CDC(v50, v51, v52);
+      UnityEngine_AndroidJavaObject__Call(v42, (System_String_o *)StringLiteral_17350/*"addCallbackParameter"*/, v46, 0);
     }
   }
   if ( AdjustSdk_AdjustPlayStoreSubscription__get_PartnerParameters(subscription, v27) )
@@ -7200,64 +7189,64 @@ LABEL_102:
                                                                                       subscription,
                                                                                       v53);
       if ( !PartnerParameters )
-        sub_21FFECC(0, v57, v58);
+        sub_2213CDC(0, v57, v58);
       if ( j >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   PartnerParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v59 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustPlayStoreSubscription__get_PartnerParameters(
                                                                         subscription,
                                                                         v53);
       if ( !v59 )
-        sub_21FFECC(0, v60, v61);
+        sub_2213CDC(0, v60, v61);
       v62 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v59,
               j,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v64 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustPlayStoreSubscription__get_PartnerParameters(
                                                                         subscription,
                                                                         v63);
       if ( !v64 )
-        sub_21FFECC(0, v65, v66);
+        sub_2213CDC(0, v65, v66);
       v67 = j + 1;
       v68 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v64,
               v67,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v69 = v102;
-      v70 = sub_21FFD10(object___TypeInfo, 2);
+      v70 = sub_2213B20(object___TypeInfo, 2);
       v73 = (System_Object_array *)v70;
       if ( !v70 )
-        sub_21FFECC(0, v71, v72);
+        sub_2213CDC(0, v71, v72);
       if ( v62 )
       {
-        v70 = sub_21FFDA4(v62, *(_QWORD *)(*(_QWORD *)v70 + 64LL));
+        v70 = sub_2213BB4(v62, *(_QWORD *)(*(_QWORD *)v70 + 64LL));
         if ( !v70 )
         {
-          v96 = sub_21FFEF0(0, v74);
-          sub_21FFD90(v96, 0);
+          v96 = sub_2213D00(0, v74);
+          sub_2213BA0(v96, 0);
         }
       }
       if ( !LODWORD(v73->max_length) )
-        sub_21FFED4(v70);
+        sub_2213CE4(v70);
       v73->m_Items[0] = v62;
-      v75 = sub_21FFBF4(v73->m_Items, v62);
+      v75 = sub_2213A04(v73->m_Items, v62);
       if ( v68 )
       {
-        v75 = sub_21FFDA4(v68, v73->obj.klass->_1.element_class);
+        v75 = sub_2213BB4(v68, v73->obj.klass->_1.element_class);
         if ( !v75 )
         {
-          v95 = sub_21FFEF0(0, v76);
-          sub_21FFD90(v95, 0);
+          v95 = sub_2213D00(0, v76);
+          sub_2213BA0(v95, 0);
         }
       }
       if ( (v73->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v75);
+        sub_2213CE4(v75);
       v73->m_Items[1] = v68;
-      v77 = sub_21FFBF4(&v73->m_Items[1], v68);
+      v77 = sub_2213A04(&v73->m_Items[1], v68);
       if ( !v69 )
-        sub_21FFECC(v77, v78, v79);
-      UnityEngine_AndroidJavaObject__Call(v69, (System_String_o *)StringLiteral_17327/*"addPartnerParameter"*/, v73, 0);
+        sub_2213CDC(v77, v78, v79);
+      UnityEngine_AndroidJavaObject__Call(v69, (System_String_o *)StringLiteral_17363/*"addPartnerParameter"*/, v73, 0);
     }
   }
   v80 = AdjustSdk_AdjustAndroid_TypeInfo;
@@ -7267,30 +7256,30 @@ LABEL_102:
     v80 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v80->static_fields->ajcAdjust;
-  v82 = sub_21FFD10(object___TypeInfo, 1);
+  v82 = sub_2213B20(object___TypeInfo, 1);
   v85 = v82;
   if ( !v82 )
     goto LABEL_101;
   v86 = v102;
   if ( v102 )
   {
-    v82 = sub_21FFDA4(v102, *(_QWORD *)(*(_QWORD *)v82 + 64LL));
+    v82 = sub_2213BB4(v102, *(_QWORD *)(*(_QWORD *)v82 + 64LL));
     if ( !v82 )
     {
-      v98 = sub_21FFEF0(0, v87);
-      sub_21FFD90(v98, 0);
+      v98 = sub_2213D00(0, v87);
+      sub_2213BA0(v98, 0);
     }
   }
   if ( !*(_DWORD *)(v85 + 24) )
-    sub_21FFED4(v82);
+    sub_2213CE4(v82);
   *(_QWORD *)(v85 + 32) = v86;
-  v82 = sub_21FFBF4(v85 + 32, v86);
+  v82 = sub_2213A04(v85 + 32, v86);
   if ( !ajcAdjust )
 LABEL_101:
-    sub_21FFECC(v82, v83, v84);
+    sub_2213CDC(v82, v83, v84);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25410/*"trackPlayStoreSubscription"*/,
+    (System_String_o *)StringLiteral_25458/*"trackPlayStoreSubscription"*/,
     (System_Object_array *)v85,
     0);
   v88 = v102;
@@ -7313,7 +7302,7 @@ LABEL_101:
     else
     {
 LABEL_76:
-      v92 = sub_2237E2C(v102, System_IDisposable_TypeInfo, 0);
+      v92 = sub_224BC3C(v102, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v92)(v88, *(_QWORD *)(v92 + 8));
   }
@@ -7433,44 +7422,44 @@ void AdjustSdk_AdjustAndroid__TrackThirdPartySharing(
   UnityEngine_AndroidJavaObject_o *v108; // [xsp+28h] [xbp-68h] BYREF
 
   v3 = thirdPartySharing;
-  if ( (byte_593044E & 1) == 0 )
+  if ( (byte_59685EE & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_bool__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_bool__get_Value__);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    sub_21FFC50(&StringLiteral_22053/*"java.lang.Boolean"*/);
-    sub_21FFC50(&StringLiteral_18838/*"com.adjust.sdk.AdjustThirdPartySharing"*/);
-    sub_21FFC50(&StringLiteral_17328/*"addPartnerSharingSetting"*/);
-    sub_21FFC50(&StringLiteral_17320/*"addGranularOption"*/);
-    thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_21FFC50(&StringLiteral_25414/*"trackThirdPartySharing"*/);
-    byte_593044E = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_bool__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_bool__get_Value__);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    sub_2213A60(&StringLiteral_22096/*"java.lang.Boolean"*/);
+    sub_2213A60(&StringLiteral_18876/*"com.adjust.sdk.AdjustThirdPartySharing"*/);
+    sub_2213A60(&StringLiteral_17364/*"addPartnerSharingSetting"*/);
+    sub_2213A60(&StringLiteral_17356/*"addGranularOption"*/);
+    thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_2213A60(&StringLiteral_25462/*"trackThirdPartySharing"*/);
+    byte_59685EE = 1;
   }
   v108 = 0;
   IsEnabled_k__BackingField = 0;
   if ( !v3 )
     goto LABEL_95;
   IsEnabled_k__BackingField = v3->fields._IsEnabled_k__BackingField;
-  v4 = sub_21FFD10(object___TypeInfo, 1);
+  v4 = sub_2213B20(object___TypeInfo, 1);
   if ( IsEnabled_k__BackingField.fields.hasValue )
   {
-    v5 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v5 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     p_IsEnabled_k__BackingField = &IsEnabled_k__BackingField;
     IsEnabled_k__BackingField = v3->fields._IsEnabled_k__BackingField;
     LOBYTE(v106[0]) = System_Nullable_bool___get_Value(
                         (System_Nullable_bool__o)p_IsEnabled_k__BackingField,
-                        (const MethodInfo_45AC820 *)Method_System_Nullable_bool__get_Value__);
-    thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)j_il2cpp_value_box_0(qword_594C050, v106);
+                        (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
+    thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)j_il2cpp_value_box_0(qword_5984328, v106);
     if ( v5 )
     {
       v7 = thirdPartySharing;
       if ( thirdPartySharing )
       {
-        thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_21FFDA4(
+        thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_2213BB4(
                                                                      thirdPartySharing,
                                                                      v5->obj.klass->_1.element_class);
         if ( !thirdPartySharing )
@@ -7479,43 +7468,43 @@ void AdjustSdk_AdjustAndroid__TrackThirdPartySharing(
       if ( !LODWORD(v5->max_length) )
         goto LABEL_97;
       v5->m_Items[0] = (Il2CppObject *)v7;
-      sub_21FFBF4(v5->m_Items, v7);
-      v9 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-      UnityEngine_AndroidJavaObject___ctor_82839756(v9, (System_String_o *)StringLiteral_22053/*"java.lang.Boolean"*/, v5, 0);
+      sub_2213A04(v5->m_Items, v7);
+      v9 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+      UnityEngine_AndroidJavaObject___ctor_83053060(v9, (System_String_o *)StringLiteral_22096/*"java.lang.Boolean"*/, v5, 0);
       if ( v4 )
       {
         if ( !v9
-          || (thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_21FFDA4(
+          || (thirdPartySharing = (AdjustSdk_AdjustThirdPartySharing_o *)sub_2213BB4(
                                                                            v9,
                                                                            *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v4 + 24) )
           {
             *(_QWORD *)(v4 + 32) = v9;
-            sub_21FFBF4(v4 + 32, v9);
-            v10 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-            UnityEngine_AndroidJavaObject___ctor_82839756(
+            sub_2213A04(v4 + 32, v9);
+            v10 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+            UnityEngine_AndroidJavaObject___ctor_83053060(
               v10,
-              (System_String_o *)StringLiteral_18838/*"com.adjust.sdk.AdjustThirdPartySharing"*/,
+              (System_String_o *)StringLiteral_18876/*"com.adjust.sdk.AdjustThirdPartySharing"*/,
               (System_Object_array *)v4,
               0);
             goto LABEL_15;
           }
 LABEL_97:
-          sub_21FFED4(thirdPartySharing);
+          sub_2213CE4(thirdPartySharing);
         }
 LABEL_99:
-        v103 = sub_21FFEF0(thirdPartySharing, v8);
-        sub_21FFD90(v103, 0);
+        v103 = sub_2213D00(thirdPartySharing, v8);
+        sub_2213BA0(v103, 0);
       }
     }
 LABEL_95:
-    sub_21FFECC(thirdPartySharing, method, v2);
+    sub_2213CDC(thirdPartySharing, method, v2);
   }
-  v10 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  v10 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v10,
-    (System_String_o *)StringLiteral_18838/*"com.adjust.sdk.AdjustThirdPartySharing"*/,
+    (System_String_o *)StringLiteral_18876/*"com.adjust.sdk.AdjustThirdPartySharing"*/,
     (System_Object_array *)v4,
     0);
 LABEL_15:
@@ -7531,88 +7520,88 @@ LABEL_15:
                                                                                     v3,
                                                                                     v12);
       if ( !GranularOptions )
-        sub_21FFECC(0, v15, v16);
+        sub_2213CDC(0, v15, v16);
       if ( v13 >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                     GranularOptions,
-                    (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                    (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v17 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_GranularOptions(
                                                                         v3,
                                                                         v12);
       if ( !v17 )
-        sub_21FFECC(0, v18, v19);
+        sub_2213CDC(0, v18, v19);
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v17,
                v13,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v22 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_GranularOptions(
                                                                         v3,
                                                                         v21);
       if ( !v22 )
-        sub_21FFECC(0, v23, v24);
+        sub_2213CDC(0, v23, v24);
       v25 = v13 + 1;
       v26 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v22,
               v25,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v28 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_GranularOptions(
                                                                         v3,
                                                                         v27);
       if ( !v28 )
-        sub_21FFECC(0, v29, v30);
+        sub_2213CDC(0, v29, v30);
       v31 = v25 + 1;
       v32 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v28,
               v31,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v33 = v108;
-      v34 = sub_21FFD10(object___TypeInfo, 3);
+      v34 = sub_2213B20(object___TypeInfo, 3);
       v37 = (System_Object_array *)v34;
       if ( !v34 )
-        sub_21FFECC(0, v35, v36);
+        sub_2213CDC(0, v35, v36);
       if ( Item )
       {
-        v34 = sub_21FFDA4(Item, *(_QWORD *)(*(_QWORD *)v34 + 64LL));
+        v34 = sub_2213BB4(Item, *(_QWORD *)(*(_QWORD *)v34 + 64LL));
         if ( !v34 )
         {
-          v99 = sub_21FFEF0(0, v38);
-          sub_21FFD90(v99, 0);
+          v99 = sub_2213D00(0, v38);
+          sub_2213BA0(v99, 0);
         }
       }
       if ( !LODWORD(v37->max_length) )
-        sub_21FFED4(v34);
+        sub_2213CE4(v34);
       v37->m_Items[0] = Item;
-      v39 = sub_21FFBF4(v37->m_Items, Item);
+      v39 = sub_2213A04(v37->m_Items, Item);
       if ( v26 )
       {
-        v39 = sub_21FFDA4(v26, v37->obj.klass->_1.element_class);
+        v39 = sub_2213BB4(v26, v37->obj.klass->_1.element_class);
         if ( !v39 )
         {
-          v98 = sub_21FFEF0(0, v40);
-          sub_21FFD90(v98, 0);
+          v98 = sub_2213D00(0, v40);
+          sub_2213BA0(v98, 0);
         }
       }
       if ( (v37->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v39);
+        sub_2213CE4(v39);
       v37->m_Items[1] = v26;
-      v41 = sub_21FFBF4(&v37->m_Items[1], v26);
+      v41 = sub_2213A04(&v37->m_Items[1], v26);
       if ( v32 )
       {
-        v41 = sub_21FFDA4(v32, v37->obj.klass->_1.element_class);
+        v41 = sub_2213BB4(v32, v37->obj.klass->_1.element_class);
         if ( !v41 )
         {
-          v97 = sub_21FFEF0(0, v42);
-          sub_21FFD90(v97, 0);
+          v97 = sub_2213D00(0, v42);
+          sub_2213BA0(v97, 0);
         }
       }
       if ( LODWORD(v37->max_length) <= 2 )
-        sub_21FFED4(v41);
+        sub_2213CE4(v41);
       v37->m_Items[2] = v32;
-      v43 = sub_21FFBF4(&v37->m_Items[2], v32);
+      v43 = sub_2213A04(&v37->m_Items[2], v32);
       if ( !v33 )
-        sub_21FFECC(v43, v44, v45);
+        sub_2213CDC(v43, v44, v45);
       v13 = v31 + 1;
-      UnityEngine_AndroidJavaObject__Call(v33, (System_String_o *)StringLiteral_17320/*"addGranularOption"*/, v37, 0);
+      UnityEngine_AndroidJavaObject__Call(v33, (System_String_o *)StringLiteral_17356/*"addGranularOption"*/, v37, 0);
     }
   }
   if ( AdjustSdk_AdjustThirdPartySharing__get_PartnerSharingSettings(v3, v12) )
@@ -7623,92 +7612,92 @@ LABEL_15:
                                                                                            v3,
                                                                                            v46);
       if ( !PartnerSharingSettings )
-        sub_21FFECC(0, v50, v51);
+        sub_2213CDC(0, v50, v51);
       if ( i >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   PartnerSharingSettings,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v52 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_PartnerSharingSettings(
                                                                         v3,
                                                                         v46);
       if ( !v52 )
-        sub_21FFECC(0, v53, v54);
+        sub_2213CDC(0, v53, v54);
       v55 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v52,
               i,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v57 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_PartnerSharingSettings(
                                                                         v3,
                                                                         v56);
       if ( !v57 )
-        sub_21FFECC(0, v58, v59);
+        sub_2213CDC(0, v58, v59);
       v60 = i + 1;
       v61 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v57,
               v60,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v63 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustThirdPartySharing__get_PartnerSharingSettings(
                                                                         v3,
                                                                         v62);
       if ( !v63 )
-        sub_21FFECC(0, v64, v65);
+        sub_2213CDC(0, v64, v65);
       v66 = v60 + 1;
       v67 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v63,
               v66,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v68 = v108;
-      v69 = sub_21FFD10(object___TypeInfo, 3);
+      v69 = sub_2213B20(object___TypeInfo, 3);
       v72 = (System_Object_array *)v69;
       if ( !v69 )
-        sub_21FFECC(0, v70, v71);
+        sub_2213CDC(0, v70, v71);
       if ( v55 )
       {
-        v69 = sub_21FFDA4(v55, *(_QWORD *)(*(_QWORD *)v69 + 64LL));
+        v69 = sub_2213BB4(v55, *(_QWORD *)(*(_QWORD *)v69 + 64LL));
         if ( !v69 )
         {
-          v101 = sub_21FFEF0(0, v73);
-          sub_21FFD90(v101, 0);
+          v101 = sub_2213D00(0, v73);
+          sub_2213BA0(v101, 0);
         }
       }
       if ( !LODWORD(v72->max_length) )
-        sub_21FFED4(v69);
+        sub_2213CE4(v69);
       v72->m_Items[0] = v55;
-      v74 = sub_21FFBF4(v72->m_Items, v55);
+      v74 = sub_2213A04(v72->m_Items, v55);
       if ( v61 )
       {
-        v74 = sub_21FFDA4(v61, v72->obj.klass->_1.element_class);
+        v74 = sub_2213BB4(v61, v72->obj.klass->_1.element_class);
         if ( !v74 )
         {
-          v102 = sub_21FFEF0(0, v75);
-          sub_21FFD90(v102, 0);
+          v102 = sub_2213D00(0, v75);
+          sub_2213BA0(v102, 0);
         }
       }
       if ( (v72->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v74);
+        sub_2213CE4(v74);
       v72->m_Items[1] = v61;
-      sub_21FFBF4(&v72->m_Items[1], v61);
-      if ( !*(_DWORD *)(qword_594C050 + 228) )
-        j_il2cpp_runtime_class_init_0(qword_594C050, v76, v77);
+      sub_2213A04(&v72->m_Items[1], v61);
+      if ( !*(_DWORD *)(qword_5984328 + 228) )
+        j_il2cpp_runtime_class_init_0(qword_5984328, v76, v77);
       v105[0] = System_Boolean__Parse((System_String_o *)v67, 0);
-      v78 = j_il2cpp_value_box_0(qword_594C050, v105);
+      v78 = j_il2cpp_value_box_0(qword_5984328, v105);
       v79 = (Il2CppObject *)v78;
       if ( v78 )
       {
-        v78 = sub_21FFDA4(v78, v72->obj.klass->_1.element_class);
+        v78 = sub_2213BB4(v78, v72->obj.klass->_1.element_class);
         if ( !v78 )
         {
-          v100 = sub_21FFEF0(0, v80);
-          sub_21FFD90(v100, 0);
+          v100 = sub_2213D00(0, v80);
+          sub_2213BA0(v100, 0);
         }
       }
       if ( LODWORD(v72->max_length) <= 2 )
-        sub_21FFED4(v78);
+        sub_2213CE4(v78);
       v72->m_Items[2] = v79;
-      v81 = sub_21FFBF4(&v72->m_Items[2], v79);
+      v81 = sub_2213A04(&v72->m_Items[2], v79);
       if ( !v68 )
-        sub_21FFECC(v81, v82, v83);
-      UnityEngine_AndroidJavaObject__Call(v68, (System_String_o *)StringLiteral_17328/*"addPartnerSharingSetting"*/, v72, 0);
+        sub_2213CDC(v81, v82, v83);
+      UnityEngine_AndroidJavaObject__Call(v68, (System_String_o *)StringLiteral_17364/*"addPartnerSharingSetting"*/, v72, 0);
     }
   }
   v84 = AdjustSdk_AdjustAndroid_TypeInfo;
@@ -7718,30 +7707,30 @@ LABEL_15:
     v84 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v84->static_fields->ajcAdjust;
-  v86 = sub_21FFD10(object___TypeInfo, 1);
+  v86 = sub_2213B20(object___TypeInfo, 1);
   v89 = v86;
   if ( !v86 )
     goto LABEL_96;
   v90 = v108;
   if ( v108 )
   {
-    v86 = sub_21FFDA4(v108, *(_QWORD *)(*(_QWORD *)v86 + 64LL));
+    v86 = sub_2213BB4(v108, *(_QWORD *)(*(_QWORD *)v86 + 64LL));
     if ( !v86 )
     {
-      v104 = sub_21FFEF0(0, v91);
-      sub_21FFD90(v104, 0);
+      v104 = sub_2213D00(0, v91);
+      sub_2213BA0(v104, 0);
     }
   }
   if ( !*(_DWORD *)(v89 + 24) )
-    sub_21FFED4(v86);
+    sub_2213CE4(v86);
   *(_QWORD *)(v89 + 32) = v90;
-  v86 = sub_21FFBF4(v89 + 32, v90);
+  v86 = sub_2213A04(v89 + 32, v90);
   if ( !ajcAdjust )
 LABEL_96:
-    sub_21FFECC(v86, v87, v88);
+    sub_2213CDC(v86, v87, v88);
   UnityEngine_AndroidJavaObject__CallStatic(
     ajcAdjust,
-    (System_String_o *)StringLiteral_25414/*"trackThirdPartySharing"*/,
+    (System_String_o *)StringLiteral_25462/*"trackThirdPartySharing"*/,
     (System_Object_array *)v89,
     0);
   v92 = v108;
@@ -7764,7 +7753,7 @@ LABEL_96:
     else
     {
 LABEL_67:
-      v96 = sub_2237E2C(v108, System_IDisposable_TypeInfo, 0);
+      v96 = sub_224BC3C(v108, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v96)(v92, *(_QWORD *)(v96 + 8));
   }
@@ -7788,7 +7777,7 @@ void AdjustSdk_AdjustAndroid__VerifyAndTrackPlayStorePurchase(
   const MethodInfo *v14; // x1
   struct System_Nullable_double__o Revenue_k__BackingField; // q0
   System_Object_array *v16; // x22
-  const MethodInfo_45AEF04 *v17; // x2
+  const MethodInfo_45E303C *v17; // x2
   __int64 v18; // x0
   __int64 v19; // x1
   __int64 v20; // x2
@@ -7917,53 +7906,53 @@ void AdjustSdk_AdjustAndroid__VerifyAndTrackPlayStorePurchase(
   UnityEngine_AndroidJavaObject_o *v143; // [xsp+38h] [xbp-68h] BYREF
   System_Nullable_double__o v144; // 0:x0.16
 
-  if ( (byte_593045D & 1) == 0 )
+  if ( (byte_59685FD & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_double__get_Value__);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
-    sub_21FFC50(&StringLiteral_17327/*"addPartnerParameter"*/);
-    sub_21FFC50(&StringLiteral_24506/*"setDeduplicationId"*/);
-    sub_21FFC50(&StringLiteral_24546/*"setPurchaseToken"*/);
-    sub_21FFC50(&StringLiteral_24498/*"setCallbackId"*/);
-    sub_21FFC50(&StringLiteral_24542/*"setProductId"*/);
-    sub_21FFC50(&StringLiteral_17314/*"addCallbackParameter"*/);
-    sub_21FFC50(&StringLiteral_25963/*"verifyAndTrackPlayStorePurchase"*/);
-    sub_21FFC50(&StringLiteral_18833/*"com.adjust.sdk.AdjustEvent"*/);
-    sub_21FFC50(&StringLiteral_24550/*"setRevenue"*/);
-    byte_593045D = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_double__get_Value__);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
+    sub_2213A60(&StringLiteral_17363/*"addPartnerParameter"*/);
+    sub_2213A60(&StringLiteral_24554/*"setDeduplicationId"*/);
+    sub_2213A60(&StringLiteral_24594/*"setPurchaseToken"*/);
+    sub_2213A60(&StringLiteral_24546/*"setCallbackId"*/);
+    sub_2213A60(&StringLiteral_24590/*"setProductId"*/);
+    sub_2213A60(&StringLiteral_17350/*"addCallbackParameter"*/);
+    sub_2213A60(&StringLiteral_26011/*"verifyAndTrackPlayStorePurchase"*/);
+    sub_2213A60(&StringLiteral_18871/*"com.adjust.sdk.AdjustEvent"*/);
+    sub_2213A60(&StringLiteral_24598/*"setRevenue"*/);
+    byte_59685FD = 1;
   }
   v143 = 0;
   v142 = (struct System_Nullable_double__o)0LL;
-  v5 = (AdjustSdk_AdjustAndroid_VerificationResultListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
+  v5 = (AdjustSdk_AdjustAndroid_VerificationResultListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
   AdjustSdk_AdjustAndroid_VerificationResultListener___ctor(v5, verificationInfoCallback, v6);
-  v7 = sub_21FFD10(object___TypeInfo, 1);
+  v7 = sub_2213B20(object___TypeInfo, 1);
   if ( !adjustEvent || (v10 = v7) == 0 )
-    sub_21FFECC(v7, v8, v9);
+    sub_2213CDC(v7, v8, v9);
   EventToken_k__BackingField = adjustEvent->fields._EventToken_k__BackingField;
   if ( EventToken_k__BackingField )
   {
-    v7 = sub_21FFDA4(adjustEvent->fields._EventToken_k__BackingField, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+    v7 = sub_2213BB4(adjustEvent->fields._EventToken_k__BackingField, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
     if ( !v7 )
     {
-      v132 = sub_21FFEF0(0, v12);
-      sub_21FFD90(v132, 0);
+      v132 = sub_2213D00(0, v12);
+      sub_2213BA0(v132, 0);
     }
   }
   if ( !*(_DWORD *)(v10 + 24) )
-    sub_21FFED4(v7);
+    sub_2213CE4(v7);
   *(_QWORD *)(v10 + 32) = EventToken_k__BackingField;
-  sub_21FFBF4(v10 + 32, EventToken_k__BackingField);
-  v13 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(
+  sub_2213A04(v10 + 32, EventToken_k__BackingField);
+  v13 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(
     v13,
-    (System_String_o *)StringLiteral_18833/*"com.adjust.sdk.AdjustEvent"*/,
+    (System_String_o *)StringLiteral_18871/*"com.adjust.sdk.AdjustEvent"*/,
     (System_Object_array *)v10,
     0);
   Revenue_k__BackingField = adjustEvent->fields._Revenue_k__BackingField;
@@ -7973,45 +7962,45 @@ void AdjustSdk_AdjustAndroid__VerifyAndTrackPlayStorePurchase(
   v142 = Revenue_k__BackingField;
   if ( Revenue_k__BackingField.fields.hasValue )
   {
-    v16 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 2);
+    v16 = (System_Object_array *)sub_2213B20(object___TypeInfo, 2);
     *(_QWORD *)&v144.fields.value = Method_System_Nullable_double__get_Value__;
     v142 = adjustEvent->fields._Revenue_k__BackingField;
     *(_QWORD *)&v144.fields.hasValue = &v142;
     v141[0] = System_Nullable_double___get_Value(v144, v17);
-    v18 = j_il2cpp_value_box_0(qword_594C0A8, v141);
+    v18 = j_il2cpp_value_box_0(qword_5984380, v141);
     if ( !v16 )
-      sub_21FFECC(v18, v19, v20);
+      sub_2213CDC(v18, v19, v20);
     v21 = (Il2CppObject *)v18;
     if ( v18 )
     {
-      v18 = sub_21FFDA4(v18, v16->obj.klass->_1.element_class);
+      v18 = sub_2213BB4(v18, v16->obj.klass->_1.element_class);
       if ( !v18 )
       {
-        v135 = sub_21FFEF0(0, v22);
-        sub_21FFD90(v135, 0);
+        v135 = sub_2213D00(0, v22);
+        sub_2213BA0(v135, 0);
       }
     }
     if ( !LODWORD(v16->max_length) )
-      sub_21FFED4(v18);
+      sub_2213CE4(v18);
     v16->m_Items[0] = v21;
-    v23 = sub_21FFBF4(v16->m_Items, v21);
+    v23 = sub_2213A04(v16->m_Items, v21);
     Currency_k__BackingField = adjustEvent->fields._Currency_k__BackingField;
     if ( Currency_k__BackingField )
     {
-      v23 = sub_21FFDA4(adjustEvent->fields._Currency_k__BackingField, v16->obj.klass->_1.element_class);
+      v23 = sub_2213BB4(adjustEvent->fields._Currency_k__BackingField, v16->obj.klass->_1.element_class);
       if ( !v23 )
       {
-        v136 = sub_21FFEF0(0, v25);
-        sub_21FFD90(v136, 0);
+        v136 = sub_2213D00(0, v25);
+        sub_2213BA0(v136, 0);
       }
     }
     if ( (v16->max_length & 0xFFFFFFFE) == 0 )
-      sub_21FFED4(v23);
+      sub_2213CE4(v23);
     v16->m_Items[1] = (Il2CppObject *)Currency_k__BackingField;
-    v26 = sub_21FFBF4(&v16->m_Items[1], Currency_k__BackingField);
+    v26 = sub_2213A04(&v16->m_Items[1], Currency_k__BackingField);
     if ( !v13 )
-      sub_21FFECC(v26, v27, v28);
-    UnityEngine_AndroidJavaObject__Call(v13, (System_String_o *)StringLiteral_24550/*"setRevenue"*/, v16, 0);
+      sub_2213CDC(v26, v27, v28);
+    UnityEngine_AndroidJavaObject__Call(v13, (System_String_o *)StringLiteral_24598/*"setRevenue"*/, v16, 0);
   }
   if ( AdjustSdk_AdjustEvent__get_CallbackParameters(adjustEvent, v14) )
   {
@@ -8021,64 +8010,64 @@ void AdjustSdk_AdjustAndroid__VerifyAndTrackPlayStorePurchase(
                                                                                        adjustEvent,
                                                                                        v29);
       if ( !CallbackParameters )
-        sub_21FFECC(0, v32, v33);
+        sub_2213CDC(0, v32, v33);
       if ( i >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   CallbackParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v34 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_CallbackParameters(
                                                                         adjustEvent,
                                                                         v29);
       if ( !v34 )
-        sub_21FFECC(0, v35, v36);
+        sub_2213CDC(0, v35, v36);
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                v34,
                i,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v39 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_CallbackParameters(
                                                                         adjustEvent,
                                                                         v38);
       if ( !v39 )
-        sub_21FFECC(0, v40, v41);
+        sub_2213CDC(0, v40, v41);
       v42 = i + 1;
       v43 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v39,
               v42,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v44 = v143;
-      v45 = sub_21FFD10(object___TypeInfo, 2);
+      v45 = sub_2213B20(object___TypeInfo, 2);
       v48 = (System_Object_array *)v45;
       if ( !v45 )
-        sub_21FFECC(0, v46, v47);
+        sub_2213CDC(0, v46, v47);
       if ( Item )
       {
-        v45 = sub_21FFDA4(Item, *(_QWORD *)(*(_QWORD *)v45 + 64LL));
+        v45 = sub_2213BB4(Item, *(_QWORD *)(*(_QWORD *)v45 + 64LL));
         if ( !v45 )
         {
-          v129 = sub_21FFEF0(0, v49);
-          sub_21FFD90(v129, 0);
+          v129 = sub_2213D00(0, v49);
+          sub_2213BA0(v129, 0);
         }
       }
       if ( !LODWORD(v48->max_length) )
-        sub_21FFED4(v45);
+        sub_2213CE4(v45);
       v48->m_Items[0] = Item;
-      v50 = sub_21FFBF4(v48->m_Items, Item);
+      v50 = sub_2213A04(v48->m_Items, Item);
       if ( v43 )
       {
-        v50 = sub_21FFDA4(v43, v48->obj.klass->_1.element_class);
+        v50 = sub_2213BB4(v43, v48->obj.klass->_1.element_class);
         if ( !v50 )
         {
-          v128 = sub_21FFEF0(0, v51);
-          sub_21FFD90(v128, 0);
+          v128 = sub_2213D00(0, v51);
+          sub_2213BA0(v128, 0);
         }
       }
       if ( (v48->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v50);
+        sub_2213CE4(v50);
       v48->m_Items[1] = v43;
-      v52 = sub_21FFBF4(&v48->m_Items[1], v43);
+      v52 = sub_2213A04(&v48->m_Items[1], v43);
       if ( !v44 )
-        sub_21FFECC(v52, v53, v54);
-      UnityEngine_AndroidJavaObject__Call(v44, (System_String_o *)StringLiteral_17314/*"addCallbackParameter"*/, v48, 0);
+        sub_2213CDC(v52, v53, v54);
+      UnityEngine_AndroidJavaObject__Call(v44, (System_String_o *)StringLiteral_17350/*"addCallbackParameter"*/, v48, 0);
     }
   }
   if ( AdjustSdk_AdjustEvent__get_PartnerParameters(adjustEvent, v29) )
@@ -8089,169 +8078,169 @@ void AdjustSdk_AdjustAndroid__VerifyAndTrackPlayStorePurchase(
                                                                                       adjustEvent,
                                                                                       v55);
       if ( !PartnerParameters )
-        sub_21FFECC(0, v59, v60);
+        sub_2213CDC(0, v59, v60);
       if ( j >= System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                   PartnerParameters,
-                  (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
+                  (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) )
         break;
       v61 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_PartnerParameters(
                                                                         adjustEvent,
                                                                         v55);
       if ( !v61 )
-        sub_21FFECC(0, v62, v63);
+        sub_2213CDC(0, v62, v63);
       v64 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v61,
               j,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v66 = (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)AdjustSdk_AdjustEvent__get_PartnerParameters(
                                                                         adjustEvent,
                                                                         v65);
       if ( !v66 )
-        sub_21FFECC(0, v67, v68);
+        sub_2213CDC(0, v67, v68);
       v69 = j + 1;
       v70 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               v66,
               v69,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v71 = v143;
-      v72 = sub_21FFD10(object___TypeInfo, 2);
+      v72 = sub_2213B20(object___TypeInfo, 2);
       v75 = (System_Object_array *)v72;
       if ( !v72 )
-        sub_21FFECC(0, v73, v74);
+        sub_2213CDC(0, v73, v74);
       if ( v64 )
       {
-        v72 = sub_21FFDA4(v64, *(_QWORD *)(*(_QWORD *)v72 + 64LL));
+        v72 = sub_2213BB4(v64, *(_QWORD *)(*(_QWORD *)v72 + 64LL));
         if ( !v72 )
         {
-          v131 = sub_21FFEF0(0, v76);
-          sub_21FFD90(v131, 0);
+          v131 = sub_2213D00(0, v76);
+          sub_2213BA0(v131, 0);
         }
       }
       if ( !LODWORD(v75->max_length) )
-        sub_21FFED4(v72);
+        sub_2213CE4(v72);
       v75->m_Items[0] = v64;
-      v77 = sub_21FFBF4(v75->m_Items, v64);
+      v77 = sub_2213A04(v75->m_Items, v64);
       if ( v70 )
       {
-        v77 = sub_21FFDA4(v70, v75->obj.klass->_1.element_class);
+        v77 = sub_2213BB4(v70, v75->obj.klass->_1.element_class);
         if ( !v77 )
         {
-          v130 = sub_21FFEF0(0, v78);
-          sub_21FFD90(v130, 0);
+          v130 = sub_2213D00(0, v78);
+          sub_2213BA0(v130, 0);
         }
       }
       if ( (v75->max_length & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v77);
+        sub_2213CE4(v77);
       v75->m_Items[1] = v70;
-      v79 = sub_21FFBF4(&v75->m_Items[1], v70);
+      v79 = sub_2213A04(&v75->m_Items[1], v70);
       if ( !v71 )
-        sub_21FFECC(v79, v80, v81);
-      UnityEngine_AndroidJavaObject__Call(v71, (System_String_o *)StringLiteral_17327/*"addPartnerParameter"*/, v75, 0);
+        sub_2213CDC(v79, v80, v81);
+      UnityEngine_AndroidJavaObject__Call(v71, (System_String_o *)StringLiteral_17363/*"addPartnerParameter"*/, v75, 0);
     }
   }
   if ( adjustEvent->fields._DeduplicationId_k__BackingField )
   {
     v82 = v143;
-    v83 = sub_21FFD10(object___TypeInfo, 1);
+    v83 = sub_2213B20(object___TypeInfo, 1);
     v86 = v83;
     if ( !v83 )
       goto LABEL_114;
     DeduplicationId_k__BackingField = adjustEvent->fields._DeduplicationId_k__BackingField;
     if ( DeduplicationId_k__BackingField )
     {
-      v83 = sub_21FFDA4(adjustEvent->fields._DeduplicationId_k__BackingField, *(_QWORD *)(*(_QWORD *)v83 + 64LL));
+      v83 = sub_2213BB4(adjustEvent->fields._DeduplicationId_k__BackingField, *(_QWORD *)(*(_QWORD *)v83 + 64LL));
       if ( !v83 )
       {
-        v137 = sub_21FFEF0(0, v88);
-        sub_21FFD90(v137, 0);
+        v137 = sub_2213D00(0, v88);
+        sub_2213BA0(v137, 0);
       }
     }
     if ( !*(_DWORD *)(v86 + 24) )
-      sub_21FFED4(v83);
+      sub_2213CE4(v83);
     *(_QWORD *)(v86 + 32) = DeduplicationId_k__BackingField;
-    v83 = sub_21FFBF4(v86 + 32, DeduplicationId_k__BackingField);
+    v83 = sub_2213A04(v86 + 32, DeduplicationId_k__BackingField);
     if ( !v82 )
 LABEL_114:
-      sub_21FFECC(v83, v84, v85);
-    UnityEngine_AndroidJavaObject__Call(v82, (System_String_o *)StringLiteral_24506/*"setDeduplicationId"*/, (System_Object_array *)v86, 0);
+      sub_2213CDC(v83, v84, v85);
+    UnityEngine_AndroidJavaObject__Call(v82, (System_String_o *)StringLiteral_24554/*"setDeduplicationId"*/, (System_Object_array *)v86, 0);
   }
   if ( adjustEvent->fields._CallbackId_k__BackingField )
   {
     v89 = v143;
-    v90 = sub_21FFD10(object___TypeInfo, 1);
+    v90 = sub_2213B20(object___TypeInfo, 1);
     v93 = v90;
     if ( !v90 )
       goto LABEL_115;
     CallbackId_k__BackingField = adjustEvent->fields._CallbackId_k__BackingField;
     if ( CallbackId_k__BackingField )
     {
-      v90 = sub_21FFDA4(adjustEvent->fields._CallbackId_k__BackingField, *(_QWORD *)(*(_QWORD *)v90 + 64LL));
+      v90 = sub_2213BB4(adjustEvent->fields._CallbackId_k__BackingField, *(_QWORD *)(*(_QWORD *)v90 + 64LL));
       if ( !v90 )
       {
-        v138 = sub_21FFEF0(0, v95);
-        sub_21FFD90(v138, 0);
+        v138 = sub_2213D00(0, v95);
+        sub_2213BA0(v138, 0);
       }
     }
     if ( !*(_DWORD *)(v93 + 24) )
-      sub_21FFED4(v90);
+      sub_2213CE4(v90);
     *(_QWORD *)(v93 + 32) = CallbackId_k__BackingField;
-    v90 = sub_21FFBF4(v93 + 32, CallbackId_k__BackingField);
+    v90 = sub_2213A04(v93 + 32, CallbackId_k__BackingField);
     if ( !v89 )
 LABEL_115:
-      sub_21FFECC(v90, v91, v92);
-    UnityEngine_AndroidJavaObject__Call(v89, (System_String_o *)StringLiteral_24498/*"setCallbackId"*/, (System_Object_array *)v93, 0);
+      sub_2213CDC(v90, v91, v92);
+    UnityEngine_AndroidJavaObject__Call(v89, (System_String_o *)StringLiteral_24546/*"setCallbackId"*/, (System_Object_array *)v93, 0);
   }
   if ( adjustEvent->fields._ProductId_k__BackingField )
   {
     v96 = v143;
-    v97 = sub_21FFD10(object___TypeInfo, 1);
+    v97 = sub_2213B20(object___TypeInfo, 1);
     v100 = v97;
     if ( !v97 )
       goto LABEL_116;
     ProductId_k__BackingField = adjustEvent->fields._ProductId_k__BackingField;
     if ( ProductId_k__BackingField )
     {
-      v97 = sub_21FFDA4(adjustEvent->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v97 + 64LL));
+      v97 = sub_2213BB4(adjustEvent->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v97 + 64LL));
       if ( !v97 )
       {
-        v139 = sub_21FFEF0(0, v102);
-        sub_21FFD90(v139, 0);
+        v139 = sub_2213D00(0, v102);
+        sub_2213BA0(v139, 0);
       }
     }
     if ( !*(_DWORD *)(v100 + 24) )
-      sub_21FFED4(v97);
+      sub_2213CE4(v97);
     *(_QWORD *)(v100 + 32) = ProductId_k__BackingField;
-    v97 = sub_21FFBF4(v100 + 32, ProductId_k__BackingField);
+    v97 = sub_2213A04(v100 + 32, ProductId_k__BackingField);
     if ( !v96 )
 LABEL_116:
-      sub_21FFECC(v97, v98, v99);
-    UnityEngine_AndroidJavaObject__Call(v96, (System_String_o *)StringLiteral_24542/*"setProductId"*/, (System_Object_array *)v100, 0);
+      sub_2213CDC(v97, v98, v99);
+    UnityEngine_AndroidJavaObject__Call(v96, (System_String_o *)StringLiteral_24590/*"setProductId"*/, (System_Object_array *)v100, 0);
   }
   if ( adjustEvent->fields.PurchaseToken )
   {
     v103 = v143;
-    v104 = sub_21FFD10(object___TypeInfo, 1);
+    v104 = sub_2213B20(object___TypeInfo, 1);
     v107 = v104;
     if ( !v104 )
       goto LABEL_117;
     PurchaseToken = adjustEvent->fields.PurchaseToken;
     if ( PurchaseToken )
     {
-      v104 = sub_21FFDA4(PurchaseToken, *(_QWORD *)(*(_QWORD *)v104 + 64LL));
+      v104 = sub_2213BB4(PurchaseToken, *(_QWORD *)(*(_QWORD *)v104 + 64LL));
       if ( !v104 )
       {
-        v140 = sub_21FFEF0(0, v109);
-        sub_21FFD90(v140, 0);
+        v140 = sub_2213D00(0, v109);
+        sub_2213BA0(v140, 0);
       }
     }
     if ( !*(_DWORD *)(v107 + 24) )
-      sub_21FFED4(v104);
+      sub_2213CE4(v104);
     *(_QWORD *)(v107 + 32) = PurchaseToken;
-    v104 = sub_21FFBF4(v107 + 32, PurchaseToken);
+    v104 = sub_2213A04(v107 + 32, PurchaseToken);
     if ( !v103 )
 LABEL_117:
-      sub_21FFECC(v104, v105, v106);
-    UnityEngine_AndroidJavaObject__Call(v103, (System_String_o *)StringLiteral_24546/*"setPurchaseToken"*/, (System_Object_array *)v107, 0);
+      sub_2213CDC(v104, v105, v106);
+    UnityEngine_AndroidJavaObject__Call(v103, (System_String_o *)StringLiteral_24594/*"setPurchaseToken"*/, (System_Object_array *)v107, 0);
   }
   v110 = AdjustSdk_AdjustAndroid_TypeInfo;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -8260,40 +8249,40 @@ LABEL_117:
     v110 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v110->static_fields->ajcAdjust;
-  v112 = sub_21FFD10(object___TypeInfo, 2);
+  v112 = sub_2213B20(object___TypeInfo, 2);
   v115 = (System_Object_array *)v112;
   if ( !v112 )
-    sub_21FFECC(0, v113, v114);
+    sub_2213CDC(0, v113, v114);
   v116 = (Il2CppObject *)v143;
   if ( v143 )
   {
-    v112 = sub_21FFDA4(v143, *(_QWORD *)(*(_QWORD *)v112 + 64LL));
+    v112 = sub_2213BB4(v143, *(_QWORD *)(*(_QWORD *)v112 + 64LL));
     if ( !v112 )
     {
-      v133 = sub_21FFEF0(0, v117);
-      sub_21FFD90(v133, 0);
+      v133 = sub_2213D00(0, v117);
+      sub_2213BA0(v133, 0);
     }
   }
   if ( !LODWORD(v115->max_length) )
-    sub_21FFED4(v112);
+    sub_2213CE4(v112);
   v115->m_Items[0] = v116;
-  v118 = sub_21FFBF4(v115->m_Items, v116);
+  v118 = sub_2213A04(v115->m_Items, v116);
   if ( v5 )
   {
-    v118 = sub_21FFDA4(v5, v115->obj.klass->_1.element_class);
+    v118 = sub_2213BB4(v5, v115->obj.klass->_1.element_class);
     if ( !v118 )
     {
-      v134 = sub_21FFEF0(0, v119);
-      sub_21FFD90(v134, 0);
+      v134 = sub_2213D00(0, v119);
+      sub_2213BA0(v134, 0);
     }
   }
   if ( (v115->max_length & 0xFFFFFFFE) == 0 )
-    sub_21FFED4(v118);
+    sub_2213CE4(v118);
   v115->m_Items[1] = (Il2CppObject *)v5;
-  v120 = sub_21FFBF4(&v115->m_Items[1], v5);
+  v120 = sub_2213A04(&v115->m_Items[1], v5);
   if ( !ajcAdjust )
-    sub_21FFECC(v120, v121, v122);
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_25963/*"verifyAndTrackPlayStorePurchase"*/, v115, 0);
+    sub_2213CDC(v120, v121, v122);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_26011/*"verifyAndTrackPlayStorePurchase"*/, v115, 0);
   v123 = v143;
   if ( v143 )
   {
@@ -8314,7 +8303,7 @@ LABEL_117:
     else
     {
 LABEL_91:
-      v127 = sub_2237E2C(v143, System_IDisposable_TypeInfo, 0);
+      v127 = sub_224BC3C(v143, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v127)(v123, *(_QWORD *)(v127 + 8));
   }
@@ -8359,51 +8348,51 @@ void AdjustSdk_AdjustAndroid__VerifyPlayStorePurchase(
   __int64 v35; // x0
   Il2CppObject *v36; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_593045B & 1) == 0 )
+  if ( (byte_59685FB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
-    sub_21FFC50(&StringLiteral_25964/*"verifyPlayStorePurchase"*/);
-    sub_21FFC50(&StringLiteral_18834/*"com.adjust.sdk.AdjustPlayStorePurchase"*/);
-    byte_593045B = 1;
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
+    sub_2213A60(&StringLiteral_26012/*"verifyPlayStorePurchase"*/);
+    sub_2213A60(&StringLiteral_18872/*"com.adjust.sdk.AdjustPlayStorePurchase"*/);
+    byte_59685FB = 1;
   }
-  v5 = (AdjustSdk_AdjustAndroid_VerificationResultListener_o *)sub_21FFEBC(AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
+  v5 = (AdjustSdk_AdjustAndroid_VerificationResultListener_o *)sub_2213CCC(AdjustSdk_AdjustAndroid_VerificationResultListener_TypeInfo);
   AdjustSdk_AdjustAndroid_VerificationResultListener___ctor(v5, verificationInfoCallback, v6);
-  v7 = sub_21FFD10(object___TypeInfo, 2);
+  v7 = sub_2213B20(object___TypeInfo, 2);
   if ( !purchase || (v10 = (System_Object_array *)v7) == 0 )
-    sub_21FFECC(v7, v8, v9);
+    sub_2213CDC(v7, v8, v9);
   ProductId_k__BackingField = purchase->fields._ProductId_k__BackingField;
   if ( ProductId_k__BackingField )
   {
-    v7 = sub_21FFDA4(purchase->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+    v7 = sub_2213BB4(purchase->fields._ProductId_k__BackingField, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
     if ( !v7 )
       goto LABEL_32;
   }
   if ( !LODWORD(v10->max_length) )
     goto LABEL_31;
   v10->m_Items[0] = (Il2CppObject *)ProductId_k__BackingField;
-  v7 = sub_21FFBF4(v10->m_Items, ProductId_k__BackingField);
+  v7 = sub_2213A04(v10->m_Items, ProductId_k__BackingField);
   PurchaseToken_k__BackingField = purchase->fields._PurchaseToken_k__BackingField;
   if ( PurchaseToken_k__BackingField )
   {
-    v7 = sub_21FFDA4(PurchaseToken_k__BackingField, v10->obj.klass->_1.element_class);
+    v7 = sub_2213BB4(PurchaseToken_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !v7 )
     {
 LABEL_32:
-      v33 = sub_21FFEF0(v7, v12);
-      sub_21FFD90(v33, 0);
+      v33 = sub_2213D00(v7, v12);
+      sub_2213BA0(v33, 0);
     }
   }
   if ( (v10->max_length & 0xFFFFFFFE) == 0 )
 LABEL_31:
-    sub_21FFED4(v7);
+    sub_2213CE4(v7);
   v10->m_Items[1] = (Il2CppObject *)PurchaseToken_k__BackingField;
-  sub_21FFBF4(&v10->m_Items[1], PurchaseToken_k__BackingField);
-  v14 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(v14, (System_String_o *)StringLiteral_18834/*"com.adjust.sdk.AdjustPlayStorePurchase"*/, v10, 0);
+  sub_2213A04(&v10->m_Items[1], PurchaseToken_k__BackingField);
+  v14 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(v14, (System_String_o *)StringLiteral_18872/*"com.adjust.sdk.AdjustPlayStorePurchase"*/, v10, 0);
   v17 = AdjustSdk_AdjustAndroid_TypeInfo;
   v36 = (Il2CppObject *)v14;
   if ( !*(&AdjustSdk_AdjustAndroid_TypeInfo->_2.cctor_finished + 1) )
@@ -8412,39 +8401,39 @@ LABEL_31:
     v17 = AdjustSdk_AdjustAndroid_TypeInfo;
   }
   ajcAdjust = (UnityEngine_AndroidJavaObject_o *)v17->static_fields->ajcAdjust;
-  v19 = sub_21FFD10(object___TypeInfo, 2);
+  v19 = sub_2213B20(object___TypeInfo, 2);
   v22 = (System_Object_array *)v19;
   if ( !v19 )
-    sub_21FFECC(0, v20, v21);
+    sub_2213CDC(0, v20, v21);
   if ( v36 )
   {
-    v19 = sub_21FFDA4(v36, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v19 = sub_2213BB4(v36, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v19 )
     {
-      v34 = sub_21FFEF0(0, v23);
-      sub_21FFD90(v34, 0);
+      v34 = sub_2213D00(0, v23);
+      sub_2213BA0(v34, 0);
     }
   }
   if ( !LODWORD(v22->max_length) )
-    sub_21FFED4(v19);
+    sub_2213CE4(v19);
   v22->m_Items[0] = v36;
-  v24 = sub_21FFBF4(v22->m_Items, v36);
+  v24 = sub_2213A04(v22->m_Items, v36);
   if ( v5 )
   {
-    v24 = sub_21FFDA4(v5, v22->obj.klass->_1.element_class);
+    v24 = sub_2213BB4(v5, v22->obj.klass->_1.element_class);
     if ( !v24 )
     {
-      v35 = sub_21FFEF0(0, v25);
-      sub_21FFD90(v35, 0);
+      v35 = sub_2213D00(0, v25);
+      sub_2213BA0(v35, 0);
     }
   }
   if ( (v22->max_length & 0xFFFFFFFE) == 0 )
-    sub_21FFED4(v24);
+    sub_2213CE4(v24);
   v22->m_Items[1] = (Il2CppObject *)v5;
-  v26 = sub_21FFBF4(&v22->m_Items[1], v5);
+  v26 = sub_2213A04(&v22->m_Items[1], v5);
   if ( !ajcAdjust )
-    sub_21FFECC(v26, v27, v28);
-  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_25964/*"verifyPlayStorePurchase"*/, v22, 0);
+    sub_2213CDC(v26, v27, v28);
+  UnityEngine_AndroidJavaObject__CallStatic(ajcAdjust, (System_String_o *)StringLiteral_26012/*"verifyPlayStorePurchase"*/, v22, 0);
   if ( v36 )
   {
     klass = v36->klass;
@@ -8464,7 +8453,7 @@ LABEL_31:
     else
     {
 LABEL_26:
-      v32 = sub_2237E2C(v36, System_IDisposable_TypeInfo, 0);
+      v32 = sub_224BC3C(v36, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(Il2CppObject *, _QWORD))v32)(v36, *(_QWORD *)(v32 + 8));
   }
@@ -8476,17 +8465,17 @@ void AdjustSdk_AdjustAndroid_AdidReadListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593047D & 1) == 0 )
+  if ( (byte_596861D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18840/*"com.adjust.sdk.OnAdidReadListener"*/);
-    byte_593047D = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18878/*"com.adjust.sdk.OnAdidReadListener"*/);
+    byte_596861D = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18840/*"com.adjust.sdk.OnAdidReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18878/*"com.adjust.sdk.OnAdidReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -8502,25 +8491,25 @@ void AdjustSdk_AdjustAndroid_AdidReadListener__onAdidRead(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_593047E & 1) == 0 )
+  if ( (byte_596861E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0__onAdidRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0_TypeInfo);
-    byte_593047E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0__onAdidRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0_TypeInfo);
+    byte_596861E = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)this;
-  sub_21FFBF4(&v5[1], this);
+  sub_2213A04(&v5[1], this);
   v5[1].monitor = adid;
-  sub_21FFBF4(&v5[1].monitor, adid);
+  sub_2213A04(&v5[1].monitor, adid);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -8550,7 +8539,7 @@ void AdjustSdk_AdjustAndroid_AdidReadListener___c__DisplayClass2_0___onAdidRead_
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))callback->fields.invoke_impl)(
@@ -8565,17 +8554,17 @@ void AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930482 & 1) == 0 )
+  if ( (byte_5968622 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18841/*"com.adjust.sdk.OnAmazonAdIdReadListener"*/);
-    byte_5930482 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18879/*"com.adjust.sdk.OnAmazonAdIdReadListener"*/);
+    byte_5968622 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18841/*"com.adjust.sdk.OnAmazonAdIdReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18879/*"com.adjust.sdk.OnAmazonAdIdReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -8591,25 +8580,25 @@ void AdjustSdk_AdjustAndroid_AmazonAdIdReadListener__onAmazonAdIdRead(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5930483 & 1) == 0 )
+  if ( (byte_5968623 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0__onAmazonAdIdRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930483 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0__onAmazonAdIdRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968623 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)this;
-  sub_21FFBF4(&v5[1], this);
+  sub_2213A04(&v5[1], this);
   v5[1].monitor = amazonAdId;
-  sub_21FFBF4(&v5[1].monitor, amazonAdId);
+  sub_2213A04(&v5[1].monitor, amazonAdId);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -8639,7 +8628,7 @@ void AdjustSdk_AdjustAndroid_AmazonAdIdReadListener___c__DisplayClass2_0___onAma
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))callback->fields.invoke_impl)(
@@ -8654,17 +8643,17 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener___ctor(
         System_Action_AdjustAttribution__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930464 & 1) == 0 )
+  if ( (byte_5968604 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18842/*"com.adjust.sdk.OnAttributionChangedListener"*/);
-    byte_5930464 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18880/*"com.adjust.sdk.OnAttributionChangedListener"*/);
+    byte_5968604 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18842/*"com.adjust.sdk.OnAttributionChangedListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18880/*"com.adjust.sdk.OnAttributionChangedListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -8681,25 +8670,25 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener__onAttributionChanged(
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5930465 & 1) == 0 )
+  if ( (byte_5968605 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0__onAttributionChanged_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930465 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0__onAttributionChanged_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968605 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)ajoAttribution;
-  sub_21FFBF4(&v5[1], ajoAttribution);
+  sub_2213A04(&v5[1], ajoAttribution);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -8793,7 +8782,7 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0___o
   __int64 v68; // x0
   __int64 v69; // x0
   double v70; // d0
-  const MethodInfo_45AEEEC *v71; // x2
+  const MethodInfo_45E3024 *v71; // x2
   __int128 v72; // q0
   struct AdjustSdk_AdjustAndroid_AttributionChangedListener_o *v73; // x8
   struct System_Action_AdjustAttribution__o *v74; // x8
@@ -8826,171 +8815,171 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0___o
   System_Nullable_double__o v101; // 0:x0.16
 
   v3 = this;
-  if ( (byte_5930466 & 1) == 0 )
+  if ( (byte_5968606 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAttribution_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_double___);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    this = (AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_o *)sub_21FFC50(&StringLiteral_19476/*"doubleValue"*/);
-    byte_5930466 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAttribution_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_double___);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    this = (AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0_o *)sub_2213A60(&StringLiteral_19518/*"doubleValue"*/);
+    byte_5968606 = 1;
   }
   ajoAttribution = v3->fields.ajoAttribution;
   v100 = 0;
   v99 = 0;
   if ( ajoAttribution )
   {
-    v5 = sub_21FFEBC(AdjustSdk_AdjustAttribution_TypeInfo);
+    v5 = sub_2213CCC(AdjustSdk_AdjustAttribution_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     v8 = v3->fields.ajoAttribution;
     inited = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
       inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v6, v7);
     if ( !v8 )
-      sub_21FFECC(inited, v6, v7);
+      sub_2213CDC(inited, v6, v7);
     object = UnityEngine_AndroidJavaObject__Get_object_(
                v8,
                AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerName,
-               (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+               (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
     if ( !v5 )
-      sub_21FFECC(IsNullOrEmpty, v12, v13);
+      sub_2213CDC(IsNullOrEmpty, v12, v13);
     if ( IsNullOrEmpty )
       v14 = 0;
     else
       v14 = object;
     *(_QWORD *)(v5 + 24) = v14;
-    sub_21FFBF4(v5 + 24, v14);
+    sub_2213A04(v5 + 24, v14);
     v17 = v3->fields.ajoAttribution;
     if ( !v17 )
-      sub_21FFECC(0, v15, v16);
+      sub_2213CDC(0, v15, v16);
     v18 = UnityEngine_AndroidJavaObject__Get_object_(
             v17,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerToken,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v18, 0) )
       v19 = 0;
     else
       v19 = v18;
     *(_QWORD *)(v5 + 16) = v19;
-    sub_21FFBF4(v5 + 16, v19);
+    sub_2213A04(v5 + 16, v19);
     v22 = v3->fields.ajoAttribution;
     if ( !v22 )
-      sub_21FFECC(0, v20, v21);
+      sub_2213CDC(0, v20, v21);
     v23 = UnityEngine_AndroidJavaObject__Get_object_(
             v22,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyNetwork,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v23, 0) )
       v24 = 0;
     else
       v24 = v23;
     *(_QWORD *)(v5 + 32) = v24;
-    sub_21FFBF4(v5 + 32, v24);
+    sub_2213A04(v5 + 32, v24);
     v27 = v3->fields.ajoAttribution;
     if ( !v27 )
-      sub_21FFECC(0, v25, v26);
+      sub_2213CDC(0, v25, v26);
     v28 = UnityEngine_AndroidJavaObject__Get_object_(
             v27,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCampaign,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v28, 0) )
       v29 = 0;
     else
       v29 = v28;
     *(_QWORD *)(v5 + 40) = v29;
-    sub_21FFBF4(v5 + 40, v29);
+    sub_2213A04(v5 + 40, v29);
     v32 = v3->fields.ajoAttribution;
     if ( !v32 )
-      sub_21FFECC(0, v30, v31);
+      sub_2213CDC(0, v30, v31);
     v33 = UnityEngine_AndroidJavaObject__Get_object_(
             v32,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdgroup,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v33, 0) )
       v34 = 0;
     else
       v34 = v33;
     *(_QWORD *)(v5 + 48) = v34;
-    sub_21FFBF4(v5 + 48, v34);
+    sub_2213A04(v5 + 48, v34);
     v37 = v3->fields.ajoAttribution;
     if ( !v37 )
-      sub_21FFECC(0, v35, v36);
+      sub_2213CDC(0, v35, v36);
     v38 = UnityEngine_AndroidJavaObject__Get_object_(
             v37,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCreative,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v38, 0) )
       v39 = 0;
     else
       v39 = v38;
     *(_QWORD *)(v5 + 56) = v39;
-    sub_21FFBF4(v5 + 56, v39);
+    sub_2213A04(v5 + 56, v39);
     v42 = v3->fields.ajoAttribution;
     if ( !v42 )
-      sub_21FFECC(0, v40, v41);
+      sub_2213CDC(0, v40, v41);
     v43 = UnityEngine_AndroidJavaObject__Get_object_(
             v42,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyClickLabel,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v43, 0) )
       v44 = 0;
     else
       v44 = v43;
     *(_QWORD *)(v5 + 64) = v44;
-    sub_21FFBF4(v5 + 64, v44);
+    sub_2213A04(v5 + 64, v44);
     v47 = v3->fields.ajoAttribution;
     if ( !v47 )
-      sub_21FFECC(0, v45, v46);
+      sub_2213CDC(0, v45, v46);
     v48 = UnityEngine_AndroidJavaObject__Get_object_(
             v47,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostType,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v48, 0) )
       v49 = 0;
     else
       v49 = v48;
     *(_QWORD *)(v5 + 72) = v49;
-    sub_21FFBF4(v5 + 72, v49);
+    sub_2213A04(v5 + 72, v49);
     v52 = v3->fields.ajoAttribution;
     if ( !v52 )
-      sub_21FFECC(0, v50, v51);
+      sub_2213CDC(0, v50, v51);
     v53 = UnityEngine_AndroidJavaObject__Get_object_(
             v52,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostCurrency,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v53, 0) )
       v54 = 0;
     else
       v54 = v53;
     *(_QWORD *)(v5 + 96) = v54;
-    sub_21FFBF4(v5 + 96, v54);
+    sub_2213A04(v5 + 96, v54);
     v57 = v3->fields.ajoAttribution;
     if ( !v57 )
-      sub_21FFECC(0, v55, v56);
+      sub_2213CDC(0, v55, v56);
     v58 = UnityEngine_AndroidJavaObject__Get_object_(
             v57,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyFbInstallReferrer,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v58, 0) )
       v59 = 0;
     else
       v59 = v58;
     *(_QWORD *)(v5 + 112) = v59;
-    sub_21FFBF4(v5 + 112, v59);
+    sub_2213A04(v5 + 112, v59);
     v62 = v3->fields.ajoAttribution;
     if ( !v62 )
-      sub_21FFECC(0, v60, v61);
+      sub_2213CDC(0, v60, v61);
     v65 = UnityEngine_AndroidJavaObject__Get_object_(
             v62,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostAmount,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
     v100 = v65;
     v97 = 0;
     v98 = &v100;
@@ -9000,22 +8989,22 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0___o
       v67 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v67 )
       {
-        sub_2237B54(Method_System_Array_Empty_object___);
+        sub_224B964(Method_System_Array_Empty_object___);
         v67 = v66[7];
       }
       v68 = *(_QWORD *)(v67 + 16);
       if ( (*(_WORD *)(v68 + 309) & 1) == 0 )
-        v68 = sub_2237AF8();
+        v68 = sub_224B908();
       if ( !*(_DWORD *)(v68 + 228) )
         j_il2cpp_runtime_class_init_0(v68, v63, v64);
       v69 = *(_QWORD *)(v66[7] + 16LL);
       if ( (*(_WORD *)(v69 + 309) & 1) == 0 )
-        v69 = sub_2237AF8();
+        v69 = sub_224B908();
       v70 = UnityEngine_AndroidJavaObject__Call_double_(
               (UnityEngine_AndroidJavaObject_o *)v65,
-              (System_String_o *)StringLiteral_19476/*"doubleValue"*/,
+              (System_String_o *)StringLiteral_19518/*"doubleValue"*/,
               **(System_Object_array ***)(v69 + 184),
-              (const MethodInfo_36D5508 *)Method_UnityEngine_AndroidJavaObject_Call_double___);
+              (const MethodInfo_3707478 *)Method_UnityEngine_AndroidJavaObject_Call_double___);
       v96 = 0u;
       *(_QWORD *)&v101.fields.value = Method_System_Nullable_double___ctor__;
       *(_QWORD *)&v101.fields.hasValue = &v96;
@@ -9047,7 +9036,7 @@ void AdjustSdk_AdjustAndroid_AttributionChangedListener___c__DisplayClass2_0___o
       else
       {
 LABEL_67:
-        v79 = sub_2237E2C(v100, System_IDisposable_TypeInfo, 0);
+        v79 = sub_224BC3C(v100, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(Il2CppObject *, _QWORD))v79)(v75, *(_QWORD *)(v79 + 8));
     }
@@ -9056,11 +9045,11 @@ LABEL_67:
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
       v80 = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v63, v64);
     if ( !v81 )
-      sub_21FFECC(v80, v63, v64);
+      sub_2213CDC(v80, v63, v64);
     v82 = UnityEngine_AndroidJavaObject__Get_object_(
             v81,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( v82 )
     {
       v85 = AdjustSdk_JSONNode__Parse((System_String_o *)v82, v83);
@@ -9068,19 +9057,19 @@ LABEL_67:
       if ( ((unsigned __int8)v82 & 1) == 0 )
       {
         if ( !v85 )
-          sub_21FFECC(v82, v83, v84);
+          sub_2213CDC(v82, v83, v84);
         v87 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v85->klass->vtable._27_get_AsObject.methodPtr)(
                                         v85,
                                         v85->klass->vtable._27_get_AsObject.method);
         v82 = (Il2CppObject *)AdjustSdk_JSONNode__op_Equality(v87, 0, v88);
         if ( ((unsigned __int8)v82 & 1) == 0 )
         {
-          v89 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+          v89 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
           System_Collections_Generic_Dictionary_object__object____ctor(
             v89,
-            (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+            (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
           *(_QWORD *)(v5 + 104) = v89;
-          sub_21FFBF4(v5 + 104, v89);
+          sub_2213A04(v5 + 104, v89);
           v92 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v85->klass->vtable._27_get_AsObject.methodPtr)(
                                            v85,
                                            v85->klass->vtable._27_get_AsObject.method);
@@ -9093,7 +9082,7 @@ LABEL_67:
     }
     _4__this = v3->fields.__4__this;
     if ( !_4__this )
-      sub_21FFECC(v82, v83, v84);
+      sub_2213CDC(v82, v83, v84);
     callback = _4__this->fields.callback;
     if ( callback )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))callback->fields.invoke_impl)(
@@ -9105,7 +9094,7 @@ LABEL_67:
   {
     v73 = v3->fields.__4__this;
     if ( !v73 )
-      sub_21FFECC(this, method, v2);
+      sub_2213CDC(this, method, v2);
     v74 = v73->fields.callback;
     if ( v74 )
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v74->fields.invoke_impl)(
@@ -9121,17 +9110,17 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener___ctor(
         System_Action_AdjustAttribution__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593047F & 1) == 0 )
+  if ( (byte_596861F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18843/*"com.adjust.sdk.OnAttributionReadListener"*/);
-    byte_593047F = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18881/*"com.adjust.sdk.OnAttributionReadListener"*/);
+    byte_596861F = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18843/*"com.adjust.sdk.OnAttributionReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18881/*"com.adjust.sdk.OnAttributionReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -9147,25 +9136,25 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener__onAttributionRead(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5930480 & 1) == 0 )
+  if ( (byte_5968620 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0__onAttributionRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930480 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0__onAttributionRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968620 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)ajoAttribution;
-  sub_21FFBF4(&v5[1], ajoAttribution);
+  sub_2213A04(&v5[1], ajoAttribution);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -9247,7 +9236,7 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0___onAt
   __int64 v56; // x0
   __int64 v57; // x0
   double v58; // d0
-  const MethodInfo_45AEEEC *v59; // x2
+  const MethodInfo_45E3024 *v59; // x2
   __int128 v60; // q0
   struct AdjustSdk_AdjustAndroid_AttributionReadListener_o *v61; // x8
   struct System_Action_AdjustAttribution__o *v62; // x8
@@ -9279,171 +9268,171 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0___onAt
   System_Nullable_double__o v88; // 0:x0.16
 
   v2 = this;
-  if ( (byte_5930481 & 1) == 0 )
+  if ( (byte_5968621 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustAttribution_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_double___);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    this = (AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_o *)sub_21FFC50(&StringLiteral_19476/*"doubleValue"*/);
-    byte_5930481 = 1;
+    sub_2213A60(&AdjustSdk_AdjustAttribution_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_double___);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    this = (AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0_o *)sub_2213A60(&StringLiteral_19518/*"doubleValue"*/);
+    byte_5968621 = 1;
   }
   ajoAttribution = v2->fields.ajoAttribution;
   v87 = 0;
   v86 = 0;
   if ( ajoAttribution )
   {
-    v4 = sub_21FFEBC(AdjustSdk_AdjustAttribution_TypeInfo);
+    v4 = sub_2213CCC(AdjustSdk_AdjustAttribution_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v7 = v2->fields.ajoAttribution;
     inited = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
       inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v5, v6);
     if ( !v7 )
-      sub_21FFECC(inited, v5);
+      sub_2213CDC(inited, v5);
     object = UnityEngine_AndroidJavaObject__Get_object_(
                v7,
                AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerName,
-               (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+               (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
     if ( !v4 )
-      sub_21FFECC(IsNullOrEmpty, v11);
+      sub_2213CDC(IsNullOrEmpty, v11);
     if ( IsNullOrEmpty )
       v12 = 0;
     else
       v12 = object;
     *(_QWORD *)(v4 + 24) = v12;
-    sub_21FFBF4(v4 + 24, v12);
+    sub_2213A04(v4 + 24, v12);
     v14 = v2->fields.ajoAttribution;
     if ( !v14 )
-      sub_21FFECC(0, v13);
+      sub_2213CDC(0, v13);
     v15 = UnityEngine_AndroidJavaObject__Get_object_(
             v14,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerToken,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v15, 0) )
       v16 = 0;
     else
       v16 = v15;
     *(_QWORD *)(v4 + 16) = v16;
-    sub_21FFBF4(v4 + 16, v16);
+    sub_2213A04(v4 + 16, v16);
     v18 = v2->fields.ajoAttribution;
     if ( !v18 )
-      sub_21FFECC(0, v17);
+      sub_2213CDC(0, v17);
     v19 = UnityEngine_AndroidJavaObject__Get_object_(
             v18,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyNetwork,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v19, 0) )
       v20 = 0;
     else
       v20 = v19;
     *(_QWORD *)(v4 + 32) = v20;
-    sub_21FFBF4(v4 + 32, v20);
+    sub_2213A04(v4 + 32, v20);
     v22 = v2->fields.ajoAttribution;
     if ( !v22 )
-      sub_21FFECC(0, v21);
+      sub_2213CDC(0, v21);
     v23 = UnityEngine_AndroidJavaObject__Get_object_(
             v22,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCampaign,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v23, 0) )
       v24 = 0;
     else
       v24 = v23;
     *(_QWORD *)(v4 + 40) = v24;
-    sub_21FFBF4(v4 + 40, v24);
+    sub_2213A04(v4 + 40, v24);
     v26 = v2->fields.ajoAttribution;
     if ( !v26 )
-      sub_21FFECC(0, v25);
+      sub_2213CDC(0, v25);
     v27 = UnityEngine_AndroidJavaObject__Get_object_(
             v26,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdgroup,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v27, 0) )
       v28 = 0;
     else
       v28 = v27;
     *(_QWORD *)(v4 + 48) = v28;
-    sub_21FFBF4(v4 + 48, v28);
+    sub_2213A04(v4 + 48, v28);
     v30 = v2->fields.ajoAttribution;
     if ( !v30 )
-      sub_21FFECC(0, v29);
+      sub_2213CDC(0, v29);
     v31 = UnityEngine_AndroidJavaObject__Get_object_(
             v30,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCreative,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v31, 0) )
       v32 = 0;
     else
       v32 = v31;
     *(_QWORD *)(v4 + 56) = v32;
-    sub_21FFBF4(v4 + 56, v32);
+    sub_2213A04(v4 + 56, v32);
     v34 = v2->fields.ajoAttribution;
     if ( !v34 )
-      sub_21FFECC(0, v33);
+      sub_2213CDC(0, v33);
     v35 = UnityEngine_AndroidJavaObject__Get_object_(
             v34,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyClickLabel,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v35, 0) )
       v36 = 0;
     else
       v36 = v35;
     *(_QWORD *)(v4 + 64) = v36;
-    sub_21FFBF4(v4 + 64, v36);
+    sub_2213A04(v4 + 64, v36);
     v38 = v2->fields.ajoAttribution;
     if ( !v38 )
-      sub_21FFECC(0, v37);
+      sub_2213CDC(0, v37);
     v39 = UnityEngine_AndroidJavaObject__Get_object_(
             v38,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostType,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v39, 0) )
       v40 = 0;
     else
       v40 = v39;
     *(_QWORD *)(v4 + 72) = v40;
-    sub_21FFBF4(v4 + 72, v40);
+    sub_2213A04(v4 + 72, v40);
     v42 = v2->fields.ajoAttribution;
     if ( !v42 )
-      sub_21FFECC(0, v41);
+      sub_2213CDC(0, v41);
     v43 = UnityEngine_AndroidJavaObject__Get_object_(
             v42,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostCurrency,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v43, 0) )
       v44 = 0;
     else
       v44 = v43;
     *(_QWORD *)(v4 + 96) = v44;
-    sub_21FFBF4(v4 + 96, v44);
+    sub_2213A04(v4 + 96, v44);
     v46 = v2->fields.ajoAttribution;
     if ( !v46 )
-      sub_21FFECC(0, v45);
+      sub_2213CDC(0, v45);
     v47 = UnityEngine_AndroidJavaObject__Get_object_(
             v46,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyFbInstallReferrer,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v47, 0) )
       v48 = 0;
     else
       v48 = v47;
     *(_QWORD *)(v4 + 112) = v48;
-    sub_21FFBF4(v4 + 112, v48);
+    sub_2213A04(v4 + 112, v48);
     v50 = v2->fields.ajoAttribution;
     if ( !v50 )
-      sub_21FFECC(0, v49);
+      sub_2213CDC(0, v49);
     v53 = UnityEngine_AndroidJavaObject__Get_object_(
             v50,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostAmount,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
     v87 = v53;
     v84 = 0;
     v85 = &v87;
@@ -9453,22 +9442,22 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0___onAt
       v55 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v55 )
       {
-        sub_2237B54(Method_System_Array_Empty_object___);
+        sub_224B964(Method_System_Array_Empty_object___);
         v55 = v54[7];
       }
       v56 = *(_QWORD *)(v55 + 16);
       if ( (*(_WORD *)(v56 + 309) & 1) == 0 )
-        v56 = sub_2237AF8();
+        v56 = sub_224B908();
       if ( !*(_DWORD *)(v56 + 228) )
         j_il2cpp_runtime_class_init_0(v56, v51, v52);
       v57 = *(_QWORD *)(v54[7] + 16LL);
       if ( (*(_WORD *)(v57 + 309) & 1) == 0 )
-        v57 = sub_2237AF8();
+        v57 = sub_224B908();
       v58 = UnityEngine_AndroidJavaObject__Call_double_(
               (UnityEngine_AndroidJavaObject_o *)v53,
-              (System_String_o *)StringLiteral_19476/*"doubleValue"*/,
+              (System_String_o *)StringLiteral_19518/*"doubleValue"*/,
               **(System_Object_array ***)(v57 + 184),
-              (const MethodInfo_36D5508 *)Method_UnityEngine_AndroidJavaObject_Call_double___);
+              (const MethodInfo_3707478 *)Method_UnityEngine_AndroidJavaObject_Call_double___);
       v83 = 0u;
       *(_QWORD *)&v88.fields.value = Method_System_Nullable_double___ctor__;
       *(_QWORD *)&v88.fields.hasValue = &v83;
@@ -9500,7 +9489,7 @@ void AdjustSdk_AdjustAndroid_AttributionReadListener___c__DisplayClass2_0___onAt
       else
       {
 LABEL_67:
-        v67 = sub_2237E2C(v87, System_IDisposable_TypeInfo, 0);
+        v67 = sub_224BC3C(v87, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(Il2CppObject *, _QWORD))v67)(v63, *(_QWORD *)(v67 + 8));
     }
@@ -9509,11 +9498,11 @@ LABEL_67:
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
       v68 = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v51, v52);
     if ( !v69 )
-      sub_21FFECC(v68, v51);
+      sub_2213CDC(v68, v51);
     v70 = UnityEngine_AndroidJavaObject__Get_object_(
             v69,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( v70 )
     {
       v72 = AdjustSdk_JSONNode__Parse((System_String_o *)v70, v71);
@@ -9521,19 +9510,19 @@ LABEL_67:
       if ( ((unsigned __int8)v70 & 1) == 0 )
       {
         if ( !v72 )
-          sub_21FFECC(v70, v71);
+          sub_2213CDC(v70, v71);
         v74 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v72->klass->vtable._27_get_AsObject.methodPtr)(
                                         v72,
                                         v72->klass->vtable._27_get_AsObject.method);
         v70 = (Il2CppObject *)AdjustSdk_JSONNode__op_Equality(v74, 0, v75);
         if ( ((unsigned __int8)v70 & 1) == 0 )
         {
-          v76 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+          v76 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
           System_Collections_Generic_Dictionary_object__object____ctor(
             v76,
-            (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+            (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
           *(_QWORD *)(v4 + 104) = v76;
-          sub_21FFBF4(v4 + 104, v76);
+          sub_2213A04(v4 + 104, v76);
           v79 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v72->klass->vtable._27_get_AsObject.methodPtr)(
                                            v72,
                                            v72->klass->vtable._27_get_AsObject.method);
@@ -9546,7 +9535,7 @@ LABEL_67:
     }
     _4__this = v2->fields.__4__this;
     if ( !_4__this )
-      sub_21FFECC(v70, v71);
+      sub_2213CDC(v70, v71);
     callback = _4__this->fields.callback;
     if ( callback )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))callback->fields.invoke_impl)(
@@ -9558,7 +9547,7 @@ LABEL_67:
   {
     v61 = v2->fields.__4__this;
     if ( !v61 )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     v62 = v61->fields.callback;
     if ( v62 )
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v62->fields.invoke_impl)(
@@ -9574,17 +9563,17 @@ void AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593047B & 1) == 0 )
+  if ( (byte_596861B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18844/*"com.adjust.sdk.OnDeeplinkResolvedListener"*/);
-    byte_593047B = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18882/*"com.adjust.sdk.OnDeeplinkResolvedListener"*/);
+    byte_596861B = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18844/*"com.adjust.sdk.OnDeeplinkResolvedListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18882/*"com.adjust.sdk.OnDeeplinkResolvedListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -9600,25 +9589,25 @@ void AdjustSdk_AdjustAndroid_DeeplinkResolutionListener__onDeeplinkResolved(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_593047C & 1) == 0 )
+  if ( (byte_596861C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0__onDeeplinkResolved_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0_TypeInfo);
-    byte_593047C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0__onDeeplinkResolved_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0_TypeInfo);
+    byte_596861C = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)this;
-  sub_21FFBF4(&v5[1], this);
+  sub_2213A04(&v5[1], this);
   v5[1].monitor = resolvedLink;
-  sub_21FFBF4(&v5[1].monitor, resolvedLink);
+  sub_2213A04(&v5[1].monitor, resolvedLink);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -9648,7 +9637,7 @@ void AdjustSdk_AdjustAndroid_DeeplinkResolutionListener___c__DisplayClass2_0___o
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))callback->fields.invoke_impl)(
@@ -9663,17 +9652,17 @@ void AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930467 & 1) == 0 )
+  if ( (byte_5968607 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18845/*"com.adjust.sdk.OnDeferredDeeplinkResponseListener"*/);
-    byte_5930467 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18883/*"com.adjust.sdk.OnDeferredDeeplinkResponseListener"*/);
+    byte_5968607 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18845/*"com.adjust.sdk.OnDeferredDeeplinkResponseListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18883/*"com.adjust.sdk.OnDeferredDeeplinkResponseListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -9692,26 +9681,26 @@ bool AdjustSdk_AdjustAndroid_DeferredDeeplinkListener__launchReceivedDeeplink(
   const MethodInfo *v12; // x1
   __int64 v13; // x2
 
-  if ( (byte_5930468 & 1) == 0 )
+  if ( (byte_5968608 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0__launchReceivedDeeplink_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930468 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0__launchReceivedDeeplink_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968608 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)deeplink;
-  sub_21FFBF4(&v5[1], deeplink);
+  sub_2213A04(&v5[1], deeplink);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v11,
       v5,
@@ -9751,12 +9740,12 @@ void AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0___lau
   struct System_Action_string__o *callback; // x8
 
   v3 = this;
-  if ( (byte_5930469 & 1) == 0 )
+  if ( (byte_5968609 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    this = (AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_o *)sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_5930469 = 1;
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    this = (AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_o *)sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_5968609 = 1;
   }
   deeplink = v3->fields.deeplink;
   if ( deeplink )
@@ -9765,22 +9754,22 @@ void AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0___lau
     v6 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v6 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-      v7 = sub_2237AF8();
+      v7 = sub_224B908();
     if ( !*(_DWORD *)(v7 + 228) )
       j_il2cpp_runtime_class_init_0(v7, method, v2);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-      v8 = sub_2237AF8();
+      v8 = sub_224B908();
     this = (AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_o *)UnityEngine_AndroidJavaObject__Call_object_(
                                                                                         deeplink,
-                                                                                        (System_String_o *)StringLiteral_25359/*"toString"*/,
+                                                                                        (System_String_o *)StringLiteral_25407/*"toString"*/,
                                                                                         **(System_Object_array ***)(v8 + 184),
-                                                                                        (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+                                                                                        (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     v9 = this;
   }
   else
@@ -9789,7 +9778,7 @@ void AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0___lau
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, v9, v2);
+    sub_2213CDC(this, v9, v2);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, AdjustSdk_AdjustAndroid_DeferredDeeplinkListener___c__DisplayClass2_0_o *, intptr_t))callback->fields.invoke_impl)(
@@ -9804,17 +9793,17 @@ void AdjustSdk_AdjustAndroid_EventTrackingFailedListener___ctor(
         System_Action_AdjustEventFailure__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593046D & 1) == 0 )
+  if ( (byte_596860D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18846/*"com.adjust.sdk.OnEventTrackingFailedListener"*/);
-    byte_593046D = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18884/*"com.adjust.sdk.OnEventTrackingFailedListener"*/);
+    byte_596860D = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18846/*"com.adjust.sdk.OnEventTrackingFailedListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18884/*"com.adjust.sdk.OnEventTrackingFailedListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -9831,25 +9820,25 @@ void AdjustSdk_AdjustAndroid_EventTrackingFailedListener__onEventTrackingFailed(
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_593046E & 1) == 0 )
+  if ( (byte_596860E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0__onEventTrackingFailed_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
-    byte_593046E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0__onEventTrackingFailed_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
+    byte_596860E = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)eventFailureData;
-  sub_21FFBF4(&v5[1], eventFailureData);
+  sub_2213A04(&v5[1], eventFailureData);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -9929,107 +9918,107 @@ void AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0___
   struct System_Action_AdjustEventFailure__o *callback; // x8
   Il2CppObject *v56; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_593046F & 1) == 0 )
+  if ( (byte_596860F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustEventFailure_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_bool___);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_593046F = 1;
+    sub_2213A60(&AdjustSdk_AdjustEventFailure_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_bool___);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_596860F = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_AdjustEventFailure_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_AdjustEventFailure_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   eventFailureData = this->fields.eventFailureData;
   inited = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v4, v5);
   if ( !eventFailureData )
-    sub_21FFECC(inited, v4, v5);
+    sub_2213CDC(inited, v4, v5);
   object = UnityEngine_AndroidJavaObject__Get_object_(
              eventFailureData,
              AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid,
-             (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+             (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
   if ( !v3 )
-    sub_21FFECC(IsNullOrEmpty, v10, v11);
+    sub_2213CDC(IsNullOrEmpty, v10, v11);
   if ( IsNullOrEmpty )
     v12 = 0;
   else
     v12 = object;
   *(_QWORD *)(v3 + 16) = v12;
-  sub_21FFBF4(v3 + 16, v12);
+  sub_2213A04(v3 + 16, v12);
   v15 = this->fields.eventFailureData;
   if ( !v15 )
-    sub_21FFECC(0, v13, v14);
+    sub_2213CDC(0, v13, v14);
   v16 = UnityEngine_AndroidJavaObject__Get_object_(
           v15,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v16, 0) )
     v17 = 0;
   else
     v17 = v16;
   *(_QWORD *)(v3 + 24) = v17;
-  sub_21FFBF4(v3 + 24, v17);
+  sub_2213A04(v3 + 24, v17);
   v20 = this->fields.eventFailureData;
   if ( !v20 )
-    sub_21FFECC(0, v18, v19);
+    sub_2213CDC(0, v18, v19);
   v21 = UnityEngine_AndroidJavaObject__Get_object_(
           v20,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v21, 0) )
     v22 = 0;
   else
     v22 = v21;
   *(_QWORD *)(v3 + 32) = v22;
-  sub_21FFBF4(v3 + 32, v22);
+  sub_2213A04(v3 + 32, v22);
   v25 = this->fields.eventFailureData;
   if ( !v25 )
-    sub_21FFECC(0, v23, v24);
+    sub_2213CDC(0, v23, v24);
   v26 = UnityEngine_AndroidJavaObject__Get_object_(
           v25,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v26, 0) )
     v27 = 0;
   else
     v27 = v26;
   *(_QWORD *)(v3 + 40) = v27;
-  sub_21FFBF4(v3 + 40, v27);
+  sub_2213A04(v3 + 40, v27);
   v30 = this->fields.eventFailureData;
   if ( !v30 )
-    sub_21FFECC(0, v28, v29);
+    sub_2213CDC(0, v28, v29);
   v31 = UnityEngine_AndroidJavaObject__Get_object_(
           v30,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v31, 0) )
     v32 = 0;
   else
     v32 = v31;
   *(_QWORD *)(v3 + 48) = v32;
-  sub_21FFBF4(v3 + 48, v32);
+  sub_2213A04(v3 + 48, v32);
   v35 = this->fields.eventFailureData;
   if ( !v35 )
-    sub_21FFECC(0, v33, v34);
+    sub_2213CDC(0, v33, v34);
   v38 = UnityEngine_AndroidJavaObject__Get_bool_(
           v35,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry,
-          (const MethodInfo_36D7418 *)Method_UnityEngine_AndroidJavaObject_Get_bool___);
+          (const MethodInfo_3709388 *)Method_UnityEngine_AndroidJavaObject_Get_bool___);
   v39 = this->fields.eventFailureData;
   *(_BYTE *)(v3 + 56) = v38;
   if ( !v39 )
-    sub_21FFECC(0, v36, v37);
+    sub_2213CDC(0, v36, v37);
   v40 = UnityEngine_AndroidJavaObject__Get_object_(
           v39,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
   v43 = (UnityEngine_AndroidJavaObject_o *)v40;
   v56 = v40;
   if ( v40 )
@@ -10038,22 +10027,22 @@ void AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0___
     v45 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v45 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v45 = v44[7];
     }
     v46 = *(_QWORD *)(v45 + 16);
     if ( (*(_WORD *)(v46 + 309) & 1) == 0 )
-      v46 = sub_2237AF8();
+      v46 = sub_224B908();
     if ( !*(_DWORD *)(v46 + 228) )
       j_il2cpp_runtime_class_init_0(v46, v41, v42);
     v47 = *(_QWORD *)(v44[7] + 16LL);
     if ( (*(_WORD *)(v47 + 309) & 1) == 0 )
-      v47 = sub_2237AF8();
+      v47 = sub_224B908();
     v48 = UnityEngine_AndroidJavaObject__Call_object_(
             v43,
-            (System_String_o *)StringLiteral_25359/*"toString"*/,
+            (System_String_o *)StringLiteral_25407/*"toString"*/,
             **(System_Object_array ***)(v47 + 184),
-            (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+            (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     AdjustSdk_AdjustEventFailure__BuildJsonResponseFromString(
       (AdjustSdk_AdjustEventFailure_o *)v3,
       (System_String_o *)v48,
@@ -10078,13 +10067,13 @@ void AdjustSdk_AdjustAndroid_EventTrackingFailedListener___c__DisplayClass2_0___
     else
     {
 LABEL_43:
-      v53 = sub_2237E2C(v56, System_IDisposable_TypeInfo, 0);
+      v53 = sub_224BC3C(v56, System_IDisposable_TypeInfo, 0);
     }
     v40 = (Il2CppObject *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v53)(v56, *(_QWORD *)(v53 + 8));
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(v40, v41, v42);
+    sub_2213CDC(v40, v41, v42);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))callback->fields.invoke_impl)(
@@ -10099,17 +10088,17 @@ void AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___ctor(
         System_Action_AdjustEventSuccess__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_593046A & 1) == 0 )
+  if ( (byte_596860A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18847/*"com.adjust.sdk.OnEventTrackingSucceededListener"*/);
-    byte_593046A = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18885/*"com.adjust.sdk.OnEventTrackingSucceededListener"*/);
+    byte_596860A = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18847/*"com.adjust.sdk.OnEventTrackingSucceededListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18885/*"com.adjust.sdk.OnEventTrackingSucceededListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -10126,25 +10115,25 @@ void AdjustSdk_AdjustAndroid_EventTrackingSucceededListener__onEventTrackingSucc
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_593046B & 1) == 0 )
+  if ( (byte_596860B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0__onEventTrackingSucceeded_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
-    byte_593046B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0__onEventTrackingSucceeded_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
+    byte_596860B = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)eventSuccessData;
-  sub_21FFBF4(&v5[1], eventSuccessData);
+  sub_2213A04(&v5[1], eventSuccessData);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -10220,98 +10209,98 @@ void AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0
   struct System_Action_AdjustEventSuccess__o *callback; // x8
   Il2CppObject *v52; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_593046C & 1) == 0 )
+  if ( (byte_596860C & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustEventSuccess_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_593046C = 1;
+    sub_2213A60(&AdjustSdk_AdjustEventSuccess_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_596860C = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustEventSuccess_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustEventSuccess_TypeInfo);
   System_Object___ctor(v3, 0);
   eventSuccessData = this->fields.eventSuccessData;
   inited = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v4, v5);
   if ( !eventSuccessData )
-    sub_21FFECC(inited, v4, v5);
+    sub_2213CDC(inited, v4, v5);
   object = UnityEngine_AndroidJavaObject__Get_object_(
              eventSuccessData,
              AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid,
-             (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+             (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
   if ( !v3 )
-    sub_21FFECC(IsNullOrEmpty, v10, v11);
+    sub_2213CDC(IsNullOrEmpty, v10, v11);
   if ( IsNullOrEmpty )
     v12 = 0;
   else
     v12 = (Il2CppClass *)object;
   v3[1].klass = v12;
-  sub_21FFBF4(&v3[1], v12);
+  sub_2213A04(&v3[1], v12);
   v15 = this->fields.eventSuccessData;
   if ( !v15 )
-    sub_21FFECC(0, v13, v14);
+    sub_2213CDC(0, v13, v14);
   v16 = UnityEngine_AndroidJavaObject__Get_object_(
           v15,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v16, 0) )
     v17 = 0;
   else
     v17 = v16;
   v3[1].monitor = v17;
-  sub_21FFBF4(&v3[1].monitor, v17);
+  sub_2213A04(&v3[1].monitor, v17);
   v20 = this->fields.eventSuccessData;
   if ( !v20 )
-    sub_21FFECC(0, v18, v19);
+    sub_2213CDC(0, v18, v19);
   v21 = UnityEngine_AndroidJavaObject__Get_object_(
           v20,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v21, 0) )
     v22 = 0;
   else
     v22 = (Il2CppClass *)v21;
   v3[2].klass = v22;
-  sub_21FFBF4(&v3[2], v22);
+  sub_2213A04(&v3[2], v22);
   v25 = this->fields.eventSuccessData;
   if ( !v25 )
-    sub_21FFECC(0, v23, v24);
+    sub_2213CDC(0, v23, v24);
   v26 = UnityEngine_AndroidJavaObject__Get_object_(
           v25,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v26, 0) )
     v27 = 0;
   else
     v27 = v26;
   v3[2].monitor = v27;
-  sub_21FFBF4(&v3[2].monitor, v27);
+  sub_2213A04(&v3[2].monitor, v27);
   v30 = this->fields.eventSuccessData;
   if ( !v30 )
-    sub_21FFECC(0, v28, v29);
+    sub_2213CDC(0, v28, v29);
   v31 = UnityEngine_AndroidJavaObject__Get_object_(
           v30,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v31, 0) )
     v32 = 0;
   else
     v32 = (Il2CppClass *)v31;
   v3[3].klass = v32;
-  sub_21FFBF4(&v3[3], v32);
+  sub_2213A04(&v3[3], v32);
   v35 = this->fields.eventSuccessData;
   if ( !v35 )
-    sub_21FFECC(0, v33, v34);
+    sub_2213CDC(0, v33, v34);
   v36 = UnityEngine_AndroidJavaObject__Get_object_(
           v35,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
   v39 = (UnityEngine_AndroidJavaObject_o *)v36;
   v52 = v36;
   if ( v36 )
@@ -10320,22 +10309,22 @@ void AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0
     v41 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v41 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v41 = v40[7];
     }
     v42 = *(_QWORD *)(v41 + 16);
     if ( (*(_WORD *)(v42 + 309) & 1) == 0 )
-      v42 = sub_2237AF8();
+      v42 = sub_224B908();
     if ( !*(_DWORD *)(v42 + 228) )
       j_il2cpp_runtime_class_init_0(v42, v37, v38);
     v43 = *(_QWORD *)(v40[7] + 16LL);
     if ( (*(_WORD *)(v43 + 309) & 1) == 0 )
-      v43 = sub_2237AF8();
+      v43 = sub_224B908();
     v44 = UnityEngine_AndroidJavaObject__Call_object_(
             v39,
-            (System_String_o *)StringLiteral_25359/*"toString"*/,
+            (System_String_o *)StringLiteral_25407/*"toString"*/,
             **(System_Object_array ***)(v43 + 184),
-            (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+            (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     AdjustSdk_AdjustEventSuccess__BuildJsonResponseFromString(
       (AdjustSdk_AdjustEventSuccess_o *)v3,
       (System_String_o *)v44,
@@ -10360,13 +10349,13 @@ void AdjustSdk_AdjustAndroid_EventTrackingSucceededListener___c__DisplayClass2_0
     else
     {
 LABEL_42:
-      v49 = sub_2237E2C(v52, System_IDisposable_TypeInfo, 0);
+      v49 = sub_224BC3C(v52, System_IDisposable_TypeInfo, 0);
     }
     v36 = (Il2CppObject *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v49)(v52, *(_QWORD *)(v49 + 8));
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(v36, v37, v38);
+    sub_2213CDC(v36, v37, v38);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, Il2CppObject *, intptr_t))callback->fields.invoke_impl)(
@@ -10381,17 +10370,17 @@ void AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930476 & 1) == 0 )
+  if ( (byte_5968616 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18848/*"com.adjust.sdk.OnGoogleAdIdReadListener"*/);
-    byte_5930476 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18886/*"com.adjust.sdk.OnGoogleAdIdReadListener"*/);
+    byte_5968616 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18848/*"com.adjust.sdk.OnGoogleAdIdReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18886/*"com.adjust.sdk.OnGoogleAdIdReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -10408,25 +10397,25 @@ void AdjustSdk_AdjustAndroid_GoogleAdIdReadListener__onGoogleAdIdRead(
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5930477 & 1) == 0 )
+  if ( (byte_5968617 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0__onGoogleAdIdRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930477 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0__onGoogleAdIdRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968617 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)this;
-  sub_21FFBF4(&v5[1], this);
+  sub_2213A04(&v5[1], this);
   v5[1].monitor = adid;
-  sub_21FFBF4(&v5[1].monitor, adid);
+  sub_2213A04(&v5[1].monitor, adid);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -10456,7 +10445,7 @@ void AdjustSdk_AdjustAndroid_GoogleAdIdReadListener___c__DisplayClass2_0___onGoo
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))callback->fields.invoke_impl)(
@@ -10471,17 +10460,17 @@ void AdjustSdk_AdjustAndroid_IsEnabledListener___ctor(
         System_Action_bool__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930487 & 1) == 0 )
+  if ( (byte_5968627 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18849/*"com.adjust.sdk.OnIsEnabledListener"*/);
-    byte_5930487 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18887/*"com.adjust.sdk.OnIsEnabledListener"*/);
+    byte_5968627 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18849/*"com.adjust.sdk.OnIsEnabledListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18887/*"com.adjust.sdk.OnIsEnabledListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -10498,25 +10487,25 @@ void AdjustSdk_AdjustAndroid_IsEnabledListener__onIsEnabledRead(
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5930488 & 1) == 0 )
+  if ( (byte_5968628 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0__onIsEnabledRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930488 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0__onIsEnabledRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968628 = 1;
   }
-  v5 = sub_21FFEBC(AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0_TypeInfo);
+  v5 = sub_2213CCC(AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4(v5 + 16, this);
+  sub_2213A04(v5 + 16, this);
   callback = this->fields.callback;
   *(_BYTE *)(v5 + 24) = isEnabled;
   if ( callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       (Il2CppObject *)v5,
@@ -10546,7 +10535,7 @@ void AdjustSdk_AdjustAndroid_IsEnabledListener___c__DisplayClass2_0___onIsEnable
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, bool, intptr_t))callback->fields.invoke_impl)(
@@ -10561,17 +10550,17 @@ void AdjustSdk_AdjustAndroid_LastDeeplinkListener___ctor(
         System_Action_string__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930489 & 1) == 0 )
+  if ( (byte_5968629 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18850/*"com.adjust.sdk.OnLastDeeplinkReadListener"*/);
-    byte_5930489 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18888/*"com.adjust.sdk.OnLastDeeplinkReadListener"*/);
+    byte_5968629 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18850/*"com.adjust.sdk.OnLastDeeplinkReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18888/*"com.adjust.sdk.OnLastDeeplinkReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -10587,25 +10576,25 @@ void AdjustSdk_AdjustAndroid_LastDeeplinkListener__onLastDeeplinkRead(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_593048A & 1) == 0 )
+  if ( (byte_596862A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0__onLastDeeplinkRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_TypeInfo);
-    byte_593048A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0__onLastDeeplinkRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_TypeInfo);
+    byte_596862A = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)ajoLastDeeplink;
-  sub_21FFBF4(&v5[1], ajoLastDeeplink);
+  sub_2213A04(&v5[1], ajoLastDeeplink);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -10642,12 +10631,12 @@ void AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0___onLastD
   struct System_Action_string__o *callback; // x8
 
   v3 = this;
-  if ( (byte_593048B & 1) == 0 )
+  if ( (byte_596862B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    this = (AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_o *)sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_593048B = 1;
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    this = (AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_o *)sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_596862B = 1;
   }
   ajoLastDeeplink = v3->fields.ajoLastDeeplink;
   if ( ajoLastDeeplink )
@@ -10656,22 +10645,22 @@ void AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0___onLastD
     v6 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v6 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-      v7 = sub_2237AF8();
+      v7 = sub_224B908();
     if ( !*(_DWORD *)(v7 + 228) )
       j_il2cpp_runtime_class_init_0(v7, method, v2);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-      v8 = sub_2237AF8();
+      v8 = sub_224B908();
     this = (AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_o *)UnityEngine_AndroidJavaObject__Call_object_(
                                                                                     ajoLastDeeplink,
-                                                                                    (System_String_o *)StringLiteral_25359/*"toString"*/,
+                                                                                    (System_String_o *)StringLiteral_25407/*"toString"*/,
                                                                                     **(System_Object_array ***)(v8 + 184),
-                                                                                    (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+                                                                                    (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     v9 = this;
   }
   else
@@ -10680,7 +10669,7 @@ void AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0___onLastD
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, v9);
+    sub_2213CDC(this, v9);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, AdjustSdk_AdjustAndroid_LastDeeplinkListener___c__DisplayClass2_0_o *, intptr_t))callback->fields.invoke_impl)(
@@ -10696,19 +10685,19 @@ void AdjustSdk_AdjustAndroid_SdkVersionReadListener___ctor(
         System_String_o *sdkPrefix,
         const MethodInfo *method)
 {
-  if ( (byte_5930484 & 1) == 0 )
+  if ( (byte_5968624 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18852/*"com.adjust.sdk.OnSdkVersionReadListener"*/);
-    byte_5930484 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18890/*"com.adjust.sdk.OnSdkVersionReadListener"*/);
+    byte_5968624 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, sdkPrefix);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18852/*"com.adjust.sdk.OnSdkVersionReadListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18890/*"com.adjust.sdk.OnSdkVersionReadListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
   this->fields.sdkPrefix = sdkPrefix;
-  sub_21FFBF4(&this->fields.sdkPrefix, sdkPrefix);
+  sub_2213A04(&this->fields.sdkPrefix, sdkPrefix);
 }
 
 
@@ -10724,25 +10713,25 @@ void AdjustSdk_AdjustAndroid_SdkVersionReadListener__onSdkVersionRead(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5930485 & 1) == 0 )
+  if ( (byte_5968625 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0__onSdkVersionRead_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_TypeInfo);
-    byte_5930485 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0__onSdkVersionRead_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_TypeInfo);
+    byte_5968625 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)this;
-  sub_21FFBF4(&v5[1], this);
+  sub_2213A04(&v5[1], this);
   v5[1].monitor = sdkVersion;
-  sub_21FFBF4(&v5[1].monitor, sdkVersion);
+  sub_2213A04(&v5[1].monitor, sdkVersion);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -10773,20 +10762,20 @@ void AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0___onSdk
   System_String_o *v5; // x1
 
   v2 = this;
-  if ( (byte_5930486 & 1) == 0 )
+  if ( (byte_5968626 & 1) == 0 )
   {
-    this = (AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_o *)sub_21FFC50(&StringLiteral_1850/*"@"*/);
-    byte_5930486 = 1;
+    this = (AdjustSdk_AdjustAndroid_SdkVersionReadListener___c__DisplayClass3_0_o *)sub_2213A60(&StringLiteral_1851/*"@"*/);
+    byte_5968626 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   callback = _4__this->fields.callback;
   if ( callback )
   {
-    v5 = System_String__Concat_75481624(
+    v5 = System_String__Concat_75694928(
            _4__this->fields.sdkPrefix,
-           (System_String_o *)StringLiteral_1850/*"@"*/,
+           (System_String_o *)StringLiteral_1851/*"@"*/,
            v2->fields.sdkVersion,
            0);
     ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))callback->fields.invoke_impl)(
@@ -10802,17 +10791,17 @@ void AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___ctor(
         System_Action_AdjustSessionFailure__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930473 & 1) == 0 )
+  if ( (byte_5968613 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18853/*"com.adjust.sdk.OnSessionTrackingFailedListener"*/);
-    byte_5930473 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18891/*"com.adjust.sdk.OnSessionTrackingFailedListener"*/);
+    byte_5968613 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18853/*"com.adjust.sdk.OnSessionTrackingFailedListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18891/*"com.adjust.sdk.OnSessionTrackingFailedListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -10829,25 +10818,25 @@ void AdjustSdk_AdjustAndroid_SessionTrackingFailedListener__onSessionTrackingFai
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5930474 & 1) == 0 )
+  if ( (byte_5968614 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0__onSessionTrackingFailed_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930474 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0__onSessionTrackingFailed_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968614 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)sessionFailureData;
-  sub_21FFBF4(&v5[1], sessionFailureData);
+  sub_2213A04(&v5[1], sessionFailureData);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -10917,81 +10906,81 @@ void AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_
   struct System_Action_AdjustSessionFailure__o *callback; // x8
   Il2CppObject *v46; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_5930475 & 1) == 0 )
+  if ( (byte_5968615 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustSessionFailure_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_bool___);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_5930475 = 1;
+    sub_2213A60(&AdjustSdk_AdjustSessionFailure_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_bool___);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_5968615 = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_AdjustSessionFailure_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_AdjustSessionFailure_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   sessionFailureData = this->fields.sessionFailureData;
   inited = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v4, v5);
   if ( !sessionFailureData )
-    sub_21FFECC(inited, v4, v5);
+    sub_2213CDC(inited, v4, v5);
   object = UnityEngine_AndroidJavaObject__Get_object_(
              sessionFailureData,
              AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid,
-             (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+             (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
   if ( !v3 )
-    sub_21FFECC(IsNullOrEmpty, v10, v11);
+    sub_2213CDC(IsNullOrEmpty, v10, v11);
   if ( IsNullOrEmpty )
     v12 = 0;
   else
     v12 = object;
   *(_QWORD *)(v3 + 16) = v12;
-  sub_21FFBF4(v3 + 16, v12);
+  sub_2213A04(v3 + 16, v12);
   v15 = this->fields.sessionFailureData;
   if ( !v15 )
-    sub_21FFECC(0, v13, v14);
+    sub_2213CDC(0, v13, v14);
   v16 = UnityEngine_AndroidJavaObject__Get_object_(
           v15,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v16, 0) )
     v17 = 0;
   else
     v17 = v16;
   *(_QWORD *)(v3 + 24) = v17;
-  sub_21FFBF4(v3 + 24, v17);
+  sub_2213A04(v3 + 24, v17);
   v20 = this->fields.sessionFailureData;
   if ( !v20 )
-    sub_21FFECC(0, v18, v19);
+    sub_2213CDC(0, v18, v19);
   v21 = UnityEngine_AndroidJavaObject__Get_object_(
           v20,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v21, 0) )
     v22 = 0;
   else
     v22 = v21;
   *(_QWORD *)(v3 + 32) = v22;
-  sub_21FFBF4(v3 + 32, v22);
+  sub_2213A04(v3 + 32, v22);
   v25 = this->fields.sessionFailureData;
   if ( !v25 )
-    sub_21FFECC(0, v23, v24);
+    sub_2213CDC(0, v23, v24);
   v28 = UnityEngine_AndroidJavaObject__Get_bool_(
           v25,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry,
-          (const MethodInfo_36D7418 *)Method_UnityEngine_AndroidJavaObject_Get_bool___);
+          (const MethodInfo_3709388 *)Method_UnityEngine_AndroidJavaObject_Get_bool___);
   v29 = this->fields.sessionFailureData;
   *(_BYTE *)(v3 + 40) = v28;
   if ( !v29 )
-    sub_21FFECC(0, v26, v27);
+    sub_2213CDC(0, v26, v27);
   v30 = UnityEngine_AndroidJavaObject__Get_object_(
           v29,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
   v33 = (UnityEngine_AndroidJavaObject_o *)v30;
   v46 = v30;
   if ( v30 )
@@ -11000,22 +10989,22 @@ void AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_
     v35 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v35 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v35 = v34[7];
     }
     v36 = *(_QWORD *)(v35 + 16);
     if ( (*(_WORD *)(v36 + 309) & 1) == 0 )
-      v36 = sub_2237AF8();
+      v36 = sub_224B908();
     if ( !*(_DWORD *)(v36 + 228) )
       j_il2cpp_runtime_class_init_0(v36, v31, v32);
     v37 = *(_QWORD *)(v34[7] + 16LL);
     if ( (*(_WORD *)(v37 + 309) & 1) == 0 )
-      v37 = sub_2237AF8();
+      v37 = sub_224B908();
     v38 = UnityEngine_AndroidJavaObject__Call_object_(
             v33,
-            (System_String_o *)StringLiteral_25359/*"toString"*/,
+            (System_String_o *)StringLiteral_25407/*"toString"*/,
             **(System_Object_array ***)(v37 + 184),
-            (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+            (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     AdjustSdk_AdjustSessionFailure__BuildJsonResponseFromString(
       (AdjustSdk_AdjustSessionFailure_o *)v3,
       (System_String_o *)v38,
@@ -11040,13 +11029,13 @@ void AdjustSdk_AdjustAndroid_SessionTrackingFailedListener___c__DisplayClass2_0_
     else
     {
 LABEL_35:
-      v43 = sub_2237E2C(v46, System_IDisposable_TypeInfo, 0);
+      v43 = sub_224BC3C(v46, System_IDisposable_TypeInfo, 0);
     }
     v30 = (Il2CppObject *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v43)(v46, *(_QWORD *)(v43 + 8));
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(v30, v31, v32);
+    sub_2213CDC(v30, v31, v32);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))callback->fields.invoke_impl)(
@@ -11061,17 +11050,17 @@ void AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___ctor(
         System_Action_AdjustSessionSuccess__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930470 & 1) == 0 )
+  if ( (byte_5968610 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18854/*"com.adjust.sdk.OnSessionTrackingSucceededListener"*/);
-    byte_5930470 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18892/*"com.adjust.sdk.OnSessionTrackingSucceededListener"*/);
+    byte_5968610 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18854/*"com.adjust.sdk.OnSessionTrackingSucceededListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18892/*"com.adjust.sdk.OnSessionTrackingSucceededListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -11088,25 +11077,25 @@ void AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener__onSessionTracking
   const MethodInfo *v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5930471 & 1) == 0 )
+  if ( (byte_5968611 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0__onSessionTrackingSucceeded_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930471 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0__onSessionTrackingSucceeded_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968611 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7, v8);
+    sub_2213CDC(v6, v7, v8);
   v5[1].klass = (Il2CppClass *)sessionSuccessData;
-  sub_21FFBF4(&v5[1], sessionSuccessData);
+  sub_2213A04(&v5[1], sessionSuccessData);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       v5,
@@ -11172,72 +11161,72 @@ void AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2
   struct System_Action_AdjustSessionSuccess__o *callback; // x8
   Il2CppObject *v42; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_5930472 & 1) == 0 )
+  if ( (byte_5968612 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustSessionSuccess_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&StringLiteral_25359/*"toString"*/);
-    byte_5930472 = 1;
+    sub_2213A60(&AdjustSdk_AdjustSessionSuccess_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&StringLiteral_25407/*"toString"*/);
+    byte_5968612 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustSessionSuccess_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustSessionSuccess_TypeInfo);
   System_Object___ctor(v3, 0);
   sessionSuccessData = this->fields.sessionSuccessData;
   inited = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v4, v5);
   if ( !sessionSuccessData )
-    sub_21FFECC(inited, v4, v5);
+    sub_2213CDC(inited, v4, v5);
   object = UnityEngine_AndroidJavaObject__Get_object_(
              sessionSuccessData,
              AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid,
-             (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+             (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)object, 0);
   if ( !v3 )
-    sub_21FFECC(IsNullOrEmpty, v10, v11);
+    sub_2213CDC(IsNullOrEmpty, v10, v11);
   if ( IsNullOrEmpty )
     v12 = 0;
   else
     v12 = (Il2CppClass *)object;
   v3[1].klass = v12;
-  sub_21FFBF4(&v3[1], v12);
+  sub_2213A04(&v3[1], v12);
   v15 = this->fields.sessionSuccessData;
   if ( !v15 )
-    sub_21FFECC(0, v13, v14);
+    sub_2213CDC(0, v13, v14);
   v16 = UnityEngine_AndroidJavaObject__Get_object_(
           v15,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v16, 0) )
     v17 = 0;
   else
     v17 = v16;
   v3[1].monitor = v17;
-  sub_21FFBF4(&v3[1].monitor, v17);
+  sub_2213A04(&v3[1].monitor, v17);
   v20 = this->fields.sessionSuccessData;
   if ( !v20 )
-    sub_21FFECC(0, v18, v19);
+    sub_2213CDC(0, v18, v19);
   v21 = UnityEngine_AndroidJavaObject__Get_object_(
           v20,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
   if ( System_String__IsNullOrEmpty((System_String_o *)v21, 0) )
     v22 = 0;
   else
     v22 = (Il2CppClass *)v21;
   v3[2].klass = v22;
-  sub_21FFBF4(&v3[2], v22);
+  sub_2213A04(&v3[2], v22);
   v25 = this->fields.sessionSuccessData;
   if ( !v25 )
-    sub_21FFECC(0, v23, v24);
+    sub_2213CDC(0, v23, v24);
   v26 = UnityEngine_AndroidJavaObject__Get_object_(
           v25,
           AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
-          (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91478704);
+          (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_AndroidJavaObject____91704896);
   v29 = (UnityEngine_AndroidJavaObject_o *)v26;
   v42 = v26;
   if ( v26 )
@@ -11246,22 +11235,22 @@ void AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2
     v31 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v31 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v31 = v30[7];
     }
     v32 = *(_QWORD *)(v31 + 16);
     if ( (*(_WORD *)(v32 + 309) & 1) == 0 )
-      v32 = sub_2237AF8();
+      v32 = sub_224B908();
     if ( !*(_DWORD *)(v32 + 228) )
       j_il2cpp_runtime_class_init_0(v32, v27, v28);
     v33 = *(_QWORD *)(v30[7] + 16LL);
     if ( (*(_WORD *)(v33 + 309) & 1) == 0 )
-      v33 = sub_2237AF8();
+      v33 = sub_224B908();
     v34 = UnityEngine_AndroidJavaObject__Call_object_(
             v29,
-            (System_String_o *)StringLiteral_25359/*"toString"*/,
+            (System_String_o *)StringLiteral_25407/*"toString"*/,
             **(System_Object_array ***)(v33 + 184),
-            (const MethodInfo_36D5738 *)Method_UnityEngine_AndroidJavaObject_Call_string____91478616);
+            (const MethodInfo_37076A8 *)Method_UnityEngine_AndroidJavaObject_Call_string____91704808);
     AdjustSdk_AdjustSessionSuccess__BuildJsonResponseFromString(
       (AdjustSdk_AdjustSessionSuccess_o *)v3,
       (System_String_o *)v34,
@@ -11286,13 +11275,13 @@ void AdjustSdk_AdjustAndroid_SessionTrackingSucceededListener___c__DisplayClass2
     else
     {
 LABEL_34:
-      v39 = sub_2237E2C(v42, System_IDisposable_TypeInfo, 0);
+      v39 = sub_224BC3C(v42, System_IDisposable_TypeInfo, 0);
     }
     v26 = (Il2CppObject *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))v39)(v42, *(_QWORD *)(v39 + 8));
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(v26, v27, v28);
+    sub_2213CDC(v26, v27, v28);
   callback = _4__this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(intptr_t, Il2CppObject *, intptr_t))callback->fields.invoke_impl)(
@@ -11307,17 +11296,17 @@ void AdjustSdk_AdjustAndroid_VerificationResultListener___ctor(
         System_Action_AdjustPurchaseVerificationResult__o *pCallback,
         const MethodInfo *method)
 {
-  if ( (byte_5930478 & 1) == 0 )
+  if ( (byte_5968618 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AndroidJavaProxy_TypeInfo);
-    sub_21FFC50(&StringLiteral_18851/*"com.adjust.sdk.OnPurchaseVerificationFinishedListener"*/);
-    byte_5930478 = 1;
+    sub_2213A60(&UnityEngine_AndroidJavaProxy_TypeInfo);
+    sub_2213A60(&StringLiteral_18889/*"com.adjust.sdk.OnPurchaseVerificationFinishedListener"*/);
+    byte_5968618 = 1;
   }
   if ( !*(&UnityEngine_AndroidJavaProxy_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_AndroidJavaProxy_TypeInfo, pCallback, method);
-  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18851/*"com.adjust.sdk.OnPurchaseVerificationFinishedListener"*/, 0);
+  UnityEngine_AndroidJavaProxy___ctor((UnityEngine_AndroidJavaProxy_o *)this, (System_String_o *)StringLiteral_18889/*"com.adjust.sdk.OnPurchaseVerificationFinishedListener"*/, 0);
   this->fields.callback = pCallback;
-  sub_21FFBF4(&this->fields.callback, pCallback);
+  sub_2213A04(&this->fields.callback, pCallback);
 }
 
 
@@ -11333,25 +11322,25 @@ void AdjustSdk_AdjustAndroid_VerificationResultListener__onVerificationFinished(
   const MethodInfo *v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5930479 & 1) == 0 )
+  if ( (byte_5968619 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AdjustThreadDispatcher_TypeInfo);
-    sub_21FFC50(&Method_AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0__onVerificationFinished_b__0__);
-    sub_21FFC50(&AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_TypeInfo);
-    byte_5930479 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0__onVerificationFinished_b__0__);
+    sub_2213A60(&AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_TypeInfo);
+    byte_5968619 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v5[1].klass = (Il2CppClass *)ajoVerificationInfo;
-  sub_21FFBF4(&v5[1], ajoVerificationInfo);
+  sub_2213A04(&v5[1], ajoVerificationInfo);
   v5[1].monitor = this;
-  sub_21FFBF4(&v5[1].monitor, this);
+  sub_2213A04(&v5[1].monitor, this);
   if ( this->fields.callback )
   {
-    v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v8,
       v5,
@@ -11398,56 +11387,56 @@ void AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0___o
   struct System_Action_AdjustPurchaseVerificationResult__o *v21; // x8
 
   v2 = this;
-  if ( (byte_593047A & 1) == 0 )
+  if ( (byte_596861A & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustPurchaseVerificationResult_TypeInfo);
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_int____91478728);
-    this = (AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_o *)sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Get_string___);
-    byte_593047A = 1;
+    sub_2213A60(&AdjustSdk_AdjustPurchaseVerificationResult_TypeInfo);
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_int____91704920);
+    this = (AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0_o *)sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Get_string___);
+    byte_596861A = 1;
   }
   if ( v2->fields.ajoVerificationInfo )
   {
-    v3 = sub_21FFEBC(AdjustSdk_AdjustPurchaseVerificationResult_TypeInfo);
+    v3 = sub_2213CCC(AdjustSdk_AdjustPurchaseVerificationResult_TypeInfo);
     System_Object___ctor((Il2CppObject *)v3, 0);
     ajoVerificationInfo = v2->fields.ajoVerificationInfo;
     inited = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
       inited = (AdjustSdk_AdjustUtils_c *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v4, v5);
     if ( !ajoVerificationInfo )
-      sub_21FFECC(inited, v4);
+      sub_2213CDC(inited, v4);
     object = UnityEngine_AndroidJavaObject__Get_object_(
                ajoVerificationInfo,
                AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyVerificationStatus,
-               (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+               (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( !v3 )
-      sub_21FFECC(object, object);
+      sub_2213CDC(object, object);
     *(_QWORD *)(v3 + 32) = object;
-    sub_21FFBF4(v3 + 32, object);
+    sub_2213A04(v3 + 32, object);
     v10 = v2->fields.ajoVerificationInfo;
     if ( !v10 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     v12 = UnityEngine_AndroidJavaObject__Get_int_(
             v10,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCode,
-            (const MethodInfo_36D7498 *)Method_UnityEngine_AndroidJavaObject_Get_int____91478728);
+            (const MethodInfo_3709408 *)Method_UnityEngine_AndroidJavaObject_Get_int____91704920);
     v13 = v2->fields.ajoVerificationInfo;
     *(_DWORD *)(v3 + 16) = v12;
     if ( !v13 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     v14 = UnityEngine_AndroidJavaObject__Get_object_(
             v13,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
-            (const MethodInfo_36D7598 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
+            (const MethodInfo_3709508 *)Method_UnityEngine_AndroidJavaObject_Get_string___);
     if ( System_String__IsNullOrEmpty((System_String_o *)v14, 0) )
       v15 = 0;
     else
       v15 = v14;
     *(_QWORD *)(v3 + 24) = v15;
-    v16 = sub_21FFBF4(v3 + 24, v15);
+    v16 = sub_2213A04(v3 + 24, v15);
     _4__this = v2->fields.__4__this;
     if ( !_4__this )
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     callback = _4__this->fields.callback;
     if ( callback )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))callback->fields.invoke_impl)(
@@ -11459,7 +11448,7 @@ void AdjustSdk_AdjustAndroid_VerificationResultListener___c__DisplayClass2_0___o
   {
     v20 = v2->fields.__4__this;
     if ( !v20 )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     v21 = v20->fields.callback;
     if ( v21 )
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v21->fields.invoke_impl)(
@@ -11478,9 +11467,9 @@ void AdjustSdk_AdjustAppStorePurchase___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._TransactionId_k__BackingField = transactionId;
-  sub_21FFBF4(&this->fields, transactionId);
+  sub_2213A04(&this->fields, transactionId);
   this->fields._ProductId_k__BackingField = productId;
-  sub_21FFBF4(&this->fields._ProductId_k__BackingField, productId);
+  sub_2213A04(&this->fields._ProductId_k__BackingField, productId);
 }
 
 
@@ -11506,7 +11495,7 @@ void AdjustSdk_AdjustAppStorePurchase__set_ProductId(
         const MethodInfo *method)
 {
   this->fields._ProductId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._ProductId_k__BackingField, value);
+  sub_2213A04(&this->fields._ProductId_k__BackingField, value);
 }
 
 
@@ -11516,7 +11505,7 @@ void AdjustSdk_AdjustAppStorePurchase__set_TransactionId(
         const MethodInfo *method)
 {
   this->fields._TransactionId_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -11529,11 +11518,11 @@ void AdjustSdk_AdjustAppStoreSubscription___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Price_k__BackingField = price;
-  sub_21FFBF4(&this->fields._Price_k__BackingField, price);
+  sub_2213A04(&this->fields._Price_k__BackingField, price);
   this->fields._Currency_k__BackingField = currency;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, currency);
+  sub_2213A04(&this->fields._Currency_k__BackingField, currency);
   this->fields._TransactionId_k__BackingField = transactionId;
-  sub_21FFBF4(&this->fields._TransactionId_k__BackingField, transactionId);
+  sub_2213A04(&this->fields._TransactionId_k__BackingField, transactionId);
 }
 
 
@@ -11557,24 +11546,24 @@ void AdjustSdk_AdjustAppStoreSubscription__AddCallbackParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_593048E & 1) == 0 )
+  if ( (byte_596862E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_593048E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596862E = 1;
   }
   innerCallbackParameters = this->fields.innerCallbackParameters;
   p_fields = &this->fields;
   v7 = (System_Collections_Generic_List_object__o *)innerCallbackParameters;
   if ( !innerCallbackParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     p_fields->innerCallbackParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_fields, v10);
+    sub_2213A04(p_fields, v10);
     v7 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
     if ( !p_fields->innerCallbackParameters )
       goto LABEL_14;
@@ -11590,14 +11579,14 @@ void AdjustSdk_AdjustAppStoreSubscription__AddCallbackParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
   if ( !p_fields->innerCallbackParameters
@@ -11607,7 +11596,7 @@ void AdjustSdk_AdjustAppStoreSubscription__AddCallbackParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -11615,14 +11604,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -11647,24 +11636,24 @@ void AdjustSdk_AdjustAppStoreSubscription__AddPartnerParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_593048F & 1) == 0 )
+  if ( (byte_596862F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_593048F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596862F = 1;
   }
   innerPartnerParameters = this->fields.innerPartnerParameters;
   p_innerPartnerParameters = &this->fields.innerPartnerParameters;
   v7 = (System_Collections_Generic_List_object__o *)innerPartnerParameters;
   if ( !innerPartnerParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     *p_innerPartnerParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_innerPartnerParameters, v10);
+    sub_2213A04(p_innerPartnerParameters, v10);
     v7 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
     if ( !*p_innerPartnerParameters )
       goto LABEL_14;
@@ -11680,14 +11669,14 @@ void AdjustSdk_AdjustAppStoreSubscription__AddPartnerParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
   if ( !*p_innerPartnerParameters
@@ -11697,7 +11686,7 @@ void AdjustSdk_AdjustAppStoreSubscription__AddPartnerParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -11705,14 +11694,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -11723,16 +11712,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustApp
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_593048C & 1) == 0 )
+  if ( (byte_596862C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_593048C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_596862C = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerCallbackParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -11751,16 +11740,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustApp
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_593048D & 1) == 0 )
+  if ( (byte_596862D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_593048D = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_596862D = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerPartnerParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -11803,7 +11792,7 @@ void AdjustSdk_AdjustAppStoreSubscription__set_Currency(
         const MethodInfo *method)
 {
   this->fields._Currency_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, value);
+  sub_2213A04(&this->fields._Currency_k__BackingField, value);
 }
 
 
@@ -11813,7 +11802,7 @@ void AdjustSdk_AdjustAppStoreSubscription__set_Price(
         const MethodInfo *method)
 {
   this->fields._Price_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Price_k__BackingField, value);
+  sub_2213A04(&this->fields._Price_k__BackingField, value);
 }
 
 
@@ -11823,7 +11812,7 @@ void AdjustSdk_AdjustAppStoreSubscription__set_SalesRegion(
         const MethodInfo *method)
 {
   this->fields._SalesRegion_k__BackingField = value;
-  sub_21FFBF4(&this->fields._SalesRegion_k__BackingField, value);
+  sub_2213A04(&this->fields._SalesRegion_k__BackingField, value);
 }
 
 
@@ -11833,7 +11822,7 @@ void AdjustSdk_AdjustAppStoreSubscription__set_TransactionDate(
         const MethodInfo *method)
 {
   this->fields._TransactionDate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._TransactionDate_k__BackingField, value);
+  sub_2213A04(&this->fields._TransactionDate_k__BackingField, value);
 }
 
 
@@ -11843,7 +11832,7 @@ void AdjustSdk_AdjustAppStoreSubscription__set_TransactionId(
         const MethodInfo *method)
 {
   this->fields._TransactionId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._TransactionId_k__BackingField, value);
+  sub_2213A04(&this->fields._TransactionId_k__BackingField, value);
 }
 
 
@@ -11853,7 +11842,7 @@ void AdjustSdk_AdjustAttribution___ctor(AdjustSdk_AdjustAttribution_o *this, con
 }
 
 
-void AdjustSdk_AdjustAttribution___ctor_36707068(
+void AdjustSdk_AdjustAttribution___ctor_36788484(
         AdjustSdk_AdjustAttribution_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -11887,7 +11876,7 @@ void AdjustSdk_AdjustAttribution___ctor_36707068(
   System_String_o *v31; // x21
   System_IFormatProvider_o *InvariantCulture; // x1
   double v33; // d0
-  const MethodInfo_45AEEEC *v34; // x2
+  const MethodInfo_45E3024 *v34; // x2
   __int64 v35; // x1
   const MethodInfo *v36; // x2
   AdjustSdk_AdjustUtils_c *v37; // x0
@@ -11907,12 +11896,12 @@ void AdjustSdk_AdjustAttribution___ctor_36707068(
   int v51; // [xsp+18h] [xbp-38h]
   System_Nullable_double__o v52; // 0:x0.16
 
-  if ( (byte_5930490 & 1) == 0 )
+  if ( (byte_5968630 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&System_Globalization_CultureInfo_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    byte_5930490 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&System_Globalization_CultureInfo_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    byte_5968630 = 1;
   }
   v51 = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -11927,28 +11916,28 @@ void AdjustSdk_AdjustAttribution___ctor_36707068(
     }
     v11 = AdjustSdk_AdjustUtils__GetJsonString(v6, v10->static_fields->KeyTrackerName, v9);
     this->fields._TrackerName_k__BackingField = v11;
-    sub_21FFBF4(&this->fields._TrackerName_k__BackingField, v11);
+    sub_2213A04(&this->fields._TrackerName_k__BackingField, v11);
     v13 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerToken, v12);
     this->fields._TrackerToken_k__BackingField = v13;
-    sub_21FFBF4(&this->fields, v13);
+    sub_2213A04(&this->fields, v13);
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyNetwork, v14);
     this->fields._Network_k__BackingField = v15;
-    sub_21FFBF4(&this->fields._Network_k__BackingField, v15);
+    sub_2213A04(&this->fields._Network_k__BackingField, v15);
     v17 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCampaign, v16);
     this->fields._Campaign_k__BackingField = v17;
-    sub_21FFBF4(&this->fields._Campaign_k__BackingField, v17);
+    sub_2213A04(&this->fields._Campaign_k__BackingField, v17);
     v19 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdgroup, v18);
     this->fields._Adgroup_k__BackingField = v19;
-    sub_21FFBF4(&this->fields._Adgroup_k__BackingField, v19);
+    sub_2213A04(&this->fields._Adgroup_k__BackingField, v19);
     v21 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCreative, v20);
     this->fields._Creative_k__BackingField = v21;
-    sub_21FFBF4(&this->fields._Creative_k__BackingField, v21);
+    sub_2213A04(&this->fields._Creative_k__BackingField, v21);
     v23 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyClickLabel, v22);
     this->fields._ClickLabel_k__BackingField = v23;
-    sub_21FFBF4(&this->fields._ClickLabel_k__BackingField, v23);
+    sub_2213A04(&this->fields._ClickLabel_k__BackingField, v23);
     v25 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostType, v24);
     this->fields._CostType_k__BackingField = v25;
-    sub_21FFBF4(&this->fields._CostType_k__BackingField, v25);
+    sub_2213A04(&this->fields._CostType_k__BackingField, v25);
     v28 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -11959,7 +11948,7 @@ void AdjustSdk_AdjustAttribution___ctor_36707068(
     if ( !*(&System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo, v29, v30);
     InvariantCulture = (System_IFormatProvider_o *)System_Globalization_CultureInfo__get_InvariantCulture(0);
-    v33 = System_Double__Parse_76836292(v31, InvariantCulture, 0);
+    v33 = System_Double__Parse_77049596(v31, InvariantCulture, 0);
     v50 = (struct System_Nullable_double__o)0LL;
     *(_QWORD *)&v52.fields.value = Method_System_Nullable_double___ctor__;
     *(_QWORD *)&v52.fields.hasValue = &v50;
@@ -11973,33 +11962,33 @@ void AdjustSdk_AdjustAttribution___ctor_36707068(
     }
     v38 = AdjustSdk_AdjustUtils__GetJsonString(v6, v37->static_fields->KeyCostCurrency, v36);
     this->fields._CostCurrency_k__BackingField = v38;
-    sub_21FFBF4(&this->fields._CostCurrency_k__BackingField, v38);
+    sub_2213A04(&this->fields._CostCurrency_k__BackingField, v38);
     v40 = AdjustSdk_AdjustUtils__GetJsonString(
             v6,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyFbInstallReferrer,
             v39);
     this->fields._FbInstallReferrer_k__BackingField = v40;
-    v41 = sub_21FFBF4(&this->fields._FbInstallReferrer_k__BackingField, v40);
+    v41 = sub_2213A04(&this->fields._FbInstallReferrer_k__BackingField, v40);
     if ( !v6 )
-      sub_21FFECC(v41, v42);
+      sub_2213CDC(v41, v42);
     v43 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, struct System_String_o *, const MethodInfo *))v6->klass->vtable._7_get_Item.methodPtr)(
                                     v6,
                                     AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
                                     v6->klass->vtable._7_get_Item.method);
     if ( !AdjustSdk_JSONNode__op_Equality(v43, 0, v44) )
     {
-      v48 = AdjustSdk_JSONNode__op_Implicit_36708380(v43, v45);
+      v48 = AdjustSdk_JSONNode__op_Implicit_36789796(v43, v45);
       if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v46, v47);
       AttributionJsonResponse = AdjustSdk_AdjustUtils__GetAttributionJsonResponse(v48, v46);
       this->fields._JsonResponse_k__BackingField = AttributionJsonResponse;
-      sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, AttributionJsonResponse);
+      sub_2213A04(&this->fields._JsonResponse_k__BackingField, AttributionJsonResponse);
     }
   }
 }
 
 
-void AdjustSdk_AdjustAttribution___ctor_36709032(
+void AdjustSdk_AdjustAttribution___ctor_36790448(
         AdjustSdk_AdjustAttribution_o *this,
         System_Collections_Generic_Dictionary_string__string__o *dicAttributionData,
         const MethodInfo *method)
@@ -12030,7 +12019,7 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
   System_String_o *v28; // x21
   System_IFormatProvider_o *InvariantCulture; // x1
   double v30; // d0
-  const MethodInfo_45AEEEC *v31; // x2
+  const MethodInfo_45E3024 *v31; // x2
   __int64 v32; // x1
   const MethodInfo *v33; // x2
   AdjustSdk_AdjustUtils_c *v34; // x0
@@ -12057,14 +12046,14 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
   int v55; // [xsp+18h] [xbp-38h]
   System_Nullable_double__o v56; // 0:x0.16
 
-  if ( (byte_5930491 & 1) == 0 )
+  if ( (byte_5968631 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&System_Globalization_CultureInfo_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    byte_5930491 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&System_Globalization_CultureInfo_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    byte_5968631 = 1;
   }
   v55 = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -12078,49 +12067,49 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
     }
     Value = AdjustSdk_AdjustUtils__TryGetValue(dicAttributionData, v7->static_fields->KeyTrackerName, v6);
     this->fields._TrackerName_k__BackingField = Value;
-    sub_21FFBF4(&this->fields._TrackerName_k__BackingField, Value);
+    sub_2213A04(&this->fields._TrackerName_k__BackingField, Value);
     v10 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTrackerToken,
             v9);
     this->fields._TrackerToken_k__BackingField = v10;
-    sub_21FFBF4(&this->fields, v10);
+    sub_2213A04(&this->fields, v10);
     v12 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyNetwork,
             v11);
     this->fields._Network_k__BackingField = v12;
-    sub_21FFBF4(&this->fields._Network_k__BackingField, v12);
+    sub_2213A04(&this->fields._Network_k__BackingField, v12);
     v14 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCampaign,
             v13);
     this->fields._Campaign_k__BackingField = v14;
-    sub_21FFBF4(&this->fields._Campaign_k__BackingField, v14);
+    sub_2213A04(&this->fields._Campaign_k__BackingField, v14);
     v16 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdgroup,
             v15);
     this->fields._Adgroup_k__BackingField = v16;
-    sub_21FFBF4(&this->fields._Adgroup_k__BackingField, v16);
+    sub_2213A04(&this->fields._Adgroup_k__BackingField, v16);
     v18 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCreative,
             v17);
     this->fields._Creative_k__BackingField = v18;
-    sub_21FFBF4(&this->fields._Creative_k__BackingField, v18);
+    sub_2213A04(&this->fields._Creative_k__BackingField, v18);
     v20 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyClickLabel,
             v19);
     this->fields._ClickLabel_k__BackingField = v20;
-    sub_21FFBF4(&this->fields._ClickLabel_k__BackingField, v20);
+    sub_2213A04(&this->fields._ClickLabel_k__BackingField, v20);
     v22 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCostType,
             v21);
     this->fields._CostType_k__BackingField = v22;
-    sub_21FFBF4(&this->fields._CostType_k__BackingField, v22);
+    sub_2213A04(&this->fields._CostType_k__BackingField, v22);
     v25 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -12131,7 +12120,7 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
     if ( !*(&System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo, v26, v27);
     InvariantCulture = (System_IFormatProvider_o *)System_Globalization_CultureInfo__get_InvariantCulture(0);
-    v30 = System_Double__Parse_76836292(v28, InvariantCulture, 0);
+    v30 = System_Double__Parse_77049596(v28, InvariantCulture, 0);
     v54 = (struct System_Nullable_double__o)0LL;
     *(_QWORD *)&v56.fields.value = Method_System_Nullable_double___ctor__;
     *(_QWORD *)&v56.fields.hasValue = &v54;
@@ -12145,13 +12134,13 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
     }
     v35 = AdjustSdk_AdjustUtils__TryGetValue(dicAttributionData, v34->static_fields->KeyCostCurrency, v33);
     this->fields._CostCurrency_k__BackingField = v35;
-    sub_21FFBF4(&this->fields._CostCurrency_k__BackingField, v35);
+    sub_2213A04(&this->fields._CostCurrency_k__BackingField, v35);
     v37 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyFbInstallReferrer,
             v36);
     this->fields._FbInstallReferrer_k__BackingField = v37;
-    sub_21FFBF4(&this->fields._FbInstallReferrer_k__BackingField, v37);
+    sub_2213A04(&this->fields._FbInstallReferrer_k__BackingField, v37);
     v39 = AdjustSdk_AdjustUtils__TryGetValue(
             dicAttributionData,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
@@ -12161,19 +12150,19 @@ void AdjustSdk_AdjustAttribution___ctor_36709032(
     if ( !v43 )
     {
       if ( !v41 )
-        sub_21FFECC(v43, v44);
+        sub_2213CDC(v43, v44);
       v45 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v41->klass->vtable._27_get_AsObject.methodPtr)(
                                       v41,
                                       v41->klass->vtable._27_get_AsObject.method);
       if ( !AdjustSdk_JSONNode__op_Equality(v45, 0, v46) )
       {
-        v47 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+        v47 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v47,
-          (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+          (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
         this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v47;
         p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-        sub_21FFBF4(p_JsonResponse_k__BackingField, v47);
+        sub_2213A04(p_JsonResponse_k__BackingField, v47);
         v49 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v41->klass->vtable._27_get_AsObject.methodPtr)(
                 v41,
                 v41->klass->vtable._27_get_AsObject.method);
@@ -12204,25 +12193,25 @@ void AdjustSdk_AdjustAttribution__BuildJsonResponseFromString(
   AdjustSdk_JSONClass_o *v13; // x20
   System_Collections_Generic_Dictionary_string__object__o *v14; // x19
 
-  if ( (byte_5930492 & 1) == 0 )
+  if ( (byte_5968632 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_5930492 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968632 = 1;
   }
   v5 = AdjustSdk_JSONNode__Parse(jsonResponseString, (const MethodInfo *)jsonResponseString);
   if ( !AdjustSdk_JSONNode__op_Equality(v5, 0, v6) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v7;
     p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-    v9 = sub_21FFBF4(p_JsonResponse_k__BackingField, v7);
+    v9 = sub_2213A04(p_JsonResponse_k__BackingField, v7);
     if ( !v5 )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     v13 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -12241,10 +12230,10 @@ System_String_o *AdjustSdk_AdjustAttribution__GetJsonResponseAsString(
   __int64 v2; // x2
   System_Collections_Generic_Dictionary_string__object__o *JsonResponse_k__BackingField; // x19
 
-  if ( (byte_5930493 & 1) == 0 )
+  if ( (byte_5968633 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_5930493 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_5968633 = 1;
   }
   JsonResponse_k__BackingField = this->fields._JsonResponse_k__BackingField;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -12277,19 +12266,14 @@ System_String_o *AdjustSdk_AdjustAttribution__get_ClickLabel(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Nullable_double__o AdjustSdk_AdjustAttribution__get_CostAmount(
         AdjustSdk_AdjustAttribution_o *this,
         const MethodInfo *method)
 {
-  double value; // x1
-  __int64 v3; // x0
   System_Nullable_double__o result; // 0:x0.16
 
-  value = this->fields._CostAmount_k__BackingField.fields.value;
-  v3 = *(_QWORD *)&this->fields._CostAmount_k__BackingField.fields.hasValue;
-  result.fields.value = value;
-  *(_QWORD *)&result.fields.hasValue = v3;
+  result.fields.value = this->fields._CostAmount_k__BackingField.fields.value;
+  *(_QWORD *)&result.fields.hasValue = *(_QWORD *)&this->fields._CostAmount_k__BackingField.fields.hasValue;
   return result;
 }
 
@@ -12364,7 +12348,7 @@ void AdjustSdk_AdjustAttribution__set_Adgroup(
         const MethodInfo *method)
 {
   this->fields._Adgroup_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Adgroup_k__BackingField, value);
+  sub_2213A04(&this->fields._Adgroup_k__BackingField, value);
 }
 
 
@@ -12374,7 +12358,7 @@ void AdjustSdk_AdjustAttribution__set_Campaign(
         const MethodInfo *method)
 {
   this->fields._Campaign_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Campaign_k__BackingField, value);
+  sub_2213A04(&this->fields._Campaign_k__BackingField, value);
 }
 
 
@@ -12384,7 +12368,7 @@ void AdjustSdk_AdjustAttribution__set_ClickLabel(
         const MethodInfo *method)
 {
   this->fields._ClickLabel_k__BackingField = value;
-  sub_21FFBF4(&this->fields._ClickLabel_k__BackingField, value);
+  sub_2213A04(&this->fields._ClickLabel_k__BackingField, value);
 }
 
 
@@ -12403,7 +12387,7 @@ void AdjustSdk_AdjustAttribution__set_CostCurrency(
         const MethodInfo *method)
 {
   this->fields._CostCurrency_k__BackingField = value;
-  sub_21FFBF4(&this->fields._CostCurrency_k__BackingField, value);
+  sub_2213A04(&this->fields._CostCurrency_k__BackingField, value);
 }
 
 
@@ -12413,7 +12397,7 @@ void AdjustSdk_AdjustAttribution__set_CostType(
         const MethodInfo *method)
 {
   this->fields._CostType_k__BackingField = value;
-  sub_21FFBF4(&this->fields._CostType_k__BackingField, value);
+  sub_2213A04(&this->fields._CostType_k__BackingField, value);
 }
 
 
@@ -12423,7 +12407,7 @@ void AdjustSdk_AdjustAttribution__set_Creative(
         const MethodInfo *method)
 {
   this->fields._Creative_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Creative_k__BackingField, value);
+  sub_2213A04(&this->fields._Creative_k__BackingField, value);
 }
 
 
@@ -12433,7 +12417,7 @@ void AdjustSdk_AdjustAttribution__set_FbInstallReferrer(
         const MethodInfo *method)
 {
   this->fields._FbInstallReferrer_k__BackingField = value;
-  sub_21FFBF4(&this->fields._FbInstallReferrer_k__BackingField, value);
+  sub_2213A04(&this->fields._FbInstallReferrer_k__BackingField, value);
 }
 
 
@@ -12443,7 +12427,7 @@ void AdjustSdk_AdjustAttribution__set_JsonResponse(
         const MethodInfo *method)
 {
   this->fields._JsonResponse_k__BackingField = value;
-  sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, value);
+  sub_2213A04(&this->fields._JsonResponse_k__BackingField, value);
 }
 
 
@@ -12453,7 +12437,7 @@ void AdjustSdk_AdjustAttribution__set_Network(
         const MethodInfo *method)
 {
   this->fields._Network_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Network_k__BackingField, value);
+  sub_2213A04(&this->fields._Network_k__BackingField, value);
 }
 
 
@@ -12463,7 +12447,7 @@ void AdjustSdk_AdjustAttribution__set_TrackerName(
         const MethodInfo *method)
 {
   this->fields._TrackerName_k__BackingField = value;
-  sub_21FFBF4(&this->fields._TrackerName_k__BackingField, value);
+  sub_2213A04(&this->fields._TrackerName_k__BackingField, value);
 }
 
 
@@ -12473,7 +12457,7 @@ void AdjustSdk_AdjustAttribution__set_TrackerToken(
         const MethodInfo *method)
 {
   this->fields._TrackerToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -12489,12 +12473,12 @@ void AdjustSdk_AdjustConfig___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields._AppToken_k__BackingField = appToken;
   v6 = (AdjustSdk_AdjustConfig_o *)((char *)v6 + 16);
-  sub_21FFBF4(v6, appToken);
+  sub_2213A04(v6, appToken);
   LODWORD(v6->fields._UrlStrategyDomains_k__BackingField) = environment;
 }
 
 
-void AdjustSdk_AdjustConfig___ctor_36641860(
+void AdjustSdk_AdjustConfig___ctor_36723276(
         AdjustSdk_AdjustConfig_o *this,
         System_String_o *appToken,
         int32_t environment,
@@ -12502,20 +12486,20 @@ void AdjustSdk_AdjustConfig___ctor_36641860(
         const MethodInfo *method)
 {
   AdjustSdk_AdjustConfig_Fields *p_fields; // x20
-  const MethodInfo_45AC808 *v10; // x2
+  const MethodInfo_45E0940 *v10; // x2
   struct System_Nullable_bool__o *v11; // x0
   struct System_Nullable_bool__o v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5930494 & 1) == 0 )
+  if ( (byte_5968634 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_bool___ctor__);
-    byte_5930494 = 1;
+    sub_2213A60(&Method_System_Nullable_bool___ctor__);
+    byte_5968634 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._AppToken_k__BackingField = appToken;
   p_fields = &this->fields;
-  sub_21FFBF4(p_fields, appToken);
-  v10 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
+  sub_2213A04(p_fields, appToken);
+  v10 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
   v11 = &v12;
   p_fields->_Environment_k__BackingField = environment;
   v12 = 0;
@@ -12533,26 +12517,26 @@ void AdjustSdk_AdjustConfig__SetUrlStrategy(
 {
   struct System_Collections_Generic_List_string__o **p_UrlStrategyDomains_k__BackingField; // x20
   __int16 *v10; // x0
-  const MethodInfo_45AC808 *v11; // x2
+  const MethodInfo_45E0940 *v11; // x2
   __int16 *v12; // x0
   __int16 v13; // [xsp+8h] [xbp-38h] BYREF
   __int16 v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5930495 & 1) == 0 )
+  if ( (byte_5968635 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_bool___ctor__);
-    byte_5930495 = 1;
+    sub_2213A60(&Method_System_Nullable_bool___ctor__);
+    byte_5968635 = 1;
   }
   this->fields._UrlStrategyDomains_k__BackingField = urlStrategyDomains;
   p_UrlStrategyDomains_k__BackingField = &this->fields._UrlStrategyDomains_k__BackingField;
-  sub_21FFBF4(p_UrlStrategyDomains_k__BackingField, urlStrategyDomains);
+  sub_2213A04(p_UrlStrategyDomains_k__BackingField, urlStrategyDomains);
   v10 = &v14;
   v14 = 0;
   System_Nullable_bool____ctor(
     (System_Nullable_bool__o)v10,
     shouldUseSubdomains,
-    (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__);
-  v11 = (const MethodInfo_45AC808 *)Method_System_Nullable_bool___ctor__;
+    (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+  v11 = (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__;
   v12 = &v13;
   v13 = 0;
   *((_WORD *)p_UrlStrategyDomains_k__BackingField - 7) = v14;
@@ -12846,7 +12830,7 @@ void AdjustSdk_AdjustConfig__set_AppToken(
         const MethodInfo *method)
 {
   this->fields._AppToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -12865,7 +12849,7 @@ void AdjustSdk_AdjustConfig__set_AttributionChangedDelegate(
         const MethodInfo *method)
 {
   this->fields._AttributionChangedDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._AttributionChangedDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._AttributionChangedDelegate_k__BackingField, value);
 }
 
 
@@ -12875,7 +12859,7 @@ void AdjustSdk_AdjustConfig__set_DefaultTracker(
         const MethodInfo *method)
 {
   this->fields._DefaultTracker_k__BackingField = value;
-  sub_21FFBF4(&this->fields._DefaultTracker_k__BackingField, value);
+  sub_2213A04(&this->fields._DefaultTracker_k__BackingField, value);
 }
 
 
@@ -12885,7 +12869,7 @@ void AdjustSdk_AdjustConfig__set_DeferredDeeplinkDelegate(
         const MethodInfo *method)
 {
   this->fields._DeferredDeeplinkDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._DeferredDeeplinkDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._DeferredDeeplinkDelegate_k__BackingField, value);
 }
 
 
@@ -12910,7 +12894,7 @@ void AdjustSdk_AdjustConfig__set_EventFailureDelegate(
         const MethodInfo *method)
 {
   this->fields._EventFailureDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._EventFailureDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._EventFailureDelegate_k__BackingField, value);
 }
 
 
@@ -12920,7 +12904,7 @@ void AdjustSdk_AdjustConfig__set_EventSuccessDelegate(
         const MethodInfo *method)
 {
   this->fields._EventSuccessDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._EventSuccessDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._EventSuccessDelegate_k__BackingField, value);
 }
 
 
@@ -12930,7 +12914,7 @@ void AdjustSdk_AdjustConfig__set_ExternalDeviceId(
         const MethodInfo *method)
 {
   this->fields._ExternalDeviceId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._ExternalDeviceId_k__BackingField, value);
+  sub_2213A04(&this->fields._ExternalDeviceId_k__BackingField, value);
 }
 
 
@@ -12940,7 +12924,7 @@ void AdjustSdk_AdjustConfig__set_FbAppId(
         const MethodInfo *method)
 {
   this->fields._FbAppId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._FbAppId_k__BackingField, value);
+  sub_2213A04(&this->fields._FbAppId_k__BackingField, value);
 }
 
 
@@ -13094,7 +13078,7 @@ void AdjustSdk_AdjustConfig__set_PreinstallFilePath(
         const MethodInfo *method)
 {
   this->fields._PreinstallFilePath_k__BackingField = value;
-  sub_21FFBF4(&this->fields._PreinstallFilePath_k__BackingField, value);
+  sub_2213A04(&this->fields._PreinstallFilePath_k__BackingField, value);
 }
 
 
@@ -13104,7 +13088,7 @@ void AdjustSdk_AdjustConfig__set_SessionFailureDelegate(
         const MethodInfo *method)
 {
   this->fields._SessionFailureDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._SessionFailureDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._SessionFailureDelegate_k__BackingField, value);
 }
 
 
@@ -13114,7 +13098,7 @@ void AdjustSdk_AdjustConfig__set_SessionSuccessDelegate(
         const MethodInfo *method)
 {
   this->fields._SessionSuccessDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._SessionSuccessDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._SessionSuccessDelegate_k__BackingField, value);
 }
 
 
@@ -13133,7 +13117,7 @@ void AdjustSdk_AdjustConfig__set_SkanUpdatedDelegate(
         const MethodInfo *method)
 {
   this->fields._SkanUpdatedDelegate_k__BackingField = value;
-  sub_21FFBF4(&this->fields._SkanUpdatedDelegate_k__BackingField, value);
+  sub_2213A04(&this->fields._SkanUpdatedDelegate_k__BackingField, value);
 }
 
 
@@ -13143,7 +13127,7 @@ void AdjustSdk_AdjustConfig__set_StoreInfo(
         const MethodInfo *method)
 {
   this->fields._StoreInfo_k__BackingField = value;
-  sub_21FFBF4(&this->fields._StoreInfo_k__BackingField, value);
+  sub_2213A04(&this->fields._StoreInfo_k__BackingField, value);
 }
 
 
@@ -13153,7 +13137,7 @@ void AdjustSdk_AdjustConfig__set_UrlStrategyDomains(
         const MethodInfo *method)
 {
   this->fields._UrlStrategyDomains_k__BackingField = value;
-  sub_21FFBF4(&this->fields._UrlStrategyDomains_k__BackingField, value);
+  sub_2213A04(&this->fields._UrlStrategyDomains_k__BackingField, value);
 }
 
 
@@ -13164,7 +13148,7 @@ void AdjustSdk_AdjustDeeplink___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Deeplink_k__BackingField = deeplink;
-  sub_21FFBF4(&this->fields, deeplink);
+  sub_2213A04(&this->fields, deeplink);
 }
 
 
@@ -13186,7 +13170,7 @@ void AdjustSdk_AdjustDeeplink__set_Deeplink(
         const MethodInfo *method)
 {
   this->fields._Deeplink_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -13196,7 +13180,7 @@ void AdjustSdk_AdjustDeeplink__set_Referrer(
         const MethodInfo *method)
 {
   this->fields._Referrer_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Referrer_k__BackingField, value);
+  sub_2213A04(&this->fields._Referrer_k__BackingField, value);
 }
 
 
@@ -13206,19 +13190,19 @@ System_String_o *AdjustSdk_AdjustEnvironmentExtension__ToLowercaseString(
 {
   __int64 *v3; // x8
 
-  if ( (byte_5930496 & 1) == 0 )
+  if ( (byte_5968636 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23928/*"production"*/);
-    sub_21FFC50(&StringLiteral_25709/*"unknown"*/);
-    sub_21FFC50(&StringLiteral_24345/*"sandbox"*/);
-    byte_5930496 = 1;
+    sub_2213A60(&StringLiteral_23975/*"production"*/);
+    sub_2213A60(&StringLiteral_25757/*"unknown"*/);
+    sub_2213A60(&StringLiteral_24393/*"sandbox"*/);
+    byte_5968636 = 1;
   }
   if ( adjustEnvironment == 1 )
-    v3 = &StringLiteral_23928/*"production"*/;
+    v3 = &StringLiteral_23975/*"production"*/;
   else
-    v3 = &StringLiteral_25709/*"unknown"*/;
+    v3 = &StringLiteral_25757/*"unknown"*/;
   if ( !adjustEnvironment )
-    v3 = (__int64 *)&StringLiteral_24345/*"sandbox"*/;
+    v3 = (__int64 *)&StringLiteral_24393/*"sandbox"*/;
   return (System_String_o *)*v3;
 }
 
@@ -13227,7 +13211,7 @@ void AdjustSdk_AdjustEvent___ctor(AdjustSdk_AdjustEvent_o *this, System_String_o
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._EventToken_k__BackingField = eventToken;
-  sub_21FFBF4(&this->fields._EventToken_k__BackingField, eventToken);
+  sub_2213A04(&this->fields._EventToken_k__BackingField, eventToken);
 }
 
 
@@ -13251,24 +13235,24 @@ void AdjustSdk_AdjustEvent__AddCallbackParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_593049A & 1) == 0 )
+  if ( (byte_596863A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_593049A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596863A = 1;
   }
   innerCallbackParameters = this->fields.innerCallbackParameters;
   p_fields = &this->fields;
   v7 = (System_Collections_Generic_List_object__o *)innerCallbackParameters;
   if ( !innerCallbackParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     p_fields->innerCallbackParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_fields, v10);
+    sub_2213A04(p_fields, v10);
     v7 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
     if ( !p_fields->innerCallbackParameters )
       goto LABEL_14;
@@ -13284,14 +13268,14 @@ void AdjustSdk_AdjustEvent__AddCallbackParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
   if ( !p_fields->innerCallbackParameters
@@ -13301,7 +13285,7 @@ void AdjustSdk_AdjustEvent__AddCallbackParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -13309,14 +13293,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -13341,24 +13325,24 @@ void AdjustSdk_AdjustEvent__AddPartnerParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_593049B & 1) == 0 )
+  if ( (byte_596863B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_593049B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596863B = 1;
   }
   innerPartnerParameters = this->fields.innerPartnerParameters;
   p_innerPartnerParameters = &this->fields.innerPartnerParameters;
   v7 = (System_Collections_Generic_List_object__o *)innerPartnerParameters;
   if ( !innerPartnerParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     *p_innerPartnerParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_innerPartnerParameters, v10);
+    sub_2213A04(p_innerPartnerParameters, v10);
     v7 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
     if ( !*p_innerPartnerParameters )
       goto LABEL_14;
@@ -13374,14 +13358,14 @@ void AdjustSdk_AdjustEvent__AddPartnerParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
   if ( !*p_innerPartnerParameters
@@ -13391,7 +13375,7 @@ void AdjustSdk_AdjustEvent__AddPartnerParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -13399,14 +13383,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -13421,19 +13405,19 @@ void AdjustSdk_AdjustEvent__SetRevenue(
   struct System_Nullable_double__o v8; // [xsp+0h] [xbp-40h] BYREF
   System_Nullable_double__o v9; // 0:x0.16
 
-  if ( (byte_5930499 & 1) == 0 )
+  if ( (byte_5968639 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_double___ctor__);
-    byte_5930499 = 1;
+    sub_2213A60(&Method_System_Nullable_double___ctor__);
+    byte_5968639 = 1;
   }
   *(_QWORD *)&v9.fields.value = Method_System_Nullable_double___ctor__;
   *(_QWORD *)&v9.fields.hasValue = &v8;
   v8 = (struct System_Nullable_double__o)0LL;
-  System_Nullable_double____ctor(v9, amount, (const MethodInfo_45AEEEC *)method);
+  System_Nullable_double____ctor(v9, amount, (const MethodInfo_45E3024 *)method);
   v7 = v8;
   this->fields._Currency_k__BackingField = currency;
   this->fields._Revenue_k__BackingField = v7;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, currency);
+  sub_2213A04(&this->fields._Currency_k__BackingField, currency);
 }
 
 
@@ -13449,16 +13433,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustEve
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_5930497 & 1) == 0 )
+  if ( (byte_5968637 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_5930497 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968637 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerCallbackParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -13487,16 +13471,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustEve
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_5930498 & 1) == 0 )
+  if ( (byte_5968638 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_5930498 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968638 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerPartnerParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -13507,17 +13491,12 @@ System_String_o *AdjustSdk_AdjustEvent__get_ProductId(AdjustSdk_AdjustEvent_o *t
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Nullable_double__o AdjustSdk_AdjustEvent__get_Revenue(AdjustSdk_AdjustEvent_o *this, const MethodInfo *method)
 {
-  double value; // x1
-  __int64 v3; // x0
   System_Nullable_double__o result; // 0:x0.16
 
-  value = this->fields._Revenue_k__BackingField.fields.value;
-  v3 = *(_QWORD *)&this->fields._Revenue_k__BackingField.fields.hasValue;
-  result.fields.value = value;
-  *(_QWORD *)&result.fields.hasValue = v3;
+  result.fields.value = this->fields._Revenue_k__BackingField.fields.value;
+  *(_QWORD *)&result.fields.hasValue = *(_QWORD *)&this->fields._Revenue_k__BackingField.fields.hasValue;
   return result;
 }
 
@@ -13534,7 +13513,7 @@ void AdjustSdk_AdjustEvent__set_CallbackId(
         const MethodInfo *method)
 {
   this->fields._CallbackId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._CallbackId_k__BackingField, value);
+  sub_2213A04(&this->fields._CallbackId_k__BackingField, value);
 }
 
 
@@ -13544,7 +13523,7 @@ void AdjustSdk_AdjustEvent__set_Currency(
         const MethodInfo *method)
 {
   this->fields._Currency_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, value);
+  sub_2213A04(&this->fields._Currency_k__BackingField, value);
 }
 
 
@@ -13554,7 +13533,7 @@ void AdjustSdk_AdjustEvent__set_DeduplicationId(
         const MethodInfo *method)
 {
   this->fields._DeduplicationId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._DeduplicationId_k__BackingField, value);
+  sub_2213A04(&this->fields._DeduplicationId_k__BackingField, value);
 }
 
 
@@ -13564,7 +13543,7 @@ void AdjustSdk_AdjustEvent__set_EventToken(
         const MethodInfo *method)
 {
   this->fields._EventToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields._EventToken_k__BackingField, value);
+  sub_2213A04(&this->fields._EventToken_k__BackingField, value);
 }
 
 
@@ -13574,7 +13553,7 @@ void AdjustSdk_AdjustEvent__set_ProductId(
         const MethodInfo *method)
 {
   this->fields._ProductId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._ProductId_k__BackingField, value);
+  sub_2213A04(&this->fields._ProductId_k__BackingField, value);
 }
 
 
@@ -13593,7 +13572,7 @@ void AdjustSdk_AdjustEvent__set_TransactionId(
         const MethodInfo *method)
 {
   this->fields._TransactionId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._TransactionId_k__BackingField, value);
+  sub_2213A04(&this->fields._TransactionId_k__BackingField, value);
 }
 
 
@@ -13603,7 +13582,7 @@ void AdjustSdk_AdjustEventFailure___ctor(AdjustSdk_AdjustEventFailure_o *this, c
 }
 
 
-void AdjustSdk_AdjustEventFailure___ctor_36714116(
+void AdjustSdk_AdjustEventFailure___ctor_36795532(
         AdjustSdk_AdjustEventFailure_o *this,
         System_Collections_Generic_Dictionary_string__string__o *eventFailureDataMap,
         const MethodInfo *method)
@@ -13644,12 +13623,12 @@ void AdjustSdk_AdjustEventFailure___ctor_36714116(
   AdjustSdk_JSONClass_o *v38; // x20
   bool result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593049C & 1) == 0 )
+  if ( (byte_596863C & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_593049C = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596863C = 1;
   }
   result = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -13663,37 +13642,37 @@ void AdjustSdk_AdjustEventFailure___ctor_36714116(
     }
     Value = AdjustSdk_AdjustUtils__TryGetValue(eventFailureDataMap, v7->static_fields->KeyAdid, v6);
     this->fields._Adid_k__BackingField = Value;
-    sub_21FFBF4(&this->fields, Value);
+    sub_2213A04(&this->fields, Value);
     v10 = AdjustSdk_AdjustUtils__TryGetValue(
             eventFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
             v9);
     this->fields._Message_k__BackingField = v10;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v10);
+    sub_2213A04(&this->fields._Message_k__BackingField, v10);
     v12 = AdjustSdk_AdjustUtils__TryGetValue(
             eventFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
             v11);
     this->fields._Timestamp_k__BackingField = v12;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v12);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v12);
     v14 = AdjustSdk_AdjustUtils__TryGetValue(
             eventFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken,
             v13);
     this->fields._EventToken_k__BackingField = v14;
-    sub_21FFBF4(&this->fields._EventToken_k__BackingField, v14);
+    sub_2213A04(&this->fields._EventToken_k__BackingField, v14);
     v16 = AdjustSdk_AdjustUtils__TryGetValue(
             eventFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId,
             v15);
     this->fields._CallbackId_k__BackingField = v16;
-    sub_21FFBF4(&this->fields._CallbackId_k__BackingField, v16);
+    sub_2213A04(&this->fields._CallbackId_k__BackingField, v16);
     v20 = AdjustSdk_AdjustUtils__TryGetValue(
             eventFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry,
             v17);
-    if ( !*(_DWORD *)(qword_594C050 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C050, v18, v19);
+    if ( !*(_DWORD *)(qword_5984328 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_5984328, v18, v19);
     if ( System_Boolean__TryParse(v20, &result, 0) )
       this->fields._WillRetry_k__BackingField = result;
     v23 = AdjustSdk_AdjustUtils_TypeInfo;
@@ -13708,19 +13687,19 @@ void AdjustSdk_AdjustEventFailure___ctor_36714116(
     if ( !v28 )
     {
       if ( !v26 )
-        sub_21FFECC(v28, v29);
+        sub_2213CDC(v28, v29);
       v30 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v26->klass->vtable._27_get_AsObject.methodPtr)(
                                       v26,
                                       v26->klass->vtable._27_get_AsObject.method);
       if ( !AdjustSdk_JSONNode__op_Equality(v30, 0, v31) )
       {
-        v32 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+        v32 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v32,
-          (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+          (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
         this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v32;
         p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-        sub_21FFBF4(p_JsonResponse_k__BackingField, v32);
+        sub_2213A04(p_JsonResponse_k__BackingField, v32);
         v34 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v26->klass->vtable._27_get_AsObject.methodPtr)(
                 v26,
                 v26->klass->vtable._27_get_AsObject.method);
@@ -13735,7 +13714,7 @@ void AdjustSdk_AdjustEventFailure___ctor_36714116(
 }
 
 
-void AdjustSdk_AdjustEventFailure___ctor_36714720(
+void AdjustSdk_AdjustEventFailure___ctor_36796136(
         AdjustSdk_AdjustEventFailure_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -13773,13 +13752,13 @@ void AdjustSdk_AdjustEventFailure___ctor_36714720(
   System_Collections_Generic_Dictionary_string__object__o *v35; // x19
   AdjustSdk_JSONClass_o *v36; // x20
 
-  if ( (byte_593049D & 1) == 0 )
+  if ( (byte_596863D & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_593049D = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596863D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v6 = AdjustSdk_JSONNode__Parse(jsonString, v5);
@@ -13793,23 +13772,23 @@ void AdjustSdk_AdjustEventFailure___ctor_36714720(
     }
     v11 = AdjustSdk_AdjustUtils__GetJsonString(v6, v10->static_fields->KeyAdid, v9);
     this->fields._Adid_k__BackingField = v11;
-    sub_21FFBF4(&this->fields, v11);
+    sub_2213A04(&this->fields, v11);
     v13 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage, v12);
     this->fields._Message_k__BackingField = v13;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v13);
+    sub_2213A04(&this->fields._Message_k__BackingField, v13);
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp, v14);
     this->fields._Timestamp_k__BackingField = v15;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v15);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v15);
     v17 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken, v16);
     this->fields._EventToken_k__BackingField = v17;
-    sub_21FFBF4(&this->fields._EventToken_k__BackingField, v17);
+    sub_2213A04(&this->fields._EventToken_k__BackingField, v17);
     v19 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId, v18);
     this->fields._CallbackId_k__BackingField = v19;
-    sub_21FFBF4(&this->fields._CallbackId_k__BackingField, v19);
+    sub_2213A04(&this->fields._CallbackId_k__BackingField, v19);
     v23 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry, v20);
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v21, v22);
-    v24 = System_Convert__ToBoolean_76466260(v23, 0);
+    v24 = System_Convert__ToBoolean_76679564(v23, 0);
     this->fields._WillRetry_k__BackingField = v24;
     if ( !v6 )
       goto LABEL_16;
@@ -13822,19 +13801,19 @@ void AdjustSdk_AdjustEventFailure___ctor_36714720(
       return;
     if ( !v26 )
 LABEL_16:
-      sub_21FFECC(v24, v25);
+      sub_2213CDC(v24, v25);
     v28 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v26->klass->vtable._27_get_AsObject.methodPtr)(
                                     v26,
                                     v26->klass->vtable._27_get_AsObject.method);
     if ( !AdjustSdk_JSONNode__op_Equality(v28, 0, v29) )
     {
-      v30 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v30 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v30,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v30;
       p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-      sub_21FFBF4(p_JsonResponse_k__BackingField, v30);
+      sub_2213A04(p_JsonResponse_k__BackingField, v30);
       v32 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v26->klass->vtable._27_get_AsObject.methodPtr)(
               v26,
               v26->klass->vtable._27_get_AsObject.method);
@@ -13865,25 +13844,25 @@ void AdjustSdk_AdjustEventFailure__BuildJsonResponseFromString(
   AdjustSdk_JSONClass_o *v14; // x20
   System_Collections_Generic_Dictionary_string__object__o *v15; // x19
 
-  if ( (byte_593049E & 1) == 0 )
+  if ( (byte_596863E & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_593049E = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596863E = 1;
   }
   v5 = AdjustSdk_JSONNode__Parse(jsonResponseString, (const MethodInfo *)jsonResponseString);
   if ( !AdjustSdk_JSONNode__op_Equality(v5, 0, v6) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v7;
     p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-    v9 = sub_21FFBF4(p_JsonResponse_k__BackingField, v7);
+    v9 = sub_2213A04(p_JsonResponse_k__BackingField, v7);
     if ( !v5 )
-      sub_21FFECC(v9, v10, v11);
+      sub_2213CDC(v9, v10, v11);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -13902,10 +13881,10 @@ System_String_o *AdjustSdk_AdjustEventFailure__GetJsonResponseAsString(
   __int64 v2; // x2
   System_Collections_Generic_Dictionary_string__object__o *JsonResponse_k__BackingField; // x19
 
-  if ( (byte_593049F & 1) == 0 )
+  if ( (byte_596863F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_593049F = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_596863F = 1;
   }
   JsonResponse_k__BackingField = this->fields._JsonResponse_k__BackingField;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -13972,7 +13951,7 @@ void AdjustSdk_AdjustEventFailure__set_Adid(
         const MethodInfo *method)
 {
   this->fields._Adid_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -13982,7 +13961,7 @@ void AdjustSdk_AdjustEventFailure__set_CallbackId(
         const MethodInfo *method)
 {
   this->fields._CallbackId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._CallbackId_k__BackingField, value);
+  sub_2213A04(&this->fields._CallbackId_k__BackingField, value);
 }
 
 
@@ -13992,7 +13971,7 @@ void AdjustSdk_AdjustEventFailure__set_EventToken(
         const MethodInfo *method)
 {
   this->fields._EventToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields._EventToken_k__BackingField, value);
+  sub_2213A04(&this->fields._EventToken_k__BackingField, value);
 }
 
 
@@ -14002,7 +13981,7 @@ void AdjustSdk_AdjustEventFailure__set_JsonResponse(
         const MethodInfo *method)
 {
   this->fields._JsonResponse_k__BackingField = value;
-  sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, value);
+  sub_2213A04(&this->fields._JsonResponse_k__BackingField, value);
 }
 
 
@@ -14012,7 +13991,7 @@ void AdjustSdk_AdjustEventFailure__set_Message(
         const MethodInfo *method)
 {
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Message_k__BackingField, value);
+  sub_2213A04(&this->fields._Message_k__BackingField, value);
 }
 
 
@@ -14022,7 +14001,7 @@ void AdjustSdk_AdjustEventFailure__set_Timestamp(
         const MethodInfo *method)
 {
   this->fields._Timestamp_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Timestamp_k__BackingField, value);
+  sub_2213A04(&this->fields._Timestamp_k__BackingField, value);
 }
 
 
@@ -14041,7 +14020,7 @@ void AdjustSdk_AdjustEventSuccess___ctor(AdjustSdk_AdjustEventSuccess_o *this, c
 }
 
 
-void AdjustSdk_AdjustEventSuccess___ctor_36715532(
+void AdjustSdk_AdjustEventSuccess___ctor_36796948(
         AdjustSdk_AdjustEventSuccess_o *this,
         System_Collections_Generic_Dictionary_string__string__o *eventSuccessDataMap,
         const MethodInfo *method)
@@ -14075,12 +14054,12 @@ void AdjustSdk_AdjustEventSuccess___ctor_36715532(
   System_Collections_Generic_Dictionary_string__object__o *v31; // x19
   AdjustSdk_JSONClass_o *v32; // x20
 
-  if ( (byte_59304A0 & 1) == 0 )
+  if ( (byte_5968640 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304A0 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968640 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( eventSuccessDataMap )
@@ -14093,31 +14072,31 @@ void AdjustSdk_AdjustEventSuccess___ctor_36715532(
     }
     Value = AdjustSdk_AdjustUtils__TryGetValue(eventSuccessDataMap, v7->static_fields->KeyAdid, v6);
     this->fields._Adid_k__BackingField = Value;
-    sub_21FFBF4(&this->fields, Value);
+    sub_2213A04(&this->fields, Value);
     v10 = AdjustSdk_AdjustUtils__TryGetValue(
             eventSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
             v9);
     this->fields._Message_k__BackingField = v10;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v10);
+    sub_2213A04(&this->fields._Message_k__BackingField, v10);
     v12 = AdjustSdk_AdjustUtils__TryGetValue(
             eventSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
             v11);
     this->fields._Timestamp_k__BackingField = v12;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v12);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v12);
     v14 = AdjustSdk_AdjustUtils__TryGetValue(
             eventSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken,
             v13);
     this->fields._EventToken_k__BackingField = v14;
-    sub_21FFBF4(&this->fields._EventToken_k__BackingField, v14);
+    sub_2213A04(&this->fields._EventToken_k__BackingField, v14);
     v16 = AdjustSdk_AdjustUtils__TryGetValue(
             eventSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId,
             v15);
     this->fields._CallbackId_k__BackingField = v16;
-    sub_21FFBF4(&this->fields._CallbackId_k__BackingField, v16);
+    sub_2213A04(&this->fields._CallbackId_k__BackingField, v16);
     v18 = AdjustSdk_AdjustUtils__TryGetValue(
             eventSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
@@ -14127,19 +14106,19 @@ void AdjustSdk_AdjustEventSuccess___ctor_36715532(
     if ( !v22 )
     {
       if ( !v20 )
-        sub_21FFECC(v22, v23);
+        sub_2213CDC(v22, v23);
       v24 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v20->klass->vtable._27_get_AsObject.methodPtr)(
                                       v20,
                                       v20->klass->vtable._27_get_AsObject.method);
       if ( !AdjustSdk_JSONNode__op_Equality(v24, 0, v25) )
       {
-        v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+        v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v26,
-          (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+          (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
         this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v26;
         p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-        sub_21FFBF4(p_JsonResponse_k__BackingField, v26);
+        sub_2213A04(p_JsonResponse_k__BackingField, v26);
         v28 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v20->klass->vtable._27_get_AsObject.methodPtr)(
                 v20,
                 v20->klass->vtable._27_get_AsObject.method);
@@ -14154,7 +14133,7 @@ void AdjustSdk_AdjustEventSuccess___ctor_36715532(
 }
 
 
-void AdjustSdk_AdjustEventSuccess___ctor_36716048(
+void AdjustSdk_AdjustEventSuccess___ctor_36797464(
         AdjustSdk_AdjustEventSuccess_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -14188,12 +14167,12 @@ void AdjustSdk_AdjustEventSuccess___ctor_36716048(
   System_Collections_Generic_Dictionary_string__object__o *v31; // x19
   AdjustSdk_JSONClass_o *v32; // x20
 
-  if ( (byte_59304A1 & 1) == 0 )
+  if ( (byte_5968641 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304A1 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968641 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v6 = AdjustSdk_JSONNode__Parse(jsonString, v5);
@@ -14207,19 +14186,19 @@ void AdjustSdk_AdjustEventSuccess___ctor_36716048(
     }
     v11 = AdjustSdk_AdjustUtils__GetJsonString(v6, v10->static_fields->KeyAdid, v9);
     this->fields._Adid_k__BackingField = v11;
-    sub_21FFBF4(&this->fields, v11);
+    sub_2213A04(&this->fields, v11);
     v13 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage, v12);
     this->fields._Message_k__BackingField = v13;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v13);
+    sub_2213A04(&this->fields._Message_k__BackingField, v13);
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp, v14);
     this->fields._Timestamp_k__BackingField = v15;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v15);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v15);
     v17 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyEventToken, v16);
     this->fields._EventToken_k__BackingField = v17;
-    sub_21FFBF4(&this->fields._EventToken_k__BackingField, v17);
+    sub_2213A04(&this->fields._EventToken_k__BackingField, v17);
     v19 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyCallbackId, v18);
     this->fields._CallbackId_k__BackingField = v19;
-    v20 = sub_21FFBF4(&this->fields._CallbackId_k__BackingField, v19);
+    v20 = sub_2213A04(&this->fields._CallbackId_k__BackingField, v19);
     if ( !v6 )
       goto LABEL_14;
     v22 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, struct System_String_o *, const MethodInfo *))v6->klass->vtable._7_get_Item.methodPtr)(
@@ -14231,19 +14210,19 @@ void AdjustSdk_AdjustEventSuccess___ctor_36716048(
       return;
     if ( !v22 )
 LABEL_14:
-      sub_21FFECC(v20, v21);
+      sub_2213CDC(v20, v21);
     v24 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
                                     v22,
                                     v22->klass->vtable._27_get_AsObject.method);
     if ( !AdjustSdk_JSONNode__op_Equality(v24, 0, v25) )
     {
-      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v26,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v26;
       p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-      sub_21FFBF4(p_JsonResponse_k__BackingField, v26);
+      sub_2213A04(p_JsonResponse_k__BackingField, v26);
       v28 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
               v22,
               v22->klass->vtable._27_get_AsObject.method);
@@ -14274,25 +14253,25 @@ void AdjustSdk_AdjustEventSuccess__BuildJsonResponseFromString(
   AdjustSdk_JSONClass_o *v14; // x20
   System_Collections_Generic_Dictionary_string__object__o *v15; // x19
 
-  if ( (byte_59304A2 & 1) == 0 )
+  if ( (byte_5968642 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304A2 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968642 = 1;
   }
   v5 = AdjustSdk_JSONNode__Parse(jsonResponseString, (const MethodInfo *)jsonResponseString);
   if ( !AdjustSdk_JSONNode__op_Equality(v5, 0, v6) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v7;
     p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-    v9 = sub_21FFBF4(p_JsonResponse_k__BackingField, v7);
+    v9 = sub_2213A04(p_JsonResponse_k__BackingField, v7);
     if ( !v5 )
-      sub_21FFECC(v9, v10, v11);
+      sub_2213CDC(v9, v10, v11);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -14311,10 +14290,10 @@ System_String_o *AdjustSdk_AdjustEventSuccess__GetJsonResponseAsString(
   __int64 v2; // x2
   System_Collections_Generic_Dictionary_string__object__o *JsonResponse_k__BackingField; // x19
 
-  if ( (byte_59304A3 & 1) == 0 )
+  if ( (byte_5968643 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_59304A3 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_5968643 = 1;
   }
   JsonResponse_k__BackingField = this->fields._JsonResponse_k__BackingField;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -14375,7 +14354,7 @@ void AdjustSdk_AdjustEventSuccess__set_Adid(
         const MethodInfo *method)
 {
   this->fields._Adid_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -14385,7 +14364,7 @@ void AdjustSdk_AdjustEventSuccess__set_CallbackId(
         const MethodInfo *method)
 {
   this->fields._CallbackId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._CallbackId_k__BackingField, value);
+  sub_2213A04(&this->fields._CallbackId_k__BackingField, value);
 }
 
 
@@ -14395,7 +14374,7 @@ void AdjustSdk_AdjustEventSuccess__set_EventToken(
         const MethodInfo *method)
 {
   this->fields._EventToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields._EventToken_k__BackingField, value);
+  sub_2213A04(&this->fields._EventToken_k__BackingField, value);
 }
 
 
@@ -14405,7 +14384,7 @@ void AdjustSdk_AdjustEventSuccess__set_JsonResponse(
         const MethodInfo *method)
 {
   this->fields._JsonResponse_k__BackingField = value;
-  sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, value);
+  sub_2213A04(&this->fields._JsonResponse_k__BackingField, value);
 }
 
 
@@ -14415,7 +14394,7 @@ void AdjustSdk_AdjustEventSuccess__set_Message(
         const MethodInfo *method)
 {
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Message_k__BackingField, value);
+  sub_2213A04(&this->fields._Message_k__BackingField, value);
 }
 
 
@@ -14425,7 +14404,7 @@ void AdjustSdk_AdjustEventSuccess__set_Timestamp(
         const MethodInfo *method)
 {
   this->fields._Timestamp_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Timestamp_k__BackingField, value);
+  sub_2213A04(&this->fields._Timestamp_k__BackingField, value);
 }
 
 
@@ -14433,22 +14412,22 @@ System_String_o *AdjustSdk_AdjustLogLevelExtension__ToLowercaseString(int32_t Ad
 {
   System_String_o **v3; // x8
 
-  if ( (byte_59304A4 & 1) == 0 )
+  if ( (byte_5968644 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19304/*"debug"*/);
-    sub_21FFC50(&StringLiteral_25709/*"unknown"*/);
-    sub_21FFC50(&StringLiteral_25961/*"verbose"*/);
-    sub_21FFC50(&StringLiteral_26104/*"warn"*/);
-    sub_21FFC50(&StringLiteral_25074/*"suppress"*/);
-    sub_21FFC50(&StringLiteral_17587/*"assert"*/);
-    sub_21FFC50(&StringLiteral_21749/*"info"*/);
-    sub_21FFC50(&StringLiteral_19915/*"error"*/);
-    byte_59304A4 = 1;
+    sub_2213A60(&StringLiteral_19345/*"debug"*/);
+    sub_2213A60(&StringLiteral_25757/*"unknown"*/);
+    sub_2213A60(&StringLiteral_26009/*"verbose"*/);
+    sub_2213A60(&StringLiteral_26154/*"warn"*/);
+    sub_2213A60(&StringLiteral_25122/*"suppress"*/);
+    sub_2213A60(&StringLiteral_17623/*"assert"*/);
+    sub_2213A60(&StringLiteral_21791/*"info"*/);
+    sub_2213A60(&StringLiteral_19957/*"error"*/);
+    byte_5968644 = 1;
   }
   if ( (unsigned int)(AdjustLogLevel - 1) > 6 )
-    v3 = (System_String_o **)&StringLiteral_25709/*"unknown"*/;
+    v3 = (System_String_o **)&StringLiteral_25757/*"unknown"*/;
   else
-    v3 = (System_String_o **)*(&off_5296200 + (unsigned int)(AdjustLogLevel - 1));
+    v3 = (System_String_o **)*(&off_52CA370 + (unsigned int)(AdjustLogLevel - 1));
   return *v3;
 }
 
@@ -14457,22 +14436,22 @@ System_String_o *AdjustSdk_AdjustLogLevelExtension__ToUppercaseString(int32_t Ad
 {
   System_String_o **v3; // x8
 
-  if ( (byte_59304A5 & 1) == 0 )
+  if ( (byte_5968645 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_15389/*"UNKNOWN"*/);
-    sub_21FFC50(&StringLiteral_5142/*"DEBUG"*/);
-    sub_21FFC50(&StringLiteral_15818/*"VERBOSE"*/);
-    sub_21FFC50(&StringLiteral_2137/*"ASSERT"*/);
-    sub_21FFC50(&StringLiteral_5686/*"ERROR"*/);
-    sub_21FFC50(&StringLiteral_16046/*"WARN"*/);
-    sub_21FFC50(&StringLiteral_13072/*"SUPPRESS"*/);
-    sub_21FFC50(&StringLiteral_7753/*"INFO"*/);
-    byte_59304A5 = 1;
+    sub_2213A60(&StringLiteral_15419/*"UNKNOWN"*/);
+    sub_2213A60(&StringLiteral_5154/*"DEBUG"*/);
+    sub_2213A60(&StringLiteral_15848/*"VERBOSE"*/);
+    sub_2213A60(&StringLiteral_2138/*"ASSERT"*/);
+    sub_2213A60(&StringLiteral_5698/*"ERROR"*/);
+    sub_2213A60(&StringLiteral_16077/*"WARN"*/);
+    sub_2213A60(&StringLiteral_13098/*"SUPPRESS"*/);
+    sub_2213A60(&StringLiteral_7765/*"INFO"*/);
+    byte_5968645 = 1;
   }
   if ( (unsigned int)(AdjustLogLevel - 1) > 6 )
-    v3 = (System_String_o **)&StringLiteral_15389/*"UNKNOWN"*/;
+    v3 = (System_String_o **)&StringLiteral_15419/*"UNKNOWN"*/;
   else
-    v3 = (System_String_o **)*(&off_52961C8 + (unsigned int)(AdjustLogLevel - 1));
+    v3 = (System_String_o **)*(&off_52CA338 + (unsigned int)(AdjustLogLevel - 1));
   return *v3;
 }
 
@@ -14485,9 +14464,9 @@ void AdjustSdk_AdjustPlayStorePurchase___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ProductId_k__BackingField = productId;
-  sub_21FFBF4(&this->fields, productId);
+  sub_2213A04(&this->fields, productId);
   this->fields._PurchaseToken_k__BackingField = purchaseToken;
-  sub_21FFBF4(&this->fields._PurchaseToken_k__BackingField, purchaseToken);
+  sub_2213A04(&this->fields._PurchaseToken_k__BackingField, purchaseToken);
 }
 
 
@@ -14513,7 +14492,7 @@ void AdjustSdk_AdjustPlayStorePurchase__set_ProductId(
         const MethodInfo *method)
 {
   this->fields._ProductId_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -14523,7 +14502,7 @@ void AdjustSdk_AdjustPlayStorePurchase__set_PurchaseToken(
         const MethodInfo *method)
 {
   this->fields._PurchaseToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields._PurchaseToken_k__BackingField, value);
+  sub_2213A04(&this->fields._PurchaseToken_k__BackingField, value);
 }
 
 
@@ -14539,17 +14518,17 @@ void AdjustSdk_AdjustPlayStoreSubscription___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Price_k__BackingField = price;
-  sub_21FFBF4(&this->fields._Price_k__BackingField, price);
+  sub_2213A04(&this->fields._Price_k__BackingField, price);
   this->fields._Currency_k__BackingField = currency;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, currency);
+  sub_2213A04(&this->fields._Currency_k__BackingField, currency);
   this->fields._ProductId_k__BackingField = productId;
-  sub_21FFBF4(&this->fields._ProductId_k__BackingField, productId);
+  sub_2213A04(&this->fields._ProductId_k__BackingField, productId);
   this->fields._OrderId_k__BackingField = orderId;
-  sub_21FFBF4(&this->fields._OrderId_k__BackingField, orderId);
+  sub_2213A04(&this->fields._OrderId_k__BackingField, orderId);
   this->fields._Signature_k__BackingField = signature;
-  sub_21FFBF4(&this->fields._Signature_k__BackingField, signature);
+  sub_2213A04(&this->fields._Signature_k__BackingField, signature);
   this->fields._PurchaseToken_k__BackingField = purchaseToken;
-  sub_21FFBF4(&this->fields._PurchaseToken_k__BackingField, purchaseToken);
+  sub_2213A04(&this->fields._PurchaseToken_k__BackingField, purchaseToken);
 }
 
 
@@ -14573,24 +14552,24 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddCallbackParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_59304A8 & 1) == 0 )
+  if ( (byte_5968648 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_59304A8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_5968648 = 1;
   }
   innerCallbackParameters = this->fields.innerCallbackParameters;
   p_fields = &this->fields;
   v7 = (System_Collections_Generic_List_object__o *)innerCallbackParameters;
   if ( !innerCallbackParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     p_fields->innerCallbackParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_fields, v10);
+    sub_2213A04(p_fields, v10);
     v7 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
     if ( !p_fields->innerCallbackParameters )
       goto LABEL_14;
@@ -14606,14 +14585,14 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddCallbackParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)p_fields->innerCallbackParameters;
   if ( !p_fields->innerCallbackParameters
@@ -14623,7 +14602,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddCallbackParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -14631,14 +14610,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -14663,24 +14642,24 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddPartnerParameter(
   __int64 v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_59304A9 & 1) == 0 )
+  if ( (byte_5968649 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_59304A9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_5968649 = 1;
   }
   innerPartnerParameters = this->fields.innerPartnerParameters;
   p_innerPartnerParameters = &this->fields.innerPartnerParameters;
   v7 = (System_Collections_Generic_List_object__o *)innerPartnerParameters;
   if ( !innerPartnerParameters )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v10,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     *p_innerPartnerParameters = (struct System_Collections_Generic_List_string__o *)v10;
-    sub_21FFBF4(p_innerPartnerParameters, v10);
+    sub_2213A04(p_innerPartnerParameters, v10);
     v7 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
     if ( !*p_innerPartnerParameters )
       goto LABEL_14;
@@ -14696,14 +14675,14 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddPartnerParameter(
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v14[4] = (Il2CppClass *)key;
-    v7 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v14 + 4, key);
+    v7 = (System_Collections_Generic_List_object__o *)sub_2213A04(v14 + 4, key);
   }
   v15 = (System_Collections_Generic_List_object__o *)*p_innerPartnerParameters;
   if ( !*p_innerPartnerParameters
@@ -14713,7 +14692,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__AddPartnerParameter(
         !v16) )
   {
 LABEL_14:
-    sub_21FFECC(v7, key);
+    sub_2213CDC(v7, key);
   }
   v18 = v15->fields._size;
   if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
@@ -14721,14 +14700,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v15->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v19 + 4, value);
+    sub_2213A04(v19 + 4, value);
   }
 }
 
@@ -14739,16 +14718,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustPla
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_59304A6 & 1) == 0 )
+  if ( (byte_5968646 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_59304A6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968646 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerCallbackParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -14775,16 +14754,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustPla
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_59304A7 & 1) == 0 )
+  if ( (byte_5968647 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_59304A7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968647 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerPartnerParameters;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -14835,7 +14814,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_Currency(
         const MethodInfo *method)
 {
   this->fields._Currency_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Currency_k__BackingField, value);
+  sub_2213A04(&this->fields._Currency_k__BackingField, value);
 }
 
 
@@ -14845,7 +14824,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_OrderId(
         const MethodInfo *method)
 {
   this->fields._OrderId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._OrderId_k__BackingField, value);
+  sub_2213A04(&this->fields._OrderId_k__BackingField, value);
 }
 
 
@@ -14855,7 +14834,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_Price(
         const MethodInfo *method)
 {
   this->fields._Price_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Price_k__BackingField, value);
+  sub_2213A04(&this->fields._Price_k__BackingField, value);
 }
 
 
@@ -14865,7 +14844,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_ProductId(
         const MethodInfo *method)
 {
   this->fields._ProductId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._ProductId_k__BackingField, value);
+  sub_2213A04(&this->fields._ProductId_k__BackingField, value);
 }
 
 
@@ -14875,7 +14854,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_PurchaseTime(
         const MethodInfo *method)
 {
   this->fields._PurchaseTime_k__BackingField = value;
-  sub_21FFBF4(&this->fields._PurchaseTime_k__BackingField, value);
+  sub_2213A04(&this->fields._PurchaseTime_k__BackingField, value);
 }
 
 
@@ -14885,7 +14864,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_PurchaseToken(
         const MethodInfo *method)
 {
   this->fields._PurchaseToken_k__BackingField = value;
-  sub_21FFBF4(&this->fields._PurchaseToken_k__BackingField, value);
+  sub_2213A04(&this->fields._PurchaseToken_k__BackingField, value);
 }
 
 
@@ -14895,7 +14874,7 @@ void AdjustSdk_AdjustPlayStoreSubscription__set_Signature(
         const MethodInfo *method)
 {
   this->fields._Signature_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Signature_k__BackingField, value);
+  sub_2213A04(&this->fields._Signature_k__BackingField, value);
 }
 
 
@@ -14907,7 +14886,7 @@ void AdjustSdk_AdjustPurchaseVerificationResult___ctor(
 }
 
 
-void AdjustSdk_AdjustPurchaseVerificationResult___ctor_36718028(
+void AdjustSdk_AdjustPurchaseVerificationResult___ctor_36799444(
         AdjustSdk_AdjustPurchaseVerificationResult_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -14926,10 +14905,10 @@ void AdjustSdk_AdjustPurchaseVerificationResult___ctor_36718028(
   const MethodInfo *v16; // x2
   struct System_String_o *v17; // x0
 
-  if ( (byte_59304AA & 1) == 0 )
+  if ( (byte_596864A & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_59304AA = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_596864A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v6 = AdjustSdk_JSONNode__Parse(jsonString, v5);
@@ -14947,13 +14926,13 @@ void AdjustSdk_AdjustPurchaseVerificationResult___ctor_36718028(
     this->fields._Code_k__BackingField = v12;
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, v13->static_fields->KeyMessage, v14);
     this->fields._Message_k__BackingField = v15;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v15);
+    sub_2213A04(&this->fields._Message_k__BackingField, v15);
     v17 = AdjustSdk_AdjustUtils__GetJsonString(
             v6,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyVerificationStatus,
             v16);
     this->fields._VerificationStatus_k__BackingField = v17;
-    sub_21FFBF4(&this->fields._VerificationStatus_k__BackingField, v17);
+    sub_2213A04(&this->fields._VerificationStatus_k__BackingField, v17);
   }
 }
 
@@ -14997,7 +14976,7 @@ void AdjustSdk_AdjustPurchaseVerificationResult__set_Message(
         const MethodInfo *method)
 {
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Message_k__BackingField, value);
+  sub_2213A04(&this->fields._Message_k__BackingField, value);
 }
 
 
@@ -15007,7 +14986,7 @@ void AdjustSdk_AdjustPurchaseVerificationResult__set_VerificationStatus(
         const MethodInfo *method)
 {
   this->fields._VerificationStatus_k__BackingField = value;
-  sub_21FFBF4(&this->fields._VerificationStatus_k__BackingField, value);
+  sub_2213A04(&this->fields._VerificationStatus_k__BackingField, value);
 }
 
 
@@ -15017,7 +14996,7 @@ void AdjustSdk_AdjustSessionFailure___ctor(AdjustSdk_AdjustSessionFailure_o *thi
 }
 
 
-void AdjustSdk_AdjustSessionFailure___ctor_36718340(
+void AdjustSdk_AdjustSessionFailure___ctor_36799756(
         AdjustSdk_AdjustSessionFailure_o *this,
         System_Collections_Generic_Dictionary_string__string__o *sessionFailureDataMap,
         const MethodInfo *method)
@@ -15054,12 +15033,12 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718340(
   AdjustSdk_JSONClass_o *v34; // x20
   bool result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59304AB & 1) == 0 )
+  if ( (byte_596864B & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304AB = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596864B = 1;
   }
   result = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -15073,25 +15052,25 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718340(
     }
     Value = AdjustSdk_AdjustUtils__TryGetValue(sessionFailureDataMap, v7->static_fields->KeyAdid, v6);
     this->fields._Adid_k__BackingField = Value;
-    sub_21FFBF4(&this->fields, Value);
+    sub_2213A04(&this->fields, Value);
     v10 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
             v9);
     this->fields._Message_k__BackingField = v10;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v10);
+    sub_2213A04(&this->fields._Message_k__BackingField, v10);
     v12 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
             v11);
     this->fields._Timestamp_k__BackingField = v12;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v12);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v12);
     v16 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionFailureDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry,
             v13);
-    if ( !*(_DWORD *)(qword_594C050 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C050, v14, v15);
+    if ( !*(_DWORD *)(qword_5984328 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_5984328, v14, v15);
     if ( System_Boolean__TryParse(v16, &result, 0) )
       this->fields._WillRetry_k__BackingField = result;
     v19 = AdjustSdk_AdjustUtils_TypeInfo;
@@ -15106,19 +15085,19 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718340(
     if ( !v24 )
     {
       if ( !v22 )
-        sub_21FFECC(v24, v25);
+        sub_2213CDC(v24, v25);
       v26 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
                                       v22,
                                       v22->klass->vtable._27_get_AsObject.method);
       if ( !AdjustSdk_JSONNode__op_Equality(v26, 0, v27) )
       {
-        v28 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+        v28 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v28,
-          (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+          (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
         this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v28;
         p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-        sub_21FFBF4(p_JsonResponse_k__BackingField, v28);
+        sub_2213A04(p_JsonResponse_k__BackingField, v28);
         v30 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
                 v22,
                 v22->klass->vtable._27_get_AsObject.method);
@@ -15133,7 +15112,7 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718340(
 }
 
 
-void AdjustSdk_AdjustSessionFailure___ctor_36718872(
+void AdjustSdk_AdjustSessionFailure___ctor_36800288(
         AdjustSdk_AdjustSessionFailure_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -15167,13 +15146,13 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718872(
   System_Collections_Generic_Dictionary_string__object__o *v31; // x19
   AdjustSdk_JSONClass_o *v32; // x20
 
-  if ( (byte_59304AC & 1) == 0 )
+  if ( (byte_596864C & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304AC = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596864C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v6 = AdjustSdk_JSONNode__Parse(jsonString, v5);
@@ -15187,17 +15166,17 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718872(
     }
     v11 = AdjustSdk_AdjustUtils__GetJsonString(v6, v10->static_fields->KeyAdid, v9);
     this->fields._Adid_k__BackingField = v11;
-    sub_21FFBF4(&this->fields, v11);
+    sub_2213A04(&this->fields, v11);
     v13 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage, v12);
     this->fields._Message_k__BackingField = v13;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v13);
+    sub_2213A04(&this->fields._Message_k__BackingField, v13);
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp, v14);
     this->fields._Timestamp_k__BackingField = v15;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v15);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v15);
     v19 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyWillRetry, v16);
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v17, v18);
-    v20 = System_Convert__ToBoolean_76466260(v19, 0);
+    v20 = System_Convert__ToBoolean_76679564(v19, 0);
     this->fields._WillRetry_k__BackingField = v20;
     if ( !v6 )
       goto LABEL_16;
@@ -15210,19 +15189,19 @@ void AdjustSdk_AdjustSessionFailure___ctor_36718872(
       return;
     if ( !v22 )
 LABEL_16:
-      sub_21FFECC(v20, v21);
+      sub_2213CDC(v20, v21);
     v24 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
                                     v22,
                                     v22->klass->vtable._27_get_AsObject.method);
     if ( !AdjustSdk_JSONNode__op_Equality(v24, 0, v25) )
     {
-      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v26,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v26;
       p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-      sub_21FFBF4(p_JsonResponse_k__BackingField, v26);
+      sub_2213A04(p_JsonResponse_k__BackingField, v26);
       v28 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v22->klass->vtable._27_get_AsObject.methodPtr)(
               v22,
               v22->klass->vtable._27_get_AsObject.method);
@@ -15253,25 +15232,25 @@ void AdjustSdk_AdjustSessionFailure__BuildJsonResponseFromString(
   AdjustSdk_JSONClass_o *v14; // x20
   System_Collections_Generic_Dictionary_string__object__o *v15; // x19
 
-  if ( (byte_59304AD & 1) == 0 )
+  if ( (byte_596864D & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304AD = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596864D = 1;
   }
   v5 = AdjustSdk_JSONNode__Parse(jsonResponseString, (const MethodInfo *)jsonResponseString);
   if ( !AdjustSdk_JSONNode__op_Equality(v5, 0, v6) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v7;
     p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-    v9 = sub_21FFBF4(p_JsonResponse_k__BackingField, v7);
+    v9 = sub_2213A04(p_JsonResponse_k__BackingField, v7);
     if ( !v5 )
-      sub_21FFECC(v9, v10, v11);
+      sub_2213CDC(v9, v10, v11);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -15290,10 +15269,10 @@ System_String_o *AdjustSdk_AdjustSessionFailure__GetJsonResponseAsString(
   __int64 v2; // x2
   System_Collections_Generic_Dictionary_string__object__o *JsonResponse_k__BackingField; // x19
 
-  if ( (byte_59304AE & 1) == 0 )
+  if ( (byte_596864E & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_59304AE = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_596864E = 1;
   }
   JsonResponse_k__BackingField = this->fields._JsonResponse_k__BackingField;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -15346,7 +15325,7 @@ void AdjustSdk_AdjustSessionFailure__set_Adid(
         const MethodInfo *method)
 {
   this->fields._Adid_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -15356,7 +15335,7 @@ void AdjustSdk_AdjustSessionFailure__set_JsonResponse(
         const MethodInfo *method)
 {
   this->fields._JsonResponse_k__BackingField = value;
-  sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, value);
+  sub_2213A04(&this->fields._JsonResponse_k__BackingField, value);
 }
 
 
@@ -15366,7 +15345,7 @@ void AdjustSdk_AdjustSessionFailure__set_Message(
         const MethodInfo *method)
 {
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Message_k__BackingField, value);
+  sub_2213A04(&this->fields._Message_k__BackingField, value);
 }
 
 
@@ -15376,7 +15355,7 @@ void AdjustSdk_AdjustSessionFailure__set_Timestamp(
         const MethodInfo *method)
 {
   this->fields._Timestamp_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Timestamp_k__BackingField, value);
+  sub_2213A04(&this->fields._Timestamp_k__BackingField, value);
 }
 
 
@@ -15395,7 +15374,7 @@ void AdjustSdk_AdjustSessionSuccess___ctor(AdjustSdk_AdjustSessionSuccess_o *thi
 }
 
 
-void AdjustSdk_AdjustSessionSuccess___ctor_36719580(
+void AdjustSdk_AdjustSessionSuccess___ctor_36800996(
         AdjustSdk_AdjustSessionSuccess_o *this,
         System_Collections_Generic_Dictionary_string__string__o *sessionSuccessDataMap,
         const MethodInfo *method)
@@ -15425,12 +15404,12 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36719580(
   System_Collections_Generic_Dictionary_string__object__o *v27; // x19
   AdjustSdk_JSONClass_o *v28; // x20
 
-  if ( (byte_59304AF & 1) == 0 )
+  if ( (byte_596864F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304AF = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_596864F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( sessionSuccessDataMap )
@@ -15443,19 +15422,19 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36719580(
     }
     Value = AdjustSdk_AdjustUtils__TryGetValue(sessionSuccessDataMap, v7->static_fields->KeyAdid, v6);
     this->fields._Adid_k__BackingField = Value;
-    sub_21FFBF4(&this->fields, Value);
+    sub_2213A04(&this->fields, Value);
     v10 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage,
             v9);
     this->fields._Message_k__BackingField = v10;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v10);
+    sub_2213A04(&this->fields._Message_k__BackingField, v10);
     v12 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp,
             v11);
     this->fields._Timestamp_k__BackingField = v12;
-    sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v12);
+    sub_2213A04(&this->fields._Timestamp_k__BackingField, v12);
     v14 = AdjustSdk_AdjustUtils__TryGetValue(
             sessionSuccessDataMap,
             AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyJsonResponse,
@@ -15465,19 +15444,19 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36719580(
     if ( !v18 )
     {
       if ( !v16 )
-        sub_21FFECC(v18, v19);
+        sub_2213CDC(v18, v19);
       v20 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v16->klass->vtable._27_get_AsObject.methodPtr)(
                                       v16,
                                       v16->klass->vtable._27_get_AsObject.method);
       if ( !AdjustSdk_JSONNode__op_Equality(v20, 0, v21) )
       {
-        v22 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+        v22 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
         System_Collections_Generic_Dictionary_object__object____ctor(
           v22,
-          (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+          (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
         this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v22;
         p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-        sub_21FFBF4(p_JsonResponse_k__BackingField, v22);
+        sub_2213A04(p_JsonResponse_k__BackingField, v22);
         v24 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v16->klass->vtable._27_get_AsObject.methodPtr)(
                 v16,
                 v16->klass->vtable._27_get_AsObject.method);
@@ -15492,7 +15471,7 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36719580(
 }
 
 
-void AdjustSdk_AdjustSessionSuccess___ctor_36720024(
+void AdjustSdk_AdjustSessionSuccess___ctor_36801440(
         AdjustSdk_AdjustSessionSuccess_o *this,
         System_String_o *jsonString,
         const MethodInfo *method)
@@ -15522,12 +15501,12 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36720024(
   System_Collections_Generic_Dictionary_string__object__o *v27; // x19
   AdjustSdk_JSONClass_o *v28; // x20
 
-  if ( (byte_59304B0 & 1) == 0 )
+  if ( (byte_5968650 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304B0 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968650 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v6 = AdjustSdk_JSONNode__Parse(jsonString, v5);
@@ -15541,13 +15520,13 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36720024(
     }
     v11 = AdjustSdk_AdjustUtils__GetJsonString(v6, v10->static_fields->KeyAdid, v9);
     this->fields._Adid_k__BackingField = v11;
-    sub_21FFBF4(&this->fields, v11);
+    sub_2213A04(&this->fields, v11);
     v13 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyMessage, v12);
     this->fields._Message_k__BackingField = v13;
-    sub_21FFBF4(&this->fields._Message_k__BackingField, v13);
+    sub_2213A04(&this->fields._Message_k__BackingField, v13);
     v15 = AdjustSdk_AdjustUtils__GetJsonString(v6, AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTimestamp, v14);
     this->fields._Timestamp_k__BackingField = v15;
-    v16 = sub_21FFBF4(&this->fields._Timestamp_k__BackingField, v15);
+    v16 = sub_2213A04(&this->fields._Timestamp_k__BackingField, v15);
     if ( !v6 )
       goto LABEL_14;
     v18 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, struct System_String_o *, const MethodInfo *))v6->klass->vtable._7_get_Item.methodPtr)(
@@ -15559,19 +15538,19 @@ void AdjustSdk_AdjustSessionSuccess___ctor_36720024(
       return;
     if ( !v18 )
 LABEL_14:
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     v20 = (AdjustSdk_JSONNode_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v18->klass->vtable._27_get_AsObject.methodPtr)(
                                     v18,
                                     v18->klass->vtable._27_get_AsObject.method);
     if ( !AdjustSdk_JSONNode__op_Equality(v20, 0, v21) )
     {
-      v22 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v22 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v22,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v22;
       p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-      sub_21FFBF4(p_JsonResponse_k__BackingField, v22);
+      sub_2213A04(p_JsonResponse_k__BackingField, v22);
       v24 = ((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v18->klass->vtable._27_get_AsObject.methodPtr)(
               v18,
               v18->klass->vtable._27_get_AsObject.method);
@@ -15602,25 +15581,25 @@ void AdjustSdk_AdjustSessionSuccess__BuildJsonResponseFromString(
   AdjustSdk_JSONClass_o *v14; // x20
   System_Collections_Generic_Dictionary_string__object__o *v15; // x19
 
-  if ( (byte_59304B1 & 1) == 0 )
+  if ( (byte_5968651 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    byte_59304B1 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    byte_5968651 = 1;
   }
   v5 = AdjustSdk_JSONNode__Parse(jsonResponseString, (const MethodInfo *)jsonResponseString);
   if ( !AdjustSdk_JSONNode__op_Equality(v5, 0, v6) )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     this->fields._JsonResponse_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v7;
     p_JsonResponse_k__BackingField = &this->fields._JsonResponse_k__BackingField;
-    v9 = sub_21FFBF4(p_JsonResponse_k__BackingField, v7);
+    v9 = sub_2213A04(p_JsonResponse_k__BackingField, v7);
     if ( !v5 )
-      sub_21FFECC(v9, v10, v11);
+      sub_2213CDC(v9, v10, v11);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -15639,10 +15618,10 @@ System_String_o *AdjustSdk_AdjustSessionSuccess__GetJsonResponseAsString(
   __int64 v2; // x2
   System_Collections_Generic_Dictionary_string__object__o *JsonResponse_k__BackingField; // x19
 
-  if ( (byte_59304B2 & 1) == 0 )
+  if ( (byte_5968652 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    byte_59304B2 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    byte_5968652 = 1;
   }
   JsonResponse_k__BackingField = this->fields._JsonResponse_k__BackingField;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -15689,7 +15668,7 @@ void AdjustSdk_AdjustSessionSuccess__set_Adid(
         const MethodInfo *method)
 {
   this->fields._Adid_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -15699,7 +15678,7 @@ void AdjustSdk_AdjustSessionSuccess__set_JsonResponse(
         const MethodInfo *method)
 {
   this->fields._JsonResponse_k__BackingField = value;
-  sub_21FFBF4(&this->fields._JsonResponse_k__BackingField, value);
+  sub_2213A04(&this->fields._JsonResponse_k__BackingField, value);
 }
 
 
@@ -15709,7 +15688,7 @@ void AdjustSdk_AdjustSessionSuccess__set_Message(
         const MethodInfo *method)
 {
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Message_k__BackingField, value);
+  sub_2213A04(&this->fields._Message_k__BackingField, value);
 }
 
 
@@ -15719,7 +15698,7 @@ void AdjustSdk_AdjustSessionSuccess__set_Timestamp(
         const MethodInfo *method)
 {
   this->fields._Timestamp_k__BackingField = value;
-  sub_21FFBF4(&this->fields._Timestamp_k__BackingField, value);
+  sub_2213A04(&this->fields._Timestamp_k__BackingField, value);
 }
 
 
@@ -15730,7 +15709,7 @@ void AdjustSdk_AdjustStoreInfo___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._StoreName_k__BackingField = storeName;
-  sub_21FFBF4(&this->fields, storeName);
+  sub_2213A04(&this->fields, storeName);
 }
 
 
@@ -15752,7 +15731,7 @@ void AdjustSdk_AdjustStoreInfo__set_StoreAppId(
         const MethodInfo *method)
 {
   this->fields._StoreAppId_k__BackingField = value;
-  sub_21FFBF4(&this->fields._StoreAppId_k__BackingField, value);
+  sub_2213A04(&this->fields._StoreAppId_k__BackingField, value);
 }
 
 
@@ -15762,7 +15741,7 @@ void AdjustSdk_AdjustStoreInfo__set_StoreName(
         const MethodInfo *method)
 {
   this->fields._StoreName_k__BackingField = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -15801,24 +15780,24 @@ void AdjustSdk_AdjustThirdPartySharing__AddGranularOption(
   __int64 v24; // x11
   Il2CppClass **v25; // x0
 
-  if ( (byte_59304B5 & 1) == 0 )
+  if ( (byte_5968655 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_59304B5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_5968655 = 1;
   }
   innerGranularOptions = this->fields.innerGranularOptions;
   p_fields = &this->fields;
   v9 = (System_Collections_Generic_List_object__o *)innerGranularOptions;
   if ( !innerGranularOptions )
   {
-    v12 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v12,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     p_fields->innerGranularOptions = (struct System_Collections_Generic_List_string__o *)v12;
-    sub_21FFBF4(p_fields, v12);
+    sub_2213A04(p_fields, v12);
     v9 = (System_Collections_Generic_List_object__o *)p_fields->innerGranularOptions;
     if ( !p_fields->innerGranularOptions )
       goto LABEL_19;
@@ -15834,14 +15813,14 @@ void AdjustSdk_AdjustThirdPartySharing__AddGranularOption(
     System_Collections_Generic_List_object___AddWithResize(
       v9,
       (Il2CppObject *)partnerName,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v9->fields._size = size + 1;
     v16[4] = (Il2CppClass *)partnerName;
-    sub_21FFBF4(v16 + 4, partnerName);
+    sub_2213A04(v16 + 4, partnerName);
   }
   v9 = (System_Collections_Generic_List_object__o *)p_fields->innerGranularOptions;
   if ( !p_fields->innerGranularOptions )
@@ -15857,14 +15836,14 @@ void AdjustSdk_AdjustThirdPartySharing__AddGranularOption(
     System_Collections_Generic_List_object___AddWithResize(
       v9,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
     v20 = &v17->obj.klass + v19;
     v9->fields._size = v19 + 1;
     v20[4] = (Il2CppClass *)key;
-    v9 = (System_Collections_Generic_List_object__o *)sub_21FFBF4(v20 + 4, key);
+    v9 = (System_Collections_Generic_List_object__o *)sub_2213A04(v20 + 4, key);
   }
   v21 = (System_Collections_Generic_List_object__o *)p_fields->innerGranularOptions;
   if ( !p_fields->innerGranularOptions
@@ -15874,7 +15853,7 @@ void AdjustSdk_AdjustThirdPartySharing__AddGranularOption(
         !v22) )
   {
 LABEL_19:
-    sub_21FFECC(v9, partnerName);
+    sub_2213CDC(v9, partnerName);
   }
   v24 = v21->fields._size;
   if ( (unsigned int)v24 >= LODWORD(v22->max_length) )
@@ -15882,14 +15861,14 @@ LABEL_19:
     System_Collections_Generic_List_object___AddWithResize(
       v21,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
   }
   else
   {
     v25 = &v22->obj.klass + v24;
     v21->fields._size = v24 + 1;
     v25[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v25 + 4, value);
+    sub_2213A04(v25 + 4, value);
   }
 }
 
@@ -15924,24 +15903,24 @@ void AdjustSdk_AdjustThirdPartySharing__AddPartnerSharingSetting(
   bool v28; // [xsp+Ch] [xbp-24h] BYREF
 
   v28 = value;
-  if ( (byte_59304B6 & 1) == 0 )
+  if ( (byte_5968656 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_59304B6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_5968656 = 1;
   }
   innerPartnerSharingSettings = this->fields.innerPartnerSharingSettings;
   p_innerPartnerSharingSettings = &this->fields.innerPartnerSharingSettings;
   v8 = (System_Collections_Generic_List_object__o *)innerPartnerSharingSettings;
   if ( !innerPartnerSharingSettings )
   {
-    v11 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v11 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v11,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     *p_innerPartnerSharingSettings = (struct System_Collections_Generic_List_string__o *)v11;
-    sub_21FFBF4(p_innerPartnerSharingSettings, v11);
+    sub_2213A04(p_innerPartnerSharingSettings, v11);
     v8 = (System_Collections_Generic_List_object__o *)*p_innerPartnerSharingSettings;
     if ( !*p_innerPartnerSharingSettings )
       goto LABEL_21;
@@ -15957,14 +15936,14 @@ void AdjustSdk_AdjustThirdPartySharing__AddPartnerSharingSetting(
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       (Il2CppObject *)partnerName,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &items->obj.klass + size;
     v8->fields._size = size + 1;
     v15[4] = (Il2CppClass *)partnerName;
-    sub_21FFBF4(v15 + 4, partnerName);
+    sub_2213A04(v15 + 4, partnerName);
   }
   v8 = (System_Collections_Generic_List_object__o *)*p_innerPartnerSharingSettings;
   if ( !*p_innerPartnerSharingSettings )
@@ -15980,18 +15959,18 @@ void AdjustSdk_AdjustThirdPartySharing__AddPartnerSharingSetting(
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       (Il2CppObject *)key,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &v16->obj.klass + v18;
     v8->fields._size = v18 + 1;
     v19[4] = (Il2CppClass *)key;
-    sub_21FFBF4(v19 + 4, key);
+    sub_2213A04(v19 + 4, key);
   }
   v22 = (System_Collections_Generic_List_object__o *)*p_innerPartnerSharingSettings;
-  if ( !*(_DWORD *)(qword_594C050 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C050, v20, v21);
+  if ( !*(_DWORD *)(qword_5984328 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984328, v20, v21);
   v8 = (System_Collections_Generic_List_object__o *)System_Boolean__ToString((bool)&v28, 0);
   if ( !v22
     || (v23 = v22->fields._items,
@@ -16000,7 +15979,7 @@ void AdjustSdk_AdjustThirdPartySharing__AddPartnerSharingSetting(
         !v23) )
   {
 LABEL_21:
-    sub_21FFECC(v8, partnerName);
+    sub_2213CDC(v8, partnerName);
   }
   v25 = v22->fields._size;
   v26 = v8;
@@ -16009,14 +15988,14 @@ LABEL_21:
     System_Collections_Generic_List_object___AddWithResize(
       v22,
       (Il2CppObject *)v8,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
     v27 = &v23->obj.klass + v25;
     v22->fields._size = v25 + 1;
     v27[4] = (Il2CppClass *)v26;
-    sub_21FFBF4(v27 + 4, v26);
+    sub_2213A04(v27 + 4, v26);
   }
 }
 
@@ -16027,16 +16006,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustThi
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_59304B3 & 1) == 0 )
+  if ( (byte_5968653 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_59304B3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968653 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerGranularOptions;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -16055,16 +16034,16 @@ System_Collections_ObjectModel_ReadOnlyCollection_string__o *AdjustSdk_AdjustThi
 {
   System_Collections_ObjectModel_ReadOnlyCollection_string__o *result; // x0
 
-  if ( (byte_59304B4 & 1) == 0 )
+  if ( (byte_5968654 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__AsReadOnly__);
-    byte_59304B4 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__AsReadOnly__);
+    byte_5968654 = 1;
   }
   result = (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)this->fields.innerPartnerSharingSettings;
   if ( result )
     return (System_Collections_ObjectModel_ReadOnlyCollection_string__o *)System_Collections_Generic_List_object___AsReadOnly(
                                                                             (System_Collections_Generic_List_object__o *)result,
-                                                                            (const MethodInfo_444FD58 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
+                                                                            (const MethodInfo_4483E90 *)Method_System_Collections_Generic_List_string__AsReadOnly__);
   return result;
 }
 
@@ -16166,225 +16145,225 @@ void AdjustSdk_AdjustUtils___cctor(const MethodInfo *method)
   __int64 v84; // x1
   struct System_String_o **p_KeyTestOptionsIgnoreSystemLifecycleBootstrap; // x0
 
-  if ( (byte_59304C6 & 1) == 0 )
+  if ( (byte_5968666 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&StringLiteral_22367/*"lockWindow"*/);
-    sub_21FFC50(&StringLiteral_20270/*"fbInstallReferrer"*/);
-    sub_21FFC50(&StringLiteral_17305/*"adServicesFrameworkEnabled"*/);
-    sub_21FFC50(&StringLiteral_18766/*"clickLabel"*/);
-    sub_21FFC50(&StringLiteral_25762/*"urlOverwrite"*/);
-    sub_21FFC50(&StringLiteral_23268/*"network"*/);
-    sub_21FFC50(&StringLiteral_18458/*"campaign"*/);
-    sub_21FFC50(&StringLiteral_17346/*"adgroup"*/);
-    sub_21FFC50(&StringLiteral_19111/*"creative"*/);
-    sub_21FFC50(&StringLiteral_21202/*"idfa"*/);
-    sub_21FFC50(&StringLiteral_19060/*"costType"*/);
-    sub_21FFC50(&StringLiteral_25417/*"trackerName"*/);
-    sub_21FFC50(&StringLiteral_25418/*"trackerToken"*/);
-    sub_21FFC50(&StringLiteral_17731/*"basePath"*/);
-    sub_21FFC50(&StringLiteral_18791/*"code"*/);
-    sub_21FFC50(&StringLiteral_17738/*"baseUrl"*/);
-    sub_21FFC50(&StringLiteral_25962/*"verificationStatus"*/);
-    sub_21FFC50(&StringLiteral_18442/*"callbackId"*/);
-    sub_21FFC50(&StringLiteral_20318/*"fineValue"*/);
-    sub_21FFC50(&StringLiteral_20005/*"eventToken"*/);
-    sub_21FFC50(&StringLiteral_23317/*"noBackoffWait"*/);
-    sub_21FFC50(&StringLiteral_17347/*"adid"*/);
-    sub_21FFC50(&StringLiteral_17606/*"attStatus"*/);
-    sub_21FFC50(&StringLiteral_18790/*"coarseValue"*/);
-    sub_21FFC50(&StringLiteral_22111/*"jsonResponse"*/);
-    sub_21FFC50(&StringLiteral_20200/*"extraPath"*/);
-    sub_21FFC50(&StringLiteral_20647/*"gdprPath"*/);
-    sub_21FFC50(&StringLiteral_26147/*"willRetry"*/);
-    sub_21FFC50(&StringLiteral_19362/*"deleteState"*/);
-    sub_21FFC50(&StringLiteral_25339/*"timestamp"*/);
-    sub_21FFC50(&StringLiteral_25338/*"timerStartInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_25790/*"useTestConnectionOptions"*/);
-    sub_21FFC50(&StringLiteral_25252/*"teardown"*/);
-    sub_21FFC50(&StringLiteral_22593/*"message"*/);
-    sub_21FFC50(&StringLiteral_19058/*"costAmount"*/);
-    sub_21FFC50(&StringLiteral_23973/*"purchaseVerificationUrl"*/);
-    sub_21FFC50(&StringLiteral_20648/*"gdprUrl"*/);
-    sub_21FFC50(&StringLiteral_25032/*"subscriptionUrl"*/);
-    sub_21FFC50(&StringLiteral_19059/*"costCurrency"*/);
-    sub_21FFC50(&StringLiteral_21219/*"ignoreSystemLifecycleBootstrap"*/);
-    sub_21FFC50(&StringLiteral_25337/*"timerIntervalInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_24492/*"sessionIntervalInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_25033/*"subsessionIntervalInMilliseconds"*/);
-    byte_59304C6 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&StringLiteral_22410/*"lockWindow"*/);
+    sub_2213A60(&StringLiteral_20312/*"fbInstallReferrer"*/);
+    sub_2213A60(&StringLiteral_17341/*"adServicesFrameworkEnabled"*/);
+    sub_2213A60(&StringLiteral_18804/*"clickLabel"*/);
+    sub_2213A60(&StringLiteral_25810/*"urlOverwrite"*/);
+    sub_2213A60(&StringLiteral_23314/*"network"*/);
+    sub_2213A60(&StringLiteral_18496/*"campaign"*/);
+    sub_2213A60(&StringLiteral_17382/*"adgroup"*/);
+    sub_2213A60(&StringLiteral_19152/*"creative"*/);
+    sub_2213A60(&StringLiteral_21243/*"idfa"*/);
+    sub_2213A60(&StringLiteral_19101/*"costType"*/);
+    sub_2213A60(&StringLiteral_25465/*"trackerName"*/);
+    sub_2213A60(&StringLiteral_25466/*"trackerToken"*/);
+    sub_2213A60(&StringLiteral_17768/*"basePath"*/);
+    sub_2213A60(&StringLiteral_18829/*"code"*/);
+    sub_2213A60(&StringLiteral_17775/*"baseUrl"*/);
+    sub_2213A60(&StringLiteral_26010/*"verificationStatus"*/);
+    sub_2213A60(&StringLiteral_18480/*"callbackId"*/);
+    sub_2213A60(&StringLiteral_20359/*"fineValue"*/);
+    sub_2213A60(&StringLiteral_20047/*"eventToken"*/);
+    sub_2213A60(&StringLiteral_23363/*"noBackoffWait"*/);
+    sub_2213A60(&StringLiteral_17383/*"adid"*/);
+    sub_2213A60(&StringLiteral_17643/*"attStatus"*/);
+    sub_2213A60(&StringLiteral_18828/*"coarseValue"*/);
+    sub_2213A60(&StringLiteral_22154/*"jsonResponse"*/);
+    sub_2213A60(&StringLiteral_20242/*"extraPath"*/);
+    sub_2213A60(&StringLiteral_20688/*"gdprPath"*/);
+    sub_2213A60(&StringLiteral_26198/*"willRetry"*/);
+    sub_2213A60(&StringLiteral_19404/*"deleteState"*/);
+    sub_2213A60(&StringLiteral_25387/*"timestamp"*/);
+    sub_2213A60(&StringLiteral_25386/*"timerStartInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_25838/*"useTestConnectionOptions"*/);
+    sub_2213A60(&StringLiteral_25300/*"teardown"*/);
+    sub_2213A60(&StringLiteral_22639/*"message"*/);
+    sub_2213A60(&StringLiteral_19099/*"costAmount"*/);
+    sub_2213A60(&StringLiteral_24020/*"purchaseVerificationUrl"*/);
+    sub_2213A60(&StringLiteral_20689/*"gdprUrl"*/);
+    sub_2213A60(&StringLiteral_25080/*"subscriptionUrl"*/);
+    sub_2213A60(&StringLiteral_19100/*"costCurrency"*/);
+    sub_2213A60(&StringLiteral_21260/*"ignoreSystemLifecycleBootstrap"*/);
+    sub_2213A60(&StringLiteral_25385/*"timerIntervalInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_24540/*"sessionIntervalInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_25081/*"subsessionIntervalInMilliseconds"*/);
+    byte_5968666 = 1;
   }
-  v1 = StringLiteral_17347/*"adid"*/;
-  AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid = (struct System_String_o *)StringLiteral_17347/*"adid"*/;
-  sub_21FFBF4(AdjustSdk_AdjustUtils_TypeInfo->static_fields, v1);
-  v2 = StringLiteral_22593/*"message"*/;
+  v1 = StringLiteral_17383/*"adid"*/;
+  AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyAdid = (struct System_String_o *)StringLiteral_17383/*"adid"*/;
+  sub_2213A04(AdjustSdk_AdjustUtils_TypeInfo->static_fields, v1);
+  v2 = StringLiteral_22639/*"message"*/;
   static_fields = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  static_fields->KeyMessage = (struct System_String_o *)StringLiteral_22593/*"message"*/;
-  sub_21FFBF4(&static_fields->KeyMessage, v2);
-  v4 = StringLiteral_23268/*"network"*/;
+  static_fields->KeyMessage = (struct System_String_o *)StringLiteral_22639/*"message"*/;
+  sub_2213A04(&static_fields->KeyMessage, v2);
+  v4 = StringLiteral_23314/*"network"*/;
   v5 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v5->KeyNetwork = (struct System_String_o *)StringLiteral_23268/*"network"*/;
-  sub_21FFBF4(&v5->KeyNetwork, v4);
-  v6 = StringLiteral_17346/*"adgroup"*/;
+  v5->KeyNetwork = (struct System_String_o *)StringLiteral_23314/*"network"*/;
+  sub_2213A04(&v5->KeyNetwork, v4);
+  v6 = StringLiteral_17382/*"adgroup"*/;
   v7 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v7->KeyAdgroup = (struct System_String_o *)StringLiteral_17346/*"adgroup"*/;
-  sub_21FFBF4(&v7->KeyAdgroup, v6);
-  v8 = StringLiteral_18458/*"campaign"*/;
+  v7->KeyAdgroup = (struct System_String_o *)StringLiteral_17382/*"adgroup"*/;
+  sub_2213A04(&v7->KeyAdgroup, v6);
+  v8 = StringLiteral_18496/*"campaign"*/;
   v9 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v9->KeyCampaign = (struct System_String_o *)StringLiteral_18458/*"campaign"*/;
-  sub_21FFBF4(&v9->KeyCampaign, v8);
-  v10 = StringLiteral_19111/*"creative"*/;
+  v9->KeyCampaign = (struct System_String_o *)StringLiteral_18496/*"campaign"*/;
+  sub_2213A04(&v9->KeyCampaign, v8);
+  v10 = StringLiteral_19152/*"creative"*/;
   v11 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v11->KeyCreative = (struct System_String_o *)StringLiteral_19111/*"creative"*/;
-  sub_21FFBF4(&v11->KeyCreative, v10);
-  v12 = StringLiteral_26147/*"willRetry"*/;
+  v11->KeyCreative = (struct System_String_o *)StringLiteral_19152/*"creative"*/;
+  sub_2213A04(&v11->KeyCreative, v10);
+  v12 = StringLiteral_26198/*"willRetry"*/;
   v13 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v13->KeyWillRetry = (struct System_String_o *)StringLiteral_26147/*"willRetry"*/;
-  sub_21FFBF4(&v13->KeyWillRetry, v12);
-  v14 = StringLiteral_25339/*"timestamp"*/;
+  v13->KeyWillRetry = (struct System_String_o *)StringLiteral_26198/*"willRetry"*/;
+  sub_2213A04(&v13->KeyWillRetry, v12);
+  v14 = StringLiteral_25387/*"timestamp"*/;
   v15 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v15->KeyTimestamp = (struct System_String_o *)StringLiteral_25339/*"timestamp"*/;
-  sub_21FFBF4(&v15->KeyTimestamp, v14);
-  v16 = StringLiteral_18442/*"callbackId"*/;
+  v15->KeyTimestamp = (struct System_String_o *)StringLiteral_25387/*"timestamp"*/;
+  sub_2213A04(&v15->KeyTimestamp, v14);
+  v16 = StringLiteral_18480/*"callbackId"*/;
   v17 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v17->KeyCallbackId = (struct System_String_o *)StringLiteral_18442/*"callbackId"*/;
-  sub_21FFBF4(&v17->KeyCallbackId, v16);
+  v17->KeyCallbackId = (struct System_String_o *)StringLiteral_18480/*"callbackId"*/;
+  sub_2213A04(&v17->KeyCallbackId, v16);
   v18 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v19 = StringLiteral_20005/*"eventToken"*/;
-  v18->KeyEventToken = (struct System_String_o *)StringLiteral_20005/*"eventToken"*/;
-  sub_21FFBF4(&v18->KeyEventToken, v19);
+  v19 = StringLiteral_20047/*"eventToken"*/;
+  v18->KeyEventToken = (struct System_String_o *)StringLiteral_20047/*"eventToken"*/;
+  sub_2213A04(&v18->KeyEventToken, v19);
   v20 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v21 = StringLiteral_18766/*"clickLabel"*/;
-  v20->KeyClickLabel = (struct System_String_o *)StringLiteral_18766/*"clickLabel"*/;
-  sub_21FFBF4(&v20->KeyClickLabel, v21);
+  v21 = StringLiteral_18804/*"clickLabel"*/;
+  v20->KeyClickLabel = (struct System_String_o *)StringLiteral_18804/*"clickLabel"*/;
+  sub_2213A04(&v20->KeyClickLabel, v21);
   v22 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v23 = StringLiteral_25417/*"trackerName"*/;
-  v22->KeyTrackerName = (struct System_String_o *)StringLiteral_25417/*"trackerName"*/;
-  sub_21FFBF4(&v22->KeyTrackerName, v23);
+  v23 = StringLiteral_25465/*"trackerName"*/;
+  v22->KeyTrackerName = (struct System_String_o *)StringLiteral_25465/*"trackerName"*/;
+  sub_2213A04(&v22->KeyTrackerName, v23);
   v24 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v25 = StringLiteral_25418/*"trackerToken"*/;
-  v24->KeyTrackerToken = (struct System_String_o *)StringLiteral_25418/*"trackerToken"*/;
-  sub_21FFBF4(&v24->KeyTrackerToken, v25);
+  v25 = StringLiteral_25466/*"trackerToken"*/;
+  v24->KeyTrackerToken = (struct System_String_o *)StringLiteral_25466/*"trackerToken"*/;
+  sub_2213A04(&v24->KeyTrackerToken, v25);
   v26 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v27 = StringLiteral_22111/*"jsonResponse"*/;
-  v26->KeyJsonResponse = (struct System_String_o *)StringLiteral_22111/*"jsonResponse"*/;
-  sub_21FFBF4(&v26->KeyJsonResponse, v27);
+  v27 = StringLiteral_22154/*"jsonResponse"*/;
+  v26->KeyJsonResponse = (struct System_String_o *)StringLiteral_22154/*"jsonResponse"*/;
+  sub_2213A04(&v26->KeyJsonResponse, v27);
   v28 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v29 = StringLiteral_19060/*"costType"*/;
-  v28->KeyCostType = (struct System_String_o *)StringLiteral_19060/*"costType"*/;
-  sub_21FFBF4(&v28->KeyCostType, v29);
+  v29 = StringLiteral_19101/*"costType"*/;
+  v28->KeyCostType = (struct System_String_o *)StringLiteral_19101/*"costType"*/;
+  sub_2213A04(&v28->KeyCostType, v29);
   v30 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v31 = StringLiteral_19058/*"costAmount"*/;
-  v30->KeyCostAmount = (struct System_String_o *)StringLiteral_19058/*"costAmount"*/;
-  sub_21FFBF4(&v30->KeyCostAmount, v31);
+  v31 = StringLiteral_19099/*"costAmount"*/;
+  v30->KeyCostAmount = (struct System_String_o *)StringLiteral_19099/*"costAmount"*/;
+  sub_2213A04(&v30->KeyCostAmount, v31);
   v32 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v33 = StringLiteral_19059/*"costCurrency"*/;
-  v32->KeyCostCurrency = (struct System_String_o *)StringLiteral_19059/*"costCurrency"*/;
-  sub_21FFBF4(&v32->KeyCostCurrency, v33);
+  v33 = StringLiteral_19100/*"costCurrency"*/;
+  v32->KeyCostCurrency = (struct System_String_o *)StringLiteral_19100/*"costCurrency"*/;
+  sub_2213A04(&v32->KeyCostCurrency, v33);
   v34 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v35 = StringLiteral_20270/*"fbInstallReferrer"*/;
-  v34->KeyFbInstallReferrer = (struct System_String_o *)StringLiteral_20270/*"fbInstallReferrer"*/;
-  sub_21FFBF4(&v34->KeyFbInstallReferrer, v35);
+  v35 = StringLiteral_20312/*"fbInstallReferrer"*/;
+  v34->KeyFbInstallReferrer = (struct System_String_o *)StringLiteral_20312/*"fbInstallReferrer"*/;
+  sub_2213A04(&v34->KeyFbInstallReferrer, v35);
   v36 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v37 = StringLiteral_20318/*"fineValue"*/;
-  v36->KeySkanConversionValue = (struct System_String_o *)StringLiteral_20318/*"fineValue"*/;
-  sub_21FFBF4(&v36->KeySkanConversionValue, v37);
+  v37 = StringLiteral_20359/*"fineValue"*/;
+  v36->KeySkanConversionValue = (struct System_String_o *)StringLiteral_20359/*"fineValue"*/;
+  sub_2213A04(&v36->KeySkanConversionValue, v37);
   v38 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v39 = StringLiteral_18790/*"coarseValue"*/;
-  v38->KeySkanCoarseValue = (struct System_String_o *)StringLiteral_18790/*"coarseValue"*/;
-  sub_21FFBF4(&v38->KeySkanCoarseValue, v39);
+  v39 = StringLiteral_18828/*"coarseValue"*/;
+  v38->KeySkanCoarseValue = (struct System_String_o *)StringLiteral_18828/*"coarseValue"*/;
+  sub_2213A04(&v38->KeySkanCoarseValue, v39);
   v40 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v41 = StringLiteral_22367/*"lockWindow"*/;
-  v40->KeySkanLockWindow = (struct System_String_o *)StringLiteral_22367/*"lockWindow"*/;
-  sub_21FFBF4(&v40->KeySkanLockWindow, v41);
+  v41 = StringLiteral_22410/*"lockWindow"*/;
+  v40->KeySkanLockWindow = (struct System_String_o *)StringLiteral_22410/*"lockWindow"*/;
+  sub_2213A04(&v40->KeySkanLockWindow, v41);
   v42 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v43 = StringLiteral_18791/*"code"*/;
-  v42->KeyCode = (struct System_String_o *)StringLiteral_18791/*"code"*/;
-  sub_21FFBF4(&v42->KeyCode, v43);
+  v43 = StringLiteral_18829/*"code"*/;
+  v42->KeyCode = (struct System_String_o *)StringLiteral_18829/*"code"*/;
+  sub_2213A04(&v42->KeyCode, v43);
   v44 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v45 = StringLiteral_25962/*"verificationStatus"*/;
-  v44->KeyVerificationStatus = (struct System_String_o *)StringLiteral_25962/*"verificationStatus"*/;
-  sub_21FFBF4(&v44->KeyVerificationStatus, v45);
+  v45 = StringLiteral_26010/*"verificationStatus"*/;
+  v44->KeyVerificationStatus = (struct System_String_o *)StringLiteral_26010/*"verificationStatus"*/;
+  sub_2213A04(&v44->KeyVerificationStatus, v45);
   v46 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v47 = StringLiteral_17738/*"baseUrl"*/;
-  v46->KeyTestOptionsBaseUrl = (struct System_String_o *)StringLiteral_17738/*"baseUrl"*/;
-  sub_21FFBF4(&v46->KeyTestOptionsBaseUrl, v47);
+  v47 = StringLiteral_17775/*"baseUrl"*/;
+  v46->KeyTestOptionsBaseUrl = (struct System_String_o *)StringLiteral_17775/*"baseUrl"*/;
+  sub_2213A04(&v46->KeyTestOptionsBaseUrl, v47);
   v48 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v49 = StringLiteral_20648/*"gdprUrl"*/;
-  v48->KeyTestOptionsGdprUrl = (struct System_String_o *)StringLiteral_20648/*"gdprUrl"*/;
-  sub_21FFBF4(&v48->KeyTestOptionsGdprUrl, v49);
+  v49 = StringLiteral_20689/*"gdprUrl"*/;
+  v48->KeyTestOptionsGdprUrl = (struct System_String_o *)StringLiteral_20689/*"gdprUrl"*/;
+  sub_2213A04(&v48->KeyTestOptionsGdprUrl, v49);
   v50 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v51 = StringLiteral_25032/*"subscriptionUrl"*/;
-  v50->KeyTestOptionsSubscriptionUrl = (struct System_String_o *)StringLiteral_25032/*"subscriptionUrl"*/;
-  sub_21FFBF4(&v50->KeyTestOptionsSubscriptionUrl, v51);
+  v51 = StringLiteral_25080/*"subscriptionUrl"*/;
+  v50->KeyTestOptionsSubscriptionUrl = (struct System_String_o *)StringLiteral_25080/*"subscriptionUrl"*/;
+  sub_2213A04(&v50->KeyTestOptionsSubscriptionUrl, v51);
   v52 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v53 = StringLiteral_23973/*"purchaseVerificationUrl"*/;
-  v52->KeyTestOptionsPurchaseVerificationUrl = (struct System_String_o *)StringLiteral_23973/*"purchaseVerificationUrl"*/;
-  sub_21FFBF4(&v52->KeyTestOptionsPurchaseVerificationUrl, v53);
+  v53 = StringLiteral_24020/*"purchaseVerificationUrl"*/;
+  v52->KeyTestOptionsPurchaseVerificationUrl = (struct System_String_o *)StringLiteral_24020/*"purchaseVerificationUrl"*/;
+  sub_2213A04(&v52->KeyTestOptionsPurchaseVerificationUrl, v53);
   v54 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v55 = StringLiteral_25762/*"urlOverwrite"*/;
-  v54->KeyTestOptionsOverwriteUrl = (struct System_String_o *)StringLiteral_25762/*"urlOverwrite"*/;
-  sub_21FFBF4(&v54->KeyTestOptionsOverwriteUrl, v55);
+  v55 = StringLiteral_25810/*"urlOverwrite"*/;
+  v54->KeyTestOptionsOverwriteUrl = (struct System_String_o *)StringLiteral_25810/*"urlOverwrite"*/;
+  sub_2213A04(&v54->KeyTestOptionsOverwriteUrl, v55);
   v56 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v57 = StringLiteral_20200/*"extraPath"*/;
-  v56->KeyTestOptionsExtraPath = (struct System_String_o *)StringLiteral_20200/*"extraPath"*/;
-  sub_21FFBF4(&v56->KeyTestOptionsExtraPath, v57);
+  v57 = StringLiteral_20242/*"extraPath"*/;
+  v56->KeyTestOptionsExtraPath = (struct System_String_o *)StringLiteral_20242/*"extraPath"*/;
+  sub_2213A04(&v56->KeyTestOptionsExtraPath, v57);
   v58 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v59 = StringLiteral_17731/*"basePath"*/;
-  v58->KeyTestOptionsBasePath = (struct System_String_o *)StringLiteral_17731/*"basePath"*/;
-  sub_21FFBF4(&v58->KeyTestOptionsBasePath, v59);
+  v59 = StringLiteral_17768/*"basePath"*/;
+  v58->KeyTestOptionsBasePath = (struct System_String_o *)StringLiteral_17768/*"basePath"*/;
+  sub_2213A04(&v58->KeyTestOptionsBasePath, v59);
   v60 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v61 = StringLiteral_20647/*"gdprPath"*/;
-  v60->KeyTestOptionsGdprPath = (struct System_String_o *)StringLiteral_20647/*"gdprPath"*/;
-  sub_21FFBF4(&v60->KeyTestOptionsGdprPath, v61);
+  v61 = StringLiteral_20688/*"gdprPath"*/;
+  v60->KeyTestOptionsGdprPath = (struct System_String_o *)StringLiteral_20688/*"gdprPath"*/;
+  sub_2213A04(&v60->KeyTestOptionsGdprPath, v61);
   v62 = AdjustSdk_AdjustUtils_TypeInfo->static_fields;
-  v63 = StringLiteral_19362/*"deleteState"*/;
-  v62->KeyTestOptionsDeleteState = (struct System_String_o *)StringLiteral_19362/*"deleteState"*/;
-  sub_21FFBF4(&v62->KeyTestOptionsDeleteState, v63);
-  v64 = StringLiteral_25790/*"useTestConnectionOptions"*/;
+  v63 = StringLiteral_19404/*"deleteState"*/;
+  v62->KeyTestOptionsDeleteState = (struct System_String_o *)StringLiteral_19404/*"deleteState"*/;
+  sub_2213A04(&v62->KeyTestOptionsDeleteState, v63);
+  v64 = StringLiteral_25838/*"useTestConnectionOptions"*/;
   p_KeyTestOptionsUseTestConnectionOptions = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsUseTestConnectionOptions;
-  *p_KeyTestOptionsUseTestConnectionOptions = (struct System_String_o *)StringLiteral_25790/*"useTestConnectionOptions"*/;
-  sub_21FFBF4(p_KeyTestOptionsUseTestConnectionOptions, v64);
-  v66 = StringLiteral_25337/*"timerIntervalInMilliseconds"*/;
+  *p_KeyTestOptionsUseTestConnectionOptions = (struct System_String_o *)StringLiteral_25838/*"useTestConnectionOptions"*/;
+  sub_2213A04(p_KeyTestOptionsUseTestConnectionOptions, v64);
+  v66 = StringLiteral_25385/*"timerIntervalInMilliseconds"*/;
   p_KeyTestOptionsTimerIntervalInMilliseconds = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsTimerIntervalInMilliseconds;
-  *p_KeyTestOptionsTimerIntervalInMilliseconds = (struct System_String_o *)StringLiteral_25337/*"timerIntervalInMilliseconds"*/;
-  sub_21FFBF4(p_KeyTestOptionsTimerIntervalInMilliseconds, v66);
-  v68 = StringLiteral_25338/*"timerStartInMilliseconds"*/;
+  *p_KeyTestOptionsTimerIntervalInMilliseconds = (struct System_String_o *)StringLiteral_25385/*"timerIntervalInMilliseconds"*/;
+  sub_2213A04(p_KeyTestOptionsTimerIntervalInMilliseconds, v66);
+  v68 = StringLiteral_25386/*"timerStartInMilliseconds"*/;
   p_KeyTestOptionsTimerStartInMilliseconds = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsTimerStartInMilliseconds;
-  *p_KeyTestOptionsTimerStartInMilliseconds = (struct System_String_o *)StringLiteral_25338/*"timerStartInMilliseconds"*/;
-  sub_21FFBF4(p_KeyTestOptionsTimerStartInMilliseconds, v68);
-  v70 = StringLiteral_24492/*"sessionIntervalInMilliseconds"*/;
+  *p_KeyTestOptionsTimerStartInMilliseconds = (struct System_String_o *)StringLiteral_25386/*"timerStartInMilliseconds"*/;
+  sub_2213A04(p_KeyTestOptionsTimerStartInMilliseconds, v68);
+  v70 = StringLiteral_24540/*"sessionIntervalInMilliseconds"*/;
   p_KeyTestOptionsSessionIntervalInMilliseconds = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsSessionIntervalInMilliseconds;
-  *p_KeyTestOptionsSessionIntervalInMilliseconds = (struct System_String_o *)StringLiteral_24492/*"sessionIntervalInMilliseconds"*/;
-  sub_21FFBF4(p_KeyTestOptionsSessionIntervalInMilliseconds, v70);
-  v72 = StringLiteral_25033/*"subsessionIntervalInMilliseconds"*/;
+  *p_KeyTestOptionsSessionIntervalInMilliseconds = (struct System_String_o *)StringLiteral_24540/*"sessionIntervalInMilliseconds"*/;
+  sub_2213A04(p_KeyTestOptionsSessionIntervalInMilliseconds, v70);
+  v72 = StringLiteral_25081/*"subsessionIntervalInMilliseconds"*/;
   p_KeyTestOptionsSubsessionIntervalInMilliseconds = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsSubsessionIntervalInMilliseconds;
-  *p_KeyTestOptionsSubsessionIntervalInMilliseconds = (struct System_String_o *)StringLiteral_25033/*"subsessionIntervalInMilliseconds"*/;
-  sub_21FFBF4(p_KeyTestOptionsSubsessionIntervalInMilliseconds, v72);
-  v74 = StringLiteral_25252/*"teardown"*/;
+  *p_KeyTestOptionsSubsessionIntervalInMilliseconds = (struct System_String_o *)StringLiteral_25081/*"subsessionIntervalInMilliseconds"*/;
+  sub_2213A04(p_KeyTestOptionsSubsessionIntervalInMilliseconds, v72);
+  v74 = StringLiteral_25300/*"teardown"*/;
   p_KeyTestOptionsTeardown = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsTeardown;
-  *p_KeyTestOptionsTeardown = (struct System_String_o *)StringLiteral_25252/*"teardown"*/;
-  sub_21FFBF4(p_KeyTestOptionsTeardown, v74);
-  v76 = StringLiteral_23317/*"noBackoffWait"*/;
+  *p_KeyTestOptionsTeardown = (struct System_String_o *)StringLiteral_25300/*"teardown"*/;
+  sub_2213A04(p_KeyTestOptionsTeardown, v74);
+  v76 = StringLiteral_23363/*"noBackoffWait"*/;
   p_KeyTestOptionsNoBackoffWait = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsNoBackoffWait;
-  *p_KeyTestOptionsNoBackoffWait = (struct System_String_o *)StringLiteral_23317/*"noBackoffWait"*/;
-  sub_21FFBF4(p_KeyTestOptionsNoBackoffWait, v76);
-  v78 = StringLiteral_17305/*"adServicesFrameworkEnabled"*/;
+  *p_KeyTestOptionsNoBackoffWait = (struct System_String_o *)StringLiteral_23363/*"noBackoffWait"*/;
+  sub_2213A04(p_KeyTestOptionsNoBackoffWait, v76);
+  v78 = StringLiteral_17341/*"adServicesFrameworkEnabled"*/;
   p_KeyTestOptionsAdServicesFrameworkEnabled = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsAdServicesFrameworkEnabled;
-  *p_KeyTestOptionsAdServicesFrameworkEnabled = (struct System_String_o *)StringLiteral_17305/*"adServicesFrameworkEnabled"*/;
-  sub_21FFBF4(p_KeyTestOptionsAdServicesFrameworkEnabled, v78);
-  v80 = StringLiteral_17606/*"attStatus"*/;
+  *p_KeyTestOptionsAdServicesFrameworkEnabled = (struct System_String_o *)StringLiteral_17341/*"adServicesFrameworkEnabled"*/;
+  sub_2213A04(p_KeyTestOptionsAdServicesFrameworkEnabled, v78);
+  v80 = StringLiteral_17643/*"attStatus"*/;
   p_KeyTestOptionsAttStatus = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsAttStatus;
-  *p_KeyTestOptionsAttStatus = (struct System_String_o *)StringLiteral_17606/*"attStatus"*/;
-  sub_21FFBF4(p_KeyTestOptionsAttStatus, v80);
-  v82 = StringLiteral_21202/*"idfa"*/;
+  *p_KeyTestOptionsAttStatus = (struct System_String_o *)StringLiteral_17643/*"attStatus"*/;
+  sub_2213A04(p_KeyTestOptionsAttStatus, v80);
+  v82 = StringLiteral_21243/*"idfa"*/;
   p_KeyTestOptionsIdfa = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsIdfa;
-  *p_KeyTestOptionsIdfa = (struct System_String_o *)StringLiteral_21202/*"idfa"*/;
-  sub_21FFBF4(p_KeyTestOptionsIdfa, v82);
-  v84 = StringLiteral_21219/*"ignoreSystemLifecycleBootstrap"*/;
+  *p_KeyTestOptionsIdfa = (struct System_String_o *)StringLiteral_21243/*"idfa"*/;
+  sub_2213A04(p_KeyTestOptionsIdfa, v82);
+  v84 = StringLiteral_21260/*"ignoreSystemLifecycleBootstrap"*/;
   p_KeyTestOptionsIgnoreSystemLifecycleBootstrap = &AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsIgnoreSystemLifecycleBootstrap;
-  *p_KeyTestOptionsIgnoreSystemLifecycleBootstrap = (struct System_String_o *)StringLiteral_21219/*"ignoreSystemLifecycleBootstrap"*/;
-  sub_21FFBF4(p_KeyTestOptionsIgnoreSystemLifecycleBootstrap, v84);
+  *p_KeyTestOptionsIgnoreSystemLifecycleBootstrap = (struct System_String_o *)StringLiteral_21260/*"ignoreSystemLifecycleBootstrap"*/;
+  sub_2213A04(p_KeyTestOptionsIgnoreSystemLifecycleBootstrap, v84);
 }
 
 
@@ -16402,18 +16381,18 @@ int32_t AdjustSdk_AdjustUtils__ConvertBool(System_Nullable_bool__o value, const 
 
   hasValue = value.fields.hasValue;
   v5 = value;
-  if ( (byte_59304B8 & 1) == 0 )
+  if ( (byte_5968658 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_bool__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_bool__get_Value__);
-    byte_59304B8 = 1;
+    sub_2213A60(&Method_System_Nullable_bool__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_bool__get_Value__);
+    byte_5968658 = 1;
   }
   if ( !hasValue )
     return -1;
   v3 = &v5;
   return System_Nullable_bool___get_Value(
            (System_Nullable_bool__o)v3,
-           (const MethodInfo_45AC820 *)Method_System_Nullable_bool__get_Value__);
+           (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
 }
 
 
@@ -16425,61 +16404,61 @@ double AdjustSdk_AdjustUtils__ConvertDouble(System_Nullable_double__o value, con
 
   v4 = value;
   hasValue = value.fields.hasValue;
-  if ( (byte_59304B9 & 1) == 0 )
+  if ( (byte_5968659 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_double__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_double__get_Value__);
-    byte_59304B9 = 1;
+    sub_2213A60(&Method_System_Nullable_double__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_double__get_Value__);
+    byte_5968659 = 1;
   }
   if ( !hasValue )
     return -1.0;
   *(_QWORD *)&v5.fields.hasValue = &v4;
   *(_QWORD *)&v5.fields.value = Method_System_Nullable_double__get_Value__;
-  return System_Nullable_double___get_Value(v5, (const MethodInfo_45AEF04 *)method);
+  return System_Nullable_double___get_Value(v5, (const MethodInfo_45E303C *)method);
 }
 
 
 int32_t AdjustSdk_AdjustUtils__ConvertInt(System_Nullable_int__o value, const MethodInfo *method)
 {
   bool hasValue; // w19
-  System_Nullable_int__o v3; // x0
-  System_Nullable_int__o v5; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v4; // [xsp+8h] [xbp-18h] BYREF
 
   hasValue = value.fields.hasValue;
-  v5 = value;
-  if ( (byte_59304BA & 1) == 0 )
+  v4 = value;
+  if ( (byte_596865A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_int__get_Value__);
-    byte_59304BA = 1;
+    sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_int__get_Value__);
+    byte_596865A = 1;
   }
-  if ( !hasValue )
+  if ( hasValue )
+    return System_Nullable_int___get_Value(
+             (System_Nullable_int__o)&v4,
+             (const MethodInfo_45E4324 *)Method_System_Nullable_int__get_Value__);
+  else
     return -1;
-  v3 = (System_Nullable_int__o)&v5;
-  return System_Nullable_int___get_Value(v3, (const MethodInfo_45B01EC *)Method_System_Nullable_int__get_Value__);
 }
 
 
 int32_t AdjustSdk_AdjustUtils__ConvertLogLevel(System_Nullable_AdjustLogLevel__o logLevel, const MethodInfo *method)
 {
   bool hasValue; // w19
-  System_Nullable_Int32Enum__o v3; // x0
-  System_Nullable_AdjustLogLevel__o v5; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_AdjustLogLevel__o v4; // [xsp+8h] [xbp-18h] BYREF
 
   hasValue = logLevel.fields.hasValue;
-  v5 = logLevel;
-  if ( (byte_59304B7 & 1) == 0 )
+  v4 = logLevel;
+  if ( (byte_5968657 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_AdjustLogLevel__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_AdjustLogLevel__get_Value__);
-    byte_59304B7 = 1;
+    sub_2213A60(&Method_System_Nullable_AdjustLogLevel__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_AdjustLogLevel__get_Value__);
+    byte_5968657 = 1;
   }
-  if ( !hasValue )
+  if ( hasValue )
+    return System_Nullable_Int32Enum___get_Value(
+             (System_Nullable_Int32Enum__o)&v4,
+             (const MethodInfo_45E46B0 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
+  else
     return -1;
-  v3 = (System_Nullable_Int32Enum__o)&v5;
-  return System_Nullable_Int32Enum___get_Value(
-           v3,
-           (const MethodInfo_45B0578 *)Method_System_Nullable_AdjustLogLevel__get_Value__);
 }
 
 
@@ -16491,17 +16470,17 @@ int64_t AdjustSdk_AdjustUtils__ConvertLong(System_Nullable_long__o value, const 
 
   v4 = value;
   hasValue = value.fields.hasValue;
-  if ( (byte_59304BB & 1) == 0 )
+  if ( (byte_596865B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_long__get_Value__);
-    byte_59304BB = 1;
+    sub_2213A60(&Method_System_Nullable_long__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_long__get_Value__);
+    byte_596865B = 1;
   }
   if ( !hasValue )
     return -1;
   *(_QWORD *)&v5.fields.hasValue = &v4;
   v5.fields.value = Method_System_Nullable_long__get_Value__;
-  return System_Nullable_long___get_Value(v5, (const MethodInfo_45B0930 *)method);
+  return System_Nullable_long___get_Value(v5, (const MethodInfo_45E4A68 *)method);
 }
 
 
@@ -16533,37 +16512,37 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
   __int64 v24; // x1
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_59304BD & 1) == 0 )
+  if ( (byte_596865D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    byte_59304BD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    byte_596865D = 1;
   }
   memset(&v26, 0, sizeof(v26));
   if ( !list
     || (System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
           (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-          (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__)
+          (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__)
       & 1) != 0 )
   {
     return 0;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   if ( System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
          (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-         (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
+         (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
   {
     v4 = 0;
     do
@@ -16571,13 +16550,13 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
                v4,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v6 = v4 + 1;
       v7 = Item;
       v8 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
              (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
              v6,
-             (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+             (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       if ( v7 )
       {
         v10 = v8;
@@ -16596,14 +16575,14 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               v7,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
             v14 = &items->obj.klass + size;
             v3->fields._size = size + 1;
             v14[4] = (Il2CppClass *)v7;
-            v8 = (Il2CppObject *)sub_21FFBF4(v14 + 4, v7);
+            v8 = (Il2CppObject *)sub_2213A04(v14 + 4, v7);
           }
           v15 = v3->fields._items;
           v16 = Method_System_Collections_Generic_List_string__Add__;
@@ -16616,14 +16595,14 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               v10,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
             v18 = &v15->obj.klass + v17;
             v3->fields._size = v17 + 1;
             v18[4] = (Il2CppClass *)v10;
-            sub_21FFBF4(v18 + 4, v10);
+            sub_2213A04(v18 + 4, v10);
           }
         }
       }
@@ -16631,27 +16610,27 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
     }
     while ( v4 < System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-                   (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) );
+                   (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) );
   }
-  v19 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v19 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v19, v20);
   if ( !v3 )
     goto LABEL_28;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     v3,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v26,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     current = v26.fields._current;
-    v22 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+    v22 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
     System_Object___ctor(v22, 0);
     v22[1].klass = (Il2CppClass *)current;
-    v23 = sub_21FFBF4(&v22[1], current);
+    v23 = sub_2213A04(&v22[1], current);
     if ( !v19 )
-      sub_21FFECC(v23, v24);
+      sub_2213CDC(v23, v24);
     ((void (__fastcall *)(AdjustSdk_JSONArray_o *, Il2CppObject *, const MethodInfo *))v19->klass->vtable._12_Add.methodPtr)(
       v19,
       v22,
@@ -16659,13 +16638,13 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfPairsToJson(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v26,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   if ( !v19 )
 LABEL_28:
-    sub_21FFECC(v8, v9);
-  return (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v19->klass->vtable._3_ToString.methodPtr)(
-                              v19,
-                              v19->klass->vtable._3_ToString.method);
+    sub_2213CDC(v8, v9);
+  return ((System_String_o *(__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v19->klass->vtable._3_ToString.methodPtr)(
+           v19,
+           v19->klass->vtable._3_ToString.method);
 }
 
 
@@ -16702,38 +16681,38 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
   __int64 v30; // x1
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_59304BE & 1) == 0 )
+  if ( (byte_596865E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    byte_59304BE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    byte_596865E = 1;
   }
   memset(&v31, 0, sizeof(v31));
   if ( !list
     || (unsigned int)(-1431655765
                     * System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                         (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-                        (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__)
+                        (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__)
                     + 715827882) > 0x55555554 )
   {
     return 0;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   if ( System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
          (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-         (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
+         (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
   {
     v5 = 0;
     do
@@ -16741,17 +16720,17 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
                v5,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v7 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
              (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
              v5 + 1,
-             (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+             (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       v8 = v5 + 2;
       v9 = v7;
       v10 = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
               (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
               v8,
-              (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+              (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       if ( Item )
       {
         if ( v9 )
@@ -16772,14 +16751,14 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
               System_Collections_Generic_List_object___AddWithResize(
                 v4,
                 Item,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
             }
             else
             {
               v16 = &items->obj.klass + size;
               v4->fields._size = size + 1;
               v16[4] = (Il2CppClass *)Item;
-              v10 = (Il2CppObject *)sub_21FFBF4(v16 + 4, Item);
+              v10 = (Il2CppObject *)sub_2213A04(v16 + 4, Item);
             }
             v17 = v4->fields._items;
             v18 = Method_System_Collections_Generic_List_string__Add__;
@@ -16792,14 +16771,14 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
               System_Collections_Generic_List_object___AddWithResize(
                 v4,
                 v9,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
             }
             else
             {
               v20 = &v17->obj.klass + v19;
               v4->fields._size = v19 + 1;
               v20[4] = (Il2CppClass *)v9;
-              v10 = (Il2CppObject *)sub_21FFBF4(v20 + 4, v9);
+              v10 = (Il2CppObject *)sub_2213A04(v20 + 4, v9);
             }
             v21 = v4->fields._items;
             v22 = Method_System_Collections_Generic_List_string__Add__;
@@ -16812,14 +16791,14 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
               System_Collections_Generic_List_object___AddWithResize(
                 v4,
                 v12,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
             }
             else
             {
               v24 = &v21->obj.klass + v23;
               v4->fields._size = v23 + 1;
               v24[4] = (Il2CppClass *)v12;
-              sub_21FFBF4(v24 + 4, v12);
+              sub_2213A04(v24 + 4, v12);
             }
           }
         }
@@ -16828,27 +16807,27 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
     }
     while ( v5 < System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-                   (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) );
+                   (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) );
   }
-  v25 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v25 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v25, v26);
   if ( !v4 )
     goto LABEL_33;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     v4,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     current = v31.fields._current;
-    v28 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+    v28 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
     System_Object___ctor(v28, 0);
     v28[1].klass = (Il2CppClass *)current;
-    v29 = sub_21FFBF4(&v28[1], current);
+    v29 = sub_2213A04(&v28[1], current);
     if ( !v25 )
-      sub_21FFECC(v29, v30);
+      sub_2213CDC(v29, v30);
     ((void (__fastcall *)(AdjustSdk_JSONArray_o *, Il2CppObject *, const MethodInfo *))v25->klass->vtable._12_Add.methodPtr)(
       v25,
       v28,
@@ -16856,13 +16835,13 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionOfTripletsToJso
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   if ( !v25 )
 LABEL_33:
-    sub_21FFECC(v10, v11);
-  return (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v25->klass->vtable._3_ToString.methodPtr)(
-                              v25,
-                              v25->klass->vtable._3_ToString.method);
+    sub_2213CDC(v10, v11);
+  return ((System_String_o *(__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v25->klass->vtable._3_ToString.methodPtr)(
+           v25,
+           v25->klass->vtable._3_ToString.method);
 }
 
 
@@ -16887,42 +16866,42 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionToJson(
   __int64 v17; // x1
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_59304BC & 1) == 0 )
+  if ( (byte_596865C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
-    byte_59304BC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+    byte_596865C = 1;
   }
   memset(&v19, 0, sizeof(v19));
   if ( !list )
     return 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   if ( System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
          (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-         (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
+         (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__) >= 1 )
   {
     for ( i = 0;
           i < System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                 (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
-                (const MethodInfo_46F8BC0 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
+                (const MethodInfo_472CCF8 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Count__);
           ++i )
     {
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)list,
                i,
-               (const MethodInfo_46F8C4C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
+               (const MethodInfo_472CD84 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_string__get_Item__);
       if ( Item )
       {
         if ( !v3 )
@@ -16939,37 +16918,37 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionToJson(
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             Item,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
         }
         else
         {
           v11 = &items->obj.klass + size;
           v3->fields._size = size + 1;
           v11[4] = (Il2CppClass *)v10;
-          sub_21FFBF4(v11 + 4, v10);
+          sub_2213A04(v11 + 4, v10);
         }
       }
     }
   }
-  v12 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v12 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v12, v13);
   if ( !v3 )
     goto LABEL_23;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     v3,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v19,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     current = v19.fields._current;
-    v15 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+    v15 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
     System_Object___ctor(v15, 0);
     v15[1].klass = (Il2CppClass *)current;
-    v16 = sub_21FFBF4(&v15[1], current);
+    v16 = sub_2213A04(&v15[1], current);
     if ( !v12 )
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     ((void (__fastcall *)(AdjustSdk_JSONArray_o *, Il2CppObject *, const MethodInfo *))v12->klass->vtable._12_Add.methodPtr)(
       v12,
       v15,
@@ -16977,13 +16956,13 @@ System_String_o *AdjustSdk_AdjustUtils__ConvertReadOnlyCollectionToJson(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v19,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   if ( !v12 )
 LABEL_23:
-    sub_21FFECC(Item, v6);
-  return (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v12->klass->vtable._3_ToString.methodPtr)(
-                              v12,
-                              v12->klass->vtable._3_ToString.method);
+    sub_2213CDC(Item, v6);
+  return ((System_String_o *(__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *))v12->klass->vtable._3_ToString.methodPtr)(
+           v12,
+           v12->klass->vtable._3_ToString.method);
 }
 
 
@@ -17009,25 +16988,25 @@ System_Collections_Generic_Dictionary_string__object__o *AdjustSdk_AdjustUtils__
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *v19; // [xsp+8h] [xbp-68h]
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v20; // [xsp+10h] [xbp-60h] BYREF
 
-  if ( (byte_59304C4 & 1) == 0 )
+  if ( (byte_5968664 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
-    byte_59304C4 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    byte_5968664 = 1;
   }
   memset(&v20, 0, sizeof(v20));
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
   v5 = AdjustSdk_JSONNode__Parse(attributionJsonResponse, v4);
   v7 = AdjustSdk_JSONNode__op_Equality(v5, 0, v6);
   if ( !v7 )
@@ -17039,10 +17018,10 @@ System_Collections_Generic_Dictionary_string__object__o *AdjustSdk_AdjustUtils__
                                    v5->klass->vtable._27_get_AsObject.method);
     if ( AdjustSdk_JSONNode__op_Equality(v9, 0, v10) )
       return (System_Collections_Generic_Dictionary_string__object__o *)v3;
-    v11 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v11 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v11,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -17054,31 +17033,31 @@ System_Collections_Generic_Dictionary_string__object__o *AdjustSdk_AdjustUtils__
       v13);
     if ( !v11 )
 LABEL_16:
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v20,
       v11,
-      (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     v18 = 0;
     v19 = &v20;
     while ( 1 )
     {
       v15 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
               &v20,
-              (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+              (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
       if ( !v15 )
         break;
       if ( !v3 )
-        sub_21FFECC(v15, v16);
+        sub_2213CDC(v15, v16);
       System_Collections_Generic_Dictionary_object__object___Add(
         v3,
         v20.fields._current.fields.key,
         v20.fields._current.fields.value,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
       &v20,
-      (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+      (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
   return (System_Collections_Generic_Dictionary_string__object__o *)v3;
 }
@@ -17124,35 +17103,35 @@ System_String_o *AdjustSdk_AdjustUtils__GetJsonResponseCompact(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v36; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v37; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_59304BF & 1) == 0 )
+  if ( (byte_596865F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_26362/*"{"*/);
-    sub_21FFC50(&StringLiteral_26607/*"}"*/);
-    sub_21FFC50(&StringLiteral_378/*"\":"*/);
-    sub_21FFC50(&StringLiteral_869/*","*/);
-    sub_21FFC50(&StringLiteral_366/*"\""*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_379/*"\":\""*/);
-    byte_59304BF = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_26413/*"{"*/);
+    sub_2213A60(&StringLiteral_26659/*"}"*/);
+    sub_2213A60(&StringLiteral_378/*"\":"*/);
+    sub_2213A60(&StringLiteral_869/*","*/);
+    sub_2213A60(&StringLiteral_366/*"\""*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_379/*"\":\""*/);
+    byte_596865F = 1;
   }
   result = (System_String_o *)StringLiteral_1/*""*/;
   memset(&v37, 0, sizeof(v37));
   if ( dictionary )
   {
-    v4 = System_String__Concat_75438412((System_String_o *)StringLiteral_1/*""*/, (System_String_o *)StringLiteral_26362/*"{"*/, 0);
+    v4 = System_String__Concat_75651716((System_String_o *)StringLiteral_1/*""*/, (System_String_o *)StringLiteral_26413/*"{"*/, 0);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v36,
       (System_Collections_Generic_Dictionary_object__object__o *)dictionary,
-      (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     v5 = 0;
     v37 = v36;
     v36.fields._dictionary = 0;
@@ -17163,24 +17142,24 @@ System_String_o *AdjustSdk_AdjustUtils__GetJsonResponseCompact(
       {
         if ( !System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
                 &v37,
-                (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+                (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
         {
           v35 = v36.fields._dictionary;
           System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
             *(System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o **)&v36.fields._version,
-            (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+            (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
           if ( v35 )
-            sub_21FFEC4(v35);
-          return System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_26607/*"}"*/, 0);
+            sub_2213CD4(v35);
+          return System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_26659/*"}"*/, 0);
         }
-        value = v37.fields._current.fields.value;
         key = v37.fields._current.fields.key;
+        value = v37.fields._current.fields.value;
         if ( v37.fields._current.fields.value )
           break;
 LABEL_14:
         if ( ++v5 >= 2 )
-          v4 = System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_869/*","*/, 0);
-        v13 = System_String__Concat_75483552(
+          v4 = System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_869/*","*/, 0);
+        v13 = System_String__Concat_75696856(
                 v4,
                 (System_String_o *)StringLiteral_366/*"\""*/,
                 (System_String_o *)key,
@@ -17191,10 +17170,10 @@ LABEL_14:
         JsonResponseCompact = AdjustSdk_AdjustUtils__GetJsonResponseCompact(
                                 (System_Collections_Generic_Dictionary_string__object__o *)value,
                                 v11);
-        v4 = System_String__Concat_75438412(v13, JsonResponseCompact, 0);
+        v4 = System_String__Concat_75651716(v13, JsonResponseCompact, 0);
       }
       klass = v37.fields._current.fields.value->klass;
-      if ( v37.fields._current.fields.value->klass != (Il2CppClass *)qword_594C0B8 )
+      if ( v37.fields._current.fields.value->klass != (Il2CppClass *)qword_5984390 )
       {
         naturalAligment = System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.naturalAligment;
         if ( klass->_2.naturalAligment >= (unsigned int)naturalAligment )
@@ -17209,74 +17188,74 @@ LABEL_14:
         goto LABEL_14;
       }
       if ( ++v5 >= 2 )
-        v10 = System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_869/*","*/, 0);
+        v10 = System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_869/*","*/, 0);
       else
         v10 = v4;
-      if ( System_String__StartsWith((System_String_o *)value, (System_String_o *)StringLiteral_26362/*"{"*/, 0)
-        && System_String__EndsWith((System_String_o *)value, (System_String_o *)StringLiteral_26607/*"}"*/, 0) )
+      if ( System_String__StartsWith((System_String_o *)value, (System_String_o *)StringLiteral_26413/*"{"*/, 0)
+        && System_String__EndsWith((System_String_o *)value, (System_String_o *)StringLiteral_26659/*"}"*/, 0) )
       {
-        v15 = sub_21FFD10(string___TypeInfo, 5);
+        v15 = sub_2213B20(string___TypeInfo, 5);
         v17 = v15;
         if ( !v15 )
-          sub_21FFECC(0, v16);
+          sub_2213CDC(0, v16);
         if ( !*(_DWORD *)(v15 + 24) )
-          sub_21FFED4(v15);
+          sub_2213CE4(v15);
         *(_QWORD *)(v15 + 32) = v10;
-        v18 = sub_21FFBF4(v15 + 32, v10);
+        v18 = sub_2213A04(v15 + 32, v10);
         if ( (*(_DWORD *)(v17 + 24) & 0xFFFFFFFE) == 0 )
-          sub_21FFED4(v18);
+          sub_2213CE4(v18);
         v19 = StringLiteral_366/*"\""*/;
         *(_QWORD *)(v17 + 40) = StringLiteral_366/*"\""*/;
-        v20 = sub_21FFBF4(v17 + 40, v19);
+        v20 = sub_2213A04(v17 + 40, v19);
         if ( *(_DWORD *)(v17 + 24) <= 2u )
-          sub_21FFED4(v20);
+          sub_2213CE4(v20);
         *(_QWORD *)(v17 + 48) = key;
-        v21 = sub_21FFBF4(v17 + 48, key);
+        v21 = sub_2213A04(v17 + 48, key);
         if ( (*(_DWORD *)(v17 + 24) & 0xFFFFFFFC) == 0 )
-          sub_21FFED4(v21);
+          sub_2213CE4(v21);
         v22 = StringLiteral_378/*"\":"*/;
         *(_QWORD *)(v17 + 56) = StringLiteral_378/*"\":"*/;
-        v23 = sub_21FFBF4(v17 + 56, v22);
+        v23 = sub_2213A04(v17 + 56, v22);
         if ( *(_DWORD *)(v17 + 24) <= 4u )
-          sub_21FFED4(v23);
+          sub_2213CE4(v23);
         *(_QWORD *)(v17 + 64) = value;
-        sub_21FFBF4(v17 + 64, value);
-        v4 = System_String__Concat_75483816((System_String_array *)v17, 0);
+        sub_2213A04(v17 + 64, value);
+        v4 = System_String__Concat_75697120((System_String_array *)v17, 0);
       }
       else
       {
-        v24 = sub_21FFD10(string___TypeInfo, 6);
+        v24 = sub_2213B20(string___TypeInfo, 6);
         v26 = v24;
         if ( !v24 )
-          sub_21FFECC(0, v25);
+          sub_2213CDC(0, v25);
         if ( !*(_DWORD *)(v24 + 24) )
-          sub_21FFED4(v24);
+          sub_2213CE4(v24);
         *(_QWORD *)(v24 + 32) = v10;
-        v27 = sub_21FFBF4(v24 + 32, v10);
+        v27 = sub_2213A04(v24 + 32, v10);
         if ( (*(_DWORD *)(v26 + 24) & 0xFFFFFFFE) == 0 )
-          sub_21FFED4(v27);
+          sub_2213CE4(v27);
         v28 = StringLiteral_366/*"\""*/;
         *(_QWORD *)(v26 + 40) = StringLiteral_366/*"\""*/;
-        v29 = sub_21FFBF4(v26 + 40, v28);
+        v29 = sub_2213A04(v26 + 40, v28);
         if ( *(_DWORD *)(v26 + 24) <= 2u )
-          sub_21FFED4(v29);
+          sub_2213CE4(v29);
         *(_QWORD *)(v26 + 48) = key;
-        v30 = sub_21FFBF4(v26 + 48, key);
+        v30 = sub_2213A04(v26 + 48, key);
         if ( (*(_DWORD *)(v26 + 24) & 0xFFFFFFFC) == 0 )
-          sub_21FFED4(v30);
+          sub_2213CE4(v30);
         v31 = StringLiteral_379/*"\":\""*/;
         *(_QWORD *)(v26 + 56) = StringLiteral_379/*"\":\""*/;
-        v32 = sub_21FFBF4(v26 + 56, v31);
+        v32 = sub_2213A04(v26 + 56, v31);
         if ( *(_DWORD *)(v26 + 24) <= 4u )
-          sub_21FFED4(v32);
+          sub_2213CE4(v32);
         *(_QWORD *)(v26 + 64) = value;
-        v33 = sub_21FFBF4(v26 + 64, value);
+        v33 = sub_2213A04(v26 + 64, value);
         if ( *(_DWORD *)(v26 + 24) <= 5u )
-          sub_21FFED4(v33);
+          sub_2213CE4(v33);
         v34 = StringLiteral_366/*"\""*/;
         *(_QWORD *)(v26 + 72) = StringLiteral_366/*"\""*/;
-        sub_21FFBF4(v26 + 72, v34);
-        v4 = System_String__Concat_75483816((System_String_array *)v26, 0);
+        sub_2213A04(v26 + 72, v34);
+        v4 = System_String__Concat_75697120((System_String_array *)v26, 0);
       }
     }
   }
@@ -17297,11 +17276,11 @@ System_String_o *AdjustSdk_AdjustUtils__GetJsonString(
   AdjustSdk_JSONNode_o *v10; // x19
   const MethodInfo *v11; // x2
 
-  if ( (byte_59304C0 & 1) == 0 )
+  if ( (byte_5968660 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59304C0 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5968660 = 1;
   }
   v5 = AdjustSdk_JSONNode__op_Equality(node, 0, method);
   if ( v5 )
@@ -17332,10 +17311,10 @@ System_String_o *AdjustSdk_AdjustUtils__GetJsonString(
     return 0;
   if ( !v10 )
 LABEL_16:
-    sub_21FFECC(v5, v6);
-  return (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v10->klass->vtable._9_get_Value.methodPtr)(
-                              v10,
-                              v10->klass->vtable._9_get_Value.method);
+    sub_2213CDC(v5, v6);
+  return ((System_String_o *(__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v10->klass->vtable._9_get_Value.methodPtr)(
+           v10,
+           v10->klass->vtable._9_get_Value.method);
 }
 
 
@@ -17363,27 +17342,27 @@ System_Collections_Generic_Dictionary_string__string__o *AdjustSdk_AdjustUtils__
   __int64 v20; // x1
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v22; // [xsp+10h] [xbp-60h] BYREF
 
-  if ( (byte_59304C3 & 1) == 0 )
+  if ( (byte_5968663 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
-    byte_59304C3 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    byte_5968663 = 1;
   }
   memset(&v22, 0, sizeof(v22));
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   v5 = AdjustSdk_JSONNode__Parse(skanUpdateData, v4);
   v7 = AdjustSdk_JSONNode__op_Equality(v5, 0, v6);
   if ( !v7 )
@@ -17395,10 +17374,10 @@ System_Collections_Generic_Dictionary_string__string__o *AdjustSdk_AdjustUtils__
                                    v5->klass->vtable._27_get_AsObject.method);
     if ( AdjustSdk_JSONNode__op_Equality(v9, 0, v10) )
       return (System_Collections_Generic_Dictionary_string__string__o *)v3;
-    v11 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    v11 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v11,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
     v14 = (AdjustSdk_JSONClass_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._27_get_AsObject.methodPtr)(
                                      v5,
                                      v5->klass->vtable._27_get_AsObject.method);
@@ -17410,17 +17389,17 @@ System_Collections_Generic_Dictionary_string__string__o *AdjustSdk_AdjustUtils__
       v13);
     if ( !v11 )
 LABEL_18:
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v22,
       v11,
-      (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
               &v22,
-              (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+              (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
       if ( !v22.fields._current.fields.value )
-        sub_21FFECC(0, v15);
+        sub_2213CDC(0, v15);
       key = v22.fields._current.fields.key;
       v19 = (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, __int64, __int64))v22.fields._current.fields.value->klass->vtable[3].methodPtr)(
                               v22.fields._current.fields.value,
@@ -17428,16 +17407,16 @@ LABEL_18:
                               v16,
                               v17);
       if ( !v3 )
-        sub_21FFECC(v19, v20);
+        sub_2213CDC(v19, v20);
       System_Collections_Generic_Dictionary_object__object___Add(
         v3,
         key,
         v19,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
       &v22,
-      (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+      (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
   return (System_Collections_Generic_Dictionary_string__string__o *)v3;
 }
@@ -17558,57 +17537,57 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   __int64 v104; // x0
   int64_t v105; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_59304C5 & 1) == 0 )
+  if ( (byte_5968665 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
-    sub_21FFC50(&Method_UnityEngine_AndroidJavaObject_Set_string___);
-    sub_21FFC50(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_23972/*"purchaseVerificationPath"*/);
-    sub_21FFC50(&StringLiteral_22053/*"java.lang.Boolean"*/);
-    sub_21FFC50(&StringLiteral_25030/*"subscriptionPath"*/);
-    sub_21FFC50(&StringLiteral_17731/*"basePath"*/);
-    sub_21FFC50(&StringLiteral_17738/*"baseUrl"*/);
-    sub_21FFC50(&StringLiteral_19018/*"context"*/);
-    sub_21FFC50(&StringLiteral_23317/*"noBackoffWait"*/);
-    sub_21FFC50(&StringLiteral_22060/*"java.lang.Long"*/);
-    sub_21FFC50(&StringLiteral_18837/*"com.adjust.sdk.AdjustTestOptions"*/);
-    sub_21FFC50(&StringLiteral_20647/*"gdprPath"*/);
-    sub_21FFC50(&StringLiteral_25478/*"true"*/);
-    sub_21FFC50(&StringLiteral_25338/*"timerStartInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_25790/*"useTestConnectionOptions"*/);
-    sub_21FFC50(&StringLiteral_25252/*"teardown"*/);
-    sub_21FFC50(&StringLiteral_23973/*"purchaseVerificationUrl"*/);
-    sub_21FFC50(&StringLiteral_20648/*"gdprUrl"*/);
-    sub_21FFC50(&StringLiteral_25032/*"subscriptionUrl"*/);
-    sub_21FFC50(&StringLiteral_21219/*"ignoreSystemLifecycleBootstrap"*/);
-    sub_21FFC50(&StringLiteral_25337/*"timerIntervalInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_24492/*"sessionIntervalInMilliseconds"*/);
-    sub_21FFC50(&StringLiteral_25033/*"subsessionIntervalInMilliseconds"*/);
-    byte_59304C5 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+    sub_2213A60(&Method_UnityEngine_AndroidJavaObject_Set_string___);
+    sub_2213A60(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_24019/*"purchaseVerificationPath"*/);
+    sub_2213A60(&StringLiteral_22096/*"java.lang.Boolean"*/);
+    sub_2213A60(&StringLiteral_25078/*"subscriptionPath"*/);
+    sub_2213A60(&StringLiteral_17768/*"basePath"*/);
+    sub_2213A60(&StringLiteral_17775/*"baseUrl"*/);
+    sub_2213A60(&StringLiteral_19058/*"context"*/);
+    sub_2213A60(&StringLiteral_23363/*"noBackoffWait"*/);
+    sub_2213A60(&StringLiteral_22103/*"java.lang.Long"*/);
+    sub_2213A60(&StringLiteral_18875/*"com.adjust.sdk.AdjustTestOptions"*/);
+    sub_2213A60(&StringLiteral_20688/*"gdprPath"*/);
+    sub_2213A60(&StringLiteral_25526/*"true"*/);
+    sub_2213A60(&StringLiteral_25386/*"timerStartInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_25838/*"useTestConnectionOptions"*/);
+    sub_2213A60(&StringLiteral_25300/*"teardown"*/);
+    sub_2213A60(&StringLiteral_24020/*"purchaseVerificationUrl"*/);
+    sub_2213A60(&StringLiteral_20689/*"gdprUrl"*/);
+    sub_2213A60(&StringLiteral_25080/*"subscriptionUrl"*/);
+    sub_2213A60(&StringLiteral_21260/*"ignoreSystemLifecycleBootstrap"*/);
+    sub_2213A60(&StringLiteral_25385/*"timerIntervalInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_24540/*"sessionIntervalInMilliseconds"*/);
+    sub_2213A60(&StringLiteral_25081/*"subsessionIntervalInMilliseconds"*/);
+    byte_5968665 = 1;
   }
   v5 = Method_System_Array_Empty_object___;
   v6 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
   if ( !v6 )
   {
-    sub_2237B54(Method_System_Array_Empty_object___);
+    sub_224B964(Method_System_Array_Empty_object___);
     v6 = v5[7];
   }
   v7 = *(_QWORD *)(v6 + 16);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8();
+    v7 = sub_224B908();
   if ( !*(_DWORD *)(v7 + 228) )
     j_il2cpp_runtime_class_init_0(v7, ajoCurrentActivity, method);
   v8 = *(_QWORD *)(v5[7] + 16LL);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8();
+    v8 = sub_224B908();
   v9 = **(System_Object_array ***)(v8 + 184);
-  v10 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_82839756(v10, (System_String_o *)StringLiteral_18837/*"com.adjust.sdk.AdjustTestOptions"*/, v9, 0);
+  v10 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_83053060(v10, (System_String_o *)StringLiteral_18875/*"com.adjust.sdk.AdjustTestOptions"*/, v9, 0);
   inited = (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
     inited = (Il2CppObject *)j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v11, v12);
@@ -17617,45 +17596,45 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   inited = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
              (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsBaseUrl,
-             (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+             (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   if ( !v10 )
     goto LABEL_112;
   UnityEngine_AndroidJavaObject__Set_object_(
     v10,
-    (System_String_o *)StringLiteral_17738/*"baseUrl"*/,
+    (System_String_o *)StringLiteral_17775/*"baseUrl"*/,
     inited,
-    (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+    (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
            (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsGdprUrl,
-           (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+           (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   UnityEngine_AndroidJavaObject__Set_object_(
     v10,
-    (System_String_o *)StringLiteral_20648/*"gdprUrl"*/,
+    (System_String_o *)StringLiteral_20689/*"gdprUrl"*/,
     Item,
-    (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+    (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
   v15 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
           (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsSubscriptionUrl,
-          (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+          (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   UnityEngine_AndroidJavaObject__Set_object_(
     v10,
-    (System_String_o *)StringLiteral_25032/*"subscriptionUrl"*/,
+    (System_String_o *)StringLiteral_25080/*"subscriptionUrl"*/,
     v15,
-    (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+    (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
   v16 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
           (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsPurchaseVerificationUrl,
-          (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+          (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   UnityEngine_AndroidJavaObject__Set_object_(
     v10,
-    (System_String_o *)StringLiteral_23973/*"purchaseVerificationUrl"*/,
+    (System_String_o *)StringLiteral_24020/*"purchaseVerificationUrl"*/,
     v16,
-    (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+    (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsExtraPath,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v19 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17666,7 +17645,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     v20 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
             (Il2CppObject *)v19->static_fields->KeyTestOptionsExtraPath,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !System_String__IsNullOrEmpty((System_String_o *)v20, 0) )
     {
       v21 = AdjustSdk_AdjustUtils_TypeInfo;
@@ -17678,39 +17657,39 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
       v22 = System_Collections_Generic_Dictionary_object__object___get_Item(
               (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
               (Il2CppObject *)v21->static_fields->KeyTestOptionsExtraPath,
-              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
       UnityEngine_AndroidJavaObject__Set_object_(
         v10,
-        (System_String_o *)StringLiteral_17731/*"basePath"*/,
+        (System_String_o *)StringLiteral_17768/*"basePath"*/,
         v22,
-        (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+        (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
       v23 = System_Collections_Generic_Dictionary_object__object___get_Item(
               (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
               (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsExtraPath,
-              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
       UnityEngine_AndroidJavaObject__Set_object_(
         v10,
-        (System_String_o *)StringLiteral_20647/*"gdprPath"*/,
+        (System_String_o *)StringLiteral_20688/*"gdprPath"*/,
         v23,
-        (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+        (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
       v24 = System_Collections_Generic_Dictionary_object__object___get_Item(
               (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
               (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsExtraPath,
-              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
       UnityEngine_AndroidJavaObject__Set_object_(
         v10,
-        (System_String_o *)StringLiteral_25030/*"subscriptionPath"*/,
+        (System_String_o *)StringLiteral_25078/*"subscriptionPath"*/,
         v24,
-        (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+        (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
       v25 = System_Collections_Generic_Dictionary_object__object___get_Item(
               (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
               (Il2CppObject *)AdjustSdk_AdjustUtils_TypeInfo->static_fields->KeyTestOptionsExtraPath,
-              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
       UnityEngine_AndroidJavaObject__Set_object_(
         v10,
-        (System_String_o *)StringLiteral_23972/*"purchaseVerificationPath"*/,
+        (System_String_o *)StringLiteral_24019/*"purchaseVerificationPath"*/,
         v25,
-        (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
+        (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_string___);
     }
   }
   v26 = AdjustSdk_AdjustUtils_TypeInfo;
@@ -17722,13 +17701,13 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   v27 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
           (Il2CppObject *)v26->static_fields->KeyTestOptionsDeleteState,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
   if ( ajoCurrentActivity && v27 )
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_19018/*"context"*/,
+      (System_String_o *)StringLiteral_19058/*"context"*/,
       (Il2CppObject *)ajoCurrentActivity,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   v30 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -17738,7 +17717,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v30->static_fields->KeyTestOptionsUseTestConnectionOptions,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v33 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17749,34 +17728,34 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     inited = System_Collections_Generic_Dictionary_object__object___get_Item(
                (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
                (Il2CppObject *)v33->static_fields->KeyTestOptionsUseTestConnectionOptions,
-               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !inited )
       goto LABEL_112;
     v34 = System_String__ToLower((System_String_o *)inited, 0);
-    v35 = System_String__op_Equality(v34, (System_String_o *)StringLiteral_25478/*"true"*/, 0);
-    v36 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v35 = System_String__op_Equality(v34, (System_String_o *)StringLiteral_25526/*"true"*/, 0);
+    v36 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     LOBYTE(v105) = v35;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C050, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, &v105);
     if ( !v36 )
       goto LABEL_112;
     v37 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v36->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v36->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v36->max_length) )
       goto LABEL_113;
     v36->m_Items[0] = v37;
-    sub_21FFBF4(v36->m_Items, v37);
-    v39 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v39, (System_String_o *)StringLiteral_22053/*"java.lang.Boolean"*/, v36, 0);
+    sub_2213A04(v36->m_Items, v37);
+    v39 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v39, (System_String_o *)StringLiteral_22096/*"java.lang.Boolean"*/, v36, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_25790/*"useTestConnectionOptions"*/,
+      (System_String_o *)StringLiteral_25838/*"useTestConnectionOptions"*/,
       (Il2CppObject *)v39,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v40 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17787,7 +17766,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v40->static_fields->KeyTestOptionsTimerIntervalInMilliseconds,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v43 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17798,31 +17777,31 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     v44 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
             (Il2CppObject *)v43->static_fields->KeyTestOptionsTimerIntervalInMilliseconds,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v45 = System_Int64__Parse((System_String_o *)v44, 0);
-    v46 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v46 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     v105 = v45;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v105);
     if ( !v46 )
       goto LABEL_112;
     v47 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v46->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v46->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v46->max_length) )
       goto LABEL_113;
     v46->m_Items[0] = v47;
-    sub_21FFBF4(v46->m_Items, v47);
-    v48 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v48, (System_String_o *)StringLiteral_22060/*"java.lang.Long"*/, v46, 0);
+    sub_2213A04(v46->m_Items, v47);
+    v48 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v48, (System_String_o *)StringLiteral_22103/*"java.lang.Long"*/, v46, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_25337/*"timerIntervalInMilliseconds"*/,
+      (System_String_o *)StringLiteral_25385/*"timerIntervalInMilliseconds"*/,
       (Il2CppObject *)v48,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v49 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17833,7 +17812,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v49->static_fields->KeyTestOptionsTimerStartInMilliseconds,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v52 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17844,31 +17823,31 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     v53 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
             (Il2CppObject *)v52->static_fields->KeyTestOptionsTimerStartInMilliseconds,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v54 = System_Int64__Parse((System_String_o *)v53, 0);
-    v55 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v55 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     v105 = v54;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v105);
     if ( !v55 )
       goto LABEL_112;
     v56 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v55->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v55->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v55->max_length) )
       goto LABEL_113;
     v55->m_Items[0] = v56;
-    sub_21FFBF4(v55->m_Items, v56);
-    v57 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v57, (System_String_o *)StringLiteral_22060/*"java.lang.Long"*/, v55, 0);
+    sub_2213A04(v55->m_Items, v56);
+    v57 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v57, (System_String_o *)StringLiteral_22103/*"java.lang.Long"*/, v55, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_25338/*"timerStartInMilliseconds"*/,
+      (System_String_o *)StringLiteral_25386/*"timerStartInMilliseconds"*/,
       (Il2CppObject *)v57,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v58 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17879,7 +17858,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v58->static_fields->KeyTestOptionsSessionIntervalInMilliseconds,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v61 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17890,31 +17869,31 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     v62 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
             (Il2CppObject *)v61->static_fields->KeyTestOptionsSessionIntervalInMilliseconds,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v63 = System_Int64__Parse((System_String_o *)v62, 0);
-    v64 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v64 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     v105 = v63;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v105);
     if ( !v64 )
       goto LABEL_112;
     v65 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v64->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v64->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v64->max_length) )
       goto LABEL_113;
     v64->m_Items[0] = v65;
-    sub_21FFBF4(v64->m_Items, v65);
-    v66 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v66, (System_String_o *)StringLiteral_22060/*"java.lang.Long"*/, v64, 0);
+    sub_2213A04(v64->m_Items, v65);
+    v66 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v66, (System_String_o *)StringLiteral_22103/*"java.lang.Long"*/, v64, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_24492/*"sessionIntervalInMilliseconds"*/,
+      (System_String_o *)StringLiteral_24540/*"sessionIntervalInMilliseconds"*/,
       (Il2CppObject *)v66,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v67 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17925,7 +17904,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v67->static_fields->KeyTestOptionsSubsessionIntervalInMilliseconds,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v70 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17936,31 +17915,31 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     v71 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
             (Il2CppObject *)v70->static_fields->KeyTestOptionsSubsessionIntervalInMilliseconds,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v72 = System_Int64__Parse((System_String_o *)v71, 0);
-    v73 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v73 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     v105 = v72;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v105);
     if ( !v73 )
       goto LABEL_112;
     v74 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v73->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v73->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v73->max_length) )
       goto LABEL_113;
     v73->m_Items[0] = v74;
-    sub_21FFBF4(v73->m_Items, v74);
-    v75 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v75, (System_String_o *)StringLiteral_22060/*"java.lang.Long"*/, v73, 0);
+    sub_2213A04(v73->m_Items, v74);
+    v75 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v75, (System_String_o *)StringLiteral_22103/*"java.lang.Long"*/, v73, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_25033/*"subsessionIntervalInMilliseconds"*/,
+      (System_String_o *)StringLiteral_25081/*"subsessionIntervalInMilliseconds"*/,
       (Il2CppObject *)v75,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v76 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17971,7 +17950,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v76->static_fields->KeyTestOptionsTeardown,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v79 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -17982,34 +17961,34 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     inited = System_Collections_Generic_Dictionary_object__object___get_Item(
                (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
                (Il2CppObject *)v79->static_fields->KeyTestOptionsTeardown,
-               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !inited )
       goto LABEL_112;
     v80 = System_String__ToLower((System_String_o *)inited, 0);
-    v81 = System_String__op_Equality(v80, (System_String_o *)StringLiteral_25478/*"true"*/, 0);
-    v82 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v81 = System_String__op_Equality(v80, (System_String_o *)StringLiteral_25526/*"true"*/, 0);
+    v82 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     LOBYTE(v105) = v81;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C050, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, &v105);
     if ( !v82 )
       goto LABEL_112;
     v83 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v82->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v82->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v82->max_length) )
       goto LABEL_113;
     v82->m_Items[0] = v83;
-    sub_21FFBF4(v82->m_Items, v83);
-    v84 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v84, (System_String_o *)StringLiteral_22053/*"java.lang.Boolean"*/, v82, 0);
+    sub_2213A04(v82->m_Items, v83);
+    v84 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v84, (System_String_o *)StringLiteral_22096/*"java.lang.Boolean"*/, v82, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_25252/*"teardown"*/,
+      (System_String_o *)StringLiteral_25300/*"teardown"*/,
       (Il2CppObject *)v84,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v85 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -18020,7 +17999,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v85->static_fields->KeyTestOptionsNoBackoffWait,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v88 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -18031,34 +18010,34 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     inited = System_Collections_Generic_Dictionary_object__object___get_Item(
                (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
                (Il2CppObject *)v88->static_fields->KeyTestOptionsNoBackoffWait,
-               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !inited )
       goto LABEL_112;
     v89 = System_String__ToLower((System_String_o *)inited, 0);
-    v90 = System_String__op_Equality(v89, (System_String_o *)StringLiteral_25478/*"true"*/, 0);
-    v91 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+    v90 = System_String__op_Equality(v89, (System_String_o *)StringLiteral_25526/*"true"*/, 0);
+    v91 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
     LOBYTE(v105) = v90;
-    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C050, &v105);
+    inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, &v105);
     if ( !v91 )
       goto LABEL_112;
     v92 = inited;
     if ( inited )
     {
-      inited = (Il2CppObject *)sub_21FFDA4(inited, v91->obj.klass->_1.element_class);
+      inited = (Il2CppObject *)sub_2213BB4(inited, v91->obj.klass->_1.element_class);
       if ( !inited )
         goto LABEL_114;
     }
     if ( !LODWORD(v91->max_length) )
       goto LABEL_113;
     v91->m_Items[0] = v92;
-    sub_21FFBF4(v91->m_Items, v92);
-    v93 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-    UnityEngine_AndroidJavaObject___ctor_82839756(v93, (System_String_o *)StringLiteral_22053/*"java.lang.Boolean"*/, v91, 0);
+    sub_2213A04(v91->m_Items, v92);
+    v93 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+    UnityEngine_AndroidJavaObject___ctor_83053060(v93, (System_String_o *)StringLiteral_22096/*"java.lang.Boolean"*/, v91, 0);
     UnityEngine_AndroidJavaObject__Set_object_(
       v10,
-      (System_String_o *)StringLiteral_23317/*"noBackoffWait"*/,
+      (System_String_o *)StringLiteral_23363/*"noBackoffWait"*/,
       (Il2CppObject *)v93,
-      (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+      (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
   }
   v94 = AdjustSdk_AdjustUtils_TypeInfo;
   if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -18069,7 +18048,7 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
          (Il2CppObject *)v94->static_fields->KeyTestOptionsIgnoreSystemLifecycleBootstrap,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v97 = AdjustSdk_AdjustUtils_TypeInfo;
     if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
@@ -18080,46 +18059,46 @@ UnityEngine_AndroidJavaObject_o *AdjustSdk_AdjustUtils__TestOptionsMap2AndroidJa
     inited = System_Collections_Generic_Dictionary_object__object___get_Item(
                (System_Collections_Generic_Dictionary_object__object__o *)testOptionsMap,
                (Il2CppObject *)v97->static_fields->KeyTestOptionsIgnoreSystemLifecycleBootstrap,
-               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( inited )
     {
       v98 = System_String__ToLower((System_String_o *)inited, 0);
-      v99 = System_String__op_Equality(v98, (System_String_o *)StringLiteral_25478/*"true"*/, 0);
-      v100 = sub_21FFD10(object___TypeInfo, 1);
+      v99 = System_String__op_Equality(v98, (System_String_o *)StringLiteral_25526/*"true"*/, 0);
+      v100 = sub_2213B20(object___TypeInfo, 1);
       LOBYTE(v105) = v99;
-      inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C050, &v105);
+      inited = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, &v105);
       if ( v100 )
       {
         v101 = inited;
-        if ( !inited || (inited = (Il2CppObject *)sub_21FFDA4(inited, *(_QWORD *)(*(_QWORD *)v100 + 64LL))) != 0 )
+        if ( !inited || (inited = (Il2CppObject *)sub_2213BB4(inited, *(_QWORD *)(*(_QWORD *)v100 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v100 + 24) )
           {
             *(_QWORD *)(v100 + 32) = v101;
-            sub_21FFBF4(v100 + 32, v101);
-            v102 = (UnityEngine_AndroidJavaObject_o *)sub_21FFEBC(UnityEngine_AndroidJavaObject_TypeInfo);
-            UnityEngine_AndroidJavaObject___ctor_82839756(
+            sub_2213A04(v100 + 32, v101);
+            v102 = (UnityEngine_AndroidJavaObject_o *)sub_2213CCC(UnityEngine_AndroidJavaObject_TypeInfo);
+            UnityEngine_AndroidJavaObject___ctor_83053060(
               v102,
-              (System_String_o *)StringLiteral_22053/*"java.lang.Boolean"*/,
+              (System_String_o *)StringLiteral_22096/*"java.lang.Boolean"*/,
               (System_Object_array *)v100,
               0);
             UnityEngine_AndroidJavaObject__Set_object_(
               v10,
-              (System_String_o *)StringLiteral_21219/*"ignoreSystemLifecycleBootstrap"*/,
+              (System_String_o *)StringLiteral_21260/*"ignoreSystemLifecycleBootstrap"*/,
               (Il2CppObject *)v102,
-              (const MethodInfo_36D7958 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
+              (const MethodInfo_37098C8 *)Method_UnityEngine_AndroidJavaObject_Set_AndroidJavaObject___);
             return v10;
           }
 LABEL_113:
-          sub_21FFED4(inited);
+          sub_2213CE4(inited);
         }
 LABEL_114:
-        v104 = sub_21FFEF0(inited, v38);
-        sub_21FFD90(v104, 0);
+        v104 = sub_2213D00(inited, v38);
+        sub_2213BA0(v104, 0);
       }
     }
 LABEL_112:
-    sub_21FFECC(inited, v11, v12);
+    sub_2213CDC(inited, v11, v12);
   }
   return v10;
 }
@@ -18134,20 +18113,20 @@ System_String_o *AdjustSdk_AdjustUtils__TryGetValue(
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = dictionary;
-  if ( (byte_59304C2 & 1) == 0 )
+  if ( (byte_5968662 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
-    dictionary = (System_Collections_Generic_Dictionary_string__string__o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59304C2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    dictionary = (System_Collections_Generic_Dictionary_string__string__o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5968662 = 1;
   }
   value = 0;
   if ( !v4 )
-    sub_21FFECC(dictionary, key);
+    sub_2213CDC(dictionary, key);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)v4,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+          (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
     return 0;
   if ( System_String__op_Equality((System_String_o *)value, (System_String_o *)StringLiteral_1/*""*/, 0) )
     return 0;
@@ -18205,25 +18184,25 @@ void AdjustSdk_AdjustUtils__WriteJsonResponseDictionary(
   System_Collections_IEnumerator_o *v46; // [xsp+28h] [xbp-58h]
 
   v4 = jsonObject;
-  if ( (byte_59304C1 & 1) == 0 )
+  if ( (byte_5968661 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_AdjustUtils_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    jsonObject = (AdjustSdk_JSONClass_o *)sub_21FFC50(&System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo);
-    byte_59304C1 = 1;
+    sub_2213A60(&AdjustSdk_AdjustUtils_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    jsonObject = (AdjustSdk_JSONClass_o *)sub_2213A60(&System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo);
+    byte_5968661 = 1;
   }
   if ( !v4 )
-    sub_21FFECC(jsonObject, output, method);
+    sub_2213CDC(jsonObject, output, method);
   Enumerator = AdjustSdk_JSONClass__GetEnumerator(v4, (const MethodInfo *)output);
   v46 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v6, v7);
+    sub_2213CDC(Enumerator, v6, v7);
   for ( i = Enumerator; ; i = v46 )
   {
     klass = i->klass;
@@ -18243,13 +18222,13 @@ void AdjustSdk_AdjustUtils__WriteJsonResponseDictionary(
     else
     {
 LABEL_10:
-      v12 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v12 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v13 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v12)(i, *(_QWORD *)(v12 + 8));
     if ( (v13 & 1) == 0 )
       break;
     if ( !v46 )
-      sub_21FFECC(v13, v14, v15);
+      sub_2213CDC(v13, v14, v15);
     v16 = v46->klass;
     v17 = *(unsigned __int16 *)&v46->klass->_2.rank;
     if ( *(_WORD *)&v46->klass->_2.rank )
@@ -18267,21 +18246,21 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v19 = sub_2237E2C(v46, System_Collections_IEnumerator_TypeInfo, 1);
+      v19 = sub_224BC3C(v46, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v20 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v19)(v46, *(_QWORD *)(v19 + 8));
     if ( !v20 )
-      sub_21FFECC(0, v21, v22);
+      sub_2213CDC(0, v21, v22);
     if ( *(Il2CppClass **)(*(_QWORD *)v20 + 64LL) != System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo->_1.element_class )
     {
-      v35 = sub_220024C(v20, System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo, v22, v23);
+      v35 = sub_221405C(v20, System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo, v22, v23);
 LABEL_45:
-      sub_21FFECC(v35, v36, v37);
+      sub_2213CDC(v35, v36, v37);
     }
     v24 = j_il2cpp_object_unbox_0(v20, System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo, v22, v23);
     v27 = *(_QWORD *)(v24 + 8);
     if ( !v27 )
-      sub_21FFECC(v24, v25, v26);
+      sub_2213CDC(v24, v25, v26);
     v28 = *(Il2CppObject **)v24;
     v29 = (AdjustSdk_JSONClass_o *)(*(__int64 (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v27 + 744LL))(
                                      *(_QWORD *)(v24 + 8),
@@ -18292,26 +18271,26 @@ LABEL_45:
                               v27,
                               *(_QWORD *)(*(_QWORD *)v27 + 464LL));
       if ( !output )
-        sub_21FFECC(v31, v32, v33);
+        sub_2213CDC(v31, v32, v33);
       System_Collections_Generic_Dictionary_object__object___Add(
         (System_Collections_Generic_Dictionary_object__object__o *)output,
         v28,
         v31,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
     }
     else
     {
-      v34 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v34 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v34,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       if ( !output )
         goto LABEL_45;
       System_Collections_Generic_Dictionary_object__object___Add(
         (System_Collections_Generic_Dictionary_object__object__o *)output,
         v28,
         (Il2CppObject *)v34,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
       if ( !*(&AdjustSdk_AdjustUtils_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AdjustSdk_AdjustUtils_TypeInfo, v38, v39);
       AdjustSdk_AdjustUtils__WriteJsonResponseDictionary(
@@ -18320,7 +18299,7 @@ LABEL_45:
         v39);
     }
   }
-  v40 = sub_21FFDA4(v46, System_IDisposable_TypeInfo);
+  v40 = sub_2213BB4(v46, System_IDisposable_TypeInfo);
   if ( v40 )
   {
     v41 = *(_QWORD *)v40;
@@ -18341,7 +18320,7 @@ LABEL_45:
     else
     {
 LABEL_37:
-      v45 = sub_2237E2C(v40, System_IDisposable_TypeInfo, 0);
+      v45 = sub_224BC3C(v40, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v45)(v42, *(_QWORD *)(v45 + 8));
   }
@@ -18352,18 +18331,18 @@ void AdjustSdk_JSONArray___ctor(AdjustSdk_JSONArray_o *this, const MethodInfo *m
 {
   System_Collections_Generic_List_object__o *v3; // x20
 
-  if ( (byte_59304EA & 1) == 0 )
+  if ( (byte_596868A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_JSONNode__TypeInfo);
-    byte_59304EA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_JSONNode__TypeInfo);
+    byte_596868A = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_JSONNode__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_JSONNode__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_JSONNode___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_JSONNode___ctor__);
   this->fields.m_List = (struct System_Collections_Generic_List_JSONNode__o *)v3;
-  sub_21FFBF4(&this->fields, v3);
+  sub_2213A04(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -18382,10 +18361,10 @@ void AdjustSdk_JSONArray__Add(
   Il2CppClass **v10; // x0
 
   v5 = this;
-  if ( (byte_59304E2 & 1) == 0 )
+  if ( (byte_5968682 & 1) == 0 )
   {
-    this = (AdjustSdk_JSONArray_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__Add__);
-    byte_59304E2 = 1;
+    this = (AdjustSdk_JSONArray_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__Add__);
+    byte_5968682 = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)v5->fields.m_List;
   if ( !m_List
@@ -18394,7 +18373,7 @@ void AdjustSdk_JSONArray__Add(
         ++m_List->fields._version,
         !items) )
   {
-    sub_21FFECC(this, aKey);
+    sub_2213CDC(this, aKey);
   }
   size = m_List->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -18402,14 +18381,14 @@ void AdjustSdk_JSONArray__Add(
     System_Collections_Generic_List_object___AddWithResize(
       m_List,
       (Il2CppObject *)aItem,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     m_List->fields._size = size + 1;
     v10[4] = (Il2CppClass *)aItem;
-    sub_21FFBF4(v10 + 4, aItem);
+    sub_2213A04(v10 + 4, aItem);
   }
 }
 
@@ -18420,16 +18399,16 @@ System_Collections_IEnumerator_o *AdjustSdk_JSONArray__GetEnumerator(
 {
   __int64 v3; // x20
 
-  if ( (byte_59304E6 & 1) == 0 )
+  if ( (byte_5968686 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray__GetEnumerator_d__14_TypeInfo);
-    byte_59304E6 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray__GetEnumerator_d__14_TypeInfo);
+    byte_5968686 = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_JSONArray__GetEnumerator_d__14_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_JSONArray__GetEnumerator_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4(v3 + 32, this);
+  sub_2213A04(v3 + 32, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -18444,12 +18423,12 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__Remove(
   System_Collections_Generic_List_object__o *v6; // x8
   AdjustSdk_JSONNode_o *v7; // x20
 
-  if ( (byte_59304E3 & 1) == 0 )
+  if ( (byte_5968683 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
-    byte_59304E3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
+    byte_5968683 = 1;
   }
   if ( aIndex < 0 )
     return 0;
@@ -18461,39 +18440,39 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__Remove(
   m_List = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                           m_List,
                                                           aIndex,
-                                                          (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
+                                                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
   v6 = (System_Collections_Generic_List_object__o *)this->fields.m_List;
   if ( !v6 )
 LABEL_10:
-    sub_21FFECC(m_List, *(_QWORD *)&aIndex);
+    sub_2213CDC(m_List, *(_QWORD *)&aIndex);
   v7 = (AdjustSdk_JSONNode_o *)m_List;
   System_Collections_Generic_List_object___RemoveAt(
     v6,
     aIndex,
-    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_JSONNode__RemoveAt__);
+    (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_JSONNode__RemoveAt__);
   return v7;
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__Remove_36737596(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__Remove_36819012(
         AdjustSdk_JSONArray_o *this,
         AdjustSdk_JSONNode_o *aNode,
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *m_List; // x0
 
-  if ( (byte_59304E4 & 1) == 0 )
+  if ( (byte_5968684 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__Remove__);
-    byte_59304E4 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__Remove__);
+    byte_5968684 = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)this->fields.m_List;
   if ( !m_List )
-    sub_21FFECC(0, aNode);
+    sub_2213CDC(0, aNode);
   System_Collections_Generic_List_object___Remove(
     m_List,
     (Il2CppObject *)aNode,
-    (const MethodInfo_445101C *)Method_System_Collections_Generic_List_JSONNode__Remove__);
+    (const MethodInfo_4485154 *)Method_System_Collections_Generic_List_JSONNode__Remove__);
   return aNode;
 }
 
@@ -18508,11 +18487,11 @@ void AdjustSdk_JSONArray__Serialize(
   int32_t v6; // w21
 
   v4 = this;
-  if ( (byte_59304E9 & 1) == 0 )
+  if ( (byte_5968689 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
-    this = (AdjustSdk_JSONArray_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
-    byte_59304E9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
+    this = (AdjustSdk_JSONArray_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
+    byte_5968689 = 1;
   }
   if ( !aWriter
     || (this = (AdjustSdk_JSONArray_o *)((__int64 (__fastcall *)(System_IO_BinaryWriter_o *, __int64, const MethodInfo *))aWriter->klass->vtable._9_Write.methodPtr)(
@@ -18527,15 +18506,15 @@ void AdjustSdk_JSONArray__Serialize(
         (this = (AdjustSdk_JSONArray_o *)v4->fields.m_List) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(this, aWriter);
+    sub_2213CDC(this, aWriter);
   }
   v6 = 0;
-  while ( v6 < SLODWORD(this[1].klass) )
+  while ( v6 < *((_DWORD *)this + 6) )
   {
     this = (AdjustSdk_JSONArray_o *)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)this,
                                       v6,
-                                      (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
+                                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
     if ( this )
     {
       ((void (__fastcall *)(AdjustSdk_JSONArray_o *, System_IO_BinaryWriter_o *, const MethodInfo *))this->klass->vtable._28_Serialize.methodPtr)(
@@ -18563,39 +18542,39 @@ System_String_o *AdjustSdk_JSONArray__ToString(AdjustSdk_JSONArray_o *this, cons
   System_String_o *v9; // x1
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_59304E7 & 1) == 0 )
+  if ( (byte_5968687 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
-    sub_21FFC50(&StringLiteral_16396/*"[ "*/);
-    sub_21FFC50(&StringLiteral_870/*", "*/);
-    sub_21FFC50(&StringLiteral_207/*" ]"*/);
-    byte_59304E7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    sub_2213A60(&StringLiteral_16428/*"[ "*/);
+    sub_2213A60(&StringLiteral_870/*", "*/);
+    sub_2213A60(&StringLiteral_207/*" ]"*/);
+    byte_5968687 = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)this->fields.m_List;
   memset(&v11, 0, sizeof(v11));
   if ( !m_List )
-    sub_21FFECC(0, method);
-  v4 = (System_String_o *)StringLiteral_16396/*"[ "*/;
+    sub_2213CDC(0, method);
+  v4 = (System_String_o *)StringLiteral_16428/*"[ "*/;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     m_List,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
   while ( 1 )
   {
     v5 = (System_String_o *)System_Collections_Generic_List_Enumerator_object___MoveNext(
                               &v11,
-                              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+                              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
     if ( ((unsigned __int8)v5 & 1) == 0 )
       break;
     if ( !v4 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     current = v11.fields._current;
     if ( v4->fields._stringLength >= 3 )
     {
-      v5 = System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_870/*", "*/, 0);
+      v5 = System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_870/*", "*/, 0);
       v8 = v5;
     }
     else
@@ -18603,20 +18582,20 @@ System_String_o *AdjustSdk_JSONArray__ToString(AdjustSdk_JSONArray_o *this, cons
       v8 = v4;
     }
     if ( !current )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     v9 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current->klass->vtable[3].methodPtr)(
                               current,
                               current->klass->vtable[3].method);
-    v4 = System_String__Concat_75438412(v8, v9, 0);
+    v4 = System_String__Concat_75651716(v8, v9, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
-  return System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_207/*" ]"*/, 0);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+  return System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_207/*" ]"*/, 0);
 }
 
 
-System_String_o *AdjustSdk_JSONArray__ToString_36738524(
+System_String_o *AdjustSdk_JSONArray__ToString_36819940(
         AdjustSdk_JSONArray_o *this,
         System_String_o *aPrefix,
         const MethodInfo *method)
@@ -18633,28 +18612,28 @@ System_String_o *AdjustSdk_JSONArray__ToString_36738524(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_59304E8 & 1) == 0 )
+  if ( (byte_5968688 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_115/*"   "*/);
-    sub_21FFC50(&StringLiteral_16396/*"[ "*/);
-    sub_21FFC50(&StringLiteral_870/*", "*/);
-    sub_21FFC50(&StringLiteral_16659/*"]"*/);
-    byte_59304E8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_115/*"   "*/);
+    sub_2213A60(&StringLiteral_16428/*"[ "*/);
+    sub_2213A60(&StringLiteral_870/*", "*/);
+    sub_2213A60(&StringLiteral_16691/*"]"*/);
+    byte_5968688 = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)this->fields.m_List;
   memset(&v16, 0, sizeof(v16));
   if ( !m_List )
-    sub_21FFECC(0, aPrefix);
-  v6 = (System_String_o *)StringLiteral_16396/*"[ "*/;
+    sub_2213CDC(0, aPrefix);
+  v6 = (System_String_o *)StringLiteral_16428/*"[ "*/;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     m_List,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
   v16 = v15;
   v15.fields._list = 0;
   *(_QWORD *)&v15.fields._index = &v16;
@@ -18662,40 +18641,40 @@ System_String_o *AdjustSdk_JSONArray__ToString_36738524(
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v16,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
     if ( !v7 )
       break;
     if ( !v6 )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     current = v16.fields._current;
     if ( v6->fields._stringLength >= 4 )
-      v6 = System_String__Concat_75438412(v6, (System_String_o *)StringLiteral_870/*", "*/, 0);
-    v10 = System_String__Concat_75483552(
+      v6 = System_String__Concat_75651716(v6, (System_String_o *)StringLiteral_870/*", "*/, 0);
+    v10 = System_String__Concat_75696856(
             v6,
             (System_String_o *)StringLiteral_43/*"\n"*/,
             aPrefix,
             (System_String_o *)StringLiteral_115/*"   "*/,
             0);
-    v11 = System_String__Concat_75438412(aPrefix, (System_String_o *)StringLiteral_115/*"   "*/, 0);
+    v11 = System_String__Concat_75651716(aPrefix, (System_String_o *)StringLiteral_115/*"   "*/, 0);
     if ( !current )
-      sub_21FFECC(v11, v11);
+      sub_2213CDC(v11, v11);
     v12 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, System_String_o *, const MethodInfo *))current->klass->vtable[17].methodPtr)(
                                current,
                                v11,
                                current->klass->vtable[17].method);
-    v6 = System_String__Concat_75438412(v10, v12, 0);
+    v6 = System_String__Concat_75651716(v10, v12, 0);
   }
   list = v15.fields._list;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     *(System_Collections_Generic_List_Enumerator_object__o **)&v15.fields._index,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
   if ( list )
-    sub_21FFEC4(list);
-  return System_String__Concat_75483552(
+    sub_2213CD4(list);
+  return System_String__Concat_75696856(
            v6,
            (System_String_o *)StringLiteral_43/*"\n"*/,
            aPrefix,
-           (System_String_o *)StringLiteral_16659/*"]"*/,
+           (System_String_o *)StringLiteral_16691/*"]"*/,
            0);
 }
 
@@ -18706,17 +18685,17 @@ System_Collections_Generic_IEnumerable_JSONNode__o *AdjustSdk_JSONArray__get_Chi
 {
   __int64 v3; // x20
 
-  if ( (byte_59304E5 & 1) == 0 )
+  if ( (byte_5968685 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
-    byte_59304E5 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
+    byte_5968685 = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = this;
-  sub_21FFBF4(v3 + 40, this);
+  sub_2213A04(v3 + 40, this);
   return (System_Collections_Generic_IEnumerable_JSONNode__o *)v3;
 }
 
@@ -18727,14 +18706,14 @@ int32_t AdjustSdk_JSONArray__get_Count(AdjustSdk_JSONArray_o *this, const Method
   struct System_Collections_Generic_List_JSONNode__o *m_List; // x8
 
   v2 = this;
-  if ( (byte_59304E1 & 1) == 0 )
+  if ( (byte_5968681 & 1) == 0 )
   {
-    this = (AdjustSdk_JSONArray_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
-    byte_59304E1 = 1;
+    this = (AdjustSdk_JSONArray_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
+    byte_5968681 = 1;
   }
   m_List = v2->fields.m_List;
   if ( !m_List )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return m_List->fields._size;
 }
 
@@ -18749,31 +18728,31 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__get_Item(
   AdjustSdk_JSONLazyCreator_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_59304DD & 1) == 0 )
+  if ( (byte_596867D & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
-    byte_59304DD = 1;
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Item__);
+    byte_596867D = 1;
   }
   if ( (aIndex & 0x80000000) == 0 )
   {
     m_List = (System_Collections_Generic_List_object__o *)this->fields.m_List;
     if ( !m_List )
-      sub_21FFECC(0, *(_QWORD *)&aIndex);
+      sub_2213CDC(0, *(_QWORD *)&aIndex);
     if ( m_List->fields._size > aIndex )
       return (AdjustSdk_JSONNode_o *)System_Collections_Generic_List_object___get_Item(
                                        m_List,
                                        aIndex,
-                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
+                                       (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_JSONNode__get_Item__);
   }
-  v7 = (AdjustSdk_JSONLazyCreator_o *)sub_21FFEBC(AdjustSdk_JSONLazyCreator_TypeInfo);
+  v7 = (AdjustSdk_JSONLazyCreator_o *)sub_2213CCC(AdjustSdk_JSONLazyCreator_TypeInfo);
   AdjustSdk_JSONLazyCreator___ctor(v7, (AdjustSdk_JSONNode_o *)this, v8);
   return (AdjustSdk_JSONNode_o *)v7;
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__get_Item_36736912(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__get_Item_36818328(
         AdjustSdk_JSONArray_o *this,
         System_String_o *aKey,
         const MethodInfo *method)
@@ -18781,12 +18760,12 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONArray__get_Item_36736912(
   AdjustSdk_JSONLazyCreator_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_59304DF & 1) == 0 )
+  if ( (byte_596867F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    byte_59304DF = 1;
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    byte_596867F = 1;
   }
-  v4 = (AdjustSdk_JSONLazyCreator_o *)sub_21FFEBC(AdjustSdk_JSONLazyCreator_TypeInfo);
+  v4 = (AdjustSdk_JSONLazyCreator_o *)sub_2213CCC(AdjustSdk_JSONLazyCreator_TypeInfo);
   AdjustSdk_JSONLazyCreator___ctor(v4, (AdjustSdk_JSONNode_o *)this, v5);
   return (AdjustSdk_JSONNode_o *)v4;
 }
@@ -18807,12 +18786,12 @@ void AdjustSdk_JSONArray__set_Item(
   Il2CppClass **v11; // x0
 
   v6 = this;
-  if ( (byte_59304DE & 1) == 0 )
+  if ( (byte_596867E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
-    this = (AdjustSdk_JSONArray_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__set_Item__);
-    byte_59304DE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__get_Count__);
+    this = (AdjustSdk_JSONArray_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__set_Item__);
+    byte_596867E = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)v6->fields.m_List;
   if ( aIndex < 0 )
@@ -18830,7 +18809,7 @@ void AdjustSdk_JSONArray__set_Item(
         m_List,
         aIndex,
         (Il2CppObject *)value,
-        (const MethodInfo_444F8B0 *)Method_System_Collections_Generic_List_JSONNode__set_Item__);
+        (const MethodInfo_44839E8 *)Method_System_Collections_Generic_List_JSONNode__set_Item__);
       return;
     }
   }
@@ -18839,26 +18818,26 @@ void AdjustSdk_JSONArray__set_Item(
   ++m_List->fields._version;
   if ( !items )
 LABEL_12:
-    sub_21FFECC(this, *(_QWORD *)&aIndex);
+    sub_2213CDC(this, *(_QWORD *)&aIndex);
   size = m_List->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       m_List,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
   }
   else
   {
     v11 = &items->obj.klass + size;
     m_List->fields._size = size + 1;
     v11[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v11 + 4, value);
+    sub_2213A04(v11 + 4, value);
   }
 }
 
 
-void AdjustSdk_JSONArray__set_Item_36737000(
+void AdjustSdk_JSONArray__set_Item_36818416(
         AdjustSdk_JSONArray_o *this,
         System_String_o *aKey,
         AdjustSdk_JSONNode_o *value,
@@ -18872,10 +18851,10 @@ void AdjustSdk_JSONArray__set_Item_36737000(
   Il2CppClass **v10; // x0
 
   v5 = this;
-  if ( (byte_59304E0 & 1) == 0 )
+  if ( (byte_5968680 & 1) == 0 )
   {
-    this = (AdjustSdk_JSONArray_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__Add__);
-    byte_59304E0 = 1;
+    this = (AdjustSdk_JSONArray_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__Add__);
+    byte_5968680 = 1;
   }
   m_List = (System_Collections_Generic_List_object__o *)v5->fields.m_List;
   if ( !m_List
@@ -18884,7 +18863,7 @@ void AdjustSdk_JSONArray__set_Item_36737000(
         ++m_List->fields._version,
         !items) )
   {
-    sub_21FFECC(this, aKey);
+    sub_2213CDC(this, aKey);
   }
   size = m_List->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -18892,14 +18871,14 @@ void AdjustSdk_JSONArray__set_Item_36737000(
     System_Collections_Generic_List_object___AddWithResize(
       m_List,
       (Il2CppObject *)value,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     m_List->fields._size = size + 1;
     v10[4] = (Il2CppClass *)value;
-    sub_21FFBF4(v10 + 4, value);
+    sub_2213A04(v10 + 4, value);
   }
 }
 
@@ -18938,12 +18917,12 @@ bool AdjustSdk_JSONArray__GetEnumerator_d__14__MoveNext(
 
   v18 = this;
   v2 = this;
-  if ( (byte_59304EB & 1) == 0 )
+  if ( (byte_596868B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
-    this = (AdjustSdk_JSONArray__GetEnumerator_d__14_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
-    byte_59304EB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
+    this = (AdjustSdk_JSONArray__GetEnumerator_d__14_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    byte_596868B = 1;
   }
   _1__state = v2->fields.__1__state;
   v16 = 0;
@@ -18955,32 +18934,32 @@ bool AdjustSdk_JSONArray__GetEnumerator_d__14__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     m_List = (System_Collections_Generic_List_object__o *)_4__this->fields.m_List;
     if ( !m_List )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     System_Collections_Generic_List_object___GetEnumerator(
       v15,
       m_List,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
     current = v15[0].fields._current;
     v7 = v18;
     v15[1] = v15[0];
     *(_OWORD *)&v18->fields.__7__wrap1.fields._list = *(_OWORD *)&v15[0].fields._list;
     v7->fields.__7__wrap1.fields._current = (struct AdjustSdk_JSONNode_o *)current;
-    sub_21FFBF4(&v7->fields.__7__wrap1, 0);
+    sub_2213A04(&v7->fields.__7__wrap1, 0);
     v2 = v18;
 LABEL_8:
     v2->fields.__1__state = -3;
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
     v10 = v18;
     if ( v9 )
     {
       v11 = (Il2CppObject *)v18->fields.__7__wrap1.fields._current;
       v18->fields.__2__current = v11;
-      sub_21FFBF4(&v10->fields.__2__current, v11);
+      sub_2213A04(&v10->fields.__2__current, v11);
       result = 1;
       v18->fields.__1__state = 1;
     }
@@ -19000,8 +18979,8 @@ LABEL_12:
   v14 = v16;
   if ( v16 )
   {
-    sub_1FE6BAC(&v17);
-    sub_21FFEC4(v14);
+    sub_1FF9BFC(&v17);
+    sub_2213CD4(v14);
   }
   return result;
 }
@@ -19023,11 +19002,11 @@ void __noreturn AdjustSdk_JSONArray__GetEnumerator_d__14__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONArray__GetEnumerator_d__14_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONArray__GetEnumerator_d__14_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -19055,14 +19034,14 @@ void AdjustSdk_JSONArray__GetEnumerator_d__14____m__Finally1(
         AdjustSdk_JSONArray__GetEnumerator_d__14_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_40C7F48 *v3; // x1
+  const MethodInfo_40FBAD4 *v3; // x1
 
-  if ( (byte_59304EC & 1) == 0 )
+  if ( (byte_596868C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
-    byte_59304EC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+    byte_596868C = 1;
   }
-  v3 = (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__;
+  v3 = (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
@@ -19105,12 +19084,12 @@ bool AdjustSdk_JSONArray__get_Childs_d__13__MoveNext(
 
   v18 = this;
   v2 = this;
-  if ( (byte_59304ED & 1) == 0 )
+  if ( (byte_596868D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
-    this = (AdjustSdk_JSONArray__get_Childs_d__13_o *)sub_21FFC50(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
-    byte_59304ED = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__get_Current__);
+    this = (AdjustSdk_JSONArray__get_Childs_d__13_o *)sub_2213A60(&Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+    byte_596868D = 1;
   }
   _1__state = v2->fields.__1__state;
   v16 = 0;
@@ -19122,32 +19101,32 @@ bool AdjustSdk_JSONArray__get_Childs_d__13__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     m_List = (System_Collections_Generic_List_object__o *)_4__this->fields.m_List;
     if ( !m_List )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     System_Collections_Generic_List_object___GetEnumerator(
       v15,
       m_List,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_JSONNode__GetEnumerator__);
     current = v15[0].fields._current;
     v7 = v18;
     v15[1] = v15[0];
     *(_OWORD *)&v18->fields.__7__wrap1.fields._list = *(_OWORD *)&v15[0].fields._list;
     v7->fields.__7__wrap1.fields._current = (struct AdjustSdk_JSONNode_o *)current;
-    sub_21FFBF4(&v7->fields.__7__wrap1, 0);
+    sub_2213A04(&v7->fields.__7__wrap1, 0);
     v2 = v18;
 LABEL_8:
     v2->fields.__1__state = -3;
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__MoveNext__);
     v10 = v18;
     if ( v9 )
     {
       v11 = v18->fields.__7__wrap1.fields._current;
       v18->fields.__2__current = v11;
-      sub_21FFBF4(&v10->fields.__2__current, v11);
+      sub_2213A04(&v10->fields.__2__current, v11);
       result = 1;
       v18->fields.__1__state = 1;
     }
@@ -19167,8 +19146,8 @@ LABEL_12:
   v14 = v16;
   if ( v16 )
   {
-    sub_1FE6BCC(&v17);
-    sub_21FFEC4(v14);
+    sub_1FF9C1C(&v17);
+    sub_2213CD4(v14);
   }
   return result;
 }
@@ -19183,10 +19162,10 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONArray__get_Chi
   int32_t CurrentManagedThreadId; // w0
   struct AdjustSdk_JSONArray_o *_4__this; // x1
 
-  if ( (byte_59304EF & 1) == 0 )
+  if ( (byte_596868F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
-    byte_59304EF = 1;
+    sub_2213A60(&AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
+    byte_596868F = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -19196,14 +19175,14 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONArray__get_Chi
   }
   else
   {
-    v4 = sub_21FFEBC(AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
+    v4 = sub_2213CCC(AdjustSdk_JSONArray__get_Childs_d__13_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     *(_DWORD *)(v4 + 16) = 0;
     CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     *(_DWORD *)(v4 + 32) = CurrentManagedThreadId;
     *(_QWORD *)(v4 + 40) = _4__this;
-    sub_21FFBF4(v4 + 40, _4__this);
+    sub_2213A04(v4 + 40, _4__this);
     return (System_Collections_Generic_IEnumerator_JSONNode__o *)v4;
   }
   return (System_Collections_Generic_IEnumerator_JSONNode__o *)this;
@@ -19226,11 +19205,11 @@ void __noreturn AdjustSdk_JSONArray__get_Childs_d__13__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONArray__get_Childs_d__13_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONArray__get_Childs_d__13_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -19258,14 +19237,14 @@ void AdjustSdk_JSONArray__get_Childs_d__13____m__Finally1(
         AdjustSdk_JSONArray__get_Childs_d__13_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_40C7F48 *v3; // x1
+  const MethodInfo_40FBAD4 *v3; // x1
 
-  if ( (byte_59304EE & 1) == 0 )
+  if ( (byte_596868E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
-    byte_59304EE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__);
+    byte_596868E = 1;
   }
-  v3 = (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__;
+  v3 = (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_JSONNode__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
@@ -19277,18 +19256,18 @@ void AdjustSdk_JSONClass___ctor(AdjustSdk_JSONClass_o *this, const MethodInfo *m
 {
   System_Collections_Generic_Dictionary_object__object__o *v3; // x20
 
-  if ( (byte_59304FE & 1) == 0 )
+  if ( (byte_596869E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__JSONNode__TypeInfo);
-    byte_59304FE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__JSONNode__TypeInfo);
+    byte_596869E = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__JSONNode__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__JSONNode__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__JSONNode___ctor__);
   this->fields.m_Dict = (struct System_Collections_Generic_Dictionary_string__JSONNode__o *)v3;
-  sub_21FFBF4(&this->fields, v3);
+  sub_2213A04(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -19307,12 +19286,12 @@ void AdjustSdk_JSONClass__Add(
   System_Guid_o v12; // [xsp+0h] [xbp-40h] BYREF
   System_Guid_o v13; // 0:x0.16
 
-  if ( (byte_59304F5 & 1) == 0 )
+  if ( (byte_5968695 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
-    byte_59304F5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+    byte_5968695 = 1;
   }
   *(_QWORD *)&v12.fields._a = 0;
   *(_QWORD *)&v12.fields._d = 0;
@@ -19330,18 +19309,18 @@ void AdjustSdk_JSONClass__Add(
         m_Dict,
         IsNullOrEmpty,
         (Il2CppObject *)aItem,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
       return;
     }
 LABEL_12:
-    sub_21FFECC(IsNullOrEmpty, v8);
+    sub_2213CDC(IsNullOrEmpty, v8);
   }
   if ( !m_Dict )
     goto LABEL_12;
   v11 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict,
           (Il2CppObject *)aKey,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
   IsNullOrEmpty = (Il2CppObject *)this->fields.m_Dict;
   if ( v11 )
   {
@@ -19351,7 +19330,7 @@ LABEL_12:
       (System_Collections_Generic_Dictionary_object__object__o *)IsNullOrEmpty,
       (Il2CppObject *)aKey,
       (Il2CppObject *)aItem,
-      (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+      (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
   }
   else
   {
@@ -19361,7 +19340,7 @@ LABEL_12:
       (System_Collections_Generic_Dictionary_object__object__o *)IsNullOrEmpty,
       (Il2CppObject *)aKey,
       (Il2CppObject *)aItem,
-      (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
+      (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
   }
 }
 
@@ -19372,16 +19351,16 @@ System_Collections_IEnumerator_o *AdjustSdk_JSONClass__GetEnumerator(
 {
   __int64 v3; // x20
 
-  if ( (byte_59304FA & 1) == 0 )
+  if ( (byte_596869A & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass__GetEnumerator_d__15_TypeInfo);
-    byte_59304FA = 1;
+    sub_2213A60(&AdjustSdk_JSONClass__GetEnumerator_d__15_TypeInfo);
+    byte_596869A = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_JSONClass__GetEnumerator_d__15_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_JSONClass__GetEnumerator_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4(v3 + 32, this);
+  sub_2213A04(v3 + 32, this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -19395,12 +19374,12 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove(
   System_Collections_Generic_Dictionary_object__object__o *v6; // x8
   AdjustSdk_JSONNode_o *v7; // x20
 
-  if ( (byte_59304F6 & 1) == 0 )
+  if ( (byte_5968696 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
-    byte_59304F6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
+    byte_5968696 = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
@@ -19408,30 +19387,30 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           m_Dict,
           (Il2CppObject *)aKey,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__) )
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__) )
     return 0;
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict
     || (m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               m_Dict,
                                                                               (Il2CppObject *)aKey,
-                                                                              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__),
+                                                                              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__),
         (v6 = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(m_Dict, aKey);
+    sub_2213CDC(m_Dict, aKey);
   }
   v7 = (AdjustSdk_JSONNode_o *)m_Dict;
   System_Collections_Generic_Dictionary_object__object___Remove(
     v6,
     (Il2CppObject *)aKey,
-    (const MethodInfo_3FCB984 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    (const MethodInfo_3FFF12C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
   return v7;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742188(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36823604(
         AdjustSdk_JSONClass_o *this,
         int32_t aIndex,
         const MethodInfo *method)
@@ -19442,14 +19421,14 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742188(
   Il2CppObject *value; // x19
 
   v3 = aIndex;
-  if ( (byte_59304F7 & 1) == 0 )
+  if ( (byte_5968697 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    byte_59304F7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    byte_5968697 = 1;
   }
   if ( v3 < 0 )
     return 0;
@@ -19458,27 +19437,27 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742188(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          m_Dict,
-         (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) <= v3 )
+         (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) <= v3 )
     return 0;
   v6 = System_Linq_Enumerable__ElementAt_KeyValuePair_object__object__(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.m_Dict,
          v3,
-         (const MethodInfo_3849724 *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
+         (const MethodInfo_387CBEC *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
   *(_QWORD *)&aIndex = v6.fields.value;
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
 LABEL_10:
-    sub_21FFECC(m_Dict, *(_QWORD *)&aIndex);
+    sub_2213CDC(m_Dict, *(_QWORD *)&aIndex);
   value = v6.fields.value;
   System_Collections_Generic_Dictionary_object__object___Remove(
     m_Dict,
     v6.fields.key,
-    (const MethodInfo_3FCB984 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    (const MethodInfo_3FFF12C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
   return (AdjustSdk_JSONNode_o *)value;
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742408(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36823824(
         AdjustSdk_JSONClass_o *this,
         AdjustSdk_JSONNode_o *aNode,
         const MethodInfo *method)
@@ -19492,25 +19471,25 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742408(
   Il2CppObject *key; // x1
   System_Collections_Generic_Dictionary_object__object__o *v12; // x0
 
-  if ( (byte_59304F8 & 1) == 0 )
+  if ( (byte_5968698 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_First_KeyValuePair_string__JSONNode____);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_KeyValuePair_string__JSONNode____);
-    sub_21FFC50(&System_Func_KeyValuePair_string__JSONNode___bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    sub_21FFC50(&Method_AdjustSdk_JSONClass___c__DisplayClass12_0__Remove_b__0__);
-    sub_21FFC50(&AdjustSdk_JSONClass___c__DisplayClass12_0_TypeInfo);
-    byte_59304F8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    sub_2213A60(&Method_System_Linq_Enumerable_First_KeyValuePair_string__JSONNode____);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_KeyValuePair_string__JSONNode____);
+    sub_2213A60(&System_Func_KeyValuePair_string__JSONNode___bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    sub_2213A60(&Method_AdjustSdk_JSONClass___c__DisplayClass12_0__Remove_b__0__);
+    sub_2213A60(&AdjustSdk_JSONClass___c__DisplayClass12_0_TypeInfo);
+    byte_5968698 = 1;
   }
-  v5 = sub_21FFEBC(AdjustSdk_JSONClass___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_2213CCC(AdjustSdk_JSONClass___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = aNode;
-  sub_21FFBF4(v5 + 16, aNode);
+  sub_2213A04(v5 + 16, aNode);
   m_Dict = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.m_Dict;
-  v9 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_KeyValuePair_string__JSONNode___bool__TypeInfo);
+  v9 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_string__JSONNode___bool__TypeInfo);
   System_Func_KeyValuePair_object__object___bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -19519,17 +19498,17 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__Remove_36742408(
   v10 = System_Linq_Enumerable__Where_KeyValuePair_object__object__(
           m_Dict,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_386F09C *)Method_System_Linq_Enumerable_Where_KeyValuePair_string__JSONNode____);
+          (const MethodInfo_38A2564 *)Method_System_Linq_Enumerable_Where_KeyValuePair_string__JSONNode____);
   key = System_Linq_Enumerable__First_KeyValuePair_object__object__(
           v10,
-          (const MethodInfo_384BEE0 *)Method_System_Linq_Enumerable_First_KeyValuePair_string__JSONNode____).fields.key;
+          (const MethodInfo_387F3A8 *)Method_System_Linq_Enumerable_First_KeyValuePair_string__JSONNode____).fields.key;
   v12 = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !v12 )
-    sub_21FFECC(0, key);
+    sub_2213CDC(0, key);
   System_Collections_Generic_Dictionary_object__object___Remove(
     v12,
     key,
-    (const MethodInfo_3FCB984 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
+    (const MethodInfo_3FFF12C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Remove__);
   return *(AdjustSdk_JSONNode_o **)(v5 + 16);
 }
 
@@ -19549,16 +19528,16 @@ void AdjustSdk_JSONClass__Serialize(
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v11; // [xsp+18h] [xbp-58h] BYREF
 
   v4 = this;
-  if ( (byte_59304FD & 1) == 0 )
+  if ( (byte_596869D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Keys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__get_Current__);
-    this = (AdjustSdk_JSONClass_o *)sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__JSONNode__GetEnumerator__);
-    byte_59304FD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Keys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__get_Current__);
+    this = (AdjustSdk_JSONClass_o *)sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__JSONNode__GetEnumerator__);
+    byte_596869D = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( !aWriter
@@ -19569,7 +19548,7 @@ void AdjustSdk_JSONClass__Serialize(
         (this = (AdjustSdk_JSONClass_o *)v4->fields.m_Dict) == 0)
     || (Count = System_Collections_Generic_Dictionary_object__object___get_Count(
                   (System_Collections_Generic_Dictionary_object__object__o *)this,
-                  (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__),
+                  (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__),
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))aWriter->klass->vtable._17_Write.methodPtr)(
           aWriter,
           Count,
@@ -19577,17 +19556,17 @@ void AdjustSdk_JSONClass__Serialize(
         (this = (AdjustSdk_JSONClass_o *)v4->fields.m_Dict) == 0)
     || (this = (AdjustSdk_JSONClass_o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
                                           (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                          (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Keys__)) == 0 )
+                                          (const MethodInfo_3FFD8D8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Keys__)) == 0 )
   {
-    sub_21FFECC(this, aWriter);
+    sub_2213CDC(this, aWriter);
   }
   System_Collections_Generic_Dictionary_KeyCollection_object__object___GetEnumerator(
     &v11,
     (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)this,
-    (const MethodInfo_43555B8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__JSONNode__GetEnumerator__);
+    (const MethodInfo_43896F0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__JSONNode__GetEnumerator__);
   while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
             &v11,
-            (const MethodInfo_41361C4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__MoveNext__) )
+            (const MethodInfo_4169D50 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__MoveNext__) )
   {
     currentKey = v11.fields._currentKey;
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppObject *, const MethodInfo *))aWriter->klass->vtable._22_Write.methodPtr)(
@@ -19596,13 +19575,13 @@ void AdjustSdk_JSONClass__Serialize(
       aWriter->klass->vtable._22_Write.method);
     m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)v4->fields.m_Dict;
     if ( !m_Dict )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              m_Dict,
              currentKey,
-             (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
+             (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
     if ( !Item )
-      sub_21FFECC(0, v10);
+      sub_2213CDC(0, v10);
     ((void (__fastcall *)(Il2CppObject *, System_IO_BinaryWriter_o *, const MethodInfo *))Item->klass->vtable[28].methodPtr)(
       Item,
       aWriter,
@@ -19610,7 +19589,7 @@ void AdjustSdk_JSONClass__Serialize(
   }
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___Dispose(
     &v11,
-    (const MethodInfo_41361C0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__Dispose__);
+    (const MethodInfo_4169D4C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__JSONNode__Dispose__);
 }
 
 
@@ -19620,111 +19599,113 @@ System_String_o *AdjustSdk_JSONClass__ToString(AdjustSdk_JSONClass_o *this, cons
   System_String_o *v4; // x21
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
-  System_String_o *v8; // x19
-  __int64 v9; // x0
-  __int64 v10; // x1
-  __int64 v11; // x21
-  __int64 v12; // x0
-  __int64 v13; // x1
-  const MethodInfo *v14; // x1
-  System_String_o *v15; // x0
-  __int64 v16; // x0
-  __int64 v17; // x1
-  __int64 v18; // x0
-  __int64 v19; // x1
-  __int64 v20; // x0
+  Il2CppObject *value; // x20
+  Il2CppObject *key; // x22
+  System_String_o *v9; // x19
+  __int64 v10; // x0
+  __int64 v11; // x1
+  __int64 v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  const MethodInfo *v15; // x1
+  System_String_o *v16; // x0
+  __int64 v17; // x0
+  __int64 v18; // x1
+  __int64 v19; // x0
+  __int64 v20; // x1
+  __int64 v21; // x0
   struct System_Collections_Generic_Dictionary_TKey__TValue__o *dictionary; // x20
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v23; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_59304FB & 1) == 0 )
+  if ( (byte_596869B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_26362/*"{"*/);
-    sub_21FFC50(&StringLiteral_26607/*"}"*/);
-    sub_21FFC50(&StringLiteral_870/*", "*/);
-    sub_21FFC50(&StringLiteral_378/*"\":"*/);
-    sub_21FFC50(&StringLiteral_366/*"\""*/);
-    byte_59304FB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_26413/*"{"*/);
+    sub_2213A60(&StringLiteral_26659/*"}"*/);
+    sub_2213A60(&StringLiteral_870/*", "*/);
+    sub_2213A60(&StringLiteral_378/*"\":"*/);
+    sub_2213A60(&StringLiteral_366/*"\""*/);
+    byte_596869B = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
-  memset(&v24, 0, sizeof(v24));
+  memset(&v25, 0, sizeof(v25));
   if ( !m_Dict )
-    sub_21FFECC(0, method);
-  v4 = (System_String_o *)StringLiteral_26362/*"{"*/;
+    sub_2213CDC(0, method);
+  v4 = (System_String_o *)StringLiteral_26413/*"{"*/;
   System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-    &v23,
+    &v24,
     m_Dict,
-    (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-  v24 = v23;
-  v23.fields._dictionary = 0;
-  *(_QWORD *)&v23.fields._version = &v24;
+    (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+  v25 = v24;
+  v24.fields._dictionary = 0;
+  *(_QWORD *)&v24.fields._version = &v25;
   while ( 1 )
   {
     v5 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-           &v24,
-           (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+           &v25,
+           (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
     if ( !v5 )
       break;
     if ( !v4 )
-      sub_21FFECC(v5, v6);
-    current = v24.fields._current;
+      sub_2213CDC(v5, v6);
+    key = v25.fields._current.fields.key;
+    value = v25.fields._current.fields.value;
     if ( v4->fields._stringLength >= 3 )
-      v8 = System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_870/*", "*/, 0);
+      v9 = System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_870/*", "*/, 0);
     else
-      v8 = v4;
-    v9 = sub_21FFD10(string___TypeInfo, 5);
-    v11 = v9;
-    if ( !v9 )
-      sub_21FFECC(0, v10);
-    if ( !*(_DWORD *)(v9 + 24) )
-      sub_21FFED4(v9);
-    *(_QWORD *)(v9 + 32) = v8;
-    v12 = sub_21FFBF4(v9 + 32, v8);
-    if ( (*(_DWORD *)(v11 + 24) & 0xFFFFFFFE) == 0 )
-      sub_21FFED4(v12);
-    v13 = StringLiteral_366/*"\""*/;
-    *(_QWORD *)(v11 + 40) = StringLiteral_366/*"\""*/;
-    sub_21FFBF4(v11 + 40, v13);
-    v15 = AdjustSdk_JSONNode__Escape((System_String_o *)current.fields.key, v14);
-    if ( *(_DWORD *)(v11 + 24) <= 2u )
-      sub_21FFED4(v15);
-    *(_QWORD *)(v11 + 48) = v15;
-    v16 = sub_21FFBF4(v11 + 48, v15);
-    if ( (*(_DWORD *)(v11 + 24) & 0xFFFFFFFC) == 0 )
-      sub_21FFED4(v16);
-    v17 = StringLiteral_378/*"\":"*/;
-    *(_QWORD *)(v11 + 56) = StringLiteral_378/*"\":"*/;
-    v18 = sub_21FFBF4(v11 + 56, v17);
-    if ( !current.fields.value )
-      sub_21FFECC(v18, v19);
-    v20 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
-            current.fields.value,
-            current.fields.value->klass->vtable[3].method);
-    if ( *(_DWORD *)(v11 + 24) <= 4u )
-      sub_21FFED4(v20);
-    *(_QWORD *)(v11 + 64) = v20;
-    sub_21FFBF4(v11 + 64, v20);
-    v4 = System_String__Concat_75483816((System_String_array *)v11, 0);
+      v9 = v4;
+    v10 = sub_2213B20(string___TypeInfo, 5);
+    v12 = v10;
+    if ( !v10 )
+      sub_2213CDC(0, v11);
+    if ( !*(_DWORD *)(v10 + 24) )
+      sub_2213CE4(v10);
+    *(_QWORD *)(v10 + 32) = v9;
+    v13 = sub_2213A04(v10 + 32, v9);
+    if ( (*(_DWORD *)(v12 + 24) & 0xFFFFFFFE) == 0 )
+      sub_2213CE4(v13);
+    v14 = StringLiteral_366/*"\""*/;
+    *(_QWORD *)(v12 + 40) = StringLiteral_366/*"\""*/;
+    sub_2213A04(v12 + 40, v14);
+    v16 = AdjustSdk_JSONNode__Escape((System_String_o *)key, v15);
+    if ( *(_DWORD *)(v12 + 24) <= 2u )
+      sub_2213CE4(v16);
+    *(_QWORD *)(v12 + 48) = v16;
+    v17 = sub_2213A04(v12 + 48, v16);
+    if ( (*(_DWORD *)(v12 + 24) & 0xFFFFFFFC) == 0 )
+      sub_2213CE4(v17);
+    v18 = StringLiteral_378/*"\":"*/;
+    *(_QWORD *)(v12 + 56) = StringLiteral_378/*"\":"*/;
+    v19 = sub_2213A04(v12 + 56, v18);
+    if ( !value )
+      sub_2213CDC(v19, v20);
+    v21 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
+            value,
+            value->klass->vtable[3].method);
+    if ( *(_DWORD *)(v12 + 24) <= 4u )
+      sub_2213CE4(v21);
+    *(_QWORD *)(v12 + 64) = v21;
+    sub_2213A04(v12 + 64, v21);
+    v4 = System_String__Concat_75697120((System_String_array *)v12, 0);
   }
-  dictionary = v23.fields._dictionary;
+  dictionary = v24.fields._dictionary;
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-    *(System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o **)&v23.fields._version,
-    (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    *(System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o **)&v24.fields._version,
+    (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
   if ( dictionary )
-    sub_21FFEC4(dictionary);
-  return System_String__Concat_75438412(v4, (System_String_o *)StringLiteral_26607/*"}"*/, 0);
+    sub_2213CD4(dictionary);
+  return System_String__Concat_75651716(v4, (System_String_o *)StringLiteral_26659/*"}"*/, 0);
 }
 
 
-System_String_o *AdjustSdk_JSONClass__ToString_36743944(
+System_String_o *AdjustSdk_JSONClass__ToString_36825360(
         AdjustSdk_JSONClass_o *this,
         System_String_o *aPrefix,
         const MethodInfo *method)
@@ -19733,118 +19714,120 @@ System_String_o *AdjustSdk_JSONClass__ToString_36743944(
   System_String_o *v6; // x22
   _BOOL8 v7; // x0
   __int64 v8; // x1
-  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
-  System_String_o *v10; // x20
-  __int64 v11; // x0
-  __int64 v12; // x1
-  __int64 v13; // x22
-  __int64 v14; // x0
-  __int64 v15; // x1
-  const MethodInfo *v16; // x1
-  System_String_o *v17; // x0
-  __int64 v18; // x0
-  __int64 v19; // x1
-  System_String_o *v20; // x0
-  __int64 v21; // x0
+  Il2CppObject *value; // x21
+  Il2CppObject *key; // x23
+  System_String_o *v11; // x20
+  __int64 v12; // x0
+  __int64 v13; // x1
+  __int64 v14; // x22
+  __int64 v15; // x0
+  __int64 v16; // x1
+  const MethodInfo *v17; // x1
+  System_String_o *v18; // x0
+  __int64 v19; // x0
+  __int64 v20; // x1
+  System_String_o *v21; // x0
+  __int64 v22; // x0
   struct System_Collections_Generic_Dictionary_TKey__TValue__o *dictionary; // x21
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v26; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_59304FC & 1) == 0 )
+  if ( (byte_596869C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_115/*"   "*/);
-    sub_21FFC50(&StringLiteral_26607/*"}"*/);
-    sub_21FFC50(&StringLiteral_870/*", "*/);
-    sub_21FFC50(&StringLiteral_368/*"\" : "*/);
-    sub_21FFC50(&StringLiteral_26363/*"{ "*/);
-    sub_21FFC50(&StringLiteral_366/*"\""*/);
-    byte_59304FC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_115/*"   "*/);
+    sub_2213A60(&StringLiteral_26659/*"}"*/);
+    sub_2213A60(&StringLiteral_870/*", "*/);
+    sub_2213A60(&StringLiteral_368/*"\" : "*/);
+    sub_2213A60(&StringLiteral_26414/*"{ "*/);
+    sub_2213A60(&StringLiteral_366/*"\""*/);
+    byte_596869C = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
-  memset(&v25, 0, sizeof(v25));
+  memset(&v26, 0, sizeof(v26));
   if ( !m_Dict )
-    sub_21FFECC(0, aPrefix);
-  v6 = (System_String_o *)StringLiteral_26363/*"{ "*/;
+    sub_2213CDC(0, aPrefix);
+  v6 = (System_String_o *)StringLiteral_26414/*"{ "*/;
   System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-    &v24,
+    &v25,
     m_Dict,
-    (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-  v25 = v24;
-  v24.fields._dictionary = 0;
-  *(_QWORD *)&v24.fields._version = &v25;
+    (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+  v26 = v25;
+  v25.fields._dictionary = 0;
+  *(_QWORD *)&v25.fields._version = &v26;
   while ( 1 )
   {
     v7 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-           &v25,
-           (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+           &v26,
+           (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
     if ( !v7 )
       break;
     if ( !v6 )
-      sub_21FFECC(v7, v8);
-    current = v25.fields._current;
+      sub_2213CDC(v7, v8);
+    key = v26.fields._current.fields.key;
+    value = v26.fields._current.fields.value;
     if ( v6->fields._stringLength >= 4 )
-      v6 = System_String__Concat_75438412(v6, (System_String_o *)StringLiteral_870/*", "*/, 0);
-    v10 = System_String__Concat_75483552(
+      v6 = System_String__Concat_75651716(v6, (System_String_o *)StringLiteral_870/*", "*/, 0);
+    v11 = System_String__Concat_75696856(
             v6,
             (System_String_o *)StringLiteral_43/*"\n"*/,
             aPrefix,
             (System_String_o *)StringLiteral_115/*"   "*/,
             0);
-    v11 = sub_21FFD10(string___TypeInfo, 5);
-    v13 = v11;
-    if ( !v11 )
-      sub_21FFECC(0, v12);
-    if ( !*(_DWORD *)(v11 + 24) )
-      sub_21FFED4(v11);
-    *(_QWORD *)(v11 + 32) = v10;
-    v14 = sub_21FFBF4(v11 + 32, v10);
-    if ( (*(_DWORD *)(v13 + 24) & 0xFFFFFFFE) == 0 )
-      sub_21FFED4(v14);
-    v15 = StringLiteral_366/*"\""*/;
-    *(_QWORD *)(v13 + 40) = StringLiteral_366/*"\""*/;
-    sub_21FFBF4(v13 + 40, v15);
-    v17 = AdjustSdk_JSONNode__Escape((System_String_o *)current.fields.key, v16);
-    if ( *(_DWORD *)(v13 + 24) <= 2u )
-      sub_21FFED4(v17);
-    *(_QWORD *)(v13 + 48) = v17;
-    v18 = sub_21FFBF4(v13 + 48, v17);
-    if ( (*(_DWORD *)(v13 + 24) & 0xFFFFFFFC) == 0 )
-      sub_21FFED4(v18);
-    v19 = StringLiteral_368/*"\" : "*/;
-    *(_QWORD *)(v13 + 56) = StringLiteral_368/*"\" : "*/;
-    sub_21FFBF4(v13 + 56, v19);
-    v20 = System_String__Concat_75438412(aPrefix, (System_String_o *)StringLiteral_115/*"   "*/, 0);
-    if ( !current.fields.value )
-      sub_21FFECC(v20, v20);
-    v21 = ((__int64 (__fastcall *)(Il2CppObject *, System_String_o *, const MethodInfo *))current.fields.value->klass->vtable[17].methodPtr)(
-            current.fields.value,
-            v20,
-            current.fields.value->klass->vtable[17].method);
-    if ( *(_DWORD *)(v13 + 24) <= 4u )
-      sub_21FFED4(v21);
-    *(_QWORD *)(v13 + 64) = v21;
-    sub_21FFBF4(v13 + 64, v21);
-    v6 = System_String__Concat_75483816((System_String_array *)v13, 0);
+    v12 = sub_2213B20(string___TypeInfo, 5);
+    v14 = v12;
+    if ( !v12 )
+      sub_2213CDC(0, v13);
+    if ( !*(_DWORD *)(v12 + 24) )
+      sub_2213CE4(v12);
+    *(_QWORD *)(v12 + 32) = v11;
+    v15 = sub_2213A04(v12 + 32, v11);
+    if ( (*(_DWORD *)(v14 + 24) & 0xFFFFFFFE) == 0 )
+      sub_2213CE4(v15);
+    v16 = StringLiteral_366/*"\""*/;
+    *(_QWORD *)(v14 + 40) = StringLiteral_366/*"\""*/;
+    sub_2213A04(v14 + 40, v16);
+    v18 = AdjustSdk_JSONNode__Escape((System_String_o *)key, v17);
+    if ( *(_DWORD *)(v14 + 24) <= 2u )
+      sub_2213CE4(v18);
+    *(_QWORD *)(v14 + 48) = v18;
+    v19 = sub_2213A04(v14 + 48, v18);
+    if ( (*(_DWORD *)(v14 + 24) & 0xFFFFFFFC) == 0 )
+      sub_2213CE4(v19);
+    v20 = StringLiteral_368/*"\" : "*/;
+    *(_QWORD *)(v14 + 56) = StringLiteral_368/*"\" : "*/;
+    sub_2213A04(v14 + 56, v20);
+    v21 = System_String__Concat_75651716(aPrefix, (System_String_o *)StringLiteral_115/*"   "*/, 0);
+    if ( !value )
+      sub_2213CDC(v21, v21);
+    v22 = ((__int64 (__fastcall *)(Il2CppObject *, System_String_o *, const MethodInfo *))value->klass->vtable[17].methodPtr)(
+            value,
+            v21,
+            value->klass->vtable[17].method);
+    if ( *(_DWORD *)(v14 + 24) <= 4u )
+      sub_2213CE4(v22);
+    *(_QWORD *)(v14 + 64) = v22;
+    sub_2213A04(v14 + 64, v22);
+    v6 = System_String__Concat_75697120((System_String_array *)v14, 0);
   }
-  dictionary = v24.fields._dictionary;
+  dictionary = v25.fields._dictionary;
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-    *(System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o **)&v24.fields._version,
-    (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    *(System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o **)&v25.fields._version,
+    (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
   if ( dictionary )
-    sub_21FFEC4(dictionary);
-  return System_String__Concat_75483552(
+    sub_2213CD4(dictionary);
+  return System_String__Concat_75696856(
            v6,
            (System_String_o *)StringLiteral_43/*"\n"*/,
            aPrefix,
-           (System_String_o *)StringLiteral_26607/*"}"*/,
+           (System_String_o *)StringLiteral_26659/*"}"*/,
            0);
 }
 
@@ -19855,17 +19838,17 @@ System_Collections_Generic_IEnumerable_JSONNode__o *AdjustSdk_JSONClass__get_Chi
 {
   __int64 v3; // x20
 
-  if ( (byte_59304F9 & 1) == 0 )
+  if ( (byte_5968699 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
-    byte_59304F9 = 1;
+    sub_2213A60(&AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
+    byte_5968699 = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = this;
-  sub_21FFBF4(v3 + 40, this);
+  sub_2213A04(v3 + 40, this);
   return (System_Collections_Generic_IEnumerable_JSONNode__o *)v3;
 }
 
@@ -19874,17 +19857,17 @@ int32_t AdjustSdk_JSONClass__get_Count(AdjustSdk_JSONClass_o *this, const Method
 {
   System_Collections_Generic_Dictionary_object__object__o *m_Dict; // x0
 
-  if ( (byte_59304F4 & 1) == 0 )
+  if ( (byte_5968694 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
-    byte_59304F4 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+    byte_5968694 = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return System_Collections_Generic_Dictionary_object__object___get_Count(
            m_Dict,
-           (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+           (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
 }
 
 
@@ -19897,12 +19880,12 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__get_Item(
   AdjustSdk_JSONLazyCreator_o *v7; // x21
   const MethodInfo *v8; // x3
 
-  if ( (byte_59304F0 & 1) == 0 )
+  if ( (byte_5968690 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    byte_59304F0 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    byte_5968690 = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
@@ -19910,52 +19893,52 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__get_Item(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          m_Dict,
          (Il2CppObject *)aKey,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__) )
   {
     m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
     if ( m_Dict )
       return (AdjustSdk_JSONNode_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                        m_Dict,
                                        (Il2CppObject *)aKey,
-                                       (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
+                                       (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Item__);
 LABEL_8:
-    sub_21FFECC(m_Dict, aKey);
+    sub_2213CDC(m_Dict, aKey);
   }
-  v7 = (AdjustSdk_JSONLazyCreator_o *)sub_21FFEBC(AdjustSdk_JSONLazyCreator_TypeInfo);
-  AdjustSdk_JSONLazyCreator___ctor_36740944(v7, (AdjustSdk_JSONNode_o *)this, aKey, v8);
+  v7 = (AdjustSdk_JSONLazyCreator_o *)sub_2213CCC(AdjustSdk_JSONLazyCreator_TypeInfo);
+  AdjustSdk_JSONLazyCreator___ctor_36822360(v7, (AdjustSdk_JSONNode_o *)this, aKey, v8);
   return (AdjustSdk_JSONNode_o *)v7;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__get_Item_36741216(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONClass__get_Item_36822632(
         AdjustSdk_JSONClass_o *this,
         int32_t aIndex,
         const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_object__object__o *m_Dict; // x0
 
-  if ( (byte_59304F2 & 1) == 0 )
+  if ( (byte_5968692 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    byte_59304F2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    byte_5968692 = 1;
   }
   if ( aIndex < 0 )
     return 0;
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
-    sub_21FFECC(0, *(_QWORD *)&aIndex);
+    sub_2213CDC(0, *(_QWORD *)&aIndex);
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          m_Dict,
-         (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) <= aIndex )
+         (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) <= aIndex )
     return 0;
   else
     return (AdjustSdk_JSONNode_o *)System_Linq_Enumerable__ElementAt_KeyValuePair_object__object__(
-                                     (System_Collections_Generic_IEnumerable_TSource__o *)this[16],
+                                     (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.m_Dict,
                                      aIndex,
-                                     (const MethodInfo_3849724 *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____).fields.value;
+                                     (const MethodInfo_387CBEC *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____).fields.value;
 }
 
 
@@ -19968,12 +19951,12 @@ void AdjustSdk_JSONClass__set_Item(
   System_Collections_Generic_Dictionary_object__object__o *m_Dict; // x0
   bool v8; // w8
 
-  if ( (byte_59304F1 & 1) == 0 )
+  if ( (byte_5968691 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
-    byte_59304F1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+    byte_5968691 = 1;
   }
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( !m_Dict )
@@ -19981,7 +19964,7 @@ void AdjustSdk_JSONClass__set_Item(
   v8 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
          m_Dict,
          (Il2CppObject *)aKey,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__ContainsKey__);
   m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
   if ( v8 )
   {
@@ -19991,11 +19974,11 @@ void AdjustSdk_JSONClass__set_Item(
         m_Dict,
         (Il2CppObject *)aKey,
         (Il2CppObject *)value,
-        (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+        (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
       return;
     }
 LABEL_9:
-    sub_21FFECC(m_Dict, aKey);
+    sub_2213CDC(m_Dict, aKey);
   }
   if ( !m_Dict )
     goto LABEL_9;
@@ -20003,12 +19986,12 @@ LABEL_9:
     m_Dict,
     (Il2CppObject *)aKey,
     (Il2CppObject *)value,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__Add__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void AdjustSdk_JSONClass__set_Item_36741376(
+void AdjustSdk_JSONClass__set_Item_36822792(
         AdjustSdk_JSONClass_o *this,
         int32_t aIndex,
         AdjustSdk_JSONNode_o *value,
@@ -20020,13 +20003,13 @@ void AdjustSdk_JSONClass__set_Item_36741376(
   System_Collections_Generic_Dictionary_object__object__o *v9; // x8
 
   v5 = aIndex;
-  if ( (byte_59304F3 & 1) == 0 )
+  if ( (byte_5968693 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
-    byte_59304F3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Key__);
+    byte_5968693 = 1;
   }
   if ( (v5 & 0x80000000) == 0 )
   {
@@ -20035,12 +20018,12 @@ void AdjustSdk_JSONClass__set_Item_36741376(
       goto LABEL_9;
     if ( System_Collections_Generic_Dictionary_object__object___get_Count(
            m_Dict,
-           (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) > v5 )
+           (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__get_Count__) > v5 )
     {
       v8 = System_Linq_Enumerable__ElementAt_KeyValuePair_object__object__(
              (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.m_Dict,
              v5,
-             (const MethodInfo_3849724 *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
+             (const MethodInfo_387CBEC *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_string__JSONNode____);
       *(_QWORD *)&aIndex = v8.fields.value;
       m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)v8.fields.key;
       v9 = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.m_Dict;
@@ -20050,11 +20033,11 @@ void AdjustSdk_JSONClass__set_Item_36741376(
           v9,
           v8.fields.key,
           (Il2CppObject *)value,
-          (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
+          (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__JSONNode__set_Item__);
         return;
       }
 LABEL_9:
-      sub_21FFECC(m_Dict, *(_QWORD *)&aIndex);
+      sub_2213CDC(m_Dict, *(_QWORD *)&aIndex);
     }
   }
 }
@@ -20095,13 +20078,13 @@ bool AdjustSdk_JSONClass__GetEnumerator_d__15__MoveNext(
 
   v19 = this;
   v2 = this;
-  if ( (byte_5930500 & 1) == 0 )
+  if ( (byte_59686A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
-    this = (AdjustSdk_JSONClass__GetEnumerator_d__15_o *)sub_21FFC50(&System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo);
-    byte_5930500 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
+    this = (AdjustSdk_JSONClass__GetEnumerator_d__15_o *)sub_2213A60(&System_Collections_Generic_KeyValuePair_string__JSONNode__TypeInfo);
+    byte_59686A0 = 1;
   }
   _1__state = v2->fields.__1__state;
   v17 = 0;
@@ -20113,14 +20096,14 @@ bool AdjustSdk_JSONClass__GetEnumerator_d__15__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.m_Dict;
     if ( !m_Dict )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v15,
       m_Dict,
-      (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+      (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
     current = v15.fields._current;
     v7 = *(_QWORD *)&v15.fields._getEnumeratorRetType;
     v8 = v19;
@@ -20128,13 +20111,13 @@ bool AdjustSdk_JSONClass__GetEnumerator_d__15__MoveNext(
     *(_OWORD *)&v19->fields.__7__wrap1.fields._dictionary = *(_OWORD *)&v15.fields._dictionary;
     v8->fields.__7__wrap1.fields._current = current;
     *(_QWORD *)&v8->fields.__7__wrap1.fields._getEnumeratorRetType = v7;
-    sub_21FFBF4(&v8->fields.__7__wrap1, 0);
+    sub_2213A04(&v8->fields.__7__wrap1, 0);
     v2 = v19;
 LABEL_8:
     v2->fields.__1__state = -3;
     if ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
            (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v2->fields.__7__wrap1,
-           (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__) )
+           (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__) )
     {
       *(struct System_Collections_Generic_KeyValuePair_TKey__TValue__o *)&v16.fields._dictionary = v19->fields.__7__wrap1.fields._current;
       v10 = (Il2CppObject *)j_il2cpp_value_box_0(
@@ -20142,7 +20125,7 @@ LABEL_8:
                               &v16);
       v11 = v19;
       v19->fields.__2__current = v10;
-      sub_21FFBF4(&v11->fields.__2__current, v10);
+      sub_2213A04(&v11->fields.__2__current, v10);
       result = 1;
       v19->fields.__1__state = 1;
     }
@@ -20162,8 +20145,8 @@ LABEL_12:
   v14 = v17;
   if ( v17 )
   {
-    sub_1FE6BEC(&v18);
-    sub_21FFEC4(v14);
+    sub_1FF9C3C(&v18);
+    sub_2213CD4(v14);
   }
   return result;
 }
@@ -20185,11 +20168,11 @@ void __noreturn AdjustSdk_JSONClass__GetEnumerator_d__15__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONClass__GetEnumerator_d__15_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONClass__GetEnumerator_d__15_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -20217,14 +20200,14 @@ void AdjustSdk_JSONClass__GetEnumerator_d__15____m__Finally1(
         AdjustSdk_JSONClass__GetEnumerator_d__15_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_4135634 *v3; // x1
+  const MethodInfo_41691C0 *v3; // x1
 
-  if ( (byte_5930501 & 1) == 0 )
+  if ( (byte_59686A1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
-    byte_5930501 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    byte_59686A1 = 1;
   }
-  v3 = (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__;
+  v3 = (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
     (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&this->fields.__7__wrap1,
@@ -20248,10 +20231,10 @@ bool AdjustSdk_JSONClass___c__DisplayClass12_0___Remove_b__0(
   AdjustSdk_JSONNode_o *value; // x19
 
   value = k.fields.value;
-  if ( (byte_59304FF & 1) == 0 )
+  if ( (byte_596869F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    byte_59304FF = 1;
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    byte_596869F = 1;
   }
   return AdjustSdk_JSONNode__op_Equality(value, (Il2CppObject *)this->fields.aNode, (const MethodInfo *)k.fields.value);
 }
@@ -20293,13 +20276,13 @@ bool AdjustSdk_JSONClass__get_Childs_d__14__MoveNext(
 
   v19 = this;
   v2 = this;
-  if ( (byte_5930502 & 1) == 0 )
+  if ( (byte_59686A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
-    this = (AdjustSdk_JSONClass__get_Childs_d__14_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
-    byte_5930502 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__get_Current__);
+    this = (AdjustSdk_JSONClass__get_Childs_d__14_o *)sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__JSONNode__get_Value__);
+    byte_59686A2 = 1;
   }
   _1__state = v2->fields.__1__state;
   v17 = 0;
@@ -20311,14 +20294,14 @@ bool AdjustSdk_JSONClass__get_Childs_d__14__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     m_Dict = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.m_Dict;
     if ( !m_Dict )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       v16,
       m_Dict,
-      (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
+      (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__JSONNode__GetEnumerator__);
     current = v16[0].fields._current;
     v7 = *(_QWORD *)&v16[0].fields._getEnumeratorRetType;
     v8 = v19;
@@ -20326,19 +20309,19 @@ bool AdjustSdk_JSONClass__get_Childs_d__14__MoveNext(
     *(_OWORD *)&v19->fields.__7__wrap1.fields._dictionary = *(_OWORD *)&v16[0].fields._dictionary;
     v8->fields.__7__wrap1.fields._current = current;
     *(_QWORD *)&v8->fields.__7__wrap1.fields._getEnumeratorRetType = v7;
-    sub_21FFBF4(&v8->fields.__7__wrap1, 0);
+    sub_2213A04(&v8->fields.__7__wrap1, 0);
     v2 = v19;
 LABEL_8:
     v2->fields.__1__state = -3;
     v10 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
             (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v2->fields.__7__wrap1,
-            (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
+            (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__MoveNext__);
     v11 = v19;
     if ( v10 )
     {
       value = v19->fields.__7__wrap1.fields._current.fields.value;
       v19->fields.__2__current = (struct AdjustSdk_JSONNode_o *)value;
-      sub_21FFBF4(&v11->fields.__2__current, value);
+      sub_2213A04(&v11->fields.__2__current, value);
       result = 1;
       v19->fields.__1__state = 1;
     }
@@ -20358,8 +20341,8 @@ LABEL_12:
   v15 = v17;
   if ( v17 )
   {
-    sub_1FE6C0C(&v18);
-    sub_21FFEC4(v15);
+    sub_1FF9C5C(&v18);
+    sub_2213CD4(v15);
   }
   return result;
 }
@@ -20374,10 +20357,10 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONClass__get_Chi
   int32_t CurrentManagedThreadId; // w0
   struct AdjustSdk_JSONClass_o *_4__this; // x1
 
-  if ( (byte_5930504 & 1) == 0 )
+  if ( (byte_59686A4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
-    byte_5930504 = 1;
+    sub_2213A60(&AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
+    byte_59686A4 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -20387,14 +20370,14 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONClass__get_Chi
   }
   else
   {
-    v4 = sub_21FFEBC(AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
+    v4 = sub_2213CCC(AdjustSdk_JSONClass__get_Childs_d__14_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     *(_DWORD *)(v4 + 16) = 0;
     CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     *(_DWORD *)(v4 + 32) = CurrentManagedThreadId;
     *(_QWORD *)(v4 + 40) = _4__this;
-    sub_21FFBF4(v4 + 40, _4__this);
+    sub_2213A04(v4 + 40, _4__this);
     return (System_Collections_Generic_IEnumerator_JSONNode__o *)v4;
   }
   return (System_Collections_Generic_IEnumerator_JSONNode__o *)this;
@@ -20417,11 +20400,11 @@ void __noreturn AdjustSdk_JSONClass__get_Childs_d__14__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONClass__get_Childs_d__14_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONClass__get_Childs_d__14_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -20449,14 +20432,14 @@ void AdjustSdk_JSONClass__get_Childs_d__14____m__Finally1(
         AdjustSdk_JSONClass__get_Childs_d__14_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_4135634 *v3; // x1
+  const MethodInfo_41691C0 *v3; // x1
 
-  if ( (byte_5930503 & 1) == 0 )
+  if ( (byte_59686A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
-    byte_5930503 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__);
+    byte_59686A3 = 1;
   }
-  v3 = (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__;
+  v3 = (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__JSONNode__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
     (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&this->fields.__7__wrap1,
@@ -20468,11 +20451,11 @@ void AdjustSdk_JSONData___ctor(AdjustSdk_JSONData_o *this, System_String_o *aDat
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.m_Data = aData;
-  sub_21FFBF4(&this->fields, aData);
+  sub_2213A04(&this->fields, aData);
 }
 
 
-void AdjustSdk_JSONData___ctor_36733324(AdjustSdk_JSONData_o *this, int32_t aData, const MethodInfo *method)
+void AdjustSdk_JSONData___ctor_36814740(AdjustSdk_JSONData_o *this, int32_t aData, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   ((void (__fastcall *)(AdjustSdk_JSONData_o *, _QWORD, const MethodInfo *))this->klass->vtable._19_set_AsInt.methodPtr)(
@@ -20482,7 +20465,7 @@ void AdjustSdk_JSONData___ctor_36733324(AdjustSdk_JSONData_o *this, int32_t aDat
 }
 
 
-void AdjustSdk_JSONData___ctor_36733380(AdjustSdk_JSONData_o *this, double aData, const MethodInfo *method)
+void AdjustSdk_JSONData___ctor_36814796(AdjustSdk_JSONData_o *this, double aData, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   ((void (__fastcall *)(AdjustSdk_JSONData_o *, const MethodInfo *, double))this->klass->vtable._23_set_AsDouble.methodPtr)(
@@ -20492,7 +20475,7 @@ void AdjustSdk_JSONData___ctor_36733380(AdjustSdk_JSONData_o *this, double aData
 }
 
 
-void AdjustSdk_JSONData___ctor_36733436(AdjustSdk_JSONData_o *this, bool aData, const MethodInfo *method)
+void AdjustSdk_JSONData___ctor_36814852(AdjustSdk_JSONData_o *this, bool aData, const MethodInfo *method)
 {
   _BOOL4 v3; // w19
 
@@ -20505,7 +20488,7 @@ void AdjustSdk_JSONData___ctor_36733436(AdjustSdk_JSONData_o *this, bool aData, 
 }
 
 
-void AdjustSdk_JSONData___ctor_36733492(AdjustSdk_JSONData_o *this, float aData, const MethodInfo *method)
+void AdjustSdk_JSONData___ctor_36814908(AdjustSdk_JSONData_o *this, float aData, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   ((void (__fastcall *)(AdjustSdk_JSONData_o *, const MethodInfo *, float))this->klass->vtable._21_set_AsFloat.methodPtr)(
@@ -20531,18 +20514,18 @@ void AdjustSdk_JSONData__Serialize(
   Il2CppMethodPointer methodPtr; // x3
   char v14; // w0
 
-  if ( (byte_5930507 & 1) == 0 )
+  if ( (byte_59686A7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5930507 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59686A7 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   v6 = (System_String_o *)StringLiteral_1/*""*/;
   v7 = (System_String_o **)v5;
   System_Object___ctor(v5, 0);
   v7[2] = v6;
-  sub_21FFBF4(v7 + 2, v6);
+  sub_2213A04(v7 + 2, v6);
   v8 = ((__int64 (__fastcall *)(AdjustSdk_JSONData_o *, const MethodInfo *))this->klass->vtable._18_get_AsInt.methodPtr)(
          this,
          this->klass->vtable._18_get_AsInt.method);
@@ -20636,7 +20619,7 @@ LABEL_6:
           goto LABEL_6;
         }
 LABEL_18:
-        sub_21FFECC(v9, v10);
+        sub_2213CDC(v9, v10);
       }
       if ( !aWriter )
         goto LABEL_18;
@@ -20657,13 +20640,13 @@ System_String_o *AdjustSdk_JSONData__ToString(AdjustSdk_JSONData_o *this, const 
 {
   System_String_o *v3; // x0
 
-  if ( (byte_5930505 & 1) == 0 )
+  if ( (byte_59686A5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_366/*"\""*/);
-    byte_5930505 = 1;
+    sub_2213A60(&StringLiteral_366/*"\""*/);
+    byte_59686A5 = 1;
   }
   v3 = AdjustSdk_JSONNode__Escape(this->fields.m_Data, method);
-  return System_String__Concat_75481624(
+  return System_String__Concat_75694928(
            (System_String_o *)StringLiteral_366/*"\""*/,
            v3,
            (System_String_o *)StringLiteral_366/*"\""*/,
@@ -20671,20 +20654,20 @@ System_String_o *AdjustSdk_JSONData__ToString(AdjustSdk_JSONData_o *this, const 
 }
 
 
-System_String_o *AdjustSdk_JSONData__ToString_36747080(
+System_String_o *AdjustSdk_JSONData__ToString_36828496(
         AdjustSdk_JSONData_o *this,
         System_String_o *aPrefix,
         const MethodInfo *method)
 {
   System_String_o *v4; // x0
 
-  if ( (byte_5930506 & 1) == 0 )
+  if ( (byte_59686A6 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_366/*"\""*/);
-    byte_5930506 = 1;
+    sub_2213A60(&StringLiteral_366/*"\""*/);
+    byte_59686A6 = 1;
   }
   v4 = AdjustSdk_JSONNode__Escape(this->fields.m_Data, (const MethodInfo *)aPrefix);
-  return System_String__Concat_75481624(
+  return System_String__Concat_75694928(
            (System_String_o *)StringLiteral_366/*"\""*/,
            v4,
            (System_String_o *)StringLiteral_366/*"\""*/,
@@ -20701,7 +20684,7 @@ System_String_o *AdjustSdk_JSONData__get_Value(AdjustSdk_JSONData_o *this, const
 void AdjustSdk_JSONData__set_Value(AdjustSdk_JSONData_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields.m_Data = value;
-  sub_21FFBF4(&this->fields, value);
+  sub_2213A04(&this->fields, value);
 }
 
 
@@ -20712,13 +20695,13 @@ void AdjustSdk_JSONLazyCreator___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.m_Node = aNode;
-  sub_21FFBF4(&this->fields, aNode);
+  sub_2213A04(&this->fields, aNode);
   this->fields.m_Key = 0;
-  sub_21FFBF4(&this->fields.m_Key, 0);
+  sub_2213A04(&this->fields.m_Key, 0);
 }
 
 
-void AdjustSdk_JSONLazyCreator___ctor_36740944(
+void AdjustSdk_JSONLazyCreator___ctor_36822360(
         AdjustSdk_JSONLazyCreator_o *this,
         AdjustSdk_JSONNode_o *aNode,
         System_String_o *aKey,
@@ -20726,9 +20709,9 @@ void AdjustSdk_JSONLazyCreator___ctor_36740944(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.m_Node = aNode;
-  sub_21FFBF4(&this->fields, aNode);
+  sub_2213A04(&this->fields, aNode);
   this->fields.m_Key = aKey;
-  sub_21FFBF4(&this->fields.m_Key, aKey);
+  sub_2213A04(&this->fields.m_Key, aKey);
 }
 
 
@@ -20743,15 +20726,15 @@ void AdjustSdk_JSONLazyCreator__Add(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_593050C & 1) == 0 )
+  if ( (byte_59686AC & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    byte_593050C = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    byte_59686AC = 1;
   }
-  v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v5, v6);
   if ( !v5 )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   ((void (__fastcall *)(AdjustSdk_JSONArray_o *, AdjustSdk_JSONNode_o *, const MethodInfo *))v5->klass->vtable._12_Add.methodPtr)(
     v5,
     aItem,
@@ -20760,7 +20743,7 @@ void AdjustSdk_JSONLazyCreator__Add(
 }
 
 
-void AdjustSdk_JSONLazyCreator__Add_36748572(
+void AdjustSdk_JSONLazyCreator__Add_36829988(
         AdjustSdk_JSONLazyCreator_o *this,
         System_String_o *aKey,
         AdjustSdk_JSONNode_o *aItem,
@@ -20772,15 +20755,15 @@ void AdjustSdk_JSONLazyCreator__Add_36748572(
   __int64 v10; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_593050D & 1) == 0 )
+  if ( (byte_59686AD & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    byte_593050D = 1;
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    byte_59686AD = 1;
   }
-  v7 = (AdjustSdk_JSONClass_o *)sub_21FFEBC(AdjustSdk_JSONClass_TypeInfo);
+  v7 = (AdjustSdk_JSONClass_o *)sub_2213CCC(AdjustSdk_JSONClass_TypeInfo);
   AdjustSdk_JSONClass___ctor(v7, v8);
   if ( !v7 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   ((void (__fastcall *)(AdjustSdk_JSONClass_o *, System_String_o *, AdjustSdk_JSONNode_o *, const MethodInfo *))v7->klass->vtable._4_Add.methodPtr)(
     v7,
     aKey,
@@ -20825,7 +20808,7 @@ void AdjustSdk_JSONLazyCreator__Set(
       goto LABEL_6;
     }
 LABEL_7:
-    sub_21FFECC(m_Node, aVal);
+    sub_2213CDC(m_Node, aVal);
   }
   if ( !m_Node )
     goto LABEL_7;
@@ -20836,30 +20819,30 @@ LABEL_7:
     m_Node->klass->vtable._4_Add.method);
 LABEL_6:
   this->fields.m_Node = 0;
-  sub_21FFBF4(&this->fields, 0);
+  sub_2213A04(&this->fields, 0);
 }
 
 
 System_String_o *AdjustSdk_JSONLazyCreator__ToString(AdjustSdk_JSONLazyCreator_o *this, const MethodInfo *method)
 {
-  if ( (byte_593050E & 1) == 0 )
+  if ( (byte_59686AE & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593050E = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59686AE = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-System_String_o *AdjustSdk_JSONLazyCreator__ToString_36748828(
+System_String_o *AdjustSdk_JSONLazyCreator__ToString_36830244(
         AdjustSdk_JSONLazyCreator_o *this,
         System_String_o *aPrefix,
         const MethodInfo *method)
 {
-  if ( (byte_593050F & 1) == 0 )
+  if ( (byte_59686AF & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593050F = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59686AF = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -20873,12 +20856,12 @@ AdjustSdk_JSONArray_o *AdjustSdk_JSONLazyCreator__get_AsArray(
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_5930518 & 1) == 0 )
+  if ( (byte_59686B8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    byte_5930518 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    byte_59686B8 = 1;
   }
-  v3 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v3 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v3, v4);
   AdjustSdk_JSONLazyCreator__Set(this, (AdjustSdk_JSONNode_o *)v3, v5);
   return v3;
@@ -20890,12 +20873,12 @@ bool AdjustSdk_JSONLazyCreator__get_AsBool(AdjustSdk_JSONLazyCreator_o *this, co
   Il2CppObject *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_5930516 & 1) == 0 )
+  if ( (byte_59686B6 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930516 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B6 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v3, 0);
   ((void (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))v3->klass->vtable[25].methodPtr)(
     v3,
@@ -20911,12 +20894,12 @@ double AdjustSdk_JSONLazyCreator__get_AsDouble(AdjustSdk_JSONLazyCreator_o *this
   Il2CppObject *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_5930514 & 1) == 0 )
+  if ( (byte_59686B4 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930514 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B4 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v3, 0);
   ((void (__fastcall *)(Il2CppObject *, const MethodInfo *, double))v3->klass->vtable[23].methodPtr)(
     v3,
@@ -20932,12 +20915,12 @@ float AdjustSdk_JSONLazyCreator__get_AsFloat(AdjustSdk_JSONLazyCreator_o *this, 
   Il2CppObject *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_5930512 & 1) == 0 )
+  if ( (byte_59686B2 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930512 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B2 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v3, 0);
   ((void (__fastcall *)(Il2CppObject *, const MethodInfo *, double))v3->klass->vtable[21].methodPtr)(
     v3,
@@ -20953,12 +20936,12 @@ int32_t AdjustSdk_JSONLazyCreator__get_AsInt(AdjustSdk_JSONLazyCreator_o *this, 
   Il2CppObject *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_5930510 & 1) == 0 )
+  if ( (byte_59686B0 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930510 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B0 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v3, 0);
   ((void (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))v3->klass->vtable[19].methodPtr)(
     v3,
@@ -20977,12 +20960,12 @@ AdjustSdk_JSONClass_o *AdjustSdk_JSONLazyCreator__get_AsObject(
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_5930519 & 1) == 0 )
+  if ( (byte_59686B9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    byte_5930519 = 1;
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    byte_59686B9 = 1;
   }
-  v3 = (AdjustSdk_JSONClass_o *)sub_21FFEBC(AdjustSdk_JSONClass_TypeInfo);
+  v3 = (AdjustSdk_JSONClass_o *)sub_2213CCC(AdjustSdk_JSONClass_TypeInfo);
   AdjustSdk_JSONClass___ctor(v3, v4);
   AdjustSdk_JSONLazyCreator__Set(this, (AdjustSdk_JSONNode_o *)v3, v5);
   return v3;
@@ -20997,18 +20980,18 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONLazyCreator__get_Item(
   AdjustSdk_JSONLazyCreator_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_5930508 & 1) == 0 )
+  if ( (byte_59686A8 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    byte_5930508 = 1;
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    byte_59686A8 = 1;
   }
-  v4 = (AdjustSdk_JSONLazyCreator_o *)sub_21FFEBC(AdjustSdk_JSONLazyCreator_TypeInfo);
+  v4 = (AdjustSdk_JSONLazyCreator_o *)sub_2213CCC(AdjustSdk_JSONLazyCreator_TypeInfo);
   AdjustSdk_JSONLazyCreator___ctor(v4, (AdjustSdk_JSONNode_o *)this, v5);
   return (AdjustSdk_JSONNode_o *)v4;
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONLazyCreator__get_Item_36748204(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONLazyCreator__get_Item_36829620(
         AdjustSdk_JSONLazyCreator_o *this,
         System_String_o *aKey,
         const MethodInfo *method)
@@ -21016,13 +20999,13 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONLazyCreator__get_Item_36748204(
   AdjustSdk_JSONLazyCreator_o *v5; // x21
   const MethodInfo *v6; // x3
 
-  if ( (byte_593050A & 1) == 0 )
+  if ( (byte_59686AA & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    byte_593050A = 1;
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    byte_59686AA = 1;
   }
-  v5 = (AdjustSdk_JSONLazyCreator_o *)sub_21FFEBC(AdjustSdk_JSONLazyCreator_TypeInfo);
-  AdjustSdk_JSONLazyCreator___ctor_36740944(v5, (AdjustSdk_JSONNode_o *)this, aKey, v6);
+  v5 = (AdjustSdk_JSONLazyCreator_o *)sub_2213CCC(AdjustSdk_JSONLazyCreator_TypeInfo);
+  AdjustSdk_JSONLazyCreator___ctor_36822360(v5, (AdjustSdk_JSONNode_o *)this, aKey, v6);
   return (AdjustSdk_JSONNode_o *)v5;
 }
 
@@ -21053,12 +21036,12 @@ void AdjustSdk_JSONLazyCreator__set_AsBool(AdjustSdk_JSONLazyCreator_o *this, bo
   Il2CppObject *v5; // x21
   const MethodInfo *v6; // x2
 
-  if ( (byte_5930517 & 1) == 0 )
+  if ( (byte_59686B7 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930517 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B7 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v5, 0);
   ((void (__fastcall *)(Il2CppObject *, bool, const MethodInfo *))v5->klass->vtable[25].methodPtr)(
     v5,
@@ -21073,12 +21056,12 @@ void AdjustSdk_JSONLazyCreator__set_AsDouble(AdjustSdk_JSONLazyCreator_o *this, 
   Il2CppObject *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_5930515 & 1) == 0 )
+  if ( (byte_59686B5 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930515 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B5 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v5, 0);
   ((void (__fastcall *)(Il2CppObject *, const MethodInfo *, double))v5->klass->vtable[23].methodPtr)(
     v5,
@@ -21093,12 +21076,12 @@ void AdjustSdk_JSONLazyCreator__set_AsFloat(AdjustSdk_JSONLazyCreator_o *this, f
   Il2CppObject *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_5930513 & 1) == 0 )
+  if ( (byte_59686B3 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930513 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B3 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v5, 0);
   ((void (__fastcall *)(Il2CppObject *, const MethodInfo *, float))v5->klass->vtable[21].methodPtr)(
     v5,
@@ -21113,12 +21096,12 @@ void AdjustSdk_JSONLazyCreator__set_AsInt(AdjustSdk_JSONLazyCreator_o *this, int
   Il2CppObject *v5; // x21
   const MethodInfo *v6; // x2
 
-  if ( (byte_5930511 & 1) == 0 )
+  if ( (byte_59686B1 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_5930511 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_59686B1 = 1;
   }
-  v5 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v5, 0);
   ((void (__fastcall *)(Il2CppObject *, _QWORD, const MethodInfo *))v5->klass->vtable[19].methodPtr)(
     v5,
@@ -21140,15 +21123,15 @@ void AdjustSdk_JSONLazyCreator__set_Item(
   __int64 v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_5930509 & 1) == 0 )
+  if ( (byte_59686A9 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    byte_5930509 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    byte_59686A9 = 1;
   }
-  v6 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+  v6 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
   AdjustSdk_JSONArray___ctor(v6, v7);
   if ( !v6 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   ((void (__fastcall *)(AdjustSdk_JSONArray_o *, AdjustSdk_JSONNode_o *, const MethodInfo *))v6->klass->vtable._12_Add.methodPtr)(
     v6,
     value,
@@ -21157,7 +21140,7 @@ void AdjustSdk_JSONLazyCreator__set_Item(
 }
 
 
-void AdjustSdk_JSONLazyCreator__set_Item_36748308(
+void AdjustSdk_JSONLazyCreator__set_Item_36829724(
         AdjustSdk_JSONLazyCreator_o *this,
         System_String_o *aKey,
         AdjustSdk_JSONNode_o *value,
@@ -21169,15 +21152,15 @@ void AdjustSdk_JSONLazyCreator__set_Item_36748308(
   __int64 v10; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_593050B & 1) == 0 )
+  if ( (byte_59686AB & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    byte_593050B = 1;
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    byte_59686AB = 1;
   }
-  v7 = (AdjustSdk_JSONClass_o *)sub_21FFEBC(AdjustSdk_JSONClass_TypeInfo);
+  v7 = (AdjustSdk_JSONClass_o *)sub_2213CCC(AdjustSdk_JSONClass_TypeInfo);
   AdjustSdk_JSONClass___ctor(v7, v8);
   if ( !v7 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   ((void (__fastcall *)(AdjustSdk_JSONClass_o *, System_String_o *, AdjustSdk_JSONNode_o *, const MethodInfo *))v7->klass->vtable._4_Add.methodPtr)(
     v7,
     aKey,
@@ -21203,15 +21186,15 @@ void AdjustSdk_JSONNode__Add(
 }
 
 
-void AdjustSdk_JSONNode__Add_36727868(
+void AdjustSdk_JSONNode__Add_36809284(
         AdjustSdk_JSONNode_o *this,
         AdjustSdk_JSONNode_o *aItem,
         const MethodInfo *method)
 {
-  if ( (byte_59304C8 & 1) == 0 )
+  if ( (byte_5968668 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59304C8 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5968668 = 1;
   }
   ((void (__fastcall *)(AdjustSdk_JSONNode_o *, void *, AdjustSdk_JSONNode_o *, const MethodInfo *))this->klass->vtable._4_Add.methodPtr)(
     this,
@@ -21248,12 +21231,12 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Deserialize(System_IO_BinaryReader_o *
   int v25; // [xsp+18h] [xbp-38h]
 
   v2 = aReader;
-  if ( (byte_59304D5 & 1) == 0 )
+  if ( (byte_5968675 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    aReader = (System_IO_BinaryReader_o *)sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_59304D5 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    aReader = (System_IO_BinaryReader_o *)sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_5968675 = 1;
   }
   if ( !v2 )
     goto LABEL_27;
@@ -21268,7 +21251,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Deserialize(System_IO_BinaryReader_o *
         v12 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._15_ReadInt32.methodPtr)(
                 v2,
                 v2->klass->vtable._15_ReadInt32.method);
-        v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+        v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
         AdjustSdk_JSONArray___ctor(v5, v13);
         if ( v12 < 1 )
           return (AdjustSdk_JSONNode_o *)v5;
@@ -21289,7 +21272,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Deserialize(System_IO_BinaryReader_o *
         v8 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._15_ReadInt32.methodPtr)(
                v2,
                v2->klass->vtable._15_ReadInt32.method);
-        v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONClass_TypeInfo);
+        v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONClass_TypeInfo);
         AdjustSdk_JSONClass___ctor((AdjustSdk_JSONClass_o *)v5, v9);
         if ( v8 < 1 )
           return (AdjustSdk_JSONNode_o *)v5;
@@ -21314,27 +21297,27 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Deserialize(System_IO_BinaryReader_o *
         v6 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._22_ReadString.methodPtr)(
                v2,
                v2->klass->vtable._22_ReadString.method);
-        v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+        v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
         System_Object___ctor((Il2CppObject *)v5, 0);
         v5->fields.m_List = (struct System_Collections_Generic_List_JSONNode__o *)v6;
-        sub_21FFBF4(&v5->fields, v6);
+        sub_2213A04(&v5->fields, v6);
         return (AdjustSdk_JSONNode_o *)v5;
       default:
 LABEL_28:
         v25 = v3;
-        v24.klass = (System_Enum_c *)sub_21FFC64(&AdjustSdk_JSONBinaryTag_TypeInfo);
+        v24.klass = (System_Enum_c *)sub_2213A74(&AdjustSdk_JSONBinaryTag_TypeInfo);
         v24.monitor = (void *)-1LL;
         v18 = System_Enum__ToString(&v24, 0);
-        v19 = (System_String_o *)sub_21FFC64(&StringLiteral_6374/*"Error deserializing JSON. Unknown tag: "*/);
-        v20 = System_String__Concat_75438412(v19, v18, 0);
-        v21 = sub_21FFC64(&System_Exception_TypeInfo);
-        v22 = (System_Exception_o *)sub_21FFEBC(v21);
-        System_Exception___ctor_77161964(v22, v20, 0);
-        v23 = sub_21FFC64(&Method_AdjustSdk_JSONNode_Deserialize__);
-        sub_21FFD90(v22, v23);
+        v19 = (System_String_o *)sub_2213A74(&StringLiteral_6386/*"Error deserializing JSON. Unknown tag: "*/);
+        v20 = System_String__Concat_75651716(v19, v18, 0);
+        v21 = sub_2213A74(&System_Exception_TypeInfo);
+        v22 = (System_Exception_o *)sub_2213CCC(v21);
+        System_Exception___ctor_77375268(v22, v20, 0);
+        v23 = sub_2213A74(&Method_AdjustSdk_JSONNode_Deserialize__);
+        sub_2213BA0(v22, v23);
     }
 LABEL_27:
-    sub_21FFECC(aReader, method);
+    sub_2213CDC(aReader, method);
   }
   if ( v3 > 5u )
   {
@@ -21343,7 +21326,7 @@ LABEL_27:
       v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._9_ReadBoolean.methodPtr)(
               v2,
               v2->klass->vtable._9_ReadBoolean.method);
-      v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+      v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v5, 0);
       ((void (__fastcall *)(AdjustSdk_JSONArray_o *, _QWORD, const MethodInfo *))v5->klass->vtable._25_set_AsBool.methodPtr)(
         v5,
@@ -21356,7 +21339,7 @@ LABEL_27:
       v7 = ((float (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._19_ReadSingle.methodPtr)(
              v2,
              v2->klass->vtable._19_ReadSingle.method);
-      v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+      v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v5, 0);
       ((void (__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *, float))v5->klass->vtable._21_set_AsFloat.methodPtr)(
         v5,
@@ -21371,7 +21354,7 @@ LABEL_27:
     v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._15_ReadInt32.methodPtr)(
             v2,
             v2->klass->vtable._15_ReadInt32.method);
-    v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+    v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
     System_Object___ctor((Il2CppObject *)v5, 0);
     ((void (__fastcall *)(AdjustSdk_JSONArray_o *, _QWORD, const MethodInfo *))v5->klass->vtable._19_set_AsInt.methodPtr)(
       v5,
@@ -21384,7 +21367,7 @@ LABEL_27:
   v4 = ((double (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v2->klass->vtable._20_ReadDouble.methodPtr)(
          v2,
          v2->klass->vtable._20_ReadDouble.method);
-  v5 = (AdjustSdk_JSONArray_o *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v5 = (AdjustSdk_JSONArray_o *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   ((void (__fastcall *)(AdjustSdk_JSONArray_o *, const MethodInfo *, double))v5->klass->vtable._23_set_AsDouble.methodPtr)(
     v5,
@@ -21412,21 +21395,21 @@ System_String_o *AdjustSdk_JSONNode__Escape(System_String_o *aText, const Method
   uint16_t v10; // [xsp+Ch] [xbp-64h] BYREF
 
   v2 = aText;
-  if ( (byte_59304D2 & 1) == 0 )
+  if ( (byte_5968672 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16642/*"\\b"*/);
-    sub_21FFC50(&StringLiteral_16645/*"\\n"*/);
-    sub_21FFC50(&StringLiteral_16652/*"\\t"*/);
-    sub_21FFC50(&StringLiteral_16626/*"\\\""*/);
-    sub_21FFC50(&StringLiteral_16644/*"\\f"*/);
-    sub_21FFC50(&StringLiteral_16650/*"\\r"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    aText = (System_String_o *)sub_21FFC50(&StringLiteral_16639/*"\\\\"*/);
-    byte_59304D2 = 1;
+    sub_2213A60(&StringLiteral_16674/*"\\b"*/);
+    sub_2213A60(&StringLiteral_16677/*"\\n"*/);
+    sub_2213A60(&StringLiteral_16684/*"\\t"*/);
+    sub_2213A60(&StringLiteral_16658/*"\\\""*/);
+    sub_2213A60(&StringLiteral_16676/*"\\f"*/);
+    sub_2213A60(&StringLiteral_16682/*"\\r"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    aText = (System_String_o *)sub_2213A60(&StringLiteral_16671/*"\\\\"*/);
+    byte_5968672 = 1;
   }
   v10 = 0;
   if ( !v2 )
-    sub_21FFECC(aText, method);
+    sub_2213CDC(aText, method);
   v3 = (System_String_o *)StringLiteral_1/*""*/;
   if ( v2->fields._stringLength >= 1 )
   {
@@ -21439,13 +21422,13 @@ System_String_o *AdjustSdk_JSONNode__Escape(System_String_o *aText, const Method
         switch ( Chars )
         {
           case 8u:
-            v8 = (System_String_o *)StringLiteral_16642/*"\\b"*/;
+            v8 = (System_String_o *)StringLiteral_16674/*"\\b"*/;
             break;
           case 9u:
-            v8 = (System_String_o *)StringLiteral_16652/*"\\t"*/;
+            v8 = (System_String_o *)StringLiteral_16684/*"\\t"*/;
             break;
           case 0xAu:
-            v8 = (System_String_o *)StringLiteral_16645/*"\\n"*/;
+            v8 = (System_String_o *)StringLiteral_16677/*"\\n"*/;
             break;
           default:
             goto LABEL_19;
@@ -21455,33 +21438,33 @@ System_String_o *AdjustSdk_JSONNode__Escape(System_String_o *aText, const Method
       {
         if ( Chars == 34 )
         {
-          v8 = (System_String_o *)StringLiteral_16626/*"\\\""*/;
+          v8 = (System_String_o *)StringLiteral_16658/*"\\\""*/;
         }
         else
         {
           if ( Chars != 92 )
           {
 LABEL_19:
-            if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-              j_il2cpp_runtime_class_init_0(qword_594C0B0, v6, v7);
+            if ( !*(_DWORD *)(qword_5984388 + 228) )
+              j_il2cpp_runtime_class_init_0(qword_5984388, v6, v7);
             v8 = System_Char__ToString((uint16_t)&v10, 0);
             goto LABEL_25;
           }
-          v8 = (System_String_o *)StringLiteral_16639/*"\\\\"*/;
+          v8 = (System_String_o *)StringLiteral_16671/*"\\\\"*/;
         }
       }
       else if ( Chars == 12 )
       {
-        v8 = (System_String_o *)StringLiteral_16644/*"\\f"*/;
+        v8 = (System_String_o *)StringLiteral_16676/*"\\f"*/;
       }
       else
       {
         if ( Chars != 13 )
           goto LABEL_19;
-        v8 = (System_String_o *)StringLiteral_16650/*"\\r"*/;
+        v8 = (System_String_o *)StringLiteral_16682/*"\\r"*/;
       }
 LABEL_25:
-      v3 = System_String__Concat_75438412(v3, v8, 0);
+      v3 = System_String__Concat_75651716(v3, v8, 0);
     }
   }
   return v3;
@@ -21503,19 +21486,19 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__LoadFromBase64(System_String_o *aBase6
   __int64 v7; // x1
   const MethodInfo *v8; // x1
 
-  if ( (byte_59304D7 & 1) == 0 )
+  if ( (byte_5968677 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    byte_59304D7 = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    byte_5968677 = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method, v2);
   v4 = System_Convert__FromBase64String(aBase64, 0);
-  v5 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_76663240(v5, v4, 0);
+  v5 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_76876544(v5, v4, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   ((void (__fastcall *)(System_IO_MemoryStream_o *, _QWORD, const MethodInfo *))v5->klass->vtable._13_set_Position.methodPtr)(
     v5,
     0,
@@ -21533,12 +21516,12 @@ AdjustSdk_JSONNode_o *__noreturn AdjustSdk_JSONNode__LoadFromCompressedBase64(
   System_String_o *v4; // x0
   __int64 v5; // x0
 
-  v2 = sub_21FFC64(&System_Exception_TypeInfo);
-  v3 = (System_Exception_o *)sub_21FFEBC(v2);
-  v4 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v3, v4, 0);
-  v5 = sub_21FFC64(&Method_AdjustSdk_JSONNode_LoadFromCompressedBase64__);
-  sub_21FFD90(v3, v5);
+  v2 = sub_2213A74(&System_Exception_TypeInfo);
+  v3 = (System_Exception_o *)sub_2213CCC(v2);
+  v4 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v3, v4, 0);
+  v5 = sub_2213A74(&Method_AdjustSdk_JSONNode_LoadFromCompressedBase64__);
+  sub_2213BA0(v3, v5);
 }
 
 
@@ -21551,12 +21534,12 @@ AdjustSdk_JSONNode_o *__noreturn AdjustSdk_JSONNode__LoadFromCompressedFile(
   System_String_o *v4; // x0
   __int64 v5; // x0
 
-  v2 = sub_21FFC64(&System_Exception_TypeInfo);
-  v3 = (System_Exception_o *)sub_21FFEBC(v2);
-  v4 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v3, v4, 0);
-  v5 = sub_21FFC64(&Method_AdjustSdk_JSONNode_LoadFromCompressedFile__);
-  sub_21FFD90(v3, v5);
+  v2 = sub_2213A74(&System_Exception_TypeInfo);
+  v3 = (System_Exception_o *)sub_2213CCC(v2);
+  v4 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v3, v4, 0);
+  v5 = sub_2213A74(&Method_AdjustSdk_JSONNode_LoadFromCompressedFile__);
+  sub_2213BA0(v3, v5);
 }
 
 
@@ -21569,12 +21552,12 @@ AdjustSdk_JSONNode_o *__noreturn AdjustSdk_JSONNode__LoadFromCompressedStream(
   System_String_o *v4; // x0
   __int64 v5; // x0
 
-  v2 = sub_21FFC64(&System_Exception_TypeInfo);
-  v3 = (System_Exception_o *)sub_21FFEBC(v2);
-  v4 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v3, v4, 0);
-  v5 = sub_21FFC64(&Method_AdjustSdk_JSONNode_LoadFromCompressedStream__);
-  sub_21FFD90(v3, v5);
+  v2 = sub_2213A74(&System_Exception_TypeInfo);
+  v3 = (System_Exception_o *)sub_2213CCC(v2);
+  v4 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v3, v4, 0);
+  v5 = sub_2213A74(&Method_AdjustSdk_JSONNode_LoadFromCompressedStream__);
+  sub_2213BA0(v3, v5);
 }
 
 
@@ -21589,13 +21572,13 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__LoadFromStream(System_IO_Stream_o *aDa
   __int64 v9; // x0
   System_IO_BinaryReader_o *v11; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_59304D6 & 1) == 0 )
+  if ( (byte_5968676 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryReader_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    byte_59304D6 = 1;
+    sub_2213A60(&System_IO_BinaryReader_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    byte_5968676 = 1;
   }
-  v3 = (System_IO_BinaryReader_o *)sub_21FFEBC(System_IO_BinaryReader_TypeInfo);
+  v3 = (System_IO_BinaryReader_o *)sub_2213CCC(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v3, aData, 0);
   v11 = v3;
   v5 = AdjustSdk_JSONNode__Deserialize(v3, v4);
@@ -21618,7 +21601,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__LoadFromStream(System_IO_Stream_o *aDa
     else
     {
 LABEL_8:
-      v9 = sub_2237E2C(v11, System_IDisposable_TypeInfo, 0);
+      v9 = sub_224BC3C(v11, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v9)(v11, *(_QWORD *)(v9 + 8));
   }
@@ -21678,33 +21661,33 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Parse(System_String_o *aJSON, const Me
   uint16_t v51; // [xsp+8h] [xbp-68h] BYREF
   _WORD v52[2]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_59304D3 & 1) == 0 )
+  if ( (byte_5968673 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Stack_JSONNode__Peek__);
-    sub_21FFC50(&Method_System_Collections_Generic_Stack_JSONNode__Pop__);
-    sub_21FFC50(&Method_System_Collections_Generic_Stack_JSONNode__Push__);
-    sub_21FFC50(&Method_System_Collections_Generic_Stack_JSONNode___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Stack_JSONNode__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_Stack_JSONNode__TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_37/*"\b"*/);
-    sub_21FFC50(&StringLiteral_38/*"\t"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_86/*"\r"*/);
-    sub_21FFC50(&StringLiteral_85/*"\f"*/);
-    byte_59304D3 = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Stack_JSONNode__Peek__);
+    sub_2213A60(&Method_System_Collections_Generic_Stack_JSONNode__Pop__);
+    sub_2213A60(&Method_System_Collections_Generic_Stack_JSONNode__Push__);
+    sub_2213A60(&Method_System_Collections_Generic_Stack_JSONNode___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Stack_JSONNode__get_Count__);
+    sub_2213A60(&System_Collections_Generic_Stack_JSONNode__TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_37/*"\b"*/);
+    sub_2213A60(&StringLiteral_38/*"\t"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_86/*"\r"*/);
+    sub_2213A60(&StringLiteral_85/*"\f"*/);
+    byte_5968673 = 1;
   }
   v52[0] = 0;
   v51 = 0;
-  v3 = (System_Collections_Generic_Stack_T__o *)sub_21FFEBC(System_Collections_Generic_Stack_JSONNode__TypeInfo);
+  v3 = (System_Collections_Generic_Stack_T__o *)sub_2213CCC(System_Collections_Generic_Stack_JSONNode__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v3,
-    (const MethodInfo_3B293E4 *)Method_System_Collections_Generic_Stack_JSONNode___ctor__);
+    (const MethodInfo_3B5CB8C *)Method_System_Collections_Generic_Stack_JSONNode___ctor__);
   if ( !aJSON )
 LABEL_104:
-    sub_21FFECC(Chars, v5);
+    sub_2213CDC(Chars, v5);
   if ( aJSON->fields._stringLength >= 1 )
   {
     v6 = 0;
@@ -21727,14 +21710,14 @@ LABEL_104:
           {
 LABEL_60:
             v52[0] = System_String__get_Chars(aJSON, v8, 0);
-            if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-              j_il2cpp_runtime_class_init_0(qword_594C0B0, v28, v29);
+            if ( !*(_DWORD *)(qword_5984388 + 228) )
+              j_il2cpp_runtime_class_init_0(qword_5984388, v28, v29);
             v30 = System_Char__ToString((uint16_t)v52, 0);
-            v10 = System_String__Concat_75438412(v10, v30, 0);
+            v10 = System_String__Concat_75651716(v10, v30, 0);
             v6 = 1;
             goto LABEL_92;
           }
-          v14 = (AdjustSdk_JSONClass_o *)sub_21FFEBC(AdjustSdk_JSONClass_TypeInfo);
+          v14 = (AdjustSdk_JSONClass_o *)sub_2213CCC(AdjustSdk_JSONClass_TypeInfo);
           AdjustSdk_JSONClass___ctor(v14, v15);
           if ( !v3 )
             goto LABEL_104;
@@ -21756,12 +21739,12 @@ LABEL_60:
                   {
                     if ( v24 == 117 )
                     {
-                      v40 = System_String__Substring_75489544(aJSON, v8 + 2, 4, 0);
-                      v52[0] = System_Int32__Parse_76926212(v40, 512, 0);
-                      if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-                        j_il2cpp_runtime_class_init_0(qword_594C0B0, v41, v42);
+                      v40 = System_String__Substring_75702848(aJSON, v8 + 2, 4, 0);
+                      v52[0] = System_Int32__Parse_77139516(v40, 512, 0);
+                      if ( !*(_DWORD *)(qword_5984388 + 228) )
+                        j_il2cpp_runtime_class_init_0(qword_5984388, v41, v42);
                       v43 = System_Char__ToString((uint16_t)v52, 0);
-                      v10 = System_String__Concat_75438412(v10, v43, 0);
+                      v10 = System_String__Concat_75651716(v10, v43, 0);
                       v8 += 5;
                       v6 = 1;
                       goto LABEL_92;
@@ -21791,11 +21774,11 @@ LABEL_60:
                       goto LABEL_95;
                     }
 LABEL_80:
-                    if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-                      j_il2cpp_runtime_class_init_0(qword_594C0B0, v25, v26);
+                    if ( !*(_DWORD *)(qword_5984388 + 228) )
+                      j_il2cpp_runtime_class_init_0(qword_5984388, v25, v26);
                     v36 = System_Char__ToString((uint16_t)&v51, 0);
 LABEL_96:
-                    v10 = System_String__Concat_75438412(v10, v36, 0);
+                    v10 = System_String__Concat_75651716(v10, v36, 0);
                     v6 = 1;
 LABEL_97:
                     ++v8;
@@ -21819,14 +21802,14 @@ LABEL_34:
               goto LABEL_104;
             if ( !v3->fields._size )
             {
-              v45 = sub_21FFC64(&System_Exception_TypeInfo);
-              v46 = (System_Exception_o *)sub_21FFEBC(v45);
-              v47 = &StringLiteral_8498/*"JSON Parse: Too many closing brackets"*/;
+              v45 = sub_2213A74(&System_Exception_TypeInfo);
+              v46 = (System_Exception_o *)sub_2213CCC(v45);
+              v47 = &StringLiteral_8511/*"JSON Parse: Too many closing brackets"*/;
               goto LABEL_107;
             }
             System_Collections_Generic_Stack_object___Pop(
               v3,
-              (const MethodInfo_3B299B8 *)Method_System_Collections_Generic_Stack_JSONNode__Pop__);
+              (const MethodInfo_3B5D160 *)Method_System_Collections_Generic_Stack_JSONNode__Pop__);
             Chars = System_String__op_Inequality(v10, (System_String_o *)StringLiteral_1/*""*/, 0);
             if ( (Chars & 1) != 0 )
             {
@@ -21862,7 +21845,7 @@ LABEL_34:
 LABEL_87:
               v9 = System_Collections_Generic_Stack_object___Peek(
                      v3,
-                     (const MethodInfo_3B29974 *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
+                     (const MethodInfo_3B5D11C *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
 LABEL_91:
             v6 = 0;
             v10 = v7;
@@ -21870,7 +21853,7 @@ LABEL_91:
           }
           if ( (v6 & 1) != 0 )
             goto LABEL_60;
-          v14 = (AdjustSdk_JSONClass_o *)sub_21FFEBC(AdjustSdk_JSONArray_TypeInfo);
+          v14 = (AdjustSdk_JSONClass_o *)sub_2213CCC(AdjustSdk_JSONArray_TypeInfo);
           AdjustSdk_JSONArray___ctor((AdjustSdk_JSONArray_o *)v14, v31);
           if ( !v3 )
             goto LABEL_104;
@@ -21878,7 +21861,7 @@ LABEL_65:
           System_Collections_Generic_Stack_object___Push(
             v3,
             (Il2CppObject *)v14,
-            (const MethodInfo_3B29AB4 *)Method_System_Collections_Generic_Stack_JSONNode__Push__);
+            (const MethodInfo_3B5D25C *)Method_System_Collections_Generic_Stack_JSONNode__Push__);
           Chars = AdjustSdk_JSONNode__op_Equality((AdjustSdk_JSONNode_o *)v9, 0, v32);
           if ( (Chars & 1) == 0 )
           {
@@ -21893,7 +21876,7 @@ LABEL_65:
             {
               v37 = System_Collections_Generic_Stack_object___Peek(
                       v3,
-                      (const MethodInfo_3B29974 *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
+                      (const MethodInfo_3B5D11C *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
               ((void (__fastcall *)(Il2CppObject *, Il2CppObject *, const MethodInfo *))v9->klass->vtable[12].methodPtr)(
                 v9,
                 v37,
@@ -21903,7 +21886,7 @@ LABEL_65:
             {
               Chars = (unsigned __int64)System_Collections_Generic_Stack_object___Peek(
                                           v3,
-                                          (const MethodInfo_3B29974 *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
+                                          (const MethodInfo_3B5D11C *)Method_System_Collections_Generic_Stack_JSONNode__Peek__);
               if ( !v9 )
                 goto LABEL_104;
               ((void (__fastcall *)(Il2CppObject *, System_String_o *, unsigned __int64, const MethodInfo *))v9->klass->vtable[4].methodPtr)(
@@ -21946,10 +21929,10 @@ LABEL_47:
             {
 LABEL_50:
               v52[0] = System_String__get_Chars(aJSON, v8, 0);
-              if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-                j_il2cpp_runtime_class_init_0(qword_594C0B0, v21, v22);
+              if ( !*(_DWORD *)(qword_5984388 + 228) )
+                j_il2cpp_runtime_class_init_0(qword_5984388, v21, v22);
               v23 = System_Char__ToString((uint16_t)v52, 0);
-              v10 = System_String__Concat_75438412(v10, v23, 0);
+              v10 = System_String__Concat_75651716(v10, v23, 0);
               goto LABEL_92;
             }
           }
@@ -22004,14 +21987,14 @@ LABEL_92:
 LABEL_102:
   if ( (v6 & 1) != 0 )
   {
-    v48 = sub_21FFC64(&System_Exception_TypeInfo);
-    v46 = (System_Exception_o *)sub_21FFEBC(v48);
-    v47 = &StringLiteral_8497/*"JSON Parse: Quotation marks seems to be messed up."*/;
+    v48 = sub_2213A74(&System_Exception_TypeInfo);
+    v46 = (System_Exception_o *)sub_2213CCC(v48);
+    v47 = &StringLiteral_8510/*"JSON Parse: Quotation marks seems to be messed up."*/;
 LABEL_107:
-    v49 = (System_String_o *)sub_21FFC64(v47);
-    System_Exception___ctor_77161964(v46, v49, 0);
-    v50 = sub_21FFC64(&Method_AdjustSdk_JSONNode_Parse__);
-    sub_21FFD90(v46, v50);
+    v49 = (System_String_o *)sub_2213A74(v47);
+    System_Exception___ctor_77375268(v46, v49, 0);
+    v50 = sub_2213A74(&Method_AdjustSdk_JSONNode_Parse__);
+    sub_2213BA0(v46, v50);
   }
   return (AdjustSdk_JSONNode_o *)v9;
 }
@@ -22026,7 +22009,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove(
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove_36727972(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove_36809388(
         AdjustSdk_JSONNode_o *this,
         int32_t aIndex,
         const MethodInfo *method)
@@ -22035,7 +22018,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove_36727972(
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove_36727980(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__Remove_36809396(
         AdjustSdk_JSONNode_o *this,
         AdjustSdk_JSONNode_o *aNode,
         const MethodInfo *method)
@@ -22053,12 +22036,12 @@ System_String_o *__noreturn AdjustSdk_JSONNode__SaveToCompressedBase64(
   System_String_o *v4; // x0
   __int64 v5; // x0
 
-  v2 = sub_21FFC64(&System_Exception_TypeInfo);
-  v3 = (System_Exception_o *)sub_21FFEBC(v2);
-  v4 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v3, v4, 0);
-  v5 = sub_21FFC64(&Method_AdjustSdk_JSONNode_SaveToCompressedBase64__);
-  sub_21FFD90(v3, v5);
+  v2 = sub_2213A74(&System_Exception_TypeInfo);
+  v3 = (System_Exception_o *)sub_2213CCC(v2);
+  v4 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v3, v4, 0);
+  v5 = sub_2213A74(&Method_AdjustSdk_JSONNode_SaveToCompressedBase64__);
+  sub_2213BA0(v3, v5);
 }
 
 
@@ -22072,12 +22055,12 @@ void __noreturn AdjustSdk_JSONNode__SaveToCompressedFile(
   System_String_o *v5; // x0
   __int64 v6; // x0
 
-  v3 = sub_21FFC64(&System_Exception_TypeInfo);
-  v4 = (System_Exception_o *)sub_21FFEBC(v3);
-  v5 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v4, v5, 0);
-  v6 = sub_21FFC64(&Method_AdjustSdk_JSONNode_SaveToCompressedFile__);
-  sub_21FFD90(v4, v6);
+  v3 = sub_2213A74(&System_Exception_TypeInfo);
+  v4 = (System_Exception_o *)sub_2213CCC(v3);
+  v5 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v4, v5, 0);
+  v6 = sub_2213A74(&Method_AdjustSdk_JSONNode_SaveToCompressedFile__);
+  sub_2213BA0(v4, v6);
 }
 
 
@@ -22091,12 +22074,12 @@ void __noreturn AdjustSdk_JSONNode__SaveToCompressedStream(
   System_String_o *v5; // x0
   __int64 v6; // x0
 
-  v3 = sub_21FFC64(&System_Exception_TypeInfo);
-  v4 = (System_Exception_o *)sub_21FFEBC(v3);
-  v5 = (System_String_o *)sub_21FFC64(&StringLiteral_4171/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
-  System_Exception___ctor_77161964(v4, v5, 0);
-  v6 = sub_21FFC64(&Method_AdjustSdk_JSONNode_SaveToCompressedStream__);
-  sub_21FFD90(v4, v6);
+  v3 = sub_2213A74(&System_Exception_TypeInfo);
+  v4 = (System_Exception_o *)sub_2213CCC(v3);
+  v5 = (System_String_o *)sub_2213A74(&StringLiteral_4176/*"Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON"*/);
+  System_Exception___ctor_77375268(v4, v5, 0);
+  v6 = sub_2213A74(&Method_AdjustSdk_JSONNode_SaveToCompressedStream__);
+  sub_2213BA0(v4, v6);
 }
 
 
@@ -22104,13 +22087,13 @@ void AdjustSdk_JSONNode__SaveToStream(AdjustSdk_JSONNode_o *this, System_IO_Stre
 {
   System_IO_BinaryWriter_o *v5; // x21
 
-  if ( (byte_59304D4 & 1) == 0 )
+  if ( (byte_5968674 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryWriter_TypeInfo);
-    byte_59304D4 = 1;
+    sub_2213A60(&System_IO_BinaryWriter_TypeInfo);
+    byte_5968674 = 1;
   }
-  v5 = (System_IO_BinaryWriter_o *)sub_21FFEBC(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_76739708(v5, aData, 0);
+  v5 = (System_IO_BinaryWriter_o *)sub_2213CCC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_76953012(v5, aData, 0);
   ((void (__fastcall *)(AdjustSdk_JSONNode_o *, System_IO_BinaryWriter_o *, const MethodInfo *))this->klass->vtable._28_Serialize.methodPtr)(
     this,
     v5,
@@ -22129,26 +22112,26 @@ void AdjustSdk_JSONNode__Serialize(
 
 System_String_o *AdjustSdk_JSONNode__ToString(AdjustSdk_JSONNode_o *this, const MethodInfo *method)
 {
-  if ( (byte_59304CB & 1) == 0 )
+  if ( (byte_596866B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_8508/*"JSONNode"*/);
-    byte_59304CB = 1;
+    sub_2213A60(&StringLiteral_8521/*"JSONNode"*/);
+    byte_596866B = 1;
   }
-  return (System_String_o *)StringLiteral_8508/*"JSONNode"*/;
+  return (System_String_o *)StringLiteral_8521/*"JSONNode"*/;
 }
 
 
-System_String_o *AdjustSdk_JSONNode__ToString_36728392(
+System_String_o *AdjustSdk_JSONNode__ToString_36809808(
         AdjustSdk_JSONNode_o *this,
         System_String_o *aPrefix,
         const MethodInfo *method)
 {
-  if ( (byte_59304CC & 1) == 0 )
+  if ( (byte_596866C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_8508/*"JSONNode"*/);
-    byte_59304CC = 1;
+    sub_2213A60(&StringLiteral_8521/*"JSONNode"*/);
+    byte_596866C = 1;
   }
-  return (System_String_o *)StringLiteral_8508/*"JSONNode"*/;
+  return (System_String_o *)StringLiteral_8521/*"JSONNode"*/;
 }
 
 
@@ -22156,10 +22139,10 @@ AdjustSdk_JSONArray_o *AdjustSdk_JSONNode__get_AsArray(AdjustSdk_JSONNode_o *thi
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_59304CE & 1) == 0 )
+  if ( (byte_596866E & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONArray_TypeInfo);
-    byte_59304CE = 1;
+    sub_2213A60(&AdjustSdk_JSONArray_TypeInfo);
+    byte_596866E = 1;
   }
   if ( !this )
     return 0;
@@ -22186,8 +22169,8 @@ bool AdjustSdk_JSONNode__get_AsBool(AdjustSdk_JSONNode_o *this, const MethodInfo
   v6 = (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))klass->vtable._9_get_Value.methodPtr)(
                             this,
                             klass->vtable._9_get_Value.method);
-  if ( !*(_DWORD *)(qword_594C050 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C050, v4, v5);
+  if ( !*(_DWORD *)(qword_5984328 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984328, v4, v5);
   if ( System_Boolean__TryParse(v6, &result, 0) )
   {
     return result;
@@ -22263,10 +22246,10 @@ AdjustSdk_JSONClass_o *AdjustSdk_JSONNode__get_AsObject(AdjustSdk_JSONNode_o *th
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_59304CF & 1) == 0 )
+  if ( (byte_596866F & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONClass_TypeInfo);
-    byte_59304CF = 1;
+    sub_2213A60(&AdjustSdk_JSONClass_TypeInfo);
+    byte_596866F = 1;
   }
   if ( !this )
     return 0;
@@ -22284,21 +22267,17 @@ System_Collections_Generic_IEnumerable_JSONNode__o *AdjustSdk_JSONNode__get_Chil
         const MethodInfo *method)
 {
   __int64 v2; // x19
-  int32_t CurrentManagedThreadId; // w8
-  System_Collections_Generic_IEnumerable_JSONNode__o *result; // x0
 
-  if ( (byte_59304C9 & 1) == 0 )
+  if ( (byte_5968669 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
-    byte_59304C9 = 1;
+    sub_2213A60(&AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
+    byte_5968669 = 1;
   }
-  v2 = sub_21FFEBC(AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
+  v2 = sub_2213CCC(AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = -2;
-  CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
-  result = (System_Collections_Generic_IEnumerable_JSONNode__o *)v2;
-  *(_DWORD *)(v2 + 32) = CurrentManagedThreadId;
-  return result;
+  *(_DWORD *)(v2 + 32) = System_Environment__get_CurrentManagedThreadId(0);
+  return (System_Collections_Generic_IEnumerable_JSONNode__o *)v2;
 }
 
 
@@ -22314,17 +22293,17 @@ System_Collections_Generic_IEnumerable_JSONNode__o *AdjustSdk_JSONNode__get_Deep
 {
   __int64 v3; // x20
 
-  if ( (byte_59304CA & 1) == 0 )
+  if ( (byte_596866A & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
-    byte_59304CA = 1;
+    sub_2213A60(&AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
+    byte_596866A = 1;
   }
-  v3 = sub_21FFEBC(AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
+  v3 = sub_2213CCC(AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = this;
-  sub_21FFBF4(v3 + 40, this);
+  sub_2213A04(v3 + 40, this);
   return (System_Collections_Generic_IEnumerable_JSONNode__o *)v3;
 }
 
@@ -22338,7 +22317,7 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__get_Item(
 }
 
 
-AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__get_Item_36727780(
+AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__get_Item_36809196(
         AdjustSdk_JSONNode_o *this,
         System_String_o *aKey,
         const MethodInfo *method)
@@ -22349,10 +22328,10 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__get_Item_36727780(
 
 System_String_o *AdjustSdk_JSONNode__get_Value(AdjustSdk_JSONNode_o *this, const MethodInfo *method)
 {
-  if ( (byte_59304C7 & 1) == 0 )
+  if ( (byte_5968667 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59304C7 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5968667 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -22363,10 +22342,10 @@ bool AdjustSdk_JSONNode__op_Equality(AdjustSdk_JSONNode_o *a, Il2CppObject *b, c
   bool result; // w0
   __int64 naturalAligment; // x10
 
-  if ( (byte_59304D1 & 1) == 0 )
+  if ( (byte_5968671 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONLazyCreator_TypeInfo);
-    byte_59304D1 = 1;
+    sub_2213A60(&AdjustSdk_JSONLazyCreator_TypeInfo);
+    byte_5968671 = 1;
   }
   result = !b
         && a
@@ -22382,20 +22361,20 @@ AdjustSdk_JSONNode_o *AdjustSdk_JSONNode__op_Implicit(System_String_o *s, const 
 {
   Il2CppObject *v3; // x20
 
-  if ( (byte_59304D0 & 1) == 0 )
+  if ( (byte_5968670 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONData_TypeInfo);
-    byte_59304D0 = 1;
+    sub_2213A60(&AdjustSdk_JSONData_TypeInfo);
+    byte_5968670 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(AdjustSdk_JSONData_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(AdjustSdk_JSONData_TypeInfo);
   System_Object___ctor(v3, 0);
   v3[1].klass = (Il2CppClass *)s;
-  sub_21FFBF4(&v3[1], s);
+  sub_2213A04(&v3[1], s);
   return (AdjustSdk_JSONNode_o *)v3;
 }
 
 
-System_String_o *AdjustSdk_JSONNode__op_Implicit_36708380(AdjustSdk_JSONNode_o *d, const MethodInfo *method)
+System_String_o *AdjustSdk_JSONNode__op_Implicit_36789796(AdjustSdk_JSONNode_o *d, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
   _BOOL8 v4; // x0
@@ -22405,10 +22384,10 @@ System_String_o *AdjustSdk_JSONNode__op_Implicit_36708380(AdjustSdk_JSONNode_o *
   if ( v4 )
     return 0;
   if ( !d )
-    sub_21FFECC(v4, v5);
-  return (System_String_o *)((__int64 (__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))d->klass->vtable._9_get_Value.methodPtr)(
-                              d,
-                              d->klass->vtable._9_get_Value.method);
+    sub_2213CDC(v4, v5);
+  return ((System_String_o *(__fastcall *)(AdjustSdk_JSONNode_o *, const MethodInfo *))d->klass->vtable._9_get_Value.methodPtr)(
+           d,
+           d->klass->vtable._9_get_Value.method);
 }
 
 
@@ -22425,17 +22404,17 @@ void AdjustSdk_JSONNode__set_AsBool(AdjustSdk_JSONNode_o *this, bool value, cons
   __int64 *v5; // x8
 
   v4 = this;
-  if ( (byte_59304CD & 1) == 0 )
+  if ( (byte_596866D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_20265/*"false"*/);
-    this = (AdjustSdk_JSONNode_o *)sub_21FFC50(&StringLiteral_25478/*"true"*/);
-    byte_59304CD = 1;
+    sub_2213A60(&StringLiteral_20307/*"false"*/);
+    this = (AdjustSdk_JSONNode_o *)sub_2213A60(&StringLiteral_25526/*"true"*/);
+    byte_596866D = 1;
   }
   if ( !v4 )
-    sub_21FFECC(this, value);
-  v5 = &StringLiteral_25478/*"true"*/;
+    sub_2213CDC(this, value);
+  v5 = &StringLiteral_25526/*"true"*/;
   if ( !value )
-    v5 = &StringLiteral_20265/*"false"*/;
+    v5 = &StringLiteral_20307/*"false"*/;
   ((void (__fastcall *)(AdjustSdk_JSONNode_o *, __int64, const MethodInfo *))v4->klass->vtable._10_set_Value.methodPtr)(
     v4,
     *v5,
@@ -22495,7 +22474,7 @@ void AdjustSdk_JSONNode__set_Item(
 }
 
 
-void AdjustSdk_JSONNode__set_Item_36727788(
+void AdjustSdk_JSONNode__set_Item_36809204(
         AdjustSdk_JSONNode_o *this,
         System_String_o *aKey,
         AdjustSdk_JSONNode_o *value,
@@ -22538,10 +22517,10 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONNode__get_Chil
 {
   int32_t l__initialThreadId; // w20
 
-  if ( (byte_59304D8 & 1) == 0 )
+  if ( (byte_5968678 & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
-    byte_59304D8 = 1;
+    sub_2213A60(&AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
+    byte_5968678 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -22551,7 +22530,7 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONNode__get_Chil
   }
   else
   {
-    this = (AdjustSdk_JSONNode__get_Childs_d__17_o *)sub_21FFEBC(AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
+    this = (AdjustSdk_JSONNode__get_Childs_d__17_o *)sub_2213CCC(AdjustSdk_JSONNode__get_Childs_d__17_TypeInfo);
     System_Object___ctor((Il2CppObject *)this, 0);
     this->fields.__1__state = 0;
     this->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
@@ -22576,11 +22555,11 @@ void __noreturn AdjustSdk_JSONNode__get_Childs_d__17__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONNode__get_Childs_d__17_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONNode__get_Childs_d__17_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -22629,7 +22608,6 @@ bool AdjustSdk_JSONNode__get_DeepChilds_d__19__MoveNext(
   __int64 v13; // x0
   __int64 v14; // x1
   AdjustSdk_JSONNode__get_DeepChilds_d__19_o *v15; // x8
-  bool result; // w0
   struct System_Collections_Generic_IEnumerator_JSONNode__o *_7__wrap1; // x19
   System_Collections_Generic_IEnumerator_JSONNode__c *klass; // x8
   __int64 v19; // x9
@@ -22667,12 +22645,12 @@ bool AdjustSdk_JSONNode__get_DeepChilds_d__19__MoveNext(
 
   v2 = this;
   v50 = this;
-  if ( (byte_59304D9 & 1) == 0 )
+  if ( (byte_5968679 & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_JSONNode__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_JSONNode__TypeInfo);
-    this = (AdjustSdk_JSONNode__get_DeepChilds_d__19_o *)sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_59304D9 = 1;
+    sub_2213A60(&System_Collections_Generic_IEnumerable_JSONNode__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_JSONNode__TypeInfo);
+    this = (AdjustSdk_JSONNode__get_DeepChilds_d__19_o *)sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_5968679 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -22682,13 +22660,13 @@ bool AdjustSdk_JSONNode__get_DeepChilds_d__19__MoveNext(
   _4__this = v2->fields.__4__this;
   v2->fields.__1__state = -1;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   v5 = ((__int64 (__fastcall *)(struct AdjustSdk_JSONNode_o *, const MethodInfo *))_4__this->klass->vtable._16_get_Childs.methodPtr)(
          _4__this,
          _4__this->klass->vtable._16_get_Childs.method);
   v7 = v5;
   if ( !v5 )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   v8 = *(_QWORD *)v5;
   v9 = *(unsigned __int16 *)(*(_QWORD *)v5 + 302LL);
   if ( *(_WORD *)(*(_QWORD *)v5 + 302LL) )
@@ -22706,18 +22684,18 @@ bool AdjustSdk_JSONNode__get_DeepChilds_d__19__MoveNext(
   else
   {
 LABEL_11:
-    v11 = sub_2237E2C(v5, System_Collections_Generic_IEnumerable_JSONNode__TypeInfo, 0);
+    v11 = sub_224BC3C(v5, System_Collections_Generic_IEnumerable_JSONNode__TypeInfo, 0);
   }
   v12 = (*(__int64 (__fastcall **)(__int64, _QWORD))v11)(v7, *(_QWORD *)(v11 + 8));
   v50->fields.__7__wrap1 = (struct System_Collections_Generic_IEnumerator_JSONNode__o *)v12;
-  v13 = sub_21FFBF4(&v50->fields.__7__wrap1, v12);
+  v13 = sub_2213A04(&v50->fields.__7__wrap1, v12);
   v15 = v50;
   v50->fields.__1__state = -3;
   while ( 1 )
   {
     _7__wrap1 = v15->fields.__7__wrap1;
     if ( !_7__wrap1 )
-      sub_21FFECC(v13, v14);
+      sub_2213CDC(v13, v14);
     klass = _7__wrap1->klass;
     v19 = *(unsigned __int16 *)&_7__wrap1->klass->_2.rank;
     if ( *(_WORD *)&_7__wrap1->klass->_2.rank )
@@ -22735,7 +22713,7 @@ LABEL_11:
     else
     {
 LABEL_22:
-      v21 = sub_2237E2C(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0);
+      v21 = sub_224BC3C(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v21)(
             _7__wrap1,
@@ -22744,12 +22722,12 @@ LABEL_22:
     {
       AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally1(v50, v22);
       v50->fields.__7__wrap1 = 0;
-      sub_21FFBF4(&v50->fields.__7__wrap1, 0);
+      sub_2213A04(&v50->fields.__7__wrap1, 0);
       return 0;
     }
     v23 = v50->fields.__7__wrap1;
     if ( !v23 )
-      sub_21FFECC(v50, v22);
+      sub_2213CDC(v50, v22);
     v24 = v23->klass;
     v25 = *(unsigned __int16 *)&v23->klass->_2.rank;
     if ( *(_WORD *)&v23->klass->_2.rank )
@@ -22767,17 +22745,17 @@ LABEL_22:
     else
     {
 LABEL_30:
-      v27 = sub_2237E2C(v50->fields.__7__wrap1, System_Collections_Generic_IEnumerator_JSONNode__TypeInfo, 0);
+      v27 = sub_224BC3C(v50->fields.__7__wrap1, System_Collections_Generic_IEnumerator_JSONNode__TypeInfo, 0);
     }
     v28 = (AdjustSdk_JSONNode_o *)(*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v27)(
                                     v23,
                                     *(_QWORD *)(v27 + 8));
     if ( !v28 )
-      sub_21FFECC(0, v29);
+      sub_2213CDC(0, v29);
     DeepChilds = AdjustSdk_JSONNode__get_DeepChilds(v28, v29);
     v32 = DeepChilds;
     if ( !DeepChilds )
-      sub_21FFECC(0, v31);
+      sub_2213CDC(0, v31);
     v33 = DeepChilds->klass;
     v34 = *(unsigned __int16 *)&DeepChilds->klass->_2.rank;
     if ( *(_WORD *)&DeepChilds->klass->_2.rank )
@@ -22795,19 +22773,19 @@ LABEL_30:
     else
     {
 LABEL_38:
-      v36 = sub_2237E2C(DeepChilds, System_Collections_Generic_IEnumerable_JSONNode__TypeInfo, 0);
+      v36 = sub_224BC3C(DeepChilds, System_Collections_Generic_IEnumerable_JSONNode__TypeInfo, 0);
     }
     v37 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_JSONNode__o *, _QWORD))v36)(
             v32,
             *(_QWORD *)(v36 + 8));
     v50->fields.__7__wrap2 = (struct System_Collections_Generic_IEnumerator_JSONNode__o *)v37;
-    this = (AdjustSdk_JSONNode__get_DeepChilds_d__19_o *)sub_21FFBF4(&v50->fields.__7__wrap2, v37);
+    this = (AdjustSdk_JSONNode__get_DeepChilds_d__19_o *)sub_2213A04(&v50->fields.__7__wrap2, v37);
     v2 = v50;
 LABEL_41:
     _7__wrap2 = v2->fields.__7__wrap2;
     v2->fields.__1__state = -4;
     if ( !_7__wrap2 )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     v39 = _7__wrap2->klass;
     v40 = *(unsigned __int16 *)&_7__wrap2->klass->_2.rank;
     if ( *(_WORD *)&_7__wrap2->klass->_2.rank )
@@ -22825,7 +22803,7 @@ LABEL_41:
     else
     {
 LABEL_46:
-      v42 = sub_2237E2C(_7__wrap2, System_Collections_IEnumerator_TypeInfo, 0);
+      v42 = sub_224BC3C(_7__wrap2, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v42)(
             _7__wrap2,
@@ -22834,12 +22812,12 @@ LABEL_46:
       break;
     AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally2(v50, v43);
     v50->fields.__7__wrap2 = 0;
-    v13 = sub_21FFBF4(&v50->fields.__7__wrap2, 0);
+    v13 = sub_2213A04(&v50->fields.__7__wrap2, 0);
     v15 = v50;
   }
   v44 = v50->fields.__7__wrap2;
   if ( !v44 )
-    sub_21FFECC(v50, v43);
+    sub_2213CDC(v50, v43);
   v45 = v44->klass;
   v46 = *(unsigned __int16 *)&v44->klass->_2.rank;
   if ( *(_WORD *)&v44->klass->_2.rank )
@@ -22857,16 +22835,15 @@ LABEL_46:
   else
   {
 LABEL_56:
-    v48 = sub_2237E2C(v50->fields.__7__wrap2, System_Collections_Generic_IEnumerator_JSONNode__TypeInfo, 0);
+    v48 = sub_224BC3C(v50->fields.__7__wrap2, System_Collections_Generic_IEnumerator_JSONNode__TypeInfo, 0);
   }
   v49 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v48)(
           v44,
           *(_QWORD *)(v48 + 8));
   v50->fields.__2__current = (struct AdjustSdk_JSONNode_o *)v49;
-  sub_21FFBF4(&v50->fields.__2__current, v49);
-  result = 1;
+  sub_2213A04(&v50->fields.__2__current, v49);
   v50->fields.__1__state = 1;
-  return result;
+  return 1;
 }
 
 
@@ -22879,10 +22856,10 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONNode__get_Deep
   int32_t CurrentManagedThreadId; // w0
   struct AdjustSdk_JSONNode_o *_4__this; // x1
 
-  if ( (byte_59304DC & 1) == 0 )
+  if ( (byte_596867C & 1) == 0 )
   {
-    sub_21FFC50(&AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
-    byte_59304DC = 1;
+    sub_2213A60(&AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
+    byte_596867C = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -22892,14 +22869,14 @@ System_Collections_Generic_IEnumerator_JSONNode__o *AdjustSdk_JSONNode__get_Deep
   }
   else
   {
-    v4 = sub_21FFEBC(AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
+    v4 = sub_2213CCC(AdjustSdk_JSONNode__get_DeepChilds_d__19_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     *(_DWORD *)(v4 + 16) = 0;
     CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     *(_DWORD *)(v4 + 32) = CurrentManagedThreadId;
     *(_QWORD *)(v4 + 40) = _4__this;
-    sub_21FFBF4(v4 + 40, _4__this);
+    sub_2213A04(v4 + 40, _4__this);
     return (System_Collections_Generic_IEnumerator_JSONNode__o *)v4;
   }
   return (System_Collections_Generic_IEnumerator_JSONNode__o *)this;
@@ -22922,11 +22899,11 @@ void __noreturn AdjustSdk_JSONNode__get_DeepChilds_d__19__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_AdjustSdk_JSONNode__get_DeepChilds_d__19_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_AdjustSdk_JSONNode__get_DeepChilds_d__19_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -22970,10 +22947,10 @@ void AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_59304DA & 1) == 0 )
+  if ( (byte_596867A & 1) == 0 )
   {
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    byte_59304DA = 1;
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    byte_596867A = 1;
   }
   _7__wrap1 = this->fields.__7__wrap1;
   this->fields.__1__state = -1;
@@ -22996,7 +22973,7 @@ void AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally1(
     else
     {
 LABEL_8:
-      v7 = sub_2237E2C(_7__wrap1, System_IDisposable_TypeInfo, 0);
+      v7 = sub_224BC3C(_7__wrap1, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v7)(
       _7__wrap1,
@@ -23015,10 +22992,10 @@ void AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally2(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_59304DB & 1) == 0 )
+  if ( (byte_596867B & 1) == 0 )
   {
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    byte_59304DB = 1;
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    byte_596867B = 1;
   }
   _7__wrap2 = this->fields.__7__wrap2;
   this->fields.__1__state = -3;
@@ -23041,7 +23018,7 @@ void AdjustSdk_JSONNode__get_DeepChilds_d__19____m__Finally2(
     else
     {
 LABEL_8:
-      v7 = sub_2237E2C(_7__wrap2, System_IDisposable_TypeInfo, 0);
+      v7 = sub_224BC3C(_7__wrap2, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct System_Collections_Generic_IEnumerator_JSONNode__o *, _QWORD))v7)(
       _7__wrap2,

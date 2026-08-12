@@ -13,20 +13,20 @@ void EventChangePassiveSkillRequest__beginRequest(
         int32_t skillId,
         const MethodInfo *method)
 {
-  if ( (byte_593A201 & 1) == 0 )
+  if ( (byte_59723DE & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25091/*"svtId"*/);
-    sub_21FFC50(&StringLiteral_19995/*"eventId"*/);
-    sub_21FFC50(&StringLiteral_22016/*"itemId"*/);
-    sub_21FFC50(&StringLiteral_24709/*"skillId"*/);
-    sub_21FFC50(&StringLiteral_25511/*"type"*/);
-    byte_593A201 = 1;
+    sub_2213A60(&StringLiteral_25139/*"svtId"*/);
+    sub_2213A60(&StringLiteral_20037/*"eventId"*/);
+    sub_2213A60(&StringLiteral_22059/*"itemId"*/);
+    sub_2213A60(&StringLiteral_24757/*"skillId"*/);
+    sub_2213A60(&StringLiteral_25559/*"type"*/);
+    byte_59723DE = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25511/*"type"*/, skillChangeType, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19995/*"eventId"*/, eventId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25091/*"svtId"*/, svtId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22016/*"itemId"*/, itemId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24709/*"skillId"*/, skillId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25559/*"type"*/, skillChangeType, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20037/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25139/*"svtId"*/, svtId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22059/*"itemId"*/, itemId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24757/*"skillId"*/, skillId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -37,16 +37,16 @@ System_String_o *EventChangePassiveSkillRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A200 & 1) == 0 )
+  if ( (byte_59723DD & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_19974/*"event/changePassiveSkill"*/);
-    byte_593A200 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20016/*"event/changePassiveSkill"*/);
+    byte_59723DD = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_19974/*"event/changePassiveSkill"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20016/*"event/changePassiveSkill"*/, 0);
 }
 
 
@@ -61,11 +61,11 @@ void EventChangePassiveSkillRequest__requestCompleted(
   System_String_o *v8; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_593A202 & 1) == 0 )
+  if ( (byte_59723DF & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    byte_593A202 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    byte_59723DF = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
@@ -73,7 +73,7 @@ void EventChangePassiveSkillRequest__requestCompleted(
   if ( v5 )
   {
     v6 = v5;
-    v7 = ResponseData__checkError_51190916(v5, 0);
+    v7 = ResponseData__checkError_51257228(v5, 0);
     v8 = 0;
     if ( v7 )
     {

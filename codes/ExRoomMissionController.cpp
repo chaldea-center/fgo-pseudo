@@ -17,21 +17,21 @@ void ExRoomMissionController___ctor(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5932DAA & 1) == 0 )
+  if ( (byte_596AEAE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
-    byte_5932DAA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+    byte_596AEAE = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
   this->fields.outputs = (struct System_Collections_Generic_List_ExRoomMissionListOutput__o *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.outputs, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.outputs, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.exRoomMissionRepository = repository;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)repository, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)repository, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -49,11 +49,11 @@ void ExRoomMissionController__ApplyReceivedResult(
   struct IExRoomMissionRepository_o *exRoomMissionRepository; // x8
 
   v4 = this;
-  if ( (byte_5932DB1 & 1) == 0 )
+  if ( (byte_596AEB5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
-    this = (ExRoomMissionController_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-    byte_5932DB1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
+    this = (ExRoomMissionController_o *)sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+    byte_596AEB5 = 1;
   }
   if ( result )
   {
@@ -67,7 +67,7 @@ void ExRoomMissionController__ApplyReceivedResult(
         if ( (__int64)v6 >= (int)max_length_low )
           break;
         if ( v6 >= max_length_low )
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         this = (ExRoomMissionController_o *)v4->fields.outputs;
         if ( this )
         {
@@ -80,7 +80,7 @@ void ExRoomMissionController__ApplyReceivedResult(
             this = (ExRoomMissionController_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)this,
                                                   v8,
-                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
             if ( !this )
               goto LABEL_20;
             exRoomMissionRepository = this->fields.exRoomMissionRepository;
@@ -99,10 +99,10 @@ void ExRoomMissionController__ApplyReceivedResult(
             this = (ExRoomMissionController_o *)System_Collections_Generic_List_object___get_Item(
                                                   (System_Collections_Generic_List_object__o *)this,
                                                   v8,
-                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
             if ( this )
             {
-              HIDWORD(this[1].klass) = 4;
+              *((_DWORD *)this + 9) = 4;
 LABEL_19:
               ReceivedMissionIds_k__BackingField = result->fields._ReceivedMissionIds_k__BackingField;
               ++v6;
@@ -112,7 +112,7 @@ LABEL_19:
           }
         }
 LABEL_20:
-        sub_21FFECC(this, result);
+        sub_2213CDC(this, result);
       }
     }
   }
@@ -127,7 +127,7 @@ int32_t ExRoomMissionController__GetStatusOrder(
   if ( (unsigned int)status > 4 )
     return 3;
   else
-    return dword_ED0010[status];
+    return dword_ED9140[status];
 }
 
 
@@ -146,14 +146,14 @@ int32_t ExRoomMissionController__IExRoomMissionController_AdvanceFilter(
   unsigned int v10; // w19
 
   v4 = this;
-  if ( (byte_5932DAD & 1) == 0 )
+  if ( (byte_596AEB1 & 1) == 0 )
   {
-    this = (ExRoomMissionController_o *)sub_21FFC50(&IExRoomMissionRepository_TypeInfo);
-    byte_5932DAD = 1;
+    this = (ExRoomMissionController_o *)sub_2213A60(&IExRoomMissionRepository_TypeInfo);
+    byte_596AEB1 = 1;
   }
   exRoomMissionRepository = v4->fields.exRoomMissionRepository;
   if ( !exRoomMissionRepository )
-    sub_21FFECC(this, *(_QWORD *)&currentFilter);
+    sub_2213CDC(this, *(_QWORD *)&currentFilter);
   klass = exRoomMissionRepository->klass;
   v7 = *(unsigned __int16 *)&exRoomMissionRepository->klass->_2.rank;
   if ( *(_WORD *)&exRoomMissionRepository->klass->_2.rank )
@@ -171,7 +171,7 @@ int32_t ExRoomMissionController__IExRoomMissionController_AdvanceFilter(
   else
   {
 LABEL_8:
-    v9 = sub_2237E2C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 3);
+    v9 = sub_224BC3C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 3);
   }
   if ( (unsigned int)currentFilter < 3 )
     v10 = currentFilter + 1;
@@ -206,30 +206,30 @@ System_Collections_Generic_List_ExRoomMissionListOutput__o *ExRoomMissionControl
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_5932DAC & 1) == 0 )
+  if ( (byte_596AEB0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
-    byte_5932DAC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+    byte_596AEB0 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
   outputs = this->fields.outputs;
   if ( !outputs )
 LABEL_21:
-    sub_21FFECC(outputs, v6);
+    sub_2213CDC(outputs, v6);
   v9 = 0;
   while ( v9 < *((_DWORD *)outputs + 6) )
   {
     outputs = System_Collections_Generic_List_object___get_Item(
                 (System_Collections_Generic_List_object__o *)outputs,
                 v9,
-                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
     if ( !outputs )
       goto LABEL_21;
     v15 = *((_DWORD *)outputs + 9);
@@ -261,14 +261,14 @@ LABEL_21:
       System_Collections_Generic_List_object___AddWithResize(
         v5,
         (Il2CppObject *)outputs,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
       v19 = &items->obj.klass + size;
       v5->fields._size = size + 1;
       v19[4] = v6;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v7, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v7, v11, v12, v13, v14);
     }
 LABEL_20:
     outputs = this->fields.outputs;
@@ -306,30 +306,30 @@ System_Collections_Generic_List_ExRoomMissionListOutput__o *ExRoomMissionControl
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_5932DB3 & 1) == 0 )
+  if ( (byte_596AEB7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
-    byte_5932DB3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+    byte_596AEB7 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionListOutput__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionListOutput___ctor__);
   outputs = this->fields.outputs;
   if ( !outputs )
 LABEL_21:
-    sub_21FFECC(outputs, v6);
+    sub_2213CDC(outputs, v6);
   v8 = 0;
   while ( v8 < *((_DWORD *)outputs + 6) )
   {
     outputs = System_Collections_Generic_List_object___get_Item(
                 (System_Collections_Generic_List_object__o *)outputs,
                 v8,
-                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
     if ( !outputs )
       goto LABEL_21;
     v15 = *((_DWORD *)outputs + 9);
@@ -361,14 +361,14 @@ LABEL_21:
       System_Collections_Generic_List_object___AddWithResize(
         v5,
         (Il2CppObject *)outputs,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
       v19 = &items->obj.klass + size;
       v5->fields._size = size + 1;
       v19[4] = v6;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v9, v10, v11, v12, v13, v14);
     }
 LABEL_20:
     outputs = this->fields.outputs;
@@ -407,23 +407,23 @@ void ExRoomMissionController__IExRoomMissionController_Initialize(
   int32_t *p_offset; // x10
   __int64 v25; // x0
 
-  if ( (byte_5932DAB & 1) == 0 )
+  if ( (byte_596AEAF & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_List_ExRoomMissionListOutput___TypeInfo);
-    sub_21FFC50(&IExRoomMissionRepository_TypeInfo);
-    sub_21FFC50(&Method_ExRoomMissionController___c__DisplayClass3_0__IExRoomMissionController_Initialize_b__0__);
-    sub_21FFC50(&ExRoomMissionController___c__DisplayClass3_0_TypeInfo);
-    byte_5932DAB = 1;
+    sub_2213A60(&System_Action_List_ExRoomMissionListOutput___TypeInfo);
+    sub_2213A60(&IExRoomMissionRepository_TypeInfo);
+    sub_2213A60(&Method_ExRoomMissionController___c__DisplayClass3_0__IExRoomMissionController_Initialize_b__0__);
+    sub_2213A60(&ExRoomMissionController___c__DisplayClass3_0_TypeInfo);
+    byte_596AEAF = 1;
   }
-  v5 = sub_21FFEBC(ExRoomMissionController___c__DisplayClass3_0_TypeInfo);
+  v5 = sub_2213CCC(ExRoomMissionController___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_QWORD *)(v5 + 24) = onCompleted,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)onCompleted, v14, v15, v16, v17, v18, v19),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)onCompleted, v14, v15, v16, v17, v18, v19),
         exRoomMissionRepository = this->fields.exRoomMissionRepository,
-        v21 = (System_Action_object__o *)sub_21FFEBC(System_Action_List_ExRoomMissionListOutput___TypeInfo),
+        v21 = (System_Action_object__o *)sub_2213CCC(System_Action_List_ExRoomMissionListOutput___TypeInfo),
         System_Action_object____ctor(
           v21,
           (Il2CppObject *)v5,
@@ -431,7 +431,7 @@ void ExRoomMissionController__IExRoomMissionController_Initialize(
           0),
         !exRoomMissionRepository) )
   {
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   klass = exRoomMissionRepository->klass;
   v23 = *(unsigned __int16 *)&exRoomMissionRepository->klass->_2.rank;
@@ -450,7 +450,7 @@ void ExRoomMissionController__IExRoomMissionController_Initialize(
   else
   {
 LABEL_9:
-    v25 = sub_2237E2C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 0);
+    v25 = sub_224BC3C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 0);
   }
   (*(void (__fastcall **)(struct IExRoomMissionRepository_o *, System_Action_object__o *, _QWORD))v25)(
     exRoomMissionRepository,
@@ -471,14 +471,14 @@ int32_t ExRoomMissionController__IExRoomMissionController_LoadFilter(
   __int64 v7; // x0
 
   v2 = this;
-  if ( (byte_5932DB0 & 1) == 0 )
+  if ( (byte_596AEB4 & 1) == 0 )
   {
-    this = (ExRoomMissionController_o *)sub_21FFC50(&IExRoomMissionRepository_TypeInfo);
-    byte_5932DB0 = 1;
+    this = (ExRoomMissionController_o *)sub_2213A60(&IExRoomMissionRepository_TypeInfo);
+    byte_596AEB4 = 1;
   }
   exRoomMissionRepository = v2->fields.exRoomMissionRepository;
   if ( !exRoomMissionRepository )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   klass = exRoomMissionRepository->klass;
   v5 = *(unsigned __int16 *)&exRoomMissionRepository->klass->_2.rank;
   if ( *(_WORD *)&exRoomMissionRepository->klass->_2.rank )
@@ -496,9 +496,9 @@ int32_t ExRoomMissionController__IExRoomMissionController_LoadFilter(
   else
   {
 LABEL_8:
-    v7 = sub_2237E2C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 2);
+    v7 = sub_224BC3C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 2);
   }
-  return (*(__int64 (__fastcall **)(struct IExRoomMissionRepository_o *, _QWORD))v7)(
+  return (*(int32_t (__fastcall **)(struct IExRoomMissionRepository_o *, _QWORD))v7)(
            exRoomMissionRepository,
            *(_QWORD *)(v7 + 8));
 }
@@ -518,14 +518,14 @@ void ExRoomMissionController__IExRoomMissionController_ReceiveSingle(
   ExRoomMissionReceiveOutput_o *v11; // x20
   const MethodInfo *v12; // x6
 
-  if ( (byte_5932DAE & 1) == 0 )
+  if ( (byte_596AEB2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
-    sub_21FFC50(&ExRoomMissionReceiveOutput_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-    byte_5932DAE = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
+    sub_2213A60(&ExRoomMissionReceiveOutput_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+    byte_596AEB2 = 1;
   }
   outputs = (System_Collections_Generic_List_object__o *)this->fields.outputs;
   if ( !outputs )
@@ -538,7 +538,7 @@ void ExRoomMissionController__IExRoomMissionController_ReceiveSingle(
     outputs = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              outputs,
                                                              v8,
-                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+                                                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
     if ( !outputs )
       goto LABEL_10;
     items = outputs->fields._items;
@@ -554,20 +554,20 @@ void ExRoomMissionController__IExRoomMissionController_ReceiveSingle(
   if ( HIDWORD(outputs->fields._syncRoot) != 3 )
   {
 LABEL_15:
-    v11 = (ExRoomMissionReceiveOutput_o *)sub_21FFEBC(ExRoomMissionReceiveOutput_TypeInfo);
+    v11 = (ExRoomMissionReceiveOutput_o *)sub_2213CCC(ExRoomMissionReceiveOutput_TypeInfo);
     ExRoomMissionReceiveOutput___ctor(v11, 0, 0, 0, 0, 0, v12);
     ActionExtensions__Call_object_(
       (System_Action_T__o *)onReceived,
       (Il2CppObject *)v11,
-      (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
+      (const MethodInfo_36FFECC *)Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
     return;
   }
-  outputs = (System_Collections_Generic_List_object__o *)sub_21FFD10(int___TypeInfo, 1);
+  outputs = (System_Collections_Generic_List_object__o *)sub_2213B20(int___TypeInfo, 1);
   if ( !outputs )
 LABEL_10:
-    sub_21FFECC(outputs, *(_QWORD *)&missionId);
+    sub_2213CDC(outputs, *(_QWORD *)&missionId);
   if ( !outputs->fields._size )
-    sub_21FFED4(outputs);
+    sub_2213CE4(outputs);
   LODWORD(outputs->fields._syncRoot) = missionId;
   ExRoomMissionController__ReceiveAllInternal(this, (System_Int32_array *)outputs, onReceived, v10);
 }
@@ -626,23 +626,23 @@ void ExRoomMissionController__ReceiveAllInternal(
   IExRoomMissionRepository_c **p_offset; // x10
   __int64 v27; // x0
 
-  if ( (byte_5932DAF & 1) == 0 )
+  if ( (byte_596AEB3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ExRoomMissionReceiveOutput__TypeInfo);
-    sub_21FFC50(&IExRoomMissionRepository_TypeInfo);
-    sub_21FFC50(&Method_ExRoomMissionController___c__DisplayClass8_0__ReceiveAllInternal_b__0__);
-    sub_21FFC50(&ExRoomMissionController___c__DisplayClass8_0_TypeInfo);
-    byte_5932DAF = 1;
+    sub_2213A60(&System_Action_ExRoomMissionReceiveOutput__TypeInfo);
+    sub_2213A60(&IExRoomMissionRepository_TypeInfo);
+    sub_2213A60(&Method_ExRoomMissionController___c__DisplayClass8_0__ReceiveAllInternal_b__0__);
+    sub_2213A60(&ExRoomMissionController___c__DisplayClass8_0_TypeInfo);
+    byte_596AEB3 = 1;
   }
-  v7 = sub_21FFEBC(ExRoomMissionController___c__DisplayClass8_0_TypeInfo);
+  v7 = sub_2213CCC(ExRoomMissionController___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15),
         *(_QWORD *)(v7 + 24) = onReceived,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)onReceived, v16, v17, v18, v19, v20, v21),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)onReceived, v16, v17, v18, v19, v20, v21),
         exRoomMissionRepository = this->fields.exRoomMissionRepository,
-        v23 = (System_Action_object__o *)sub_21FFEBC(System_Action_ExRoomMissionReceiveOutput__TypeInfo),
+        v23 = (System_Action_object__o *)sub_2213CCC(System_Action_ExRoomMissionReceiveOutput__TypeInfo),
         System_Action_object____ctor(
           v23,
           (Il2CppObject *)v7,
@@ -650,7 +650,7 @@ void ExRoomMissionController__ReceiveAllInternal(
           0),
         !exRoomMissionRepository) )
   {
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
   klass = exRoomMissionRepository->klass;
   v25 = *(unsigned __int16 *)&exRoomMissionRepository->klass->_2.rank;
@@ -669,7 +669,7 @@ void ExRoomMissionController__ReceiveAllInternal(
   else
   {
 LABEL_9:
-    v27 = sub_2237E2C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 1);
+    v27 = sub_224BC3C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 1);
   }
   (*(void (__fastcall **)(struct IExRoomMissionRepository_o *, System_Int32_array *, System_Action_object__o *, _QWORD))v27)(
     exRoomMissionRepository,
@@ -698,14 +698,14 @@ void ExRoomMissionController__SortOutputs(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5932DB2 & 1) == 0 )
+  if ( (byte_596AEB6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Comparison_ExRoomMissionListOutput__TypeInfo);
-    sub_21FFC50(&Method_ExRoomMissionController__SortOutputs_b__12_1__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Sort__);
-    sub_21FFC50(&Method_ExRoomMissionController___c__SortOutputs_b__12_0__);
-    sub_21FFC50(&ExRoomMissionController___c_TypeInfo);
-    byte_5932DB2 = 1;
+    sub_2213A60(&System_Comparison_ExRoomMissionListOutput__TypeInfo);
+    sub_2213A60(&Method_ExRoomMissionController__SortOutputs_b__12_1__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Sort__);
+    sub_2213A60(&Method_ExRoomMissionController___c__SortOutputs_b__12_0__);
+    sub_2213A60(&ExRoomMissionController___c_TypeInfo);
+    byte_596AEB6 = 1;
   }
   if ( filter == 1 )
   {
@@ -725,19 +725,19 @@ void ExRoomMissionController__SortOutputs(
         static_fields = ExRoomMissionController___c_TypeInfo->static_fields;
       }
       v10 = (Il2CppObject *)static_fields->__9;
-      _9__12_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_ExRoomMissionListOutput__TypeInfo);
+      _9__12_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_ExRoomMissionListOutput__TypeInfo);
       System_Comparison_object____ctor(_9__12_0, v10, Method_ExRoomMissionController___c__SortOutputs_b__12_0__, 0);
       v11 = ExRoomMissionController___c_TypeInfo->static_fields;
       v11->__9__12_0 = (struct System_Comparison_ExRoomMissionListOutput__o *)_9__12_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->__9__12_0, (int32_t)_9__12_0, v12, v13, v14, v15, v16, v17);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->__9__12_0, (int32_t)_9__12_0, v12, v13, v14, v15, v16, v17);
     }
     if ( !outputsToSort )
 LABEL_11:
-      sub_21FFECC(v7, outputsToSort);
+      sub_2213CDC(v7, outputsToSort);
   }
   else
   {
-    _9__12_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_ExRoomMissionListOutput__TypeInfo);
+    _9__12_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_ExRoomMissionListOutput__TypeInfo);
     System_Comparison_object____ctor(
       _9__12_0,
       (Il2CppObject *)this,
@@ -746,10 +746,10 @@ LABEL_11:
     if ( !outputsToSort )
       goto LABEL_11;
   }
-  System_Collections_Generic_List_object___Sort_71636404(
+  System_Collections_Generic_List_object___Sort_71849708(
     (System_Collections_Generic_List_object__o *)outputsToSort,
     _9__12_0,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__Sort__);
 }
 
 
@@ -775,7 +775,7 @@ int32_t ExRoomMissionController___SortOutputs_b__12_1(
   if ( !a )
     goto LABEL_20;
   Status_k__BackingField = (unsigned int)a->fields._Status_k__BackingField;
-  v7 = (unsigned int)Status_k__BackingField > 4 ? 3 : dword_ED0010[Status_k__BackingField];
+  v7 = (unsigned int)Status_k__BackingField > 4 ? 3 : dword_ED9140[Status_k__BackingField];
   v17 = v7;
   if ( !b )
     goto LABEL_20;
@@ -783,8 +783,8 @@ int32_t ExRoomMissionController___SortOutputs_b__12_1(
   if ( (unsigned int)v8 > 4 )
     v9 = 3;
   else
-    v9 = dword_ED0010[v8];
-  this = (ExRoomMissionController_o *)System_Int32__CompareTo_76925088((int32_t)&v17, v9, 0);
+    v9 = dword_ED9140[v8];
+  this = (ExRoomMissionController_o *)System_Int32__CompareTo_77138392((int32_t)&v17, v9, 0);
   if ( !(_DWORD)this )
   {
     EventMissionEntity_k__BackingField = a->fields._EventMissionEntity_k__BackingField;
@@ -793,7 +793,7 @@ int32_t ExRoomMissionController___SortOutputs_b__12_1(
     v11 = b->fields._EventMissionEntity_k__BackingField;
     if ( !v11 )
       goto LABEL_20;
-    this = (ExRoomMissionController_o *)System_Int32__CompareTo_76925088(
+    this = (ExRoomMissionController_o *)System_Int32__CompareTo_77138392(
                                           (_DWORD)EventMissionEntity_k__BackingField + 92,
                                           v11->fields.priority,
                                           0);
@@ -805,7 +805,7 @@ int32_t ExRoomMissionController___SortOutputs_b__12_1(
       v13 = b->fields._EventMissionEntity_k__BackingField;
       if ( !v13 )
         goto LABEL_20;
-      this = (ExRoomMissionController_o *)System_Int32__CompareTo_76925088((_DWORD)v12 + 16, v13->fields.id, 0);
+      this = (ExRoomMissionController_o *)System_Int32__CompareTo_77138392((_DWORD)v12 + 16, v13->fields.id, 0);
       if ( !(_DWORD)this )
       {
         v14 = a->fields._EventMissionEntity_k__BackingField;
@@ -814,12 +814,12 @@ int32_t ExRoomMissionController___SortOutputs_b__12_1(
           v15 = b->fields._EventMissionEntity_k__BackingField;
           if ( v15 )
           {
-            LODWORD(this) = System_Int32__CompareTo_76925088((_DWORD)v14 + 32, v15->fields.dispNo, 0);
+            LODWORD(this) = System_Int32__CompareTo_77138392((_DWORD)v14 + 32, v15->fields.dispNo, 0);
             return (int)this;
           }
         }
 LABEL_20:
-        sub_21FFECC(this, a);
+        sub_2213CDC(this, a);
       }
     }
   }
@@ -837,15 +837,15 @@ void ExRoomMissionController___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5932DB4 & 1) == 0 )
+  if ( (byte_596AEB8 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionController___c_TypeInfo);
-    byte_5932DB4 = 1;
+    sub_2213A60(&ExRoomMissionController___c_TypeInfo);
+    byte_596AEB8 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ExRoomMissionController___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ExRoomMissionController___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ExRoomMissionController___c_TypeInfo->static_fields->__9 = (struct ExRoomMissionController___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ExRoomMissionController___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -886,7 +886,7 @@ int32_t ExRoomMissionController___c___SortOutputs_b__12_0(
   v7 = b->fields._EventMissionEntity_k__BackingField;
   if ( !v7 )
     goto LABEL_13;
-  this = (ExRoomMissionController___c_o *)System_Int64__CompareTo_76929328(
+  this = (ExRoomMissionController___c_o *)System_Int64__CompareTo_77142632(
                                             (int64_t)&EventMissionEntity_k__BackingField->fields.startedAt,
                                             v7->fields.startedAt,
                                             0);
@@ -898,14 +898,14 @@ int32_t ExRoomMissionController___c___SortOutputs_b__12_0(
   v9 = b->fields._EventMissionEntity_k__BackingField;
   if ( !v9 )
     goto LABEL_13;
-  this = (ExRoomMissionController___c_o *)System_Int32__CompareTo_76925088((_DWORD)v8 + 92, v9->fields.priority, 0);
+  this = (ExRoomMissionController___c_o *)System_Int32__CompareTo_77138392((_DWORD)v8 + 92, v9->fields.priority, 0);
   if ( (_DWORD)this )
     return (int)this;
   v10 = a->fields._EventMissionEntity_k__BackingField;
   if ( !v10 || (v11 = b->fields._EventMissionEntity_k__BackingField) == 0 )
 LABEL_13:
-    sub_21FFECC(this, a);
-  LODWORD(this) = System_Int32__CompareTo_76925088((_DWORD)v10 + 32, v11->fields.dispNo, 0);
+    sub_2213CDC(this, a);
+  LODWORD(this) = System_Int32__CompareTo_77138392((_DWORD)v10 + 32, v11->fields.dispNo, 0);
   return (int)this;
 }
 
@@ -931,11 +931,11 @@ void ExRoomMissionController___c__DisplayClass3_0___IExRoomMissionController_Ini
   struct ExRoomMissionController_o *v9; // x8
 
   v4 = this;
-  if ( (byte_5932DB5 & 1) == 0 )
+  if ( (byte_596AEB9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__AddRange__);
-    this = (ExRoomMissionController___c__DisplayClass3_0_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Clear__);
-    byte_5932DB5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__AddRange__);
+    this = (ExRoomMissionController___c__DisplayClass3_0_o *)sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__Clear__);
+    byte_596AEB9 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -960,12 +960,12 @@ void ExRoomMissionController___c__DisplayClass3_0___IExRoomMissionController_Ini
         System_Collections_Generic_List_object___AddRange(
           (System_Collections_Generic_List_object__o *)this,
           (System_Collections_Generic_IEnumerable_T__o *)newOutputs,
-          (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__AddRange__);
+          (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__AddRange__);
         goto LABEL_11;
       }
     }
 LABEL_12:
-    sub_21FFECC(this, newOutputs);
+    sub_2213CDC(this, newOutputs);
   }
 LABEL_11:
   ActionExtensions__Call(v4->fields.onCompleted, 0);
@@ -987,17 +987,17 @@ void ExRoomMissionController___c__DisplayClass8_0___ReceiveAllInternal_b__0(
 {
   ExRoomMissionController_o *_4__this; // x0
 
-  if ( (byte_5932DB6 & 1) == 0 )
+  if ( (byte_596AEBA & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
-    byte_5932DB6 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
+    byte_596AEBA = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, result);
+    sub_2213CDC(0, result);
   ExRoomMissionController__ApplyReceivedResult(_4__this, result, method);
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.onReceived,
     (Il2CppObject *)result,
-    (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
+    (const MethodInfo_36FFECC *)Method_ActionExtensions_Call_ExRoomMissionReceiveOutput___);
 }

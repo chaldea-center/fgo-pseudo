@@ -47,10 +47,10 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
   bool v28; // w6
   bool v29; // w7
 
-  if ( (byte_59326CD & 1) == 0 )
+  if ( (byte_596A8DA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59326CD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A8DA = 1;
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite )
@@ -76,9 +76,9 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
     v13 = (UnityEngine_Object_o *)*p_boardPrefab;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
-    UnityEngine_Object__Destroy_83246496(v13, 0);
+    UnityEngine_Object__Destroy_83459800(v13, 0);
     *p_boardPrefab = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.boardPrefab, 0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.boardPrefab, 0, v14, v15, v16, v17, v18, v19);
   }
   BoardPrefab_k__BackingField = (UnityEngine_Object_o *)item->fields._BoardPrefab_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -89,7 +89,7 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v21, transform, 0, 0);
     this->fields.boardPrefab = Object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.boardPrefab,
       (int32_t)Object,
       v24,
@@ -109,7 +109,7 @@ void RoadmapBoardListViewItemDraw__UpdateBoard(
         (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0) )
   {
 LABEL_21:
-    sub_21FFECC(boardSprite, item);
+    sub_2213CDC(boardSprite, item);
   }
   UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0);
 }

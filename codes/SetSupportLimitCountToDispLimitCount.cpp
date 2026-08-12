@@ -12,10 +12,10 @@ void SetSupportLimitCountToDispLimitCount__Init(SetSupportLimitCountToDispLimitC
   __int64 v2; // x2
   const MethodInfo *v4; // x1
 
-  if ( (byte_59334C9 & 1) == 0 )
+  if ( (byte_596B5D1 & 1) == 0 )
   {
-    sub_21FFC50(&OptionManager_TypeInfo);
-    byte_59334C9 = 1;
+    sub_2213A60(&OptionManager_TypeInfo);
+    byte_596B5D1 = 1;
   }
   if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, method, v2);
@@ -33,16 +33,16 @@ void SetSupportLimitCountToDispLimitCount__OnClickSetSupportLimitCountToDispLimi
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_59334CC & 1) == 0 )
+  if ( (byte_596B5D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__);
-    byte_59334CC = 1;
+    sub_2213A60(&Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__);
+    byte_596B5D4 = 1;
   }
   v3 = Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__;
   isUnifySetting = this->fields.isUnifySetting;
   if ( (*((_BYTE *)Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__);
-  v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SetSupportLimitCountToDispLimitCount_OnClickSetSupportLimitCountToDispLimitCount__);
+  v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isUnifySetting, 0, 0);
   this->fields.isUnifySetting ^= 1u;
   SetSupportLimitCountToDispLimitCount__SetDisplayValue(this, v6);
@@ -56,10 +56,10 @@ void SetSupportLimitCountToDispLimitCount__Reflection(
   __int64 v2; // x2
   _BOOL4 isUnifySetting; // w19
 
-  if ( (byte_59334CB & 1) == 0 )
+  if ( (byte_596B5D3 & 1) == 0 )
   {
-    sub_21FFC50(&OptionManager_TypeInfo);
-    byte_59334CB = 1;
+    sub_2213A60(&OptionManager_TypeInfo);
+    byte_596B5D3 = 1;
   }
   isUnifySetting = this->fields.isUnifySetting;
   if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
@@ -75,17 +75,17 @@ void SetSupportLimitCountToDispLimitCount__SetDisplayValue(
   UIButton_o *settingBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_59334CA & 1) == 0 )
+  if ( (byte_596B5D2 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18237/*"btn_on"*/);
-    sub_21FFC50(&StringLiteral_18236/*"btn_off"*/);
-    byte_59334CA = 1;
+    sub_2213A60(&StringLiteral_18275/*"btn_on"*/);
+    sub_2213A60(&StringLiteral_18274/*"btn_off"*/);
+    byte_596B5D2 = 1;
   }
   settingBtn = this->fields.settingBtn;
   if ( !settingBtn )
-    sub_21FFECC(0, method);
-  v4 = &StringLiteral_18236/*"btn_off"*/;
+    sub_2213CDC(0, method);
+  v4 = &StringLiteral_18274/*"btn_off"*/;
   if ( this->fields.isUnifySetting )
-    v4 = &StringLiteral_18237/*"btn_on"*/;
+    v4 = &StringLiteral_18275/*"btn_on"*/;
   UIButton__set_normalSprite(settingBtn, (System_String_o *)*v4, 0);
 }

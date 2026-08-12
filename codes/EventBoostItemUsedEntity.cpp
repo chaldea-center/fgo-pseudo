@@ -1,13 +1,13 @@
 void EventBoostItemUsedEntity___ctor(EventBoostItemUsedEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938535 & 1) == 0 )
+  if ( (byte_59706E8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
-    byte_5938535 = 1;
+    sub_2213A60(&Method_DataEntityBase_long___ctor__);
+    byte_59706E8 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3F0E560 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -37,7 +37,7 @@ UsedCount_o *EventBoostItemUsedEntity__GetUsedCount(
   {
     result = *i;
     if ( !*i )
-      sub_21FFECC(0, userId);
+      sub_2213CDC(0, userId);
     if ( result->fields.userId == userId )
       break;
     LODWORD(max_length) = max_length - 1;

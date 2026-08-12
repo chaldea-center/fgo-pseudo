@@ -20,7 +20,7 @@ void UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const 
   if ( userSvtLeaderInfo )
   {
     userSvtLeaderInfo->fields.equipTarget1 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3, v4, v5, v6, v7);
   }
   System_Object__Finalize(v10, 0);
 }

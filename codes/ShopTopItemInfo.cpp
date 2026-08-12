@@ -25,7 +25,7 @@ void ShopTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._Kind_k__BackingField = kind;
   v12->fields._TextCode_k__BackingField = textCode;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v12->fields._TextCode_k__BackingField,
     (int32_t)textCode,
     v13,
@@ -36,7 +36,7 @@ void ShopTopItemInfo___ctor(
     v18);
   v12->fields._ImageName_k__BackingField = imageName;
   v12 = (ShopTopItemInfo_o *)((char *)v12 + 32);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v12, (int32_t)imageName, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v12, (int32_t)imageName, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = state;
   HIDWORD(v12->monitor) = shopType;
 }
@@ -81,7 +81,7 @@ void ShopTopItemInfo__set_ImageName(ShopTopItemInfo_o *this, System_String_o *va
   bool v7; // w7
 
   this->fields._ImageName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ImageName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -120,7 +120,7 @@ void ShopTopItemInfo__set_TextCode(ShopTopItemInfo_o *this, System_String_o *val
   bool v7; // w7
 
   this->fields._TextCode_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._TextCode_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

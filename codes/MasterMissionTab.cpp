@@ -10,22 +10,22 @@ System_String_o *MasterMissionTab__GetButtonSpriteName(MasterMissionTab_o *this,
   System_String_o **v6; // x10
   System_String_o **v7; // x8
 
-  if ( (byte_593C099 & 1) == 0 )
+  if ( (byte_5974396 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18192/*"btn_bg_on_4"*/);
-    sub_21FFC50(&StringLiteral_18187/*"btn_bg_off_4"*/);
-    sub_21FFC50(&StringLiteral_18188/*"btn_bg_off_5"*/);
-    sub_21FFC50(&StringLiteral_18193/*"btn_bg_on_5"*/);
-    byte_593C099 = 1;
+    sub_2213A60(&StringLiteral_18230/*"btn_bg_on_4"*/);
+    sub_2213A60(&StringLiteral_18225/*"btn_bg_off_4"*/);
+    sub_2213A60(&StringLiteral_18226/*"btn_bg_off_5"*/);
+    sub_2213A60(&StringLiteral_18231/*"btn_bg_on_5"*/);
+    byte_5974396 = 1;
   }
   if ( isOn )
-    v5 = &StringLiteral_18192/*"btn_bg_on_4"*/;
+    v5 = &StringLiteral_18230/*"btn_bg_on_4"*/;
   else
-    v5 = &StringLiteral_18187/*"btn_bg_off_4"*/;
+    v5 = &StringLiteral_18225/*"btn_bg_off_4"*/;
   if ( isOn )
-    v6 = (System_String_o **)&StringLiteral_18193/*"btn_bg_on_5"*/;
+    v6 = (System_String_o **)&StringLiteral_18231/*"btn_bg_on_5"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_18188/*"btn_bg_off_5"*/;
+    v6 = (System_String_o **)&StringLiteral_18226/*"btn_bg_off_5"*/;
   if ( this->fields.isSmall )
     v7 = v6;
   else
@@ -217,7 +217,7 @@ void MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const MethodInfo *m
       }
     }
 LABEL_53:
-    sub_21FFECC(transform, v5);
+    sub_2213CDC(transform, v5);
   }
   transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -372,7 +372,7 @@ void MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const MethodInfo *m
                                                     0)) == 0) )
   {
 LABEL_53:
-    sub_21FFECC(gameObject, v5);
+    sub_2213CDC(gameObject, v5);
   }
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)gameObject,

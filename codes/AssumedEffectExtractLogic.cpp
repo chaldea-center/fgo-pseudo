@@ -41,21 +41,21 @@ void AssumedEffectExtractLogic__FromEnemyScript(
   __int64 v40; // x0
   __int64 v41; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_593AC4B & 1) == 0 )
+  if ( (byte_5972E2B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_BattleDeckServantData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_BattleDeckServantData__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_593AC4B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_BattleDeckServantData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_BattleDeckServantData__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_5972E2B = 1;
   }
   if ( battleInfo )
   {
     v5 = BattleInfoData__AllDeckServantEnumerable(battleInfo, 0);
     if ( !v5 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     klass = v5->klass;
     v8 = v5;
     v9 = *(unsigned __int16 *)&v5->klass->_2.rank;
@@ -74,14 +74,14 @@ void AssumedEffectExtractLogic__FromEnemyScript(
     else
     {
 LABEL_9:
-      v11 = sub_2237E2C(v5, System_Collections_Generic_IEnumerable_BattleDeckServantData__TypeInfo, 0);
+      v11 = sub_224BC3C(v5, System_Collections_Generic_IEnumerable_BattleDeckServantData__TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleDeckServantData__o *, _QWORD))v11)(
             v8,
             *(_QWORD *)(v11 + 8));
     v41 = v12;
     if ( !v12 )
-      sub_21FFECC(v12, v13);
+      sub_2213CDC(v12, v13);
     for ( i = v12; ; i = v41 )
     {
       v15 = *(_QWORD *)i;
@@ -101,13 +101,13 @@ LABEL_9:
       else
       {
 LABEL_17:
-        v18 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+        v18 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
       }
       v19 = (*(__int64 (__fastcall **)(__int64, _QWORD))v18)(i, *(_QWORD *)(v18 + 8));
       if ( (v19 & 1) == 0 )
         break;
       if ( !v41 )
-        sub_21FFECC(v19, v20);
+        sub_2213CDC(v19, v20);
       v21 = *(_QWORD *)v41;
       v22 = *(unsigned __int16 *)(*(_QWORD *)v41 + 302LL);
       if ( *(_WORD *)(*(_QWORD *)v41 + 302LL) )
@@ -125,26 +125,26 @@ LABEL_17:
       else
       {
 LABEL_25:
-        v24 = sub_2237E2C(v41, System_Collections_Generic_IEnumerator_BattleDeckServantData__TypeInfo, 0);
+        v24 = sub_224BC3C(v41, System_Collections_Generic_IEnumerator_BattleDeckServantData__TypeInfo, 0);
       }
       v25 = (BattleDeckServantData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v41, *(_QWORD *)(v24 + 8));
       if ( !toUpdate )
-        sub_21FFECC(v25, v26);
+        sub_2213CDC(v25, v26);
       v27 = v25;
       if ( !v25 )
-        sub_21FFECC(0, v26);
+        sub_2213CDC(0, v26);
       EffectIdHashSet = toUpdate->fields.EffectIdHashSet;
       AssumedEffectId = (System_Collections_Generic_IEnumerable_T__o *)BattleDeckServantData__GetAssumedEffectId(v25, 0);
       if ( !EffectIdHashSet )
-        sub_21FFECC(AssumedEffectId, AssumedEffectId);
+        sub_2213CDC(AssumedEffectId, AssumedEffectId);
       System_Collections_Generic_HashSet_int___UnionWith(
         EffectIdHashSet,
         AssumedEffectId,
-        (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+        (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
       OverwriteShadowDataArray = BattleDeckServantData__GetOverwriteShadowDataArray(v27, 0);
       v32 = OverwriteShadowDataArray;
       if ( !OverwriteShadowDataArray )
-        sub_21FFECC(0, v31);
+        sub_2213CDC(0, v31);
       max_length = OverwriteShadowDataArray->max_length;
       if ( max_length >= 1 )
       {
@@ -152,17 +152,17 @@ LABEL_25:
         do
         {
           if ( (unsigned int)v34 >= max_length )
-            sub_21FFED4(OverwriteShadowDataArray);
+            sub_2213CE4(OverwriteShadowDataArray);
           v35 = v32->m_Items[v34];
           if ( !v35 )
-            sub_21FFECC(OverwriteShadowDataArray, v31);
+            sub_2213CDC(OverwriteShadowDataArray, v31);
           v36 = toUpdate->fields.EffectIdHashSet;
           if ( !v36 )
-            sub_21FFECC(0, v31);
+            sub_2213CDC(0, v31);
           OverwriteShadowDataArray = (EnemyScriptParam_OverwriteShadowData_array *)System_Collections_Generic_HashSet_int___Add(
                                                                                      v36,
                                                                                      v35->fields.specialShadowEffectId,
-                                                                                     (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                                                                     (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
           max_length = v32->max_length;
           ++v34;
         }
@@ -188,7 +188,7 @@ LABEL_25:
       else
       {
 LABEL_44:
-        v40 = sub_2237E2C(v41, System_IDisposable_TypeInfo, 0);
+        v40 = sub_224BC3C(v41, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v40)(v41, *(_QWORD *)(v40 + 8));
     }
@@ -207,28 +207,28 @@ void AssumedEffectExtractLogic__FromItem(
   int32_t v8; // w20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593AC4C & 1) == 0 )
+  if ( (byte_5972E2C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593AC4C = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5972E2C = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_17;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           id,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     return;
   Instance = (DataManager_o *)entity;
   if ( !entity )
@@ -249,17 +249,17 @@ void AssumedEffectExtractLogic__FromItem(
     Instance = (DataManager_o *)System_Collections_Generic_HashSet_int___Add(
                                   (System_Collections_Generic_HashSet_int__o *)Instance,
                                   v7,
-                                  (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                  (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
   }
   if ( v8 < 1 )
     return;
   if ( !toUpdate || (Instance = (DataManager_o *)toUpdate->fields.EffectIdHashSet) == 0 )
 LABEL_17:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   System_Collections_Generic_HashSet_int___Add(
     (System_Collections_Generic_HashSet_int__o *)Instance,
     v8,
-    (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+    (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 
@@ -282,12 +282,12 @@ void AssumedEffectExtractLogic__FromQuestPhase(
   System_Collections_Generic_HashSet_int__o *v15; // x19
 
   v4 = questPhaseEntity;
-  if ( (byte_593AC4A & 1) == 0 )
+  if ( (byte_5972E2A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    questPhaseEntity = (QuestPhaseEntity_o *)sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    byte_593AC4A = 1;
+    sub_2213A60(&Method_System_Array_Empty_int___);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    questPhaseEntity = (QuestPhaseEntity_o *)sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    byte_5972E2A = 1;
   }
   if ( v4 )
   {
@@ -300,7 +300,7 @@ void AssumedEffectExtractLogic__FromQuestPhase(
     System_Collections_Generic_HashSet_int___UnionWith(
       EffectIdHashSet,
       (System_Collections_Generic_IEnumerable_T__o *)questPhaseEntity,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     v6 = toUpdate->fields.EffectIdHashSet;
     questPhaseEntity = (QuestPhaseEntity_o *)QuestPhaseEntity__getSpecialShadowEffectId(v4, 0);
     if ( !v6 )
@@ -308,7 +308,7 @@ void AssumedEffectExtractLogic__FromQuestPhase(
     System_Collections_Generic_HashSet_int___Add(
       v6,
       (int32_t)questPhaseEntity,
-      (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+      (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
     v7 = toUpdate->fields.EffectIdHashSet;
     questPhaseEntity = (QuestPhaseEntity_o *)QuestPhaseEntity__GetBattleSkillDropEffectIds(v4, 0);
     if ( !v7 )
@@ -316,23 +316,23 @@ void AssumedEffectExtractLogic__FromQuestPhase(
     System_Collections_Generic_HashSet_int___UnionWith(
       v7,
       (System_Collections_Generic_IEnumerable_T__o *)questPhaseEntity,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     v10 = Method_System_Array_Empty_int___;
     cameraIdHashSet = toUpdate->fields.cameraIdHashSet;
     v12 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v12 )
     {
-      sub_2237B54(Method_System_Array_Empty_int___);
+      sub_224B964(Method_System_Array_Empty_int___);
       v12 = v10[7];
     }
     v13 = *(_QWORD *)(v12 + 16);
     if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
-      v13 = sub_2237AF8(v9);
+      v13 = sub_224B908(v9);
     if ( !*(_DWORD *)(v13 + 228) )
       *(__n128 *)&v9 = j_il2cpp_runtime_class_init_0(v13, v8);
     v14 = *(_QWORD *)(v10[7] + 16LL);
     if ( (*(_WORD *)(v14 + 309) & 1) == 0 )
-      v14 = sub_2237AF8(v9);
+      v14 = sub_224B908(v9);
     questPhaseEntity = (QuestPhaseEntity_o *)QuestPhaseEntity__GetAddUniqueCameraIds(
                                                v4,
                                                **(System_Int32_array ***)(v14 + 184),
@@ -341,18 +341,18 @@ void AssumedEffectExtractLogic__FromQuestPhase(
       || (System_Collections_Generic_HashSet_int___UnionWith(
             cameraIdHashSet,
             (System_Collections_Generic_IEnumerable_T__o *)questPhaseEntity,
-            (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__),
+            (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__),
           v15 = toUpdate->fields.EffectIdHashSet,
           questPhaseEntity = (QuestPhaseEntity_o *)QuestPhaseEntity__GetExBattleUiSkillEffectIds(v4, 0),
           !v15) )
     {
 LABEL_20:
-      sub_21FFECC(questPhaseEntity, toUpdate);
+      sub_2213CDC(questPhaseEntity, toUpdate);
     }
     System_Collections_Generic_HashSet_int___UnionWith(
       v15,
       (System_Collections_Generic_IEnumerable_T__o *)questPhaseEntity,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
 }
 
@@ -389,35 +389,35 @@ void AssumedEffectExtractLogic__FromServant(
   bool v29; // w6
   bool v30; // w7
 
-  if ( (byte_593AC48 & 1) == 0 )
+  if ( (byte_5972E28 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_ExcludeNull_ServantEntity___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_SelectMany_ServantEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_BattleUserServantData__ServantEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_ServantEntity___);
-    sub_21FFC50(&System_Func_BattleUserServantData__ServantEntity__TypeInfo);
-    sub_21FFC50(&System_Func_ServantEntity__IEnumerable_int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromServant_b__2_1__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__DisplayClass2_0__FromServant_b__0__);
-    sub_21FFC50(&AssumedEffectExtractLogic___c__DisplayClass2_0_TypeInfo);
-    sub_21FFC50(&AssumedEffectExtractLogic___c_TypeInfo);
-    byte_593AC48 = 1;
+    sub_2213A60(&Method_BasicHelper_ExcludeNull_ServantEntity___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_SelectMany_ServantEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_BattleUserServantData__ServantEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_ServantEntity___);
+    sub_2213A60(&System_Func_BattleUserServantData__ServantEntity__TypeInfo);
+    sub_2213A60(&System_Func_ServantEntity__IEnumerable_int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromServant_b__2_1__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__DisplayClass2_0__FromServant_b__0__);
+    sub_2213A60(&AssumedEffectExtractLogic___c__DisplayClass2_0_TypeInfo);
+    sub_2213A60(&AssumedEffectExtractLogic___c_TypeInfo);
+    byte_5972E28 = 1;
   }
-  v5 = sub_21FFEBC(AssumedEffectExtractLogic___c__DisplayClass2_0_TypeInfo);
+  v5 = sub_2213CCC(AssumedEffectExtractLogic___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)servants, 0) )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-    Master_object = (System_Collections_Generic_HashSet_int__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+    Master_object = (System_Collections_Generic_HashSet_int__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
     if ( !v5 )
       goto LABEL_16;
     *(_QWORD *)(v5 + 16) = Master_object;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
-    v15 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_BattleUserServantData__ServantEntity__TypeInfo);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
+    v15 = (System_Func_object__object__o *)sub_2213CCC(System_Func_BattleUserServantData__ServantEntity__TypeInfo);
     System_Func_object__object____ctor(
       v15,
       (Il2CppObject *)v5,
@@ -426,13 +426,13 @@ void AssumedEffectExtractLogic__FromServant(
     v16 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_object__object_(
                                                            (System_Collections_Generic_IEnumerable_TSource__o *)servants,
                                                            (System_Func_TSource__TResult__o *)v15,
-                                                           (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_BattleUserServantData__ServantEntity___);
+                                                           (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_BattleUserServantData__ServantEntity___);
     v17 = BasicHelper__ExcludeNull_object_(
             v16,
-            (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_ServantEntity___);
+            (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_ServantEntity___);
     v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-                                                                 (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_ServantEntity___);
+                                                                 (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_ServantEntity___);
     v20 = AssumedEffectExtractLogic___c_TypeInfo;
     if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -449,27 +449,27 @@ void AssumedEffectExtractLogic__FromServant(
         static_fields = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
       }
       v23 = (Il2CppObject *)static_fields->__9;
-      _9__2_1 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_ServantEntity__IEnumerable_int___TypeInfo);
+      _9__2_1 = (System_Func_object__object__o *)sub_2213CCC(System_Func_ServantEntity__IEnumerable_int___TypeInfo);
       System_Func_object__object____ctor(_9__2_1, v23, Method_AssumedEffectExtractLogic___c__FromServant_b__2_1__, 0);
       v24 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
       v24->__9__2_1 = (struct System_Func_ServantEntity__IEnumerable_int___o *)_9__2_1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24->__9__2_1, (int32_t)_9__2_1, v25, v26, v27, v28, v29, v30);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24->__9__2_1, (int32_t)_9__2_1, v25, v26, v27, v28, v29, v30);
     }
     Master_object = (System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                    v19,
                                                                    (System_Func_TSource__IEnumerable_TResult___o *)_9__2_1,
-                                                                   (const MethodInfo_3860774 *)Method_System_Linq_Enumerable_SelectMany_ServantEntity__int___);
+                                                                   (const MethodInfo_3893C3C *)Method_System_Linq_Enumerable_SelectMany_ServantEntity__int___);
     if ( !toUpdate
       || (v8 = (System_Collections_Generic_IEnumerable_T__o *)Master_object,
           (Master_object = toUpdate->fields.EffectIdHashSet) == 0) )
     {
 LABEL_16:
-      sub_21FFECC(Master_object, v8);
+      sub_2213CDC(Master_object, v8);
     }
     System_Collections_Generic_HashSet_int___UnionWith(
       Master_object,
       v8,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
 }
 
@@ -551,46 +551,46 @@ void AssumedEffectExtractLogic__FromSkill(
   bool v74; // w7
   AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v75; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_593AC46 & 1) == 0 )
+  if ( (byte_5972E26 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_ExcludeNull_SkillEntity___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_SelectMany_SkillEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_int__SkillEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_SimpleSkillData__SkillEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_SkillEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_SkillEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_SkillEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_SimpleSkillData___);
-    sub_21FFC50(&System_Func_SimpleSkillData__SkillEntity__TypeInfo);
-    sub_21FFC50(&System_Func_SimpleSkillData__bool__TypeInfo);
-    sub_21FFC50(&System_Func_SkillEntity__IEnumerable_int___TypeInfo);
-    sub_21FFC50(&System_Func_int__bool__TypeInfo);
-    sub_21FFC50(&System_Func_int__SkillEntity__TypeInfo);
-    sub_21FFC50(&System_Func_SkillEntity__int__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SkillEntity__AddRange__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_0__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_2__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_3__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_5__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__DisplayClass0_0__FromSkill_b__1__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__DisplayClass0_0__FromSkill_b__4__);
-    sub_21FFC50(&AssumedEffectExtractLogic___c__DisplayClass0_0_TypeInfo);
-    sub_21FFC50(&AssumedEffectExtractLogic___c_TypeInfo);
-    byte_593AC46 = 1;
+    sub_2213A60(&Method_BasicHelper_ExcludeNull_SkillEntity___);
+    sub_2213A60(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_SelectMany_SkillEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_int__SkillEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_SimpleSkillData__SkillEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_SkillEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_SkillEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_SkillEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_SimpleSkillData___);
+    sub_2213A60(&System_Func_SimpleSkillData__SkillEntity__TypeInfo);
+    sub_2213A60(&System_Func_SimpleSkillData__bool__TypeInfo);
+    sub_2213A60(&System_Func_SkillEntity__IEnumerable_int___TypeInfo);
+    sub_2213A60(&System_Func_int__bool__TypeInfo);
+    sub_2213A60(&System_Func_int__SkillEntity__TypeInfo);
+    sub_2213A60(&System_Func_SkillEntity__int__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SkillEntity__AddRange__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_0__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_2__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_3__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromSkill_b__0_5__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__DisplayClass0_0__FromSkill_b__1__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__DisplayClass0_0__FromSkill_b__4__);
+    sub_2213A60(&AssumedEffectExtractLogic___c__DisplayClass0_0_TypeInfo);
+    sub_2213A60(&AssumedEffectExtractLogic___c_TypeInfo);
+    byte_5972E26 = 1;
   }
-  v5 = sub_21FFEBC(AssumedEffectExtractLogic___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_2213CCC(AssumedEffectExtractLogic___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-  Master_object = (System_Collections_Generic_IEnumerable_T__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = (System_Collections_Generic_IEnumerable_T__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !v5 )
     goto LABEL_34;
   *(_QWORD *)(v5 + 16) = Master_object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
   v16 = AssumedEffectExtractLogic___c_TypeInfo;
   v75 = toUpdate;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
@@ -608,17 +608,17 @@ void AssumedEffectExtractLogic__FromSkill(
       static_fields = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v19 = (Il2CppObject *)static_fields->__9;
-    _9__0_0 = (System_Func_SimpleSkillData__bool__o *)sub_21FFEBC(System_Func_SimpleSkillData__bool__TypeInfo);
+    _9__0_0 = (System_Func_SimpleSkillData__bool__o *)sub_2213CCC(System_Func_SimpleSkillData__bool__TypeInfo);
     System_Func_SimpleSkillData__bool____ctor(_9__0_0, v19, Method_AssumedEffectExtractLogic___c__FromSkill_b__0_0__, 0);
     v20 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v20->__9__0_0 = _9__0_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->__9__0_0, (int32_t)_9__0_0, v21, v22, v23, v24, v25, v26);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->__9__0_0, (int32_t)_9__0_0, v21, v22, v23, v24, v25, v26);
   }
   v27 = System_Linq_Enumerable__Where_SimpleSkillData_(
           (System_Collections_Generic_IEnumerable_TSource__o *)skillDataEnumerable,
           (System_Func_TSource__bool__o *)_9__0_0,
-          (const MethodInfo_38705B8 *)Method_System_Linq_Enumerable_Where_SimpleSkillData___);
-  v28 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_SimpleSkillData__SkillEntity__TypeInfo);
+          (const MethodInfo_38A3A80 *)Method_System_Linq_Enumerable_Where_SimpleSkillData___);
+  v28 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_SimpleSkillData__SkillEntity__TypeInfo);
   System_Func_SimpleSkillData__object____ctor(
     v28,
     (Il2CppObject *)v5,
@@ -627,11 +627,11 @@ void AssumedEffectExtractLogic__FromSkill(
   v29 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_SimpleSkillData__object_(
                                                          v27,
                                                          (System_Func_TSource__TResult__o *)v28,
-                                                         (const MethodInfo_385EA00 *)Method_System_Linq_Enumerable_Select_SimpleSkillData__SkillEntity___);
-  v30 = BasicHelper__ExcludeNull_object_(v29, (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_SkillEntity___);
+                                                         (const MethodInfo_3891EC8 *)Method_System_Linq_Enumerable_Select_SimpleSkillData__SkillEntity___);
+  v30 = BasicHelper__ExcludeNull_object_(v29, (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_SkillEntity___);
   v31 = System_Linq_Enumerable__ToList_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v30,
-          (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_SkillEntity___);
+          (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_SkillEntity___);
   v33 = AssumedEffectExtractLogic___c_TypeInfo;
   v34 = (System_Collections_Generic_IEnumerable_TSource__o *)v31;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
@@ -649,16 +649,16 @@ void AssumedEffectExtractLogic__FromSkill(
       v35 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v37 = (Il2CppObject *)v35->__9;
-    _9__0_2 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_SkillEntity__int__TypeInfo);
+    _9__0_2 = (System_Func_object__int__o *)sub_2213CCC(System_Func_SkillEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_2, v37, Method_AssumedEffectExtractLogic___c__FromSkill_b__0_2__, 0);
     v38 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v38->__9__0_2 = (struct System_Func_SkillEntity__int__o *)_9__0_2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v38->__9__0_2, (int32_t)_9__0_2, v39, v40, v41, v42, v43, v44);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38->__9__0_2, (int32_t)_9__0_2, v39, v40, v41, v42, v43, v44);
   }
   v45 = System_Linq_Enumerable__Select_object__int_(
           v34,
           (System_Func_TSource__TResult__o *)_9__0_2,
-          (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_SkillEntity__int___);
+          (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_SkillEntity__int___);
   v47 = AssumedEffectExtractLogic___c_TypeInfo;
   v48 = (System_Collections_Generic_IEnumerable_TSource__o *)v45;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
@@ -676,17 +676,17 @@ void AssumedEffectExtractLogic__FromSkill(
       v49 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v51 = (Il2CppObject *)v49->__9;
-    _9__0_3 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+    _9__0_3 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(_9__0_3, v51, Method_AssumedEffectExtractLogic___c__FromSkill_b__0_3__, 0);
     v52 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v52->__9__0_3 = _9__0_3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v52->__9__0_3, (int32_t)_9__0_3, v53, v54, v55, v56, v57, v58);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v52->__9__0_3, (int32_t)_9__0_3, v53, v54, v55, v56, v57, v58);
   }
   v59 = System_Linq_Enumerable__Where_int_(
           v48,
           (System_Func_TSource__bool__o *)_9__0_3,
-          (const MethodInfo_386F9A8 *)Method_System_Linq_Enumerable_Where_int___);
-  v60 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_int__SkillEntity__TypeInfo);
+          (const MethodInfo_38A2E70 *)Method_System_Linq_Enumerable_Where_int___);
+  v60 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_int__SkillEntity__TypeInfo);
   System_Func_int__object____ctor(
     v60,
     (Il2CppObject *)v5,
@@ -695,17 +695,17 @@ void AssumedEffectExtractLogic__FromSkill(
   v61 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_int__object_(
                                                          v59,
                                                          (System_Func_TSource__TResult__o *)v60,
-                                                         (const MethodInfo_385A9E0 *)Method_System_Linq_Enumerable_Select_int__SkillEntity___);
-  v62 = BasicHelper__ExcludeNull_object_(v61, (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_SkillEntity___);
+                                                         (const MethodInfo_388DEA8 *)Method_System_Linq_Enumerable_Select_int__SkillEntity___);
+  v62 = BasicHelper__ExcludeNull_object_(v61, (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_SkillEntity___);
   Master_object = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__ToArray_object_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v62,
-                                                                   (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_SkillEntity___);
+                                                                   (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_SkillEntity___);
   if ( !v34 )
     goto LABEL_34;
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)v34,
     Master_object,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_SkillEntity__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_SkillEntity__AddRange__);
   v64 = AssumedEffectExtractLogic___c_TypeInfo;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -722,27 +722,27 @@ void AssumedEffectExtractLogic__FromSkill(
       v65 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v67 = (Il2CppObject *)v65->__9;
-    _9__0_5 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_SkillEntity__IEnumerable_int___TypeInfo);
+    _9__0_5 = (System_Func_object__object__o *)sub_2213CCC(System_Func_SkillEntity__IEnumerable_int___TypeInfo);
     System_Func_object__object____ctor(_9__0_5, v67, Method_AssumedEffectExtractLogic___c__FromSkill_b__0_5__, 0);
     v68 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v68->__9__0_5 = (struct System_Func_SkillEntity__IEnumerable_int___o *)_9__0_5;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v68->__9__0_5, (int32_t)_9__0_5, v69, v70, v71, v72, v73, v74);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v68->__9__0_5, (int32_t)_9__0_5, v69, v70, v71, v72, v73, v74);
   }
   Master_object = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                    v34,
                                                                    (System_Func_TSource__IEnumerable_TResult___o *)_9__0_5,
-                                                                   (const MethodInfo_3860774 *)Method_System_Linq_Enumerable_SelectMany_SkillEntity__int___);
+                                                                   (const MethodInfo_3893C3C *)Method_System_Linq_Enumerable_SelectMany_SkillEntity__int___);
   if ( !v75
     || (v8 = Master_object,
         (Master_object = (System_Collections_Generic_IEnumerable_T__o *)v75->fields.EffectIdHashSet) == 0) )
   {
 LABEL_34:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   }
   System_Collections_Generic_HashSet_int___UnionWith(
     (System_Collections_Generic_HashSet_int__o *)Master_object,
     v8,
-    (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
 }
 
 
@@ -766,13 +766,13 @@ void AssumedEffectExtractLogic__FromStage(
   System_Collections_Generic_HashSet_int__o *v16; // x19
 
   v4 = stageEntity;
-  if ( (byte_593AC49 & 1) == 0 )
+  if ( (byte_5972E29 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_string__UnionWith__);
-    stageEntity = (StageEntity_o *)sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    byte_593AC49 = 1;
+    sub_2213A60(&Method_System_Array_Empty_int___);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_string__UnionWith__);
+    stageEntity = (StageEntity_o *)sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    byte_5972E29 = 1;
   }
   if ( v4 )
   {
@@ -785,7 +785,7 @@ void AssumedEffectExtractLogic__FromStage(
     System_Collections_Generic_HashSet_int___UnionWith(
       EffectIdHashSet,
       (System_Collections_Generic_IEnumerable_T__o *)stageEntity,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
     v6 = toUpdate->fields.EffectIdHashSet;
     stageEntity = (StageEntity_o *)StageEntity__GetSpecialShadowEffectId(v4, 1, 0);
     if ( !v6 )
@@ -793,7 +793,7 @@ void AssumedEffectExtractLogic__FromStage(
     System_Collections_Generic_HashSet_int___Add(
       v6,
       (int32_t)stageEntity,
-      (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+      (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
     v7 = toUpdate->fields.EffectIdHashSet;
     stageEntity = (StageEntity_o *)StageEntity__GetSpecialShadowEffectId(v4, 0, 0);
     if ( !v7 )
@@ -801,7 +801,7 @@ void AssumedEffectExtractLogic__FromStage(
     System_Collections_Generic_HashSet_int___Add(
       v7,
       (int32_t)stageEntity,
-      (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+      (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
     AudioAssetNameHashSet = toUpdate->fields.AudioAssetNameHashSet;
     stageEntity = (StageEntity_o *)StageEntity__GetAssumedVoiceAssetNames(v4, 0);
     if ( !AudioAssetNameHashSet )
@@ -809,40 +809,40 @@ void AssumedEffectExtractLogic__FromStage(
     System_Collections_Generic_HashSet_object___UnionWith(
       (System_Collections_Generic_HashSet_object__o *)AudioAssetNameHashSet,
       (System_Collections_Generic_IEnumerable_T__o *)stageEntity,
-      (const MethodInfo_4287944 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
+      (const MethodInfo_42BB4D0 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
     v11 = Method_System_Array_Empty_int___;
     cameraIdHashSet = toUpdate->fields.cameraIdHashSet;
     v13 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v13 )
     {
-      sub_2237B54(Method_System_Array_Empty_int___);
+      sub_224B964(Method_System_Array_Empty_int___);
       v13 = v11[7];
     }
     v14 = *(_QWORD *)(v13 + 16);
     if ( (*(_WORD *)(v14 + 309) & 1) == 0 )
-      v14 = sub_2237AF8(v10);
+      v14 = sub_224B908(v10);
     if ( !*(_DWORD *)(v14 + 228) )
       *(__n128 *)&v10 = j_il2cpp_runtime_class_init_0(v14, v9);
     v15 = *(_QWORD *)(v11[7] + 16LL);
     if ( (*(_WORD *)(v15 + 309) & 1) == 0 )
-      v15 = sub_2237AF8(v10);
+      v15 = sub_224B908(v10);
     stageEntity = (StageEntity_o *)StageEntity__GetAddUniqueCameraIds(v4, **(System_Int32_array ***)(v15 + 184), 0);
     if ( !cameraIdHashSet
       || (System_Collections_Generic_HashSet_int___UnionWith(
             cameraIdHashSet,
             (System_Collections_Generic_IEnumerable_T__o *)stageEntity,
-            (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__),
+            (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__),
           v16 = toUpdate->fields.EffectIdHashSet,
           stageEntity = (StageEntity_o *)StageEntity__GetExBattleUiSkillEffectIds(v4, 0),
           !v16) )
     {
 LABEL_21:
-      sub_21FFECC(stageEntity, toUpdate);
+      sub_2213CDC(stageEntity, toUpdate);
     }
     System_Collections_Generic_HashSet_int___UnionWith(
       v16,
       (System_Collections_Generic_IEnumerable_T__o *)stageEntity,
-      (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+      (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
   }
 }
 
@@ -893,35 +893,35 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
   bool v43; // w6
   bool v44; // w7
 
-  if ( (byte_593AC47 & 1) == 0 )
+  if ( (byte_5972E27 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_ExcludeNull_TreasureDvcEntity___);
-    sub_21FFC50(&Method_DataManager_GetMaster_TreasureDvcMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_SelectMany_TreasureDvcEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_SimpleTreasureDeviceData__TreasureDvcEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_TreasureDvcEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_SimpleTreasureDeviceData___);
-    sub_21FFC50(&System_Func_TreasureDvcEntity__IEnumerable_int___TypeInfo);
-    sub_21FFC50(&System_Func_SimpleTreasureDeviceData__bool__TypeInfo);
-    sub_21FFC50(&System_Func_SimpleTreasureDeviceData__TreasureDvcEntity__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromTreasureDevice_b__1_0__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__FromTreasureDevice_b__1_2__);
-    sub_21FFC50(&Method_AssumedEffectExtractLogic___c__DisplayClass1_0__FromTreasureDevice_b__1__);
-    sub_21FFC50(&AssumedEffectExtractLogic___c__DisplayClass1_0_TypeInfo);
-    sub_21FFC50(&AssumedEffectExtractLogic___c_TypeInfo);
-    byte_593AC47 = 1;
+    sub_2213A60(&Method_BasicHelper_ExcludeNull_TreasureDvcEntity___);
+    sub_2213A60(&Method_DataManager_GetMaster_TreasureDvcMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_SelectMany_TreasureDvcEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_SimpleTreasureDeviceData__TreasureDvcEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_TreasureDvcEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_SimpleTreasureDeviceData___);
+    sub_2213A60(&System_Func_TreasureDvcEntity__IEnumerable_int___TypeInfo);
+    sub_2213A60(&System_Func_SimpleTreasureDeviceData__bool__TypeInfo);
+    sub_2213A60(&System_Func_SimpleTreasureDeviceData__TreasureDvcEntity__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromTreasureDevice_b__1_0__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__FromTreasureDevice_b__1_2__);
+    sub_2213A60(&Method_AssumedEffectExtractLogic___c__DisplayClass1_0__FromTreasureDevice_b__1__);
+    sub_2213A60(&AssumedEffectExtractLogic___c__DisplayClass1_0_TypeInfo);
+    sub_2213A60(&AssumedEffectExtractLogic___c_TypeInfo);
+    byte_5972E27 = 1;
   }
-  v5 = sub_21FFEBC(AssumedEffectExtractLogic___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_2213CCC(AssumedEffectExtractLogic___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-  Master_object = (System_Collections_Generic_HashSet_int__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  Master_object = (System_Collections_Generic_HashSet_int__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
   if ( !v5 )
     goto LABEL_21;
   *(_QWORD *)(v5 + 16) = Master_object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v9, v10, v11, v12, v13, v14);
   v16 = AssumedEffectExtractLogic___c_TypeInfo;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -938,7 +938,7 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
       static_fields = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v19 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Func_SimpleTreasureDeviceData__bool__o *)sub_21FFEBC(System_Func_SimpleTreasureDeviceData__bool__TypeInfo);
+    _9__1_0 = (System_Func_SimpleTreasureDeviceData__bool__o *)sub_2213CCC(System_Func_SimpleTreasureDeviceData__bool__TypeInfo);
     System_Func_SimpleTreasureDeviceData__bool____ctor(
       _9__1_0,
       v19,
@@ -946,13 +946,13 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
       0);
     v20 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v20->__9__1_0 = _9__1_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->__9__1_0, (int32_t)_9__1_0, v21, v22, v23, v24, v25, v26);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->__9__1_0, (int32_t)_9__1_0, v21, v22, v23, v24, v25, v26);
   }
   v27 = System_Linq_Enumerable__Where_SimpleTreasureDeviceData_(
           (System_Collections_Generic_IEnumerable_TSource__o *)tdDataEnumerable,
           (System_Func_TSource__bool__o *)_9__1_0,
-          (const MethodInfo_38708BC *)Method_System_Linq_Enumerable_Where_SimpleTreasureDeviceData___);
-  v28 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_SimpleTreasureDeviceData__TreasureDvcEntity__TypeInfo);
+          (const MethodInfo_38A3D84 *)Method_System_Linq_Enumerable_Where_SimpleTreasureDeviceData___);
+  v28 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_SimpleTreasureDeviceData__TreasureDvcEntity__TypeInfo);
   System_Func_SimpleTreasureDeviceData__object____ctor(
     v28,
     (Il2CppObject *)v5,
@@ -961,13 +961,13 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
   v29 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_SimpleTreasureDeviceData__object_(
                                                          v27,
                                                          (System_Func_TSource__TResult__o *)v28,
-                                                         (const MethodInfo_385ED24 *)Method_System_Linq_Enumerable_Select_SimpleTreasureDeviceData__TreasureDvcEntity___);
+                                                         (const MethodInfo_38921EC *)Method_System_Linq_Enumerable_Select_SimpleTreasureDeviceData__TreasureDvcEntity___);
   v30 = BasicHelper__ExcludeNull_object_(
           v29,
-          (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_TreasureDvcEntity___);
+          (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_TreasureDvcEntity___);
   v31 = System_Linq_Enumerable__ToArray_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v30,
-          (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_TreasureDvcEntity___);
+          (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_TreasureDvcEntity___);
   v33 = AssumedEffectExtractLogic___c_TypeInfo;
   v34 = (System_Collections_Generic_IEnumerable_TSource__o *)v31;
   if ( !*(&AssumedEffectExtractLogic___c_TypeInfo->_2.cctor_finished + 1) )
@@ -985,7 +985,7 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
       v35 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     }
     v37 = (Il2CppObject *)v35->__9;
-    _9__1_2 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_TreasureDvcEntity__IEnumerable_int___TypeInfo);
+    _9__1_2 = (System_Func_object__object__o *)sub_2213CCC(System_Func_TreasureDvcEntity__IEnumerable_int___TypeInfo);
     System_Func_object__object____ctor(
       _9__1_2,
       v37,
@@ -993,23 +993,23 @@ void AssumedEffectExtractLogic__FromTreasureDevice(
       0);
     v38 = AssumedEffectExtractLogic___c_TypeInfo->static_fields;
     v38->__9__1_2 = (struct System_Func_TreasureDvcEntity__IEnumerable_int___o *)_9__1_2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v38->__9__1_2, (int32_t)_9__1_2, v39, v40, v41, v42, v43, v44);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38->__9__1_2, (int32_t)_9__1_2, v39, v40, v41, v42, v43, v44);
   }
   Master_object = (System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                  v34,
                                                                  (System_Func_TSource__IEnumerable_TResult___o *)_9__1_2,
-                                                                 (const MethodInfo_3860774 *)Method_System_Linq_Enumerable_SelectMany_TreasureDvcEntity__int___);
+                                                                 (const MethodInfo_3893C3C *)Method_System_Linq_Enumerable_SelectMany_TreasureDvcEntity__int___);
   if ( !toUpdate
     || (v8 = (System_Collections_Generic_IEnumerable_T__o *)Master_object,
         (Master_object = toUpdate->fields.EffectIdHashSet) == 0) )
   {
 LABEL_21:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   }
   System_Collections_Generic_HashSet_int___UnionWith(
     Master_object,
     v8,
-    (const MethodInfo_42814B4 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+    (const MethodInfo_42B5040 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
 }
 
 
@@ -1023,15 +1023,15 @@ void AssumedEffectExtractLogic___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593AC4D & 1) == 0 )
+  if ( (byte_5972E2D & 1) == 0 )
   {
-    sub_21FFC50(&AssumedEffectExtractLogic___c_TypeInfo);
-    byte_593AC4D = 1;
+    sub_2213A60(&AssumedEffectExtractLogic___c_TypeInfo);
+    byte_5972E2D = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(AssumedEffectExtractLogic___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(AssumedEffectExtractLogic___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AssumedEffectExtractLogic___c_TypeInfo->static_fields->__9 = (struct AssumedEffectExtractLogic___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)AssumedEffectExtractLogic___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1055,7 +1055,7 @@ System_Collections_Generic_IEnumerable_int__o *AssumedEffectExtractLogic___c___F
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return (System_Collections_Generic_IEnumerable_int__o *)ServantEntity__GetAssumedEffectId(x, 0);
 }
 
@@ -1075,7 +1075,7 @@ int32_t AssumedEffectExtractLogic___c___FromSkill_b__0_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return SkillEntity__GetPlayerAttackPreselectExecuteSkillId(x, 0, 0);
 }
 
@@ -1095,7 +1095,7 @@ System_Collections_Generic_IEnumerable_int__o *AssumedEffectExtractLogic___c___F
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return (System_Collections_Generic_IEnumerable_int__o *)SkillEntity__GetAssumedEffectId(x, 0);
 }
 
@@ -1115,7 +1115,7 @@ System_Collections_Generic_IEnumerable_int__o *AssumedEffectExtractLogic___c___F
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return (System_Collections_Generic_IEnumerable_int__o *)TreasureDvcEntity__GetAssumedEffectId(x, 0);
 }
 
@@ -1137,18 +1137,18 @@ SkillEntity_o *AssumedEffectExtractLogic___c__DisplayClass0_0___FromSkill_b__1(
   DataMasterBase_TMaster__TEntity__PKType__o *skillMaster; // x0
 
   id = x.fields.id;
-  if ( (byte_593AC4E & 1) == 0 )
+  if ( (byte_5972E2E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    byte_593AC4E = 1;
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    byte_5972E2E = 1;
   }
   skillMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.skillMaster;
   if ( !skillMaster )
-    sub_21FFECC(0, x);
+    sub_2213CDC(0, x);
   return (SkillEntity_o *)DataMasterBase_object__object__int___GetEntity(
                             skillMaster,
                             id,
-                            (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                            (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
 }
 
 
@@ -1160,18 +1160,18 @@ SkillEntity_o *AssumedEffectExtractLogic___c__DisplayClass0_0___FromSkill_b__4(
 {
   DataMasterBase_TMaster__TEntity__PKType__o *skillMaster; // x0
 
-  if ( (byte_593AC4F & 1) == 0 )
+  if ( (byte_5972E2F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    byte_593AC4F = 1;
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    byte_5972E2F = 1;
   }
   skillMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.skillMaster;
   if ( !skillMaster )
-    sub_21FFECC(0, *(_QWORD *)&x);
+    sub_2213CDC(0, *(_QWORD *)&x);
   return (SkillEntity_o *)DataMasterBase_object__object__int___GetEntity(
                             skillMaster,
                             x,
-                            (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                            (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
 }
 
 
@@ -1192,18 +1192,18 @@ TreasureDvcEntity_o *AssumedEffectExtractLogic___c__DisplayClass1_0___FromTreasu
   DataMasterBase_TMaster__TEntity__PKType__o *tdMaster; // x0
 
   id = x.fields.id;
-  if ( (byte_593AC50 & 1) == 0 )
+  if ( (byte_5972E30 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    byte_593AC50 = 1;
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    byte_5972E30 = 1;
   }
   tdMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.tdMaster;
   if ( !tdMaster )
-    sub_21FFECC(0, x);
+    sub_2213CDC(0, x);
   return (TreasureDvcEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                   tdMaster,
                                   id,
-                                  (const MethodInfo_3EDD388 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                  (const MethodInfo_3F10B30 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
 }
 
 
@@ -1227,11 +1227,11 @@ ServantEntity_o *AssumedEffectExtractLogic___c__DisplayClass2_0___FromServant_b_
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
   v4 = this;
-  if ( (byte_593AC51 & 1) == 0 )
+  if ( (byte_5972E31 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    this = (AssumedEffectExtractLogic___c__DisplayClass2_0_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593AC51 = 1;
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    this = (AssumedEffectExtractLogic___c__DisplayClass2_0_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_5972E31 = 1;
   }
   if ( !x )
     goto LABEL_8;
@@ -1242,14 +1242,14 @@ ServantEntity_o *AssumedEffectExtractLogic___c__DisplayClass2_0___FromServant_b_
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, x);
   *(_QWORD *)&v9.fields.currentCryptoKey = v6;
   *(_QWORD *)&v9.fields.fakeValue = v5;
-  this = (AssumedEffectExtractLogic___c__DisplayClass2_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  this = (AssumedEffectExtractLogic___c__DisplayClass2_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                                v9,
                                                                0);
   if ( !servantMaster )
 LABEL_8:
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   return (ServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
                               servantMaster,
                               (int32_t)this,
-                              (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                              (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
 }

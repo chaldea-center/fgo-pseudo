@@ -11,5 +11,5 @@ void EventTowerReward___ctor(EventTowerReward_o *this, const MethodInfo *method)
   *(_OWORD *)&this->fields.iconId = 0u;
   *(_OWORD *)&this->fields.limitCount = 0u;
   *(_OWORD *)&this->fields.eventId = 0u;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.voiceIds, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.voiceIds, 0, v3, v4, v5, v6, v7, v8);
 }

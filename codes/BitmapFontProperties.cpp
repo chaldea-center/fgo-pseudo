@@ -24,7 +24,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
     while ( 1 )
     {
       if ( max_length == v5 )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       this = (BitmapFontProperties_o *)bitmapFontInfos->m_Items[v5];
       if ( !this )
         break;
@@ -34,7 +34,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
         return 0;
     }
 LABEL_10:
-    sub_21FFECC(this, *(_QWORD *)&type);
+    sub_2213CDC(this, *(_QWORD *)&type);
   }
   return 0;
 }

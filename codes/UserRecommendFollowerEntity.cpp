@@ -1,13 +1,13 @@
 void UserRecommendFollowerEntity___ctor(UserRecommendFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939654 & 1) == 0 )
+  if ( (byte_5971815 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
-    byte_5939654 = 1;
+    sub_2213A60(&Method_DataEntityBase_long___ctor__);
+    byte_5971815 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3F0E560 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int64_t UserRecommendFollowerEntity__CreatePrimaryKey(UserRecommendFollowerEntit
 
 bool UserRecommendFollowerEntity__IsEnableData(UserRecommendFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939652 & 1) == 0 )
+  if ( (byte_5971813 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5939652 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5971813 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -48,11 +48,11 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
   RecommendSupportQuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   baseQuestId = questId;
-  if ( (byte_5939653 & 1) == 0 )
+  if ( (byte_5971814 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5939653 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5971814 = 1;
   }
   followerInfo = this->fields.followerInfo;
   entity = 0;
@@ -60,7 +60,7 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
     return 0;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&questId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
   if ( !Master_object )
     goto LABEL_21;
   Master_object = (Il2CppObject *)RecommendSupportQuestMaster__TryGetEntity(
@@ -87,10 +87,10 @@ bool UserRecommendFollowerEntity__IsEnableQuest(
   v11 = v10->m_Items[0];
   if ( !v11 || (userRecommendSupportHash = v11->fields.userRecommendSupportHash) == 0 )
 LABEL_21:
-    sub_21FFECC(Master_object, v9);
+    sub_2213CDC(Master_object, v9);
   if ( !LODWORD(userRecommendSupportHash->max_length) )
 LABEL_22:
-    sub_21FFED4(Master_object);
+    sub_2213CE4(Master_object);
   v13 = userRecommendSupportHash->m_Items[0];
   if ( !v13 )
     goto LABEL_21;
@@ -135,7 +135,7 @@ FollowerInfo_o *UserRecommendFollowerEntity__getFollowerInfo(
   {
     result = *i;
     if ( !*i )
-      sub_21FFECC(0, followerId);
+      sub_2213CDC(0, followerId);
     if ( result->fields.userId == followerId && (followerType == -1 || result->fields.type == followerType) )
       break;
     if ( !--max_length )

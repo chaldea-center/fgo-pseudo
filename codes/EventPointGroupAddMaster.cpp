@@ -1,14 +1,14 @@
 void EventPointGroupAddMaster___ctor(EventPointGroupAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593881E & 1) == 0 )
+  if ( (byte_59708E8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string___ctor__);
-    byte_593881E = 1;
+    sub_2213A60(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string___ctor__);
+    byte_59708E8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     228,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ EventPointGroupAddEntity_o *EventPointGroupAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_593881C & 1) == 0 )
+  if ( (byte_59708E6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__GetEntity__);
-    byte_593881C = 1;
+    sub_2213A60(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__GetEntity__);
+    byte_59708E6 = 1;
   }
   PK = (Il2CppObject *)EventPointGroupAddEntity__CreatePK(
                          eventId,
@@ -37,7 +37,7 @@ EventPointGroupAddEntity_o *EventPointGroupAddMaster__GetEntity(
   return (EventPointGroupAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__GetEntity__);
+                                         (const MethodInfo_3F157EC *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__GetEntity__);
 }
 
 
@@ -81,22 +81,22 @@ System_Int32_array *EventPointGroupAddMaster__GetTermedIconIds(
   __int64 v39; // x8
   unsigned int max_length; // w9
 
-  if ( (byte_5938820 & 1) == 0 )
+  if ( (byte_59708EA & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_FindIndex_int___);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&System_Predicate_int__TypeInfo);
-    sub_21FFC50(&Method_EventPointGroupAddMaster___c__DisplayClass4_0__GetTermedIconIds_b__0__);
-    sub_21FFC50(&EventPointGroupAddMaster___c__DisplayClass4_0_TypeInfo);
-    byte_5938820 = 1;
+    sub_2213A60(&Method_System_Array_FindIndex_int___);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&System_Predicate_int__TypeInfo);
+    sub_2213A60(&Method_EventPointGroupAddMaster___c__DisplayClass4_0__GetTermedIconIds_b__0__);
+    sub_2213A60(&EventPointGroupAddMaster___c__DisplayClass4_0_TypeInfo);
+    byte_59708EA = 1;
   }
-  v10 = sub_21FFEBC(EventPointGroupAddMaster___c__DisplayClass4_0_TypeInfo);
+  v10 = sub_2213CCC(EventPointGroupAddMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   if ( !groupIds )
     goto LABEL_33;
-  list = sub_21FFD10(int___TypeInfo, LODWORD(groupIds->max_length));
+  list = sub_2213B20(int___TypeInfo, LODWORD(groupIds->max_length));
   if ( !list )
     goto LABEL_33;
   v13 = *(_QWORD *)(list + 24);
@@ -110,7 +110,7 @@ System_Int32_array *EventPointGroupAddMaster__GetTermedIconIds(
     {
       if ( !v16 )
 LABEL_34:
-        sub_21FFED4(list);
+        sub_2213CE4(list);
       --v15;
       --v16;
       *v17++ = 0;
@@ -120,10 +120,10 @@ LABEL_34:
   list = (__int64)this->fields.list;
   if ( !list )
 LABEL_33:
-    sub_21FFECC(list, v12);
+    sub_2213CDC(list, v12);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
+            (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
   if ( Count >= 1 )
   {
     v19 = Count;
@@ -136,30 +136,30 @@ LABEL_33:
       list = (__int64)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)list,
                         v20,
-                        (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
+                        (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
       if ( !v10 )
         goto LABEL_33;
       *(_QWORD *)(v10 + 16) = list;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v10 + 16), list, v21, v22, v23, v24, v25, v26);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 16), list, v21, v22, v23, v24, v25, v26);
       v27 = *(_DWORD **)(v10 + 16);
       if ( v27 && v27[4] == eventId && v27[5] == termId && v27[8] == 1 )
       {
         v28 = *(System_Predicate_int__o **)(v10 + 24);
         if ( !v28 )
         {
-          v28 = (System_Predicate_int__o *)sub_21FFEBC(System_Predicate_int__TypeInfo);
+          v28 = (System_Predicate_int__o *)sub_2213CCC(System_Predicate_int__TypeInfo);
           System_Predicate_int____ctor(
             v28,
             (Il2CppObject *)v10,
             Method_EventPointGroupAddMaster___c__DisplayClass4_0__GetTermedIconIds_b__0__,
             0);
           *(_QWORD *)(v10 + 24) = v28;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v10 + 24), (int32_t)v28, v29, v30, v31, v32, v33, v34);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 24), (int32_t)v28, v29, v30, v31, v32, v33, v34);
         }
         list = System_Array__FindIndex_int_(
                  groupIds,
                  (System_Predicate_T__o *)v28,
-                 (const MethodInfo_3978028 *)Method_System_Array_FindIndex_int___);
+                 (const MethodInfo_39A9D14 *)Method_System_Array_FindIndex_int___);
         if ( (list & 0x80000000) == 0 )
         {
           if ( !defaultImageIds )
@@ -240,34 +240,33 @@ bool EventPointGroupAddMaster__IsClearCondChangeImage(
   int v37; // w23
   int32_t v38; // w21
   System_Collections_ObjectModel_Collection_T__o *v39; // x22
-  bool result; // w0
 
-  if ( (byte_593881F & 1) == 0 )
+  if ( (byte_59708E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
-    sub_21FFC50(&System_Comparison_EventPointGroupAddEntity__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventPointGroupAddEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_EventPointGroupAddEntity__TypeInfo);
-    sub_21FFC50(&Method_EventPointGroupAddMaster___c__IsClearCondChangeImage_b__3_0__);
-    sub_21FFC50(&EventPointGroupAddMaster___c_TypeInfo);
-    byte_593881F = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
+    sub_2213A60(&System_Comparison_EventPointGroupAddEntity__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventPointGroupAddEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_EventPointGroupAddEntity__TypeInfo);
+    sub_2213A60(&Method_EventPointGroupAddMaster___c__IsClearCondChangeImage_b__3_0__);
+    sub_2213A60(&EventPointGroupAddMaster___c_TypeInfo);
+    byte_59708E9 = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventPointGroupAddEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventPointGroupAddEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventPointGroupAddEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventPointGroupAddEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   *imageId = 0;
   if ( !list )
     goto LABEL_33;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
+                                                             (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v14 = (int)list;
@@ -280,7 +279,7 @@ bool EventPointGroupAddMaster__IsClearCondChangeImage(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v15,
-                                                                 (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
+                                                                 (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupAddEntity__get_Item__);
       if ( !list )
         break;
       v12 = (const MethodInfo *)list;
@@ -302,21 +301,21 @@ bool EventPointGroupAddMaster__IsClearCondChangeImage(
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)list,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
           v25 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v25[4] = (Il2CppClass *)v12;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v12, v16, v17, v18, v19, v20, v21);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v12, v16, v17, v18, v19, v20, v21);
         }
       }
       if ( v14 == ++v15 )
         goto LABEL_18;
     }
 LABEL_33:
-    sub_21FFECC(list, v12);
+    sub_2213CDC(list, v12);
   }
 LABEL_18:
   if ( !v11 )
@@ -339,7 +338,7 @@ LABEL_18:
       static_fields = EventPointGroupAddMaster___c_TypeInfo->static_fields;
     }
     v29 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventPointGroupAddEntity__TypeInfo);
+    _9__3_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventPointGroupAddEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__3_0,
       v29,
@@ -347,12 +346,12 @@ LABEL_18:
       0);
     v30 = EventPointGroupAddMaster___c_TypeInfo->static_fields;
     v30->__9__3_0 = (struct System_Comparison_EventPointGroupAddEntity__o *)_9__3_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v30->__9__3_0, (int32_t)_9__3_0, v31, v32, v33, v34, v35, v36);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30->__9__3_0, (int32_t)_9__3_0, v31, v32, v33, v34, v35, v36);
   }
-  System_Collections_Generic_List_object___Sort_71636404(
+  System_Collections_Generic_List_object___Sort_71849708(
     v11,
     _9__3_0,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventPointGroupAddEntity__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventPointGroupAddEntity__Sort__);
   v37 = v11->fields._size;
   if ( v37 < 1 )
     return 0;
@@ -362,7 +361,7 @@ LABEL_18:
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_Generic_List_object___get_Item(
                                                                v11,
                                                                v38,
-                                                               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Item__);
+                                                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventPointGroupAddEntity__get_Item__);
     if ( !list )
       goto LABEL_33;
     v39 = list;
@@ -371,9 +370,8 @@ LABEL_18:
     if ( v37 == ++v38 )
       return 0;
   }
-  result = 1;
   *imageId = HIDWORD(v39[1].monitor);
-  return result;
+  return 1;
 }
 
 
@@ -389,10 +387,10 @@ bool EventPointGroupAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_593881D & 1) == 0 )
+  if ( (byte_59708E7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__TryGetEntity__);
-    byte_593881D = 1;
+    sub_2213A60(&Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__TryGetEntity__);
+    byte_59708E7 = 1;
   }
   PK = (Il2CppObject *)EventPointGroupAddEntity__CreatePK(
                          eventId,
@@ -404,7 +402,7 @@ bool EventPointGroupAddMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventPointGroupAddMaster__EventPointGroupAddEntity__string__TryGetEntity__);
 }
 
 
@@ -418,15 +416,15 @@ void EventPointGroupAddMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5938821 & 1) == 0 )
+  if ( (byte_59708EB & 1) == 0 )
   {
-    sub_21FFC50(&EventPointGroupAddMaster___c_TypeInfo);
-    byte_5938821 = 1;
+    sub_2213A60(&EventPointGroupAddMaster___c_TypeInfo);
+    byte_59708EB = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventPointGroupAddMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventPointGroupAddMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventPointGroupAddMaster___c_TypeInfo->static_fields->__9 = (struct EventPointGroupAddMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventPointGroupAddMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -451,7 +449,7 @@ int32_t EventPointGroupAddMaster___c___IsClearCondChangeImage_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -474,6 +472,6 @@ bool EventPointGroupAddMaster___c__DisplayClass4_0___GetTermedIconIds_b__0(
 
   tempEnt = this->fields.tempEnt;
   if ( !tempEnt )
-    sub_21FFECC(this, *(_QWORD *)&x);
+    sub_2213CDC(this, *(_QWORD *)&x);
   return tempEnt->fields.groupId == x;
 }

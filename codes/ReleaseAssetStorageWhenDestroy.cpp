@@ -9,10 +9,10 @@ void ReleaseAssetStorageWhenDestroy__OnDestroy(ReleaseAssetStorageWhenDestroy_o 
   __int64 v2; // x2
   System_String_o *assetName; // x19
 
-  if ( (byte_59326B6 & 1) == 0 )
+  if ( (byte_596A8C3 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_59326B6 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_596A8C3 = 1;
   }
   assetName = this->fields.assetName;
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
@@ -33,7 +33,7 @@ void ReleaseAssetStorageWhenDestroy__Setup(
   bool v7; // w7
 
   this->fields.assetName = assetName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.assetName,
     (int32_t)assetName,
     (System_String_o *)method,

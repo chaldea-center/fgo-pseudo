@@ -1,27 +1,27 @@
 void ClassBoardClassEntity___ctor(ClassBoardClassEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59383D8 & 1) == 0 )
+  if ( (byte_5970588 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59383D8 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970588 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ClassBoardClassEntity__CreatePK(int32_t classBoardBaseId, int32_t classId, const MethodInfo *method)
 {
-  if ( (byte_59383D7 & 1) == 0 )
+  if ( (byte_5970587 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59383D7 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5970587 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            classId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -45,10 +45,10 @@ bool ClassBoardClassEntity__IsOpen(ClassBoardClassEntity_o *this, const MethodIn
   int32_t condTargetId; // w21
   int64_t condNum; // x19
 
-  if ( (byte_59383D6 & 1) == 0 )
+  if ( (byte_5970586 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    byte_59383D6 = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    byte_5970586 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

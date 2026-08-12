@@ -15,10 +15,10 @@ void EventHeelPortraitListViewItem___ctor(
   bool v15; // w7
 
   v9 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 120);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v9, (int32_t)heelPortraitEntity, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v9, (int32_t)heelPortraitEntity, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
@@ -67,7 +67,7 @@ void EventHeelPortraitListViewItem__set_Entity(
   bool v7; // w7
 
   this->fields._Entity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Entity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

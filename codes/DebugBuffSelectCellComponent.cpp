@@ -34,16 +34,16 @@ void DebugBuffSelectCellComponent__Set(
   System_String_o *v31; // x0
   __int64 v32; // x1
 
-  if ( (byte_5939C8C & 1) == 0 )
+  if ( (byte_5971E50 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1532/*":"*/);
-    byte_5939C8C = 1;
+    sub_2213A60(&StringLiteral_1533/*":"*/);
+    byte_5971E50 = 1;
   }
   this->fields.name = name;
   p_name = &this->fields.name;
   this->fields.id = id;
   v15 = (_DWORD)this + 40;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.name,
     (int32_t)name,
     name,
@@ -53,16 +53,16 @@ void DebugBuffSelectCellComponent__Set(
     (bool)method,
     v7);
   this->fields.detail = detail;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.detail, (int32_t)detail, v16, v17, v18, v19, v20, v21);
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_callback, (int32_t)callback, v23, v24, v25, v26, v27, v28);
   v29 = (UILabel_o *)*(p_callback - 5);
   *((_DWORD *)p_callback - 2) = buffType;
   v30 = System_Int32__ToString(v15, 0);
-  v31 = System_String__Concat_75481624(v30, (System_String_o *)StringLiteral_1532/*":"*/, *p_name, 0);
+  v31 = System_String__Concat_75694928(v30, (System_String_o *)StringLiteral_1533/*":"*/, *p_name, 0);
   if ( !v29 )
-    sub_21FFECC(v31, v32);
+    sub_2213CDC(v31, v32);
   UILabel__set_text(v29, v31, 0);
 }
 

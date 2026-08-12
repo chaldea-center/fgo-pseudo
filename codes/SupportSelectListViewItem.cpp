@@ -18,9 +18,9 @@ void SupportSelectListViewItem___ctor(
   bool v18; // w6
   bool v19; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.supportServantData = supportServantData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
     v8,
@@ -30,7 +30,7 @@ void SupportSelectListViewItem___ctor(
     v12,
     v13);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     v14,
@@ -54,7 +54,7 @@ void SupportSelectListViewItem__ResetEventCampaign(
   bool v7; // w7
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     (System_String_o *)method,
@@ -72,7 +72,7 @@ System_String_o *SupportSelectListViewItem__get_DeckName(SupportSelectListViewIt
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -97,7 +97,7 @@ void SupportSelectListViewItem__set_listObj(
   bool v7; // w7
 
   this->fields._listObj_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -125,7 +125,7 @@ void SupportSelectListViewItem__setuplistObj(
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._listObj_k__BackingField,
     (int32_t)obj,
     (System_String_o *)method,
@@ -135,7 +135,7 @@ void SupportSelectListViewItem__setuplistObj(
     v6,
     v7);
   if ( !*p_listObj_k__BackingField )
-    sub_21FFECC(0, v10);
+    sub_2213CDC(0, v10);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

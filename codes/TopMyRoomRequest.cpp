@@ -81,20 +81,20 @@ void TopMyRoomRequest__beginRequest(
   RequestBase_o *v79; // [xsp+8h] [xbp-68h]
 
   v4 = this;
-  if ( (byte_593A325 & 1) == 0 )
+  if ( (byte_5972502 & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_922/*",["*/);
-    sub_21FFC50(&StringLiteral_869/*","*/);
-    sub_21FFC50(&StringLiteral_26032/*"voicePlayedList"*/);
-    sub_21FFC50(&StringLiteral_16395/*"["*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    this = (TopMyRoomRequest_o *)sub_21FFC50(&StringLiteral_16659/*"]"*/);
-    byte_593A325 = 1;
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_922/*",["*/);
+    sub_2213A60(&StringLiteral_869/*","*/);
+    sub_2213A60(&StringLiteral_26082/*"voicePlayedList"*/);
+    sub_2213A60(&StringLiteral_16427/*"["*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    this = (TopMyRoomRequest_o *)sub_2213A60(&StringLiteral_16691/*"]"*/);
+    byte_5972502 = 1;
   }
   if ( !voicePlayedList )
 LABEL_33:
-    sub_21FFECC(this, voicePlayedList);
+    sub_2213CDC(this, voicePlayedList);
   v79 = (RequestBase_o *)v4;
   max_length = voicePlayedList->max_length;
   v6 = (TopMyRoomRequest_o *)StringLiteral_1/*""*/;
@@ -108,22 +108,22 @@ LABEL_33:
       {
         if ( System_String__IsNullOrEmpty((System_String_o *)v6, 0) )
         {
-          this = (TopMyRoomRequest_o *)sub_21FFD10(string___TypeInfo, 5);
+          this = (TopMyRoomRequest_o *)sub_2213B20(string___TypeInfo, 5);
           if ( !this )
             goto LABEL_33;
           v15 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
-          v16 = StringLiteral_16395/*"["*/;
-          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16395/*"["*/;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.paramString, v16, v9, v10, v11, v12, v13, v14);
+          v16 = StringLiteral_16427/*"["*/;
+          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16427/*"["*/;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.paramString, v16, v9, v10, v11, v12, v13, v14);
           if ( !LODWORD(v8->max_length) )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 32, 0);
           if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFE) == 0 )
             break;
           *(_QWORD *)&v15->fields.shouldShowConnect = this;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v15->fields.shouldShowConnect,
             (int32_t)this,
             v17,
@@ -136,30 +136,30 @@ LABEL_33:
             break;
           v29 = StringLiteral_869/*","*/;
           v15[1].klass = (TopMyRoomRequest_c *)StringLiteral_869/*","*/;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1], v29, v23, v24, v25, v26, v27, v28);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[1], v29, v23, v24, v25, v26, v27, v28);
           if ( (v8->max_length & 0xFFFFFFFE) == 0 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
           if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFC) == 0 )
             break;
           v15[1].monitor = this;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, (int32_t)this, v30, v31, v32, v33, v34, v35);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, (int32_t)this, v30, v31, v32, v33, v34, v35);
           if ( LODWORD(v15->fields.paramInteger) <= 4 )
             break;
-          v42 = StringLiteral_16659/*"]"*/;
-          v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_16659/*"]"*/;
+          v42 = StringLiteral_16691/*"]"*/;
+          v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_16691/*"]"*/;
           p_fields = (MissionNaviTransitionBoardItem_o *)&v15[1].fields;
         }
         else
         {
-          this = (TopMyRoomRequest_o *)sub_21FFD10(string___TypeInfo, 6);
+          this = (TopMyRoomRequest_o *)sub_2213B20(string___TypeInfo, 6);
           if ( !this )
             goto LABEL_33;
           v15 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
           this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v6;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.paramString,
             (int32_t)v6,
             v44,
@@ -172,7 +172,7 @@ LABEL_33:
             break;
           v56 = StringLiteral_922/*",["*/;
           *(_QWORD *)&v15->fields.shouldShowConnect = StringLiteral_922/*",["*/;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v15->fields.shouldShowConnect,
             v56,
             v50,
@@ -187,42 +187,42 @@ LABEL_33:
           if ( LODWORD(v15->fields.paramInteger) <= 2 )
             break;
           v15[1].klass = (TopMyRoomRequest_c *)this;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1], (int32_t)this, v57, v58, v59, v60, v61, v62);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[1], (int32_t)this, v57, v58, v59, v60, v61, v62);
           if ( ((__int64)v15->fields.paramInteger & 0xFFFFFFFC) == 0 )
             break;
           v69 = StringLiteral_869/*","*/;
           v15[1].monitor = (void *)StringLiteral_869/*","*/;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, v69, v63, v64, v65, v66, v67, v68);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[1].monitor, v69, v63, v64, v65, v66, v67, v68);
           if ( (v8->max_length & 0xFFFFFFFE) == 0 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
           if ( LODWORD(v15->fields.paramInteger) <= 4 )
             break;
           v15[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)this;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15[1].fields, (int32_t)this, v70, v71, v72, v73, v74, v75);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[1].fields, (int32_t)this, v70, v71, v72, v73, v74, v75);
           if ( LODWORD(v15->fields.paramInteger) <= 5 )
             break;
-          v42 = StringLiteral_16659/*"]"*/;
-          v15[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16659/*"]"*/;
+          v42 = StringLiteral_16691/*"]"*/;
+          v15[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16691/*"]"*/;
           p_fields = (MissionNaviTransitionBoardItem_o *)&v15[1].fields.paramInteger;
         }
-        sub_21FFBF4(p_fields, v42, v36, v37, v38, v39, v40, v41);
-        this = (TopMyRoomRequest_o *)System_String__Concat_75483816((System_String_array *)v15, 0);
+        sub_2213A04(p_fields, v42, v36, v37, v38, v39, v40, v41);
+        this = (TopMyRoomRequest_o *)System_String__Concat_75697120((System_String_array *)v15, 0);
         v6 = this;
       }
       LODWORD(max_length) = voicePlayedList->max_length;
       if ( (__int64)++v7 >= (int)max_length )
         goto LABEL_31;
     }
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   }
 LABEL_31:
-  v76 = System_String__Concat_75481624(
-          (System_String_o *)StringLiteral_16395/*"["*/,
+  v76 = System_String__Concat_75694928(
+          (System_String_o *)StringLiteral_16427/*"["*/,
           (System_String_o *)v6,
-          (System_String_o *)StringLiteral_16659/*"]"*/,
+          (System_String_o *)StringLiteral_16691/*"]"*/,
           0);
-  RequestBase__addField_51187332(v79, (System_String_o *)StringLiteral_26032/*"voicePlayedList"*/, v76, v77);
+  RequestBase__addField_51259256(v79, (System_String_o *)StringLiteral_26082/*"voicePlayedList"*/, v76, v77);
   RequestBase__beginRequest(v79, v78);
 }
 
@@ -231,16 +231,16 @@ System_String_o *TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, const Method
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A324 & 1) == 0 )
+  if ( (byte_5972501 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18507/*"card/voice"*/);
-    byte_593A324 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18545/*"card/voice"*/);
+    byte_5972501 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18507/*"card/voice"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_18545/*"card/voice"*/, 0);
 }
 
 
@@ -254,12 +254,12 @@ void TopMyRoomRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_593A326 & 1) == 0 )
+  if ( (byte_5972503 & 1) == 0 )
   {
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A326 = 1;
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972503 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
@@ -269,14 +269,14 @@ void TopMyRoomRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_23468/*"ok"*/;
+    v8 = &StringLiteral_23515/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_23290/*"ng"*/;
+    v8 = &StringLiteral_23336/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

@@ -46,22 +46,22 @@ void EventInfoPassportMaximController__CachePassportInputComponents(
   bool v32; // w7
 
   v4 = this;
-  if ( (byte_59399D6 & 1) == 0 )
+  if ( (byte_5971D4C & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_Collider2D___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_Collider____91557144);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIButton___);
-    this = (EventInfoPassportMaximController_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITouchPress___);
-    byte_59399D6 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_Collider2D___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_Collider____91783536);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIButton___);
+    this = (EventInfoPassportMaximController_o *)sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITouchPress___);
+    byte_5971D4C = 1;
   }
   if ( !root )
-    sub_21FFECC(this, root);
+    sub_2213CDC(this, root);
   ComponentsInChildren_object = UnityEngine_GameObject__GetComponentsInChildren_object_(
                                   root,
                                   1,
-                                  (const MethodInfo_3884508 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITouchPress___);
+                                  (const MethodInfo_38B79D0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITouchPress___);
   v4->fields.passportTouchPresses = (struct UITouchPress_array *)ComponentsInChildren_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v4->fields.passportTouchPresses,
     (int32_t)ComponentsInChildren_object,
     v6,
@@ -73,9 +73,9 @@ void EventInfoPassportMaximController__CachePassportInputComponents(
   v12 = UnityEngine_GameObject__GetComponentsInChildren_object_(
           root,
           1,
-          (const MethodInfo_3884508 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIButton___);
+          (const MethodInfo_38B79D0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIButton___);
   v4->fields.passportButtons = (struct UIButton_array *)v12;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v4->fields.passportButtons,
     (int32_t)v12,
     v13,
@@ -87,9 +87,9 @@ void EventInfoPassportMaximController__CachePassportInputComponents(
   v19 = UnityEngine_GameObject__GetComponentsInChildren_object_(
           root,
           1,
-          (const MethodInfo_3884508 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Collider____91557144);
+          (const MethodInfo_38B79D0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Collider____91783536);
   v4->fields.passportColliders = (struct UnityEngine_Collider_array *)v19;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v4->fields.passportColliders,
     (int32_t)v19,
     v20,
@@ -101,9 +101,9 @@ void EventInfoPassportMaximController__CachePassportInputComponents(
   v26 = UnityEngine_GameObject__GetComponentsInChildren_object_(
           root,
           1,
-          (const MethodInfo_3884508 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Collider2D___);
+          (const MethodInfo_38B79D0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Collider2D___);
   v4->fields.passportColliders2D = (struct UnityEngine_Collider2D_array *)v26;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v4->fields.passportColliders2D,
     (int32_t)v26,
     v27,
@@ -128,10 +128,10 @@ float EventInfoPassportMaximController__CalcGameScreenAspectRatio(
   float v8; // s0
   float v9; // s1
 
-  if ( (byte_59399D8 & 1) == 0 )
+  if ( (byte_5971D4E & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_59399D8 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_5971D4E = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -186,17 +186,16 @@ void EventInfoPassportMaximController__ClearPassportInputComponents(
   bool v26; // w7
 
   this->fields.passportTouchPresses = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.passportTouchPresses, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.passportTouchPresses, 0, v2, v3, v4, v5, v6, v7);
   this->fields.passportButtons = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.passportButtons, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.passportButtons, 0, v9, v10, v11, v12, v13, v14);
   this->fields.passportColliders = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.passportColliders, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.passportColliders, 0, v15, v16, v17, v18, v19, v20);
   this->fields.passportColliders2D = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.passportColliders2D, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.passportColliders2D, 0, v21, v22, v23, v24, v25, v26);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void EventInfoPassportMaximController__Close(EventInfoPassportMaximController_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
@@ -209,43 +208,36 @@ void EventInfoPassportMaximController__Close(EventInfoPassportMaximController_o 
   __int64 v10; // x1
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_GameObject_o *v12; // x20
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  float v16; // s3
-  float v17; // s4
-  float v18; // s3
-  TweenScale_o *v19; // x20
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  int32_t v26; // w1
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
-  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  TweenScale_o *v13; // x20
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  int32_t v20; // w1
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o v28; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_59399D1 & 1) == 0 )
+  if ( (byte_5971D47 & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoPassportMaximController_Close__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_10266/*"OnCloseMaximPassportFinished"*/);
-    byte_59399D1 = 1;
+    sub_2213A60(&Method_EventInfoPassportMaximController_Close__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_10279/*"OnCloseMaximPassportFinished"*/);
+    byte_5971D47 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_EventInfoPassportMaximController_Close__;
     if ( (*((_BYTE *)Method_EventInfoPassportMaximController_Close__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoPassportMaximController_Close__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoPassportMaximController_Close__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     maximMask = this->fields.maximMask;
     this->fields.isMaximBusy = 1;
@@ -280,46 +272,32 @@ LABEL_14:
       goto LABEL_23;
     v12 = maximMask;
     maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(this->fields.selectPassport, 0);
-    if ( !maximMask )
-      goto LABEL_23;
-    position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)maximMask, 0);
-    x = position.fields.x;
-    y = position.fields.y;
-    z = position.fields.z;
-    maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !maximMask )
-      goto LABEL_23;
-    maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(maximMask, 0);
-    if ( !maximMask )
-      goto LABEL_23;
-    v34.fields.x = x;
-    v34.fields.y = y;
-    v34.fields.z = z;
-    v35 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)maximMask, v34, 0);
-    v16 = v35.fields.y;
-    v17 = v35.fields.z;
-    v35.fields.y = v35.fields.x;
-    v35.fields.z = v16;
-    v18 = v17;
-    TweenPosition__Begin(v12, 0.2, *(UnityEngine_Vector3_o *)&v35.fields.y, 0);
-    v19 = TweenScale__Begin(v12, 0.2, this->fields.maximStartScale, 0);
-    maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !v19 )
+    if ( !maximMask
+      || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)maximMask, 0),
+          (maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
+      || (maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(maximMask, 0)) == 0
+      || (v28 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)maximMask, position, 0),
+          TweenPosition__Begin(v12, 0.2, v28, 0),
+          v13 = TweenScale__Begin(v12, 0.2, this->fields.maximStartScale, 0),
+          maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
+          !v13) )
+    {
 LABEL_23:
-      sub_21FFECC(maximMask, v5);
-    v19->fields.eventReceiver = maximMask;
-    sub_21FFBF4(
-      (MissionNaviTransitionBoardItem_o *)&v19->fields.eventReceiver,
+      sub_2213CDC(maximMask, v5);
+    }
+    v13->fields.eventReceiver = maximMask;
+    sub_2213A04(
+      (MissionNaviTransitionBoardItem_o *)&v13->fields.eventReceiver,
       (int32_t)maximMask,
-      v20,
-      v21,
-      v22,
-      v23,
-      v24,
-      v25);
-    v26 = StringLiteral_10266/*"OnCloseMaximPassportFinished"*/;
-    v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10266/*"OnCloseMaximPassportFinished"*/;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->fields.callWhenFinished, v26, v27, v28, v29, v30, v31, v32);
+      v14,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19);
+    v20 = StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
+    v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
   }
 }
 
@@ -356,15 +334,15 @@ void EventInfoPassportMaximController__CloseImmediate(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maximBackSprite, 0, 0),
         (maximBackSprite = (UnityEngine_Component_o *)this->fields.maximMask) == 0) )
   {
-    sub_21FFECC(maximBackSprite, v3);
+    sub_2213CDC(maximBackSprite, v3);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maximBackSprite, 0, 0);
   GameObjectHelper__SetActiveSafely(this->fields.selectPassport, 1, 0);
   this->fields.selectPassport = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectPassport, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectPassport, 0, v5, v6, v7, v8, v9, v10);
   BasicHelper__Destroy((UnityEngine_Component_o *)this->fields.maximPassport, 0);
   this->fields.maximPassport = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.maximPassport, 0, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.maximPassport, 0, v11, v12, v13, v14, v15, v16);
   EventInfoPassportMaximController__ClearPassportInputComponents(this, v17);
   this->fields.state = 0;
   this->fields.isMaximBusy = 0;
@@ -385,25 +363,23 @@ System_Collections_IEnumerator_o *EventInfoPassportMaximController__DelayAndExec
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_59399D5 & 1) == 0 )
+  if ( (byte_5971D4B & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoPassportMaximController__DelayAndExecute_d__31_TypeInfo);
-    byte_59399D5 = 1;
+    sub_2213A60(&EventInfoPassportMaximController__DelayAndExecute_d__31_TypeInfo);
+    byte_5971D4B = 1;
   }
-  v5 = sub_21FFEBC(EventInfoPassportMaximController__DelayAndExecute_d__31_TypeInfo);
+  v5 = sub_2213CCC(EventInfoPassportMaximController__DelayAndExecute_d__31_TypeInfo);
   EventInfoPassportMaximController__DelayAndExecute_d__31___ctor(
     (EventInfoPassportMaximController__DelayAndExecute_d__31_o *)v5,
     0,
     0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
-  result = (System_Collections_IEnumerator_o *)v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 40) = action;
-  return result;
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -414,7 +390,7 @@ void EventInfoPassportMaximController__EndBackMask(EventInfoPassportMaximControl
 
   maximBackSprite = (UnityEngine_Component_o *)this->fields.maximBackSprite;
   if ( !maximBackSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   gameObject = UnityEngine_Component__get_gameObject(maximBackSprite, 0);
   TweenAlpha__Begin(gameObject, 0.2, 0.0, 0);
 }
@@ -428,10 +404,10 @@ void EventInfoPassportMaximController__ForceCloseForDialogClosing(
   UnityEngine_Object_o *maximPassport; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_59399D2 & 1) == 0 )
+  if ( (byte_5971D48 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399D2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D48 = 1;
   }
   if ( this->fields.state )
     goto LABEL_7;
@@ -449,14 +425,13 @@ LABEL_7:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o EventInfoPassportMaximController__GetMaximScale(
         EventInfoPassportMaximController_o *this,
         UnityEngine_GameObject_o *target,
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s0 OVERLAPPED
+  float x; // s0
   float y; // s1
   float z; // s2
   UnityEngine_GameObject_o *gameObject; // x0
@@ -471,27 +446,25 @@ UnityEngine_Vector3_o EventInfoPassportMaximController__GetMaximScale(
   float v18; // s8
   float v19; // s8
   float v20; // s3
-  float v21; // s0
-  float v22; // s1
-  float v23; // s2
   UnityEngine_Bounds_o v24; // [xsp+8h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_59399D7 & 1) == 0 )
+  if ( (byte_5971D4D & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399D7 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D4D = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, target);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)target, 0, 0) )
   {
-    if ( !byte_5931945 )
+    if ( !byte_5969AE5 )
     {
-      sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931945 = 1;
+      sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE5 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->oneVector.fields.x;
@@ -504,11 +477,11 @@ UnityEngine_Vector3_o EventInfoPassportMaximController__GetMaximScale(
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0), !target) )
   {
 LABEL_25:
-    sub_21FFECC(gameObject, v10);
+    sub_2213CDC(gameObject, v10);
   }
   v11 = (UnityEngine_Transform_o *)gameObject;
   transform = UnityEngine_GameObject__get_transform(target, 0);
-  NGUIMath__CalculateRelativeWidgetBounds_56085108(&v24, v11, transform, 0);
+  NGUIMath__CalculateRelativeWidgetBounds_56289764(&v24, v11, transform, 0);
   v14 = v24.fields.m_Extents.fields.x + v24.fields.m_Extents.fields.x;
   if ( (float)(v24.fields.m_Extents.fields.x + v24.fields.m_Extents.fields.x) <= 0.0
     || (v15 = v24.fields.m_Extents.fields.y + v24.fields.m_Extents.fields.y,
@@ -517,12 +490,15 @@ LABEL_25:
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0);
     if ( gameObject )
     {
-      *(UnityEngine_Vector3_o *)&x = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+      x = localScale.fields.x;
+      y = localScale.fields.y;
+      z = localScale.fields.z;
 LABEL_24:
-      v21 = x + x;
-      v22 = y + y;
-      v23 = z + z;
-      goto LABEL_26;
+      result.fields.x = x + x;
+      result.fields.y = y + y;
+      result.fields.z = z + z;
+      return result;
     }
     goto LABEL_25;
   }
@@ -541,17 +517,13 @@ LABEL_24:
     v19 = (float)m_CachedPtr / v15;
   else
     v19 = (float)((float)m_CachedPtr / v18) / v14;
-  localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+  v25 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
   v20 = 1.0;
   if ( v19 >= 1.0 )
     v20 = v19;
-  v21 = v20 * localScale.fields.x;
-  v22 = v20 * localScale.fields.y;
-  v23 = v20 * localScale.fields.z;
-LABEL_26:
-  result.fields.z = v23;
-  result.fields.y = v22;
-  result.fields.x = v21;
+  result.fields.x = v20 * v25.fields.x;
+  result.fields.y = v20 * v25.fields.y;
+  result.fields.z = v20 * v25.fields.z;
   return result;
 }
 
@@ -627,28 +599,24 @@ void EventInfoPassportMaximController__Open(
   const MethodInfo *v39; // x2
   const MethodInfo *v40; // x1
   const MethodInfo *v41; // x2
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  float v45; // s0
-  float v46; // s1
-  float v47; // s3
-  float v48; // s2
-  float v49; // s4
+  float v42; // s0
+  float v43; // s1
+  float v44; // s3
+  float v45; // s2
+  float v46; // s4
+  UnityEngine_Vector3_o MaximScale; // 0:kr40_12.12
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o MaximScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v53; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Vector3_o v54; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v50; // 0:s1.4,4:s2.4,8:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_59399D0 & 1) == 0 )
+  if ( (byte_5971D46 & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoPassportMaximController_Open__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399D0 = 1;
+    sub_2213A60(&Method_EventInfoPassportMaximController_Open__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D46 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, passport);
@@ -666,7 +634,7 @@ void EventInfoPassportMaximController__Open(
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)passport, 0);
         this->fields.selectPassport = gameObject;
         p_selectPassport = &this->fields.selectPassport;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.selectPassport,
           (int32_t)gameObject,
           v12,
@@ -680,7 +648,7 @@ void EventInfoPassportMaximController__Open(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
         v20 = UnityEngine_Object__Instantiate_object_(
                 selectPassport,
-                (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
         maximMask = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v20, 0, 0);
         if ( ((unsigned __int8)maximMask & 1) != 0 )
           return;
@@ -688,9 +656,9 @@ void EventInfoPassportMaximController__Open(
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)v20,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
           *p_maximPassport = (struct EventInfoPassport_o *)Component_object;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.maximPassport,
             (int32_t)Component_object,
             v22,
@@ -706,10 +674,10 @@ void EventInfoPassportMaximController__Open(
           {
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30);
-            UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)v20, 0);
+            UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v20, 0);
             return;
           }
-          v31 = (System_Reflection_MethodBase_o *)sub_1FEBA28(Method_EventInfoPassportMaximController_Open__);
+          v31 = (System_Reflection_MethodBase_o *)sub_1FFEFAC(Method_EventInfoPassportMaximController_Open__);
           OverwriteAssetSoundName__PlaySystemSe(v31, 0, 0, 0);
           maximMask = *p_selectPassport;
           if ( *p_selectPassport )
@@ -787,20 +755,14 @@ void EventInfoPassportMaximController__Open(
                                                  this,
                                                  (UnityEngine_GameObject_o *)v20,
                                                  v41);
-                                  x = MaximScale.fields.x;
-                                  y = MaximScale.fields.y;
-                                  z = MaximScale.fields.z;
-                                  v45 = sub_24A40FC(0);
-                                  v47 = v46;
-                                  v49 = v48;
-                                  v53.fields.x = v45;
-                                  v53.fields.y = v47;
-                                  v53.fields.z = v49;
-                                  TweenPosition__Begin((UnityEngine_GameObject_o *)v20, 0.2, v53, 0);
-                                  v54.fields.x = x;
-                                  v54.fields.y = y;
-                                  v54.fields.z = z;
-                                  TweenScale__Begin((UnityEngine_GameObject_o *)v20, 0.2, v54, 0);
+                                  v42 = sub_24B9B38(0);
+                                  v44 = v43;
+                                  v46 = v45;
+                                  v50.fields.x = v42;
+                                  v50.fields.y = v44;
+                                  v50.fields.z = v46;
+                                  TweenPosition__Begin((UnityEngine_GameObject_o *)v20, 0.2, v50, 0);
+                                  TweenScale__Begin((UnityEngine_GameObject_o *)v20, 0.2, MaximScale, 0);
                                   return;
                                 }
                               }
@@ -816,7 +778,7 @@ void EventInfoPassportMaximController__Open(
           }
         }
       }
-      sub_21FFECC(maximMask, v9);
+      sub_2213CDC(maximMask, v9);
     }
   }
 }
@@ -840,9 +802,9 @@ void EventInfoPassportMaximController__ScheduleDelayedAction(
 
   EventInfoPassportMaximController__StopDelayedActionCoroutine(this, *(const MethodInfo **)&action);
   v6 = EventInfoPassportMaximController__DelayAndExecute(this, action, v5);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v6, 0);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v6, 0);
   this->fields.delayedActionCoroutine = started;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.delayedActionCoroutine,
     (int32_t)started,
     v8,
@@ -884,10 +846,10 @@ void EventInfoPassportMaximController__SetPassportTouchEnabled(
   unsigned __int64 v26; // x23
   UnityEngine_Object_o *v27; // x20
 
-  if ( (byte_59399D4 & 1) == 0 )
+  if ( (byte_5971D4A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399D4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D4A = 1;
   }
   maximPassport = (UnityEngine_Object_o *)this->fields.maximPassport;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -936,7 +898,7 @@ void EventInfoPassportMaximController__SetPassportTouchEnabled(
           goto LABEL_22;
       }
 LABEL_53:
-      sub_21FFED4(v7);
+      sub_2213CE4(v7);
     }
 LABEL_22:
     passportButtons = this->fields.passportButtons;
@@ -994,7 +956,7 @@ LABEL_42:
     passportColliders2D = this->fields.passportColliders2D;
     if ( !passportColliders2D )
 LABEL_54:
-      sub_21FFECC(v7, v6);
+      sub_2213CDC(v7, v6);
     v25 = passportColliders2D->max_length;
     if ( (int)v25 >= 1 )
     {
@@ -1052,10 +1014,10 @@ void EventInfoPassportMaximController__StartBackMask(
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_59399D3 & 1) == 0 )
+  if ( (byte_5971D49 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10332/*"OnOpenMaximPassportFinished"*/);
-    byte_59399D3 = 1;
+    sub_2213A60(&StringLiteral_10345/*"OnOpenMaximPassportFinished"*/);
+    byte_5971D49 = 1;
   }
   maximBackSprite = (UnityEngine_Component_o *)this->fields.maximBackSprite;
   if ( !maximBackSprite )
@@ -1077,10 +1039,10 @@ void EventInfoPassportMaximController__StartBackMask(
         !v5) )
   {
 LABEL_9:
-    sub_21FFECC(maximBackSprite, method);
+    sub_2213CDC(maximBackSprite, method);
   }
   v5->fields.eventReceiver = (struct UnityEngine_GameObject_o *)maximBackSprite;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v5->fields.eventReceiver,
     (int32_t)maximBackSprite,
     v6,
@@ -1089,9 +1051,9 @@ LABEL_9:
     v9,
     v10,
     v11);
-  v12 = StringLiteral_10332/*"OnOpenMaximPassportFinished"*/;
-  v5->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10332/*"OnOpenMaximPassportFinished"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v5->fields.callWhenFinished, v12, v13, v14, v15, v16, v17, v18);
+  v12 = StringLiteral_10345/*"OnOpenMaximPassportFinished"*/;
+  v5->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10345/*"OnOpenMaximPassportFinished"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5->fields.callWhenFinished, v12, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -1112,9 +1074,9 @@ void EventInfoPassportMaximController__StopDelayedActionCoroutine(
   delayedActionCoroutine = this->fields.delayedActionCoroutine;
   if ( delayedActionCoroutine )
   {
-    UnityEngine_MonoBehaviour__StopCoroutine_83232056((UnityEngine_MonoBehaviour_o *)this, delayedActionCoroutine, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine_83445360((UnityEngine_MonoBehaviour_o *)this, delayedActionCoroutine, 0);
     this->fields.delayedActionCoroutine = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_delayedActionCoroutine, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_delayedActionCoroutine, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -1149,7 +1111,6 @@ bool EventInfoPassportMaximController__DelayAndExecute_d__31__MoveNext(
   unsigned int i_5__2; // w8
   struct EventInfoPassportMaximController_o *_4__this; // x20
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
   int32_t action; // w8
 
   _1__state = this->fields.__1__state;
@@ -1162,9 +1123,9 @@ bool EventInfoPassportMaximController__DelayAndExecute_d__31__MoveNext(
     if ( i_5__2 > 0x7FFFFFFE )
       goto LABEL_5;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     _4__this->fields.delayedActionCoroutine = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_4__this->fields.delayedActionCoroutine, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields.delayedActionCoroutine, 0, v2, v3, v4, v5, v6, v7);
     action = this->fields.action;
     if ( action == 1 )
     {
@@ -1183,10 +1144,9 @@ bool EventInfoPassportMaximController__DelayAndExecute_d__31__MoveNext(
 LABEL_5:
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
     *((_DWORD *)p__2__current - 2) = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -1208,11 +1168,11 @@ void __noreturn EventInfoPassportMaximController__DelayAndExecute_d__31__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_EventInfoPassportMaximController__DelayAndExecute_d__31_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_EventInfoPassportMaximController__DelayAndExecute_d__31_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

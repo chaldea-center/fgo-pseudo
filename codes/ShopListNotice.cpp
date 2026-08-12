@@ -52,20 +52,20 @@ void ShopListNotice___ctor(ShopListNotice_o *this, ShopEntity_array *shopEntitie
   __int64 v54; // x1
   __int64 v55; // x2
   const MethodInfo *v56; // x5
-  _BOOL8 IsEnableEventShop_49829504; // x0
+  _BOOL8 IsEnableEventShop_49892788; // x0
   bool v58; // w25
   unsigned int ShopLimitedType; // w0
 
-  if ( (byte_593474B & 1) == 0 )
+  if ( (byte_596C87A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ShopMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_ShopEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_ShopEntity___);
-    sub_21FFC50(&System_Func_ShopEntity__bool__TypeInfo);
-    sub_21FFC50(&Method_ShopListNotice___c___ctor_b__36_0__);
-    sub_21FFC50(&ShopListNotice___c_TypeInfo);
-    byte_593474B = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ShopMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_ShopEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_ShopEntity___);
+    sub_2213A60(&System_Func_ShopEntity__bool__TypeInfo);
+    sub_2213A60(&Method_ShopListNotice___c___ctor_b__36_0__);
+    sub_2213A60(&ShopListNotice___c_TypeInfo);
+    byte_596C87A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v7 = ShopListNotice___c_TypeInfo;
@@ -84,19 +84,19 @@ void ShopListNotice___ctor(ShopListNotice_o *this, ShopEntity_array *shopEntitie
       static_fields = ShopListNotice___c_TypeInfo->static_fields;
     }
     v10 = (Il2CppObject *)static_fields->__9;
-    _9__36_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_ShopEntity__bool__TypeInfo);
+    _9__36_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_ShopEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__36_0, v10, Method_ShopListNotice___c___ctor_b__36_0__, 0);
     v11 = ShopListNotice___c_TypeInfo->static_fields;
     v11->__9__36_0 = (struct System_Func_ShopEntity__bool__o *)_9__36_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->__9__36_0, (int32_t)_9__36_0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->__9__36_0, (int32_t)_9__36_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)shopEntities,
           (System_Func_TSource__bool__o *)_9__36_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_ShopEntity___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_ShopEntity___);
   v19 = (ShopListNotice_o *)System_Linq_Enumerable__ToArray_object_(
                               v18,
-                              (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_ShopEntity___);
+                              (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_ShopEntity___);
   IsNewIconShow = ShopListNotice__GetIsNewIconShow(v19, (ShopEntity_array *)v19, v20);
   this->fields._IsShowNew_k__BackingField = IsNewIconShow;
   ShopEntitiesByLimitedType = ShopListNotice__GetShopEntitiesByLimitedType(
@@ -142,24 +142,24 @@ void ShopListNotice___ctor(ShopListNotice_o *this, ShopEntity_array *shopEntitie
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v54, v55);
-    Master_object = (ShopEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ShopMaster___);
+    Master_object = (ShopEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopMaster___);
     if ( Master_object )
     {
-      IsEnableEventShop_49829504 = ShopMaster__IsEnableEventShop_49829504((ShopMaster_o *)Master_object, 0);
+      IsEnableEventShop_49892788 = ShopMaster__IsEnableEventShop_49892788((ShopMaster_o *)Master_object, 0);
       goto LABEL_16;
     }
 LABEL_20:
-    sub_21FFECC(Master_object, v54);
+    sub_2213CDC(Master_object, v54);
   }
-  IsEnableEventShop_49829504 = 0;
+  IsEnableEventShop_49892788 = 0;
 LABEL_16:
-  v58 = IsEnableEventShop_49829504;
+  v58 = IsEnableEventShop_49892788;
   ShopLimitedType = ShopListNotice__GetShopLimitedType(
-                      (ShopListNotice_o *)IsEnableEventShop_49829504,
+                      (ShopListNotice_o *)IsEnableEventShop_49892788,
                       v30,
                       v39,
                       v48,
-                      IsEnableEventShop_49829504,
+                      IsEnableEventShop_49892788,
                       v56);
   this->fields._PeriodTimeLimit_k__BackingField = (int64_t)MostRecentTimeLimit;
   this->fields._MonthlyTimeLimit_k__BackingField = (int64_t)v34;
@@ -191,7 +191,7 @@ bool ShopListNotice__GetIndefiniteTimeLimit(
     while ( 1 )
     {
       if ( (unsigned int)v6 >= max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       this = (ShopListNotice_o *)shopEntities->m_Items[v6];
       if ( !this )
         break;
@@ -206,7 +206,7 @@ bool ShopListNotice__GetIndefiniteTimeLimit(
       return v5;
     }
 LABEL_9:
-    sub_21FFECC(this, shopEntities);
+    sub_2213CDC(this, shopEntities);
   }
   return v5;
 }
@@ -226,19 +226,19 @@ bool ShopListNotice__GetIsLimitedIconShow(
   int v10; // w23
   ShopEntity_o *v11; // x26
 
-  if ( (byte_593474D & 1) == 0 )
+  if ( (byte_596C87C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserShopMaster___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593474D = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserShopMaster___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C87C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserShopMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserShopMaster___);
   if ( !shopEntities )
     goto LABEL_21;
   max_length = shopEntities->max_length;
@@ -250,14 +250,14 @@ bool ShopListNotice__GetIsLimitedIconShow(
     while ( 1 )
     {
       if ( v10 >= (unsigned int)max_length )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v11 = shopEntities->m_Items[v10];
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
-      if ( !byte_5931D52 )
+      if ( !byte_5969EF2 )
       {
-        sub_21FFC50(&NetworkManager_TypeInfo);
-        byte_5931D52 = 1;
+        sub_2213A60(&NetworkManager_TypeInfo);
+        byte_5969EF2 = 1;
       }
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -286,7 +286,7 @@ bool ShopListNotice__GetIsLimitedIconShow(
       return v8;
     }
 LABEL_21:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   return v8;
 }
@@ -307,64 +307,53 @@ bool ShopListNotice__GetIsNewIconShow(ShopListNotice_o *this, ShopEntity_array *
   int64_t openedAt; // x23
   System_DateTime_o v15; // x1
   System_DateTime_o v16; // x2
-  System_DateTime_o v17; // x0
   int32_t Hour; // w23
-  System_DateTime_o v19; // x0
   int32_t Minute; // w24
-  System_DateTime_o v21; // x0
-  __int64 v22; // x1
-  __int64 v23; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
   int32_t Second; // w25
-  System_TimeSpan_o v25; // x0
-  System_DateTime_o v26; // x0
-  System_TimeSpan_o v27; // x1
-  System_DateTime_o v28; // x0
-  System_DateTime_o v29; // x1
-  System_DateTime_o v30; // x2
-  BalanceConfig_c *v31; // x8
-  System_DateTime_o v32; // x0
-  System_DateTime_o v33; // x1
-  System_DateTime_o v34; // x2
-  System_DateTime_o v35; // x0
-  int v36; // w8
-  System_DateTime_o v37; // x0
-  System_DateTime_o v38; // x1
-  System_DateTime_o v39; // x0
-  uint64_t v41; // [xsp+8h] [xbp-88h] BYREF
-  int64_t v42; // [xsp+10h] [xbp-80h] BYREF
-  uint64_t dateData; // [xsp+18h] [xbp-78h] BYREF
-  __int64 v44; // [xsp+20h] [xbp-70h] BYREF
-  __int64 v45; // [xsp+28h] [xbp-68h]
-  System_DateTimeOffset_o v46; // 0:x0.16
+  System_DateTime_o v22; // x0
+  System_DateTime_o v23; // x1
+  System_DateTime_o v24; // x2
+  BalanceConfig_c *v25; // x8
+  System_DateTime_o v26; // x1
+  System_DateTime_o v27; // x2
+  int32_t v28; // w0
+  uint64_t dateData; // [xsp+8h] [xbp-88h] BYREF
+  System_TimeSpan_o v31; // [xsp+10h] [xbp-80h] BYREF
+  System_DateTime_o v32; // [xsp+18h] [xbp-78h] BYREF
+  __int64 v33; // [xsp+20h] [xbp-70h] BYREF
+  __int64 v34; // [xsp+28h] [xbp-68h]
+  System_DateTimeOffset_o v35; // 0:x0.16
 
-  if ( (byte_593474C & 1) == 0 )
+  if ( (byte_596C87B & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserShopMaster___);
-    sub_21FFC50(&System_DateTimeOffset_TypeInfo);
-    sub_21FFC50(&System_DateTime_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&System_TimeSpan_TypeInfo);
-    byte_593474C = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserShopMaster___);
+    sub_2213A60(&System_DateTimeOffset_TypeInfo);
+    sub_2213A60(&System_DateTime_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&System_TimeSpan_TypeInfo);
+    byte_596C87B = 1;
   }
-  v44 = 0;
-  v45 = 0;
-  dateData = 0;
+  v33 = 0;
+  v34 = 0;
+  v32.fields._dateData = 0;
   v4 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
-  v41 = 0;
-  v42 = 0;
+  dateData = 0;
+  v31.fields._ticks = 0;
   if ( !v4 )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, shopEntities, method);
   v5.fields._dateData = NetworkManager__getDateTime(0).fields._dateData;
-  v44 = 0;
-  v45 = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v33 = 0;
+  v34 = 0;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserShopMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserShopMaster___);
   if ( !shopEntities )
     goto LABEL_34;
   max_length = shopEntities->max_length;
@@ -376,58 +365,50 @@ bool ShopListNotice__GetIsNewIconShow(ShopListNotice_o *this, ShopEntity_array *
     while ( 1 )
     {
       if ( v12 >= (unsigned int)max_length )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v13 = shopEntities->m_Items[v12];
       if ( !v13 )
         break;
       openedAt = v13->fields.openedAt;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v8);
-      dateData = NetworkManager__getDateTime_48311376(openedAt, 0).fields._dateData;
+      v32.fields._dateData = NetworkManager__getDateTime_48347260(openedAt, 0).fields._dateData;
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v15.fields._dateData, v16.fields._dateData);
-      v17.fields._dateData = (uint64_t)&dateData;
-      Hour = System_DateTime__get_Hour(v17, 0);
-      v19.fields._dateData = (uint64_t)&dateData;
-      Minute = System_DateTime__get_Minute(v19, 0);
-      v21.fields._dateData = (uint64_t)&dateData;
-      Second = System_DateTime__get_Second(v21, 0);
+      Hour = System_DateTime__get_Hour((System_DateTime_o)&v32, 0);
+      Minute = System_DateTime__get_Minute((System_DateTime_o)&v32, 0);
+      Second = System_DateTime__get_Second((System_DateTime_o)&v32, 0);
       if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v22, v23);
-      v25.fields._ticks = (int64_t)&v42;
-      System_TimeSpan___ctor_77029652(v25, Hour, Minute, Second, 0);
-      v27.fields._ticks = v42;
-      v26.fields._dateData = dateData;
-      v28.fields._dateData = System_DateTime__op_Subtraction(v26, v27, 0).fields._dateData;
-      v31 = BalanceConfig_TypeInfo;
-      dateData = v28.fields._dateData;
+        j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v19, v20);
+      System_TimeSpan___ctor_77242956((System_TimeSpan_o)&v31, Hour, Minute, Second, 0);
+      v22.fields._dateData = System_DateTime__op_Subtraction(v32, v31, 0).fields._dateData;
+      v25 = BalanceConfig_TypeInfo;
+      v32.fields._dateData = v22.fields._dateData;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v29.fields._dateData, v30.fields._dateData);
-        v31 = BalanceConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v23.fields._dateData, v24.fields._dateData);
+        v25 = BalanceConfig_TypeInfo;
       }
-      v32.fields._dateData = (uint64_t)&dateData;
-      dateData = System_DateTime__AddDays(v32, v31->static_fields->ShopNewItemAddDays, 0).fields._dateData;
+      v32.fields._dateData = System_DateTime__AddDays(
+                               (System_DateTime_o)&v32,
+                               v25->static_fields->ShopNewItemAddDays,
+                               0).fields._dateData;
       if ( !*(&System_DateTimeOffset_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTimeOffset_TypeInfo, v33.fields._dateData, v34.fields._dateData);
-      v46.fields._dateTime.fields._dateData = (uint64_t)&v44;
-      *(_QWORD *)&v46.fields._offsetMinutes = 0;
-      v41 = System_DateTimeOffset__get_LocalDateTime(v46, (const MethodInfo *)v34.fields._dateData).fields._dateData;
-      v35.fields._dateData = (uint64_t)&v41;
-      v36 = -System_DateTime__get_Hour(v35, 0);
-      v37.fields._dateData = (uint64_t)&dateData;
-      v38.fields._dateData = System_DateTime__AddHours(v37, (double)v36, 0).fields._dateData;
-      dateData = v38.fields._dateData;
-      v39.fields._dateData = v5.fields._dateData;
-      Instance = (DataManager_o *)System_DateTime__op_GreaterThan(v39, v38, 0);
+        j_il2cpp_runtime_class_init_0(System_DateTimeOffset_TypeInfo, v26.fields._dateData, v27.fields._dateData);
+      v35.fields._dateTime.fields._dateData = (uint64_t)&v33;
+      *(_QWORD *)&v35.fields._offsetMinutes = 0;
+      dateData = System_DateTimeOffset__get_LocalDateTime(v35, (const MethodInfo *)v27.fields._dateData).fields._dateData;
+      v28 = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
+      v32.fields._dateData = System_DateTime__AddHours((System_DateTime_o)&v32, (double)-v28, 0).fields._dateData;
+      Instance = (DataManager_o *)System_DateTime__op_GreaterThan(v5, v32, 0);
       if ( ((unsigned __int8)Instance & 1) == 0 )
       {
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v8);
-        if ( !byte_5931D52 )
+        if ( !byte_5969EF2 )
         {
-          sub_21FFC50(&NetworkManager_TypeInfo);
-          byte_5931D52 = 1;
+          sub_2213A60(&NetworkManager_TypeInfo);
+          byte_5969EF2 = 1;
         }
         Instance = (DataManager_o *)NetworkManager_TypeInfo;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -455,7 +436,7 @@ bool ShopListNotice__GetIsNewIconShow(ShopListNotice_o *this, ShopEntity_array *
         return v10;
     }
 LABEL_34:
-    sub_21FFECC(Instance, v7);
+    sub_2213CDC(Instance, v7);
   }
   return v10;
 }
@@ -476,10 +457,10 @@ int64_t ShopListNotice__GetMostRecentTimeLimit(
   Il2CppClass *v12; // x23
   __int64 events; // x26
 
-  if ( (byte_5934750 & 1) == 0 )
+  if ( (byte_596C87F & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5934750 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596C87F = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, entities, method);
@@ -495,7 +476,7 @@ int64_t ShopListNotice__GetMostRecentTimeLimit(
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_21FFED4(Time);
+        sub_2213CE4(Time);
       v11 = &entities->obj.klass + (int)v9;
       v12 = v11[4];
       if ( !v12 )
@@ -515,7 +496,7 @@ int64_t ShopListNotice__GetMostRecentTimeLimit(
         return v10;
     }
 LABEL_19:
-    sub_21FFECC(Time, v6);
+    sub_2213CDC(Time, v6);
   }
   return 0;
 }
@@ -545,18 +526,18 @@ ShopEntity_array *ShopListNotice__GetShopEntitiesByLimitedType(
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_593474E & 1) == 0 )
+  if ( (byte_596C87D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ShopEntity__TypeInfo);
-    byte_593474E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ShopEntity__TypeInfo);
+    byte_596C87D = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ShopEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ShopEntity___ctor__);
   if ( !shopEntities )
     goto LABEL_31;
   max_length = shopEntities->max_length;
@@ -566,7 +547,7 @@ ShopEntity_array *ShopListNotice__GetShopEntitiesByLimitedType(
     do
     {
       if ( v16 >= (unsigned int)max_length )
-        sub_21FFED4(IsExchangeServantIconDisplayTarget);
+        sub_2213CE4(IsExchangeServantIconDisplayTarget);
       m_Items = shopEntities->m_Items;
       v18 = shopEntities->m_Items[v16];
       if ( type > 2 )
@@ -620,14 +601,14 @@ ShopEntity_array *ShopListNotice__GetShopEntitiesByLimitedType(
         System_Collections_Generic_List_object___AddWithResize(
           v6,
           (Il2CppObject *)v18,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
         v22 = &items->obj.klass + size;
         v6->fields._size = size + 1;
         v22[4] = (Il2CppClass *)v18;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v9, v10, v11, v12, v13, v14);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v9, v10, v11, v12, v13, v14);
       }
 LABEL_28:
       LODWORD(max_length) = shopEntities->max_length;
@@ -636,10 +617,10 @@ LABEL_28:
   }
   if ( !v6 )
 LABEL_31:
-    sub_21FFECC(IsExchangeServantIconDisplayTarget, v8);
+    sub_2213CDC(IsExchangeServantIconDisplayTarget, v8);
   return (ShopEntity_array *)System_Collections_Generic_List_object___ToArray(
                                v6,
-                               (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ShopEntity__ToArray__);
+                               (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_ShopEntity__ToArray__);
 }
 
 
@@ -732,18 +713,18 @@ ShopEntity_array *ShopListNotice__GetTimeLimitedShopEntities(
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_593474F & 1) == 0 )
+  if ( (byte_596C87E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ShopEntity__TypeInfo);
-    byte_593474F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ShopEntity__TypeInfo);
+    byte_596C87E = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ShopEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ShopEntity___ctor__);
   if ( !entities )
     goto LABEL_17;
   max_length = entities->max_length;
@@ -753,7 +734,7 @@ ShopEntity_array *ShopListNotice__GetTimeLimitedShopEntities(
     while ( 1 )
     {
       if ( v16 >= max_length )
-        sub_21FFED4(v7);
+        sub_2213CE4(v7);
       v8 = (Il2CppObject *)entities->m_Items[v16];
       if ( !v8 )
         break;
@@ -772,14 +753,14 @@ ShopEntity_array *ShopListNotice__GetTimeLimitedShopEntities(
           System_Collections_Generic_List_object___AddWithResize(
             v6,
             v8,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v6->fields._size = size + 1;
           v20[4] = (Il2CppClass *)v8;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
         }
       }
       max_length = entities->max_length;
@@ -787,14 +768,14 @@ ShopEntity_array *ShopListNotice__GetTimeLimitedShopEntities(
         goto LABEL_15;
     }
 LABEL_17:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
 LABEL_15:
   if ( !v6 )
     goto LABEL_17;
   return (ShopEntity_array *)System_Collections_Generic_List_object___ToArray(
                                v6,
-                               (const MethodInfo_445164C *)Method_System_Collections_Generic_List_ShopEntity__ToArray__);
+                               (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_ShopEntity__ToArray__);
 }
 
 
@@ -918,15 +899,15 @@ void ShopListNotice___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5934751 & 1) == 0 )
+  if ( (byte_596C880 & 1) == 0 )
   {
-    sub_21FFC50(&ShopListNotice___c_TypeInfo);
-    byte_5934751 = 1;
+    sub_2213A60(&ShopListNotice___c_TypeInfo);
+    byte_596C880 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ShopListNotice___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ShopListNotice___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ShopListNotice___c_TypeInfo->static_fields->__9 = (struct ShopListNotice___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ShopListNotice___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -947,6 +928,6 @@ void ShopListNotice___c___ctor(ShopListNotice___c_o *this, const MethodInfo *met
 bool ShopListNotice___c____ctor_b__36_0(ShopListNotice___c_o *this, ShopEntity_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return !ShopEntity__IsSoldOut(x, 0);
 }

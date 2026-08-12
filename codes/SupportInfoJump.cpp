@@ -17,13 +17,13 @@ void SupportInfoJump___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.otherUserGameEntity = entity;
   v8 = (SupportInfoJump_o *)((char *)v8 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)entity, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)entity, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->fields.returnSceneName) = kind;
   BYTE4(v8->fields.returnSceneName) = isSelect;
 }
 
 
-void SupportInfoJump___ctor_48473488(
+void SupportInfoJump___ctor_48526572(
         SupportInfoJump_o *this,
         FollowerInfo_o *followerInfo,
         int32_t kind,
@@ -42,7 +42,7 @@ void SupportInfoJump___ctor_48473488(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.followerInfo = followerInfo;
   v8 = (SupportInfoJump_o *)((char *)v8 + 32);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)followerInfo, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)followerInfo, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = kind;
   BYTE4(v8->monitor) = isSelect;
 }
@@ -72,18 +72,18 @@ bool SupportInfoJump__ReturnScene(SupportInfoJump_o *this, int32_t fade, Il2CppO
   Il2CppObject *Instance; // x0
   __int64 v9; // x1
 
-  if ( (byte_5938092 & 1) == 0 )
+  if ( (byte_5970241 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_5938092 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_5970241 = 1;
   }
   returnSceneName = this->fields.returnSceneName;
   if ( returnSceneName )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
-      sub_21FFECC(0, v9);
-    AvalonSceneManager__transitionScene_48092832(
+      sub_2213CDC(0, v9);
+    AvalonSceneManager__transitionScene_48124608(
       (AvalonSceneManager_o *)Instance,
       this->fields.returnSceneName,
       fade,
@@ -112,17 +112,17 @@ void SupportInfoJump__SetReturnNowScene(SupportInfoJump_o *this, const MethodInf
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5938091 & 1) == 0 )
+  if ( (byte_5970240 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_5938091 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_5970240 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   NowSceneName = AvalonSceneManager__getNowSceneName((AvalonSceneManager_o *)Instance, 0);
   this->fields.returnSceneName = NowSceneName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)NowSceneName, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)NowSceneName, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -137,16 +137,16 @@ void SupportInfoJump__SetReturnScene(SupportInfoJump_o *this, int32_t type, cons
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5938090 & 1) == 0 )
+  if ( (byte_597023F & 1) == 0 )
   {
-    sub_21FFC50(&SceneList_TypeInfo);
-    byte_5938090 = 1;
+    sub_2213A60(&SceneList_TypeInfo);
+    byte_597023F = 1;
   }
   if ( !*(&SceneList_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo, *(_QWORD *)&type);
   SceneName = SceneList__getSceneName(type, 0);
   this->fields.returnSceneName = SceneName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)SceneName, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)SceneName, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -174,7 +174,7 @@ void SupportInfoJump__SetSetupInfo(
   bool v15; // w7
 
   this->fields.eventSetupInfo = eventSetupInfo;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventSetupInfo,
     (int32_t)eventSetupInfo,
     (System_String_o *)questRestrictionInfo,
@@ -184,7 +184,7 @@ void SupportInfoJump__SetSetupInfo(
     v6,
     v7);
   this->fields.questRestrictionInfo = questRestrictionInfo;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.questRestrictionInfo,
     (int32_t)questRestrictionInfo,
     v10,

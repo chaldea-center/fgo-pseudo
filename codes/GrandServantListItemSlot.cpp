@@ -30,24 +30,24 @@ void GrandServantListItemSlot__Initialize(
   Il2CppObject *v24; // x1
   const MethodInfo *v25; // x2
 
-  if ( (byte_5933231 & 1) == 0 )
+  if ( (byte_596B338 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_GrandServantListSelectObject___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GrandServantListItemDraw___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933231 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_GrandServantListSelectObject___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GrandServantListItemDraw___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B338 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-  v10 = UnityEngine_Object__Instantiate_object__59506996(
+  v10 = UnityEngine_Object__Instantiate_object__59717116(
           (Il2CppObject *)prefab,
           transform,
-          (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GrandServantListItemDraw___);
+          (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GrandServantListItemDraw___);
   this->fields.draw = (struct GrandServantListItemDraw_o *)v10;
   p_draw = &this->fields.draw;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.draw, (int32_t)v10, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.draw, (int32_t)v10, v12, v13, v14, v15, v16, v17);
   draw = this->fields.draw;
   if ( !draw )
     goto LABEL_11;
@@ -56,7 +56,7 @@ void GrandServantListItemSlot__Initialize(
   if ( !*p_draw
     || (draw = (GrandServantListItemDraw_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)draw,
-                                               (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_GrandServantListSelectObject___)) == 0
+                                               (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_GrandServantListSelectObject___)) == 0
     || (v21 = (GrandServantListSelectObject_o *)draw,
         GrandServantListSelectObject__Initialize(
           (GrandServantListSelectObject_o *)draw,
@@ -66,16 +66,16 @@ void GrandServantListItemSlot__Initialize(
         (draw = (GrandServantListItemDraw_o *)this->fields.lockedRoot) == 0)
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)draw,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___),
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___),
         GrandServantListSelectObject__AddServantTouchPress(v21, (UITouchPress_o *)Component_object, v23),
         (draw = (GrandServantListItemDraw_o *)this->fields.emptyRoot) == 0) )
   {
 LABEL_11:
-    sub_21FFECC(draw, v18);
+    sub_2213CDC(draw, v18);
   }
   v24 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)draw,
-          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
   GrandServantListSelectObject__AddServantTouchPress(v21, (UITouchPress_o *)v24, v25);
 }
 
@@ -86,7 +86,7 @@ void GrandServantListItemSlot__Release(GrandServantListItemSlot_o *this, const M
 
   draw = this->fields.draw;
   if ( !draw || (this = (GrandServantListItemSlot_o *)draw->fields.servantNarrowTexture) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   UINarrowFigureTexture__ReleaseCharacter((UINarrowFigureTexture_o *)this, 0);
 }
 
@@ -98,7 +98,7 @@ void GrandServantListItemSlot__SetActiveIcon(GrandServantListItemSlot_o *this, b
 
   iconOn = this->fields.iconOn;
   if ( !iconOn || (UnityEngine_GameObject__SetActive(iconOn, b, 0), (iconOn = this->fields.iconOff) == 0) )
-    sub_21FFECC(iconOn, b);
+    sub_2213CDC(iconOn, b);
   UnityEngine_GameObject__SetActive(iconOn, !b, 0);
 }
 
@@ -162,7 +162,7 @@ void GrandServantListItemSlot__UpdateView(
         }
       }
 LABEL_20:
-      sub_21FFECC(this, grandServantListData);
+      sub_2213CDC(this, grandServantListData);
     }
     GrandServantListItemSlot__SetActiveIcon(v4, 0, v5);
     this = (GrandServantListItemSlot_o *)v4->fields.lockedRoot;

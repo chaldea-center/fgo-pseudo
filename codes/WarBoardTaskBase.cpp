@@ -8,14 +8,14 @@ void WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodInfo *method)
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_5936268 & 1) == 0 )
+  if ( (byte_596E3C2 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5936268 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596E3C2 = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.Key = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   this->fields.IsEnabled = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -24,18 +24,16 @@ void WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodInfo *method)
 System_Collections_IEnumerator_o *WarBoardTaskBase__Execute(WarBoardTaskBase_o *this, const MethodInfo *method)
 {
   __int64 v2; // x19
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_5936267 & 1) == 0 )
+  if ( (byte_596E3C1 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardTaskBase__Execute_d__15_TypeInfo);
-    byte_5936267 = 1;
+    sub_2213A60(&WarBoardTaskBase__Execute_d__15_TypeInfo);
+    byte_596E3C1 = 1;
   }
-  v2 = sub_21FFEBC(WarBoardTaskBase__Execute_d__15_TypeInfo);
+  v2 = sub_2213CCC(WarBoardTaskBase__Execute_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
-  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return result;
+  return (System_Collections_IEnumerator_o *)v2;
 }
 
 
@@ -120,7 +118,7 @@ void WarBoardTaskBase_TaskCallback___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -131,12 +129,12 @@ void WarBoardTaskBase_TaskCallback___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -148,9 +146,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF71E8;
+  this->fields.invoke_impl = (intptr_t)sub_200A1F4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF71A8;
+  this->fields.extra_arg = (intptr_t)sub_200A1B4;
 }
 
 
@@ -160,9 +158,9 @@ System_IAsyncResult_o *WarBoardTaskBase_TaskCallback__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -171,7 +169,7 @@ void WarBoardTaskBase_TaskCallback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -215,11 +213,11 @@ void __noreturn WarBoardTaskBase__Execute_d__15__System_Collections_IEnumerator_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

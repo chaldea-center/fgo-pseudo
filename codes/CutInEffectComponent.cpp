@@ -1,9 +1,9 @@
 void CutInEffectComponent___ctor(CutInEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939D9B & 1) == 0 )
+  if ( (byte_5971F5F & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectComponent_TypeInfo);
-    byte_5939D9B = 1;
+    sub_2213A60(&CommonEffectComponent_TypeInfo);
+    byte_5971F5F = 1;
   }
   if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
@@ -22,12 +22,12 @@ UnityEngine_GameObject_o *CutInEffectComponent__GetPrefabRoot(
 
   prefabRoots = this->fields.prefabRoots;
   if ( !prefabRoots )
-    sub_21FFECC(this, *(_QWORD *)&idx);
+    sub_2213CDC(this, *(_QWORD *)&idx);
   max_length = prefabRoots->max_length;
   if ( max_length <= idx )
     return 0;
   if ( max_length <= (unsigned int)idx )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   return prefabRoots->m_Items[idx];
 }
 
@@ -78,28 +78,28 @@ bool CutInEffectComponent__HasEvent(CutInEffectComponent_o *this, System_String_
   __int64 v46; // x0
   __int64 *v48; // [xsp+28h] [xbp-68h]
 
-  if ( (byte_5939D9A & 1) == 0 )
+  if ( (byte_5971F5E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_AnimationState_TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_Find_AnimationEvent___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_21FFC50(&System_Func_AnimationEvent__bool__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_CutInEffectComponent___c__DisplayClass11_0__HasEvent_b__0__);
-    sub_21FFC50(&CutInEffectComponent___c__DisplayClass11_0_TypeInfo);
-    byte_5939D9A = 1;
+    sub_2213A60(&UnityEngine_AnimationState_TypeInfo);
+    sub_2213A60(&Method_BasicHelper_Find_AnimationEvent___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_2213A60(&System_Func_AnimationEvent__bool__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_CutInEffectComponent___c__DisplayClass11_0__HasEvent_b__0__);
+    sub_2213A60(&CutInEffectComponent___c__DisplayClass11_0_TypeInfo);
+    byte_5971F5E = 1;
   }
-  v5 = sub_21FFEBC(CutInEffectComponent___c__DisplayClass11_0_TypeInfo);
+  v5 = sub_2213CCC(CutInEffectComponent___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_49;
   *(_QWORD *)(v5 + 16) = funcName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)funcName, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)funcName, v8, v9, v10, v11, v12, v13);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -110,13 +110,13 @@ bool CutInEffectComponent__HasEvent(CutInEffectComponent_o *this, System_String_
   }
   if ( !Component_object )
 LABEL_49:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)Component_object, 0);
   v48 = (__int64 *)Enumerator;
   while ( 1 )
   {
     if ( !v48 )
-      sub_21FFECC(Enumerator, v18);
+      sub_2213CDC(Enumerator, v18);
     v19 = *v48;
     v20 = *(unsigned __int16 *)(*v48 + 302);
     if ( *(_WORD *)(*v48 + 302) )
@@ -134,7 +134,7 @@ LABEL_49:
     else
     {
 LABEL_15:
-      v22 = sub_2237E2C(v48, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_224BC3C(v48, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v16 = (*(__int64 (__fastcall **)(__int64 *, _QWORD))v22)(v48, *(_QWORD *)(v22 + 8));
     if ( (v16 & 1) == 0 )
@@ -156,16 +156,16 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v26 = sub_2237E2C(v48, System_Collections_IEnumerator_TypeInfo, 1);
+      v26 = sub_224BC3C(v48, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v27 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(__int64 *, _QWORD))v26)(v48, *(_QWORD *)(v26 + 8));
     if ( !v27 )
-      sub_21FFECC(0, v28);
+      sub_2213CDC(0, v28);
     if ( v27->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_220024C(v27, UnityEngine_AnimationState_TypeInfo, v29);
+      sub_221405C(v27, UnityEngine_AnimationState_TypeInfo, v29);
 LABEL_48:
-      sub_21FFECC(Enumerator, v18);
+      sub_2213CDC(Enumerator, v18);
     }
     name = UnityEngine_AnimationState__get_name(v27, 0);
     Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)Component_object, name, 0);
@@ -182,19 +182,19 @@ LABEL_48:
         v34 = *(System_Func_object__bool__o **)(v5 + 24);
         if ( !v34 )
         {
-          v34 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_AnimationEvent__bool__TypeInfo);
+          v34 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_AnimationEvent__bool__TypeInfo);
           System_Func_object__bool____ctor(
             v34,
             (Il2CppObject *)v5,
             Method_CutInEffectComponent___c__DisplayClass11_0__HasEvent_b__0__,
             0);
           *(_QWORD *)(v5 + 24) = v34;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)v34, v35, v36, v37, v38, v39, v40);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)v34, v35, v36, v37, v38, v39, v40);
         }
         Enumerator = BasicHelper__Find_object_(
                        events,
                        (System_Func_T__bool__o *)v34,
-                       (const MethodInfo_37DD66C *)Method_BasicHelper_Find_AnimationEvent___);
+                       (const MethodInfo_3810A1C *)Method_BasicHelper_Find_AnimationEvent___);
         if ( Enumerator )
           break;
       }
@@ -204,7 +204,7 @@ LABEL_48:
       }
     }
   }
-  v41 = sub_21FFDA4(v48, System_IDisposable_TypeInfo);
+  v41 = sub_2213BB4(v48, System_IDisposable_TypeInfo);
   if ( v41 )
   {
     v42 = *(_QWORD *)v41;
@@ -225,7 +225,7 @@ LABEL_48:
     else
     {
 LABEL_41:
-      v46 = sub_2237E2C(v41, System_IDisposable_TypeInfo, 0);
+      v46 = sub_224BC3C(v41, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v46)(v43, *(_QWORD *)(v46 + 8));
   }
@@ -243,10 +243,10 @@ void CutInEffectComponent__PlayBuffEffect(
   __int64 v6; // x1
   BattlePerformance_o *v7; // x0
 
-  if ( (byte_5939D97 & 1) == 0 )
+  if ( (byte_5971F5B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939D97 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971F5B = 1;
   }
   battlePerformance = (UnityEngine_Object_o *)this->fields.battlePerformance;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -255,7 +255,7 @@ void CutInEffectComponent__PlayBuffEffect(
   {
     v7 = this->fields.battlePerformance;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     BattlePerformance__PlayBuffInSkillCutInEffect(v7, functionIndex, 0);
   }
 }
@@ -267,10 +267,10 @@ void CutInEffectComponent__PlayCommandSpellEffect(CutInEffectComponent_o *this, 
   __int64 v4; // x1
   BattlePerformance_o *v5; // x0
 
-  if ( (byte_5939D99 & 1) == 0 )
+  if ( (byte_5971F5D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939D99 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971F5D = 1;
   }
   if ( this->fields.commandSpellReserved )
   {
@@ -281,7 +281,7 @@ void CutInEffectComponent__PlayCommandSpellEffect(CutInEffectComponent_o *this, 
     {
       v5 = this->fields.battlePerformance;
       if ( !v5 )
-        sub_21FFECC(0, v4);
+        sub_2213CDC(0, v4);
       BattlePerformance__PlayEnemyCommandSpellEffect(v5, 1, 0);
     }
   }
@@ -310,14 +310,14 @@ void CutInEffectComponent__PlayVoiceFromIdx(CutInEffectComponent_o *this, int32_
           return;
         monitor = (System_String_o **)v6[1].monitor;
         if ( !monitor )
-          sub_21FFECC(this, v7);
+          sub_2213CDC(this, v7);
         if ( *((_DWORD *)monitor + 6) > (unsigned int)idx )
         {
           CommonEffectComponent__PlayVoice(v6, monitor[idx + 4], 0);
           return;
         }
       }
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     }
   }
 }
@@ -329,12 +329,12 @@ void CutInEffectComponent__ReservePlayCommandSpellEffect(CutInEffectComponent_o 
   System_String_o *v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_5939D98 & 1) == 0 )
+  if ( (byte_5971F5C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_11086/*"PlayCommandSpellEffect"*/);
-    byte_5939D98 = 1;
+    sub_2213A60(&StringLiteral_11103/*"PlayCommandSpellEffect"*/);
+    byte_5971F5C = 1;
   }
-  v4 = (System_String_o *)StringLiteral_11086/*"PlayCommandSpellEffect"*/;
+  v4 = (System_String_o *)StringLiteral_11103/*"PlayCommandSpellEffect"*/;
   this->fields.commandSpellReserved = 1;
   if ( !CutInEffectComponent__HasEvent(this, v4, v2) )
     CutInEffectComponent__PlayCommandSpellEffect(this, v5);
@@ -353,7 +353,7 @@ void CutInEffectComponent__SetBattlePerformance(
   bool v7; // w7
 
   this->fields.battlePerformance = performance;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.battlePerformance,
     (int32_t)performance,
     (System_String_o *)method,
@@ -377,7 +377,7 @@ void CutInEffectComponent__SetVoiceStrs(
   bool v7; // w7
 
   this->fields.voiceStrs = voiceStrs;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.voiceStrs,
     (int32_t)voiceStrs,
     (System_String_o *)method,
@@ -405,7 +405,7 @@ bool CutInEffectComponent___c__DisplayClass11_0___HasEvent_b__0(
   System_String_o *functionName; // x0
 
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   functionName = UnityEngine_AnimationEvent__get_functionName(x, 0);
   return System_String__op_Equality(functionName, this->fields.funcName, 0);
 }

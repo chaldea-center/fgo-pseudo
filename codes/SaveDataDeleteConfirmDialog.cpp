@@ -2,10 +2,10 @@ void SaveDataDeleteConfirmDialog___ctor(SaveDataDeleteConfirmDialog_o *this, con
 {
   __int64 v2; // x2
 
-  if ( (byte_59326F2 & 1) == 0 )
+  if ( (byte_596A8FF & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59326F2 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596A8FF = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -19,17 +19,17 @@ void SaveDataDeleteConfirmDialog__OnClickCancel(SaveDataDeleteConfirmDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   struct SaveDataDeleteConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_59326F1 & 1) == 0 )
+  if ( (byte_596A8FE & 1) == 0 )
   {
-    sub_21FFC50(&Method_SaveDataDeleteConfirmDialog_OnClickCancel__);
-    byte_59326F1 = 1;
+    sub_2213A60(&Method_SaveDataDeleteConfirmDialog_OnClickCancel__);
+    byte_596A8FE = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SaveDataDeleteConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -51,30 +51,30 @@ void SaveDataDeleteConfirmDialog__OnClickDecide(SaveDataDeleteConfirmDialog_o *t
   System_Reflection_MethodBase_o *v8; // x0
   struct SaveDataDeleteConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_59326F0 & 1) == 0 )
+  if ( (byte_596A8FD & 1) == 0 )
   {
-    sub_21FFC50(&Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
-    byte_59326F0 = 1;
+    sub_2213A60(&Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
+    byte_596A8FD = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     unlockSlider = this->fields.unlockSlider;
     if ( !unlockSlider )
-      sub_21FFECC(0, v3);
+      sub_2213CDC(0, v3);
     IsLocked = UnlockSlider__IsLocked(unlockSlider, 0);
     v6 = Method_SaveDataDeleteConfirmDialog_OnClickDecide__;
     if ( IsLocked )
     {
       if ( (*((_BYTE *)Method_SaveDataDeleteConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
-      v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+        v6 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
+      v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
     }
     else
     {
       if ( (*((_BYTE *)Method_SaveDataDeleteConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
-      v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+        v6 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteConfirmDialog_OnClickDecide__);
+      v8 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0);
       clickFunc = this->fields.clickFunc;
       if ( clickFunc )
@@ -91,13 +91,13 @@ void SaveDataDeleteConfirmDialog__OnEnable(SaveDataDeleteConfirmDialog_o *this, 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_59326EE & 1) == 0 )
+  if ( (byte_596A8FB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_59326EE = 1;
+    sub_2213A60(&StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_596A8FB = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -116,14 +116,14 @@ void SaveDataDeleteConfirmDialog__Open(
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_59326EF & 1) == 0 )
+  if ( (byte_596A8FC & 1) == 0 )
   {
-    sub_21FFC50(&UnlockSlider_OnDragFinished_TypeInfo);
-    sub_21FFC50(&Method_SaveDataDeleteConfirmDialog_UpdateDecideButton__);
-    byte_59326EF = 1;
+    sub_2213A60(&UnlockSlider_OnDragFinished_TypeInfo);
+    sub_2213A60(&Method_SaveDataDeleteConfirmDialog_UpdateDecideButton__);
+    byte_596A8FC = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     (System_String_o *)method,
@@ -133,14 +133,14 @@ void SaveDataDeleteConfirmDialog__Open(
     v6,
     v7);
   unlockSlider = this->fields.unlockSlider;
-  v11 = (UnlockSlider_OnDragFinished_o *)sub_21FFEBC(UnlockSlider_OnDragFinished_TypeInfo);
+  v11 = (UnlockSlider_OnDragFinished_o *)sub_2213CCC(UnlockSlider_OnDragFinished_TypeInfo);
   UnlockSlider_OnDragFinished___ctor(
     v11,
     (Il2CppObject *)this,
     Method_SaveDataDeleteConfirmDialog_UpdateDecideButton__,
     0);
   if ( !unlockSlider )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   UnlockSlider__Setup(unlockSlider, v11, 0);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
@@ -154,24 +154,21 @@ void SaveDataDeleteConfirmDialog__UpdateDecideButton(
 {
   UIButtonColor_o *decideButtonColor; // x0
   _BOOL4 v5; // w21
-  float r; // s0 OVERLAPPED
-  float g; // s1
-  float b; // s2
-  float a; // s3
+  UnityEngine_Color_o disabledColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor )
 LABEL_9:
-    sub_21FFECC(decideButtonColor, isUnlocked);
+    sub_2213CDC(decideButtonColor, isUnlocked);
   v5 = isUnlocked;
   decideButtonColor->klass->vtable._14_SetState.methodPtr();
   decideButtonColor = this->fields.decideButtonColor;
   if ( v5 )
   {
-    r = 1.0;
-    g = 1.0;
-    b = 1.0;
-    a = 1.0;
+    disabledColor.fields.r = 1.0;
+    disabledColor.fields.g = 1.0;
+    disabledColor.fields.b = 1.0;
+    disabledColor.fields.a = 1.0;
     if ( !decideButtonColor )
       goto LABEL_9;
   }
@@ -179,12 +176,9 @@ LABEL_9:
   {
     if ( !decideButtonColor )
       goto LABEL_9;
-    r = decideButtonColor->fields.disabledColor.fields.r;
-    g = decideButtonColor->fields.disabledColor.fields.g;
-    b = decideButtonColor->fields.disabledColor.fields.b;
-    a = decideButtonColor->fields.disabledColor.fields.a;
+    disabledColor = decideButtonColor->fields.disabledColor;
   }
-  UIButtonColor__set_defaultColor(decideButtonColor, *(UnityEngine_Color_o *)&r, 0);
+  UIButtonColor__set_defaultColor(decideButtonColor, disabledColor, 0);
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor )
     goto LABEL_9;
@@ -214,7 +208,7 @@ void SaveDataDeleteConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -225,12 +219,12 @@ void SaveDataDeleteConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -242,9 +236,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FECDD8;
+  this->fields.invoke_impl = (intptr_t)sub_1FFFF98;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FECD90;
+  this->fields.extra_arg = (intptr_t)sub_1FFFF50;
 }
 
 
@@ -260,8 +254,8 @@ System_IAsyncResult_o *SaveDataDeleteConfirmDialog_ClickDelegate__BeginInvoke(
 
   v10[0] = isDecide;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -270,7 +264,7 @@ void SaveDataDeleteConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

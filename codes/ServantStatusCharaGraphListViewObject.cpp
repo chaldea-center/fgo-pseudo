@@ -2,13 +2,13 @@ void ServantStatusCharaGraphListViewObject___cctor(const MethodInfo *method)
 {
   struct ServantStatusCharaGraphListViewObject_StaticFields *static_fields; // x8
 
-  if ( (byte_593414A & 1) == 0 )
+  if ( (byte_596C2FD & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    byte_593414A = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    byte_596C2FD = 1;
   }
   static_fields = ServantStatusCharaGraphListViewObject_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->CARD_HEIGHT = xmmword_E94640;
+  *(_OWORD *)&static_fields->CARD_HEIGHT = xmmword_E9D7E0;
   static_fields->MAXIM_OUT_SPEED = 0.2;
 }
 
@@ -19,10 +19,10 @@ void ServantStatusCharaGraphListViewObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5934149 & 1) == 0 )
+  if ( (byte_596C2FC & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5934149 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596C2FC = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -44,20 +44,20 @@ void ServantStatusCharaGraphListViewObject__Awake(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934133 & 1) == 0 )
+  if ( (byte_596C2E6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewItemDraw___);
-    byte_5934133 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewItemDraw___);
+    byte_596C2E6 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewItemDraw___);
   this->fields.itemDraw = (struct ServantStatusCharaGraphListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -83,10 +83,10 @@ float ServantStatusCharaGraphListViewObject__CalcGameScreenAspectRatio(
   float v9; // s0
   float v10; // s1
 
-  if ( (byte_593413B & 1) == 0 )
+  if ( (byte_596C2EE & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_593413B = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_596C2EE = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -125,10 +125,10 @@ void ServantStatusCharaGraphListViewObject__ChangeDisplay(
   bool IsExpandImage; // w8
   ServantStatusCharaGraphListViewItemDraw_o *v12; // x0
 
-  if ( (byte_5934146 & 1) == 0 )
+  if ( (byte_596C2F9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934146 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C2F9 = 1;
   }
   if ( item )
   {
@@ -153,7 +153,7 @@ void ServantStatusCharaGraphListViewObject__ChangeDisplay(
             return;
           }
 LABEL_15:
-          sub_21FFECC(v12, v7);
+          sub_2213CDC(v12, v7);
         }
         if ( !v12 )
           goto LABEL_15;
@@ -188,21 +188,21 @@ UnityEngine_GameObject_o *ServantStatusCharaGraphListViewObject__CreateDragObjec
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_5934136 & 1) == 0 )
+  if ( (byte_596C2E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-    byte_5934136 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+    byte_596C2E9 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___)) == 0) )
+                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___)) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
-  ServantStatusCharaGraphListViewObject__Init_41305568((ServantStatusCharaGraphListViewObject_o *)DragObject, 2, v6);
+  ServantStatusCharaGraphListViewObject__Init_41386688((ServantStatusCharaGraphListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -214,11 +214,11 @@ void ServantStatusCharaGraphListViewObject__EventExViewer(
   __int64 v2; // x2
   ServantStatusCharaGraphListViewObject_c *v4; // x0
 
-  if ( (byte_593413C & 1) == 0 )
+  if ( (byte_596C2EF & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    sub_21FFC50(&StringLiteral_6486/*"EventMoveEnd"*/);
-    byte_593413C = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    sub_2213A60(&StringLiteral_6498/*"EventMoveEnd"*/);
+    byte_596C2EF = 1;
   }
   v4 = ServantStatusCharaGraphListViewObject_TypeInfo;
   if ( !*(&ServantStatusCharaGraphListViewObject_TypeInfo->_2.cctor_finished + 1) )
@@ -228,7 +228,7 @@ void ServantStatusCharaGraphListViewObject__EventExViewer(
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6486/*"EventMoveEnd"*/,
+    (System_String_o *)StringLiteral_6498/*"EventMoveEnd"*/,
     v4->static_fields->MAXIM_IN_SPEED,
     0);
 }
@@ -242,18 +242,18 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove(
   Il2CppObject *Component_object; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_5934141 & 1) == 0 )
+  if ( (byte_596C2F4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-    byte_5934141 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+    byte_596C2F4 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-  ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41320944(
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+  ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41402064(
     this,
     (ServantStatusCharaGraphListViewObject_o *)Component_object,
     v5);
@@ -269,7 +269,7 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove2(
 }
 
 
-void ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41320944(
+void ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41402064(
         ServantStatusCharaGraphListViewObject_o *this,
         ServantStatusCharaGraphListViewObject_o *target,
         const MethodInfo *method)
@@ -284,12 +284,12 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41320944(
   ServantStatusCharaGraphListViewObject_c *v11; // x0
 
   v4 = (UnityEngine_MonoBehaviour_o *)this;
-  if ( (byte_5934142 & 1) == 0 )
+  if ( (byte_596C2F5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    this = (ServantStatusCharaGraphListViewObject_o *)sub_21FFC50(&StringLiteral_6467/*"EventFadeoutFrameMove2"*/);
-    byte_5934142 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    this = (ServantStatusCharaGraphListViewObject_o *)sub_2213A60(&StringLiteral_6479/*"EventFadeoutFrameMove2"*/);
+    byte_596C2F5 = 1;
   }
   if ( !target )
     goto LABEL_21;
@@ -322,7 +322,7 @@ LABEL_12:
         goto LABEL_18;
       }
 LABEL_21:
-      sub_21FFECC(this, target);
+      sub_2213CDC(this, target);
     }
     this = (ServantStatusCharaGraphListViewObject_o *)target->fields.itemDraw;
     if ( !this )
@@ -338,7 +338,7 @@ LABEL_18:
     j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewObject_TypeInfo, v6, v7);
     v11 = ServantStatusCharaGraphListViewObject_TypeInfo;
   }
-  UnityEngine_MonoBehaviour__Invoke(v4, (System_String_o *)StringLiteral_6467/*"EventFadeoutFrameMove2"*/, v11->static_fields->MAXIM_IN_SPEED, 0);
+  UnityEngine_MonoBehaviour__Invoke(v4, (System_String_o *)StringLiteral_6479/*"EventFadeoutFrameMove2"*/, v11->static_fields->MAXIM_IN_SPEED, 0);
 }
 
 
@@ -349,10 +349,10 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameStart(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_5934140 & 1) == 0 )
+  if ( (byte_596C2F3 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6466/*"EventFadeoutFrameMove"*/);
-    byte_5934140 = 1;
+    sub_2213A60(&StringLiteral_6478/*"EventFadeoutFrameMove"*/);
+    byte_596C2F3 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -360,7 +360,7 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameStart(
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6466/*"EventFadeoutFrameMove"*/,
+    (System_String_o *)StringLiteral_6478/*"EventFadeoutFrameMove"*/,
     delay,
     0);
 }
@@ -372,11 +372,10 @@ void ServantStatusCharaGraphListViewObject__EventFadeoutFrameStartViewer(
 {
   const MethodInfo *v2; // x2
 
-  ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41320944(this, this, v2);
+  ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41402064(this, this, v2);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ServantStatusCharaGraphListViewObject__EventMaximMove(
         ServantStatusCharaGraphListViewObject_o *this,
         const MethodInfo *method)
@@ -390,52 +389,46 @@ void ServantStatusCharaGraphListViewObject__EventMaximMove(
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x3
   UnityEngine_GameObject_o *v11; // x20
-  unsigned __int64 v12; // d0 OVERLAPPED
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v14; // s2
   float x; // s8
   float y; // s9
   float z; // s10
-  int v18; // s1
   float MAXIM_IN_SPEED; // s11
-  float v20; // s5
-  float v21; // s6
-  float w; // s7
-  float v23; // s4
-  TweenPosition_o *v24; // x20
+  TweenPosition_o *v17; // x20
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  int32_t v24; // w1
   System_String_o *v25; // x2
   System_String_o *v26; // x3
   int32_t v27; // w4
   int32_t v28; // w5
   bool v29; // w6
   bool v30; // w7
-  int32_t v31; // w1
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  UnityEngine_Vector3_o v38; // [xsp+0h] [xbp-60h] BYREF
+  UnityEngine_Vector3_o v31; // [xsp+0h] [xbp-60h] BYREF
   UnityEngine_Vector3_o localScale; // [xsp+10h] [xbp-50h] BYREF
-  UnityEngine_Vector3_o v40; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Quaternion_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector3_o v33; // 0:kr20_12.12
+  UnityEngine_Vector3_o v34; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Quaternion_o v35; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_593413E & 1) == 0 )
+  if ( (byte_596C2F1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-    sub_21FFC50(&ServantStatusCharaGraphListViewManager_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    sub_21FFC50(&StringLiteral_6483/*"EventMaximMove2"*/);
-    byte_593413E = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+    sub_2213A60(&ServantStatusCharaGraphListViewManager_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    sub_2213A60(&StringLiteral_6495/*"EventMaximMove2"*/);
+    byte_596C2F1 = 1;
   }
   dragObject = (UnityEngine_GameObject_o *)ServantStatusCharaGraphListViewObject_TypeInfo;
   manager = this->fields.manager;
   localScale.fields.z = 0.0;
   *(_QWORD *)&localScale.fields.x = 0;
   v6 = *(&ServantStatusCharaGraphListViewObject_TypeInfo->_2.cctor_finished + 1);
-  v38.fields.z = 0.0;
-  *(_QWORD *)&v38.fields.x = 0;
+  v31.fields.z = 0.0;
+  *(_QWORD *)&v31.fields.x = 0;
   if ( !v6 )
   {
     j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewObject_TypeInfo, method, v2);
@@ -457,64 +450,56 @@ void ServantStatusCharaGraphListViewObject__EventMaximMove(
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
   this->fields.dragObjectRect = ServantStatusCharaGraphListViewObject__GetDragObjectRect(
                                   (ServantStatusCharaGraphListViewObject_o *)Component_object,
                                   v9);
-  ServantStatusCharaGraphListViewObject__GetMaximTransformValues(this, &localScale, &v38, v10);
-  if ( !byte_5931940 )
+  ServantStatusCharaGraphListViewObject__GetMaximTransformValues(this, &localScale, &v31, v10);
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   v11 = this->fields.dragObject;
-  v12 = vmul_f32(*(float32x2_t *)&v38.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v14 = v38.fields.z * 0.017453;
   x = static_fields->zeroVector.fields.x;
   y = static_fields->zeroVector.fields.y;
   z = static_fields->zeroVector.fields.z;
-  v18 = HIDWORD(v12);
   MAXIM_IN_SPEED = ServantStatusCharaGraphListViewObject_TypeInfo->static_fields->MAXIM_IN_SPEED;
-  v41 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v12, 0);
-  v20 = v41.fields.y;
-  v21 = v41.fields.z;
-  w = v41.fields.w;
-  v41.fields.y = v41.fields.x;
-  v41.fields.z = v20;
-  v41.fields.w = v21;
-  v23 = w;
-  TweenRotation__Begin(v11, MAXIM_IN_SPEED, *(UnityEngine_Quaternion_o *)&v41.fields.y, 0);
+  *(float32x2_t *)&v33.fields.x = vmul_f32(*(float32x2_t *)&v31.fields.x, vdup_n_s32(0x3C8EFA35u));
+  v33.fields.z = v31.fields.z * 0.017453;
+  v35 = UnityEngine_Quaternion__Internal_FromEulerRad(v33, 0);
+  TweenRotation__Begin(v11, MAXIM_IN_SPEED, v35, 0);
   TweenScale__Begin(
     this->fields.dragObject,
     ServantStatusCharaGraphListViewObject_TypeInfo->static_fields->MAXIM_IN_SPEED,
     localScale,
     0);
-  v40.fields.x = x;
-  v40.fields.y = y;
-  v40.fields.z = z;
-  v24 = TweenPosition__Begin(
+  v34.fields.x = x;
+  v34.fields.y = y;
+  v34.fields.z = z;
+  v17 = TweenPosition__Begin(
           this->fields.dragObject,
           ServantStatusCharaGraphListViewObject_TypeInfo->static_fields->MAXIM_IN_SPEED,
-          v40,
+          v34,
           0);
   dragObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !v24 )
+  if ( !v17 )
 LABEL_13:
-    sub_21FFECC(dragObject, method);
-  v24->fields.eventReceiver = dragObject;
-  sub_21FFBF4(
-    (MissionNaviTransitionBoardItem_o *)&v24->fields.eventReceiver,
+    sub_2213CDC(dragObject, method);
+  v17->fields.eventReceiver = dragObject;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v17->fields.eventReceiver,
     (int32_t)dragObject,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
-  v31 = StringLiteral_6483/*"EventMaximMove2"*/;
-  v24->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6483/*"EventMaximMove2"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24->fields.callWhenFinished, v31, v32, v33, v34, v35, v36, v37);
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
+  v24 = StringLiteral_6495/*"EventMaximMove2"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6495/*"EventMaximMove2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->fields.callWhenFinished, v24, v25, v26, v27, v28, v29, v30);
 }
 
 
@@ -537,33 +522,33 @@ void ServantStatusCharaGraphListViewObject__EventMaximMove2(
   UnityEngine_Object_o *v15; // x20
   __int64 v16; // x1
 
-  if ( (byte_593413F & 1) == 0 )
+  if ( (byte_596C2F2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_11105/*"PlayScriptButton"*/);
-    sub_21FFC50(&StringLiteral_6486/*"EventMoveEnd"*/);
-    byte_593413F = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_11122/*"PlayScriptButton"*/);
+    sub_2213A60(&StringLiteral_6498/*"EventMoveEnd"*/);
+    byte_596C2F2 = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
   targetFrameRate = UnityEngine_Application__get_targetFrameRate(0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6486/*"EventMoveEnd"*/,
+    (System_String_o *)StringLiteral_6498/*"EventMoveEnd"*/,
     1.0 / (float)targetFrameRate,
     0);
-  v5 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11105/*"PlayScriptButton"*/, 0);
+  v5 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11122/*"PlayScriptButton"*/, 0);
   this->fields.playScriptButton = v5;
   p_playScriptButton = &this->fields.playScriptButton;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_playScriptButton, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_playScriptButton, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   v15 = (UnityEngine_Object_o *)*p_playScriptButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
   if ( UnityEngine_Object__op_Inequality(v15, 0, 0) )
   {
     if ( !*p_playScriptButton )
-      sub_21FFECC(0, v16);
+      sub_2213CDC(0, v16);
     UnityEngine_GameObject__SetActive(*p_playScriptButton, 0, 0);
   }
 }
@@ -586,11 +571,11 @@ void ServantStatusCharaGraphListViewObject__EventMaximStart(
   UnityEngine_GameObject_o *dragObject; // x0
   const MethodInfo *v15; // x2
 
-  if ( (byte_593413D & 1) == 0 )
+  if ( (byte_596C2F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-    sub_21FFC50(&StringLiteral_6482/*"EventMaximMove"*/);
-    byte_593413D = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+    sub_2213A60(&StringLiteral_6494/*"EventMaximMove"*/);
+    byte_596C2F0 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -600,19 +585,19 @@ void ServantStatusCharaGraphListViewObject__EventMaximStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v6;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v6, v7, v8, v9, v10, v11, v12);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___)) == 0 )
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___)) == 0 )
   {
-    sub_21FFECC(dragObject, v13);
+    sub_2213CDC(dragObject, v13);
   }
-  ServantStatusCharaGraphListViewObject__Init_41305568((ServantStatusCharaGraphListViewObject_o *)dragObject, 2, v15);
+  ServantStatusCharaGraphListViewObject__Init_41386688((ServantStatusCharaGraphListViewObject_o *)dragObject, 2, v15);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6482/*"EventMaximMove"*/,
+    (System_String_o *)StringLiteral_6494/*"EventMaximMove"*/,
     delay,
     0);
 }
@@ -665,13 +650,12 @@ void ServantStatusCharaGraphListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ServantStatusCharaGraphListViewObject__EventUsuallyMove(
         ServantStatusCharaGraphListViewObject_o *this,
         const MethodInfo *method)
@@ -688,53 +672,46 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove(
   ServantStatusCharaGraphListViewObject_c *v12; // x0
   UnityEngine_GameObject_o *v13; // x20
   float MAXIM_OUT_SPEED; // s8
-  float y; // s5
-  float z; // s6
-  float w; // s7
-  float v18; // s4
   UnityEngine_Transform_o *parent; // x20
-  float v20; // s4
-  float v21; // s5
-  float v22; // s3
-  TweenPosition_o *v23; // x20
+  TweenPosition_o *v16; // x20
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  int32_t v23; // w1
   System_String_o *v24; // x2
   System_String_o *v25; // x3
   int32_t v26; // w4
   int32_t v27; // w5
   bool v28; // w6
   bool v29; // w7
-  int32_t v30; // w1
-  System_String_o *v31; // x2
-  System_String_o *v32; // x3
-  int32_t v33; // w4
-  int32_t v34; // w5
-  bool v35; // w6
-  bool v36; // w7
-  __int64 v37; // x1
-  __int64 v38; // x2
+  __int64 v30; // x1
+  __int64 v31; // x2
   MissionNaviTransitionBoardItem_o *p_playScriptButton; // x19
-  UnityEngine_Object_o *v40; // x20
+  UnityEngine_Object_o *v33; // x20
   struct UnityEngine_GameObject_o *playScriptButton; // t1
-  System_String_o *v42; // x2
-  System_String_o *v43; // x3
-  int32_t v44; // w4
-  int32_t v45; // w5
-  bool v46; // w6
-  bool v47; // w7
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
-  UnityEngine_Vector3_o v51; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Quaternion_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector3_o v43; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v44; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Quaternion_o v45; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_5934144 & 1) == 0 )
+  if ( (byte_596C2F7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewManager_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    sub_21FFC50(&StringLiteral_6531/*"EventUsuallyMove2"*/);
-    byte_5934144 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewManager_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    sub_2213A60(&StringLiteral_6543/*"EventUsuallyMove2"*/);
+    byte_596C2F7 = 1;
   }
   dragObject = (UnityEngine_GameObject_o *)ServantStatusCharaGraphListViewObject_TypeInfo;
   manager = this->fields.manager;
@@ -759,7 +736,7 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove(
     goto LABEL_30;
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              dragObject,
-                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
+                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___);
   if ( !dragObject )
     goto LABEL_30;
   v8 = dragObject;
@@ -786,26 +763,19 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove(
     j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewObject_TypeInfo, method, v10);
     v12 = ServantStatusCharaGraphListViewObject_TypeInfo;
   }
-  v48.fields.x = 0.0;
-  v48.fields.y = 0.0;
-  v48.fields.z = 0.0;
+  v41.fields.x = 0.0;
+  v41.fields.y = 0.0;
+  v41.fields.z = 0.0;
   MAXIM_OUT_SPEED = v12->static_fields->MAXIM_OUT_SPEED;
-  v52 = UnityEngine_Quaternion__Internal_FromEulerRad(v48, 0);
-  y = v52.fields.y;
-  z = v52.fields.z;
-  w = v52.fields.w;
-  v52.fields.y = v52.fields.x;
-  v52.fields.z = y;
-  v52.fields.w = z;
-  v18 = w;
-  TweenRotation__Begin(v13, MAXIM_OUT_SPEED, *(UnityEngine_Quaternion_o *)&v52.fields.y, 0);
-  v51.fields.x = 1.0;
-  v51.fields.y = 1.0;
-  v51.fields.z = 1.0;
+  v45 = UnityEngine_Quaternion__Internal_FromEulerRad(v41, 0);
+  TweenRotation__Begin(v13, MAXIM_OUT_SPEED, v45, 0);
+  v43.fields.x = 1.0;
+  v43.fields.y = 1.0;
+  v43.fields.z = 1.0;
   TweenScale__Begin(
     this->fields.dragObject,
     ServantStatusCharaGraphListViewObject_TypeInfo->static_fields->MAXIM_OUT_SPEED,
-    v51,
+    v43,
     0);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -820,50 +790,45 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove(
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !parent )
     goto LABEL_30;
-  v50 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-  v20 = v50.fields.y;
-  v21 = v50.fields.z;
-  v50.fields.y = v50.fields.x;
-  v50.fields.z = v20;
-  v22 = v21;
-  v23 = TweenPosition__Begin(
+  v44 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+  v16 = TweenPosition__Begin(
           this->fields.dragObject,
           ServantStatusCharaGraphListViewObject_TypeInfo->static_fields->MAXIM_OUT_SPEED,
-          *(UnityEngine_Vector3_o *)&v50.fields.y,
+          v44,
           0);
   dragObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !v23 )
+  if ( !v16 )
     goto LABEL_30;
-  v23->fields.eventReceiver = dragObject;
-  sub_21FFBF4(
-    (MissionNaviTransitionBoardItem_o *)&v23->fields.eventReceiver,
+  v16->fields.eventReceiver = dragObject;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v16->fields.eventReceiver,
     (int32_t)dragObject,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
-  v30 = StringLiteral_6531/*"EventUsuallyMove2"*/;
-  v23->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6531/*"EventUsuallyMove2"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23->fields.callWhenFinished, v30, v31, v32, v33, v34, v35, v36);
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
+  v23 = StringLiteral_6543/*"EventUsuallyMove2"*/;
+  v16->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6543/*"EventUsuallyMove2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16->fields.callWhenFinished, v23, v24, v25, v26, v27, v28, v29);
   playScriptButton = this->fields.playScriptButton;
   p_playScriptButton = (MissionNaviTransitionBoardItem_o *)&this->fields.playScriptButton;
-  v40 = (UnityEngine_Object_o *)playScriptButton;
+  v33 = (UnityEngine_Object_o *)playScriptButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v38);
-  if ( UnityEngine_Object__op_Inequality(v40, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
+  if ( UnityEngine_Object__op_Inequality(v33, 0, 0) )
   {
     dragObject = (UnityEngine_GameObject_o *)p_playScriptButton->klass;
     if ( p_playScriptButton->klass )
     {
       UnityEngine_GameObject__SetActive(dragObject, 1, 0);
       p_playScriptButton->klass = 0;
-      sub_21FFBF4(p_playScriptButton, 0, v42, v43, v44, v45, v46, v47);
+      sub_2213A04(p_playScriptButton, 0, v35, v36, v37, v38, v39, v40);
       return;
     }
 LABEL_30:
-    sub_21FFECC(dragObject, method);
+    sub_2213CDC(dragObject, method);
   }
 }
 
@@ -886,11 +851,11 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove2(
   bool v14; // w7
   const MethodInfo *v15; // x1
 
-  if ( (byte_5934145 & 1) == 0 )
+  if ( (byte_596C2F8 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewManager_TypeInfo);
-    byte_5934145 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewManager_TypeInfo);
+    byte_596C2F8 = 1;
   }
   manager = this->fields.manager;
   if ( !manager
@@ -898,7 +863,7 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove2(
         manager->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (ServantStatusCharaGraphListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] != ServantStatusCharaGraphListViewManager_TypeInfo )
   {
-    sub_21FFECC(manager, method);
+    sub_2213CDC(manager, method);
   }
   ServantStatusCharaGraphListViewManager__DragBackOff((ServantStatusCharaGraphListViewManager_o *)manager, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
@@ -909,7 +874,7 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyMove2(
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v6, v7);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v9, v10, v11, v12, v13, v14);
   ServantStatusCharaGraphListViewObject__EventMoveEnd(this, v15);
 }
 
@@ -921,10 +886,10 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyStart(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_5934143 & 1) == 0 )
+  if ( (byte_596C2F6 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6530/*"EventUsuallyMove"*/);
-    byte_5934143 = 1;
+    sub_2213A60(&StringLiteral_6542/*"EventUsuallyMove"*/);
+    byte_596C2F6 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -932,7 +897,7 @@ void ServantStatusCharaGraphListViewObject__EventUsuallyStart(
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6530/*"EventUsuallyMove"*/,
+    (System_String_o *)StringLiteral_6542/*"EventUsuallyMove"*/,
     delay,
     0);
 }
@@ -950,20 +915,12 @@ UnityEngine_Rect_o ServantStatusCharaGraphListViewObject__GetDragObjectRange(
         ServantStatusCharaGraphListViewObject_o *this,
         const MethodInfo *method)
 {
-  float m_XMin; // s0
-  float m_YMin; // s1
-  float m_Width; // s2
-  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  m_XMin = this->fields.dragObjectRect.fields.m_XMin;
-  m_YMin = this->fields.dragObjectRect.fields.m_YMin;
-  m_Width = this->fields.dragObjectRect.fields.m_Width;
-  m_Height = this->fields.dragObjectRect.fields.m_Height;
-  result.fields.m_Height = m_Height;
-  result.fields.m_Width = m_Width;
-  result.fields.m_YMin = m_YMin;
-  result.fields.m_XMin = m_XMin;
+  result.fields.m_XMin = this->fields.dragObjectRect.fields.m_XMin;
+  result.fields.m_YMin = this->fields.dragObjectRect.fields.m_YMin;
+  result.fields.m_Width = this->fields.dragObjectRect.fields.m_Width;
+  result.fields.m_Height = this->fields.dragObjectRect.fields.m_Height;
   return result;
 }
 
@@ -977,16 +934,12 @@ UnityEngine_Rect_o ServantStatusCharaGraphListViewObject__GetDragObjectRect(
   float *p_CARD_HEIGHT; // x8
   float v5; // s3
   float v6; // s4
-  float v7; // s2
-  float v8; // s0
-  float v9; // s1
-  float v10; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5934139 & 1) == 0 )
+  if ( (byte_596C2EC & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    byte_5934139 = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    byte_596C2EC = 1;
   }
   v3 = ServantStatusCharaGraphListViewObject_TypeInfo;
   if ( !*(&ServantStatusCharaGraphListViewObject_TypeInfo->_2.cctor_finished + 1) )
@@ -997,14 +950,10 @@ UnityEngine_Rect_o ServantStatusCharaGraphListViewObject__GetDragObjectRect(
   p_CARD_HEIGHT = &v3->static_fields->CARD_HEIGHT;
   v5 = p_CARD_HEIGHT[1];
   v6 = p_CARD_HEIGHT[2];
-  v7 = *p_CARD_HEIGHT / v6;
-  v8 = (float)(*p_CARD_HEIGHT * -0.5) / v6;
-  v9 = (float)(v5 * -0.5) / v6;
-  v10 = v5 / v6;
-  result.fields.m_Height = v10;
-  result.fields.m_Width = v7;
-  result.fields.m_YMin = v9;
-  result.fields.m_XMin = v8;
+  result.fields.m_Width = *p_CARD_HEIGHT / v6;
+  result.fields.m_XMin = (float)(*p_CARD_HEIGHT * -0.5) / v6;
+  result.fields.m_YMin = (float)(v5 * -0.5) / v6;
+  result.fields.m_Height = v5 / v6;
   return result;
 }
 
@@ -1016,10 +965,10 @@ ServantStatusCharaGraphListViewItem_o *ServantStatusCharaGraphListViewObject__Ge
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5934135 & 1) == 0 )
+  if ( (byte_596C2E8 & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_5934135 = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_596C2E8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -1054,11 +1003,11 @@ void ServantStatusCharaGraphListViewObject__GetMaximTransformValues(
   float CARD_HEIGHT; // s1
   float v19; // s0
 
-  if ( (byte_593413A & 1) == 0 )
+  if ( (byte_596C2ED & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    this = (ServantStatusCharaGraphListViewObject_o *)sub_21FFC50(&ServantStatusCharaGraphListViewObject_TypeInfo);
-    byte_593413A = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    this = (ServantStatusCharaGraphListViewObject_o *)sub_2213A60(&ServantStatusCharaGraphListViewObject_TypeInfo);
+    byte_596C2ED = 1;
   }
   v8 = ServantStatusCharaGraphListViewObject__CalcGameScreenAspectRatio(this, (const MethodInfo *)localScale);
   v9 = ServantStatusCharaGraphListViewObject_TypeInfo;
@@ -1150,10 +1099,10 @@ void ServantStatusCharaGraphListViewObject__Init(
   int32_t v33; // w8
   MissionNaviTransitionBoardItem_c *v34; // x19
 
-  if ( (byte_5934137 & 1) == 0 )
+  if ( (byte_596C2EA & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_5934137 = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_596C2EA = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -1184,13 +1133,13 @@ void ServantStatusCharaGraphListViewObject__Init(
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_21FFECC(transform, v23);
+      sub_2213CDC(transform, v23);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   }
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v16,
@@ -1207,7 +1156,7 @@ void ServantStatusCharaGraphListViewObject__Init(
       {
         case 9:
           this->fields.dispMode = 2;
-          ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41320944(this, this, v26);
+          ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_41402064(this, this, v26);
           break;
         case 10:
           this->fields.dispMode = 2;
@@ -1224,7 +1173,7 @@ LABEL_42:
           if ( p_callbackFunc->klass )
           {
             p_callbackFunc->klass = 0;
-            sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)v26, v27, v28, v29, v30, v31);
+            sub_2213A04(p_callbackFunc, 0, (System_String_o *)v26, v27, v28, v29, v30, v31);
             ((void (__fastcall *)(Il2CppClass *, _QWORD))v34->_1.namespaze)(
               v34->_1.element_class,
               *(_QWORD *)&v34->_1.byval_arg.bits);
@@ -1299,64 +1248,73 @@ LABEL_34:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ServantStatusCharaGraphListViewObject__Init_41305568(
+void ServantStatusCharaGraphListViewObject__Init_41386688(
         ServantStatusCharaGraphListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  int v4; // s1 OVERLAPPED
+  float v4; // s1
+  float v5; // s2
+  float v6; // s3
+  UnityEngine_Vector3_o v9; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ServantStatusCharaGraphListViewObject__Init(this, initMode, 0, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
+  v9.fields.x = v4;
+  v9.fields.y = v5;
+  v9.fields.z = v6;
+  ServantStatusCharaGraphListViewObject__Init(this, initMode, 0, 0.0, v9, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ServantStatusCharaGraphListViewObject__Init_41306344(
+void ServantStatusCharaGraphListViewObject__Init_41387464(
         ServantStatusCharaGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
-  int v4; // s1 OVERLAPPED
+  float v4; // s1
+  float v5; // s2
+  float v6; // s3
+  UnityEngine_Vector3_o v10; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ServantStatusCharaGraphListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
+  v10.fields.x = v4;
+  v10.fields.y = v5;
+  v10.fields.z = v6;
+  ServantStatusCharaGraphListViewObject__Init(this, initMode, callbackFunc, 0.0, v10, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ServantStatusCharaGraphListViewObject__Init_41308236(
+void ServantStatusCharaGraphListViewObject__Init_41389356(
         ServantStatusCharaGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v12; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ServantStatusCharaGraphListViewObject__Init(
-    this,
-    initMode,
-    callbackFunc,
-    delay,
-    *(UnityEngine_Vector3_o *)&v5,
-    method);
+  v12.fields.x = v5;
+  v12.fields.y = v6;
+  v12.fields.z = v7;
+  ServantStatusCharaGraphListViewObject__Init(this, initMode, callbackFunc, delay, v12, method);
 }
 
 
@@ -1370,7 +1328,7 @@ bool ServantStatusCharaGraphListViewObject__IsExpandImage(
   int32_t v6; // w1
 
   if ( !item || (this = (ServantStatusCharaGraphListViewObject_o *)item->fields.mainInfo) == 0 )
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   ServantEntity = ServantStatusListViewItem__GetServantEntity((ServantStatusListViewItem_o *)this, 0, 0);
   if ( ServantEntity )
   {
@@ -1400,11 +1358,11 @@ void ServantStatusCharaGraphListViewObject__OnDestroy(
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5934134 & 1) == 0 )
+  if ( (byte_596C2E7 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934134 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C2E7 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -1418,7 +1376,7 @@ void ServantStatusCharaGraphListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -1450,7 +1408,7 @@ void ServantStatusCharaGraphListViewObject__SetDragObjectItemDataType(
       }
     }
 LABEL_8:
-    sub_21FFECC(IsExpandImage, v6);
+    sub_2213CDC(IsExpandImage, v6);
   }
   if ( !item )
     goto LABEL_8;
@@ -1469,7 +1427,7 @@ void ServantStatusCharaGraphListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -1491,10 +1449,10 @@ void ServantStatusCharaGraphListViewObject__SetItemDataType(
   const MethodInfo *v14; // x1
 
   v5 = this;
-  if ( (byte_5934148 & 1) == 0 )
+  if ( (byte_596C2FB & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphListViewObject_o *)sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_5934148 = 1;
+    this = (ServantStatusCharaGraphListViewObject_o *)sub_2213A60(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_596C2FB = 1;
   }
   linkItem = v5->fields.linkItem;
   v7 = ServantStatusCharaGraphListViewItem_TypeInfo;
@@ -1533,7 +1491,7 @@ void ServantStatusCharaGraphListViewObject__SetItemDataType(
         }
       }
 LABEL_21:
-      sub_21FFECC(this, v7);
+      sub_2213CDC(this, v7);
     }
     if ( !v9 )
       goto LABEL_21;
@@ -1560,7 +1518,7 @@ LABEL_21:
     }
     else
     {
-      v13 = (ServantStatusCharaGraphListViewManager_o *)sub_220024C(
+      v13 = (ServantStatusCharaGraphListViewManager_o *)sub_221405C(
                                                           v5->fields.linkItem,
                                                           ServantStatusCharaGraphListViewItem_TypeInfo,
                                                           method,
@@ -1590,11 +1548,11 @@ void ServantStatusCharaGraphListViewObject__SetupDisp(
   const MethodInfo *v16; // x2
   bool IsExpandImage; // w8
 
-  if ( (byte_5934138 & 1) == 0 )
+  if ( (byte_596C2EB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantStatusCharaGraphListViewItem_TypeInfo);
-    byte_5934138 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantStatusCharaGraphListViewItem_TypeInfo);
+    byte_596C2EB = 1;
   }
   linkItem = (ServantStatusCharaGraphListViewItem_o *)this->fields.linkItem;
   if ( !linkItem )
@@ -1655,7 +1613,7 @@ LABEL_20:
         return;
       }
 LABEL_23:
-      sub_21FFECC(v12, v13);
+      sub_2213CDC(v12, v13);
     }
   }
 }
@@ -1675,11 +1633,11 @@ System_String_o *ServantStatusCharaGraphListViewObject__ToString(
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_5934147 & 1) == 0 )
+  if ( (byte_596C2FA & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusCharaGraphListViewItemDraw_DispMode_TypeInfo);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    byte_5934147 = 1;
+    sub_2213A60(&ServantStatusCharaGraphListViewItemDraw_DispMode_TypeInfo);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    byte_596C2FA = 1;
   }
   dispMode = this->fields.dispMode;
   v12 = 0.0;
@@ -1692,8 +1650,8 @@ System_String_o *ServantStatusCharaGraphListViewObject__ToString(
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_240362C(&v11, 0, 0, 0);
-  return System_String__Concat_75481624(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
+  v7 = (System_String_o *)sub_2402C74(&v11, 0, 0, 0);
+  return System_String__Concat_75694928(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
 }
 
 
@@ -1714,10 +1672,10 @@ void ServantStatusCharaGraphListViewObject__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5934131 & 1) == 0 )
+  if ( (byte_596C2E4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5934131 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C2E4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1730,13 +1688,13 @@ void ServantStatusCharaGraphListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ServantStatusCharaGraphListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (ServantStatusCharaGraphListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ServantStatusCharaGraphListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -1757,10 +1715,10 @@ void ServantStatusCharaGraphListViewObject__remove_callbackFunc(
   ServantStatusCharaGraphListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5934132 & 1) == 0 )
+  if ( (byte_596C2E5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5934132 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C2E5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1773,12 +1731,12 @@ void ServantStatusCharaGraphListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ServantStatusCharaGraphListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (ServantStatusCharaGraphListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ServantStatusCharaGraphListViewObject__GetDragObject(v13, v14);
 }

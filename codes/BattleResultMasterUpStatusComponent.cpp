@@ -25,11 +25,11 @@ void BattleResultMasterUpStatusComponent__setData(
 
   v15 = oldVal;
   v14 = newVal;
-  if ( (byte_593C2D4 & 1) == 0 )
+  if ( (byte_597450C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593C2D4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597450C = 1;
   }
   oldParamLabel = (UnityEngine_Object_o *)this->fields.oldParamLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -63,7 +63,7 @@ void BattleResultMasterUpStatusComponent__setData(
       return;
     }
 LABEL_20:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
 }
 
@@ -79,11 +79,11 @@ void BattleResultMasterUpStatusComponent__setTitle(
   __int64 v8; // x1
   System_String_o *v9; // x21
 
-  if ( (byte_593C2D3 & 1) == 0 )
+  if ( (byte_597450B & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C2D3 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597450B = 1;
   }
   titleParamLabel = (UnityEngine_Object_o *)this->fields.titleParamLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -96,7 +96,7 @@ void BattleResultMasterUpStatusComponent__setTitle(
     if ( v7 )
     {
       v9 = v7;
-      if ( System_String__Equals_75473208(v7, key, 0) )
+      if ( System_String__Equals_75686512(v7, key, 0) )
         return;
       v7 = (System_String_o *)this->fields.titleParamLabel;
       if ( v7 )
@@ -105,6 +105,6 @@ void BattleResultMasterUpStatusComponent__setTitle(
         return;
       }
     }
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
 }

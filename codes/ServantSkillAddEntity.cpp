@@ -1,13 +1,13 @@
 void ServantSkillAddEntity___ctor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593912F & 1) == 0 )
+  if ( (byte_59712EE & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593912F = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59712EE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ServantSkillAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_593912E & 1) == 0 )
+  if ( (byte_59712ED & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_593912E = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59712ED = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -50,41 +50,41 @@ int32_t ServantSkillAddEntity__GetBaseSkillId(ServantSkillAddEntity_o *this, con
   if ( !max_length )
     return 0;
   if ( !(_DWORD)max_length )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   return skillIds->m_Items[0];
 }
 
 
 int32_t ServantSkillAddEntity__GetCondIgnoreSealedLimitCount(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939129 & 1) == 0 )
+  if ( (byte_59712E8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18978/*"condIgnoreSealedLimitCount"*/);
-    byte_5939129 = 1;
+    sub_2213A60(&StringLiteral_19017/*"condIgnoreSealedLimitCount"*/);
+    byte_59712E8 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18978/*"condIgnoreSealedLimitCount"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19017/*"condIgnoreSealedLimitCount"*/, 0, 0);
 }
 
 
 System_String_o *ServantSkillAddEntity__GetCondLabelColor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593912C & 1) == 0 )
+  if ( (byte_59712EB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18980/*"condLabelColor"*/);
-    byte_593912C = 1;
+    sub_2213A60(&StringLiteral_19019/*"condLabelColor"*/);
+    byte_59712EB = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18980/*"condLabelColor"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19019/*"condLabelColor"*/, 0, 0);
 }
 
 
 System_String_o *ServantSkillAddEntity__GetCondSpriteColor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593912D & 1) == 0 )
+  if ( (byte_59712EC & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18982/*"condSpriteColor"*/);
-    byte_593912D = 1;
+    sub_2213A60(&StringLiteral_19021/*"condSpriteColor"*/);
+    byte_59712EC = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18982/*"condSpriteColor"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19021/*"condSpriteColor"*/, 0, 0);
 }
 
 
@@ -92,12 +92,12 @@ System_Int32_array *ServantSkillAddEntity__GetEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593912A & 1) == 0 )
+  if ( (byte_59712E9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19827/*"enableDispOnBattleConfirmDialog"*/);
-    byte_593912A = 1;
+    sub_2213A60(&StringLiteral_19869/*"enableDispOnBattleConfirmDialog"*/);
+    byte_59712E9 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19827/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19869/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
 }
 
 
@@ -117,12 +117,12 @@ bool ServantSkillAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593912B & 1) == 0 )
+  if ( (byte_59712EA & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19827/*"enableDispOnBattleConfirmDialog"*/);
-    byte_593912B = 1;
+    sub_2213A60(&StringLiteral_19869/*"enableDispOnBattleConfirmDialog"*/);
+    byte_59712EA = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19827/*"enableDispOnBattleConfirmDialog"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19869/*"enableDispOnBattleConfirmDialog"*/, 0);
 }
 
 

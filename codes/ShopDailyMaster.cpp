@@ -1,14 +1,14 @@
 void ShopDailyMaster___ctor(ShopDailyMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59391FD & 1) == 0 )
+  if ( (byte_59713BC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string___ctor__);
-    byte_59391FD = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string___ctor__);
+    byte_59713BC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     125,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ShopDailyEntity_o *ShopDailyMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59391FE & 1) == 0 )
+  if ( (byte_59713BD & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__GetEntity__);
-    byte_59391FE = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__GetEntity__);
+    byte_59713BD = 1;
   }
   PK = (Il2CppObject *)ShopDailyEntity__CreatePK(dayKey, shopId, *(const MethodInfo **)&shopId);
   return (ShopDailyEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_3EE2044 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__GetEntity__);
+                                (const MethodInfo_3F157EC *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__GetEntity__);
 }
 
 
@@ -59,25 +59,25 @@ System_Collections_Generic_List_ShopDailyEntity__o *ShopDailyMaster__GetTodayEna
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_59391F8 & 1) == 0 )
+  if ( (byte_59713B7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopDailyEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopDailyEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ShopDailyEntity__TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59391F8 = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopDailyEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopDailyEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ShopDailyEntity__TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59713B7 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&shopType);
   Time = NetworkManager__getTime(0);
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopDailyEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ShopDailyEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopDailyEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ShopDailyEntity___ctor__);
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
   if ( Entitys )
   {
     max_length = Entitys->max_length;
@@ -88,7 +88,7 @@ System_Collections_Generic_List_ShopDailyEntity__o *ShopDailyMaster__GetTodayEna
       do
       {
         if ( v10 >= (unsigned int)max_length )
-          sub_21FFED4(Entitys);
+          sub_2213CE4(Entitys);
         v11 = v9->m_Items[v10];
         if ( v11 )
         {
@@ -101,7 +101,7 @@ System_Collections_Generic_List_ShopDailyEntity__o *ShopDailyMaster__GetTodayEna
                   ++v5->fields._version,
                   !items) )
             {
-              sub_21FFECC(Entitys, v12);
+              sub_2213CDC(Entitys, v12);
             }
             size = v5->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -109,14 +109,14 @@ System_Collections_Generic_List_ShopDailyEntity__o *ShopDailyMaster__GetTodayEna
               System_Collections_Generic_List_object___AddWithResize(
                 v5,
                 v11,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
             }
             else
             {
               v21 = &items->obj.klass + size;
               v5->fields._size = size + 1;
               v21[4] = (Il2CppClass *)v11;
-              sub_21FFBF4(
+              sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)(v21 + 4),
                 (int32_t)v11,
                 (System_String_o *)v7,
@@ -154,16 +154,16 @@ bool ShopDailyMaster__IsAllCondClear(
   __int64 v14; // x1
   const MethodInfo *v16; // x2
 
-  if ( (byte_59391FC & 1) == 0 )
+  if ( (byte_59713BB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ShopReleaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
-    byte_59391FC = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ShopReleaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+    byte_59713BB = 1;
   }
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
   if ( !Entitys )
     goto LABEL_17;
   max_length = Entitys->max_length;
@@ -174,7 +174,7 @@ bool ShopDailyMaster__IsAllCondClear(
   while ( 1 )
   {
     if ( v12 >= (unsigned int)max_length )
-      sub_21FFED4(Entitys);
+      sub_2213CE4(Entitys);
     v13 = v11->m_Items[v12];
     if ( v13 )
     {
@@ -191,10 +191,10 @@ bool ShopDailyMaster__IsAllCondClear(
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v14);
-  Entitys = (System_Object_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+  Entitys = (System_Object_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
   if ( !Entitys )
 LABEL_17:
-    sub_21FFECC(Entitys, v8);
+    sub_2213CDC(Entitys, v8);
   return ShopReleaseMaster__IsAllCondClear((ShopReleaseMaster_o *)Entitys, HIDWORD(v13[1].klass), v16);
 }
 
@@ -210,16 +210,16 @@ bool ShopDailyMaster__IsOpen(ShopDailyMaster_o *this, int32_t shopId, int64_t no
   __int64 v13; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_59391FB & 1) == 0 )
+  if ( (byte_59713BA & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ShopReleaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
-    byte_59391FB = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ShopReleaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+    byte_59713BA = 1;
   }
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
   if ( !Entitys )
     goto LABEL_17;
   max_length = Entitys->max_length;
@@ -230,7 +230,7 @@ bool ShopDailyMaster__IsOpen(ShopDailyMaster_o *this, int32_t shopId, int64_t no
   while ( 1 )
   {
     if ( v12 >= (unsigned int)max_length )
-      sub_21FFED4(Entitys);
+      sub_2213CE4(Entitys);
     Entitys = (System_Object_array *)v11->m_Items[v12];
     if ( Entitys )
     {
@@ -247,10 +247,10 @@ bool ShopDailyMaster__IsOpen(ShopDailyMaster_o *this, int32_t shopId, int64_t no
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13);
-  Entitys = (System_Object_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+  Entitys = (System_Object_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
   if ( !Entitys )
 LABEL_17:
-    sub_21FFECC(Entitys, v8);
+    sub_2213CDC(Entitys, v8);
   return ShopReleaseMaster__IsOpen((ShopReleaseMaster_o *)Entitys, shopId, v15);
 }
 
@@ -265,16 +265,16 @@ bool ShopDailyMaster__IsValid(ShopDailyMaster_o *this, int32_t shopId, int64_t n
   bool v12; // w22
   unsigned __int64 v13; // x23
 
-  if ( (byte_59391FA & 1) == 0 )
+  if ( (byte_59713B9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
-    byte_59391FA = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+    byte_59713B9 = 1;
   }
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
   if ( !Entitys )
-    sub_21FFECC(0, v8);
+    sub_2213CDC(0, v8);
   max_length = Entitys->max_length;
   v11 = Entitys;
   v12 = (int)max_length > 0;
@@ -284,7 +284,7 @@ bool ShopDailyMaster__IsValid(ShopDailyMaster_o *this, int32_t shopId, int64_t n
     do
     {
       if ( v13 >= (unsigned int)max_length )
-        sub_21FFED4(Entitys);
+        sub_2213CE4(Entitys);
       Entitys = (System_Object_array *)v11->m_Items[v13];
       if ( Entitys )
       {
@@ -327,13 +327,13 @@ bool ShopDailyMaster__TryGetEnableEntity(
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_59391F9 & 1) == 0 )
+  if ( (byte_59713B8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
-    byte_59391F9 = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+    byte_59713B8 = 1;
   }
   *entity = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)entity,
     0,
     *(System_String_o **)&shopId,
@@ -344,7 +344,7 @@ bool ShopDailyMaster__TryGetEnableEntity(
     v7);
   Entitys = DataMasterBase_object__object__object___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__getEntitys__);
   if ( Entitys )
   {
     max_length = Entitys->max_length;
@@ -359,7 +359,7 @@ LABEL_12:
     while ( 1 )
     {
       if ( v16 >= (unsigned int)max_length )
-        sub_21FFED4(Entitys);
+        sub_2213CE4(Entitys);
       v17 = (ShopDailyEntity_o *)v15->m_Items[v16];
       if ( v17 && v17->fields.shopId == shopId )
       {
@@ -367,7 +367,7 @@ LABEL_12:
         if ( ((unsigned __int8)Entitys & 1) != 0 )
         {
           *entity = v17;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)entity,
             (int32_t)v17,
             (System_String_o *)v13,
@@ -399,15 +399,15 @@ bool ShopDailyMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59391FF & 1) == 0 )
+  if ( (byte_59713BE & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__TryGetEntity__);
-    byte_59391FF = 1;
+    sub_2213A60(&Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__TryGetEntity__);
+    byte_59713BE = 1;
   }
   PK = (Il2CppObject *)ShopDailyEntity__CreatePK(dayKey, shopId, *(const MethodInfo **)&dayKey);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_ShopDailyMaster__ShopDailyEntity__string__TryGetEntity__);
 }

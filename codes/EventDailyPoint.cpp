@@ -10,5 +10,5 @@ void EventDailyPoint___ctor(EventDailyPoint_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.eventPointBehavior = 0;
   this->fields.eventDailyPoint = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventPointBehavior, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.eventPointBehavior, 0, v3, v4, v5, v6, v7, v8);
 }

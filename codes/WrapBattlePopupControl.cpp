@@ -6,7 +6,7 @@ void WrapBattlePopupControl___ctor(
   const MethodInfo *v3; // x3
 
   if ( !inPerf )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   WrapBaseBattlePopupControl___ctor((WrapBaseBattlePopupControl_o *)this, inPerf->fields.popupTr, inPerf, v3);
 }
 
@@ -39,7 +39,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidResetDamageObject(
                  v7);
     }
 LABEL_8:
-    sub_21FFECC(IsNullOrEmpty, v6);
+    sub_2213CDC(IsNullOrEmpty, v6);
   }
   if ( !perf )
     goto LABEL_8;
@@ -65,7 +65,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceObject,
@@ -84,7 +84,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceTextObject,
@@ -103,7 +103,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextClassIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, *(_QWORD *)&color);
+    sub_2213CDC(this, *(_QWORD *)&color);
   return BattleEffectControl__getBuffTextClassIconObject((BattleEffectControl_o *)this, color, 0);
 }
 
@@ -118,7 +118,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, *(_QWORD *)&color);
+    sub_2213CDC(this, *(_QWORD *)&color);
   return BattleEffectControl__getBuffTextObject((BattleEffectControl_o *)this, color, 0);
 }
 
@@ -135,7 +135,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetDamageObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, critical);
+    sub_2213CDC(this, critical);
   return BattleEffectControl__getDamageObject((BattleEffectControl_o *)this, critical, week, resist, 0);
 }
 
@@ -150,7 +150,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetEffectInstantiateLocal(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, *(_QWORD *)&id);
+    sub_2213CDC(this, *(_QWORD *)&id);
   return BattleEffectControl__getEffectInstantiate((BattleEffectControl_o *)this, id, 0);
 }
 
@@ -165,7 +165,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.invincibleObject,
@@ -184,7 +184,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetSpecialInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields._specialInvincibleObject_k__BackingField,
@@ -202,6 +202,6 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__SetBuffIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_21FFECC(this, buffList);
+    sub_2213CDC(this, buffList);
   return BattleEffectControl__SetBuffIconObject((BattleEffectControl_o *)this, buffList, 0);
 }

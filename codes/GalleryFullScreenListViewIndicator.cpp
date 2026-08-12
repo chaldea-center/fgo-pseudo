@@ -27,7 +27,7 @@ void GalleryFullScreenListViewIndicator__Closed(GalleryFullScreenListViewIndicat
   GalleryFullScreenListViewIndicator__SetActiveObject(this, 0, v2);
   uiRootPanel = this->fields.uiRootPanel;
   if ( !uiRootPanel )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, double))uiRootPanel->klass->vtable._8_set_alpha.methodPtr)(
     uiRootPanel,
     uiRootPanel->klass->vtable._8_set_alpha.method,
@@ -51,7 +51,7 @@ void GalleryFullScreenListViewIndicator__GetCanScrollList(
     || (listViewManager = (ListViewManager_o *)ListViewManager__GetCenterIndex(listViewManager, 0),
         (v8 = this->fields.listViewManager) == 0) )
   {
-    sub_21FFECC(listViewManager, isLeft);
+    sub_2213CDC(listViewManager, isLeft);
   }
   v9 = (int)listViewManager;
   v10 = ListViewManager__get_ItemSum(v8, 0) - 1;
@@ -86,11 +86,11 @@ void GalleryFullScreenListViewIndicator__OnClickLeft(
   _QWORD *v8; // x0
   System_Reflection_MethodBase_o *v9; // x0
 
-  if ( (byte_593341D & 1) == 0 )
+  if ( (byte_596B525 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GalleryFullScreenListViewIndicator_OnClickLeft__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593341D = 1;
+    sub_2213A60(&Method_GalleryFullScreenListViewIndicator_OnClickLeft__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B525 = 1;
   }
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -107,12 +107,12 @@ void GalleryFullScreenListViewIndicator__OnClickLeft(
     v6 = this->fields.listViewManager;
     if ( !v6 )
 LABEL_13:
-      sub_21FFECC(v6, v5);
+      sub_2213CDC(v6, v5);
     ListViewManager__MoveCenterItem(v6, v5, 1, 0, 0.0, 0, 0);
     v8 = Method_GalleryFullScreenListViewIndicator_OnClickLeft__;
     if ( (*((_BYTE *)Method_GalleryFullScreenListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_21FFC68(Method_GalleryFullScreenListViewIndicator_OnClickLeft__);
-    v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+      v8 = (_QWORD *)sub_2213A78(Method_GalleryFullScreenListViewIndicator_OnClickLeft__);
+    v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 7, 0, 0);
   }
 }
@@ -132,11 +132,11 @@ void GalleryFullScreenListViewIndicator__OnClickPageSprite(
   _QWORD *v11; // x0
   System_Reflection_MethodBase_o *v12; // x0
 
-  if ( (byte_593341F & 1) == 0 )
+  if ( (byte_596B527 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593341F = 1;
+    sub_2213A60(&Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B527 = 1;
   }
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -152,7 +152,7 @@ void GalleryFullScreenListViewIndicator__OnClickPageSprite(
           SiblingIndex = UnityEngine_Transform__GetSiblingIndex(pageTransform, 0),
           !this->fields.listViewManager) )
     {
-      sub_21FFECC(SiblingIndex, v7);
+      sub_2213CDC(SiblingIndex, v7);
     }
     ListViewManager__MoveCenterItem(
       this->fields.listViewManager,
@@ -164,8 +164,8 @@ void GalleryFullScreenListViewIndicator__OnClickPageSprite(
       0);
     v11 = Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__;
     if ( (*((_BYTE *)Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_21FFC68(Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__);
-    v12 = (System_Reflection_MethodBase_o *)sub_21FFC34(v11, v11[4]);
+      v11 = (_QWORD *)sub_2213A78(Method_GalleryFullScreenListViewIndicator_OnClickPageSprite__);
+    v12 = (System_Reflection_MethodBase_o *)sub_2213A44(v11, v11[4]);
     OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0, 0);
   }
 }
@@ -184,11 +184,11 @@ void GalleryFullScreenListViewIndicator__OnClickRight(
   _QWORD *v9; // x0
   System_Reflection_MethodBase_o *v10; // x0
 
-  if ( (byte_593341E & 1) == 0 )
+  if ( (byte_596B526 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GalleryFullScreenListViewIndicator_OnClickRight__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593341E = 1;
+    sub_2213A60(&Method_GalleryFullScreenListViewIndicator_OnClickRight__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B526 = 1;
   }
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -214,14 +214,14 @@ void GalleryFullScreenListViewIndicator__OnClickRight(
 LABEL_12:
           v9 = Method_GalleryFullScreenListViewIndicator_OnClickRight__;
           if ( (*((_BYTE *)Method_GalleryFullScreenListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-            v9 = (_QWORD *)sub_21FFC68(Method_GalleryFullScreenListViewIndicator_OnClickRight__);
-          v10 = (System_Reflection_MethodBase_o *)sub_21FFC34(v9, v9[4]);
+            v9 = (_QWORD *)sub_2213A78(Method_GalleryFullScreenListViewIndicator_OnClickRight__);
+          v10 = (System_Reflection_MethodBase_o *)sub_2213A44(v9, v9[4]);
           OverwriteAssetSoundName__PlaySystemSe(v10, 7, 0, 0);
           return;
         }
       }
     }
-    sub_21FFECC(CenterIndex, v5);
+    sub_2213CDC(CenterIndex, v5);
   }
 }
 
@@ -268,20 +268,20 @@ void GalleryFullScreenListViewIndicator__OnModifyCenterItem(
   __int64 v41; // x10
   UILabel_o *titleLabel; // x20
 
-  if ( (byte_5933418 & 1) == 0 )
+  if ( (byte_596B520 & 1) == 0 )
   {
-    sub_21FFC50(&GalleryFullScreenListViewItem_TypeInfo);
-    sub_21FFC50(&GalleryFullScreenListViewManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_UISprite__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933418 = 1;
+    sub_2213A60(&GalleryFullScreenListViewItem_TypeInfo);
+    sub_2213A60(&GalleryFullScreenListViewManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_UISprite__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B520 = 1;
   }
   this->fields.listViewManager = manager;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.listViewManager,
     (int32_t)manager,
     (System_String_o *)item,
@@ -306,12 +306,12 @@ void GalleryFullScreenListViewIndicator__OnModifyCenterItem(
   p_pageSpriteList = &this->fields.pageSpriteList;
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.pageSpriteList, 0) )
   {
-    v18 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UISprite__TypeInfo);
+    v18 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_UISprite__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v18,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UISprite___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UISprite___ctor__);
     this->fields.pageSpriteList = (struct System_Collections_Generic_List_UISprite__o *)v18;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.pageSpriteList,
       (int32_t)v18,
       v19,
@@ -328,15 +328,15 @@ void GalleryFullScreenListViewIndicator__OnModifyCenterItem(
         pageSpriteSeed = (Il2CppObject *)this->fields.pageSpriteSeed;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v25);
-        leftObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59506996(
+        leftObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                    pageSpriteSeed,
                                                    transform,
-                                                   (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                                   (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
         if ( !leftObject )
           break;
         leftObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    leftObject,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         v34 = (System_Collections_Generic_List_object__o *)*p_pageSpriteList;
         if ( !*p_pageSpriteList )
           break;
@@ -352,20 +352,20 @@ void GalleryFullScreenListViewIndicator__OnModifyCenterItem(
           System_Collections_Generic_List_object___AddWithResize(
             v34,
             (Il2CppObject *)leftObject,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
           v39 = &items->obj.klass + size;
           v34->fields._size = size + 1;
           v39[4] = (Il2CppClass *)v38;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v39 + 4), (int32_t)v38, v28, v29, v30, v31, v32, v33);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v39 + 4), (int32_t)v38, v28, v29, v30, v31, v32, v33);
         }
         if ( ++v26 >= this->fields.pageSpriteMax )
           goto LABEL_18;
       }
 LABEL_30:
-      sub_21FFECC(leftObject, v13);
+      sub_2213CDC(leftObject, v13);
     }
   }
 LABEL_18:
@@ -421,7 +421,7 @@ void GalleryFullScreenListViewIndicator__OnModifyPosition(
   isLeft = 0;
   isRight = 0;
   this->fields.listViewManager = manager;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.listViewManager,
     (int32_t)manager,
     (System_String_o *)item,
@@ -440,7 +440,7 @@ void GalleryFullScreenListViewIndicator__OnModifyPosition(
   if ( !leftObject
     || (UnityEngine_GameObject__SetActive(leftObject, v13 != 0, 0), (leftObject = this->fields.rightObject) == 0) )
   {
-    sub_21FFECC(leftObject, v10);
+    sub_2213CDC(leftObject, v10);
   }
   UnityEngine_GameObject__SetActive(leftObject, v14 != 0, 0);
 }
@@ -462,7 +462,7 @@ void GalleryFullScreenListViewIndicator__Opened(GalleryFullScreenListViewIndicat
   uiRootPanel = this->fields.uiRootPanel;
   this->fields.status = 2;
   if ( !uiRootPanel )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float))uiRootPanel->klass->vtable._8_set_alpha.methodPtr)(
     uiRootPanel,
     uiRootPanel->klass->vtable._8_set_alpha.method,
@@ -492,15 +492,15 @@ void GalleryFullScreenListViewIndicator__ResetPageSpriteList(
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_593341C & 1) == 0 )
+  if ( (byte_596B524 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_UISprite__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite__ForEach__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite__get_Item__);
-    sub_21FFC50(&Method_GalleryFullScreenListViewIndicator___c__ResetPageSpriteList_b__25_0__);
-    sub_21FFC50(&GalleryFullScreenListViewIndicator___c_TypeInfo);
-    byte_593341C = 1;
+    sub_2213A60(&System_Action_UISprite__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite__ForEach__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite__get_Item__);
+    sub_2213A60(&Method_GalleryFullScreenListViewIndicator___c__ResetPageSpriteList_b__25_0__);
+    sub_2213A60(&GalleryFullScreenListViewIndicator___c_TypeInfo);
+    byte_596B524 = 1;
   }
   pageSpriteList = this->fields.pageSpriteList;
   if ( !pageSpriteList )
@@ -512,7 +512,7 @@ void GalleryFullScreenListViewIndicator__ResetPageSpriteList(
     pageSpriteList = System_Collections_Generic_List_object___get_Item(
                        (System_Collections_Generic_List_object__o *)pageSpriteList,
                        v5,
-                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                       (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
     if ( pageSpriteList )
     {
       pageSpriteList = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)pageSpriteList, 0);
@@ -552,7 +552,7 @@ void GalleryFullScreenListViewIndicator__ResetPageSpriteList(
       static_fields = GalleryFullScreenListViewIndicator___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__25_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_UISprite__TypeInfo);
+    _9__25_0 = (System_Action_object__o *)sub_2213CCC(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(
       _9__25_0,
       v12,
@@ -560,15 +560,15 @@ void GalleryFullScreenListViewIndicator__ResetPageSpriteList(
       0);
     v13 = GalleryFullScreenListViewIndicator___c_TypeInfo->static_fields;
     v13->__9__25_0 = (struct System_Action_UISprite__o *)_9__25_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->__9__25_0, (int32_t)_9__25_0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__25_0, (int32_t)_9__25_0, v14, v15, v16, v17, v18, v19);
   }
   if ( !v9 )
 LABEL_15:
-    sub_21FFECC(pageSpriteList, method);
+    sub_2213CDC(pageSpriteList, method);
   System_Collections_Generic_List_object___ForEach(
     (System_Collections_Generic_List_object__o *)v9,
     (System_Action_T__o *)_9__25_0,
-    (const MethodInfo_445054C *)Method_System_Collections_Generic_List_UISprite__ForEach__);
+    (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_UISprite__ForEach__);
 }
 
 
@@ -586,10 +586,10 @@ void GalleryFullScreenListViewIndicator__SetActiveObject(
   bool isRight; // [xsp+8h] [xbp-28h] BYREF
   bool isLeft; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5933419 & 1) == 0 )
+  if ( (byte_596B521 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933419 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B521 = 1;
   }
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   isLeft = 0;
@@ -619,7 +619,7 @@ void GalleryFullScreenListViewIndicator__SetActiveObject(
           (pageGrid = (UnityEngine_Component_o *)this->fields.closeButton) == 0) )
     {
 LABEL_14:
-      sub_21FFECC(pageGrid, v6);
+      sub_2213CDC(pageGrid, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)pageGrid, active, 0);
   }
@@ -641,7 +641,7 @@ void GalleryFullScreenListViewIndicator__SetIndexMax(
         (leftObject = (UnityEngine_GameObject_o *)this->fields.pageGrid) == 0)
     || (leftObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)leftObject, 0)) == 0 )
   {
-    sub_21FFECC(leftObject, *(_QWORD *)&max);
+    sub_2213CDC(leftObject, *(_QWORD *)&max);
   }
   UnityEngine_GameObject__SetActive(leftObject, 0, 0);
 }
@@ -656,11 +656,11 @@ void GalleryFullScreenListViewIndicator__SetPageIndex(
   __int64 v5; // x1
   System_Collections_Generic_List_object__o *pageSpriteList; // x0
 
-  if ( (byte_593341B & 1) == 0 )
+  if ( (byte_596B523 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISprite__get_Item__);
-    sub_21FFC50(&StringLiteral_21533/*"img_slider_on"*/);
-    byte_593341B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UISprite__get_Item__);
+    sub_2213A60(&StringLiteral_21574/*"img_slider_on"*/);
+    byte_596B523 = 1;
   }
   this->fields.pageIndex = index;
   GalleryFullScreenListViewIndicator__ResetPageSpriteList(this, *(const MethodInfo **)&index);
@@ -669,11 +669,11 @@ void GalleryFullScreenListViewIndicator__SetPageIndex(
     || (pageSpriteList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         pageSpriteList,
                                                                         index,
-                                                                        (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISprite__get_Item__)) == 0 )
+                                                                        (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISprite__get_Item__)) == 0 )
   {
-    sub_21FFECC(pageSpriteList, v5);
+    sub_2213CDC(pageSpriteList, v5);
   }
-  UISprite__set_spriteName((UISprite_o *)pageSpriteList, (System_String_o *)StringLiteral_21533/*"img_slider_on"*/, 0);
+  UISprite__set_spriteName((UISprite_o *)pageSpriteList, (System_String_o *)StringLiteral_21574/*"img_slider_on"*/, 0);
 }
 
 
@@ -686,15 +686,15 @@ void GalleryFullScreenListViewIndicator__SetPageMax(
   int32_t pageSpriteMax; // w21
   const MethodInfo *v6; // x1
 
-  if ( (byte_593341A & 1) == 0 )
+  if ( (byte_596B522 & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593341A = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596B522 = 1;
   }
   pageSpriteMax = this->fields.pageSpriteMax;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, *(_QWORD *)&max, method);
-  this->fields.pageMax = System_Math__Min_76940292(max, pageSpriteMax, 0);
+  this->fields.pageMax = System_Math__Min_77153596(max, pageSpriteMax, 0);
   this->fields.pageIndex = -1;
   GalleryFullScreenListViewIndicator__ResetPageSpriteList(this, v6);
 }
@@ -775,7 +775,7 @@ void GalleryFullScreenListViewIndicator__UpdateStatus(
         return;
       }
 LABEL_13:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
   }
 }
@@ -791,15 +791,15 @@ void GalleryFullScreenListViewIndicator___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5933420 & 1) == 0 )
+  if ( (byte_596B528 & 1) == 0 )
   {
-    sub_21FFC50(&GalleryFullScreenListViewIndicator___c_TypeInfo);
-    byte_5933420 = 1;
+    sub_2213A60(&GalleryFullScreenListViewIndicator___c_TypeInfo);
+    byte_596B528 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(GalleryFullScreenListViewIndicator___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(GalleryFullScreenListViewIndicator___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GalleryFullScreenListViewIndicator___c_TypeInfo->static_fields->__9 = (struct GalleryFullScreenListViewIndicator___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)GalleryFullScreenListViewIndicator___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -824,12 +824,12 @@ void GalleryFullScreenListViewIndicator___c___ResetPageSpriteList_b__25_0(
         UISprite_o *sprite,
         const MethodInfo *method)
 {
-  if ( (byte_5933421 & 1) == 0 )
+  if ( (byte_596B529 & 1) == 0 )
   {
-    this = (GalleryFullScreenListViewIndicator___c_o *)sub_21FFC50(&StringLiteral_21532/*"img_slider_off"*/);
-    byte_5933421 = 1;
+    this = (GalleryFullScreenListViewIndicator___c_o *)sub_2213A60(&StringLiteral_21573/*"img_slider_off"*/);
+    byte_596B529 = 1;
   }
   if ( !sprite )
-    sub_21FFECC(this, sprite);
-  UISprite__set_spriteName(sprite, (System_String_o *)StringLiteral_21532/*"img_slider_off"*/, 0);
+    sub_2213CDC(this, sprite);
+  UISprite__set_spriteName(sprite, (System_String_o *)StringLiteral_21573/*"img_slider_off"*/, 0);
 }

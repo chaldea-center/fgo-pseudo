@@ -1,13 +1,13 @@
 void QuestPickupEntity___ctor(QuestPickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938E19 & 1) == 0 )
+  if ( (byte_5970FD7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5938E19 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5970FD7 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 

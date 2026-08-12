@@ -1,13 +1,13 @@
 void UserFriendRequestHistoryEntity___ctor(UserFriendRequestHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59395A3 & 1) == 0 )
+  if ( (byte_5971763 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_59395A3 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5971763 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,18 +27,18 @@ int64_t UserFriendRequestHistoryEntity__getOtherUserId(
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_59395A2 & 1) == 0 )
+  if ( (byte_5971762 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59395A2 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5971762 = 1;
   }
   userId = this->fields.userId;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )

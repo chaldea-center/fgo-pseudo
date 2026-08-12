@@ -8,22 +8,22 @@ void ListViewItem___ctor(ListViewItem_o *this, const MethodInfo *method)
   bool v7; // w7
   struct System_String_o *v9; // x1
 
-  if ( (byte_5939E05 & 1) == 0 )
+  if ( (byte_5971FD8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939E05 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971FD8 = 1;
   }
   v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.selectNum = -1;
   this->fields.sortStr1 = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.basePosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.basePosition.fields.x = 0;
 }
 
 
-void ListViewItem___ctor_50749276(ListViewItem_o *this, int32_t index, const MethodInfo *method)
+void ListViewItem___ctor_50819428(ListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
   System_String_o *v3; // x3
   int32_t v4; // w4
@@ -39,15 +39,15 @@ void ListViewItem___ctor_50749276(ListViewItem_o *this, int32_t index, const Met
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5939E06 & 1) == 0 )
+  if ( (byte_5971FD9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939E06 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971FD9 = 1;
   }
   v10 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.selectNum = -1;
   this->fields.sortStr1 = v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1,
     (int32_t)v10,
     (System_String_o *)method,
@@ -65,7 +65,7 @@ void ListViewItem___ctor_50749276(ListViewItem_o *this, int32_t index, const Met
   this->fields.sortValue1 = 0;
   this->fields.sortValue0 = 0;
   this->fields.sortStr1 = v11;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   this->fields.basePosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.basePosition.fields.x = 0;
 }
@@ -98,7 +98,7 @@ void ListViewItem__Set(ListViewItem_o *this, ListViewItem_o *item, const MethodI
   struct System_String_o *v14; // x9
 
   if ( !item )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   sortStr1 = item->fields.sortStr1;
   v10 = *(_QWORD *)&item->fields.index;
   v11 = *(_OWORD *)&item->fields.sortValue0;
@@ -109,7 +109,7 @@ void ListViewItem__Set(ListViewItem_o *this, ListViewItem_o *item, const MethodI
   sortValue1 = item->fields.sortValue1;
   this->fields.loopIndex = item->fields.loopIndex;
   this->fields.sortValue1 = sortValue1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.sortStr1,
     (int32_t)sortStr1,
     (System_String_o *)method,
@@ -150,12 +150,11 @@ bool ListViewItem__SetSortValue(ListViewItem_o *this, ListViewSort_o *sort, cons
   int32_t v9; // w1
   struct System_String_o **p_sortStr1; // x19
   struct System_String_o *v11; // x8
-  bool result; // w0
 
-  if ( (byte_5939E07 & 1) == 0 )
+  if ( (byte_5971FDA & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939E07 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971FDA = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
@@ -164,12 +163,11 @@ bool ListViewItem__SetSortValue(ListViewItem_o *this, ListViewSort_o *sort, cons
   *(p_sortStr1 - 3) = 0;
   *(p_sortStr1 - 2) = 0;
   *(p_sortStr1 - 1) = v11;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_sortStr1, v9, (System_String_o *)method, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_sortStr1, v9, (System_String_o *)method, v3, v4, v5, v6, v7);
   *((_WORD *)p_sortStr1 + 20) = 0;
-  result = 1;
   *(_OWORD *)(p_sortStr1 + 3) = 0u;
   *(_OWORD *)(p_sortStr1 + 1) = 0u;
-  return result;
+  return 1;
 }
 
 
@@ -213,7 +211,7 @@ int32_t ListViewItem__SortCompDown(ListViewItem_o *this, ListViewItem_o *item, c
       if ( sortValue1 == v11 )
       {
         sortStr1 = this->fields.sortStr1;
-        if ( !sortStr1 || (v13 = item->fields.sortStr1) == 0 || System_String__Equals_75473208(sortStr1, v13, 0) )
+        if ( !sortStr1 || (v13 = item->fields.sortStr1) == 0 || System_String__Equals_75686512(sortStr1, v13, 0) )
         {
           sortValue1B = v6->fields.sortValue1B;
           v15 = item->fields.sortValue1B;
@@ -242,9 +240,9 @@ int32_t ListViewItem__SortCompDown(ListViewItem_o *this, ListViewItem_o *item, c
         }
         this = (ListViewItem_o *)item->fields.sortStr1;
         if ( this )
-          return System_String__CompareTo_75472312((System_String_o *)this, v6->fields.sortStr1, 0);
+          return System_String__CompareTo_75685616((System_String_o *)this, v6->fields.sortStr1, 0);
 LABEL_18:
-        sub_21FFECC(this, item);
+        sub_2213CDC(this, item);
       }
     }
   }
@@ -299,7 +297,7 @@ LABEL_13:
   if ( sortValue1 == v11 )
   {
     sortStr1 = this->fields.sortStr1;
-    if ( !sortStr1 || (v14 = item->fields.sortStr1) == 0 || System_String__Equals_75473208(sortStr1, v14, 0) )
+    if ( !sortStr1 || (v14 = item->fields.sortStr1) == 0 || System_String__Equals_75686512(sortStr1, v14, 0) )
     {
       sortValue1B = v6->fields.sortValue1B;
       v16 = item->fields.sortValue1B;
@@ -329,9 +327,9 @@ LABEL_13:
     }
     this = (ListViewItem_o *)v6->fields.sortStr1;
     if ( this )
-      return System_String__CompareTo_75472312((System_String_o *)this, item->fields.sortStr1, 0);
+      return System_String__CompareTo_75685616((System_String_o *)this, item->fields.sortStr1, 0);
 LABEL_21:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
 LABEL_16:
   if ( v12 )
@@ -343,17 +341,11 @@ LABEL_16:
 
 UnityEngine_Vector3_o ListViewItem__get_BasePosition(ListViewItem_o *this, const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  x = this->fields.basePosition.fields.x;
-  y = this->fields.basePosition.fields.y;
-  z = this->fields.basePosition.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.basePosition.fields.x;
+  result.fields.y = this->fields.basePosition.fields.y;
+  result.fields.z = this->fields.basePosition.fields.z;
   return result;
 }
 
@@ -416,7 +408,7 @@ void ListViewItem__set_BasePosition(ListViewItem_o *this, UnityEngine_Vector3_o 
 void ListViewItem__set_IsSelect(ListViewItem_o *this, bool value, const MethodInfo *method)
 {
   if ( !this )
-    sub_21FFECC(0, value);
+    sub_2213CDC(0, value);
   this->fields.selectNum = value - 1;
 }
 
@@ -448,7 +440,7 @@ void ListViewItem__set_ViewObject(ListViewItem_o *this, ListViewObject_o *value,
   bool v7; // w7
 
   this->fields.viewObject = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.viewObject,
     (int32_t)value,
     (System_String_o *)method,

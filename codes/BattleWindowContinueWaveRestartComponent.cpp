@@ -13,18 +13,18 @@ void BattleWindowContinueWaveRestartComponent__OnClickCancel(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_593C177 & 1) == 0 )
+  if ( (byte_59742CF & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
-    byte_593C177 = 1;
+    sub_2213A60(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
+    byte_59742CF = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ActionExtensions__Call(this->fields.cancelCallback, 0);
   }
@@ -38,18 +38,18 @@ void BattleWindowContinueWaveRestartComponent__OnClickDecide(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_593C176 & 1) == 0 )
+  if ( (byte_59742CE & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
-    byte_593C176 = 1;
+    sub_2213A60(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
+    byte_59742CE = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     ActionExtensions__Call(this->fields.decideCallback, 0);
   }
@@ -68,26 +68,26 @@ void BattleWindowContinueWaveRestartComponent__SetWindow(
   System_String_o *v10; // x6
   const MethodInfo *v11; // x7
 
-  if ( (byte_593C175 & 1) == 0 )
+  if ( (byte_59742CD & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3967/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_3966/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_3968/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_3969/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/);
-    byte_593C175 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3972/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/);
+    sub_2213A60(&StringLiteral_3971/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/);
+    sub_2213A60(&StringLiteral_3973/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_3974/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/);
+    byte_59742CD = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, decideCall);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3969/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3968/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3966/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3967/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, 0);
-  BattleWindowContinueWaveRestartComponent__SetWindow_54876636(this, decideCall, cancelCall, v7, v8, v9, v10, v11);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3974/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3973/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3971/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3972/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, 0);
+  BattleWindowContinueWaveRestartComponent__SetWindow_54895964(this, decideCall, cancelCall, v7, v8, v9, v10, v11);
 }
 
 
-void BattleWindowContinueWaveRestartComponent__SetWindow_54876636(
+void BattleWindowContinueWaveRestartComponent__SetWindow_54895964(
         BattleWindowContinueWaveRestartComponent_o *this,
         System_Action_o *decideCall,
         System_Action_o *cancelCall,
@@ -107,7 +107,7 @@ void BattleWindowContinueWaveRestartComponent__SetWindow_54876636(
   UILabel_o *titleLabel; // x0
 
   this->fields.decideCallback = decideCall;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.decideCallback,
     (int32_t)decideCall,
     (System_String_o *)cancelCall,
@@ -117,7 +117,7 @@ void BattleWindowContinueWaveRestartComponent__SetWindow_54876636(
     (bool)cancelLabel,
     (bool)method);
   this->fields.cancelCallback = cancelCall;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cancelCallback,
     (int32_t)cancelCall,
     v14,
@@ -132,7 +132,7 @@ void BattleWindowContinueWaveRestartComponent__SetWindow_54876636(
     || (UILabel__set_text(titleLabel, message, 0), (titleLabel = this->fields.decideButtonLabel) == 0)
     || (UILabel__set_text(titleLabel, decideLabel, 0), (titleLabel = this->fields.cancelButtonLabel) == 0) )
   {
-    sub_21FFECC(titleLabel, v20);
+    sub_2213CDC(titleLabel, v20);
   }
   UILabel__set_text(titleLabel, cancelLabel, 0);
 }

@@ -21,10 +21,10 @@ void EndrolContentItem__ChangeDisplayItems(EndrolContentItem_o *this, const Meth
   int v15; // w8
   __int64 v16; // x20
 
-  if ( (byte_593238D & 1) == 0 )
+  if ( (byte_596A48C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593238D = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A48C = 1;
   }
   nowType = this->fields.nowType;
   if ( nowType <= 2 )
@@ -70,7 +70,7 @@ LABEL_16:
       textLabel = (UILabel_o *)this->fields.imgSprite;
       if ( !textLabel )
 LABEL_60:
-        sub_21FFECC(textLabel, method);
+        sub_2213CDC(textLabel, method);
       goto LABEL_44;
     }
     textLabel = (UILabel_o *)this->fields.imgSprite;
@@ -116,7 +116,7 @@ LABEL_44:
         goto LABEL_43;
     }
 LABEL_61:
-    sub_21FFED4(textLabel);
+    sub_2213CE4(textLabel);
   }
   if ( nowType == 3 )
   {
@@ -221,10 +221,10 @@ void EndrolContentItem__OnTriggerEnter(
   const MethodInfo *v6; // x2
 
   v4 = this;
-  if ( (byte_5932388 & 1) == 0 )
+  if ( (byte_596A487 & 1) == 0 )
   {
-    this = (EndrolContentItem_o *)sub_21FFC50(&StringLiteral_6284/*"Endrol"*/);
-    byte_5932388 = 1;
+    this = (EndrolContentItem_o *)sub_2213A60(&StringLiteral_6296/*"Endrol"*/);
+    byte_596A487 = 1;
   }
   if ( !coll )
     goto LABEL_9;
@@ -232,7 +232,7 @@ void EndrolContentItem__OnTriggerEnter(
   if ( !this )
     goto LABEL_9;
   tag = UnityEngine_GameObject__get_tag((UnityEngine_GameObject_o *)this, 0);
-  if ( System_String__op_Equality(tag, (System_String_o *)StringLiteral_6284/*"Endrol"*/, 0) )
+  if ( System_String__op_Equality(tag, (System_String_o *)StringLiteral_6296/*"Endrol"*/, 0) )
   {
     this = (EndrolContentItem_o *)v4->fields.rootComponent;
     if ( this )
@@ -241,7 +241,7 @@ void EndrolContentItem__OnTriggerEnter(
       return;
     }
 LABEL_9:
-    sub_21FFECC(this, coll);
+    sub_2213CDC(this, coll);
   }
 }
 
@@ -252,7 +252,7 @@ void EndrolContentItem__OpenSkipConfirmWindow(EndrolContentItem_o *this, const M
 
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   EndrolRootComponent__OnClickEndrol(rootComponent, method);
 }
 
@@ -274,23 +274,21 @@ void EndrolContentItem__SetDoubleColumnText(
   unsigned int v16; // w25
   struct UILabel_array *v17; // x8
   struct UILabel_array *v18; // x8
-  int v19; // s0 OVERLAPPED
-  int v20; // s2
-  int32_t v21; // w8
-  float v22; // s1
-  __int64 v23; // x1
-  __int64 v24; // x2
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
+  int32_t v20; // w8
+  __int64 v21; // x1
+  __int64 v22; // x2
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593238B & 1) == 0 )
+  if ( (byte_596A48A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593238B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A48A = 1;
   }
   this->fields.nowType = 3;
   EndrolContentItem__ChangeDisplayItems(this, *(const MethodInfo **)&posY);
@@ -308,7 +306,7 @@ void EndrolContentItem__SetDoubleColumnText(
       v16 = v14 - 4;
       if ( (unsigned int)(v14 - 4) >= LODWORD(columnTextLabel->max_length) || v16 >= max_length )
 LABEL_28:
-        sub_21FFED4(transform);
+        sub_2213CE4(transform);
       transform = (UILabel_o *)*((_QWORD *)&columnTextLabel->obj.klass + v14);
       if ( !transform )
         break;
@@ -336,35 +334,35 @@ LABEL_28:
         goto LABEL_17;
     }
 LABEL_27:
-    sub_21FFECC(transform, v12);
+    sub_2213CDC(transform, v12);
   }
 LABEL_17:
   transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_27;
-  v19 = 0;
-  v20 = 0;
-  v21 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v22 = (float)(posY - (v21 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v19, 0);
+  v29.fields.x = 0.0;
+  v29.fields.z = 0.0;
+  v20 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v29.fields.y = (float)(posY - (v20 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v29, 0);
   transform = (UILabel_o *)this->fields.contentItemWidget;
   if ( !transform )
     goto LABEL_27;
   UIWidget__set_height((UIWidget_o *)transform, fontSize, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21, v22);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
+      v23,
+      v24,
       v25,
       v26,
       v27,
-      v28,
-      v29,
-      v30);
+      v28);
   }
 }
 
@@ -397,10 +395,10 @@ void EndrolContentItem__SetImage(
 
   y = size.fields.y;
   x = size.fields.x;
-  if ( (byte_593238A & 1) == 0 )
+  if ( (byte_596A489 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593238A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A489 = 1;
   }
   this->fields.nowType = 2;
   EndrolContentItem__ChangeDisplayItems(this, *(const MethodInfo **)&posY);
@@ -422,7 +420,7 @@ void EndrolContentItem__SetImage(
         (imgSprite = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_20:
-    sub_21FFECC(imgSprite, v12);
+    sub_2213CDC(imgSprite, v12);
   }
   v25.fields.z = 0.0;
   v25.fields.y = (float)posY + (float)(y * -0.5);
@@ -433,7 +431,7 @@ LABEL_20:
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)root, 0, 0) )
   {
     this->fields.rootComponent = root;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)root,
       v19,
@@ -458,23 +456,21 @@ void EndrolContentItem__SetText(
 {
   __int64 v13; // x1
   UILabel_o *textLabel; // x0
-  int v15; // s0 OVERLAPPED
-  int v16; // s2
-  int32_t v17; // w8
-  float v18; // s1
-  __int64 v19; // x1
-  __int64 v20; // x2
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
+  int32_t v16; // w8
+  __int64 v17; // x1
+  __int64 v18; // x2
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5932389 & 1) == 0 )
+  if ( (byte_596A488 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932389 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A488 = 1;
   }
   this->fields.nowType = 1;
   EndrolContentItem__ChangeDisplayItems(this, *(const MethodInfo **)&posY);
@@ -489,34 +485,34 @@ void EndrolContentItem__SetText(
   textLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !textLabel )
     goto LABEL_17;
-  v15 = 0;
-  v16 = 0;
-  v17 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v18 = (float)(posY - (v17 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, *(UnityEngine_Vector3_o *)&v15, 0);
+  v25.fields.x = 0.0;
+  v25.fields.z = 0.0;
+  v16 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v25.fields.y = (float)(posY - (v16 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v25, 0);
   textLabel = this->fields.textLabel;
   if ( !textLabel
     || (UILabel__set_fontSize(textLabel, fontSize, 0), (textLabel = (UILabel_o *)this->fields.contentItemWidget) == 0)
     || (UIWidget__set_height((UIWidget_o *)textLabel, fontSize, 0), (textLabel = this->fields.textLabel) == 0) )
   {
 LABEL_17:
-    sub_21FFECC(textLabel, v13);
+    sub_2213CDC(textLabel, v13);
   }
   UIWidget__set_pivot((UIWidget_o *)textLabel, pivot, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
+      v19,
+      v20,
       v21,
       v22,
       v23,
-      v24,
-      v25,
-      v26);
+      v24);
   }
 }
 
@@ -553,28 +549,26 @@ void EndrolContentItem__SetTripleColumnText(
   unsigned int v31; // w26
   struct UILabel_array *v32; // x8
   struct UILabel_array *v33; // x8
-  int v34; // s0 OVERLAPPED
-  int v35; // s2
-  int32_t v36; // w8
-  float v37; // s1
-  __int64 v38; // x1
-  __int64 v39; // x2
-  System_String_o *v40; // x2
-  System_String_o *v41; // x3
-  int32_t v42; // w4
-  int32_t v43; // w5
-  bool v44; // w6
-  bool v45; // w7
+  int32_t v35; // w8
+  __int64 v36; // x1
+  __int64 v37; // x2
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593238C & 1) == 0 )
+  if ( (byte_596A48B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    byte_593238C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    byte_596A48B = 1;
   }
   this->fields.nowType = 4;
   EndrolContentItem__ChangeDisplayItems(this, *(const MethodInfo **)&posY);
-  textLabel = (char *)sub_21FFD10(string___TypeInfo, 2);
+  textLabel = (char *)sub_2213B20(string___TypeInfo, 2);
   if ( !txt )
     goto LABEL_36;
   if ( !LODWORD(txt->max_length) )
@@ -586,12 +580,12 @@ void EndrolContentItem__SetTripleColumnText(
     goto LABEL_37;
   v20 = txt->m_Items[0];
   *((_QWORD *)textLabel + 4) = v20;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(textLabel + 32), (int32_t)v20, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(textLabel + 32), (int32_t)v20, v13, v14, v15, v16, v17, v18);
   if ( LODWORD(txt->max_length) <= 2 || (*((_DWORD *)v19 + 6) & 0xFFFFFFFE) == 0 )
     goto LABEL_37;
   v27 = txt->m_Items[2];
   *((_QWORD *)v19 + 5) = v27;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 40), (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 40), (int32_t)v27, v21, v22, v23, v24, v25, v26);
   v28 = *((_DWORD *)v19 + 6);
   if ( v28 >= 1 )
   {
@@ -631,12 +625,12 @@ void EndrolContentItem__SetTripleColumnText(
         goto LABEL_22;
     }
 LABEL_36:
-    sub_21FFECC(textLabel, v12);
+    sub_2213CDC(textLabel, v12);
   }
 LABEL_22:
   if ( (txt->max_length & 0xFFFFFFFE) == 0 )
 LABEL_37:
-    sub_21FFED4(textLabel);
+    sub_2213CE4(textLabel);
   textLabel = (char *)this->fields.textLabel;
   if ( !textLabel )
     goto LABEL_36;
@@ -652,29 +646,29 @@ LABEL_37:
   textLabel = (char *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !textLabel )
     goto LABEL_36;
-  v34 = 0;
-  v35 = 0;
-  v36 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v37 = (float)(posY - (v36 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, *(UnityEngine_Vector3_o *)&v34, 0);
+  v44.fields.x = 0.0;
+  v44.fields.z = 0.0;
+  v35 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v44.fields.y = (float)(posY - (v35 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v44, 0);
   textLabel = (char *)this->fields.contentItemWidget;
   if ( !textLabel )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)textLabel, fontSize, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36, v37);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
+      v38,
+      v39,
       v40,
       v41,
       v42,
-      v43,
-      v44,
-      v45);
+      v43);
   }
 }
 
@@ -694,7 +688,7 @@ int32_t EndrolContentItem__get_contentHeight(EndrolContentItem_o *this, const Me
     imgSprite = this->fields.contentItemWidget;
     if ( !imgSprite )
 LABEL_3:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
   }
   return imgSprite[43];
 }

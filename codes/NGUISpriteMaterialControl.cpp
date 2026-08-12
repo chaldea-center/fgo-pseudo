@@ -8,14 +8,14 @@ void NGUISpriteMaterialControl___ctor(NGUISpriteMaterialControl_o *this, const M
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_5931FA4 & 1) == 0 )
+  if ( (byte_596A144 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_5931FA4 = 1;
+    sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_596A144 = 1;
   }
-  v9 = StringLiteral_16884/*"_MaskTex"*/;
-  this->fields.maskPropertyName = (struct System_String_o *)StringLiteral_16884/*"_MaskTex"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.maskPropertyName, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_16919/*"_MaskTex"*/;
+  this->fields.maskPropertyName = (struct System_String_o *)StringLiteral_16919/*"_MaskTex"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.maskPropertyName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -76,14 +76,14 @@ void NGUISpriteMaterialControl__ApplyCustomMaterial(NGUISpriteMaterialControl_o 
   __int64 v54; // x2
   const MethodInfo *v55; // x1
 
-  if ( (byte_5931FA1 & 1) == 0 )
+  if ( (byte_596A141 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_131/*" (Clone)"*/);
-    byte_5931FA1 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_131/*" (Clone)"*/);
+    byte_596A141 = 1;
   }
   sprite = (UnityEngine_Object_o *)this->fields.sprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -123,7 +123,7 @@ LABEL_17:
           goto LABEL_52;
         v25 = v24->fields.mAtlas;
         *p_originalAtlas = v25;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.originalAtlas,
           (int32_t)v25,
           v18,
@@ -134,11 +134,11 @@ LABEL_17:
           v23);
       }
       baseMaterial = this->fields.baseMaterial;
-      v27 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_83061620(v27, baseMaterial, 0);
+      v27 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_83274924(v27, baseMaterial, 0);
       this->fields.cloneMaterial = v27;
       p_cloneMaterial = &this->fields.cloneMaterial;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.cloneMaterial,
         (int32_t)v27,
         v29,
@@ -177,7 +177,7 @@ LABEL_17:
           v5 = (UIAtlas_o *)*p_cloneMaterial;
           if ( !*p_cloneMaterial )
             goto LABEL_52;
-          UnityEngine_Material__SetTexture_83063164(
+          UnityEngine_Material__SetTexture_83276468(
             (UnityEngine_Material_o *)v5,
             this->fields.maskPropertyId,
             this->fields.maskTexture,
@@ -192,12 +192,12 @@ LABEL_17:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v41, v42);
       v5 = (UIAtlas_o *)UnityEngine_Object__Instantiate_object_(
                           gameObject,
-                          (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                          (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !gameObject )
         goto LABEL_52;
       v44 = (UnityEngine_Object_o *)v5;
       name = UnityEngine_Object__get_name((UnityEngine_Object_o *)gameObject, 0);
-      v5 = (UIAtlas_o *)System_String__Concat_75438412(name, (System_String_o *)StringLiteral_131/*" (Clone)"*/, 0);
+      v5 = (UIAtlas_o *)System_String__Concat_75651716(name, (System_String_o *)StringLiteral_131/*" (Clone)"*/, 0);
       if ( !v44 )
         goto LABEL_52;
       UnityEngine_Object__set_name(v44, (System_String_o *)v5, 0);
@@ -208,9 +208,9 @@ LABEL_17:
       UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)v5, 0);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v44,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       *p_cloneAtlas = (UnityEngine_Object_o *)Component_object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.cloneAtlas,
         (int32_t)Component_object,
         v48,
@@ -223,14 +223,14 @@ LABEL_17:
       {
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v54);
-        UnityEngine_Object__Destroy_83246496(v44, 0);
+        UnityEngine_Object__Destroy_83459800(v44, 0);
         NGUISpriteMaterialControl__CleanupDynamicObjects(this, v55);
         return;
       }
       v5 = (UIAtlas_o *)*p_cloneAtlas;
       if ( !*p_cloneAtlas || (UIAtlas__set_replacement(v5, 0, 0), (v5 = (UIAtlas_o *)*p_cloneAtlas) == 0) )
 LABEL_52:
-        sub_21FFECC(v5, v6);
+        sub_2213CDC(v5, v6);
       UIAtlas__set_spriteMaterial(v5, this->fields.cloneMaterial, 0);
     }
     v5 = (UIAtlas_o *)this->fields.sprite;
@@ -260,17 +260,17 @@ void NGUISpriteMaterialControl__Awake(NGUISpriteMaterialControl_o *this, const M
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5931F9E & 1) == 0 )
+  if ( (byte_596A13E & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    byte_5931F9E = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    byte_596A13E = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   this->fields.sprite = (struct UISprite_o *)Component_object;
   p_sprite = &this->fields.sprite;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_sprite, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_sprite, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_sprite + 8) = UnityEngine_Shader__PropertyToID((System_String_o *)*(p_sprite - 1), 0);
 }
 
@@ -302,14 +302,14 @@ void NGUISpriteMaterialControl__CleanupDynamicObjects(NGUISpriteMaterialControl_
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5931FA3 & 1) == 0 )
+  if ( (byte_596A143 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931FA3 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A143 = 1;
   }
   this->fields.cloneAtlas = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cloneAtlas, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cloneAtlas, 0, v2, v3, v4, v5, v6, v7);
   cloneMaterial = this->fields.cloneMaterial;
   p_cloneMaterial = (MissionNaviTransitionBoardItem_o *)&this->fields.cloneMaterial;
   v12 = (UnityEngine_Object_o *)cloneMaterial;
@@ -326,16 +326,16 @@ void NGUISpriteMaterialControl__CleanupDynamicObjects(NGUISpriteMaterialControl_
     {
       if ( !v20 )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
-      UnityEngine_Object__Destroy_83246496(klass, 0);
+      UnityEngine_Object__Destroy_83459800(klass, 0);
     }
     else
     {
       if ( !v20 )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
-      UnityEngine_Object__DestroyImmediate_83246828(klass, 0);
+      UnityEngine_Object__DestroyImmediate_83460132(klass, 0);
     }
     p_cloneMaterial->klass = 0;
-    sub_21FFBF4(p_cloneMaterial, 0, v21, v22, v23, v24, v25, v26);
+    sub_2213A04(p_cloneMaterial, 0, v21, v22, v23, v24, v25, v26);
   }
 }
 
@@ -349,10 +349,10 @@ void NGUISpriteMaterialControl__OnDestroy(NGUISpriteMaterialControl_o *this, con
   UnityEngine_Object_o *originalAtlas; // x20
   UISprite_o *v8; // x0
 
-  if ( (byte_5931FA0 & 1) == 0 )
+  if ( (byte_596A140 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931FA0 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A140 = 1;
   }
   sprite = (UnityEngine_Object_o *)this->fields.sprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -366,7 +366,7 @@ void NGUISpriteMaterialControl__OnDestroy(NGUISpriteMaterialControl_o *this, con
     {
       v8 = this->fields.sprite;
       if ( !v8 )
-        sub_21FFECC(0, v5);
+        sub_2213CDC(0, v5);
       UISprite__set_atlas(v8, this->fields.originalAtlas, 0);
     }
   }
@@ -380,10 +380,10 @@ void NGUISpriteMaterialControl__OnEnable(NGUISpriteMaterialControl_o *this, cons
   UnityEngine_Object_o *baseMaterial; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_5931F9F & 1) == 0 )
+  if ( (byte_596A13F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931F9F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A13F = 1;
   }
   baseMaterial = (UnityEngine_Object_o *)this->fields.baseMaterial;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -403,10 +403,10 @@ void NGUISpriteMaterialControl__RevertToOriginal(NGUISpriteMaterialControl_o *th
   __int64 v8; // x1
   UISprite_o *v9; // x0
 
-  if ( (byte_5931FA2 & 1) == 0 )
+  if ( (byte_596A142 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931FA2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A142 = 1;
   }
   sprite = (UnityEngine_Object_o *)this->fields.sprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -420,7 +420,7 @@ void NGUISpriteMaterialControl__RevertToOriginal(NGUISpriteMaterialControl_o *th
     {
       v9 = this->fields.sprite;
       if ( !v9 || (UISprite__set_atlas(v9, this->fields.originalAtlas, 0), (v9 = this->fields.sprite) == 0) )
-        sub_21FFECC(v9, v8);
+        sub_2213CDC(v9, v8);
       ((void (__fastcall *)(UISprite_o *, const MethodInfo *))v9->klass->vtable._30_MarkAsChanged.methodPtr)(
         v9,
         v9->klass->vtable._30_MarkAsChanged.method);

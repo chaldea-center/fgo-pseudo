@@ -8,21 +8,21 @@ void SceneTemp___ctor(SceneTemp_o *this, System_String_o *sceneName, const Metho
   bool v10; // w7
   __int64 v11; // x1
 
-  if ( (byte_5937FD5 & 1) == 0 )
+  if ( (byte_5970147 & 1) == 0 )
   {
-    sub_21FFC50(&SceneList_TypeInfo);
-    byte_5937FD5 = 1;
+    sub_2213A60(&SceneList_TypeInfo);
+    byte_5970147 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.sceneName = sceneName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)sceneName, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)sceneName, v5, v6, v7, v8, v9, v10);
   if ( !*(&SceneList_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo, v11);
   this->fields.sceneType = SceneList__getSceneType(sceneName, 0);
 }
 
 
-void SceneTemp___ctor_48429740(SceneTemp_o *this, SceneRootComponent_o *comp, const MethodInfo *method)
+void SceneTemp___ctor_48467484(SceneTemp_o *this, SceneRootComponent_o *comp, const MethodInfo *method)
 {
   __int64 v5; // x0
   const MethodInfo *v6; // x1
@@ -36,17 +36,17 @@ void SceneTemp___ctor_48429740(SceneTemp_o *this, SceneRootComponent_o *comp, co
   __int64 v14; // x1
   System_String_o *v15; // x20
 
-  if ( (byte_5937FD6 & 1) == 0 )
+  if ( (byte_5970148 & 1) == 0 )
   {
-    sub_21FFC50(&SceneList_TypeInfo);
-    byte_5937FD6 = 1;
+    sub_2213A60(&SceneList_TypeInfo);
+    byte_5970148 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !comp )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   SceneName = SceneRootComponent__getSceneName(comp, v6);
   this->fields.sceneName = SceneName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)SceneName, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)SceneName, v8, v9, v10, v11, v12, v13);
   v15 = this->fields.sceneName;
   if ( !*(&SceneList_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo, v14);

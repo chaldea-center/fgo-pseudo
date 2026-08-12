@@ -2,10 +2,10 @@ void ServantSellConfirmListViewObject___ctor(ServantSellConfirmListViewObject_o 
 {
   __int64 v2; // x2
 
-  if ( (byte_5934617 & 1) == 0 )
+  if ( (byte_596C746 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5934617 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596C746 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -25,20 +25,20 @@ void ServantSellConfirmListViewObject__Awake(ServantSellConfirmListViewObject_o 
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593460B & 1) == 0 )
+  if ( (byte_596C73A & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewItemDraw___);
-    byte_593460B = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewItemDraw___);
+    byte_596C73A = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewItemDraw___);
   this->fields.itemDraw = (struct ServantSellConfirmListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -70,7 +70,7 @@ void ServantSellConfirmListViewObject__CallOnMoveEnd(
   if ( onMoveEnd )
   {
     p_onMoveEnd->klass = 0;
-    sub_21FFBF4(p_onMoveEnd, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_onMoveEnd, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -89,11 +89,11 @@ UnityEngine_GameObject_o *ServantSellConfirmListViewObject__CreateDragObject(
   ServantSellConfirmListViewObject_o *v9; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_5934610 & 1) == 0 )
+  if ( (byte_596C73F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934610 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C73F = 1;
   }
   DragObject = (UnityEngine_Object_o *)ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -104,9 +104,9 @@ UnityEngine_GameObject_o *ServantSellConfirmListViewObject__CreateDragObject(
     if ( !DragObject
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)DragObject,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___)) == 0 )
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantSellConfirmListViewObject___)) == 0 )
     {
-      sub_21FFECC(Component_object, v7);
+      sub_2213CDC(Component_object, v7);
     }
     v9 = (ServantSellConfirmListViewObject_o *)Component_object;
     ServantSellConfirmListViewObject__Init((ServantSellConfirmListViewObject_o *)Component_object, 2, 0, v8);
@@ -123,10 +123,10 @@ ServantSellConfirmListViewItem_o *ServantSellConfirmListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_593460D & 1) == 0 )
+  if ( (byte_596C73C & 1) == 0 )
   {
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    byte_593460D = 1;
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    byte_596C73C = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -180,10 +180,10 @@ void ServantSellConfirmListViewObject__Init(
   int32_t v20; // w8
   int32_t v21; // w9
 
-  if ( (byte_5934611 & 1) == 0 )
+  if ( (byte_596C740 & 1) == 0 )
   {
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    byte_5934611 = 1;
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    byte_596C740 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -194,7 +194,7 @@ void ServantSellConfirmListViewObject__Init(
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (ServantSellConfirmListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != ServantSellConfirmListViewItem_TypeInfo )
   {
-    sub_220024C(linkItem, ServantSellConfirmListViewItem_TypeInfo, onMoveEnd, method);
+    sub_221405C(linkItem, ServantSellConfirmListViewItem_TypeInfo, onMoveEnd, method);
 LABEL_7:
     initMode = 0;
   }
@@ -208,11 +208,11 @@ LABEL_7:
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v12);
+    sub_2213CDC(transform, v12);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.onMoveEnd = onMoveEnd;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onMoveEnd,
     (int32_t)onMoveEnd,
     v13,
@@ -224,7 +224,7 @@ LABEL_7:
   if ( (unsigned int)(initMode - 1) > 2 )
     v20 = 0;
   else
-    v20 = dword_ECF9D8[initMode - 1];
+    v20 = dword_ED8B08[initMode - 1];
   this->fields.dispMode = v20;
   if ( initMode == 3 )
     v21 = 3;
@@ -253,12 +253,12 @@ bool ServantSellConfirmListViewObject__IsCanDrag(ServantSellConfirmListViewObjec
   __int64 naturalAligment; // x9
   UnityEngine_Object_o *touchPress; // x20
 
-  if ( (byte_593460F & 1) == 0 )
+  if ( (byte_596C73E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    byte_593460F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    byte_596C73E = 1;
   }
   manager = (UITouchPress_o *)this->fields.manager;
   if ( !manager )
@@ -267,7 +267,7 @@ bool ServantSellConfirmListViewObject__IsCanDrag(ServantSellConfirmListViewObjec
   if ( manager->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (ServantSellConfirmListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] != ServantSellConfirmListViewManager_TypeInfo )
   {
-    sub_220024C(manager, ServantSellConfirmListViewManager_TypeInfo, v2, v3);
+    sub_221405C(manager, ServantSellConfirmListViewManager_TypeInfo, v2, v3);
     goto LABEL_13;
   }
   touchPress = (UnityEngine_Object_o *)this->fields.touchPress;
@@ -282,7 +282,7 @@ bool ServantSellConfirmListViewObject__IsCanDrag(ServantSellConfirmListViewObjec
       return 0;
     }
 LABEL_13:
-    sub_21FFECC(manager, method);
+    sub_2213CDC(manager, method);
   }
   return 0;
 }
@@ -312,15 +312,15 @@ void ServantSellConfirmListViewObject__OnClickSelect(
   System_Reflection_MethodBase_o *v19; // x0
 
   v4 = this;
-  if ( (byte_5934613 & 1) == 0 )
+  if ( (byte_596C742 & 1) == 0 )
   {
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    sub_21FFC50(&Method_ServantSellConfirmListViewObject_OnClickSelect__);
-    sub_21FFC50(&TutorialFlag_TypeInfo);
-    sub_21FFC50(&StringLiteral_10254/*"OnClickSelectListView"*/);
-    this = (ServantSellConfirmListViewObject_o *)sub_21FFC50(&StringLiteral_10247/*"OnClickLockModeItem"*/);
-    byte_5934613 = 1;
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    sub_2213A60(&Method_ServantSellConfirmListViewObject_OnClickSelect__);
+    sub_2213A60(&TutorialFlag_TypeInfo);
+    sub_2213A60(&StringLiteral_10267/*"OnClickSelectListView"*/);
+    this = (ServantSellConfirmListViewObject_o *)sub_2213A60(&StringLiteral_10260/*"OnClickLockModeItem"*/);
+    byte_596C742 = 1;
   }
   linkItem = (Il2CppObject *)v4->fields.linkItem;
   if ( !linkItem )
@@ -330,7 +330,7 @@ void ServantSellConfirmListViewObject__OnClickSelect(
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (ServantSellConfirmListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != ServantSellConfirmListViewItem_TypeInfo )
   {
-    sub_220024C(v4->fields.linkItem, ServantSellConfirmListViewItem_TypeInfo, v2, v3);
+    sub_221405C(v4->fields.linkItem, ServantSellConfirmListViewItem_TypeInfo, v2, v3);
 LABEL_30:
     if ( BYTE1(linkItem[11].monitor) )
       this = (ServantSellConfirmListViewObject_o *)ServantSellConfirmListViewObject__GetItem(v4, (const MethodInfo *)v6);
@@ -355,7 +355,7 @@ LABEL_30:
     goto LABEL_14;
   if ( !v10 )
 LABEL_32:
-    sub_21FFECC(this, v6);
+    sub_2213CDC(this, v6);
   monitor_high = HIDWORD(v10[1].monitor);
   if ( monitor_high == 2 || monitor_high == 1 )
   {
@@ -364,12 +364,12 @@ LABEL_32:
       goto LABEL_23;
     if ( !*(&TutorialFlag_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v16, v17);
-    if ( !TutorialFlag__Get_47357952(126, 0) )
+    if ( !TutorialFlag__Get_47388504(126, 0) )
     {
 LABEL_23:
       v12 = (UnityEngine_Component_o *)v10;
       Item = linkItem;
-      v13 = &StringLiteral_10247/*"OnClickLockModeItem"*/;
+      v13 = &StringLiteral_10260/*"OnClickLockModeItem"*/;
       goto LABEL_24;
     }
   }
@@ -380,15 +380,15 @@ LABEL_23:
 LABEL_14:
     Item = (Il2CppObject *)ServantSellConfirmListViewObject__GetItem(v4, (const MethodInfo *)v6);
     v12 = manager;
-    v13 = &StringLiteral_10254/*"OnClickSelectListView"*/;
+    v13 = &StringLiteral_10267/*"OnClickSelectListView"*/;
 LABEL_24:
     UnityEngine_Component__SendMessage(v12, (System_String_o *)*v13, Item, 0);
     return;
   }
   v18 = Method_ServantSellConfirmListViewObject_OnClickSelect__;
   if ( (*((_BYTE *)Method_ServantSellConfirmListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-    v18 = (_QWORD *)sub_21FFC68(Method_ServantSellConfirmListViewObject_OnClickSelect__);
-  v19 = (System_Reflection_MethodBase_o *)sub_21FFC34(v18, v18[4]);
+    v18 = (_QWORD *)sub_2213A78(Method_ServantSellConfirmListViewObject_OnClickSelect__);
+  v19 = (System_Reflection_MethodBase_o *)sub_2213A44(v18, v18[4]);
   OverwriteAssetSoundName__PlaySystemSe(v19, 2, 0, 0);
 }
 
@@ -409,11 +409,11 @@ void ServantSellConfirmListViewObject__OnDestroy(ServantSellConfirmListViewObjec
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_593460C & 1) == 0 )
+  if ( (byte_596C73B & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593460C = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C73B = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -427,7 +427,7 @@ void ServantSellConfirmListViewObject__OnDestroy(ServantSellConfirmListViewObjec
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -442,11 +442,11 @@ void ServantSellConfirmListViewObject__OnDragDropStart(
   __int64 naturalAligment; // x10
 
   v2 = this;
-  if ( (byte_5934615 & 1) == 0 )
+  if ( (byte_596C744 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (ServantSellConfirmListViewObject_o *)sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    byte_5934615 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (ServantSellConfirmListViewObject_o *)sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    byte_596C744 = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
@@ -455,7 +455,7 @@ void ServantSellConfirmListViewObject__OnDragDropStart(
         klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (ServantSellConfirmListViewManager_c *)klass->_2.typeHierarchy[naturalAligment - 1] != ServantSellConfirmListViewManager_TypeInfo )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -469,11 +469,11 @@ void ServantSellConfirmListViewObject__OnLongPush(ServantSellConfirmListViewObje
   __int64 naturalAligment; // x9
   __int64 v8; // x9
 
-  if ( (byte_5934614 & 1) == 0 )
+  if ( (byte_596C743 & 1) == 0 )
   {
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    byte_5934614 = 1;
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    byte_596C743 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -494,9 +494,9 @@ void ServantSellConfirmListViewObject__OnLongPush(ServantSellConfirmListViewObje
         return;
       }
     }
-    sub_220024C(linkItem, v6, v2, v3);
+    sub_221405C(linkItem, v6, v2, v3);
 LABEL_11:
-    sub_21FFECC(linkItem, v6);
+    sub_2213CDC(linkItem, v6);
   }
 }
 
@@ -508,12 +508,12 @@ void ServantSellConfirmListViewObject__OnLongRelease(
   struct ListViewManager_o *manager; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_5934616 & 1) == 0 )
+  if ( (byte_596C745 & 1) == 0 )
   {
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_10317/*"OnLongPushListView"*/);
-    sub_21FFC50(&StringLiteral_4175/*"CancelDragEnd"*/);
-    byte_5934616 = 1;
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_10330/*"OnLongPushListView"*/);
+    sub_2213A60(&StringLiteral_4180/*"CancelDragEnd"*/);
+    byte_596C745 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -526,23 +526,23 @@ void ServantSellConfirmListViewObject__OnLongRelease(
       {
         if ( HIDWORD(manager[1].monitor) )
           return;
-        UnityEngine_Component__SendMessage_83209572(
+        UnityEngine_Component__SendMessage_83422876(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_4175/*"CancelDragEnd"*/,
+          (System_String_o *)StringLiteral_4180/*"CancelDragEnd"*/,
           0);
         manager = this->fields.manager;
         if ( manager )
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)manager,
-            (System_String_o *)StringLiteral_10317/*"OnLongPushListView"*/,
+            (System_String_o *)StringLiteral_10330/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0);
           return;
         }
       }
     }
-    sub_21FFECC(manager, method);
+    sub_2213CDC(manager, method);
   }
 }
 
@@ -565,12 +565,12 @@ void ServantSellConfirmListViewObject__SetInput(
   ServantSellConfirmListViewObject_o *v15; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_593460E & 1) == 0 )
+  if ( (byte_596C73D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    byte_593460E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    byte_596C73D = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -584,7 +584,7 @@ void ServantSellConfirmListViewObject__SetInput(
            manager->klass->_2.naturalAligment < (unsigned int)v11)
        || (ServantSellConfirmListViewManager_c *)manager->klass->_2.typeHierarchy[v11 - 1] != ServantSellConfirmListViewManager_TypeInfo) )
     {
-      sub_220024C(manager, ServantSellConfirmListViewManager_TypeInfo, v8, v9);
+      sub_221405C(manager, ServantSellConfirmListViewManager_TypeInfo, v8, v9);
     }
     else
     {
@@ -596,12 +596,12 @@ void ServantSellConfirmListViewObject__SetInput(
         && (ServantSellConfirmListViewItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == ServantSellConfirmListViewItem_TypeInfo )
       {
         if ( !manager || (manager = this->fields.itemDraw) == 0 )
-          sub_21FFECC(manager, linkItem);
+          sub_2213CDC(manager, linkItem);
         ServantSellConfirmListViewItemDraw__SetInput(manager, (ServantSellConfirmListViewItem_o *)linkItem, 1, v9);
         return;
       }
     }
-    sub_220024C(linkItem, v13, v8, v9);
+    sub_221405C(linkItem, v13, v8, v9);
     ServantSellConfirmListViewObject__IsCanDrag(v15, v16);
   }
 }
@@ -613,12 +613,12 @@ void ServantSellConfirmListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void ServantSellConfirmListViewObject__SetItem_41844948(
+void ServantSellConfirmListViewObject__SetItem_41860036(
         ServantSellConfirmListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -645,12 +645,12 @@ void ServantSellConfirmListViewObject__SetupDisp(ServantSellConfirmListViewObjec
   __int64 v15; // x1
   const MethodInfo *v16; // x5
 
-  if ( (byte_5934612 & 1) == 0 )
+  if ( (byte_596C741 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewItem_TypeInfo);
-    sub_21FFC50(&ServantSellConfirmListViewManager_TypeInfo);
-    byte_5934612 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewItem_TypeInfo);
+    sub_2213A60(&ServantSellConfirmListViewManager_TypeInfo);
+    byte_596C741 = 1;
   }
   manager = (int32_t *)this->fields.manager;
   if ( manager )
@@ -659,7 +659,7 @@ void ServantSellConfirmListViewObject__SetupDisp(ServantSellConfirmListViewObjec
     if ( *(unsigned __int8 *)(*(_QWORD *)manager + 304LL) < (unsigned int)naturalAligment
       || *(ServantSellConfirmListViewManager_c **)(*(_QWORD *)(*(_QWORD *)manager + 200LL) + 8 * naturalAligment - 8) != ServantSellConfirmListViewManager_TypeInfo )
     {
-      sub_220024C(this->fields.manager, ServantSellConfirmListViewManager_TypeInfo, v2, v3);
+      sub_221405C(this->fields.manager, ServantSellConfirmListViewManager_TypeInfo, v2, v3);
       goto LABEL_18;
     }
   }
@@ -675,7 +675,7 @@ void ServantSellConfirmListViewObject__SetupDisp(ServantSellConfirmListViewObjec
       goto LABEL_11;
     }
 LABEL_18:
-    sub_220024C(linkItem, v8, v2, v3);
+    sub_221405C(linkItem, v8, v2, v3);
     goto LABEL_19;
   }
   v10 = 0;
@@ -703,7 +703,7 @@ LABEL_11:
       }
     }
 LABEL_19:
-    sub_21FFECC(v14, v15);
+    sub_2213CDC(v14, v15);
   }
 }
 
@@ -725,10 +725,10 @@ void ServantSellConfirmListViewObject__add_onMoveEnd(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5934609 & 1) == 0 )
+  if ( (byte_596C738 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5934609 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C738 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -741,13 +741,13 @@ void ServantSellConfirmListViewObject__add_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_onMoveEnd, v8, v6);
+    v11 = sub_224B48C(p_onMoveEnd, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ServantSellConfirmListViewObject__remove_onMoveEnd(v13, v14, v15);
 }
 
@@ -768,10 +768,10 @@ void ServantSellConfirmListViewObject__remove_onMoveEnd(
   ServantSellConfirmListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_593460A & 1) == 0 )
+  if ( (byte_596C739 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593460A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C739 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -784,12 +784,12 @@ void ServantSellConfirmListViewObject__remove_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_onMoveEnd, v8, v6);
+    v11 = sub_224B48C(p_onMoveEnd, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ServantSellConfirmListViewObject__Awake(v13, v14);
 }

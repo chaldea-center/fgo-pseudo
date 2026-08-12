@@ -8,15 +8,15 @@ void MyRoomRootComponent___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5933870 & 1) == 0 )
+  if ( (byte_596B989 & 1) == 0 )
   {
-    sub_21FFC50(&MyRoomRootComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_8521/*"JumpNewMaterial"*/);
-    byte_5933870 = 1;
+    sub_2213A60(&MyRoomRootComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_8534/*"JumpNewMaterial"*/);
+    byte_596B989 = 1;
   }
-  v7 = StringLiteral_8521/*"JumpNewMaterial"*/;
-  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8521/*"JumpNewMaterial"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_8534/*"JumpNewMaterial"*/;
+  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8534/*"JumpNewMaterial"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)MyRoomRootComponent_TypeInfo->static_fields,
     v7,
     v1,
@@ -44,12 +44,12 @@ void MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, const MethodI
   __int64 v8; // x1
   __int64 v9; // x2
 
-  if ( (byte_593386F & 1) == 0 )
+  if ( (byte_596B988 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593386F = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B988 = 1;
   }
   myRoomControl = (UnityEngine_Object_o *)this->fields.myRoomControl;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -66,12 +66,12 @@ void MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, const MethodI
       goto LABEL_13;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+                                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
     v7 = (MyRoomControl_o *)gameObject;
   }
   if ( !v7 )
 LABEL_13:
-    sub_21FFECC(gameObject, v6);
+    sub_2213CDC(gameObject, v6);
   MyRoomControl__quit(v7, 0);
   MyRoomControl__hideSerialCode(v7, 0);
   MyRoomControl__hideContinueDevice(v7, 0);
@@ -90,16 +90,16 @@ void MyRoomRootComponent__beginInitialize(MyRoomRootComponent_o *this, const Met
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_593386C & 1) == 0 )
+  if ( (byte_596B985 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_593386C = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_596B985 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 9, 35, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -122,11 +122,11 @@ void MyRoomRootComponent__beginResume(MyRoomRootComponent_o *this, Il2CppObject 
   Il2CppClass *parent; // x8
 
   v9 = (SceneRootComponent_o *)this;
-  if ( (byte_593386E & 1) == 0 )
+  if ( (byte_596B987 & 1) == 0 )
   {
-    sub_21FFC50(&BattleSetupInfo_TypeInfo);
-    this = (MyRoomRootComponent_o *)sub_21FFC50(&StringLiteral_11606/*"RETURN_BLACKLIST"*/);
-    byte_593386E = 1;
+    sub_2213A60(&BattleSetupInfo_TypeInfo);
+    this = (MyRoomRootComponent_o *)sub_2213A60(&StringLiteral_11626/*"RETURN_BLACKLIST"*/);
+    byte_596B987 = 1;
   }
   klass = v9[1].klass;
   if ( !klass )
@@ -154,7 +154,7 @@ void MyRoomRootComponent__beginResume(MyRoomRootComponent_o *this, Il2CppObject 
     p_field_count = (MissionNaviTransitionBoardItem_o *)&klass->_2.field_count;
     *(_QWORD *)&klass->_2.field_count = 0;
   }
-  sub_21FFBF4(p_field_count, v14, (System_String_o *)method, v3, v4, v5, v6, v7);
+  sub_2213A04(p_field_count, v14, (System_String_o *)method, v3, v4, v5, v6, v7);
   v16 = v9[1].klass;
   if ( !v16 )
     goto LABEL_24;
@@ -169,14 +169,14 @@ LABEL_22:
   parent = v16->_1.parent;
   if ( !parent )
 LABEL_24:
-    sub_21FFECC(this, data);
+    sub_2213CDC(this, data);
   if ( parent->_2.token == 1 )
   {
     SceneRootComponent__beginFinish(v9, 0);
-    SceneRootComponent__sendMessage(v9, (System_String_o *)StringLiteral_11606/*"RETURN_BLACKLIST"*/, 0);
+    SceneRootComponent__sendMessage(v9, (System_String_o *)StringLiteral_11626/*"RETURN_BLACKLIST"*/, 0);
     goto LABEL_22;
   }
-  SceneRootComponent__beginResume_48429424(v9, 0);
+  SceneRootComponent__beginResume_48467168(v9, 0);
 }
 
 
@@ -196,11 +196,11 @@ void MyRoomRootComponent__beginStartUp(MyRoomRootComponent_o *this, Il2CppObject
   bool v16; // w7
   struct MyRoomControl_o *v17; // x8
 
-  if ( (byte_593386D & 1) == 0 )
+  if ( (byte_596B986 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SceneJumpInfo_TypeInfo);
-    byte_593386D = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SceneJumpInfo_TypeInfo);
+    byte_596B986 = 1;
   }
   MainMenuBar__setMenuActive(1, 0, 0);
   if ( data )
@@ -225,7 +225,7 @@ void MyRoomRootComponent__beginStartUp(MyRoomRootComponent_o *this, Il2CppObject
     v17 = this->fields.myRoomControl;
     if ( !v17
       || (v17->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)data,
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v17->fields.sceneJumpInfo,
             (int32_t)data,
             v11,
@@ -236,7 +236,7 @@ void MyRoomRootComponent__beginStartUp(MyRoomRootComponent_o *this, Il2CppObject
             v16),
           (v9 = this->fields.myRoomControl) == 0) )
     {
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     }
     MyRoomControl__startUp(v9, 0);
   }

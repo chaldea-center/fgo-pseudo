@@ -4,7 +4,7 @@ void WarBoardSquareIndexData___ctor(WarBoardSquareIndexData_o *this, const Metho
 }
 
 
-void WarBoardSquareIndexData___ctor_45042296(
+void WarBoardSquareIndexData___ctor_45066560(
         WarBoardSquareIndexData_o *this,
         WarBoardSquareIndexData_SaveData_o *squareIndexData,
         const MethodInfo *method)
@@ -28,11 +28,11 @@ void WarBoardSquareIndexData___ctor_45042296(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !squareIndexData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   effectIds = squareIndexData->fields.effectIds;
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   this->fields.effectIds = effectIds;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.effectIds,
     (int32_t)effectIds,
     v7,
@@ -43,7 +43,7 @@ void WarBoardSquareIndexData___ctor_45042296(
     v12);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.script, (int32_t)script, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.script, (int32_t)script, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -65,13 +65,13 @@ void WarBoardSquareIndexData_SaveData___ctor(WarBoardSquareIndexData_SaveData_o 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareIndex = 0;
   this->fields.effectIds = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.effectIds, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.effectIds, 0, v3, v4, v5, v6, v7, v8);
   this->fields.script = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.script, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.script, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
-void WarBoardSquareIndexData_SaveData___ctor_45001452(
+void WarBoardSquareIndexData_SaveData___ctor_45025716(
         WarBoardSquareIndexData_SaveData_o *this,
         WarBoardSquareIndexData_o *squareIndexData,
         const MethodInfo *method)
@@ -95,11 +95,11 @@ void WarBoardSquareIndexData_SaveData___ctor_45001452(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !squareIndexData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   effectIds = squareIndexData->fields.effectIds;
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   this->fields.effectIds = effectIds;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.effectIds,
     (int32_t)effectIds,
     v7,
@@ -110,5 +110,5 @@ void WarBoardSquareIndexData_SaveData___ctor_45001452(
     v12);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.script, (int32_t)script, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.script, (int32_t)script, v15, v16, v17, v18, v19, v20);
 }

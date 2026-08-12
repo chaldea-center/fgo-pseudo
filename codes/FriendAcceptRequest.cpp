@@ -6,12 +6,12 @@ void FriendAcceptRequest___ctor(FriendAcceptRequest_o *this, const MethodInfo *m
 
 void FriendAcceptRequest__beginRequest(FriendAcceptRequest_o *this, int64_t targetUserId, const MethodInfo *method)
 {
-  if ( (byte_593A262 & 1) == 0 )
+  if ( (byte_597243F & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25231/*"targetUserId"*/);
-    byte_593A262 = 1;
+    sub_2213A60(&StringLiteral_25279/*"targetUserId"*/);
+    byte_597243F = 1;
   }
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_25231/*"targetUserId"*/, targetUserId, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_25279/*"targetUserId"*/, targetUserId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -20,16 +20,16 @@ System_String_o *FriendAcceptRequest__getURL(FriendAcceptRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A261 & 1) == 0 )
+  if ( (byte_597243E & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_20559/*"friend/accept"*/);
-    byte_593A261 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20600/*"friend/accept"*/);
+    byte_597243E = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20559/*"friend/accept"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20600/*"friend/accept"*/, 0);
 }
 
 
@@ -44,17 +44,17 @@ void FriendAcceptRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_593A263 & 1) == 0 )
+  if ( (byte_5972440 & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A263 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972440 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(14, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_51257228(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
@@ -63,7 +63,7 @@ void FriendAcceptRequest__requestCompleted(
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_23290/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_23336/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

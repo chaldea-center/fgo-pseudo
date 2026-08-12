@@ -24,23 +24,17 @@ UnityEngine_Vector3_o BaseEnemyParamPosData__get_ExBattleUiTrPos(
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  x = static_fields->zeroVector.fields.x;
-  y = static_fields->zeroVector.fields.y;
-  z = static_fields->zeroVector.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->zeroVector.fields.x;
+  result.fields.y = static_fields->zeroVector.fields.y;
+  result.fields.z = static_fields->zeroVector.fields.z;
   return result;
 }
 
@@ -50,23 +44,17 @@ UnityEngine_Vector3_o BaseEnemyParamPosData__get_NormalTrLocalPos(
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  x = static_fields->zeroVector.fields.x;
-  y = static_fields->zeroVector.fields.y;
-  z = static_fields->zeroVector.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->zeroVector.fields.x;
+  result.fields.y = static_fields->zeroVector.fields.y;
+  result.fields.z = static_fields->zeroVector.fields.z;
   return result;
 }
 
@@ -76,22 +64,16 @@ UnityEngine_Vector3_o BaseEnemyParamPosData__get_NormalTrLocalScale(
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  x = static_fields->oneVector.fields.x;
-  y = static_fields->oneVector.fields.y;
-  z = static_fields->oneVector.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->oneVector.fields.x;
+  result.fields.y = static_fields->oneVector.fields.y;
+  result.fields.z = static_fields->oneVector.fields.z;
   return result;
 }

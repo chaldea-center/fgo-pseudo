@@ -92,60 +92,60 @@ void UIEventTrigger___ctor(UIEventTrigger_o *this, const MethodInfo *method)
   bool v92; // w6
   bool v93; // w7
 
-  if ( (byte_593CD0A & 1) == 0 )
+  if ( (byte_5974FE1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_593CD0A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_5974FE1 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onHoverOver = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onHoverOver, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onHoverOver, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onHoverOut = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onHoverOut, (int32_t)v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onHoverOut, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  v17 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPress = (struct System_Collections_Generic_List_EventDelegate__o *)v17;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onPress, (int32_t)v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onPress, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onRelease = (struct System_Collections_Generic_List_EventDelegate__o *)v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onRelease, (int32_t)v24, v25, v26, v27, v28, v29, v30);
-  v31 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onRelease, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  v31 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v31,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSelect = (struct System_Collections_Generic_List_EventDelegate__o *)v31;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onSelect, (int32_t)v31, v32, v33, v34, v35, v36, v37);
-  v38 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onSelect, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+  v38 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v38,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDeselect = (struct System_Collections_Generic_List_EventDelegate__o *)v38;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDeselect, (int32_t)v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDeselect, (int32_t)v38, v39, v40, v41, v42, v43, v44);
+  v45 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v45,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v45;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClick, (int32_t)v45, v46, v47, v48, v49, v50, v51);
-  v52 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onClick, (int32_t)v45, v46, v47, v48, v49, v50, v51);
+  v52 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v52,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v52;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onDoubleClick,
     (int32_t)v52,
     v53,
@@ -154,36 +154,36 @@ void UIEventTrigger___ctor(UIEventTrigger_o *this, const MethodInfo *method)
     v56,
     v57,
     v58);
-  v59 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v59 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v59,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragStart = (struct System_Collections_Generic_List_EventDelegate__o *)v59;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDragStart, (int32_t)v59, v60, v61, v62, v63, v64, v65);
-  v66 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDragStart, (int32_t)v59, v60, v61, v62, v63, v64, v65);
+  v66 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v66,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragEnd = (struct System_Collections_Generic_List_EventDelegate__o *)v66;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDragEnd, (int32_t)v66, v67, v68, v69, v70, v71, v72);
-  v73 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDragEnd, (int32_t)v66, v67, v68, v69, v70, v71, v72);
+  v73 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v73,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragOver = (struct System_Collections_Generic_List_EventDelegate__o *)v73;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDragOver, (int32_t)v73, v74, v75, v76, v77, v78, v79);
-  v80 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDragOver, (int32_t)v73, v74, v75, v76, v77, v78, v79);
+  v80 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v80,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragOut = (struct System_Collections_Generic_List_EventDelegate__o *)v80;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDragOut, (int32_t)v80, v81, v82, v83, v84, v85, v86);
-  v87 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDragOut, (int32_t)v80, v81, v82, v83, v84, v85, v86);
+  v87 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v87,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDrag = (struct System_Collections_Generic_List_EventDelegate__o *)v87;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onDrag, (int32_t)v87, v88, v89, v90, v91, v92, v93);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onDrag, (int32_t)v87, v88, v89, v90, v91, v92, v93);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -206,12 +206,12 @@ void UIEventTrigger__OnClick(UIEventTrigger_o *this, const MethodInfo *method)
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CD03 & 1) == 0 )
+  if ( (byte_5974FDA & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD03 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDA = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -219,7 +219,7 @@ void UIEventTrigger__OnClick(UIEventTrigger_o *this, const MethodInfo *method)
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v4,
@@ -231,9 +231,9 @@ void UIEventTrigger__OnClick(UIEventTrigger_o *this, const MethodInfo *method)
     onClick = this->fields.onClick;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v10);
-    EventDelegate__Execute_56080488(onClick, 0);
+    EventDelegate__Execute_56285144(onClick, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v12,
@@ -264,12 +264,12 @@ void UIEventTrigger__OnDoubleClick(UIEventTrigger_o *this, const MethodInfo *met
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CD04 & 1) == 0 )
+  if ( (byte_5974FDB & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD04 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDB = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -277,7 +277,7 @@ void UIEventTrigger__OnDoubleClick(UIEventTrigger_o *this, const MethodInfo *met
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v4,
@@ -289,9 +289,9 @@ void UIEventTrigger__OnDoubleClick(UIEventTrigger_o *this, const MethodInfo *met
     onDoubleClick = this->fields.onDoubleClick;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v10);
-    EventDelegate__Execute_56080488(onDoubleClick, 0);
+    EventDelegate__Execute_56285144(onDoubleClick, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v12,
@@ -322,12 +322,12 @@ void UIEventTrigger__OnDrag(UIEventTrigger_o *this, UnityEngine_Vector2_o delta,
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CD09 & 1) == 0 )
+  if ( (byte_5974FE0 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD09 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FE0 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -335,7 +335,7 @@ void UIEventTrigger__OnDrag(UIEventTrigger_o *this, UnityEngine_Vector2_o delta,
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v5,
@@ -347,9 +347,9 @@ void UIEventTrigger__OnDrag(UIEventTrigger_o *this, UnityEngine_Vector2_o delta,
     onDrag = this->fields.onDrag;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v11);
-    EventDelegate__Execute_56080488(onDrag, 0);
+    EventDelegate__Execute_56285144(onDrag, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v13,
@@ -380,12 +380,12 @@ void UIEventTrigger__OnDragEnd(UIEventTrigger_o *this, const MethodInfo *method)
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CD06 & 1) == 0 )
+  if ( (byte_5974FDD & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD06 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDD = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -393,7 +393,7 @@ void UIEventTrigger__OnDragEnd(UIEventTrigger_o *this, const MethodInfo *method)
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v4,
@@ -405,9 +405,9 @@ void UIEventTrigger__OnDragEnd(UIEventTrigger_o *this, const MethodInfo *method)
     onDragEnd = this->fields.onDragEnd;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v10);
-    EventDelegate__Execute_56080488(onDragEnd, 0);
+    EventDelegate__Execute_56285144(onDragEnd, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v12,
@@ -438,12 +438,12 @@ void UIEventTrigger__OnDragOut(UIEventTrigger_o *this, UnityEngine_GameObject_o 
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CD08 & 1) == 0 )
+  if ( (byte_5974FDF & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD08 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDF = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -451,7 +451,7 @@ void UIEventTrigger__OnDragOut(UIEventTrigger_o *this, UnityEngine_GameObject_o 
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v5,
@@ -463,9 +463,9 @@ void UIEventTrigger__OnDragOut(UIEventTrigger_o *this, UnityEngine_GameObject_o 
     onDragOut = this->fields.onDragOut;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v11);
-    EventDelegate__Execute_56080488(onDragOut, 0);
+    EventDelegate__Execute_56285144(onDragOut, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v13,
@@ -496,12 +496,12 @@ void UIEventTrigger__OnDragOver(UIEventTrigger_o *this, UnityEngine_GameObject_o
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CD07 & 1) == 0 )
+  if ( (byte_5974FDE & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD07 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDE = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -509,7 +509,7 @@ void UIEventTrigger__OnDragOver(UIEventTrigger_o *this, UnityEngine_GameObject_o
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v5,
@@ -521,9 +521,9 @@ void UIEventTrigger__OnDragOver(UIEventTrigger_o *this, UnityEngine_GameObject_o
     onDragOver = this->fields.onDragOver;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v11);
-    EventDelegate__Execute_56080488(onDragOver, 0);
+    EventDelegate__Execute_56285144(onDragOver, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v13,
@@ -554,12 +554,12 @@ void UIEventTrigger__OnDragStart(UIEventTrigger_o *this, const MethodInfo *metho
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CD05 & 1) == 0 )
+  if ( (byte_5974FDC & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD05 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FDC = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -567,7 +567,7 @@ void UIEventTrigger__OnDragStart(UIEventTrigger_o *this, const MethodInfo *metho
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v4,
@@ -579,9 +579,9 @@ void UIEventTrigger__OnDragStart(UIEventTrigger_o *this, const MethodInfo *metho
     onDragStart = this->fields.onDragStart;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v10);
-    EventDelegate__Execute_56080488(onDragStart, 0);
+    EventDelegate__Execute_56285144(onDragStart, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v12,
@@ -614,12 +614,12 @@ void UIEventTrigger__OnHover(UIEventTrigger_o *this, bool isOver, const MethodIn
   bool v19; // w6
   bool v20; // w7
 
-  if ( (byte_593CD00 & 1) == 0 )
+  if ( (byte_5974FD7 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD00 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FD7 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -627,7 +627,7 @@ void UIEventTrigger__OnHover(UIEventTrigger_o *this, bool isOver, const MethodIn
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v6,
@@ -650,9 +650,9 @@ void UIEventTrigger__OnHover(UIEventTrigger_o *this, bool isOver, const MethodIn
 LABEL_10:
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v12);
     }
-    EventDelegate__Execute_56080488(onHoverOver, 0);
+    EventDelegate__Execute_56285144(onHoverOver, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v15,
@@ -685,12 +685,12 @@ void UIEventTrigger__OnPress(UIEventTrigger_o *this, bool pressed, const MethodI
   bool v19; // w6
   bool v20; // w7
 
-  if ( (byte_593CD01 & 1) == 0 )
+  if ( (byte_5974FD8 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD01 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FD8 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -698,7 +698,7 @@ void UIEventTrigger__OnPress(UIEventTrigger_o *this, bool pressed, const MethodI
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v6,
@@ -721,9 +721,9 @@ void UIEventTrigger__OnPress(UIEventTrigger_o *this, bool pressed, const MethodI
 LABEL_10:
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v12);
     }
-    EventDelegate__Execute_56080488(onPress, 0);
+    EventDelegate__Execute_56285144(onPress, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v15,
@@ -756,12 +756,12 @@ void UIEventTrigger__OnSelect(UIEventTrigger_o *this, bool selected, const Metho
   bool v19; // w6
   bool v20; // w7
 
-  if ( (byte_593CD02 & 1) == 0 )
+  if ( (byte_5974FD9 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIEventTrigger_TypeInfo);
-    byte_593CD02 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIEventTrigger_TypeInfo);
+    byte_5974FD9 = 1;
   }
   current = (UnityEngine_Object_o *)UIEventTrigger_TypeInfo->static_fields->current;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -769,7 +769,7 @@ void UIEventTrigger__OnSelect(UIEventTrigger_o *this, bool selected, const Metho
   if ( !UnityEngine_Object__op_Inequality(current, 0, 0) )
   {
     UIEventTrigger_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       (int32_t)this,
       v6,
@@ -792,9 +792,9 @@ void UIEventTrigger__OnSelect(UIEventTrigger_o *this, bool selected, const Metho
 LABEL_10:
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v12);
     }
-    EventDelegate__Execute_56080488(onSelect, 0);
+    EventDelegate__Execute_56285144(onSelect, 0);
     UIEventTrigger_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIEventTrigger_TypeInfo->static_fields,
       0,
       v15,

@@ -2,10 +2,10 @@ void CriFsPlugin___cctor(const MethodInfo *method)
 {
   struct CriFsPlugin_StaticFields *static_fields; // x8
 
-  if ( (byte_5931598 & 1) == 0 )
+  if ( (byte_5969738 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931598 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_5969738 = 1;
   }
   static_fields = CriFsPlugin_TypeInfo->static_fields;
   static_fields->initializationCount = 0;
@@ -21,8 +21,8 @@ uint32_t CriFsPlugin__CRIWARE05FCC2E5(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = off_5931550;
-  if ( !off_5931550 )
+  v1 = off_59696F0;
+  if ( !off_59696F0 )
   {
     v3[0] = "cri_ware_unity";
     v3[1] = 14;
@@ -31,10 +31,10 @@ uint32_t CriFsPlugin__CRIWARE05FCC2E5(const MethodInfo *method)
     v3[4] = 0x200000000LL;
     v4 = 0;
     v5 = 0;
-    v1 = (void *)sub_2200304(v3);
-    off_5931550 = v1;
+    v1 = (void *)sub_2214114(v3);
+    off_59696F0 = v1;
   }
-  return ((__int64 (*)(void))v1)();
+  return ((uint32_t (*)(void))v1)();
 }
 
 
@@ -45,8 +45,8 @@ void CriFsPlugin__CRIWARE3F65C816(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = off_5931538;
-  if ( !off_5931538 )
+  v1 = off_59696D8;
+  if ( !off_59696D8 )
   {
     v2[0] = "cri_ware_unity";
     v2[1] = 14;
@@ -55,8 +55,8 @@ void CriFsPlugin__CRIWARE3F65C816(const MethodInfo *method)
     v2[4] = 0x200000000LL;
     v3 = 0;
     v4 = 0;
-    v1 = (void *)sub_2200304(v2);
-    off_5931538 = v1;
+    v1 = (void *)sub_2214114(v2);
+    off_59696D8 = v1;
   }
   ((void (*)(void))v1)();
 }
@@ -69,8 +69,8 @@ void CriFsPlugin__CRIWARE610B5BF8(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = off_5931548;
-  if ( !off_5931548 )
+  v1 = off_59696E8;
+  if ( !off_59696E8 )
   {
     v2[0] = "cri_ware_unity";
     v2[1] = 14;
@@ -79,8 +79,8 @@ void CriFsPlugin__CRIWARE610B5BF8(const MethodInfo *method)
     v2[4] = 0x200000000LL;
     v3 = 0;
     v4 = 0;
-    v1 = (void *)sub_2200304(v2);
-    off_5931548 = v1;
+    v1 = (void *)sub_2214114(v2);
+    off_59696E8 = v1;
   }
   ((void (*)(void))v1)();
 }
@@ -100,8 +100,8 @@ void CriFsPlugin__CRIWARE7222D63A(
   int v15; // [xsp+28h] [xbp-48h]
   char v16; // [xsp+2Ch] [xbp-44h]
 
-  v9 = off_5931530;
-  if ( !off_5931530 )
+  v9 = off_59696D0;
+  if ( !off_59696D0 )
   {
     v14[0] = "cri_ware_unity";
     v14[1] = 14;
@@ -110,8 +110,8 @@ void CriFsPlugin__CRIWARE7222D63A(
     v14[4] = 0x200000000LL;
     v15 = 24;
     v16 = 0;
-    v9 = (void *)sub_2200304(v14);
-    off_5931530 = v9;
+    v9 = (void *)sub_2214114(v14);
+    off_59696D0 = v9;
   }
   ((void (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, bool, bool, const MethodInfo *))v9)(
     (unsigned int)num_loaders,
@@ -131,8 +131,8 @@ bool CriFsPlugin__CRIWARE9F3B52BA(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = off_5931540;
-  if ( !off_5931540 )
+  v1 = off_59696E0;
+  if ( !off_59696E0 )
   {
     v3[0] = "cri_ware_unity";
     v3[1] = 14;
@@ -141,8 +141,8 @@ bool CriFsPlugin__CRIWARE9F3B52BA(const MethodInfo *method)
     v3[4] = 0x200000000LL;
     v4 = 0;
     v5 = 0;
-    v1 = (void *)sub_2200304(v3);
-    off_5931540 = v1;
+    v1 = (void *)sub_2214114(v3);
+    off_59696E0 = v1;
   }
   return ((unsigned int (*)(void))v1)() != 0;
 }
@@ -162,11 +162,11 @@ void CriFsPlugin__FinalizeLibrary(const MethodInfo *method)
   int v11; // w10
   const MethodInfo *v12; // x0
 
-  if ( (byte_5931528 & 1) == 0 )
+  if ( (byte_59696C8 & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931528 = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C8 = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -225,10 +225,10 @@ void CriFsPlugin__InitializeLibrary(const MethodInfo *method)
   bool IsLibraryInitialized; // w8
   CriFsPlugin_c *v9; // x0
 
-  if ( (byte_5931526 & 1) == 0 )
+  if ( (byte_59696C6 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931526 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C6 = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -264,10 +264,10 @@ bool CriFsPlugin__IsLibraryInitialized(const MethodInfo *method)
   __int64 v2; // x2
   CriFsPlugin_c *inited; // x0
 
-  if ( (byte_5931527 & 1) == 0 )
+  if ( (byte_59696C7 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931527 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C7 = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -280,10 +280,10 @@ void CriFsPlugin__SetConfigAdditionalParameters_ANDROID(int32_t device_read_bps,
 {
   __int64 v2; // x2
 
-  if ( (byte_5931523 & 1) == 0 )
+  if ( (byte_59696C3 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931523 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C3 = 1;
   }
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo, method, v2);
@@ -304,10 +304,10 @@ void CriFsPlugin__SetConfigParameters(
 {
   struct CriFsPlugin_StaticFields *static_fields; // x8
 
-  if ( (byte_5931521 & 1) == 0 )
+  if ( (byte_59696C1 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931521 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C1 = 1;
   }
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo, *(_QWORD *)&num_binders, *(_QWORD *)&num_installers);
@@ -329,10 +329,10 @@ void CriFsPlugin__SetDataDecompressionThreadPriorityExperimentalAndroid(int32_t 
 {
   __int64 v2; // x2
 
-  if ( (byte_5931525 & 1) == 0 )
+  if ( (byte_59696C5 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931525 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C5 = 1;
   }
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo, method, v2);
@@ -344,10 +344,10 @@ void CriFsPlugin__SetMemoryFileSystemThreadPriorityExperimentalAndroid(int32_t p
 {
   __int64 v2; // x2
 
-  if ( (byte_5931524 & 1) == 0 )
+  if ( (byte_59696C4 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931524 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C4 = 1;
   }
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo, method, v2);
@@ -358,10 +358,10 @@ void CriFsPlugin__SetMemoryFileSystemThreadPriorityExperimentalAndroid(int32_t p
 // local variable allocation has failed, the output may be wrong!
 void CriFsPlugin__SetReadDeviceEnabled(int32_t deviceId, bool enabled, const MethodInfo *method)
 {
-  if ( (byte_5931522 & 1) == 0 )
+  if ( (byte_59696C2 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931522 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C2 = 1;
   }
   if ( deviceId || enabled )
   {
@@ -379,8 +379,8 @@ uint32_t CriFsPlugin__criFsLoader_GetRetryCount(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = off_5931558;
-  if ( !off_5931558 )
+  v1 = off_59696F8;
+  if ( !off_59696F8 )
   {
     v3[0] = "cri_ware_unity";
     v3[1] = 14;
@@ -389,10 +389,10 @@ uint32_t CriFsPlugin__criFsLoader_GetRetryCount(const MethodInfo *method)
     v3[4] = 0x200000000LL;
     v4 = 0;
     v5 = 0;
-    v1 = (void *)sub_2200304(v3);
-    off_5931558 = v1;
+    v1 = (void *)sub_2214114(v3);
+    off_59696F8 = v1;
   }
-  return ((__int64 (*)(void))v1)();
+  return ((uint32_t (*)(void))v1)();
 }
 
 
@@ -403,8 +403,8 @@ void CriFsPlugin__criFsUnity_SetConfigAdditionalParameters_ANDROID(int32_t devic
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_5931580;
-  if ( !off_5931580 )
+  v3 = off_5969720;
+  if ( !off_5969720 )
   {
     v4[0] = "cri_ware_unity";
     v4[1] = 14;
@@ -413,8 +413,8 @@ void CriFsPlugin__criFsUnity_SetConfigAdditionalParameters_ANDROID(int32_t devic
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v3 = (void *)sub_2200304(v4);
-    off_5931580 = v3;
+    v3 = (void *)sub_2214114(v4);
+    off_5969720 = v3;
   }
   ((void (__fastcall *)(_QWORD, const MethodInfo *))v3)((unsigned int)device_read_bps, method);
 }
@@ -427,8 +427,8 @@ void CriFsPlugin__criFsUnity_SetDataDecompressionThreadPriority_ANDROID(int32_t 
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_5931590;
-  if ( !off_5931590 )
+  v3 = off_5969730;
+  if ( !off_5969730 )
   {
     v4[0] = "cri_ware_unity";
     v4[1] = 14;
@@ -437,8 +437,8 @@ void CriFsPlugin__criFsUnity_SetDataDecompressionThreadPriority_ANDROID(int32_t 
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v3 = (void *)sub_2200304(v4);
-    off_5931590 = v3;
+    v3 = (void *)sub_2214114(v4);
+    off_5969730 = v3;
   }
   ((void (__fastcall *)(_QWORD, const MethodInfo *))v3)((unsigned int)prio, method);
 }
@@ -451,8 +451,8 @@ void CriFsPlugin__criFsUnity_SetMemoryFileSystemThreadPriority_ANDROID(int32_t p
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_5931588;
-  if ( !off_5931588 )
+  v3 = off_5969728;
+  if ( !off_5969728 )
   {
     v4[0] = "cri_ware_unity";
     v4[1] = 14;
@@ -461,8 +461,8 @@ void CriFsPlugin__criFsUnity_SetMemoryFileSystemThreadPriority_ANDROID(int32_t p
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v3 = (void *)sub_2200304(v4);
-    off_5931588 = v3;
+    v3 = (void *)sub_2214114(v4);
+    off_5969728 = v3;
   }
   ((void (__fastcall *)(_QWORD, const MethodInfo *))v3)((unsigned int)prio, method);
 }
@@ -475,8 +475,8 @@ int32_t CriFsPlugin__criFs_GetNumBinds(int32_t *cur, int32_t *max, int32_t *limi
   int v10; // [xsp+28h] [xbp-38h]
   char v11; // [xsp+2Ch] [xbp-34h]
 
-  v6 = off_5931560;
-  if ( !off_5931560 )
+  v6 = off_5969700;
+  if ( !off_5969700 )
   {
     v9[0] = "cri_ware_unity";
     v9[1] = 14;
@@ -485,10 +485,10 @@ int32_t CriFsPlugin__criFs_GetNumBinds(int32_t *cur, int32_t *max, int32_t *limi
     v9[4] = 0x200000000LL;
     v10 = 24;
     v11 = 0;
-    v6 = (void *)sub_2200304(v9);
-    off_5931560 = v6;
+    v6 = (void *)sub_2214114(v9);
+    off_5969700 = v6;
   }
-  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -499,8 +499,8 @@ int32_t CriFsPlugin__criFs_GetNumUsedInstallers(int32_t *cur, int32_t *max, int3
   int v10; // [xsp+28h] [xbp-38h]
   char v11; // [xsp+2Ch] [xbp-34h]
 
-  v6 = off_5931570;
-  if ( !off_5931570 )
+  v6 = off_5969710;
+  if ( !off_5969710 )
   {
     v9[0] = "cri_ware_unity";
     v9[1] = 14;
@@ -509,10 +509,10 @@ int32_t CriFsPlugin__criFs_GetNumUsedInstallers(int32_t *cur, int32_t *max, int3
     v9[4] = 0x200000000LL;
     v10 = 24;
     v11 = 0;
-    v6 = (void *)sub_2200304(v9);
-    off_5931570 = v6;
+    v6 = (void *)sub_2214114(v9);
+    off_5969710 = v6;
   }
-  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -523,8 +523,8 @@ int32_t CriFsPlugin__criFs_GetNumUsedLoaders(int32_t *cur, int32_t *max, int32_t
   int v10; // [xsp+28h] [xbp-38h]
   char v11; // [xsp+2Ch] [xbp-34h]
 
-  v6 = off_5931568;
-  if ( !off_5931568 )
+  v6 = off_5969708;
+  if ( !off_5969708 )
   {
     v9[0] = "cri_ware_unity";
     v9[1] = 14;
@@ -533,10 +533,10 @@ int32_t CriFsPlugin__criFs_GetNumUsedLoaders(int32_t *cur, int32_t *max, int32_t
     v9[4] = 0x200000000LL;
     v10 = 24;
     v11 = 0;
-    v6 = (void *)sub_2200304(v9);
-    off_5931568 = v6;
+    v6 = (void *)sub_2214114(v9);
+    off_5969708 = v6;
   }
-  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -547,8 +547,8 @@ int32_t CriFsPlugin__criFs_SetReadDeviceEnabled(int32_t device_id, bool enabled,
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v5 = off_5931578;
-  if ( !off_5931578 )
+  v5 = off_5969718;
+  if ( !off_5969718 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -557,10 +557,10 @@ int32_t CriFsPlugin__criFs_SetReadDeviceEnabled(int32_t device_id, bool enabled,
     v7[4] = 0x200000000LL;
     v8 = 8;
     v9 = 0;
-    v5 = (void *)sub_2200304(v7);
-    off_5931578 = v5;
+    v5 = (void *)sub_2214114(v7);
+    off_5969718 = v5;
   }
-  return ((__int64 (__fastcall *)(_QWORD, bool, const MethodInfo *))v5)((unsigned int)device_id, enabled, method);
+  return ((int32_t (__fastcall *)(_QWORD, bool, const MethodInfo *))v5)((unsigned int)device_id, enabled, method);
 }
 
 
@@ -570,10 +570,10 @@ bool CriFsPlugin__get_isInitialized(const MethodInfo *method)
   __int64 v2; // x2
   CriFsPlugin_c *v3; // x0
 
-  if ( (byte_5931520 & 1) == 0 )
+  if ( (byte_59696C0 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931520 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_59696C0 = 1;
   }
   v3 = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )

@@ -20,17 +20,17 @@ IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
   __int64 v13; // x0
 
   v6 = this;
-  if ( (byte_593C301 & 1) == 0 )
+  if ( (byte_5974539 & 1) == 0 )
   {
-    this = (FriendshipGaugeSelector_o *)sub_21FFC50(&IFriendshipGauge_TypeInfo);
-    byte_593C301 = 1;
+    this = (FriendshipGaugeSelector_o *)sub_2213A60(&IFriendshipGauge_TypeInfo);
+    byte_5974539 = 1;
   }
   v7 = 40;
   if ( friendshipExceedCount + maxFriendShipRank < 11 || friendshipExceedCount == 0 )
     v7 = 32;
   v9 = *(IFriendshipGauge_o **)((char *)&v6->klass + v7);
   if ( !v9 )
-    sub_21FFECC(this, *(_QWORD *)&maxFriendShipRank);
+    sub_2213CDC(this, *(_QWORD *)&maxFriendShipRank);
   klass = v9->klass;
   v11 = *(unsigned __int16 *)&v9->klass->_2.rank;
   if ( *(_WORD *)&v9->klass->_2.rank )
@@ -48,7 +48,7 @@ IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
   else
   {
 LABEL_13:
-    v13 = sub_2237E2C(v9, IFriendshipGauge_TypeInfo, 5);
+    v13 = sub_224BC3C(v9, IFriendshipGauge_TypeInfo, 5);
   }
   (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
   return v9;

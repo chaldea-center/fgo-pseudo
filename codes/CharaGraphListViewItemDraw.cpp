@@ -37,7 +37,7 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mAtlas = 0;
   this->fields._DefaultMaskAtlas_k__BackingField = mAtlas;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)mAtlas,
     v2,
@@ -52,7 +52,7 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mSpriteName = 0;
   this->fields._DefaultMaskName_k__BackingField = mSpriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)mSpriteName,
     v11,
@@ -254,7 +254,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskAtlas(
   bool v7; // w7
 
   this->fields._DefaultMaskAtlas_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -278,7 +278,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskName(
   bool v7; // w7
 
   this->fields._DefaultMaskName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

@@ -12,7 +12,7 @@ void TutorialCommunicateAdapter___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.onGetRequest = onGetRequest;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onGetRequest,
     (int32_t)onGetRequest,
     v5,
@@ -35,15 +35,15 @@ void TutorialCommunicateAdapter__SendRequest(
   bool v6; // w6
   bool v7; // w7
   System_Action_T__o *onGetRequest; // x0
-  const MethodInfo_36CDF5C *v11; // x2
+  const MethodInfo_36FFECC *v11; // x2
 
-  if ( (byte_5938093 & 1) == 0 )
+  if ( (byte_5970242 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
-    byte_5938093 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_TutorialCommunicateAdapter___);
+    byte_5970242 = 1;
   }
   this->fields._EventTutorialEntity_k__BackingField = entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)entity,
     (System_String_o *)method,
@@ -53,7 +53,7 @@ void TutorialCommunicateAdapter__SendRequest(
     v6,
     v7);
   onGetRequest = (System_Action_T__o *)this->fields.onGetRequest;
-  v11 = (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___;
+  v11 = (const MethodInfo_36FFECC *)Method_ActionExtensions_Call_TutorialCommunicateAdapter___;
   this->fields._IsPerformanceBusy_k__BackingField = 1;
   ActionExtensions__Call_object_(onGetRequest, (Il2CppObject *)this, v11);
 }
@@ -91,7 +91,7 @@ void TutorialCommunicateAdapter__set_EventTutorialEntity(
   bool v7; // w7
 
   this->fields._EventTutorialEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventTutorialEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

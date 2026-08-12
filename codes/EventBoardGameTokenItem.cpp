@@ -10,15 +10,15 @@ void EventBoardGameTokenItem__DestroyItem(EventBoardGameTokenItem_o *this, const
   __int64 v4; // x2
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_59323DD & 1) == 0 )
+  if ( (byte_596A4DC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59323DD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A4DC = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
 }
 
 
@@ -47,25 +47,25 @@ void EventBoardGameTokenItem__Init(EventBoardGameTokenItem_o *this, const Method
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_59323D9 & 1) == 0 )
+  if ( (byte_596A4D8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59323D9 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A4D8 = 1;
   }
   v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.index = 0;
   this->fields.haved = 0;
   this->fields.tokenName = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.tokenName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.tokenName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
   v10 = (int)StringLiteral_1/*""*/;
   this->fields.tokenImageId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.tokenImageId, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.tokenImageId, v10, v11, v12, v13, v14, v15, v16);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel )
-    sub_21FFECC(0, v17);
+    sub_2213CDC(0, v17);
   UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.callback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callback, 0, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callback, 0, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -77,21 +77,21 @@ void EventBoardGameTokenItem__OnClickItem(EventBoardGameTokenItem_o *this, const
   __int64 v6; // x1
   struct System_Action_int__o *callback; // x8
 
-  if ( (byte_59323DC & 1) == 0 )
+  if ( (byte_596A4DB & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventBoardGameTokenItem_OnClickItem__);
-    byte_59323DC = 1;
+    sub_2213A60(&Method_EventBoardGameTokenItem_OnClickItem__);
+    byte_596A4DB = 1;
   }
   if ( this->fields.callback && this->fields.haved )
   {
     v3 = Method_EventBoardGameTokenItem_OnClickItem__;
     if ( (*((_BYTE *)Method_EventBoardGameTokenItem_OnClickItem__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventBoardGameTokenItem_OnClickItem__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventBoardGameTokenItem_OnClickItem__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     callback = this->fields.callback;
     if ( !callback )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callback->fields.invoke_impl)(
       callback->fields.method_code,
       (unsigned int)this->fields.index,
@@ -132,10 +132,10 @@ void EventBoardGameTokenItem__SetItem(
   bool v30; // w7
 
   v12 = this;
-  if ( (byte_59323DA & 1) == 0 )
+  if ( (byte_596A4D9 & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_21FFC50(&StringLiteral_25365/*"token_enpty"*/);
-    byte_59323DA = 1;
+    this = (EventBoardGameTokenItem_o *)sub_2213A60(&StringLiteral_25413/*"token_enpty"*/);
+    byte_596A4D9 = 1;
   }
   v13 = *item;
   if ( ent )
@@ -145,7 +145,7 @@ void EventBoardGameTokenItem__SetItem(
     v13->fields.index = ent->fields.tokenId;
     v14 = System_Int32__ToString((int)ent + 20, 0);
     v13->fields.tokenName = v14;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->fields.tokenName, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields.tokenName, (int32_t)v14, v15, v16, v17, v18, v19, v20);
     v13 = *item;
     if ( !*item )
       goto LABEL_14;
@@ -162,18 +162,18 @@ void EventBoardGameTokenItem__SetItem(
         goto LABEL_11;
       }
 LABEL_14:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
   }
   else if ( !v13 )
   {
     goto LABEL_14;
   }
-  v22 = StringLiteral_25365/*"token_enpty"*/;
-  v13->fields.tokenImageId = (struct System_String_o *)StringLiteral_25365/*"token_enpty"*/;
+  v22 = StringLiteral_25413/*"token_enpty"*/;
+  v13->fields.tokenImageId = (struct System_String_o *)StringLiteral_25413/*"token_enpty"*/;
   p_tokenImageId = (MissionNaviTransitionBoardItem_o *)&v13->fields.tokenImageId;
 LABEL_11:
-  sub_21FFBF4(
+  sub_2213A04(
     p_tokenImageId,
     v22,
     (System_String_o *)ent,
@@ -186,7 +186,7 @@ LABEL_11:
   if ( callback )
   {
     v12->fields.callback = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v12->fields.callback,
       (int32_t)callback,
       v25,
@@ -223,10 +223,10 @@ void EventBoardGameTokenItem__SetTokenInfo(
   bool v20; // w7
 
   v10 = this;
-  if ( (byte_59323DB & 1) == 0 )
+  if ( (byte_596A4DA & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59323DB = 1;
+    this = (EventBoardGameTokenItem_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A4DA = 1;
   }
   if ( !item )
     goto LABEL_13;
@@ -236,7 +236,7 @@ void EventBoardGameTokenItem__SetTokenInfo(
   v10->fields.index = item->fields.index;
   v10->fields.haved = haved;
   v10->fields.tokenName = tokenName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v10->fields.tokenName,
     (int32_t)tokenName,
     (System_String_o *)dispNo,
@@ -247,7 +247,7 @@ void EventBoardGameTokenItem__SetTokenInfo(
     v7);
   tokenImageId = item->fields.tokenImageId;
   v10->fields.tokenImageId = tokenImageId;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v10->fields.tokenImageId,
     (int32_t)tokenImageId,
     v15,
@@ -283,7 +283,7 @@ void EventBoardGameTokenItem__SetTokenInfo(
       }
     }
 LABEL_13:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
 }
 

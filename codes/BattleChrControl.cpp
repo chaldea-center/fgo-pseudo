@@ -11,17 +11,17 @@ void BattleChrControl__OnAnimEvent(
 {
   UnityEngine_GameObject_o *targetObject; // x0
 
-  if ( (byte_59379C7 & 1) == 0 )
+  if ( (byte_596FB2A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10219/*"OnAnimEvent"*/);
-    byte_59379C7 = 1;
+    sub_2213A60(&StringLiteral_10232/*"OnAnimEvent"*/);
+    byte_596FB2A = 1;
   }
   targetObject = this->fields.targetObject;
   if ( !targetObject )
-    sub_21FFECC(0, ev);
-  UnityEngine_GameObject__SendMessage_83224784(
+    sub_2213CDC(0, ev);
+  UnityEngine_GameObject__SendMessage_83438088(
     targetObject,
-    (System_String_o *)StringLiteral_10219/*"OnAnimEvent"*/,
+    (System_String_o *)StringLiteral_10232/*"OnAnimEvent"*/,
     (Il2CppObject *)ev,
     0);
 }
@@ -36,7 +36,7 @@ void BattleChrControl__setTarget(BattleChrControl_o *this, UnityEngine_GameObjec
   bool v7; // w7
 
   this->fields.targetObject = obj;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetObject,
     (int32_t)obj,
     (System_String_o *)method,

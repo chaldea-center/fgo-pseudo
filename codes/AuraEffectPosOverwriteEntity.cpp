@@ -1,13 +1,13 @@
 void AuraEffectPosOverwriteEntity___ctor(AuraEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593826F & 1) == 0 )
+  if ( (byte_5970417 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593826F = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970417 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *AuraEffectPosOverwriteEntity__CreatePK(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_593826E & 1) == 0 )
+  if ( (byte_5970416 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_593826E = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5970416 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            auraEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,16 +49,12 @@ UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetOffset(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s2
-  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.offsetX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  v3 = (float)this->fields.offsetZ / 1000.0;
-  v4 = *((float *)&v2 + 1);
+  result.fields.z = (float)this->fields.offsetZ / 1000.0;
+  result.fields.y = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
-  result.fields.z = v3;
-  result.fields.y = v4;
   return result;
 }
 
@@ -68,16 +64,12 @@ UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetRotation(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s2
-  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.rotationX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  v3 = (float)this->fields.rotationZ / 1000.0;
-  v4 = *((float *)&v2 + 1);
+  result.fields.z = (float)this->fields.rotationZ / 1000.0;
+  result.fields.y = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
-  result.fields.z = v3;
-  result.fields.y = v4;
   return result;
 }
 
@@ -90,12 +82,12 @@ bool AuraEffectPosOverwriteEntity__IsUseNodePositionOnly(
   int32_t IntValue; // w0
   bool v6; // w8
 
-  if ( (byte_593826D & 1) == 0 )
+  if ( (byte_5970415 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25784/*"useNodePositionOnly"*/);
-    byte_593826D = 1;
+    sub_2213A60(&StringLiteral_25832/*"useNodePositionOnly"*/);
+    byte_5970415 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25784/*"useNodePositionOnly"*/, -1, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25832/*"useNodePositionOnly"*/, -1, 0);
   v6 = IntValue == 1;
   if ( IntValue < 0 )
     return defVal;

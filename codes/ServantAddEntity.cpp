@@ -1,13 +1,13 @@
 void ServantAddEntity___ctor(ServantAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938F1A & 1) == 0 )
+  if ( (byte_59710D8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5938F1A = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_59710D8 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ int32_t ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, const Metho
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_5938F14 & 1) == 0 )
+  if ( (byte_59710D2 & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5938F14 = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_59710D2 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -28,7 +28,7 @@ int32_t ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, const Metho
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v6, 0);
 }
 
 
@@ -38,11 +38,11 @@ System_String_o *ServantAddEntity__GetIdentifyText(ServantAddEntity_o *this, con
   __int64 v4; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5938F16 & 1) == 0 )
+  if ( (byte_59710D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&StringLiteral_17321/*"addIdentifyText"*/);
-    byte_5938F16 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&StringLiteral_17357/*"addIdentifyText"*/);
+    byte_59710D4 = 1;
   }
   result = (System_String_o *)this->fields.script;
   value = 0;
@@ -50,14 +50,14 @@ System_String_o *ServantAddEntity__GetIdentifyText(ServantAddEntity_o *this, con
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_17321/*"addIdentifyText"*/,
+            (Il2CppObject *)StringLiteral_17357/*"addIdentifyText"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     result = (System_String_o *)value;
-    if ( value && value->klass != (Il2CppClass *)qword_594C0B8 )
+    if ( value && value->klass != (Il2CppClass *)qword_5984390 )
     {
-      sub_220024C(value, qword_594C0B8, v4);
+      sub_221405C(value, qword_5984390, v4);
       return 0;
     }
   }
@@ -71,11 +71,11 @@ System_String_o *ServantAddEntity__GetOverwriteServantCoinName(ServantAddEntity_
   __int64 v4; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5938F17 & 1) == 0 )
+  if ( (byte_59710D5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&StringLiteral_23682/*"overwriteServantCoinName"*/);
-    byte_5938F17 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&StringLiteral_23729/*"overwriteServantCoinName"*/);
+    byte_59710D5 = 1;
   }
   result = (System_String_o *)this->fields.script;
   value = 0;
@@ -83,14 +83,14 @@ System_String_o *ServantAddEntity__GetOverwriteServantCoinName(ServantAddEntity_
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_23682/*"overwriteServantCoinName"*/,
+            (Il2CppObject *)StringLiteral_23729/*"overwriteServantCoinName"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     result = (System_String_o *)value;
-    if ( value && value->klass != (Il2CppClass *)qword_594C0B8 )
+    if ( value && value->klass != (Il2CppClass *)qword_5984390 )
     {
-      sub_220024C(value, qword_594C0B8, v4);
+      sub_221405C(value, qword_5984390, v4);
       return 0;
     }
   }
@@ -104,11 +104,11 @@ System_String_o *ServantAddEntity__GetOverwriteServantRecordName(ServantAddEntit
   __int64 v4; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5938F18 & 1) == 0 )
+  if ( (byte_59710D6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&StringLiteral_23685/*"overwriteServantRecordName"*/);
-    byte_5938F18 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&StringLiteral_23732/*"overwriteServantRecordName"*/);
+    byte_59710D6 = 1;
   }
   result = (System_String_o *)this->fields.script;
   value = 0;
@@ -116,14 +116,14 @@ System_String_o *ServantAddEntity__GetOverwriteServantRecordName(ServantAddEntit
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_23685/*"overwriteServantRecordName"*/,
+            (Il2CppObject *)StringLiteral_23732/*"overwriteServantRecordName"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     result = (System_String_o *)value;
-    if ( value && value->klass != (Il2CppClass *)qword_594C0B8 )
+    if ( value && value->klass != (Il2CppClass *)qword_5984390 )
     {
-      sub_220024C(value, qword_594C0B8, v4);
+      sub_221405C(value, qword_5984390, v4);
       return 0;
     }
   }
@@ -137,11 +137,11 @@ System_String_o *ServantAddEntity__GetOverwriteServantRecordRuby(ServantAddEntit
   __int64 v4; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5938F19 & 1) == 0 )
+  if ( (byte_59710D7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&StringLiteral_23686/*"overwriteServantRecordRuby"*/);
-    byte_5938F19 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&StringLiteral_23733/*"overwriteServantRecordRuby"*/);
+    byte_59710D7 = 1;
   }
   result = (System_String_o *)this->fields.script;
   value = 0;
@@ -149,14 +149,14 @@ System_String_o *ServantAddEntity__GetOverwriteServantRecordRuby(ServantAddEntit
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_23686/*"overwriteServantRecordRuby"*/,
+            (Il2CppObject *)StringLiteral_23733/*"overwriteServantRecordRuby"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     result = (System_String_o *)value;
-    if ( value && value->klass != (Il2CppClass *)qword_594C0B8 )
+    if ( value && value->klass != (Il2CppClass *)qword_5984390 )
     {
-      sub_220024C(value, qword_594C0B8, v4);
+      sub_221405C(value, qword_5984390, v4);
       return 0;
     }
   }
@@ -170,11 +170,11 @@ System_String_o *ServantAddEntity__GetOverwriteServantShortName(ServantAddEntity
   __int64 v4; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5938F15 & 1) == 0 )
+  if ( (byte_59710D3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&StringLiteral_23603/*"overWriteServantShortName"*/);
-    byte_5938F15 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&StringLiteral_23650/*"overWriteServantShortName"*/);
+    byte_59710D3 = 1;
   }
   result = (System_String_o *)this->fields.script;
   value = 0;
@@ -182,14 +182,14 @@ System_String_o *ServantAddEntity__GetOverwriteServantShortName(ServantAddEntity
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_23603/*"overWriteServantShortName"*/,
+            (Il2CppObject *)StringLiteral_23650/*"overWriteServantShortName"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     result = (System_String_o *)value;
-    if ( value && value->klass != (Il2CppClass *)qword_594C0B8 )
+    if ( value && value->klass != (Il2CppClass *)qword_5984390 )
     {
-      sub_220024C(value, qword_594C0B8, v4);
+      sub_221405C(value, qword_5984390, v4);
       return 0;
     }
   }
@@ -221,10 +221,10 @@ bool ServantAddEntity__TryGetOverwriteServantRecordNameAndRuby(
 
   OverwriteServantRecordName = ServantAddEntity__GetOverwriteServantRecordName(this, (const MethodInfo *)name);
   *name = OverwriteServantRecordName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)name, (int32_t)OverwriteServantRecordName, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)name, (int32_t)OverwriteServantRecordName, v8, v9, v10, v11, v12, v13);
   OverwriteServantRecordRuby = ServantAddEntity__GetOverwriteServantRecordRuby(this, v14);
   *ruby = OverwriteServantRecordRuby;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ruby,
     (int32_t)OverwriteServantRecordRuby,
     v16,

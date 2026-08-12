@@ -2,10 +2,10 @@ void ConfirmedGrandServantSelectDialog___ctor(ConfirmedGrandServantSelectDialog_
 {
   __int64 v2; // x2
 
-  if ( (byte_59331D5 & 1) == 0 )
+  if ( (byte_596B2DB & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59331D5 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596B2DB = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -37,7 +37,7 @@ void ConfirmedGrandServantSelectDialog__Callback(ConfirmedGrandServantSelectDial
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -65,13 +65,13 @@ void ConfirmedGrandServantSelectDialog__OnEnable(ConfirmedGrandServantSelectDial
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_59331D3 & 1) == 0 )
+  if ( (byte_596B2D9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16225/*"Window/Buttons/CloseButton"*/);
-    byte_59331D3 = 1;
+    sub_2213A60(&StringLiteral_16257/*"Window/Buttons/CloseButton"*/);
+    byte_596B2D9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16225/*"Window/Buttons/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16257/*"Window/Buttons/CloseButton"*/, 0);
 }
 
 
@@ -98,16 +98,16 @@ void ConfirmedGrandServantSelectDialog__Open(
   GrandGraphDetailEntity_o *v22; // x22
   System_String_o *v23; // x23
 
-  if ( (byte_59331D4 & 1) == 0 )
+  if ( (byte_596B2DA & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3874/*"CONFIRMED_GRAND_SERVANT_SELECT_DIALOG_MESSAGE"*/);
-    byte_59331D4 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3879/*"CONFIRMED_GRAND_SERVANT_SELECT_DIALOG_MESSAGE"*/);
+    byte_596B2DA = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (System_String_o *)userServantEntity,
@@ -118,7 +118,7 @@ void ConfirmedGrandServantSelectDialog__Open(
     v7);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v12, v13);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !grandGraphEntity )
     goto LABEL_14;
   if ( !userServantEntity )
@@ -133,10 +133,10 @@ void ConfirmedGrandServantSelectDialog__Open(
   v22 = Entity;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19, v20);
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3874/*"CONFIRMED_GRAND_SERVANT_SELECT_DIALOG_MESSAGE"*/, 0);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3879/*"CONFIRMED_GRAND_SERVANT_SELECT_DIALOG_MESSAGE"*/, 0);
   Master_object = (GrandGraphDetailMaster_o *)UserServantEntity__GetSvtName(userServantEntity, 1, 0);
   if ( !v22
-    || (Master_object = (GrandGraphDetailMaster_o *)System_String__Format_75484576(
+    || (Master_object = (GrandGraphDetailMaster_o *)System_String__Format_75697880(
                                                       v23,
                                                       (Il2CppObject *)Master_object,
                                                       (Il2CppObject *)v22->fields.nameFull,
@@ -146,7 +146,7 @@ void ConfirmedGrandServantSelectDialog__Open(
         (Master_object = (GrandGraphDetailMaster_o *)this->fields.servantFaceIcon) == 0) )
   {
 LABEL_14:
-    sub_21FFECC(Master_object, v15);
+    sub_2213CDC(Master_object, v15);
   }
   GrandServantListServantFaceIcon__Setup((GrandServantListServantFaceIcon_o *)Master_object, userServantEntity, 0, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -170,10 +170,10 @@ void ConfirmedGrandServantSelectDialog__add_callbackFunc(
   ConfirmedGrandServantSelectDialog_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_59331D1 & 1) == 0 )
+  if ( (byte_596B2D7 & 1) == 0 )
   {
-    sub_21FFC50(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo);
-    byte_59331D1 = 1;
+    sub_2213A60(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo);
+    byte_596B2D7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -186,13 +186,13 @@ void ConfirmedGrandServantSelectDialog__add_callbackFunc(
       if ( (ConfirmedGrandServantSelectDialog_CallbackFunc_c *)v8->klass != ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ConfirmedGrandServantSelectDialog_o *)sub_220024C(
+  v13 = (ConfirmedGrandServantSelectDialog_o *)sub_221405C(
                                                  v8,
                                                  ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo,
                                                  v9,
@@ -217,10 +217,10 @@ void ConfirmedGrandServantSelectDialog__remove_callbackFunc(
   ConfirmedGrandServantSelectDialog_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_59331D2 & 1) == 0 )
+  if ( (byte_596B2D8 & 1) == 0 )
   {
-    sub_21FFC50(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo);
-    byte_59331D2 = 1;
+    sub_2213A60(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo);
+    byte_596B2D8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -233,13 +233,13 @@ void ConfirmedGrandServantSelectDialog__remove_callbackFunc(
       if ( (ConfirmedGrandServantSelectDialog_CallbackFunc_c *)v8->klass != ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (ConfirmedGrandServantSelectDialog_o *)sub_220024C(
+  v13 = (ConfirmedGrandServantSelectDialog_o *)sub_221405C(
                                                  v8,
                                                  ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo,
                                                  v9,
@@ -267,7 +267,7 @@ void ConfirmedGrandServantSelectDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -278,12 +278,12 @@ void ConfirmedGrandServantSelectDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -295,9 +295,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FEE8C8;
+  this->fields.invoke_impl = (intptr_t)sub_20017B4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FEE888;
+  this->fields.extra_arg = (intptr_t)&loc_2001774;
 }
 
 
@@ -307,9 +307,9 @@ System_IAsyncResult_o *ConfirmedGrandServantSelectDialog_CallbackFunc__BeginInvo
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -318,7 +318,7 @@ void ConfirmedGrandServantSelectDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

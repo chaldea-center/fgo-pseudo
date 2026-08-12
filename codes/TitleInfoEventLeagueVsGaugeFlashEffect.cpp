@@ -34,7 +34,7 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
   p_endCallBack = (MissionNaviTransitionBoardItem_o *)&this->fields.endCallBack;
   v9 = endCallBack;
   p_endCallBack->klass = 0;
-  sub_21FFBF4(p_endCallBack, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_endCallBack, 0, v2, v3, v4, v5, v6, v7);
   if ( endCallBack )
     ActionExtensions__Call(v9, 0);
 }
@@ -75,11 +75,11 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   int32_t v33; // [xsp+Ch] [xbp-44h] BYREF
 
   v10 = this;
-  if ( (byte_5936F28 & 1) == 0 )
+  if ( (byte_596E7B9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_21FFC50(&StringLiteral_17987/*"bit_vs_gauge_flash_"*/);
-    byte_5936F28 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_2213A60(&StringLiteral_18025/*"bit_vs_gauge_flash_"*/);
+    byte_596E7B9 = 1;
   }
   v11 = 0.5;
   v12 = 0.5;
@@ -105,14 +105,14 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
     goto LABEL_31;
   if ( (v15->max_length & 0xFFFFFFFE) == 0 )
 LABEL_32:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v15->m_Items[1];
   if ( !this )
     goto LABEL_31;
   UIProgressBar__set_value((UIProgressBar_o *)this, v12, 0);
   v33 = joinGroupId;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v33);
-  v17 = System_String__Concat((Il2CppObject *)StringLiteral_17987/*"bit_vs_gauge_flash_"*/, v16, 0);
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v33);
+  v17 = System_String__Concat((Il2CppObject *)StringLiteral_18025/*"bit_vs_gauge_flash_"*/, v16, 0);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
   v21 = v17;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -135,12 +135,12 @@ LABEL_32:
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_82865240((UnityEngine_Animation_o *)this, v21, 0);
+        UnityEngine_Animation__Play_83078544((UnityEngine_Animation_o *)this, v21, 0);
         goto LABEL_30;
       }
     }
 LABEL_31:
-    sub_21FFECC(this, *(_QWORD *)&joinGroupId);
+    sub_2213CDC(this, *(_QWORD *)&joinGroupId);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
@@ -154,10 +154,10 @@ LABEL_27:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_31;
-  SimpleAnimation__Play_78338864((SimpleAnimation_o *)this, v21, 0);
+  SimpleAnimation__Play_78552168((SimpleAnimation_o *)this, v21, 0);
 LABEL_30:
   v10->fields.endCallBack = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v10->fields.endCallBack,
     (int32_t)callback,
     v23,

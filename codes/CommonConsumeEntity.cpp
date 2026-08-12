@@ -1,27 +1,27 @@
 void CommonConsumeEntity___ctor(CommonConsumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593847A & 1) == 0 )
+  if ( (byte_597062A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593847A = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597062A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *CommonConsumeEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_5938476 & 1) == 0 )
+  if ( (byte_5970626 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938476 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5970626 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,27 +44,27 @@ ItemEntity_o *CommonConsumeEntity__GetItemEntity(CommonConsumeEntity_o *this, co
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5938478 & 1) == 0 )
+  if ( (byte_5970628 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938478 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970628 = 1;
   }
   if ( this->fields.type != 1 )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   return (ItemEntity_o *)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                            this->fields.objectId,
-                           (const MethodInfo_3EDD388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                           (const MethodInfo_3F10B30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
 }
 
 
@@ -73,18 +73,18 @@ System_String_o *CommonConsumeEntity__GetName(CommonConsumeEntity_o *this, const
   int32_t type; // w8
   ItemEntity_o *ItemEntity; // x0
 
-  if ( (byte_5938479 & 1) == 0 )
+  if ( (byte_5970629 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2132/*"AP_TXT"*/);
-    byte_5938479 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2133/*"AP_TXT"*/);
+    byte_5970629 = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_2132/*"AP_TXT"*/, 0);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_2133/*"AP_TXT"*/, 0);
   }
   else if ( type == 1 && (ItemEntity = CommonConsumeEntity__GetItemEntity(this, method)) != 0 )
   {
@@ -92,7 +92,7 @@ System_String_o *CommonConsumeEntity__GetName(CommonConsumeEntity_o *this, const
   }
   else
   {
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   }
 }
 
@@ -116,21 +116,21 @@ int32_t CommonConsumeEntity__GetUserHasNum(CommonConsumeEntity_o *this, const Me
   UserItemMaster_o *v8; // x20
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5938477 & 1) == 0 )
+  if ( (byte_5970627 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938477 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970627 = 1;
   }
   entity = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   type = this->fields.type;
   if ( type == 2 )
   {
@@ -142,10 +142,10 @@ int32_t CommonConsumeEntity__GetUserHasNum(CommonConsumeEntity_o *this, const Me
     v8 = (UserItemMaster_o *)MasterData_object;
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5);
-    if ( !byte_5931D52 )
+    if ( !byte_5969EF2 )
     {
-      sub_21FFC50(&NetworkManager_TypeInfo);
-      byte_5931D52 = 1;
+      sub_2213A60(&NetworkManager_TypeInfo);
+      byte_5969EF2 = 1;
     }
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -166,7 +166,7 @@ int32_t CommonConsumeEntity__GetUserHasNum(CommonConsumeEntity_o *this, const Me
       if ( entity )
         return entity->fields.num;
 LABEL_19:
-      sub_21FFECC(Instance, v5);
+      sub_2213CDC(Instance, v5);
     }
   }
   return 0;

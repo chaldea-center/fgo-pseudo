@@ -10,7 +10,7 @@ int32_t DeckSetupResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return data->fields.success == 0;
 }
 

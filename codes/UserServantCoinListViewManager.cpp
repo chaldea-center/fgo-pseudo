@@ -8,17 +8,17 @@ void UserServantCoinListViewManager___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5933B95 & 1) == 0 )
+  if ( (byte_596BCAE & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_TypeInfo);
-    sub_21FFC50(&UserServantCoinListViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_15809/*"UserServantCoinList1"*/);
-    byte_5933B95 = 1;
+    sub_2213A60(&ListViewSort_TypeInfo);
+    sub_2213A60(&UserServantCoinListViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_15839/*"UserServantCoinList1"*/);
+    byte_596BCAE = 1;
   }
-  v1 = (ListViewSort_o *)sub_21FFEBC(ListViewSort_TypeInfo);
-  ListViewSort___ctor_50784632(v1, (System_String_o *)StringLiteral_15809/*"UserServantCoinList1"*/, 27, 1, 0);
+  v1 = (ListViewSort_o *)sub_2213CCC(ListViewSort_TypeInfo);
+  ListViewSort___ctor_50854784(v1, (System_String_o *)StringLiteral_15839/*"UserServantCoinList1"*/, 27, 1, 0);
   UserServantCoinListViewManager_TypeInfo->static_fields->servantSortInfo = v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UserServantCoinListViewManager_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -57,13 +57,13 @@ void UserServantCoinListViewManager__ChangeIconScale(UserServantCoinListViewMana
   __int64 naturalAligment; // x10
   UnityEngine_Object_o *klass; // x22
 
-  if ( (byte_5933B94 & 1) == 0 )
+  if ( (byte_596BCAD & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
-    byte_5933B94 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UserServantCoinListViewItem_TypeInfo);
+    byte_596BCAD = 1;
   }
   scaleType = this->fields.scaleType;
   if ( scaleType < 2 )
@@ -89,7 +89,7 @@ LABEL_9:
     v11->fields.seed = smallSizeSeed;
     p_seed = &v11->fields.seed;
     *((_DWORD *)p_seed + 79) = v12;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_seed, (int32_t)smallSizeSeed, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_seed, (int32_t)smallSizeSeed, v2, v3, v4, v5, v6, v7);
   }
   sort = this->fields.sort;
   if ( !sort
@@ -98,7 +98,7 @@ LABEL_9:
         (sort = (ListViewSort_o *)this->fields.itemList) == 0) )
   {
 LABEL_23:
-    sub_21FFECC(sort, method);
+    sub_2213CDC(sort, method);
   }
   v16 = 0;
   while ( v16 < *(_DWORD *)&sort->fields.FILTER_DEFAULT_VALUE )
@@ -106,7 +106,7 @@ LABEL_23:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)sort,
              v16,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( Item )
     {
       v18 = (ListViewItem_o *)Item;
@@ -131,7 +131,7 @@ LABEL_23:
     if ( !sort )
       goto LABEL_23;
   }
-  UserServantCoinListViewManager__SetMode_40604872(this, 2, v15);
+  UserServantCoinListViewManager__SetMode_40612960(this, 2, v15);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
 }
 
@@ -186,19 +186,19 @@ void UserServantCoinListViewManager__CreateList(UserServantCoinListViewManager_o
   struct ListViewItemSeed_o *normalSizeSeed; // x1
   const MethodInfo *v49; // x1
 
-  if ( (byte_5933B8A & 1) == 0 )
+  if ( (byte_596BCA3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Item__);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__getEntityList__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
-    sub_21FFC50(&UserServantCoinListViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_15429/*"USER_SERVANT_COIN_LIST_EMPTY"*/);
-    byte_5933B8A = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Item__);
+    sub_2213A60(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__getEntityList__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UserServantCoinListViewItem_TypeInfo);
+    sub_2213A60(&UserServantCoinListViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_15459/*"USER_SERVANT_COIN_LIST_EMPTY"*/);
+    byte_596BCA3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -207,7 +207,7 @@ void UserServantCoinListViewManager__CreateList(UserServantCoinListViewManager_o
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5, v6);
-  gameObject = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  gameObject = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !gameObject )
     goto LABEL_35;
   v7 = (System_Collections_ObjectModel_Collection_T__o *)*((_QWORD *)gameObject + 5);
@@ -215,7 +215,7 @@ void UserServantCoinListViewManager__CreateList(UserServantCoinListViewManager_o
     goto LABEL_35;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             *((System_Collections_ObjectModel_Collection_T__o **)gameObject + 5),
-            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Count__);
+            (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -226,8 +226,8 @@ void UserServantCoinListViewManager__CreateList(UserServantCoinListViewManager_o
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                v7,
                v12,
-               (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Item__);
-      v15 = (UserServantCoinListViewItem_o *)sub_21FFEBC(UserServantCoinListViewItem_TypeInfo);
+               (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_UserSvtCoinEntity__get_Item__);
+      v15 = (UserServantCoinListViewItem_o *)sub_2213CCC(UserServantCoinListViewItem_TypeInfo);
       UserServantCoinListViewItem___ctor(v15, v12, (UserSvtCoinEntity_o *)Item, v16);
       if ( !itemList )
         break;
@@ -242,26 +242,26 @@ void UserServantCoinListViewManager__CreateList(UserServantCoinListViewManager_o
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v15,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
         v26 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v26[4] = (Il2CppClass *)v15;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v15, v17, v18, v19, v20, v21, v22);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v15, v17, v18, v19, v20, v21, v22);
       }
       if ( v11 == ++v12 )
         goto LABEL_16;
     }
 LABEL_35:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
 LABEL_16:
   emptyMessageLabel = this->fields.emptyMessageLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15429/*"USER_SERVANT_COIN_LIST_EMPTY"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_15459/*"USER_SERVANT_COIN_LIST_EMPTY"*/, 0);
   if ( !emptyMessageLabel )
     goto LABEL_35;
   UILabel__set_text(emptyMessageLabel, (System_String_o *)gameObject, 0);
@@ -275,7 +275,7 @@ LABEL_16:
   v37 = *p_servantSortInfo;
   this->fields.sort = *p_servantSortInfo;
   p_sort = &this->fields.sort;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sort, (int32_t)v37, v29, v30, v31, v32, v33, v34);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.sort, (int32_t)v37, v29, v30, v31, v32, v33, v34);
   gameObject = this->fields.sort;
   if ( !gameObject )
     goto LABEL_35;
@@ -303,7 +303,7 @@ LABEL_16:
     normalSizeSeed = this->fields.extremelySmallSizeSeed;
 LABEL_33:
     this->fields.seed = normalSizeSeed;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.seed,
       (int32_t)normalSizeSeed,
       v39,
@@ -326,10 +326,10 @@ void UserServantCoinListViewManager__DeleteContinueData(const MethodInfo *method
   UserServantCoinListViewManager_c *v3; // x0
   ListViewSort_o *servantSortInfo; // x0
 
-  if ( (byte_5933B87 & 1) == 0 )
+  if ( (byte_596BCA0 & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_TypeInfo);
-    byte_5933B87 = 1;
+    sub_2213A60(&UserServantCoinListViewManager_TypeInfo);
+    byte_596BCA0 = 1;
   }
   v3 = UserServantCoinListViewManager_TypeInfo;
   if ( !*(&UserServantCoinListViewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -339,7 +339,7 @@ void UserServantCoinListViewManager__DeleteContinueData(const MethodInfo *method
   }
   servantSortInfo = v3->static_fields->servantSortInfo;
   if ( !servantSortInfo )
-    sub_21FFECC(0, v1);
+    sub_2213CDC(0, v1);
   ListViewSort__DeleteContinueData(servantSortInfo, 0);
 }
 
@@ -353,10 +353,10 @@ void UserServantCoinListViewManager__DestroyList(UserServantCoinListViewManager_
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_5933B8C & 1) == 0 )
+  if ( (byte_596BCA5 & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_TypeInfo);
-    byte_5933B8C = 1;
+    sub_2213A60(&UserServantCoinListViewManager_TypeInfo);
+    byte_596BCA5 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   v5 = UserServantCoinListViewManager_TypeInfo;
@@ -373,7 +373,7 @@ void UserServantCoinListViewManager__DestroyList(UserServantCoinListViewManager_
       j_il2cpp_runtime_class_init_0(v5, v3, v4);
       servantSortInfo = UserServantCoinListViewManager_TypeInfo->static_fields->servantSortInfo;
       if ( !servantSortInfo )
-        sub_21FFECC(v7, v8);
+        sub_2213CDC(v7, v8);
     }
     ListViewSort__Save(servantSortInfo, 0);
   }
@@ -391,8 +391,8 @@ void UserServantCoinListViewManager__EndSelectSortKind(
 
   sortSelectMenu = this->fields.sortSelectMenu;
   if ( !sortSelectMenu )
-    sub_21FFECC(0, isDecide);
-  UserServantCoinSortSelectMenu__Close_40617884(sortSelectMenu, 0, method);
+    sub_2213CDC(0, isDecide);
+  UserServantCoinSortSelectMenu__Close_40625972(sortSelectMenu, 0, method);
   UserServantCoinListViewManager__SetFilterButtonImage(this, v6);
   if ( isDecide )
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
@@ -407,7 +407,7 @@ System_String_o *UserServantCoinListViewManager__GetScaleButtonSpriteName(
 
   sort = this->fields.sort;
   if ( !sort )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return ListViewSort__GetScaleKindSpriteName(sort, this->fields.scaleType, 0);
 }
 
@@ -419,10 +419,10 @@ void UserServantCoinListViewManager__InitLoad(const MethodInfo *method)
   UserServantCoinListViewManager_c *v3; // x0
   ListViewSort_o *servantSortInfo; // x0
 
-  if ( (byte_5933B88 & 1) == 0 )
+  if ( (byte_596BCA1 & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_TypeInfo);
-    byte_5933B88 = 1;
+    sub_2213A60(&UserServantCoinListViewManager_TypeInfo);
+    byte_596BCA1 = 1;
   }
   v3 = UserServantCoinListViewManager_TypeInfo;
   if ( !*(&UserServantCoinListViewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -432,7 +432,7 @@ void UserServantCoinListViewManager__InitLoad(const MethodInfo *method)
   }
   servantSortInfo = v3->static_fields->servantSortInfo;
   if ( !servantSortInfo )
-    sub_21FFECC(0, v1);
+    sub_2213CDC(0, v1);
   ListViewSort__InitLoad(servantSortInfo, 0);
 }
 
@@ -470,16 +470,16 @@ void UserServantCoinListViewManager__OnClickSelectListView(
   const MethodInfo *v12; // x2
 
   v5 = this;
-  if ( (byte_5933B90 & 1) == 0 )
+  if ( (byte_596BCA9 & 1) == 0 )
   {
-    this = (UserServantCoinListViewManager_o *)sub_21FFC50(&UserServantCoinListViewItem_TypeInfo);
-    byte_5933B90 = 1;
+    this = (UserServantCoinListViewManager_o *)sub_2213A60(&UserServantCoinListViewItem_TypeInfo);
+    byte_596BCA9 = 1;
   }
   callbackFunc = v5->fields.callbackFunc;
   if ( callbackFunc )
   {
     if ( !obj || (this = (UserServantCoinListViewManager_o *)obj->fields.linkItem) == 0 )
-      sub_21FFECC(this, obj);
+      sub_2213CDC(this, obj);
     naturalAligment = UserServantCoinListViewItem_TypeInfo->_2.naturalAligment;
     if ( this->klass->_2.naturalAligment >= (unsigned int)naturalAligment
       && (UserServantCoinListViewItem_c *)this->klass->_2.typeHierarchy[naturalAligment - 1] == UserServantCoinListViewItem_TypeInfo )
@@ -497,7 +497,7 @@ void UserServantCoinListViewManager__OnClickSelectListView(
     }
     else
     {
-      v10 = (UserServantCoinListViewManager_o *)sub_220024C(this, UserServantCoinListViewItem_TypeInfo, method, v3);
+      v10 = (UserServantCoinListViewManager_o *)sub_221405C(this, UserServantCoinListViewItem_TypeInfo, method, v3);
       UserServantCoinListViewManager__OnLongPushListView(v10, v11, v12);
     }
   }
@@ -514,21 +514,21 @@ void UserServantCoinListViewManager__OnClickSortAscendingOrder(
   __int64 v6; // x1
   struct ListViewSort_o *sort; // x8
 
-  if ( (byte_5933B92 & 1) == 0 )
+  if ( (byte_596BCAB & 1) == 0 )
   {
-    sub_21FFC50(&Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__);
-    byte_5933B92 = 1;
+    sub_2213A60(&Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__);
+    byte_596BCAB = 1;
   }
   if ( this->fields.isInput )
   {
     v3 = Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__;
     if ( (*((_BYTE *)Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_UserServantCoinListViewManager_OnClickSortAscendingOrder__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     sort = this->fields.sort;
     if ( !sort )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     sort->fields.isAscendingOrder ^= 1u;
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   }
@@ -547,30 +547,30 @@ void UserServantCoinListViewManager__OnClickSortKind(UserServantCoinListViewMana
   __int64 v10; // x1
   const MethodInfo *v11; // x4
 
-  if ( (byte_5933B91 & 1) == 0 )
+  if ( (byte_596BCAA & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinSortSelectMenu_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_UserServantCoinListViewManager_EndSelectSortKind__);
-    sub_21FFC50(&Method_UserServantCoinListViewManager_OnClickSortKind__);
-    byte_5933B91 = 1;
+    sub_2213A60(&UserServantCoinSortSelectMenu_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_UserServantCoinListViewManager_EndSelectSortKind__);
+    sub_2213A60(&Method_UserServantCoinListViewManager_OnClickSortKind__);
+    byte_596BCAA = 1;
   }
   if ( this->fields.isInput )
   {
     v3 = Method_UserServantCoinListViewManager_OnClickSortKind__;
     if ( (*((_BYTE *)Method_UserServantCoinListViewManager_OnClickSortKind__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_UserServantCoinListViewManager_OnClickSortKind__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_UserServantCoinListViewManager_OnClickSortKind__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     sortSelectMenu = this->fields.sortSelectMenu;
     sort = this->fields.sort;
-    v7 = (UserServantCoinSortSelectMenu_CallbackFunc_o *)sub_21FFEBC(UserServantCoinSortSelectMenu_CallbackFunc_TypeInfo);
+    v7 = (UserServantCoinSortSelectMenu_CallbackFunc_o *)sub_2213CCC(UserServantCoinSortSelectMenu_CallbackFunc_TypeInfo);
     UserServantCoinSortSelectMenu_CallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
       Method_UserServantCoinListViewManager_EndSelectSortKind__,
       v8);
     if ( !sortSelectMenu )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     UserServantCoinSortSelectMenu__Open(sortSelectMenu, 0, sort, v7, v11);
   }
 }
@@ -593,10 +593,10 @@ void UserServantCoinListViewManager__OnMoveEnd(UserServantCoinListViewManager_o 
   struct UIScrollView_o *v15; // x0
   System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_5933B8F & 1) == 0 )
+  if ( (byte_596BCA8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B8F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BCA8 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v5 = __OFSUB__(callbackCount, 1);
@@ -613,7 +613,7 @@ void UserServantCoinListViewManager__OnMoveEnd(UserServantCoinListViewManager_o 
       {
         v15 = this->fields.scrollView;
         if ( !v15 )
-          sub_21FFECC(0, v8);
+          sub_2213CDC(0, v8);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v15->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v15,
           1,
@@ -621,7 +621,7 @@ void UserServantCoinListViewManager__OnMoveEnd(UserServantCoinListViewManager_o 
       }
       callbackFunc2 = this->fields.callbackFunc2;
       this->fields.callbackFunc2 = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc2, 0, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc2, 0, v9, v10, v11, v12, v13, v14);
       ActionExtensions__Call(callbackFunc2, 0);
     }
   }
@@ -638,7 +638,7 @@ void UserServantCoinListViewManager__RequestListObject(
   System_Collections_Generic_List_object__o *ObjectList; // x0
   __int64 v8; // x1
   int32_t size; // w8
-  const MethodInfo_4450604 *v10; // x1
+  const MethodInfo_448473C *v10; // x1
   Il2CppObject *current; // x21
   System_Action_o *v12; // x22
   __int64 v13; // x0
@@ -646,37 +646,37 @@ void UserServantCoinListViewManager__RequestListObject(
   const MethodInfo *v15; // x3
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_5933B8E & 1) == 0 )
+  if ( (byte_596BCA7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__get_Count__);
-    sub_21FFC50(&Method_UserServantCoinListViewManager_OnMoveEnd__);
-    sub_21FFC50(&StringLiteral_10331/*"OnMoveEnd"*/);
-    byte_5933B8E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__get_Count__);
+    sub_2213A60(&Method_UserServantCoinListViewManager_OnMoveEnd__);
+    sub_2213A60(&StringLiteral_10344/*"OnMoveEnd"*/);
+    byte_596BCA7 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   ObjectList = (System_Collections_Generic_List_object__o *)UserServantCoinListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_21FFECC(0, v8);
+    sub_2213CDC(0, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10331/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10344/*"OnMoveEnd"*/,
       delay,
       0);
   }
   else
   {
-    v10 = (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserServantCoinListViewObject__GetEnumerator__;
+    v10 = (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserServantCoinListViewObject__GetEnumerator__;
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v16,
@@ -684,18 +684,18 @@ void UserServantCoinListViewManager__RequestListObject(
       v10);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v16,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__MoveNext__) )
     {
       current = v16.fields._current;
-      v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v12, (Il2CppObject *)this, Method_UserServantCoinListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_21FFECC(v13, v14);
-      UserServantCoinListViewObject__Init_40604720((UserServantCoinListViewObject_o *)current, mode, v12, delay, v15);
+        sub_2213CDC(v13, v14);
+      UserServantCoinListViewObject__Init_40612808((UserServantCoinListViewObject_o *)current, mode, v12, delay, v15);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v16,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UserServantCoinListViewObject__Dispose__);
   }
 }
 
@@ -709,13 +709,13 @@ void UserServantCoinListViewManager__SetFilterButtonImage(
   System_String_o **v5; // x20
   UnityEngine_Color_o v6; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_5933B8B & 1) == 0 )
+  if ( (byte_596BCA4 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18164/*"btn_bg_05"*/);
-    sub_21FFC50(&StringLiteral_18165/*"btn_bg_06"*/);
-    sub_21FFC50(&StringLiteral_449/*"#FE4545"*/);
-    sub_21FFC50(&StringLiteral_429/*"#000000"*/);
-    byte_5933B8B = 1;
+    sub_2213A60(&StringLiteral_18202/*"btn_bg_05"*/);
+    sub_2213A60(&StringLiteral_18203/*"btn_bg_06"*/);
+    sub_2213A60(&StringLiteral_449/*"#FE4545"*/);
+    sub_2213A60(&StringLiteral_429/*"#000000"*/);
+    byte_596BCA4 = 1;
   }
   sort = this->fields.sort;
   *(_QWORD *)&v6.fields.r = 0;
@@ -725,14 +725,14 @@ void UserServantCoinListViewManager__SetFilterButtonImage(
   sort = (ListViewSort_o *)ListViewSort__CheckFilterDefaultAll(sort, -1, 0);
   if ( !this->fields.filterSprite )
     goto LABEL_10;
-  v4 = (System_String_o **)&StringLiteral_18164/*"btn_bg_05"*/;
+  v4 = (System_String_o **)&StringLiteral_18202/*"btn_bg_05"*/;
   if ( ((unsigned __int8)sort & 1) != 0 )
   {
     v5 = (System_String_o **)&StringLiteral_429/*"#000000"*/;
   }
   else
   {
-    v4 = (System_String_o **)&StringLiteral_18165/*"btn_bg_06"*/;
+    v4 = (System_String_o **)&StringLiteral_18203/*"btn_bg_06"*/;
     v5 = (System_String_o **)&StringLiteral_449/*"#FE4545"*/;
   }
   UISprite__set_spriteName(this->fields.filterSprite, *v4, 0);
@@ -742,7 +742,7 @@ void UserServantCoinListViewManager__SetFilterButtonImage(
   sort = (ListViewSort_o *)this->fields.sortKindLabel;
   if ( !sort )
 LABEL_10:
-    sub_21FFECC(sort, method);
+    sub_2213CDC(sort, method);
   UILabel__set_effectColor((UILabel_o *)sort, v6, 0);
 }
 
@@ -760,7 +760,7 @@ void UserServantCoinListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (System_String_o *)callback,
@@ -769,11 +769,11 @@ void UserServantCoinListViewManager__SetMode(
     v5,
     v6,
     v7);
-  UserServantCoinListViewManager__SetMode_40604872(this, mode, v10);
+  UserServantCoinListViewManager__SetMode_40612960(this, mode, v10);
 }
 
 
-void UserServantCoinListViewManager__SetMode_40604872(
+void UserServantCoinListViewManager__SetMode_40612960(
         UserServantCoinListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -798,10 +798,10 @@ void UserServantCoinListViewManager__SetObjectItem(
   ListViewObject_o *v7; // x0
   int32_t v8; // w1
 
-  if ( (byte_5933B8D & 1) == 0 )
+  if ( (byte_596BCA6 & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewObject_TypeInfo);
-    byte_5933B8D = 1;
+    sub_2213A60(&UserServantCoinListViewObject_TypeInfo);
+    byte_596BCA6 = 1;
   }
   if ( obj
     && (naturalAligment = UserServantCoinListViewObject_TypeInfo->_2.naturalAligment,
@@ -824,13 +824,13 @@ void UserServantCoinListViewManager__SetObjectItem(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_21FFECC(v7, obj);
+    sub_2213CDC(v7, obj);
   }
   if ( !v7 )
     goto LABEL_15;
   v8 = 3;
 LABEL_14:
-  UserServantCoinListViewObject__Init_40604720((UserServantCoinListViewObject_o *)v7, v8, 0, 0.0, method);
+  UserServantCoinListViewObject__Init_40612808((UserServantCoinListViewObject_o *)v7, v8, 0, 0.0, method);
 }
 
 
@@ -854,16 +854,16 @@ void UserServantCoinListViewManager__SetSortButtonImage(
   System_String_o **v16; // x8
   System_String_o **v17; // x8
 
-  if ( (byte_5933B93 & 1) == 0 )
+  if ( (byte_596BCAC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_18253/*"btn_sort_up"*/);
-    sub_21FFC50(&StringLiteral_18357/*"btn_txt_up"*/);
-    sub_21FFC50(&StringLiteral_18306/*"btn_txt_new"*/);
-    sub_21FFC50(&StringLiteral_18296/*"btn_txt_down"*/);
-    sub_21FFC50(&StringLiteral_18314/*"btn_txt_old"*/);
-    sub_21FFC50(&StringLiteral_18250/*"btn_sort_down"*/);
-    byte_5933B93 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_18291/*"btn_sort_up"*/);
+    sub_2213A60(&StringLiteral_18395/*"btn_txt_up"*/);
+    sub_2213A60(&StringLiteral_18344/*"btn_txt_new"*/);
+    sub_2213A60(&StringLiteral_18334/*"btn_txt_down"*/);
+    sub_2213A60(&StringLiteral_18352/*"btn_txt_old"*/);
+    sub_2213A60(&StringLiteral_18288/*"btn_sort_down"*/);
+    byte_596BCAC = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -894,7 +894,7 @@ void UserServantCoinListViewManager__SetSortButtonImage(
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v12 = (System_String_o **)(v10->fields.isAscendingOrder ? &StringLiteral_18314/*"btn_txt_old"*/ : &StringLiteral_18306/*"btn_txt_new"*/);
+          v12 = (System_String_o **)(v10->fields.isAscendingOrder ? &StringLiteral_18352/*"btn_txt_old"*/ : &StringLiteral_18344/*"btn_txt_new"*/);
           UISprite__set_spriteName((UISprite_o *)sort, *v12, 0);
           v13 = this->fields.sort;
           if ( v13 )
@@ -902,8 +902,8 @@ void UserServantCoinListViewManager__SetSortButtonImage(
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v14 = (System_String_o **)&StringLiteral_18250/*"btn_sort_down"*/;
-              v15 = (System_String_o **)&StringLiteral_18253/*"btn_sort_up"*/;
+              v14 = (System_String_o **)&StringLiteral_18288/*"btn_sort_down"*/;
+              v15 = (System_String_o **)&StringLiteral_18291/*"btn_sort_up"*/;
 LABEL_30:
               if ( v13->fields.isAscendingOrder )
                 v17 = v14;
@@ -920,7 +920,7 @@ LABEL_30:
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v16 = (System_String_o **)(v10->fields.isAscendingOrder ? &StringLiteral_18357/*"btn_txt_up"*/ : &StringLiteral_18296/*"btn_txt_down"*/);
+          v16 = (System_String_o **)(v10->fields.isAscendingOrder ? &StringLiteral_18395/*"btn_txt_up"*/ : &StringLiteral_18334/*"btn_txt_down"*/);
           UISprite__set_spriteName((UISprite_o *)sort, *v16, 0);
           v13 = this->fields.sort;
           if ( v13 )
@@ -928,8 +928,8 @@ LABEL_30:
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v14 = (System_String_o **)&StringLiteral_18253/*"btn_sort_up"*/;
-              v15 = (System_String_o **)&StringLiteral_18250/*"btn_sort_down"*/;
+              v14 = (System_String_o **)&StringLiteral_18291/*"btn_sort_up"*/;
+              v15 = (System_String_o **)&StringLiteral_18288/*"btn_sort_down"*/;
               goto LABEL_30;
             }
           }
@@ -937,7 +937,7 @@ LABEL_30:
       }
     }
 LABEL_34:
-    sub_21FFECC(sort, v5);
+    sub_2213CDC(sort, v5);
   }
 }
 
@@ -957,10 +957,10 @@ void UserServantCoinListViewManager__add_callbackFunc(
   UserServantCoinListViewManager_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5933B83 & 1) == 0 )
+  if ( (byte_596BC9C & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_CallbackFunc_TypeInfo);
-    byte_5933B83 = 1;
+    sub_2213A60(&UserServantCoinListViewManager_CallbackFunc_TypeInfo);
+    byte_596BC9C = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -971,13 +971,13 @@ void UserServantCoinListViewManager__add_callbackFunc(
       if ( (UserServantCoinListViewManager_CallbackFunc_c *)v6->klass != UserServantCoinListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserServantCoinListViewManager_o *)sub_220024C(
+  v11 = (UserServantCoinListViewManager_o *)sub_221405C(
                                               v6,
                                               UserServantCoinListViewManager_CallbackFunc_TypeInfo,
                                               v7,
@@ -1001,10 +1001,10 @@ void UserServantCoinListViewManager__add_callbackFunc2(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5933B85 & 1) == 0 )
+  if ( (byte_596BC9E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5933B85 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596BC9E = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   while ( 1 )
@@ -1015,13 +1015,13 @@ void UserServantCoinListViewManager__add_callbackFunc2(
       if ( (System_Action_c *)v6->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc2, v6, callbackFunc2);
+    v9 = sub_224B48C(&this->fields.callbackFunc2, v6, callbackFunc2);
     v10 = v9 == (_QWORD)callbackFunc2;
     callbackFunc2 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserServantCoinListViewManager_o *)sub_220024C(v6, System_Action_TypeInfo, v7, v8);
+  v11 = (UserServantCoinListViewManager_o *)sub_221405C(v6, System_Action_TypeInfo, v7, v8);
   UserServantCoinListViewManager__remove_callbackFunc2(v11, v12, v13);
 }
 
@@ -1053,37 +1053,37 @@ System_Collections_Generic_List_UserServantCoinListViewObject__o *UserServantCoi
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5933B89 & 1) == 0 )
+  if ( (byte_596BCA2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserServantCoinListViewObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_UserServantCoinListViewObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B89 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantCoinListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserServantCoinListViewObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_UserServantCoinListViewObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BCA2 = 1;
   }
   memset(&v25, 0, sizeof(v25));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UserServantCoinListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_UserServantCoinListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UserServantCoinListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UserServantCoinListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v25 = v24;
   v24.fields._list = 0;
   *(_QWORD *)&v24.fields._index = &v25;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v25,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v25.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1092,10 +1092,10 @@ System_Collections_Generic_List_UserServantCoinListViewObject__o *UserServantCoi
     if ( !v9 )
     {
       if ( !current )
-        sub_21FFECC(v9, v10);
+        sub_2213CDC(v9, v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UserServantCoinListViewObject___);
       v18 = Component_object;
       if ( !v3
         || (items = v3->fields._items,
@@ -1103,7 +1103,7 @@ System_Collections_Generic_List_UserServantCoinListViewObject__o *UserServantCoi
             ++v3->fields._version,
             !items) )
       {
-        sub_21FFECC(Component_object, Component_object);
+        sub_2213CDC(Component_object, Component_object);
       }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -1111,20 +1111,20 @@ System_Collections_Generic_List_UserServantCoinListViewObject__o *UserServantCoi
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
         v22 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v22[4] = (Il2CppClass *)v18;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v25,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_UserServantCoinListViewObject__o *)v3;
 }
 
@@ -1144,10 +1144,10 @@ void UserServantCoinListViewManager__remove_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5933B84 & 1) == 0 )
+  if ( (byte_596BC9D & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_CallbackFunc_TypeInfo);
-    byte_5933B84 = 1;
+    sub_2213A60(&UserServantCoinListViewManager_CallbackFunc_TypeInfo);
+    byte_596BC9D = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -1158,13 +1158,13 @@ void UserServantCoinListViewManager__remove_callbackFunc(
       if ( (UserServantCoinListViewManager_CallbackFunc_c *)v6->klass != UserServantCoinListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserServantCoinListViewManager_o *)sub_220024C(
+  v11 = (UserServantCoinListViewManager_o *)sub_221405C(
                                               v6,
                                               UserServantCoinListViewManager_CallbackFunc_TypeInfo,
                                               v7,
@@ -1186,10 +1186,10 @@ void UserServantCoinListViewManager__remove_callbackFunc2(
   bool v10; // zf
   const MethodInfo *v11; // x0
 
-  if ( (byte_5933B86 & 1) == 0 )
+  if ( (byte_596BC9F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5933B86 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596BC9F = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   while ( 1 )
@@ -1200,13 +1200,13 @@ void UserServantCoinListViewManager__remove_callbackFunc2(
       if ( (System_Action_c *)v6->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc2, v6, callbackFunc2);
+    v9 = sub_224B48C(&this->fields.callbackFunc2, v6, callbackFunc2);
     v10 = v9 == (_QWORD)callbackFunc2;
     callbackFunc2 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (const MethodInfo *)sub_220024C(v6, System_Action_TypeInfo, v7, v8);
+  v11 = (const MethodInfo *)sub_221405C(v6, System_Action_TypeInfo, v7, v8);
   UserServantCoinListViewManager__DeleteContinueData(v11);
 }
 
@@ -1230,7 +1230,7 @@ void UserServantCoinListViewManager_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1241,12 +1241,12 @@ void UserServantCoinListViewManager_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1258,9 +1258,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF073C;
+  this->fields.invoke_impl = (intptr_t)sub_20036B4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FF06E4;
+  this->fields.extra_arg = (intptr_t)&loc_200365C;
 }
 
 
@@ -1278,15 +1278,15 @@ System_IAsyncResult_o *UserServantCoinListViewManager_CallbackFunc__BeginInvoke(
 
   v12 = kind;
   v11 = itemId;
-  if ( (byte_5933B96 & 1) == 0 )
+  if ( (byte_596BCAF & 1) == 0 )
   {
-    sub_21FFC50(&UserServantCoinListViewManager_ResultKind_TypeInfo);
-    byte_5933B96 = 1;
+    sub_2213A60(&UserServantCoinListViewManager_ResultKind_TypeInfo);
+    byte_596BCAF = 1;
   }
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(UserServantCoinListViewManager_ResultKind_TypeInfo, &v12);
-  v10[1] = j_il2cpp_value_box_0(qword_594C070, &v11);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v10, callback, object);
+  v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
+  return sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -1295,7 +1295,7 @@ void UserServantCoinListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

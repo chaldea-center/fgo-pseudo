@@ -10,15 +10,15 @@ void CharaGraphSortOwnerGrandEquipRewardUp___ctor(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5933201 & 1) == 0 )
+  if ( (byte_596B308 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
-    byte_5933201 = 1;
+    sub_2213A60(&CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
+    byte_596B308 = 1;
   }
-  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_21FFEBC(CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
+  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_2213CCC(CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
   CharaGraphSortManageUnitServantEquip___ctor(v3, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
@@ -43,12 +43,12 @@ System_String_o *CharaGraphSortOwnerGrandEquipRewardUp__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandEquipRewardUp_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_5933200 & 1) == 0 )
+  if ( (byte_596B307 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4556/*"CharaGraphSort_GrandEquip_Reward_Up"*/);
-    byte_5933200 = 1;
+    sub_2213A60(&StringLiteral_4564/*"CharaGraphSort_GrandEquip_Reward_Up"*/);
+    byte_596B307 = 1;
   }
-  return (System_String_o *)StringLiteral_4556/*"CharaGraphSort_GrandEquip_Reward_Up"*/;
+  return (System_String_o *)StringLiteral_4564/*"CharaGraphSort_GrandEquip_Reward_Up"*/;
 }
 
 
@@ -64,7 +64,7 @@ void CharaGraphSortOwnerGrandEquipRewardUp__set_ServantEquipSortManageUnit(
   bool v7; // w7
 
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

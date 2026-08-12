@@ -24,17 +24,17 @@ void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconCompon
   UnityEngine_GameObject_o *locked; // x19
   bool v12; // w1
 
-  if ( (byte_593870A & 1) == 0 )
+  if ( (byte_5970A65 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_AssistMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593870A = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_AssistMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A65 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_AssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_AssistMaster___);
   if ( !Master_object )
     goto LABEL_19;
   CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0);
@@ -42,7 +42,7 @@ void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconCompon
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_AssistMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_AssistMaster___);
     if ( Master_object )
     {
       CurrentEntity = AssistMaster__GetMinPriorityEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0);
@@ -51,7 +51,7 @@ void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconCompon
       goto LABEL_11;
     }
 LABEL_19:
-    sub_21FFECC(Master_object, v4);
+    sub_2213CDC(Master_object, v4);
   }
 LABEL_11:
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;

@@ -20,7 +20,7 @@ void EventPointGaugeEffectAction__OnPlayGaugeBarAnime(EventPointGaugeEffectActio
   p_gaugeStartAction = (MissionNaviTransitionBoardItem_o *)&this->fields.gaugeStartAction;
   v9 = gaugeStartAction;
   p_gaugeStartAction->klass = 0;
-  sub_21FFBF4(p_gaugeStartAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_gaugeStartAction, 0, v2, v3, v4, v5, v6, v7);
   if ( gaugeStartAction )
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
 }
@@ -38,7 +38,7 @@ void EventPointGaugeEffectAction__Setup(
   bool v7; // w7
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.gaugeStartAction,
     (int32_t)gaugeStartAct,
     (System_String_o *)method,

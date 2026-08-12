@@ -12,7 +12,7 @@ void WrapBattleSimpleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.animation = simpleAnim;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)simpleAnim, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)simpleAnim, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -67,19 +67,19 @@ WrapBattleBaseAnimation_SimpleData_o *WrapBattleSimpleAnimation__GetPlayingSimpl
   __int64 v47; // x0
   __int64 v49; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_593C1B7 & 1) == 0 )
+  if ( (byte_597430F & 1) == 0 )
   {
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
-    sub_21FFC50(&SimpleAnimation_State_TypeInfo);
-    byte_593C1B7 = 1;
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&WrapBattleBaseAnimation_SimpleData_TypeInfo);
+    sub_2213A60(&SimpleAnimation_State_TypeInfo);
+    byte_597430F = 1;
   }
   animation = this->fields.animation;
   if ( !animation || (animation = (SimpleAnimation_o *)SimpleAnimation__GetStates(animation, 0)) == 0 )
-    sub_21FFECC(animation, method);
+    sub_2213CDC(animation, method);
   klass = animation->klass;
   v5 = animation;
   v6 = *(unsigned __int16 *)&animation->klass->_2.rank;
@@ -98,14 +98,14 @@ WrapBattleBaseAnimation_SimpleData_o *WrapBattleSimpleAnimation__GetPlayingSimpl
   else
   {
 LABEL_9:
-    v8 = sub_2237E2C(animation, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+    v8 = sub_224BC3C(animation, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
   }
   v9 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v8)(v5, *(_QWORD *)(v8 + 8));
   v49 = v9;
   do
   {
     if ( !v49 )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     v11 = *(_QWORD *)v49;
     v12 = *(unsigned __int16 *)(*(_QWORD *)v49 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v49 + 302LL) )
@@ -123,7 +123,7 @@ LABEL_9:
     else
     {
 LABEL_17:
-      v14 = sub_2237E2C(v49, System_Collections_IEnumerator_TypeInfo, 0);
+      v14 = sub_224BC3C(v49, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v14)(v49, *(_QWORD *)(v14 + 8)) & 1) == 0 )
     {
@@ -147,12 +147,12 @@ LABEL_17:
     else
     {
 LABEL_24:
-      v18 = sub_2237E2C(v49, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+      v18 = sub_224BC3C(v49, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
     }
     v19 = (*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v49, *(_QWORD *)(v18 + 8));
     v21 = v19;
     if ( !v19 )
-      sub_21FFECC(0, v20);
+      sub_2213CDC(0, v20);
     v22 = *(_QWORD *)v19;
     v23 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
@@ -170,7 +170,7 @@ LABEL_24:
     else
     {
 LABEL_31:
-      v25 = sub_2237E2C(v19, SimpleAnimation_State_TypeInfo, 0);
+      v25 = sub_224BC3C(v19, SimpleAnimation_State_TypeInfo, 0);
     }
     v9 = (*(__int64 (__fastcall **)(__int64, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8));
   }
@@ -192,7 +192,7 @@ LABEL_31:
   else
   {
 LABEL_38:
-    v29 = sub_2237E2C(v21, SimpleAnimation_State_TypeInfo, 9);
+    v29 = sub_224BC3C(v21, SimpleAnimation_State_TypeInfo, 9);
   }
   v31 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v21, *(_QWORD *)(v29 + 8));
   v32 = *(_QWORD *)v21;
@@ -213,13 +213,13 @@ LABEL_38:
   else
   {
 LABEL_45:
-    v36 = sub_2237E2C(v21, SimpleAnimation_State_TypeInfo, 3);
+    v36 = sub_224BC3C(v21, SimpleAnimation_State_TypeInfo, 3);
   }
   v37 = (*(float (__fastcall **)(__int64, _QWORD))v36)(v21, *(_QWORD *)(v36 + 8));
-  v30 = sub_21FFEBC(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+  v30 = sub_2213CCC(WrapBattleBaseAnimation_SimpleData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v30, 0);
   *(_QWORD *)(v30 + 16) = v33;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 16), v33, v38, v39, v40, v41, v42, v43);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 16), v33, v38, v39, v40, v41, v42, v43);
   *(float *)(v30 + 24) = v37;
 LABEL_48:
   v44 = *(_QWORD *)v49;
@@ -239,7 +239,7 @@ LABEL_48:
   else
   {
 LABEL_52:
-    v47 = sub_2237E2C(v49, System_IDisposable_TypeInfo, 0);
+    v47 = sub_224BC3C(v49, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v47)(v49, *(_QWORD *)(v47 + 8));
   return (WrapBattleBaseAnimation_SimpleData_o *)v30;
@@ -259,10 +259,10 @@ void WrapBattleSimpleAnimation__PlayAnimation(
   SimpleAnimation_State_c **p_offset; // x10
   __int64 v12; // x0
 
-  if ( (byte_593C1B6 & 1) == 0 )
+  if ( (byte_597430E & 1) == 0 )
   {
-    sub_21FFC50(&SimpleAnimation_State_TypeInfo);
-    byte_593C1B6 = 1;
+    sub_2213A60(&SimpleAnimation_State_TypeInfo);
+    byte_597430E = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
@@ -288,12 +288,12 @@ void WrapBattleSimpleAnimation__PlayAnimation(
   else
   {
 LABEL_9:
-    v12 = sub_2237E2C(animation, SimpleAnimation_State_TypeInfo, 4);
+    v12 = sub_224BC3C(animation, SimpleAnimation_State_TypeInfo, 4);
   }
   (*(void (__fastcall **)(SimpleAnimation_o *, _QWORD, float))v12)(v9, *(_QWORD *)(v12 + 8), timeline);
   animation = this->fields.animation;
   if ( !animation || (SimpleAnimation__Sample(animation, 0), (animation = this->fields.animation) == 0) )
 LABEL_14:
-    sub_21FFECC(animation, animName);
-  SimpleAnimation__Play_78338864(animation, animName, 0);
+    sub_2213CDC(animation, animName);
+  SimpleAnimation__Play_78552168(animation, animName, 0);
 }

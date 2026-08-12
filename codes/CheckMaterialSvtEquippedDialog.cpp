@@ -10,19 +10,19 @@ void CheckMaterialSvtEquippedDialog___ctor(CheckMaterialSvtEquippedDialog_o *thi
   __int64 v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_59320D9 & 1) == 0 )
+  if ( (byte_596A1D8 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_long__TypeInfo);
-    byte_59320D9 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_long__TypeInfo);
+    byte_596A1D8 = 1;
   }
-  v3 = (System_Collections_Generic_List_long__o *)sub_21FFEBC(System_Collections_Generic_List_long__TypeInfo);
+  v3 = (System_Collections_Generic_List_long__o *)sub_2213CCC(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v3,
-    (const MethodInfo_44378D8 *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_446BA10 *)Method_System_Collections_Generic_List_long___ctor__);
   this->fields.lastSvtCommandCodeList = v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.lastSvtCommandCodeList,
     (int32_t)v3,
     v4,
@@ -57,7 +57,7 @@ void CheckMaterialSvtEquippedDialog__CallOnConfirm(
   if ( callback )
   {
     this->fields.callback = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_callback, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_callback, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v10->fields.invoke_impl)(
       v10->fields.method_code,
       (unsigned int)result,
@@ -76,14 +76,14 @@ void CheckMaterialSvtEquippedDialog__ClearCommandCodeRemoveResult(
   int v4; // w9
 
   v2 = this;
-  if ( (byte_59320CD & 1) == 0 )
+  if ( (byte_596A1CC & 1) == 0 )
   {
-    this = (CheckMaterialSvtEquippedDialog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_long__Clear__);
-    byte_59320CD = 1;
+    this = (CheckMaterialSvtEquippedDialog_o *)sub_2213A60(&Method_System_Collections_Generic_List_long__Clear__);
+    byte_596A1CC = 1;
   }
   lastSvtCommandCodeList = v2->fields.lastSvtCommandCodeList;
   if ( !lastSvtCommandCodeList )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v4 = lastSvtCommandCodeList->fields._version + 1;
   lastSvtCommandCodeList->fields._size = 0;
   lastSvtCommandCodeList->fields._version = v4;
@@ -113,25 +113,25 @@ void CheckMaterialSvtEquippedDialog__EndCloseShowCommandCode(
   bool v13; // w7
   const MethodInfo *v14; // x2
 
-  if ( (byte_59320D7 & 1) == 0 )
+  if ( (byte_596A1D6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
-    byte_59320D7 = 1;
+    sub_2213A60(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
+    byte_596A1D6 = 1;
   }
   v3 = System_Action_CheckMaterialSvtListViewItem__TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 1;
-  v5 = (System_Action_object__o *)sub_21FFEBC(v3);
+  v5 = (System_Action_object__o *)sub_2213CCC(v3);
   System_Action_object____ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__,
     0);
   if ( !listViewManager )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   listViewManager->fields.onSelectItem = (struct System_Action_CheckMaterialSvtListViewItem__o *)v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&listViewManager->fields.onSelectItem,
     (int32_t)v5,
     v8,
@@ -140,7 +140,7 @@ void CheckMaterialSvtEquippedDialog__EndCloseShowCommandCode(
     v11,
     v12,
     v13);
-  CheckMaterialSvtListViewManager__SetMode_37659644(listViewManager, 2, v14);
+  CheckMaterialSvtListViewManager__SetMode_37657156(listViewManager, 2, v14);
 }
 
 
@@ -161,25 +161,25 @@ void CheckMaterialSvtEquippedDialog__EndCloseShowServant(
   bool v13; // w7
   const MethodInfo *v14; // x2
 
-  if ( (byte_59320D4 & 1) == 0 )
+  if ( (byte_596A1D3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
-    byte_59320D4 = 1;
+    sub_2213A60(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
+    byte_596A1D3 = 1;
   }
   v3 = System_Action_CheckMaterialSvtListViewItem__TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 1;
-  v5 = (System_Action_object__o *)sub_21FFEBC(v3);
+  v5 = (System_Action_object__o *)sub_2213CCC(v3);
   System_Action_object____ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__,
     0);
   if ( !listViewManager )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   listViewManager->fields.onSelectItem = (struct System_Action_CheckMaterialSvtListViewItem__o *)v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&listViewManager->fields.onSelectItem,
     (int32_t)v5,
     v8,
@@ -188,7 +188,7 @@ void CheckMaterialSvtEquippedDialog__EndCloseShowServant(
     v11,
     v12,
     v13);
-  CheckMaterialSvtListViewManager__SetMode_37659644(listViewManager, 2, v14);
+  CheckMaterialSvtListViewManager__SetMode_37657156(listViewManager, 2, v14);
 }
 
 
@@ -207,25 +207,25 @@ void CheckMaterialSvtEquippedDialog__EndOpen(CheckMaterialSvtEquippedDialog_o *t
   bool v13; // w7
   const MethodInfo *v14; // x2
 
-  if ( (byte_59320CE & 1) == 0 )
+  if ( (byte_596A1CD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
-    byte_59320CE = 1;
+    sub_2213A60(&System_Action_CheckMaterialSvtListViewItem__TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
+    byte_596A1CD = 1;
   }
   v3 = System_Action_CheckMaterialSvtListViewItem__TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 1;
-  v5 = (System_Action_object__o *)sub_21FFEBC(v3);
+  v5 = (System_Action_object__o *)sub_2213CCC(v3);
   System_Action_object____ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__,
     0);
   if ( !listViewManager )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   listViewManager->fields.onSelectItem = (struct System_Action_CheckMaterialSvtListViewItem__o *)v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&listViewManager->fields.onSelectItem,
     (int32_t)v5,
     v8,
@@ -234,7 +234,7 @@ void CheckMaterialSvtEquippedDialog__EndOpen(CheckMaterialSvtEquippedDialog_o *t
     v11,
     v12,
     v13);
-  CheckMaterialSvtListViewManager__SetMode_37659644(listViewManager, 2, v14);
+  CheckMaterialSvtListViewManager__SetMode_37657156(listViewManager, 2, v14);
 }
 
 
@@ -248,12 +248,12 @@ void CheckMaterialSvtEquippedDialog__EndShowCommandCode(
   Il2CppObject *Instance; // x20
   System_Action_o *v7; // x21
 
-  if ( (byte_59320D6 & 1) == 0 )
+  if ( (byte_596A1D5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndCloseShowCommandCode__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59320D6 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndCloseShowCommandCode__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596A1D5 = 1;
   }
   if ( isDecide )
   {
@@ -262,12 +262,12 @@ void CheckMaterialSvtEquippedDialog__EndShowCommandCode(
       goto LABEL_8;
     CheckMaterialSvtListViewManager__ModifyItem(listViewManager, this->fields.commandCodeStatusId, method);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_CheckMaterialSvtEquippedDialog_EndCloseShowCommandCode__, 0);
   if ( !Instance )
 LABEL_8:
-    sub_21FFECC(listViewManager, isDecide);
+    sub_2213CDC(listViewManager, isDecide);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v7, 0);
 }
 
@@ -282,12 +282,12 @@ void CheckMaterialSvtEquippedDialog__EndShowServant(
   Il2CppObject *Instance; // x20
   System_Action_o *v7; // x21
 
-  if ( (byte_59320D3 & 1) == 0 )
+  if ( (byte_596A1D2 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndCloseShowServant__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59320D3 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndCloseShowServant__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596A1D2 = 1;
   }
   if ( isDecide )
   {
@@ -296,12 +296,12 @@ void CheckMaterialSvtEquippedDialog__EndShowServant(
       goto LABEL_8;
     CheckMaterialSvtListViewManager__ModifyItem(listViewManager, this->fields.servantStatusId, method);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_CheckMaterialSvtEquippedDialog_EndCloseShowServant__, 0);
   if ( !Instance )
 LABEL_8:
-    sub_21FFECC(listViewManager, isDecide);
+    sub_2213CDC(listViewManager, isDecide);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v7, 0);
 }
 
@@ -310,10 +310,10 @@ void CheckMaterialSvtEquippedDialog__Init(CheckMaterialSvtEquippedDialog_o *this
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_59320CA & 1) == 0 )
+  if ( (byte_596A1C9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59320CA = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A1C9 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -350,7 +350,7 @@ void CheckMaterialSvtEquippedDialog__Init(CheckMaterialSvtEquippedDialog_o *this
     || (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0)) == 0 )
   {
 LABEL_16:
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   this->fields.state = 0;
@@ -367,7 +367,7 @@ void CheckMaterialSvtEquippedDialog__ModifyItem(
 
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, selectedId);
+    sub_2213CDC(0, selectedId);
   CheckMaterialSvtListViewManager__ModifyItem(listViewManager, selectedId, method);
 }
 
@@ -382,24 +382,24 @@ void CheckMaterialSvtEquippedDialog__OnClickCancel(CheckMaterialSvtEquippedDialo
   const MethodInfo *v7; // x2
 
   v2 = this;
-  if ( (byte_59320D0 & 1) == 0 )
+  if ( (byte_596A1CF & 1) == 0 )
   {
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnClickCancel__);
-    this = (CheckMaterialSvtEquippedDialog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_long__Clear__);
-    byte_59320D0 = 1;
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnClickCancel__);
+    this = (CheckMaterialSvtEquippedDialog_o *)sub_2213A60(&Method_System_Collections_Generic_List_long__Clear__);
+    byte_596A1CF = 1;
   }
   if ( v2->fields.state == 1 )
   {
     lastSvtCommandCodeList = v2->fields.lastSvtCommandCodeList;
     if ( !lastSvtCommandCodeList )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     v4 = lastSvtCommandCodeList->fields._version + 1;
     v5 = Method_CheckMaterialSvtEquippedDialog_OnClickCancel__;
     lastSvtCommandCodeList->fields._size = 0;
     lastSvtCommandCodeList->fields._version = v4;
     if ( (v5[83] & 2) != 0 )
-      v5 = (_BYTE *)sub_21FFC68(v5);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, *((_QWORD *)v5 + 4));
+      v5 = (_BYTE *)sub_2213A78(v5);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, *((_QWORD *)v5 + 4));
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0);
     CheckMaterialSvtEquippedDialog__CallOnConfirm(v2, 0, v7);
   }
@@ -411,17 +411,17 @@ void CheckMaterialSvtEquippedDialog__OnClickClose(CheckMaterialSvtEquippedDialog
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_59320D1 & 1) == 0 )
+  if ( (byte_596A1D0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnClickClose__);
-    byte_59320D1 = 1;
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnClickClose__);
+    byte_596A1D0 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_CheckMaterialSvtEquippedDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_CheckMaterialSvtEquippedDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CheckMaterialSvtEquippedDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CheckMaterialSvtEquippedDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     BaseDialog__Close((BaseDialog_o *)this, 0, 0);
   }
@@ -434,17 +434,17 @@ void CheckMaterialSvtEquippedDialog__OnClickDecide(CheckMaterialSvtEquippedDialo
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_59320CF & 1) == 0 )
+  if ( (byte_596A1CE & 1) == 0 )
   {
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnClickDecide__);
-    byte_59320CF = 1;
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnClickDecide__);
+    byte_596A1CE = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_CheckMaterialSvtEquippedDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_CheckMaterialSvtEquippedDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CheckMaterialSvtEquippedDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CheckMaterialSvtEquippedDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     CheckMaterialSvtEquippedDialog__CallOnConfirm(this, 1, v5);
   }
@@ -464,26 +464,26 @@ void CheckMaterialSvtEquippedDialog__OnSelectCommandCodeDetail(
   UserCommandCodeEntity_o *UserCommandCodeEntity_k__BackingField; // x20
   ServantStatusDialog_EndDelegate_o *v11; // x22
 
-  if ( (byte_59320D5 & 1) == 0 )
+  if ( (byte_596A1D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndShowCommandCode__);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59320D5 = 1;
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndShowCommandCode__);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596A1D4 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v5 = Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__;
     if ( (*((_BYTE *)Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_CheckMaterialSvtEquippedDialog_OnSelectCommandCodeDetail__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     if ( !selectItem
       || (this->fields.commandCodeStatusId = CheckMaterialSvtListViewItem__get_UserCommandCodeId(selectItem, v8),
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
           UserCommandCodeEntity_k__BackingField = selectItem->fields._UserCommandCodeEntity_k__BackingField,
-          v11 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo),
+          v11 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo),
           ServantStatusDialog_EndDelegate___ctor(
             v11,
             (Il2CppObject *)this,
@@ -491,9 +491,9 @@ void CheckMaterialSvtEquippedDialog__OnSelectCommandCodeDetail(
             0),
           !Instance) )
     {
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     }
-    CommonUI__OpenServantStatusDialog_37304416(
+    CommonUI__OpenServantStatusDialog_37385832(
       (CommonUI_o *)Instance,
       32,
       UserCommandCodeEntity_k__BackingField,
@@ -519,13 +519,13 @@ void CheckMaterialSvtEquippedDialog__OnSelectServantDetail(
   const MethodInfo *v11; // x2
 
   v4 = this;
-  if ( (byte_59320D2 & 1) == 0 )
+  if ( (byte_596A1D1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndShowServant__);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    this = (CheckMaterialSvtEquippedDialog_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59320D2 = 1;
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndShowServant__);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    this = (CheckMaterialSvtEquippedDialog_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596A1D1 = 1;
   }
   if ( v4->fields.state == 1 )
   {
@@ -535,13 +535,13 @@ void CheckMaterialSvtEquippedDialog__OnSelectServantDetail(
     {
       v5 = Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__;
       if ( (*((_BYTE *)Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_21FFC68(Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
-      v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+        v5 = (_QWORD *)sub_2213A78(Method_CheckMaterialSvtEquippedDialog_OnSelectServantDetail__);
+      v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       v4->fields.servantStatusId = CheckMaterialSvtListViewItem__get_UserSvtId(selectItem, v7);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       servantStatusId = v4->fields.servantStatusId;
-      v10 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+      v10 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
       ServantStatusDialog_EndDelegate___ctor(
         v10,
         (Il2CppObject *)v4,
@@ -549,11 +549,11 @@ void CheckMaterialSvtEquippedDialog__OnSelectServantDetail(
         0);
       if ( Instance )
       {
-        CommonUI__OpenServantStatusDialog_37301228((CommonUI_o *)Instance, 29, servantStatusId, v10, 0, 0);
+        CommonUI__OpenServantStatusDialog_37382644((CommonUI_o *)Instance, 29, servantStatusId, v10, 0, 0);
         return;
       }
 LABEL_13:
-      sub_21FFECC(this, selectItem);
+      sub_2213CDC(this, selectItem);
     }
     if ( selectItem->fields._UserCommandCodeEntity_k__BackingField )
     {
@@ -587,11 +587,11 @@ void CheckMaterialSvtEquippedDialog__Open(
   UILabel_o *upperLabel; // x22
   UILabel_o *lowerLabel; // x22
   const MethodInfo *v22; // x7
-  const MethodInfo_40C441C **v23; // x25
-  const MethodInfo_3822EA4 **v24; // x23
-  const MethodInfo_3EDF9E8 **v25; // x28
-  const MethodInfo_3822EA4 **v26; // x29
-  const MethodInfo_4438370 **v27; // x24
+  const MethodInfo_40F7FA8 **v23; // x25
+  const MethodInfo_385636C **v24; // x23
+  const MethodInfo_3F13190 **v25; // x28
+  const MethodInfo_385636C **v26; // x29
+  const MethodInfo_446C4A8 **v27; // x24
   Il2CppObject *current; // x21
   Il2CppObject *Instance; // x0
   __int64 v30; // x1
@@ -614,11 +614,11 @@ void CheckMaterialSvtEquippedDialog__Open(
   CheckMaterialSvtEquippedDialog___c_c *v47; // x0
   struct CheckMaterialSvtEquippedDialog___c_StaticFields *static_fields; // x8
   System_Predicate_long__o *_9__20_0; // x22
-  const MethodInfo_4438370 **v50; // x19
-  const MethodInfo_40C441C **v51; // x24
-  const MethodInfo_3822EA4 **v52; // x25
-  const MethodInfo_3EDF9E8 **v53; // x29
-  const MethodInfo_3822EA4 **v54; // x28
+  const MethodInfo_446C4A8 **v50; // x19
+  const MethodInfo_40F7FA8 **v51; // x24
+  const MethodInfo_385636C **v52; // x25
+  const MethodInfo_3F13190 **v53; // x29
+  const MethodInfo_385636C **v54; // x28
   Il2CppObject *v55; // x23
   struct CheckMaterialSvtEquippedDialog___c_StaticFields *v56; // x0
   System_String_o *v57; // x2
@@ -636,37 +636,37 @@ void CheckMaterialSvtEquippedDialog__Open(
   System_Collections_Generic_List_Enumerator_T__o v69; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v70; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_59320CB & 1) == 0 )
+  if ( (byte_596A1CA & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndOpen__);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__RemoveAll__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&System_Predicate_long__TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog___c__Open_b__20_0__);
-    sub_21FFC50(&CheckMaterialSvtEquippedDialog___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_3736/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/);
-    sub_21FFC50(&StringLiteral_3737/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_3914/*"CONFIRM_TITLE_SVT_COMBINE"*/);
-    byte_59320CB = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndOpen__);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__RemoveAll__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&System_Predicate_long__TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog___c__Open_b__20_0__);
+    sub_2213A60(&CheckMaterialSvtEquippedDialog___c_TypeInfo);
+    sub_2213A60(&StringLiteral_3741/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/);
+    sub_2213A60(&StringLiteral_3742/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_3919/*"CONFIRM_TITLE_SVT_COMBINE"*/);
+    byte_596A1CA = 1;
   }
   state = this->fields.state;
   memset(&v70, 0, sizeof(v70));
   if ( !state )
   {
     this->fields.callback = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
       (int32_t)callback,
       (System_String_o *)servantIdList,
@@ -689,17 +689,17 @@ void CheckMaterialSvtEquippedDialog__Open(
     titleLabel = this->fields.titleLabel;
     if ( !*(&v18->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(v18, v14, v15);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3914/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3919/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0);
     if ( !titleLabel )
       goto LABEL_51;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     upperLabel = this->fields.upperLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3741/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/, 0);
     if ( !upperLabel )
       goto LABEL_51;
     UILabel__set_text(upperLabel, (System_String_o *)gameObject, 0);
     lowerLabel = this->fields.lowerLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3742/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/, 0);
     if ( !lowerLabel )
       goto LABEL_51;
     UILabel__set_text(lowerLabel, (System_String_o *)gameObject, 0);
@@ -731,12 +731,12 @@ void CheckMaterialSvtEquippedDialog__Open(
     System_Collections_Generic_List_long___GetEnumerator(
       &v69,
       servantIdList,
-      (const MethodInfo_4438C14 *)Method_System_Collections_Generic_List_long__GetEnumerator__);
-    v23 = (const MethodInfo_40C441C **)&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__;
-    v24 = (const MethodInfo_3822EA4 **)&Method_DataManager_GetMasterData_UserServantMaster___;
-    v25 = (const MethodInfo_3EDF9E8 **)&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__;
-    v26 = (const MethodInfo_3822EA4 **)&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___;
-    v27 = (const MethodInfo_4438370 **)&Method_System_Collections_Generic_List_long__AddRange__;
+      (const MethodInfo_446CD4C *)Method_System_Collections_Generic_List_long__GetEnumerator__);
+    v23 = (const MethodInfo_40F7FA8 **)&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__;
+    v24 = (const MethodInfo_385636C **)&Method_DataManager_GetMasterData_UserServantMaster___;
+    v25 = (const MethodInfo_3F13190 **)&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__;
+    v26 = (const MethodInfo_385636C **)&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___;
+    v27 = (const MethodInfo_446C4A8 **)&Method_System_Collections_Generic_List_long__AddRange__;
     v70 = v69;
     v69.fields._list = 0;
     *(_QWORD *)&v69.fields._index = &v70;
@@ -744,29 +744,29 @@ void CheckMaterialSvtEquippedDialog__Open(
     while ( System_Collections_Generic_List_Enumerator_long___MoveNext(&v70, *v23) )
     {
       current = v70.fields._current;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
-        sub_21FFECC(0, v30);
+        sub_2213CDC(0, v30);
       MasterData_object = DataManager__GetMasterData_object_((DataManager_o *)Instance, *v24);
       if ( !MasterData_object )
-        sub_21FFECC(0, v32);
+        sub_2213CDC(0, v32);
       Entity = DataMasterBase_object__object__long___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                  (int64_t)current,
                  *v25);
       if ( !Entity )
-        sub_21FFECC(0, v34);
+        sub_2213CDC(0, v34);
       SvtId = UserServantEntity__getSvtId((UserServantEntity_o *)Entity, 0);
-      v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !v36 )
-        sub_21FFECC(0, v37);
+        sub_2213CDC(0, v37);
       v40 = DataManager__GetMasterData_object_((DataManager_o *)v36, *v26);
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v38, v39);
-      if ( !byte_5931D52 )
+      if ( !byte_5969EF2 )
       {
-        sub_21FFC50(&NetworkManager_TypeInfo);
-        byte_5931D52 = 1;
+        sub_2213A60(&NetworkManager_TypeInfo);
+        byte_5969EF2 = 1;
       }
       v41 = NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -775,7 +775,7 @@ void CheckMaterialSvtEquippedDialog__Open(
         v41 = NetworkManager_TypeInfo;
       }
       if ( !v40 )
-        sub_21FFECC(v41, v38);
+        sub_2213CDC(v41, v38);
       UserSvtCommandCodeIdList = (System_Collections_Generic_IEnumerable_T__o *)UserServantCommandCodeMaster__getUserSvtCommandCodeIdList(
                                                                                   (UserServantCommandCodeMaster_o *)v40,
                                                                                   v41->static_fields->userIdNumber,
@@ -785,7 +785,7 @@ void CheckMaterialSvtEquippedDialog__Open(
       {
         v43 = this->fields.lastSvtCommandCodeList;
         if ( !v43 )
-          sub_21FFECC(0, UserSvtCommandCodeIdList);
+          sub_2213CDC(0, UserSvtCommandCodeIdList);
         System_Collections_Generic_List_long___AddRange(v43, UserSvtCommandCodeIdList, *v27);
         v46 = this->fields.lastSvtCommandCodeList;
         v47 = CheckMaterialSvtEquippedDialog___c_TypeInfo;
@@ -809,11 +809,11 @@ void CheckMaterialSvtEquippedDialog__Open(
           v53 = v25;
           v54 = v24;
           v55 = (Il2CppObject *)static_fields->__9;
-          _9__20_0 = (System_Predicate_long__o *)sub_21FFEBC(System_Predicate_long__TypeInfo);
+          _9__20_0 = (System_Predicate_long__o *)sub_2213CCC(System_Predicate_long__TypeInfo);
           System_Predicate_long____ctor(_9__20_0, v55, Method_CheckMaterialSvtEquippedDialog___c__Open_b__20_0__, 0);
           v56 = CheckMaterialSvtEquippedDialog___c_TypeInfo->static_fields;
           v56->__9__20_0 = _9__20_0;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v56->__9__20_0,
             (int32_t)_9__20_0,
             v57,
@@ -829,17 +829,17 @@ void CheckMaterialSvtEquippedDialog__Open(
           v27 = v50;
         }
         if ( !v46 )
-          sub_21FFECC(v47, v44);
+          sub_2213CDC(v47, v44);
         this = v68;
         System_Collections_Generic_List_long___RemoveAll(
           v46,
           (System_Predicate_T__o *)_9__20_0,
-          (const MethodInfo_4439758 *)Method_System_Collections_Generic_List_long__RemoveAll__);
+          (const MethodInfo_446D890 *)Method_System_Collections_Generic_List_long__RemoveAll__);
       }
     }
     System_Collections_Generic_List_Enumerator_long___Dispose(
       &v70,
-      (const MethodInfo_40C4418 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+      (const MethodInfo_40F7FA4 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
     gameObject = (UnityEngine_GameObject_o *)this->fields.lowerLabel;
     if ( !gameObject
       || (v63 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0),
@@ -850,13 +850,13 @@ void CheckMaterialSvtEquippedDialog__Open(
           (gameObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
     {
 LABEL_51:
-      sub_21FFECC(gameObject, v14);
+      sub_2213CDC(gameObject, v14);
     }
     v65 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     GameObjectExtensions__SetLocalPositionY(v65, 94.0, 0);
     this->fields.state = 2;
     CheckMaterialSvtEquippedDialog__SetObjActive(this, 0, v66);
-    v67 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v67 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v67, (Il2CppObject *)this, Method_CheckMaterialSvtEquippedDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v67, 0, 0, 0);
   }
@@ -895,17 +895,17 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
   System_Action_o *v28; // x20
 
   v9 = this;
-  if ( (byte_59320CC & 1) == 0 )
+  if ( (byte_596A1CB & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CheckMaterialSvtEquippedDialog_EndOpen__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Distinct_long___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_long___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3800/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/);
-    this = (CheckMaterialSvtEquippedDialog_o *)sub_21FFC50(&StringLiteral_3801/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/);
-    byte_59320CC = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CheckMaterialSvtEquippedDialog_EndOpen__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Distinct_long___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_long___);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3805/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/);
+    this = (CheckMaterialSvtEquippedDialog_o *)sub_2213A60(&StringLiteral_3806/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/);
+    byte_596A1CB = 1;
   }
   lastSvtCommandCodeList = v9->fields.lastSvtCommandCodeList;
   if ( !lastSvtCommandCodeList )
@@ -913,7 +913,7 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
   if ( lastSvtCommandCodeList->fields._size >= 1 && !v9->fields.state )
   {
     v9->fields.callback = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v9->fields.callback,
       (int32_t)callback,
       (System_String_o *)method,
@@ -928,12 +928,12 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
       v11 = System_Linq_Enumerable__Distinct_long_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v9->fields.lastSvtCommandCodeList,
-              (const MethodInfo_3849180 *)Method_System_Linq_Enumerable_Distinct_long___);
+              (const MethodInfo_387C648 *)Method_System_Linq_Enumerable_Distinct_long___);
       v12 = System_Linq_Enumerable__ToList_long_(
               v11,
-              (const MethodInfo_386D7A8 *)Method_System_Linq_Enumerable_ToList_long___);
+              (const MethodInfo_38A0C70 *)Method_System_Linq_Enumerable_ToList_long___);
       v9->fields.lastSvtCommandCodeList = (struct System_Collections_Generic_List_long__o *)v12;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v9->fields.lastSvtCommandCodeList,
         (int32_t)v12,
         v13,
@@ -945,12 +945,12 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
       titleLabel = v9->fields.titleLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19, v20);
-      this = (CheckMaterialSvtEquippedDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3801/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/, 0);
+      this = (CheckMaterialSvtEquippedDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3806/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/, 0);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, (System_String_o *)this, 0);
         lowerLabel = v9->fields.lowerLabel;
-        this = (CheckMaterialSvtEquippedDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/, 0);
+        this = (CheckMaterialSvtEquippedDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3805/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/, 0);
         if ( lowerLabel )
         {
           UILabel__set_text(lowerLabel, (System_String_o *)this, 0);
@@ -996,7 +996,7 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
                         GameObjectExtensions__SetLocalPositionY(v26, 140.0, 0);
                         CheckMaterialSvtEquippedDialog__SetObjActive(v9, 1, v27);
                         v9->fields.state = 2;
-                        v28 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                        v28 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                         System_Action___ctor(
                           v28,
                           (Il2CppObject *)v9,
@@ -1015,7 +1015,7 @@ void CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
       }
     }
 LABEL_20:
-    sub_21FFECC(this, callback);
+    sub_2213CDC(this, callback);
   }
 }
 
@@ -1033,13 +1033,13 @@ void CheckMaterialSvtEquippedDialog__SetObjActive(
   UILabel_o *cancelLabel; // x20
   UILabel_o *closeLabel; // x19
 
-  if ( (byte_59320D8 & 1) == 0 )
+  if ( (byte_596A1D7 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_59320D8 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_596A1D7 = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton )
@@ -1065,19 +1065,19 @@ void CheckMaterialSvtEquippedDialog__SetObjActive(
   decideLabel = this->fields.decideLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v7);
-  decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, (System_String_o *)decideButton, 0),
         cancelLabel = this->fields.cancelLabel,
-        decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, (System_String_o *)decideButton, 0),
         closeLabel = this->fields.closeLabel,
-        decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0),
+        decideButton = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0),
         !closeLabel) )
   {
 LABEL_15:
-    sub_21FFECC(decideButton, isOneButton);
+    sub_2213CDC(decideButton, isOneButton);
   }
   UILabel__set_text(closeLabel, (System_String_o *)decideButton, 0);
 }
@@ -1093,15 +1093,15 @@ void CheckMaterialSvtEquippedDialog___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59320DA & 1) == 0 )
+  if ( (byte_596A1D9 & 1) == 0 )
   {
-    sub_21FFC50(&CheckMaterialSvtEquippedDialog___c_TypeInfo);
-    byte_59320DA = 1;
+    sub_2213A60(&CheckMaterialSvtEquippedDialog___c_TypeInfo);
+    byte_596A1D9 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(CheckMaterialSvtEquippedDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(CheckMaterialSvtEquippedDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   CheckMaterialSvtEquippedDialog___c_TypeInfo->static_fields->__9 = (struct CheckMaterialSvtEquippedDialog___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)CheckMaterialSvtEquippedDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

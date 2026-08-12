@@ -1,6 +1,6 @@
 void CreateComboEndSkillTask___ctor(CreateComboEndSkillTask_o *this, const MethodInfo *method)
 {
-  CreateSkillTaskFromBuffAction___ctor((CreateSkillTaskFromBuffAction_o *)this, 0);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
@@ -19,7 +19,7 @@ bool CreateComboEndSkillTask__IsCreatable(
     return 1;
   if ( !logic || (this = (CreateComboEndSkillTask_o *)logic->fields.logicnomal) == 0 )
 LABEL_8:
-    sub_21FFECC(this, logic);
+    sub_2213CDC(this, logic);
   return BattleLogicNomal__IsComboEnd((BattleLogicNomal_o *)this, 0);
 }
 
@@ -31,16 +31,16 @@ BuffList_ACTION_array *CreateComboEndSkillTask__get_TargetActs(
   BuffList_ACTION_array *result; // x0
   __int64 v3; // x1
 
-  if ( (byte_593B8E4 & 1) == 0 )
+  if ( (byte_5973A1C & 1) == 0 )
   {
-    sub_21FFC50(&BuffList_ACTION___TypeInfo);
-    byte_593B8E4 = 1;
+    sub_2213A60(&BuffList_ACTION___TypeInfo);
+    byte_5973A1C = 1;
   }
-  result = (BuffList_ACTION_array *)sub_21FFD10(BuffList_ACTION___TypeInfo, 1);
+  result = (BuffList_ACTION_array *)sub_2213B20(BuffList_ACTION___TypeInfo, 1);
   if ( !result )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   if ( !LODWORD(result->max_length) )
-    sub_21FFED4(result);
+    sub_2213CE4(result);
   result->m_Items[0] = 149;
   return result;
 }

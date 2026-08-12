@@ -111,15 +111,15 @@ void ExRoomMissionListOutput___ctor(
   bool v116; // w6
   bool v117; // w7
 
-  if ( (byte_5932DBC & 1) == 0 )
+  if ( (byte_596AEC0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
-    byte_5932DBC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    byte_596AEC0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._EventMissionEntity_k__BackingField = eventMissionEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)eventMissionEntity,
     v18,
@@ -129,7 +129,7 @@ void ExRoomMissionListOutput___ctor(
     v22,
     v23);
   this->fields._UserEventMissionEntity_k__BackingField = userEventMissionEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserEventMissionEntity_k__BackingField,
     (int32_t)userEventMissionEntity,
     v24,
@@ -142,13 +142,13 @@ void ExRoomMissionListOutput___ctor(
   this->fields._Status_k__BackingField = status;
   if ( !conditionEntities )
   {
-    conditionEntities = (System_Collections_Generic_List_EventMissionConditionEntity__o *)sub_21FFEBC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    conditionEntities = (System_Collections_Generic_List_EventMissionConditionEntity__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       (System_Collections_Generic_List_object__o *)conditionEntities,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   }
   this->fields._ConditionEntities_k__BackingField = conditionEntities;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ConditionEntities_k__BackingField,
     (int32_t)conditionEntities,
     v30,
@@ -158,7 +158,7 @@ void ExRoomMissionListOutput___ctor(
     v34,
     v35);
   this->fields._RewardResolvedRewards_k__BackingField = rewardResolvedRewards;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardResolvedRewards_k__BackingField,
     (int32_t)rewardResolvedRewards,
     v36,
@@ -169,7 +169,7 @@ void ExRoomMissionListOutput___ctor(
     v41);
   v44 = ExRoomMissionListOutput__BuildRewardGiftEntities(v42, this->fields._RewardResolvedRewards_k__BackingField, v43);
   this->fields._RewardGiftEntities_k__BackingField = v44;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardGiftEntities_k__BackingField,
     (int32_t)v44,
     v45,
@@ -180,7 +180,7 @@ void ExRoomMissionListOutput___ctor(
     v50);
   RewardResolvedReward = ExRoomMissionListOutput__FindRewardResolvedReward(this, iconGiftEntity, v51);
   this->fields._IconGiftEntity_k__BackingField = iconGiftEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconGiftEntity_k__BackingField,
     (int32_t)iconGiftEntity,
     v53,
@@ -190,7 +190,7 @@ void ExRoomMissionListOutput___ctor(
     v57,
     v58);
   this->fields._SubGiftEntity_k__BackingField = subGiftEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SubGiftEntity_k__BackingField,
     (int32_t)subGiftEntity,
     v59,
@@ -203,7 +203,7 @@ void ExRoomMissionListOutput___ctor(
   {
     RewardItemEntity_k__BackingField = RewardResolvedReward->fields._RewardItemEntity_k__BackingField;
     this->fields._RewardItemEntity_k__BackingField = RewardItemEntity_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardItemEntity_k__BackingField,
       (int32_t)RewardItemEntity_k__BackingField,
       v65,
@@ -214,7 +214,7 @@ void ExRoomMissionListOutput___ctor(
       v70);
     RewardServantEntity_k__BackingField = RewardResolvedReward->fields._RewardServantEntity_k__BackingField;
     this->fields._RewardServantEntity_k__BackingField = RewardServantEntity_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantEntity_k__BackingField,
       (int32_t)RewardServantEntity_k__BackingField,
       v73,
@@ -225,7 +225,7 @@ void ExRoomMissionListOutput___ctor(
       v78);
     RewardCommandCodeEntity_k__BackingField = RewardResolvedReward->fields._RewardCommandCodeEntity_k__BackingField;
     this->fields._RewardCommandCodeEntity_k__BackingField = RewardCommandCodeEntity_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCommandCodeEntity_k__BackingField,
       (int32_t)RewardCommandCodeEntity_k__BackingField,
       v80,
@@ -236,7 +236,7 @@ void ExRoomMissionListOutput___ctor(
       v85);
     RewardServantCostumeEntity_k__BackingField = RewardResolvedReward->fields._RewardServantCostumeEntity_k__BackingField;
     this->fields._RewardServantCostumeEntity_k__BackingField = RewardServantCostumeEntity_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantCostumeEntity_k__BackingField,
       (int32_t)RewardServantCostumeEntity_k__BackingField,
       v87,
@@ -250,7 +250,7 @@ void ExRoomMissionListOutput___ctor(
   else
   {
     this->fields._RewardItemEntity_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardItemEntity_k__BackingField,
       0,
       v65,
@@ -260,7 +260,7 @@ void ExRoomMissionListOutput___ctor(
       v69,
       v70);
     this->fields._RewardServantEntity_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantEntity_k__BackingField,
       0,
       v100,
@@ -270,7 +270,7 @@ void ExRoomMissionListOutput___ctor(
       v104,
       v105);
     this->fields._RewardCommandCodeEntity_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCommandCodeEntity_k__BackingField,
       0,
       v106,
@@ -280,7 +280,7 @@ void ExRoomMissionListOutput___ctor(
       v110,
       v111);
     this->fields._RewardServantCostumeEntity_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantCostumeEntity_k__BackingField,
       0,
       v112,
@@ -292,7 +292,7 @@ void ExRoomMissionListOutput___ctor(
     RewardEquipEntity_k__BackingField = 0;
   }
   this->fields._RewardEquipEntity_k__BackingField = RewardEquipEntity_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardEquipEntity_k__BackingField,
     (int32_t)RewardEquipEntity_k__BackingField,
     v93,
@@ -328,17 +328,17 @@ GiftEntity_array *ExRoomMissionListOutput__BuildRewardGiftEntities(
   __int64 v20; // x9
   __int64 v22; // x0
 
-  if ( (byte_5932DBE & 1) == 0 )
+  if ( (byte_596AEC2 & 1) == 0 )
   {
-    sub_21FFC50(&GiftEntity___TypeInfo);
-    byte_5932DBE = 1;
+    sub_2213A60(&GiftEntity___TypeInfo);
+    byte_596AEC2 = 1;
   }
   if ( !resolvedRewards )
     return 0;
   max_length = resolvedRewards->max_length;
   if ( !max_length )
     return 0;
-  v5 = sub_21FFD10(GiftEntity___TypeInfo, max_length);
+  v5 = sub_2213B20(GiftEntity___TypeInfo, max_length);
   v13 = resolvedRewards->max_length;
   v14 = (unsigned int *)v5;
   if ( (int)v13 >= 1 )
@@ -357,11 +357,11 @@ GiftEntity_array *ExRoomMissionListOutput__BuildRewardGiftEntities(
         v18 = *(_QWORD *)(v17 + 16);
         if ( v18 )
         {
-          v5 = sub_21FFDA4(v18, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
+          v5 = sub_2213BB4(v18, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
           if ( !v5 )
           {
-            v22 = sub_21FFEF0(0, v19);
-            sub_21FFD90(v22, 0);
+            v22 = sub_2213D00(0, v19);
+            sub_2213BA0(v22, 0);
           }
         }
       }
@@ -369,14 +369,14 @@ GiftEntity_array *ExRoomMissionListOutput__BuildRewardGiftEntities(
       {
         if ( !v14 )
 LABEL_21:
-          sub_21FFECC(v5, v6);
+          sub_2213CDC(v5, v6);
         v18 = 0;
       }
       if ( v15 - 4 >= (unsigned __int64)v14[6] )
 LABEL_20:
-        sub_21FFED4(v5);
+        sub_2213CE4(v5);
       *(_QWORD *)&v14[2 * v15] = v18;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14[v16], v18, v7, v8, v9, v10, v11, v12);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14[v16], v18, v7, v8, v9, v10, v11, v12);
       LODWORD(v13) = resolvedRewards->max_length;
       v20 = v15 - 3;
       ++v15;
@@ -443,16 +443,15 @@ ExRoomMissionResolvedReward_o *ExRoomMissionListOutput__FindRewardResolvedReward
   __int64 v8; // x9
   __int64 v9; // x9
   int32_t v10; // w1
-  System_Nullable_int__o v11; // x0
-  __int64 v13; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v12; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_5932DBD & 1) == 0 )
+  if ( (byte_596AEC1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_int___ctor__);
-    this = (ExRoomMissionListOutput_o *)sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
-    byte_5932DBD = 1;
+    sub_2213A60(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_int___ctor__);
+    this = (ExRoomMissionListOutput_o *)sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    byte_596AEC1 = 1;
   }
   RewardResolvedRewards_k__BackingField = v4->fields._RewardResolvedRewards_k__BackingField;
   if ( RewardResolvedRewards_k__BackingField )
@@ -472,20 +471,22 @@ ExRoomMissionResolvedReward_o *ExRoomMissionListOutput__FindRewardResolvedReward
         if ( v9 )
         {
           v10 = *(_DWORD *)(v9 + 24);
-          v11 = (System_Nullable_int__o)&v13;
-          v13 = 0;
-          System_Nullable_int____ctor(v11, v10, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
+          v12 = 0;
+          System_Nullable_int____ctor(
+            (System_Nullable_int__o)&v12,
+            v10,
+            (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
           RewardResolvedRewards_k__BackingField = v4->fields._RewardResolvedRewards_k__BackingField;
-          if ( (_BYTE)v13 )
+          if ( (_BYTE)v12 )
           {
-            if ( HIDWORD(v13) == objectId )
+            if ( HIDWORD(v12) == objectId )
             {
               if ( !RewardResolvedRewards_k__BackingField )
 LABEL_12:
-                sub_21FFECC(this, *(_QWORD *)&objectId);
+                sub_2213CDC(this, *(_QWORD *)&objectId);
               if ( (unsigned int)(v6 - 4) >= LODWORD(RewardResolvedRewards_k__BackingField->max_length) )
 LABEL_17:
-                sub_21FFED4(this);
+                sub_2213CE4(this);
               return (ExRoomMissionResolvedReward_o *)*((_QWORD *)&RewardResolvedRewards_k__BackingField->obj.klass + v6);
             }
           }
@@ -644,7 +645,7 @@ void ExRoomMissionListOutput__set_ConditionEntities(
   bool v7; // w7
 
   this->fields._ConditionEntities_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ConditionEntities_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -668,7 +669,7 @@ void ExRoomMissionListOutput__set_EventMissionEntity(
   bool v7; // w7
 
   this->fields._EventMissionEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -692,7 +693,7 @@ void ExRoomMissionListOutput__set_IconGiftEntity(
   bool v7; // w7
 
   this->fields._IconGiftEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconGiftEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -725,7 +726,7 @@ void ExRoomMissionListOutput__set_RewardCommandCodeEntity(
   bool v7; // w7
 
   this->fields._RewardCommandCodeEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCommandCodeEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -749,7 +750,7 @@ void ExRoomMissionListOutput__set_RewardEquipEntity(
   bool v7; // w7
 
   this->fields._RewardEquipEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardEquipEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -773,7 +774,7 @@ void ExRoomMissionListOutput__set_RewardGiftEntities(
   bool v7; // w7
 
   this->fields._RewardGiftEntities_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardGiftEntities_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -797,7 +798,7 @@ void ExRoomMissionListOutput__set_RewardItemEntity(
   bool v7; // w7
 
   this->fields._RewardItemEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardItemEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -821,7 +822,7 @@ void ExRoomMissionListOutput__set_RewardResolvedRewards(
   bool v7; // w7
 
   this->fields._RewardResolvedRewards_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardResolvedRewards_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -845,7 +846,7 @@ void ExRoomMissionListOutput__set_RewardServantCostumeEntity(
   bool v7; // w7
 
   this->fields._RewardServantCostumeEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantCostumeEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -869,7 +870,7 @@ void ExRoomMissionListOutput__set_RewardServantEntity(
   bool v7; // w7
 
   this->fields._RewardServantEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -899,7 +900,7 @@ void ExRoomMissionListOutput__set_SubGiftEntity(
   bool v7; // w7
 
   this->fields._SubGiftEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SubGiftEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -923,7 +924,7 @@ void ExRoomMissionListOutput__set_UserEventMissionEntity(
   bool v7; // w7
 
   this->fields._UserEventMissionEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserEventMissionEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

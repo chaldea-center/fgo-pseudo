@@ -40,7 +40,7 @@ bool NumSpriteComponent__TryGetSpriteByIndex(
   UISprite_o *v21; // x1
 
   *sprite = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)sprite,
     0,
     *(System_String_o **)&index,
@@ -51,15 +51,15 @@ bool NumSpriteComponent__TryGetSpriteByIndex(
     v7);
   numberSp = this->fields.numberSp;
   if ( !numberSp )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   max_length = numberSp->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_21FFED4(v11);
+      sub_2213CE4(v11);
     v21 = numberSp->m_Items[index];
     *sprite = v21;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)sprite, (int32_t)v21, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)sprite, (int32_t)v21, v13, v14, v15, v16, v17, v18);
   }
   return max_length > index;
 }

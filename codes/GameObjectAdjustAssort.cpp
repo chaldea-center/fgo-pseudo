@@ -44,17 +44,17 @@ void GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, int32_t index
   __int64 v39; // x0
   __int64 v40; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5937C19 & 1) == 0 )
+  if ( (byte_596FD7C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
-    sub_21FFC50(&System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_GameObjectAdjustAssort___c__Apply_b__2_0__);
-    sub_21FFC50(&GameObjectAdjustAssort___c_TypeInfo);
-    byte_5937C19 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
+    sub_2213A60(&System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_GameObjectAdjustAssort___c__Apply_b__2_0__);
+    sub_2213A60(&GameObjectAdjustAssort___c_TypeInfo);
+    byte_596FD7C = 1;
   }
   v5 = GameObjectAdjustAssort___c_TypeInfo;
   adjustParamArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.adjustParamArray;
@@ -73,18 +73,18 @@ void GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, int32_t index
       static_fields = GameObjectAdjustAssort___c_TypeInfo->static_fields;
     }
     v9 = (Il2CppObject *)static_fields->__9;
-    _9__2_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
+    _9__2_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GameObjectAdjustAssort_AdjustParam__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__2_0, v9, Method_GameObjectAdjustAssort___c__Apply_b__2_0__, 0);
     v10 = GameObjectAdjustAssort___c_TypeInfo->static_fields;
     v10->__9__2_0 = (struct System_Func_GameObjectAdjustAssort_AdjustParam__bool__o *)_9__2_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->__9__2_0, (int32_t)_9__2_0, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->__9__2_0, (int32_t)_9__2_0, v11, v12, v13, v14, v15, v16);
   }
   v17 = System_Linq_Enumerable__Where_object_(
           adjustParamArray,
           (System_Func_TSource__bool__o *)_9__2_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_GameObjectAdjustAssort_AdjustParam___);
   if ( !v17 )
-    sub_21FFECC(0, v18);
+    sub_2213CDC(0, v18);
   klass = v17->klass;
   v20 = v17;
   v21 = *(unsigned __int16 *)&v17->klass->_2.rank;
@@ -103,7 +103,7 @@ void GameObjectAdjustAssort__Apply(GameObjectAdjustAssort_o *this, int32_t index
   else
   {
 LABEL_14:
-    v23 = sub_2237E2C(v17, System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0);
+    v23 = sub_224BC3C(v17, System_Collections_Generic_IEnumerable_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0);
   }
   v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v23)(
           v20,
@@ -112,7 +112,7 @@ LABEL_14:
   while ( 1 )
   {
     if ( !v40 )
-      sub_21FFECC(v24, v25);
+      sub_2213CDC(v24, v25);
     v26 = *(_QWORD *)v40;
     v27 = *(unsigned __int16 *)(*(_QWORD *)v40 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v40 + 302LL) )
@@ -130,7 +130,7 @@ LABEL_14:
     else
     {
 LABEL_22:
-      v29 = sub_2237E2C(v40, System_Collections_IEnumerator_TypeInfo, 0);
+      v29 = sub_224BC3C(v40, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v40, *(_QWORD *)(v29 + 8)) & 1) == 0 )
       break;
@@ -151,7 +151,7 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v33 = sub_2237E2C(v40, System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0);
+      v33 = sub_224BC3C(v40, System_Collections_Generic_IEnumerator_GameObjectAdjustAssort_AdjustParam__TypeInfo, 0);
     }
     v34 = (GameObjectAdjustAssort_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v40, *(_QWORD *)(v33 + 8));
     GameObjectAdjustAssort__ApplyLocalPosition(v34, (GameObjectAdjustAssort_AdjustParam_o *)v34, index, v35);
@@ -173,7 +173,7 @@ LABEL_29:
   else
   {
 LABEL_36:
-    v39 = sub_2237E2C(v40, System_IDisposable_TypeInfo, 0);
+    v39 = sub_224BC3C(v40, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v39)(v40, *(_QWORD *)(v39 + 8));
 }
@@ -187,25 +187,25 @@ void GameObjectAdjustAssort__ApplyLocalPosition(
 {
   struct UnityEngine_Vector3_array *localPosArray; // x8
 
-  if ( (byte_5937C1A & 1) == 0 )
+  if ( (byte_596FD7D & 1) == 0 )
   {
-    this = (GameObjectAdjustAssort_o *)sub_21FFC50(&Method_BasicHelper_IsValidIndex_Vector3___);
-    byte_5937C1A = 1;
+    this = (GameObjectAdjustAssort_o *)sub_2213A60(&Method_BasicHelper_IsValidIndex_Vector3___);
+    byte_596FD7D = 1;
   }
   if ( !adjustParam )
     goto LABEL_9;
   this = (GameObjectAdjustAssort_o *)BasicHelper__IsValidIndex_Vector3_(
                                        adjustParam->fields.localPosArray,
                                        index,
-                                       (const MethodInfo_37E1C40 *)Method_BasicHelper_IsValidIndex_Vector3___);
+                                       (const MethodInfo_3814FF0 *)Method_BasicHelper_IsValidIndex_Vector3___);
   if ( ((unsigned __int8)this & 1) == 0 )
     return;
   localPosArray = adjustParam->fields.localPosArray;
   if ( !localPosArray )
 LABEL_9:
-    sub_21FFECC(this, adjustParam);
+    sub_2213CDC(this, adjustParam);
   if ( LODWORD(localPosArray->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   GameObjectExtensions__SetLocalPosition(adjustParam->fields.target, localPosArray->m_Items[index], 0);
 }
 
@@ -226,15 +226,15 @@ void GameObjectAdjustAssort___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5937C1B & 1) == 0 )
+  if ( (byte_596FD7E & 1) == 0 )
   {
-    sub_21FFC50(&GameObjectAdjustAssort___c_TypeInfo);
-    byte_5937C1B = 1;
+    sub_2213A60(&GameObjectAdjustAssort___c_TypeInfo);
+    byte_596FD7E = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(GameObjectAdjustAssort___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(GameObjectAdjustAssort___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GameObjectAdjustAssort___c_TypeInfo->static_fields->__9 = (struct GameObjectAdjustAssort___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)GameObjectAdjustAssort___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -259,13 +259,13 @@ bool GameObjectAdjustAssort___c___Apply_b__2_0(
 {
   UnityEngine_Object_o *target; // x19
 
-  if ( (byte_5937C1C & 1) == 0 )
+  if ( (byte_596FD7F & 1) == 0 )
   {
-    this = (GameObjectAdjustAssort___c_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937C1C = 1;
+    this = (GameObjectAdjustAssort___c_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FD7F = 1;
   }
   if ( !x )
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   target = (UnityEngine_Object_o *)x->fields.target;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, x);

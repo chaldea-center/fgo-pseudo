@@ -41,32 +41,30 @@ void QuestInformationListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v39; // w5
   bool v40; // w6
   bool v41; // w7
-  System_Array_o *v42; // x0
-  System_RuntimeFieldHandle_o v43; // x1
-  System_Array_o *v44; // x19
-  struct QuestInformationListViewItemDraw_StaticFields *v45; // x0
-  System_String_o *v46; // x2
-  System_String_o *v47; // x3
-  int32_t v48; // w4
-  int32_t v49; // w5
-  bool v50; // w6
-  bool v51; // w7
+  System_Array_o *v42; // x19
+  struct QuestInformationListViewItemDraw_StaticFields *v43; // x0
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
+  int32_t v47; // w5
+  bool v48; // w6
+  bool v49; // w7
 
-  if ( (byte_593524E & 1) == 0 )
+  if ( (byte_596D390 & 1) == 0 )
   {
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&float___TypeInfo);
-    sub_21FFC50(&Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58);
-    sub_21FFC50(&StringLiteral_19887/*"enemy_icon_"*/);
-    sub_21FFC50(&StringLiteral_24044/*"questinfo_enemy_brank"*/);
-    sub_21FFC50(&StringLiteral_15702/*"Unlit/Transparent Colored"*/);
-    sub_21FFC50(&StringLiteral_26933/*"？？？"*/);
-    sub_21FFC50(&StringLiteral_6297/*"Enemys/Icon/"*/);
-    byte_593524E = 1;
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&float___TypeInfo);
+    sub_2213A60(&Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58);
+    sub_2213A60(&StringLiteral_19929/*"enemy_icon_"*/);
+    sub_2213A60(&StringLiteral_24091/*"questinfo_enemy_brank"*/);
+    sub_2213A60(&StringLiteral_15732/*"Unlit/Transparent Colored"*/);
+    sub_2213A60(&StringLiteral_26985/*"？？？"*/);
+    sub_2213A60(&StringLiteral_6309/*"Enemys/Icon/"*/);
+    byte_596D390 = 1;
   }
-  v7 = StringLiteral_24044/*"questinfo_enemy_brank"*/;
-  QuestInformationListViewItemDraw_TypeInfo->static_fields->ENEMY_UNKNOWN_SP = (struct System_String_o *)StringLiteral_24044/*"questinfo_enemy_brank"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_24091/*"questinfo_enemy_brank"*/;
+  QuestInformationListViewItemDraw_TypeInfo->static_fields->ENEMY_UNKNOWN_SP = (struct System_String_o *)StringLiteral_24091/*"questinfo_enemy_brank"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)QuestInformationListViewItemDraw_TypeInfo->static_fields,
     v7,
     v1,
@@ -75,33 +73,34 @@ void QuestInformationListViewItemDraw___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_26933/*"？？？"*/;
+  v8 = StringLiteral_26985/*"？？？"*/;
   static_fields = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  static_fields->ENEMY_UNKNOWN_NAME = (struct System_String_o *)StringLiteral_26933/*"？？？"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ENEMY_UNKNOWN_NAME, v8, v10, v11, v12, v13, v14, v15);
-  v16 = StringLiteral_6297/*"Enemys/Icon/"*/;
+  static_fields->ENEMY_UNKNOWN_NAME = (struct System_String_o *)StringLiteral_26985/*"？？？"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ENEMY_UNKNOWN_NAME, v8, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_6309/*"Enemys/Icon/"*/;
   v17 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  v17->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_6297/*"Enemys/Icon/"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->ENEMY_ICON_TEXTURE_PATH, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_19887/*"enemy_icon_"*/;
+  v17->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_6309/*"Enemys/Icon/"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->ENEMY_ICON_TEXTURE_PATH, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_19929/*"enemy_icon_"*/;
   v25 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  v25->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_19887/*"enemy_icon_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->ENEMY_ICON_TEXTURE_PREFIX, v24, v26, v27, v28, v29, v30, v31);
+  v25->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_19929/*"enemy_icon_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->ENEMY_ICON_TEXTURE_PREFIX, v24, v26, v27, v28, v29, v30, v31);
   v32 = QuestInformationListViewItemDraw_TypeInfo;
-  v33 = StringLiteral_15702/*"Unlit/Transparent Colored"*/;
+  v33 = StringLiteral_15732/*"Unlit/Transparent Colored"*/;
   v34 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  v34->SHADOW_COLOR = (struct UnityEngine_Color_o)xmmword_E93FE0;
+  v34->SHADOW_COLOR = (struct UnityEngine_Color_o)xmmword_E9D180;
   v35 = v32->static_fields;
   v34->ENEMY_UNKNOWN_CLASSID = 12;
   v35->DEFAULT_SHADER = (struct System_String_o *)v33;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v35->DEFAULT_SHADER, v33, v36, v37, v38, v39, v40, v41);
-  v42 = (System_Array_o *)sub_21FFD10(float___TypeInfo, 4);
-  v43.fields.value = Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58;
-  v44 = v42;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v42, v43, 0);
-  v45 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  v45->TARGET_POSITION = (struct System_Single_array *)v44;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v45->TARGET_POSITION, (int32_t)v44, v46, v47, v48, v49, v50, v51);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v35->DEFAULT_SHADER, v33, v36, v37, v38, v39, v40, v41);
+  v42 = (System_Array_o *)sub_2213B20(float___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v42,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58,
+    0);
+  v43 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
+  v43->TARGET_POSITION = (struct System_Single_array *)v42;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v43->TARGET_POSITION, (int32_t)v42, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -125,7 +124,7 @@ UnityEngine_Material_o *QuestInformationListViewItemDraw__GetNewChocoMaterial(
     if ( viewManager )
       return QuestInformationListViewManager__NewChocoMaterialForSprite(viewManager, (const MethodInfo *)isSprite);
 LABEL_6:
-    sub_21FFECC(viewManager, isSprite);
+    sub_2213CDC(viewManager, isSprite);
   }
   if ( !viewManager )
     goto LABEL_6;
@@ -147,7 +146,7 @@ UnityEngine_Material_o *QuestInformationListViewItemDraw__GetNewColorShadowMater
     if ( viewManager )
       return QuestInformationListViewManager__NewColorShadowMaterialForSprite(viewManager, (const MethodInfo *)isSprite);
 LABEL_6:
-    sub_21FFECC(viewManager, isSprite);
+    sub_2213CDC(viewManager, isSprite);
   }
   if ( !viewManager )
     goto LABEL_6;
@@ -195,25 +194,25 @@ void QuestInformationListViewItemDraw__LoadEnemyTexture(
   __int64 v38; // x2
   int32_t v39; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_593524B & 1) == 0 )
+  if ( (byte_596D38D & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_QuestInformationListViewItemDraw___c__DisplayClass33_0__LoadEnemyTexture_b__0__);
-    sub_21FFC50(&QuestInformationListViewItemDraw___c__DisplayClass33_0_TypeInfo);
-    byte_593524B = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_QuestInformationListViewItemDraw___c__DisplayClass33_0__LoadEnemyTexture_b__0__);
+    sub_2213A60(&QuestInformationListViewItemDraw___c__DisplayClass33_0_TypeInfo);
+    byte_596D38D = 1;
   }
-  v7 = sub_21FFEBC(QuestInformationListViewItemDraw___c__DisplayClass33_0_TypeInfo);
+  v7 = sub_2213CCC(QuestInformationListViewItemDraw___c__DisplayClass33_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_14;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__SetLoadMode(Instance, 1, 0);
@@ -226,16 +225,16 @@ void QuestInformationListViewItemDraw__LoadEnemyTexture(
   iconId = item->fields.iconId;
   ENEMY_ICON_TEXTURE_PREFIX = (Il2CppObject *)QuestInformationListViewItemDraw_TypeInfo->static_fields->ENEMY_ICON_TEXTURE_PREFIX;
   v39 = iconId;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v39);
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v39);
   v27 = System_String__Concat(ENEMY_ICON_TEXTURE_PREFIX, v26, 0);
   this->fields.enemyIconName = v27;
   p_enemyIconName = &this->fields.enemyIconName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_enemyIconName, (int32_t)v27, v29, v30, v31, v32, v33, v34);
-  v35 = System_String__Concat_75438412(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_enemyIconName, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+  v35 = System_String__Concat_75651716(
           QuestInformationListViewItemDraw_TypeInfo->static_fields->ENEMY_ICON_TEXTURE_PATH,
           *p_enemyIconName,
           0);
-  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v36 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v36,
     (Il2CppObject *)v7,
@@ -245,14 +244,14 @@ void QuestInformationListViewItemDraw__LoadEnemyTexture(
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v37, v38);
   if ( !AssetManager__loadAssetStorage(v35, v36, 1, 0, 0) )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetLoadMode(Instance, 0, 0);
       return;
     }
 LABEL_14:
-    sub_21FFECC(Instance, v9);
+    sub_2213CDC(Instance, v9);
   }
 }
 
@@ -289,11 +288,11 @@ void QuestInformationListViewItemDraw__ReleaseEnemyTexture(
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_593524C & 1) == 0 )
+  if ( (byte_596D38E & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    byte_593524C = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    byte_596D38E = 1;
   }
   p_enemyIconName = &this->fields.enemyIconName;
   if ( !System_String__IsNullOrEmpty(this->fields.enemyIconName, 0) )
@@ -304,15 +303,15 @@ void QuestInformationListViewItemDraw__ReleaseEnemyTexture(
       j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, v4, v5);
       v6 = QuestInformationListViewItemDraw_TypeInfo;
     }
-    v9 = System_String__Concat_75438412(v6->static_fields->ENEMY_ICON_TEXTURE_PATH, *p_enemyIconName, 0);
+    v9 = System_String__Concat_75651716(v6->static_fields->ENEMY_ICON_TEXTURE_PATH, *p_enemyIconName, 0);
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v7, v8);
     AssetManager__releaseAssetStorage(v9, 0);
     this->fields.enemyIconAssetData = 0;
     p_enemyIconAssetData = (MissionNaviTransitionBoardItem_o *)&this->fields.enemyIconAssetData;
-    sub_21FFBF4(p_enemyIconAssetData, 0, v11, v12, v13, v14, v15, v16);
+    sub_2213A04(p_enemyIconAssetData, 0, v11, v12, v13, v14, v15, v16);
     p_enemyIconAssetData->monitor = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_enemyIconName, 0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_enemyIconName, 0, v17, v18, v19, v20, v21, v22);
   }
 }
 
@@ -326,41 +325,37 @@ void QuestInformationListViewItemDraw__SetDispType(
         const MethodInfo *method)
 {
   QuestInformationListViewItemDraw_o *v8; // x21
-  float r; // s0 OVERLAPPED
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  QuestInformationListViewItemDraw_o *v13; // x21
-  UnityEngine_Material_o *v14; // x20
-  struct QuestInformationListViewItemDraw_StaticFields *static_fields; // x8
+  QuestInformationListViewItemDraw_o *v12; // x21
+  UnityEngine_Material_o *v13; // x20
+  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
-  if ( (byte_5935248 & 1) == 0 )
+  if ( (byte_596D38A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&StringLiteral_16781/*"_Color"*/);
-    this = (QuestInformationListViewItemDraw_o *)sub_21FFC50(&StringLiteral_16726/*"_AddColor"*/);
-    byte_5935248 = 1;
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&StringLiteral_16813/*"_Color"*/);
+    this = (QuestInformationListViewItemDraw_o *)sub_2213A60(&StringLiteral_16758/*"_AddColor"*/);
+    byte_596D38A = 1;
   }
   switch ( dispTp )
   {
     case 3:
       if ( !sp )
         goto LABEL_22;
-      v17.fields.r = 1.0;
-      v17.fields.g = 1.0;
-      v17.fields.b = 1.0;
-      v17.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v17, 0);
-      v14 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
+      v16.fields.r = 1.0;
+      v16.fields.g = 1.0;
+      v16.fields.b = 1.0;
+      v16.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v16, 0);
+      v13 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
                                         v8,
                                         1,
                                         v8->klass->vtable._5_GetNewChocoMaterial.method);
-      v13 = (QuestInformationListViewItemDraw_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_83061620((UnityEngine_Material_o *)v13, v14, 0);
+      v12 = (QuestInformationListViewItemDraw_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_83274924((UnityEngine_Material_o *)v12, v13, 0);
       goto LABEL_15;
     case 2:
       if ( !item )
@@ -372,52 +367,48 @@ void QuestInformationListViewItemDraw__SetDispType(
           j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, sp);
         if ( sp )
         {
-          static_fields = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-          b = static_fields->SHADOW_COLOR.fields.b;
-          a = static_fields->SHADOW_COLOR.fields.a;
-          r = static_fields->SHADOW_COLOR.fields.r;
-          g = static_fields->SHADOW_COLOR.fields.g;
+          SHADOW_COLOR = QuestInformationListViewItemDraw_TypeInfo->static_fields->SHADOW_COLOR;
           goto LABEL_21;
         }
 LABEL_22:
-        sub_21FFECC(this, *(_QWORD *)&dispTp);
+        sub_2213CDC(this, *(_QWORD *)&dispTp);
       }
       if ( !sp )
         goto LABEL_22;
-      v16.fields.r = 1.0;
-      v16.fields.g = 1.0;
-      v16.fields.b = 1.0;
-      v16.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v16, 0);
+      v15.fields.r = 1.0;
+      v15.fields.g = 1.0;
+      v15.fields.b = 1.0;
+      v15.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v15, 0);
       this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
                                                      v8,
                                                      1,
                                                      v8->klass->vtable._4_GetNewColorShadowMaterial.method);
       if ( !this )
         goto LABEL_22;
-      v13 = this;
+      v12 = this;
       UnityEngine_Material__SetColor(
         (UnityEngine_Material_o *)this,
-        (System_String_o *)StringLiteral_16781/*"_Color"*/,
+        (System_String_o *)StringLiteral_16813/*"_Color"*/,
         item->fields.mainColor,
         0);
       UnityEngine_Material__SetColor(
-        (UnityEngine_Material_o *)v13,
-        (System_String_o *)StringLiteral_16726/*"_AddColor"*/,
+        (UnityEngine_Material_o *)v12,
+        (System_String_o *)StringLiteral_16758/*"_AddColor"*/,
         item->fields.addColor,
         0);
 LABEL_15:
-      UISpriteAltMat__SetMaterialKeepTexture(sp, (UnityEngine_Material_o *)v13, 0);
+      UISpriteAltMat__SetMaterialKeepTexture(sp, (UnityEngine_Material_o *)v12, 0);
       return;
     case 1:
       if ( sp )
       {
-        r = 1.0;
-        g = 1.0;
-        b = 1.0;
-        a = 1.0;
+        SHADOW_COLOR.fields.r = 1.0;
+        SHADOW_COLOR.fields.g = 1.0;
+        SHADOW_COLOR.fields.b = 1.0;
+        SHADOW_COLOR.fields.a = 1.0;
 LABEL_21:
-        UIWidget__set_color((UIWidget_o *)sp, *(UnityEngine_Color_o *)&r, 0);
+        UIWidget__set_color((UIWidget_o *)sp, SHADOW_COLOR, 0);
         UISpriteAltMat__ResetMaterial(sp, 0);
         return;
       }
@@ -435,92 +426,30 @@ void QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
         const MethodInfo *method)
 {
   QuestInformationListViewItemDraw_o *v8; // x21
-  float r; // s0 OVERLAPPED
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  UnityEngine_Material_o *v13; // x21
-  UnityEngine_Texture_o *v14; // x0
+  UnityEngine_Material_o *v12; // x21
+  UnityEngine_Texture_o *v13; // x0
   UITexture_c *klass; // x8
-  UITexture_o *v16; // x0
-  UnityEngine_Material_o *v17; // x1
-  UnityEngine_Material_o *v18; // x20
-  UnityEngine_Texture_o *v19; // x0
-  struct QuestInformationListViewItemDraw_StaticFields *static_fields; // x8
+  UITexture_o *v15; // x0
+  UnityEngine_Material_o *v16; // x1
+  UnityEngine_Material_o *v17; // x20
+  UnityEngine_Texture_o *v18; // x0
+  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
-  if ( (byte_593524A & 1) == 0 )
+  if ( (byte_596D38C & 1) == 0 )
   {
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&StringLiteral_16781/*"_Color"*/);
-    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
-    sub_21FFC50(&StringLiteral_16726/*"_AddColor"*/);
-    this = (QuestInformationListViewItemDraw_o *)sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_593524A = 1;
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&StringLiteral_16813/*"_Color"*/);
+    sub_2213A60(&StringLiteral_16914/*"_MainTex"*/);
+    sub_2213A60(&StringLiteral_16758/*"_AddColor"*/);
+    this = (QuestInformationListViewItemDraw_o *)sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_596D38C = 1;
   }
   switch ( dispTp )
   {
     case 3:
-      if ( !texture )
-        goto LABEL_27;
-      v22.fields.r = 1.0;
-      v22.fields.g = 1.0;
-      v22.fields.b = 1.0;
-      v22.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)texture, v22, 0);
-      ((void (__fastcall *)(UITexture_o *, _QWORD, const MethodInfo *))texture->klass->vtable._29_set_shader.methodPtr)(
-        texture,
-        0,
-        texture->klass->vtable._29_set_shader.method);
-      v18 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
-                                        v8,
-                                        1,
-                                        v8->klass->vtable._5_GetNewChocoMaterial.method);
-      this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
-                                                     texture,
-                                                     texture->klass->vtable._24_get_material.method);
-      if ( !this )
-        goto LABEL_27;
-      this = (QuestInformationListViewItemDraw_o *)UnityEngine_Material__GetTexture(
-                                                     (UnityEngine_Material_o *)this,
-                                                     (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
-                                                     0);
-      if ( !v18 )
-        goto LABEL_27;
-      UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16879/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
-      this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
-                                                     texture,
-                                                     texture->klass->vtable._24_get_material.method);
-      if ( !this )
-        goto LABEL_27;
-      v19 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16884/*"_MaskTex"*/, 0);
-      UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16884/*"_MaskTex"*/, v19, 0);
-      klass = texture->klass;
-      v16 = texture;
-      v17 = v18;
-      goto LABEL_20;
-    case 2:
-      if ( !item )
-        goto LABEL_27;
-      if ( item->fields.colorType < 1 )
-      {
-        this = (QuestInformationListViewItemDraw_o *)QuestInformationListViewItemDraw_TypeInfo;
-        if ( !*(&QuestInformationListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, texture);
-        if ( texture )
-        {
-          static_fields = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-          r = static_fields->SHADOW_COLOR.fields.r;
-          g = static_fields->SHADOW_COLOR.fields.g;
-          b = static_fields->SHADOW_COLOR.fields.b;
-          a = static_fields->SHADOW_COLOR.fields.a;
-          goto LABEL_26;
-        }
-LABEL_27:
-        sub_21FFECC(this, *(_QWORD *)&dispTp);
-      }
       if ( !texture )
         goto LABEL_27;
       v21.fields.r = 1.0;
@@ -532,7 +461,61 @@ LABEL_27:
         texture,
         0,
         texture->klass->vtable._29_set_shader.method);
-      v13 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
+      v17 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
+                                        v8,
+                                        1,
+                                        v8->klass->vtable._5_GetNewChocoMaterial.method);
+      this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
+                                                     texture,
+                                                     texture->klass->vtable._24_get_material.method);
+      if ( !this )
+        goto LABEL_27;
+      this = (QuestInformationListViewItemDraw_o *)UnityEngine_Material__GetTexture(
+                                                     (UnityEngine_Material_o *)this,
+                                                     (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
+                                                     0);
+      if ( !v17 )
+        goto LABEL_27;
+      UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+      this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
+                                                     texture,
+                                                     texture->klass->vtable._24_get_material.method);
+      if ( !this )
+        goto LABEL_27;
+      v18 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
+      UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v18, 0);
+      klass = texture->klass;
+      v15 = texture;
+      v16 = v17;
+      goto LABEL_20;
+    case 2:
+      if ( !item )
+        goto LABEL_27;
+      if ( item->fields.colorType < 1 )
+      {
+        this = (QuestInformationListViewItemDraw_o *)QuestInformationListViewItemDraw_TypeInfo;
+        if ( !*(&QuestInformationListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, texture);
+        if ( texture )
+        {
+          SHADOW_COLOR = QuestInformationListViewItemDraw_TypeInfo->static_fields->SHADOW_COLOR;
+          goto LABEL_26;
+        }
+LABEL_27:
+        sub_2213CDC(this, *(_QWORD *)&dispTp);
+      }
+      if ( !texture )
+        goto LABEL_27;
+      v20.fields.r = 1.0;
+      v20.fields.g = 1.0;
+      v20.fields.b = 1.0;
+      v20.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)texture, v20, 0);
+      ((void (__fastcall *)(UITexture_o *, _QWORD, const MethodInfo *))texture->klass->vtable._29_set_shader.methodPtr)(
+        texture,
+        0,
+        texture->klass->vtable._29_set_shader.method);
+      v12 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
                                         v8,
                                         1,
                                         v8->klass->vtable._4_GetNewColorShadowMaterial.method);
@@ -543,27 +526,27 @@ LABEL_27:
         goto LABEL_27;
       this = (QuestInformationListViewItemDraw_o *)UnityEngine_Material__GetTexture(
                                                      (UnityEngine_Material_o *)this,
-                                                     (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+                                                     (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
                                                      0);
-      if ( !v13 )
+      if ( !v12 )
         goto LABEL_27;
-      UnityEngine_Material__SetTexture(v13, (System_String_o *)StringLiteral_16879/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+      UnityEngine_Material__SetTexture(v12, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
       this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
                                                      texture,
                                                      texture->klass->vtable._24_get_material.method);
       if ( !this )
         goto LABEL_27;
-      v14 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16884/*"_MaskTex"*/, 0);
-      UnityEngine_Material__SetTexture(v13, (System_String_o *)StringLiteral_16884/*"_MaskTex"*/, v14, 0);
-      UnityEngine_Material__SetColor(v13, (System_String_o *)StringLiteral_16781/*"_Color"*/, item->fields.mainColor, 0);
-      UnityEngine_Material__SetColor(v13, (System_String_o *)StringLiteral_16726/*"_AddColor"*/, item->fields.addColor, 0);
+      v13 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
+      UnityEngine_Material__SetTexture(v12, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v13, 0);
+      UnityEngine_Material__SetColor(v12, (System_String_o *)StringLiteral_16813/*"_Color"*/, item->fields.mainColor, 0);
+      UnityEngine_Material__SetColor(v12, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, item->fields.addColor, 0);
       klass = texture->klass;
-      v16 = texture;
-      v17 = v13;
+      v15 = texture;
+      v16 = v12;
 LABEL_20:
       ((void (__fastcall *)(UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))klass->vtable._25_set_material.methodPtr)(
+        v15,
         v16,
-        v17,
         klass->vtable._25_set_material.method);
       ((void (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._30_MarkAsChanged.methodPtr)(
         texture,
@@ -572,12 +555,12 @@ LABEL_20:
     case 1:
       if ( texture )
       {
-        r = 1.0;
-        g = 1.0;
-        b = 1.0;
-        a = 1.0;
+        SHADOW_COLOR.fields.r = 1.0;
+        SHADOW_COLOR.fields.g = 1.0;
+        SHADOW_COLOR.fields.b = 1.0;
+        SHADOW_COLOR.fields.a = 1.0;
 LABEL_26:
-        UIWidget__set_color((UIWidget_o *)texture, *(UnityEngine_Color_o *)&r, 0);
+        UIWidget__set_color((UIWidget_o *)texture, SHADOW_COLOR, 0);
         return;
       }
       goto LABEL_27;
@@ -586,7 +569,7 @@ LABEL_26:
 
 
 // local variable allocation has failed, the output may be wrong!
-void QuestInformationListViewItemDraw__SetDispType_43347392(
+void QuestInformationListViewItemDraw__SetDispType_43367988(
         QuestInformationListViewItemDraw_o *this,
         int32_t dispTp,
         UITexture_o *texture,
@@ -610,13 +593,13 @@ void QuestInformationListViewItemDraw__SetDispType_43347392(
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
-  if ( (byte_5935249 & 1) == 0 )
+  if ( (byte_596D38B & 1) == 0 )
   {
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&StringLiteral_16781/*"_Color"*/);
-    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
-    this = (QuestInformationListViewItemDraw_o *)sub_21FFC50(&StringLiteral_16726/*"_AddColor"*/);
-    byte_5935249 = 1;
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&StringLiteral_16813/*"_Color"*/);
+    sub_2213A60(&StringLiteral_16914/*"_MainTex"*/);
+    this = (QuestInformationListViewItemDraw_o *)sub_2213A60(&StringLiteral_16758/*"_AddColor"*/);
+    byte_596D38B = 1;
   }
   if ( dispTp == 3 )
   {
@@ -640,7 +623,7 @@ void QuestInformationListViewItemDraw__SetDispType_43347392(
                                                    texture->klass->vtable._26_get_mainTexture.method);
     if ( !v18 )
       goto LABEL_33;
-    UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16879/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+    UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
     klass = texture->klass;
     v16 = texture;
     v17 = v18;
@@ -680,7 +663,7 @@ LABEL_22:
           j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, v9);
         if ( v10 )
         {
-          if ( !System_String__Equals_75473208(
+          if ( !System_String__Equals_75686512(
                   (System_String_o *)v10,
                   QuestInformationListViewItemDraw_TypeInfo->static_fields->DEFAULT_SHADER,
                   0) )
@@ -695,7 +678,7 @@ LABEL_22:
       }
     }
 LABEL_33:
-    sub_21FFECC(this, *(_QWORD *)&dispTp);
+    sub_2213CDC(this, *(_QWORD *)&dispTp);
   }
   if ( !item )
     goto LABEL_33;
@@ -721,9 +704,9 @@ LABEL_33:
                                                    texture->klass->vtable._26_get_mainTexture.method);
     if ( !v14 )
       goto LABEL_33;
-    UnityEngine_Material__SetTexture(v14, (System_String_o *)StringLiteral_16879/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
-    UnityEngine_Material__SetColor(v14, (System_String_o *)StringLiteral_16781/*"_Color"*/, item->fields.mainColor, 0);
-    UnityEngine_Material__SetColor(v14, (System_String_o *)StringLiteral_16726/*"_AddColor"*/, item->fields.addColor, 0);
+    UnityEngine_Material__SetTexture(v14, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+    UnityEngine_Material__SetColor(v14, (System_String_o *)StringLiteral_16813/*"_Color"*/, item->fields.mainColor, 0);
+    UnityEngine_Material__SetColor(v14, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, item->fields.addColor, 0);
     klass = texture->klass;
     v16 = texture;
     v17 = v14;
@@ -747,7 +730,7 @@ LABEL_33:
   this = (QuestInformationListViewItemDraw_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !this )
     goto LABEL_33;
-  if ( !System_String__Equals_75473208(
+  if ( !System_String__Equals_75686512(
           (System_String_o *)this,
           QuestInformationListViewItemDraw_TypeInfo->static_fields->DEFAULT_SHADER,
           0) )
@@ -782,13 +765,13 @@ void QuestInformationListViewItemDraw__SetEnemyName(
   __int64 v9; // x2
 
   v4 = this;
-  if ( (byte_593524D & 1) == 0 )
+  if ( (byte_596D38F & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_QuestInformationListViewItemDraw__SetEnemyName_b__35_0__);
-    this = (QuestInformationListViewItemDraw_o *)sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
-    byte_593524D = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_QuestInformationListViewItemDraw__SetEnemyName_b__35_0__);
+    this = (QuestInformationListViewItemDraw_o *)sub_2213A60(&ServantAssetLoadManager_TypeInfo);
+    byte_596D38F = 1;
   }
   if ( !item )
     goto LABEL_12;
@@ -798,7 +781,7 @@ void QuestInformationListViewItemDraw__SetEnemyName(
     if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, item, method);
     NameEffectPath = ServantAssetLoadManager__getNameEffectPath(enemyNameEffectId, 0);
-    v7 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v7 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v7,
       (Il2CppObject *)v4,
@@ -811,7 +794,7 @@ void QuestInformationListViewItemDraw__SetEnemyName(
   this = (QuestInformationListViewItemDraw_o *)v4->fields.textLb;
   if ( !this )
 LABEL_12:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   UILabel__set_text((UILabel_o *)this, item->fields.nameText, 0);
 }
 
@@ -915,56 +898,56 @@ void QuestInformationListViewItemDraw__SetItem(
   UILabel_o *holdNumTitleLb; // x21
   UILabel_o *holdNumCntLb; // x21
 
-  if ( (byte_5935246 & 1) == 0 )
+  if ( (byte_596D388 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_MstMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewManager_TypeInfo);
-    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_QuestInformationListViewItemDraw___c__DisplayClass26_0__SetItem_b__0__);
-    sub_21FFC50(&QuestInformationListViewItemDraw___c__DisplayClass26_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_12564/*"SHOP_BUY_ITEM_HOLD"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935246 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_MstMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&QuestInformationListViewManager_TypeInfo);
+    sub_2213A60(&ServantAssetLoadManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_QuestInformationListViewItemDraw___c__DisplayClass26_0__SetItem_b__0__);
+    sub_2213A60(&QuestInformationListViewItemDraw___c__DisplayClass26_0_TypeInfo);
+    sub_2213A60(&StringLiteral_12590/*"SHOP_BUY_ITEM_HOLD"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D388 = 1;
   }
-  v7 = sub_21FFEBC(QuestInformationListViewItemDraw___c__DisplayClass26_0_TypeInfo);
+  v7 = sub_2213CCC(QuestInformationListViewItemDraw___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_195;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = item;
   v16 = (QuestInformationListViewItem_o **)(v7 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)item, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)item, v17, v18, v19, v20, v21, v22);
   completeMissionTarget = (UnityEngine_Object_o *)this->fields.completeMissionTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
   Instance = UnityEngine_Object__op_Inequality(completeMissionTarget, 0, 0);
   if ( (Instance & 1) != 0 )
   {
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_195;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMissionMaster___);
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMissionMaster___);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_195;
     Instance = (int64_t)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MstMissionMaster___);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_MstMissionMaster___);
     if ( !Instance )
       goto LABEL_195;
     Instance = (int64_t)MstMissionMaster__GetEnableMissions((MstMissionMaster_o *)Instance, 0);
@@ -999,7 +982,7 @@ void QuestInformationListViewItemDraw__SetItem(
       }
       if ( !(_DWORD)v37 )
 LABEL_196:
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v38 = *(_QWORD *)(Instance + 32);
       if ( !v38 )
         goto LABEL_195;
@@ -1027,12 +1010,12 @@ LABEL_24:
         manager->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (QuestInformationListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] != v41 )
   {
-    sub_220024C(manager, v41, v26, v27);
+    sub_221405C(manager, v41, v26, v27);
 LABEL_32:
     this->fields.viewManager = 0;
     p_viewManager = &this->fields.viewManager;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_viewManager, (int32_t)manager, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_viewManager, (int32_t)manager, v26, v27, v28, v29, v30, v31);
   if ( !mode )
     return;
   v45 = *v16;
@@ -1062,7 +1045,7 @@ LABEL_32:
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v9, v64);
       Manager__loadCommandCard = ServantAssetLoadManager__loadCommandCard(v66, targetId, targetCnt, targetCnt, 0);
       *p_SvtImg = Manager__loadCommandCard;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.SvtImg,
         (int32_t)Manager__loadCommandCard,
         v70,
@@ -1073,7 +1056,7 @@ LABEL_32:
         v75);
       if ( !*v16 )
         goto LABEL_195;
-      QuestInformationListViewItemDraw__SetDispType_43347392(
+      QuestInformationListViewItemDraw__SetDispType_43367988(
         this,
         (*v16)->fields.dispType,
         this->fields.SvtImg,
@@ -1106,10 +1089,10 @@ LABEL_32:
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
         if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v52, v53);
-        if ( !byte_5931EF0 )
+        if ( !byte_596A090 )
         {
-          sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-          byte_5931EF0 = 1;
+          sub_2213A60(&TerminalSceneComponent_TypeInfo);
+          byte_596A090 = 1;
         }
         v54 = TerminalSceneComponent_TypeInfo;
         if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -1125,10 +1108,10 @@ LABEL_32:
           enemySp = (UISprite_o *)this->fields.enemySp;
           if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v56);
-          if ( !byte_5931EF0 )
+          if ( !byte_596A090 )
           {
-            sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-            byte_5931EF0 = 1;
+            sub_2213A60(&TerminalSceneComponent_TypeInfo);
+            byte_596A090 = 1;
           }
           Instance = (int64_t)TerminalSceneComponent_TypeInfo;
           if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -1235,7 +1218,7 @@ LABEL_32:
       else
       {
         v82 = *(QuestInformationListViewItem_o **)(v7 + 24);
-        v83 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        v83 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
           v83,
           (Il2CppObject *)v7,
@@ -1309,7 +1292,7 @@ LABEL_32:
     if ( !Instance )
       goto LABEL_195;
     v48 = v47->fields.mRewardType == 2 ? 2 : 1;
-    ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)Instance, v48, v47->fields.targetId, -1, 0, 0);
+    ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)Instance, v48, v47->fields.targetId, -1, 0, 0);
     Instance = (int64_t)this->fields.itemIcon;
     if ( !Instance )
       goto LABEL_195;
@@ -1336,12 +1319,12 @@ LABEL_32:
     goto LABEL_195;
   if ( (*v16)->fields.mRewardType == 2 )
   {
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_195;
     Instance = (int64_t)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
     if ( !*v16 )
       goto LABEL_195;
     v62 = (ItemMaster_o *)Instance;
@@ -1381,7 +1364,7 @@ LABEL_101:
         }
       }
 LABEL_195:
-      sub_21FFECC(Instance, v9);
+      sub_2213CDC(Instance, v9);
     }
     if ( !*v16 )
       goto LABEL_195;
@@ -1418,15 +1401,15 @@ LABEL_195:
         }
         else
         {
-          Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_195;
           v94 = DataManager__GetMasterData_object_(
                   (DataManager_o *)Instance,
-                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
             *(__n128 *)&v95 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v92, v93);
-          Instance = sub_23D80E0(0, v95);
+          Instance = sub_2417958(0, v95);
           if ( !*v16 )
             goto LABEL_195;
           if ( !v94 )
@@ -1446,7 +1429,7 @@ LABEL_195:
     holdNumTitleLb = this->fields.holdNumTitleLb;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v90);
-    Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_12564/*"SHOP_BUY_ITEM_HOLD"*/, 0);
+    Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_12590/*"SHOP_BUY_ITEM_HOLD"*/, 0);
     if ( !holdNumTitleLb )
       goto LABEL_195;
     UILabel__set_text(holdNumTitleLb, (System_String_o *)Instance, 0);
@@ -1552,10 +1535,10 @@ void QuestInformationListViewItemDraw__UpdateTargetPosition(
   QuestInformationListViewItemDraw_c *v19; // x8
   struct System_Single_array *v20; // x8
 
-  if ( (byte_5935247 & 1) == 0 )
+  if ( (byte_596D389 & 1) == 0 )
   {
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    byte_5935247 = 1;
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    byte_596D389 = 1;
   }
   completeMissionTarget = (UnityEngine_Component_o *)this->fields.completeMissionTarget;
   if ( !completeMissionTarget )
@@ -1668,11 +1651,11 @@ void QuestInformationListViewItemDraw__UpdateTargetPosition(
           return;
         }
 LABEL_42:
-        sub_21FFED4(completeMissionTarget);
+        sub_2213CE4(completeMissionTarget);
       }
     }
 LABEL_41:
-    sub_21FFECC(completeMissionTarget, method);
+    sub_2213CDC(completeMissionTarget, method);
   }
 }
 
@@ -1690,31 +1673,31 @@ void QuestInformationListViewItemDraw___SetEnemyName_b__35_0(
   UnityEngine_Transform_o *transform; // x20
 
   v4 = this;
-  if ( (byte_593524F & 1) == 0 )
+  if ( (byte_596D391 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (QuestInformationListViewItemDraw_o *)sub_21FFC50(&StringLiteral_24021/*"quest_info"*/);
-    byte_593524F = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (QuestInformationListViewItemDraw_o *)sub_2213A60(&StringLiteral_24068/*"quest_info"*/);
+    byte_596D391 = 1;
   }
   if ( !assetData
-    || (this = (QuestInformationListViewItemDraw_o *)AssetData__GetObject_object__58323140(
+    || (this = (QuestInformationListViewItemDraw_o *)AssetData__GetObject_object__58532980(
                                                        assetData,
-                                                       (System_String_o *)StringLiteral_24021/*"quest_info"*/,
-                                                       (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112),
+                                                       (System_String_o *)StringLiteral_24068/*"quest_info"*/,
+                                                       (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320),
         (textLb = (UnityEngine_Component_o *)v4->fields.textLb) == 0) )
   {
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   }
   v6 = (Il2CppObject *)this;
   transform = UnityEngine_Component__get_transform(textLb, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-  UnityEngine_Object__Instantiate_object__59506996(
+  UnityEngine_Object__Instantiate_object__59717116(
     v6,
     transform,
-    (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+    (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
 }
 
 
@@ -1748,12 +1731,12 @@ void QuestInformationListViewItemDraw___c__DisplayClass26_0___SetItem_b__0(
     || (this = (QuestInformationListViewItemDraw___c__DisplayClass26_0_o *)v3->fields.__4__this) == 0 )
   {
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     (QuestInformationListViewItemDraw_o *)this,
     item->fields.dispType,
-    (UITexture_o *)this[4].fields.__4__this,
+    *((UITexture_o **)this + 18),
     item,
     v5);
 }
@@ -1784,23 +1767,23 @@ void QuestInformationListViewItemDraw___c__DisplayClass33_0___LoadEnemyTexture_b
   struct QuestInformationListViewItemDraw_o *v14; // x8
   struct QuestInformationListViewItemDraw_o *v15; // x8
   AssetData_o *enemyIconAssetData; // x21
-  Il2CppObject *Object_object__58323140; // x0
+  Il2CppObject *Object_object__58532980; // x0
 
-  if ( (byte_5935250 & 1) == 0 )
+  if ( (byte_596D392 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_17171/*"_alpha"*/);
-    sub_21FFC50(&StringLiteral_5116/*"Custom/SpriteWithMask"*/);
-    sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_5935250 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_17207/*"_alpha"*/);
+    sub_2213A60(&StringLiteral_5128/*"Custom/SpriteWithMask"*/);
+    sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_596D392 = 1;
   }
   _4__this = (AssetData_o *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_13;
   _4__this[1].fields.attrib = (struct System_String_o *)assetData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this[1].fields.attrib,
     (int32_t)assetData,
     (System_String_o *)method,
@@ -1809,8 +1792,8 @@ void QuestInformationListViewItemDraw___c__DisplayClass33_0___LoadEnemyTexture_b
     v5,
     v6,
     v7);
-  v11 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5116/*"Custom/SpriteWithMask"*/, 0);
-  v12 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
+  v11 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5128/*"Custom/SpriteWithMask"*/, 0);
+  v12 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v12, v11, 0);
   v13 = this->fields.__4__this;
   if ( !v13 )
@@ -1828,32 +1811,32 @@ void QuestInformationListViewItemDraw___c__DisplayClass33_0___LoadEnemyTexture_b
   _4__this = v14->fields.enemyIconAssetData;
   if ( !_4__this )
     goto LABEL_13;
-  _4__this = (AssetData_o *)AssetData__GetObject_object__58323140(
+  _4__this = (AssetData_o *)AssetData__GetObject_object__58532980(
                               _4__this,
                               v14->fields.enemyIconName,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360);
   if ( !v12
     || (UnityEngine_Material__set_mainTexture(v12, (UnityEngine_Texture_o *)_4__this, 0),
         (v15 = this->fields.__4__this) == 0)
     || (enemyIconAssetData = v15->fields.enemyIconAssetData,
-        _4__this = (AssetData_o *)System_String__Concat_75438412(
+        _4__this = (AssetData_o *)System_String__Concat_75651716(
                                     v15->fields.enemyIconName,
-                                    (System_String_o *)StringLiteral_17171/*"_alpha"*/,
+                                    (System_String_o *)StringLiteral_17207/*"_alpha"*/,
                                     0),
         !enemyIconAssetData)
-    || (Object_object__58323140 = AssetData__GetObject_object__58323140(
+    || (Object_object__58532980 = AssetData__GetObject_object__58532980(
                                     enemyIconAssetData,
                                     (System_String_o *)_4__this,
-                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152),
+                                    (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360),
         UnityEngine_Material__SetTexture(
           v12,
-          (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
-          (UnityEngine_Texture_o *)Object_object__58323140,
+          (System_String_o *)StringLiteral_16919/*"_MaskTex"*/,
+          (UnityEngine_Texture_o *)Object_object__58532980,
           0),
-        (_4__this = (AssetData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (_4__this = (AssetData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
 LABEL_13:
-    sub_21FFECC(_4__this, assetData);
+    sub_2213CDC(_4__this, assetData);
   }
   CommonUI__SetLoadMode((CommonUI_o *)_4__this, 0, 0);
   ActionExtensions__Call(this->fields.callback, 0);

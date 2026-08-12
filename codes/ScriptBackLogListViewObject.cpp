@@ -1,9 +1,9 @@
 void ScriptBackLogListViewObject___ctor(ScriptBackLogListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A639 & 1) == 0 )
+  if ( (byte_5972818 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_593A639 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_5972818 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method);
@@ -23,20 +23,20 @@ void ScriptBackLogListViewObject__Awake(ScriptBackLogListViewObject_o *this, con
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593A632 & 1) == 0 )
+  if ( (byte_5972811 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewItemDraw___);
-    byte_593A632 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewItemDraw___);
+    byte_5972811 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewItemDraw___);
   this->fields.itemDraw = (struct ScriptBackLogListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -57,21 +57,21 @@ UnityEngine_GameObject_o *ScriptBackLogListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_593A635 & 1) == 0 )
+  if ( (byte_5972814 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
-    byte_593A635 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___);
+    byte_5972814 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___)) == 0) )
+                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ScriptBackLogListViewObject___)) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
-  ScriptBackLogListViewObject__Init_51726128((ScriptBackLogListViewObject_o *)DragObject, 2, v6);
+  ScriptBackLogListViewObject__Init_51800660((ScriptBackLogListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -96,7 +96,7 @@ void ScriptBackLogListViewObject__EventMoveEnd(ScriptBackLogListViewObject_o *th
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -109,10 +109,10 @@ ScriptBackLogListViewItem_o *ScriptBackLogListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_593A634 & 1) == 0 )
+  if ( (byte_5972813 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptBackLogListViewItem_TypeInfo);
-    byte_593A634 = 1;
+    sub_2213A60(&ScriptBackLogListViewItem_TypeInfo);
+    byte_5972813 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -159,10 +159,10 @@ void ScriptBackLogListViewObject__Init(
   int32_t v31; // w9
   MissionNaviTransitionBoardItem_c *v32; // x19
 
-  if ( (byte_593A636 & 1) == 0 )
+  if ( (byte_5972815 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptBackLogListViewItem_TypeInfo);
-    byte_593A636 = 1;
+    sub_2213A60(&ScriptBackLogListViewItem_TypeInfo);
+    byte_5972815 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -191,12 +191,12 @@ void ScriptBackLogListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v16);
+    sub_2213CDC(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v18,
@@ -207,8 +207,8 @@ void ScriptBackLogListViewObject__Init(
     v23);
   if ( v12 <= 3 )
   {
-    v31 = dword_E92F40[v12];
-    this->fields.dispMode = *((_DWORD *)&xmmword_E93450 + v12);
+    v31 = dword_E9C0E0[v12];
+    this->fields.dispMode = *((_DWORD *)&xmmword_E9C5F0 + v12);
     this->fields.state = v31;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -217,7 +217,7 @@ void ScriptBackLogListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v25, v26, v27, v28, v29, v30);
+    sub_2213A04(p_callbackFunc, 0, v25, v26, v27, v28, v29, v30);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))v32->_1.namespaze)(
       v32->_1.element_class,
       *(_QWORD *)&v32->_1.byval_arg.bits);
@@ -225,60 +225,75 @@ void ScriptBackLogListViewObject__Init(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ScriptBackLogListViewObject__Init_51726128(
+void ScriptBackLogListViewObject__Init_51800660(
         ScriptBackLogListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v10; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ScriptBackLogListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
+  v10.fields.x = v5;
+  v10.fields.y = v6;
+  v10.fields.z = v7;
+  ScriptBackLogListViewObject__Init(this, initMode, 0, v4, v10, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ScriptBackLogListViewObject__Init_51727580(
+void ScriptBackLogListViewObject__Init_51802112(
         ScriptBackLogListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v11; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ScriptBackLogListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
+  v11.fields.x = v5;
+  v11.fields.y = v6;
+  v11.fields.z = v7;
+  ScriptBackLogListViewObject__Init(this, initMode, callbackFunc, delay, v11, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void ScriptBackLogListViewObject__Init_51727664(
+void ScriptBackLogListViewObject__Init_51802196(
         ScriptBackLogListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
   float v4; // s0
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v11; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  ScriptBackLogListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
+  v11.fields.x = v5;
+  v11.fields.y = v6;
+  v11.fields.z = v7;
+  ScriptBackLogListViewObject__Init(this, initMode, callbackFunc, v4, v11, method);
 }
 
 
@@ -296,11 +311,11 @@ void ScriptBackLogListViewObject__OnDestroy(ScriptBackLogListViewObject_o *this,
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_593A633 & 1) == 0 )
+  if ( (byte_5972812 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A633 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972812 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -314,7 +329,7 @@ void ScriptBackLogListViewObject__OnDestroy(ScriptBackLogListViewObject_o *this,
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v6);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v8, v9, v10, v11, v12, v13);
+    sub_2213A04(p_dragObject, 0, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -326,7 +341,7 @@ void ScriptBackLogListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -341,11 +356,11 @@ void ScriptBackLogListViewObject__SetupDisp(ScriptBackLogListViewObject_o *this,
   const MethodInfo *v9; // x3
   ScriptBackLogListViewItemDraw_o *v10; // x0
 
-  if ( (byte_593A637 & 1) == 0 )
+  if ( (byte_5972816 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScriptBackLogListViewItem_TypeInfo);
-    byte_593A637 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScriptBackLogListViewItem_TypeInfo);
+    byte_5972816 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -369,7 +384,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_21FFECC(0, v8);
+      sub_2213CDC(0, v8);
     ScriptBackLogListViewItemDraw__SetItem(v10, (ScriptBackLogListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -380,7 +395,7 @@ void ScriptBackLogListViewObject__Start(ScriptBackLogListViewObject_o *this, con
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    ScriptBackLogListViewObject__Init_51726128(this, 2, v2);
+    ScriptBackLogListViewObject__Init_51800660(this, 2, v2);
 }
 
 
@@ -396,11 +411,11 @@ System_String_o *ScriptBackLogListViewObject__ToString(ScriptBackLogListViewObje
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_593A638 & 1) == 0 )
+  if ( (byte_5972817 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptBackLogListViewItemDraw_DispMode_TypeInfo);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    byte_593A638 = 1;
+    sub_2213A60(&ScriptBackLogListViewItemDraw_DispMode_TypeInfo);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    byte_5972817 = 1;
   }
   dispMode = this->fields.dispMode;
   v12 = 0.0;
@@ -413,8 +428,8 @@ System_String_o *ScriptBackLogListViewObject__ToString(ScriptBackLogListViewObje
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_240362C(&v11, 0, 0, 0);
-  return System_String__Concat_75481624(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
+  v7 = (System_String_o *)sub_2402C74(&v11, 0, 0, 0);
+  return System_String__Concat_75694928(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
 }
 
 
@@ -434,10 +449,10 @@ void ScriptBackLogListViewObject__add_callbackFunc(
   System_Action_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_593A630 & 1) == 0 )
+  if ( (byte_597280F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593A630 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_597280F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -450,13 +465,13 @@ void ScriptBackLogListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9);
+  sub_221405C(v8, System_Action_TypeInfo, v9);
   ScriptBackLogListViewObject__remove_callbackFunc(v12, v13, v14);
 }
 
@@ -476,10 +491,10 @@ void ScriptBackLogListViewObject__remove_callbackFunc(
   ScriptBackLogListViewObject_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593A631 & 1) == 0 )
+  if ( (byte_5972810 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593A631 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5972810 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -492,12 +507,12 @@ void ScriptBackLogListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9);
+  sub_221405C(v8, System_Action_TypeInfo, v9);
   ScriptBackLogListViewObject__Awake(v12, v13);
 }

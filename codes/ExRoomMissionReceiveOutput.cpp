@@ -28,7 +28,7 @@ void ExRoomMissionReceiveOutput___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ReceivedMissionIds_k__BackingField = receivedMissionIds;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)receivedMissionIds,
     v13,
@@ -40,7 +40,7 @@ void ExRoomMissionReceiveOutput___ctor(
   this->fields._IsOverPresentBox_k__BackingField = isOverPresentBox;
   this->fields._OverflowType_k__BackingField = overflowType;
   this->fields._GetSvts_k__BackingField = getSvts;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GetSvts_k__BackingField,
     (int32_t)getSvts,
     v19,
@@ -50,7 +50,7 @@ void ExRoomMissionReceiveOutput___ctor(
     v23,
     v24);
   this->fields._GetCommandCodes_k__BackingField = getCommandCodes;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GetCommandCodes_k__BackingField,
     (int32_t)getCommandCodes,
     v25,
@@ -108,7 +108,7 @@ void ExRoomMissionReceiveOutput__set_GetCommandCodes(
   bool v7; // w7
 
   this->fields._GetCommandCodes_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GetCommandCodes_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -132,7 +132,7 @@ void ExRoomMissionReceiveOutput__set_GetSvts(
   bool v7; // w7
 
   this->fields._GetSvts_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GetSvts_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -174,7 +174,7 @@ void ExRoomMissionReceiveOutput__set_ReceivedMissionIds(
   bool v7; // w7
 
   this->fields._ReceivedMissionIds_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

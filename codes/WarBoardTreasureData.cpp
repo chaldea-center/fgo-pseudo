@@ -22,12 +22,12 @@ void WarBoardTreasureData___ctor(
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_593617D & 1) == 0 )
+  if ( (byte_596E2D7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___);
-    sub_21FFC50(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593617D = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___);
+    sub_2213A60(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596E2D7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !layout )
@@ -37,7 +37,7 @@ void WarBoardTreasureData___ctor(
   this->fields._treasureId_k__BackingField = effectId;
   Individuality = WarBoardStageLayoutEntity__GetIndividuality(layout, 0);
   this->fields._individuality_k__BackingField = Individuality;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)Individuality,
     v9,
@@ -46,22 +46,22 @@ void WarBoardTreasureData___ctor(
     v12,
     v13,
     v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___)) == 0 )
   {
 LABEL_7:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields._treasureId_k__BackingField,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
   this->fields.treasureEntity = (struct WarBoardTreasureEntity_o *)Entity;
   p_treasureEntity = &this->fields.treasureEntity;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_treasureEntity, (int32_t)Entity, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_treasureEntity, (int32_t)Entity, v17, v18, v19, v20, v21, v22);
   *((_BYTE *)p_treasureEntity - 20) = 0;
 }
 
@@ -79,7 +79,7 @@ bool WarBoardTreasureData__Get(
   this = (WarBoardTreasureData_o *)this->fields.component;
   if ( !this )
 LABEL_7:
-    sub_21FFECC(this, piece);
+    sub_2213CDC(this, piece);
   WarBoardTreasureComponent__OnUse(
     (WarBoardTreasureComponent_o *)this,
     piece->fields._nowSquareIndex_k__BackingField,
@@ -118,7 +118,7 @@ void WarBoardTreasureData__SetComponent(
   bool v7; // w7
 
   this->fields.component = component;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.component,
     (int32_t)component,
     (System_String_o *)method,
@@ -137,7 +137,7 @@ void WarBoardTreasureData__SetTouchEnable(WarBoardTreasureData_o *this, bool ena
 
   component = this->fields.component;
   if ( !component )
-    sub_21FFECC(0, enable);
+    sub_2213CDC(0, enable);
   WarBoardTreasureComponent__SetTouchEnable(component, enable, 0);
 }
 
@@ -149,7 +149,7 @@ void WarBoardTreasureData__SetTreasureEnable(WarBoardTreasureData_o *this, bool 
 
   component = this->fields.component;
   if ( !component )
-    sub_21FFECC(0, enable);
+    sub_2213CDC(0, enable);
   WarBoardTreasureComponent__SetColliderEnable(component, enable, 0);
 }
 
@@ -249,7 +249,7 @@ System_String_o *WarBoardTreasureData__get_treasureName(WarBoardTreasureData_o *
   if ( treasureEntity )
     p_name = &treasureEntity->fields.name;
   else
-    p_name = *(System_String_o ***)(qword_594C0B8 + 184);
+    p_name = *(System_String_o ***)(qword_5984390 + 184);
   return *p_name;
 }
 
@@ -266,7 +266,7 @@ void WarBoardTreasureData__set_individuality(
   bool v7; // w7
 
   this->fields._individuality_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -305,7 +305,7 @@ void WarBoardTreasureData_SaveData___ctor(WarBoardTreasureData_SaveData_o *this,
 }
 
 
-void WarBoardTreasureData_SaveData___ctor_45000896(
+void WarBoardTreasureData_SaveData___ctor_45025160(
         WarBoardTreasureData_SaveData_o *this,
         WarBoardTreasureData_o *owner,
         const MethodInfo *method)
@@ -330,10 +330,10 @@ void WarBoardTreasureData_SaveData___ctor_45000896(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.owner = owner;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
   v18 = this->fields.owner;
   if ( !v18 )
-    sub_21FFECC(0, v11);
+    sub_2213CDC(0, v11);
   isUse_k__BackingField = v18->fields._isUse_k__BackingField;
   treasureId_k__BackingField = v18->fields._treasureId_k__BackingField;
   treasureEntity = v18->fields.treasureEntity;
@@ -344,7 +344,7 @@ void WarBoardTreasureData_SaveData___ctor_45000896(
     LODWORD(treasureEntity) = treasureEntity->fields.rarity;
   v18->fields.localSaveData = this;
   this->fields.iconId = (int)treasureEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v18->fields.localSaveData,
     (int32_t)this,
     v12,
@@ -412,15 +412,15 @@ void WarBoardTreasureData_SaveData__SetOwner(
   struct WarBoardTreasureData_o *owner; // x0
 
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   Treasure = WarBoardData__GetTreasure(data, this->fields.squareIndex, 0);
   this->fields.owner = Treasure;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)Treasure, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)Treasure, v5, v6, v7, v8, v9, v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&owner->fields.localSaveData,
       (int32_t)this,
       v11,
@@ -439,10 +439,10 @@ int32_t WarBoardTreasureData_SaveData__get_Effect(WarBoardTreasureData_SaveData_
   WarBoardTreasureComponent_c *v4; // x0
   int32_t iconId; // w19
 
-  if ( (byte_593617F & 1) == 0 )
+  if ( (byte_596E2D9 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardTreasureComponent_TypeInfo);
-    byte_593617F = 1;
+    sub_2213A60(&WarBoardTreasureComponent_TypeInfo);
+    byte_596E2D9 = 1;
   }
   v4 = WarBoardTreasureComponent_TypeInfo;
   iconId = this->fields.iconId;
@@ -461,10 +461,10 @@ int32_t WarBoardTreasureData_SaveData__get_Rarity(WarBoardTreasureData_SaveData_
   WarBoardTreasureComponent_c *v4; // x0
   int32_t iconId; // w19
 
-  if ( (byte_593617E & 1) == 0 )
+  if ( (byte_596E2D8 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardTreasureComponent_TypeInfo);
-    byte_593617E = 1;
+    sub_2213A60(&WarBoardTreasureComponent_TypeInfo);
+    byte_596E2D8 = 1;
   }
   v4 = WarBoardTreasureComponent_TypeInfo;
   iconId = this->fields.iconId;

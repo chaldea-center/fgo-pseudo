@@ -26,12 +26,12 @@ void FriendshipUpItemSwitchComponent__ChangeButtonState(
   System_Reflection_MethodBase_o *v19; // x0
   const MethodInfo *v20; // x2
 
-  if ( (byte_5933D4C & 1) == 0 )
+  if ( (byte_596BE65 & 1) == 0 )
   {
-    sub_21FFC50(&Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_5933D4C = 1;
+    sub_2213A60(&Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_596BE65 = 1;
   }
   IsNullOrEmpty = (PartyOrganizationUtility_o *)BasicHelper__IsNullOrEmpty(
                                                   (System_Collections_ICollection_o *)this->fields.itemInfoArray,
@@ -51,8 +51,8 @@ void FriendshipUpItemSwitchComponent__ChangeButtonState(
       {
         v10 = Method_FriendshipUpItemSwitchComponent_ChangeButtonState__;
         if ( (*((_BYTE *)Method_FriendshipUpItemSwitchComponent_ChangeButtonState__ + 83) & 2) != 0 )
-          v10 = (_QWORD *)sub_21FFC68(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
-        v11 = (System_Reflection_MethodBase_o *)sub_21FFC34(v10, v10[4]);
+          v10 = (_QWORD *)sub_2213A78(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
+        v11 = (System_Reflection_MethodBase_o *)sub_2213A44(v10, v10[4]);
         OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
         if ( openSelectDialog )
         {
@@ -62,14 +62,14 @@ void FriendshipUpItemSwitchComponent__ChangeButtonState(
           return;
         }
 LABEL_32:
-        sub_21FFECC(IsNullOrEmpty, v6);
+        sub_2213CDC(IsNullOrEmpty, v6);
       }
       itemInfoArray = this->fields.itemInfoArray;
       if ( !itemInfoArray )
         goto LABEL_32;
     }
     if ( !LODWORD(itemInfoArray->max_length) )
-      sub_21FFED4(IsNullOrEmpty);
+      sub_2213CE4(IsNullOrEmpty);
     v12 = itemInfoArray->m_Items[0];
     friendshipUpItemUseItem = (UnityEngine_Object_o *)this->fields.friendshipUpItemUseItem;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -84,11 +84,11 @@ LABEL_32:
       if ( UseFlag )
       {
         if ( (*((_BYTE *)Method_FriendshipUpItemSwitchComponent_ChangeButtonState__ + 83) & 2) != 0 )
-          v15 = (_QWORD *)sub_21FFC68(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
-        v16 = (System_Reflection_MethodBase_o *)sub_21FFC34(v15, v15[4]);
+          v15 = (_QWORD *)sub_2213A78(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
+        v16 = (System_Reflection_MethodBase_o *)sub_2213A44(v15, v15[4]);
         OverwriteAssetSoundName__PlaySystemSe(v16, 1, 0, 0);
         QuestUseItemInfo__SetUseFlag(v12, 0, 0);
-        IsNullOrEmpty = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        IsNullOrEmpty = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( !IsNullOrEmpty )
           goto LABEL_32;
         PartyOrganizationUtility__SaveQuestUseItemUseState(IsNullOrEmpty, 0);
@@ -100,11 +100,11 @@ LABEL_32:
       else
       {
         if ( (*((_BYTE *)Method_FriendshipUpItemSwitchComponent_ChangeButtonState__ + 83) & 2) != 0 )
-          v15 = (_QWORD *)sub_21FFC68(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
-        v19 = (System_Reflection_MethodBase_o *)sub_21FFC34(v15, v15[4]);
+          v15 = (_QWORD *)sub_2213A78(Method_FriendshipUpItemSwitchComponent_ChangeButtonState__);
+        v19 = (System_Reflection_MethodBase_o *)sub_2213A44(v15, v15[4]);
         OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0);
         QuestUseItemInfo__SetUseFlag(v12, 1, 0);
-        IsNullOrEmpty = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        IsNullOrEmpty = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
         if ( !IsNullOrEmpty )
           goto LABEL_32;
         PartyOrganizationUtility__SaveQuestUseItemUseState(IsNullOrEmpty, 0);
@@ -131,10 +131,10 @@ void FriendshipUpItemSwitchComponent__EnableUseButton(
   const MethodInfo *v7; // x2
   FriendshipUpItemUseItem_o *v8; // x0
 
-  if ( (byte_5933D4B & 1) == 0 )
+  if ( (byte_596BE64 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933D4B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BE64 = 1;
   }
   friendshipUpItemUseItem = (UnityEngine_Object_o *)this->fields.friendshipUpItemUseItem;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -143,7 +143,7 @@ void FriendshipUpItemSwitchComponent__EnableUseButton(
   {
     v8 = this->fields.friendshipUpItemUseItem;
     if ( !v8 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     FriendshipUpItemUseItem__SetButtonEnabled(v8, flag, v7);
   }
 }
@@ -161,7 +161,7 @@ bool FriendshipUpItemSwitchComponent__ParameterChange(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0);
   if ( activeSelf )
     FriendshipUpItemSwitchComponent__SetItem(this, count, v7);
@@ -182,10 +182,10 @@ void FriendshipUpItemSwitchComponent__SetAlpha(
   __int64 v10; // x2
   UnityEngine_Object_o *friendshipUpItemUseItem; // x20
 
-  if ( (byte_5933D4F & 1) == 0 )
+  if ( (byte_596BE68 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933D4F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BE68 = 1;
   }
   switchWidget = (UnityEngine_Object_o *)this->fields.switchWidget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -211,7 +211,7 @@ void FriendshipUpItemSwitchComponent__SetAlpha(
         return;
       }
 LABEL_13:
-      sub_21FFECC(v8, v7);
+      sub_2213CDC(v8, v7);
     }
   }
 }
@@ -230,10 +230,10 @@ void FriendshipUpItemSwitchComponent__SetItem(
   float v10; // s0
   int32_t startCount; // w9
 
-  if ( (byte_5933D4D & 1) == 0 )
+  if ( (byte_596BE66 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_5933D4D = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_596BE66 = 1;
   }
   IsNullOrEmpty = (void *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.itemInfoArray, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
@@ -245,7 +245,7 @@ void FriendshipUpItemSwitchComponent__SetItem(
       return;
     }
 LABEL_14:
-    sub_21FFECC(IsNullOrEmpty, v6);
+    sub_2213CDC(IsNullOrEmpty, v6);
   }
   itemInfoArray = this->fields.itemInfoArray;
   if ( !itemInfoArray )
@@ -260,7 +260,7 @@ LABEL_14:
       this->fields.startCount = count;
     }
     FriendshipUpItemSwitchComponent__SetParam(this, (count - startCount) % max_length, v7);
-    IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !IsNullOrEmpty )
       goto LABEL_14;
     v10 = *((float *)IsNullOrEmpty + 13);
@@ -288,18 +288,18 @@ void FriendshipUpItemSwitchComponent__SetItemInfo(FriendshipUpItemSwitchComponen
   const MethodInfo *v12; // x2
   int32_t v13; // w1
 
-  if ( (byte_5933D4A & 1) == 0 )
+  if ( (byte_596BE63 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_5933D4A = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_596BE63 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   CachedQuestUseItems = PartyOrganizationUtility__GetCachedQuestUseItems((PartyOrganizationUtility_o *)Instance, 0);
   this->fields.itemInfoArray = CachedQuestUseItems;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemInfoArray,
     (int32_t)CachedQuestUseItems,
     v6,
@@ -317,16 +317,16 @@ void FriendshipUpItemSwitchComponent__SetItemInfo(FriendshipUpItemSwitchComponen
       return;
     }
 LABEL_10:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   SwitchParameterDisplayManager__AddComponent(
     (SwitchParameterDisplayManager_o *)Instance,
     (SwitchParameterDisplayComponent_o *)this,
     0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   v13 = *((_DWORD *)Instance + 12);
@@ -350,11 +350,11 @@ void FriendshipUpItemSwitchComponent__SetParam(
   QuestUseItemInfo_o *v11; // x20
   const MethodInfo *v12; // x4
 
-  if ( (byte_5933D4E & 1) == 0 )
+  if ( (byte_596BE67 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_5933D4E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_596BE67 = 1;
   }
   if ( (index & 0x80000000) == 0 )
   {
@@ -371,14 +371,14 @@ void FriendshipUpItemSwitchComponent__SetParam(
       if ( !itemInfoArray )
         goto LABEL_14;
       if ( LODWORD(itemInfoArray->max_length) <= index )
-        sub_21FFED4(gameObject);
+        sub_2213CE4(gameObject);
       v9 = &itemInfoArray->obj.klass + (unsigned int)index;
       v10 = this->fields.friendshipUpItemUseItem;
       v11 = (QuestUseItemInfo_o *)v9[4];
-      gameObject = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      gameObject = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !gameObject || !v10 )
 LABEL_14:
-        sub_21FFECC(gameObject, v7);
+        sub_2213CDC(gameObject, v7);
       FriendshipUpItemUseItem__SetInit(v10, v11, *((_BYTE *)gameObject + 128), 0, v12);
     }
   }
@@ -398,7 +398,7 @@ bool FriendshipUpItemSwitchComponent__UpdateAlpha(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   if ( UnityEngine_GameObject__get_activeSelf(gameObject, 0) )
   {
     itemInfoArray = this->fields.itemInfoArray;

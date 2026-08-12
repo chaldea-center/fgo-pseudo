@@ -8,15 +8,15 @@ void TitleInfoEventTowerBase___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5937196 & 1) == 0 )
+  if ( (byte_596F115 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventTowerBase_TypeInfo);
-    sub_21FFC50(&StringLiteral_25392/*"tower_img_base{0:00}"*/);
-    byte_5937196 = 1;
+    sub_2213A60(&TitleInfoEventTowerBase_TypeInfo);
+    sub_2213A60(&StringLiteral_25440/*"tower_img_base{0:00}"*/);
+    byte_596F115 = 1;
   }
-  v7 = StringLiteral_25392/*"tower_img_base{0:00}"*/;
-  TitleInfoEventTowerBase_TypeInfo->static_fields->SPRITE_NAME_TOWER_BASE = (struct System_String_o *)StringLiteral_25392/*"tower_img_base{0:00}"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_25440/*"tower_img_base{0:00}"*/;
+  TitleInfoEventTowerBase_TypeInfo->static_fields->SPRITE_NAME_TOWER_BASE = (struct System_String_o *)StringLiteral_25440/*"tower_img_base{0:00}"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)TitleInfoEventTowerBase_TypeInfo->static_fields,
     v7,
     v1,
@@ -55,19 +55,19 @@ void TitleInfoEventTowerBase__SetBaseSprite(
   System_String_o *v19; // x19
   int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5937195 & 1) == 0 )
+  if ( (byte_596F114 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&TitleInfoEventTowerBase_TypeInfo);
-    byte_5937195 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&TitleInfoEventTowerBase_TypeInfo);
+    byte_596F114 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_14;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v9 = (UIWidget_o *)gameObject;
   if ( changeSize )
   {
@@ -78,7 +78,7 @@ void TitleInfoEventTowerBase__SetBaseSprite(
       goto LABEL_9;
     }
 LABEL_14:
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
   if ( !gameObject )
     goto LABEL_14;
@@ -95,7 +95,7 @@ LABEL_9:
   p_SPRITE_NAME_TOWER_BASE = &v13->static_fields->SPRITE_NAME_TOWER_BASE;
   v20 = towerId;
   v15 = *p_SPRITE_NAME_TOWER_BASE;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v20);
   v19 = System_String__Format(v15, v16, 0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v17, v18);

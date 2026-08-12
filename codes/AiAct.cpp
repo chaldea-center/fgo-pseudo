@@ -58,7 +58,7 @@ bool AiAct__isThinkEnd(int32_t intype, const MethodInfo *method)
 }
 
 
-bool AiAct__isThinkEnd_47207436(int32_t type, const MethodInfo *method)
+bool AiAct__isThinkEnd_47235196(int32_t type, const MethodInfo *method)
 {
   return type != 99;
 }

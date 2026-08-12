@@ -26,10 +26,10 @@ void StaffSelectListViewItem___ctor(
   bool v29; // w7
   bool IsRestrictionSvt; // w0
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._StaffPhotoEntity_k__BackingField,
     (int32_t)entity,
     v15,
@@ -56,12 +56,12 @@ void StaffSelectListViewItem___ctor(
   v21 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_9:
-    sub_21FFECC(v21, v22);
+    sub_2213CDC(v21, v22);
   IsRestrictionSvt = StaffPhotoEntity__IsRestrictionSvt(v21, selectedSvtId, 0);
 LABEL_8:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   this->fields._IsNotSelect_k__BackingField = IsRestrictionSvt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v24,
@@ -83,7 +83,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_21FFECC(this, *(_QWORD *)&selectStaffPhotoId);
+    sub_2213CDC(this, *(_QWORD *)&selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -94,14 +94,12 @@ bool StaffSelectListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct StaffPhotoEntity_o *StaffPhotoEntity_k__BackingField; // x9
-  bool result; // w0
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_21FFECC(this, sort);
-  result = 1;
+    sub_2213CDC(this, sort);
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
-  return result;
+  return 1;
 }
 
 

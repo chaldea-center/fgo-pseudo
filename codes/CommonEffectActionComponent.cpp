@@ -14,18 +14,18 @@ void CommonEffectActionComponent__Awake(CommonEffectActionComponent_o *this, con
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939D34 & 1) == 0 )
+  if ( (byte_5971EF8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
-    byte_5939D34 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+    byte_5971EF8 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v3,
-    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
   this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.eventActionList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -45,26 +45,26 @@ void CommonEffectActionComponent__CallEventAction(
   struct System_Collections_Generic_Dictionary_int__Action__o *v7; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_5939D36 & 1) == 0 )
+  if ( (byte_5971EFA & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
-    byte_5939D36 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+    byte_5971EFA = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__object___ContainsKey(
          (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
          key,
-         (const MethodInfo_3F68EFC *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_3F9C6A4 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
     v7 = this->fields.eventActionList;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
              (System_Collections_Generic_Dictionary_int__object__o *)v7,
              key,
-             (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+             (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
     ActionExtensions__Call((System_Action_o *)Item, 0);
   }
 }
@@ -88,7 +88,7 @@ void CommonEffectActionComponent__SetEndAction(
   bool v7; // w7
 
   this->fields.endAction = endAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.endAction,
     (int32_t)endAction,
     (System_String_o *)method,
@@ -108,10 +108,10 @@ void CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_5939D35 & 1) == 0 )
+  if ( (byte_5971EF9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
-    byte_5939D35 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+    byte_5971EF9 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -119,7 +119,7 @@ void CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
       key,
       (Il2CppObject *)action,
-      (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
@@ -135,7 +135,7 @@ void CommonEffectActionComponent__SetStartAction(
   bool v7; // w7
 
   this->fields.startAction = startAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.startAction,
     (int32_t)startAction,
     (System_String_o *)method,

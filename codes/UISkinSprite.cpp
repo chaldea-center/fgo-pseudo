@@ -16,11 +16,11 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
   int32_t v9; // w22
   void *Item; // x0
 
-  if ( (byte_5939FFB & 1) == 0 )
+  if ( (byte_59721CF & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
-    byte_5939FFB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+    byte_59721CF = 1;
   }
   replaceDataList = this->fields.replaceDataList;
   if ( !replaceDataList )
@@ -37,7 +37,7 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Item,
              v9,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
     if ( !Item )
       goto LABEL_17;
     if ( *((_DWORD *)Item + 4) == uiChangeType )
@@ -48,7 +48,7 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Item,
                v9,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__);
       if ( !Item )
         goto LABEL_17;
       if ( *((_DWORD *)Item + 5) == version )
@@ -62,10 +62,10 @@ System_String_o *UISkinSprite__GetReplaceSpriteName(
     || (Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)Item,
                  v9,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__)) == 0 )
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISkinSprite_ReplaceData__get_Item__)) == 0 )
   {
 LABEL_17:
-    sub_21FFECC(Item, *(_QWORD *)&uiChangeType);
+    sub_2213CDC(Item, *(_QWORD *)&uiChangeType);
   }
   return (System_String_o *)*((_QWORD *)Item + 3);
 }
@@ -87,13 +87,13 @@ System_String_o *UISkinSprite__GetSpriteName(
   TerminalOverwriteEntity_o *overwriteEntity; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *overwriteId; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_5939FFA & 1) == 0 )
+  if ( (byte_59721CE & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&ServantCommentManager_TypeInfo);
-    byte_5939FFA = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&ServantCommentManager_TypeInfo);
+    byte_59721CE = 1;
   }
   overwriteId = 0;
   overwriteEntity = 0;
@@ -101,7 +101,7 @@ System_String_o *UISkinSprite__GetSpriteName(
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&uiChangeType);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
     if ( Master_object )
     {
       v8 = (TerminalOverwriteMaster_o *)Master_object;
@@ -135,11 +135,11 @@ LABEL_10:
 LABEL_16:
     spriteNameList = this->fields.spriteNameList;
     if ( !spriteNameList )
-      sub_21FFECC(0, *(_QWORD *)&uiChangeType);
+      sub_2213CDC(0, *(_QWORD *)&uiChangeType);
     return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)spriteNameList,
                                 uiChangeType,
-                                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
   }
   return ReplaceSpriteName;
 }
@@ -175,22 +175,22 @@ void UISkinSprite__setupSprite(UISkinSprite_o *this, bool ignoreOverwrite, const
   struct System_Collections_Generic_List_string__o *v13; // x8
   System_String_o *SpriteName; // x0
 
-  if ( (byte_5939FF9 & 1) == 0 )
+  if ( (byte_59721CD & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantCommentManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AtlasManager__getInstance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_5939FF9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantCommentManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AtlasManager__getInstance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_59721CD = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_AtlasManager__getInstance__ + 4);
   if ( (*(_WORD *)(v6 + 309) & 1) == 0 )
-    v6 = sub_2237AF8(v3);
+    v6 = sub_224B908(v3);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_WORD *)(v7 + 309) & 1) == 0 )
-    v7 = sub_2237AF8(v3);
+    v7 = sub_224B908(v3);
   v8 = **(UnityEngine_Object_o ***)(v7 + 184);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, ignoreOverwrite);
@@ -202,12 +202,12 @@ void UISkinSprite__setupSprite(UISkinSprite_o *this, bool ignoreOverwrite, const
       goto LABEL_26;
     if ( spriteNameList->fields._size )
     {
-      Instance = (AtlasManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+      Instance = (AtlasManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
       if ( Instance )
       {
         if ( AtlasManager__SetSkinLocal(Instance, (UISprite_o *)this, this->fields.skinType, 0) )
         {
-          Instance = (AtlasManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+          Instance = (AtlasManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
           if ( Instance )
           {
             Instance = (AtlasManager_o *)AtlasManager__getSkinAtlasData(Instance, this->fields.skinType, 0);
@@ -242,13 +242,13 @@ LABEL_18:
             SpriteName = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                               (System_Collections_Generic_List_object__o *)Instance,
                                               0,
-                                              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                              (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
             goto LABEL_25;
           }
         }
       }
 LABEL_26:
-      sub_21FFECC(Instance, coinAtlasRef_low);
+      sub_2213CDC(Instance, coinAtlasRef_low);
     }
   }
 }

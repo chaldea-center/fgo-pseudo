@@ -3,13 +3,13 @@ void SaveDataDeleteMenuDialog___ctor(SaveDataDeleteMenuDialog_o *this, const Met
   __int64 v2; // x2
   BaseDialog_c *v4; // x0
 
-  if ( (byte_59326F8 & 1) == 0 )
+  if ( (byte_596A905 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59326F8 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596A905 = 1;
   }
   v4 = BaseDialog_TypeInfo;
-  this->fields.buttonDisabledColor = (struct UnityEngine_Color_o)xmmword_E93FA0;
+  this->fields.buttonDisabledColor = (struct UnityEngine_Color_o)xmmword_E9D140;
   if ( !*(&v4->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v4, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -33,21 +33,21 @@ void SaveDataDeleteMenuDialog__OnClickCacheClear(SaveDataDeleteMenuDialog_o *thi
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_59326F5 & 1) == 0 )
+  if ( (byte_596A902 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
-    byte_59326F5 = 1;
+    sub_2213A60(&Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
+    byte_596A902 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteMenuDialog_OnClickCacheClear__;
     if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickCacheClear__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteMenuDialog_OnClickCacheClear__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ActionExtensions__Call(this->fields.cacheClearAction, 0);
     this->fields.cacheClearAction = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cacheClearAction, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cacheClearAction, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -63,21 +63,21 @@ void SaveDataDeleteMenuDialog__OnClickCancel(SaveDataDeleteMenuDialog_o *this, c
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_59326F7 & 1) == 0 )
+  if ( (byte_596A904 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SaveDataDeleteMenuDialog_OnClickCancel__);
-    byte_59326F7 = 1;
+    sub_2213A60(&Method_SaveDataDeleteMenuDialog_OnClickCancel__);
+    byte_596A904 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_SaveDataDeleteMenuDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteMenuDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteMenuDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ActionExtensions__Call(this->fields.cancelAction, 0);
     this->fields.cancelAction = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cancelAction, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cancelAction, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -95,10 +95,10 @@ void SaveDataDeleteMenuDialog__OnClickSeveDataDelete(SaveDataDeleteMenuDialog_o 
   bool v11; // w6
   bool v12; // w7
 
-  if ( (byte_59326F6 & 1) == 0 )
+  if ( (byte_596A903 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
-    byte_59326F6 = 1;
+    sub_2213A60(&Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
+    byte_596A903 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
@@ -106,20 +106,20 @@ void SaveDataDeleteMenuDialog__OnClickSeveDataDelete(SaveDataDeleteMenuDialog_o 
     {
       v3 = Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__;
       if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
-      v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+        v3 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
+      v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
       OverwriteAssetSoundName__PlaySystemSe(v4, 2, 0, 0);
     }
     else
     {
       v5 = Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__;
       if ( (*((_BYTE *)Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_21FFC68(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
-      v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+        v5 = (_QWORD *)sub_2213A78(Method_SaveDataDeleteMenuDialog_OnClickSeveDataDelete__);
+      v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       ActionExtensions__Call(this->fields.saveDataDeleteAction, 0);
       this->fields.saveDataDeleteAction = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.saveDataDeleteAction, 0, v7, v8, v9, v10, v11, v12);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.saveDataDeleteAction, 0, v7, v8, v9, v10, v11, v12);
     }
   }
 }
@@ -129,13 +129,13 @@ void SaveDataDeleteMenuDialog__OnEnable(SaveDataDeleteMenuDialog_o *this, const 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_59326F3 & 1) == 0 )
+  if ( (byte_596A900 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_59326F3 = 1;
+    sub_2213A60(&StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_596A900 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16235/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16267/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -166,13 +166,13 @@ void SaveDataDeleteMenuDialog__Open(
   const MethodInfo *v26; // x2
   bool v27; // w1
 
-  if ( (byte_59326F4 & 1) == 0 )
+  if ( (byte_596A901 & 1) == 0 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_59326F4 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596A901 = 1;
   }
   this->fields.cacheClearAction = cacheClearAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cacheClearAction,
     (int32_t)cacheClearAction,
     (System_String_o *)saveDataDeleteAction,
@@ -182,7 +182,7 @@ void SaveDataDeleteMenuDialog__Open(
     v6,
     v7);
   this->fields.saveDataDeleteAction = saveDataDeleteAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.saveDataDeleteAction,
     (int32_t)saveDataDeleteAction,
     v12,
@@ -192,7 +192,7 @@ void SaveDataDeleteMenuDialog__Open(
     v16,
     v17);
   this->fields.cancelAction = cancelAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cancelAction,
     (int32_t)cancelAction,
     v18,
@@ -221,34 +221,26 @@ void SaveDataDeleteMenuDialog__UpdateSaveDeleteButton(
 {
   UIButtonColor_o *saveDeleteButtonColor; // x0
   _BOOL4 v5; // w21
-  float a; // s3
-  float b; // s2
-  float g; // s1
-  float r; // s0 OVERLAPPED
+  UnityEngine_Color_o buttonDisabledColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   saveDeleteButtonColor = this->fields.saveDeleteButtonColor;
   if ( !saveDeleteButtonColor )
     goto LABEL_7;
   v5 = isEnabled;
   saveDeleteButtonColor->klass->vtable._14_SetState.methodPtr();
-  a = 1.0;
-  b = 1.0;
+  buttonDisabledColor.fields.a = 1.0;
+  buttonDisabledColor.fields.b = 1.0;
   saveDeleteButtonColor = this->fields.saveDeleteButtonColor;
-  g = 1.0;
-  r = 1.0;
+  buttonDisabledColor.fields.g = 1.0;
+  buttonDisabledColor.fields.r = 1.0;
   if ( !v5 )
-  {
-    r = this->fields.buttonDisabledColor.fields.r;
-    g = this->fields.buttonDisabledColor.fields.g;
-    b = this->fields.buttonDisabledColor.fields.b;
-    a = this->fields.buttonDisabledColor.fields.a;
-  }
+    buttonDisabledColor = this->fields.buttonDisabledColor;
   if ( !saveDeleteButtonColor
-    || (UIButtonColor__set_defaultColor(saveDeleteButtonColor, *(UnityEngine_Color_o *)&r, 0),
+    || (UIButtonColor__set_defaultColor(saveDeleteButtonColor, buttonDisabledColor, 0),
         (saveDeleteButtonColor = this->fields.saveDeleteButtonColor) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(saveDeleteButtonColor, isEnabled);
+    sub_2213CDC(saveDeleteButtonColor, isEnabled);
   }
   ((void (__fastcall *)(UIButtonColor_o *, bool, const MethodInfo *))saveDeleteButtonColor->klass->vtable._5_set_isEnabled.methodPtr)(
     saveDeleteButtonColor,

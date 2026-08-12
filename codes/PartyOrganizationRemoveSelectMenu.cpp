@@ -2,10 +2,10 @@ void PartyOrganizationRemoveSelectMenu___ctor(PartyOrganizationRemoveSelectMenu_
 {
   __int64 v2; // x2
 
-  if ( (byte_5933FB2 & 1) == 0 )
+  if ( (byte_596C0CB & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5933FB2 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596C0CB = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -33,7 +33,7 @@ void PartyOrganizationRemoveSelectMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)result,
@@ -46,11 +46,11 @@ void PartyOrganizationRemoveSelectMenu__Close(PartyOrganizationRemoveSelectMenu_
 {
   const MethodInfo *v2; // x2
 
-  PartyOrganizationRemoveSelectMenu__Close_41064936(this, 0, v2);
+  PartyOrganizationRemoveSelectMenu__Close_41073024(this, 0, v2);
 }
 
 
-void PartyOrganizationRemoveSelectMenu__Close_41064936(
+void PartyOrganizationRemoveSelectMenu__Close_41073024(
         PartyOrganizationRemoveSelectMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -63,14 +63,14 @@ void PartyOrganizationRemoveSelectMenu__Close_41064936(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_5933FAA & 1) == 0 )
+  if ( (byte_596C0C3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_EndClose__);
-    byte_5933FAA = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_EndClose__);
+    byte_596C0C3 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -81,7 +81,7 @@ void PartyOrganizationRemoveSelectMenu__Close_41064936(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_PartyOrganizationRemoveSelectMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -106,7 +106,7 @@ void PartyOrganizationRemoveSelectMenu__EndClose(PartyOrganizationRemoveSelectMe
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -122,10 +122,10 @@ void PartyOrganizationRemoveSelectMenu__Init(PartyOrganizationRemoveSelectMenu_o
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_5933FA8 & 1) == 0 )
+  if ( (byte_596C0C1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933FA8 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C0C1 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -157,7 +157,7 @@ void PartyOrganizationRemoveSelectMenu__Init(PartyOrganizationRemoveSelectMenu_o
         (titleLabel = this->fields.cancelLabel) == 0) )
   {
 LABEL_13:
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -173,18 +173,18 @@ void PartyOrganizationRemoveSelectMenu__OnChangeName(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FAF & 1) == 0 )
+  if ( (byte_596C0C8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnChangeName__);
-    byte_5933FAF = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnChangeName__);
+    byte_596C0C8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnChangeName__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnChangeName__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnChangeName__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnChangeName__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 5, v5);
   }
@@ -199,18 +199,18 @@ void PartyOrganizationRemoveSelectMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FB0 & 1) == 0 )
+  if ( (byte_596C0C9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__);
-    byte_5933FB0 = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__);
+    byte_596C0C9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 0, v5);
   }
@@ -225,18 +225,18 @@ void PartyOrganizationRemoveSelectMenu__OnClickCopy(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FAB & 1) == 0 )
+  if ( (byte_596C0C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__);
-    byte_5933FAB = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__);
+    byte_596C0C4 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnClickCopy__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 1, v5);
   }
@@ -251,18 +251,18 @@ void PartyOrganizationRemoveSelectMenu__OnClickInitAll(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FAD & 1) == 0 )
+  if ( (byte_596C0C6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__);
-    byte_5933FAD = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__);
+    byte_596C0C6 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnClickInitAll__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 3, v5);
   }
@@ -277,18 +277,18 @@ void PartyOrganizationRemoveSelectMenu__OnClickRemoveAll(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FAC & 1) == 0 )
+  if ( (byte_596C0C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__);
-    byte_5933FAC = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__);
+    byte_596C0C5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveAll__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 2, v5);
   }
@@ -303,18 +303,18 @@ void PartyOrganizationRemoveSelectMenu__OnClickRemoveEquip(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933FAE & 1) == 0 )
+  if ( (byte_596C0C7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__);
-    byte_5933FAE = 1;
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__);
+    byte_596C0C7 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__;
     if ( (*((_BYTE *)Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PartyOrganizationRemoveSelectMenu_OnClickRemoveEquip__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationRemoveSelectMenu__Callback(this, 4, v5);
   }
@@ -371,22 +371,22 @@ void PartyOrganizationRemoveSelectMenu__Open(
   __int64 v50; // x1
   System_Action_o *v51; // x20
 
-  if ( (byte_5933FA9 & 1) == 0 )
+  if ( (byte_596C0C2 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_PartyOrganizationRemoveSelectMenu_EndOpen__);
-    sub_21FFC50(&StringLiteral_10669/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_10672/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/);
-    sub_21FFC50(&StringLiteral_10675/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/);
-    sub_21FFC50(&StringLiteral_10677/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/);
-    sub_21FFC50(&StringLiteral_10670/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_10673/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_10676/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/);
-    sub_21FFC50(&StringLiteral_10671/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/);
-    sub_21FFC50(&StringLiteral_10674/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/);
-    byte_5933FA9 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_PartyOrganizationRemoveSelectMenu_EndOpen__);
+    sub_2213A60(&StringLiteral_10682/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/);
+    sub_2213A60(&StringLiteral_10685/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/);
+    sub_2213A60(&StringLiteral_10688/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/);
+    sub_2213A60(&StringLiteral_10690/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/);
+    sub_2213A60(&StringLiteral_10683/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_10686/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_10689/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/);
+    sub_2213A60(&StringLiteral_10684/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/);
+    sub_2213A60(&StringLiteral_10687/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/);
+    byte_596C0C2 = 1;
   }
   state = this->fields.state;
   switch ( state )
@@ -394,7 +394,7 @@ void PartyOrganizationRemoveSelectMenu__Open(
     case 4:
 LABEL_6:
       this->fields.callbackFunc = callback;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
         (int32_t)callback,
         (System_String_o *)isEnableCopy,
@@ -413,7 +413,7 @@ LABEL_6:
           titleLabel = this->fields.titleLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16, v17);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10677/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10690/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, 0);
           if ( titleLabel )
           {
             v20 = menuKind & 0xFFFFFFF7;
@@ -429,7 +429,7 @@ LABEL_6:
             {
               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21, v22);
-              v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10674/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/, 0);
+              v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10687/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/, 0);
               gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                          v25,
                                                          (Il2CppObject *)partyItem->fields.deckName,
@@ -442,7 +442,7 @@ LABEL_6:
             messageLabel = this->fields.messageLabel;
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v26, v27);
-            gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10673/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/, 0);
+            gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10686/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/, 0);
             if ( messageLabel )
             {
               UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
@@ -458,42 +458,42 @@ LABEL_6:
                 if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31, v32);
                 gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_10671/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/,
+                                                           (System_String_o *)StringLiteral_10684/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/,
                                                            0);
                 if ( copyLabel )
                 {
                   UILabel__set_text(copyLabel, (System_String_o *)gameObject, 0);
                   removeAllLabel = this->fields.removeAllLabel;
                   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_10675/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/,
+                                                             (System_String_o *)StringLiteral_10688/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/,
                                                              0);
                   if ( removeAllLabel )
                   {
                     UILabel__set_text(removeAllLabel, (System_String_o *)gameObject, 0);
                     initAllLabel = this->fields.initAllLabel;
                     gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                               (System_String_o *)StringLiteral_10672/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/,
+                                                               (System_String_o *)StringLiteral_10685/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/,
                                                                0);
                     if ( initAllLabel )
                     {
                       UILabel__set_text(initAllLabel, (System_String_o *)gameObject, 0);
                       removeEquipLabel = this->fields.removeEquipLabel;
                       gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_10676/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/,
+                                                                 (System_String_o *)StringLiteral_10689/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/,
                                                                  0);
                       if ( removeEquipLabel )
                       {
                         UILabel__set_text(removeEquipLabel, (System_String_o *)gameObject, 0);
                         changeNameLabel = this->fields.changeNameLabel;
                         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_10670/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/,
+                                                                   (System_String_o *)StringLiteral_10683/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/,
                                                                    0);
                         if ( changeNameLabel )
                         {
                           UILabel__set_text(changeNameLabel, (System_String_o *)gameObject, 0);
                           cancelLabel = this->fields.cancelLabel;
                           gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                     (System_String_o *)StringLiteral_10669/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/,
+                                                                     (System_String_o *)StringLiteral_10682/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/,
                                                                      0);
                           if ( cancelLabel )
                           {
@@ -575,7 +575,7 @@ LABEL_6:
                                           1,
                                           gameObject->klass[1]._1.implementedInterfaces);
                                         this->fields.state = 1;
-                                        v51 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                                        v51 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                                         System_Action___ctor(
                                           v51,
                                           (Il2CppObject *)this,
@@ -601,11 +601,11 @@ LABEL_6:
         }
       }
 LABEL_60:
-      sub_21FFECC(gameObject, v16);
+      sub_2213CDC(gameObject, v16);
     case 3:
       this->fields.callbackFunc = callback;
       p_callbackFunc = &this->fields.callbackFunc;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)p_callbackFunc,
         (int32_t)callback,
         (System_String_o *)isEnableCopy,
@@ -639,10 +639,10 @@ void PartyOrganizationRemoveSelectMenu__add_callbackFunc(
   PartyOrganizationRemoveSelectMenu_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5933FA6 & 1) == 0 )
+  if ( (byte_596C0BF & 1) == 0 )
   {
-    sub_21FFC50(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo);
-    byte_5933FA6 = 1;
+    sub_2213A60(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo);
+    byte_596C0BF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -655,13 +655,13 @@ void PartyOrganizationRemoveSelectMenu__add_callbackFunc(
       if ( (PartyOrganizationRemoveSelectMenu_CallbackFunc_c *)v8->klass != PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (PartyOrganizationRemoveSelectMenu_o *)sub_220024C(
+  v13 = (PartyOrganizationRemoveSelectMenu_o *)sub_221405C(
                                                  v8,
                                                  PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo,
                                                  v9,
@@ -674,12 +674,12 @@ System_String_o *PartyOrganizationRemoveSelectMenu__get_closeBtnPath(
         PartyOrganizationRemoveSelectMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_5933FB1 & 1) == 0 )
+  if ( (byte_596C0CA & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_3190/*"BaseWindow/CancelButton"*/);
-    byte_5933FB1 = 1;
+    sub_2213A60(&StringLiteral_3194/*"BaseWindow/CancelButton"*/);
+    byte_596C0CA = 1;
   }
-  return (System_String_o *)StringLiteral_3190/*"BaseWindow/CancelButton"*/;
+  return (System_String_o *)StringLiteral_3194/*"BaseWindow/CancelButton"*/;
 }
 
 
@@ -707,10 +707,10 @@ void PartyOrganizationRemoveSelectMenu__remove_callbackFunc(
   PartyOrganizationRemoveSelectMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5933FA7 & 1) == 0 )
+  if ( (byte_596C0C0 & 1) == 0 )
   {
-    sub_21FFC50(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo);
-    byte_5933FA7 = 1;
+    sub_2213A60(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo);
+    byte_596C0C0 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -723,13 +723,13 @@ void PartyOrganizationRemoveSelectMenu__remove_callbackFunc(
       if ( (PartyOrganizationRemoveSelectMenu_CallbackFunc_c *)v8->klass != PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (PartyOrganizationRemoveSelectMenu_o *)sub_220024C(
+  v13 = (PartyOrganizationRemoveSelectMenu_o *)sub_221405C(
                                                  v8,
                                                  PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo,
                                                  v9,
@@ -757,7 +757,7 @@ void PartyOrganizationRemoveSelectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -768,12 +768,12 @@ void PartyOrganizationRemoveSelectMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -785,9 +785,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF1AB8;
+  this->fields.invoke_impl = (intptr_t)sub_2004A30;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF1A70;
+  this->fields.extra_arg = (intptr_t)sub_20049E8;
 }
 
 
@@ -802,14 +802,14 @@ System_IAsyncResult_o *PartyOrganizationRemoveSelectMenu_CallbackFunc__BeginInvo
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_5933FB3 & 1) == 0 )
+  if ( (byte_596C0CC & 1) == 0 )
   {
-    sub_21FFC50(&PartyOrganizationRemoveSelectMenu_ResultKind_TypeInfo);
-    byte_5933FB3 = 1;
+    sub_2213A60(&PartyOrganizationRemoveSelectMenu_ResultKind_TypeInfo);
+    byte_596C0CC = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(PartyOrganizationRemoveSelectMenu_ResultKind_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -818,7 +818,7 @@ void PartyOrganizationRemoveSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

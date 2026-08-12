@@ -30,16 +30,16 @@ System_Collections_IEnumerator_o *EventHappinessCounterUpdateAction__CountUpAnim
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5934DC7 & 1) == 0 )
+  if ( (byte_596CEF6 & 1) == 0 )
   {
-    sub_21FFC50(&EventHappinessCounterUpdateAction__CountUpAnim_d__20_TypeInfo);
-    byte_5934DC7 = 1;
+    sub_2213A60(&EventHappinessCounterUpdateAction__CountUpAnim_d__20_TypeInfo);
+    byte_596CEF6 = 1;
   }
-  v3 = sub_21FFEBC(EventHappinessCounterUpdateAction__CountUpAnim_d__20_TypeInfo);
+  v3 = sub_2213CCC(EventHappinessCounterUpdateAction__CountUpAnim_d__20_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -57,17 +57,17 @@ int32_t EventHappinessCounterUpdateAction__GetOldHappinessPoint(
   int v9; // w10
   UserEventPointEntity_o *v10; // x11
 
-  if ( (byte_5934DC8 & 1) == 0 )
+  if ( (byte_596CEF7 & 1) == 0 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934DC8 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CEF7 = 1;
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
-  if ( !byte_5934EAA )
+  if ( !byte_596CFD9 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAA = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFD9 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -81,7 +81,7 @@ int32_t EventHappinessCounterUpdateAction__GetOldHappinessPoint(
     return 0;
   if ( !OldUserEventPoint_k__BackingField )
 LABEL_19:
-    sub_21FFECC(IsNullOrEmpty, v7);
+    sub_2213CDC(IsNullOrEmpty, v7);
   max_length = OldUserEventPoint_k__BackingField->max_length;
   if ( max_length < 1 )
     return 0;
@@ -89,7 +89,7 @@ LABEL_19:
   while ( 1 )
   {
     if ( max_length == v9 )
-      sub_21FFED4(IsNullOrEmpty);
+      sub_2213CE4(IsNullOrEmpty);
     v10 = OldUserEventPoint_k__BackingField->m_Items[v9];
     if ( !v10 )
       goto LABEL_19;
@@ -124,12 +124,12 @@ void EventHappinessCounterUpdateAction__Init(
   const MethodInfo *v20; // x1
   int32_t v21; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5934DC4 & 1) == 0 )
+  if ( (byte_596CEF3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventHappinessCounterUpdateAction__Init_b__16_0__);
-    sub_21FFC50(&StringLiteral_26402/*"{0:D4}"*/);
-    byte_5934DC4 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventHappinessCounterUpdateAction__Init_b__16_0__);
+    sub_2213A60(&StringLiteral_26453/*"{0:D4}"*/);
+    byte_596CEF3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -140,8 +140,8 @@ void EventHappinessCounterUpdateAction__Init(
   OldHappinessPoint = EventHappinessCounterUpdateAction__GetOldHappinessPoint(this, v7);
   happinessPointLabel = this->fields.happinessPointLabel;
   v21 = OldHappinessPoint;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_26402/*"{0:D4}"*/, v10, 0);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_26453/*"{0:D4}"*/, v10, 0);
   if ( !happinessPointLabel )
     goto LABEL_14;
   UILabel__set_text(happinessPointLabel, (System_String_o *)gameObject, 0);
@@ -172,15 +172,15 @@ void EventHappinessCounterUpdateAction__Init(
                                                    0)) == 0
     || (UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)gameObject, 0.0, 0),
         effectActionComponent = this->fields.effectActionComponent,
-        v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+        v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(v13, (Il2CppObject *)this, Method_EventHappinessCounterUpdateAction__Init_b__16_0__, 0),
         !effectActionComponent) )
   {
 LABEL_14:
-    sub_21FFECC(gameObject, v6);
+    sub_2213CDC(gameObject, v6);
   }
   effectActionComponent->fields.endAction = v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&effectActionComponent->fields.endAction,
     (int32_t)v13,
     v14,
@@ -210,15 +210,15 @@ void EventHappinessCounterUpdateAction__Play(
   float *p_fadeInTime; // x8
   System_String_o *v15; // x20
 
-  if ( (byte_5934DC6 & 1) == 0 )
+  if ( (byte_596CEF5 & 1) == 0 )
   {
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934DC6 = 1;
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596CEF5 = 1;
   }
   this->fields.state = 1;
   this->fields.endAct = endAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.endAct,
     (int32_t)endAction,
     (System_String_o *)method,
@@ -231,7 +231,7 @@ void EventHappinessCounterUpdateAction__Play(
   if ( !gameObject )
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v13 = (CommonUI_o *)gameObject;
   p_fadeInTime = &this->fields.fadeInTime;
   if ( this->fields.fadeInTime <= 0.0 )
@@ -267,9 +267,9 @@ void EventHappinessCounterUpdateAction__Play(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.animation) == 0) )
   {
 LABEL_16:
-    sub_21FFECC(gameObject, v11);
+    sub_2213CDC(gameObject, v11);
   }
-  UnityEngine_Animation__Play_82865240((UnityEngine_Animation_o *)gameObject, v15, 0);
+  UnityEngine_Animation__Play_83078544((UnityEngine_Animation_o *)gameObject, v15, 0);
 }
 
 
@@ -292,11 +292,11 @@ void EventHappinessCounterUpdateAction__SetupScreenTouchInfo(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5934DC5 & 1) == 0 )
+  if ( (byte_596CEF4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934DC5 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596CEF4 = 1;
   }
   p_screenTouchObj = (MissionNaviTransitionBoardItem_o *)&this->fields.screenTouchObj;
   screenTouchObj = (UnityEngine_Object_o *)this->fields.screenTouchObj;
@@ -304,18 +304,18 @@ void EventHappinessCounterUpdateAction__SetupScreenTouchInfo(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(screenTouchObj, 0, 0) )
   {
-    Instance = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     screenTouchInfoRoot = this->fields.screenTouchInfoRoot;
     if ( !screenTouchInfoRoot
       || (v9 = (CommonUI_o *)Instance, Instance = UnityEngine_GameObject__get_transform(screenTouchInfoRoot, 0), !v9) )
     {
 LABEL_11:
-      sub_21FFECC(Instance, v6);
+      sub_2213CDC(Instance, v6);
     }
     ScreeenTouchInfo = CommonUI__CreateScreeenTouchInfo(v9, Instance, 0, 0);
     GameObjectExtensions__SetLocalPositionY(ScreeenTouchInfo, 0.0, 0);
     p_screenTouchObj->klass = (MissionNaviTransitionBoardItem_c *)ScreeenTouchInfo;
-    sub_21FFBF4(p_screenTouchObj, (int32_t)ScreeenTouchInfo, v11, v12, v13, v14, v15, v16);
+    sub_2213A04(p_screenTouchObj, (int32_t)ScreeenTouchInfo, v11, v12, v13, v14, v15, v16);
   }
   Instance = (UnityEngine_Transform_o *)p_screenTouchObj->klass;
   if ( !p_screenTouchObj->klass )
@@ -331,7 +331,7 @@ void EventHappinessCounterUpdateAction__StartCountUp(
   System_Collections_IEnumerator_o *updated; // x1
 
   updated = EventHappinessCounterUpdateAction__CountUpAnim(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, updated, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, updated, 0);
 }
 
 
@@ -350,15 +350,15 @@ void EventHappinessCounterUpdateAction__Update(EventHappinessCounterUpdateAction
   AvalonSceneManager_c *v13; // x0
   System_Action_o *v14; // x21
 
-  if ( (byte_5934DC3 & 1) == 0 )
+  if ( (byte_596CEF2 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&Method_EventHappinessCounterUpdateAction__Update_b__15_0__);
-    sub_21FFC50(&Method_EventHappinessCounterUpdateAction_Update__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934DC3 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&Method_EventHappinessCounterUpdateAction__Update_b__15_0__);
+    sub_2213A60(&Method_EventHappinessCounterUpdateAction_Update__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596CEF2 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -374,10 +374,10 @@ void EventHappinessCounterUpdateAction__Update(EventHappinessCounterUpdateAction
       UnityEngine_GameObject__SetActive(screenTouchObj, 0, 0);
       v6 = Method_EventHappinessCounterUpdateAction_Update__;
       if ( (*((_BYTE *)Method_EventHappinessCounterUpdateAction_Update__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_21FFC68(Method_EventHappinessCounterUpdateAction_Update__);
-      v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+        v6 = (_QWORD *)sub_2213A78(Method_EventHappinessCounterUpdateAction_Update__);
+      v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       fadeOutTime = this->fields.fadeOutTime;
       v12 = (CommonUI_o *)Instance;
       if ( fadeOutTime <= 0.0 )
@@ -390,11 +390,11 @@ void EventHappinessCounterUpdateAction__Update(EventHappinessCounterUpdateAction
         }
         fadeOutTime = v13->static_fields->DEFAULT_FADE_TIME;
       }
-      v14 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v14 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v14, (Il2CppObject *)this, Method_EventHappinessCounterUpdateAction__Update_b__15_0__, 0);
       if ( !v12 )
 LABEL_17:
-        sub_21FFECC(screenTouchObj, v4);
+        sub_2213CDC(screenTouchObj, v4);
       CommonUI__maskFadeout(v12, 1, fadeOutTime, v14, 0);
     }
   }
@@ -409,7 +409,7 @@ void EventHappinessCounterUpdateAction___Init_b__16_0(
 
   screenTouchObj = this->fields.screenTouchObj;
   if ( !screenTouchObj )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UnityEngine_GameObject__SetActive(screenTouchObj, 1, 0);
   this->fields.state = 2;
 }
@@ -447,7 +447,6 @@ bool EventHappinessCounterUpdateAction__CountUpAnim_d__20__MoveNext(
   int nowPoint_5__2; // w8
   UILabel_o *happinessPointLabel; // x19
   Il2CppObject *v11; // x0
-  bool result; // w0
   float v13; // s0
   float v14; // s8
   double v15; // d0
@@ -470,10 +469,10 @@ bool EventHappinessCounterUpdateAction__CountUpAnim_d__20__MoveNext(
   double iptr; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = this;
-  if ( (byte_5934DC9 & 1) == 0 )
+  if ( (byte_596CEF8 & 1) == 0 )
   {
-    this = (EventHappinessCounterUpdateAction__CountUpAnim_d__20_o *)sub_21FFC50(&StringLiteral_26402/*"{0:D4}"*/);
-    byte_5934DC9 = 1;
+    this = (EventHappinessCounterUpdateAction__CountUpAnim_d__20_o *)sub_2213A60(&StringLiteral_26453/*"{0:D4}"*/);
+    byte_596CEF8 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -491,7 +490,7 @@ bool EventHappinessCounterUpdateAction__CountUpAnim_d__20__MoveNext(
     v2->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_31:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     v2->fields._nowPoint_5__2 = UserEventPointMaster__GetEventPoint(
                                   _4__this->fields.eventId,
                                   _4__this->fields.happinessPointGroupId,
@@ -507,9 +506,9 @@ LABEL_31:
   {
     happinessPointLabel = _4__this->fields.happinessPointLabel;
     LODWORD(iptr) = nowPoint_5__2;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &iptr);
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iptr);
     this = (EventHappinessCounterUpdateAction__CountUpAnim_d__20_o *)System_String__Format(
-                                                                       (System_String_o *)StringLiteral_26402/*"{0:D4}"*/,
+                                                                       (System_String_o *)StringLiteral_26453/*"{0:D4}"*/,
                                                                        v11,
                                                                        0);
     if ( happinessPointLabel )
@@ -558,9 +557,9 @@ LABEL_27:
   if ( v20 == INFINITY )
     v21 = 0x80000000;
   LODWORD(iptr) = v21;
-  v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &iptr);
+  v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iptr);
   this = (EventHappinessCounterUpdateAction__CountUpAnim_d__20_o *)System_String__Format(
-                                                                     (System_String_o *)StringLiteral_26402/*"{0:D4}"*/,
+                                                                     (System_String_o *)StringLiteral_26453/*"{0:D4}"*/,
                                                                      v23,
                                                                      0);
   if ( !v22 )
@@ -570,10 +569,9 @@ LABEL_27:
   v2->fields._time_5__4 = v24 + UnityEngine_Time__get_deltaTime(0);
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-  sub_21FFBF4(p__2__current, 0, v26, v27, v28, v29, v30, v31);
-  result = 1;
+  sub_2213A04(p__2__current, 0, v26, v27, v28, v29, v30, v31);
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return result;
+  return 1;
 }
 
 
@@ -593,11 +591,11 @@ void __noreturn EventHappinessCounterUpdateAction__CountUpAnim_d__20__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_EventHappinessCounterUpdateAction__CountUpAnim_d__20_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_EventHappinessCounterUpdateAction__CountUpAnim_d__20_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

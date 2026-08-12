@@ -23,9 +23,9 @@ void StaffCostumeSelectListViewItem___ctor(
   int32_t idx; // w8
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoCostumeEntity_k__BackingField = costumeEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._StaffPhotoCostumeEntity_k__BackingField,
     (int32_t)costumeEntity,
     v10,
@@ -35,12 +35,12 @@ void StaffCostumeSelectListViewItem___ctor(
     v14,
     v15);
   if ( !costumeEntity )
-    sub_21FFECC(v16, v17);
+    sub_2213CDC(v16, v17);
   idx = costumeEntity->fields.idx;
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
   *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 8) = idx == selectedCostumeIdx;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v18,
@@ -62,7 +62,7 @@ void StaffCostumeSelectListViewItem__ModifyItem(
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_21FFECC(this, *(_QWORD *)&selectedCostumeIdx);
+    sub_2213CDC(this, *(_QWORD *)&selectedCostumeIdx);
   this->fields._IsSelected_k__BackingField = StaffPhotoCostumeEntity_k__BackingField->fields.idx == selectedCostumeIdx;
 }
 
@@ -73,14 +73,12 @@ bool StaffCostumeSelectListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct StaffPhotoCostumeEntity_o *StaffPhotoCostumeEntity_k__BackingField; // x9
-  bool result; // w0
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_21FFECC(this, sort);
-  result = 1;
+    sub_2213CDC(this, sort);
   this->fields.sortValue1 = StaffPhotoCostumeEntity_k__BackingField->fields.dispOrder;
-  return result;
+  return 1;
 }
 
 

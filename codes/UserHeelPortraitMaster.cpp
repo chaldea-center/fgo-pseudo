@@ -1,14 +1,14 @@
 void UserHeelPortraitMaster___ctor(UserHeelPortraitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59395DF & 1) == 0 )
+  if ( (byte_59717A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
-    byte_59395DF = 1;
+    sub_2213A60(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
+    byte_59717A0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     464,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ UserHeelPortraitEntity_o *UserHeelPortraitMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59395E0 & 1) == 0 )
+  if ( (byte_59717A1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
-    byte_59395E0 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
+    byte_59717A1 = 1;
   }
   PK = (Il2CppObject *)UserHeelPortraitEntity__CreatePK(eventId, *(const MethodInfo **)&eventId);
   return (UserHeelPortraitEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
+                                       (const MethodInfo_3F157EC *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__GetEntity__);
 }
 
 
@@ -41,15 +41,15 @@ bool UserHeelPortraitMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59395E1 & 1) == 0 )
+  if ( (byte_59717A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
-    byte_59395E1 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
+    byte_59717A2 = 1;
   }
   PK = (Il2CppObject *)UserHeelPortraitEntity__CreatePK(eventId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_UserHeelPortraitMaster__UserHeelPortraitEntity__string__TryGetEntity__);
 }

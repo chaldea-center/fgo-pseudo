@@ -6,11 +6,11 @@ void StandFigureSlideComponent___cctor(const MethodInfo *method)
   struct StandFigureSlideComponent_StaticFields *static_fields; // x8
   int v5; // w9
 
-  if ( (byte_5934F37 & 1) == 0 )
+  if ( (byte_596D067 & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&StandFigureSlideComponent_TypeInfo);
-    byte_5934F37 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&StandFigureSlideComponent_TypeInfo);
+    byte_596D067 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   static_fields = StandFigureSlideComponent_TypeInfo->static_fields;
@@ -36,18 +36,18 @@ void StandFigureSlideComponent___ctor(StandFigureSlideComponent_o *this, const M
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5934F36 & 1) == 0 )
+  if ( (byte_596D066 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
-    byte_5934F36 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    byte_596D066 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
   this->fields.figureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.figureCollectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.figureCollectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -75,29 +75,29 @@ void StandFigureSlideComponent__Awake(StandFigureSlideComponent_o *this, const M
   const MethodInfo *v21; // x1
   const MethodInfo *v22; // x2
 
-  if ( (byte_5934F2C & 1) == 0 )
+  if ( (byte_596D05C & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_StandFigureSlideComponent___ctor__);
-    sub_21FFC50(&Method_CStateManager_StandFigureSlideComponent__add__);
-    sub_21FFC50(&CStateManager_StandFigureSlideComponent__TypeInfo);
-    sub_21FFC50(&StandFigureSlideComponent_StateNone_TypeInfo);
-    sub_21FFC50(&StandFigureSlideComponent_StateReady_TypeInfo);
-    sub_21FFC50(&StandFigureSlideComponent_StateSlide_TypeInfo);
-    byte_5934F2C = 1;
+    sub_2213A60(&Method_CStateManager_StandFigureSlideComponent___ctor__);
+    sub_2213A60(&Method_CStateManager_StandFigureSlideComponent__add__);
+    sub_2213A60(&CStateManager_StandFigureSlideComponent__TypeInfo);
+    sub_2213A60(&StandFigureSlideComponent_StateNone_TypeInfo);
+    sub_2213A60(&StandFigureSlideComponent_StateReady_TypeInfo);
+    sub_2213A60(&StandFigureSlideComponent_StateSlide_TypeInfo);
+    byte_596D05C = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v4 = (CStateManager_T__o *)sub_21FFEBC(CStateManager_StandFigureSlideComponent__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_2213CCC(CStateManager_StandFigureSlideComponent__TypeInfo);
     CStateManager_object____ctor(
       v4,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_3E505AC *)Method_CStateManager_StandFigureSlideComponent___ctor__);
+      (const MethodInfo_3E83D54 *)Method_CStateManager_StandFigureSlideComponent___ctor__);
     this->fields.mFSM = (struct CStateManager_StandFigureSlideComponent__o *)v4;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6, v7, v8, v9, v10);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v12 = (Il2CppObject *)sub_21FFEBC(StandFigureSlideComponent_StateNone_TypeInfo);
+    v12 = (Il2CppObject *)sub_2213CCC(StandFigureSlideComponent_StateNone_TypeInfo);
     System_Object___ctor(v12, 0);
     if ( !mFSM )
       goto LABEL_9;
@@ -105,29 +105,29 @@ void StandFigureSlideComponent__Awake(StandFigureSlideComponent_o *this, const M
       mFSM,
       0,
       (IState_T__o *)v12,
-      (const MethodInfo_3E5065C *)Method_CStateManager_StandFigureSlideComponent__add__);
+      (const MethodInfo_3E83E04 *)Method_CStateManager_StandFigureSlideComponent__add__);
     v15 = (CStateManager_T__o *)*p_mFSM;
-    v16 = (Il2CppObject *)sub_21FFEBC(StandFigureSlideComponent_StateReady_TypeInfo);
+    v16 = (Il2CppObject *)sub_2213CCC(StandFigureSlideComponent_StateReady_TypeInfo);
     System_Object___ctor(v16, 0);
     if ( !v15
       || (CStateManager_object___add(
             v15,
             1,
             (IState_T__o *)v16,
-            (const MethodInfo_3E5065C *)Method_CStateManager_StandFigureSlideComponent__add__),
+            (const MethodInfo_3E83E04 *)Method_CStateManager_StandFigureSlideComponent__add__),
           v17 = (CStateManager_T__o *)*p_mFSM,
-          v18 = (Il2CppObject *)sub_21FFEBC(StandFigureSlideComponent_StateSlide_TypeInfo),
+          v18 = (Il2CppObject *)sub_2213CCC(StandFigureSlideComponent_StateSlide_TypeInfo),
           System_Object___ctor(v18, 0),
           !v17) )
     {
 LABEL_9:
-      sub_21FFECC(v13, v14);
+      sub_2213CDC(v13, v14);
     }
     CStateManager_object___add(
       v17,
       2,
       (IState_T__o *)v18,
-      (const MethodInfo_3E5065C *)Method_CStateManager_StandFigureSlideComponent__add__);
+      (const MethodInfo_3E83E04 *)Method_CStateManager_StandFigureSlideComponent__add__);
     StandFigureSlideComponent__SetState(this, 0, v19);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -162,7 +162,7 @@ void StandFigureSlideComponent__CreateEndCallback(StandFigureSlideComponent_o *t
     if ( createCallback )
     {
       p_createCallback->klass = 0;
-      sub_21FFBF4(p_createCallback, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04(p_createCallback, 0, v2, v3, v4, v5, v6, v7);
       ((void (__fastcall *)(intptr_t, intptr_t))v11->fields.invoke_impl)(v11->fields.method_code, v11->fields.method);
     }
   }
@@ -244,33 +244,33 @@ void StandFigureSlideComponent__CreateFigurePrefab(
   int32_t v77; // [xsp+58h] [xbp-68h]
   int32_t v78; // [xsp+5Ch] [xbp-64h]
 
-  if ( (byte_5934F30 & 1) == 0 )
+  if ( (byte_596D060 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StandFigureCollect_TypeInfo);
-    sub_21FFC50(&Method_StandFigureSlideComponent_CreateEndCallback__);
-    byte_5934F30 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StandFigureCollect_TypeInfo);
+    sub_2213A60(&Method_StandFigureSlideComponent_CreateEndCallback__);
+    byte_596D060 = 1;
   }
   memset(&v76, 0, sizeof(v76));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   v17 = Instance;
   DataManager__GetMasterData_object_(
     Instance,
-    (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v17,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   if ( !Instance )
     goto LABEL_35;
   EntityListOrderBy = SvtMultiPortraitMaster__GetEntityListOrderBy(
@@ -281,7 +281,7 @@ void StandFigureSlideComponent__CreateFigurePrefab(
                         0);
   this->fields.createCallback = callBack;
   *(_QWORD *)&this->fields.createNumMax = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.createCallback,
     (int32_t)callBack,
     v19,
@@ -293,13 +293,13 @@ void StandFigureSlideComponent__CreateFigurePrefab(
   if ( !EntityListOrderBy
     || !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EntityListOrderBy,
-          (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
+          (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
   {
     v60 = System_Action_TypeInfo;
     ++this->fields.createNumMax;
-    v61 = (System_Action_o *)sub_21FFEBC(v60);
+    v61 = (System_Action_o *)sub_2213CCC(v60);
     System_Action___ctor(v61, (Il2CppObject *)this, Method_StandFigureSlideComponent_CreateEndCallback__, 0);
-    Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_47607168(
+    Instance = (DataManager_o *)StandFigureManager__CreateRenderPrefab_47638192(
                                   gameObject,
                                   svtId,
                                   imageLimitCount,
@@ -316,7 +316,7 @@ void StandFigureSlideComponent__CreateFigurePrefab(
       v62 = (UIStandFigureR_o *)Instance;
       UIStandFigureR__SetAlpha((UIStandFigureR_o *)Instance, alpha, 0);
       figureCollectList = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-      v64 = (StandFigureCollect_o *)sub_21FFEBC(StandFigureCollect_TypeInfo);
+      v64 = (StandFigureCollect_o *)sub_2213CCC(StandFigureCollect_TypeInfo);
       StandFigureCollect___ctor(v64, 0, v62, 0);
       if ( figureCollectList )
       {
@@ -331,28 +331,28 @@ void StandFigureSlideComponent__CreateFigurePrefab(
             System_Collections_Generic_List_object___AddWithResize(
               figureCollectList,
               (Il2CppObject *)v64,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
           }
           else
           {
             v74 = &items->obj.klass + size;
             figureCollectList->fields._size = size + 1;
             v74[4] = (Il2CppClass *)v64;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v74 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v74 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
           }
           return;
         }
       }
     }
 LABEL_35:
-    sub_21FFECC(Instance, v16);
+    sub_2213CDC(Instance, v16);
   }
   v77 = svtId;
   v78 = imageLimitCount;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v75,
     (System_Collections_Generic_List_object__o *)EntityListOrderBy,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
   v76 = v75;
   v75.fields._list = 0;
   *(_QWORD *)&v75.fields._index = &v76;
@@ -360,17 +360,17 @@ LABEL_35:
   {
     v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v76,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
     if ( !v25 )
       break;
     current = (SvtMultiPortraitEntity_o *)v76.fields._current;
     if ( !v76.fields._current )
-      sub_21FFECC(v25, v26);
+      sub_2213CDC(v25, v26);
     klass_high = HIDWORD(v76.fields._current[2].klass);
     v29 = System_Action_TypeInfo;
     ++this->fields.createNumMax;
     portraitImageId = current->fields.portraitImageId;
-    v31 = (System_Action_o *)sub_21FFEBC(v29);
+    v31 = (System_Action_o *)sub_2213CCC(v29);
     System_Action___ctor(v31, (Il2CppObject *)this, Method_StandFigureSlideComponent_CreateEndCallback__, 0);
     PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                          gameObject,
@@ -385,9 +385,9 @@ LABEL_35:
                          0);
     v40 = PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_21FFECC(0, v33);
+      sub_2213CDC(0, v33);
     PrefabForImageId->fields.svtMultiPortraitEntity = current;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity,
       (int32_t)current,
       v34,
@@ -403,16 +403,16 @@ LABEL_35:
       v42 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v40, 0);
       v44 = current->fields.commonPosition;
       if ( !v44 )
-        sub_21FFECC(v42, v43);
+        sub_2213CDC(v42, v43);
       max_length = v44->max_length;
       if ( max_length == 1 )
-        sub_21FFED4(v42);
+        sub_2213CE4(v42);
       if ( !max_length )
-        sub_21FFED4(v42);
-      GameObjectExtensions__AddLocalPosition_42877056(v42, (float)v44->m_Items[0], (float)v44->m_Items[1], v43);
+        sub_2213CE4(v42);
+      GameObjectExtensions__AddLocalPosition_42892452(v42, (float)v44->m_Items[0], (float)v44->m_Items[1], v43);
     }
     v46 = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-    v47 = (StandFigureCollect_o *)sub_21FFEBC(StandFigureCollect_TypeInfo);
+    v47 = (StandFigureCollect_o *)sub_2213CCC(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v47, current, v40, 0);
     if ( !v46
       || (v56 = v46->fields._items,
@@ -420,7 +420,7 @@ LABEL_35:
           ++v46->fields._version,
           !v56) )
     {
-      sub_21FFECC(v48, v49);
+      sub_2213CDC(v48, v49);
     }
     v58 = v46->fields._size;
     if ( (unsigned int)v58 >= LODWORD(v56->max_length) )
@@ -428,19 +428,19 @@ LABEL_35:
       System_Collections_Generic_List_object___AddWithResize(
         v46,
         (Il2CppObject *)v47,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
     }
     else
     {
       v59 = &v56->obj.klass + v58;
       v46->fields._size = v58 + 1;
       v59[4] = (Il2CppClass *)v47;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v59 + 4), (int32_t)v47, v50, v51, v52, v53, v54, v55);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v59 + 4), (int32_t)v47, v50, v51, v52, v53, v54, v55);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v76,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 }
 
 
@@ -465,15 +465,15 @@ void StandFigureSlideComponent__Destroy(StandFigureSlideComponent_o *this, const
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5934F2E & 1) == 0 )
+  if ( (byte_596D05E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934F2E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D05E = 1;
   }
   figureCollectList = this->fields.figureCollectList;
   memset(&v20, 0, sizeof(v20));
@@ -482,7 +482,7 @@ void StandFigureSlideComponent__Destroy(StandFigureSlideComponent_o *this, const
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)figureCollectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v20 = v19;
   v19.fields._list = 0;
   *(_QWORD *)&v19.fields._index = &v20;
@@ -490,12 +490,12 @@ void StandFigureSlideComponent__Destroy(StandFigureSlideComponent_o *this, const
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v20,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v4 )
       break;
     current = v20.fields._current;
     if ( !v20.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     monitor = (UnityEngine_Object_o *)v20.fields._current[1].monitor;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
@@ -503,24 +503,24 @@ void StandFigureSlideComponent__Destroy(StandFigureSlideComponent_o *this, const
     {
       v10 = (UIStandFigureR_o *)current[1].monitor;
       if ( !v10 )
-        sub_21FFECC(0, v9);
+        sub_2213CDC(0, v9);
       UIStandFigureR__ReleaseCharacter(v10, 0);
       v12 = (UnityEngine_Component_o *)current[1].monitor;
       if ( !v12 )
-        sub_21FFECC(0, v11);
+        sub_2213CDC(0, v11);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v12, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
-      UnityEngine_Object__DestroyImmediate_83246828(gameObject, 0);
+      UnityEngine_Object__DestroyImmediate_83460132(gameObject, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
   v16 = this->fields.figureCollectList;
   if ( !v16 )
 LABEL_22:
-    sub_21FFECC(figureCollectList, method);
+    sub_2213CDC(figureCollectList, method);
   size = v16->fields._size;
   v18 = v16->fields._version + 1;
   v16->fields._size = 0;
@@ -549,7 +549,7 @@ void StandFigureSlideComponent__EndSlide(StandFigureSlideComponent_o *this, cons
   StandFigureSlideComponent__SetState(this, 1, v6);
   ActionExtensions__Call(this->fields.mSlideEndAct, 0);
   this->fields.mSlideEndAct = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSlideEndAct, 0, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSlideEndAct, 0, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -559,14 +559,14 @@ int32_t StandFigureSlideComponent__GetState(StandFigureSlideComponent_o *this, c
   struct CStateManager_StandFigureSlideComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_5934F34 & 1) == 0 )
+  if ( (byte_596D064 & 1) == 0 )
   {
-    this = (StandFigureSlideComponent_o *)sub_21FFC50(&Method_CStateManager_StandFigureSlideComponent__getState__);
-    byte_5934F34 = 1;
+    this = (StandFigureSlideComponent_o *)sub_2213A60(&Method_CStateManager_StandFigureSlideComponent__getState__);
+    byte_596D064 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -621,7 +621,7 @@ void StandFigureSlideComponent__SetBtnAct(
   bool v7; // w7
 
   this->fields.mBtnAct = btn_act;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mBtnAct,
     (int32_t)btn_act,
     (System_String_o *)method,
@@ -641,7 +641,7 @@ void StandFigureSlideComponent__SetEnable(StandFigureSlideComponent_o *this, boo
   mBtnColl = (UnityEngine_Collider_o *)this->fields.mBtnColl;
   this->fields.mIsEnable = is_enable;
   if ( !mBtnColl )
-    sub_21FFECC(0, is_enable);
+    sub_2213CDC(0, is_enable);
   UnityEngine_Collider__set_enabled(mBtnColl, is_enable, 0);
 }
 
@@ -661,33 +661,33 @@ void StandFigureSlideComponent__SetFigureAlpha(
   UIStandFigureR_o *v12; // x0
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_5934F31 & 1) == 0 )
+  if ( (byte_596D061 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934F31 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D061 = 1;
   }
   figureCollectList = this->fields.figureCollectList;
   memset(&v13, 0, sizeof(v13));
   if ( !figureCollectList )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)figureCollectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v13,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v6 )
       break;
     current = v13.fields._current;
     if ( !v13.fields._current )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     v10 = *(UnityEngine_Object_o **)((char *)&v13.fields._current->klass + (unsigned __int64)off_18);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
@@ -695,13 +695,13 @@ void StandFigureSlideComponent__SetFigureAlpha(
     {
       v12 = *(UIStandFigureR_o **)((char *)off_18 + (_QWORD)current);
       if ( !v12 )
-        sub_21FFECC(0, v11);
+        sub_2213CDC(0, v11);
       UIStandFigureR__SetAlpha(v12, alpha, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
 }
 
 
@@ -710,18 +710,18 @@ void StandFigureSlideComponent__SetState(StandFigureSlideComponent_o *this, int3
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_5934F35 & 1) == 0 )
+  if ( (byte_596D065 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_StandFigureSlideComponent__setState__);
-    byte_5934F35 = 1;
+    sub_2213A60(&Method_CStateManager_StandFigureSlideComponent__setState__);
+    byte_596D065 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_21FFECC(0, *(_QWORD *)&state);
+    sub_2213CDC(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_3E506E4 *)Method_CStateManager_StandFigureSlideComponent__setState__);
+    (const MethodInfo_3E83E8C *)Method_CStateManager_StandFigureSlideComponent__setState__);
 }
 
 
@@ -769,30 +769,30 @@ void StandFigureSlideComponent__Setup(
   System_Action_o *v43; // x25
   const MethodInfo *v44; // x6
 
-  if ( (byte_5934F2F & 1) == 0 )
+  if ( (byte_596D05F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__0__);
-    sub_21FFC50(&Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__1__);
-    sub_21FFC50(&StandFigureSlideComponent___c__DisplayClass31_0_TypeInfo);
-    byte_5934F2F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__0__);
+    sub_2213A60(&Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__1__);
+    sub_2213A60(&StandFigureSlideComponent___c__DisplayClass31_0_TypeInfo);
+    byte_596D05F = 1;
   }
-  v9 = sub_21FFEBC(StandFigureSlideComponent___c__DisplayClass31_0_TypeInfo);
+  v9 = sub_2213CCC(StandFigureSlideComponent___c__DisplayClass31_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_17;
   *(_QWORD *)(v9 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = end_act;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)end_act, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)end_act, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)v9, Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__0__, 0);
   *(_QWORD *)(v9 + 32) = v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 32), (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 32), (int32_t)v24, v25, v26, v27, v28, v29, v30);
   this->fields.mIsLoading = 1;
   StandFigureSlideComponent__SetState(this, 0, v31);
   if ( !usd )
@@ -808,11 +808,11 @@ LABEL_13:
     goto LABEL_14;
   ServantId = UserServantEntity__GetServantId(usd, -1, 0);
   FigureImage = UserServantEntity__GetFigureImage(usd, 0, -1, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0
     || (ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
                                        (ServantLimitImageMaster_o *)Instance,
                                        ServantId,
@@ -824,11 +824,11 @@ LABEL_13:
         (Instance = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)this->fields.figureCollectList,
                       0,
-                      (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0)
+                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0)
     || (monitor = Instance[1].monitor) == 0 )
   {
 LABEL_17:
-    sub_21FFECC(Instance, v11);
+    sub_2213CDC(Instance, v11);
   }
   if ( v36 == monitor[15] )
     goto LABEL_13;
@@ -837,17 +837,17 @@ LABEL_14:
   StandFigureSlideComponent__SlideOut(this, 0, 1, v38);
   v39 = UserServantEntity__GetServantId(usd, -1, 0);
   v40 = UserServantEntity__GetFigureImage(usd, 0, -1, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   if ( !Instance )
     goto LABEL_17;
   v41 = ServantLimitImageMaster__GetServantImageLimitSealAfter((ServantLimitImageMaster_o *)Instance, v39, v40, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v43 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v43 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v43, (Il2CppObject *)v9, Method_StandFigureSlideComponent___c__DisplayClass31_0__Setup_b__1__, 0);
   StandFigureSlideComponent__CreateFigurePrefab(this, gameObject, v39, v41, depth, 0.0, v43, v44);
 }
@@ -871,10 +871,10 @@ void StandFigureSlideComponent__SlideIn(
   const MethodInfo *v15; // x1
   const MethodInfo *v16; // x2
 
-  if ( (byte_5934F32 & 1) == 0 )
+  if ( (byte_596D062 & 1) == 0 )
   {
-    sub_21FFC50(&StandFigureSlideComponent_TypeInfo);
-    byte_5934F32 = 1;
+    sub_2213A60(&StandFigureSlideComponent_TypeInfo);
+    byte_596D062 = 1;
   }
   if ( this->fields.mIsEnable
     && (StandFigureSlideComponent__GetState(this, (const MethodInfo *)end_act) != 2 || !this->fields.mIsFrameIn) )
@@ -892,7 +892,7 @@ void StandFigureSlideComponent__SlideIn(
     this->fields.mIsFrameIn = 1;
     this->fields.mTgtPosX = v14;
     this->fields.mSlideEndAct = end_act;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSlideEndAct,
       (int32_t)end_act,
       v6,
@@ -927,10 +927,10 @@ void StandFigureSlideComponent__SlideOut(
   const MethodInfo *v18; // x1
   const MethodInfo *v19; // x2
 
-  if ( (byte_5934F33 & 1) == 0 )
+  if ( (byte_596D063 & 1) == 0 )
   {
-    sub_21FFC50(&StandFigureSlideComponent_TypeInfo);
-    byte_5934F33 = 1;
+    sub_2213A60(&StandFigureSlideComponent_TypeInfo);
+    byte_596D063 = 1;
   }
   if ( this->fields.mIsEnable
     && (StandFigureSlideComponent__GetState(this, (const MethodInfo *)end_act) != 2 || this->fields.mIsFrameIn) )
@@ -952,7 +952,7 @@ void StandFigureSlideComponent__SlideOut(
     }
     this->fields.mIsFrameIn = 0;
     this->fields.mSlideEndAct = end_act;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSlideEndAct,
       (int32_t)end_act,
       v8,
@@ -983,16 +983,16 @@ void StandFigureSlideComponent__Update(StandFigureSlideComponent_o *this, const 
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_5934F2D & 1) == 0 )
+  if ( (byte_596D05D & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_StandFigureSlideComponent__update__);
-    byte_5934F2D = 1;
+    sub_2213A60(&Method_CStateManager_StandFigureSlideComponent__update__);
+    byte_596D05D = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_3E506C4 *)Method_CStateManager_StandFigureSlideComponent__update__);
+      (const MethodInfo_3E83E6C *)Method_CStateManager_StandFigureSlideComponent__update__);
 }
 
 
@@ -1103,43 +1103,43 @@ void StandFigureSlideComponent_StateSlide__begin(
   bool v28; // w6
   bool v29; // w7
 
-  if ( (byte_5934F38 & 1) == 0 )
+  if ( (byte_596D068 & 1) == 0 )
   {
-    sub_21FFC50(&Method_TransitionCalculator_float___ctor__);
-    sub_21FFC50(&TransitionCalculator_float__TypeInfo);
-    byte_5934F38 = 1;
+    sub_2213A60(&Method_TransitionCalculator_float___ctor__);
+    sub_2213A60(&TransitionCalculator_float__TypeInfo);
+    byte_596D068 = 1;
   }
   v5 = ChangedFPSUtil__CovertFrameNumToSecond(17, 0);
   v6 = ExtraEasing__AsymptoticSeriesFloat(0.35, 17.0, 0);
   if ( !that )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v8 = (System_Func_T__T__float__T__o *)v6;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
   LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, v10);
   mTgtPosX = that->fields.mTgtPosX;
   v13 = LocalPositionX;
-  v14 = (TransitionCalculator_float__o *)sub_21FFEBC(TransitionCalculator_float__TypeInfo);
+  v14 = (TransitionCalculator_float__o *)sub_2213CCC(TransitionCalculator_float__TypeInfo);
   TransitionCalculator_float____ctor(
     v14,
     v13,
     mTgtPosX,
     v5,
     v8,
-    (const MethodInfo_3BB5C04 *)Method_TransitionCalculator_float___ctor__);
+    (const MethodInfo_3BE93AC *)Method_TransitionCalculator_float___ctor__);
   this->fields.positionCalculator = v14;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v14, v15, v16, v17, v18, v19, v20);
   mTgtAlp = that->fields.mTgtAlp;
   mNowAlp = that->fields.mNowAlp;
-  v23 = (TransitionCalculator_float__o *)sub_21FFEBC(TransitionCalculator_float__TypeInfo);
+  v23 = (TransitionCalculator_float__o *)sub_2213CCC(TransitionCalculator_float__TypeInfo);
   TransitionCalculator_float____ctor(
     v23,
     mNowAlp,
     mTgtAlp,
     v5,
     v8,
-    (const MethodInfo_3BB5C04 *)Method_TransitionCalculator_float___ctor__);
+    (const MethodInfo_3BE93AC *)Method_TransitionCalculator_float___ctor__);
   this->fields.alphaCalculator = v23;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.alphaCalculator,
     (int32_t)v23,
     v24,
@@ -1174,11 +1174,11 @@ void StandFigureSlideComponent_StateSlide__update(
   const MethodInfo *v10; // x1
 
   v4 = this;
-  if ( (byte_5934F39 & 1) == 0 )
+  if ( (byte_596D069 & 1) == 0 )
   {
-    sub_21FFC50(&Method_TransitionCalculator_float__IsFinished__);
-    this = (StandFigureSlideComponent_StateSlide_o *)sub_21FFC50(&Method_TransitionCalculator_float__Update__);
-    byte_5934F39 = 1;
+    sub_2213A60(&Method_TransitionCalculator_float__IsFinished__);
+    this = (StandFigureSlideComponent_StateSlide_o *)sub_2213A60(&Method_TransitionCalculator_float__Update__);
+    byte_596D069 = 1;
   }
   if ( !that )
     goto LABEL_10;
@@ -1190,23 +1190,23 @@ void StandFigureSlideComponent_StateSlide__update(
   v5 = this;
   v6 = TransitionCalculator_float___Update(
          v4->fields.positionCalculator,
-         (const MethodInfo_3BB5C64 *)Method_TransitionCalculator_float__Update__);
+         (const MethodInfo_3BE940C *)Method_TransitionCalculator_float__Update__);
   GameObjectExtensions__SetLocalPositionX((UnityEngine_GameObject_o *)v5, v6, v7);
   this = (StandFigureSlideComponent_StateSlide_o *)v4->fields.alphaCalculator;
   if ( !this
     || (v8 = TransitionCalculator_float___Update(
                (TransitionCalculator_float__o *)this,
-               (const MethodInfo_3BB5C64 *)Method_TransitionCalculator_float__Update__),
+               (const MethodInfo_3BE940C *)Method_TransitionCalculator_float__Update__),
         that->fields.mNowAlp = v8,
         StandFigureSlideComponent__SetFigureAlpha(that, v8, v9),
         (this = (StandFigureSlideComponent_StateSlide_o *)v4->fields.positionCalculator) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(this, that);
+    sub_2213CDC(this, that);
   }
   if ( TransitionCalculator_float___IsFinished(
          (TransitionCalculator_float__o *)this,
-         (const MethodInfo_3BB5CB4 *)Method_TransitionCalculator_float__IsFinished__) )
+         (const MethodInfo_3BE945C *)Method_TransitionCalculator_float__IsFinished__) )
   {
     StandFigureSlideComponent__EndSlide(that, v10);
   }
@@ -1235,7 +1235,7 @@ void StandFigureSlideComponent___c__DisplayClass31_0___Setup_b__0(
         ActionExtensions__Call(this->fields.end_act, 0),
         (v5 = this->fields.__4__this) == 0) )
   {
-    sub_21FFECC(_4__this, method);
+    sub_2213CDC(_4__this, method);
   }
   v5->fields.mIsLoading = 0;
 }
@@ -1249,7 +1249,7 @@ void StandFigureSlideComponent___c__DisplayClass31_0___Setup_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   _4__this->fields.mNowAlp = 0.0;
   StandFigureSlideComponent__SetFigureAlpha(_4__this, 0.0, method);
   ActionExtensions__Call(this->fields.this_end_act, 0);

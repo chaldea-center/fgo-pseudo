@@ -32,18 +32,18 @@ void ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *method)
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_593C3C2 & 1) == 0 )
+  if ( (byte_59745FA & 1) == 0 )
   {
-    sub_21FFC50(&ClassBoardBaseClassIconNameComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_19412/*"dialog_icon_10004"*/);
-    sub_21FFC50(&StringLiteral_19413/*"dialog_icon_10005"*/);
-    sub_21FFC50(&StringLiteral_18261/*"btn_tab_{0}"*/);
-    sub_21FFC50(&StringLiteral_18738/*"class2_{0}"*/);
-    byte_593C3C2 = 1;
+    sub_2213A60(&ClassBoardBaseClassIconNameComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_19454/*"dialog_icon_10004"*/);
+    sub_2213A60(&StringLiteral_19455/*"dialog_icon_10005"*/);
+    sub_2213A60(&StringLiteral_18299/*"btn_tab_{0}"*/);
+    sub_2213A60(&StringLiteral_18776/*"class2_{0}"*/);
+    byte_59745FA = 1;
   }
-  v7 = StringLiteral_18261/*"btn_tab_{0}"*/;
-  ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields->TabBtnNameFormat = (struct System_String_o *)StringLiteral_18261/*"btn_tab_{0}"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_18299/*"btn_tab_{0}"*/;
+  ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields->TabBtnNameFormat = (struct System_String_o *)StringLiteral_18299/*"btn_tab_{0}"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields,
     v7,
     v1,
@@ -52,10 +52,10 @@ void ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_18738/*"class2_{0}"*/;
+  v8 = StringLiteral_18776/*"class2_{0}"*/;
   static_fields = ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields;
-  static_fields->TabGrandBtnNameFormat = (struct System_String_o *)StringLiteral_18738/*"class2_{0}"*/;
-  sub_21FFBF4(
+  static_fields->TabGrandBtnNameFormat = (struct System_String_o *)StringLiteral_18776/*"class2_{0}"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->TabGrandBtnNameFormat,
     v8,
     v10,
@@ -64,14 +64,14 @@ void ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = StringLiteral_19412/*"dialog_icon_10004"*/;
+  v16 = StringLiteral_19454/*"dialog_icon_10004"*/;
   v17 = ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields;
-  v17->TabGrandEx1IconName = (struct System_String_o *)StringLiteral_19412/*"dialog_icon_10004"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->TabGrandEx1IconName, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_19413/*"dialog_icon_10005"*/;
+  v17->TabGrandEx1IconName = (struct System_String_o *)StringLiteral_19454/*"dialog_icon_10004"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->TabGrandEx1IconName, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_19455/*"dialog_icon_10005"*/;
   v25 = ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields;
-  v25->TabGrandEx2IconName = (struct System_String_o *)StringLiteral_19413/*"dialog_icon_10005"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->TabGrandEx2IconName, v24, v26, v27, v28, v29, v30, v31);
+  v25->TabGrandEx2IconName = (struct System_String_o *)StringLiteral_19455/*"dialog_icon_10005"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->TabGrandEx2IconName, v24, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -120,17 +120,17 @@ void ClassBoardBaseClassIconNameComponent__GrandSetup(
   Il2CppObject *v25; // [xsp+8h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_593C3C1 & 1) == 0 )
+  if ( (byte_59745F9 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&ClassBoardBaseClassIconNameComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_7277/*"GRAND_CLASS_BOARD_RELEASE_DIALOG_CLASS_TEXT"*/);
-    byte_593C3C1 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&ClassBoardBaseClassIconNameComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_7289/*"GRAND_CLASS_BOARD_RELEASE_DIALOG_CLASS_TEXT"*/);
+    byte_59745F9 = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   entity = 0;
@@ -189,7 +189,7 @@ LABEL_9:
       v20 = v17->static_fields;
       v24 = classBaseId;
       TabGrandBtnNameFormat = v20->TabGrandBtnNameFormat;
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
+      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
       v23 = System_String__Format(TabGrandBtnNameFormat, v22, 0);
       v9 = AtlasManager_TypeInfo;
       TabGrandEx1IconName = v23;
@@ -200,7 +200,7 @@ LABEL_9:
   AtlasManager__SetClassIconSprite(icon, TabGrandEx1IconName, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_33;
   v14 = Master_object;
@@ -208,7 +208,7 @@ LABEL_9:
                                                                   Master_object,
                                                                   &entity,
                                                                   classBaseId,
-                                                                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !entity )
@@ -217,13 +217,13 @@ LABEL_9:
           v14,
           &v25,
           (int32_t)entity[4].monitor,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__) )
     return;
   name = this->fields.name;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_7277/*"GRAND_CLASS_BOARD_RELEASE_DIALOG_CLASS_TEXT"*/,
+                                                                  (System_String_o *)StringLiteral_7289/*"GRAND_CLASS_BOARD_RELEASE_DIALOG_CLASS_TEXT"*/,
                                                                   0);
   if ( !v25
     || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
@@ -233,7 +233,7 @@ LABEL_9:
         !name) )
   {
 LABEL_33:
-    sub_21FFECC(Master_object, v13);
+    sub_2213CDC(Master_object, v13);
   }
   UILabel__set_text(name, (System_String_o *)Master_object, 0);
 }
@@ -258,14 +258,14 @@ void ClassBoardBaseClassIconNameComponent__Setup(
   int32_t v15; // [xsp+Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_593C3C0 & 1) == 0 )
+  if ( (byte_59745F8 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&ClassBoardBaseClassIconNameComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    byte_593C3C0 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&ClassBoardBaseClassIconNameComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    byte_59745F8 = 1;
   }
   v5 = ClassBoardBaseClassIconNameComponent_TypeInfo;
   v6 = *(&ClassBoardBaseClassIconNameComponent_TypeInfo->_2.cctor_finished + 1);
@@ -278,26 +278,26 @@ void ClassBoardBaseClassIconNameComponent__Setup(
   }
   TabBtnNameFormat = v5->static_fields->TabBtnNameFormat;
   v15 = classBaseId;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v15);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v15);
   v11 = System_String__Format(TabBtnNameFormat, v9, 0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v10);
   AtlasManager__SetClassIconSprite(icon, v11, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v12);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
                                                                   classBaseId,
-                                                                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !entity || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.name) == 0 )
 LABEL_15:
-    sub_21FFECC(Master_object, v14);
+    sub_2213CDC(Master_object, v14);
   UILabel__set_text((UILabel_o *)Master_object, (System_String_o *)entity[1].monitor, 0);
 }
 

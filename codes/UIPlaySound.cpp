@@ -13,10 +13,10 @@ void UIPlaySound__OnClick(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD49 & 1) == 0 )
+  if ( (byte_5975020 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD49 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_5975020 = 1;
   }
   if ( UIPlaySound__get_canPlay(this, method) && !this->fields.trigger )
   {
@@ -25,7 +25,7 @@ void UIPlaySound__OnClick(UIPlaySound_o *this, const MethodInfo *method)
     audioClip = this->fields.audioClip;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v3);
-    NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
   }
 }
 
@@ -36,10 +36,10 @@ void UIPlaySound__OnDisable(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD46 & 1) == 0 )
+  if ( (byte_597501D & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD46 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_597501D = 1;
   }
   if ( this->fields.trigger == 7 )
   {
@@ -48,7 +48,7 @@ void UIPlaySound__OnDisable(UIPlaySound_o *this, const MethodInfo *method)
     audioClip = this->fields.audioClip;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, method);
-    NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
   }
 }
 
@@ -59,10 +59,10 @@ void UIPlaySound__OnEnable(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD45 & 1) == 0 )
+  if ( (byte_597501C & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD45 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_597501C = 1;
   }
   if ( this->fields.trigger == 6 )
   {
@@ -71,7 +71,7 @@ void UIPlaySound__OnEnable(UIPlaySound_o *this, const MethodInfo *method)
     audioClip = this->fields.audioClip;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, method);
-    NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
   }
 }
 
@@ -85,10 +85,10 @@ void UIPlaySound__OnHover(UIPlaySound_o *this, bool isOver, const MethodInfo *me
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD47 & 1) == 0 )
+  if ( (byte_597501E & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD47 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_597501E = 1;
   }
   if ( this->fields.trigger == 1 )
   {
@@ -113,7 +113,7 @@ void UIPlaySound__OnHover(UIPlaySound_o *this, bool isOver, const MethodInfo *me
     audioClip = this->fields.audioClip;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v5);
-    NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
   }
 }
 
@@ -127,10 +127,10 @@ void UIPlaySound__OnPress(UIPlaySound_o *this, bool isPressed, const MethodInfo 
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD48 & 1) == 0 )
+  if ( (byte_597501F & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD48 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_597501F = 1;
   }
   if ( this->fields.trigger == 3 )
   {
@@ -155,7 +155,7 @@ void UIPlaySound__OnPress(UIPlaySound_o *this, bool isPressed, const MethodInfo 
     audioClip = this->fields.audioClip;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v5);
-    NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+    NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
   }
 }
 
@@ -167,10 +167,10 @@ void UIPlaySound__OnSelect(UIPlaySound_o *this, bool isSelected, const MethodInf
   const MethodInfo *v6; // x2
   UICamera_c *v7; // x0
 
-  if ( (byte_593CD4A & 1) == 0 )
+  if ( (byte_5975021 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CD4A = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_5975021 = 1;
   }
   if ( UIPlaySound__get_canPlay(this, (const MethodInfo *)isSelected) )
   {
@@ -195,17 +195,17 @@ void UIPlaySound__Play(UIPlaySound_o *this, const MethodInfo *method)
   float pitch; // s9
   UnityEngine_AudioClip_o *audioClip; // x20
 
-  if ( (byte_593CD4B & 1) == 0 )
+  if ( (byte_5975022 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CD4B = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_5975022 = 1;
   }
   volume = this->fields.volume;
   pitch = this->fields.pitch;
   audioClip = this->fields.audioClip;
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, method);
-  NGUITools__PlaySound_56204512(audioClip, volume, pitch, 0);
+  NGUITools__PlaySound_56409168(audioClip, volume, pitch, 0);
 }
 
 
@@ -216,25 +216,25 @@ bool UIPlaySound__get_canPlay(UIPlaySound_o *this, const MethodInfo *method)
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593CD44 & 1) == 0 )
+  if ( (byte_597501B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CD44 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597501B = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
     return 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIButton___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v5 )
     return 1;
   if ( !Component_object )
-    sub_21FFECC(v5, v6);
-  return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[4].methodPtr)(
+    sub_2213CDC(v5, v6);
+  return ((bool (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[4].methodPtr)(
            Component_object,
            Component_object->klass->vtable[4].method);
 }

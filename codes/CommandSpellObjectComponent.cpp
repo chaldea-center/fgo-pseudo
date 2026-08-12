@@ -13,28 +13,28 @@ void CommandSpellObjectComponent__onClickUse(CommandSpellObjectComponent_o *this
   CommandSpellWindowComponent_o *target; // x0
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_593C182 & 1) == 0 )
+  if ( (byte_59742DA & 1) == 0 )
   {
-    sub_21FFC50(&Method_CommandSpellObjectComponent_onClickUse__);
-    byte_593C182 = 1;
+    sub_2213A60(&Method_CommandSpellObjectComponent_onClickUse__);
+    byte_59742DA = 1;
   }
   v3 = Method_CommandSpellObjectComponent_onClickUse__;
   if ( this->fields.touchFlg )
   {
     if ( (*((_BYTE *)Method_CommandSpellObjectComponent_onClickUse__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CommandSpellObjectComponent_onClickUse__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CommandSpellObjectComponent_onClickUse__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlayCommonSe(v4, 9, 0, 0);
     target = this->fields.target;
     if ( !target )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     CommandSpellWindowComponent__UseSpell(target, this->fields.Id, v6);
   }
   else
   {
     if ( (*((_BYTE *)Method_CommandSpellObjectComponent_onClickUse__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CommandSpellObjectComponent_onClickUse__);
-    v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CommandSpellObjectComponent_onClickUse__);
+    v8 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 2, 0, 0);
   }
 }
@@ -47,7 +47,7 @@ void CommandSpellObjectComponent__setData(
         int32_t count,
         const MethodInfo *method)
 {
-  const MethodInfo_476E8C0 *v9; // x0
+  const MethodInfo_47A29F8 *v9; // x0
   DataManager_o *Instance; // x0
   __int64 v11; // x1
   DataManager_o *v12; // x22
@@ -67,35 +67,35 @@ void CommandSpellObjectComponent__setData(
   System_String_o *v26; // x0
   System_String_o *v27; // x0
 
-  if ( (byte_593C180 & 1) == 0 )
+  if ( (byte_59742D8 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandSpellMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_15431/*"USE_MASTER_SPELL"*/);
-    sub_21FFC50(&StringLiteral_3809/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/);
-    sub_21FFC50(&StringLiteral_8923/*"MASTER_SPELL_UNIT"*/);
-    byte_593C180 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandSpellMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_15461/*"USE_MASTER_SPELL"*/);
+    sub_2213A60(&StringLiteral_3814/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/);
+    sub_2213A60(&StringLiteral_8936/*"MASTER_SPELL_UNIT"*/);
+    byte_59742D8 = 1;
   }
-  v9 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v9 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.Id = Id;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v9);
   if ( !Instance )
     goto LABEL_26;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandSpellMaster___);
   if ( !Instance )
     goto LABEL_26;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 Id,
-                                (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+                                (const MethodInfo_3F10B30 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_26;
   v12 = Instance;
@@ -110,14 +110,14 @@ void CommandSpellObjectComponent__setData(
   label_count = this->fields.label_count;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15431/*"USE_MASTER_SPELL"*/, 0);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15461/*"USE_MASTER_SPELL"*/, 0);
   v16 = System_Int32__ToString((int)v12 + 20, 0);
-  Instance = (DataManager_o *)System_String__Concat_75438412(v15, v16, 0);
+  Instance = (DataManager_o *)System_String__Concat_75651716(v15, v16, 0);
   if ( !label_count )
     goto LABEL_26;
   UILabel__set_text(label_count, (System_String_o *)Instance, 0);
   unitLabel = this->fields.unitLabel;
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8923/*"MASTER_SPELL_UNIT"*/, 0);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8936/*"MASTER_SPELL_UNIT"*/, 0);
   if ( !unitLabel )
     goto LABEL_26;
   UILabel__set_text(unitLabel, (System_String_o *)Instance, 0);
@@ -130,11 +130,11 @@ void CommandSpellObjectComponent__setData(
   ClassBoardReleaseQuestId = v19->static_fields->ClassBoardReleaseQuestId;
   if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v18);
-  if ( CondType__IsQuestClear_47254560(ClassBoardReleaseQuestId, -1, 0, 0) )
+  if ( CondType__IsQuestClear_47284152(ClassBoardReleaseQuestId, -1, 0, 0) )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v21);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
     if ( Master_object )
     {
       Instance = (DataManager_o *)ClassBoardCommandSpellMaster__IsAddFunctionCommandSpell(
@@ -149,13 +149,13 @@ void CommandSpellObjectComponent__setData(
           mText = label_conf->fields.mText;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11);
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3809/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0);
-          v27 = System_String__Concat_75438412(mText, v26, 0);
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3814/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0);
+          v27 = System_String__Concat_75651716(mText, v26, 0);
           UILabel__set_text(label_conf, v27, 0);
           goto LABEL_25;
         }
 LABEL_26:
-        sub_21FFECC(Instance, v11);
+        sub_2213CDC(Instance, v11);
       }
     }
   }
@@ -182,25 +182,25 @@ void CommandSpellObjectComponent__updateIsUse(
   int32_t Consume; // w8
   bool v10; // w21
 
-  if ( (byte_593C181 & 1) == 0 )
+  if ( (byte_59742D9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandSpellMaster___);
-    sub_21FFC50(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593C181 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandSpellMaster___);
+    sub_2213A60(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59742D9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandSpellMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 this->fields.Id,
-                                (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+                                (const MethodInfo_3F10B30 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
   if ( mode == 1 )
   {
     if ( !Instance )
@@ -218,7 +218,7 @@ void CommandSpellObjectComponent__updateIsUse(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_21FFECC(Instance, v8);
+    sub_2213CDC(Instance, v8);
   }
   if ( !Instance )
     goto LABEL_15;

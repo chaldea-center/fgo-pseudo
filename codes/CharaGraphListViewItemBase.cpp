@@ -50,12 +50,12 @@ void CharaGraphListViewItemBase___ctor(
   bool v49; // w7
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.filterLogic,
     (int32_t)FilterLogic,
     v9,
@@ -66,7 +66,7 @@ void CharaGraphListViewItemBase___ctor(
     v14);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
   this->fields.sortLogic = SortLogic;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.sortLogic,
     (int32_t)SortLogic,
     v17,
@@ -77,7 +77,7 @@ void CharaGraphListViewItemBase___ctor(
     v22);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)ItemDrawPattern,
     v25,
@@ -88,7 +88,7 @@ void CharaGraphListViewItemBase___ctor(
     v30);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)RootInfo_k__BackingField,
     v32,
@@ -100,14 +100,14 @@ void CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 24), (int32_t)this, v38, v39, v40, v41, v42, v43),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 24), (int32_t)this, v38, v39, v40, v41, v42, v43),
         (v6 = (char *)this->fields.sortLogic) == 0) )
   {
 LABEL_5:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 24), (int32_t)this, v44, v45, v46, v47, v48, v49);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 24), (int32_t)this, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -148,7 +148,7 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   SortValueLast_k__BackingField = sortLogic->fields._SortValueLast_k__BackingField;
   this->fields.sortValue2B = SortValue2B_k__BackingField;
   this->fields.sortValueLast = SortValueLast_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)IconInfo1_k__BackingField,
     v2,
@@ -160,10 +160,10 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   v21 = (__int64)*(p_IconInfo1_k__BackingField - 9);
   if ( !v21 )
 LABEL_4:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v22 = *(struct IconLabelInfo_o **)(v21 + 104);
   this->fields._IconInfo2_k__BackingField = v22;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)v22,
     v15,
@@ -188,15 +188,15 @@ bool CharaGraphListViewItemBase__GetNpInfo(
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5937929 & 1) == 0 )
+  if ( (byte_596FA8C & 1) == 0 )
   {
-    sub_21FFC50(&TreasureDvcInfo_TypeInfo);
-    byte_5937929 = 1;
+    sub_2213A60(&TreasureDvcInfo_TypeInfo);
+    byte_596FA8C = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_21FFEBC(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_2213CCC(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0);
   *tdInfo = v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)tdInfo, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)tdInfo, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   return 0;
 }
 
@@ -216,7 +216,7 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&filterLogic->fields,
           (int32_t)sort,
           (System_String_o *)method,
@@ -227,9 +227,9 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
           v7),
         (filterLogic = this->fields.filterLogic) == 0) )
   {
-    sub_21FFECC(filterLogic, sort);
+    sub_2213CDC(filterLogic, sort);
   }
-  return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
+  return ((bool (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
            filterLogic,
            filterLogic->klass->vtable._4_unknown.method);
 }
@@ -248,7 +248,7 @@ void CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._10_ModifyLocal.method);
   if ( !args )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -313,10 +313,10 @@ bool CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8, v9, v10, v11, v12),
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8, v9, v10, v11, v12),
           (v15 = this->fields.sortLogic) == 0) )
     {
-      sub_21FFECC(sortLogic, v6);
+      sub_2213CDC(sortLogic, v6);
     }
     CharaGraphSortLogicBase__InitSortValue(this->fields.sortLogic, v6);
     ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, const MethodInfo *))v15->klass->vtable._4_SetSortValueLocal.methodPtr)(
@@ -626,7 +626,7 @@ void CharaGraphListViewItemBase__set_DrawPattern(
   bool v7; // w7
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -677,7 +677,7 @@ void CharaGraphListViewItemBase__set_IconInfo1(
   bool v7; // w7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -701,7 +701,7 @@ void CharaGraphListViewItemBase__set_IconInfo2(
   bool v7; // w7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -860,7 +860,7 @@ void CharaGraphListViewItemBase__set_RootInfo(
   bool v7; // w7
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

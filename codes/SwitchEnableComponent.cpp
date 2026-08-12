@@ -11,10 +11,10 @@ void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value,
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_593657F & 1) == 0 )
+  if ( (byte_596E756 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593657F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E756 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -23,7 +23,7 @@ void SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value,
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     UnityEngine_Behaviour__set_enabled(v7, value, 0);
   }
 }
@@ -38,10 +38,10 @@ void SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, const MethodIn
   bool v7; // w1
   const MethodInfo *v8; // x2
 
-  if ( (byte_593657E & 1) == 0 )
+  if ( (byte_596E755 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593657E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E755 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -50,7 +50,7 @@ void SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, const MethodIn
   {
     v6 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     v7 = !UnityEngine_Behaviour__get_enabled(v6, 0);
     SwitchEnableComponent__SetEnable(this, v7, v8);
   }

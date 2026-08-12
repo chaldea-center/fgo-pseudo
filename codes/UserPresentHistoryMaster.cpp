@@ -1,14 +1,14 @@
 void UserPresentHistoryMaster___ctor(UserPresentHistoryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593961B & 1) == 0 )
+  if ( (byte_59717DC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
-    byte_593961B = 1;
+    sub_2213A60(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
+    byte_59717DC = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     161,
-    (const MethodInfo_3EDD598 *)Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
+    (const MethodInfo_3F10D40 *)Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long___ctor__);
 }
 
 
@@ -32,15 +32,15 @@ System_Collections_Generic_List_UserPresentHistoryEntity__o *UserPresentHistoryM
   __int64 v16; // x1
   System_Collections_Generic_List_UserPresentHistoryEntity__o *v17; // x19
 
-  if ( (byte_593961C & 1) == 0 )
+  if ( (byte_59717DD & 1) == 0 )
   {
-    sub_21FFC50(&System_Converter_UserPresentHistoryEntity__UserPresentHistoryEntity__TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long__getEntityList__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
-    sub_21FFC50(&Method_ObservableCollectionExtensions_ConvertAll_UserPresentHistoryEntity__UserPresentHistoryEntity___);
-    sub_21FFC50(&Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__);
-    sub_21FFC50(&UserPresentHistoryMaster___c_TypeInfo);
-    byte_593961C = 1;
+    sub_2213A60(&System_Converter_UserPresentHistoryEntity__UserPresentHistoryEntity__TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_UserPresentHistoryMaster__UserPresentHistoryEntity__long__getEntityList__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
+    sub_2213A60(&Method_ObservableCollectionExtensions_ConvertAll_UserPresentHistoryEntity__UserPresentHistoryEntity___);
+    sub_2213A60(&Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__);
+    sub_2213A60(&UserPresentHistoryMaster___c_TypeInfo);
+    byte_59717DD = 1;
   }
   v3 = UserPresentHistoryMaster___c_TypeInfo;
   list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list;
@@ -59,22 +59,22 @@ System_Collections_Generic_List_UserPresentHistoryEntity__o *UserPresentHistoryM
       static_fields = UserPresentHistoryMaster___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Converter_TInput__TOutput__o *)sub_21FFEBC(System_Converter_UserPresentHistoryEntity__UserPresentHistoryEntity__TypeInfo);
+    _9__1_0 = (System_Converter_TInput__TOutput__o *)sub_2213CCC(System_Converter_UserPresentHistoryEntity__UserPresentHistoryEntity__TypeInfo);
     System_Converter_object__object____ctor(_9__1_0, v7, Method_UserPresentHistoryMaster___c__GetEntityList_b__1_0__, 0);
     v8 = UserPresentHistoryMaster___c_TypeInfo->static_fields;
     v8->__9__1_0 = (struct System_Converter_UserPresentHistoryEntity__UserPresentHistoryEntity__o *)_9__1_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->__9__1_0, (int32_t)_9__1_0, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->__9__1_0, (int32_t)_9__1_0, v9, v10, v11, v12, v13, v14);
   }
   v15 = (System_Collections_Generic_List_object__o *)ObservableCollectionExtensions__ConvertAll_object__object_(
                                                        list,
                                                        (System_Converter_T__TOutput__o *)_9__1_0,
-                                                       (const MethodInfo_38C0A74 *)Method_ObservableCollectionExtensions_ConvertAll_UserPresentHistoryEntity__UserPresentHistoryEntity___);
+                                                       (const MethodInfo_38F3F3C *)Method_ObservableCollectionExtensions_ConvertAll_UserPresentHistoryEntity__UserPresentHistoryEntity___);
   if ( !v15 )
-    sub_21FFECC(0, v16);
+    sub_2213CDC(0, v16);
   v17 = (System_Collections_Generic_List_UserPresentHistoryEntity__o *)v15;
   System_Collections_Generic_List_object___Sort(
     v15,
-    (const MethodInfo_44514D4 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
+    (const MethodInfo_448560C *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__Sort__);
   return v17;
 }
 
@@ -88,19 +88,19 @@ System_Collections_Generic_IEnumerator_UserPresentHistoryEntity__o *UserPresentH
   System_Collections_Generic_List_Enumerator_T__o v6; // [xsp+0h] [xbp-50h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v7; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_593961D & 1) == 0 )
+  if ( (byte_59717DE & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
-    byte_593961D = 1;
+    sub_2213A60(&System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
+    byte_59717DE = 1;
   }
   EntityList = (System_Collections_Generic_List_object__o *)UserPresentHistoryMaster__GetEntityList(this, method);
   if ( !EntityList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     &v7,
     EntityList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserPresentHistoryEntity__GetEnumerator__);
   v6 = v7;
   return (System_Collections_Generic_IEnumerator_UserPresentHistoryEntity__o *)j_il2cpp_value_box_0(
                                                                                  System_Collections_Generic_List_Enumerator_UserPresentHistoryEntity__TypeInfo,
@@ -118,15 +118,15 @@ void UserPresentHistoryMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593961E & 1) == 0 )
+  if ( (byte_59717DF & 1) == 0 )
   {
-    sub_21FFC50(&UserPresentHistoryMaster___c_TypeInfo);
-    byte_593961E = 1;
+    sub_2213A60(&UserPresentHistoryMaster___c_TypeInfo);
+    byte_59717DF = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(UserPresentHistoryMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(UserPresentHistoryMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UserPresentHistoryMaster___c_TypeInfo->static_fields->__9 = (struct UserPresentHistoryMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UserPresentHistoryMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

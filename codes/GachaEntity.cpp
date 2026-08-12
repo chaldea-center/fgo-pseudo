@@ -1,13 +1,13 @@
 void GachaEntity___ctor(GachaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938A76 & 1) == 0 )
+  if ( (byte_5970C29 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5938A76 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5970C29 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,10 +25,10 @@ bool GachaEntity__HasFlag(GachaEntity_o *this, int32_t check, const MethodInfo *
 
 bool GachaEntity__IsClosed(GachaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938A75 & 1) == 0 )
+  if ( (byte_5970C28 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5938A75 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5970C28 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -44,31 +44,31 @@ int32_t GachaEntity__getPayMultiTimePrice(GachaEntity_o *this, const MethodInfo 
   Il2CppObject *MasterData_object; // x0
   Il2CppObject *Entity; // x0
 
-  if ( (byte_5938A74 & 1) == 0 )
+  if ( (byte_5970C27 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_StoneShopMaster___);
-    sub_21FFC50(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_5938A74 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_StoneShopMaster___);
+    sub_2213A60(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_5970C27 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_WORD *)(v4 + 309) & 1) == 0 )
-    v4 = sub_2237AF8(v2);
+    v4 = sub_224B908(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
-    v5 = sub_2237AF8(v2);
+    v5 = sub_224B908(v2);
   MasterData_object = **(Il2CppObject ***)(v5 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_StoneShopMaster___)) == 0 )
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_StoneShopMaster___)) == 0 )
   {
-    sub_21FFECC(MasterData_object, method);
+    sub_2213CDC(MasterData_object, method);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              this->fields.shopId2,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
   if ( Entity )
     LODWORD(Entity) = HIDWORD(Entity[2].monitor);
   return (int)Entity;
@@ -83,31 +83,31 @@ int32_t GachaEntity__getPayOneTimePrice(GachaEntity_o *this, const MethodInfo *m
   Il2CppObject *MasterData_object; // x0
   Il2CppObject *Entity; // x0
 
-  if ( (byte_5938A73 & 1) == 0 )
+  if ( (byte_5970C26 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_StoneShopMaster___);
-    sub_21FFC50(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_5938A73 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_StoneShopMaster___);
+    sub_2213A60(&Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_5970C26 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_WORD *)(v4 + 309) & 1) == 0 )
-    v4 = sub_2237AF8(v2);
+    v4 = sub_224B908(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
-    v5 = sub_2237AF8(v2);
+    v5 = sub_224B908(v2);
   MasterData_object = **(Il2CppObject ***)(v5 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_StoneShopMaster___)) == 0 )
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_StoneShopMaster___)) == 0 )
   {
-    sub_21FFECC(MasterData_object, method);
+    sub_2213CDC(MasterData_object, method);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              this->fields.shopId1,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_StoneShopMaster__StoneShopEntity__int__GetEntity__);
   if ( Entity )
     LODWORD(Entity) = HIDWORD(Entity[2].monitor);
   return (int)Entity;
@@ -122,33 +122,33 @@ int32_t GachaEntity__getPrice(GachaEntity_o *this, const MethodInfo *method)
   Il2CppObject *MasterData_object; // x0
   ShopEntity_o *Entity; // x0
 
-  if ( (byte_5938A72 & 1) == 0 )
+  if ( (byte_5970C25 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_5938A72 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_2213A60(&Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_5970C25 = 1;
   }
   if ( this->fields.type != 3 )
     return 0;
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_WORD *)(v4 + 309) & 1) == 0 )
-    v4 = sub_2237AF8(v2);
+    v4 = sub_224B908(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
-    v5 = sub_2237AF8(v2);
+    v5 = sub_224B908(v2);
   MasterData_object = **(Il2CppObject ***)(v5 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
   {
-    sub_21FFECC(MasterData_object, method);
+    sub_2213CDC(MasterData_object, method);
   }
   Entity = (ShopEntity_o *)DataMasterBase_object__object__int___GetEntity(
                              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                              this->fields.shopId1,
-                             (const MethodInfo_3EDD388 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
+                             (const MethodInfo_3F10B30 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__GetEntity__);
   if ( Entity && Entity->fields.payType == 3 )
     return ShopEntity__GetPrice(Entity, 0);
   else

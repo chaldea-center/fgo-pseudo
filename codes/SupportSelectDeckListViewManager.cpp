@@ -37,12 +37,12 @@ void SupportSelectDeckListViewManager__CreateList(
   __int64 size; // x10
   Il2CppClass **v33; // x8
 
-  if ( (byte_5934B05 & 1) == 0 )
+  if ( (byte_596CC34 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_21FFC50(&SupportSelectDeckListViewItem_TypeInfo);
-    byte_5934B05 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_int___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_2213A60(&SupportSelectDeckListViewItem_TypeInfo);
+    byte_596CC34 = 1;
   }
   if ( deckDataList )
   {
@@ -55,20 +55,20 @@ void SupportSelectDeckListViewManager__CreateList(
         v10 = System_Array__IndexOf_int_(
                 sameKindIdxList,
                 v9,
-                (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+                (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
         v11 = System_Array__IndexOf_int_(
                 notCopyIdxList,
                 v9,
-                (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+                (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
         if ( v9 >= LODWORD(deckDataList->max_length) )
-          sub_21FFED4(v11);
+          sub_2213CE4(v11);
         v12 = deckDataList->m_Items[v9];
         v13 = v11;
         v14 = v10 >= 0;
-        v15 = sub_21FFEBC(SupportSelectDeckListViewItem_TypeInfo);
-        ListViewItem___ctor_50749276((ListViewItem_o *)v15, v9, 0);
+        v15 = sub_2213CCC(SupportSelectDeckListViewItem_TypeInfo);
+        ListViewItem___ctor_50819428((ListViewItem_o *)v15, v9, 0);
         *(_QWORD *)(v15 + 120) = v12;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v15 + 120), (int32_t)v12, v16, v17, v18, v19, v20, v21);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v15 + 120), (int32_t)v12, v16, v17, v18, v19, v20, v21);
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         *(_BYTE *)(v15 + 128) = v14;
         *(_BYTE *)(v15 + 129) = v13 < 0;
@@ -78,7 +78,7 @@ void SupportSelectDeckListViewManager__CreateList(
               ++itemList->fields._version,
               !items) )
         {
-          sub_21FFECC(itemList, v22);
+          sub_2213CDC(itemList, v22);
         }
         size = itemList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -86,14 +86,14 @@ void SupportSelectDeckListViewManager__CreateList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v15,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
         else
         {
           v33 = &items->obj.klass + size;
           itemList->fields._size = size + 1;
           v33[4] = (Il2CppClass *)v15;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v33 + 4), v15, v23, v24, v25, v26, v27, v28);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 4), v15, v23, v24, v25, v26, v27, v28);
         }
         ++v9;
       }
@@ -131,37 +131,37 @@ System_Collections_Generic_List_SupportSelectDeckListViewObject__o *SupportSelec
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5934B07 & 1) == 0 )
+  if ( (byte_596CC36 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SupportSelectDeckListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_SupportSelectDeckListViewObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B07 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SupportSelectDeckListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_SupportSelectDeckListViewObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC36 = 1;
   }
   memset(&v25, 0, sizeof(v25));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SupportSelectDeckListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SupportSelectDeckListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SupportSelectDeckListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SupportSelectDeckListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v25 = v24;
   v24.fields._list = 0;
   *(_QWORD *)&v24.fields._index = &v25;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v25,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v25.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -170,10 +170,10 @@ System_Collections_Generic_List_SupportSelectDeckListViewObject__o *SupportSelec
     if ( v9 )
     {
       if ( !current )
-        sub_21FFECC(v9, v10);
+        sub_2213CDC(v9, v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectDeckListViewObject___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectDeckListViewObject___);
       v18 = Component_object;
       if ( !v3
         || (items = v3->fields._items,
@@ -181,7 +181,7 @@ System_Collections_Generic_List_SupportSelectDeckListViewObject__o *SupportSelec
             ++v3->fields._version,
             !items) )
       {
-        sub_21FFECC(Component_object, Component_object);
+        sub_2213CDC(Component_object, Component_object);
       }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -189,20 +189,20 @@ System_Collections_Generic_List_SupportSelectDeckListViewObject__o *SupportSelec
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
         v22 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v22[4] = (Il2CppClass *)v18;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v25,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_SupportSelectDeckListViewObject__o *)v3;
 }
 
@@ -223,11 +223,11 @@ void SupportSelectDeckListViewManager__SetMode(
 {
   const MethodInfo *v3; // x3
 
-  SupportSelectDeckListViewManager__SetMode_42434428(this, mode, 0, v3);
+  SupportSelectDeckListViewManager__SetMode_42449640(this, mode, 0, v3);
 }
 
 
-void SupportSelectDeckListViewManager__SetMode_42434428(
+void SupportSelectDeckListViewManager__SetMode_42449640(
         SupportSelectDeckListViewManager_o *this,
         int32_t mode,
         SupportSelectDeckListViewObject_OnSelectEvent_o *onSelectDeck,
@@ -254,18 +254,18 @@ void SupportSelectDeckListViewManager__SetMode_42434428(
   struct SupportSelectDeckListViewObject_OnSelectEvent_o *v25; // x1
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_5934B06 & 1) == 0 )
+  if ( (byte_596CC35 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B06 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC35 = 1;
   }
   memset(&v26, 0, sizeof(v26));
   this->fields.onSelectDeck = onSelectDeck;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onSelectDeck,
     (int32_t)onSelectDeck,
     (System_String_o *)onSelectDeck,
@@ -277,14 +277,14 @@ void SupportSelectDeckListViewManager__SetMode_42434428(
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0);
   ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectDeckListViewManager__GetObjectList(this, v11);
   if ( !ObjectList )
-    sub_21FFECC(0, v13);
+    sub_2213CDC(0, v13);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     ObjectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_SupportSelectDeckListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v26,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__MoveNext__) )
   {
     current = v26.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -293,10 +293,10 @@ void SupportSelectDeckListViewManager__SetMode_42434428(
     if ( v17 )
     {
       if ( !current )
-        sub_21FFECC(v17, v18);
+        sub_2213CDC(v17, v18);
       v25 = this->fields.onSelectDeck;
       *(__int64 *)((char *)&qword_80 + (_QWORD)current) = (__int64)v25;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)((char *)&qword_80 + (_QWORD)current),
         (int32_t)v25,
         v19,
@@ -313,7 +313,7 @@ void SupportSelectDeckListViewManager__SetMode_42434428(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v26,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_SupportSelectDeckListViewObject__Dispose__);
   this->fields.currentMode = mode;
 }
 
@@ -336,19 +336,19 @@ void SupportSelectDeckListViewManager__SetObjectItem(
   bool v14; // w7
 
   v5 = this;
-  if ( (byte_5934B08 & 1) == 0 )
+  if ( (byte_596CC37 & 1) == 0 )
   {
-    this = (SupportSelectDeckListViewManager_o *)sub_21FFC50(&SupportSelectDeckListViewObject_TypeInfo);
-    byte_5934B08 = 1;
+    this = (SupportSelectDeckListViewManager_o *)sub_2213A60(&SupportSelectDeckListViewObject_TypeInfo);
+    byte_596CC37 = 1;
   }
   if ( !obj )
 LABEL_8:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   naturalAligment = SupportSelectDeckListViewObject_TypeInfo->_2.naturalAligment;
   if ( obj->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (SupportSelectDeckListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != SupportSelectDeckListViewObject_TypeInfo )
   {
-    sub_220024C(obj, SupportSelectDeckListViewObject_TypeInfo, item, method);
+    sub_221405C(obj, SupportSelectDeckListViewObject_TypeInfo, item, method);
     goto LABEL_8;
   }
   SupportSelectDeckListViewObject__Init(
@@ -357,7 +357,7 @@ LABEL_8:
   onSelectDeck = v5->fields.onSelectDeck;
   currentMode = v5->fields.currentMode;
   obj[1].monitor = onSelectDeck;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&obj[1].monitor, (int32_t)onSelectDeck, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&obj[1].monitor, (int32_t)onSelectDeck, v9, v10, v11, v12, v13, v14);
   ((void (__fastcall *)(ListViewObject_o *, bool, const MethodInfo *))obj->klass->vtable._9_SetInput.methodPtr)(
     obj,
     currentMode == 2,

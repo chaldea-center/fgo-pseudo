@@ -1,14 +1,14 @@
 void CompleteMissionMaster___ctor(CompleteMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593849A & 1) == 0 )
+  if ( (byte_597064A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
-    byte_593849A = 1;
+    sub_2213A60(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    byte_597064A = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     147,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
 }
 
 
@@ -49,25 +49,25 @@ bool CompleteMissionMaster__TryGetEntityFromObjectId(
   bool v35; // w7
   CompleteMissionEntity_o *v37; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_593849B & 1) == 0 )
+  if ( (byte_597064B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_593849B = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_597064B = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, entity);
+    sub_2213CDC(0, entity);
   Enumerator = (CompleteMissionEntity_o *)System_Collections_ObjectModel_Collection_object___GetEnumerator(
                                             list,
-                                            (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+                                            (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
   v37 = Enumerator;
   while ( 1 )
   {
     if ( !v37 )
-      sub_21FFECC(Enumerator, v9);
+      sub_2213CDC(Enumerator, v9);
     klass = v37->klass;
     v11 = *(unsigned __int16 *)&v37->klass->_2.rank;
     if ( *(_WORD *)&v37->klass->_2.rank )
@@ -85,7 +85,7 @@ bool CompleteMissionMaster__TryGetEntityFromObjectId(
     else
     {
 LABEL_10:
-      v13 = sub_2237E2C(v37, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_224BC3C(v37, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(CompleteMissionEntity_o *, _QWORD))v13)(v37, *(_QWORD *)(v13 + 8)) & 1) == 0 )
       break;
@@ -106,18 +106,18 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v17 = sub_2237E2C(v37, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0);
+      v17 = sub_224BC3C(v37, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0);
     }
     Enumerator = (CompleteMissionEntity_o *)(*(__int64 (__fastcall **)(CompleteMissionEntity_o *, _QWORD))v17)(
                                               v37,
                                               *(_QWORD *)(v17 + 8));
     v9 = Enumerator;
     if ( !Enumerator )
-      sub_21FFECC(0, 0);
+      sub_2213CDC(0, 0);
     if ( Enumerator->fields.objectId == objectId )
     {
       *entity = Enumerator;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)entity, (int32_t)Enumerator, v18, v19, v20, v21, v22, v23);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)entity, (int32_t)Enumerator, v18, v19, v20, v21, v22, v23);
       v24 = 1;
       v25 = 4;
       goto LABEL_23;
@@ -143,13 +143,13 @@ LABEL_23:
   else
   {
 LABEL_27:
-    v29 = sub_2237E2C(v37, System_IDisposable_TypeInfo, 0);
+    v29 = sub_224BC3C(v37, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(CompleteMissionEntity_o *, _QWORD))v29)(v37, *(_QWORD *)(v29 + 8));
   if ( v25 == 5 )
   {
     *entity = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)entity, 0, v30, v31, v32, v33, v34, v35);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)entity, 0, v30, v31, v32, v33, v34, v35);
     return 0;
   }
   return v24;

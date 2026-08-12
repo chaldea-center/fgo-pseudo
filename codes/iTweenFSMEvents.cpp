@@ -15,13 +15,13 @@ void iTweenFSMEvents__iTweenOnComplete(iTweenFSMEvents_o *this, int32_t aniTween
   {
     fsm = (struct HutongGames_PlayMaker_Actions_iTweenFsmAction_o *)itweenFSMAction->fields.fsm;
     if ( !fsm
-      || (HutongGames_PlayMaker_Fsm__Event_78205908(
+      || (HutongGames_PlayMaker_Fsm__Event_78419212(
             (HutongGames_PlayMaker_Fsm_o *)fsm,
             itweenFSMAction->fields.finishEvent,
             0),
           (fsm = this->fields.itweenFSMAction) == 0) )
     {
-      sub_21FFECC(fsm, *(_QWORD *)&aniTweenID);
+      sub_2213CDC(fsm, *(_QWORD *)&aniTweenID);
     }
     HutongGames_PlayMaker_FsmStateAction__Finish((HutongGames_PlayMaker_FsmStateAction_o *)fsm, 0);
   }
@@ -41,8 +41,8 @@ void iTweenFSMEvents__iTweenOnStart(iTweenFSMEvents_o *this, int32_t aniTweenID,
     {
       fsm = itweenFSMAction->fields.fsm;
       if ( !fsm )
-        sub_21FFECC(0, *(_QWORD *)&aniTweenID);
-      HutongGames_PlayMaker_Fsm__Event_78205908(fsm, itweenFSMAction->fields.startEvent, 0);
+        sub_2213CDC(0, *(_QWORD *)&aniTweenID);
+      HutongGames_PlayMaker_Fsm__Event_78419212(fsm, itweenFSMAction->fields.startEvent, 0);
     }
   }
 }

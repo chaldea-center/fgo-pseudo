@@ -13,7 +13,7 @@ void ExRoomStateQuest___ctor(ExRoomStateQuest_o *this, ExRoomRootComponent_o *ex
   System_Object___ctor((Il2CppObject *)this, 0);
   v4->fields.root = exRoom;
   v4 = (ExRoomStateQuest_o *)((char *)v4 + 16);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v4, (int32_t)exRoom, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v4, (int32_t)exRoom, v5, v6, v7, v8, v9, v10);
   v4->fields.root = (struct ExRoomRootComponent_o *)0x7400000065LL;
 }
 
@@ -29,10 +29,10 @@ void ExRoomStateQuest__OnClickBack(ExRoomStateQuest_o *this, const MethodInfo *m
   UnityEngine_Object_o *TerminalScene; // x20
   const MethodInfo *v10; // x2
 
-  if ( (byte_5932D97 & 1) == 0 )
+  if ( (byte_596AE9B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D97 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE9B = 1;
   }
   root = (UnityEngine_Object_o *)this->fields.root;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -76,7 +76,7 @@ void ExRoomStateQuest__OnClickBack(ExRoomStateQuest_o *this, const MethodInfo *m
       return;
     }
 LABEL_19:
-    sub_21FFECC(background, v6);
+    sub_2213CDC(background, v6);
   }
 }
 
@@ -101,13 +101,13 @@ void ExRoomStateQuest__OnEnter(ExRoomStateQuest_o *this, const MethodInfo *metho
   const MethodInfo *v18; // x2
   struct ExRoomRootComponent_o *v19; // x8
 
-  if ( (byte_5932D95 & 1) == 0 )
+  if ( (byte_596AE99 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ExRoomStateQuest__OnEnter_b__2_0__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5932D95 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ExRoomStateQuest__OnEnter_b__2_0__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596AE99 = 1;
   }
   root = (UnityEngine_Object_o *)this->fields.root;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -133,21 +133,21 @@ LABEL_10:
     || (v5 = v11->fields._QuestDisp_k__BackingField) == 0
     || (ExRoomQuestComponent__Init(v5, v11->fields.actionPanel, v11->fields._ResourceCatalog_k__BackingField, v10),
         v12 = (UnityEngine_MonoBehaviour_o *)this->fields.root,
-        v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+        v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(v13, (Il2CppObject *)this, Method_ExRoomStateQuest__OnEnter_b__2_0__, 0),
-        v5 = (ExRoomQuestComponent_o *)BasicHelper__DelayCall_51090016(1, v13, 0),
+        v5 = (ExRoomQuestComponent_o *)BasicHelper__DelayCall_51163500(1, v13, 0),
         !v12) )
   {
 LABEL_35:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452(v12, (System_Collections_IEnumerator_o *)v5, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756(v12, (System_Collections_IEnumerator_o *)v5, 0);
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v6, v14);
-  if ( !byte_5932E00 )
+  if ( !byte_596AF00 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5932E00 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596AF00 = 1;
   }
   v15 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -159,10 +159,10 @@ LABEL_35:
   {
     if ( !*(&v15->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(v15, v6, v14);
-    if ( !byte_5932E01 )
+    if ( !byte_596AF01 )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_5932E01 = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596AF01 = 1;
     }
     v5 = (ExRoomQuestComponent_o *)TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -204,12 +204,12 @@ void ExRoomStateQuest__OnEnterPlayVoice(ExRoomStateQuest_o *this, const MethodIn
   struct ExRoomRootComponent_o *root; // x8
   struct ExRoomRootComponent_o *v7; // x8
 
-  if ( (byte_5932D94 & 1) == 0 )
+  if ( (byte_596AE98 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6540/*"ExRoom_QuestWinShowStarted"*/);
-    byte_5932D94 = 1;
+    sub_2213A60(&StringLiteral_6552/*"ExRoom_QuestWinShowStarted"*/);
+    byte_596AE98 = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6540/*"ExRoom_QuestWinShowStarted"*/, 0);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6552/*"ExRoom_QuestWinShowStarted"*/, 0);
   root = this->fields.root;
   if ( !root )
     goto LABEL_9;
@@ -227,7 +227,7 @@ void ExRoomStateQuest__OnEnterPlayVoice(ExRoomStateQuest_o *this, const MethodIn
       }
     }
 LABEL_9:
-    sub_21FFECC(servant, v4);
+    sub_2213CDC(servant, v4);
   }
   ExRoomStateBase__OnEnterPlayVoice((ExRoomStateBase_o *)this, v4);
 }
@@ -247,12 +247,12 @@ void ExRoomStateQuest__OnExit(ExRoomStateQuest_o *this, const MethodInfo *method
   System_Action_o *v12; // x21
   const MethodInfo *v13; // x2
 
-  if ( (byte_5932D96 & 1) == 0 )
+  if ( (byte_596AE9A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ExRoomStateQuest__OnExit_b__3_0__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D96 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ExRoomStateQuest__OnExit_b__3_0__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE9A = 1;
   }
   root = (UnityEngine_Object_o *)this->fields.root;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -273,7 +273,7 @@ void ExRoomStateQuest__OnExit(ExRoomStateQuest_o *this, const MethodInfo *method
       if ( v10 )
       {
         v11 = v10->fields._QuestDisp_k__BackingField;
-        v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(v12, (Il2CppObject *)this, Method_ExRoomStateQuest__OnExit_b__3_0__, 0);
         if ( v11 )
         {
@@ -282,7 +282,7 @@ void ExRoomStateQuest__OnExit(ExRoomStateQuest_o *this, const MethodInfo *method
         }
       }
 LABEL_14:
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
   }
   this->fields._OnEndExit_k__BackingField = 1;
@@ -296,7 +296,7 @@ void ExRoomStateQuest___OnEnter_b__2_0(ExRoomStateQuest_o *this, const MethodInf
 
   root = this->fields.root;
   if ( !root || (v3 = this, (this = (ExRoomStateQuest_o *)root->fields._QuestDisp_k__BackingField) == 0) )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ExRoomQuestComponent__SlideIn((ExRoomQuestComponent_o *)this, method);
   v3->fields._OnEndEnter_k__BackingField = 1;
 }

@@ -12,9 +12,9 @@ void MyRoomHelpListViewItem___ctor(
   bool v11; // w6
   bool v12; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.info, (int32_t)info, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.info, (int32_t)info, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -30,7 +30,7 @@ System_String_o *MyRoomHelpListViewItem__get_ImageName(MyRoomHelpListViewItem_o 
 
   info = this->fields.info;
   if ( !info )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return info->fields.imageName;
 }
 
@@ -43,14 +43,14 @@ System_String_o *MyRoomHelpListViewItem__get_InfoText(MyRoomHelpListViewItem_o *
   System_String_o *textCode; // x19
 
   v3 = this;
-  if ( (byte_5933C24 & 1) == 0 )
+  if ( (byte_596BD3D & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5933C24 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596BD3D = 1;
   }
   info = v3->fields.info;
   if ( !info )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   textCode = info->fields.textCode;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
@@ -66,14 +66,14 @@ System_String_o *MyRoomHelpListViewItem__get_ItemName(MyRoomHelpListViewItem_o *
   System_String_o *itemName; // x19
 
   v3 = this;
-  if ( (byte_5933C25 & 1) == 0 )
+  if ( (byte_596BD3E & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5933C25 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596BD3E = 1;
   }
   info = v3->fields.info;
   if ( !info )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   itemName = info->fields.itemName;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);

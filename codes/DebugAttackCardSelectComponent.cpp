@@ -11,7 +11,7 @@ void DebugAttackCardSelectComponent__Close(DebugAttackCardSelectComponent_o *thi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -35,18 +35,18 @@ System_Collections_IEnumerator_o *DebugAttackCardSelectComponent__CreateListCoro
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5939C8A & 1) == 0 )
+  if ( (byte_5971E4E & 1) == 0 )
   {
-    sub_21FFC50(&DebugAttackCardSelectComponent__CreateListCoroutine_d__6_TypeInfo);
-    byte_5939C8A = 1;
+    sub_2213A60(&DebugAttackCardSelectComponent__CreateListCoroutine_d__6_TypeInfo);
+    byte_5971E4E = 1;
   }
-  v5 = sub_21FFEBC(DebugAttackCardSelectComponent__CreateListCoroutine_d__6_TypeInfo);
+  v5 = sub_2213CCC(DebugAttackCardSelectComponent__CreateListCoroutine_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = nameList;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)nameList, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)nameList, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -72,11 +72,11 @@ void DebugAttackCardSelectComponent__Open(
   const MethodInfo *v19; // x2
   System_Collections_IEnumerator_o *ListCoroutine; // x1
 
-  if ( (byte_5939C89 & 1) == 0 )
+  if ( (byte_5971E4D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939C89 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971E4D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -87,7 +87,7 @@ void DebugAttackCardSelectComponent__Open(
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.actionCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.actionCallback,
     (int32_t)callback,
     v9,
@@ -128,14 +128,14 @@ void DebugAttackCardSelectComponent__Open(
         v17 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
-        UnityEngine_Object__Destroy_83246496(v17, 0);
+        UnityEngine_Object__Destroy_83459800(v17, 0);
         gameObject = (UnityEngine_GameObject_o *)this->fields.grid;
         ++v15;
       }
       while ( gameObject );
     }
 LABEL_16:
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
 LABEL_17:
   gameObject = (UnityEngine_GameObject_o *)this->fields.scrollView;
@@ -144,18 +144,18 @@ LABEL_17:
     goto LABEL_16;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)gameObject,
-                                             (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   v18 = (UIPanel_o *)gameObject;
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   if ( !v18 )
     goto LABEL_16;
   UIPanel__set_clipOffset(v18, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0);
   ListCoroutine = DebugAttackCardSelectComponent__CreateListCoroutine(this, nameList, v19);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
 }
 
 
@@ -178,7 +178,7 @@ void DebugAttackCardSelectComponent__TapAttackCardSelectCallback(
       actionCallback->fields.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -221,16 +221,16 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
   v8 = this;
-  if ( (byte_5939C8B & 1) == 0 )
+  if ( (byte_5971E4F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__string__TypeInfo);
-    sub_21FFC50(&Method_DebugAttackCardSelectComponent_TapAttackCardSelectCallback__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_DebugAttackCardSelectCellComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939C8B = 1;
+    sub_2213A60(&System_Action_int__string__TypeInfo);
+    sub_2213A60(&Method_DebugAttackCardSelectComponent_TapAttackCardSelectCallback__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_DebugAttackCardSelectCellComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971E4F = 1;
   }
   _1__state = v8->fields.__1__state;
   if ( _1__state )
@@ -254,10 +254,10 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
             transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
-            this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)UnityEngine_Object__Instantiate_object__59506996(
+            this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                                                    baseCell,
                                                                                    transform,
-                                                                                   (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                                                                   (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
             if ( this )
             {
               v16 = this;
@@ -266,10 +266,10 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
                                                                                      (UnityEngine_GameObject_o *)v16,
                                                                                      0);
               v17 = this;
-              if ( !byte_5931940 )
+              if ( !byte_5969AE0 )
               {
-                this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-                byte_5931940 = 1;
+                this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+                byte_5969AE0 = 1;
               }
               if ( v17 )
               {
@@ -281,10 +281,10 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
                                                                                        (UnityEngine_GameObject_o *)v16,
                                                                                        0);
                 v18 = this;
-                if ( !byte_5931945 )
+                if ( !byte_5969AE5 )
                 {
-                  this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-                  byte_5931945 = 1;
+                  this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+                  byte_5969AE5 = 1;
                 }
                 if ( v18 )
                 {
@@ -294,15 +294,15 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
                     0);
                   this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                                          (UnityEngine_GameObject_o *)v16,
-                                                                                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_DebugAttackCardSelectCellComponent___);
+                                                                                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_DebugAttackCardSelectCellComponent___);
                   if ( v8->fields.nameList )
                   {
                     v19 = (DebugAttackCardSelectCellComponent_o *)this;
                     Item = System_Collections_Generic_List_object___get_Item(
                              (System_Collections_Generic_List_object__o *)v8->fields.nameList,
                              v12,
-                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
-                    v21 = (System_Action_T1__T2__o *)sub_21FFEBC(System_Action_int__string__TypeInfo);
+                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
+                    v21 = (System_Action_T1__T2__o *)sub_2213CCC(System_Action_int__string__TypeInfo);
                     System_Action_int__object____ctor(
                       v21,
                       (Il2CppObject *)_4__this,
@@ -333,7 +333,7 @@ bool DebugAttackCardSelectComponent__CreateListCoroutine_d__6__MoveNext(
         || (this = (DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *)_4__this->fields.grid) == 0 )
       {
 LABEL_22:
-        sub_21FFECC(this, method);
+        sub_2213CDC(this, method);
       }
       ((void (__fastcall *)(DebugAttackCardSelectComponent__CreateListCoroutine_d__6_o *, const MethodInfo *))this->klass->vtable._8_System_Collections_IEnumerator_Reset.methodPtr)(
         this,
@@ -346,7 +346,7 @@ LABEL_22:
     v8->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
     p__2__current[-1].fields._BoardType_k__BackingField = -1;
-    sub_21FFBF4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
   }
   return _1__state == 0;
@@ -369,11 +369,11 @@ void __noreturn DebugAttackCardSelectComponent__CreateListCoroutine_d__6__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_DebugAttackCardSelectComponent__CreateListCoroutine_d__6_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_DebugAttackCardSelectComponent__CreateListCoroutine_d__6_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

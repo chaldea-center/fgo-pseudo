@@ -17,11 +17,11 @@ void RecommendSupportData___ctor(RecommendSupportData_o *this, const MethodInfo 
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5934301 & 1) == 0 )
+  if ( (byte_596C430 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData___TypeInfo);
-    byte_5934301 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData___TypeInfo);
+    byte_596C430 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -29,16 +29,16 @@ void RecommendSupportData___ctor(RecommendSupportData_o *this, const MethodInfo 
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct RecommendSupportData_RecommendDeckData_array *)sub_21FFD10(
+  v5 = (struct RecommendSupportData_RecommendDeckData_array *)sub_2213B20(
                                                                 RecommendSupportData_RecommendDeckData___TypeInfo,
                                                                 (unsigned int)v4->static_fields->RecommendSupportMemberMax);
   this->fields.deckData = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
-  v12 = (struct RecommendSupportData_RecommendDeckData_array *)sub_21FFD10(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (struct RecommendSupportData_RecommendDeckData_array *)sub_2213B20(
                                                                  RecommendSupportData_RecommendDeckData___TypeInfo,
                                                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->RecommendSupportMemberMax);
   this->fields.oldDeckData = v12;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v12, v13, v14, v15, v16, v17, v18);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -63,10 +63,10 @@ void RecommendSupportData__CancelDeckData(RecommendSupportData_o *this, const Me
   Il2CppClass **v18; // x0
   __int64 v19; // x0
 
-  if ( (byte_59342FD & 1) == 0 )
+  if ( (byte_596C42C & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_59342FD = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596C42C = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -106,23 +106,23 @@ void RecommendSupportData__CancelDeckData(RecommendSupportData_o *this, const Me
       v5 = (__int64)RecommendSupportData__DeepCopy((RecommendSupportData_o *)v5, v8->m_Items[i], v2);
       if ( !v9 )
 LABEL_22:
-        sub_21FFECC(v5, method);
+        sub_2213CDC(v5, method);
       v16 = v5;
       if ( v5 )
       {
-        v5 = sub_21FFDA4(v5, v9->obj.klass->_1.element_class);
+        v5 = sub_2213BB4(v5, v9->obj.klass->_1.element_class);
         if ( !v5 )
         {
-          v19 = sub_21FFEF0(0, v17);
-          sub_21FFD90(v19, 0);
+          v19 = sub_2213D00(0, v17);
+          sub_2213BA0(v19, 0);
         }
       }
       if ( i >= LODWORD(v9->max_length) )
 LABEL_23:
-        sub_21FFED4(v5);
+        sub_2213CE4(v5);
       v18 = &v9->obj.klass + (int)i;
       v18[4] = (Il2CppClass *)v16;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), v16, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v18 + 4), v16, v10, v11, v12, v13, v14, v15);
     }
   }
 }
@@ -145,30 +145,30 @@ void RecommendSupportData__ClearDeckData(RecommendSupportData_o *this, int32_t i
   Il2CppClass **v17; // x0
   __int64 v18; // x0
 
-  if ( (byte_59342E8 & 1) == 0 )
+  if ( (byte_596C417 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342E8 = 1;
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C417 = 1;
   }
   deckData = this->fields.deckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   if ( !deckData )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   if ( v6 )
   {
-    v8 = sub_21FFDA4(v6, deckData->obj.klass->_1.element_class);
+    v8 = sub_2213BB4(v6, deckData->obj.klass->_1.element_class);
     if ( !v8 )
     {
-      v18 = sub_21FFEF0(0, v16);
-      sub_21FFD90(v18, 0);
+      v18 = sub_2213D00(0, v16);
+      sub_2213BA0(v18, 0);
     }
   }
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(v8);
+    sub_2213CE4(v8);
   v17 = &deckData->obj.klass + index;
   v17[4] = (Il2CppClass *)v6;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -212,13 +212,13 @@ void RecommendSupportData__CopyData(
   bool v37; // w7
 
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   v7 = RecommendSupportData__DeepCopyAll(this, data->fields.deckData, (const MethodInfo *)isInit);
   this->fields.deckData = v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   v15 = RecommendSupportData__DeepCopyAll(this, data->fields.oldDeckData, v14);
   this->fields.oldDeckData = v15;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v15, v16, v17, v18, v19, v20, v21);
   if ( isInit )
   {
     IsSelectServant_k__BackingField = data->fields._IsSelectServant_k__BackingField;
@@ -226,7 +226,7 @@ void RecommendSupportData__CopyData(
     this->fields.kind = data->fields.kind;
     this->fields._IsSelectServant_k__BackingField = IsSelectServant_k__BackingField;
     this->fields._EventSetupInfo_k__BackingField = EventSetupInfo_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._EventSetupInfo_k__BackingField,
       (int32_t)EventSetupInfo_k__BackingField,
       v22,
@@ -238,7 +238,7 @@ void RecommendSupportData__CopyData(
     EventSetupInfo2_k__BackingField = data->fields._EventSetupInfo2_k__BackingField;
     this->fields._EventSetupInfo2_k__BackingField = EventSetupInfo2_k__BackingField;
     p_EventSetupInfo2_k__BackingField = &this->fields._EventSetupInfo2_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)p_EventSetupInfo2_k__BackingField,
       (int32_t)EventSetupInfo2_k__BackingField,
       v32,
@@ -272,10 +272,10 @@ void RecommendSupportData__DecisionDeckData(RecommendSupportData_o *this, const 
   Il2CppClass **v18; // x0
   __int64 v19; // x0
 
-  if ( (byte_59342FC & 1) == 0 )
+  if ( (byte_596C42B & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_59342FC = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596C42B = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -315,23 +315,23 @@ void RecommendSupportData__DecisionDeckData(RecommendSupportData_o *this, const 
       v5 = (__int64)RecommendSupportData__DeepCopy((RecommendSupportData_o *)v5, v8->m_Items[i], v2);
       if ( !v9 )
 LABEL_22:
-        sub_21FFECC(v5, method);
+        sub_2213CDC(v5, method);
       v16 = v5;
       if ( v5 )
       {
-        v5 = sub_21FFDA4(v5, v9->obj.klass->_1.element_class);
+        v5 = sub_2213BB4(v5, v9->obj.klass->_1.element_class);
         if ( !v5 )
         {
-          v19 = sub_21FFEF0(0, v17);
-          sub_21FFD90(v19, 0);
+          v19 = sub_2213D00(0, v17);
+          sub_2213BA0(v19, 0);
         }
       }
       if ( i >= LODWORD(v9->max_length) )
 LABEL_23:
-        sub_21FFED4(v5);
+        sub_2213CE4(v5);
       v18 = &v9->obj.klass + (int)i;
       v18[4] = (Il2CppClass *)v16;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), v16, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v18 + 4), v16, v10, v11, v12, v13, v14, v15);
     }
   }
 }
@@ -355,15 +355,15 @@ RecommendSupportData_RecommendDeckData_o *RecommendSupportData__DeepCopy(
   struct System_Int32_array *adviceMessageIds; // x1
   int32_t questPhase; // w8
 
-  if ( (byte_59342FF & 1) == 0 )
+  if ( (byte_596C42E & 1) == 0 )
   {
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342FF = 1;
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C42E = 1;
   }
-  v4 = sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  v4 = sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !source || !v4 )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   v13 = *(_OWORD *)&source->fields.userSvtId;
   adviceMessageIds = source->fields.adviceMessageIds;
   *(_QWORD *)(v4 + 16) = *(_QWORD *)&source->fields.idx;
@@ -371,7 +371,7 @@ RecommendSupportData_RecommendDeckData_o *RecommendSupportData__DeepCopy(
   *(_OWORD *)(v4 + 32) = v13;
   *(_QWORD *)(v4 + 48) = adviceMessageIds;
   *(_DWORD *)(v4 + 24) = questPhase;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v4 + 48), (int32_t)adviceMessageIds, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v4 + 48), (int32_t)adviceMessageIds, v7, v8, v9, v10, v11, v12);
   return (RecommendSupportData_RecommendDeckData_o *)v4;
 }
 
@@ -384,23 +384,23 @@ RecommendSupportData_RecommendDeckData_array *RecommendSupportData__DeepCopyAll(
   System_Func_object__object__o *v5; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
 
-  if ( (byte_59342FE & 1) == 0 )
+  if ( (byte_596C42D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&System_Func_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData__TypeInfo);
-    sub_21FFC50(&Method_RecommendSupportData_DeepCopy__);
-    byte_59342FE = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&System_Func_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData__TypeInfo);
+    sub_2213A60(&Method_RecommendSupportData_DeepCopy__);
+    byte_596C42D = 1;
   }
-  v5 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData__TypeInfo);
+  v5 = (System_Func_object__object__o *)sub_2213CCC(System_Func_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData__TypeInfo);
   System_Func_object__object____ctor(v5, (Il2CppObject *)this, Method_RecommendSupportData_DeepCopy__, 0);
   v6 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)source,
                                                               (System_Func_TSource__TResult__o *)v5,
-                                                              (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData___);
+                                                              (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_RecommendSupportData_RecommendDeckData__RecommendSupportData_RecommendDeckData___);
   return (RecommendSupportData_RecommendDeckData_array *)System_Linq_Enumerable__ToArray_object_(
                                                            v6,
-                                                           (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_RecommendSupportData_RecommendDeckData___);
+                                                           (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_RecommendSupportData_RecommendDeckData___);
 }
 
 
@@ -420,28 +420,28 @@ int64_t RecommendSupportData__GetEquip(RecommendSupportData_o *this, int32_t ind
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342EE & 1) == 0 )
+  if ( (byte_596C41D & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342EE = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41D = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.deckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
     return 0;
   deckData = (System_Object_array *)this->fields.deckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          deckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (int64_t)v8[2].monitor;
 }
 
@@ -457,29 +457,29 @@ System_Int32_array *RecommendSupportData__GetMessage(
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342F5 & 1) == 0 )
+  if ( (byte_596C424 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F5 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C424 = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.deckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
-    return (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+    return (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
   deckData = (System_Object_array *)this->fields.deckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          deckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (System_Int32_array *)v8[3].klass;
 }
 
@@ -500,14 +500,14 @@ System_String_o *RecommendSupportData__GetMessageSentence(
   __int64 v13; // x1
   System_String_array *ConvertMessageToId; // x1
 
-  if ( (byte_59342F9 & 1) == 0 )
+  if ( (byte_596C428 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_11493/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/);
-    sub_21FFC50(&StringLiteral_11484/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/);
-    byte_59342F9 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_11513/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/);
+    sub_2213A60(&StringLiteral_11504/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/);
+    byte_596C428 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)ids, 0);
   v7 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
@@ -515,18 +515,18 @@ System_String_o *RecommendSupportData__GetMessageSentence(
   {
     if ( !v7 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_11484/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/, 0);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_11504/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_NO_INPUT"*/, 0);
   }
   else
   {
     if ( !v7 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11493/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11513/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_SEPARATOR"*/, 0);
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
     if ( !Master_object )
-      sub_21FFECC(0, v13);
+      sub_2213CDC(0, v13);
     ConvertMessageToId = RecommendAdviceMessageMaster__GetConvertMessageToId(
                            (RecommendAdviceMessageMaster_o *)Master_object,
                            ids,
@@ -536,7 +536,7 @@ System_String_o *RecommendSupportData__GetMessageSentence(
 }
 
 
-System_String_o *RecommendSupportData__GetMessageSentence_41524364(
+System_String_o *RecommendSupportData__GetMessageSentence_41539300(
         RecommendSupportData_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -545,15 +545,15 @@ System_String_o *RecommendSupportData__GetMessageSentence_41524364(
   RecommendSupportData_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_59342FA & 1) == 0 )
+  if ( (byte_596C429 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_59342FA = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_596C429 = 1;
   }
   Message = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendSupportData__GetMessage(this, index, method);
   v6 = (RecommendSupportData_o *)System_Linq_Enumerable__ToArray_int_(
                                    Message,
-                                   (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+                                   (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
   return RecommendSupportData__GetMessageSentence(v6, (System_Int32_array *)v6, v7);
 }
 
@@ -574,28 +574,28 @@ int64_t RecommendSupportData__GetOldEquip(RecommendSupportData_o *this, int32_t 
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342F0 & 1) == 0 )
+  if ( (byte_596C41F & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F0 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41F = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.oldDeckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
     return 0;
   oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          oldDeckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (int64_t)v8[2].monitor;
 }
 
@@ -611,29 +611,29 @@ System_Int32_array *RecommendSupportData__GetOldMessage(
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342F7 & 1) == 0 )
+  if ( (byte_596C426 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F7 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C426 = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.oldDeckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
-    return (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+    return (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
   oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          oldDeckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (System_Int32_array *)v8[3].klass;
 }
 
@@ -646,28 +646,28 @@ int64_t RecommendSupportData__GetOldServant(RecommendSupportData_o *this, int32_
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342EC & 1) == 0 )
+  if ( (byte_596C41B & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342EC = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41B = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.oldDeckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
     return 0;
   oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          oldDeckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (int64_t)v8[2].klass;
 }
 
@@ -680,28 +680,28 @@ int64_t RecommendSupportData__GetServant(RecommendSupportData_o *this, int32_t i
   Il2CppObject *v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_59342EA & 1) == 0 )
+  if ( (byte_596C419 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342EA = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C419 = 1;
   }
-  if ( !BasicHelper__IsValidIndex_object__58596384(
+  if ( !BasicHelper__IsValidIndex_object__58806224(
           (System_Object_array *)this->fields.deckData,
           index,
-          (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
     return 0;
   deckData = (System_Object_array *)this->fields.deckData;
-  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976(v6, index, v7);
+  v6 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912(v6, index, v7);
   v8 = BasicHelper__IndexValue_object_(
          deckData,
          index,
          (Il2CppObject *)v6,
-         (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+         (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
   if ( !v8 )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   return (int64_t)v8[2].klass;
 }
 
@@ -779,14 +779,14 @@ void RecommendSupportData__Init(
   bool v70; // w7
   __int64 v71; // x0
 
-  if ( (byte_59342E5 & 1) == 0 )
+  if ( (byte_596C414 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserRecommendSupportMaster___);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_59342E5 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserRecommendSupportMaster___);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C414 = 1;
   }
   v5 = 0;
   for ( i = 8; ; i += 2 )
@@ -800,8 +800,8 @@ void RecommendSupportData__Init(
     if ( (__int64)v5 >= v7->static_fields->RecommendSupportMemberMax )
       break;
     deckData = (unsigned int *)this->fields.deckData;
-    v9 = sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976((RecommendSupportData_RecommendDeckData_o *)v9, v5, v10);
+    v9 = sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912((RecommendSupportData_RecommendDeckData_o *)v9, v5, v10);
     if ( !v9 )
       goto LABEL_31;
     v13 = int___TypeInfo;
@@ -809,32 +809,32 @@ void RecommendSupportData__Init(
     *(_DWORD *)(v9 + 24) = 0;
     *(_QWORD *)(v9 + 32) = 0;
     *(_QWORD *)(v9 + 40) = 0;
-    v14 = sub_21FFD10(v13, 0);
+    v14 = sub_2213B20(v13, 0);
     *(_QWORD *)(v9 + 48) = v14;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 48), v14, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 48), v14, v15, v16, v17, v18, v19, v20);
     if ( !deckData )
       goto LABEL_31;
-    Instance = (DataManager_o *)sub_21FFDA4(v9, *(_QWORD *)(*(_QWORD *)deckData + 64LL));
+    Instance = (DataManager_o *)sub_2213BB4(v9, *(_QWORD *)(*(_QWORD *)deckData + 64LL));
     if ( !Instance )
     {
 LABEL_33:
-      v71 = sub_21FFEF0(Instance, v21);
-      sub_21FFD90(v71, 0);
+      v71 = sub_2213D00(Instance, v21);
+      sub_2213BA0(v71, 0);
     }
     if ( v5 >= deckData[6] )
 LABEL_32:
-      sub_21FFED4(Instance);
+      sub_2213CE4(Instance);
     *(_QWORD *)&deckData[2 * v5 + 8] = v9;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&deckData[i], v9, v22, v23, v24, v25, v26, v27);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&deckData[i], v9, v22, v23, v24, v25, v26, v27);
     ++v5;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserRecommendSupportMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserRecommendSupportMaster___);
   if ( !Instance )
     goto LABEL_31;
   RecommendSupportDeck = UserRecommendSupportMaster__GetRecommendSupportDeck(
@@ -856,8 +856,8 @@ LABEL_32:
       goto LABEL_32;
     v32 = (unsigned int *)this->fields.deckData;
     v33 = RecommendSupportDeck->m_Items[j];
-    v34 = sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976((RecommendSupportData_RecommendDeckData_o *)v34, j, v35);
+    v34 = sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912((RecommendSupportData_RecommendDeckData_o *)v34, j, v35);
     if ( v33 )
     {
       if ( !v34 )
@@ -871,7 +871,7 @@ LABEL_32:
       adviceMessageIds = v33->fields.adviceMessageIds;
       *(_QWORD *)(v34 + 48) = adviceMessageIds;
       *(_QWORD *)(v34 + 40) = EquipUserSvtId;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)(v34 + 48),
         (int32_t)adviceMessageIds,
         v45,
@@ -885,7 +885,7 @@ LABEL_32:
       goto LABEL_31;
     if ( v34 )
     {
-      Instance = (DataManager_o *)sub_21FFDA4(v34, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
+      Instance = (DataManager_o *)sub_2213BB4(v34, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
       if ( !Instance )
         goto LABEL_33;
     }
@@ -893,15 +893,15 @@ LABEL_32:
       goto LABEL_32;
     v51 = &v32[2 * j];
     *((_QWORD *)v51 + 4) = v34;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v51 + 8), v34, v36, v37, v38, v39, v40, v41);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v51 + 8), v34, v36, v37, v38, v39, v40, v41);
   }
   v52 = RecommendSupportData__DeepCopyAll(this, this->fields.deckData, v29);
   this->fields.oldDeckData = v52;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v52, v53, v54, v55, v56, v57, v58);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v52, v53, v54, v55, v56, v57, v58);
   this->fields._IsSelectServant_k__BackingField = 0;
   this->fields.kind = 1;
   this->fields._EventSetupInfo2_k__BackingField = eventUpSetupInfo;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventSetupInfo2_k__BackingField,
     (int32_t)eventUpSetupInfo,
     v59,
@@ -911,7 +911,7 @@ LABEL_32:
     v63,
     v64);
   this->fields._EventSetupInfo_k__BackingField = eventUpSetupInfo;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventSetupInfo_k__BackingField,
     (int32_t)eventUpSetupInfo,
     v65,
@@ -922,7 +922,7 @@ LABEL_32:
     v70);
   if ( !SelfUserGame )
 LABEL_31:
-    sub_21FFECC(Instance, v12);
+    sub_2213CDC(Instance, v12);
   this->fields._PushUserServantId_k__BackingField = SelfUserGame->fields.pushUserSvtId;
 }
 
@@ -937,11 +937,11 @@ void RecommendSupportData__RemoveEquipData(RecommendSupportData_o *this, int32_t
   if ( !deckData )
     goto LABEL_5;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = deckData->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v4->fields.userSvtEquipId = 0;
 }
 
@@ -956,11 +956,11 @@ void RecommendSupportData__RemoveQuest(RecommendSupportData_o *this, int32_t ind
   if ( !deckData )
     goto LABEL_5;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = deckData->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v4->fields.questId = 0;
   v4->fields.questPhase = 0;
 }
@@ -976,11 +976,11 @@ void RecommendSupportData__RemoveServantData(RecommendSupportData_o *this, int32
   if ( !deckData )
     goto LABEL_5;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = deckData->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v4->fields.userSvtId = 0;
 }
 
@@ -1013,14 +1013,14 @@ void RecommendSupportData__ResetDeckData(RecommendSupportData_o *this, int32_t i
   Il2CppClass **v28; // x0
   __int64 v29; // x0
 
-  if ( (byte_59342E9 & 1) == 0 )
+  if ( (byte_596C418 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342E9 = 1;
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C418 = 1;
   }
   deckData = this->fields.deckData;
-  v6 = sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-  RecommendSupportData_RecommendDeckData___ctor_41518976((RecommendSupportData_RecommendDeckData_o *)v6, index, v7);
+  v6 = sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+  RecommendSupportData_RecommendDeckData___ctor_41533912((RecommendSupportData_RecommendDeckData_o *)v6, index, v7);
   oldDeckData = this->fields.oldDeckData;
   if ( !oldDeckData )
     goto LABEL_11;
@@ -1038,22 +1038,22 @@ void RecommendSupportData__ResetDeckData(RecommendSupportData_o *this, int32_t i
   questPhase = v17->fields.questPhase;
   *(_OWORD *)(v6 + 32) = *(_OWORD *)&v17->fields.userSvtId;
   *(_DWORD *)(v6 + 24) = questPhase;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 48), (int32_t)adviceMessageIds, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 48), (int32_t)adviceMessageIds, v10, v11, v12, v13, v14, v15);
   if ( !deckData )
 LABEL_11:
-    sub_21FFECC(v8, v9);
-  v8 = sub_21FFDA4(v6, deckData->obj.klass->_1.element_class);
+    sub_2213CDC(v8, v9);
+  v8 = sub_2213BB4(v6, deckData->obj.klass->_1.element_class);
   if ( !v8 )
   {
-    v29 = sub_21FFEF0(0, v21);
-    sub_21FFD90(v29, 0);
+    v29 = sub_2213D00(0, v21);
+    sub_2213BA0(v29, 0);
   }
   if ( LODWORD(deckData->max_length) <= index )
 LABEL_12:
-    sub_21FFED4(v8);
+    sub_2213CE4(v8);
   v28 = &deckData->obj.klass + index;
   v28[4] = (Il2CppClass *)v6;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 4), v6, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), v6, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -1075,27 +1075,27 @@ void RecommendSupportData__SetAdviceMessage(
 
   v8 = ids;
   v10 = this;
-  if ( (byte_59342E7 & 1) == 0 )
+  if ( (byte_596C416 & 1) == 0 )
   {
-    this = (RecommendSupportData_o *)sub_21FFC50(&int___TypeInfo);
-    byte_59342E7 = 1;
+    this = (RecommendSupportData_o *)sub_2213A60(&int___TypeInfo);
+    byte_596C416 = 1;
   }
   deckData = v10->fields.deckData;
   if ( !deckData )
     goto LABEL_9;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v12 = deckData->m_Items[index];
   if ( !v8 )
   {
-    this = (RecommendSupportData_o *)sub_21FFD10(int___TypeInfo, 0);
+    this = (RecommendSupportData_o *)sub_2213B20(int___TypeInfo, 0);
     v8 = (struct System_Int32_array *)this;
   }
   if ( !v12 )
 LABEL_9:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v12->fields.adviceMessageIds = v8;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v12->fields.adviceMessageIds,
     (int32_t)v8,
     (System_String_o *)ids,
@@ -1122,11 +1122,11 @@ void RecommendSupportData__SetEquipData(
   if ( !deckData )
     goto LABEL_5;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v6 = deckData->m_Items[index];
   if ( !v6 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v6->fields.userSvtEquipId = userSvtId;
 }
 
@@ -1142,10 +1142,10 @@ void RecommendSupportData__SetOld(RecommendSupportData_o *this, RecommendSupport
   bool v10; // w7
 
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   v4 = RecommendSupportData__DeepCopyAll(this, data->fields.deckData, method);
   this->fields.oldDeckData = v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.oldDeckData, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -1179,11 +1179,11 @@ void RecommendSupportData__SetQuest(
   if ( !deckData )
     goto LABEL_9;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v8 = deckData->m_Items[index];
   if ( !v8 )
 LABEL_9:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v8->fields.questId = id;
   v8->fields.questPhase = phase;
 }
@@ -1205,16 +1205,16 @@ void RecommendSupportData__SetServantData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-50h]
 
   v6 = this;
-  if ( (byte_59342E6 & 1) == 0 )
+  if ( (byte_596C415 & 1) == 0 )
   {
-    this = (RecommendSupportData_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_59342E6 = 1;
+    this = (RecommendSupportData_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_596C415 = 1;
   }
   deckData = v6->fields.deckData;
   if ( !deckData )
     goto LABEL_10;
   if ( LODWORD(deckData->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   if ( !entity )
     goto LABEL_10;
   v8 = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
@@ -1225,10 +1225,10 @@ void RecommendSupportData__SetServantData(
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, *(_QWORD *)&index, entity);
   v11 = v12;
-  this = (RecommendSupportData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v11, 0);
+  this = (RecommendSupportData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v11, 0);
   if ( !v10 )
 LABEL_10:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   v10->fields.userSvtId = (int64_t)this;
 }
 
@@ -1249,19 +1249,19 @@ bool RecommendSupportData__ShouldShowExpiredDialog(RecommendSupportData_o *this,
   RecommendSupportData_RecommendDeckData_o *v14; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5934300 & 1) == 0 )
+  if ( (byte_596C42F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    byte_5934300 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    byte_596C42F = 1;
   }
   v4 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v4 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_QuestMaster___);
   for ( i = 0; ; ++i )
   {
     p_image = &BalanceConfig_TypeInfo->_1.image;
@@ -1283,11 +1283,11 @@ bool RecommendSupportData__ShouldShowExpiredDialog(RecommendSupportData_o *this,
       goto LABEL_22;
     if ( i >= LODWORD(oldDeckData->max_length) )
 LABEL_23:
-      sub_21FFED4(p_image);
+      sub_2213CE4(p_image);
     v13 = oldDeckData->m_Items[i];
     if ( !v13 || (v14 = deckData->m_Items[i]) == 0 )
 LABEL_22:
-      sub_21FFECC(p_image, v5);
+      sub_2213CDC(p_image, v5);
     questId = (unsigned int)v14->fields.questId;
     if ( *(_QWORD *)&v13->fields.questId != *(_QWORD *)&v14->fields.questId )
     {
@@ -1297,7 +1297,7 @@ LABEL_22:
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
              questId,
-             (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+             (const MethodInfo_3F10B80 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
       {
         p_image = &entity->klass;
         if ( !entity )
@@ -1324,28 +1324,28 @@ bool RecommendSupportData__TryGetEquip(
   __int64 v11; // x1
   int64_t monitor; // x8
 
-  if ( (byte_59342EF & 1) == 0 )
+  if ( (byte_596C41E & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342EF = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41E = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.deckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     deckData = (System_Object_array *)this->fields.deckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             deckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     monitor = (int64_t)v10[2].monitor;
   }
   else
@@ -1387,19 +1387,19 @@ bool RecommendSupportData__TryGetIsQuestSetting(
   bool v30; // w7
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59342F3 & 1) == 0 )
+  if ( (byte_596C422 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    byte_59342F3 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    byte_596C422 = 1;
   }
   entity = 0;
   *settingIndex = -1;
-  v13 = *(System_String_o ***)(qword_594C0B8 + 184);
+  v13 = *(System_String_o ***)(qword_5984390 + 184);
   v14 = *v13;
   *svtName = *v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)svtName,
     (int32_t)v14,
     *(System_String_o **)&questPhase,
@@ -1412,7 +1412,7 @@ bool RecommendSupportData__TryGetIsQuestSetting(
     return 0;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v15, v16);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantMaster___);
   deckData = this->fields.deckData;
   if ( !deckData )
     goto LABEL_20;
@@ -1423,7 +1423,7 @@ bool RecommendSupportData__TryGetIsQuestSetting(
   while ( 1 )
   {
     if ( max_length == v21 )
-      sub_21FFED4(Master_object);
+      sub_2213CE4(Master_object);
     v22 = deckData->m_Items[v21];
     if ( !v22 )
       goto LABEL_20;
@@ -1435,19 +1435,19 @@ bool RecommendSupportData__TryGetIsQuestSetting(
   *settingIndex = v21;
   if ( !Master_object )
 LABEL_20:
-    sub_21FFECC(Master_object, v18);
+    sub_2213CDC(Master_object, v18);
   if ( DataMasterBase_object__object__long___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          v22->fields.userSvtId,
-         (const MethodInfo_3EDFA34 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_3F131DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
     Master_object = entity;
     if ( entity )
     {
       v24 = UserServantEntity__GetSvtName((UserServantEntity_o *)entity, 0, 0);
       *svtName = v24;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)svtName, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)svtName, (int32_t)v24, v25, v26, v27, v28, v29, v30);
       return 1;
     }
     goto LABEL_20;
@@ -1475,37 +1475,37 @@ bool RecommendSupportData__TryGetMessage(
   bool v17; // w7
   System_Int32_array *klass; // x1
 
-  if ( (byte_59342F6 & 1) == 0 )
+  if ( (byte_596C425 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F6 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C425 = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.deckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     deckData = (System_Object_array *)this->fields.deckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             deckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     klass = (System_Int32_array *)v10[3].klass;
   }
   else
   {
-    klass = (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+    klass = (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
   }
   *ids = klass;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)ids, (int32_t)klass, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)ids, (int32_t)klass, v12, v13, v14, v15, v16, v17);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*ids, 0);
 }
 
@@ -1523,28 +1523,28 @@ bool RecommendSupportData__TryGetOldEquip(
   __int64 v11; // x1
   int64_t monitor; // x8
 
-  if ( (byte_59342F1 & 1) == 0 )
+  if ( (byte_596C420 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F1 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C420 = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.oldDeckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             oldDeckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     monitor = (int64_t)v10[2].monitor;
   }
   else
@@ -1575,44 +1575,44 @@ bool RecommendSupportData__TryGetOldMessage(
   bool v17; // w7
   System_Collections_Generic_List_int__o *v18; // x20
 
-  if ( (byte_59342F8 & 1) == 0 )
+  if ( (byte_596C427 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F8 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C427 = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.oldDeckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             oldDeckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     v18 = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__ToList_int_(
                                                       (System_Collections_Generic_IEnumerable_TSource__o *)v10[3].klass,
-                                                      (const MethodInfo_386D6A8 *)Method_System_Linq_Enumerable_ToList_int___);
+                                                      (const MethodInfo_38A0B70 *)Method_System_Linq_Enumerable_ToList_int___);
   }
   else
   {
-    v18 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+    v18 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v18,
-      (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   }
   *adviceMessageIds = v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)adviceMessageIds, (int32_t)v18, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)adviceMessageIds, (int32_t)v18, v12, v13, v14, v15, v16, v17);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*adviceMessageIds, 0);
 }
 
@@ -1625,7 +1625,6 @@ bool RecommendSupportData__TryGetOldQuest(
         const MethodInfo *method)
 {
   System_Object_array *oldDeckData; // x0
-  bool result; // w0
   System_Object_array *v11; // x22
   RecommendSupportData_RecommendDeckData_o *v12; // x23
   const MethodInfo *v13; // x2
@@ -1641,45 +1640,44 @@ bool RecommendSupportData__TryGetOldQuest(
   Il2CppClass *klass; // x1
   Il2CppClass *v24; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59342F4 & 1) == 0 )
+  if ( (byte_596C423 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F4 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C423 = 1;
   }
   oldDeckData = (System_Object_array *)this->fields.oldDeckData;
   v24 = 0;
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          oldDeckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
-    result = 0;
     *questId = 0;
     *questPhase = 0;
+    return 0;
   }
   else
   {
     v11 = (System_Object_array *)this->fields.oldDeckData;
-    v12 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v12, index, v13);
+    v12 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v12, index, v13);
     v14 = BasicHelper__IndexValue_object_(
             v11,
             index,
             (Il2CppObject *)v12,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v14 )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     monitor = (int32_t)v14[1].monitor;
     klass = v14[3].klass;
     *questId = HIDWORD(v14[1].klass);
     *questPhase = monitor;
     v24 = klass;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24, (int32_t)klass, v16, v17, v18, v19, v20, v21);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24, (int32_t)klass, v16, v17, v18, v19, v20, v21);
     return *questId > 0;
   }
-  return result;
 }
 
 
@@ -1696,28 +1694,28 @@ bool RecommendSupportData__TryGetOldServant(
   __int64 v11; // x1
   int64_t klass; // x8
 
-  if ( (byte_59342ED & 1) == 0 )
+  if ( (byte_596C41C & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342ED = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41C = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.oldDeckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     oldDeckData = (System_Object_array *)this->fields.oldDeckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             oldDeckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     klass = (int64_t)v10[2].klass;
   }
   else
@@ -1750,48 +1748,46 @@ bool RecommendSupportData__TryGetQuest(
   bool v20; // w7
   int32_t monitor; // w9
   Il2CppClass *klass; // x1
-  bool result; // w0
   Il2CppClass *v24; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59342F2 & 1) == 0 )
+  if ( (byte_596C421 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342F2 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C421 = 1;
   }
   deckData = (System_Object_array *)this->fields.deckData;
   v24 = 0;
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          deckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     v10 = (System_Object_array *)this->fields.deckData;
-    v11 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v11, index, v12);
+    v11 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v11, index, v12);
     v13 = BasicHelper__IndexValue_object_(
             v10,
             index,
             (Il2CppObject *)v11,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v13 )
-      sub_21FFECC(0, v14);
+      sub_2213CDC(0, v14);
     monitor = (int32_t)v13[1].monitor;
     klass = v13[3].klass;
     *questId = HIDWORD(v13[1].klass);
     *questPhase = monitor;
     v24 = klass;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v24, (int32_t)klass, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24, (int32_t)klass, v15, v16, v17, v18, v19, v20);
     return *questId > 0;
   }
   else
   {
-    result = 0;
     *questId = 0;
     *questPhase = 0;
+    return 0;
   }
-  return result;
 }
 
 
@@ -1808,28 +1804,28 @@ bool RecommendSupportData__TryGetServant(
   __int64 v11; // x1
   int64_t klass; // x8
 
-  if ( (byte_59342EB & 1) == 0 )
+  if ( (byte_596C41A & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&RecommendSupportData_RecommendDeckData_TypeInfo);
-    byte_59342EB = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&RecommendSupportData_RecommendDeckData_TypeInfo);
+    byte_596C41A = 1;
   }
-  if ( BasicHelper__IsValidIndex_object__58596384(
+  if ( BasicHelper__IsValidIndex_object__58806224(
          (System_Object_array *)this->fields.deckData,
          index,
-         (const MethodInfo_37E1C20 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
+         (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
     deckData = (System_Object_array *)this->fields.deckData;
-    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_21FFEBC(RecommendSupportData_RecommendDeckData_TypeInfo);
-    RecommendSupportData_RecommendDeckData___ctor_41518976(v8, index, v9);
+    v8 = (RecommendSupportData_RecommendDeckData_o *)sub_2213CCC(RecommendSupportData_RecommendDeckData_TypeInfo);
+    RecommendSupportData_RecommendDeckData___ctor_41533912(v8, index, v9);
     v10 = BasicHelper__IndexValue_object_(
             deckData,
             index,
             (Il2CppObject *)v8,
-            (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_RecommendSupportData_RecommendDeckData___);
     if ( !v10 )
-      sub_21FFECC(0, v11);
+      sub_2213CDC(0, v11);
     klass = (int64_t)v10[2].klass;
   }
   else
@@ -1871,13 +1867,13 @@ bool RecommendSupportData__get_IsNoServant(RecommendSupportData_o *this, const M
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59342FB & 1) == 0 )
+  if ( (byte_596C42A & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_RecommendSupportData_RecommendDeckData___);
-    sub_21FFC50(&System_Func_RecommendSupportData_RecommendDeckData__bool__TypeInfo);
-    sub_21FFC50(&Method_RecommendSupportData___c__get_IsNoServant_b__50_0__);
-    sub_21FFC50(&RecommendSupportData___c_TypeInfo);
-    byte_59342FB = 1;
+    sub_2213A60(&Method_BasicHelper_Any_RecommendSupportData_RecommendDeckData___);
+    sub_2213A60(&System_Func_RecommendSupportData_RecommendDeckData__bool__TypeInfo);
+    sub_2213A60(&Method_RecommendSupportData___c__get_IsNoServant_b__50_0__);
+    sub_2213A60(&RecommendSupportData___c_TypeInfo);
+    byte_596C42A = 1;
   }
   v4 = RecommendSupportData___c_TypeInfo;
   deckData = (System_Object_array *)this->fields.deckData;
@@ -1896,16 +1892,16 @@ bool RecommendSupportData__get_IsNoServant(RecommendSupportData_o *this, const M
       static_fields = RecommendSupportData___c_TypeInfo->static_fields;
     }
     v8 = (Il2CppObject *)static_fields->__9;
-    _9__50_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_RecommendSupportData_RecommendDeckData__bool__TypeInfo);
+    _9__50_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_RecommendSupportData_RecommendDeckData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__50_0, v8, Method_RecommendSupportData___c__get_IsNoServant_b__50_0__, 0);
     v9 = RecommendSupportData___c_TypeInfo->static_fields;
     v9->__9__50_0 = (struct System_Func_RecommendSupportData_RecommendDeckData__bool__o *)_9__50_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__50_0, (int32_t)_9__50_0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->__9__50_0, (int32_t)_9__50_0, v10, v11, v12, v13, v14, v15);
   }
-  return !BasicHelper__Any_object__58575580(
+  return !BasicHelper__Any_object__58785420(
             deckData,
             (System_Func_T__bool__o *)_9__50_0,
-            (const MethodInfo_37DCADC *)Method_BasicHelper_Any_RecommendSupportData_RecommendDeckData___);
+            (const MethodInfo_380FE8C *)Method_BasicHelper_Any_RecommendSupportData_RecommendDeckData___);
 }
 
 
@@ -1939,7 +1935,7 @@ void RecommendSupportData__set_EventSetupInfo(
   bool v7; // w7
 
   this->fields._EventSetupInfo_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventSetupInfo_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1963,7 +1959,7 @@ void RecommendSupportData__set_EventSetupInfo2(
   bool v7; // w7
 
   this->fields._EventSetupInfo2_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventSetupInfo2_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1995,7 +1991,7 @@ void RecommendSupportData_RecommendDeckData___ctor(
 }
 
 
-void RecommendSupportData_RecommendDeckData___ctor_41518976(
+void RecommendSupportData_RecommendDeckData___ctor_41533912(
         RecommendSupportData_RecommendDeckData_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -2009,17 +2005,17 @@ void RecommendSupportData_RecommendDeckData___ctor_41518976(
   bool v11; // w6
   bool v12; // w7
 
-  if ( (byte_5934302 & 1) == 0 )
+  if ( (byte_596C431 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    byte_5934302 = 1;
+    sub_2213A60(&int___TypeInfo);
+    byte_596C431 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v5 = int___TypeInfo;
   this->fields.idx = index + 1;
-  v6 = (struct System_Int32_array *)sub_21FFD10(v5, 0);
+  v6 = (struct System_Int32_array *)sub_2213B20(v5, 0);
   this->fields.adviceMessageIds = v6;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds,
     (int32_t)v6,
     v7,
@@ -2037,7 +2033,7 @@ bool RecommendSupportData_RecommendDeckData__Compare(
         const MethodInfo *method)
 {
   if ( !src )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return this->fields.idx == src->fields.idx
       && this->fields.questId == src->fields.questId
       && this->fields.questPhase == src->fields.questPhase
@@ -2053,7 +2049,7 @@ bool RecommendSupportData_RecommendDeckData__CompareQuest(
         const MethodInfo *method)
 {
   if ( !src )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return this->fields.questId == src->fields.questId && this->fields.questPhase == src->fields.questPhase;
 }
 
@@ -2085,7 +2081,7 @@ void RecommendSupportData_RecommendDeckData__Deconstruct(
   *outAdviceMessageIds = adviceMessageIds;
   *outUserSvtId = userSvtId;
   *outUserSvtEquipId = userSvtEquipId;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)outAdviceMessageIds,
     (int32_t)adviceMessageIds,
     (System_String_o *)outQuestId,
@@ -2107,15 +2103,15 @@ void RecommendSupportData___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5934303 & 1) == 0 )
+  if ( (byte_596C432 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendSupportData___c_TypeInfo);
-    byte_5934303 = 1;
+    sub_2213A60(&RecommendSupportData___c_TypeInfo);
+    byte_596C432 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(RecommendSupportData___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(RecommendSupportData___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendSupportData___c_TypeInfo->static_fields->__9 = (struct RecommendSupportData___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)RecommendSupportData___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -2139,6 +2135,6 @@ bool RecommendSupportData___c___get_IsNoServant_b__50_0(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return data->fields.userSvtId > 0;
 }

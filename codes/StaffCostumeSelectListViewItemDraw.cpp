@@ -14,12 +14,12 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
   __int64 v6; // x2
   UIRangeLabel_o *v7; // x21
   int v8; // w8
-  struct UISprite_o *v9; // x11
-  float *p_mTrans; // x8
-  float *p_mUpdateFrame; // x9
-  float *p_mChildren; // x10
+  float *v9; // x11
+  float *v10; // x8
+  float *v11; // x9
+  float *v12; // x10
   float *v13; // x11
-  struct UISprite_o *iconSprite; // x11
+  float *v14; // x11
   __int64 *v15; // x8
   __int64 v16; // x1
   __int64 v17; // x2
@@ -29,13 +29,13 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = (StaffCostumeSelectListViewItemDraw_o **)this;
-  if ( (byte_5933B48 & 1) == 0 )
+  if ( (byte_596BC61 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_18171/*"btn_bg_20"*/);
-    this = (StaffCostumeSelectListViewItemDraw_o *)sub_21FFC50(&StringLiteral_18173/*"btn_bg_21"*/);
-    byte_5933B48 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_18209/*"btn_bg_20"*/);
+    this = (StaffCostumeSelectListViewItemDraw_o *)sub_2213A60(&StringLiteral_18211/*"btn_bg_21"*/);
+    byte_596BC61 = 1;
   }
   if ( !item )
     goto LABEL_36;
@@ -52,10 +52,10 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
   {
     if ( !v8 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
-    if ( !byte_5932AD3 )
+    if ( !byte_596ABD5 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      byte_5932AD3 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      byte_596ABD5 = 1;
     }
     this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -63,22 +63,22 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
       this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     }
-    iconSprite = this[2].fields.iconSprite;
-    p_mTrans = (float *)&iconSprite->fields.mTrans;
-    p_mUpdateFrame = (float *)&iconSprite->fields.mTrans + 1;
-    p_mChildren = (float *)&iconSprite->fields.mChildren;
-    v13 = (float *)&iconSprite->fields.mChildren + 1;
+    v14 = (float *)*((_QWORD *)this + 23);
+    v10 = v14 + 20;
+    v11 = v14 + 21;
+    v12 = v14 + 22;
+    v13 = v14 + 23;
     if ( v7 )
       goto LABEL_22;
 LABEL_36:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   if ( !v8 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
-  if ( !byte_5932AD4 )
+  if ( !byte_596ABD6 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5932AD4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596ABD6 = 1;
   }
   this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -86,25 +86,25 @@ LABEL_36:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
     this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   }
-  v9 = this[2].fields.iconSprite;
-  p_mTrans = (float *)&v9->fields.mChanged;
-  p_mUpdateFrame = (float *)&v9->fields.mUpdateFrame;
-  p_mChildren = (float *)&v9->fields.mAnchorsCached;
-  v13 = (float *)(&v9->fields.mAnchorsCached + 4);
+  v9 = (float *)*((_QWORD *)this + 23);
+  v10 = v9 + 24;
+  v11 = v9 + 25;
+  v12 = v9 + 26;
+  v13 = v9 + 27;
   if ( !v7 )
     goto LABEL_36;
 LABEL_22:
   v21.fields.a = *v13;
-  v21.fields.b = *p_mChildren;
-  v21.fields.g = *p_mUpdateFrame;
-  v21.fields.r = *p_mTrans;
+  v21.fields.b = *v12;
+  v21.fields.g = *v11;
+  v21.fields.r = *v10;
   UIRangeLabel__set_effectColor(v7, v21, 0);
   this = v4[6];
   if ( !this )
     goto LABEL_36;
-  v15 = &StringLiteral_18171/*"btn_bg_20"*/;
+  v15 = &StringLiteral_18209/*"btn_bg_20"*/;
   if ( item->fields._IsSelected_k__BackingField )
-    v15 = &StringLiteral_18173/*"btn_bg_21"*/;
+    v15 = &StringLiteral_18211/*"btn_bg_21"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v15, 0);
   PhotoCampaignAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._PhotoCampaignAtlas_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -151,11 +151,11 @@ void StaffCostumeSelectListViewItemDraw__SetInput(
   const MethodInfo *v9; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_5933B47 & 1) == 0 )
+  if ( (byte_596BC60 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B47 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC60 = 1;
   }
   if ( item )
   {
@@ -168,11 +168,11 @@ void StaffCostumeSelectListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0) )
       {
-        sub_21FFECC(Component_object, v8);
+        sub_2213CDC(Component_object, v8);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,

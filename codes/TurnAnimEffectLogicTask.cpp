@@ -21,7 +21,7 @@ void TurnAnimEffectLogicTask___ctor(
   CreateActionDataLogicTask___ctor((CreateActionDataLogicTask_o *)this, 0);
   *(&this->fields.gimmickFixedReelOrder + 1) = isEndEnemyTurn;
   *(_QWORD *)&this->fields.isEndEnemyTurn = logicFunction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.isEndEnemyTurn,
     (int32_t)logicFunction,
     v9,
@@ -31,7 +31,7 @@ void TurnAnimEffectLogicTask___ctor(
     v13,
     v14);
   this->fields.logicFunction = (struct BattleLogicFunction_o *)turnProgressBuffDict;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.logicFunction,
     (int32_t)turnProgressBuffDict,
     v15,
@@ -53,15 +53,15 @@ BattleActionData_o *TurnAnimEffectLogicTask__MakeActionData(
   BattleLogicFunction_o *v7; // x22
   TurnAnimEffectActionData_o *v8; // x23
 
-  if ( (byte_593BC25 & 1) == 0 )
+  if ( (byte_5973E31 & 1) == 0 )
   {
-    sub_21FFC50(&TurnAnimEffectActionData_TypeInfo);
-    byte_593BC25 = 1;
+    sub_2213A60(&TurnAnimEffectActionData_TypeInfo);
+    byte_5973E31 = 1;
   }
   v5 = *(&this->fields.gimmickFixedReelOrder + 1);
   v7 = *(BattleLogicFunction_o **)&this->fields.isEndEnemyTurn;
   logicFunction = this->fields.logicFunction;
-  v8 = (TurnAnimEffectActionData_o *)sub_21FFEBC(TurnAnimEffectActionData_TypeInfo);
+  v8 = (TurnAnimEffectActionData_o *)sub_2213CCC(TurnAnimEffectActionData_TypeInfo);
   TurnAnimEffectActionData___ctor(
     v8,
     v5,

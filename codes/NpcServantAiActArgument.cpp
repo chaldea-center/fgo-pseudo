@@ -22,7 +22,7 @@ void NpcServantAiActArgument___ctor(
 
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
   this->fields._SvtData_k__BackingField = svtData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SvtData_k__BackingField,
     (int32_t)svtData,
     v10,
@@ -33,7 +33,7 @@ void NpcServantAiActArgument___ctor(
     v15);
   this->fields._NpcAi_k__BackingField = npcAi;
   this->fields._IsNoMessage_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)npcAi,
     v16,
@@ -74,10 +74,10 @@ void NpcServantAiActArgument__InitCommonTask(
   BattleActionData_o *v26; // x20
   __int64 v27; // x0
 
-  if ( (byte_593B93D & 1) == 0 )
+  if ( (byte_5973A76 & 1) == 0 )
   {
-    sub_21FFC50(&BattleActionData___TypeInfo);
-    byte_593B93D = 1;
+    sub_2213A60(&BattleActionData___TypeInfo);
+    byte_5973A76 = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
   NpcAi_k__BackingField = (__int64)this->fields._NpcAi_k__BackingField;
@@ -111,7 +111,7 @@ LABEL_8:
            this->fields._AiEnt_k__BackingField,
            *(_QWORD *)(*(_QWORD *)NpcAi_k__BackingField + 800LL));
   }
-  v8 = sub_21FFD10(BattleActionData___TypeInfo, 2);
+  v8 = sub_2213B20(BattleActionData___TypeInfo, 2);
   v9 = this->fields._NpcAi_k__BackingField;
   v10 = (BattleActionData_array *)v8;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
@@ -125,38 +125,38 @@ LABEL_8:
   v17 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_21FFDA4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_2213BB4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
     {
 LABEL_23:
-      v27 = sub_21FFEF0(NpcAi_k__BackingField, v18);
-      sub_21FFD90(v27, 0);
+      v27 = sub_2213D00(NpcAi_k__BackingField, v18);
+      sub_2213BA0(v27, 0);
     }
   }
   if ( !LODWORD(v10->max_length) )
     goto LABEL_22;
   v10->m_Items[0] = v17;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v10->m_Items, (int32_t)v17, v11, v12, v13, v14, v15, v16);
   v19 = this->fields._NpcAi_k__BackingField;
   NpcAi_k__BackingField = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
                             this,
                             this->klass->vtable._4_get_UniqueId.method);
   if ( !v19 )
 LABEL_21:
-    sub_21FFECC(NpcAi_k__BackingField, v5);
+    sub_2213CDC(NpcAi_k__BackingField, v5);
   NpcAi_k__BackingField = (__int64)BattleLogicNpcAi__MakeStepInAction(v19, NpcAi_k__BackingField, v7 & 1, 0);
   v26 = (BattleActionData_o *)NpcAi_k__BackingField;
   if ( NpcAi_k__BackingField )
   {
-    NpcAi_k__BackingField = sub_21FFDA4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
+    NpcAi_k__BackingField = sub_2213BB4(NpcAi_k__BackingField, v10->obj.klass->_1.element_class);
     if ( !NpcAi_k__BackingField )
       goto LABEL_23;
   }
   if ( (v10->max_length & 0xFFFFFFFE) == 0 )
 LABEL_22:
-    sub_21FFED4(NpcAi_k__BackingField);
+    sub_2213CE4(NpcAi_k__BackingField);
   v10->m_Items[1] = v26;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
   BattleLogicTask__SetInterruptAction((BattleLogicTask_o *)task, v10, 0);
 }
 
@@ -179,7 +179,7 @@ void NpcServantAiActArgument__set_NpcAi(
   bool v7; // w7
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

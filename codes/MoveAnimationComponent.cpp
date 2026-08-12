@@ -6,10 +6,10 @@ void MoveAnimationComponent___ctor(MoveAnimationComponent_o *this, const MethodI
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -65,11 +65,11 @@ void MoveAnimationComponent__PlayAnimation(
   v11.fields.x = p_beginPosition->fields.x;
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
-  MoveAnimationComponent__PlayAnimation_37480564(this, animationType, v10, v11, onFinish, method);
+  MoveAnimationComponent__PlayAnimation_37561988(this, animationType, v10, v11, onFinish, method);
 }
 
 
-void MoveAnimationComponent__PlayAnimation_37480564(
+void MoveAnimationComponent__PlayAnimation_37561988(
         MoveAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromPosition,
@@ -102,10 +102,10 @@ void MoveAnimationComponent__PlayAnimation_37480564(
   v9 = fromPosition.fields.z;
   v10 = fromPosition.fields.y;
   v11 = fromPosition.fields.x;
-  if ( (byte_5931F8A & 1) == 0 )
+  if ( (byte_596A12A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931F8A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A12A = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -115,7 +115,7 @@ void MoveAnimationComponent__PlayAnimation_37480564(
   transform = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !transform || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
 LABEL_16:
-    sub_21FFECC(transform, v19);
+    sub_2213CDC(transform, v19);
   v24.fields.x = v11;
   v24.fields.y = v10;
   v24.fields.z = v9;
@@ -175,7 +175,7 @@ void MoveAnimationComponent__SetBeginWorldPosition(
         (Target = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0)) == 0)
     || (Target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(Target, 0)) == 0 )
   {
-    sub_21FFECC(Target, v8);
+    sub_2213CDC(Target, v8);
   }
   this->fields.beginPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Target, 0);
 }

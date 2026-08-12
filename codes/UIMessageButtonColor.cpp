@@ -1,8 +1,8 @@
 void UIMessageButtonColor___ctor(UIMessageButtonColor_o *this, const MethodInfo *method)
 {
   __asm { FMOV            V0.4S, #1.0 }
-  this->fields.hover = (struct UnityEngine_Color_o)xmmword_E94790;
-  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_E94070;
+  this->fields.hover = (struct UnityEngine_Color_o)xmmword_E9D930;
+  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_E9D210;
   this->fields.normalColor = _Q0;
   this->fields.duration = 0.2;
   UIWidgetContainer___ctor((UIWidgetContainer_o *)this, 0);
@@ -43,10 +43,10 @@ void UIMessageButtonColor__ChangeTweenColor(
   b = c.fields.b;
   g = c.fields.g;
   r = c.fields.r;
-  if ( (byte_5939FDB & 1) == 0 )
+  if ( (byte_59721AF & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FDB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721AF = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -80,7 +80,7 @@ void UIMessageButtonColor__ChangeTweenColor(
           return;
       }
 LABEL_13:
-      sub_21FFECC(transform, v11);
+      sub_2213CDC(transform, v11);
     }
   }
 }
@@ -97,10 +97,10 @@ void UIMessageButtonColor__Init(UIMessageButtonColor_o *this, const MethodInfo *
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5939FD8 & 1) == 0 )
+  if ( (byte_59721AC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FD8 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721AC = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -109,7 +109,7 @@ void UIMessageButtonColor__Init(UIMessageButtonColor_o *this, const MethodInfo *
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     this->fields.tweenTarget = gameObject;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.tweenTarget,
       (int32_t)gameObject,
       v5,
@@ -135,11 +135,11 @@ void UIMessageButtonColor__OnDisable(UIMessageButtonColor_o *this, const MethodI
   __int64 v10; // x1
   Il2CppObject *Component_object; // x23
 
-  if ( (byte_5939FD7 & 1) == 0 )
+  if ( (byte_59721AB & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FD7 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721AB = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -170,7 +170,7 @@ void UIMessageButtonColor__OnDisable(UIMessageButtonColor_o *this, const MethodI
             break;
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                transform,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
           transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -188,7 +188,7 @@ void UIMessageButtonColor__OnDisable(UIMessageButtonColor_o *this, const MethodI
             return;
         }
 LABEL_20:
-        sub_21FFECC(transform, v4);
+        sub_2213CDC(transform, v4);
       }
     }
   }
@@ -246,11 +246,11 @@ void UIMessageButtonColor__OnEnable(UIMessageButtonColor_o *this, const MethodIn
   __int64 v17; // x1
   UnityEngine_Object_o *v18; // x21
 
-  if ( (byte_5939FD6 & 1) == 0 )
+  if ( (byte_59721AA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FD6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721AA = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -303,7 +303,7 @@ LABEL_23:
     v15 = v8->static_fields->currentTouch;
     if ( !v15 )
 LABEL_25:
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     current = (UnityEngine_Object_o *)v15->fields.current;
     v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -375,11 +375,11 @@ void UIMessageButtonColor__OnPress(UIMessageButtonColor_o *this, bool isPressed,
   UICamera_c *v18; // x0
   UnityEngine_Color_o v19; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_5939FD9 & 1) == 0 )
+  if ( (byte_59721AD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FD9 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721AD = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -418,7 +418,7 @@ void UIMessageButtonColor__OnPress(UIMessageButtonColor_o *this, bool isPressed,
           }
           currentTouch = v13->static_fields->currentTouch;
           if ( !currentTouch )
-            sub_21FFECC(v13, v8);
+            sub_2213CDC(v13, v8);
           current = (UnityEngine_Object_o *)currentTouch->fields.current;
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -464,11 +464,11 @@ void UIMessageButtonColor__OnSelect(UIMessageButtonColor_o *this, bool isSelecte
   UICamera_c *v6; // x0
   UnityEngine_Object_o *tweenTarget; // x21
 
-  if ( (byte_5939FDA & 1) == 0 )
+  if ( (byte_59721AE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FDA = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721AE = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -498,10 +498,6 @@ LABEL_8:
 
 UnityEngine_Color_o UIMessageButtonColor__get_defaultColor(UIMessageButtonColor_o *this, const MethodInfo *method)
 {
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !this->fields.mStarted )
@@ -509,14 +505,10 @@ UnityEngine_Color_o UIMessageButtonColor__get_defaultColor(UIMessageButtonColor_
     this->fields.mStarted = 1;
     UIMessageButtonColor__Init(this, method);
   }
-  r = this->fields.mColor.fields.r;
-  g = this->fields.mColor.fields.g;
-  b = this->fields.mColor.fields.b;
-  a = this->fields.mColor.fields.a;
-  result.fields.a = a;
-  result.fields.b = b;
-  result.fields.g = g;
-  result.fields.r = r;
+  result.fields.r = this->fields.mColor.fields.r;
+  result.fields.g = this->fields.mColor.fields.g;
+  result.fields.b = this->fields.mColor.fields.b;
+  result.fields.a = this->fields.mColor.fields.a;
   return result;
 }
 

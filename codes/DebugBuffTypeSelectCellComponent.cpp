@@ -22,15 +22,15 @@ void DebugBuffTypeSelectCellComponent__Set(
   System_Enum_o v16; // [xsp+8h] [xbp-48h] BYREF
   int v17; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5939C91 & 1) == 0 )
+  if ( (byte_5971E55 & 1) == 0 )
   {
-    sub_21FFC50(&BuffList_TYPE_TypeInfo);
-    byte_5939C91 = 1;
+    sub_2213A60(&BuffList_TYPE_TypeInfo);
+    byte_5971E55 = 1;
   }
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = buffType;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_callback,
     (int32_t)callback,
     (System_String_o *)callback,
@@ -46,7 +46,7 @@ void DebugBuffTypeSelectCellComponent__Set(
   v17 = v12;
   v14 = System_Enum__ToString(&v16, 0);
   if ( !v13 )
-    sub_21FFECC(v14, v15);
+    sub_2213CDC(v14, v15);
   UILabel__set_text(v13, v14, 0);
 }
 

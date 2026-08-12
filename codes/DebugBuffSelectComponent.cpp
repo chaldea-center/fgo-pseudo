@@ -11,7 +11,7 @@ void DebugBuffSelectComponent__Close(DebugBuffSelectComponent_o *this, const Met
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -28,16 +28,16 @@ System_Collections_IEnumerator_o *DebugBuffSelectComponent__CreateListCoroutine(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939C8E & 1) == 0 )
+  if ( (byte_5971E52 & 1) == 0 )
   {
-    sub_21FFC50(&DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
-    byte_5939C8E = 1;
+    sub_2213A60(&DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
+    byte_5971E52 = 1;
   }
-  v3 = sub_21FFEBC(DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
+  v3 = sub_2213CCC(DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -63,10 +63,10 @@ void DebugBuffSelectComponent__Open(
   const MethodInfo *v20; // x1
   System_Collections_IEnumerator_o *ListCoroutine; // x1
 
-  if ( (byte_5939C8D & 1) == 0 )
+  if ( (byte_5971E51 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_5939C8D = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_5971E51 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -77,7 +77,7 @@ void DebugBuffSelectComponent__Open(
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.callback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
     (int32_t)callback,
     v11,
@@ -99,10 +99,10 @@ void DebugBuffSelectComponent__Open(
                                              (UnityEngine_Component_o *)gameObject,
                                              0);
   v18 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v18 )
     goto LABEL_15;
@@ -112,19 +112,19 @@ void DebugBuffSelectComponent__Open(
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)gameObject,
-                                             (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   v19 = (UIPanel_o *)gameObject;
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   if ( !v19 )
 LABEL_15:
-    sub_21FFECC(gameObject, v10);
+    sub_2213CDC(gameObject, v10);
   UIPanel__set_clipOffset(v19, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0);
   ListCoroutine = DebugBuffSelectComponent__CreateListCoroutine(this, v20);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
 }
 
 
@@ -135,15 +135,15 @@ void DebugBuffSelectComponent__RemoveList(DebugBuffSelectComponent_o *this, cons
   __int64 v5; // x1
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_5939C8F & 1) == 0 )
+  if ( (byte_5971E53 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939C8F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971E53 = 1;
   }
   grid = (UnityEngine_Component_o *)this->fields.grid;
   if ( !grid )
 LABEL_13:
-    sub_21FFECC(grid, method);
+    sub_2213CDC(grid, method);
   v4 = 0;
   while ( 1 )
   {
@@ -164,7 +164,7 @@ LABEL_13:
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(grid, 0);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-          UnityEngine_Object__Destroy_83246496(gameObject, 0);
+          UnityEngine_Object__Destroy_83459800(gameObject, 0);
           grid = (UnityEngine_Component_o *)this->fields.grid;
           ++v4;
           if ( grid )
@@ -201,7 +201,7 @@ void DebugBuffSelectComponent__TapBuffSelectCallback(
       callback->fields.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -230,7 +230,6 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
   int32_t _1__state; // w8
   struct DebugBuffSelectComponent_o *_4__this; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  bool result; // w0
   System_Object_array *Entitys; // x0
   System_String_o *v14; // x2
   System_String_o *v15; // x3
@@ -268,17 +267,17 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
   bool v47; // w7
 
   v8 = this;
-  if ( (byte_5939C90 & 1) == 0 )
+  if ( (byte_5971E54 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__string__string__int__TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_21FFC50(&Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
-    sub_21FFC50(&Method_DebugBuffSelectComponent_TapBuffSelectCallback__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5939C90 = 1;
+    sub_2213A60(&System_Action_int__string__string__int__TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_2213A60(&Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
+    sub_2213A60(&Method_DebugBuffSelectComponent_TapBuffSelectCallback__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5971E54 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -294,28 +293,27 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
       v8->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       p__2__current[-1].fields._BoardType_k__BackingField = -1;
-      sub_21FFBF4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
-      result = 1;
+      sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return result;
+      return 1;
     }
     return 0;
   }
   v8->fields.__1__state = -1;
-  this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)DataManager__GetMasterData_object_(
                                                                          (DataManager_o *)this,
-                                                                         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0 )
+                                                                         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_BuffMaster___)) == 0 )
   {
 LABEL_41:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   Entitys = DataMasterBase_object__object__int___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3EDC704 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
+              (const MethodInfo_3F0FEAC *)Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
   v8->fields._entList_5__2 = (struct BuffEntity_array *)Entitys;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v8->fields._entList_5__2,
     (int32_t)Entitys,
     v14,
@@ -365,7 +363,7 @@ LABEL_45:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
       this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)UnityEngine_Object__Instantiate_object_(
                                                                        BaseCell,
-                                                                       (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                       (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !this )
         goto LABEL_41;
       v23 = this;
@@ -386,10 +384,10 @@ LABEL_45:
                                                                        (UnityEngine_GameObject_o *)v23,
                                                                        0);
       v25 = this;
-      if ( !byte_5931940 )
+      if ( !byte_5969AE0 )
       {
-        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931940 = 1;
+        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE0 = 1;
       }
       if ( !v25 )
         goto LABEL_41;
@@ -401,10 +399,10 @@ LABEL_45:
                                                                        (UnityEngine_GameObject_o *)v23,
                                                                        0);
       v26 = this;
-      if ( !byte_5931945 )
+      if ( !byte_5969AE5 )
       {
-        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931945 = 1;
+        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE5 = 1;
       }
       if ( !v26 )
         goto LABEL_41;
@@ -414,14 +412,14 @@ LABEL_45:
         0);
       this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                        (UnityEngine_GameObject_o *)v23,
-                                                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
+                                                                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
       v27 = v8->fields._entList_5__2;
       if ( !v27 )
         goto LABEL_41;
       i_5__5 = v8->fields._i_5__5;
       if ( (unsigned int)i_5__5 >= LODWORD(v27->max_length) )
 LABEL_42:
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v29 = v27->m_Items[i_5__5];
       if ( !v29 )
         goto LABEL_41;
@@ -430,7 +428,7 @@ LABEL_42:
       detail = v29->fields.detail;
       id = v29->fields.id;
       type = v29->fields.type;
-      v35 = (System_Action_T1__T2__T3__T4__o *)sub_21FFEBC(System_Action_int__string__string__int__TypeInfo);
+      v35 = (System_Action_T1__T2__T3__T4__o *)sub_2213CCC(System_Action_int__string__string__int__TypeInfo);
       System_Action_int__object__object__int____ctor(
         v35,
         (Il2CppObject *)_4__this,
@@ -465,10 +463,9 @@ LABEL_32:
     this->klass->vtable._8_System_Collections_IEnumerator_Reset.method);
   v8->fields.__2__current = 0;
   v41 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
-  sub_21FFBF4(v41, 0, v42, v43, v44, v45, v46, v47);
-  result = 1;
+  sub_2213A04(v41, 0, v42, v43, v44, v45, v46, v47);
   v41[-1].fields._BoardType_k__BackingField = 2;
-  return result;
+  return 1;
 }
 
 
@@ -488,11 +485,11 @@ void __noreturn DebugBuffSelectComponent__CreateListCoroutine_d__8__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_DebugBuffSelectComponent__CreateListCoroutine_d__8_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_DebugBuffSelectComponent__CreateListCoroutine_d__8_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

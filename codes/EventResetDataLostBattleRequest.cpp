@@ -10,14 +10,14 @@ void EventResetDataLostBattleRequest__beginRequest(
         int32_t resetIdx,
         const MethodInfo *method)
 {
-  if ( (byte_593A225 & 1) == 0 )
+  if ( (byte_5972402 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19264/*"dataLostBattleId"*/);
-    sub_21FFC50(&StringLiteral_21205/*"idx"*/);
-    byte_593A225 = 1;
+    sub_2213A60(&StringLiteral_19305/*"dataLostBattleId"*/);
+    sub_2213A60(&StringLiteral_21246/*"idx"*/);
+    byte_5972402 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19264/*"dataLostBattleId"*/, dataLostBattleId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21205/*"idx"*/, resetIdx, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19305/*"dataLostBattleId"*/, dataLostBattleId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21246/*"idx"*/, resetIdx, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -28,16 +28,16 @@ System_String_o *EventResetDataLostBattleRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A224 & 1) == 0 )
+  if ( (byte_5972401 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_19984/*"event/resetDataLostBattle"*/);
-    byte_593A224 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20026/*"event/resetDataLostBattle"*/);
+    byte_5972401 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_19984/*"event/resetDataLostBattle"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20026/*"event/resetDataLostBattle"*/, 0);
 }
 
 
@@ -52,17 +52,17 @@ void EventResetDataLostBattleRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_593A226 & 1) == 0 )
+  if ( (byte_5972403 & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A226 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972403 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(124, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_51257228(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
@@ -71,7 +71,7 @@ void EventResetDataLostBattleRequest__requestCompleted(
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_23290/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_23336/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

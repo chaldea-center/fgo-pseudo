@@ -2,10 +2,10 @@ void TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *thi
 {
   __int64 v2; // x2
 
-  if ( (byte_5936F32 & 1) == 0 )
+  if ( (byte_596F08C & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectComponent_TypeInfo);
-    byte_5936F32 = 1;
+    sub_2213A60(&CommonEffectComponent_TypeInfo);
+    byte_596F08C = 1;
   }
   if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method, v2);
@@ -63,22 +63,22 @@ void TitleInfoEventOpenHeaderEffect__setup(
   int32_t v28; // [xsp+Ch] [xbp-34h] BYREF
 
   v28 = eventId;
-  if ( (byte_5936F31 & 1) == 0 )
+  if ( (byte_596F08B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17172/*"_anim"*/);
-    sub_21FFC50(&StringLiteral_19670/*"ef_mapnamechange_"*/);
-    byte_5936F31 = 1;
+    sub_2213A60(&StringLiteral_17208/*"_anim"*/);
+    sub_2213A60(&StringLiteral_19712/*"ef_mapnamechange_"*/);
+    byte_596F08B = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v28, 0);
-  v9 = System_String__Concat_75481624(
-         (System_String_o *)StringLiteral_19670/*"ef_mapnamechange_"*/,
+  v9 = System_String__Concat_75694928(
+         (System_String_o *)StringLiteral_19712/*"ef_mapnamechange_"*/,
          v8,
-         (System_String_o *)StringLiteral_17172/*"_anim"*/,
+         (System_String_o *)StringLiteral_17208/*"_anim"*/,
          0);
   this->fields.baseName = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11, v12, v13, v14, v15);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.changeUiCallback,
     (int32_t)changeUiCallback,
     v16,
@@ -88,7 +88,7 @@ void TitleInfoEventOpenHeaderEffect__setup(
     v20,
     v21);
   this->fields.animEndCallback = endCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animEndCallback,
     (int32_t)endCallback,
     v22,

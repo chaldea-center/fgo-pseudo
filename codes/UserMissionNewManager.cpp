@@ -25,17 +25,17 @@ void UserMissionNewManager___cctor(const MethodInfo *method)
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_5939C53 & 1) == 0 )
+  if ( (byte_5971E17 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_6944/*"Fgo_20160323_1"*/);
-    byte_5939C53 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_6956/*"Fgo_20160323_1"*/);
+    byte_5971E17 = 1;
   }
-  v7 = StringLiteral_6944/*"Fgo_20160323_1"*/;
-  UserMissionNewManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6944/*"Fgo_20160323_1"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_6956/*"Fgo_20160323_1"*/;
+  UserMissionNewManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6956/*"Fgo_20160323_1"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UserMissionNewManager_TypeInfo->static_fields,
     v7,
     v1,
@@ -46,13 +46,13 @@ void UserMissionNewManager___cctor(const MethodInfo *method)
     v6);
   v8 = System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo;
   *(_WORD *)&UserMissionNewManager_TypeInfo->static_fields->isModfiy = 0;
-  v9 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v8);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
   static_fields = UserMissionNewManager_TypeInfo->static_fields;
   static_fields->missionNewInfoList = (struct System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__o *)v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->missionNewInfoList,
     (int32_t)v9,
     v11,
@@ -61,13 +61,13 @@ void UserMissionNewManager___cctor(const MethodInfo *method)
     v14,
     v15,
     v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__);
   v18 = UserMissionNewManager_TypeInfo->static_fields;
   v18->oldNewInfoList = (struct System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__o *)v17;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->oldNewInfoList, (int32_t)v17, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->oldNewInfoList, (int32_t)v17, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -85,12 +85,12 @@ void UserMissionNewManager__ClearSaveDataList(const MethodInfo *method)
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_5939C4E & 1) == 0 )
+  if ( (byte_5971E12 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C4E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E12 = 1;
   }
   v2 = UserMissionNewManager_TypeInfo;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -110,7 +110,7 @@ void UserMissionNewManager__ClearSaveDataList(const MethodInfo *method)
     missionNewInfoList = UserMissionNewManager_TypeInfo->static_fields->missionNewInfoList;
     if ( !missionNewInfoList )
 LABEL_14:
-      sub_21FFECC(v2, v1);
+      sub_2213CDC(v2, v1);
   }
   size = missionNewInfoList->fields._size;
   v5 = missionNewInfoList->fields._version + 1;
@@ -148,14 +148,14 @@ void UserMissionNewManager__DeleteSaveData(const MethodInfo *method)
   int v13; // w9
   struct UserMissionNewManager_StaticFields *static_fields; // x8
 
-  if ( (byte_5939C4D & 1) == 0 )
+  if ( (byte_5971E11 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C4D = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E11 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v1);
@@ -163,7 +163,7 @@ void UserMissionNewManager__DeleteSaveData(const MethodInfo *method)
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v2);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventDetailMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventDetailMaster___);
     if ( Master_object )
     {
       EventIdsByMission = (System_Collections_ICollection_o *)EventDetailMaster__GetEventIdsByMission(
@@ -181,7 +181,7 @@ void UserMissionNewManager__DeleteSaveData(const MethodInfo *method)
           do
           {
             if ( v8 >= (unsigned int)monitor )
-              sub_21FFED4(IsNullOrEmpty);
+              sub_2213CE4(IsNullOrEmpty);
             v9 = *((_DWORD *)&EventIdsByMission[2].klass + v8);
             if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UserMissionNewManager_TypeInfo, v6);
@@ -240,7 +240,7 @@ LABEL_27:
       }
     }
 LABEL_32:
-    sub_21FFECC(IsNullOrEmpty, v6);
+    sub_2213CDC(IsNullOrEmpty, v6);
   }
 }
 
@@ -300,14 +300,14 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
   UserMissionNewManager_c *v52; // x0
   System_IO_BinaryReader_o *v53; // [xsp+28h] [xbp-48h]
 
-  if ( (byte_5939C4F & 1) == 0 )
+  if ( (byte_5971E13 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryReader_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Add__);
-    sub_21FFC50(&UserMissionNewManager_UserMissionNewInfo_TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C4F = 1;
+    sub_2213A60(&System_IO_BinaryReader_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Add__);
+    sub_2213A60(&UserMissionNewManager_UserMissionNewInfo_TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E13 = 1;
   }
   v2 = (const MethodInfo *)UserMissionNewManager_TypeInfo;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -324,11 +324,11 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UserMissionNewManager_TypeInfo, v4);
     UserMissionNewManager__ClearSaveDataList((const MethodInfo *)v5);
     v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0);
-    v7 = (System_IO_BinaryReader_o *)sub_21FFEBC(System_IO_BinaryReader_TypeInfo);
+    v7 = (System_IO_BinaryReader_o *)sub_2213CCC(System_IO_BinaryReader_TypeInfo);
     System_IO_BinaryReader___ctor(v7, v6, 0);
     v53 = v7;
     if ( !v7 )
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     v11 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
                                v7,
                                v7->klass->vtable._22_ReadString.method);
@@ -345,7 +345,7 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
     else
     {
       if ( !v53 )
-        sub_21FFECC(0, v13);
+        sub_2213CDC(0, v13);
       v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v53->klass->vtable._9_ReadBoolean.methodPtr)(
               v53,
               v53->klass->vtable._9_ReadBoolean.method);
@@ -372,10 +372,10 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
           v28 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v53->klass->vtable._9_ReadBoolean.methodPtr)(
                   v53,
                   v53->klass->vtable._9_ReadBoolean.method);
-          v29 = sub_21FFEBC(UserMissionNewManager_UserMissionNewInfo_TypeInfo);
+          v29 = sub_2213CCC(UserMissionNewManager_UserMissionNewInfo_TypeInfo);
           System_Object___ctor((Il2CppObject *)v29, 0);
           if ( !v29 )
-            sub_21FFECC(v30, v31);
+            sub_2213CDC(v30, v31);
           v38 = UserMissionNewManager_TypeInfo;
           *(_DWORD *)(v29 + 16) = v26;
           *(_DWORD *)(v29 + 20) = v27;
@@ -392,7 +392,7 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
                 ++missionNewInfoList->fields._version,
                 !items) )
           {
-            sub_21FFECC(missionNewInfoList, v31);
+            sub_2213CDC(missionNewInfoList, v31);
           }
           size = missionNewInfoList->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -400,14 +400,14 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
             System_Collections_Generic_List_object___AddWithResize(
               missionNewInfoList,
               (Il2CppObject *)v29,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
           }
           else
           {
             v43 = &items->obj.klass + size;
             missionNewInfoList->fields._size = size + 1;
             v43[4] = (Il2CppClass *)v29;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v43 + 4), v29, v32, v33, v34, v35, v36, v37);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v43 + 4), v29, v32, v33, v34, v35, v36, v37);
           }
           --v25;
         }
@@ -422,7 +422,7 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
       static_fields = v44->static_fields;
       v46 = static_fields->missionNewInfoList;
       static_fields->oldNewInfoList = v46;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&static_fields->oldNewInfoList,
         (int32_t)v46,
         v19,
@@ -452,7 +452,7 @@ bool UserMissionNewManager__ReadData(const MethodInfo *method)
       else
       {
 LABEL_34:
-        v50 = sub_2237E2C(v53, System_IDisposable_TypeInfo, 0);
+        v50 = sub_224BC3C(v53, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v50)(v53, *(_QWORD *)(v50 + 8));
     }
@@ -481,14 +481,14 @@ void UserMissionNewManager__SetClearNewFlg(const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o *v8; // [xsp+10h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_5939C52 & 1) == 0 )
+  if ( (byte_5971E16 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C52 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E16 = 1;
   }
   v2 = UserMissionNewManager_TypeInfo;
   memset(&v9, 0, sizeof(v9));
@@ -499,22 +499,22 @@ void UserMissionNewManager__SetClearNewFlg(const MethodInfo *method)
   }
   missionNewInfoList = (System_Collections_Generic_List_object__o *)v2->static_fields->missionNewInfoList;
   if ( !missionNewInfoList )
-    sub_21FFECC(0, v1);
+    sub_2213CDC(0, v1);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     missionNewInfoList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
   v7 = 0;
   v8 = &v9;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v9,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
     if ( !v4 )
       break;
     if ( !v9.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     if ( *((_BYTE *)&v9.fields._current->klass + (unsigned __int64)off_18) )
     {
       v6 = UserMissionNewManager_TypeInfo;
@@ -529,7 +529,7 @@ void UserMissionNewManager__SetClearNewFlg(const MethodInfo *method)
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
 }
 
 
@@ -555,17 +555,17 @@ bool UserMissionNewManager__SetIsNewMissionInfo(int32_t targetMissionId, const M
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-58h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_5939C51 & 1) == 0 )
+  if ( (byte_5971E15 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
-    sub_21FFC50(&UserMissionNewManager_UserMissionNewInfo_TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C51 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
+    sub_2213A60(&UserMissionNewManager_UserMissionNewInfo_TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E15 = 1;
   }
   missionNewInfoList = UserMissionNewManager_TypeInfo;
   memset(&v22, 0, sizeof(v22));
@@ -589,7 +589,7 @@ bool UserMissionNewManager__SetIsNewMissionInfo(int32_t targetMissionId, const M
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v21,
       oldNewInfoList,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__GetEnumerator__);
     v22 = v21;
     v21.fields._list = 0;
     *(_QWORD *)&v21.fields._index = &v22;
@@ -597,25 +597,25 @@ bool UserMissionNewManager__SetIsNewMissionInfo(int32_t targetMissionId, const M
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v22,
-             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
+             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__MoveNext__);
       if ( !v5 )
         break;
       if ( !v22.fields._current )
-        sub_21FFECC(v5, v6);
+        sub_2213CDC(v5, v6);
       if ( HIDWORD(v22.fields._current[1].klass) == targetMissionId )
       {
         v7 = LOBYTE(v22.fields._current[1].monitor) != 0;
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v22,
-          (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
+          (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
         return v7;
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v22,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UserMissionNewManager_UserMissionNewInfo__Dispose__);
   }
-  v8 = sub_21FFEBC(UserMissionNewManager_UserMissionNewInfo_TypeInfo);
+  v8 = sub_2213CCC(UserMissionNewManager_UserMissionNewInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   missionNewInfoList = UserMissionNewManager_TypeInfo;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -634,7 +634,7 @@ bool UserMissionNewManager__SetIsNewMissionInfo(int32_t targetMissionId, const M
         !name) )
   {
 LABEL_26:
-    sub_21FFECC(missionNewInfoList, method);
+    sub_2213CDC(missionNewInfoList, method);
   }
   namespaze_low = SLODWORD(missionNewInfoList->_1.namespaze);
   if ( (unsigned int)namespaze_low >= *((_DWORD *)name + 6) )
@@ -642,14 +642,14 @@ LABEL_26:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)missionNewInfoList,
       (Il2CppObject *)v8,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &name[8 * namespaze_low];
     LODWORD(missionNewInfoList->_1.namespaze) = namespaze_low + 1;
     *((_QWORD *)v19 + 4) = v8;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 32), v8, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 32), v8, v9, v10, v11, v12, v13, v14);
   }
   v7 = 1;
   UserMissionNewManager_TypeInfo->static_fields->isModfiy = 1;
@@ -683,15 +683,15 @@ bool UserMissionNewManager__WriteData(const MethodInfo *method)
   __int64 v23; // x0
   System_IO_BinaryWriter_o *v24; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_5939C50 & 1) == 0 )
+  if ( (byte_5971E14 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryWriter_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Item__);
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C50 = 1;
+    sub_2213A60(&System_IO_BinaryWriter_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Item__);
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E14 = 1;
   }
   v2 = UserMissionNewManager_TypeInfo;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -721,8 +721,8 @@ bool UserMissionNewManager__WriteData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UserMissionNewManager_TypeInfo, v1);
   SaveFileName = UserMissionNewManager__getSaveFileName((const MethodInfo *)v6);
   v8 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0);
-  v9 = (System_IO_BinaryWriter_o *)sub_21FFEBC(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_76739708(v9, v8, 0);
+  v9 = (System_IO_BinaryWriter_o *)sub_2213CCC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_76953012(v9, v8, 0);
   v11 = UserMissionNewManager_TypeInfo;
   v24 = v9;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -732,14 +732,14 @@ bool UserMissionNewManager__WriteData(const MethodInfo *method)
   }
   missionNewInfoList = v11->static_fields->missionNewInfoList;
   if ( !missionNewInfoList )
-    sub_21FFECC(v11, v10);
+    sub_2213CDC(v11, v10);
   if ( !v9 )
-    sub_21FFECC(0, v10);
+    sub_2213CDC(0, v10);
   size = missionNewInfoList->fields._size;
   v24->klass->vtable._22_Write.methodPtr();
   v24->klass->vtable._8_Write.methodPtr();
   if ( !v24 )
-    sub_21FFECC(0, v14);
+    sub_2213CDC(0, v14);
   v24->klass->vtable._17_Write.methodPtr();
   if ( size >= 1 )
   {
@@ -753,12 +753,12 @@ bool UserMissionNewManager__WriteData(const MethodInfo *method)
       }
       v18 = (System_Collections_Generic_List_object__o *)v17->static_fields->missionNewInfoList;
       if ( !v18 )
-        sub_21FFECC(0, v15);
+        sub_2213CDC(0, v15);
       if ( !System_Collections_Generic_List_object___get_Item(
               v18,
               i,
-              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Item__) )
-        sub_21FFECC(0, v19);
+              (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__get_Item__) )
+        sub_2213CDC(0, v19);
       v24->klass->vtable._17_Write.methodPtr();
       v24->klass->vtable._17_Write.methodPtr();
       v24->klass->vtable._8_Write.methodPtr();
@@ -781,7 +781,7 @@ bool UserMissionNewManager__WriteData(const MethodInfo *method)
   else
   {
 LABEL_30:
-    v23 = sub_2237E2C(v24, System_IDisposable_TypeInfo, 0);
+    v23 = sub_224BC3C(v24, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v24, *(_QWORD *)(v23 + 8));
   return 1;
@@ -796,11 +796,11 @@ System_String_o *UserMissionNewManager__getSaveFileName(const MethodInfo *method
   UserMissionNewManager_c *v4; // x8
   System_String_o *v5; // x19
 
-  if ( (byte_5939C4C & 1) == 0 )
+  if ( (byte_5971E10 & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    byte_5939C4C = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    byte_5971E10 = 1;
   }
   if ( !*(&AndroidUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo, v1);
@@ -812,7 +812,7 @@ System_String_o *UserMissionNewManager__getSaveFileName(const MethodInfo *method
     j_il2cpp_runtime_class_init_0(UserMissionNewManager_TypeInfo, v3);
     v4 = UserMissionNewManager_TypeInfo;
   }
-  return System_String__Concat_75438412(v5, v4->static_fields->saveName, 0);
+  return System_String__Concat_75651716(v5, v4->static_fields->saveName, 0);
 }
 
 
@@ -820,28 +820,28 @@ System_String_o *UserMissionNewManager__getSaveFileNameByEvent(int32_t eventId, 
 {
   __int64 v3; // x1
   System_String_o *DatFileSavePath; // x20
-  System_String_o *FileName_47352800; // x2
+  System_String_o *FileName_47383344; // x2
 
-  if ( (byte_5939C4B & 1) == 0 )
+  if ( (byte_5971E0F & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&DatFileName_TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_5939C4B = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&DatFileName_TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_5971E0F = 1;
   }
   if ( !*(&AndroidUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo, method);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0);
   if ( !*(&DatFileName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo, v3);
-  FileName_47352800 = DatFileName__getFileName_47352800(25, eventId, 0, 0);
-  return System_String__Concat_75481624(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName_47352800, 0);
+  FileName_47383344 = DatFileName__getFileName_47383344(25, eventId, 0, 0);
+  return System_String__Concat_75694928(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName_47383344, 0);
 }
 
 
 void UserMissionNewManager__setSaveFileName(int32_t eventId, const MethodInfo *method)
 {
-  System_String_o *FileName_47352800; // x0
+  System_String_o *FileName_47383344; // x0
   System_String_o *v4; // x0
   __int64 v5; // x1
   System_String_o *v6; // x2
@@ -854,17 +854,17 @@ void UserMissionNewManager__setSaveFileName(int32_t eventId, const MethodInfo *m
   System_String_o *v13; // x20
   struct UserMissionNewManager_StaticFields *static_fields; // x0
 
-  if ( (byte_5939C4A & 1) == 0 )
+  if ( (byte_5971E0E & 1) == 0 )
   {
-    sub_21FFC50(&DatFileName_TypeInfo);
-    sub_21FFC50(&UserMissionNewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_5939C4A = 1;
+    sub_2213A60(&DatFileName_TypeInfo);
+    sub_2213A60(&UserMissionNewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_5971E0E = 1;
   }
   if ( !*(&DatFileName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo, method);
-  FileName_47352800 = DatFileName__getFileName_47352800(25, eventId, 0, 0);
-  v4 = System_String__Concat_75438412((System_String_o *)StringLiteral_1123/*"/"*/, FileName_47352800, 0);
+  FileName_47383344 = DatFileName__getFileName_47383344(25, eventId, 0, 0);
+  v4 = System_String__Concat_75651716((System_String_o *)StringLiteral_1123/*"/"*/, FileName_47383344, 0);
   v12 = UserMissionNewManager_TypeInfo;
   v13 = v4;
   if ( !*(&UserMissionNewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -874,7 +874,7 @@ void UserMissionNewManager__setSaveFileName(int32_t eventId, const MethodInfo *m
   }
   static_fields = v12->static_fields;
   static_fields->saveName = v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->saveName, (int32_t)v13, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->saveName, (int32_t)v13, v6, v7, v8, v9, v10, v11);
   UserMissionNewManager_TypeInfo->static_fields->currentEventId = eventId;
 }
 

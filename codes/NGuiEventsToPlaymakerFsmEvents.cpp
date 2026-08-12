@@ -16,15 +16,15 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(
   const MethodInfo *v9; // x3
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59363EE & 1) == 0 )
+  if ( (byte_596E548 & 1) == 0 )
   {
-    sub_21FFC50(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_59363EE = 1;
+    sub_2213A60(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_596E548 = 1;
   }
   v11 = fsmEventDelegate;
   v6 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v11);
   FsmEventEnumValue = (NGuiEventsToPlaymakerFsmEvents_o *)NGuiPlayMakerProxy__GetFsmEventEnumValue(v6, v7);
-  return NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45327240(
+  return NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45351504(
            FsmEventEnumValue,
            fsm,
            (System_String_o *)FsmEventEnumValue,
@@ -32,7 +32,7 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(
 }
 
 
-bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45327240(
+bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45351504(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         System_String_o *fsmEvent,
@@ -71,7 +71,7 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45327240(
                                                    0);
       if ( !this )
         goto LABEL_26;
-      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_75473208((System_String_o *)this, fsmEvent, 0);
+      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_75686512((System_String_o *)this, fsmEvent, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
         return 1;
       m_CancellationTokenSource = (int)v7->fields.m_CancellationTokenSource;
@@ -81,7 +81,7 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45327240(
   this = (NGuiEventsToPlaymakerFsmEvents_o *)PlayMakerFSM__get_FsmStates(fsm, 0);
   if ( !this )
 LABEL_26:
-    sub_21FFECC(this, fsm);
+    sub_2213CDC(this, fsm);
   m_CancellationTokenSource_low = LODWORD(this->fields.m_CancellationTokenSource);
   v10 = this;
   if ( (int)m_CancellationTokenSource_low >= 1 )
@@ -116,7 +116,7 @@ LABEL_23:
                                                    0);
       if ( !this )
         goto LABEL_26;
-      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_75473208((System_String_o *)this, fsmEvent, 0);
+      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_75686512((System_String_o *)this, fsmEvent, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
         return 1;
       v14 = *(_DWORD *)(v13 + 24);
@@ -124,7 +124,7 @@ LABEL_23:
         goto LABEL_23;
     }
 LABEL_27:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   }
   return 0;
 }
@@ -142,76 +142,76 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation(
   const MethodInfo *v10; // x3
   int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_59363ED & 1) == 0 )
+  if ( (byte_596E547 & 1) == 0 )
   {
-    sub_21FFC50(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_59363ED = 1;
+    sub_2213A60(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_596E547 = 1;
   }
   v12 = fsmEventDelegate;
   v7 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v12);
   FsmEventEnumValue = NGuiPlayMakerProxy__GetFsmEventEnumValue(v7, v8);
-  return NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_45327076(this, fsm, FsmEventEnumValue, v10);
+  return NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_45351340(this, fsm, FsmEventEnumValue, v10);
 }
 
 
-bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_45327076(
+bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_45351340(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         System_String_o *fsmEvent,
         const MethodInfo *method)
 {
-  HutongGames_PlayMaker_FsmEvent_array *DoesTargetImplementsEvent_45327240; // x0
+  HutongGames_PlayMaker_FsmEvent_array *DoesTargetImplementsEvent_45351504; // x0
   __int64 v7; // x1
   int max_length; // w8
   HutongGames_PlayMaker_FsmEvent_array *v9; // x20
   __int64 v10; // x21
   HutongGames_PlayMaker_FsmEvent_o *v11; // x8
 
-  DoesTargetImplementsEvent_45327240 = (HutongGames_PlayMaker_FsmEvent_array *)NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45327240(
+  DoesTargetImplementsEvent_45351504 = (HutongGames_PlayMaker_FsmEvent_array *)NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_45351504(
                                                                                  this,
                                                                                  fsm,
                                                                                  fsmEvent,
                                                                                  method);
-  if ( ((unsigned __int8)DoesTargetImplementsEvent_45327240 & 1) == 0 )
+  if ( ((unsigned __int8)DoesTargetImplementsEvent_45351504 & 1) == 0 )
   {
     if ( !fsm )
       goto LABEL_14;
-    DoesTargetImplementsEvent_45327240 = PlayMakerFSM__get_FsmEvents(fsm, 0);
-    if ( !DoesTargetImplementsEvent_45327240 )
+    DoesTargetImplementsEvent_45351504 = PlayMakerFSM__get_FsmEvents(fsm, 0);
+    if ( !DoesTargetImplementsEvent_45351504 )
       goto LABEL_14;
-    max_length = DoesTargetImplementsEvent_45327240->max_length;
-    v9 = DoesTargetImplementsEvent_45327240;
+    max_length = DoesTargetImplementsEvent_45351504->max_length;
+    v9 = DoesTargetImplementsEvent_45351504;
     if ( max_length >= 1 )
     {
       v10 = 0;
       while ( 1 )
       {
         if ( (unsigned int)v10 >= max_length )
-          sub_21FFED4(DoesTargetImplementsEvent_45327240);
+          sub_2213CE4(DoesTargetImplementsEvent_45351504);
         v11 = v9->m_Items[v10];
         if ( !v11 )
           break;
-        DoesTargetImplementsEvent_45327240 = (HutongGames_PlayMaker_FsmEvent_array *)v11->fields.name;
-        if ( !DoesTargetImplementsEvent_45327240 )
+        DoesTargetImplementsEvent_45351504 = (HutongGames_PlayMaker_FsmEvent_array *)v11->fields.name;
+        if ( !DoesTargetImplementsEvent_45351504 )
           break;
-        DoesTargetImplementsEvent_45327240 = (HutongGames_PlayMaker_FsmEvent_array *)System_String__Equals_75473208(
-                                                                                       (System_String_o *)DoesTargetImplementsEvent_45327240,
+        DoesTargetImplementsEvent_45351504 = (HutongGames_PlayMaker_FsmEvent_array *)System_String__Equals_75686512(
+                                                                                       (System_String_o *)DoesTargetImplementsEvent_45351504,
                                                                                        fsmEvent,
                                                                                        0);
-        if ( ((unsigned __int8)DoesTargetImplementsEvent_45327240 & 1) == 0 )
+        if ( ((unsigned __int8)DoesTargetImplementsEvent_45351504 & 1) == 0 )
         {
           max_length = v9->max_length;
           if ( (int)++v10 < max_length )
             continue;
         }
-        return (unsigned __int8)DoesTargetImplementsEvent_45327240 & 1;
+        return (unsigned __int8)DoesTargetImplementsEvent_45351504 & 1;
       }
 LABEL_14:
-      sub_21FFECC(DoesTargetImplementsEvent_45327240, v7);
+      sub_2213CDC(DoesTargetImplementsEvent_45351504, v7);
     }
   }
-  LOBYTE(DoesTargetImplementsEvent_45327240) = 0;
-  return (unsigned __int8)DoesTargetImplementsEvent_45327240 & 1;
+  LOBYTE(DoesTargetImplementsEvent_45351504) = 0;
+  return (unsigned __int8)DoesTargetImplementsEvent_45351504 & 1;
 }
 
 
@@ -229,13 +229,13 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
   const MethodInfo *v10; // x1
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59363EF & 1) == 0 )
+  if ( (byte_596E549 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_59363EF = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_596E549 = 1;
   }
   customEventsKeys = (System_Collections_Generic_List_T__o *)this->fields.customEventsKeys;
   if ( !customEventsKeys )
@@ -243,7 +243,7 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
   v6 = System_Collections_Generic_List_Int32Enum___Contains(
          customEventsKeys,
          event,
-         (const MethodInfo_4435CD0 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
+         (const MethodInfo_4469E08 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
   targetFSM = this->fields.targetFSM;
   if ( v6 )
   {
@@ -254,13 +254,13 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
       customEventsKeys = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___IndexOf(
                                                                    customEventsKeys,
                                                                    event,
-                                                                   (const MethodInfo_44365AC *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
+                                                                   (const MethodInfo_446A6E4 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
       if ( customEventsValues )
       {
         customEventsKeys = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_object___get_Item(
                                                                      (System_Collections_Generic_List_object__o *)customEventsValues,
                                                                      (int32_t)customEventsKeys,
-                                                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( targetFSM )
         {
           PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)customEventsKeys, 0);
@@ -269,7 +269,7 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
       }
     }
 LABEL_11:
-    sub_21FFECC(customEventsKeys, *(_QWORD *)&event);
+    sub_2213CDC(customEventsKeys, *(_QWORD *)&event);
   }
   v11 = event;
   v9 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v11);
@@ -303,11 +303,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
   const MethodInfo *v21; // x2
   __int64 v22; // x20
 
-  if ( (byte_59363FA & 1) == 0 )
+  if ( (byte_596E554 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59363FA = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E554 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -321,7 +321,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
       if ( !usage )
         goto LABEL_27;
       if ( LODWORD(usage->max_length) <= 0xE )
-        sub_21FFED4(value);
+        sub_2213CE4(value);
       v10 = UnityEngine_Object_TypeInfo;
       input = (UnityEngine_Object_o *)this->fields._input;
       ++usage->m_Items[14];
@@ -342,7 +342,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
         if ( !v13 )
           goto LABEL_27;
         *(_QWORD *)(v13 + 80) = value;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 80), (int32_t)value, v14, v15, v16, v17, v18, v19);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 80), (int32_t)value, v14, v15, v16, v17, v18, v19);
       }
       toggle = (UnityEngine_Object_o *)this->fields._toggle;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -368,7 +368,7 @@ LABEL_26:
         }
       }
 LABEL_27:
-      sub_21FFECC(value, v7);
+      sub_2213CDC(value, v7);
     }
   }
 }
@@ -392,12 +392,12 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v17; // x2
 
-  if ( (byte_59363F0 & 1) == 0 )
+  if ( (byte_596E54A & 1) == 0 )
   {
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F0 = 1;
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54A = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -409,9 +409,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
     {
       usage = this->fields._usage;
       if ( !usage )
-        sub_21FFECC(v6, v7);
+        sub_2213CDC(v6, v7);
       if ( !LODWORD(usage->max_length) )
-        sub_21FFED4(v6);
+        sub_2213CE4(v6);
       v15 = UICamera_TypeInfo;
       ++usage->m_Items[0];
       if ( !*(&v15->_2.cctor_finished + 1) )
@@ -421,7 +421,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
       }
       currentTouch = v15->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v8,
@@ -461,13 +461,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
 
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_59363F4 & 1) == 0 )
+  if ( (byte_596E54E & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F4 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54E = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -484,7 +484,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
       }
       EventData = (float *)v16->static_fields->EventData;
       if ( !EventData )
-        sub_21FFECC(v16, v9);
+        sub_2213CDC(v16, v9);
       EventData[17] = x;
       EventData[18] = y;
       EventData[19] = 0.0;
@@ -496,7 +496,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
       }
       currentTouch = v18->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v10,
@@ -539,13 +539,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v26; // x2
 
-  if ( (byte_59363F5 & 1) == 0 )
+  if ( (byte_596E54F & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F5 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54F = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -562,9 +562,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
       }
       EventData = v15->static_fields->EventData;
       if ( !EventData )
-        sub_21FFECC(0, v8);
+        sub_2213CDC(0, v8);
       EventData->fields.GameObjectData = go;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&EventData->fields.GameObjectData,
         (int32_t)go,
         v9,
@@ -581,7 +581,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
       }
       currentTouch = v24->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v18,
@@ -601,155 +601,153 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   __int64 v2; // x2
   struct System_Int32_array *usage; // x8
   Il2CppType *v5; // x21
-  System_RuntimeTypeHandle_o v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
   System_Type_o *TypeFromHandle; // x21
   System_Collections_Generic_List_object__o *Names; // x0
-  __int64 v11; // x1
-  struct System_Int32_array *v12; // x0
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
+  __int64 v10; // x1
+  struct System_Int32_array *v11; // x0
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
   UnityEngine_Object_o *targetFSM; // x21
-  __int64 v20; // x1
-  __int64 v21; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
   Il2CppObject *Component_object; // x0
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  UnityEngine_Object_o *v29; // x20
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  UnityEngine_Object_o *v28; // x20
+  const MethodInfo *v29; // x3
   const MethodInfo *v30; // x3
-  const MethodInfo *v31; // x3
-  Il2CppObject *v32; // x0
-  System_String_o *v33; // x2
-  System_String_o *v34; // x3
-  int32_t v35; // w4
-  int32_t v36; // w5
-  bool v37; // w6
-  bool v38; // w7
-  __int64 v39; // x1
-  __int64 v40; // x2
+  Il2CppObject *v31; // x0
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  __int64 v38; // x1
+  __int64 v39; // x2
   UnityEngine_Object_o *input; // x20
-  EventDelegate_o *v42; // x20
-  System_String_o *v43; // x2
-  System_String_o *v44; // x3
-  int32_t v45; // w4
-  int32_t v46; // w5
-  bool v47; // w6
-  bool v48; // w7
-  struct UIInput_o *v49; // x8
+  EventDelegate_o *v41; // x20
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  struct UIInput_o *v48; // x8
   struct System_Object_array *items; // x8
-  _QWORD *v51; // x9
+  _QWORD *v50; // x9
   __int64 size; // x10
-  Il2CppClass **v53; // x8
-  const MethodInfo *v54; // x3
-  Il2CppObject *v55; // x0
-  System_String_o *v56; // x2
-  System_String_o *v57; // x3
-  int32_t v58; // w4
-  int32_t v59; // w5
-  bool v60; // w6
-  bool v61; // w7
-  __int64 v62; // x1
-  __int64 v63; // x2
+  Il2CppClass **v52; // x8
+  const MethodInfo *v53; // x3
+  Il2CppObject *v54; // x0
+  System_String_o *v55; // x2
+  System_String_o *v56; // x3
+  int32_t v57; // w4
+  int32_t v58; // w5
+  bool v59; // w6
+  bool v60; // w7
+  __int64 v61; // x1
+  __int64 v62; // x2
   UnityEngine_Object_o *pBar; // x20
-  EventDelegate_o *v65; // x20
-  System_String_o *v66; // x2
-  System_String_o *v67; // x3
-  int32_t v68; // w4
-  int32_t v69; // w5
-  bool v70; // w6
-  bool v71; // w7
-  struct UIProgressBar_o *v72; // x8
-  struct System_Object_array *v73; // x8
-  _QWORD *v74; // x9
-  __int64 v75; // x10
-  Il2CppClass **v76; // x8
-  Il2CppObject *v77; // x0
-  System_String_o *v78; // x2
-  System_String_o *v79; // x3
-  int32_t v80; // w4
-  int32_t v81; // w5
-  bool v82; // w6
-  bool v83; // w7
-  __int64 v84; // x1
-  __int64 v85; // x2
-  UnityEngine_Object_o *v86; // x20
-  EventDelegate_o *v87; // x20
-  System_String_o *v88; // x2
-  System_String_o *v89; // x3
-  int32_t v90; // w4
-  int32_t v91; // w5
-  bool v92; // w6
-  bool v93; // w7
-  struct UIInput_o *v94; // x8
-  struct System_Object_array *v95; // x8
-  _QWORD *v96; // x9
-  __int64 v97; // x10
-  Il2CppClass **v98; // x8
-  Il2CppObject *v99; // x0
-  System_String_o *v100; // x2
-  System_String_o *v101; // x3
-  int32_t v102; // w4
-  int32_t v103; // w5
-  bool v104; // w6
-  bool v105; // w7
-  __int64 v106; // x1
-  __int64 v107; // x2
+  EventDelegate_o *v64; // x20
+  System_String_o *v65; // x2
+  System_String_o *v66; // x3
+  int32_t v67; // w4
+  int32_t v68; // w5
+  bool v69; // w6
+  bool v70; // w7
+  struct UIProgressBar_o *v71; // x8
+  struct System_Object_array *v72; // x8
+  _QWORD *v73; // x9
+  __int64 v74; // x10
+  Il2CppClass **v75; // x8
+  Il2CppObject *v76; // x0
+  System_String_o *v77; // x2
+  System_String_o *v78; // x3
+  int32_t v79; // w4
+  int32_t v80; // w5
+  bool v81; // w6
+  bool v82; // w7
+  __int64 v83; // x1
+  __int64 v84; // x2
+  UnityEngine_Object_o *v85; // x20
+  EventDelegate_o *v86; // x20
+  System_String_o *v87; // x2
+  System_String_o *v88; // x3
+  int32_t v89; // w4
+  int32_t v90; // w5
+  bool v91; // w6
+  bool v92; // w7
+  struct UIInput_o *v93; // x8
+  struct System_Object_array *v94; // x8
+  _QWORD *v95; // x9
+  __int64 v96; // x10
+  Il2CppClass **v97; // x8
+  Il2CppObject *v98; // x0
+  System_String_o *v99; // x2
+  System_String_o *v100; // x3
+  int32_t v101; // w4
+  int32_t v102; // w5
+  bool v103; // w6
+  bool v104; // w7
+  __int64 v105; // x1
+  __int64 v106; // x2
   UnityEngine_Object_o *toggle; // x20
-  EventDelegate_o *v109; // x20
-  System_String_o *v110; // x2
-  System_String_o *v111; // x3
-  int32_t v112; // w4
-  int32_t v113; // w5
-  bool v114; // w6
-  bool v115; // w7
-  struct UIToggle_o *v116; // x8
+  EventDelegate_o *v108; // x20
+  System_String_o *v109; // x2
+  System_String_o *v110; // x3
+  int32_t v111; // w4
+  int32_t v112; // w5
+  bool v113; // w6
+  bool v114; // w7
+  struct UIToggle_o *v115; // x8
   System_Collections_Generic_List_object__o *onChange; // x8
-  struct System_Object_array *v118; // x9
-  _QWORD *v119; // x10
-  __int64 v120; // x11
-  Il2CppClass **v121; // x0
+  struct System_Object_array *v117; // x9
+  _QWORD *v118; // x10
+  __int64 v119; // x11
+  Il2CppClass **v120; // x0
 
-  if ( (byte_59363EC & 1) == 0 )
+  if ( (byte_596E546 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&NGuiPlayMakerDelegates_var);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_10358/*"OnSubmitChange"*/);
-    sub_21FFC50(&StringLiteral_10353/*"OnSliderChange"*/);
-    sub_21FFC50(&StringLiteral_10221/*"OnChange"*/);
-    byte_59363EC = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&NGuiPlayMakerDelegates_var);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_10371/*"OnSubmitChange"*/);
+    sub_2213A60(&StringLiteral_10366/*"OnSliderChange"*/);
+    sub_2213A60(&StringLiteral_10234/*"OnChange"*/);
+    byte_596E546 = 1;
   }
   usage = this->fields._usage;
   if ( !usage || !usage->max_length )
   {
     v5 = NGuiPlayMakerDelegates_var;
-    if ( !*(_DWORD *)(qword_594C108 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C108, method, v2);
-    v6.fields.value = (intptr_t)v5;
-    TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
-    if ( !*(_DWORD *)(qword_594C0C0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C0C0, v7, v8);
+    if ( !*(_DWORD *)(qword_59843E0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, method, v2);
+    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v5, 0);
+    if ( !*(_DWORD *)(qword_5984398 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_5984398, v6, v7);
     Names = (System_Collections_Generic_List_object__o *)System_Enum__GetNames(TypeFromHandle, 0);
     if ( !Names )
       goto LABEL_63;
-    v12 = (struct System_Int32_array *)sub_21FFD10(int___TypeInfo, (unsigned int)Names->fields._size);
-    this->fields._usage = v12;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._usage, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+    v11 = (struct System_Int32_array *)sub_2213B20(int___TypeInfo, (unsigned int)Names->fields._size);
+    this->fields._usage = v11;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._usage, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -758,49 +756,49 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.targetFSM = (struct PlayMakerFSM_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.targetFSM,
       (int32_t)Component_object,
+      v22,
       v23,
       v24,
       v25,
       v26,
-      v27,
-      v28);
+      v27);
   }
-  v29 = (UnityEngine_Object_o *)this->fields.targetFSM;
+  v28 = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
-  if ( UnityEngine_Object__op_Equality(v29, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
+  if ( UnityEngine_Object__op_Equality(v28, 0, 0) )
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
-  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 10, v30) )
+  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 10, v29) )
   {
-    v32 = UnityEngine_Component__GetComponent_object_(
+    v31 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-    this->fields._input = (struct UIInput_o *)v32;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+    this->fields._input = (struct UIInput_o *)v31;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v31, v32, v33, v34, v35, v36, v37);
     input = (UnityEngine_Object_o *)this->fields._input;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39, v40);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
     if ( UnityEngine_Object__op_Inequality(input, 0, 0) )
     {
-      v42 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-      EventDelegate___ctor(v42, 0);
-      if ( !v42 )
+      v41 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+      EventDelegate___ctor(v41, 0);
+      if ( !v41 )
         goto LABEL_63;
-      EventDelegate__set_target(v42, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v42, (System_String_o *)StringLiteral_10358/*"OnSubmitChange"*/, 0);
-      v49 = this->fields._input;
-      if ( !v49 )
+      EventDelegate__set_target(v41, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v41, (System_String_o *)StringLiteral_10371/*"OnSubmitChange"*/, 0);
+      v48 = this->fields._input;
+      if ( !v48 )
         goto LABEL_63;
-      Names = (System_Collections_Generic_List_object__o *)v49->fields.onSubmit;
+      Names = (System_Collections_Generic_List_object__o *)v48->fields.onSubmit;
       if ( !Names )
         goto LABEL_63;
       items = Names->fields._items;
-      v51 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      v50 = Method_System_Collections_Generic_List_EventDelegate__Add__;
       ++Names->fields._version;
       if ( !items )
         goto LABEL_63;
@@ -809,166 +807,166 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       {
         System_Collections_Generic_List_object___AddWithResize(
           Names,
-          (Il2CppObject *)v42,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+          (Il2CppObject *)v41,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
       }
       else
       {
-        v53 = &items->obj.klass + size;
+        v52 = &items->obj.klass + size;
         Names->fields._size = size + 1;
-        v53[4] = (Il2CppClass *)v42;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v53 + 4), (int32_t)v42, v43, v44, v45, v46, v47, v48);
+        v52[4] = (Il2CppClass *)v41;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v52 + 4), (int32_t)v41, v42, v43, v44, v45, v46, v47);
       }
     }
   }
-  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 11, v31) )
+  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 11, v30) )
   {
-    v55 = UnityEngine_Component__GetComponent_object_(
+    v54 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
-    this->fields._pBar = (struct UIProgressBar_o *)v55;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._pBar, (int32_t)v55, v56, v57, v58, v59, v60, v61);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+    this->fields._pBar = (struct UIProgressBar_o *)v54;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._pBar, (int32_t)v54, v55, v56, v57, v58, v59, v60);
     pBar = (UnityEngine_Object_o *)this->fields._pBar;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v62, v63);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v61, v62);
     if ( UnityEngine_Object__op_Inequality(pBar, 0, 0) )
     {
-      v65 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-      EventDelegate___ctor(v65, 0);
-      if ( !v65 )
+      v64 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+      EventDelegate___ctor(v64, 0);
+      if ( !v64 )
         goto LABEL_63;
-      EventDelegate__set_target(v65, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v65, (System_String_o *)StringLiteral_10353/*"OnSliderChange"*/, 0);
-      v72 = this->fields._pBar;
-      if ( !v72 )
+      EventDelegate__set_target(v64, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v64, (System_String_o *)StringLiteral_10366/*"OnSliderChange"*/, 0);
+      v71 = this->fields._pBar;
+      if ( !v71 )
         goto LABEL_63;
-      Names = (System_Collections_Generic_List_object__o *)v72->fields.onChange;
+      Names = (System_Collections_Generic_List_object__o *)v71->fields.onChange;
       if ( !Names )
         goto LABEL_63;
-      v73 = Names->fields._items;
-      v74 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      v72 = Names->fields._items;
+      v73 = Method_System_Collections_Generic_List_EventDelegate__Add__;
       ++Names->fields._version;
-      if ( !v73 )
+      if ( !v72 )
         goto LABEL_63;
-      v75 = Names->fields._size;
-      if ( (unsigned int)v75 >= LODWORD(v73->max_length) )
+      v74 = Names->fields._size;
+      if ( (unsigned int)v74 >= LODWORD(v72->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           Names,
-          (Il2CppObject *)v65,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v74[4] + 192LL) + 112LL));
+          (Il2CppObject *)v64,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
       }
       else
       {
-        v76 = &v73->obj.klass + v75;
-        Names->fields._size = v75 + 1;
-        v76[4] = (Il2CppClass *)v65;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v76 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
+        v75 = &v72->obj.klass + v74;
+        Names->fields._size = v74 + 1;
+        v75[4] = (Il2CppClass *)v64;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v75 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
       }
     }
   }
-  if ( !NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 14, v54) )
+  if ( !NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 14, v53) )
     return;
-  v77 = UnityEngine_Component__GetComponent_object_(
+  v76 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-  this->fields._input = (struct UIInput_o *)v77;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v77, v78, v79, v80, v81, v82, v83);
-  v86 = (UnityEngine_Object_o *)this->fields._input;
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+  this->fields._input = (struct UIInput_o *)v76;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v76, v77, v78, v79, v80, v81, v82);
+  v85 = (UnityEngine_Object_o *)this->fields._input;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v84, v85);
-  if ( UnityEngine_Object__op_Inequality(v86, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v83, v84);
+  if ( UnityEngine_Object__op_Inequality(v85, 0, 0) )
   {
-    v87 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-    EventDelegate___ctor(v87, 0);
-    if ( !v87 )
+    v86 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+    EventDelegate___ctor(v86, 0);
+    if ( !v86 )
       goto LABEL_63;
-    EventDelegate__set_target(v87, (UnityEngine_MonoBehaviour_o *)this, 0);
-    EventDelegate__set_methodName(v87, (System_String_o *)StringLiteral_10221/*"OnChange"*/, 0);
-    v94 = this->fields._input;
-    if ( !v94 )
+    EventDelegate__set_target(v86, (UnityEngine_MonoBehaviour_o *)this, 0);
+    EventDelegate__set_methodName(v86, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
+    v93 = this->fields._input;
+    if ( !v93 )
       goto LABEL_63;
-    Names = (System_Collections_Generic_List_object__o *)v94->fields.onChange;
+    Names = (System_Collections_Generic_List_object__o *)v93->fields.onChange;
     if ( !Names )
       goto LABEL_63;
-    v95 = Names->fields._items;
-    v96 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+    v94 = Names->fields._items;
+    v95 = Method_System_Collections_Generic_List_EventDelegate__Add__;
     ++Names->fields._version;
-    if ( !v95 )
+    if ( !v94 )
       goto LABEL_63;
-    v97 = Names->fields._size;
-    if ( (unsigned int)v97 >= LODWORD(v95->max_length) )
+    v96 = Names->fields._size;
+    if ( (unsigned int)v96 >= LODWORD(v94->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         Names,
-        (Il2CppObject *)v87,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
+        (Il2CppObject *)v86,
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v95[4] + 192LL) + 112LL));
     }
     else
     {
-      v98 = &v95->obj.klass + v97;
-      Names->fields._size = v97 + 1;
-      v98[4] = (Il2CppClass *)v87;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v98 + 4), (int32_t)v87, v88, v89, v90, v91, v92, v93);
+      v97 = &v94->obj.klass + v96;
+      Names->fields._size = v96 + 1;
+      v97[4] = (Il2CppClass *)v86;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v97 + 4), (int32_t)v86, v87, v88, v89, v90, v91, v92);
     }
   }
-  v99 = UnityEngine_Component__GetComponent_object_(
+  v98 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
-  this->fields._toggle = (struct UIToggle_o *)v99;
-  sub_21FFBF4(
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+  this->fields._toggle = (struct UIToggle_o *)v98;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._toggle,
-    (int32_t)v99,
+    (int32_t)v98,
+    v99,
     v100,
     v101,
     v102,
     v103,
-    v104,
-    v105);
+    v104);
   toggle = (UnityEngine_Object_o *)this->fields._toggle;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v106, v107);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v105, v106);
   if ( UnityEngine_Object__op_Inequality(toggle, 0, 0) )
   {
-    v109 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-    EventDelegate___ctor(v109, 0);
-    if ( v109 )
+    v108 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+    EventDelegate___ctor(v108, 0);
+    if ( v108 )
     {
-      EventDelegate__set_target(v109, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v109, (System_String_o *)StringLiteral_10221/*"OnChange"*/, 0);
-      v116 = this->fields._toggle;
-      if ( v116 )
+      EventDelegate__set_target(v108, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v108, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
+      v115 = this->fields._toggle;
+      if ( v115 )
       {
-        onChange = (System_Collections_Generic_List_object__o *)v116->fields.onChange;
+        onChange = (System_Collections_Generic_List_object__o *)v115->fields.onChange;
         if ( onChange )
         {
-          v118 = onChange->fields._items;
-          v119 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+          v117 = onChange->fields._items;
+          v118 = Method_System_Collections_Generic_List_EventDelegate__Add__;
           ++onChange->fields._version;
-          if ( v118 )
+          if ( v117 )
           {
-            v120 = onChange->fields._size;
-            if ( (unsigned int)v120 >= LODWORD(v118->max_length) )
+            v119 = onChange->fields._size;
+            if ( (unsigned int)v119 >= LODWORD(v117->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 onChange,
-                (Il2CppObject *)v109,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v119[4] + 192LL) + 112LL));
+                (Il2CppObject *)v108,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
             }
             else
             {
-              v121 = &v118->obj.klass + v120;
-              onChange->fields._size = v120 + 1;
-              v121[4] = (Il2CppClass *)v109;
-              sub_21FFBF4(
-                (MissionNaviTransitionBoardItem_o *)(v121 + 4),
-                (int32_t)v109,
+              v120 = &v117->obj.klass + v119;
+              onChange->fields._size = v119 + 1;
+              v120[4] = (Il2CppClass *)v108;
+              sub_2213A04(
+                (MissionNaviTransitionBoardItem_o *)(v120 + 4),
+                (int32_t)v108,
+                v109,
                 v110,
                 v111,
                 v112,
                 v113,
-                v114,
-                v115);
+                v114);
             }
             return;
           }
@@ -976,7 +974,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       }
     }
 LABEL_63:
-    sub_21FFECC(Names, v11);
+    sub_2213CDC(Names, v10);
   }
 }
 
@@ -1007,13 +1005,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnHover(
   int32_t *v23; // x8
   struct System_Int32_array *v24; // x8
 
-  if ( (byte_59363F1 & 1) == 0 )
+  if ( (byte_596E54B & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F1 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54B = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1047,7 +1045,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnHover(
           }
           currentTouch = v18->static_fields->currentTouch;
           NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
             (int32_t)currentTouch,
             v10,
@@ -1085,12 +1083,12 @@ LABEL_21:
                 goto LABEL_21;
               }
 LABEL_24:
-              sub_21FFED4(v8);
+              sub_2213CE4(v8);
             }
           }
         }
       }
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     }
   }
 }
@@ -1122,13 +1120,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnPress(
   int32_t *v23; // x8
   struct System_Int32_array *v24; // x8
 
-  if ( (byte_59363F2 & 1) == 0 )
+  if ( (byte_596E54C & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F2 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54C = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1162,7 +1160,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnPress(
           }
           currentTouch = v18->static_fields->currentTouch;
           NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
             (int32_t)currentTouch,
             v10,
@@ -1200,12 +1198,12 @@ LABEL_21:
                 goto LABEL_21;
               }
 LABEL_24:
-              sub_21FFED4(v8);
+              sub_2213CE4(v8);
             }
           }
         }
       }
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     }
   }
 }
@@ -1232,13 +1230,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v19; // x2
 
-  if ( (byte_59363F3 & 1) == 0 )
+  if ( (byte_596E54D & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F3 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E54D = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1255,7 +1253,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
       }
       EventData = v15->static_fields->EventData;
       if ( !EventData )
-        sub_21FFECC(v15, v8);
+        sub_2213CDC(v15, v8);
       EventData->fields.BoolData = selected;
       v17 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -1265,7 +1263,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
       }
       currentTouch = v17->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v9,
@@ -1300,11 +1298,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
   HutongGames_PlayMaker_Fsm_c *v17; // x0
   const MethodInfo *v18; // x2
 
-  if ( (byte_59363F9 & 1) == 0 )
+  if ( (byte_596E553 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59363F9 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E553 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1318,7 +1316,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
       if ( !usage )
         goto LABEL_14;
       if ( LODWORD(usage->max_length) <= 0xC )
-        sub_21FFED4(EventData);
+        sub_2213CE4(EventData);
       v17 = HutongGames_PlayMaker_Fsm_TypeInfo;
       ++usage->m_Items[12];
       if ( !*(&v17->_2.cctor_finished + 1) )
@@ -1329,9 +1327,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
       EventData = v17->static_fields->EventData;
       if ( !EventData )
 LABEL_14:
-        sub_21FFECC(EventData, v9);
+        sub_2213CDC(EventData, v9);
       EventData->fields.StringData = item;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&EventData->fields.StringData,
         (int32_t)item,
         v10,
@@ -1366,11 +1364,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnSliderChange(
   float v17; // s8
   UnityEngine_Transform_c *v18; // x8
 
-  if ( (byte_59363F8 & 1) == 0 )
+  if ( (byte_596E552 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59363F8 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E552 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1384,7 +1382,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSliderChange(
       if ( usage )
       {
         if ( LODWORD(usage->max_length) <= 0xB )
-          sub_21FFED4(v8);
+          sub_2213CE4(v8);
         v8 = (UIProgressBar_o *)HutongGames_PlayMaker_Fsm_TypeInfo;
         ++usage->m_Items[11];
         if ( !HIDWORD(v8[2].klass) )
@@ -1424,7 +1422,7 @@ LABEL_21:
           }
         }
       }
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     }
   }
 }
@@ -1451,12 +1449,12 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
   System_String_o *value; // x20
   HutongGames_PlayMaker_Fsm_c *v20; // x8
 
-  if ( (byte_59363F7 & 1) == 0 )
+  if ( (byte_596E551 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59363F7 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596E551 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1470,7 +1468,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
       if ( usage )
       {
         if ( LODWORD(usage->max_length) <= 0xA )
-          sub_21FFED4(EventData);
+          sub_2213CE4(EventData);
         v10 = UnityEngine_Object_TypeInfo;
         input = (UnityEngine_Object_o *)this->fields._input;
         ++usage->m_Items[10];
@@ -1492,7 +1490,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
           if ( EventData )
           {
             *(_QWORD *)&EventData->fields.activeTextColor.fields.r = value;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&EventData->fields.activeTextColor,
               (int32_t)value,
               v13,
@@ -1507,7 +1505,7 @@ LABEL_18:
           }
         }
       }
-      sub_21FFECC(EventData, v7);
+      sub_2213CDC(EventData, v7);
     }
   }
 }
@@ -1534,13 +1532,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v19; // x2
 
-  if ( (byte_59363F6 & 1) == 0 )
+  if ( (byte_596E550 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59363F6 = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596E550 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1557,7 +1555,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
       }
       EventData = v15->static_fields->EventData;
       if ( !EventData )
-        sub_21FFECC(v15, v8);
+        sub_2213CDC(v15, v8);
       EventData->fields.BoolData = show;
       v17 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -1567,7 +1565,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
       }
       currentTouch = v17->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v9,
@@ -1607,13 +1605,13 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
   HutongGames_PlayMaker_Fsm_c *v21; // x0
   const MethodInfo *v22; // x2
 
-  if ( (byte_59363FB & 1) == 0 )
+  if ( (byte_596E555 & 1) == 0 )
   {
-    sub_21FFC50(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_21FFC50(&Localization_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIPopupList_TypeInfo);
-    byte_59363FB = 1;
+    sub_2213A60(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_2213A60(&Localization_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIPopupList_TypeInfo);
+    byte_596E555 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1632,7 +1630,7 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
         if ( !usage )
           goto LABEL_22;
         if ( LODWORD(usage->max_length) <= 0xC )
-          sub_21FFED4(EventData);
+          sub_2213CE4(EventData);
         static_fields = UIPopupList_TypeInfo->static_fields;
         ++usage->m_Items[12];
         v19 = static_fields->current;
@@ -1654,9 +1652,9 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
         EventData = v21->static_fields->EventData;
         if ( !EventData )
 LABEL_22:
-          sub_21FFECC(EventData, v10);
+          sub_2213CDC(EventData, v10);
         EventData->fields.StringData = mSelectedItem;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&EventData->fields.StringData,
           (int32_t)mSelectedItem,
           v11,
@@ -1687,6 +1685,6 @@ int32_t NGuiEventsToPlaymakerFsmEvents__getUsage(
   if ( max_length <= fsmEventDelegate )
     return -1;
   if ( max_length <= (unsigned int)fsmEventDelegate )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   return usage->m_Items[fsmEventDelegate];
 }

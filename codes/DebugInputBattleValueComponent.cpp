@@ -17,7 +17,7 @@ void DebugInputBattleValueComponent__Cancel(DebugInputBattleValueComponent_o *th
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_21FFECC(debugMenuTran, method);
+    sub_2213CDC(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -66,7 +66,7 @@ void DebugInputBattleValueComponent__Open(
     goto LABEL_20;
   v11 = this;
   this->fields.data = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.data,
     (int32_t)data,
     (System_String_o *)debugMenuTran,
@@ -76,7 +76,7 @@ void DebugInputBattleValueComponent__Open(
     v6,
     v7);
   v11->fields.debugMenuTran = debugMenuTran;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields.debugMenuTran,
     (int32_t)debugMenuTran,
     v12,
@@ -86,7 +86,7 @@ void DebugInputBattleValueComponent__Open(
     v16,
     v17);
   v11->fields.onSubmitCallback = onSubmitCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields.onSubmitCallback,
     (int32_t)onSubmitCallback,
     v18,
@@ -114,7 +114,7 @@ void DebugInputBattleValueComponent__Open(
   if ( !v26 )
   {
     v35 = 0;
-    sub_21FFECC(v24, v25);
+    sub_2213CDC(v24, v25);
   }
   max_length = v26->max_length;
   if ( max_length >= 1 )
@@ -126,13 +126,13 @@ void DebugInputBattleValueComponent__Open(
       if ( (unsigned int)v28 >= max_length )
       {
         v35 = v28;
-        sub_21FFED4(v24);
+        sub_2213CE4(v24);
       }
       v30 = v26->m_Items[v28];
       if ( !v30 )
       {
         v35 = v28;
-        sub_21FFECC(v24, v25);
+        sub_2213CDC(v24, v25);
       }
       UIToggle__set_value(v26->m_Items[v28], v29 & 1, 0);
       max_length = v26->max_length;
@@ -156,7 +156,7 @@ void DebugInputBattleValueComponent__Open(
     || (v34 = v11->fields.battleValueIdInput, v33->fields.validation = 1, !v34) )
   {
 LABEL_20:
-    sub_21FFECC(this, data);
+    sub_2213CDC(this, data);
   }
   v34->fields.validation = 1;
   v33->fields.keyboardType = 4;
@@ -178,7 +178,7 @@ void DebugInputBattleValueComponent__Submit(DebugInputBattleValueComponent_o *th
         System_Int32__TryParse(value, &result[1], 0),
         (battleValueIdInput = this->fields.battleValueNumInput) == 0) )
   {
-    sub_21FFECC(battleValueIdInput, method);
+    sub_2213CDC(battleValueIdInput, method);
   }
   v5 = UIInput__get_value(battleValueIdInput, 0);
   System_Int32__TryParse(v5, result, 0);

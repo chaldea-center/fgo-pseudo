@@ -9,20 +9,20 @@ void EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *met
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_59389E3 & 1) == 0 )
+  if ( (byte_5970B96 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59389E3 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5970B96 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
   v3 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
   *(p_value - 1) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -33,16 +33,16 @@ System_String_o *EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_59389E4 & 1) == 0 )
+  if ( (byte_5970B97 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
-    byte_59389E4 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_5970B97 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_382164C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_3854B14 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

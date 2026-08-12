@@ -17,17 +17,17 @@ TweenOrthoSize_o *TweenOrthoSize__Begin(
   TweenOrthoSize_o *v9; // x19
   const MethodInfo *v10; // x2
 
-  if ( (byte_593CF19 & 1) == 0 )
+  if ( (byte_59751F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UITweener_Begin_TweenOrthoSize___);
-    byte_593CF19 = 1;
+    sub_2213A60(&Method_UITweener_Begin_TweenOrthoSize___);
+    byte_59751F0 = 1;
   }
   v7 = (TweenOrthoSize_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenOrthoSize___);
+                             (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenOrthoSize___);
   if ( !v7 )
-    sub_21FFECC(0, v8);
+    sub_2213CDC(0, v8);
   v9 = v7;
   v7->fields.from = TweenOrthoSize__get_value(v7, v8);
   v9->fields.to = to;
@@ -73,11 +73,11 @@ UnityEngine_Camera_o *TweenOrthoSize__get_cachedCamera(TweenOrthoSize_o *this, c
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_593CF18 & 1) == 0 )
+  if ( (byte_59751EF & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF18 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751EF = 1;
   }
   mCam = (UnityEngine_Object_o *)this->fields.mCam;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -86,9 +86,9 @@ UnityEngine_Camera_o *TweenOrthoSize__get_cachedCamera(TweenOrthoSize_o *this, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Camera___);
     this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)Component_object,
       v5,
@@ -116,7 +116,7 @@ float TweenOrthoSize__get_value(TweenOrthoSize_o *this, const MethodInfo *method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return UnityEngine_Camera__get_orthographicSize(cachedCamera, 0);
 }
 
@@ -135,6 +135,6 @@ void TweenOrthoSize__set_value(TweenOrthoSize_o *this, float value, const Method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   UnityEngine_Camera__set_orthographicSize(cachedCamera, value, 0);
 }

@@ -1,13 +1,13 @@
 void UserEventCooltimeRewardEntity___ctor(UserEventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59394C0 & 1) == 0 )
+  if ( (byte_5971680 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59394C0 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971680 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -24,17 +24,17 @@ System_String_o *UserEventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_59394BE & 1) == 0 )
+  if ( (byte_597167E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
-    byte_59394BE = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+    byte_597167E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            spotId,
            lv,
-           (const MethodInfo_3821A94 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_3854F5C *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
@@ -62,19 +62,19 @@ EventCooltimeRewardEntity_o *UserEventCooltimeRewardEntity__GetEventCooltimeRewa
   __int64 v5; // x1
   EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_59394BF & 1) == 0 )
+  if ( (byte_597167F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_59394BF = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_597167F = 1;
   }
   v3 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v3 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   EventCooltimeRewardMaster__TryGetEntity(
     (EventCooltimeRewardMaster_o *)Master_object,
     &entity,

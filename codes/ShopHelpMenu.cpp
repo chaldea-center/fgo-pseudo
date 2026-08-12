@@ -1,9 +1,9 @@
 void ShopHelpMenu___ctor(ShopHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_593AAA6 & 1) == 0 )
+  if ( (byte_5972C86 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593AAA6 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5972C86 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -20,14 +20,14 @@ void ShopHelpMenu__Close(ShopHelpMenu_o *this, System_Action_o *onClose, const M
   bool v7; // w7
   System_Action_o *v10; // x20
 
-  if ( (byte_593AAA5 & 1) == 0 )
+  if ( (byte_5972C85 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ShopHelpMenu_endClose__);
-    byte_593AAA5 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ShopHelpMenu_endClose__);
+    byte_5972C85 = 1;
   }
   this->fields.onClose = onClose;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClose,
     (int32_t)onClose,
     (System_String_o *)method,
@@ -36,7 +36,7 @@ void ShopHelpMenu__Close(ShopHelpMenu_o *this, System_Action_o *onClose, const M
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ShopHelpMenu_endClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -56,16 +56,16 @@ void ShopHelpMenu__OnEnable(ShopHelpMenu_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v6; // x19
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_593AAA4 & 1) == 0 )
+  if ( (byte_5972C84 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_13366/*"ShopHelpListPanel/BaseWindow/UpperCloseButton"*/);
-    byte_593AAA4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_13393/*"ShopHelpListPanel/BaseWindow/UpperCloseButton"*/);
+    byte_5972C84 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
-  v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_13366/*"ShopHelpListPanel/BaseWindow/UpperCloseButton"*/, 0);
+  v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_13393/*"ShopHelpListPanel/BaseWindow/UpperCloseButton"*/, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v6, 0, 0);
@@ -78,7 +78,7 @@ void ShopHelpMenu__OnEnable(ShopHelpMenu_o *this, const MethodInfo *method)
       return;
     }
 LABEL_9:
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   }
 }
 
@@ -107,7 +107,7 @@ void ShopHelpMenu__endClose(ShopHelpMenu_o *this, const MethodInfo *method)
   if ( onClose )
   {
     this->fields.onClose = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_onClose, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_onClose, 0, v2, v3, v4, v5, v6, v7);
     BaseDialog__Init((BaseDialog_o *)this, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }

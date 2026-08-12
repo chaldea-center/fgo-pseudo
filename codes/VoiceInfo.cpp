@@ -28,14 +28,14 @@ void VoiceInfo___ctor(VoiceInfo_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.isCanPlay = 0;
   this->fields.overwriteName = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
   this->fields.overwriteNameDefault = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
   *(_QWORD *)&this->fields.overwritePriority = 0;
   this->fields.servantVoiceConds = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.servantVoiceConds, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.servantVoiceConds, 0, v15, v16, v17, v18, v19, v20);
   this->fields.sync = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.sync, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.sync, 0, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -57,10 +57,10 @@ LABEL_7:
     goto LABEL_8;
   }
   if ( !(_DWORD)max_length )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   sync = (struct ServantVoiceSync_array *)sync->m_Items[0];
   if ( !sync )
-    sub_21FFECC(this, syncSvtId);
+    sub_2213CDC(this, syncSvtId);
   LODWORD(sync) = sync->bounds;
   result = 1;
 LABEL_8:

@@ -14,10 +14,10 @@ void BattleValueButtonComponent__OnClickTarget(BattleValueButtonComponent_o *thi
   __int64 v8; // x1
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593C15C & 1) == 0 )
+  if ( (byte_59742B4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C15C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59742B4 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -28,10 +28,10 @@ void BattleValueButtonComponent__OnClickTarget(BattleValueButtonComponent_o *thi
     v6 = this->fields.target;
     sendmessage = this->fields.sendmessage;
     v9 = val;
-    v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9);
+    v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v9);
     if ( !v6 )
-      sub_21FFECC(v7, v8);
-    UnityEngine_GameObject__SendMessage_83224784(v6, sendmessage, v7, 0);
+      sub_2213CDC(v7, v8);
+    UnityEngine_GameObject__SendMessage_83438088(v6, sendmessage, v7, 0);
   }
 }
 
@@ -43,10 +43,10 @@ void BattleValueButtonComponent__SetActive(BattleValueButtonComponent_o *this, b
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_593C15E & 1) == 0 )
+  if ( (byte_59742B6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C15E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59742B6 = 1;
   }
   boxCollider = (UnityEngine_Object_o *)this->fields.boxCollider;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -57,7 +57,7 @@ void BattleValueButtonComponent__SetActive(BattleValueButtonComponent_o *this, b
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isActive, 0);
   }
@@ -73,7 +73,7 @@ void BattleValueButtonComponent__SetDefaultPosition(BattleValueButtonComponent_o
   defaultPositionX = this->fields.defaultPositionX;
   defaultPositionY = this->fields.defaultPositionY;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPosition_42876120(gameObject, defaultPositionX, defaultPositionY, 0);
+  GameObjectExtensions__SetLocalPosition_42891516(gameObject, defaultPositionX, defaultPositionY, 0);
 }
 
 
@@ -92,7 +92,7 @@ void BattleValueButtonComponent__SetOffsetPosition(
   UnityEngine_GameObject_o *gameObject; // x0
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPosition_42876120(
+  GameObjectExtensions__SetLocalPosition_42891516(
     gameObject,
     this->fields.defaultPositionX + offsetX,
     this->fields.defaultPositionY + offsetY,
@@ -109,7 +109,7 @@ void BattleValueButtonComponent__SetPosition(
   UnityEngine_GameObject_o *gameObject; // x0
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPosition_42876120(gameObject, posX, posY, 0);
+  GameObjectExtensions__SetLocalPosition_42891516(gameObject, posX, posY, 0);
 }
 
 
@@ -136,10 +136,10 @@ void BattleValueButtonComponent__SetSize(
   int32_t v12; // w1
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593C15D & 1) == 0 )
+  if ( (byte_59742B5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C15D = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59742B5 = 1;
   }
   boxCollider = (UnityEngine_Object_o *)this->fields.boxCollider;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -176,6 +176,6 @@ void BattleValueButtonComponent__SetSize(
       }
     }
 LABEL_21:
-    sub_21FFECC(v9, v8);
+    sub_2213CDC(v9, v8);
   }
 }

@@ -1,9 +1,9 @@
 void BoostItemListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_5933CCA & 1) == 0 )
+  if ( (byte_596BDE3 & 1) == 0 )
   {
-    sub_21FFC50(&BoostItemListViewItemDraw_TypeInfo);
-    byte_5933CCA = 1;
+    sub_2213A60(&BoostItemListViewItemDraw_TypeInfo);
+    byte_596BDE3 = 1;
   }
   BoostItemListViewItemDraw_TypeInfo->static_fields->DETAIL_FONT_SIZE = 18;
 }
@@ -15,7 +15,6 @@ void BoostItemListViewItemDraw___ctor(BoostItemListViewItemDraw_o *this, const M
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BoostItemListViewItemDraw__SetItem(
         BoostItemListViewItemDraw_o *this,
         BoostItemListViewItem_o *item,
@@ -46,25 +45,21 @@ void BoostItemListViewItemDraw__SetItem(
   System_String_o *v26; // x0
   __int64 v27; // x2
   UIWidget_o *v28; // x20
-  struct UILabel_o *v29; // x8
-  float v30; // s0 OVERLAPPED
-  float v31; // s1
-  float v32; // s2
-  float v33; // s3
-  int v34; // [xsp+Ch] [xbp-34h] BYREF
+  int v32; // [xsp+Ch] [xbp-34h] BYREF
+  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v5 = item;
   v6 = this;
-  if ( (byte_5933CC9 & 1) == 0 )
+  if ( (byte_596BDE2 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&BoostItemListViewItemDraw_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_4075/*"CURRENT_NUM_TXT"*/);
-    this = (BoostItemListViewItemDraw_o *)sub_21FFC50(&StringLiteral_21153/*"icon_race_"*/);
-    byte_5933CC9 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&BoostItemListViewItemDraw_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_4080/*"CURRENT_NUM_TXT"*/);
+    this = (BoostItemListViewItemDraw_o *)sub_2213A60(&StringLiteral_21194/*"icon_race_"*/);
+    byte_596BDE2 = 1;
   }
-  v34 = 0;
+  v32 = 0;
   if ( mode )
   {
     if ( !v5 )
@@ -72,13 +67,13 @@ void BoostItemListViewItemDraw__SetItem(
     itemEntity = (int32_t *)v5->fields.itemEntity;
     magnification = v5->fields.magnification;
     isCanNotSelect = v5->fields.isCanNotSelect;
-    v34 = magnification;
+    v32 = magnification;
     if ( !itemEntity )
       goto LABEL_34;
     this = (BoostItemListViewItemDraw_o *)v6->fields.itemIconInfo;
     if ( !this )
       goto LABEL_34;
-    ItemIconComponent__SetItemImage_47934504(
+    ItemIconComponent__SetItemImage_47882600(
       (ItemIconComponent_o *)this,
       itemEntity[10],
       itemEntity[11],
@@ -89,7 +84,7 @@ void BoostItemListViewItemDraw__SetItem(
     infoLabel = v6->fields.infoLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v10, v11);
-    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4075/*"CURRENT_NUM_TXT"*/, 0);
+    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4080/*"CURRENT_NUM_TXT"*/, 0);
     if ( !infoLabel )
       goto LABEL_34;
     UILabel__set_text(infoLabel, (System_String_o *)this, 0);
@@ -99,10 +94,10 @@ void BoostItemListViewItemDraw__SetItem(
       goto LABEL_34;
     UILabel__set_text(numLabel, (System_String_o *)this, 0);
     nameLabel = v6->fields.nameLabel;
-    if ( (byte_5933CC6 & 1) == 0 )
+    if ( (byte_596BDDF & 1) == 0 )
     {
-      this = (BoostItemListViewItemDraw_o *)sub_21FFC50(&StringLiteral_19915/*"error"*/);
-      byte_5933CC6 = 1;
+      this = (BoostItemListViewItemDraw_o *)sub_2213A60(&StringLiteral_19957/*"error"*/);
+      byte_596BDDF = 1;
     }
     if ( !nameLabel )
       goto LABEL_34;
@@ -110,7 +105,7 @@ void BoostItemListViewItemDraw__SetItem(
     if ( v16 )
       p_name = &v16->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_19915/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_19957/*"error"*/;
     UILabel__set_text(nameLabel, *p_name, 0);
     detailLabel = v6->fields.detailLabel;
     SkillText = BoostItemListViewItem__get_SkillText(v5, v19);
@@ -133,16 +128,16 @@ void BoostItemListViewItemDraw__SetItem(
     item = 0;
     if ( magnification >= 2 )
     {
-      v26 = System_Int32__ToString((int32_t)&v34, 0);
-      this = (BoostItemListViewItemDraw_o *)System_String__Concat_75438412(
-                                              (System_String_o *)StringLiteral_21153/*"icon_race_"*/,
+      v26 = System_Int32__ToString((int32_t)&v32, 0);
+      this = (BoostItemListViewItemDraw_o *)System_String__Concat_75651716(
+                                              (System_String_o *)StringLiteral_21194/*"icon_race_"*/,
                                               v26,
                                               0);
       item = (BoostItemListViewItem_o *)this;
     }
     if ( !magnificationSprite )
 LABEL_34:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     UISprite__set_spriteName(magnificationSprite, (System_String_o *)item, 0);
     v28 = (UIWidget_o *)v6->fields.magnificationSprite;
     if ( isCanNotSelect )
@@ -153,30 +148,26 @@ LABEL_34:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, item, v27);
         this = (BoostItemListViewItemDraw_o *)BalanceConfig_TypeInfo;
       }
-      v29 = this[1].fields.infoLabel;
-      v30 = *(float *)&v29->fields.mLastWidth;
-      v31 = *(float *)&v29->fields.mLastHeight;
-      v32 = *((float *)&v29->fields.mLastHeight + 1);
-      v33 = *(float *)&v29[1].klass;
+      v33 = *(UnityEngine_Color_o *)(*((_QWORD *)this + 23) + 668LL);
       if ( !v28 )
         goto LABEL_34;
     }
     else
     {
-      v33 = 1.0;
-      v32 = 1.0;
-      v31 = 1.0;
-      v30 = 1.0;
+      v33.fields.a = 1.0;
+      v33.fields.b = 1.0;
+      v33.fields.g = 1.0;
+      v33.fields.r = 1.0;
       if ( !v28 )
         goto LABEL_34;
     }
-    UIWidget__set_color(v28, *(UnityEngine_Color_o *)&v30, 0);
+    UIWidget__set_color(v28, v33, 0);
     this = (BoostItemListViewItemDraw_o *)v6->fields.magnificationSprite;
     if ( !this )
       goto LABEL_34;
     this = (BoostItemListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !this )
       goto LABEL_34;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v34 > 1, 0);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v32 > 1, 0);
   }
 }

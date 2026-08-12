@@ -18,7 +18,7 @@ void BattleLogicBattleScriptSystemTask__Init(
   bool v7; // w7
 
   this->fields.battleScriptEntities = entities;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.battleScriptEntities,
     (int32_t)entities,
     *(System_String_o **)&systemType,
@@ -40,19 +40,19 @@ BattleActionData_o *BattleLogicBattleScriptSystemTask__MakeActionData(
   __int64 ActorId; // x0
   __int64 v7; // x1
 
-  if ( (byte_593BC24 & 1) == 0 )
+  if ( (byte_5973E30 & 1) == 0 )
   {
-    sub_21FFC50(&BattleScriptSystemActionData_TypeInfo);
-    byte_593BC24 = 1;
+    sub_2213A60(&BattleScriptSystemActionData_TypeInfo);
+    byte_5973E30 = 1;
   }
   v5 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleScriptEntities, 0) )
   {
-    v5 = (BattleScriptSystemActionData_o *)sub_21FFEBC(BattleScriptSystemActionData_TypeInfo);
+    v5 = (BattleScriptSystemActionData_o *)sub_2213CCC(BattleScriptSystemActionData_TypeInfo);
     BattleScriptSystemActionData___ctor(v5, 0);
     ActorId = BattleLogicTask__getActorId((BattleLogicTask_o *)this, 0);
     if ( !v5 || (v5->fields.actorId = ActorId, !logic) )
-      sub_21FFECC(ActorId, v7);
+      sub_2213CDC(ActorId, v7);
     BattleScriptSystemActionData__SetBattleScriptSystem(
       v5,
       logic->fields.logicBattleScript,

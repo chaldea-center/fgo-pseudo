@@ -21,7 +21,7 @@ void EquipGraphViewListViewMenu__Callback(EquipGraphViewListViewMenu_o *this, bo
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -42,7 +42,7 @@ int32_t EquipGraphViewListViewMenu__CardId(
 
   result = 0;
   if ( !path )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   IndexOf = System_String__LastIndexOf(path, 0x2Fu, 0);
   v5 = -10;
   result = -10;
@@ -77,13 +77,13 @@ void EquipGraphViewListViewMenu__Close(EquipGraphViewListViewMenu_o *this, const
       goto LABEL_6;
     ListViewManager__DestroyList(listViewManager, 0);
     this->fields.equipGraphAssetList = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.equipGraphAssetList, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.equipGraphAssetList, 0, v5, v6, v7, v8, v9, v10);
     this->fields.state = 0;
   }
   listViewManager = (ListViewManager_o *)this->fields.rootObject;
   if ( !listViewManager )
 LABEL_6:
-    sub_21FFECC(listViewManager, v3);
+    sub_2213CDC(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0);
 }
 
@@ -99,7 +99,7 @@ void EquipGraphViewListViewMenu__EndInput(EquipGraphViewListViewMenu_o *this, co
       || (ListViewManager__set_IsInput(listViewManager, 0, 0),
           (listViewManager = (ListViewManager_o *)this->fields.cancelButton) == 0) )
     {
-      sub_21FFECC(listViewManager, method);
+      sub_2213CDC(listViewManager, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0);
   }
@@ -130,12 +130,12 @@ void EquipGraphViewListViewMenu__OnClickItem(EquipGraphViewListViewMenu_o *this,
   __int64 v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5935AFB & 1) == 0 )
+  if ( (byte_596DC3D & 1) == 0 )
   {
-    sub_21FFC50(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu_OnEndFigureView__);
-    sub_21FFC50(&ScriptManager_TypeInfo);
-    byte_5935AFB = 1;
+    sub_2213A60(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu_OnEndFigureView__);
+    sub_2213A60(&ScriptManager_TypeInfo);
+    byte_596DC3D = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -152,10 +152,10 @@ void EquipGraphViewListViewMenu__OnClickItem(EquipGraphViewListViewMenu_o *this,
     this->fields.state = 3;
     if ( !listViewManager )
 LABEL_11:
-      sub_21FFECC(listViewManager, method);
+      sub_2213CDC(listViewManager, method);
     dragParentObject = (System_String_o *)listViewManager->fields.dragParentObject;
     equipGraphAssetList = this->fields.equipGraphAssetList;
-    v8 = (ScriptManager_CallbackFunc_o *)sub_21FFEBC(ScriptManager_CallbackFunc_TypeInfo);
+    v8 = (ScriptManager_CallbackFunc_o *)sub_2213CCC(ScriptManager_CallbackFunc_TypeInfo);
     ScriptManager_CallbackFunc___ctor(v8, (Il2CppObject *)this, Method_EquipGraphViewListViewMenu_OnEndFigureView__, 0);
     if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v9, v10);
@@ -175,23 +175,23 @@ void EquipGraphViewListViewMenu__OnEndFigureView(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_5935AFC & 1) == 0 )
+  if ( (byte_596DC3E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu_OnClickItem__);
-    byte_5935AFC = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu_OnClickItem__);
+    byte_596DC3E = 1;
   }
   if ( this->fields.state == 3 )
   {
     listViewManager = this->fields.listViewManager;
     this->fields.state = 2;
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EquipGraphViewListViewMenu_OnClickItem__, 0);
     if ( !listViewManager
-      || (FigureViewListViewManager__SetMode_44264244(listViewManager, 1, v5, v8),
+      || (FigureViewListViewManager__SetMode_44285232(listViewManager, 1, v5, v8),
           (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
     {
-      sub_21FFECC(cancelButton, v7);
+      sub_2213CDC(cancelButton, v7);
     }
     UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
   }
@@ -212,10 +212,10 @@ void EquipGraphViewListViewMenu__OnSearchLabelChange(EquipGraphViewListViewMenu_
 
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ListViewManager__DestroyList(listViewManager, 0);
   this->fields.equipGraphAssetList = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.equipGraphAssetList, 0, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.equipGraphAssetList, 0, v4, v5, v6, v7, v8, v9);
   callbackFunc = this->fields.callbackFunc;
   this->fields.state = 0;
   EquipGraphViewListViewMenu__Open(this, callbackFunc, v11);
@@ -238,7 +238,7 @@ void EquipGraphViewListViewMenu__Open(
   void *Instance; // x0
   __int64 v14; // x1
   DataMasterBase_TMaster__TEntity__PKType__o *v15; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *CollectionList_49683392; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *CollectionList_49746676; // x0
   __int64 v17; // x2
   System_Collections_Generic_List_int__o *v18; // x22
   EquipGraphViewListViewMenu___c_c *v19; // x8
@@ -325,48 +325,48 @@ void EquipGraphViewListViewMenu__Open(
   const MethodInfo *v100; // x3
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_5935AF9 & 1) == 0 )
+  if ( (byte_596DC3B & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&System_Comparison_string__TypeInfo);
-    sub_21FFC50(&System_Converter_string__string__TypeInfo);
-    sub_21FFC50(&System_Converter_int__string__TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Intersect_string___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__ConvertAll_string___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__ConvertAll_string___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__RemoveAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Sort___91439504);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor___91439360);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__set_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&System_Predicate_string__TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu___c__Open_b__12_0__);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu___c__Open_b__12_1__);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu___c__Open_b__12_2__);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu___c__DisplayClass12_0__Open_b__3__);
-    sub_21FFC50(&EquipGraphViewListViewMenu___c__DisplayClass12_0_TypeInfo);
-    sub_21FFC50(&EquipGraphViewListViewMenu___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_165/*" : "*/);
-    sub_21FFC50(&StringLiteral_4547/*"CharaGraph"*/);
-    byte_5935AF9 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&System_Comparison_string__TypeInfo);
+    sub_2213A60(&System_Converter_string__string__TypeInfo);
+    sub_2213A60(&System_Converter_int__string__TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Intersect_string___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__ConvertAll_string___);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__ConvertAll_string___);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__RemoveAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Sort___91665632);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor___91665488);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__set_Item__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&System_Predicate_string__TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu___c__Open_b__12_0__);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu___c__Open_b__12_1__);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu___c__Open_b__12_2__);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu___c__DisplayClass12_0__Open_b__3__);
+    sub_2213A60(&EquipGraphViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    sub_2213A60(&EquipGraphViewListViewMenu___c_TypeInfo);
+    sub_2213A60(&StringLiteral_165/*" : "*/);
+    sub_2213A60(&StringLiteral_4555/*"CharaGraph"*/);
+    byte_596DC3B = 1;
   }
   state = this->fields.state;
   entity = 0;
   if ( !state )
   {
-    v6 = sub_21FFEBC(EquipGraphViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    v6 = sub_2213CCC(EquipGraphViewListViewMenu___c__DisplayClass12_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v7,
@@ -375,22 +375,22 @@ void EquipGraphViewListViewMenu__Open(
       v10,
       v11,
       v12);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_50;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_50;
     v15 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-    CollectionList_49683392 = (System_Collections_Generic_IEnumerable_TSource__o *)ServantMaster__GetCollectionList_49683392(
+    CollectionList_49746676 = (System_Collections_Generic_IEnumerable_TSource__o *)ServantMaster__GetCollectionList_49746676(
                                                                                      (ServantMaster_o *)Instance,
                                                                                      1,
                                                                                      0);
     Instance = System_Linq_Enumerable__ToList_int_(
-                 CollectionList_49683392,
-                 (const MethodInfo_386D6A8 *)Method_System_Linq_Enumerable_ToList_int___);
+                 CollectionList_49746676,
+                 (const MethodInfo_38A0B70 *)Method_System_Linq_Enumerable_ToList_int___);
     v18 = (System_Collections_Generic_List_int__o *)Instance;
     v19 = EquipGraphViewListViewMenu___c_TypeInfo;
     if ( !*(&EquipGraphViewListViewMenu___c_TypeInfo->_2.cctor_finished + 1) )
@@ -408,18 +408,18 @@ void EquipGraphViewListViewMenu__Open(
         static_fields = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       }
       v22 = (Il2CppObject *)static_fields->__9;
-      _9__12_0 = (System_Converter_TInput__TOutput__o *)sub_21FFEBC(System_Converter_int__string__TypeInfo);
+      _9__12_0 = (System_Converter_TInput__TOutput__o *)sub_2213CCC(System_Converter_int__string__TypeInfo);
       System_Converter_int__object____ctor(_9__12_0, v22, Method_EquipGraphViewListViewMenu___c__Open_b__12_0__, 0);
       v23 = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       v23->__9__12_0 = (struct System_Converter_int__string__o *)_9__12_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23->__9__12_0, (int32_t)_9__12_0, v24, v25, v26, v27, v28, v29);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->__9__12_0, (int32_t)_9__12_0, v24, v25, v26, v27, v28, v29);
     }
     if ( !v18 )
       goto LABEL_50;
     Instance = System_Collections_Generic_List_int___ConvertAll_object_(
                  v18,
                  (System_Converter_T__TOutput__o *)_9__12_0,
-                 (const MethodInfo_36A562C *)Method_System_Collections_Generic_List_int__ConvertAll_string___);
+                 (const MethodInfo_36D759C *)Method_System_Collections_Generic_List_int__ConvertAll_string___);
     v31 = EquipGraphViewListViewMenu___c_TypeInfo;
     v32 = (System_Collections_Generic_List_object__o *)Instance;
     if ( !*(&EquipGraphViewListViewMenu___c_TypeInfo->_2.cctor_finished + 1) )
@@ -437,35 +437,35 @@ void EquipGraphViewListViewMenu__Open(
         v33 = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       }
       v35 = (Il2CppObject *)v33->__9;
-      _9__12_1 = (System_Converter_TInput__TOutput__o *)sub_21FFEBC(System_Converter_string__string__TypeInfo);
+      _9__12_1 = (System_Converter_TInput__TOutput__o *)sub_2213CCC(System_Converter_string__string__TypeInfo);
       System_Converter_object__object____ctor(_9__12_1, v35, Method_EquipGraphViewListViewMenu___c__Open_b__12_1__, 0);
       v36 = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       v36->__9__12_1 = (struct System_Converter_string__string__o *)_9__12_1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v36->__9__12_1, (int32_t)_9__12_1, v37, v38, v39, v40, v41, v42);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36->__9__12_1, (int32_t)_9__12_1, v37, v38, v39, v40, v41, v42);
     }
     if ( !v32 )
       goto LABEL_50;
     v45 = System_Collections_Generic_List_object___ConvertAll_object_(
             v32,
             (System_Converter_T__TOutput__o *)_9__12_1,
-            (const MethodInfo_36A5860 *)Method_System_Collections_Generic_List_string__ConvertAll_string___);
+            (const MethodInfo_36D77D0 *)Method_System_Collections_Generic_List_string__ConvertAll_string___);
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v43, v44);
     AssetStorageList = (System_Collections_Generic_IEnumerable_T__o *)AssetManager__getAssetStorageList(
-                                                                        (System_String_o *)StringLiteral_4547/*"CharaGraph"*/,
+                                                                        (System_String_o *)StringLiteral_4555/*"CharaGraph"*/,
                                                                         0);
-    v47 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_71627776(
+    v47 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_71841080(
       v47,
       AssetStorageList,
-      (const MethodInfo_444F400 *)Method_System_Collections_Generic_List_string___ctor___91439360);
+      (const MethodInfo_4483538 *)Method_System_Collections_Generic_List_string___ctor___91665488);
     v48 = System_Linq_Enumerable__Intersect_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)v47,
             (System_Collections_Generic_IEnumerable_TSource__o *)v45,
-            (const MethodInfo_3850070 *)Method_System_Linq_Enumerable_Intersect_string___);
+            (const MethodInfo_3883538 *)Method_System_Linq_Enumerable_Intersect_string___);
     Instance = System_Linq_Enumerable__ToList_object_(
                  v48,
-                 (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_string___);
+                 (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_string___);
     if ( !this->fields.rootObject )
       goto LABEL_50;
     v49 = (System_Collections_Generic_List_object__o *)Instance;
@@ -494,18 +494,18 @@ void EquipGraphViewListViewMenu__Open(
         v51 = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       }
       v53 = (Il2CppObject *)v51->__9;
-      _9__12_2 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_string__TypeInfo);
+      _9__12_2 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_string__TypeInfo);
       System_Comparison_object____ctor(_9__12_2, v53, Method_EquipGraphViewListViewMenu___c__Open_b__12_2__, 0);
       v54 = EquipGraphViewListViewMenu___c_TypeInfo->static_fields;
       v54->__9__12_2 = (struct System_Comparison_string__o *)_9__12_2;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v54->__9__12_2, (int32_t)_9__12_2, v55, v56, v57, v58, v59, v60);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v54->__9__12_2, (int32_t)_9__12_2, v55, v56, v57, v58, v59, v60);
     }
     if ( !v49 )
       goto LABEL_50;
-    System_Collections_Generic_List_object___Sort_71636404(
+    System_Collections_Generic_List_object___Sort_71849708(
       v49,
       _9__12_2,
-      (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_string__Sort___91439504);
+      (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_string__Sort___91665632);
     if ( v49->fields._size >= 1 )
     {
       v61 = 0;
@@ -514,40 +514,40 @@ void EquipGraphViewListViewMenu__Open(
         Item = System_Collections_Generic_List_object___get_Item(
                  v49,
                  v61,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
         v64 = EquipGraphViewListViewMenu__CardId((EquipGraphViewListViewMenu_o *)Item, (System_String_o *)Item, v63);
         if ( DataMasterBase_object__object__int___TryGetEntity(
                v15,
                &entity,
                v64,
-               (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+               (const MethodInfo_3F10B80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
         {
-          v65 = sub_21FFD10(string___TypeInfo, 2);
+          v65 = sub_2213B20(string___TypeInfo, 2);
           Instance = System_Collections_Generic_List_object___get_Item(
                        v49,
                        v61,
-                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                       (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
           if ( !v65 )
             goto LABEL_50;
           if ( !*(_DWORD *)(v65 + 24) )
             goto LABEL_51;
           *(_QWORD *)(v65 + 32) = Instance;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v65 + 32), (int32_t)Instance, v66, v67, v68, v69, v70, v71);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v65 + 32), (int32_t)Instance, v66, v67, v68, v69, v70, v71);
           Instance = entity;
           if ( !entity )
             goto LABEL_50;
           Instance = ServantEntity__getName((ServantEntity_o *)entity, 0, -1, 0, 0, 0);
           if ( (*(_DWORD *)(v65 + 24) & 0xFFFFFFFE) == 0 )
 LABEL_51:
-            sub_21FFED4(Instance);
+            sub_2213CE4(Instance);
           *(_QWORD *)(v65 + 40) = Instance;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v65 + 40), (int32_t)Instance, v72, v73, v74, v75, v76, v77);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v65 + 40), (int32_t)Instance, v72, v73, v74, v75, v76, v77);
           v78 = (Il2CppObject *)System_String__Join((System_String_o *)StringLiteral_165/*" : "*/, (System_String_array *)v65, 0);
           System_Collections_Generic_List_object___set_Item(
             v49,
             v61,
             v78,
-            (const MethodInfo_444F8B0 *)Method_System_Collections_Generic_List_string__set_Item__);
+            (const MethodInfo_44839E8 *)Method_System_Collections_Generic_List_string__set_Item__);
         }
         ++v61;
       }
@@ -561,15 +561,15 @@ LABEL_51:
       goto LABEL_50;
     *(_QWORD *)(v6 + 16) = Instance;
     v85 = (System_String_o **)(v6 + 16);
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)Instance, v79, v80, v81, v82, v83, v84);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)Instance, v79, v80, v81, v82, v83, v84);
     if ( System_String__IsNullOrEmpty(*(System_String_o **)(v6 + 16), 0) )
     {
       *v85 = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), 0, v86, v87, v88, v89, v90, v91);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), 0, v86, v87, v88, v89, v90, v91);
     }
     if ( *v85 )
     {
-      v92 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_string__TypeInfo);
+      v92 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_string__TypeInfo);
       System_Predicate_object____ctor(
         v92,
         (Il2CppObject *)v6,
@@ -578,13 +578,13 @@ LABEL_51:
       System_Collections_Generic_List_object___RemoveAll(
         v49,
         (System_Predicate_T__o *)v92,
-        (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_string__RemoveAll__);
+        (const MethodInfo_4485290 *)Method_System_Collections_Generic_List_string__RemoveAll__);
     }
     v93 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                           v49,
-                                          (const MethodInfo_445164C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                          (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_string__ToArray__);
     this->fields.equipGraphAssetList = v93;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.equipGraphAssetList,
       (int32_t)v93,
       v94,
@@ -596,7 +596,7 @@ LABEL_51:
     Instance = this->fields.listViewManager;
     if ( !Instance )
 LABEL_50:
-      sub_21FFECC(Instance, v14);
+      sub_2213CDC(Instance, v14);
     FigureViewListViewManager__CreateList(
       (FigureViewListViewManager_o *)Instance,
       this->fields.equipGraphAssetList,
@@ -616,22 +616,22 @@ void EquipGraphViewListViewMenu__StartInput(EquipGraphViewListViewMenu_o *this, 
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_5935AFA & 1) == 0 )
+  if ( (byte_596DC3C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu_OnClickItem__);
-    byte_5935AFA = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu_OnClickItem__);
+    byte_596DC3C = 1;
   }
   v3 = System_Action_TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 2;
-  v5 = (System_Action_o *)sub_21FFEBC(v3);
+  v5 = (System_Action_o *)sub_2213CCC(v3);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_EquipGraphViewListViewMenu_OnClickItem__, 0);
   if ( !listViewManager
-    || (FigureViewListViewManager__SetMode_44264244(listViewManager, 1, v5, v8),
+    || (FigureViewListViewManager__SetMode_44285232(listViewManager, 1, v5, v8),
         (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
   {
-    sub_21FFECC(cancelButton, v7);
+    sub_2213CDC(cancelButton, v7);
   }
   UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
 }
@@ -643,16 +643,16 @@ void EquipGraphViewListViewMenu__StartMenu(EquipGraphViewListViewMenu_o *this, c
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_5935AF8 & 1) == 0 )
+  if ( (byte_596DC3A & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_EquipGraphViewListViewMenu__StartMenu_b__11_0__);
-    byte_5935AF8 = 1;
+    sub_2213A60(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_EquipGraphViewListViewMenu__StartMenu_b__11_0__);
+    byte_596DC3A = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (EquipGraphViewListViewMenu_CallbackFunc_o *)sub_21FFEBC(EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
+  v3 = (EquipGraphViewListViewMenu_CallbackFunc_o *)sub_2213CCC(EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
   EquipGraphViewListViewMenu_CallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -679,10 +679,10 @@ void EquipGraphViewListViewMenu__add_callbackFunc(
   EquipGraphViewListViewMenu_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5935AF6 & 1) == 0 )
+  if ( (byte_596DC38 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_5935AF6 = 1;
+    sub_2213A60(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_596DC38 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -695,13 +695,13 @@ void EquipGraphViewListViewMenu__add_callbackFunc(
       if ( (EquipGraphViewListViewMenu_CallbackFunc_c *)v8->klass != EquipGraphViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, EquipGraphViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, EquipGraphViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
   EquipGraphViewListViewMenu__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -722,10 +722,10 @@ void EquipGraphViewListViewMenu__remove_callbackFunc(
   EquipGraphViewListViewMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5935AF7 & 1) == 0 )
+  if ( (byte_596DC39 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_5935AF7 = 1;
+    sub_2213A60(&EquipGraphViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_596DC39 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -738,13 +738,13 @@ void EquipGraphViewListViewMenu__remove_callbackFunc(
       if ( (EquipGraphViewListViewMenu_CallbackFunc_c *)v8->klass != EquipGraphViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, EquipGraphViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, EquipGraphViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
   EquipGraphViewListViewMenu__StartMenu(v13, v14);
 }
 
@@ -768,7 +768,7 @@ void EquipGraphViewListViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -779,12 +779,12 @@ void EquipGraphViewListViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -796,9 +796,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF5248;
+  this->fields.invoke_impl = (intptr_t)sub_2008284;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF5200;
+  this->fields.extra_arg = (intptr_t)sub_200823C;
 }
 
 
@@ -814,8 +814,8 @@ System_IAsyncResult_o *EquipGraphViewListViewMenu_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -824,7 +824,7 @@ void EquipGraphViewListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -850,15 +850,15 @@ void EquipGraphViewListViewMenu___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5935AFD & 1) == 0 )
+  if ( (byte_596DC3F & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphViewListViewMenu___c_TypeInfo);
-    byte_5935AFD = 1;
+    sub_2213A60(&EquipGraphViewListViewMenu___c_TypeInfo);
+    byte_596DC3F = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EquipGraphViewListViewMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EquipGraphViewListViewMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EquipGraphViewListViewMenu___c_TypeInfo->static_fields->__9 = (struct EquipGraphViewListViewMenu___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EquipGraphViewListViewMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -910,27 +910,27 @@ System_String_o *EquipGraphViewListViewMenu___c___Open_b__12_1(
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_5935AFE & 1) == 0 )
+  if ( (byte_596DC40 & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_4548/*"CharaGraph/"*/);
-    byte_5935AFE = 1;
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_4556/*"CharaGraph/"*/);
+    byte_596DC40 = 1;
   }
-  v4 = sub_21FFD10(string___TypeInfo, 2);
+  v4 = sub_2213B20(string___TypeInfo, 2);
   if ( !v4 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   v12 = v4;
   if ( !*(_DWORD *)(v4 + 24)
-    || (v13 = StringLiteral_4548/*"CharaGraph/"*/,
-        *(_QWORD *)(v4 + 32) = StringLiteral_4548/*"CharaGraph/"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11),
+    || (v13 = StringLiteral_4556/*"CharaGraph/"*/,
+        *(_QWORD *)(v4 + 32) = StringLiteral_4556/*"CharaGraph/"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11),
         (*(_DWORD *)(v12 + 24) & 0xFFFFFFFE) == 0) )
   {
-    sub_21FFED4(v4);
+    sub_2213CE4(v4);
   }
   *(_QWORD *)(v12 + 40) = x;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v12 + 40), (int32_t)x, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v12 + 40), (int32_t)x, v14, v15, v16, v17, v18, v19);
   return System_String__Join((System_String_o *)StringLiteral_1/*""*/, (System_String_array *)v12, 0);
 }
 
@@ -946,7 +946,7 @@ int32_t EquipGraphViewListViewMenu___c___Open_b__12_2(
   int32_t result; // w0
 
   if ( !a || !b )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   stringLength = a->fields._stringLength;
   v5 = b->fields._stringLength;
   result = stringLength - v5;
@@ -970,6 +970,6 @@ bool EquipGraphViewListViewMenu___c__DisplayClass12_0___Open_b__3(
         const MethodInfo *method)
 {
   if ( !X )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return !System_String__Contains(X, this->fields.searchStr, 0);
 }

@@ -37,7 +37,7 @@ void CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)commonConsumeEntity,
     v9,
@@ -47,7 +47,7 @@ void CommonConsumeDetailInfo___ctor(
     v13,
     v14);
   this->fields.targetEntity = targetEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetEntity,
     (int32_t)targetEntity,
     v15,
@@ -57,7 +57,7 @@ void CommonConsumeDetailInfo___ctor(
     v19,
     v20);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userOwnStatusEntity,
     (int32_t)userOwnStatusEntity,
     v21,
@@ -68,11 +68,11 @@ void CommonConsumeDetailInfo___ctor(
     v26);
   v29 = this->fields.CommonConsumeEntity;
   if ( !v29 )
-    sub_21FFECC(v27, v28);
+    sub_2213CDC(v27, v28);
   this->fields._Num_k__BackingField = v29->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
   this->fields._Name_k__BackingField = TargetName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)TargetName,
     v31,
@@ -94,11 +94,11 @@ bool CommonConsumeDetailInfo__CheckIsOwnedEnoughly(CommonConsumeDetailInfo_o *th
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_5938104 & 1) == 0 )
+  if ( (byte_59702AA & 1) == 0 )
   {
-    sub_21FFC50(&ItemEntity_TypeInfo);
-    sub_21FFC50(&UserItemEntity_TypeInfo);
-    byte_5938104 = 1;
+    sub_2213A60(&ItemEntity_TypeInfo);
+    sub_2213A60(&UserItemEntity_TypeInfo);
+    byte_59702AA = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -123,11 +123,11 @@ System_String_o *CommonConsumeDetailInfo__GetTargetName(CommonConsumeDetailInfo_
   System_String_o **v6; // x8
   System_String_o **p_monitor; // x9
 
-  if ( (byte_5938103 & 1) == 0 )
+  if ( (byte_59702A9 & 1) == 0 )
   {
-    sub_21FFC50(&ItemEntity_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5938103 = 1;
+    sub_2213A60(&ItemEntity_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59702A9 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity )
@@ -189,7 +189,7 @@ void CommonConsumeDetailInfo__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

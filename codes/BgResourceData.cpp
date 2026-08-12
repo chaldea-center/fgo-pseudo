@@ -4,18 +4,18 @@ void BgResourceData___ctor(BgResourceData_o *this, int32_t bgId, int32_t bgType,
   Il2CppObject *Master_object; // x0
   __int64 v9; // x1
 
-  if ( (byte_593B16D & 1) == 0 )
+  if ( (byte_597335C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_BattleBgMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_593B16D = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_BattleBgMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_597335C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v7);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BattleBgMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BattleBgMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   this->fields = (BgResourceData_Fields)BattleBgMaster__GetBgResourceIdType(
                                           (BattleBgMaster_o *)Master_object,
                                           bgId,
@@ -28,10 +28,10 @@ System_String_o *BgResourceData__get_AssetPath(BgResourceData_o *this, const Met
 {
   int32_t Id_k__BackingField; // w19
 
-  if ( (byte_593B16C & 1) == 0 )
+  if ( (byte_597335B & 1) == 0 )
   {
-    sub_21FFC50(&BattleDataDefine_TypeInfo);
-    byte_593B16C = 1;
+    sub_2213A60(&BattleDataDefine_TypeInfo);
+    byte_597335B = 1;
   }
   Id_k__BackingField = this->fields._Id_k__BackingField;
   if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )

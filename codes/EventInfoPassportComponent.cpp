@@ -34,24 +34,24 @@ void EventInfoPassportComponent__CreateEventInfoPassportDialog(
   System_Action_o *v21; // x20
   __int64 v22; // x1
 
-  if ( (byte_59399BA & 1) == 0 )
+  if ( (byte_5971D30 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_EventInfoPassportComponent___c__DisplayClass7_0__CreateEventInfoPassportDialog_b__0__);
-    sub_21FFC50(&EventInfoPassportComponent___c__DisplayClass7_0_TypeInfo);
-    byte_59399BA = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_EventInfoPassportComponent___c__DisplayClass7_0__CreateEventInfoPassportDialog_b__0__);
+    sub_2213A60(&EventInfoPassportComponent___c__DisplayClass7_0_TypeInfo);
+    byte_5971D30 = 1;
   }
-  v5 = sub_21FFEBC(EventInfoPassportComponent___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_2213CCC(EventInfoPassportComponent___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)onClosed, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)onClosed, v14, v15, v16, v17, v18, v19);
   eventId = this->fields.eventId;
-  v21 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -59,7 +59,7 @@ void EventInfoPassportComponent__CreateEventInfoPassportDialog(
     0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v22);
-  AtlasManager__LoadEventUI_47538036(eventId, v21, 1, 0);
+  AtlasManager__LoadEventUI_47569188(eventId, v21, 1, 0);
 }
 
 
@@ -73,7 +73,7 @@ void EventInfoPassportComponent__Initialization(
 
   EventInfoUIBase__Initialization((EventInfoUIBase_o *)this, eventUiEntity, 0);
   if ( !eventUiEntity )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   this->fields.eventId = eventUiEntity->fields.eventId;
 }
 
@@ -93,12 +93,12 @@ void EventInfoPassportComponent__OnClick(EventInfoPassportComponent_o *this, con
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_59399B9 & 1) == 0 )
+  if ( (byte_5971D2F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoPassportComponent_OnClick__);
-    sub_21FFC50(&Method_EventInfoPassportComponent__OnClick_b__6_0__);
-    byte_59399B9 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoPassportComponent_OnClick__);
+    sub_2213A60(&Method_EventInfoPassportComponent__OnClick_b__6_0__);
+    byte_5971D2F = 1;
   }
   v3 = (EventInfoPassportComponent_o *)((__int64 (__fastcall *)(EventInfoPassportComponent_o *, const MethodInfo *))this->klass->vtable._17_IsBusy.methodPtr)(
                                          this,
@@ -109,10 +109,10 @@ void EventInfoPassportComponent__OnClick(EventInfoPassportComponent_o *this, con
     EventInfoPassportComponent__SetTerminalTouchEnable(v3, 0, v4);
     v5 = Method_EventInfoPassportComponent_OnClick__;
     if ( (*((_BYTE *)Method_EventInfoPassportComponent_OnClick__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_EventInfoPassportComponent_OnClick__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_EventInfoPassportComponent_OnClick__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-    v7 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoPassportComponent__OnClick_b__6_0__, 0);
     EventInfoPassportComponent__CreateEventInfoPassportDialog(this, v7, v8);
   }
@@ -145,18 +145,18 @@ void EventInfoPassportComponent__SetTerminalTouchEnable(
   UnityEngine_Object_o *genericContainerHandle; // x20
   System_String_c *v10; // x8
 
-  if ( (byte_59399BB & 1) == 0 )
+  if ( (byte_5971D31 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_59399BB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_5971D31 = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, enable);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -171,10 +171,10 @@ void EventInfoPassportComponent__SetTerminalTouchEnable(
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     v7 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -192,10 +192,10 @@ void EventInfoPassportComponent__SetTerminalTouchEnable(
         return;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       v7 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -214,7 +214,7 @@ void EventInfoPassportComponent__SetTerminalTouchEnable(
         }
       }
     }
-    sub_21FFECC(v7, v6);
+    sub_2213CDC(v7, v6);
   }
 }
 
@@ -225,15 +225,15 @@ void EventInfoPassportComponent___OnClick_b__6_0(EventInfoPassportComponent_o *t
   EventInfoPassportComponent_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_59399BC & 1) == 0 )
+  if ( (byte_5971D32 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    byte_59399BC = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    byte_5971D32 = 1;
   }
   eventId = this->fields.eventId;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method);
-  AtlasManager__ReleaseEventUI_47538200(eventId, 0);
+  AtlasManager__ReleaseEventUI_47569360(eventId, 0);
   this->fields.isBusy = 0;
   EventInfoPassportComponent__SetTerminalTouchEnable(v4, 1, v5);
 }
@@ -261,12 +261,12 @@ void EventInfoPassportComponent___c__DisplayClass7_0___CreateEventInfoPassportDi
   const MethodInfo *v10; // x3
   struct EventInfoPassportComponent_o *v11; // x8
 
-  if ( (byte_59399BD & 1) == 0 )
+  if ( (byte_5971D33 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GameObjectHelper_Instantiate_EventInfoPassportDialog___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59399BD = 1;
+    sub_2213A60(&Method_GameObjectHelper_Instantiate_EventInfoPassportDialog___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5971D33 = 1;
   }
   _4__this = (UnityEngine_Object_o *)this->fields.__4__this;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -278,14 +278,14 @@ void EventInfoPassportComponent___c__DisplayClass7_0___CreateEventInfoPassportDi
   if ( !v6 )
     goto LABEL_16;
   eventInfoPassportDialogPrefab = v6->fields.eventInfoPassportDialogPrefab;
-  Instance = (UnityEngine_Transform_o **)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (UnityEngine_Transform_o **)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   v9 = GameObjectHelper__Instantiate_object_(
          eventInfoPassportDialogPrefab,
          Instance[15],
          0,
-         (const MethodInfo_38853E4 *)Method_GameObjectHelper_Instantiate_EventInfoPassportDialog___);
+         (const MethodInfo_38B88AC *)Method_GameObjectHelper_Instantiate_EventInfoPassportDialog___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   Instance = (UnityEngine_Transform_o **)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0, 0);
@@ -301,7 +301,7 @@ LABEL_11:
         (v11 = this->fields.__4__this) == 0) )
   {
 LABEL_16:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   EventInfoPassportDialog__Open((EventInfoPassportDialog_o *)v9, v11->fields.eventId, this->fields.onClosed, v10);
 }

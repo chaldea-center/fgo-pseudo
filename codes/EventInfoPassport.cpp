@@ -19,7 +19,7 @@ void EventInfoPassport__DisplayMaximSkillView(EventInfoPassport_o *this, const M
 
   skillBase = this->fields.skillBase;
   if ( !skillBase )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   if ( UnityEngine_GameObject__get_activeSelf(skillBase, 0) )
   {
     EventInfoPassport__SetMaximSkillInfo(this, v4);
@@ -83,15 +83,15 @@ void EventInfoPassport__DisplayPassport(
   EventJobEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v8 = this;
-  if ( (byte_59399B7 & 1) == 0 )
+  if ( (byte_5971D2D & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_23766/*"passport_card_base_{0:D2}"*/);
-    sub_21FFC50(&StringLiteral_23767/*"passport_card_name_{0:D2}"*/);
-    this = (EventInfoPassport_o *)sub_21FFC50(&StringLiteral_23768/*"passport_card_photo_{0:D2}"*/);
-    byte_59399B7 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&StringLiteral_23813/*"passport_card_base_{0:D2}"*/);
+    sub_2213A60(&StringLiteral_23814/*"passport_card_name_{0:D2}"*/);
+    this = (EventInfoPassport_o *)sub_2213A60(&StringLiteral_23815/*"passport_card_photo_{0:D2}"*/);
+    byte_5971D2D = 1;
   }
   entity = 0;
   if ( isEmptyPassport )
@@ -102,11 +102,11 @@ void EventInfoPassport__DisplayPassport(
       baseSprite = v8->fields.baseSprite;
       v8->fields.eventId = eventId;
       imageId = 8061200;
-      v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId);
-      v13 = System_String__Format((System_String_o *)StringLiteral_23766/*"passport_card_base_{0:D2}"*/, v11, 0);
+      v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &imageId);
+      v13 = System_String__Format((System_String_o *)StringLiteral_23813/*"passport_card_base_{0:D2}"*/, v11, 0);
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v12);
-      AtlasManager__SetEventUI_47538316(eventId, baseSprite, v13, 0);
+      AtlasManager__SetEventUI_47569484(eventId, baseSprite, v13, 0);
       this = (EventInfoPassport_o *)v8->fields.nameSprite;
       if ( this )
       {
@@ -130,7 +130,7 @@ void EventInfoPassport__DisplayPassport(
                 {
                   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
                   v8->fields.onClickAction = 0;
-                  sub_21FFBF4(
+                  sub_2213A04(
                     (MissionNaviTransitionBoardItem_o *)&v8->fields.onClickAction,
                     0,
                     v14,
@@ -148,13 +148,13 @@ void EventInfoPassport__DisplayPassport(
       }
     }
 LABEL_53:
-    sub_21FFECC(this, passportEntity);
+    sub_2213CDC(this, passportEntity);
   }
   if ( passportEntity )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, passportEntity);
-    this = (EventInfoPassport_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobMaster___);
+    this = (EventInfoPassport_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobMaster___);
     if ( !this )
       goto LABEL_53;
     if ( EventJobMaster__TryGetEntity(
@@ -168,7 +168,7 @@ LABEL_53:
       v8->fields.onClickAction = passportClickAction;
       v8->fields.eventId = v26;
       v8->fields._JobId_k__BackingField = passportEntity->fields.jobId;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v8->fields.onClickAction,
         (int32_t)passportClickAction,
         v20,
@@ -180,11 +180,11 @@ LABEL_53:
       v27 = v8->fields.eventId;
       v28 = v8->fields.baseSprite;
       imageId = passportEntity->fields.imageId;
-      v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId);
-      v31 = System_String__Format((System_String_o *)StringLiteral_23766/*"passport_card_base_{0:D2}"*/, v29, 0);
+      v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &imageId);
+      v31 = System_String__Format((System_String_o *)StringLiteral_23813/*"passport_card_base_{0:D2}"*/, v29, 0);
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v30);
-      AtlasManager__SetEventUI_47538316(v27, v28, v31, 0);
+      AtlasManager__SetEventUI_47569484(v27, v28, v31, 0);
       this = (EventInfoPassport_o *)entity;
       if ( !entity )
         goto LABEL_53;
@@ -195,11 +195,11 @@ LABEL_53:
       v33 = v8->fields.eventId;
       nameSprite = v8->fields.nameSprite;
       imageId = v32;
-      v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId);
-      v37 = System_String__Format((System_String_o *)StringLiteral_23767/*"passport_card_name_{0:D2}"*/, v35, 0);
+      v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &imageId);
+      v37 = System_String__Format((System_String_o *)StringLiteral_23814/*"passport_card_name_{0:D2}"*/, v35, 0);
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v36);
-      AtlasManager__SetEventUI_47538316(v33, nameSprite, v37, 0);
+      AtlasManager__SetEventUI_47569484(v33, nameSprite, v37, 0);
       IsOpenPassport = EventJobPassportEntity__IsOpenPassport(passportEntity, 0);
       this = (EventInfoPassport_o *)v8->fields.maskBase;
       v8->fields._IsOpenPassport_k__BackingField = IsOpenPassport;
@@ -222,11 +222,11 @@ LABEL_53:
         v40 = v8->fields.eventId;
         photoSprite = v8->fields.photoSprite;
         imageId = v39;
-        v42 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &imageId);
-        v44 = System_String__Format((System_String_o *)StringLiteral_23768/*"passport_card_photo_{0:D2}"*/, v42, 0);
+        v42 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &imageId);
+        v44 = System_String__Format((System_String_o *)StringLiteral_23815/*"passport_card_photo_{0:D2}"*/, v42, 0);
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v43);
-        this = (EventInfoPassport_o *)AtlasManager__SetEventUI_47538316(v40, photoSprite, v44, 0);
+        this = (EventInfoPassport_o *)AtlasManager__SetEventUI_47569484(v40, photoSprite, v44, 0);
       }
       else
       {
@@ -301,17 +301,17 @@ System_String_o *EventInfoPassport__GetMaskLabelText(EventInfoPassport_o *this, 
   int32_t JobId_k__BackingField; // [xsp+8h] [xbp-28h] BYREF
   int32_t eventId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59399B8 & 1) == 0 )
+  if ( (byte_5971D2E & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_8493/*"JOB_PASSPORT_DIALOG_NOT_CONDITION_TEXT"*/);
-    byte_59399B8 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_8506/*"JOB_PASSPORT_DIALOG_NOT_CONDITION_TEXT"*/);
+    byte_5971D2E = 1;
   }
   eventId = this->fields.eventId;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &eventId);
-  v4 = (Il2CppObject *)System_String__Concat((Il2CppObject *)StringLiteral_8493/*"JOB_PASSPORT_DIALOG_NOT_CONDITION_TEXT"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &eventId);
+  v4 = (Il2CppObject *)System_String__Concat((Il2CppObject *)StringLiteral_8506/*"JOB_PASSPORT_DIALOG_NOT_CONDITION_TEXT"*/, v3, 0);
   JobId_k__BackingField = this->fields._JobId_k__BackingField;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &JobId_k__BackingField);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &JobId_k__BackingField);
   v7 = System_String__Concat(v4, v5, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
@@ -360,7 +360,7 @@ void EventInfoPassport__SetActiveSkillObject(EventInfoPassport_o *this, bool isM
         (skillNameLabel = (UnityEngine_Component_o *)this->fields.maximSkillDetailLabel) == 0) )
   {
 LABEL_6:
-    sub_21FFECC(skillNameLabel, isMaxim);
+    sub_2213CDC(skillNameLabel, isMaxim);
   }
   v9 = UnityEngine_Component__get_gameObject(skillNameLabel, 0);
   GameObjectHelper__SetActiveSafely(v9, isMaxim, 0);
@@ -380,7 +380,7 @@ void EventInfoPassport__SetMaximSkillInfo(EventInfoPassport_o *this, const Metho
         (skillDetailLabel = v3->fields.skillDetailLabel) == 0)
     || (this = (EventInfoPassport_o *)v3->fields.maximSkillDetailLabel) == 0 )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   UILabel__set_text((UILabel_o *)this, skillDetailLabel->fields.mText, 0);
 }

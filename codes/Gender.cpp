@@ -31,36 +31,36 @@ void Gender___cctor(const MethodInfo *method)
   bool v29; // w6
   bool v30; // w7
 
-  if ( (byte_5937524 & 1) == 0 )
+  if ( (byte_596F683 & 1) == 0 )
   {
-    sub_21FFC50(&Gender_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_6658/*"FEMALE"*/);
-    sub_21FFC50(&StringLiteral_10119/*"OTHER"*/);
-    sub_21FFC50(&StringLiteral_8882/*"MALE"*/);
-    byte_5937524 = 1;
+    sub_2213A60(&Gender_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_6670/*"FEMALE"*/);
+    sub_2213A60(&StringLiteral_10132/*"OTHER"*/);
+    sub_2213A60(&StringLiteral_8895/*"MALE"*/);
+    byte_596F683 = 1;
   }
-  v1 = sub_21FFD10(string___TypeInfo, 3);
+  v1 = sub_2213B20(string___TypeInfo, 3);
   if ( !v1 )
-    sub_21FFECC(0, v2);
+    sub_2213CDC(0, v2);
   v9 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v10 = StringLiteral_8882/*"MALE"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_8882/*"MALE"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
+    || (v10 = StringLiteral_8895/*"MALE"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_8895/*"MALE"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8),
         (*(_DWORD *)(v9 + 24) & 0xFFFFFFFE) == 0)
-    || (v17 = StringLiteral_6658/*"FEMALE"*/,
-        *(_QWORD *)(v9 + 40) = StringLiteral_6658/*"FEMALE"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
+    || (v17 = StringLiteral_6670/*"FEMALE"*/,
+        *(_QWORD *)(v9 + 40) = StringLiteral_6670/*"FEMALE"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16),
         *(_DWORD *)(v9 + 24) <= 2u) )
   {
-    sub_21FFED4(v1);
+    sub_2213CE4(v1);
   }
-  v24 = StringLiteral_10119/*"OTHER"*/;
-  *(_QWORD *)(v9 + 48) = StringLiteral_10119/*"OTHER"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_10132/*"OTHER"*/;
+  *(_QWORD *)(v9 + 48) = StringLiteral_10132/*"OTHER"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 48), v24, v18, v19, v20, v21, v22, v23);
   Gender_TypeInfo->static_fields->nameList = (struct System_String_array *)v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)Gender_TypeInfo->static_fields, v9, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)Gender_TypeInfo->static_fields, v9, v25, v26, v27, v28, v29, v30);
 }
 
 
@@ -86,7 +86,7 @@ int32_t Gender__GetGenderTypeBySelectType(int32_t genderSelectType, const Method
     switch ( genderSelectType )
     {
       case 3:
-        return UnityEngine_Random__Range_83187376(1, 3, 0);
+        return UnityEngine_Random__Range_83400680(1, 3, 0);
       case 4:
         SelfUserGame = UserGameMaster__getSelfUserGame(0);
         if ( !SelfUserGame )
@@ -109,7 +109,7 @@ int32_t Gender__GetGenderTypeBySelectType(int32_t genderSelectType, const Method
         if ( SelfUserGame )
           return SelfUserGame->fields.genderType;
 LABEL_18:
-        sub_21FFECC(SelfUserGame, v3);
+        sub_2213CDC(SelfUserGame, v3);
       default:
         return -1;
     }
@@ -125,10 +125,10 @@ int32_t Gender__Parse(System_String_o *name, const MethodInfo *method)
   Gender_c *v5; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_5937522 & 1) == 0 )
+  if ( (byte_596F681 & 1) == 0 )
   {
-    sub_21FFC50(&Gender_TypeInfo);
-    byte_5937522 = 1;
+    sub_2213A60(&Gender_TypeInfo);
+    byte_596F681 = 1;
   }
   v4 = 0;
   while ( 1 )
@@ -142,7 +142,7 @@ int32_t Gender__Parse(System_String_o *name, const MethodInfo *method)
     nameList = v5->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_21FFECC(v5, method);
+      sub_2213CDC(v5, method);
     if ( v4 >= SLODWORD(nameList->max_length) )
       return 3;
     if ( !*(&v5->_2.cctor_finished + 1) )
@@ -153,12 +153,12 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( (unsigned int)v4 >= LODWORD(nameList->max_length) )
-      sub_21FFED4(v5);
+      sub_2213CE4(v5);
     v5 = (Gender_c *)nameList->m_Items[v4];
     if ( !v5 )
       goto LABEL_16;
     ++v4;
-    if ( System_String__Equals_75473208((System_String_o *)v5, name, 0) )
+    if ( System_String__Equals_75686512((System_String_o *)v5, name, 0) )
       return v4;
   }
 }
@@ -171,10 +171,10 @@ int32_t Gender__ToData(System_String_o *name, const MethodInfo *method)
   Gender_c *v5; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_5937523 & 1) == 0 )
+  if ( (byte_596F682 & 1) == 0 )
   {
-    sub_21FFC50(&Gender_TypeInfo);
-    byte_5937523 = 1;
+    sub_2213A60(&Gender_TypeInfo);
+    byte_596F682 = 1;
   }
   v4 = 0;
   while ( 1 )
@@ -188,7 +188,7 @@ int32_t Gender__ToData(System_String_o *name, const MethodInfo *method)
     nameList = v5->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_21FFECC(v5, method);
+      sub_2213CDC(v5, method);
     if ( v4 >= SLODWORD(nameList->max_length) )
       return 3;
     if ( !*(&v5->_2.cctor_finished + 1) )
@@ -199,12 +199,12 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( (unsigned int)v4 >= LODWORD(nameList->max_length) )
-      sub_21FFED4(v5);
+      sub_2213CE4(v5);
     v5 = (Gender_c *)nameList->m_Items[v4];
     if ( !v5 )
       goto LABEL_16;
     ++v4;
-    if ( System_String__Equals_75473208((System_String_o *)v5, name, 0) )
+    if ( System_String__Equals_75686512((System_String_o *)v5, name, 0) )
       return v4;
   }
 }
@@ -216,10 +216,10 @@ System_String_o *Gender__ToName(int32_t type, const MethodInfo *method)
   Gender_c *v4; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_5937521 & 1) == 0 )
+  if ( (byte_596F680 & 1) == 0 )
   {
-    sub_21FFC50(&Gender_TypeInfo);
-    byte_5937521 = 1;
+    sub_2213A60(&Gender_TypeInfo);
+    byte_596F680 = 1;
   }
   v4 = Gender_TypeInfo;
   if ( !*(&Gender_TypeInfo->_2.cctor_finished + 1) )
@@ -229,8 +229,8 @@ System_String_o *Gender__ToName(int32_t type, const MethodInfo *method)
   }
   nameList = v4->static_fields->nameList;
   if ( !nameList )
-    sub_21FFECC(v4, method);
+    sub_2213CDC(v4, method);
   if ( (unsigned int)(type - 1) >= LODWORD(nameList->max_length) )
-    sub_21FFED4(v4);
+    sub_2213CE4(v4);
   return nameList->m_Items[type - 1];
 }

@@ -33,7 +33,7 @@ void TweenAnimationComponent__OnFinishAnimation(TweenAnimationComponent_o *this,
   p_onFinishAnimation = (MissionNaviTransitionBoardItem_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0);
   p_onFinishAnimation->klass = 0;
-  sub_21FFBF4(p_onFinishAnimation, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04(p_onFinishAnimation, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -69,11 +69,11 @@ void TweenAnimationComponent__Setup(
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_59372CE & 1) == 0 )
+  if ( (byte_596F429 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_10296/*"OnFinishAnimation"*/);
-    byte_59372CE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_10309/*"OnFinishAnimation"*/);
+    byte_596F429 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType, tweener);
@@ -95,7 +95,7 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         tweener->fields.eventReceiver = gameObject;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&tweener->fields.eventReceiver,
           (int32_t)gameObject,
           v13,
@@ -104,9 +104,9 @@ LABEL_8:
           v16,
           v17,
           v18);
-        v19 = StringLiteral_10296/*"OnFinishAnimation"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10296/*"OnFinishAnimation"*/;
-        sub_21FFBF4(
+        v19 = StringLiteral_10309/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10309/*"OnFinishAnimation"*/;
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&tweener->fields.callWhenFinished,
           v19,
           v20,
@@ -116,7 +116,7 @@ LABEL_8:
           v24,
           v25);
         this->fields.onFinishAnimation = onFinish;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.onFinishAnimation,
           (int32_t)onFinish,
           v26,
@@ -128,7 +128,7 @@ LABEL_8:
         return;
       }
     }
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   }
 }
 
@@ -146,10 +146,10 @@ UnityEngine_GameObject_o *TweenAnimationComponent__get_Target(
   __int64 v2; // x2
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_59372CD & 1) == 0 )
+  if ( (byte_596F428 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59372CD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F428 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )

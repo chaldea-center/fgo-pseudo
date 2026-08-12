@@ -12,11 +12,11 @@ void BattleQuestPhaseTurnLimitUtil___ctor(
   bool v10; // w7
 
   if ( !questPhaseEnt )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   script = questPhaseEnt->fields.script;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.EntityScript = script;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)script, v5, v6, v7, v8, v9, v10);
 }
 
 

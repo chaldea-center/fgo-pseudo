@@ -16,7 +16,7 @@ void ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *m
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
   {
-    sub_21FFECC(baseObject, method);
+    sub_2213CDC(baseObject, method);
   }
   ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0);
 }
@@ -71,11 +71,11 @@ void ResultItemComponent__Set(
       v11 = (unsigned int)count;
       v12 = v7;
 LABEL_19:
-      ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)this, type, v12, v11, 0, 0);
+      ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)this, type, v12, v11, 0, 0);
       return;
     }
 LABEL_20:
-    sub_21FFECC(this, giftEnt);
+    sub_2213CDC(this, giftEnt);
   }
   this = (ResultItemComponent_o *)v6->fields.itemIcon;
   if ( !this )
@@ -84,7 +84,7 @@ LABEL_20:
     num = -1;
   else
     num = v5->fields.num;
-  ItemIconComponent__SetItemImage_47940588((ItemIconComponent_o *)this, (int32_t)giftEnt, v5->fields.objectId, num, 0);
+  ItemIconComponent__SetItemImage_47888684((ItemIconComponent_o *)this, (int32_t)giftEnt, v5->fields.objectId, num, 0);
 }
 
 
@@ -104,9 +104,9 @@ void ResultItemComponent__SetExtra(ResultItemComponent_o *this, int32_t imgId, i
       || (UnityEngine_GameObject__SetActive(baseObject, 1, 0),
           (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
     {
-      sub_21FFECC(baseObject, *(_QWORD *)&imgId);
+      sub_2213CDC(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_47934504((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
+    ItemIconComponent__SetItemImage_47882600((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
   }
 }
 
@@ -125,7 +125,7 @@ void ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -145,7 +145,7 @@ void ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodI
   if ( !bonusSprite
     || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0)) == 0 )
   {
-    sub_21FFECC(bonusSprite, method);
+    sub_2213CDC(bonusSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0);
 }

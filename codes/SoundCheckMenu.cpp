@@ -15,26 +15,26 @@ void SoundCheckMenu___ctor(SoundCheckMenu_o *this, const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5935C67 & 1) == 0 )
+  if ( (byte_596DDA9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_string____ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__List_string___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_5935C67 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_string____ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__List_string___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596DDA9 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.cpkNameList = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cpkNameList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__List_string___TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cpkNameList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__List_string___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v10,
-    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__List_string____ctor__);
+    (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__List_string____ctor__);
   this->fields.exceptionData = (struct System_Collections_Generic_Dictionary_int__List_string___o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.exceptionData,
     (int32_t)v10,
     v11,
@@ -59,23 +59,23 @@ void SoundCheckMenu__CheckNumDispWrite(SoundCheckMenu_o *this, int32_t num, int3
 
   v11 = num;
   v10 = max;
-  if ( (byte_5935C63 & 1) == 0 )
+  if ( (byte_596DDA5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    sub_21FFC50(&StringLiteral_4561/*"CheckNum : "*/);
-    byte_5935C63 = 1;
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    sub_2213A60(&StringLiteral_4569/*"CheckNum : "*/);
+    byte_596DDA5 = 1;
   }
   checkNumDisp = this->fields.checkNumDisp;
   v6 = System_Int32__ToString((int32_t)&v11, 0);
   v7 = System_Int32__ToString((int32_t)&v10, 0);
-  v8 = System_String__Concat_75483552(
-         (System_String_o *)StringLiteral_4561/*"CheckNum : "*/,
+  v8 = System_String__Concat_75696856(
+         (System_String_o *)StringLiteral_4569/*"CheckNum : "*/,
          v6,
          (System_String_o *)StringLiteral_1123/*"/"*/,
          v7,
          0);
   if ( !checkNumDisp )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   UILabel__set_text(checkNumDisp, v8, 0);
 }
 
@@ -88,11 +88,11 @@ void SoundCheckMenu__Close(SoundCheckMenu_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x2
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_5935C58 & 1) == 0 )
+  if ( (byte_596DD9A & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_3201/*"Battle"*/);
-    byte_5935C58 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&StringLiteral_3205/*"Battle"*/);
+    byte_596DD9A = 1;
   }
   if ( this->fields.sceneStart && !this->fields.nextCheck )
   {
@@ -100,12 +100,12 @@ void SoundCheckMenu__Close(SoundCheckMenu_o *this, const MethodInfo *method)
     if ( !gameObject )
       goto LABEL_16;
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-    if ( SoundCheckMenu__CueSheetCheck(v5, (System_String_o *)StringLiteral_3201/*"Battle"*/, v6) )
+    if ( SoundCheckMenu__CueSheetCheck(v5, (System_String_o *)StringLiteral_3205/*"Battle"*/, v6) )
     {
-      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !gameObject )
         goto LABEL_16;
-      SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)gameObject, (System_String_o *)StringLiteral_3201/*"Battle"*/, 0);
+      SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)gameObject, (System_String_o *)StringLiteral_3205/*"Battle"*/, 0);
     }
     gameObject = (UnityEngine_GameObject_o *)this->fields.scrollView;
     if ( gameObject )
@@ -133,7 +133,7 @@ void SoundCheckMenu__Close(SoundCheckMenu_o *this, const MethodInfo *method)
       }
     }
 LABEL_16:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
 }
 
@@ -149,12 +149,12 @@ bool SoundCheckMenu__CueSheetCheck(SoundCheckMenu_o *this, System_String_o *Shee
   __int64 v10; // x22
   __int64 v11; // x8
 
-  if ( (byte_5935C64 & 1) == 0 )
+  if ( (byte_596DDA6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    byte_5935C64 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    byte_596DDA6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   klass = Instance[2].klass;
@@ -171,7 +171,7 @@ bool SoundCheckMenu__CueSheetCheck(SoundCheckMenu_o *this, System_String_o *Shee
     while ( 1 )
     {
       if ( (unsigned int)v10 >= namespaze )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v11 = *((_QWORD *)&element_class->_1.byval_arg.data + v10);
       if ( !v11 )
         break;
@@ -186,7 +186,7 @@ bool SoundCheckMenu__CueSheetCheck(SoundCheckMenu_o *this, System_String_o *Shee
       return v9;
     }
 LABEL_13:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   return v9;
 }
@@ -216,13 +216,13 @@ void SoundCheckMenu__ErrorOutput(SoundCheckMenu_o *this, System_String_o *text, 
   System_String_o *v23; // x0
 
   v4 = this;
-  if ( (byte_5935C62 & 1) == 0 )
+  if ( (byte_596DDA4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_UILabel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    this = (SoundCheckMenu_o *)sub_21FFC50(&StringLiteral_6429/*"ErrorCount : "*/);
-    byte_5935C62 = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_UILabel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    this = (SoundCheckMenu_o *)sub_2213A60(&StringLiteral_6441/*"ErrorCount : "*/);
+    byte_596DDA4 = 1;
   }
   v5 = v4->fields.errorCnt + 1;
   v4->fields.errorCnt = v5;
@@ -235,7 +235,7 @@ void SoundCheckMenu__ErrorOutput(SoundCheckMenu_o *this, System_String_o *text, 
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, text, method);
     this = (SoundCheckMenu_o *)UnityEngine_Object__Instantiate_object_(
                                  resultLabelSeed,
-                                 (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                 (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_UILabel___);
     if ( !this )
       goto LABEL_14;
     v8 = (UnityEngine_Component_o *)this;
@@ -250,23 +250,23 @@ void SoundCheckMenu__ErrorOutput(SoundCheckMenu_o *this, System_String_o *text, 
           !*p_resultLabel) )
     {
 LABEL_14:
-      sub_21FFECC(this, text);
+      sub_2213CDC(this, text);
     }
     GameObjectExtensions__SetLocalPositionY(
       (UnityEngine_GameObject_o *)v11,
       (float)(LocalPositionY - (float)(*p_resultLabel)->fields.mHeight) + (float)(*p_resultLabel)->fields.mFontSize,
       0);
     *p_resultLabel = (struct UILabel_o *)v8;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields.resultLabel, (int32_t)v8, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields.resultLabel, (int32_t)v8, v14, v15, v16, v17, v18, v19);
   }
   resultLabel = v4->fields.resultLabel;
   if ( !resultLabel )
     goto LABEL_14;
-  v21 = System_String__Concat_75481624(resultLabel->fields.mText, text, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+  v21 = System_String__Concat_75694928(resultLabel->fields.mText, text, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   UILabel__set_text(resultLabel, v21, 0);
   errorCntLabel = v4->fields.errorCntLabel;
   v23 = System_Int32__ToString((int)v4 + 108, 0);
-  this = (SoundCheckMenu_o *)System_String__Concat_75438412((System_String_o *)StringLiteral_6429/*"ErrorCount : "*/, v23, 0);
+  this = (SoundCheckMenu_o *)System_String__Concat_75651716((System_String_o *)StringLiteral_6441/*"ErrorCount : "*/, v23, 0);
   if ( !errorCntLabel )
     goto LABEL_14;
   UILabel__set_text(errorCntLabel, (System_String_o *)this, 0);
@@ -283,13 +283,13 @@ bool SoundCheckMenu__IsReplaceable(SoundCheckMenu_o *this, System_String_o *grou
   System_String_o *v6; // x0
   int32_t Value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5935C5C & 1) == 0 )
+  if ( (byte_596DD9E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_8889/*"MASHU_SVT_ID1"*/);
-    sub_21FFC50(&StringLiteral_8890/*"MASHU_SVT_ID2"*/);
-    byte_5935C5C = 1;
+    sub_2213A60(&StringLiteral_8902/*"MASHU_SVT_ID1"*/);
+    sub_2213A60(&StringLiteral_8903/*"MASHU_SVT_ID2"*/);
+    byte_596DD9E = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8889/*"MASHU_SVT_ID1"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8902/*"MASHU_SVT_ID1"*/, 0);
   v4 = System_Int32__ToString((int32_t)&Value, 0);
   if ( System_String__op_Equality(groupId, v4, 0) )
   {
@@ -297,7 +297,7 @@ bool SoundCheckMenu__IsReplaceable(SoundCheckMenu_o *this, System_String_o *grou
   }
   else
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8890/*"MASHU_SVT_ID2"*/, 0);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8903/*"MASHU_SVT_ID2"*/, 0);
     v6 = System_Int32__ToString((int32_t)&Value, 0);
     return System_String__op_Equality(groupId, v6, 0);
   }
@@ -319,44 +319,44 @@ void SoundCheckMenu__OnButtonClick(
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x1
 
-  if ( (byte_5935C61 & 1) == 0 )
+  if ( (byte_596DDA3 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25096/*"svtVoiceButton"*/);
-    sub_21FFC50(&StringLiteral_9714/*"NPButton"*/);
-    sub_21FFC50(&StringLiteral_17404/*"allCpkVoiceButton"*/);
-    sub_21FFC50(&StringLiteral_3235/*"BattleEffectButton"*/);
-    sub_21FFC50(&StringLiteral_2297/*"AllButton"*/);
-    byte_5935C61 = 1;
+    sub_2213A60(&StringLiteral_25144/*"svtVoiceButton"*/);
+    sub_2213A60(&StringLiteral_9727/*"NPButton"*/);
+    sub_2213A60(&StringLiteral_17440/*"allCpkVoiceButton"*/);
+    sub_2213A60(&StringLiteral_3239/*"BattleEffectButton"*/);
+    sub_2213A60(&StringLiteral_2298/*"AllButton"*/);
+    byte_596DDA3 = 1;
   }
   if ( !this->fields.nextCheck && this->fields.sceneStart )
   {
     SoundCheckMenu__ValueReset(this, (const MethodInfo *)ButtonObj);
     if ( !ButtonObj )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)ButtonObj, 0);
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_2297/*"AllButton"*/, 0) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_2298/*"AllButton"*/, 0) )
     {
       v9 = SoundCheckMenu__allCheck(this, v8);
 LABEL_17:
-      UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v9, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v9, 0);
       return;
     }
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_3235/*"BattleEffectButton"*/, 0) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_3239/*"BattleEffectButton"*/, 0) )
     {
       v9 = SoundCheckMenu__battleEffectCheck(this, v10);
       goto LABEL_17;
     }
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_9714/*"NPButton"*/, 0) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_9727/*"NPButton"*/, 0) )
     {
       v9 = SoundCheckMenu__npCheck(this, v11);
       goto LABEL_17;
     }
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_25096/*"svtVoiceButton"*/, 0) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_25144/*"svtVoiceButton"*/, 0) )
     {
       v9 = SoundCheckMenu__svtVoiceCheck(this, v12);
       goto LABEL_17;
     }
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_17404/*"allCpkVoiceButton"*/, 0) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_17440/*"allCpkVoiceButton"*/, 0) )
     {
       v9 = SoundCheckMenu__cueNameMstCheck(this, v13);
       goto LABEL_17;
@@ -374,27 +374,27 @@ void SoundCheckMenu__Open(SoundCheckMenu_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x20
   System_Action_o *v8; // x21
 
-  if ( (byte_5935C57 & 1) == 0 )
+  if ( (byte_596DD99 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu__Open_b__16_0__);
-    sub_21FFC50(&StringLiteral_3201/*"Battle"*/);
-    byte_5935C57 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu__Open_b__16_0__);
+    sub_2213A60(&StringLiteral_3205/*"Battle"*/);
+    byte_596DD99 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_7;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  if ( SoundCheckMenu__CueSheetCheck(v5, (System_String_o *)StringLiteral_3201/*"Battle"*/, v6) )
+  if ( SoundCheckMenu__CueSheetCheck(v5, (System_String_o *)StringLiteral_3205/*"Battle"*/, v6) )
     return;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-  v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_SoundCheckMenu__Open_b__16_0__, 0);
   if ( !Instance )
 LABEL_7:
-    sub_21FFECC(gameObject, v4);
-  SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, (System_String_o *)StringLiteral_3201/*"Battle"*/, v8, 1, 0);
+    sub_2213CDC(gameObject, v4);
+  SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, (System_String_o *)StringLiteral_3205/*"Battle"*/, v8, 1, 0);
 }
 
 
@@ -442,12 +442,12 @@ void SoundCheckMenu__ValueReset(SoundCheckMenu_o *this, const MethodInfo *method
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5935C60 & 1) == 0 )
+  if ( (byte_596DDA2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_UILabel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_6430/*"ErrorCount : 0"*/);
-    byte_5935C60 = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_UILabel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_6442/*"ErrorCount : 0"*/);
+    byte_596DDA2 = 1;
   }
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView )
@@ -474,24 +474,24 @@ void SoundCheckMenu__ValueReset(SoundCheckMenu_o *this, const MethodInfo *method
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   scrollView = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object_(
                                             resultLabelSeed,
-                                            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                            (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_UILabel___);
   if ( !scrollView )
     goto LABEL_14;
   v8 = (struct UILabel_o *)scrollView;
   gameObject = UnityEngine_Component__get_gameObject(scrollView, 0);
   GameObjectExtensions__SafeSetParent(gameObject, (UnityEngine_Component_o *)this->fields.scrollView, 0);
   this->fields.resultLabel = v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.resultLabel, (int32_t)v8, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.resultLabel, (int32_t)v8, v10, v11, v12, v13, v14, v15);
   scrollView = (UnityEngine_Component_o *)this->fields.errorCntLabel;
   this->fields.checkCnt = 0;
   this->fields.nextCheck = 1;
   this->fields.errorCnt = 0;
   if ( !scrollView
-    || (UILabel__set_text((UILabel_o *)scrollView, (System_String_o *)StringLiteral_6430/*"ErrorCount : 0"*/, 0),
+    || (UILabel__set_text((UILabel_o *)scrollView, (System_String_o *)StringLiteral_6442/*"ErrorCount : 0"*/, 0),
         (scrollView = (UnityEngine_Component_o *)this->fields.scrollView) == 0) )
   {
 LABEL_14:
-    sub_21FFECC(scrollView, method);
+    sub_2213CDC(scrollView, method);
   }
   UIScrollView__ResetPosition((UIScrollView_o *)scrollView, 0);
 }
@@ -513,16 +513,16 @@ System_Collections_IEnumerator_o *SoundCheckMenu__allCheck(SoundCheckMenu_o *thi
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5935C5F & 1) == 0 )
+  if ( (byte_596DDA1 & 1) == 0 )
   {
-    sub_21FFC50(&SoundCheckMenu__allCheck_d__24_TypeInfo);
-    byte_5935C5F = 1;
+    sub_2213A60(&SoundCheckMenu__allCheck_d__24_TypeInfo);
+    byte_596DDA1 = 1;
   }
-  v3 = sub_21FFEBC(SoundCheckMenu__allCheck_d__24_TypeInfo);
+  v3 = sub_2213CCC(SoundCheckMenu__allCheck_d__24_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -537,16 +537,16 @@ System_Collections_IEnumerator_o *SoundCheckMenu__battleEffectCheck(SoundCheckMe
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5935C5E & 1) == 0 )
+  if ( (byte_596DDA0 & 1) == 0 )
   {
-    sub_21FFC50(&SoundCheckMenu__battleEffectCheck_d__23_TypeInfo);
-    byte_5935C5E = 1;
+    sub_2213A60(&SoundCheckMenu__battleEffectCheck_d__23_TypeInfo);
+    byte_596DDA0 = 1;
   }
-  v3 = sub_21FFEBC(SoundCheckMenu__battleEffectCheck_d__23_TypeInfo);
+  v3 = sub_2213CCC(SoundCheckMenu__battleEffectCheck_d__23_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -555,7 +555,7 @@ void SoundCheckMenu__cpkNameListup(SoundCheckMenu_o *this, const MethodInfo *met
 {
   __int64 v2; // x2
   System_String_o *CpkPath; // x0
-  Il2CppObject *Files_76702204; // x0
+  Il2CppObject *Files_76915508; // x0
   __int64 v6; // x1
   struct System_Collections_Generic_List_string__o *cpkNameList; // x8
   __int64 size; // x2
@@ -578,19 +578,19 @@ void SoundCheckMenu__cpkNameListup(SoundCheckMenu_o *this, const MethodInfo *met
   Il2CppObject *v25; // x1
   Il2CppClass **v26; // x0
 
-  if ( (byte_5935C59 & 1) == 0 )
+  if ( (byte_596DD9B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_853/*"*.cpk.bytes"*/);
-    byte_5935C59 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&StringLiteral_853/*"*.cpk.bytes"*/);
+    byte_596DD9B = 1;
   }
   if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method, v2);
   CpkPath = SoundManager__getCpkPath(0);
-  Files_76702204 = (Il2CppObject *)System_IO_Directory__GetFiles_76702204(
+  Files_76915508 = (Il2CppObject *)System_IO_Directory__GetFiles_76915508(
                                      CpkPath,
                                      (System_String_o *)StringLiteral_853/*"*.cpk.bytes"*/,
                                      1,
@@ -599,7 +599,7 @@ void SoundCheckMenu__cpkNameListup(SoundCheckMenu_o *this, const MethodInfo *met
   if ( !cpkNameList )
     goto LABEL_21;
   size = (unsigned int)cpkNameList->fields._size;
-  v9 = Files_76702204;
+  v9 = Files_76915508;
   v10 = cpkNameList->fields._version + 1;
   cpkNameList->fields._size = 0;
   cpkNameList->fields._version = v10;
@@ -614,12 +614,12 @@ void SoundCheckMenu__cpkNameListup(SoundCheckMenu_o *this, const MethodInfo *met
     while ( 1 )
     {
       if ( v12 >= (unsigned int)monitor )
-        sub_21FFED4(Files_76702204);
+        sub_2213CE4(Files_76915508);
       v13 = (System_String_o *)*((_QWORD *)&v9[2].klass + v12);
       if ( !*(&System_IO_Path_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v6, size);
       FileNameWithoutExtension = System_IO_Path__GetFileNameWithoutExtension(v13, 0);
-      Files_76702204 = (Il2CppObject *)System_IO_Path__GetFileNameWithoutExtension(FileNameWithoutExtension, 0);
+      Files_76915508 = (Il2CppObject *)System_IO_Path__GetFileNameWithoutExtension(FileNameWithoutExtension, 0);
       v21 = (System_Collections_Generic_List_object__o *)this->fields.cpkNameList;
       if ( !v21 )
         break;
@@ -629,27 +629,27 @@ void SoundCheckMenu__cpkNameListup(SoundCheckMenu_o *this, const MethodInfo *met
       if ( !items )
         break;
       v24 = v21->fields._size;
-      v25 = Files_76702204;
+      v25 = Files_76915508;
       if ( (unsigned int)v24 >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v21,
-          Files_76702204,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+          Files_76915508,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
       }
       else
       {
         v26 = &items->obj.klass + v24;
         v21->fields._size = v24 + 1;
         v26[4] = (Il2CppClass *)v25;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v25, v15, v16, v17, v18, v19, v20);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v25, v15, v16, v17, v18, v19, v20);
       }
       LODWORD(monitor) = v9[1].monitor;
       if ( (__int64)++v12 >= (int)monitor )
         return;
     }
 LABEL_21:
-    sub_21FFECC(Files_76702204, v6);
+    sub_2213CDC(Files_76915508, v6);
   }
 }
 
@@ -838,34 +838,34 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
   __int64 v182; // x11
   __int64 v183; // x0
 
-  if ( (byte_5935C65 & 1) == 0 )
+  if ( (byte_596DDA7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&StringLiteral_1233/*"0_B091"*/);
-    sub_21FFC50(&StringLiteral_1230/*"0_B031"*/);
-    sub_21FFC50(&StringLiteral_1238/*"0_B161"*/);
-    sub_21FFC50(&StringLiteral_1234/*"0_B121"*/);
-    sub_21FFC50(&StringLiteral_1237/*"0_B151"*/);
-    sub_21FFC50(&StringLiteral_1232/*"0_B081"*/);
-    sub_21FFC50(&StringLiteral_1242/*"0_B201"*/);
-    sub_21FFC50(&StringLiteral_1240/*"0_B181"*/);
-    sub_21FFC50(&StringLiteral_1227/*"0_"*/);
-    sub_21FFC50(&StringLiteral_1229/*"0_B021"*/);
-    sub_21FFC50(&StringLiteral_1239/*"0_B171"*/);
-    sub_21FFC50(&StringLiteral_1231/*"0_B041"*/);
-    sub_21FFC50(&StringLiteral_1235/*"0_B131"*/);
-    sub_21FFC50(&StringLiteral_1236/*"0_B141"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_1241/*"0_B191"*/);
-    sub_21FFC50(&StringLiteral_1228/*"0_B011"*/);
-    byte_5935C65 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&StringLiteral_1233/*"0_B091"*/);
+    sub_2213A60(&StringLiteral_1230/*"0_B031"*/);
+    sub_2213A60(&StringLiteral_1238/*"0_B161"*/);
+    sub_2213A60(&StringLiteral_1234/*"0_B121"*/);
+    sub_2213A60(&StringLiteral_1237/*"0_B151"*/);
+    sub_2213A60(&StringLiteral_1232/*"0_B081"*/);
+    sub_2213A60(&StringLiteral_1242/*"0_B201"*/);
+    sub_2213A60(&StringLiteral_1240/*"0_B181"*/);
+    sub_2213A60(&StringLiteral_1227/*"0_"*/);
+    sub_2213A60(&StringLiteral_1229/*"0_B021"*/);
+    sub_2213A60(&StringLiteral_1239/*"0_B171"*/);
+    sub_2213A60(&StringLiteral_1231/*"0_B041"*/);
+    sub_2213A60(&StringLiteral_1235/*"0_B131"*/);
+    sub_2213A60(&StringLiteral_1236/*"0_B141"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_1241/*"0_B191"*/);
+    sub_2213A60(&StringLiteral_1228/*"0_B011"*/);
+    byte_596DDA7 = 1;
   }
-  Item = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFD10(int___TypeInfo, 2);
+  Item = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213B20(int___TypeInfo, 2);
   if ( !Item )
     goto LABEL_114;
   entries = Item->fields._entries;
@@ -883,24 +883,24 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
     {
       v8 = *(&v6->fields._count + v7);
       exceptionData = this->fields.exceptionData;
-      v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+      v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v10,
-        (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+        (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
       if ( !exceptionData )
         goto LABEL_114;
       System_Collections_Generic_Dictionary_int__object___set_Item(
         (System_Collections_Generic_Dictionary_int__object__o *)exceptionData,
         v8,
         (Il2CppObject *)v10,
-        (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
+        (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
         goto LABEL_114;
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       buckets = Item->fields._buckets;
@@ -915,14 +915,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = (__int64)buckets + 8 * entries_low;
         LODWORD(Item->fields._entries) = entries_low + 1;
         *(_QWORD *)(v20 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 32), (int32_t)v4, v11, v12, v13, v14, v15, v16);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 32), (int32_t)v4, v11, v12, v13, v14, v15, v16);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -930,7 +930,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v27 = Item->fields._buckets;
@@ -945,14 +945,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
         v30 = (__int64)v27 + 8 * v29;
         LODWORD(Item->fields._entries) = v29 + 1;
         *(_QWORD *)(v30 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 32), (int32_t)v4, v21, v22, v23, v24, v25, v26);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 32), (int32_t)v4, v21, v22, v23, v24, v25, v26);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -960,7 +960,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v37 = Item->fields._buckets;
@@ -975,14 +975,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
       }
       else
       {
         v40 = (__int64)v37 + 8 * v39;
         LODWORD(Item->fields._entries) = v39 + 1;
         *(_QWORD *)(v40 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v40 + 32), (int32_t)v4, v31, v32, v33, v34, v35, v36);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v40 + 32), (int32_t)v4, v31, v32, v33, v34, v35, v36);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -990,7 +990,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v47 = Item->fields._buckets;
@@ -1005,14 +1005,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
         v50 = (__int64)v47 + 8 * v49;
         LODWORD(Item->fields._entries) = v49 + 1;
         *(_QWORD *)(v50 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v4, v41, v42, v43, v44, v45, v46);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v4, v41, v42, v43, v44, v45, v46);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1020,7 +1020,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v57 = Item->fields._buckets;
@@ -1035,14 +1035,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
       }
       else
       {
         v60 = (__int64)v57 + 8 * v59;
         LODWORD(Item->fields._entries) = v59 + 1;
         *(_QWORD *)(v60 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v60 + 32), (int32_t)v4, v51, v52, v53, v54, v55, v56);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v60 + 32), (int32_t)v4, v51, v52, v53, v54, v55, v56);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1050,7 +1050,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v67 = Item->fields._buckets;
@@ -1065,14 +1065,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
       }
       else
       {
         v70 = (__int64)v67 + 8 * v69;
         LODWORD(Item->fields._entries) = v69 + 1;
         *(_QWORD *)(v70 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v70 + 32), (int32_t)v4, v61, v62, v63, v64, v65, v66);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v70 + 32), (int32_t)v4, v61, v62, v63, v64, v65, v66);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1080,7 +1080,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v77 = Item->fields._buckets;
@@ -1095,14 +1095,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v78[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v78[4] + 192LL) + 112LL));
       }
       else
       {
         v80 = (__int64)v77 + 8 * v79;
         LODWORD(Item->fields._entries) = v79 + 1;
         *(_QWORD *)(v80 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v80 + 32), (int32_t)v4, v71, v72, v73, v74, v75, v76);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v80 + 32), (int32_t)v4, v71, v72, v73, v74, v75, v76);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1110,7 +1110,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v87 = Item->fields._buckets;
@@ -1125,14 +1125,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
       }
       else
       {
         v90 = (__int64)v87 + 8 * v89;
         LODWORD(Item->fields._entries) = v89 + 1;
         *(_QWORD *)(v90 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v90 + 32), (int32_t)v4, v81, v82, v83, v84, v85, v86);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v90 + 32), (int32_t)v4, v81, v82, v83, v84, v85, v86);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1140,7 +1140,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v97 = Item->fields._buckets;
@@ -1155,14 +1155,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v98[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v98[4] + 192LL) + 112LL));
       }
       else
       {
         v100 = (__int64)v97 + 8 * v99;
         LODWORD(Item->fields._entries) = v99 + 1;
         *(_QWORD *)(v100 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v100 + 32), (int32_t)v4, v91, v92, v93, v94, v95, v96);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v100 + 32), (int32_t)v4, v91, v92, v93, v94, v95, v96);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1170,7 +1170,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v107 = Item->fields._buckets;
@@ -1185,14 +1185,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
       }
       else
       {
         v110 = (__int64)v107 + 8 * v109;
         LODWORD(Item->fields._entries) = v109 + 1;
         *(_QWORD *)(v110 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v110 + 32), (int32_t)v4, v101, v102, v103, v104, v105, v106);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v110 + 32), (int32_t)v4, v101, v102, v103, v104, v105, v106);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1200,7 +1200,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v117 = Item->fields._buckets;
@@ -1215,14 +1215,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
       }
       else
       {
         v120 = (__int64)v117 + 8 * v119;
         LODWORD(Item->fields._entries) = v119 + 1;
         *(_QWORD *)(v120 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v120 + 32), (int32_t)v4, v111, v112, v113, v114, v115, v116);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v120 + 32), (int32_t)v4, v111, v112, v113, v114, v115, v116);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1230,7 +1230,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v127 = Item->fields._buckets;
@@ -1245,14 +1245,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
       }
       else
       {
         v130 = (__int64)v127 + 8 * v129;
         LODWORD(Item->fields._entries) = v129 + 1;
         *(_QWORD *)(v130 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v130 + 32), (int32_t)v4, v121, v122, v123, v124, v125, v126);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v130 + 32), (int32_t)v4, v121, v122, v123, v124, v125, v126);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1260,7 +1260,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v137 = Item->fields._buckets;
@@ -1275,14 +1275,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v138[4] + 192LL) + 112LL));
       }
       else
       {
         v140 = (__int64)v137 + 8 * v139;
         LODWORD(Item->fields._entries) = v139 + 1;
         *(_QWORD *)(v140 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v140 + 32), (int32_t)v4, v131, v132, v133, v134, v135, v136);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v140 + 32), (int32_t)v4, v131, v132, v133, v134, v135, v136);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1290,7 +1290,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v147 = Item->fields._buckets;
@@ -1305,14 +1305,14 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
       }
       else
       {
         v150 = (__int64)v147 + 8 * v149;
         LODWORD(Item->fields._entries) = v149 + 1;
         *(_QWORD *)(v150 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v150 + 32), (int32_t)v4, v141, v142, v143, v144, v145, v146);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v150 + 32), (int32_t)v4, v141, v142, v143, v144, v145, v146);
       }
       Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
       if ( !Item )
@@ -1320,7 +1320,7 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
       Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                        Item,
                                                                        v8,
-                                                                       (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                       (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( !Item )
         goto LABEL_114;
       v157 = Item->fields._buckets;
@@ -1335,42 +1335,42 @@ void SoundCheckMenu__createExceptionList(SoundCheckMenu_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Item,
           v4,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v158[4] + 192LL) + 112LL));
       }
       else
       {
         v160 = (__int64)v157 + 8 * v159;
         LODWORD(Item->fields._entries) = v159 + 1;
         *(_QWORD *)(v160 + 32) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v160 + 32), (int32_t)v4, v151, v152, v153, v154, v155, v156);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v160 + 32), (int32_t)v4, v151, v152, v153, v154, v155, v156);
       }
       LODWORD(entries) = v6->fields._entries;
       if ( (__int64)++v7 >= (int)entries )
         goto LABEL_101;
     }
 LABEL_115:
-    sub_21FFED4(Item);
+    sub_2213CE4(Item);
   }
 LABEL_101:
   v161 = this->fields.exceptionData;
-  v162 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v162 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v162,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !v161 )
     goto LABEL_114;
   System_Collections_Generic_Dictionary_int__object___set_Item(
     (System_Collections_Generic_Dictionary_int__object__o *)v161,
     602300,
     (Il2CppObject *)v162,
-    (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
+    (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__List_string___set_Item__);
   Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
   if ( !Item )
     goto LABEL_114;
   Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                    Item,
                                                                    602300,
-                                                                   (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                   (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
   if ( !Item )
     goto LABEL_114;
   v169 = Item->fields._buckets;
@@ -1385,21 +1385,21 @@ LABEL_101:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Item,
       v4,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
   }
   else
   {
     v172 = (__int64)v169 + 8 * v171;
     LODWORD(Item->fields._entries) = v171 + 1;
     *(_QWORD *)(v172 + 32) = v4;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v172 + 32), (int32_t)v4, v163, v164, v165, v166, v167, v168);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v172 + 32), (int32_t)v4, v163, v164, v165, v166, v167, v168);
   }
   Item = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
   if ( !Item
     || (Item = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                          Item,
                                                                          602300,
-                                                                         (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__)) == 0
+                                                                         (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__)) == 0
     || (v179 = Item,
         v180 = Item->fields._buckets,
         v4 = (Il2CppObject *)StringLiteral_1/*""*/,
@@ -1408,7 +1408,7 @@ LABEL_101:
         !v180) )
   {
 LABEL_114:
-    sub_21FFECC(Item, v4);
+    sub_2213CDC(Item, v4);
   }
   v182 = SLODWORD(Item->fields._entries);
   if ( (unsigned int)v182 >= LODWORD(v180->max_length) )
@@ -1416,14 +1416,14 @@ LABEL_114:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Item,
       v4,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v181[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v181[4] + 192LL) + 112LL));
   }
   else
   {
     v183 = (__int64)v180 + 8 * v182;
     LODWORD(v179->fields._entries) = v182 + 1;
     *(_QWORD *)(v183 + 32) = v4;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v183 + 32), (int32_t)v4, v173, v174, v175, v176, v177, v178);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v183 + 32), (int32_t)v4, v173, v174, v175, v176, v177, v178);
   }
 }
 
@@ -1438,16 +1438,16 @@ System_Collections_IEnumerator_o *SoundCheckMenu__cueNameMstCheck(SoundCheckMenu
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5935C5A & 1) == 0 )
+  if ( (byte_596DD9C & 1) == 0 )
   {
-    sub_21FFC50(&SoundCheckMenu__cueNameMstCheck_d__19_TypeInfo);
-    byte_5935C5A = 1;
+    sub_2213A60(&SoundCheckMenu__cueNameMstCheck_d__19_TypeInfo);
+    byte_596DD9C = 1;
   }
-  v3 = sub_21FFEBC(SoundCheckMenu__cueNameMstCheck_d__19_TypeInfo);
+  v3 = sub_2213CCC(SoundCheckMenu__cueNameMstCheck_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1461,12 +1461,12 @@ bool SoundCheckMenu__isExceptionCheck(
 {
   System_Collections_Generic_Dictionary_int__object__o *exceptionData; // x0
 
-  if ( (byte_5935C66 & 1) == 0 )
+  if ( (byte_596DDA8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_string___ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Contains__);
-    byte_5935C66 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_string___ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Contains__);
+    byte_596DDA8 = 1;
   }
   exceptionData = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
   if ( !exceptionData )
@@ -1474,7 +1474,7 @@ bool SoundCheckMenu__isExceptionCheck(
   if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
          exceptionData,
          svtId,
-         (const MethodInfo_3F68EFC *)Method_System_Collections_Generic_Dictionary_int__List_string___ContainsKey__) )
+         (const MethodInfo_3F9C6A4 *)Method_System_Collections_Generic_Dictionary_int__List_string___ContainsKey__) )
   {
     exceptionData = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.exceptionData;
     if ( exceptionData )
@@ -1482,15 +1482,15 @@ bool SoundCheckMenu__isExceptionCheck(
       exceptionData = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                                 exceptionData,
                                                                                 svtId,
-                                                                                (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
+                                                                                (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_string___get_Item__);
       if ( exceptionData )
         return System_Collections_Generic_List_object___Contains(
                  (System_Collections_Generic_List_object__o *)exceptionData,
                  (Il2CppObject *)voiceId,
-                 (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_string__Contains__);
+                 (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_string__Contains__);
     }
 LABEL_9:
-    sub_21FFECC(exceptionData, *(_QWORD *)&svtId);
+    sub_2213CDC(exceptionData, *(_QWORD *)&svtId);
   }
   return 0;
 }
@@ -1506,16 +1506,16 @@ System_Collections_IEnumerator_o *SoundCheckMenu__npCheck(SoundCheckMenu_o *this
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5935C5B & 1) == 0 )
+  if ( (byte_596DD9D & 1) == 0 )
   {
-    sub_21FFC50(&SoundCheckMenu__npCheck_d__20_TypeInfo);
-    byte_5935C5B = 1;
+    sub_2213A60(&SoundCheckMenu__npCheck_d__20_TypeInfo);
+    byte_596DD9D = 1;
   }
-  v3 = sub_21FFEBC(SoundCheckMenu__npCheck_d__20_TypeInfo);
+  v3 = sub_2213CCC(SoundCheckMenu__npCheck_d__20_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1530,16 +1530,16 @@ System_Collections_IEnumerator_o *SoundCheckMenu__svtVoiceCheck(SoundCheckMenu_o
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5935C5D & 1) == 0 )
+  if ( (byte_596DD9F & 1) == 0 )
   {
-    sub_21FFC50(&SoundCheckMenu__svtVoiceCheck_d__22_TypeInfo);
-    byte_5935C5D = 1;
+    sub_2213A60(&SoundCheckMenu__svtVoiceCheck_d__22_TypeInfo);
+    byte_596DD9F = 1;
   }
-  v3 = sub_21FFEBC(SoundCheckMenu__svtVoiceCheck_d__22_TypeInfo);
+  v3 = sub_2213CCC(SoundCheckMenu__svtVoiceCheck_d__22_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1569,12 +1569,12 @@ void SoundCheckMenu___c__DisplayClass19_0___cueNameMstCheck_b__0(
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5935C68 & 1) == 0 )
+  if ( (byte_596DDAA & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__1__);
-    byte_5935C68 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__1__);
+    byte_596DDAA = 1;
   }
   sequencePath = this->fields.sequencePath;
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1585,14 +1585,14 @@ void SoundCheckMenu___c__DisplayClass19_0___cueNameMstCheck_b__0(
     v8 = this->fields.sequencePath;
     if ( !_9__1 )
     {
-      _9__1 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+      _9__1 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__1__,
         0);
       this->fields.__9__1 = _9__1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
     }
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5, v6);
@@ -1619,7 +1619,7 @@ void SoundCheckMenu___c__DisplayClass19_0___cueNameMstCheck_b__1(
 
   this->fields.nobleAssetData = data;
   p_nobleAssetData = &this->fields.nobleAssetData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.nobleAssetData,
     (int32_t)data,
     (System_String_o *)method,
@@ -1669,31 +1669,31 @@ void SoundCheckMenu___c__DisplayClass20_1___npCheck_b__0(
   int32_t v18; // w5
   bool v19; // w6
   bool v20; // w7
-  const MethodInfo_476E8C0 *v21; // x0
+  const MethodInfo_47A29F8 *v21; // x0
   struct SoundCheckMenu___c__DisplayClass20_0_o *CS___8__locals1; // x8
   SoundManager_o *v23; // x20
   Il2CppObject *Item; // x21
   System_Action_o *v25; // x22
 
-  if ( (byte_5935C69 & 1) == 0 )
+  if ( (byte_596DDAB & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__1__);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass20_2_TypeInfo);
-    byte_5935C69 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__1__);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass20_2_TypeInfo);
+    byte_596DDAB = 1;
   }
-  v5 = sub_21FFEBC(SoundCheckMenu___c__DisplayClass20_2_TypeInfo);
+  v5 = sub_2213CCC(SoundCheckMenu___c__DisplayClass20_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   this->fields.nobleSequenceData = data;
   p_fields = &this->fields;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_fields, (int32_t)data, v15, v16, v17, v18, v19, v20);
-  v21 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_fields, (int32_t)data, v15, v16, v17, v18, v19, v20);
+  v21 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__;
   *(_DWORD *)(v5 + 16) = 0;
   Instance = SingletonMonoBehaviour_object___get_Instance(v21);
   CS___8__locals1 = p_fields->CS___8__locals1;
@@ -1706,13 +1706,13 @@ void SoundCheckMenu___c__DisplayClass20_1___npCheck_b__0(
     || (Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)Instance,
                  v7,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__),
-        v25 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__),
+        v25 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(v25, (Il2CppObject *)v5, Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__1__, 0),
         !v23) )
   {
 LABEL_8:
-    sub_21FFECC(Instance, v7);
+    sub_2213CDC(Instance, v7);
   }
   SoundManager__LoadAudioAssetStorage(v23, (System_String_o *)Item, v25, 1, 0);
 }
@@ -1752,15 +1752,15 @@ void SoundCheckMenu___c__DisplayClass20_2___npCheck_b__1(
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5935C6A & 1) == 0 )
+  if ( (byte_596DDAC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__2__);
-    byte_5935C6A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__2__);
+    byte_596DDAC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CS___8__locals2 = this->fields.CS___8__locals2;
   if ( !CS___8__locals2 )
     goto LABEL_10;
@@ -1776,19 +1776,19 @@ void SoundCheckMenu___c__DisplayClass20_2___npCheck_b__1(
   Instance = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Instance,
                DataCnt,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
   v8 = (System_String_o *)Instance;
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__2, (Il2CppObject *)this, Method_SoundCheckMenu___c__DisplayClass20_2__npCheck_b__2__, 0);
     this->fields.__9__2 = _9__2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v10, v11, v12, v13, v14, v15);
   }
   if ( !v7 )
 LABEL_10:
-    sub_21FFECC(Instance, DataCnt);
+    sub_2213CDC(Instance, DataCnt);
   SoundManager__LoadAudioAssetStorage(v7, v8, _9__2, 1, 0);
 }
 
@@ -1812,15 +1812,15 @@ void SoundCheckMenu___c__DisplayClass20_2___npCheck_b__2(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5935C6B & 1) == 0 )
+  if ( (byte_596DDAD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__3__);
-    byte_5935C6B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__3__);
+    byte_596DDAD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CS___8__locals2 = this->fields.CS___8__locals2;
   if ( !CS___8__locals2 )
     goto LABEL_11;
@@ -1836,7 +1836,7 @@ void SoundCheckMenu___c__DisplayClass20_2___npCheck_b__2(
   Instance = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Instance,
                DataCnt,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
   v8 = this->fields.CS___8__locals2;
   if ( !v8 )
     goto LABEL_11;
@@ -1844,14 +1844,14 @@ void SoundCheckMenu___c__DisplayClass20_2___npCheck_b__2(
   _9__3 = v8->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__3, (Il2CppObject *)v8, Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__3__, 0);
     v8->fields.__9__3 = _9__3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__9__3, (int32_t)_9__3, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__9__3, (int32_t)_9__3, v11, v12, v13, v14, v15, v16);
   }
   if ( !v7 )
 LABEL_11:
-    sub_21FFECC(Instance, DataCnt);
+    sub_2213CDC(Instance, DataCnt);
   SoundManager__LoadAudioAssetStorage(v7, v9, _9__3, 1, 0);
 }
 
@@ -1889,15 +1889,15 @@ void SoundCheckMenu___c__DisplayClass22_1___svtVoiceCheck_b__0(
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5935C6C & 1) == 0 )
+  if ( (byte_596DDAE & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__1__);
-    byte_5935C6C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__1__);
+    byte_596DDAE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
     goto LABEL_9;
@@ -1910,23 +1910,23 @@ void SoundCheckMenu___c__DisplayClass22_1___svtVoiceCheck_b__0(
   Instance = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Instance,
                DataCnt,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
   v7 = (System_String_o *)Instance;
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__1__,
       0);
     this->fields.__9__1 = _9__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
   }
   if ( !v6 )
 LABEL_9:
-    sub_21FFECC(Instance, DataCnt);
+    sub_2213CDC(Instance, DataCnt);
   SoundManager__LoadAudioAssetStorage(v6, v7, _9__1, 1, 0);
 }
 
@@ -1948,15 +1948,15 @@ void SoundCheckMenu___c__DisplayClass22_1___svtVoiceCheck_b__1(
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5935C6D & 1) == 0 )
+  if ( (byte_596DDAF & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__2__);
-    byte_5935C6D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__2__);
+    byte_596DDAF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
     goto LABEL_9;
@@ -1969,23 +1969,23 @@ void SoundCheckMenu___c__DisplayClass22_1___svtVoiceCheck_b__1(
   Instance = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Instance,
                DataCnt,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
   v7 = (System_String_o *)Instance;
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__2__,
       0);
     this->fields.__9__2 = _9__2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v9, v10, v11, v12, v13, v14);
   }
   if ( !v6 )
 LABEL_9:
-    sub_21FFECC(Instance, DataCnt);
+    sub_2213CDC(Instance, DataCnt);
   SoundManager__LoadAudioAssetStorage(v6, v7, _9__2, 1, 0);
 }
 
@@ -2020,7 +2020,6 @@ bool SoundCheckMenu__allCheck_d__24__MoveNext(SoundCheckMenu__allCheck_d__24_o *
   struct SoundCheckMenu_o *_4__this; // x20
   System_Collections_IEnumerator_o *v11; // x0
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
   System_Collections_IEnumerator_o *v14; // x0
   Il2CppObject **v15; // x19
   System_Collections_IEnumerator_o *v16; // x0
@@ -2043,26 +2042,25 @@ bool SoundCheckMenu__allCheck_d__24__MoveNext(SoundCheckMenu__allCheck_d__24_o *
       if ( _4__this )
       {
         v11 = SoundCheckMenu__battleEffectCheck(_4__this, method);
-        UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)_4__this, v11, 0);
+        UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)_4__this, v11, 0);
 LABEL_7:
         if ( _4__this->fields.nextCheck )
         {
           this->fields.__2__current = 0;
           p__2__current = &this->fields.__2__current;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
-          result = 1;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
           *((_DWORD *)p__2__current - 2) = 1;
-          return result;
+          return 1;
         }
         _4__this->fields.checkCnt = 0;
         _4__this->fields.nextCheck = 1;
         v14 = SoundCheckMenu__npCheck(_4__this, method);
-        UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)_4__this, v14, 0);
+        UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)_4__this, v14, 0);
         goto LABEL_12;
       }
     }
 LABEL_10:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   this->fields.__1__state = -1;
   if ( !_4__this )
@@ -2072,15 +2070,14 @@ LABEL_12:
   {
     this->fields.__2__current = 0;
     v15 = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v15, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)v15, 0, v2, v3, v4, v5, v6, v7);
     *((_DWORD *)v15 - 2) = 2;
-    return result;
+    return 1;
   }
   _4__this->fields.checkCnt = 0;
   _4__this->fields.nextCheck = 1;
   v16 = SoundCheckMenu__svtVoiceCheck(_4__this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)_4__this, v16, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)_4__this, v16, 0);
   return 0;
 }
 
@@ -2101,11 +2098,11 @@ void __noreturn SoundCheckMenu__allCheck_d__24__System_Collections_IEnumerator_R
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundCheckMenu__allCheck_d__24_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundCheckMenu__allCheck_d__24_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -2177,17 +2174,17 @@ bool SoundCheckMenu__battleEffectCheck_d__23__MoveNext(
   bool v38; // w7
   const MethodInfo *v39; // x2
 
-  if ( (byte_5935C6E & 1) == 0 )
+  if ( (byte_596DDB0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EffectMaster___);
-    sub_21FFC50(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_EffectMaster__EffectEntity__int__getEntitys__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_23374/*"not exist : "*/);
-    sub_21FFC50(&StringLiteral_81/*"\ntarget : Battle\n"*/);
-    sub_21FFC50(&StringLiteral_3201/*"Battle"*/);
-    byte_5935C6E = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EffectMaster___);
+    sub_2213A60(&Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+    sub_2213A60(&Method_DataMasterBase_EffectMaster__EffectEntity__int__getEntitys__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&StringLiteral_23420/*"not exist : "*/);
+    sub_2213A60(&StringLiteral_81/*"\ntarget : Battle\n"*/);
+    sub_2213A60(&StringLiteral_3205/*"Battle"*/);
+    byte_596DDB0 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -2207,13 +2204,13 @@ LABEL_33:
   if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (MasterData_object = DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EffectMaster___),
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EffectMaster___),
           this->fields._effectMst_5__2 = (struct EffectMaster_o *)MasterData_object,
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields._effectMst_5__2,
             (int32_t)MasterData_object,
             v14,
@@ -2225,16 +2222,16 @@ LABEL_33:
           (Instance = (DataManager_o *)this->fields._effectMst_5__2) == 0)
       || (Instance = (DataManager_o *)DataMasterBase_object__object__int___getEntitys(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                                        (const MethodInfo_3EDC704 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__getEntitys__)) == 0
+                                        (const MethodInfo_3F0FEAC *)Method_DataMasterBase_EffectMaster__EffectEntity__int__getEntitys__)) == 0
       || !_4__this )
     {
 LABEL_35:
-      sub_21FFECC(Instance, method);
+      sub_2213CDC(Instance, method);
     }
     m_CancellationTokenSource = Instance->fields.m_CancellationTokenSource;
     this->fields.__7__wrap2 = (struct EffectEntity_array *)Instance;
     _4__this->fields.checkMax = (int)m_CancellationTokenSource;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__7__wrap2,
       (int32_t)Instance,
       v20,
@@ -2254,7 +2251,7 @@ LABEL_35:
       if ( v27 >= max_length )
       {
         Instance->klass = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)Instance, 0, v2, v3, v4, v5, v6, v7);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, 0, v2, v3, v4, v5, v6, v7);
         if ( !_4__this )
           goto LABEL_35;
         _4__this->fields.nextCheck = 0;
@@ -2262,7 +2259,7 @@ LABEL_35:
         goto LABEL_32;
       }
       if ( v27 >= (unsigned int)max_length )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v29 = _7__wrap2->m_Items[v27];
       if ( !v29 )
         goto LABEL_35;
@@ -2272,7 +2269,7 @@ LABEL_35:
       Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                     v29->fields.id,
-                                    (const MethodInfo_3EDD388 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
+                                    (const MethodInfo_3F10B30 *)Method_DataMasterBase_EffectMaster__EffectEntity__int__GetEntity__);
       if ( !Instance )
         goto LABEL_35;
       v30 = Instance;
@@ -2285,12 +2282,12 @@ LABEL_35:
 LABEL_20:
       v27 = this->fields.__7__wrap3 + 1;
     }
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     if ( !Instance )
       goto LABEL_35;
     Instance = (DataManager_o *)SoundManager__IsExistsSound(
                                   (SoundManager_o *)Instance,
-                                  (System_String_o *)StringLiteral_3201/*"Battle"*/,
+                                  (System_String_o *)StringLiteral_3205/*"Battle"*/,
                                   *(System_String_o **)&v30->fields._DispLog,
                                   0);
     if ( ((unsigned __int8)Instance & 1) != 0 )
@@ -2300,8 +2297,8 @@ LABEL_20:
     }
     else
     {
-      Instance = (DataManager_o *)System_String__Concat_75481624(
-                                    (System_String_o *)StringLiteral_23374/*"not exist : "*/,
+      Instance = (DataManager_o *)System_String__Concat_75694928(
+                                    (System_String_o *)StringLiteral_23420/*"not exist : "*/,
                                     *(System_String_o **)&v30->fields._DispLog,
                                     (System_String_o *)StringLiteral_81/*"\ntarget : Battle\n"*/,
                                     0);
@@ -2313,7 +2310,7 @@ LABEL_20:
     v28 = 1;
 LABEL_32:
     this->fields.__2__current = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v33, v34, v35, v36, v37, v38);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v33, v34, v35, v36, v37, v38);
     result = 1;
     goto LABEL_33;
   }
@@ -2337,11 +2334,11 @@ void __noreturn SoundCheckMenu__battleEffectCheck_d__23__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundCheckMenu__battleEffectCheck_d__23_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundCheckMenu__battleEffectCheck_d__23_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -2529,40 +2526,40 @@ bool SoundCheckMenu__cueNameMstCheck_d__19__MoveNext(
   System_Collections_Generic_List_Enumerator_T__o v155; // [xsp+18h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v156; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_5935C6F & 1) == 0 )
+  if ( (byte_596DDB1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__bool__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
-    sub_21FFC50(&UnityEngine_GameObject_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__0__);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass19_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_4586/*"ChrSequence1"*/);
-    sub_21FFC50(&StringLiteral_80/*"\ntarget : "*/);
-    sub_21FFC50(&StringLiteral_1227/*"0_"*/);
-    sub_21FFC50(&StringLiteral_20303/*"file only data : "*/);
-    sub_21FFC50(&StringLiteral_9896/*"NoblePhantasm/Sequence/"*/);
-    sub_21FFC50(&StringLiteral_1198/*"0"*/);
-    byte_5935C6F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__bool__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
+    sub_2213A60(&UnityEngine_GameObject_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__0__);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass19_0_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_4594/*"ChrSequence1"*/);
+    sub_2213A60(&StringLiteral_80/*"\ntarget : "*/);
+    sub_2213A60(&StringLiteral_1227/*"0_"*/);
+    sub_2213A60(&StringLiteral_20344/*"file only data : "*/);
+    sub_2213A60(&StringLiteral_9909/*"NoblePhantasm/Sequence/"*/);
+    sub_2213A60(&StringLiteral_1198/*"0"*/);
+    byte_596DDB1 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -2574,14 +2571,14 @@ bool SoundCheckMenu__cueNameMstCheck_d__19__MoveNext(
     if ( !_1__state )
     {
       this->fields.__1__state = -1;
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Instance )
       {
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
         this->fields._svtVoiceMst_5__2 = (struct ServantVoiceMaster_o *)MasterData_object;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields._svtVoiceMst_5__2,
           (int32_t)MasterData_object,
           v14,
@@ -2590,19 +2587,19 @@ bool SoundCheckMenu__cueNameMstCheck_d__19__MoveNext(
           v17,
           v18,
           v19);
-        Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
           Instance = (__int64)DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
           if ( Instance )
           {
             Entitys = DataMasterBase_object__object__object___getEntitys(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                        (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
+                        (const MethodInfo_3F14B68 *)Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
             this->fields._svtLimitAddEntitys_5__3 = (struct ServantLimitAddEntity_array *)Entitys;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields._svtLimitAddEntitys_5__3,
               (int32_t)Entitys,
               v21,
@@ -2611,12 +2608,12 @@ bool SoundCheckMenu__cueNameMstCheck_d__19__MoveNext(
               v24,
               v25,
               v26);
-            v27 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
+            v27 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
             System_Collections_Generic_Dictionary_object__bool____ctor(
               v27,
-              (const MethodInfo_3FAF6A0 *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
+              (const MethodInfo_3FE2E48 *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
             this->fields._svtVoiceListup_5__4 = (struct System_Collections_Generic_Dictionary_string__bool__o *)v27;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields._svtVoiceListup_5__4,
               (int32_t)v27,
               v28,
@@ -2625,12 +2622,12 @@ bool SoundCheckMenu__cueNameMstCheck_d__19__MoveNext(
               v31,
               v32,
               v33);
-            v34 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
+            v34 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__bool__TypeInfo);
             System_Collections_Generic_Dictionary_object__bool____ctor(
               v34,
-              (const MethodInfo_3FAF6A0 *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
+              (const MethodInfo_3FE2E48 *)Method_System_Collections_Generic_Dictionary_string__bool___ctor__);
             this->fields._nobleListup_5__5 = (struct System_Collections_Generic_Dictionary_string__bool__o *)v34;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields._nobleListup_5__5,
               (int32_t)v34,
               v35,
@@ -2679,7 +2676,7 @@ LABEL_120:
         if ( v119 >= max_length )
         {
           *(_QWORD *)Instance = 0;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)Instance, 0, v2, v3, v4, v5, v6, v7);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, 0, v2, v3, v4, v5, v6, v7);
 LABEL_123:
           p__8__1 = &this->fields.__8__1;
           _8__1 = this->fields.__8__1;
@@ -2687,19 +2684,19 @@ LABEL_123:
             goto LABEL_144;
           if ( _8__1->fields.nobleAssetData )
           {
-            Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+            Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
             if ( !*p__8__1 || !Instance )
               goto LABEL_144;
             AssetManager__ReleaseAssetStorage((AssetManager_o *)Instance, (*p__8__1)->fields.sequencePath, 0);
           }
-          Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+          Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
           if ( !Instance )
             goto LABEL_144;
           SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)Instance, this->fields._nameOrig_5__7, 0);
           this->fields.__8__1 = 0;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__8__1, 0, v129, v130, v131, v132, v133, v134);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__8__1, 0, v129, v130, v131, v132, v133, v134);
           this->fields._nameOrig_5__7 = 0;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields._nameOrig_5__7,
             0,
             v135,
@@ -2709,7 +2706,7 @@ LABEL_123:
             v139,
             v140);
           this->fields._svtLimitAddEntity_5__9 = 0;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields._svtLimitAddEntity_5__9,
             0,
             v141,
@@ -2730,11 +2727,11 @@ LABEL_131:
               goto LABEL_144;
             if ( v42 >= v147->fields._size )
               break;
-            v43 = (Il2CppObject *)sub_21FFEBC(SoundCheckMenu___c__DisplayClass19_0_TypeInfo);
+            v43 = (Il2CppObject *)sub_2213CCC(SoundCheckMenu___c__DisplayClass19_0_TypeInfo);
             System_Object___ctor(v43, 0);
             this->fields.__8__1 = (struct SoundCheckMenu___c__DisplayClass19_0_o *)v43;
             v44 = &this->fields.__8__1;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields.__8__1,
               (int32_t)v43,
               v45,
@@ -2749,9 +2746,9 @@ LABEL_131:
             Item = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)Instance,
                      this->fields._ii_5__6,
-                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
             this->fields._nameOrig_5__7 = (struct System_String_o *)Item;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields._nameOrig_5__7,
               (int32_t)Item,
               v52,
@@ -2777,28 +2774,28 @@ LABEL_131:
               {
                 v58 = *v44;
                 LODWORD(v155.fields._list) = this->fields._voiceId_5__8;
-                v59 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v155);
-                Instance = (__int64)System_String__Concat((Il2CppObject *)StringLiteral_9896/*"NoblePhantasm/Sequence/"*/, v59, 0);
+                v59 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v155);
+                Instance = (__int64)System_String__Concat((Il2CppObject *)StringLiteral_9909/*"NoblePhantasm/Sequence/"*/, v59, 0);
                 if ( !v58 )
                   goto LABEL_144;
                 v58->fields.sequencePath = (struct System_String_o *)Instance;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v58->fields, Instance, v60, v61, v62, v63, v64, v65);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)&v58->fields, Instance, v60, v61, v62, v63, v64, v65);
                 Instance = (__int64)this->fields._nobleListup_5__5;
                 if ( !Instance )
                   goto LABEL_144;
                 System_Collections_Generic_Dictionary_object__bool___Clear(
                   (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
-                  (const MethodInfo_3FB01D4 *)Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
+                  (const MethodInfo_3FE397C *)Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
                 Instance = (__int64)*v44;
                 if ( !*v44 )
                   goto LABEL_144;
                 *(_QWORD *)(Instance + 32) = 0;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Instance + 32), 0, v66, v67, v68, v69, v70, v71);
-                v72 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)(Instance + 32), 0, v66, v67, v68, v69, v70, v71);
+                v72 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
                 nameOrig_5__7 = this->fields._nameOrig_5__7;
                 v74 = (Il2CppObject *)*v44;
                 v75 = (SoundManager_o *)v72;
-                v76 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                v76 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                 System_Action___ctor(v76, v74, Method_SoundCheckMenu___c__DisplayClass19_0__cueNameMstCheck_b__0__, 0);
                 if ( !v75 )
                   goto LABEL_144;
@@ -2813,7 +2810,7 @@ LABEL_28:
                   goto LABEL_138;
                 }
                 this->fields._svtLimitAddEntity_5__9 = 0;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&this->fields._svtLimitAddEntity_5__9,
                   0,
                   v2,
@@ -2842,7 +2839,7 @@ LABEL_28:
                       goto LABEL_39;
                   }
                   this->fields._svtLimitAddEntity_5__9 = (struct ServantLimitAddEntity_o *)method;
-                  sub_21FFBF4(
+                  sub_2213A04(
                     (MissionNaviTransitionBoardItem_o *)&this->fields._svtLimitAddEntity_5__9,
                     (int32_t)method,
                     v78,
@@ -2856,7 +2853,7 @@ LABEL_39:
                 Instance = (__int64)this->fields._svtVoiceMst_5__2;
                 if ( !Instance )
                   goto LABEL_144;
-                Instance = (__int64)ServantVoiceMaster__getEntity_49774560(
+                Instance = (__int64)ServantVoiceMaster__getEntity_49837844(
                                       (ServantVoiceMaster_o *)Instance,
                                       this->fields._voiceId_5__8,
                                       0,
@@ -2866,7 +2863,7 @@ LABEL_39:
                 v87 = Instance;
                 System_Collections_Generic_Dictionary_object__bool___Clear(
                   (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields._svtVoiceListup_5__4,
-                  (const MethodInfo_3FB01D4 *)Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
+                  (const MethodInfo_3FE397C *)Method_System_Collections_Generic_Dictionary_string__bool__Clear__);
                 if ( !v87 )
                   goto LABEL_144;
                 v89 = *(_QWORD *)(v87 + 24);
@@ -2887,7 +2884,7 @@ LABEL_39:
                           System_Collections_Generic_List_object___GetEnumerator(
                             &v155,
                             (System_Collections_Generic_List_object__o *)Instance,
-                            (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+                            (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
                           v93 = *(_OWORD *)&v155.fields._list;
                           v155.fields._list = 0;
                           *(_QWORD *)&v155.fields._index = &v156;
@@ -2897,39 +2894,39 @@ LABEL_39:
                           {
                             v94 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                                     &v156,
-                                    (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+                                    (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
                             if ( !v94 )
                               break;
                             current = v156.fields._current;
                             if ( !v156.fields._current )
-                              sub_21FFECC(v94, v95);
+                              sub_2213CDC(v94, v95);
                             monitor = (int)v156.fields._current[1].monitor;
                             if ( monitor >= 1 )
                             {
                               for ( j = 0; j < monitor; ++j )
                               {
                                 if ( j >= (unsigned int)monitor )
-                                  sub_21FFED4(v94);
+                                  sub_2213CE4(v94);
                                 v99 = *((_QWORD *)&current[2].klass + j);
                                 if ( !v99 )
-                                  sub_21FFECC(v94, v95);
+                                  sub_2213CDC(v94, v95);
                                 svtVoiceListup_5__4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields._svtVoiceListup_5__4;
                                 if ( !svtVoiceListup_5__4 )
-                                  sub_21FFECC(0, v95);
+                                  sub_2213CDC(0, v95);
                                 v94 = System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                                         svtVoiceListup_5__4,
                                         *(Il2CppObject **)(v99 + 16),
-                                        (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
+                                        (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
                                 if ( !v94 )
                                 {
                                   v101 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields._svtVoiceListup_5__4;
                                   if ( !v101 )
-                                    sub_21FFECC(0, v95);
+                                    sub_2213CDC(0, v95);
                                   System_Collections_Generic_Dictionary_object__bool___Add(
                                     v101,
                                     *(Il2CppObject **)(v99 + 16),
                                     1,
-                                    (const MethodInfo_3FB003C *)Method_System_Collections_Generic_Dictionary_string__bool__Add__);
+                                    (const MethodInfo_3FE37E4 *)Method_System_Collections_Generic_Dictionary_string__bool__Add__);
                                 }
                                 monitor = (int)current[1].monitor;
                               }
@@ -2937,7 +2934,7 @@ LABEL_39:
                           }
                           System_Collections_Generic_List_Enumerator_object___Dispose(
                             &v156,
-                            (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+                            (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
                         }
                       }
                     }
@@ -2948,7 +2945,7 @@ LABEL_39:
                       goto LABEL_70;
                   }
 LABEL_145:
-                  sub_21FFED4(Instance);
+                  sub_2213CE4(Instance);
                 }
 LABEL_70:
                 v102 = this->fields.__8__1;
@@ -2975,9 +2972,9 @@ LABEL_70:
                     Instance = (__int64)UnityEngine_Object__get_name(objectList->m_Items[v107], 0);
                     if ( !Instance )
                       goto LABEL_144;
-                    Instance = System_String__Equals_75473208(
+                    Instance = System_String__Equals_75686512(
                                  (System_String_o *)Instance,
-                                 (System_String_o *)StringLiteral_4586/*"ChrSequence1"*/,
+                                 (System_String_o *)StringLiteral_4594/*"ChrSequence1"*/,
                                  0);
                     if ( (Instance & 1) != 0 )
                       break;
@@ -2999,9 +2996,9 @@ LABEL_83:
                   goto LABEL_97;
                 if ( !v106 )
                   goto LABEL_144;
-                Instance = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
+                Instance = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
                                       (UnityEngine_GameObject_o *)v106,
-                                      (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
+                                      (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
                 if ( !Instance )
                   goto LABEL_144;
                 v108 = *(_DWORD *)(Instance + 24);
@@ -3020,7 +3017,7 @@ LABEL_83:
                     Instance = System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                                  (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
                                  *(Il2CppObject **)(v111 + 72),
-                                 (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
+                                 (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
                     if ( (Instance & 1) == 0 )
                     {
                       Instance = (__int64)this->fields._nobleListup_5__5;
@@ -3030,7 +3027,7 @@ LABEL_83:
                         (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
                         *(Il2CppObject **)(v111 + 72),
                         1,
-                        (const MethodInfo_3FB003C *)Method_System_Collections_Generic_Dictionary_string__bool__Add__);
+                        (const MethodInfo_3FE37E4 *)Method_System_Collections_Generic_Dictionary_string__bool__Add__);
                     }
                     v108 = *(_DWORD *)(v109 + 24);
                     if ( (int)++v110 >= v108 )
@@ -3045,7 +3042,7 @@ LABEL_97:
                 {
                   CueInfoList = CriAtomExAcb__GetCueInfoList((CriAtomExAcb_o *)Instance, 0);
                   this->fields.__7__wrap9 = CueInfoList;
-                  sub_21FFBF4(
+                  sub_2213A04(
                     (MissionNaviTransitionBoardItem_o *)&this->fields.__7__wrap9,
                     (int32_t)CueInfoList,
                     v113,
@@ -3075,7 +3072,7 @@ LABEL_97:
         if ( !System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                 (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
                 name,
-                (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
+                (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
         {
           Instance = (__int64)this->fields._nobleListup_5__5;
           if ( !Instance )
@@ -3083,7 +3080,7 @@ LABEL_97:
           Instance = System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                        (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
                        name,
-                       (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
+                       (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__);
           if ( (Instance & 1) == 0 )
           {
             if ( !name )
@@ -3097,23 +3094,23 @@ LABEL_97:
             Instance = *(_QWORD *)(Instance + 32);
             if ( !Instance )
               goto LABEL_144;
-            Instance = System_String__Equals_75473208(
+            Instance = System_String__Equals_75686512(
                          (System_String_o *)Instance,
                          (System_String_o *)StringLiteral_1198/*"0"*/,
                          0);
             if ( (Instance & 1) != 0 || (svtLimitAddEntity_5__9 = this->fields._svtLimitAddEntity_5__9) == 0 )
             {
 LABEL_135:
-              Instance = sub_21FFD10(string___TypeInfo, 5);
+              Instance = sub_2213B20(string___TypeInfo, 5);
               if ( Instance )
               {
                 v148 = (System_String_array *)Instance;
-                sub_1FEB274(Instance, 0, StringLiteral_20303/*"file only data : "*/);
-                sub_1FEB274(v148, 1, name);
-                sub_1FEB274(v148, 2, StringLiteral_80/*"\ntarget : "*/);
-                sub_1FEB274(v148, 3, this->fields._nameOrig_5__7);
-                sub_1FEB274(v148, 4, StringLiteral_43/*"\n"*/);
-                Instance = (__int64)System_String__Concat_75483816(v148, 0);
+                sub_1FFE2C4(Instance, 0, StringLiteral_20344/*"file only data : "*/);
+                sub_1FFE2C4(v148, 1, name);
+                sub_1FFE2C4(v148, 2, StringLiteral_80/*"\ntarget : "*/);
+                sub_1FFE2C4(v148, 3, this->fields._nameOrig_5__7);
+                sub_1FFE2C4(v148, 4, StringLiteral_43/*"\n"*/);
+                Instance = (__int64)System_String__Concat_75697120(v148, 0);
                 if ( _4__this )
                 {
                   SoundCheckMenu__ErrorOutput(_4__this, (System_String_o *)Instance, v149);
@@ -3122,13 +3119,13 @@ LABEL_135:
                 }
               }
 LABEL_144:
-              sub_21FFECC(Instance, method);
+              sub_2213CDC(Instance, method);
             }
             if ( !*(_DWORD *)(v121 + 24) )
               goto LABEL_145;
             v123 = *(_QWORD *)(v121 + 32);
             LODWORD(v155.fields._list) = svtLimitAddEntity_5__9->fields.voicePrefix;
-            Instance = j_il2cpp_value_box_0(qword_594C070, &v155);
+            Instance = j_il2cpp_value_box_0(qword_5984348, &v155);
             if ( !v123 )
               goto LABEL_144;
             Instance = (*(__int64 (__fastcall **)(__int64, __int64, _QWORD))(*(_QWORD *)v123 + 312LL))(
@@ -3139,7 +3136,7 @@ LABEL_144:
             {
               if ( (*(_DWORD *)(v121 + 24) & 0xFFFFFFFE) == 0 )
                 goto LABEL_145;
-              Instance = (__int64)System_String__Concat_75438412(
+              Instance = (__int64)System_String__Concat_75651716(
                                     (System_String_o *)StringLiteral_1227/*"0_"*/,
                                     *(System_String_o **)(v121 + 40),
                                     0);
@@ -3149,7 +3146,7 @@ LABEL_144:
               if ( !System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                       (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields._svtVoiceListup_5__4,
                       (Il2CppObject *)Instance,
-                      (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
+                      (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
               {
                 Instance = (__int64)this->fields._nobleListup_5__5;
                 if ( !Instance )
@@ -3157,30 +3154,30 @@ LABEL_144:
                 if ( !System_Collections_Generic_Dictionary_object__bool___ContainsKey(
                         (System_Collections_Generic_Dictionary_TKey__TValue__o *)Instance,
                         v124,
-                        (const MethodInfo_3FB0240 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
+                        (const MethodInfo_3FE39E8 *)Method_System_Collections_Generic_Dictionary_string__bool__ContainsKey__) )
                   break;
               }
             }
           }
         }
       }
-      Instance = sub_21FFD10(string___TypeInfo, 5);
+      Instance = sub_2213B20(string___TypeInfo, 5);
       if ( !Instance )
         goto LABEL_144;
       v150 = (System_String_array *)Instance;
-      sub_1FEB274(Instance, 0, StringLiteral_20303/*"file only data : "*/);
-      sub_1FEB274(v150, 1, name);
-      sub_1FEB274(v150, 2, StringLiteral_80/*"\ntarget : "*/);
-      sub_1FEB274(v150, 3, this->fields._nameOrig_5__7);
-      sub_1FEB274(v150, 4, StringLiteral_43/*"\n"*/);
-      Instance = (__int64)System_String__Concat_75483816(v150, 0);
+      sub_1FFE2C4(Instance, 0, StringLiteral_20344/*"file only data : "*/);
+      sub_1FFE2C4(v150, 1, name);
+      sub_1FFE2C4(v150, 2, StringLiteral_80/*"\ntarget : "*/);
+      sub_1FFE2C4(v150, 3, this->fields._nameOrig_5__7);
+      sub_1FFE2C4(v150, 4, StringLiteral_43/*"\n"*/);
+      Instance = (__int64)System_String__Concat_75697120(v150, 0);
       if ( !_4__this )
         goto LABEL_144;
       SoundCheckMenu__ErrorOutput(_4__this, (System_String_o *)Instance, v151);
       v12 = 2;
 LABEL_138:
       this->fields.__2__current = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
       LOBYTE(Instance) = 1;
       goto LABEL_139;
     }
@@ -3211,11 +3208,11 @@ void __noreturn SoundCheckMenu__cueNameMstCheck_d__19__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundCheckMenu__cueNameMstCheck_d__19_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundCheckMenu__cueNameMstCheck_d__19_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3255,7 +3252,7 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
   bool v7; // w7
   SoundCheckMenu__npCheck_d__20_o *v8; // x20
   AssetManager_c **v9; // x28
-  const MethodInfo_40C7F48 **v10; // x27
+  const MethodInfo_40FBAD4 **v10; // x27
   int _1__state; // w8
   SoundCheckMenu_o *_4__this; // x19
   _BOOL8 IsExistsSound; // x0
@@ -3396,7 +3393,7 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
   int v148; // w8
   AssetManager_c **v149; // x25
   SoundCheckMenu_o *v150; // x26
-  const MethodInfo_40C7F48 **v151; // x19
+  const MethodInfo_40FBAD4 **v151; // x19
   unsigned int v152; // w28
   struct ServantLimitAddEntity_o *v153; // x20
   struct ServantEntity_o *v154; // x8
@@ -3497,7 +3494,7 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
   _BOOL8 v249; // x0
   __int64 v250; // x1
   __int64 v251; // x2
-  System_Object_array *ComponentsInChildren_object__59262092; // x1
+  System_Object_array *ComponentsInChildren_object__59472212; // x1
   SoundCheckMenu__npCheck_d__20_o *v253; // x0
   System_String_o *v254; // x2
   System_String_o *v255; // x3
@@ -3586,7 +3583,7 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
   System_String_o *v338; // x21
   System_String_o *v339; // x22
   System_Text_RegularExpressions_Regex_o *v340; // x0
-  System_String_o *IsMatch_81841672; // x0
+  System_String_o *IsMatch_82054976; // x0
   __int64 v342; // x1
   char v343; // w20
   System_Text_RegularExpressions_Regex_o *v344; // x0
@@ -3820,59 +3817,59 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
 
   v8 = this;
   v566 = this;
-  if ( (byte_5935C70 & 1) == 0 )
+  if ( (byte_596DDB2 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
-    sub_21FFC50(&UnityEngine_GameObject_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass20_0_TypeInfo);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__0__);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass20_1_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_4586/*"ChrSequence1"*/);
-    sub_21FFC50(&StringLiteral_9898/*"NoblePhantasm_"*/);
-    sub_21FFC50(&StringLiteral_23374/*"not exist : "*/);
-    sub_21FFC50(&StringLiteral_9725/*"NP_"*/);
-    sub_21FFC50(&StringLiteral_80/*"\ntarget : "*/);
-    sub_21FFC50(&StringLiteral_16714/*"_"*/);
-    sub_21FFC50(&StringLiteral_4588/*"ChrVoice_"*/);
-    sub_21FFC50(&StringLiteral_1227/*"0_"*/);
-    sub_21FFC50(&StringLiteral_13274/*"Servants_"*/);
-    sub_21FFC50(&StringLiteral_764/*"(\\d+)_(\\d)_(.+)"*/);
-    sub_21FFC50(&StringLiteral_9726/*"NP_(\\d+)_(.+)"*/);
-    sub_21FFC50(&StringLiteral_17619/*"audio type error : "*/);
-    sub_21FFC50(&StringLiteral_3201/*"Battle"*/);
-    sub_21FFC50(&StringLiteral_9896/*"NoblePhantasm/Sequence/"*/);
-    byte_5935C70 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
+    sub_2213A60(&UnityEngine_GameObject_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
+    sub_2213A60(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass20_0_TypeInfo);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__0__);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass20_1_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_4594/*"ChrSequence1"*/);
+    sub_2213A60(&StringLiteral_9911/*"NoblePhantasm_"*/);
+    sub_2213A60(&StringLiteral_23420/*"not exist : "*/);
+    sub_2213A60(&StringLiteral_9738/*"NP_"*/);
+    sub_2213A60(&StringLiteral_80/*"\ntarget : "*/);
+    sub_2213A60(&StringLiteral_16746/*"_"*/);
+    sub_2213A60(&StringLiteral_4596/*"ChrVoice_"*/);
+    sub_2213A60(&StringLiteral_1227/*"0_"*/);
+    sub_2213A60(&StringLiteral_13301/*"Servants_"*/);
+    sub_2213A60(&StringLiteral_764/*"(\\d+)_(\\d)_(.+)"*/);
+    sub_2213A60(&StringLiteral_9739/*"NP_(\\d+)_(.+)"*/);
+    sub_2213A60(&StringLiteral_17656/*"audio type error : "*/);
+    sub_2213A60(&StringLiteral_3205/*"Battle"*/);
+    sub_2213A60(&StringLiteral_9909/*"NoblePhantasm/Sequence/"*/);
+    byte_596DDB2 = 1;
   }
   v9 = &AssetManager_TypeInfo;
-  v10 = (const MethodInfo_40C7F48 **)&Method_System_Collections_Generic_List_Enumerator_string__Dispose__;
+  v10 = (const MethodInfo_40FBAD4 **)&Method_System_Collections_Generic_List_Enumerator_string__Dispose__;
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
   IsExistsSound = 0;
@@ -3891,39 +3888,39 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
     else
     {
       v8->fields.__1__state = -1;
-      v14 = (Il2CppObject *)sub_21FFEBC(SoundCheckMenu___c__DisplayClass20_0_TypeInfo);
+      v14 = (Il2CppObject *)sub_2213CCC(SoundCheckMenu___c__DisplayClass20_0_TypeInfo);
       System_Object___ctor(v14, 0);
       v15 = v566;
       v566->fields.__8__1 = (struct SoundCheckMenu___c__DisplayClass20_0_o *)v14;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15->fields.__8__1, (int32_t)v14, v16, v17, v18, v19, v20, v21);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15->fields.__8__1, (int32_t)v14, v16, v17, v18, v19, v20, v21);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
-        sub_21FFECC(0, v23);
+        sub_2213CDC(0, v23);
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+                            (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
       v26 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
       if ( !MasterData_object )
-        sub_21FFECC(0, v25);
+        sub_2213CDC(0, v25);
       DataMasterBase_object__object__int___getEntitys(
         (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-        (const MethodInfo_3EDC704 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
+        (const MethodInfo_3F0FEAC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
       Entitys = DataMasterBase_object__object__int___getEntitys(
                   v26,
-                  (const MethodInfo_3EDC704 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
-      v28 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantEntity__TypeInfo);
+                  (const MethodInfo_3F0FEAC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
+      v28 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantEntity__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v28,
-        (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
-      v29 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+      v29 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !v29 )
-        sub_21FFECC(0, v30);
+        sub_2213CDC(0, v30);
       v31 = DataManager__GetMasterData_object_(
               (DataManager_o *)v29,
-              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
       v32 = v566;
       v566->fields._svtLimitAddMst_5__2 = (struct ServantLimitAddMaster_o *)v31;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v32->fields._svtLimitAddMst_5__2,
         (int32_t)v31,
         v33,
@@ -3934,13 +3931,13 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
         v38);
       svtLimitAddMst_5__2 = (DataMasterBase_TMaster__TEntity__PKType__o *)v566->fields._svtLimitAddMst_5__2;
       if ( !svtLimitAddMst_5__2 )
-        sub_21FFECC(0, v39);
+        sub_2213CDC(0, v39);
       v41 = DataMasterBase_object__object__object___getEntitys(
               svtLimitAddMst_5__2,
-              (const MethodInfo_3EE13C0 *)Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
+              (const MethodInfo_3F14B68 *)Method_DataMasterBase_ServantLimitAddMaster__ServantLimitAddEntity__string__getEntitys__);
       v42 = v566;
       v566->fields._svtLimitAddEntitys_5__3 = (struct ServantLimitAddEntity_array *)v41;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v42->fields._svtLimitAddEntitys_5__3,
         (int32_t)v41,
         v43,
@@ -3950,18 +3947,18 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
         v47,
         v48);
       if ( !Entitys )
-        sub_21FFECC(IsServant, v50);
+        sub_2213CDC(IsServant, v50);
       max_length = Entitys->max_length;
       if ( max_length >= 1 )
       {
         for ( i = 0; i < max_length; ++i )
         {
           if ( i >= (unsigned int)max_length )
-            sub_21FFED4(IsServant);
+            sub_2213CE4(IsServant);
           v53 = &Entitys->obj.klass + i;
           v54 = (Il2CppObject *)v53[4];
           if ( !v54 )
-            sub_21FFECC(IsServant, v50);
+            sub_2213CDC(IsServant, v50);
           IsServant = ServantEntity__get_IsServant((ServantEntity_o *)v53[4], 0);
           if ( IsServant )
           {
@@ -3971,7 +3968,7 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
                   ++v28->fields._version,
                   !items) )
             {
-              sub_21FFECC(IsServant, v50);
+              sub_2213CDC(IsServant, v50);
             }
             size = v28->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -3979,31 +3976,31 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
               System_Collections_Generic_List_object___AddWithResize(
                 v28,
                 v54,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
             }
             else
             {
               v64 = &items->obj.klass + size;
               v28->fields._size = size + 1;
               v64[4] = (Il2CppClass *)v54;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v64 + 4), (int32_t)v54, v55, v56, v57, v58, v59, v60);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v64 + 4), (int32_t)v54, v55, v56, v57, v58, v59, v60);
             }
           }
           max_length = Entitys->max_length;
         }
       }
       if ( !v28 )
-        sub_21FFECC(IsServant, v50);
+        sub_2213CDC(IsServant, v50);
       if ( !_4__this )
-        sub_21FFECC(IsServant, v50);
+        sub_2213CDC(IsServant, v50);
       v9 = &AssetManager_TypeInfo;
       v65 = System_Text_RegularExpressions_Regex_TypeInfo;
       _4__this->fields.checkMax = v28->fields._size;
-      v66 = (System_Text_RegularExpressions_Regex_o *)sub_21FFEBC(v65);
-      System_Text_RegularExpressions_Regex___ctor_81846648(v66, (System_String_o *)StringLiteral_764/*"(\\d+)_(\\d)_(.+)"*/, 1, 0);
+      v66 = (System_Text_RegularExpressions_Regex_o *)sub_2213CCC(v65);
+      System_Text_RegularExpressions_Regex___ctor_82059952(v66, (System_String_o *)StringLiteral_764/*"(\\d+)_(\\d)_(.+)"*/, 1, 0);
       v67 = v566;
       v566->fields._rNpVoice_5__4 = v66;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v67->fields._rNpVoice_5__4,
         (int32_t)v66,
         v68,
@@ -4012,11 +4009,11 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
         v71,
         v72,
         v73);
-      v74 = (System_Text_RegularExpressions_Regex_o *)sub_21FFEBC(System_Text_RegularExpressions_Regex_TypeInfo);
-      System_Text_RegularExpressions_Regex___ctor_81846648(v74, (System_String_o *)StringLiteral_9726/*"NP_(\\d+)_(.+)"*/, 1, 0);
+      v74 = (System_Text_RegularExpressions_Regex_o *)sub_2213CCC(System_Text_RegularExpressions_Regex_TypeInfo);
+      System_Text_RegularExpressions_Regex___ctor_82059952(v74, (System_String_o *)StringLiteral_9739/*"NP_(\\d+)_(.+)"*/, 1, 0);
       v75 = v566;
       v566->fields._rNpSE_5__5 = v74;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v75->fields._rNpSE_5__5,
         (int32_t)v74,
         v76,
@@ -4026,24 +4023,24 @@ bool SoundCheckMenu__npCheck_d__20__MoveNext(SoundCheckMenu__npCheck_d__20_o *th
         v80,
         v81);
       _8__1 = v566->fields.__8__1;
-      v83 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+      v83 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v83,
-        (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+        (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
       if ( !_8__1 )
-        sub_21FFECC(v84, v85);
+        sub_2213CDC(v84, v85);
       _8__1->fields.voiceDataPath = (struct System_Collections_Generic_List_string__o *)v83;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_8__1->fields, (int32_t)v83, v86, v87, v88, v89, v90, v91);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&_8__1->fields, (int32_t)v83, v86, v87, v88, v89, v90, v91);
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v559,
         v28,
-        (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+        (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
       current = v559.fields._current;
       v93 = v566;
       v560 = v559;
       *(_OWORD *)&v566->fields.__7__wrap5.fields._list = *(_OWORD *)&v559.fields._list;
       v93->fields.__7__wrap5.fields._current = (struct ServantEntity_o *)current;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v93->fields.__7__wrap5, 0, v94, v95, v96, v97, v98, v99);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v93->fields.__7__wrap5, 0, v94, v95, v96, v97, v98, v99);
       v8 = v566;
     }
     v8->fields.__1__state = -3;
@@ -4073,24 +4070,24 @@ LABEL_275:
     p__7__wrap9 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__7__wrap9;
     v448 = _7__wrap9;
     if ( !_7__wrap9 )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     v451 = v448->max_length;
     if ( v260 >= v451 )
       break;
     if ( v260 >= (unsigned int)v451 )
-      sub_21FFED4(IsExistsSound);
+      sub_2213CE4(IsExistsSound);
     v264 = v448->m_Items[v260];
     if ( !v264 )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     if ( !_4__this )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     soundId = v264->fields.soundId;
     v266 = SoundCheckMenu__IsReplaceable((SoundCheckMenu_o *)IsExistsSound, v264->fields.groupId, v2);
     if ( v266 )
     {
       svtEntity_5__7 = v566->fields._svtEntity_5__7;
       if ( !svtEntity_5__7 )
-        sub_21FFECC(v266, v267);
+        sub_2213CDC(v266, v267);
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v267, v268);
       *(_QWORD *)&v570.fields.currentCryptoKey = &svtEntity_5__7->fields;
@@ -4098,17 +4095,17 @@ LABEL_275:
       CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v570, v268);
       rNpVoice_5__4 = v566->fields._rNpVoice_5__4;
       if ( !rNpVoice_5__4 )
-        sub_21FFECC(0, v270);
-      if ( System_Text_RegularExpressions_Regex__IsMatch_81841672(rNpVoice_5__4, soundId, 0) )
+        sub_2213CDC(0, v270);
+      if ( System_Text_RegularExpressions_Regex__IsMatch_82054976(rNpVoice_5__4, soundId, 0) )
       {
         v273 = v566->fields._rNpVoice_5__4;
         if ( !v273 )
-          sub_21FFECC(0, v272);
-        matched = System_Text_RegularExpressions_Regex__Match_81842168(v273, soundId, 0);
-        v275 = sub_21FFD10(string___TypeInfo, 5);
+          sub_2213CDC(0, v272);
+        matched = System_Text_RegularExpressions_Regex__Match_82055472(v273, soundId, 0);
+        v275 = sub_2213B20(string___TypeInfo, 5);
         v278 = v566->fields._svtEntity_5__7;
         if ( !v278 )
-          sub_21FFECC(v275, v276);
+          sub_2213CDC(v275, v276);
         v279 = v275;
         if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v276, v277);
@@ -4116,23 +4113,23 @@ LABEL_275:
         *(_QWORD *)&v571.fields.fakeValue = 0;
         v280 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v571, v277);
         if ( !v279 )
-          sub_21FFECC(v280, v280);
+          sub_2213CDC(v280, v280);
         if ( !*(_DWORD *)(v279 + 24) )
-          sub_21FFED4(v280);
+          sub_2213CE4(v280);
         *(_QWORD *)(v279 + 32) = v280;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v279 + 32), (int32_t)v280, v281, v282, v283, v284, v285, v286);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v279 + 32), (int32_t)v280, v281, v282, v283, v284, v285, v286);
         if ( (*(_DWORD *)(v279 + 24) & 0xFFFFFFFE) == 0 )
-          sub_21FFED4(v287);
-        v294 = StringLiteral_16714/*"_"*/;
-        *(_QWORD *)(v279 + 40) = StringLiteral_16714/*"_"*/;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v279 + 40), v294, v288, v289, v290, v291, v292, v293);
+          sub_2213CE4(v287);
+        v294 = StringLiteral_16746/*"_"*/;
+        *(_QWORD *)(v279 + 40) = StringLiteral_16746/*"_"*/;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v279 + 40), v294, v288, v289, v290, v291, v292, v293);
         if ( !matched )
-          sub_21FFECC(v295, v296);
+          sub_2213CDC(v295, v296);
         v297 = (System_Text_RegularExpressions_GroupCollection_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Match_o *, const MethodInfo *))matched->klass->vtable._5_get_Groups.methodPtr)(
                                                                      matched,
                                                                      matched->klass->vtable._5_get_Groups.method);
         if ( !v297 )
-          sub_21FFECC(0, v298);
+          sub_2213CDC(0, v298);
         Item = System_Text_RegularExpressions_GroupCollection__get_Item(v297, 2, 0);
         v306 = 0;
         if ( Item )
@@ -4145,17 +4142,17 @@ LABEL_275:
         if ( *(_DWORD *)(v279 + 24) < 3u )
           goto LABEL_240;
         *(_QWORD *)(v279 + 48) = v306;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v279 + 48), (int32_t)v306, v300, v301, v302, v303, v304, v305);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v279 + 48), (int32_t)v306, v300, v301, v302, v303, v304, v305);
         if ( (*(_DWORD *)(v279 + 24) & 0xFFFFFFFC) == 0 )
-          sub_21FFED4(v307);
-        v314 = StringLiteral_16714/*"_"*/;
-        *(_QWORD *)(v279 + 56) = StringLiteral_16714/*"_"*/;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v279 + 56), v314, v308, v309, v310, v311, v312, v313);
+          sub_2213CE4(v307);
+        v314 = StringLiteral_16746/*"_"*/;
+        *(_QWORD *)(v279 + 56) = StringLiteral_16746/*"_"*/;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v279 + 56), v314, v308, v309, v310, v311, v312, v313);
         v315 = (System_Text_RegularExpressions_GroupCollection_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Match_o *, const MethodInfo *))matched->klass->vtable._5_get_Groups.methodPtr)(
                                                                      matched,
                                                                      matched->klass->vtable._5_get_Groups.method);
         if ( !v315 )
-          sub_21FFECC(0, v316);
+          sub_2213CDC(0, v316);
         Item = System_Text_RegularExpressions_GroupCollection__get_Item(v315, 3, 0);
         v323 = 0;
         if ( Item )
@@ -4167,23 +4164,23 @@ LABEL_275:
         }
         if ( *(_DWORD *)(v279 + 24) <= 4u )
 LABEL_240:
-          sub_21FFED4(Item);
+          sub_2213CE4(Item);
         *(_QWORD *)(v279 + 64) = v323;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v279 + 64), (int32_t)v323, v317, v318, v319, v320, v321, v322);
-        soundId = System_String__Concat_75483816((System_String_array *)v279, 0);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v279 + 64), (int32_t)v323, v317, v318, v319, v320, v321, v322);
+        soundId = System_String__Concat_75697120((System_String_array *)v279, 0);
       }
       rNpSE_5__5 = v566->fields._rNpSE_5__5;
       if ( !rNpSE_5__5 )
-        sub_21FFECC(0, v272);
-      if ( System_Text_RegularExpressions_Regex__IsMatch_81841672(rNpSE_5__5, soundId, 0) )
+        sub_2213CDC(0, v272);
+      if ( System_Text_RegularExpressions_Regex__IsMatch_82054976(rNpSE_5__5, soundId, 0) )
       {
         v325 = v566->fields._rNpSE_5__5;
         if ( !v325 )
-          sub_21FFECC(0, v267);
-        v326 = System_Text_RegularExpressions_Regex__Match_81842168(v325, soundId, 0);
+          sub_2213CDC(0, v267);
+        v326 = System_Text_RegularExpressions_Regex__Match_82055472(v325, soundId, 0);
         v329 = v566->fields._svtEntity_5__7;
         if ( !v329 )
-          sub_21FFECC(v326, v327);
+          sub_2213CDC(v326, v327);
         v330 = v326;
         if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v327, v328);
@@ -4191,68 +4188,68 @@ LABEL_240:
         *(_QWORD *)&v572.fields.fakeValue = 0;
         v331 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v572, v328);
         if ( !v330 )
-          sub_21FFECC(v331, v332);
+          sub_2213CDC(v331, v332);
         v333 = v331;
         v334 = (System_Text_RegularExpressions_GroupCollection_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Match_o *, const MethodInfo *))v330->klass->vtable._5_get_Groups.methodPtr)(
                                                                      v330,
                                                                      v330->klass->vtable._5_get_Groups.method);
         if ( !v334 )
-          sub_21FFECC(0, v335);
+          sub_2213CDC(0, v335);
         v336 = System_Text_RegularExpressions_GroupCollection__get_Item(v334, 2, 0);
         v337 = 0;
-        v338 = (System_String_o *)StringLiteral_16714/*"_"*/;
-        v339 = (System_String_o *)StringLiteral_9725/*"NP_"*/;
+        v338 = (System_String_o *)StringLiteral_16746/*"_"*/;
+        v339 = (System_String_o *)StringLiteral_9738/*"NP_"*/;
         if ( v336 )
           v337 = (System_String_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Group_o *, const MethodInfo *))v336->klass->vtable._3_ToString.methodPtr)(
                                       v336,
                                       v336->klass->vtable._3_ToString.method);
-        soundId = System_String__Concat_75483552(v339, v333, v338, v337, 0);
+        soundId = System_String__Concat_75696856(v339, v333, v338, v337, 0);
       }
     }
     v340 = v566->fields._rNpVoice_5__4;
     if ( !v340 )
-      sub_21FFECC(0, v267);
-    IsMatch_81841672 = (System_String_o *)System_Text_RegularExpressions_Regex__IsMatch_81841672(v340, soundId, 0);
-    v343 = (char)IsMatch_81841672;
-    if ( ((unsigned __int8)IsMatch_81841672 & 1) != 0 )
+      sub_2213CDC(0, v267);
+    IsMatch_82054976 = (System_String_o *)System_Text_RegularExpressions_Regex__IsMatch_82054976(v340, soundId, 0);
+    v343 = (char)IsMatch_82054976;
+    if ( ((unsigned __int8)IsMatch_82054976 & 1) != 0 )
     {
       v344 = v566->fields._rNpVoice_5__4;
       if ( !v344 )
-        sub_21FFECC(0, v342);
-      v345 = System_Text_RegularExpressions_Regex__Match_81842168(v344, soundId, 0);
+        sub_2213CDC(0, v342);
+      v345 = System_Text_RegularExpressions_Regex__Match_82055472(v344, soundId, 0);
       v347 = v345;
       svtLimitAddEntity_5__9 = v566->fields._svtLimitAddEntity_5__9;
       if ( svtLimitAddEntity_5__9 )
       {
         v349 = System_Int32__ToString((int)svtLimitAddEntity_5__9 + 52, 0);
         if ( !v347 )
-          sub_21FFECC(v349, v350);
+          sub_2213CDC(v349, v350);
         v351 = v349;
         v352 = (System_Text_RegularExpressions_GroupCollection_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Match_o *, const MethodInfo *))v347->klass->vtable._5_get_Groups.methodPtr)(
                                                                      v347,
                                                                      v347->klass->vtable._5_get_Groups.method);
         if ( !v352 )
-          sub_21FFECC(0, v353);
+          sub_2213CDC(0, v353);
         v354 = System_Text_RegularExpressions_GroupCollection__get_Item(v352, 3, 0);
         v355 = 0;
-        v356 = (System_String_o *)StringLiteral_16714/*"_"*/;
+        v356 = (System_String_o *)StringLiteral_16746/*"_"*/;
         if ( v354 )
           v355 = (System_String_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Group_o *, const MethodInfo *, _QWORD))v354->klass->vtable._3_ToString.methodPtr)(
                                       v354,
                                       v354->klass->vtable._3_ToString.method,
                                       0);
-        IsMatch_81841672 = System_String__Concat_75481624(v351, v356, v355, 0);
-        soundId = IsMatch_81841672;
+        IsMatch_82054976 = System_String__Concat_75694928(v351, v356, v355, 0);
+        soundId = IsMatch_82054976;
       }
       else
       {
         if ( !v345 )
-          sub_21FFECC(0, v346);
+          sub_2213CDC(0, v346);
         v357 = (System_Text_RegularExpressions_GroupCollection_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Match_o *, const MethodInfo *))v345->klass->vtable._5_get_Groups.methodPtr)(
                                                                      v345,
                                                                      v345->klass->vtable._5_get_Groups.method);
         if ( !v357 )
-          sub_21FFECC(0, v358);
+          sub_2213CDC(0, v358);
         v359 = System_Text_RegularExpressions_GroupCollection__get_Item(v357, 3, 0);
         v360 = 0;
         v361 = (System_String_o *)StringLiteral_1227/*"0_"*/;
@@ -4260,8 +4257,8 @@ LABEL_240:
           v360 = (System_String_o *)((__int64 (__fastcall *)(System_Text_RegularExpressions_Group_o *, const MethodInfo *))v359->klass->vtable._3_ToString.methodPtr)(
                                       v359,
                                       v359->klass->vtable._3_ToString.method);
-        IsMatch_81841672 = System_String__Concat_75438412(v361, v360, 0);
-        soundId = IsMatch_81841672;
+        IsMatch_82054976 = System_String__Concat_75651716(v361, v360, 0);
+        soundId = IsMatch_82054976;
       }
     }
     audioType = v264->fields.audioType;
@@ -4269,29 +4266,29 @@ LABEL_240:
     {
       if ( (v343 & 1) != 0 )
         goto LABEL_221;
-      v363 = sub_21FFD10(string___TypeInfo, 5);
+      v363 = sub_2213B20(string___TypeInfo, 5);
       v371 = v363;
       if ( !v363 )
-        sub_21FFECC(0, v364);
+        sub_2213CDC(0, v364);
       if ( !*(_DWORD *)(v363 + 24) )
-        sub_21FFED4(v363);
-      v372 = StringLiteral_17619/*"audio type error : "*/;
-      *(_QWORD *)(v363 + 32) = StringLiteral_17619/*"audio type error : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v363 + 32), v372, v365, v366, v367, v368, v369, v370);
+        sub_2213CE4(v363);
+      v372 = StringLiteral_17656/*"audio type error : "*/;
+      *(_QWORD *)(v363 + 32) = StringLiteral_17656/*"audio type error : "*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v363 + 32), v372, v365, v366, v367, v368, v369, v370);
       if ( (*(_DWORD *)(v371 + 24) & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v373);
+        sub_2213CE4(v373);
       *(_QWORD *)(v371 + 40) = soundId;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 40), (int32_t)soundId, v374, v375, v376, v377, v378, v379);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 40), (int32_t)soundId, v374, v375, v376, v377, v378, v379);
       if ( *(_DWORD *)(v371 + 24) <= 2u )
-        sub_21FFED4(v380);
+        sub_2213CE4(v380);
       v387 = StringLiteral_80/*"\ntarget : "*/;
       *(_QWORD *)(v371 + 48) = StringLiteral_80/*"\ntarget : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 48), v387, v381, v382, v383, v384, v385, v386);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 48), v387, v381, v382, v383, v384, v385, v386);
       if ( (*(_DWORD *)(v371 + 24) & 0xFFFFFFFC) == 0 )
-        sub_21FFED4(v388);
+        sub_2213CE4(v388);
       sequencePath_5__8 = v566->fields._sequencePath_5__8;
       *(_QWORD *)(v371 + 56) = sequencePath_5__8;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)(v371 + 56),
         (int32_t)sequencePath_5__8,
         v389,
@@ -4301,115 +4298,115 @@ LABEL_240:
         v393,
         v394);
       if ( *(_DWORD *)(v371 + 24) <= 4u )
-        sub_21FFED4(v396);
+        sub_2213CE4(v396);
       goto LABEL_220;
     }
     if ( audioType == 1 && (v343 & 1) != 0 )
     {
-      v403 = sub_21FFD10(string___TypeInfo, 5);
+      v403 = sub_2213B20(string___TypeInfo, 5);
       v371 = v403;
       if ( !v403 )
-        sub_21FFECC(0, v404);
+        sub_2213CDC(0, v404);
       if ( !*(_DWORD *)(v403 + 24) )
-        sub_21FFED4(v403);
-      v411 = StringLiteral_17619/*"audio type error : "*/;
-      *(_QWORD *)(v403 + 32) = StringLiteral_17619/*"audio type error : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v403 + 32), v411, v405, v406, v407, v408, v409, v410);
+        sub_2213CE4(v403);
+      v411 = StringLiteral_17656/*"audio type error : "*/;
+      *(_QWORD *)(v403 + 32) = StringLiteral_17656/*"audio type error : "*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v403 + 32), v411, v405, v406, v407, v408, v409, v410);
       if ( (*(_DWORD *)(v371 + 24) & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v412);
+        sub_2213CE4(v412);
       *(_QWORD *)(v371 + 40) = soundId;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 40), (int32_t)soundId, v413, v414, v415, v416, v417, v418);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 40), (int32_t)soundId, v413, v414, v415, v416, v417, v418);
       if ( *(_DWORD *)(v371 + 24) <= 2u )
-        sub_21FFED4(v419);
+        sub_2213CE4(v419);
       v426 = StringLiteral_80/*"\ntarget : "*/;
       *(_QWORD *)(v371 + 48) = StringLiteral_80/*"\ntarget : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 48), v426, v420, v421, v422, v423, v424, v425);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 48), v426, v420, v421, v422, v423, v424, v425);
       if ( (*(_DWORD *)(v371 + 24) & 0xFFFFFFFC) == 0 )
-        sub_21FFED4(v427);
+        sub_2213CE4(v427);
       v434 = v566->fields._sequencePath_5__8;
       *(_QWORD *)(v371 + 56) = v434;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 56), (int32_t)v434, v428, v429, v430, v431, v432, v433);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 56), (int32_t)v434, v428, v429, v430, v431, v432, v433);
       if ( *(_DWORD *)(v371 + 24) <= 4u )
-        sub_21FFED4(v435);
+        sub_2213CE4(v435);
 LABEL_220:
       v436 = StringLiteral_43/*"\n"*/;
       *(_QWORD *)(v371 + 64) = StringLiteral_43/*"\n"*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v371 + 64), v436, v397, v398, v399, v400, v401, v402);
-      v437 = System_String__Concat_75483816((System_String_array *)v371, 0);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v371 + 64), v436, v397, v398, v399, v400, v401, v402);
+      v437 = System_String__Concat_75697120((System_String_array *)v371, 0);
       SoundCheckMenu__ErrorOutput(_4__this, v437, v438);
     }
 LABEL_221:
     _8__2 = v566->fields.__8__2;
     if ( !_8__2 )
-      sub_21FFECC(IsMatch_81841672, v342);
+      sub_2213CDC(IsMatch_82054976, v342);
     CS___8__locals1 = _8__2->fields.CS___8__locals1;
     if ( !CS___8__locals1 )
-      sub_21FFECC(IsMatch_81841672, v342);
+      sub_2213CDC(IsMatch_82054976, v342);
     voiceDataPath = (System_Collections_Generic_List_object__o *)CS___8__locals1->fields.voiceDataPath;
     if ( !voiceDataPath )
-      sub_21FFECC(0, v342);
+      sub_2213CDC(0, v342);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v560,
       voiceDataPath,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v563 = v560;
     do
     {
       v442 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &v563,
-               (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
       if ( !v442 )
         break;
       v443 = v563.fields._current;
-      v444 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      v444 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !v444 )
-        sub_21FFECC(0, v445);
+        sub_2213CDC(0, v445);
     }
     while ( !SoundManager__IsExistsSound((SoundManager_o *)v444, (System_String_o *)v443, soundId, 0) );
     System_Collections_Generic_List_Enumerator_object___Dispose(&v563, *v10);
-    v446 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    v446 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     if ( !v446 )
-      sub_21FFECC(0, v447);
+      sub_2213CDC(0, v447);
     IsExistsSound = SoundManager__IsExistsSound(
                       (SoundManager_o *)v446,
-                      (System_String_o *)StringLiteral_3201/*"Battle"*/,
+                      (System_String_o *)StringLiteral_3205/*"Battle"*/,
                       soundId,
                       0);
     if ( !v442 && !IsExistsSound )
     {
-      v461 = sub_21FFD10(string___TypeInfo, 5);
+      v461 = sub_2213B20(string___TypeInfo, 5);
       v469 = v461;
       if ( !v461 )
-        sub_21FFECC(0, v462);
+        sub_2213CDC(0, v462);
       if ( !*(_DWORD *)(v461 + 24) )
-        sub_21FFED4(v461);
-      v470 = StringLiteral_23374/*"not exist : "*/;
-      *(_QWORD *)(v461 + 32) = StringLiteral_23374/*"not exist : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v461 + 32), v470, v463, v464, v465, v466, v467, v468);
+        sub_2213CE4(v461);
+      v470 = StringLiteral_23420/*"not exist : "*/;
+      *(_QWORD *)(v461 + 32) = StringLiteral_23420/*"not exist : "*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v461 + 32), v470, v463, v464, v465, v466, v467, v468);
       if ( (*(_DWORD *)(v469 + 24) & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v471);
+        sub_2213CE4(v471);
       *(_QWORD *)(v469 + 40) = soundId;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v469 + 40), (int32_t)soundId, v472, v473, v474, v475, v476, v477);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v469 + 40), (int32_t)soundId, v472, v473, v474, v475, v476, v477);
       if ( *(_DWORD *)(v469 + 24) <= 2u )
-        sub_21FFED4(v478);
+        sub_2213CE4(v478);
       v485 = StringLiteral_80/*"\ntarget : "*/;
       *(_QWORD *)(v469 + 48) = StringLiteral_80/*"\ntarget : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v469 + 48), v485, v479, v480, v481, v482, v483, v484);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v469 + 48), v485, v479, v480, v481, v482, v483, v484);
       if ( (*(_DWORD *)(v469 + 24) & 0xFFFFFFFC) == 0 )
-        sub_21FFED4(v486);
+        sub_2213CE4(v486);
       v493 = v566->fields._sequencePath_5__8;
       *(_QWORD *)(v469 + 56) = v493;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v469 + 56), (int32_t)v493, v487, v488, v489, v490, v491, v492);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v469 + 56), (int32_t)v493, v487, v488, v489, v490, v491, v492);
       if ( *(_DWORD *)(v469 + 24) <= 4u )
-        sub_21FFED4(v494);
+        sub_2213CE4(v494);
       v501 = StringLiteral_43/*"\n"*/;
       *(_QWORD *)(v469 + 64) = StringLiteral_43/*"\n"*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v469 + 64), v501, v495, v496, v497, v498, v499, v500);
-      v502 = System_String__Concat_75483816((System_String_array *)v469, 0);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v469 + 64), v501, v495, v496, v497, v498, v499, v500);
+      v502 = System_String__Concat_75697120((System_String_array *)v469, 0);
       SoundCheckMenu__ErrorOutput(_4__this, v502, v503);
       v504 = v566;
       v566->fields.__2__current = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v504->fields.__2__current, 0, v505, v506, v507, v508, v509, v510);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v504->fields.__2__current, 0, v505, v506, v507, v508, v509, v510);
       v261 = v566;
       v262 = 3;
 LABEL_150:
@@ -4420,7 +4417,7 @@ LABEL_150:
     v8 = v566;
   }
   p__7__wrap9->klass = 0;
-  sub_21FFBF4(p__7__wrap9, 0, (System_String_o *)v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p__7__wrap9, 0, (System_String_o *)v2, v3, v4, v5, v6, v7);
   while ( 1 )
   {
     v452 = v566->fields._sequencePath_5__8;
@@ -4429,38 +4426,38 @@ LABEL_150:
     AssetManager__releaseAssetStorage(v452, 0);
     v455 = v566->fields.__8__2;
     if ( !v455 )
-      sub_21FFECC(v453, v454);
+      sub_2213CDC(v453, v454);
     v456 = v455->fields.CS___8__locals1;
     if ( !v456 )
-      sub_21FFECC(v453, v454);
+      sub_2213CDC(v453, v454);
     v457 = (System_Collections_Generic_List_object__o *)v456->fields.voiceDataPath;
     if ( !v457 )
-      sub_21FFECC(0, v454);
+      sub_2213CDC(0, v454);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v560,
       v457,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v563 = v560;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v563,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
       v458 = v563.fields._current;
-      v459 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      v459 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !v459 )
-        sub_21FFECC(0, v460);
+        sub_2213CDC(0, v460);
       SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)v459, (System_String_o *)v458, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(&v563, *v10);
     if ( !_4__this )
-      sub_21FFECC(v511, v512);
+      sub_2213CDC(v511, v512);
     v519 = v566;
     ++_4__this->fields.checkCnt;
     v519->fields.__8__2 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v519->fields.__8__2, 0, v513, v514, v515, v516, v517, v518);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v519->fields.__8__2, 0, v513, v514, v515, v516, v517, v518);
     v520 = v566;
     v566->fields._sequencePath_5__8 = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v520->fields._sequencePath_5__8,
       0,
       v521,
@@ -4471,7 +4468,7 @@ LABEL_150:
       v526);
     v527 = v566;
     v566->fields._svtLimitAddEntity_5__9 = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v527->fields._svtLimitAddEntity_5__9,
       0,
       v528,
@@ -4482,7 +4479,7 @@ LABEL_150:
       v533);
     v534 = v566;
     v566->fields._svtEntity_5__7 = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v534->fields._svtEntity_5__7,
       0,
       v535,
@@ -4495,7 +4492,7 @@ LABEL_150:
 LABEL_309:
     v548 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              (System_Collections_Generic_List_Enumerator_object__o *)&v8->fields.__7__wrap5,
-             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
+             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
     v549 = v566;
     if ( !v548 )
     {
@@ -4505,17 +4502,17 @@ LABEL_309:
       v557->fields.__7__wrap5.fields._current = 0;
       v557->fields.__7__wrap5.fields._list = 0;
       if ( !_4__this )
-        sub_21FFECC(v557, v550);
+        sub_2213CDC(v557, v550);
       _4__this->fields.nextCheck = 0;
       v557->fields.__2__current = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v557->fields.__2__current, 0, v551, v552, v553, v554, v555, v556);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v557->fields.__2__current, 0, v551, v552, v553, v554, v555, v556);
       v261 = v566;
       v262 = 4;
       goto LABEL_150;
     }
     v101 = v566->fields.__7__wrap5.fields._current;
     v566->fields._svtEntity_5__7 = v101;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v549->fields._svtEntity_5__7,
       (int32_t)v101,
       v542,
@@ -4524,11 +4521,11 @@ LABEL_309:
       v545,
       v546,
       v547);
-    v102 = (Il2CppObject *)sub_21FFEBC(SoundCheckMenu___c__DisplayClass20_1_TypeInfo);
+    v102 = (Il2CppObject *)sub_2213CCC(SoundCheckMenu___c__DisplayClass20_1_TypeInfo);
     System_Object___ctor(v102, 0);
     v103 = v566;
     v566->fields.__8__2 = (struct SoundCheckMenu___c__DisplayClass20_1_o *)v102;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v103->fields.__8__2,
       (int32_t)v102,
       v104,
@@ -4539,10 +4536,10 @@ LABEL_309:
       v109);
     v117 = v566->fields.__8__2;
     if ( !v117 )
-      sub_21FFECC(0, v110);
+      sub_2213CDC(0, v110);
     v118 = v566->fields.__8__1;
     v117->fields.CS___8__locals1 = v118;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v117->fields.CS___8__locals1,
       (int32_t)v118,
       v111,
@@ -4553,17 +4550,17 @@ LABEL_309:
       v116);
     v122 = v566->fields._svtEntity_5__7;
     if ( !v122 )
-      sub_21FFECC(v119, v120);
+      sub_2213CDC(v119, v120);
     id = v122->fields.id;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v120, v121);
     *(_QWORD *)&v567.fields.currentCryptoKey = &id;
     *(_QWORD *)&v567.fields.fakeValue = 0;
     v123 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v567, v121);
-    v124 = System_String__Concat_75438412((System_String_o *)StringLiteral_9896/*"NoblePhantasm/Sequence/"*/, v123, 0);
+    v124 = System_String__Concat_75651716((System_String_o *)StringLiteral_9909/*"NoblePhantasm/Sequence/"*/, v123, 0);
     v125 = v566;
     v566->fields._sequencePath_5__8 = v124;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v125->fields._sequencePath_5__8,
       (int32_t)v124,
       v126,
@@ -4580,7 +4577,7 @@ LABEL_309:
       break;
     v143 = v566;
     v566->fields._svtLimitAddEntity_5__9 = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v143->fields._svtLimitAddEntity_5__9,
       0,
       v137,
@@ -4591,7 +4588,7 @@ LABEL_309:
       v142);
     svtLimitAddEntitys_5__3 = v566->fields._svtLimitAddEntitys_5__3;
     if ( !svtLimitAddEntitys_5__3 )
-      sub_21FFECC(v144, v145);
+      sub_2213CDC(v144, v145);
     v148 = svtLimitAddEntitys_5__3->max_length;
     v149 = v9;
     v150 = _4__this;
@@ -4602,13 +4599,13 @@ LABEL_309:
       while ( 1 )
       {
         if ( v152 >= v148 )
-          sub_21FFED4(v144);
+          sub_2213CE4(v144);
         v153 = svtLimitAddEntitys_5__3->m_Items[v152];
         if ( !v153 )
-          sub_21FFECC(v144, v145);
+          sub_2213CDC(v144, v145);
         v154 = v566->fields._svtEntity_5__7;
         if ( !v154 )
-          sub_21FFECC(v144, v145);
+          sub_2213CDC(v144, v145);
         v155 = *(_QWORD *)&v154->fields.id.fields.currentCryptoKey;
         v156 = *(_QWORD *)&v154->fields.id.fields.fakeValue;
         svtId = v153->fields.svtId;
@@ -4616,7 +4613,7 @@ LABEL_309:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v145, v146);
         *(_QWORD *)&v568.fields.currentCryptoKey = v155;
         *(_QWORD *)&v568.fields.fakeValue = v156;
-        v144 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v568, 0);
+        v144 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v568, 0);
         if ( svtId == (_DWORD)v144 )
           break;
         v148 = svtLimitAddEntitys_5__3->max_length;
@@ -4625,7 +4622,7 @@ LABEL_309:
       }
       v163 = v566;
       v566->fields._svtLimitAddEntity_5__9 = v153;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v163->fields._svtLimitAddEntity_5__9,
         (int32_t)v153,
         v146,
@@ -4638,7 +4635,7 @@ LABEL_309:
 LABEL_66:
     v164 = v566->fields._svtEntity_5__7;
     if ( !v164 )
-      sub_21FFECC(v144, v145);
+      sub_2213CDC(v144, v145);
     v165 = *(_QWORD *)&v164->fields.id.fields.currentCryptoKey;
     v166 = *(_QWORD *)&v164->fields.id.fields.fakeValue;
     v167 = v566->fields._svtLimitAddMst_5__2;
@@ -4646,22 +4643,22 @@ LABEL_66:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v145, v146);
     *(_QWORD *)&v569.fields.currentCryptoKey = v165;
     *(_QWORD *)&v569.fields.fakeValue = v166;
-    v168 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v569, 0);
+    v168 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v569, 0);
     if ( !v167 )
-      sub_21FFECC(v168, (unsigned int)v168);
+      sub_2213CDC(v168, (unsigned int)v168);
     v10 = v151;
     v9 = v149;
     VoiceId = ServantLimitAddMaster__getVoiceId(v167, v168, 0, 0);
     v565 = VoiceId;
     v171 = v566->fields.__8__2;
     if ( !v171 )
-      sub_21FFECC(VoiceId, v170);
+      sub_2213CDC(VoiceId, v170);
     v172 = v171->fields.CS___8__locals1;
     if ( !v172 )
-      sub_21FFECC(VoiceId, v170);
+      sub_2213CDC(VoiceId, v170);
     v173 = v172->fields.voiceDataPath;
     if ( !v173 )
-      sub_21FFECC(VoiceId, v170);
+      sub_2213CDC(VoiceId, v170);
     v174 = v173->fields._size;
     _4__this = v150;
     v175 = v173->fields._version + 1;
@@ -4672,14 +4669,14 @@ LABEL_66:
       System_Array__Clear((System_Array_o *)v173->fields._items, 0, v174, 0);
       v171 = v566->fields.__8__2;
       if ( !v171 )
-        sub_21FFECC(VoiceId, v170);
+        sub_2213CDC(VoiceId, v170);
     }
     v176 = v171->fields.CS___8__locals1;
     if ( !v176 )
-      sub_21FFECC(VoiceId, v170);
+      sub_2213CDC(VoiceId, v170);
     v177 = (System_Collections_Generic_List_object__o *)v176->fields.voiceDataPath;
     v178 = System_Int32__ToString((int32_t)&v565, 0);
-    v179 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_4588/*"ChrVoice_"*/, v178, 0);
+    v179 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_4596/*"ChrVoice_"*/, v178, 0);
     v186 = v179;
     if ( !v177
       || (v187 = v177->fields._items,
@@ -4687,7 +4684,7 @@ LABEL_66:
           ++v177->fields._version,
           !v187) )
     {
-      sub_21FFECC(v179, v179);
+      sub_2213CDC(v179, v179);
     }
     v189 = v177->fields._size;
     if ( (unsigned int)v189 >= LODWORD(v187->max_length) )
@@ -4695,24 +4692,24 @@ LABEL_66:
       System_Collections_Generic_List_object___AddWithResize(
         v177,
         v179,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v188[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v188[4] + 192LL) + 112LL));
     }
     else
     {
       v190 = &v187->obj.klass + v189;
       v177->fields._size = v189 + 1;
       v190[4] = (Il2CppClass *)v186;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v190 + 4), (int32_t)v186, v180, v181, v182, v183, v184, v185);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v190 + 4), (int32_t)v186, v180, v181, v182, v183, v184, v185);
     }
     v193 = v566->fields.__8__2;
     if ( !v193 )
-      sub_21FFECC(v191, v192);
+      sub_2213CDC(v191, v192);
     v194 = v193->fields.CS___8__locals1;
     if ( !v194 )
-      sub_21FFECC(v191, v192);
+      sub_2213CDC(v191, v192);
     v195 = (System_Collections_Generic_List_object__o *)v194->fields.voiceDataPath;
     v196 = System_Int32__ToString((int32_t)&v565, 0);
-    v197 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_13274/*"Servants_"*/, v196, 0);
+    v197 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_13301/*"Servants_"*/, v196, 0);
     v204 = v197;
     if ( !v195
       || (v205 = v195->fields._items,
@@ -4720,7 +4717,7 @@ LABEL_66:
           ++v195->fields._version,
           !v205) )
     {
-      sub_21FFECC(v197, v197);
+      sub_2213CDC(v197, v197);
     }
     v207 = v195->fields._size;
     if ( (unsigned int)v207 >= LODWORD(v205->max_length) )
@@ -4728,24 +4725,24 @@ LABEL_66:
       System_Collections_Generic_List_object___AddWithResize(
         v195,
         v197,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v206[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v206[4] + 192LL) + 112LL));
     }
     else
     {
       v208 = &v205->obj.klass + v207;
       v195->fields._size = v207 + 1;
       v208[4] = (Il2CppClass *)v204;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v208 + 4), (int32_t)v204, v198, v199, v200, v201, v202, v203);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v208 + 4), (int32_t)v204, v198, v199, v200, v201, v202, v203);
     }
     v211 = v566->fields.__8__2;
     if ( !v211 )
-      sub_21FFECC(v209, v210);
+      sub_2213CDC(v209, v210);
     v212 = v211->fields.CS___8__locals1;
     if ( !v212 )
-      sub_21FFECC(v209, v210);
+      sub_2213CDC(v209, v210);
     v213 = (System_Collections_Generic_List_object__o *)v212->fields.voiceDataPath;
     v214 = System_Int32__ToString((int32_t)&v565, 0);
-    v215 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_9898/*"NoblePhantasm_"*/, v214, 0);
+    v215 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_9911/*"NoblePhantasm_"*/, v214, 0);
     v222 = v215;
     if ( !v213
       || (v223 = v213->fields._items,
@@ -4753,7 +4750,7 @@ LABEL_66:
           ++v213->fields._version,
           !v223) )
     {
-      sub_21FFECC(v215, v215);
+      sub_2213CDC(v215, v215);
     }
     v225 = v213->fields._size;
     if ( (unsigned int)v225 >= LODWORD(v223->max_length) )
@@ -4761,25 +4758,25 @@ LABEL_66:
       System_Collections_Generic_List_object___AddWithResize(
         v213,
         v215,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v224[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v224[4] + 192LL) + 112LL));
     }
     else
     {
       v226 = &v223->obj.klass + v225;
       v213->fields._size = v225 + 1;
       v226[4] = (Il2CppClass *)v222;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v226 + 4), (int32_t)v222, v216, v217, v218, v219, v220, v221);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v226 + 4), (int32_t)v222, v216, v217, v218, v219, v220, v221);
     }
     v234 = v566->fields.__8__2;
     if ( !v234 )
-      sub_21FFECC(0, v227);
+      sub_2213CDC(0, v227);
     v234->fields.nobleSequenceData = 0;
     p_fields = &v234->fields;
     p_fields->isLoadEnd = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_fields, 0, v228, v229, v230, v231, v232, v233);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_fields, 0, v228, v229, v230, v231, v232, v233);
     v236 = v566->fields._sequencePath_5__8;
     v237 = (Il2CppObject *)v566->fields.__8__2;
-    v238 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v238 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v238, v237, Method_SoundCheckMenu___c__DisplayClass20_1__npCheck_b__0__, 0);
     if ( !*(&(*v149)->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(*v149, v239, v240);
@@ -4788,11 +4785,11 @@ LABEL_66:
 LABEL_99:
     v241 = v8->fields.__8__2;
     if ( !v241 )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     if ( !v241->fields.isLoadEnd )
     {
       v8->fields.__2__current = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current,
         0,
         (System_String_o *)v2,
@@ -4807,10 +4804,10 @@ LABEL_99:
     }
     nobleSequenceData = v241->fields.nobleSequenceData;
     if ( !nobleSequenceData )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     objectList = nobleSequenceData->fields.objectList;
     if ( !objectList )
-      sub_21FFECC(IsExistsSound, method);
+      sub_2213CDC(IsExistsSound, method);
     v244 = objectList->max_length;
     v245 = 0;
     if ( v244 >= 1 )
@@ -4819,14 +4816,14 @@ LABEL_99:
       while ( 1 )
       {
         if ( (unsigned int)v246 >= v244 )
-          sub_21FFED4(IsExistsSound);
+          sub_2213CE4(IsExistsSound);
         v245 = objectList->m_Items[v246];
         if ( !v245 )
-          sub_21FFECC(IsExistsSound, method);
+          sub_2213CDC(IsExistsSound, method);
         name = UnityEngine_Object__get_name(objectList->m_Items[v246], 0);
         if ( !name )
-          sub_21FFECC(0, v248);
-        IsExistsSound = System_String__Equals_75473208(name, (System_String_o *)StringLiteral_4586/*"ChrSequence1"*/, 0);
+          sub_2213CDC(0, v248);
+        IsExistsSound = System_String__Equals_75686512(name, (System_String_o *)StringLiteral_4594/*"ChrSequence1"*/, 0);
         if ( IsExistsSound )
           break;
         v244 = objectList->max_length;
@@ -4846,15 +4843,15 @@ LABEL_113:
     if ( v249 )
     {
       if ( !v245 )
-        sub_21FFECC(v249, v250);
-      ComponentsInChildren_object__59262092 = UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
+        sub_2213CDC(v249, v250);
+      ComponentsInChildren_object__59472212 = UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
                                                 (UnityEngine_GameObject_o *)v245,
-                                                (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
+                                                (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOPlayAudioEvent___);
       v253 = v566;
-      v566->fields.__7__wrap9 = (struct WellFired_USFGOPlayAudioEvent_array *)ComponentsInChildren_object__59262092;
-      sub_21FFBF4(
+      v566->fields.__7__wrap9 = (struct WellFired_USFGOPlayAudioEvent_array *)ComponentsInChildren_object__59472212;
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v253->fields.__7__wrap9,
-        (int32_t)ComponentsInChildren_object__59262092,
+        (int32_t)ComponentsInChildren_object__59472212,
         v254,
         v255,
         v256,
@@ -4868,19 +4865,19 @@ LABEL_113:
     }
   }
   if ( !_4__this )
-    sub_21FFECC(isExistAssetStorage, v136);
+    sub_2213CDC(isExistAssetStorage, v136);
   v263 = v566;
   ++_4__this->fields.checkCnt;
   v263->fields.__2__current = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v263->fields.__2__current, 0, v137, v138, v139, v140, v141, v142);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v263->fields.__2__current, 0, v137, v138, v139, v140, v141, v142);
   LOBYTE(IsExistsSound) = 1;
   v566->fields.__1__state = 1;
 LABEL_45:
   v100 = v561;
   if ( v561 )
   {
-    sub_1FF6034(&v562, method);
-    sub_21FFEC4(v100);
+    sub_2009070(&v562, method);
+    sub_2213CD4(v100);
   }
   return IsExistsSound;
 }
@@ -4902,11 +4899,11 @@ void __noreturn SoundCheckMenu__npCheck_d__20__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundCheckMenu__npCheck_d__20_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundCheckMenu__npCheck_d__20_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -4929,14 +4926,14 @@ void SoundCheckMenu__npCheck_d__20__System_IDisposable_Dispose(
 
 void SoundCheckMenu__npCheck_d__20____m__Finally1(SoundCheckMenu__npCheck_d__20_o *this, const MethodInfo *method)
 {
-  const MethodInfo_40C7F48 *v3; // x1
+  const MethodInfo_40FBAD4 *v3; // x1
 
-  if ( (byte_5935C71 & 1) == 0 )
+  if ( (byte_596DDB3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
-    byte_5935C71 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
+    byte_596DDB3 = 1;
   }
-  v3 = (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__;
+  v3 = (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap5,
@@ -5094,7 +5091,7 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
   __int64 v135; // x22
   ServantVoiceMaster_o *svtVoiceMst_5__2; // x20
   __int64 v137; // x0
-  struct ServantVoiceEntity_array *Entity_49774560; // x1
+  struct ServantVoiceEntity_array *Entity_49837844; // x1
   SoundCheckMenu__svtVoiceCheck_d__22_o *v139; // x0
   System_String_o *v140; // x2
   System_String_o *v141; // x3
@@ -5333,49 +5330,49 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
 
   v371 = this;
   v8 = this;
-  if ( (byte_5935C72 & 1) == 0 )
+  if ( (byte_596DDB4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_VoiceMaster___);
-    sub_21FFC50(&Method_DataMasterBase_VoiceMaster__VoiceEntity__string__getEntitys__);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ServantEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass22_0_TypeInfo);
-    sub_21FFC50(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__0__);
-    sub_21FFC50(&SoundCheckMenu___c__DisplayClass22_1_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_9898/*"NoblePhantasm_"*/);
-    sub_21FFC50(&StringLiteral_23374/*"not exist : "*/);
-    sub_21FFC50(&StringLiteral_80/*"\ntarget : "*/);
-    sub_21FFC50(&StringLiteral_4588/*"ChrVoice_"*/);
-    sub_21FFC50(&StringLiteral_13274/*"Servants_"*/);
-    sub_21FFC50(&StringLiteral_3201/*"Battle"*/);
-    byte_5935C72 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_VoiceMaster___);
+    sub_2213A60(&Method_DataMasterBase_VoiceMaster__VoiceEntity__string__getEntitys__);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ServantEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass22_0_TypeInfo);
+    sub_2213A60(&Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__0__);
+    sub_2213A60(&SoundCheckMenu___c__DisplayClass22_1_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_9911/*"NoblePhantasm_"*/);
+    sub_2213A60(&StringLiteral_23420/*"not exist : "*/);
+    sub_2213A60(&StringLiteral_80/*"\ntarget : "*/);
+    sub_2213A60(&StringLiteral_4596/*"ChrVoice_"*/);
+    sub_2213A60(&StringLiteral_13301/*"Servants_"*/);
+    sub_2213A60(&StringLiteral_3205/*"Battle"*/);
+    byte_596DDB4 = 1;
   }
   v370 = 0;
   v9 = 0;
@@ -5400,39 +5397,39 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
     v8->fields.__8__2 = 0;
     p__8__2 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__8__2;
     p__8__2[-1].fields._QuestId_k__BackingField = -3;
-    sub_21FFBF4(p__8__2, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p__8__2, 0, v2, v3, v4, v5, v6, v7);
     v13 = v371;
     v371->fields._svtVoiceEntitys_5__6 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->fields._svtVoiceEntitys_5__6, 0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields._svtVoiceEntitys_5__6, 0, v14, v15, v16, v17, v18, v19);
     v20 = v371;
     v371->fields._svtEntity_5__5 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->fields._svtEntity_5__5, 0, v21, v22, v23, v24, v25, v26);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->fields._svtEntity_5__5, 0, v21, v22, v23, v24, v25, v26);
     v27 = v371;
     goto LABEL_32;
   }
   if ( !_1__state )
   {
     v8->fields.__1__state = -1;
-    v28 = (Il2CppObject *)sub_21FFEBC(SoundCheckMenu___c__DisplayClass22_0_TypeInfo);
+    v28 = (Il2CppObject *)sub_2213CCC(SoundCheckMenu___c__DisplayClass22_0_TypeInfo);
     System_Object___ctor(v28, 0);
     v29 = v371;
     v371->fields.__8__1 = (struct SoundCheckMenu___c__DisplayClass22_0_o *)v28;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v29->fields.__8__1, (int32_t)v28, v30, v31, v32, v33, v34, v35);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v29->fields.__8__1, (int32_t)v28, v30, v31, v32, v33, v34, v35);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_21FFECC(0, v37);
+      sub_2213CDC(0, v37);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
-    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
+    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v39 )
-      sub_21FFECC(0, v40);
+      sub_2213CDC(0, v40);
     v41 = DataManager__GetMasterData_object_(
             (DataManager_o *)v39,
-            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+            (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
     v42 = v371;
     v371->fields._svtVoiceMst_5__2 = (struct ServantVoiceMaster_o *)v41;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v42->fields._svtVoiceMst_5__2,
       (int32_t)v41,
       v43,
@@ -5441,15 +5438,15 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
       v46,
       v47,
       v48);
-    v49 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v49 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v49 )
-      sub_21FFECC(0, v50);
+      sub_2213CDC(0, v50);
     v51 = DataManager__GetMasterData_object_(
             (DataManager_o *)v49,
-            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+            (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
     v52 = v371;
     v371->fields._svtLimitAddMst_5__3 = (struct ServantLimitAddMaster_o *)v51;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v52->fields._svtLimitAddMst_5__3,
       (int32_t)v51,
       v53,
@@ -5458,40 +5455,40 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
       v56,
       v57,
       v58);
-    v59 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v59 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v59 )
-      sub_21FFECC(0, v60);
+      sub_2213CDC(0, v60);
     v61 = DataManager__GetMasterData_object_(
             (DataManager_o *)v59,
-            (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_VoiceMaster___);
+            (const MethodInfo_385636C *)Method_DataManager_GetMasterData_VoiceMaster___);
     if ( !MasterData_object )
-      sub_21FFECC(v61, v62);
+      sub_2213CDC(v61, v62);
     v63 = (DataMasterBase_TMaster__TEntity__PKType__o *)v61;
     Entitys = DataMasterBase_object__object__int___getEntitys(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                (const MethodInfo_3EDC704 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
-    v65 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantEntity__TypeInfo);
+                (const MethodInfo_3F0FEAC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__getEntitys__);
+    v65 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v65,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ServantEntity___ctor__);
     if ( !v63 )
-      sub_21FFECC(v66, v67);
+      sub_2213CDC(v66, v67);
     IsServant = DataMasterBase_object__object__object___getEntitys(
                   v63,
-                  (const MethodInfo_3EE13C0 *)Method_DataMasterBase_VoiceMaster__VoiceEntity__string__getEntitys__);
+                  (const MethodInfo_3F14B68 *)Method_DataMasterBase_VoiceMaster__VoiceEntity__string__getEntitys__);
     if ( !Entitys )
-      sub_21FFECC(IsServant, v69);
+      sub_2213CDC(IsServant, v69);
     max_length = Entitys->max_length;
     if ( max_length >= 1 )
     {
       for ( i = 0; i < max_length; ++i )
       {
         if ( i >= (unsigned int)max_length )
-          sub_21FFED4(IsServant);
+          sub_2213CE4(IsServant);
         v72 = &Entitys->obj.klass + i;
         v73 = (Il2CppObject *)v72[4];
         if ( !v73 )
-          sub_21FFECC(IsServant, v69);
+          sub_2213CDC(IsServant, v69);
         IsServant = (System_Object_array *)ServantEntity__get_IsServant((ServantEntity_o *)v72[4], 0);
         if ( ((unsigned __int8)IsServant & 1) != 0 )
         {
@@ -5501,7 +5498,7 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
                 ++v65->fields._version,
                 !items) )
           {
-            sub_21FFECC(IsServant, v69);
+            sub_2213CDC(IsServant, v69);
           }
           size = v65->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -5509,50 +5506,50 @@ bool SoundCheckMenu__svtVoiceCheck_d__22__MoveNext(
             System_Collections_Generic_List_object___AddWithResize(
               v65,
               v73,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
           }
           else
           {
             v83 = &items->obj.klass + size;
             v65->fields._size = size + 1;
             v83[4] = (Il2CppClass *)v73;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v83 + 4), (int32_t)v73, v74, v75, v76, v77, v78, v79);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v83 + 4), (int32_t)v73, v74, v75, v76, v77, v78, v79);
           }
         }
         max_length = Entitys->max_length;
       }
     }
     if ( !v65 )
-      sub_21FFECC(IsServant, v69);
+      sub_2213CDC(IsServant, v69);
     if ( !_4__this )
-      sub_21FFECC(IsServant, v69);
+      sub_2213CDC(IsServant, v69);
     v84 = v371;
     _4__this->fields.checkMax = v65->fields._size;
     _8__1 = v84->fields.__8__1;
-    v86 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v86 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v86,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     if ( !_8__1 )
-      sub_21FFECC(v87, v88);
+      sub_2213CDC(v87, v88);
     _8__1->fields.voiceDataPath = (struct System_Collections_Generic_List_string__o *)v86;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_8__1->fields, (int32_t)v86, v89, v90, v91, v92, v93, v94);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&_8__1->fields, (int32_t)v86, v89, v90, v91, v92, v93, v94);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v364,
       v65,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantEntity__GetEnumerator__);
     current = v364.fields._current;
     v96 = v371;
     v365 = v364;
     *(_OWORD *)&v371->fields.__7__wrap3.fields._list = *(_OWORD *)&v364.fields._list;
     v96->fields.__7__wrap3.fields._current = (struct ServantEntity_o *)current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v96->fields.__7__wrap3, 0, v97, v98, v99, v100, v101, v102);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v96->fields.__7__wrap3, 0, v97, v98, v99, v100, v101, v102);
     v27 = v371;
     v371->fields.__1__state = -3;
 LABEL_32:
     v110 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              (System_Collections_Generic_List_Enumerator_object__o *)&v27->fields.__7__wrap3,
-             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
+             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__MoveNext__);
     v111 = v371;
     if ( !v110 )
     {
@@ -5562,14 +5559,14 @@ LABEL_32:
       v179->fields.__7__wrap3.fields._current = 0;
       v179->fields.__7__wrap3.fields._list = 0;
       if ( !_4__this )
-        sub_21FFECC(v177, v178);
+        sub_2213CDC(v177, v178);
       LOBYTE(v9) = 0;
       _4__this->fields.nextCheck = 0;
       goto LABEL_173;
     }
     v112 = v371->fields.__7__wrap3.fields._current;
     v371->fields._svtEntity_5__5 = v112;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v111->fields._svtEntity_5__5,
       (int32_t)v112,
       v104,
@@ -5578,11 +5575,11 @@ LABEL_32:
       v107,
       v108,
       v109);
-    v113 = (Il2CppObject *)sub_21FFEBC(SoundCheckMenu___c__DisplayClass22_1_TypeInfo);
+    v113 = (Il2CppObject *)sub_2213CCC(SoundCheckMenu___c__DisplayClass22_1_TypeInfo);
     System_Object___ctor(v113, 0);
     v114 = v371;
     v371->fields.__8__2 = (struct SoundCheckMenu___c__DisplayClass22_1_o *)v113;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v114->fields.__8__2,
       (int32_t)v113,
       v115,
@@ -5593,10 +5590,10 @@ LABEL_32:
       v120);
     _8__2 = v371->fields.__8__2;
     if ( !_8__2 )
-      sub_21FFECC(0, v121);
+      sub_2213CDC(0, v121);
     v129 = v371->fields.__8__1;
     _8__2->fields.CS___8__locals1 = v129;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&_8__2->fields.CS___8__locals1,
       (int32_t)v129,
       v122,
@@ -5607,7 +5604,7 @@ LABEL_32:
       v127);
     svtEntity_5__5 = v371->fields._svtEntity_5__5;
     if ( !svtEntity_5__5 )
-      sub_21FFECC(v130, v131);
+      sub_2213CDC(v130, v131);
     v134 = *(_QWORD *)&svtEntity_5__5->fields.id.fields.currentCryptoKey;
     v135 = *(_QWORD *)&svtEntity_5__5->fields.id.fields.fakeValue;
     svtVoiceMst_5__2 = v371->fields._svtVoiceMst_5__2;
@@ -5615,15 +5612,15 @@ LABEL_32:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v131, v132);
     *(_QWORD *)&v372.fields.currentCryptoKey = v134;
     *(_QWORD *)&v372.fields.fakeValue = v135;
-    v137 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v372, 0);
+    v137 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v372, 0);
     if ( !svtVoiceMst_5__2 )
-      sub_21FFECC(v137, (unsigned int)v137);
-    Entity_49774560 = ServantVoiceMaster__getEntity_49774560(svtVoiceMst_5__2, v137, 0, 0);
+      sub_2213CDC(v137, (unsigned int)v137);
+    Entity_49837844 = ServantVoiceMaster__getEntity_49837844(svtVoiceMst_5__2, v137, 0, 0);
     v139 = v371;
-    v371->fields._svtVoiceEntitys_5__6 = Entity_49774560;
-    sub_21FFBF4(
+    v371->fields._svtVoiceEntitys_5__6 = Entity_49837844;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v139->fields._svtVoiceEntitys_5__6,
-      (int32_t)Entity_49774560,
+      (int32_t)Entity_49837844,
       v140,
       v141,
       v142,
@@ -5632,22 +5629,22 @@ LABEL_32:
       v145);
     v148 = v371->fields._svtEntity_5__5;
     if ( !v148 )
-      sub_21FFECC(v146, v147);
+      sub_2213CDC(v146, v147);
     svtLimitAddMst_5__3 = v371->fields._svtLimitAddMst_5__3;
-    v150 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v148->fields.id, 0);
+    v150 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v148->fields.id, 0);
     if ( !svtLimitAddMst_5__3 )
-      sub_21FFECC(v150, (unsigned int)v150);
+      sub_2213CDC(v150, (unsigned int)v150);
     VoiceId = ServantLimitAddMaster__getVoiceId(svtLimitAddMst_5__3, v150, 0, 0);
     v370 = VoiceId;
     v153 = v371->fields.__8__2;
     if ( !v153 )
-      sub_21FFECC(VoiceId, v152);
+      sub_2213CDC(VoiceId, v152);
     CS___8__locals1 = v153->fields.CS___8__locals1;
     if ( !CS___8__locals1 )
-      sub_21FFECC(VoiceId, v152);
+      sub_2213CDC(VoiceId, v152);
     voiceDataPath = CS___8__locals1->fields.voiceDataPath;
     if ( !voiceDataPath )
-      sub_21FFECC(VoiceId, v152);
+      sub_2213CDC(VoiceId, v152);
     v156 = voiceDataPath->fields._size;
     v157 = voiceDataPath->fields._version + 1;
     voiceDataPath->fields._size = 0;
@@ -5657,14 +5654,14 @@ LABEL_32:
       System_Array__Clear((System_Array_o *)voiceDataPath->fields._items, 0, v156, 0);
       v153 = v371->fields.__8__2;
       if ( !v153 )
-        sub_21FFECC(VoiceId, v152);
+        sub_2213CDC(VoiceId, v152);
     }
     v158 = v153->fields.CS___8__locals1;
     if ( !v158 )
-      sub_21FFECC(VoiceId, v152);
+      sub_2213CDC(VoiceId, v152);
     v159 = (System_Collections_Generic_List_object__o *)v158->fields.voiceDataPath;
     v160 = System_Int32__ToString((int32_t)&v370, 0);
-    v161 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_4588/*"ChrVoice_"*/, v160, 0);
+    v161 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_4596/*"ChrVoice_"*/, v160, 0);
     v168 = v161;
     if ( !v159
       || (v169 = v159->fields._items,
@@ -5672,7 +5669,7 @@ LABEL_32:
           ++v159->fields._version,
           !v169) )
     {
-      sub_21FFECC(v161, v161);
+      sub_2213CDC(v161, v161);
     }
     v171 = v159->fields._size;
     if ( (unsigned int)v171 >= LODWORD(v169->max_length) )
@@ -5680,24 +5677,24 @@ LABEL_32:
       System_Collections_Generic_List_object___AddWithResize(
         v159,
         v161,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v170[4] + 192LL) + 112LL));
     }
     else
     {
       v172 = &v169->obj.klass + v171;
       v159->fields._size = v171 + 1;
       v172[4] = (Il2CppClass *)v168;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v172 + 4), (int32_t)v168, v162, v163, v164, v165, v166, v167);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v172 + 4), (int32_t)v168, v162, v163, v164, v165, v166, v167);
     }
     v180 = v371->fields.__8__2;
     if ( !v180 )
-      sub_21FFECC(v173, v174);
+      sub_2213CDC(v173, v174);
     v181 = v180->fields.CS___8__locals1;
     if ( !v181 )
-      sub_21FFECC(v173, v174);
+      sub_2213CDC(v173, v174);
     v182 = (System_Collections_Generic_List_object__o *)v181->fields.voiceDataPath;
     v183 = System_Int32__ToString((int32_t)&v370, 0);
-    v184 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_13274/*"Servants_"*/, v183, 0);
+    v184 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_13301/*"Servants_"*/, v183, 0);
     v191 = v184;
     if ( !v182
       || (v192 = v182->fields._items,
@@ -5705,7 +5702,7 @@ LABEL_32:
           ++v182->fields._version,
           !v192) )
     {
-      sub_21FFECC(v184, v184);
+      sub_2213CDC(v184, v184);
     }
     v194 = v182->fields._size;
     if ( (unsigned int)v194 >= LODWORD(v192->max_length) )
@@ -5713,24 +5710,24 @@ LABEL_32:
       System_Collections_Generic_List_object___AddWithResize(
         v182,
         v184,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v193[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v193[4] + 192LL) + 112LL));
     }
     else
     {
       v195 = &v192->obj.klass + v194;
       v182->fields._size = v194 + 1;
       v195[4] = (Il2CppClass *)v191;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v195 + 4), (int32_t)v191, v185, v186, v187, v188, v189, v190);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v195 + 4), (int32_t)v191, v185, v186, v187, v188, v189, v190);
     }
     v198 = v371->fields.__8__2;
     if ( !v198 )
-      sub_21FFECC(v196, v197);
+      sub_2213CDC(v196, v197);
     v199 = v198->fields.CS___8__locals1;
     if ( !v199 )
-      sub_21FFECC(v196, v197);
+      sub_2213CDC(v196, v197);
     v200 = (System_Collections_Generic_List_object__o *)v199->fields.voiceDataPath;
     v201 = System_Int32__ToString((int32_t)&v370, 0);
-    v202 = (Il2CppObject *)System_String__Concat_75438412((System_String_o *)StringLiteral_9898/*"NoblePhantasm_"*/, v201, 0);
+    v202 = (Il2CppObject *)System_String__Concat_75651716((System_String_o *)StringLiteral_9911/*"NoblePhantasm_"*/, v201, 0);
     v209 = v202;
     if ( !v200
       || (v210 = v200->fields._items,
@@ -5738,7 +5735,7 @@ LABEL_32:
           ++v200->fields._version,
           !v210) )
     {
-      sub_21FFECC(v202, v202);
+      sub_2213CDC(v202, v202);
     }
     v212 = v200->fields._size;
     if ( (unsigned int)v212 >= LODWORD(v210->max_length) )
@@ -5746,42 +5743,42 @@ LABEL_32:
       System_Collections_Generic_List_object___AddWithResize(
         v200,
         v202,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v211[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v211[4] + 192LL) + 112LL));
     }
     else
     {
       v213 = &v210->obj.klass + v212;
       v200->fields._size = v212 + 1;
       v213[4] = (Il2CppClass *)v209;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v213 + 4), (int32_t)v209, v203, v204, v205, v206, v207, v208);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v213 + 4), (int32_t)v209, v203, v204, v205, v206, v207, v208);
     }
     v216 = v371->fields.__8__2;
     if ( !v216 )
-      sub_21FFECC(v214, v215);
+      sub_2213CDC(v214, v215);
     v216->fields.DataCnt = 0;
     v216->fields.isLoadEnd = 0;
-    v217 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    v217 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     v219 = v371->fields.__8__2;
     if ( !v219 )
-      sub_21FFECC(v217, v218);
+      sub_2213CDC(v217, v218);
     v220 = v219->fields.CS___8__locals1;
     if ( !v220 )
-      sub_21FFECC(v217, v218);
+      sub_2213CDC(v217, v218);
     DataCnt = (unsigned int)v219->fields.DataCnt;
     v222 = (SoundManager_o *)v217;
     v223 = (System_Collections_Generic_List_object__o *)v220->fields.voiceDataPath;
     v219->fields.DataCnt = DataCnt + 1;
     if ( !v223 )
-      sub_21FFECC(0, DataCnt);
+      sub_2213CDC(0, DataCnt);
     Item = System_Collections_Generic_List_object___get_Item(
              v223,
              DataCnt,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
     v225 = (Il2CppObject *)v371->fields.__8__2;
-    v226 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v226 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v226, v225, Method_SoundCheckMenu___c__DisplayClass22_1__svtVoiceCheck_b__0__, 0);
     if ( !v222 )
-      sub_21FFECC(v227, v228);
+      sub_2213CDC(v227, v228);
     SoundManager__LoadAudioAssetStorage(v222, (System_String_o *)Item, v226, 1, 0);
     v8 = v371;
     goto LABEL_74;
@@ -5792,12 +5789,12 @@ LABEL_32:
 LABEL_74:
   v229 = v8->fields.__8__2;
   if ( !v229 )
-    sub_21FFECC(v9, method);
+    sub_2213CDC(v9, method);
   if ( v229->fields.isLoadEnd )
   {
     svtVoiceEntitys_5__6 = v8->fields._svtVoiceEntitys_5__6;
     v8->fields.__7__wrap6 = svtVoiceEntitys_5__6;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v8->fields.__7__wrap6,
       (int32_t)svtVoiceEntitys_5__6,
       v2,
@@ -5813,47 +5810,47 @@ LABEL_74:
     {
       _7__wrap6 = v238->fields.__7__wrap6;
       if ( !_7__wrap6 )
-        sub_21FFECC(v238, v231);
+        sub_2213CDC(v238, v231);
       v267 = _7__wrap6->max_length;
       if ( v239 >= v267 )
       {
         v238->fields.__7__wrap6 = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v238->fields.__7__wrap6, 0, v232, v233, v234, v235, v236, v237);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v238->fields.__7__wrap6, 0, v232, v233, v234, v235, v236, v237);
         v270 = v371->fields.__8__2;
         if ( !v270 )
-          sub_21FFECC(v268, v269);
+          sub_2213CDC(v268, v269);
         v271 = v270->fields.CS___8__locals1;
         if ( !v271 )
-          sub_21FFECC(v268, v269);
+          sub_2213CDC(v268, v269);
         v272 = (System_Collections_Generic_List_object__o *)v271->fields.voiceDataPath;
         if ( !v272 )
-          sub_21FFECC(0, v269);
+          sub_2213CDC(0, v269);
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v365,
           v272,
-          (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+          (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
         v369 = v365;
         v365.fields._list = 0;
         *(_QWORD *)&v365.fields._index = &v369;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v369,
-                  (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+                  (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
         {
           v273 = v369.fields._current;
-          v274 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+          v274 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
           if ( !v274 )
-            sub_21FFECC(0, v275);
+            sub_2213CDC(0, v275);
           SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)v274, (System_String_o *)v273, 0);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v369,
-          (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+          (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
         if ( !_4__this )
-          sub_21FFECC(v353, v354);
+          sub_2213CDC(v353, v354);
         v361 = v371;
         ++_4__this->fields.checkCnt;
         v361->fields.__2__current = 0;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v361->fields.__2__current,
           0,
           v355,
@@ -5867,10 +5864,10 @@ LABEL_74:
         goto LABEL_172;
       }
       if ( v239 >= (unsigned int)v267 )
-        sub_21FFED4(v238);
+        sub_2213CE4(v238);
       v240 = _7__wrap6->m_Items[v239];
       v238->fields._svtVoiceEntity_5__9 = v240;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v238->fields._svtVoiceEntity_5__9,
         (int32_t)v240,
         v232,
@@ -5892,7 +5889,7 @@ LABEL_133:
       if ( (int)j >= 25 )
       {
         v238->fields._svtVoiceEntity_5__9 = 0;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v238->fields._svtVoiceEntity_5__9,
           0,
           v232,
@@ -5906,7 +5903,7 @@ LABEL_133:
       }
       svtVoiceEntity_5__9 = v238->fields._svtVoiceEntity_5__9;
       if ( !svtVoiceEntity_5__9 )
-        sub_21FFECC(0, j);
+        sub_2213CDC(0, j);
       VoiceList = ServantVoiceEntity__getVoiceList(svtVoiceEntity_5__9, j, 0);
       if ( VoiceList )
         break;
@@ -5917,20 +5914,20 @@ LABEL_130:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v364,
       (System_Collections_Generic_List_object__o *)VoiceList,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
     v244 = v364.fields._current;
     v245 = v371;
     v365 = v364;
     *(_OWORD *)&v371->fields.__7__wrap10.fields._list = *(_OWORD *)&v364.fields._list;
     v245->fields.__7__wrap10.fields._current = (struct ServantVoiceData_array *)v244;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v245->fields.__7__wrap10, 0, v246, v247, v248, v249, v250, v251);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v245->fields.__7__wrap10, 0, v246, v247, v248, v249, v250, v251);
     v252 = v371;
     v371->fields.__1__state = -4;
     while ( 1 )
     {
       v264 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                (System_Collections_Generic_List_Enumerator_object__o *)&v252->fields.__7__wrap10,
-               (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
       v265 = v371;
       if ( !v264 )
       {
@@ -5943,7 +5940,7 @@ LABEL_130:
       }
       v253 = v371->fields.__7__wrap10.fields._current;
       v371->fields.__7__wrap11 = v253;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v265->fields.__7__wrap11,
         (int32_t)v253,
         v258,
@@ -5959,30 +5956,30 @@ LABEL_125:
       p__7__wrap11 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__7__wrap11;
       _7__wrap11 = v8->fields.__7__wrap11;
       if ( !_7__wrap11 )
-        sub_21FFECC(p__7__wrap11, method);
+        sub_2213CDC(p__7__wrap11, method);
       v256 = _7__wrap11->max_length;
       if ( v176 < v256 )
         break;
       p__7__wrap11->klass = 0;
-      sub_21FFBF4(p__7__wrap11, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04(p__7__wrap11, 0, v2, v3, v4, v5, v6, v7);
       v252 = v371;
     }
     if ( v176 >= (unsigned int)v256 )
-      sub_21FFED4(p__7__wrap11);
+      sub_2213CE4(p__7__wrap11);
     v276 = v8->fields.__8__2;
     if ( !v276 )
-      sub_21FFECC(p__7__wrap11, method);
+      sub_2213CDC(p__7__wrap11, method);
     v277 = v276->fields.CS___8__locals1;
     if ( !v277 )
-      sub_21FFECC(p__7__wrap11, method);
+      sub_2213CDC(p__7__wrap11, method);
     v278 = (System_Collections_Generic_List_object__o *)v277->fields.voiceDataPath;
     if ( !v278 )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     v279 = _7__wrap11->m_Items[v176];
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v365,
       v278,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v369 = v365;
     v365.fields._list = 0;
     *(_QWORD *)&v365.fields._index = &v369;
@@ -5990,33 +5987,33 @@ LABEL_125:
     {
       v280 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &v369,
-               (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
       if ( !v280 )
         break;
       v281 = v369.fields._current;
-      v282 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      v282 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !v279 )
-        sub_21FFECC(v282, v283);
+        sub_2213CDC(v282, v283);
       if ( !v282 )
-        sub_21FFECC(0, v283);
+        sub_2213CDC(0, v283);
     }
     while ( !SoundManager__IsExistsSound((SoundManager_o *)v282, (System_String_o *)v281, v279->fields.id, 0) );
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v369,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    v284 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    v284 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     if ( !v279 )
-      sub_21FFECC(v284, v285);
+      sub_2213CDC(v284, v285);
     if ( !v284 )
-      sub_21FFECC(0, v285);
+      sub_2213CDC(0, v285);
     IsExistsSound = SoundManager__IsExistsSound(
                       (SoundManager_o *)v284,
-                      (System_String_o *)StringLiteral_3201/*"Battle"*/,
+                      (System_String_o *)StringLiteral_3205/*"Battle"*/,
                       v279->fields.id,
                       0);
     v289 = v371->fields._svtEntity_5__5;
     if ( !v289 )
-      sub_21FFECC(IsExistsSound, v287);
+      sub_2213CDC(IsExistsSound, v287);
     v290 = IsExistsSound;
     v291 = *(_QWORD *)&v289->fields.id.fields.currentCryptoKey;
     v292 = *(_QWORD *)&v289->fields.id.fields.fakeValue;
@@ -6024,33 +6021,33 @@ LABEL_125:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v287, v288);
     *(_QWORD *)&v373.fields.currentCryptoKey = v291;
     *(_QWORD *)&v373.fields.fakeValue = v292;
-    v293 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v373, 0);
+    v293 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v373, 0);
     if ( !_4__this )
-      sub_21FFECC(v293, (unsigned int)v293);
+      sub_2213CDC(v293, (unsigned int)v293);
     if ( !SoundCheckMenu__isExceptionCheck(_4__this, v293, v279->fields.id, v294) && !v280 && !v290 )
     {
-      v301 = sub_21FFD10(string___TypeInfo, 5);
+      v301 = sub_2213B20(string___TypeInfo, 5);
       v309 = v301;
       if ( !v301 )
-        sub_21FFECC(0, v302);
+        sub_2213CDC(0, v302);
       if ( !*(_DWORD *)(v301 + 24) )
-        sub_21FFED4(v301);
-      v310 = StringLiteral_23374/*"not exist : "*/;
-      *(_QWORD *)(v301 + 32) = StringLiteral_23374/*"not exist : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v301 + 32), v310, v303, v304, v305, v306, v307, v308);
+        sub_2213CE4(v301);
+      v310 = StringLiteral_23420/*"not exist : "*/;
+      *(_QWORD *)(v301 + 32) = StringLiteral_23420/*"not exist : "*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v301 + 32), v310, v303, v304, v305, v306, v307, v308);
       if ( (*(_DWORD *)(v309 + 24) & 0xFFFFFFFE) == 0 )
-        sub_21FFED4(v311);
+        sub_2213CE4(v311);
       id = v279->fields.id;
       *(_QWORD *)(v309 + 40) = id;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v309 + 40), (int32_t)id, v312, v313, v314, v315, v316, v317);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v309 + 40), (int32_t)id, v312, v313, v314, v315, v316, v317);
       if ( *(_DWORD *)(v309 + 24) <= 2u )
-        sub_21FFED4(v319);
+        sub_2213CE4(v319);
       v326 = StringLiteral_80/*"\ntarget : "*/;
       *(_QWORD *)(v309 + 48) = StringLiteral_80/*"\ntarget : "*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v309 + 48), v326, v320, v321, v322, v323, v324, v325);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v309 + 48), v326, v320, v321, v322, v323, v324, v325);
       v330 = v371->fields._svtEntity_5__5;
       if ( !v330 )
-        sub_21FFECC(v327, v328);
+        sub_2213CDC(v327, v328);
       v331 = v330->fields.id;
       v332 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1);
       v368 = v331;
@@ -6060,20 +6057,20 @@ LABEL_125:
       *(_QWORD *)&v374.fields.fakeValue = 0;
       v333 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v374, v329);
       if ( (*(_DWORD *)(v309 + 24) & 0xFFFFFFFC) == 0 )
-        sub_21FFED4(v333);
+        sub_2213CE4(v333);
       *(_QWORD *)(v309 + 56) = v333;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v309 + 56), (int32_t)v333, v334, v335, v336, v337, v338, v339);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v309 + 56), (int32_t)v333, v334, v335, v336, v337, v338, v339);
       if ( *(_DWORD *)(v309 + 24) <= 4u )
-        sub_21FFED4(v340);
+        sub_2213CE4(v340);
       v347 = StringLiteral_43/*"\n"*/;
       *(_QWORD *)(v309 + 64) = StringLiteral_43/*"\n"*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v309 + 64), v347, v341, v342, v343, v344, v345, v346);
-      v348 = System_String__Concat_75483816((System_String_array *)v309, 0);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v309 + 64), v347, v341, v342, v343, v344, v345, v346);
+      v348 = System_String__Concat_75697120((System_String_array *)v309, 0);
       SoundCheckMenu__ErrorOutput(_4__this, v348, v349);
     }
     v350 = v371;
     v371->fields.__2__current = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v350->fields.__2__current, 0, v295, v296, v297, v298, v299, v300);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v350->fields.__2__current, 0, v295, v296, v297, v298, v299, v300);
     v351 = v371;
     v352 = 2;
 LABEL_172:
@@ -6083,7 +6080,7 @@ LABEL_172:
   else
   {
     v8->fields.__2__current = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
     LOBYTE(v9) = 1;
     v371->fields.__1__state = 1;
   }
@@ -6091,8 +6088,8 @@ LABEL_173:
   v362 = v366;
   if ( v366 )
   {
-    sub_1FF6068(&v367);
-    sub_21FFEC4(v362);
+    sub_20090A4(&v367);
+    sub_2213CD4(v362);
   }
   return v9;
 }
@@ -6114,11 +6111,11 @@ void __noreturn SoundCheckMenu__svtVoiceCheck_d__22__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundCheckMenu__svtVoiceCheck_d__22_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundCheckMenu__svtVoiceCheck_d__22_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -6150,14 +6147,14 @@ void SoundCheckMenu__svtVoiceCheck_d__22____m__Finally1(
         SoundCheckMenu__svtVoiceCheck_d__22_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_40C7F48 *v3; // x1
+  const MethodInfo_40FBAD4 *v3; // x1
 
-  if ( (byte_5935C73 & 1) == 0 )
+  if ( (byte_596DDB5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
-    byte_5935C73 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__);
+    byte_596DDB5 = 1;
   }
-  v3 = (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__;
+  v3 = (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantEntity__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap3,
@@ -6169,14 +6166,14 @@ void SoundCheckMenu__svtVoiceCheck_d__22____m__Finally2(
         SoundCheckMenu__svtVoiceCheck_d__22_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_40C7F48 *v3; // x1
+  const MethodInfo_40FBAD4 *v3; // x1
 
-  if ( (byte_5935C74 & 1) == 0 )
+  if ( (byte_596DDB6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
-    byte_5935C74 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    byte_596DDB6 = 1;
   }
-  v3 = (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__;
+  v3 = (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__;
   this->fields.__1__state = -3;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap10,

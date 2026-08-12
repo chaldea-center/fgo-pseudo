@@ -11,6 +11,6 @@ void BattleCommandCardTask__SetAttacked(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   BattleData__SetCommandAttacked(data, isAttacked, 0);
 }

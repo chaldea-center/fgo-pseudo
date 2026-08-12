@@ -2,33 +2,32 @@ void BattleResultEventFortificationItemComponent___ctor(
         BattleResultEventFortificationItemComponent_o *this,
         const MethodInfo *method)
 {
-  System_Array_o *v3; // x0
-  System_RuntimeFieldHandle_o v4; // x1
-  struct System_Int32_array *v5; // x20
-  System_String_o *v6; // x2
-  System_String_o *v7; // x3
-  int32_t v8; // w4
-  int32_t v9; // w5
-  bool v10; // w6
-  bool v11; // w7
-  const MethodInfo *v12; // x1
+  System_Array_o *v3; // x20
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  const MethodInfo *v10; // x1
 
-  if ( (byte_593C23E & 1) == 0 )
+  if ( (byte_5974476 & 1) == 0 )
   {
-    sub_21FFC50(&BattleResultEventItemComponent_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1);
-    byte_593C23E = 1;
+    sub_2213A60(&BattleResultEventItemComponent_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1);
+    byte_5974476 = 1;
   }
-  v3 = (System_Array_o *)sub_21FFD10(int___TypeInfo, 3);
-  v4.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
-  v5 = (struct System_Int32_array *)v3;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v3, v4, 0);
-  this->fields.workTypeOrder = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v3,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1,
+    0);
+  this->fields.workTypeOrder = (struct System_Int32_array *)v3;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !*(&BattleResultEventItemComponent_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo, v12);
-  BattleResultEventItemComponent___ctor((BattleResultEventItemComponent_o *)this, v12);
+    j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo, v10);
+  BattleResultEventItemComponent___ctor((BattleResultEventItemComponent_o *)this, v10);
 }
 
 
@@ -40,7 +39,7 @@ bool BattleResultEventFortificationItemComponent__IsFortificationInfos(
 
   gaugeListRoot = this->fields.gaugeListRoot;
   if ( !gaugeListRoot )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UnityEngine_Transform__get_childCount(gaugeListRoot, 0) > 0;
 }
 
@@ -67,15 +66,15 @@ void BattleResultEventFortificationItemComponent__SetFortificationInfos(
   Il2CppObject *Component_object; // x19
 
   v4 = this;
-  if ( (byte_593C23D & 1) == 0 )
+  if ( (byte_5974475 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_BattleFortificationInfo__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_BattleFortificationInfo___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_BattleResultEventFortificationItemComponent___c__DisplayClass4_0__SetFortificationInfos_b__0__);
-    this = (BattleResultEventFortificationItemComponent_o *)sub_21FFC50(&BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
-    byte_593C23D = 1;
+    sub_2213A60(&System_Action_BattleFortificationInfo__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_BattleFortificationInfo___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_BattleResultEventFortificationItemComponent___c__DisplayClass4_0__SetFortificationInfos_b__0__);
+    this = (BattleResultEventFortificationItemComponent_o *)sub_2213A60(&BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
+    byte_5974475 = 1;
   }
   if ( fortificationInfos && fortificationInfos->max_length )
   {
@@ -87,17 +86,17 @@ void BattleResultEventFortificationItemComponent__SetFortificationInfos(
       v6 = 0;
       while ( 1 )
       {
-        v7 = sub_21FFEBC(BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
+        v7 = sub_2213CCC(BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
         System_Object___ctor((Il2CppObject *)v7, 0);
         if ( !v7 )
           break;
         *(_QWORD *)(v7 + 24) = v4;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v4, v8, v9, v10, v11, v12, v13);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v4, v8, v9, v10, v11, v12, v13);
         if ( v6 >= LODWORD(workTypeOrder->max_length) )
-          sub_21FFED4(v14);
+          sub_2213CE4(v14);
         v15 = System_Action_BattleFortificationInfo__TypeInfo;
         *(_DWORD *)(v7 + 16) = workTypeOrder->m_Items[v6];
-        v16 = (System_Action_object__o *)sub_21FFEBC(v15);
+        v16 = (System_Action_object__o *)sub_2213CCC(v15);
         System_Action_object____ctor(
           v16,
           (Il2CppObject *)v7,
@@ -106,12 +105,12 @@ void BattleResultEventFortificationItemComponent__SetFortificationInfos(
         BasicHelper__ForEach_object_(
           (System_Collections_Generic_IEnumerable_T__o *)fortificationInfos,
           (System_Action_T__o *)v16,
-          (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_BattleFortificationInfo___);
+          (const MethodInfo_381282C *)Method_BasicHelper_ForEach_BattleFortificationInfo___);
         if ( (__int64)++v6 >= SLODWORD(workTypeOrder->max_length) )
           goto LABEL_11;
       }
 LABEL_18:
-      sub_21FFECC(this, fortificationInfos);
+      sub_2213CDC(this, fortificationInfos);
     }
 LABEL_11:
     this = (BattleResultEventFortificationItemComponent_o *)v4->fields.gaugeListRoot;
@@ -119,7 +118,7 @@ LABEL_11:
       goto LABEL_18;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17);
     this = (BattleResultEventFortificationItemComponent_o *)UnityEngine_Object__op_Inequality(
@@ -158,7 +157,7 @@ void BattleResultEventFortificationItemComponent__setResultData(
       (BattleResultEventItemComponent_o *)this,
       drop,
       *(const MethodInfo **)&eventId);
-    BattleResultEventItemComponent__SetItemWindow_54982564((BattleResultEventItemComponent_o *)this, drop, v8);
+    BattleResultEventItemComponent__SetItemWindow_55102764((BattleResultEventItemComponent_o *)this, drop, v8);
   }
 }
 
@@ -183,11 +182,11 @@ void BattleResultEventFortificationItemComponent___c__DisplayClass4_0___SetForti
   UnityEngine_Transform_o *gaugeListRoot; // x21
   UnityEngine_Component_o *v10; // x20
 
-  if ( (byte_593C23F & 1) == 0 )
+  if ( (byte_5974477 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_FortificationGauge___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C23F = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_FortificationGauge___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974477 = 1;
   }
   if ( info )
   {
@@ -201,17 +200,17 @@ void BattleResultEventFortificationItemComponent___c__DisplayClass4_0___SetForti
       gaugeListRoot = _4__this->fields.gaugeListRoot;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
-      FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__59506996(
+      FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                            fortificationGaugePrefab,
                                                            gaugeListRoot,
-                                                           (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_FortificationGauge___);
+                                                           (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_FortificationGauge___);
       if ( !FortificationWorkType
         || (v10 = FortificationWorkType,
             FortificationGauge__SetData((FortificationGauge_o *)FortificationWorkType, info, 0),
             (FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v10, 0)) == 0) )
       {
 LABEL_12:
-        sub_21FFECC(FortificationWorkType, v6);
+        sub_2213CDC(FortificationWorkType, v6);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)FortificationWorkType, 1, 0);
     }

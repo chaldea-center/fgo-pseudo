@@ -6,7 +6,7 @@ void BattleLogicUtilities___ctor(BattleLogicUtilities_o *this, const MethodInfo 
 
 UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
         UnityEngine_Vector3_array *list,
-        const MethodInfo_37E3CB8 *method)
+        const MethodInfo_3817068 *method)
 {
   System_Random_o *v4; // x19
   Il2CppObject *v5; // x0
@@ -26,15 +26,15 @@ UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
   __int64 v19; // d1
   int v20; // s0
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v22; // x0
-  const MethodInfo_37E3E1C *v23; // x1
+  const MethodInfo_38171CC *v23; // x1
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&System_Random_TypeInfo);
+    sub_2213A60(&System_Random_TypeInfo);
     if ( !method->rgctx_data )
-      sub_2237B54(method);
+      sub_224B964(method);
   }
-  v4 = (System_Random_o *)sub_21FFEBC(System_Random_TypeInfo);
+  v4 = (System_Random_o *)sub_2213CCC(System_Random_TypeInfo);
   System_Random___ctor(v4, 0);
   if ( !list )
     goto LABEL_18;
@@ -43,12 +43,12 @@ UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
   _0_T = method->rgctx_data->_0_T__;
   if ( (*((_WORD *)&_0_T->_2.bitflags2 + 1) & 1) == 0 )
   {
-    v5 = (Il2CppObject *)sub_2237AF8(v7);
+    v5 = (Il2CppObject *)sub_224B908(v7);
     _0_T = (Il2CppClass *)v5;
   }
   if ( !v8 )
     goto LABEL_18;
-  v5 = (Il2CppObject *)sub_21FFDA4(v8, _0_T);
+  v5 = (Il2CppObject *)sub_2213BB4(v8, _0_T);
   if ( v5 )
   {
     monitor = v5[1].monitor;
@@ -79,7 +79,7 @@ UnityEngine_Vector3_array *BattleLogicUtilities__getShuffle_Vector3_(
         *((_DWORD *)v16 + 2) = v17;
         if ( v13 - 2 >= LODWORD(v12->max_length) )
 LABEL_17:
-          sub_21FFED4(v15);
+          sub_2213CE4(v15);
         --v13;
         LODWORD(monitor) = (_DWORD)monitor - 1;
         *((_QWORD *)v14 - 1) = v19;
@@ -90,19 +90,19 @@ LABEL_17:
       return v12;
     }
 LABEL_18:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
-  sub_220024C(v8, _0_T, v10);
+  sub_221405C(v8, _0_T, v10);
   return (UnityEngine_Vector3_array *)BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(v22, v23);
 }
 
 
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *list,
-        const MethodInfo_37E3E1C *method)
+        const MethodInfo_38171CC *method)
 {
   unsigned __int64 StatusReg; // x19
-  const MethodInfo_37E3E1C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_38171CC_RGCTXs *rgctx_data; // x8
   size_t actualSize; // x20
   char *v7; // x24
   Il2CppObject *v8; // x0
@@ -143,11 +143,11 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_21FFC50(&System_Random_TypeInfo);
+    sub_2213A60(&System_Random_TypeInfo);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_2237B54(method);
+      sub_224B964(method);
       rgctx_data = method->rgctx_data;
     }
   }
@@ -155,7 +155,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities
   v39 = (char *)&v33 - ((actualSize + 15) & 0x1FFFFFFF0LL);
   v7 = v39;
   memset(v39, 0, actualSize);
-  v35 = (System_Random_o *)sub_21FFEBC(System_Random_TypeInfo);
+  v35 = (System_Random_o *)sub_2213CCC(System_Random_TypeInfo);
   System_Random___ctor(v35, 0);
   if ( !list )
     goto LABEL_24;
@@ -164,15 +164,15 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities
   _0_T = method->rgctx_data->_0_T__;
   if ( (*((_WORD *)&_0_T->_2.bitflags2 + 1) & 1) == 0 )
   {
-    v8 = (Il2CppObject *)sub_2237AF8(v10);
+    v8 = (Il2CppObject *)sub_224B908(v10);
     _0_T = (Il2CppClass *)v8;
   }
   if ( !v11 )
     goto LABEL_24;
   v33 = StatusReg;
-  v8 = (Il2CppObject *)sub_21FFDA4(v11, _0_T);
+  v8 = (Il2CppObject *)sub_2213BB4(v11, _0_T);
   if ( !v8 )
-    sub_220024C(v11, _0_T, v13);
+    sub_221405C(v11, _0_T, v13);
   monitor = (unsigned __int64)v8[1].monitor;
   v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)v8;
   if ( (int)monitor >= 2 )
@@ -206,14 +206,14 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities
         memmove((char *)v22 + (unsigned int)klass->_2.native_size * v20, v26, actualSize);
         _1_T = method->rgctx_data->_1_T;
         if ( (*(_WORD *)((_BYTE *)_1_T + 309) & 1) == 0 )
-          _1_T = (void *)sub_2237AF8(v27);
+          _1_T = (void *)sub_224B908(v27);
         v28 = v21->max_length;
         v14 = v21;
         v29 = v38;
         v7 = v16;
         if ( (unsigned int)v20 >= v28 )
           goto LABEL_23;
-        sub_21FFBF8(_1_T, (char *)v38 + (unsigned int)v14->obj.klass->_2.native_size * v20, v39);
+        sub_2213A08(_1_T, (char *)v38 + (unsigned int)v14->obj.klass->_2.native_size * v20, v39);
         v30 = v34;
         _1_T = memcpy(v34, v16, actualSize);
         if ( v24 >= LODWORD(v14->max_length) )
@@ -221,11 +221,11 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *BattleLogicUtilities
         memcpy((char *)v29 + v24 * (unsigned int)v14->obj.klass->_2.native_size, v16, actualSize);
         _1_T = method->rgctx_data->_1_T;
         if ( (*(_WORD *)((_BYTE *)_1_T + 309) & 1) == 0 )
-          _1_T = (void *)sub_2237AF8(v31);
+          _1_T = (void *)sub_224B908(v31);
         if ( v24 >= LODWORD(v14->max_length) )
 LABEL_23:
-          sub_21FFED4(_1_T);
-        sub_21FFBF8(_1_T, (char *)v29 + v24 * (unsigned int)v14->obj.klass->_2.native_size, v30);
+          sub_2213CE4(_1_T);
+        sub_2213A08(_1_T, (char *)v29 + v24 * (unsigned int)v14->obj.klass->_2.native_size, v30);
         v15 = v36 - 1;
         monitor = (unsigned int)(v37 - 1);
       }
@@ -233,7 +233,7 @@ LABEL_23:
       return v14;
     }
 LABEL_24:
-    sub_21FFECC(v8, monitor);
+    sub_2213CDC(v8, monitor);
   }
   return v14;
 }

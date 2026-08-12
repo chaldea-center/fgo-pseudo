@@ -31,10 +31,10 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
   UnityEngine_Transform_o *v18; // x21
   UnityEngine_Transform_o *v19; // x21
 
-  if ( (byte_5937AE0 & 1) == 0 )
+  if ( (byte_596FBB1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937AE0 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FBB1 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -49,7 +49,7 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mTrans,
         (int32_t)transform,
         v9,
@@ -68,35 +68,35 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     v16 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0);
     v17 = this->fields.mTrans;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      parent = (UnityEngine_Transform_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      parent = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v17 )
       goto LABEL_24;
     UnityEngine_Transform__set_localPosition(v17, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     v18 = *p_mTrans;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      parent = (UnityEngine_Transform_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      parent = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v18 )
       goto LABEL_24;
     UnityEngine_Transform__set_localEulerAngles(v18, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     v19 = *p_mTrans;
-    if ( !byte_5931945 )
+    if ( !byte_5969AE5 )
     {
-      parent = (UnityEngine_Transform_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931945 = 1;
+      parent = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE5 = 1;
     }
     if ( !v19
       || (UnityEngine_Transform__set_localScale(v19, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (parent = *p_mTrans) == 0) )
     {
 LABEL_24:
-      sub_21FFECC(parent, v7);
+      sub_2213CDC(parent, v7);
     }
     UnityEngine_Transform__set_parent(parent, v16, 0);
   }
@@ -115,5 +115,5 @@ void FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const MethodInfo *metho
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }

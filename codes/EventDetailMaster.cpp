@@ -1,14 +1,14 @@
 void EventDetailMaster___ctor(EventDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59385DF & 1) == 0 )
+  if ( (byte_5970792 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int___ctor__);
-    byte_59385DF = 1;
+    sub_2213A60(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int___ctor__);
+    byte_5970792 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     128,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int___ctor__);
 }
 
 
@@ -43,19 +43,19 @@ System_Int32_array *EventDetailMaster__GetEventIdsByMission(EventDetailMaster_o 
   System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
 
-  if ( (byte_59385E0 & 1) == 0 )
+  if ( (byte_5970793 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__getEntityList__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_EventDetailEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_EventDetailEntity___);
-    sub_21FFC50(&System_Func_EventDetailEntity__int__TypeInfo);
-    sub_21FFC50(&System_Func_EventDetailEntity__bool__TypeInfo);
-    sub_21FFC50(&Method_EventDetailMaster___c__GetEventIdsByMission_b__1_0__);
-    sub_21FFC50(&Method_EventDetailMaster___c__GetEventIdsByMission_b__1_1__);
-    sub_21FFC50(&EventDetailMaster___c_TypeInfo);
-    byte_59385E0 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__getEntityList__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_EventDetailEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_EventDetailEntity___);
+    sub_2213A60(&System_Func_EventDetailEntity__int__TypeInfo);
+    sub_2213A60(&System_Func_EventDetailEntity__bool__TypeInfo);
+    sub_2213A60(&Method_EventDetailMaster___c__GetEventIdsByMission_b__1_0__);
+    sub_2213A60(&Method_EventDetailMaster___c__GetEventIdsByMission_b__1_1__);
+    sub_2213A60(&EventDetailMaster___c_TypeInfo);
+    byte_5970793 = 1;
   }
   v3 = EventDetailMaster___c_TypeInfo;
   list = this->fields.list;
@@ -74,16 +74,16 @@ System_Int32_array *EventDetailMaster__GetEventIdsByMission(EventDetailMaster_o 
       static_fields = EventDetailMaster___c_TypeInfo->static_fields;
     }
     v7 = (Il2CppObject *)static_fields->__9;
-    _9__1_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_EventDetailEntity__bool__TypeInfo);
+    _9__1_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_EventDetailEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__1_0, v7, Method_EventDetailMaster___c__GetEventIdsByMission_b__1_0__, 0);
     v8 = EventDetailMaster___c_TypeInfo->static_fields;
     v8->__9__1_0 = (struct System_Func_EventDetailEntity__bool__o *)_9__1_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->__9__1_0, (int32_t)_9__1_0, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->__9__1_0, (int32_t)_9__1_0, v9, v10, v11, v12, v13, v14);
   }
   v15 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)_9__1_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_EventDetailEntity___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_EventDetailEntity___);
   v17 = EventDetailMaster___c_TypeInfo;
   v18 = v15;
   if ( !*(&EventDetailMaster___c_TypeInfo->_2.cctor_finished + 1) )
@@ -101,22 +101,22 @@ System_Int32_array *EventDetailMaster__GetEventIdsByMission(EventDetailMaster_o 
       v19 = EventDetailMaster___c_TypeInfo->static_fields;
     }
     v21 = (Il2CppObject *)v19->__9;
-    _9__1_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_EventDetailEntity__int__TypeInfo);
+    _9__1_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_EventDetailEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__1_1, v21, Method_EventDetailMaster___c__GetEventIdsByMission_b__1_1__, 0);
     v22 = EventDetailMaster___c_TypeInfo->static_fields;
     v22->__9__1_1 = (struct System_Func_EventDetailEntity__int__o *)_9__1_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v22->__9__1_1, (int32_t)_9__1_1, v23, v24, v25, v26, v27, v28);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v22->__9__1_1, (int32_t)_9__1_1, v23, v24, v25, v26, v27, v28);
   }
   v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v18,
                                                                (System_Func_TSource__TResult__o *)_9__1_1,
-                                                               (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_EventDetailEntity__int___);
+                                                               (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_EventDetailEntity__int___);
   v30 = System_Linq_Enumerable__Distinct_int_(
           v29,
-          (const MethodInfo_3849124 *)Method_System_Linq_Enumerable_Distinct_int___);
+          (const MethodInfo_387C5EC *)Method_System_Linq_Enumerable_Distinct_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v30,
-           (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -141,13 +141,13 @@ bool EventDetailMaster__IsActiveEventHaveWarId(
   EventMaster_o *v19; // x24
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_59385E1 & 1) == 0 )
+  if ( (byte_5970794 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    byte_59385E1 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    byte_5970794 = 1;
   }
   v7 = DataManager_TypeInfo;
   *eventId = 0;
@@ -156,10 +156,10 @@ bool EventDetailMaster__IsActiveEventHaveWarId(
   entity = 0;
   if ( !v8 )
     j_il2cpp_runtime_class_init_0(v7, eventId);
-  Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
 LABEL_25:
-    sub_21FFECC(Master_object, MasterKind_k__BackingField);
+    sub_2213CDC(Master_object, MasterKind_k__BackingField);
   EnableExistEventRewardEntityList = EventMaster__GetEnableExistEventRewardEntityList(Master_object, 0);
   if ( EnableExistEventRewardEntityList )
   {
@@ -168,7 +168,7 @@ LABEL_25:
       goto LABEL_22;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v12);
-    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
     max_length = v13->max_length;
     if ( max_length >= 1 )
     {
@@ -177,7 +177,7 @@ LABEL_25:
       while ( 1 )
       {
         if ( (unsigned int)v16 >= max_length )
-          sub_21FFED4(Master_object);
+          sub_2213CE4(Master_object);
         v17 = v13->m_Items[v16];
         if ( !v17 )
           goto LABEL_25;
@@ -185,7 +185,7 @@ LABEL_25:
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            &entity,
                                            v17->fields.id,
-                                           (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+                                           (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           Master_object = (EventMaster_o *)entity;
@@ -220,9 +220,9 @@ LABEL_25:
         if ( (int)++v16 >= max_length )
           goto LABEL_22;
       }
-      LOBYTE(EnableExistEventRewardEntityList) = 1;
       *eventId = v17->fields.id;
       *grandWarId = *(&v19->fields._MasterKind_k__BackingField + 1);
+      LOBYTE(EnableExistEventRewardEntityList) = 1;
     }
     else
     {
@@ -244,15 +244,15 @@ void EventDetailMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59385E2 & 1) == 0 )
+  if ( (byte_5970795 & 1) == 0 )
   {
-    sub_21FFC50(&EventDetailMaster___c_TypeInfo);
-    byte_59385E2 = 1;
+    sub_2213A60(&EventDetailMaster___c_TypeInfo);
+    byte_5970795 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventDetailMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventDetailMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventDetailMaster___c_TypeInfo->static_fields->__9 = (struct EventDetailMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventDetailMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -276,7 +276,7 @@ bool EventDetailMaster___c___GetEventIdsByMission_b__1_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return (LOBYTE(ent->fields.flag) >> 5) & 1;
 }
 
@@ -287,6 +287,6 @@ int32_t EventDetailMaster___c___GetEventIdsByMission_b__1_1(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return ent->fields.eventId;
 }

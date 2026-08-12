@@ -27,7 +27,7 @@ void DebugListSelectCellComponent__Set(
 
   this->fields.id = id;
   p_id = &this->fields.id;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.id,
     (int32_t)id,
     *(System_String_o **)&index,
@@ -38,11 +38,11 @@ void DebugListSelectCellComponent__Set(
     v7);
   v13 = (UILabel_o *)*(p_id - 1);
   if ( !v13 )
-    sub_21FFECC(0, v12);
+    sub_2213CDC(0, v12);
   UILabel__set_text(v13, this->fields.id, 0);
   this->fields.callback = callback;
   this->fields.index = index;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
     (int32_t)callback,
     v14,

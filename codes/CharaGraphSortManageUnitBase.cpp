@@ -16,7 +16,7 @@ void CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   bool v7; // w7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)sortSaveKeyPrefix,
     (System_String_o *)method,
@@ -46,10 +46,10 @@ ListViewSort_o *CharaGraphSortManageUnitBase__get_SortInfo(
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_593797B & 1) == 0 )
+  if ( (byte_596FADE & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_TypeInfo);
-    byte_593797B = 1;
+    sub_2213A60(&ListViewSort_TypeInfo);
+    byte_596FADE = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -58,20 +58,20 @@ ListViewSort_o *CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.image)(
                               this,
                               this->klass[1]._1.gc_desc);
-    v6 = System_String__Concat_75438412(SortSaveKeyPrefix_k__BackingField, v5, 0);
+    v6 = System_String__Concat_75651716(SortSaveKeyPrefix_k__BackingField, v5, 0);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.name)(
            this,
            this->klass[1]._1.namespaze);
-    sortInfo = (struct ListViewSort_o *)sub_21FFEBC(ListViewSort_TypeInfo);
-    ListViewSort___ctor_50784632(sortInfo, v6, v7, 0, 0);
+    sortInfo = (struct ListViewSort_o *)sub_2213CCC(ListViewSort_TypeInfo);
+    ListViewSort___ctor_50854784(sortInfo, v6, v7, 0, 0);
     v8 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
            this,
            *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
     if ( !sortInfo )
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.sortInfo,
       (int32_t)sortInfo,
       v10,
@@ -105,7 +105,7 @@ void CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   bool v7; // w7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

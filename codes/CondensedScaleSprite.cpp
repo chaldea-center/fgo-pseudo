@@ -31,7 +31,7 @@ float CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_o *this, co
         maxLabelWidth = this->fields.maxLabelWidth,
         (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0) )
   {
-    sub_21FFECC(UISprite, v4);
+    sub_2213CDC(UISprite, v4);
   }
   if ( mWidth >= maxLabelWidth )
     v8 = maxLabelWidth;
@@ -59,7 +59,7 @@ float CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o *this, cons
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel || (mText = uiLabel->fields.mText) == 0 )
-      sub_21FFECC(v3, v4);
+      sub_2213CDC(v3, v4);
     if ( mText->fields._stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -81,7 +81,7 @@ float CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSprite_o *this,
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
   if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0 )
-    sub_21FFECC(UISprite, v5);
+    sub_2213CDC(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
@@ -110,7 +110,7 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_21FFECC(uiLabel, method);
+    sub_2213CDC(uiLabel, method);
   }
 }
 
@@ -136,7 +136,7 @@ void CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const
     || (mText = uiLabel->fields.mText,
         v10 = this,
         this->fields.previousText = mText,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.previousText,
           (int32_t)mText,
           v2,
@@ -149,7 +149,7 @@ void CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const
         (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v10, v13)) == 0)
     || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0 )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   v14.fields.y = 1.0;
   v14.fields.z = 1.0;
@@ -167,7 +167,7 @@ void CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const MethodInfo
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
@@ -185,11 +185,11 @@ UISprite_o *CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, con
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5939DE4 & 1) == 0 )
+  if ( (byte_5971FB7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939DE4 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971FB7 = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -198,9 +198,9 @@ UISprite_o *CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, con
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.uiSprite,
       (int32_t)Component_object,
       v5,

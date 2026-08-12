@@ -8,18 +8,18 @@ void EventMapGimmickMoveManager___ctor(EventMapGimmickMoveManager_o *this, const
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59323BE & 1) == 0 )
+  if ( (byte_596A4BD & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__TypeInfo);
-    byte_59323BE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__TypeInfo);
+    byte_596A4BD = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData___ctor__);
   this->fields.eventMapGimmickMoveDataList = (struct System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -42,10 +42,10 @@ void EventMapGimmickMoveManager__Add(
   Il2CppClass **v14; // x0
 
   v9 = this;
-  if ( (byte_59323B8 & 1) == 0 )
+  if ( (byte_596A4B7 & 1) == 0 )
   {
-    this = (EventMapGimmickMoveManager_o *)sub_21FFC50(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__Add__);
-    byte_59323B8 = 1;
+    this = (EventMapGimmickMoveManager_o *)sub_2213A60(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__Add__);
+    byte_596A4B7 = 1;
   }
   eventMapGimmickMoveDataList = (System_Collections_Generic_List_object__o *)v9->fields.eventMapGimmickMoveDataList;
   if ( !eventMapGimmickMoveDataList
@@ -54,7 +54,7 @@ void EventMapGimmickMoveManager__Add(
         ++eventMapGimmickMoveDataList->fields._version,
         !items) )
   {
-    sub_21FFECC(this, data);
+    sub_2213CDC(this, data);
   }
   size = eventMapGimmickMoveDataList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -62,14 +62,14 @@ void EventMapGimmickMoveManager__Add(
     System_Collections_Generic_List_object___AddWithResize(
       eventMapGimmickMoveDataList,
       (Il2CppObject *)data,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     eventMapGimmickMoveDataList->fields._size = size + 1;
     v14[4] = (Il2CppClass *)data;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)(v14 + 4),
       (int32_t)data,
       (System_String_o *)method,
@@ -94,7 +94,7 @@ float EventMapGimmickMoveManager__CalcEventRaidMoveRateFromTime(
   if ( !eventRaidEnt )
     return 0.0;
   if ( !mapGimmickPathEnt )
-    sub_21FFECC(calcTime, eventRaidEnt);
+    sub_2213CDC(calcTime, eventRaidEnt);
   v4 = EventMapGimmickMoveManager__LimitMapGimmickPathRate(
          mapGimmickPathEnt->fields.mapGimmickId,
          (float)(calcTime - eventRaidEnt->fields.startedAt) / (float)mapGimmickPathEnt->fields.moveTime,
@@ -130,14 +130,14 @@ float EventMapGimmickMoveManager__CalcMapGimmickPathRate(
   const MethodInfo *v17; // x3
 
   v6 = targetId;
-  if ( (byte_59323BB & 1) == 0 )
+  if ( (byte_596A4BA & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventRaidMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    *(_QWORD *)&targetId = sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59323BB = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventRaidMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    *(_QWORD *)&targetId = sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596A4BA = 1;
   }
   if ( !mapGimmickMoveEnt )
     goto LABEL_22;
@@ -155,7 +155,7 @@ float EventMapGimmickMoveManager__CalcMapGimmickPathRate(
     ProgressNum = CondType__GetProgressNum(32, v6, 0, 0, 0);
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-    *(_QWORD *)&targetId = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+    *(_QWORD *)&targetId = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_QuestGroupMaster___);
     if ( *(_QWORD *)&targetId )
     {
       *(_QWORD *)&targetId = QuestGroupMaster__GetQuestIdListByGroupId(*(QuestGroupMaster_o **)&targetId, v6, 2, 0);
@@ -171,11 +171,11 @@ float EventMapGimmickMoveManager__CalcMapGimmickPathRate(
       }
     }
 LABEL_22:
-    sub_21FFECC(*(_QWORD *)&targetId, *(_QWORD *)&targetNum);
+    sub_2213CDC(*(_QWORD *)&targetId, *(_QWORD *)&targetNum);
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&targetNum, mapGimmickMoveEnt);
-  *(_QWORD *)&targetId = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventRaidMaster___);
+  *(_QWORD *)&targetId = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventRaidMaster___);
   if ( !*(_QWORD *)&targetId )
     goto LABEL_22;
   Entity = EventRaidMaster__GetEntity(*(EventRaidMaster_o **)&targetId, v6, targetNum, 0);
@@ -219,14 +219,14 @@ void EventMapGimmickMoveManager__Clear(EventMapGimmickMoveManager_o *this, const
   System_Collections_Generic_List_Enumerator_object__o *v23; // [xsp+10h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_59323B7 & 1) == 0 )
+  if ( (byte_596A4B6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
-    byte_59323B7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
+    byte_596A4B6 = 1;
   }
   eventMapGimmickMoveDataList = (System_Collections_Generic_List_object__o *)this->fields.eventMapGimmickMoveDataList;
   memset(&v24, 0, sizeof(v24));
@@ -235,24 +235,24 @@ void EventMapGimmickMoveManager__Clear(EventMapGimmickMoveManager_o *this, const
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     eventMapGimmickMoveDataList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
   v22 = 0;
   v23 = &v24;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v24,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
     if ( !v4 )
       break;
     current = v24.fields._current;
     if ( !v24.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     *(Il2CppClass **)((char *)&v24.fields._current->klass + (unsigned __int64)off_18) = 0;
     *(_DWORD *)((char *)&word_10 + (_QWORD)current) = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)off_18 + (_QWORD)current), 0, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)off_18 + (_QWORD)current), 0, v6, v7, v8, v9, v10, v11);
     *(__int64 *)((char *)&qword_20 + (_QWORD)current) = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)((char *)&qword_20 + (_QWORD)current),
       0,
       v13,
@@ -265,11 +265,11 @@ void EventMapGimmickMoveManager__Clear(EventMapGimmickMoveManager_o *this, const
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
   v19 = this->fields.eventMapGimmickMoveDataList;
   if ( !v19 )
 LABEL_13:
-    sub_21FFECC(eventMapGimmickMoveDataList, method);
+    sub_2213CDC(eventMapGimmickMoveDataList, method);
   size = v19->fields._size;
   v21 = v19->fields._version + 1;
   v19->fields._size = 0;
@@ -287,17 +287,17 @@ float EventMapGimmickMoveManager__GetRemainingDistance(int32_t mapGimmickId, con
   MapGimmickPathEntity_o *MapGimmickPathEntity; // x0
   const MethodInfo *v7; // x3
 
-  if ( (byte_59323BD & 1) == 0 )
+  if ( (byte_596A4BC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_MapGimmickPathMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_59323BD = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_MapGimmickPathMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_596A4BC = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   MapGimmickPathEntity = MapGimmickPathMaster__GetMapGimmickPathEntity(
                            (MapGimmickPathMaster_o *)Master_object,
                            mapGimmickId,
@@ -331,17 +331,17 @@ float EventMapGimmickMoveManager__LimitMapGimmickPathRate(
   Il2CppObject *Master_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_59323BC & 1) == 0 )
+  if ( (byte_596A4BB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_MapGimmickPathReleaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_59323BC = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_MapGimmickPathReleaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_596A4BB = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v3);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_MapGimmickPathReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_MapGimmickPathReleaseMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   return MapGimmickPathReleaseMaster__LimitMapGimmickPathRate(
            (MapGimmickPathReleaseMaster_o *)Master_object,
            mapGimmickId,
@@ -361,29 +361,29 @@ void EventMapGimmickMoveManager__UpdateAllMapGimmickPosition(
   System_Collections_Generic_List_Enumerator_object__o *v7; // [xsp+10h] [xbp-40h]
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_59323B9 & 1) == 0 )
+  if ( (byte_596A4B8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
-    byte_59323B9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
+    byte_596A4B8 = 1;
   }
   eventMapGimmickMoveDataList = (System_Collections_Generic_List_object__o *)this->fields.eventMapGimmickMoveDataList;
   memset(&v8, 0, sizeof(v8));
   if ( !eventMapGimmickMoveDataList )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     eventMapGimmickMoveDataList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventMapGimmickMoveManager_MapGimmickMoveData__GetEnumerator__);
   v6 = 0;
   v7 = &v8;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v8,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__MoveNext__);
     if ( !v4 )
       break;
     EventMapGimmickMoveManager__UpdateMapGimmickPosition(
@@ -393,7 +393,7 @@ void EventMapGimmickMoveManager__UpdateAllMapGimmickPosition(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventMapGimmickMoveManager_MapGimmickMoveData__Dispose__);
 }
 
 
@@ -432,72 +432,65 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
   int32_t valueType; // w8
   UnityEngine_GameObject_o *v32; // x0
   EventRaidEntity_o *v33; // x22
-  float x; // s13
-  float y; // s14
-  float z; // s15
-  __int64 v37; // x8
-  float v38; // s11
-  float v39; // s0
-  float v40; // s12
-  __int64 v41; // x2
-  __int64 v42; // x8
+  __int64 v34; // x8
+  float v35; // s0
+  float v36; // s12
+  __int64 v37; // x2
+  __int64 v38; // x8
+  int v39; // s14
+  float v40; // s9
+  float v41; // s12
+  float v42; // s8
   float v43; // s9
   float v44; // s10
-  float v45; // s13
-  int v46; // s14
-  float v47; // s9
-  float v48; // s12
-  float v49; // s8
-  float v50; // s9
-  float v51; // s10
   int64_t Time; // x0
-  const MethodInfo *v53; // x3
-  float v54; // s0
-  float v55; // s0
-  __int64 v56; // x8
-  UITweener_o *v57; // x20
-  int v58; // w8
-  __int64 v59; // x9
-  __int64 v60; // x21
-  EventDelegate_Callback_c *v61; // x0
-  EventDelegate_Callback_o *v62; // x22
-  EventDelegate_o *v63; // x19
-  unsigned __int64 v64; // [xsp+0h] [xbp-A0h] BYREF
-  float v65; // [xsp+8h] [xbp-98h]
-  float v66; // [xsp+58h] [xbp-48h]
-  float v67; // [xsp+5Ch] [xbp-44h]
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v46; // x3
+  float v47; // s0
+  float v48; // s0
+  __int64 v49; // x8
+  UITweener_o *v50; // x20
+  int v51; // w8
+  __int64 v52; // x9
+  __int64 v53; // x21
+  EventDelegate_Callback_c *v54; // x0
+  EventDelegate_Callback_o *v55; // x22
+  EventDelegate_o *v56; // x19
+  __int64 v57; // [xsp+0h] [xbp-A0h] BYREF
+  float v58; // [xsp+8h] [xbp-98h]
+  float z; // [xsp+58h] [xbp-48h]
+  float y; // [xsp+5Ch] [xbp-44h]
+  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:kr14_12.12
+  UnityEngine_Vector3_o v62; // 0:kr20_12.12
+  UnityEngine_Vector3_o v63; // 0:kr34_12.12
+  UnityEngine_Vector3_o v64; // 0:kr40_12.12
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_59323BA & 1) == 0 )
+  if ( (byte_596A4B9 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventRaidMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_MapGimmickPathMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_EventMapGimmickMoveManager___c__DisplayClass7_0__UpdateMapGimmickPosition_b__0__);
-    sub_21FFC50(&EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
-    byte_59323BA = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventRaidMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_MapGimmickPathMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_EventMapGimmickMoveManager___c__DisplayClass7_0__UpdateMapGimmickPosition_b__0__);
+    sub_2213A60(&EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
+    byte_596A4B9 = 1;
   }
-  v65 = 0.0;
-  v64 = 0;
-  v4 = sub_21FFEBC(EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
+  v58 = 0.0;
+  v57 = 0;
+  v4 = sub_2213CCC(EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
     goto LABEL_73;
   *(_QWORD *)(v4 + 16) = data;
   v13 = v4 + 16;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v4 + 16), (int32_t)data, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v4 + 16), (int32_t)data, v7, v8, v9, v10, v11, v12);
   if ( !*(_QWORD *)(v4 + 16) )
     goto LABEL_73;
   v15 = *(UnityEngine_Object_o **)(*(_QWORD *)(v4 + 16) + 24LL);
@@ -515,7 +508,7 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
     {
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v18, v19);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
       if ( !*(_QWORD *)v13 || !Master_object )
         goto LABEL_73;
       MapGimmickPathEntity = MapGimmickPathMaster__GetMapGimmickPathEntity(
@@ -536,7 +529,7 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
         v26 = v25;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)Master_object,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27, v28);
         Master_object = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -544,14 +537,14 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
         {
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v30);
-          UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
+          UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
         }
         valueType = v24->fields.valueType;
         if ( valueType == 1 )
         {
           if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6, v30);
-          Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventRaidMaster___);
+          Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventRaidMaster___);
           if ( !Master_object )
             goto LABEL_73;
           Master_object = EventRaidMaster__GetEntity((EventRaidMaster_o *)Master_object, targetId, targetNum, 0);
@@ -572,136 +565,136 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
             Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
             if ( !Master_object )
               goto LABEL_73;
-            x = PointAsWorldFlatten.fields.x;
-            y = PointAsWorldFlatten.fields.y;
-            z = PointAsWorldFlatten.fields.z;
-            v70 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v26, 0);
-            v37 = *(_QWORD *)v13;
-            v66 = v70.fields.z;
-            v67 = v70.fields.y;
-            if ( !v37 )
+            v62 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v26, 0);
+            v34 = *(_QWORD *)v13;
+            z = v62.fields.z;
+            y = v62.fields.y;
+            if ( !v34 )
               goto LABEL_73;
-            v38 = v70.fields.x;
-            v39 = EventMapGimmickMoveManager__LimitMapGimmickPathRate(*(_DWORD *)(v37 + 16), 1.0, v6);
+            v35 = EventMapGimmickMoveManager__LimitMapGimmickPathRate(*(_DWORD *)(v34 + 16), 1.0, v6);
             if ( !*(_QWORD *)v13 )
               goto LABEL_73;
             Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
             if ( !Master_object )
               goto LABEL_73;
-            v40 = v39;
-            v71 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v39, 0);
-            *(float *)(v4 + 24) = v71.fields.x;
-            v42 = *(_QWORD *)(v4 + 16);
-            *(float *)(v4 + 28) = v71.fields.y;
-            *(float *)(v4 + 32) = v71.fields.z;
-            if ( !v42 )
+            v36 = v35;
+            v63 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v35, 0);
+            *(float *)(v4 + 24) = v63.fields.x;
+            v38 = *(_QWORD *)(v4 + 16);
+            *(float *)(v4 + 28) = v63.fields.y;
+            *(float *)(v4 + 32) = v63.fields.z;
+            if ( !v38 )
               goto LABEL_73;
-            v43 = v71.fields.x - x;
-            v44 = v71.fields.y - y;
-            v45 = v71.fields.z - z;
-            v46 = *(_DWORD *)(v42 + 40);
-            v64 = __PAIR64__(LODWORD(v44), LODWORD(v43));
-            v65 = v71.fields.z - z;
-            if ( !byte_5931942 )
+            v39 = *(_DWORD *)(v38 + 40);
+            *(float *)&v57 = v63.fields.x - PointAsWorldFlatten.fields.x;
+            *((float *)&v57 + 1) = v63.fields.y - PointAsWorldFlatten.fields.y;
+            v58 = v63.fields.z - PointAsWorldFlatten.fields.z;
+            if ( !byte_5969AE2 )
             {
-              sub_21FFC50(&System_Math_TypeInfo);
-              byte_5931942 = 1;
+              sub_2213A60(&System_Math_TypeInfo);
+              byte_5969AE2 = 1;
             }
             if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v41);
+              j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v37);
             Master_object = BalanceConfig_TypeInfo;
-            v47 = sqrtf((float)((float)(v43 * v43) + (float)(v44 * v44)) + (float)(v45 * v45));
+            v40 = sqrtf(
+                    (float)((float)((float)(v63.fields.x - PointAsWorldFlatten.fields.x)
+                                  * (float)(v63.fields.x - PointAsWorldFlatten.fields.x))
+                          + (float)((float)(v63.fields.y - PointAsWorldFlatten.fields.y)
+                                  * (float)(v63.fields.y - PointAsWorldFlatten.fields.y)))
+                  + (float)((float)(v63.fields.z - PointAsWorldFlatten.fields.z)
+                          * (float)(v63.fields.z - PointAsWorldFlatten.fields.z)));
             if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
             {
-              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v6, v41);
+              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v6, v37);
               Master_object = BalanceConfig_TypeInfo;
             }
-            if ( v47 < 0.001 )
+            if ( v40 < 0.001 )
             {
               if ( *(_QWORD *)v13 )
               {
-                v68 = *(UnityEngine_Vector3_o *)(v4 + 24);
+                v65 = *(UnityEngine_Vector3_o *)(v4 + 24);
                 v32 = *(UnityEngine_GameObject_o **)(*(_QWORD *)v13 + 24LL);
                 goto LABEL_56;
               }
 LABEL_73:
-              sub_21FFECC(Master_object, v6);
+              sub_2213CDC(Master_object, v6);
             }
-            v48 = (float)(v40 - v26) * (float)v46;
-            v49 = (float)*(int *)(*((_QWORD *)Master_object + 23) + 284LL);
-            if ( v48 <= v49 )
+            v41 = (float)(v36 - v26) * (float)v39;
+            v42 = (float)*(int *)(*((_QWORD *)Master_object + 23) + 284LL);
+            if ( v41 <= v42 )
             {
-              v51 = v66;
-              v50 = v67;
-              v56 = *(_QWORD *)v13;
+              v44 = z;
+              v43 = y;
+              v49 = *(_QWORD *)v13;
             }
             else
             {
-              v51 = v66;
-              v50 = v67;
+              v44 = z;
+              v43 = y;
               if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6, v41);
+                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6, v37);
               Time = NetworkManager__getTime(0);
-              v54 = EventMapGimmickMoveManager__CalcEventRaidMoveRateFromTime(Time + (__int64)v49, v33, v24, v53);
+              v47 = EventMapGimmickMoveManager__CalcEventRaidMoveRateFromTime(Time + (__int64)v42, v33, v24, v46);
               if ( !*(_QWORD *)v13 )
                 goto LABEL_73;
               Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
               if ( !Master_object )
                 goto LABEL_73;
-              v72 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v54, 0);
-              *(UnityEngine_Vector3_o *)(v4 + 24) = v72;
-              *(float *)&v64 = v72.fields.x - v38;
-              *((float *)&v64 + 1) = v72.fields.y - v50;
-              v65 = v72.fields.z - v51;
-              v55 = sub_244FB30(&v64, 0);
-              v56 = *(_QWORD *)(v4 + 16);
-              if ( v55 < 0.001 )
+              v64 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v47, 0);
+              *(UnityEngine_Vector3_o *)(v4 + 24) = v64;
+              *(float *)&v57 = v64.fields.x - v62.fields.x;
+              *((float *)&v57 + 1) = v64.fields.y - v43;
+              v58 = v64.fields.z - v44;
+              v48 = sub_244F1C8(&v57, 0);
+              v49 = *(_QWORD *)(v4 + 16);
+              if ( v48 < 0.001 )
               {
-                if ( !v56 )
+                if ( !v49 )
                   goto LABEL_73;
                 GameObjectExtensions__SetPosition(
-                  *(UnityEngine_GameObject_o **)(v56 + 24),
+                  *(UnityEngine_GameObject_o **)(v49 + 24),
                   *(UnityEngine_Vector3_o *)(v4 + 24),
                   0);
                 return;
               }
-              v48 = v49;
+              v41 = v42;
             }
-            if ( !v56 )
+            if ( !v49 )
               goto LABEL_73;
-            Master_object = *(void **)(v56 + 24);
+            Master_object = *(void **)(v49 + 24);
             if ( !Master_object )
               goto LABEL_73;
             Master_object = UnityEngine_GameObject__AddComponent_object_(
                               (UnityEngine_GameObject_o *)Master_object,
-                              (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                              (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
             if ( !Master_object )
               goto LABEL_73;
-            *((float *)Master_object + 32) = v38;
-            *((float *)Master_object + 33) = v50;
+            *((_DWORD *)Master_object + 32) = LODWORD(v62.fields.x);
+            *((float *)Master_object + 33) = v43;
             *((_BYTE *)Master_object + 152) = 1;
-            v57 = (UITweener_o *)Master_object;
-            *((float *)Master_object + 34) = v51;
-            v58 = *(_DWORD *)(v4 + 32);
-            v59 = *(_QWORD *)(v4 + 24);
-            *((float *)Master_object + 14) = v48;
-            v60 = *((_QWORD *)Master_object + 9);
-            *((_DWORD *)Master_object + 37) = v58;
-            *(_QWORD *)((char *)Master_object + 140) = v59;
-            v61 = EventDelegate_Callback_TypeInfo;
-            v57->fields.method = 0;
-            v62 = (EventDelegate_Callback_o *)sub_21FFEBC(v61);
+            v50 = (UITweener_o *)Master_object;
+            *((float *)Master_object + 34) = v44;
+            v51 = *(_DWORD *)(v4 + 32);
+            v52 = *(_QWORD *)(v4 + 24);
+            *((float *)Master_object + 14) = v41;
+            v53 = *((_QWORD *)Master_object + 9);
+            *((_DWORD *)Master_object + 37) = v51;
+            *(_QWORD *)((char *)Master_object + 140) = v52;
+            v54 = EventDelegate_Callback_TypeInfo;
+            v50->fields.method = 0;
+            v55 = (EventDelegate_Callback_o *)sub_2213CCC(v54);
             EventDelegate_Callback___ctor(
-              v62,
+              v55,
               (Il2CppObject *)v4,
               Method_EventMapGimmickMoveManager___c__DisplayClass7_0__UpdateMapGimmickPosition_b__0__,
               0);
-            v63 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-            EventDelegate___ctor_56132624(v63, v62, 0);
-            if ( !v60 )
+            v56 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+            EventDelegate___ctor_56337280(v56, v55, 0);
+            if ( !v53 )
               goto LABEL_73;
-            sub_1FEBF38(v60, v63, Method_System_Collections_Generic_List_EventDelegate__Add__);
-            UITweener__PlayForward(v57, 0);
+            sub_1FFEDA8(v53, v56, Method_System_Collections_Generic_List_EventDelegate__Add__);
+            UITweener__PlayForward(v50, 0);
           }
         }
         else if ( valueType == 2 )
@@ -723,7 +716,7 @@ LABEL_73:
                     Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
                     if ( Master_object )
                     {
-                      v68 = Custom2dSplineMesh__GetPointAsWorldFlatten(
+                      v65 = Custom2dSplineMesh__GetPointAsWorldFlatten(
                               (Custom2dSplineMesh_o *)Master_object,
                               *((float *)Master_object + 17),
                               0);
@@ -731,7 +724,7 @@ LABEL_73:
                       {
                         v32 = *(UnityEngine_GameObject_o **)(*(_QWORD *)v13 + 24LL);
 LABEL_56:
-                        GameObjectExtensions__SetPosition(v32, v68, 0);
+                        GameObjectExtensions__SetPosition(v32, v65, 0);
                         return;
                       }
                     }
@@ -774,7 +767,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v10->fields._MapGimmickId_k__BackingField = mapGimmickId;
   v10->fields._MapGimmickObject_k__BackingField = mapGimmickObject;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v10->fields._MapGimmickObject_k__BackingField,
     (int32_t)mapGimmickObject,
     v11,
@@ -785,7 +778,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData___ctor(
     v16);
   v10->fields._MapGimmickPathMesh_k__BackingField = mapGimmickPathMesh;
   v10 = (EventMapGimmickMoveManager_MapGimmickMoveData_o *)((char *)v10 + 32);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10, (int32_t)mapGimmickPathMesh, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v10, (int32_t)mapGimmickPathMesh, v17, v18, v19, v20, v21, v22);
   LODWORD(v10->monitor) = moveTime;
 }
 
@@ -811,7 +804,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData__Clear(
   v8 = this;
   this->fields._MapGimmickId_k__BackingField = 0;
   this->fields._MapGimmickObject_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._MapGimmickObject_k__BackingField,
     0,
     v2,
@@ -822,7 +815,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData__Clear(
     v7);
   v8->fields._MapGimmickPathMesh_k__BackingField = 0;
   v8 = (EventMapGimmickMoveManager_MapGimmickMoveData_o *)((char *)v8 + 32);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, 0, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = 0;
 }
 
@@ -880,7 +873,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData__set_MapGimmickObject(
   bool v7; // w7
 
   this->fields._MapGimmickObject_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._MapGimmickObject_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -904,7 +897,7 @@ void EventMapGimmickMoveManager_MapGimmickMoveData__set_MapGimmickPathMesh(
   bool v7; // w7
 
   this->fields._MapGimmickPathMesh_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._MapGimmickPathMesh_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -941,6 +934,6 @@ void EventMapGimmickMoveManager___c__DisplayClass7_0___UpdateMapGimmickPosition_
 
   data = this->fields.data;
   if ( !data )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   GameObjectExtensions__SetPosition(data->fields._MapGimmickObject_k__BackingField, this->fields.endPos, 0);
 }

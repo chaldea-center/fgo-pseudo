@@ -1,13 +1,13 @@
 void ServantScriptAddEntity___ctor(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939109 & 1) == 0 )
+  if ( (byte_59712C8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
-    byte_5939109 = 1;
+    sub_2213A60(&Method_DataEntityBase_long___ctor__);
+    byte_59712C8 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3F0E560 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -28,8 +28,6 @@ UnityEngine_Vector2_o ServantScriptAddEntity__getOffset(
   int32_t *p_offsetYGrandBoard; // x11
   int32_t *p_offsetXEventShop; // x8
   int32_t *p_offsetYEventShop; // x9
-  float v9; // s0
-  float v10; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   p_offsetXEventReward = &this->fields.offsetXEventReward;
@@ -53,9 +51,7 @@ UnityEngine_Vector2_o ServantScriptAddEntity__getOffset(
     p_offsetYEventShop = p_offsetYGrandBoard;
     p_offsetXEventShop = p_offsetXGrandBoard;
   }
-  v9 = (float)*p_offsetXEventShop;
-  v10 = (float)*p_offsetYEventShop;
-  result.fields.y = v10;
-  result.fields.x = v9;
+  result.fields.x = (float)*p_offsetXEventShop;
+  result.fields.y = (float)*p_offsetYEventShop;
   return result;
 }

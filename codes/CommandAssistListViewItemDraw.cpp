@@ -37,22 +37,22 @@ void CommandAssistListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_5931D3D & 1) == 0 )
+  if ( (byte_5969EDD & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_8598/*"LEVEL_INFO"*/);
-    sub_21FFC50(&StringLiteral_5743/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5742/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
-    byte_5931D3D = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_8611/*"LEVEL_INFO"*/);
+    sub_2213A60(&StringLiteral_5755/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5754/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
+    byte_5969EDD = 1;
   }
   v5 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   IconImageId_k__BackingField = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, item, method);
-  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item )
     goto LABEL_19;
   v8 = Master_object;
@@ -82,33 +82,33 @@ void CommandAssistListViewItemDraw__UpdateUi(
   UILabel__set_text((UILabel_o *)Master_object, item->fields._Name_k__BackingField, 0);
   if ( !CurrentEntity || !MaxLevelEntity )
     goto LABEL_19;
-  v16 = (System_String_o **)&StringLiteral_5743/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
+  v16 = (System_String_o **)&StringLiteral_5755/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
   levelLabel = this->fields.levelLabel;
   if ( CurrentEntity->fields.lv != MaxLevelEntity->fields.lv )
-    v16 = (System_String_o **)&StringLiteral_5742/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
+    v16 = (System_String_o **)&StringLiteral_5754/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
   v18 = *v16;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7, v15);
   v19 = LocalizationManager__Get(v18, 0);
   lv = CurrentEntity->fields.lv;
-  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &lv);
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &lv);
   v29 = MaxLevelEntity->fields.lv;
-  v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v29);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format_75484576(v19, v20, v21, 0);
+  v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v29);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format_75697880(v19, v20, v21, 0);
   if ( !levelLabel )
     goto LABEL_19;
   UILabel__set_text(levelLabel, (System_String_o *)Master_object, 0);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8598/*"LEVEL_INFO"*/, 0);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8611/*"LEVEL_INFO"*/, 0);
   v28 = CurrentEntity->fields.lv;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v28);
+  v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v28);
   v26 = (Il2CppObject *)System_String__Format(v24, v25, 0);
   v27 = System_String__Format(Detail_k__BackingField, v26, 0);
   WrapControlText__textAdjust(detailLabel, v27, 16, 0, 0);
   Master_object = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_object )
 LABEL_19:
-    sub_21FFECC(Master_object, v7);
+    sub_2213CDC(Master_object, v7);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Master_object, !item->fields._IsLast_k__BackingField, 0);
 }

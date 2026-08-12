@@ -16,11 +16,11 @@ _QWORD *__fastcall CreateZStream(int a1, char a2, __int64 a3, __int64 a4)
     v10 = 4294967281LL;
   if ( !a1 )
   {
-    if ( (unsigned int)sub_2279C18(v8, (unsigned int)v10, "1.3.1-unity", 112) )
+    if ( (unsigned int)sub_228DA28(v8, (unsigned int)v10, "1.3.1-unity", 112) )
       goto LABEL_7;
 LABEL_10:
-    v9[8] = sub_2221FF4;
-    v9[9] = sub_2222000;
+    v9[8] = sub_2235E04;
+    v9[9] = sub_2235E10;
     v11 = calloc(1u, 0x28u);
     *v11 = v9;
     v11[2] = a3;
@@ -33,7 +33,7 @@ LABEL_10:
     v9[3] = v12;
     return v11;
   }
-  if ( !(unsigned int)sub_227BE6C(v8, 0xFFFFFFFFLL, 8, v10, 8, 0, "1.3.1-unity", 112) )
+  if ( !(unsigned int)sub_228FC7C(v8, 0xFFFFFFFFLL, 8, v10, 8, 0, "1.3.1-unity", 112) )
     goto LABEL_10;
 LABEL_7:
   free(v9);

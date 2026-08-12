@@ -12,14 +12,14 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5937559 & 1) == 0 )
+  if ( (byte_596F6BB & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_11269/*"QP_UNIT"*/);
-    sub_21FFC50(&StringLiteral_8886/*"MANA_UNIT"*/);
-    sub_21FFC50(&StringLiteral_12895/*"STONE_UNIT"*/);
-    sub_21FFC50(&StringLiteral_6829/*"FRIEND_POINT_UNIT"*/);
-    byte_5937559 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_11289/*"QP_UNIT"*/);
+    sub_2213A60(&StringLiteral_8899/*"MANA_UNIT"*/);
+    sub_2213A60(&StringLiteral_12921/*"STONE_UNIT"*/);
+    sub_2213A60(&StringLiteral_6841/*"FRIEND_POINT_UNIT"*/);
+    byte_596F6BB = 1;
   }
   if ( type <= 13 )
   {
@@ -29,7 +29,7 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
       {
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
-        v5 = &StringLiteral_8886/*"MANA_UNIT"*/;
+        v5 = &StringLiteral_8899/*"MANA_UNIT"*/;
       }
       else
       {
@@ -37,19 +37,19 @@ System_String_o *ItemType__GetCountText(int32_t type, int32_t num, const MethodI
           goto LABEL_19;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
-        v5 = &StringLiteral_6829/*"FRIEND_POINT_UNIT"*/;
+        v5 = &StringLiteral_6841/*"FRIEND_POINT_UNIT"*/;
       }
 LABEL_13:
       v6 = LocalizationManager__Get((System_String_o *)*v5, 0);
       v9 = num;
-      v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9);
+      v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v9);
       return System_String__Format(v6, v7, 0);
     }
     if ( type == 1 )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
-      v5 = &StringLiteral_11269/*"QP_UNIT"*/;
+      v5 = &StringLiteral_11289/*"QP_UNIT"*/;
       goto LABEL_13;
     }
     if ( type != 2 )
@@ -57,7 +57,7 @@ LABEL_13:
 LABEL_10:
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&num, method);
-    v5 = &StringLiteral_12895/*"STONE_UNIT"*/;
+    v5 = &StringLiteral_12921/*"STONE_UNIT"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
@@ -90,15 +90,15 @@ System_String_o *ItemType__get_CrossOperatorString(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x2
 
-  if ( (byte_5937557 & 1) == 0 )
+  if ( (byte_596F6B9 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3837/*"COMMON_COUNT_OPERATOR_CROSS"*/);
-    byte_5937557 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3842/*"COMMON_COUNT_OPERATOR_CROSS"*/);
+    byte_596F6B9 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v1, v2);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3837/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3842/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0);
 }
 
 
@@ -107,13 +107,13 @@ System_String_o *ItemType__get_PlusOperatorString(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x2
 
-  if ( (byte_5937558 & 1) == 0 )
+  if ( (byte_596F6BA & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3838/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_5937558 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3843/*"COMMON_COUNT_OPERATOR_PLUS"*/);
+    byte_596F6BA = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v1, v2);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3838/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3843/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
 }

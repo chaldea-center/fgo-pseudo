@@ -12,20 +12,20 @@ UnityEngine_Texture2D_o *UIAlphaMaskTextureRender__GetAlphaTexture(
   System_String_o *LastName; // x0
   System_String_o *v5; // x1
 
-  if ( (byte_5939ECD & 1) == 0 )
+  if ( (byte_59720A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    this = (UIAlphaMaskTextureRender_o *)sub_21FFC50(&StringLiteral_17270/*"a"*/);
-    byte_5939ECD = 1;
+    sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    this = (UIAlphaMaskTextureRender_o *)sub_2213A60(&StringLiteral_17306/*"a"*/);
+    byte_59720A0 = 1;
   }
   if ( !assetData )
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   LastName = AssetData__get_LastName(assetData, 0);
-  v5 = System_String__Concat_75438412(LastName, (System_String_o *)StringLiteral_17270/*"a"*/, 0);
-  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__58323140(
+  v5 = System_String__Concat_75651716(LastName, (System_String_o *)StringLiteral_17306/*"a"*/, 0);
+  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__58532980(
                                       assetData,
                                       v5,
-                                      (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+                                      (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360);
 }
 
 
@@ -36,16 +36,16 @@ UnityEngine_Texture2D_o *UIAlphaMaskTextureRender__GetTexture(
 {
   System_String_o *LastName; // x1
 
-  if ( (byte_5939ECC & 1) == 0 )
+  if ( (byte_597209F & 1) == 0 )
   {
-    this = (UIAlphaMaskTextureRender_o *)sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    byte_5939ECC = 1;
+    this = (UIAlphaMaskTextureRender_o *)sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    byte_597209F = 1;
   }
   if ( !assetData )
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   LastName = AssetData__get_LastName(assetData, 0);
-  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__58323140(
+  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__58532980(
                                       assetData,
                                       LastName,
-                                      (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+                                      (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360);
 }

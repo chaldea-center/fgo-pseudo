@@ -22,11 +22,11 @@ void CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_5937933 & 1) == 0 )
+  if ( (byte_596FA96 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_long___);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5937933 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_long___);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_596FA96 = 1;
   }
   CharaGraphServantListViewItemBase___ctor(
     (CharaGraphServantListViewItemBase_o *)this,
@@ -43,14 +43,14 @@ void CharaGraphEquipListViewItem___ctor(
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v12, v13);
   v24 = v25;
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v24, 0);
+  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v24, 0);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_10:
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   v16 = v11;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(this->fields._UserServantEntity_k__BackingField, 1, 0);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)EquipCategoryIdList,
     v18,
@@ -62,7 +62,7 @@ LABEL_10:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v16,
-         (const MethodInfo_3843378 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_3876840 *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -89,7 +89,7 @@ void CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   bool v7; // w7
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

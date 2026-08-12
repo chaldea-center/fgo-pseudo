@@ -22,7 +22,7 @@ void ScriptSelectListViewItemDraw__EndMove(ScriptSelectListViewItemDraw_o *this,
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -32,19 +32,19 @@ void ScriptSelectListViewItemDraw__EndSelectDecideMove1(ScriptSelectListViewItem
 {
   ScriptLineMessage_o *effectMessageManager; // x0
 
-  if ( (byte_593A722 & 1) == 0 )
+  if ( (byte_5972901 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6273/*"EndSelectDecideMove2"*/);
-    byte_593A722 = 1;
+    sub_2213A60(&StringLiteral_6285/*"EndSelectDecideMove2"*/);
+    byte_5972901 = 1;
   }
   if ( this->fields.message )
   {
     effectMessageManager = this->fields.effectMessageManager;
     if ( !effectMessageManager )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     ScriptLineMessage__Fadeout(effectMessageManager, 0.2, 0);
   }
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6273/*"EndSelectDecideMove2"*/, 0.5, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6285/*"EndSelectDecideMove2"*/, 0.5, 0);
 }
 
 
@@ -54,10 +54,10 @@ void ScriptSelectListViewItemDraw__EndSelectDecideMove2(ScriptSelectListViewItem
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Component_o *v5; // x8
 
-  if ( (byte_593A723 & 1) == 0 )
+  if ( (byte_5972902 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6252/*"EndMove"*/);
-    byte_593A723 = 1;
+    sub_2213A60(&StringLiteral_6264/*"EndMove"*/);
+    byte_5972902 = 1;
   }
   baseSprite = (UnityEngine_Component_o *)this->fields.baseSprite;
   if ( !baseSprite
@@ -68,10 +68,10 @@ void ScriptSelectListViewItemDraw__EndSelectDecideMove2(ScriptSelectListViewItem
         LODWORD(v5[1].monitor) = 6,
         !baseSprite) )
   {
-    sub_21FFECC(baseSprite, method);
+    sub_2213CDC(baseSprite, method);
   }
   UIMessageButton__Fadeout((UIMessageButton_o *)baseSprite, 0.6, 0);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6252/*"EndMove"*/, 0.6, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6264/*"EndMove"*/, 0.6, 0);
 }
 
 
@@ -90,14 +90,14 @@ void ScriptSelectListViewItemDraw__NoSelectDecide(
   UnityEngine_GameObject_o *gameObject; // x0
   UIMessageButton_o *v13; // x8
 
-  if ( (byte_593A720 & 1) == 0 )
+  if ( (byte_59728FF & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&StringLiteral_6252/*"EndMove"*/);
-    byte_593A720 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&StringLiteral_6264/*"EndMove"*/);
+    byte_59728FF = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -115,7 +115,7 @@ void ScriptSelectListViewItemDraw__NoSelectDecide(
     goto LABEL_10;
   baseButton = (UIMessageButton_o *)UnityEngine_Component__GetComponent_object_(
                                       (UnityEngine_Component_o *)baseButton,
-                                      (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                      (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !baseButton
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, 0, 0),
         (baseButton = (UIMessageButton_o *)this->fields.baseSprite) == 0)
@@ -124,10 +124,10 @@ void ScriptSelectListViewItemDraw__NoSelectDecide(
     || (v13 = baseButton, baseButton = this->fields.baseButton, LODWORD(v13->fields.tweenTarget) = 6, !baseButton) )
   {
 LABEL_10:
-    sub_21FFECC(baseButton, v10);
+    sub_2213CDC(baseButton, v10);
   }
   UIMessageButton__Fadeout(baseButton, 0.5, 0);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6252/*"EndMove"*/, 0.5, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6264/*"EndMove"*/, 0.5, 0);
 }
 
 
@@ -151,17 +151,17 @@ void ScriptSelectListViewItemDraw__SelectDecide(
   System_String_o *message; // x21
   System_String_o *v18; // x2
 
-  if ( (byte_593A721 & 1) == 0 )
+  if ( (byte_5972900 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&ScriptMessageLabel_TypeInfo);
-    sub_21FFC50(&StringLiteral_6272/*"EndSelectDecideMove1"*/);
-    sub_21FFC50(&StringLiteral_11987/*"SCRIPT_ACTION_SELECT_COLOR"*/);
-    byte_593A721 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&ScriptMessageLabel_TypeInfo);
+    sub_2213A60(&StringLiteral_6284/*"EndSelectDecideMove1"*/);
+    sub_2213A60(&StringLiteral_12010/*"SCRIPT_ACTION_SELECT_COLOR"*/);
+    byte_5972900 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -179,7 +179,7 @@ void ScriptSelectListViewItemDraw__SelectDecide(
     goto LABEL_20;
   baseButton = (UIMessageButton_o *)UnityEngine_Component__GetComponent_object_(
                                       (UnityEngine_Component_o *)baseButton,
-                                      (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                      (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !baseButton )
     goto LABEL_20;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, 0, 0);
@@ -187,7 +187,7 @@ void ScriptSelectListViewItemDraw__SelectDecide(
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11987/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12010/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0);
     effectMessageManager = this->fields.effectMessageManager;
     v16 = v13;
     message = this->fields.message;
@@ -224,10 +224,10 @@ void ScriptSelectListViewItemDraw__SelectDecide(
       }
     }
 LABEL_20:
-    sub_21FFECC(baseButton, v10);
+    sub_2213CDC(baseButton, v10);
   }
 LABEL_19:
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6272/*"EndSelectDecideMove1"*/, 0.1, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6284/*"EndSelectDecideMove1"*/, 0.1, 0);
 }
 
 
@@ -269,12 +269,12 @@ void ScriptSelectListViewItemDraw__SetItem(
   bool v35; // w6
   bool v36; // w7
 
-  if ( (byte_593A71F & 1) == 0 )
+  if ( (byte_59728FE & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&ScriptMessageLabel_TypeInfo);
-    sub_21FFC50(&StringLiteral_11987/*"SCRIPT_ACTION_SELECT_COLOR"*/);
-    byte_593A71F = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&ScriptMessageLabel_TypeInfo);
+    sub_2213A60(&StringLiteral_12010/*"SCRIPT_ACTION_SELECT_COLOR"*/);
+    byte_59728FE = 1;
   }
   if ( !item )
   {
@@ -287,9 +287,9 @@ void ScriptSelectListViewItemDraw__SetItem(
       {
         ScriptLineMessage__DeleteLabels(messageManager, 0);
         this->fields.message = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.message, 0, v25, v26, v27, v28, v29, v30);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.message, 0, v25, v26, v27, v28, v29, v30);
         this->fields.font = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.font, 0, v31, v32, v33, v34, v35, v36);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.font, 0, v31, v32, v33, v34, v35, v36);
         return;
       }
     }
@@ -297,7 +297,7 @@ void ScriptSelectListViewItemDraw__SetItem(
   }
   message = item->fields.message;
   this->fields.message = message;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.message,
     (int32_t)message,
     *(System_String_o **)&mode,
@@ -308,14 +308,14 @@ void ScriptSelectListViewItemDraw__SetItem(
     v7);
   fontType = item->fields.fontType;
   this->fields.font = fontType;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.font, (int32_t)fontType, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.font, (int32_t)fontType, v13, v14, v15, v16, v17, v18);
   if ( mode )
   {
     if ( this->fields.message )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item);
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_11987/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_12010/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0);
       v21 = this->fields.messageManager;
       v22 = this->fields.message;
       if ( !*(&ScriptMessageLabel_TypeInfo->_2.cctor_finished + 1) )
@@ -358,6 +358,6 @@ void ScriptSelectListViewItemDraw__SetItem(
       return;
     }
 LABEL_25:
-    sub_21FFECC(messageManager, item);
+    sub_2213CDC(messageManager, item);
   }
 }

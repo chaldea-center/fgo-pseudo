@@ -12,10 +12,10 @@ ScriptEncryptEntity_o *ScriptEncryptSettings__GetEntity(
   ScriptEncryptEntity_o *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593A64D & 1) == 0 )
+  if ( (byte_597282C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
-    byte_593A64D = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
+    byte_597282C = 1;
   }
   result = (ScriptEncryptEntity_o *)this->fields.lookup;
   value = 0;
@@ -25,7 +25,7 @@ ScriptEncryptEntity_o *ScriptEncryptSettings__GetEntity(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)scriptName,
            &value,
-           (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__) )
+           (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__) )
     {
       return (ScriptEncryptEntity_o *)value;
     }
@@ -49,11 +49,11 @@ System_String_o *ScriptEncryptSettings__GetKey(
   System_String_o *monitor; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593A64C & 1) == 0 )
+  if ( (byte_597282B & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
-    byte_593A64C = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
+    byte_597282B = 1;
   }
   result = (System_String_o *)this->fields.lookup;
   value = 0;
@@ -63,11 +63,11 @@ System_String_o *ScriptEncryptSettings__GetKey(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)scriptName,
            &value,
-           (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
+           (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TryGetValue__);
     if ( v6 )
     {
       if ( !value )
-        sub_21FFECC(v6, v7);
+        sub_2213CDC(v6, v7);
       monitor = (System_String_o *)value[1].monitor;
       if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v7);
@@ -99,22 +99,22 @@ void ScriptEncryptSettings__OnEnable(ScriptEncryptSettings_o *this, const Method
   __int64 v15; // x21
   __int64 v16; // x2
 
-  if ( (byte_593A64B & 1) == 0 )
+  if ( (byte_597282A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TypeInfo);
-    byte_593A64B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TypeInfo);
+    byte_597282A = 1;
   }
   if ( this->fields.settings )
   {
-    v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TypeInfo);
+    v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v3,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity___ctor__);
     this->fields.lookup = (struct System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__o *)v3;
     p_lookup = &this->fields.lookup;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_lookup, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_lookup, (int32_t)v3, v5, v6, v7, v8, v9, v10);
     v13 = (__int64)*(p_lookup - 1);
     if ( !v13 )
       goto LABEL_12;
@@ -125,7 +125,7 @@ void ScriptEncryptSettings__OnEnable(ScriptEncryptSettings_o *this, const Method
       while ( 1 )
       {
         if ( (unsigned int)v15 >= v14 )
-          sub_21FFED4(v11);
+          sub_2213CE4(v11);
         v16 = *(_QWORD *)(v13 + 32 + 8 * v15);
         if ( !v16 )
           break;
@@ -136,13 +136,13 @@ void ScriptEncryptSettings__OnEnable(ScriptEncryptSettings_o *this, const Method
           v11,
           *(Il2CppObject **)(v16 + 16),
           (Il2CppObject *)v16,
-          (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__Add__);
+          (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__ScriptEncryptEntity__Add__);
         v14 = *(_DWORD *)(v13 + 24);
         if ( (int)++v15 >= v14 )
           return;
       }
 LABEL_12:
-      sub_21FFECC(v11, v12);
+      sub_2213CDC(v11, v12);
     }
   }
 }

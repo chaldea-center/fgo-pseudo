@@ -16,10 +16,10 @@ void UISliderWithButton__OnClickMinusButton(UISliderWithButton_o *this, const Me
   float v8; // s8
   float v9; // s0
 
-  if ( (byte_593A004 & 1) == 0 )
+  if ( (byte_59721D8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UISliderWithButton_OnClickMinusButton__);
-    byte_593A004 = 1;
+    sub_2213A60(&Method_UISliderWithButton_OnClickMinusButton__);
+    byte_59721D8 = 1;
   }
   if ( this->fields.isTouchEnable )
   {
@@ -27,8 +27,8 @@ void UISliderWithButton__OnClickMinusButton(UISliderWithButton_o *this, const Me
     {
       v5 = Method_UISliderWithButton_OnClickMinusButton__;
       if ( (*((_BYTE *)Method_UISliderWithButton_OnClickMinusButton__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_21FFC68(Method_UISliderWithButton_OnClickMinusButton__);
-      v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+        v5 = (_QWORD *)sub_2213A78(Method_UISliderWithButton_OnClickMinusButton__);
+      v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       v7 = (float)(this->fields.maxStep - this->fields.minStep);
       this->fields.valueChange = -1;
@@ -44,8 +44,8 @@ void UISliderWithButton__OnClickMinusButton(UISliderWithButton_o *this, const Me
   {
     v3 = Method_UISliderWithButton_OnClickMinusButton__;
     if ( (*((_BYTE *)Method_UISliderWithButton_OnClickMinusButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_UISliderWithButton_OnClickMinusButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_UISliderWithButton_OnClickMinusButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 2, 0, 0);
   }
 }
@@ -62,10 +62,10 @@ void UISliderWithButton__OnClickPlusButton(UISliderWithButton_o *this, const Met
   float v9; // s8
   float v10; // s0
 
-  if ( (byte_593A003 & 1) == 0 )
+  if ( (byte_59721D7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UISliderWithButton_OnClickPlusButton__);
-    byte_593A003 = 1;
+    sub_2213A60(&Method_UISliderWithButton_OnClickPlusButton__);
+    byte_59721D7 = 1;
   }
   if ( this->fields.isTouchEnable )
   {
@@ -74,8 +74,8 @@ void UISliderWithButton__OnClickPlusButton(UISliderWithButton_o *this, const Met
     {
       v6 = Method_UISliderWithButton_OnClickPlusButton__;
       if ( (*((_BYTE *)Method_UISliderWithButton_OnClickPlusButton__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_21FFC68(Method_UISliderWithButton_OnClickPlusButton__);
-      v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v6, v6[4]);
+        v6 = (_QWORD *)sub_2213A78(Method_UISliderWithButton_OnClickPlusButton__);
+      v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
       v8 = (float)(this->fields.maxStep - this->fields.minStep);
       this->fields.valueChange = 1;
@@ -91,8 +91,8 @@ void UISliderWithButton__OnClickPlusButton(UISliderWithButton_o *this, const Met
   {
     v4 = Method_UISliderWithButton_OnClickPlusButton__;
     if ( (*((_BYTE *)Method_UISliderWithButton_OnClickPlusButton__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_21FFC68(Method_UISliderWithButton_OnClickPlusButton__);
-    v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, v4[4]);
+      v4 = (_QWORD *)sub_2213A78(Method_UISliderWithButton_OnClickPlusButton__);
+    v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0);
   }
 }
@@ -114,10 +114,10 @@ void UISliderWithButton__OnDragBackground(
   struct UnityEngine_Camera_o *currentCamera; // x1
   float v13; // s0
 
-  if ( (byte_593A000 & 1) == 0 )
+  if ( (byte_59721D4 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593A000 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721D4 = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -135,7 +135,7 @@ void UISliderWithButton__OnDragBackground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)method,
@@ -167,10 +167,10 @@ void UISliderWithButton__OnDragForeground(
   float mOffset; // s8
   float v14; // s0
 
-  if ( (byte_593A002 & 1) == 0 )
+  if ( (byte_59721D6 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593A002 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721D6 = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -188,7 +188,7 @@ void UISliderWithButton__OnDragForeground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)method,
@@ -285,10 +285,10 @@ void UISliderWithButton__OnPressBackground(
   float v13; // s0
   struct UIProgressBar_OnDragFinished_o *onDragFinished; // x8
 
-  if ( (byte_5939FFF & 1) == 0 )
+  if ( (byte_59721D3 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FFF = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721D3 = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -306,7 +306,7 @@ void UISliderWithButton__OnPressBackground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)isPressed,
@@ -329,7 +329,6 @@ void UISliderWithButton__OnPressBackground(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UISliderWithButton__OnPressForeground(
         UISliderWithButton_o *this,
         UnityEngine_GameObject_o *go,
@@ -338,37 +337,35 @@ void UISliderWithButton__OnPressForeground(
 {
   UICamera_c *v6; // x0
   UnityEngine_Transform_o *thumb; // x0
-  float v8; // s0 OVERLAPPED
-  float v9; // s1
-  float v10; // s2
-  __int64 v11; // x1
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  UICamera_c *v18; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  UICamera_c *v16; // x0
   struct UnityEngine_Camera_o *currentCamera; // x1
-  __int64 v20; // x1
+  __int64 v18; // x1
   UnityEngine_Object_o *mFG; // x20
-  bool v22; // w0
-  float v23; // s0
-  __int64 v24; // x1
+  bool v20; // w0
+  float v21; // s0
+  __int64 v22; // x1
   float value; // s0
-  UICamera_c *v26; // x0
-  float v27; // s8
+  UICamera_c *v24; // x0
+  float v25; // s8
   struct UIProgressBar_OnDragFinished_o *onDragFinished; // x8
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593A001 & 1) == 0 )
+  if ( (byte_59721D5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593A001 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721D5 = 1;
   }
   v6 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -383,72 +380,72 @@ void UISliderWithButton__OnPressForeground(
     {
       if ( thumb )
       {
-        v29.fields.x = 2.0;
-        v29.fields.y = 2.0;
-        v29.fields.z = 1.0;
-        UnityEngine_Transform__set_localScale(thumb, v29, 0);
+        v27.fields.x = 2.0;
+        v27.fields.y = 2.0;
+        v27.fields.z = 1.0;
+        UnityEngine_Transform__set_localScale(thumb, v27, 0);
         thumb = (UnityEngine_Transform_o *)this->fields.mBG;
         if ( thumb )
         {
           thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
           if ( thumb )
           {
-            v30.fields.x = 1.0;
-            v30.fields.y = 2.0;
-            v30.fields.z = 1.0;
-            UnityEngine_Transform__set_localScale(thumb, v30, 0);
+            v28.fields.x = 1.0;
+            v28.fields.y = 2.0;
+            v28.fields.z = 1.0;
+            UnityEngine_Transform__set_localScale(thumb, v28, 0);
             thumb = (UnityEngine_Transform_o *)this->fields.mFG;
             if ( thumb )
             {
               thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
               if ( thumb )
               {
-                v8 = 1.0;
-                v9 = 2.0;
+                v29.fields.x = 1.0;
+                v29.fields.y = 2.0;
 LABEL_20:
-                v10 = 1.0;
-                UnityEngine_Transform__set_localScale(thumb, *(UnityEngine_Vector3_o *)&v8, 0);
-                v18 = UICamera_TypeInfo;
+                v29.fields.z = 1.0;
+                UnityEngine_Transform__set_localScale(thumb, v29, 0);
+                v16 = UICamera_TypeInfo;
                 if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
                 {
-                  j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v11);
-                  v18 = UICamera_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v9);
+                  v16 = UICamera_TypeInfo;
                 }
-                currentCamera = v18->static_fields->currentCamera;
+                currentCamera = v16->static_fields->currentCamera;
                 this->fields.mCam = currentCamera;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
                   (int32_t)currentCamera,
+                  v10,
+                  v11,
                   v12,
                   v13,
                   v14,
-                  v15,
-                  v16,
-                  v17);
+                  v15);
                 if ( isPressed )
                 {
                   mFG = (UnityEngine_Object_o *)this->fields.mFG;
                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
-                  v22 = UnityEngine_Object__op_Equality(mFG, 0, 0);
-                  v23 = 0.0;
-                  if ( !v22 )
+                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
+                  v20 = UnityEngine_Object__op_Equality(mFG, 0, 0);
+                  v21 = 0.0;
+                  if ( !v20 )
                   {
                     value = UIProgressBar__get_value((UIProgressBar_o *)this, 0);
-                    v26 = UICamera_TypeInfo;
-                    v27 = value;
+                    v24 = UICamera_TypeInfo;
+                    v25 = value;
                     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
                     {
-                      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v24);
-                      v26 = UICamera_TypeInfo;
+                      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v22);
+                      v24 = UICamera_TypeInfo;
                     }
-                    v23 = v27
+                    v21 = v25
                         - UIProgressBar__ScreenToValue(
                             (UIProgressBar_o *)this,
-                            v26->static_fields->lastTouchPosition,
+                            v24->static_fields->lastTouchPosition,
                             0);
                   }
-                  this->fields.mOffset = v23;
+                  this->fields.mOffset = v21;
                 }
                 else
                 {
@@ -467,35 +464,35 @@ LABEL_20:
     }
     else if ( thumb )
     {
-      v31.fields.x = 1.0;
-      v31.fields.y = 1.0;
-      v31.fields.z = 1.0;
-      UnityEngine_Transform__set_localScale(thumb, v31, 0);
+      v30.fields.x = 1.0;
+      v30.fields.y = 1.0;
+      v30.fields.z = 1.0;
+      UnityEngine_Transform__set_localScale(thumb, v30, 0);
       thumb = (UnityEngine_Transform_o *)this->fields.mBG;
       if ( thumb )
       {
         thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
         if ( thumb )
         {
-          v32.fields.x = 1.0;
-          v32.fields.y = 1.0;
-          v32.fields.z = 1.0;
-          UnityEngine_Transform__set_localScale(thumb, v32, 0);
+          v31.fields.x = 1.0;
+          v31.fields.y = 1.0;
+          v31.fields.z = 1.0;
+          UnityEngine_Transform__set_localScale(thumb, v31, 0);
           thumb = (UnityEngine_Transform_o *)this->fields.mFG;
           if ( thumb )
           {
             thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
             if ( thumb )
             {
-              v8 = 1.0;
-              v9 = 1.0;
+              v29.fields.x = 1.0;
+              v29.fields.y = 1.0;
               goto LABEL_20;
             }
           }
         }
       }
     }
-    sub_21FFECC(thumb, go);
+    sub_2213CDC(thumb, go);
   }
 }
 
@@ -562,18 +559,18 @@ void UISliderWithButton__OnStart(UISliderWithButton_o *this, const MethodInfo *m
   bool v60; // w6
   bool v61; // w7
 
-  if ( (byte_5939FFE & 1) == 0 )
+  if ( (byte_59721D2 & 1) == 0 )
   {
-    sub_21FFC50(&UIEventListener_BoolDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UISliderWithButton_OnDragBackground__);
-    sub_21FFC50(&Method_UISliderWithButton_OnDragForeground__);
-    sub_21FFC50(&Method_UISliderWithButton_OnPressBackground__);
-    sub_21FFC50(&Method_UISliderWithButton_OnPressForeground__);
-    sub_21FFC50(&UIEventListener_VectorDelegate_TypeInfo);
-    byte_5939FFE = 1;
+    sub_2213A60(&UIEventListener_BoolDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UISliderWithButton_OnDragBackground__);
+    sub_2213A60(&Method_UISliderWithButton_OnDragForeground__);
+    sub_2213A60(&Method_UISliderWithButton_OnPressBackground__);
+    sub_2213A60(&Method_UISliderWithButton_OnPressForeground__);
+    sub_2213A60(&UIEventListener_VectorDelegate_TypeInfo);
+    byte_59721D2 = 1;
   }
   mBG = (UnityEngine_Object_o *)this->fields.mBG;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -587,7 +584,7 @@ void UISliderWithButton__OnStart(UISliderWithButton_o *this, const MethodInfo *m
       goto LABEL_58;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v6,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -597,7 +594,7 @@ void UISliderWithButton__OnStart(UISliderWithButton_o *this, const MethodInfo *m
       goto LABEL_58;
     v10 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0);
@@ -614,11 +611,11 @@ LABEL_14:
   v6 = (UnityEngine_Component_o *)UIEventListener__Get(gameObject, 0);
   if ( !v6 )
 LABEL_58:
-    sub_21FFECC(v6, v4);
+    sub_2213CDC(v6, v4);
   v13 = v6;
   v14 = (MissionNaviTransitionBoardItem_o *)&v6[3];
   klass = (System_Delegate_o *)v6[3].klass;
-  v16 = (UIEventListener_BoolDelegate_o *)sub_21FFEBC(UIEventListener_BoolDelegate_TypeInfo);
+  v16 = (UIEventListener_BoolDelegate_o *)sub_2213CCC(UIEventListener_BoolDelegate_TypeInfo);
   UIEventListener_BoolDelegate___ctor(v16, (Il2CppObject *)this, Method_UISliderWithButton_OnPressBackground__, 0);
   v17 = System_Delegate__Combine(klass, (System_Delegate_o *)v16, 0);
   v24 = v17;
@@ -635,10 +632,10 @@ LABEL_58:
   {
     v14->klass = 0;
   }
-  sub_21FFBF4(v14, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_2213A04(v14, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   monitor = (System_Delegate_o *)v13[4].monitor;
   v13 = (UnityEngine_Component_o *)((char *)v13 + 104);
-  v27 = (UIEventListener_VectorDelegate_o *)sub_21FFEBC(UIEventListener_VectorDelegate_TypeInfo);
+  v27 = (UIEventListener_VectorDelegate_o *)sub_2213CCC(UIEventListener_VectorDelegate_TypeInfo);
   UIEventListener_VectorDelegate___ctor(v27, (Il2CppObject *)this, Method_UISliderWithButton_OnDragBackground__, 0);
   v28 = System_Delegate__Combine(monitor, (System_Delegate_o *)v27, 0);
   v24 = v28;
@@ -655,7 +652,7 @@ LABEL_58:
   {
     v13->klass = 0;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v28, v18, v29, v30, v31, v32, v33);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v28, v18, v29, v30, v31, v32, v33);
   thumb = (UnityEngine_Object_o *)this->fields.thumb;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34);
@@ -666,7 +663,7 @@ LABEL_58:
       goto LABEL_58;
     v37 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v37, 0, 0) )
@@ -676,7 +673,7 @@ LABEL_58:
       goto LABEL_58;
     v39 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v39, 0, 0) )
@@ -707,7 +704,7 @@ LABEL_44:
             v13 = v6;
             v45 = (MissionNaviTransitionBoardItem_o *)&v6[3];
             v46 = (System_Delegate_o *)v6[3].klass;
-            v47 = (UIEventListener_BoolDelegate_o *)sub_21FFEBC(UIEventListener_BoolDelegate_TypeInfo);
+            v47 = (UIEventListener_BoolDelegate_o *)sub_2213CCC(UIEventListener_BoolDelegate_TypeInfo);
             UIEventListener_BoolDelegate___ctor(
               v47,
               (Il2CppObject *)this,
@@ -728,10 +725,10 @@ LABEL_44:
             {
               v45->klass = 0;
             }
-            sub_21FFBF4(v45, (int32_t)v48, v18, v49, v50, v51, v52, v53);
+            sub_2213A04(v45, (int32_t)v48, v18, v49, v50, v51, v52, v53);
             v54 = (System_Delegate_o *)v13[4].monitor;
             v13 = (UnityEngine_Component_o *)((char *)v13 + 104);
-            v55 = (UIEventListener_VectorDelegate_o *)sub_21FFEBC(UIEventListener_VectorDelegate_TypeInfo);
+            v55 = (UIEventListener_VectorDelegate_o *)sub_2213CCC(UIEventListener_VectorDelegate_TypeInfo);
             UIEventListener_VectorDelegate___ctor(
               v55,
               (Il2CppObject *)this,
@@ -744,7 +741,7 @@ LABEL_44:
 LABEL_56:
               v13->klass = 0;
 LABEL_57:
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v24, v18, v57, v58, v59, v60, v61);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v24, v18, v57, v58, v59, v60, v61);
               return;
             }
             v25 = (System_Delegate_c *)UIEventListener_VectorDelegate_TypeInfo;
@@ -755,7 +752,7 @@ LABEL_57:
                 goto LABEL_57;
             }
 LABEL_55:
-            sub_220024C(v24, v25, v18);
+            sub_221405C(v24, v25, v18);
             goto LABEL_56;
           }
         }
@@ -780,10 +777,10 @@ void UISliderWithButton__SetGray(UISliderWithButton_o *this, const MethodInfo *m
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593A006 & 1) == 0 )
+  if ( (byte_59721DA & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    byte_593A006 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    byte_59721DA = 1;
   }
   plusButton = (UnityEngine_Component_o *)this->fields.plusButton;
   this->fields.isTouchEnable = 0;
@@ -807,7 +804,7 @@ void UISliderWithButton__SetGray(UISliderWithButton_o *this, const MethodInfo *m
     goto LABEL_25;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                             plusButton,
-                                            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !plusButton )
     goto LABEL_25;
   v7.fields.r = 0.5;
@@ -864,10 +861,10 @@ void UISliderWithButton__SetGray(UISliderWithButton_o *this, const MethodInfo *m
   v13.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)plusButton, v13, 0);
   thumb = this->fields.thumb;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !thumb )
     goto LABEL_25;
@@ -877,10 +874,10 @@ void UISliderWithButton__SetGray(UISliderWithButton_o *this, const MethodInfo *m
     goto LABEL_25;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v5 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v5 )
     goto LABEL_25;
@@ -890,14 +887,14 @@ void UISliderWithButton__SetGray(UISliderWithButton_o *this, const MethodInfo *m
     goto LABEL_25;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v6 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v6 )
 LABEL_25:
-    sub_21FFECC(plusButton, method);
+    sub_2213CDC(plusButton, method);
   UnityEngine_Transform__set_localScale(v6, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
 }
 
@@ -934,11 +931,11 @@ void UISliderWithButton__Upgrade(UISliderWithButton_o *this, const MethodInfo *m
   int32_t direction; // w9
   int v16; // w11
 
-  if ( (byte_5939FFD & 1) == 0 )
+  if ( (byte_59721D1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FFD = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721D1 = 1;
   }
   if ( this->fields.direction != 2 )
   {
@@ -951,12 +948,12 @@ void UISliderWithButton__Upgrade(UISliderWithButton_o *this, const MethodInfo *m
     {
       v6 = (UnityEngine_Component_o *)this->fields.foreground;
       if ( !v6 )
-        sub_21FFECC(0, v5);
+        sub_2213CDC(0, v5);
       Component_object = UnityEngine_Component__GetComponent_object_(
                            v6,
-                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.mFG = (struct UIWidget_o *)Component_object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mFG,
         (int32_t)Component_object,
         v8,
@@ -1116,10 +1113,10 @@ void UISliderWithButton__grayMode(UISliderWithButton_o *this, const MethodInfo *
   v24.fields.a = 1.0;
   plusButton = (UnityEngine_Component_o *)TweenColor__Begin(v12, 0.5, v24, 0);
   thumb = this->fields.thumb;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !thumb )
     goto LABEL_24;
@@ -1129,10 +1126,10 @@ void UISliderWithButton__grayMode(UISliderWithButton_o *this, const MethodInfo *
     goto LABEL_24;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v14 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v14 )
     goto LABEL_24;
@@ -1142,14 +1139,14 @@ void UISliderWithButton__grayMode(UISliderWithButton_o *this, const MethodInfo *
     goto LABEL_24;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v15 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v15 )
 LABEL_24:
-    sub_21FFECC(plusButton, method);
+    sub_2213CDC(plusButton, method);
   UnityEngine_Transform__set_localScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
 }
 
@@ -1173,22 +1170,22 @@ void UISliderWithButton__init(
   UILabel_o *maxValue; // x20
   int64_t maxStep; // x21
 
-  if ( (byte_5939FFC & 1) == 0 )
+  if ( (byte_59721D0 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12540/*"SHOP_BULK_WINDOW_MIN_LABEL"*/);
-    sub_21FFC50(&StringLiteral_12539/*"SHOP_BULK_WINDOW_MAX_LABEL"*/);
-    byte_5939FFC = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12566/*"SHOP_BULK_WINDOW_MIN_LABEL"*/);
+    sub_2213A60(&StringLiteral_12565/*"SHOP_BULK_WINDOW_MAX_LABEL"*/);
+    byte_59721D0 = 1;
   }
   minLabel = this->fields.minLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&max);
-  NumberFormatLong = LocalizationManager__Get((System_String_o *)StringLiteral_12540/*"SHOP_BULK_WINDOW_MIN_LABEL"*/, 0);
+  NumberFormatLong = LocalizationManager__Get((System_String_o *)StringLiteral_12566/*"SHOP_BULK_WINDOW_MIN_LABEL"*/, 0);
   if ( !minLabel )
     goto LABEL_17;
   UILabel__set_text(minLabel, NumberFormatLong, 0);
   maxLabel = this->fields.maxLabel;
-  NumberFormatLong = LocalizationManager__Get((System_String_o *)StringLiteral_12539/*"SHOP_BULK_WINDOW_MAX_LABEL"*/, 0);
+  NumberFormatLong = LocalizationManager__Get((System_String_o *)StringLiteral_12565/*"SHOP_BULK_WINDOW_MAX_LABEL"*/, 0);
   if ( !maxLabel )
     goto LABEL_17;
   UILabel__set_text(maxLabel, NumberFormatLong, 0);
@@ -1218,7 +1215,7 @@ void UISliderWithButton__init(
   NumberFormatLong = LocalizationManager__GetNumberFormatLong(maxStep, 0);
   if ( !maxValue )
 LABEL_17:
-    sub_21FFECC(NumberFormatLong, v11);
+    sub_2213CDC(NumberFormatLong, v11);
   UILabel__set_text(maxValue, NumberFormatLong, 0);
   ((void (__fastcall *)(UISliderWithButton_o *, const MethodInfo *))this->klass->vtable._7_ForceUpdate.methodPtr)(
     this,
@@ -1350,10 +1347,10 @@ void UISliderWithButton__normalMode(UISliderWithButton_o *this, const MethodInfo
   v24.fields.a = 1.0;
   plusButton = (UnityEngine_Component_o *)TweenColor__Begin(v12, 0.5, v24, 0);
   thumb = this->fields.thumb;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !thumb )
     goto LABEL_24;
@@ -1363,10 +1360,10 @@ void UISliderWithButton__normalMode(UISliderWithButton_o *this, const MethodInfo
     goto LABEL_24;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v14 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v14 )
     goto LABEL_24;
@@ -1376,14 +1373,14 @@ void UISliderWithButton__normalMode(UISliderWithButton_o *this, const MethodInfo
     goto LABEL_24;
   plusButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(plusButton, 0);
   v15 = (UnityEngine_Transform_o *)plusButton;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    plusButton = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    plusButton = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v15 )
 LABEL_24:
-    sub_21FFECC(plusButton, method);
+    sub_2213CDC(plusButton, method);
   UnityEngine_Transform__set_localScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
 }
 
@@ -1427,10 +1424,10 @@ int32_t UISliderWithButton__sliderValueChange(UISliderWithButton_o *this, const 
   int32_t v25; // w10
   double iptr; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_593A005 & 1) == 0 )
+  if ( (byte_59721D9 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_593A005 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_59721D9 = 1;
   }
   valueChange = this->fields.valueChange;
   if ( valueChange )
@@ -1465,10 +1462,10 @@ int32_t UISliderWithButton__sliderValueChange(UISliderWithButton_o *this, const 
   {
     v10 = UIProgressBar__get_value((UIProgressBar_o *)this, 0);
     v11 = (float)(this->fields.maxStep - this->fields.minStep);
-    if ( !byte_593220B )
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
     v12 = v10 * v11;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )

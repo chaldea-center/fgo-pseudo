@@ -2,17 +2,17 @@ void SummonConfirmDlgComponent___cctor(const MethodInfo *method)
 {
   struct SummonConfirmDlgComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_59348E8 & 1) == 0 )
+  if ( (byte_596CA17 & 1) == 0 )
   {
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    byte_59348E8 = 1;
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    byte_596CA17 = 1;
   }
   static_fields = SummonConfirmDlgComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->CONFIRM_TITLE_LABEL_POS_Y = 0x42920000432E0000LL;
-  *(_OWORD *)&static_fields->CONFIRM_LABEL_DEFAULT_FONT_SIZE = xmmword_E94120;
-  *(_OWORD *)&static_fields->PRIVILEGE_SUMMON_MESSAGE_WIDTH_THRESHOLD = xmmword_E94000;
+  *(_OWORD *)&static_fields->CONFIRM_LABEL_DEFAULT_FONT_SIZE = xmmword_E9D2C0;
+  *(_OWORD *)&static_fields->PRIVILEGE_SUMMON_MESSAGE_WIDTH_THRESHOLD = xmmword_E9D1A0;
   static_fields->CONFIRM_DETAIL_LABEL_CAMPAIGN_POS_Y = 50.0;
-  *(_OWORD *)&static_fields->GROUP_BONUS_LABEL_POS_Y = xmmword_E93AE0;
+  *(_OWORD *)&static_fields->GROUP_BONUS_LABEL_POS_Y = xmmword_E9CC80;
   static_fields->EXTRA_BONUS_LIMIT = 2;
 }
 
@@ -21,10 +21,10 @@ void SummonConfirmDlgComponent___ctor(SummonConfirmDlgComponent_o *this, const M
 {
   __int64 v2; // x2
 
-  if ( (byte_59348E7 & 1) == 0 )
+  if ( (byte_596CA16 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59348E7 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596CA16 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -53,29 +53,29 @@ void SummonConfirmDlgComponent__BonusSelectAfterOpenShortChargeStone(
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
   v18 = haveFreeStoneNum;
-  if ( (byte_59348D4 & 1) == 0 )
+  if ( (byte_596CA03 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3069/*"BONUS_SELECT_NOT_HAVE_CHARGE_STONE_AFTER_DIALOG_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_422/*"#,0"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_59348D4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3072/*"BONUS_SELECT_NOT_HAVE_CHARGE_STONE_AFTER_DIALOG_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_422/*"#,0"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_596CA03 = 1;
   }
   bonusSelectBeforeMessage = this->fields.bonusSelectBeforeMessage;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&price, *(_QWORD *)&haveChargeStoneNum);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3069/*"BONUS_SELECT_NOT_HAVE_CHARGE_STONE_AFTER_DIALOG_MESSAGE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3072/*"BONUS_SELECT_NOT_HAVE_CHARGE_STONE_AFTER_DIALOG_MESSAGE"*/, 0);
   v17 = haveChargeStoneNum;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
-  v12 = (Il2CppObject *)System_Int32__ToString_76925352((int32_t)&v18, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
-  v13 = System_String__Format_75484576(v10, v11, v12, 0);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v17);
+  v12 = (Il2CppObject *)System_Int32__ToString_77138656((int32_t)&v18, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+  v13 = System_String__Format_75697880(v10, v11, v12, 0);
   if ( !bonusSelectBeforeMessage
     || (UILabel__set_text(bonusSelectBeforeMessage, v13, 0),
         bonusSelectBeforeDecideLabel = this->fields.bonusSelectBeforeDecideLabel,
-        v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0),
+        v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0),
         !bonusSelectBeforeDecideLabel) )
   {
-    sub_21FFECC(v13, v14);
+    sub_2213CDC(v13, v14);
   }
   UILabel__set_text(bonusSelectBeforeDecideLabel, v13, 0);
   this->fields.state = 7;
@@ -129,30 +129,30 @@ void SummonConfirmDlgComponent__BonusSelectStoneBuyDialog(
   int32_t v48; // [xsp+28h] [xbp-68h] BYREF
   int32_t v49; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_59348D5 & 1) == 0 )
+  if ( (byte_596CA04 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_12864/*"STONE_PURCHASE"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_3073/*"BONUS_SELECT_STONE_BUY_CONFIRM_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_3074/*"BONUS_SELECT_STONE_BUY_CONFIRM_TITLE"*/);
-    byte_59348D5 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_12890/*"STONE_PURCHASE"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_3076/*"BONUS_SELECT_STONE_BUY_CONFIRM_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_3077/*"BONUS_SELECT_STONE_BUY_CONFIRM_TITLE"*/);
+    byte_596CA04 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, callback, *(_QWORD *)&haveStoneNum);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3074/*"BONUS_SELECT_STONE_BUY_CONFIRM_TITLE"*/, 0);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3073/*"BONUS_SELECT_STONE_BUY_CONFIRM_MESSAGE"*/, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3077/*"BONUS_SELECT_STONE_BUY_CONFIRM_TITLE"*/, 0);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3076/*"BONUS_SELECT_STONE_BUY_CONFIRM_MESSAGE"*/, 0);
   v49 = haveStoneNum;
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v49);
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v49);
   v48 = haveChargeStoneNum;
-  v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v48);
+  v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v48);
   v47 = haveFreeStoneNum;
-  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v47);
-  baseWindow = System_String__Format_75484644(v17, v18, v19, v20, 0);
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v47);
+  baseWindow = System_String__Format_75697948(v17, v18, v19, v20, 0);
   if ( !this->fields.bonusSelectNotHaveChargeStoneBeforeInfo )
     goto LABEL_25;
   v23 = baseWindow;
@@ -184,17 +184,17 @@ void SummonConfirmDlgComponent__BonusSelectStoneBuyDialog(
         transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)baseWindow, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
-        baseWindow = (System_String_o *)UnityEngine_Object__Instantiate_object__59506996(
+        baseWindow = (System_String_o *)UnityEngine_Object__Instantiate_object__59717116(
                                           MsgInfoPrefab_k__BackingField,
                                           transform,
-                                          (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                          (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
         if ( baseWindow )
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)baseWindow,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
           this->fields.bonusSelectMsgInfo = (struct BonusSelectSummonMsgInfo_o *)Component_object;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.bonusSelectMsgInfo,
             (int32_t)Component_object,
             v34,
@@ -208,7 +208,7 @@ void SummonConfirmDlgComponent__BonusSelectStoneBuyDialog(
       }
     }
 LABEL_25:
-    sub_21FFECC(baseWindow, v22);
+    sub_2213CDC(baseWindow, v22);
   }
 LABEL_19:
   baseWindow = (System_String_o *)this->fields.bonusSelectMsgInfo;
@@ -225,7 +225,7 @@ LABEL_19:
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v40, v41);
-  baseWindow = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  baseWindow = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_25;
   UILabel__set_text(cancelBtnLb, baseWindow, 0);
@@ -233,7 +233,7 @@ LABEL_19:
   if ( !baseWindow )
     goto LABEL_25;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseWindow, 1, 0);
-  v43 = (System_String_o *)StringLiteral_12864/*"STONE_PURCHASE"*/;
+  v43 = (System_String_o *)StringLiteral_12890/*"STONE_PURCHASE"*/;
   this->fields.state = 4;
   v44 = LocalizationManager__Get(v43, 0);
   SummonConfirmDlgComponent__Open(this, 0, 0, v44, callback, 14.0, 0, 0, 0, 1, 0, v45);
@@ -259,7 +259,7 @@ void SummonConfirmDlgComponent__Callback(SummonConfirmDlgComponent_o *this, bool
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       0,
       (System_String_o *)method,
@@ -269,7 +269,7 @@ void SummonConfirmDlgComponent__Callback(SummonConfirmDlgComponent_o *this, bool
       v6,
       v7);
     this->fields.autoSaleDialogCloseCallbackFunc = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
       0,
       v11,
@@ -290,11 +290,11 @@ void SummonConfirmDlgComponent__Close(SummonConfirmDlgComponent_o *this, const M
 {
   const MethodInfo *v2; // x2
 
-  SummonConfirmDlgComponent__Close_42170740(this, 0, v2);
+  SummonConfirmDlgComponent__Close_42185804(this, 0, v2);
 }
 
 
-void SummonConfirmDlgComponent__Close_42170740(
+void SummonConfirmDlgComponent__Close_42185804(
         SummonConfirmDlgComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -306,14 +306,14 @@ void SummonConfirmDlgComponent__Close_42170740(
   bool v7; // w7
   System_Action_o *v10; // x20
 
-  if ( (byte_59348E3 & 1) == 0 )
+  if ( (byte_596CA12 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_EndClose__);
-    byte_59348E3 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_EndClose__);
+    byte_596CA12 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -322,7 +322,7 @@ void SummonConfirmDlgComponent__Close_42170740(
     v5,
     v6,
     v7);
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_SummonConfirmDlgComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -343,10 +343,10 @@ void SummonConfirmDlgComponent__EndClose(SummonConfirmDlgComponent_o *this, cons
   bool v13; // w7
   struct System_Action_o *closeCallbackFunc; // x20
 
-  if ( (byte_59348E4 & 1) == 0 )
+  if ( (byte_596CA13 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59348E4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CA13 = 1;
   }
   SummonConfirmDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -365,14 +365,14 @@ void SummonConfirmDlgComponent__EndClose(SummonConfirmDlgComponent_o *this, cons
       goto LABEL_9;
     }
 LABEL_12:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
 LABEL_9:
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v8, v9, v10, v11, v12, v13);
     ((void (__fastcall *)(intptr_t, intptr_t))closeCallbackFunc->fields.invoke_impl)(
       closeCallbackFunc->fields.method_code,
       closeCallbackFunc->fields.method);
@@ -418,15 +418,15 @@ void SummonConfirmDlgComponent__Init(SummonConfirmDlgComponent_o *this, const Me
   UnityEngine_GameObject_o *bonusMsgInfo; // x20
   UnityEngine_GameObject_o *extraMsgInfo; // x20
 
-  if ( (byte_59348D1 & 1) == 0 )
+  if ( (byte_596CA00 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59348D1 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596CA00 = 1;
   }
   confirmTitleLabel = this->fields.confirmTitleLabel;
   if ( !confirmTitleLabel )
@@ -474,7 +474,7 @@ void SummonConfirmDlgComponent__Init(SummonConfirmDlgComponent_o *this, const Me
         goto LABEL_16;
     }
 LABEL_66:
-    sub_21FFED4(confirmTitleLabel);
+    sub_2213CE4(confirmTitleLabel);
   }
 LABEL_16:
   extraItemIconComponents = this->fields.extraItemIconComponents;
@@ -500,12 +500,12 @@ LABEL_22:
   confirmBtnLb = this->fields.confirmBtnLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v4);
-  confirmTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  confirmTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !confirmBtnLb )
     goto LABEL_65;
   UILabel__set_text(confirmBtnLb, (System_String_o *)confirmTitleLabel, 0);
   cancelBtnLb = this->fields.cancelBtnLb;
-  confirmTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  confirmTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_65;
   UILabel__set_text(cancelBtnLb, (System_String_o *)confirmTitleLabel, 0);
@@ -531,7 +531,7 @@ LABEL_22:
   v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)confirmTitleLabel, 0);
   GameObjectExtensions__SetLocalPositionY(v18, -64.0, 0);
   this->fields.extraGiftEntList = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.extraGiftEntList, 0, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.extraGiftEntList, 0, v19, v20, v21, v22, v23, v24);
   confirmTitleLabel = this->fields.confirmTitleLabel;
   if ( !confirmTitleLabel )
     goto LABEL_65;
@@ -664,10 +664,10 @@ LABEL_22:
     goto LABEL_65;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)confirmTitleLabel, 0, 0);
   bonusMsgInfo = this->fields.bonusMsgInfo;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   GameObjectExtensions__SetLocalPosition(bonusMsgInfo, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   confirmTitleLabel = (UILabel_o *)this->fields.extraMsgInfo;
@@ -675,10 +675,10 @@ LABEL_22:
     goto LABEL_65;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)confirmTitleLabel, 0, 0);
   extraMsgInfo = this->fields.extraMsgInfo;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   GameObjectExtensions__SetLocalPosition(extraMsgInfo, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   confirmTitleLabel = (UILabel_o *)this->fields.bonusSelectNotHaveChargeStoneBeforeInfo;
@@ -687,7 +687,7 @@ LABEL_22:
         (confirmTitleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_65:
-    sub_21FFECC(confirmTitleLabel, method);
+    sub_2213CDC(confirmTitleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)confirmTitleLabel, 0, 0);
   *(_QWORD *)&this->fields.state = 0;
@@ -720,23 +720,23 @@ void SummonConfirmDlgComponent__OnClickSetting(SummonConfirmDlgComponent_o *this
   AutomaticSaleDlgComponent_o *autoSaleDlgInfo; // x20
   AutomaticSaleDlgComponent_CallbackFunc_o *v8; // x21
 
-  if ( (byte_59348E5 & 1) == 0 )
+  if ( (byte_596CA14 & 1) == 0 )
   {
-    sub_21FFC50(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_OnClickSetting__);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_settingResult__);
-    byte_59348E5 = 1;
+    sub_2213A60(&AutomaticSaleDlgComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_OnClickSetting__);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_settingResult__);
+    byte_596CA14 = 1;
   }
   v3 = Method_SummonConfirmDlgComponent_OnClickSetting__;
   if ( (*((_BYTE *)Method_SummonConfirmDlgComponent_OnClickSetting__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SummonConfirmDlgComponent_OnClickSetting__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SummonConfirmDlgComponent_OnClickSetting__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0),
         autoSaleDlgInfo = this->fields.autoSaleDlgInfo,
-        v8 = (AutomaticSaleDlgComponent_CallbackFunc_o *)sub_21FFEBC(AutomaticSaleDlgComponent_CallbackFunc_TypeInfo),
+        v8 = (AutomaticSaleDlgComponent_CallbackFunc_o *)sub_2213CCC(AutomaticSaleDlgComponent_CallbackFunc_TypeInfo),
         AutomaticSaleDlgComponent_CallbackFunc___ctor(
           v8,
           (Il2CppObject *)this,
@@ -744,7 +744,7 @@ void SummonConfirmDlgComponent__OnClickSetting(SummonConfirmDlgComponent_o *this
           0),
         !autoSaleDlgInfo) )
   {
-    sub_21FFECC(gameObject, v6);
+    sub_2213CDC(gameObject, v6);
   }
   AutomaticSaleDlgComponent__Open(autoSaleDlgInfo, v8, 0);
 }
@@ -756,19 +756,19 @@ void SummonConfirmDlgComponent__OnEnable(SummonConfirmDlgComponent_o *this, cons
   UnityEngine_Transform_o *v4; // x0
   UnityEngine_Transform_o *v5; // x0
 
-  if ( (byte_59348E6 & 1) == 0 )
+  if ( (byte_596CA15 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4819/*"ConfirmWindow/CloseButton"*/);
-    sub_21FFC50(&StringLiteral_4821/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/);
-    sub_21FFC50(&StringLiteral_4817/*"ConfirmWindow/BonusSelectInfo/DecideButton"*/);
-    byte_59348E6 = 1;
+    sub_2213A60(&StringLiteral_4827/*"ConfirmWindow/CloseButton"*/);
+    sub_2213A60(&StringLiteral_4829/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/);
+    sub_2213A60(&StringLiteral_4825/*"ConfirmWindow/BonusSelectInfo/DecideButton"*/);
+    byte_596CA15 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_4821/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_4829/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, 0);
   v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(v4, (System_String_o *)StringLiteral_4819/*"ConfirmWindow/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(v4, (System_String_o *)StringLiteral_4827/*"ConfirmWindow/CloseButton"*/, 0);
   v5 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(v5, (System_String_o *)StringLiteral_4817/*"ConfirmWindow/BonusSelectInfo/DecideButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(v5, (System_String_o *)StringLiteral_4825/*"ConfirmWindow/BonusSelectInfo/DecideButton"*/, 0);
 }
 
 
@@ -887,29 +887,29 @@ void SummonConfirmDlgComponent__Open(
   System_Action_o *v119; // x20
   int v120; // [xsp+4h] [xbp-7Ch]
 
-  if ( (byte_59348DC & 1) == 0 )
+  if ( (byte_596CA0B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
-    sub_21FFC50(&System_Func_GachaExtraGiftEntity__int__TypeInfo);
-    sub_21FFC50(&System_Func_GachaExtraGiftEntity__bool__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_EndOpen__);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent___c__Open_b__75_1__);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent___c__DisplayClass75_0__Open_b__0__);
-    sub_21FFC50(&SummonConfirmDlgComponent___c__DisplayClass75_0_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59348DC = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
+    sub_2213A60(&System_Func_GachaExtraGiftEntity__int__TypeInfo);
+    sub_2213A60(&System_Func_GachaExtraGiftEntity__bool__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_EndOpen__);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent___c__Open_b__75_1__);
+    sub_2213A60(&Method_SummonConfirmDlgComponent___c__DisplayClass75_0__Open_b__0__);
+    sub_2213A60(&SummonConfirmDlgComponent___c__DisplayClass75_0_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent___c_TypeInfo);
+    sub_2213A60(&StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596CA0B = 1;
   }
-  v21 = sub_21FFEBC(SummonConfirmDlgComponent___c__DisplayClass75_0_TypeInfo);
+  v21 = sub_2213CCC(SummonConfirmDlgComponent___c__DisplayClass75_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v21, 0);
   if ( !v21 )
     goto LABEL_146;
@@ -919,7 +919,7 @@ void SummonConfirmDlgComponent__Open(
     goto LABEL_146;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v24,
@@ -1018,7 +1018,7 @@ void SummonConfirmDlgComponent__Open(
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v23, v49);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/, 0);
       decideTxt = (System_String_o *)gameObject;
     }
     if ( !v50 )
@@ -1140,12 +1140,12 @@ void SummonConfirmDlgComponent__Open(
       goto LABEL_146;
     v120 = v52;
     UIWidget__set_height((UIWidget_o *)gameObject, 524, 0);
-    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
       goto LABEL_146;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)gameObject,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GiftMaster___);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GiftMaster___);
     *(_DWORD *)(v21 + 20) = 1;
     while ( 1 )
     {
@@ -1153,19 +1153,19 @@ void SummonConfirmDlgComponent__Open(
       v72 = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.extraGiftEntList;
       if ( !v71 )
       {
-        v71 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GachaExtraGiftEntity__bool__TypeInfo);
+        v71 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GachaExtraGiftEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v71,
           (Il2CppObject *)v21,
           Method_SummonConfirmDlgComponent___c__DisplayClass75_0__Open_b__0__,
           0);
         *(_QWORD *)(v21 + 24) = v71;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 24), (int32_t)v71, v73, v74, v75, v76, v77, v78);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 24), (int32_t)v71, v73, v74, v75, v76, v77, v78);
       }
       v79 = System_Linq_Enumerable__Where_object_(
               v72,
               (System_Func_TSource__bool__o *)v71,
-              (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
+              (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
       v82 = SummonConfirmDlgComponent___c_TypeInfo;
       v83 = v79;
       if ( !*(&SummonConfirmDlgComponent___c_TypeInfo->_2.cctor_finished + 1) )
@@ -1183,11 +1183,11 @@ void SummonConfirmDlgComponent__Open(
           static_fields = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
         }
         v86 = (Il2CppObject *)static_fields->__9;
-        _9__75_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_GachaExtraGiftEntity__int__TypeInfo);
+        _9__75_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_GachaExtraGiftEntity__int__TypeInfo);
         System_Func_object__int____ctor(_9__75_1, v86, Method_SummonConfirmDlgComponent___c__Open_b__75_1__, 0);
         v87 = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
         v87->__9__75_1 = (struct System_Func_GachaExtraGiftEntity__int__o *)_9__75_1;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v87->__9__75_1,
           (int32_t)_9__75_1,
           v88,
@@ -1200,10 +1200,10 @@ void SummonConfirmDlgComponent__Open(
       v94 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                    v83,
                                                                    (System_Func_TSource__TResult__o *)_9__75_1,
-                                                                   (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
+                                                                   (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
       v95 = (System_Collections_ICollection_o *)System_Linq_Enumerable__ToList_int_(
                                                   v94,
-                                                  (const MethodInfo_386D6A8 *)Method_System_Linq_Enumerable_ToList_int___);
+                                                  (const MethodInfo_38A0B70 *)Method_System_Linq_Enumerable_ToList_int___);
       gameObject = (UnityEngine_GameObject_o *)BasicHelper__IsNullOrEmpty(v95, 0);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
@@ -1334,11 +1334,11 @@ LABEL_135:
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0), (gameObject = this->fields.defMsgInfo) == 0) )
   {
 LABEL_146:
-    sub_21FFECC(gameObject, v23);
+    sub_2213CDC(gameObject, v23);
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   SummonConfirmDlgComponent__setBtnInfoActive(this, v118);
-  v119 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v119 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v119, (Il2CppObject *)this, Method_SummonConfirmDlgComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v119, 0, 0, 0);
 }
@@ -1361,11 +1361,11 @@ void SummonConfirmDlgComponent__OpenBonusSelectNotHaveChargeStone(
   bool v14; // w7
   System_Action_o *v15; // x20
 
-  if ( (byte_59348DE & 1) == 0 )
+  if ( (byte_596CA0D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_EndOpen__);
-    byte_59348DE = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_EndOpen__);
+    byte_596CA0D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
@@ -1374,11 +1374,11 @@ void SummonConfirmDlgComponent__OpenBonusSelectNotHaveChargeStone(
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0), (gameObject = this->fields.defMsgInfo) == 0)
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0), (gameObject = this->fields.confirmBtnObject) == 0) )
   {
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v9,
@@ -1387,7 +1387,7 @@ void SummonConfirmDlgComponent__OpenBonusSelectNotHaveChargeStone(
     v12,
     v13,
     v14);
-  v15 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)this, Method_SummonConfirmDlgComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v15, 0, 0, 0);
 }
@@ -1438,16 +1438,16 @@ void SummonConfirmDlgComponent__OpenConfirmFree(
   int32_t remainNum; // [xsp+38h] [xbp-58h] BYREF
   int32_t DailyFreeGachaResetTime; // [xsp+3Ch] [xbp-54h] BYREF
 
-  if ( (byte_59348DA & 1) == 0 )
+  if ( (byte_596CA09 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&UserGachaMaster_TypeInfo);
-    sub_21FFC50(&StringLiteral_3889/*"CONFIRM_FREESUMMON_MSG"*/);
-    sub_21FFC50(&StringLiteral_3888/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/);
-    sub_21FFC50(&StringLiteral_6828/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/);
-    byte_59348DA = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&UserGachaMaster_TypeInfo);
+    sub_2213A60(&StringLiteral_3894/*"CONFIRM_FREESUMMON_MSG"*/);
+    sub_2213A60(&StringLiteral_3893/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/);
+    sub_2213A60(&StringLiteral_6840/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/);
+    byte_596CA09 = 1;
   }
   v9 = BalanceConfig_TypeInfo;
   DailyFreeGachaResetTime = 0;
@@ -1477,10 +1477,10 @@ void SummonConfirmDlgComponent__OpenConfirmFree(
   {
     if ( !v20 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3888/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/, 0);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3893/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/, 0);
     v42 = maxNum;
-    v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v42);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v21, v15, v22, 0);
+    v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v42);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v21, v15, v22, 0);
     if ( !this->fields.campaignLabel )
       goto LABEL_22;
     v25 = (System_String_o *)gameObject;
@@ -1489,15 +1489,15 @@ void SummonConfirmDlgComponent__OpenConfirmFree(
       goto LABEL_22;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     campaignLabel = this->fields.campaignLabel;
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6828/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/, 0);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6840/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/, 0);
     v41 = remainNum;
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v41);
+    v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v41);
     v40 = maxNum;
-    v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v40);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v27, v28, v29, 0);
+    v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v40);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v27, v28, v29, 0);
     if ( !campaignLabel )
 LABEL_22:
-      sub_21FFECC(gameObject, v24);
+      sub_2213CDC(gameObject, v24);
     UILabel__set_text(campaignLabel, (System_String_o *)gameObject, 0);
     v37 = SummonConfirmDlgComponent_TypeInfo;
     if ( !*(&SummonConfirmDlgComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -1511,12 +1511,12 @@ LABEL_22:
   {
     if ( !v20 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3889/*"CONFIRM_FREESUMMON_MSG"*/, 0);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3894/*"CONFIRM_FREESUMMON_MSG"*/, 0);
     v25 = System_String__Format(v38, v15, 0);
   }
   this->fields.state = 8;
   this->fields.autoSaleDialogCloseCallbackFunc = autoSaleDialogCloseCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
     (int32_t)autoSaleDialogCloseCallback,
     v31,
@@ -1740,30 +1740,30 @@ void SummonConfirmDlgComponent__OpenConfirmGroupSummon(
   int32_t v213; // [xsp+3Ch] [xbp-64h] BYREF
 
   v213 = groupId;
-  if ( (byte_59348DD & 1) == 0 )
+  if ( (byte_596CA0C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_GachaGroupMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_GachaMaster___);
-    sub_21FFC50(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent_EndOpen__);
-    sub_21FFC50(&StringLiteral_3894/*"CONFIRM_GROUPSUMMON_INFOMSG_3"*/);
-    sub_21FFC50(&StringLiteral_3896/*"CONFIRM_GROUPSUMMON_STONEMSG"*/);
-    sub_21FFC50(&StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3892/*"CONFIRM_GROUPSUMMON_INFOMSG"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_3893/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/);
-    sub_21FFC50(&StringLiteral_3895/*"CONFIRM_GROUPSUMMON_INFOMSG_UNIQUE_"*/);
-    byte_59348DD = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_GachaGroupMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_GachaMaster___);
+    sub_2213A60(&Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SummonConfirmDlgComponent_EndOpen__);
+    sub_2213A60(&StringLiteral_3899/*"CONFIRM_GROUPSUMMON_INFOMSG_3"*/);
+    sub_2213A60(&StringLiteral_3901/*"CONFIRM_GROUPSUMMON_STONEMSG"*/);
+    sub_2213A60(&StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3897/*"CONFIRM_GROUPSUMMON_INFOMSG"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_3898/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/);
+    sub_2213A60(&StringLiteral_3900/*"CONFIRM_GROUPSUMMON_INFOMSG_UNIQUE_"*/);
+    byte_596CA0C = 1;
   }
   resultText = 0;
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     *(System_String_o **)&price,
@@ -1774,10 +1774,10 @@ void SummonConfirmDlgComponent__OpenConfirmGroupSummon(
     afterFreeStoneNum);
   v21 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_WORD *)(v21 + 309) & 1) == 0 )
-    v21 = sub_2237AF8(v20);
+    v21 = sub_224B908(v20);
   v22 = *(_QWORD *)(*(_QWORD *)(v21 + 192) + 16LL);
   if ( (*(_WORD *)(v22 + 309) & 1) == 0 )
-    v22 = sub_2237AF8(v20);
+    v22 = sub_224B908(v20);
   MasterData_object = **(_QWORD **)(v22 + 184);
   if ( !MasterData_object )
     goto LABEL_124;
@@ -1785,23 +1785,23 @@ void SummonConfirmDlgComponent__OpenConfirmGroupSummon(
   v203 = haveFreeStoneNum;
   MasterData_object = (__int64)DataManager__GetMasterData_object_(
                                  (DataManager_o *)MasterData_object,
-                                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GachaMaster___);
+                                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GachaMaster___);
   if ( !MasterData_object )
     goto LABEL_124;
   v24 = (GachaMaster_o *)MasterData_object;
   GachaDataInGroup = GachaMaster__getGachaDataInGroup((GachaMaster_o *)MasterData_object, groupId, 0);
-  MasterData_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  MasterData_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !MasterData_object )
     goto LABEL_124;
   MasterData_object = (__int64)DataManager__GetMasterData_object_(
                                  (DataManager_o *)MasterData_object,
-                                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GachaGroupMaster___);
+                                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GachaGroupMaster___);
   if ( !MasterData_object )
     goto LABEL_124;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              groupId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_GachaGroupMaster__GachaGroupEntity__int__GetEntity__);
   MasterData_object = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)GachaDataInGroup, 0);
   v28 = 1;
   v29 = 1;
@@ -1817,7 +1817,7 @@ void SummonConfirmDlgComponent__OpenConfirmGroupSummon(
         goto LABEL_124;
       if ( !LODWORD(GachaDataInGroup->max_length) )
 LABEL_125:
-        sub_21FFED4(MasterData_object);
+        sub_2213CE4(MasterData_object);
       v31 = GachaDataInGroup->m_Items[0];
       if ( !v31 )
         goto LABEL_124;
@@ -1827,9 +1827,9 @@ LABEL_125:
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v19, v27);
-  v32 = System_Math__Max_76939956(v29, 1, 0);
+  v32 = System_Math__Max_77153260(v29, 1, 0);
   this->fields.extraGiftEntList = giftEntList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.extraGiftEntList,
     (int32_t)giftEntList,
     v33,
@@ -1840,7 +1840,7 @@ LABEL_125:
     v38);
   monitor = (Il2CppObject *)StringLiteral_1/*""*/;
   v40 = System_Int32__ToString((int32_t)&v213, 0);
-  v43 = System_String__Concat_75438412((System_String_o *)StringLiteral_3895/*"CONFIRM_GROUPSUMMON_INFOMSG_UNIQUE_"*/, v40, 0);
+  v43 = System_String__Concat_75651716((System_String_o *)StringLiteral_3900/*"CONFIRM_GROUPSUMMON_INFOMSG_UNIQUE_"*/, v40, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v41, v42);
   MasterData_object = LocalizationManager__TryGet(&resultText, v43, (System_String_o *)StringLiteral_1/*""*/, 0);
@@ -1862,31 +1862,31 @@ LABEL_125:
           infoMsgLabel = this->fields.infoMsgLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19, v44);
-          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_3892/*"CONFIRM_GROUPSUMMON_INFOMSG"*/, 0);
-          MasterData_object = sub_21FFD10(object___TypeInfo, 4);
+          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_3897/*"CONFIRM_GROUPSUMMON_INFOMSG"*/, 0);
+          MasterData_object = sub_2213B20(object___TypeInfo, 4);
           if ( MasterData_object )
           {
             v68 = (System_Object_array *)MasterData_object;
             if ( name )
             {
-              MasterData_object = sub_21FFDA4(name, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
+              MasterData_object = sub_2213BB4(name, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
               if ( !MasterData_object )
                 goto LABEL_126;
             }
             if ( !LODWORD(v68->max_length) )
               goto LABEL_125;
             v68->m_Items[0] = name;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v68->m_Items, (int32_t)name, v62, v63, v64, v65, v66, v67);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)v68->m_Items, (int32_t)name, v62, v63, v64, v65, v66, v67);
             if ( v59 )
             {
-              MasterData_object = sub_21FFDA4(v59, v68->obj.klass->_1.element_class);
+              MasterData_object = sub_2213BB4(v59, v68->obj.klass->_1.element_class);
               if ( !MasterData_object )
                 goto LABEL_126;
             }
             if ( (v68->max_length & 0xFFFFFFFE) == 0 )
               goto LABEL_125;
             v68->m_Items[1] = v59;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v68->m_Items[1],
               (int32_t)v59,
               v70,
@@ -1896,18 +1896,18 @@ LABEL_125:
               v74,
               v75);
             max_length = v32;
-            MasterData_object = j_il2cpp_value_box_0(qword_594C070, &max_length);
+            MasterData_object = j_il2cpp_value_box_0(qword_5984348, &max_length);
             v82 = (Il2CppObject *)MasterData_object;
             if ( MasterData_object )
             {
-              MasterData_object = sub_21FFDA4(MasterData_object, v68->obj.klass->_1.element_class);
+              MasterData_object = sub_2213BB4(MasterData_object, v68->obj.klass->_1.element_class);
               if ( !MasterData_object )
                 goto LABEL_126;
             }
             if ( LODWORD(v68->max_length) <= 2 )
               goto LABEL_125;
             v68->m_Items[2] = v82;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v68->m_Items[2],
               (int32_t)v82,
               v76,
@@ -1917,18 +1917,18 @@ LABEL_125:
               v80,
               v81);
             v210 = price;
-            MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v210);
+            MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v210);
             v89 = (Il2CppObject *)MasterData_object;
             if ( MasterData_object )
             {
-              MasterData_object = sub_21FFDA4(MasterData_object, v68->obj.klass->_1.element_class);
+              MasterData_object = sub_2213BB4(MasterData_object, v68->obj.klass->_1.element_class);
               if ( !MasterData_object )
                 goto LABEL_126;
             }
             if ( (v68->max_length & 0xFFFFFFFC) == 0 )
               goto LABEL_125;
             v68->m_Items[3] = v89;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v68->m_Items[3],
               (int32_t)v89,
               v83,
@@ -1937,7 +1937,7 @@ LABEL_125:
               v86,
               v87,
               v88);
-            MasterData_object = (__int64)System_String__Format_75484712(v61, v68, 0);
+            MasterData_object = (__int64)System_String__Format_75698016(v61, v68, 0);
             if ( !infoMsgLabel )
               goto LABEL_124;
             v90 = (System_String_o *)MasterData_object;
@@ -1957,7 +1957,7 @@ LABEL_72:
       MasterData_object = System_String__IsNullOrEmpty((System_String_o *)Entity[1].monitor, 0);
       if ( (MasterData_object & 1) == 0 )
         monitor = (Il2CppObject *)Entity[1].monitor;
-      v93 = (System_String_o **)&StringLiteral_3893/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/;
+      v93 = (System_String_o **)&StringLiteral_3898/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/;
       if ( (v28 & 1) == 0 )
       {
         if ( !LODWORD(GachaDataInGroup->max_length) )
@@ -1966,27 +1966,27 @@ LABEL_72:
         if ( !v94 )
           goto LABEL_124;
         if ( SHIDWORD(Entity[1].klass) / v94->fields.drawNum1 > 1 )
-          v93 = (System_String_o **)&StringLiteral_3894/*"CONFIRM_GROUPSUMMON_INFOMSG_3"*/;
+          v93 = (System_String_o **)&StringLiteral_3899/*"CONFIRM_GROUPSUMMON_INFOMSG_3"*/;
       }
       v95 = *v93;
       v96 = this->fields.infoMsgLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19, v92);
       v97 = LocalizationManager__Get(v95, 0);
-      MasterData_object = sub_21FFD10(object___TypeInfo, 4);
+      MasterData_object = sub_2213B20(object___TypeInfo, 4);
       if ( MasterData_object )
       {
         v104 = (System_Object_array *)MasterData_object;
         if ( monitor )
         {
-          MasterData_object = sub_21FFDA4(monitor, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
+          MasterData_object = sub_2213BB4(monitor, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
           if ( !MasterData_object )
             goto LABEL_126;
         }
         if ( !LODWORD(v104->max_length) )
           goto LABEL_125;
         v104->m_Items[0] = monitor;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)v104->m_Items,
           (int32_t)monitor,
           v98,
@@ -1996,18 +1996,18 @@ LABEL_72:
           v102,
           v103);
         max_length = max_length_low;
-        MasterData_object = j_il2cpp_value_box_0(qword_594C070, &max_length);
+        MasterData_object = j_il2cpp_value_box_0(qword_5984348, &max_length);
         v111 = (Il2CppObject *)MasterData_object;
         if ( MasterData_object )
         {
-          MasterData_object = sub_21FFDA4(MasterData_object, v104->obj.klass->_1.element_class);
+          MasterData_object = sub_2213BB4(MasterData_object, v104->obj.klass->_1.element_class);
           if ( !MasterData_object )
             goto LABEL_126;
         }
         if ( (v104->max_length & 0xFFFFFFFE) == 0 )
           goto LABEL_125;
         v104->m_Items[1] = v111;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v104->m_Items[1],
           (int32_t)v111,
           v105,
@@ -2017,18 +2017,18 @@ LABEL_72:
           v109,
           v110);
         v210 = v32;
-        MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v210);
+        MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v210);
         v118 = (Il2CppObject *)MasterData_object;
         if ( MasterData_object )
         {
-          MasterData_object = sub_21FFDA4(MasterData_object, v104->obj.klass->_1.element_class);
+          MasterData_object = sub_2213BB4(MasterData_object, v104->obj.klass->_1.element_class);
           if ( !MasterData_object )
             goto LABEL_126;
         }
         if ( LODWORD(v104->max_length) <= 2 )
           goto LABEL_125;
         v104->m_Items[2] = v118;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v104->m_Items[2],
           (int32_t)v118,
           v112,
@@ -2038,18 +2038,18 @@ LABEL_72:
           v116,
           v117);
         v209 = price;
-        MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v209);
+        MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v209);
         v125 = (Il2CppObject *)MasterData_object;
         if ( MasterData_object )
         {
-          MasterData_object = sub_21FFDA4(MasterData_object, v104->obj.klass->_1.element_class);
+          MasterData_object = sub_2213BB4(MasterData_object, v104->obj.klass->_1.element_class);
           if ( !MasterData_object )
             goto LABEL_126;
         }
         if ( (v104->max_length & 0xFFFFFFFC) == 0 )
           goto LABEL_125;
         v104->m_Items[3] = v125;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v104->m_Items[3],
           (int32_t)v125,
           v119,
@@ -2058,7 +2058,7 @@ LABEL_72:
           v122,
           v123,
           v124);
-        MasterData_object = (__int64)System_String__Format_75484712(v97, v104, 0);
+        MasterData_object = (__int64)System_String__Format_75698016(v97, v104, 0);
         if ( !v96 )
           goto LABEL_124;
         v90 = (System_String_o *)MasterData_object;
@@ -2067,11 +2067,11 @@ LABEL_72:
       }
     }
 LABEL_124:
-    sub_21FFECC(MasterData_object, v19);
+    sub_2213CDC(MasterData_object, v19);
   }
   v45 = this->fields.infoMsgLabel;
   v46 = resultText;
-  MasterData_object = sub_21FFD10(object___TypeInfo, 4);
+  MasterData_object = sub_2213B20(object___TypeInfo, 4);
   v53 = (System_Object_array *)MasterData_object;
   if ( Entity )
     v54 = (Il2CppObject *)Entity[1].monitor;
@@ -2085,56 +2085,56 @@ LABEL_124:
     goto LABEL_124;
   if ( v129 )
   {
-    MasterData_object = sub_21FFDA4(v129, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
+    MasterData_object = sub_2213BB4(v129, *(_QWORD *)(*(_QWORD *)MasterData_object + 64LL));
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( !LODWORD(v53->max_length) )
     goto LABEL_125;
   v53->m_Items[0] = v129;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v53->m_Items, (int32_t)v129, v47, v48, v49, v50, v51, v52);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v53->m_Items, (int32_t)v129, v47, v48, v49, v50, v51, v52);
   if ( !GachaDataInGroup )
     goto LABEL_124;
   max_length = GachaDataInGroup->max_length;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &max_length);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &max_length);
   v136 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v53->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v53->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( (v53->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_125;
   v53->m_Items[1] = v136;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v53->m_Items[1], (int32_t)v136, v130, v131, v132, v133, v134, v135);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v53->m_Items[1], (int32_t)v136, v130, v131, v132, v133, v134, v135);
   v210 = v32;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v210);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v210);
   v143 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v53->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v53->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( LODWORD(v53->max_length) <= 2 )
     goto LABEL_125;
   v53->m_Items[2] = v143;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v53->m_Items[2], (int32_t)v143, v137, v138, v139, v140, v141, v142);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v53->m_Items[2], (int32_t)v143, v137, v138, v139, v140, v141, v142);
   v209 = price;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v209);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v209);
   v150 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v53->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v53->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( (v53->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_125;
   v53->m_Items[3] = v150;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v53->m_Items[3], (int32_t)v150, v144, v145, v146, v147, v148, v149);
-  MasterData_object = (__int64)System_String__Format_75484712(v46, v53, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v53->m_Items[3], (int32_t)v150, v144, v145, v146, v147, v148, v149);
+  MasterData_object = (__int64)System_String__Format_75698016(v46, v53, 0);
   if ( !v45 )
     goto LABEL_124;
   UILabel__set_text(v45, (System_String_o *)MasterData_object, 0);
@@ -2143,98 +2143,98 @@ LABEL_93:
   msgLabel = this->fields.msgLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v126, v127);
-  v152 = LocalizationManager__Get((System_String_o *)StringLiteral_3896/*"CONFIRM_GROUPSUMMON_STONEMSG"*/, 0);
-  v153 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 6);
+  v152 = LocalizationManager__Get((System_String_o *)StringLiteral_3901/*"CONFIRM_GROUPSUMMON_STONEMSG"*/, 0);
+  v153 = (System_Object_array *)sub_2213B20(object___TypeInfo, 6);
   max_length = v128;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &max_length);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &max_length);
   if ( !v153 )
     goto LABEL_124;
   v160 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( !LODWORD(v153->max_length) )
     goto LABEL_125;
   v153->m_Items[0] = v160;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v153->m_Items, (int32_t)v160, v154, v155, v156, v157, v158, v159);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v153->m_Items, (int32_t)v160, v154, v155, v156, v157, v158, v159);
   v210 = haveChargeStoneNum;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v210);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v210);
   v167 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( (v153->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_125;
   v153->m_Items[1] = v167;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v153->m_Items[1], (int32_t)v167, v161, v162, v163, v164, v165, v166);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v153->m_Items[1], (int32_t)v167, v161, v162, v163, v164, v165, v166);
   v209 = v203;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v209);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v209);
   v174 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( LODWORD(v153->max_length) <= 2 )
     goto LABEL_125;
   v153->m_Items[2] = v174;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v153->m_Items[2], (int32_t)v174, v168, v169, v170, v171, v172, v173);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v153->m_Items[2], (int32_t)v174, v168, v169, v170, v171, v172, v173);
   v208 = v202;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v208);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v208);
   v181 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( (v153->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_125;
   v153->m_Items[3] = v181;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v153->m_Items[3], (int32_t)v181, v175, v176, v177, v178, v179, v180);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v153->m_Items[3], (int32_t)v181, v175, v176, v177, v178, v179, v180);
   v207 = afterChargeStoneNum;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v207);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v207);
   v188 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
       goto LABEL_126;
   }
   if ( LODWORD(v153->max_length) <= 4 )
     goto LABEL_125;
   v153->m_Items[4] = v188;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v153->m_Items[4], (int32_t)v188, v182, v183, v184, v185, v186, v187);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v153->m_Items[4], (int32_t)v188, v182, v183, v184, v185, v186, v187);
   v206 = afterFreeStoneNum;
-  MasterData_object = j_il2cpp_value_box_0(qword_594C070, &v206);
+  MasterData_object = j_il2cpp_value_box_0(qword_5984348, &v206);
   v195 = (Il2CppObject *)MasterData_object;
   if ( MasterData_object )
   {
-    MasterData_object = sub_21FFDA4(MasterData_object, v153->obj.klass->_1.element_class);
+    MasterData_object = sub_2213BB4(MasterData_object, v153->obj.klass->_1.element_class);
     if ( !MasterData_object )
     {
 LABEL_126:
-      v201 = sub_21FFEF0(MasterData_object, v69);
-      sub_21FFD90(v201, 0);
+      v201 = sub_2213D00(MasterData_object, v69);
+      sub_2213BA0(v201, 0);
     }
   }
   if ( LODWORD(v153->max_length) <= 5 )
     goto LABEL_125;
   v153->m_Items[5] = v195;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v153->m_Items[5], (int32_t)v195, v189, v190, v191, v192, v193, v194);
-  MasterData_object = (__int64)System_String__Format_75484712(v152, v153, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v153->m_Items[5], (int32_t)v195, v189, v190, v191, v192, v193, v194);
+  MasterData_object = (__int64)System_String__Format_75698016(v152, v153, 0);
   if ( !msgLabel )
     goto LABEL_124;
   UILabel__set_text(msgLabel, (System_String_o *)MasterData_object, 0);
   confirmBtnLb = this->fields.confirmBtnLb;
-  MasterData_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  MasterData_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3829/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !confirmBtnLb )
     goto LABEL_124;
   UILabel__set_text(confirmBtnLb, (System_String_o *)MasterData_object, 0);
@@ -2259,7 +2259,7 @@ LABEL_126:
     goto LABEL_124;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)MasterData_object, 1, 0);
   SummonConfirmDlgComponent__setBtnInfoActive(this, v199);
-  v200 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v200 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v200, (Il2CppObject *)this, Method_SummonConfirmDlgComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v200, 0, 0, 0);
 }
@@ -2281,12 +2281,12 @@ void SummonConfirmDlgComponent__OpenConfirmOnePayFree(
   const MethodInfo *v14; // [xsp+10h] [xbp-50h]
   int32_t GachaDailyMaxDrawNumResetAt; // [xsp+2Ch] [xbp-34h] BYREF
 
-  if ( (byte_59348DB & 1) == 0 )
+  if ( (byte_596CA0A & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3898/*"CONFIRM_ONETIME_FREESUMMON_CAMPAIGN_MSG"*/);
-    byte_59348DB = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3903/*"CONFIRM_ONETIME_FREESUMMON_CAMPAIGN_MSG"*/);
+    byte_596CA0A = 1;
   }
   v7 = BalanceConfig_TypeInfo;
   v8 = *(&BalanceConfig_TypeInfo->_2.cctor_finished + 1);
@@ -2300,7 +2300,7 @@ void SummonConfirmDlgComponent__OpenConfirmOnePayFree(
   v11 = (Il2CppObject *)System_Int32__ToString((int32_t)&GachaDailyMaxDrawNumResetAt, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3898/*"CONFIRM_ONETIME_FREESUMMON_CAMPAIGN_MSG"*/, 0);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3903/*"CONFIRM_ONETIME_FREESUMMON_CAMPAIGN_MSG"*/, 0);
   v13 = System_String__Format(v12, v11, 0);
   this->fields.state = 9;
   SummonConfirmDlgComponent__Open(this, title, v13, 0, callback, 35.0, 0, 0, 0, 0, 0, v14);
@@ -2373,91 +2373,91 @@ void SummonConfirmDlgComponent__OpenConfirmPoint(
   int32_t v68; // [xsp+28h] [xbp-68h] BYREF
   int32_t v69; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_59348D9 & 1) == 0 )
+  if ( (byte_596CA08 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_3900/*"CONFIRM_POINTSUMMON_MSG"*/);
-    byte_59348D9 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_3905/*"CONFIRM_POINTSUMMON_MSG"*/);
+    byte_596CA08 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&havePointNum, *(_QWORD *)&gachaTime);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3900/*"CONFIRM_POINTSUMMON_MSG"*/, 0);
-  v18 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 4);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3905/*"CONFIRM_POINTSUMMON_MSG"*/, 0);
+  v18 = (System_Object_array *)sub_2213B20(object___TypeInfo, 4);
   v69 = needPointNum;
-  v19 = j_il2cpp_value_box_0(qword_594C070, &v69);
+  v19 = j_il2cpp_value_box_0(qword_5984348, &v69);
   if ( !v18 )
-    sub_21FFECC(v19, v20);
+    sub_2213CDC(v19, v20);
   v27 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_2213BB4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
       goto LABEL_24;
   }
   if ( !LODWORD(v18->max_length) )
     goto LABEL_23;
   v18->m_Items[0] = v27;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v18->m_Items, (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v18->m_Items, (int32_t)v27, v21, v22, v23, v24, v25, v26);
   v68 = gachaTime;
-  v19 = j_il2cpp_value_box_0(qword_594C070, &v68);
+  v19 = j_il2cpp_value_box_0(qword_5984348, &v68);
   v35 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_2213BB4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
       goto LABEL_24;
   }
   if ( (v18->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_23;
   v18->m_Items[1] = v35;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[1], (int32_t)v35, v29, v30, v31, v32, v33, v34);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->m_Items[1], (int32_t)v35, v29, v30, v31, v32, v33, v34);
   v67 = havePointNum;
-  v19 = j_il2cpp_value_box_0(qword_594C070, &v67);
+  v19 = j_il2cpp_value_box_0(qword_5984348, &v67);
   v42 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_2213BB4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
       goto LABEL_24;
   }
   if ( LODWORD(v18->max_length) <= 2 )
     goto LABEL_23;
   v18->m_Items[2] = v42;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[2], (int32_t)v42, v36, v37, v38, v39, v40, v41);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->m_Items[2], (int32_t)v42, v36, v37, v38, v39, v40, v41);
   v66 = afterPointNum;
-  v19 = j_il2cpp_value_box_0(qword_594C070, &v66);
+  v19 = j_il2cpp_value_box_0(qword_5984348, &v66);
   v49 = (Il2CppObject *)v19;
   if ( v19 )
   {
-    v19 = sub_21FFDA4(v19, v18->obj.klass->_1.element_class);
+    v19 = sub_2213BB4(v19, v18->obj.klass->_1.element_class);
     if ( !v19 )
     {
 LABEL_24:
-      v63 = sub_21FFEF0(v19, v28);
-      sub_21FFD90(v63, 0);
+      v63 = sub_2213D00(v19, v28);
+      sub_2213BA0(v63, 0);
     }
   }
   if ( (v18->max_length & 0xFFFFFFFC) == 0 )
 LABEL_23:
-    sub_21FFED4(v19);
+    sub_2213CE4(v19);
   v18->m_Items[3] = v49;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->m_Items[3], (int32_t)v49, v43, v44, v45, v46, v47, v48);
-  v50 = System_String__Format_75484712(v17, v18, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->m_Items[3], (int32_t)v49, v43, v44, v45, v46, v47, v48);
+  v50 = System_String__Format_75698016(v17, v18, 0);
   if ( !System_String__IsNullOrEmpty(summonConfirmMessage, 0) )
   {
     v69 = needPointNum;
-    v57 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v69);
+    v57 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v69);
     v68 = havePointNum;
-    v58 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v68);
+    v58 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v68);
     v67 = afterPointNum;
-    v59 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v67);
-    v50 = System_String__Format_75484644(summonConfirmMessage, v57, v58, v59, 0);
+    v59 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v67);
+    v50 = System_String__Format_75697948(summonConfirmMessage, v57, v58, v59, 0);
   }
   this->fields.state = 6;
   this->fields.autoSaleDialogCloseCallbackFunc = autoSaleDialogCloseCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
     (int32_t)autoSaleDialogCloseCallback,
     v51,
@@ -2688,36 +2688,36 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
   System_String_o *defaultText; // [xsp+70h] [xbp-70h] BYREF
   System_String_o *resultText; // [xsp+78h] [xbp-68h] BYREF
 
-  if ( (byte_59348D7 & 1) == 0 )
+  if ( (byte_596CA06 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_GachaDetailMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_12932/*"SUMMON_CHARGE_STONEPAY_WARNING_MSG"*/);
-    sub_21FFC50(&StringLiteral_3881/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/);
-    sub_21FFC50(&StringLiteral_3877/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/);
-    sub_21FFC50(&StringLiteral_3899/*"CONFIRM_PAYSUMMON_MSG"*/);
-    sub_21FFC50(&StringLiteral_3878/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/);
-    sub_21FFC50(&StringLiteral_12977/*"SUMMON_WARNING_MESSAGE_501"*/);
-    sub_21FFC50(&StringLiteral_12975/*"SUMMON_STONEPAY_WARNING_MSG"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_12962/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/);
-    sub_21FFC50(&StringLiteral_3902/*"CONFIRM_SUMMON_MESSAGE_{0}"*/);
-    sub_21FFC50(&StringLiteral_12978/*"SUMMON_WARNING_MESSAGE_{0}"*/);
-    sub_21FFC50(&StringLiteral_12922/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/);
-    sub_21FFC50(&StringLiteral_3880/*"CONFIRM_CHARGESUMMON_MSG"*/);
-    sub_21FFC50(&StringLiteral_3901/*"CONFIRM_SUMMON_MESSAGE_501"*/);
-    byte_59348D7 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_GachaDetailMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_12958/*"SUMMON_CHARGE_STONEPAY_WARNING_MSG"*/);
+    sub_2213A60(&StringLiteral_3886/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/);
+    sub_2213A60(&StringLiteral_3882/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/);
+    sub_2213A60(&StringLiteral_3904/*"CONFIRM_PAYSUMMON_MSG"*/);
+    sub_2213A60(&StringLiteral_3883/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/);
+    sub_2213A60(&StringLiteral_13003/*"SUMMON_WARNING_MESSAGE_501"*/);
+    sub_2213A60(&StringLiteral_13001/*"SUMMON_STONEPAY_WARNING_MSG"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_12988/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/);
+    sub_2213A60(&StringLiteral_3907/*"CONFIRM_SUMMON_MESSAGE_{0}"*/);
+    sub_2213A60(&StringLiteral_13004/*"SUMMON_WARNING_MESSAGE_{0}"*/);
+    sub_2213A60(&StringLiteral_12948/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/);
+    sub_2213A60(&StringLiteral_3885/*"CONFIRM_CHARGESUMMON_MSG"*/);
+    sub_2213A60(&StringLiteral_3906/*"CONFIRM_SUMMON_MESSAGE_501"*/);
+    byte_596CA06 = 1;
   }
   resultText = 0;
   defaultText = 0;
   this->fields.extraGiftEntList = giftEntList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.extraGiftEntList,
     (int32_t)giftEntList,
     *(System_String_o **)&type,
@@ -2732,15 +2732,15 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27, v28);
-      v32 = (System_String_o **)&StringLiteral_3881/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/;
+      v32 = (System_String_o **)&StringLiteral_3886/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/;
     }
     else
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27, v28);
-      v32 = (System_String_o **)&StringLiteral_3880/*"CONFIRM_CHARGESUMMON_MSG"*/;
+      v32 = (System_String_o **)&StringLiteral_3885/*"CONFIRM_CHARGESUMMON_MSG"*/;
       if ( type != 7 )
-        v32 = (System_String_o **)&StringLiteral_3899/*"CONFIRM_PAYSUMMON_MSG"*/;
+        v32 = (System_String_o **)&StringLiteral_3904/*"CONFIRM_PAYSUMMON_MSG"*/;
     }
     v31 = LocalizationManager__Get(*v32, 0);
     resultText = v31;
@@ -2749,74 +2749,74 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27, v28);
-    resultText = LocalizationManager__Get((System_String_o *)StringLiteral_3901/*"CONFIRM_SUMMON_MESSAGE_501"*/, 0);
+    resultText = LocalizationManager__Get((System_String_o *)StringLiteral_3906/*"CONFIRM_SUMMON_MESSAGE_501"*/, 0);
     v201 = privilegeGachaTextId;
-    v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v201);
-    v30 = System_String__Format((System_String_o *)StringLiteral_3902/*"CONFIRM_SUMMON_MESSAGE_{0}"*/, v29, 0);
+    v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v201);
+    v30 = System_String__Format((System_String_o *)StringLiteral_3907/*"CONFIRM_SUMMON_MESSAGE_{0}"*/, v29, 0);
     LocalizationManager__TryGet(&resultText, v30, resultText, 0);
     v31 = resultText;
   }
-  v33 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 9);
+  v33 = (System_Object_array *)sub_2213B20(object___TypeInfo, 9);
   v201 = price;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v201);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v201);
   if ( !v33 )
     goto LABEL_102;
   v42 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( !LODWORD(v33->max_length) )
     goto LABEL_101;
   v33->m_Items[0] = v42;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v33->m_Items, (int32_t)v42, v36, v37, v38, v39, v40, v41);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v33->m_Items, (int32_t)v42, v36, v37, v38, v39, v40, v41);
   v200 = num;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v200);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v200);
   v50 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( (v33->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_101;
   v33->m_Items[1] = v50;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[1], (int32_t)v50, v44, v45, v46, v47, v48, v49);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[1], (int32_t)v50, v44, v45, v46, v47, v48, v49);
   v199 = haveStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v199);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v199);
   v57 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v33->max_length) <= 2 )
     goto LABEL_101;
   v33->m_Items[2] = v57;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[2], (int32_t)v57, v51, v52, v53, v54, v55, v56);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[2], (int32_t)v57, v51, v52, v53, v54, v55, v56);
   v198 = haveFreeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v198);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v198);
   v64 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( (v33->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_101;
   v33->m_Items[3] = v64;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[3], (int32_t)v64, v58, v59, v60, v61, v62, v63);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[3], (int32_t)v64, v58, v59, v60, v61, v62, v63);
   v197 = haveChargeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v197);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v197);
   v71 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
@@ -2824,61 +2824,61 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
   if ( LODWORD(v33->max_length) <= 4 )
     goto LABEL_101;
   v33->m_Items[4] = v71;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[4], (int32_t)v71, v65, v66, v67, v68, v69, v70);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[4], (int32_t)v71, v65, v66, v67, v68, v69, v70);
   v196 = afterStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v196);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v196);
   v78 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v33->max_length) <= 5 )
     goto LABEL_101;
   v33->m_Items[5] = v78;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[5], (int32_t)v78, v72, v73, v74, v75, v76, v77);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[5], (int32_t)v78, v72, v73, v74, v75, v76, v77);
   v195 = afterFreeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v195);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v195);
   v85 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v33->max_length) <= 6 )
     goto LABEL_101;
   v33->m_Items[6] = v85;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[6], (int32_t)v85, v79, v80, v81, v82, v83, v84);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[6], (int32_t)v85, v79, v80, v81, v82, v83, v84);
   v194 = afterChargeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v194);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v194);
   v92 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( (v33->max_length & 0xFFFFFFF8) == 0 )
     goto LABEL_101;
   v33->m_Items[7] = v92;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[7], (int32_t)v92, v86, v87, v88, v89, v90, v91);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[7], (int32_t)v92, v86, v87, v88, v89, v90, v91);
   v99 = num;
   if ( title )
   {
-    addMsgBgSprite = sub_21FFDA4(title, v33->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(title, v33->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v33->max_length) <= 8 )
     goto LABEL_101;
   v33->m_Items[8] = (Il2CppObject *)title;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->m_Items[8], (int32_t)title, v93, v94, v95, v96, v97, v98);
-  v102 = System_String__Format_75484712(v31, v33, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->m_Items[8], (int32_t)title, v93, v94, v95, v96, v97, v98);
+  v102 = System_String__Format_75698016(v31, v33, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v100, v101);
-  addMsgBgSprite = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12975/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0);
+  addMsgBgSprite = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13001/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0);
   if ( !this->fields.addMsgBgSprite )
     goto LABEL_102;
   v103 = (System_String_o *)addMsgBgSprite;
@@ -2891,16 +2891,16 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v104, v105);
-    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_12932/*"SUMMON_CHARGE_STONEPAY_WARNING_MSG"*/, 0);
-    defaultText = LocalizationManager__Get((System_String_o *)StringLiteral_12977/*"SUMMON_WARNING_MESSAGE_501"*/, 0);
+    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_12958/*"SUMMON_CHARGE_STONEPAY_WARNING_MSG"*/, 0);
+    defaultText = LocalizationManager__Get((System_String_o *)StringLiteral_13003/*"SUMMON_WARNING_MESSAGE_501"*/, 0);
     v201 = privilegeGachaTextId;
-    v107 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v201);
-    v108 = System_String__Format((System_String_o *)StringLiteral_12978/*"SUMMON_WARNING_MESSAGE_{0}"*/, v107, 0);
+    v107 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v201);
+    v108 = System_String__Format((System_String_o *)StringLiteral_13004/*"SUMMON_WARNING_MESSAGE_{0}"*/, v107, 0);
     LocalizationManager__TryGet(&defaultText, v108, defaultText, 0);
     v109 = defaultText;
     DateTime = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0);
-    v111 = System_String__Format_75484576(v109, (Il2CppObject *)title, DateTime, 0);
-    addMsgBgSprite = (__int64)System_String__Concat_75438412(v106, v111, 0);
+    v111 = System_String__Format_75697880(v109, (Il2CppObject *)title, DateTime, 0);
+    addMsgBgSprite = (__int64)System_String__Concat_75651716(v106, v111, 0);
     if ( !this->fields.addMsgBgSprite )
       goto LABEL_102;
     v103 = (System_String_o *)addMsgBgSprite;
@@ -2914,10 +2914,10 @@ void SummonConfirmDlgComponent__OpenConfirmStone(
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v104, v105);
-    v112 = LocalizationManager__Get((System_String_o *)StringLiteral_12962/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/, 0);
+    v112 = LocalizationManager__Get((System_String_o *)StringLiteral_12988/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/, 0);
     v113 = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0);
     v114 = System_String__Format(v112, v113, 0);
-    addMsgBgSprite = (__int64)System_String__Concat_75438412(v103, v114, 0);
+    addMsgBgSprite = (__int64)System_String__Concat_75651716(v103, v114, 0);
     if ( this->fields.addMsgBgSprite )
     {
       v103 = (System_String_o *)addMsgBgSprite;
@@ -2931,7 +2931,7 @@ LABEL_59:
       }
     }
 LABEL_102:
-    sub_21FFECC(addMsgBgSprite, v35);
+    sub_2213CDC(addMsgBgSprite, v35);
   }
 LABEL_60:
   this->fields.state = 4;
@@ -2942,113 +2942,113 @@ LABEL_60:
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v104, v105);
-  addMsgBgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaDetailMaster___);
+  addMsgBgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GachaDetailMaster___);
   if ( !addMsgBgSprite )
     goto LABEL_102;
   addMsgBgSprite = (__int64)DataMasterBase_object__object__int___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)addMsgBgSprite,
                               gachaId,
-                              (const MethodInfo_3EDD388 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
+                              (const MethodInfo_3F10B30 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
   if ( !addMsgBgSprite )
     goto LABEL_102;
   v115 = (GachaDetailEntity_o *)addMsgBgSprite;
   titlea = GachaDetailEntity__GetConfirmBonusSelectSummonTitle((GachaDetailEntity_o *)addMsgBgSprite, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v116, v117);
-  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3877/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/, 0);
+  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3882/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/, 0);
   v201 = v190;
-  v119 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v201);
+  v119 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v201);
   v200 = v99;
-  v120 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v200);
-  v121 = System_String__Format_75484576(v118, v119, v120, 0);
-  v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3878/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/, 0);
-  v123 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 6);
+  v120 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v200);
+  v121 = System_String__Format_75697880(v118, v119, v120, 0);
+  v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3883/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/, 0);
+  v123 = (System_Object_array *)sub_2213B20(object___TypeInfo, 6);
   v199 = haveStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v199);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v199);
   if ( !v123 )
     goto LABEL_102;
   v130 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( !LODWORD(v123->max_length) )
     goto LABEL_101;
   v123->m_Items[0] = v130;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v123->m_Items, (int32_t)v130, v124, v125, v126, v127, v128, v129);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v123->m_Items, (int32_t)v130, v124, v125, v126, v127, v128, v129);
   v198 = haveChargeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v198);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v198);
   v137 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( (v123->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_101;
   v123->m_Items[1] = v137;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v123->m_Items[1], (int32_t)v137, v131, v132, v133, v134, v135, v136);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v123->m_Items[1], (int32_t)v137, v131, v132, v133, v134, v135, v136);
   v197 = haveFreeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v197);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v197);
   v144 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v123->max_length) <= 2 )
     goto LABEL_101;
   v123->m_Items[2] = v144;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v123->m_Items[2], (int32_t)v144, v138, v139, v140, v141, v142, v143);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v123->m_Items[2], (int32_t)v144, v138, v139, v140, v141, v142, v143);
   v196 = afterStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v196);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v196);
   v151 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( (v123->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_101;
   v123->m_Items[3] = v151;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v123->m_Items[3], (int32_t)v151, v145, v146, v147, v148, v149, v150);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v123->m_Items[3], (int32_t)v151, v145, v146, v147, v148, v149, v150);
   v195 = afterChargeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v195);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v195);
   v158 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
       goto LABEL_103;
   }
   if ( LODWORD(v123->max_length) <= 4 )
     goto LABEL_101;
   v123->m_Items[4] = v158;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v123->m_Items[4], (int32_t)v158, v152, v153, v154, v155, v156, v157);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v123->m_Items[4], (int32_t)v158, v152, v153, v154, v155, v156, v157);
   v194 = afterFreeStoneNum;
-  addMsgBgSprite = j_il2cpp_value_box_0(qword_594C070, &v194);
+  addMsgBgSprite = j_il2cpp_value_box_0(qword_5984348, &v194);
   v165 = (Il2CppObject *)addMsgBgSprite;
   if ( addMsgBgSprite )
   {
-    addMsgBgSprite = sub_21FFDA4(addMsgBgSprite, v123->obj.klass->_1.element_class);
+    addMsgBgSprite = sub_2213BB4(addMsgBgSprite, v123->obj.klass->_1.element_class);
     if ( !addMsgBgSprite )
     {
 LABEL_103:
-      v187 = sub_21FFEF0(addMsgBgSprite, v43);
-      sub_21FFD90(v187, 0);
+      v187 = sub_2213D00(addMsgBgSprite, v43);
+      sub_2213BA0(v187, 0);
     }
   }
   if ( LODWORD(v123->max_length) <= 5 )
 LABEL_101:
-    sub_21FFED4(addMsgBgSprite);
+    sub_2213CE4(addMsgBgSprite);
   v123->m_Items[5] = v165;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v123->m_Items[5], (int32_t)v165, v159, v160, v161, v162, v163, v164);
-  v166 = System_String__Format_75484712(v122, v123, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v123->m_Items[5], (int32_t)v165, v159, v160, v161, v162, v163, v164);
+  v166 = System_String__Format_75698016(v122, v123, 0);
   ConfirmBonusSelectSummonLowMsg = GachaDetailEntity__GetConfirmBonusSelectSummonLowMsg(v115, 0);
   bonusSelectMsgInfo = (UnityEngine_Object_o *)this->fields.bonusSelectMsgInfo;
   v171 = ConfirmBonusSelectSummonLowMsg;
@@ -3066,17 +3066,17 @@ LABEL_101:
     transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)addMsgBgSprite, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v173, v174);
-    addMsgBgSprite = (__int64)UnityEngine_Object__Instantiate_object__59506996(
+    addMsgBgSprite = (__int64)UnityEngine_Object__Instantiate_object__59717116(
                                 MsgInfoPrefab_k__BackingField,
                                 transform,
-                                (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
     if ( !addMsgBgSprite )
       goto LABEL_102;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)addMsgBgSprite,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
     this->fields.bonusSelectMsgInfo = (struct BonusSelectSummonMsgInfo_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.bonusSelectMsgInfo,
       (int32_t)Component_object,
       v177,
@@ -3102,11 +3102,11 @@ LABEL_101:
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v183, v184);
-  addMsgBgSprite = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  addMsgBgSprite = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_102;
   UILabel__set_text(cancelBtnLb, (System_String_o *)addMsgBgSprite, 0);
-  v186 = LocalizationManager__Get((System_String_o *)StringLiteral_12922/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, 0);
+  v186 = LocalizationManager__Get((System_String_o *)StringLiteral_12948/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, 0);
   SummonConfirmDlgComponent__Open(this, 0, 0, v186, callback, 14.0, 0, shopIdIdx, 0, 1, 0, v188);
 }
 
@@ -3135,38 +3135,38 @@ void SummonConfirmDlgComponent__OpenConfirmTicket(
   int32_t v24; // [xsp+28h] [xbp-48h] BYREF
   int32_t v25; // [xsp+2Ch] [xbp-44h] BYREF
 
-  if ( (byte_59348D8 & 1) == 0 )
+  if ( (byte_596CA07 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3904/*"CONFIRM_TICKETSUMMON_MSG"*/);
-    sub_21FFC50(&StringLiteral_3905/*"CONFIRM_TICKETSUMMON_MSG2"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59348D8 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3909/*"CONFIRM_TICKETSUMMON_MSG"*/);
+    sub_2213A60(&StringLiteral_3910/*"CONFIRM_TICKETSUMMON_MSG2"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596CA07 = 1;
   }
   v13 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   if ( num == 1 )
   {
     if ( !v13 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, title, *(_QWORD *)&num);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3904/*"CONFIRM_TICKETSUMMON_MSG"*/, 0);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3909/*"CONFIRM_TICKETSUMMON_MSG"*/, 0);
     v25 = haveTicketNum;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v25);
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
     v24 = afterTicketNum;
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-    v17 = System_String__Format_75484576(v14, v15, v16, 0);
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+    v17 = System_String__Format_75697880(v14, v15, v16, 0);
   }
   else
   {
     if ( !v13 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, title, *(_QWORD *)&num);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3905/*"CONFIRM_TICKETSUMMON_MSG2"*/, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3910/*"CONFIRM_TICKETSUMMON_MSG2"*/, 0);
     v25 = num;
-    v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v25);
+    v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
     v24 = haveTicketNum;
-    v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
+    v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
     v23 = afterTicketNum;
-    v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v23);
-    v17 = System_String__Format_75484644(v18, v19, v20, v21, 0);
+    v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v23);
+    v17 = System_String__Format_75697948(v18, v19, v20, v21, 0);
   }
   this->fields.state = 5;
   SummonConfirmDlgComponent__Open(this, title, v17, 0, callback, 14.0, 0, 0, 0, 0, 0, v22);
@@ -3195,26 +3195,26 @@ void SummonConfirmDlgComponent__OpenShortChargeStone(
   int32_t v20; // [xsp+2Ch] [xbp-54h] BYREF
 
   v20 = haveFreeStoneNum;
-  if ( (byte_59348D3 & 1) == 0 )
+  if ( (byte_596CA02 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12864/*"STONE_PURCHASE"*/);
-    sub_21FFC50(&StringLiteral_12676/*"SHORT_HAVE_CHARGE_STONE"*/);
-    sub_21FFC50(&StringLiteral_422/*"#,0"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59348D3 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12890/*"STONE_PURCHASE"*/);
+    sub_2213A60(&StringLiteral_12702/*"SHORT_HAVE_CHARGE_STONE"*/);
+    sub_2213A60(&StringLiteral_422/*"#,0"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596CA02 = 1;
   }
   v10 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&price, *(_QWORD *)&haveChargeStoneNum);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12676/*"SHORT_HAVE_CHARGE_STONE"*/, 0);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12702/*"SHORT_HAVE_CHARGE_STONE"*/, 0);
   v19 = price;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v19);
   v18 = haveChargeStoneNum;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v18);
-  v14 = (Il2CppObject *)System_Int32__ToString_76925352((int32_t)&v20, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
-  v15 = System_String__Format_75484644(v11, v12, v13, v14, 0);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12864/*"STONE_PURCHASE"*/, 0);
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v18);
+  v14 = (Il2CppObject *)System_Int32__ToString_77138656((int32_t)&v20, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+  v15 = System_String__Format_75697948(v11, v12, v13, v14, 0);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12890/*"STONE_PURCHASE"*/, 0);
   this->fields.state = 2;
   SummonConfirmDlgComponent__Open(this, v10, v15, v16, callback, 14.0, 0, 0, 0, 0, 0, v17);
 }
@@ -3234,19 +3234,19 @@ void SummonConfirmDlgComponent__OpenShortPoint(
   const MethodInfo *v11; // [xsp+10h] [xbp-40h]
   int32_t v12; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_59348D6 & 1) == 0 )
+  if ( (byte_596CA05 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12677/*"SHORT_HAVE_POINT"*/);
-    sub_21FFC50(&StringLiteral_12675/*"SHORT_DLG_TITLE"*/);
-    byte_59348D6 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12703/*"SHORT_HAVE_POINT"*/);
+    sub_2213A60(&StringLiteral_12701/*"SHORT_DLG_TITLE"*/);
+    byte_596CA05 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&havePoint, callback);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12675/*"SHORT_DLG_TITLE"*/, 0);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12677/*"SHORT_HAVE_POINT"*/, 0);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12701/*"SHORT_DLG_TITLE"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12703/*"SHORT_HAVE_POINT"*/, 0);
   v12 = havePoint;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v12);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v12);
   v10 = System_String__Format(v8, v9, 0);
   this->fields.state = 3;
   SummonConfirmDlgComponent__Open(this, v7, v10, 0, callback, 14.0, 0, 0, 0, 0, 0, v11);
@@ -3271,24 +3271,24 @@ void SummonConfirmDlgComponent__OpenShortStone(
   int32_t v16; // [xsp+28h] [xbp-48h] BYREF
   int32_t v17; // [xsp+2Ch] [xbp-44h] BYREF
 
-  if ( (byte_59348D2 & 1) == 0 )
+  if ( (byte_596CA01 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12864/*"STONE_PURCHASE"*/);
-    sub_21FFC50(&StringLiteral_12678/*"SHORT_HAVE_STONE"*/);
-    sub_21FFC50(&StringLiteral_12675/*"SHORT_DLG_TITLE"*/);
-    byte_59348D2 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12890/*"STONE_PURCHASE"*/);
+    sub_2213A60(&StringLiteral_12704/*"SHORT_HAVE_STONE"*/);
+    sub_2213A60(&StringLiteral_12701/*"SHORT_DLG_TITLE"*/);
+    byte_596CA01 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&haveFreeStone, *(_QWORD *)&haveChargeStone);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12675/*"SHORT_DLG_TITLE"*/, 0);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12678/*"SHORT_HAVE_STONE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12701/*"SHORT_DLG_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12704/*"SHORT_HAVE_STONE"*/, 0);
   v17 = haveChargeStone;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v17);
   v16 = haveFreeStone;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v16);
-  v13 = System_String__Format_75484576(v10, v11, v12, 0);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12864/*"STONE_PURCHASE"*/, 0);
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
+  v13 = System_String__Format_75697880(v10, v11, v12, 0);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12890/*"STONE_PURCHASE"*/, 0);
   this->fields.state = 2;
   SummonConfirmDlgComponent__Open(this, v9, v13, v14, callback, 14.0, 0, 0, 0, 0, 0, v15);
 }
@@ -3305,7 +3305,7 @@ void SummonConfirmDlgComponent__SetBonusText(
   __int64 v9; // x2
   int32_t klass; // w21
   BalanceConfig_c *v11; // x8
-  const MethodInfo_384C73C *v12; // x1
+  const MethodInfo_387FC04 *v12; // x1
   Il2CppObject *object; // x0
   __int64 v14; // x1
   __int64 v15; // x2
@@ -3355,26 +3355,26 @@ void SummonConfirmDlgComponent__SetBonusText(
   UILabel_o *extraTitleLabel; // x19
   int32_t v60; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_59348E1 & 1) == 0 )
+  if ( (byte_596CA10 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ItemIconComponent__TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_ItemIconComponent___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_First_GiftEntity___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent___c__SetBonusText_b__80_0__);
-    sub_21FFC50(&SummonConfirmDlgComponent___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    sub_21FFC50(&StringLiteral_12933/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_12935/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/);
-    sub_21FFC50(&StringLiteral_12936/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/);
-    sub_21FFC50(&StringLiteral_12938/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/);
-    sub_21FFC50(&StringLiteral_12937/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/);
-    sub_21FFC50(&StringLiteral_12934/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE_2"*/);
-    byte_59348E1 = 1;
+    sub_2213A60(&System_Action_ItemIconComponent__TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_ItemIconComponent___);
+    sub_2213A60(&Method_System_Linq_Enumerable_First_GiftEntity___);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent___c__SetBonusText_b__80_0__);
+    sub_2213A60(&SummonConfirmDlgComponent___c_TypeInfo);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    sub_2213A60(&StringLiteral_12959/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_12961/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/);
+    sub_2213A60(&StringLiteral_12962/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/);
+    sub_2213A60(&StringLiteral_12964/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/);
+    sub_2213A60(&StringLiteral_12963/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/);
+    sub_2213A60(&StringLiteral_12960/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE_2"*/);
+    byte_596CA10 = 1;
   }
   SelfUserGame = (UnityEngine_GameObject_o *)UserGameMaster__getSelfUserGame(0);
   if ( bonusType == 2 )
@@ -3397,16 +3397,16 @@ void SummonConfirmDlgComponent__SetBonusText(
         static_fields = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
       }
       v31 = (Il2CppObject *)static_fields->__9;
-      _9__80_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_ItemIconComponent__TypeInfo);
+      _9__80_0 = (System_Action_object__o *)sub_2213CCC(System_Action_ItemIconComponent__TypeInfo);
       System_Action_object____ctor(_9__80_0, v31, Method_SummonConfirmDlgComponent___c__SetBonusText_b__80_0__, 0);
       v32 = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
       v32->__9__80_0 = (struct System_Action_ItemIconComponent__o *)_9__80_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v32->__9__80_0, (int32_t)_9__80_0, v33, v34, v35, v36, v37, v38);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v32->__9__80_0, (int32_t)_9__80_0, v33, v34, v35, v36, v37, v38);
     }
     BasicHelper__ForEach_object_(
       extraItemIconComponents,
       (System_Action_T__o *)_9__80_0,
-      (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_ItemIconComponent___);
+      (const MethodInfo_381282C *)Method_BasicHelper_ForEach_ItemIconComponent___);
     for ( i = 4; ; ++i )
     {
       SelfUserGame = (UnityEngine_GameObject_o *)SummonConfirmDlgComponent_TypeInfo;
@@ -3425,7 +3425,7 @@ void SummonConfirmDlgComponent__SetBonusText(
       SelfUserGame = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                    (System_Collections_Generic_List_object__o *)giftEntities,
                                                    v41,
-                                                   (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                                                   (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
       v42 = this->fields.extraItemIconComponents;
       if ( !v42 )
         goto LABEL_59;
@@ -3436,7 +3436,7 @@ void SummonConfirmDlgComponent__SetBonusText(
         goto LABEL_59;
       if ( v41 >= LODWORD(extraMessageLabels->max_length) )
 LABEL_60:
-        sub_21FFED4(SelfUserGame);
+        sub_2213CE4(SelfUserGame);
       v44 = (ItemIconComponent_o *)*((_QWORD *)&v42->obj.klass + i);
       if ( !v44 )
         goto LABEL_59;
@@ -3448,7 +3448,7 @@ LABEL_60:
       UnityEngine_GameObject__SetActive(SelfUserGame, 1, 0);
       if ( !v45 )
         goto LABEL_59;
-      ItemIconComponent__SetGift_47936840(v44, v45[5], v45[6], v45[7], 0, 0);
+      ItemIconComponent__SetGift_47884936(v44, v45[5], v45[6], v45[7], 0, 0);
       if ( (_DWORD)i - 3 == giftEntities->fields._size )
         goto LABEL_63;
       v49 = SummonConfirmDlgComponent_TypeInfo;
@@ -3462,7 +3462,7 @@ LABEL_60:
 LABEL_63:
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v47, v48);
-        v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12933/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/, 0);
+        v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12959/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/, 0);
         v51 = v45[7];
         v52 = v50;
         NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v51, 0);
@@ -3472,12 +3472,12 @@ LABEL_63:
       {
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v47, v48);
-        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12934/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE_2"*/, 0);
+        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12960/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE_2"*/, 0);
         v55 = v45[7];
         v56 = v54;
         v57 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v55, 0);
         v58 = System_String__Format(v56, v57, 0);
-        SelfUserGame = (UnityEngine_GameObject_o *)System_String__Concat_75438412(
+        SelfUserGame = (UnityEngine_GameObject_o *)System_String__Concat_75651716(
                                                      v58,
                                                      (System_String_o *)StringLiteral_113/*" "*/,
                                                      0);
@@ -3490,7 +3490,7 @@ LABEL_63:
     extraTitleLabel = this->fields.extraTitleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v39);
-    SelfUserGame = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12936/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/, 0);
+    SelfUserGame = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12962/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/, 0);
     if ( extraTitleLabel )
     {
       UILabel__set_text(extraTitleLabel, (System_String_o *)SelfUserGame, 0);
@@ -3509,15 +3509,15 @@ LABEL_63:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v8, v9);
     v11 = BalanceConfig_TypeInfo;
   }
-  v12 = (const MethodInfo_384C73C *)Method_System_Linq_Enumerable_First_GiftEntity___;
+  v12 = (const MethodInfo_387FC04 *)Method_System_Linq_Enumerable_First_GiftEntity___;
   this->fields.isGetBonus = klass < v11->static_fields->ManaMax;
   object = System_Linq_Enumerable__First_object_((System_Collections_Generic_IEnumerable_TSource__o *)giftEntities, v12);
   titleLabel = this->fields.titleLabel;
   v17 = (int32_t *)object;
   if ( this->fields.isGetBonus )
-    v18 = (System_String_o **)&StringLiteral_12935/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/;
+    v18 = (System_String_o **)&StringLiteral_12961/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/;
   else
-    v18 = (System_String_o **)&StringLiteral_12938/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/;
+    v18 = (System_String_o **)&StringLiteral_12964/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/;
   v19 = *v18;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14, v15);
@@ -3526,7 +3526,7 @@ LABEL_63:
     goto LABEL_59;
   UILabel__set_text(titleLabel, (System_String_o *)SelfUserGame, 0);
   messageLabel = this->fields.messageLabel;
-  v23 = this->fields.isGetBonus ? (System_String_o **)&StringLiteral_12933/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/ : (System_String_o **)&StringLiteral_12937/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/;
+  v23 = this->fields.isGetBonus ? (System_String_o **)&StringLiteral_12959/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/ : (System_String_o **)&StringLiteral_12963/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/;
   v24 = *v23;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v20, v21);
@@ -3534,16 +3534,16 @@ LABEL_63:
   if ( !v17
     || (v25 = (System_String_o *)SelfUserGame,
         v60 = v17[7],
-        v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v60),
+        v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v60),
         SelfUserGame = (UnityEngine_GameObject_o *)System_String__Format(v25, v26, 0),
         !messageLabel)
     || (UILabel__set_text(messageLabel, (System_String_o *)SelfUserGame, 0),
         (SelfUserGame = (UnityEngine_GameObject_o *)this->fields.bonusItemIconComponent) == 0) )
   {
 LABEL_59:
-    sub_21FFECC(SelfUserGame, v8);
+    sub_2213CDC(SelfUserGame, v8);
   }
-  ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)SelfUserGame, v17[5], v17[6], v17[7], 0, 0);
+  ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)SelfUserGame, v17[5], v17[6], v17[7], 0, 0);
 }
 
 
@@ -3561,11 +3561,11 @@ void SummonConfirmDlgComponent__SetBonusTextPos(SummonConfirmDlgComponent_o *thi
   int v11; // w25
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v13; // x0
+  float v14; // s8
+  int v15; // w21
+  UnityEngine_GameObject_o *v16; // x0
+  int v17; // w8
   unsigned int localPosition; // s0
-  float v15; // s8
-  int v16; // w21
-  UnityEngine_GameObject_o *v17; // x0
-  int v18; // w8
 
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -3604,12 +3604,12 @@ void SummonConfirmDlgComponent__SetBonusTextPos(SummonConfirmDlgComponent_o *thi
   this = (SummonConfirmDlgComponent_o *)v5->fields.messageLabel;
   if ( !this )
     goto LABEL_31;
-  v15 = *(float *)&localPosition;
-  v16 = v7 + mWidth + addMsgBgSprite;
-  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPositionX(v17, (float)(v15 + (float)(v8 >> 1)) + (float)(v11 >> 1), 0);
-  v18 = v16 >= 0 ? v16 : v16 + 1;
-  GameObjectExtensions__SetLocalPositionX(v5->fields.bonusMsgInfo, (float)(v10 - (v18 >> 1)), 0);
+  v14 = *(float *)&localPosition;
+  v15 = v7 + mWidth + addMsgBgSprite;
+  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  GameObjectExtensions__SetLocalPositionX(v16, (float)(v14 + (float)(v8 >> 1)) + (float)(v11 >> 1), 0);
+  v17 = v15 >= 0 ? v15 : v15 + 1;
+  GameObjectExtensions__SetLocalPositionX(v5->fields.bonusMsgInfo, (float)(v10 - (v17 >> 1)), 0);
   this = (SummonConfirmDlgComponent_o *)v5->fields.titleLabel;
   if ( !this )
     goto LABEL_31;
@@ -3634,7 +3634,7 @@ void SummonConfirmDlgComponent__SetBonusTextPos(SummonConfirmDlgComponent_o *thi
         (this = (SummonConfirmDlgComponent_o *)v5->fields.bonusMsgInfo) == 0) )
   {
 LABEL_31:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
 }
@@ -3670,10 +3670,10 @@ void SummonConfirmDlgComponent__SetExtraTextPos(SummonConfirmDlgComponent_o *thi
   float v27; // s9
 
   v3 = this;
-  if ( (byte_59348E2 & 1) == 0 )
+  if ( (byte_596CA11 & 1) == 0 )
   {
-    this = (SummonConfirmDlgComponent_o *)sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    byte_59348E2 = 1;
+    this = (SummonConfirmDlgComponent_o *)sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    byte_596CA11 = 1;
   }
   extraTitleLabel = v3->fields.extraTitleLabel;
   if ( !extraTitleLabel )
@@ -3698,7 +3698,7 @@ void SummonConfirmDlgComponent__SetExtraTextPos(SummonConfirmDlgComponent_o *thi
       goto LABEL_27;
     if ( v9 >= LODWORD(extraItemIconComponents->max_length) )
 LABEL_28:
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     this = (SummonConfirmDlgComponent_o *)*((_QWORD *)&extraItemIconComponents->obj.klass + v5);
     if ( !this )
       goto LABEL_27;
@@ -3762,7 +3762,7 @@ LABEL_28:
         (this = (SummonConfirmDlgComponent_o *)v3->fields.extraMsgInfo) == 0) )
   {
 LABEL_27:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
 }
@@ -3829,24 +3829,24 @@ bool SummonConfirmDlgComponent__SetGroupSummonBonusMsg(
   int v58; // w8
   bool v59; // nf
 
-  if ( (byte_59348E0 & 1) == 0 )
+  if ( (byte_596CA0F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
-    sub_21FFC50(&System_Func_GachaExtraGiftEntity__int__TypeInfo);
-    sub_21FFC50(&System_Func_GachaExtraGiftEntity__bool__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&SummonConfirmDlgComponent_TypeInfo);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent___c__SetGroupSummonBonusMsg_b__79_1__);
-    sub_21FFC50(&Method_SummonConfirmDlgComponent___c__DisplayClass79_0__SetGroupSummonBonusMsg_b__0__);
-    sub_21FFC50(&SummonConfirmDlgComponent___c__DisplayClass79_0_TypeInfo);
-    sub_21FFC50(&SummonConfirmDlgComponent___c_TypeInfo);
-    byte_59348E0 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
+    sub_2213A60(&System_Func_GachaExtraGiftEntity__int__TypeInfo);
+    sub_2213A60(&System_Func_GachaExtraGiftEntity__bool__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&SummonConfirmDlgComponent_TypeInfo);
+    sub_2213A60(&Method_SummonConfirmDlgComponent___c__SetGroupSummonBonusMsg_b__79_1__);
+    sub_2213A60(&Method_SummonConfirmDlgComponent___c__DisplayClass79_0__SetGroupSummonBonusMsg_b__0__);
+    sub_2213A60(&SummonConfirmDlgComponent___c__DisplayClass79_0_TypeInfo);
+    sub_2213A60(&SummonConfirmDlgComponent___c_TypeInfo);
+    byte_596CA0F = 1;
   }
-  v5 = sub_21FFEBC(SummonConfirmDlgComponent___c__DisplayClass79_0_TypeInfo);
+  v5 = sub_2213CCC(SummonConfirmDlgComponent___c__DisplayClass79_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_51;
@@ -3878,14 +3878,14 @@ bool SummonConfirmDlgComponent__SetGroupSummonBonusMsg(
         (baseWindowSprite = (UIWidget_o *)this->fields.msgLabel) == 0)
     || (v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindowSprite, 0),
         GameObjectExtensions__SetLocalPositionY(v11, -29.0, 0),
-        (baseWindowSprite = (UIWidget_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
+        (baseWindowSprite = (UIWidget_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
   {
 LABEL_51:
-    sub_21FFECC(baseWindowSprite, v7);
+    sub_2213CDC(baseWindowSprite, v7);
   }
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)baseWindowSprite,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GiftMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GiftMaster___);
   *(_DWORD *)(v5 + 20) = 1;
   do
   {
@@ -3893,19 +3893,19 @@ LABEL_51:
     extraGiftEntList = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.extraGiftEntList;
     if ( !v13 )
     {
-      v13 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GachaExtraGiftEntity__bool__TypeInfo);
+      v13 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GachaExtraGiftEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v13,
         (Il2CppObject *)v5,
         Method_SummonConfirmDlgComponent___c__DisplayClass79_0__SetGroupSummonBonusMsg_b__0__,
         0);
       *(_QWORD *)(v5 + 24) = v13;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)v13, v15, v16, v17, v18, v19, v20);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)v13, v15, v16, v17, v18, v19, v20);
     }
     v21 = System_Linq_Enumerable__Where_object_(
             extraGiftEntList,
             (System_Func_TSource__bool__o *)v13,
-            (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
+            (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_GachaExtraGiftEntity___);
     v24 = SummonConfirmDlgComponent___c_TypeInfo;
     v25 = v21;
     if ( !*(&SummonConfirmDlgComponent___c_TypeInfo->_2.cctor_finished + 1) )
@@ -3923,7 +3923,7 @@ LABEL_51:
         static_fields = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
       }
       v28 = (Il2CppObject *)static_fields->__9;
-      _9__79_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_GachaExtraGiftEntity__int__TypeInfo);
+      _9__79_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_GachaExtraGiftEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__79_1,
         v28,
@@ -3931,15 +3931,15 @@ LABEL_51:
         0);
       v29 = SummonConfirmDlgComponent___c_TypeInfo->static_fields;
       v29->__9__79_1 = (struct System_Func_GachaExtraGiftEntity__int__o *)_9__79_1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v29->__9__79_1, (int32_t)_9__79_1, v30, v31, v32, v33, v34, v35);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v29->__9__79_1, (int32_t)_9__79_1, v30, v31, v32, v33, v34, v35);
     }
     v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                  v25,
                                                                  (System_Func_TSource__TResult__o *)_9__79_1,
-                                                                 (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
+                                                                 (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_GachaExtraGiftEntity__int___);
     v37 = (System_Collections_ICollection_o *)System_Linq_Enumerable__ToArray_int_(
                                                 v36,
-                                                (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+                                                (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
     baseWindowSprite = (UIWidget_o *)BasicHelper__IsNullOrEmpty(v37, 0);
     if ( ((unsigned __int8)baseWindowSprite & 1) == 0 )
     {
@@ -4028,10 +4028,10 @@ void SummonConfirmDlgComponent__add_callbackFunc(
   SummonConfirmDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_59348CF & 1) == 0 )
+  if ( (byte_596C9FE & 1) == 0 )
   {
-    sub_21FFC50(&SummonConfirmDlgComponent_CallbackFunc_TypeInfo);
-    byte_59348CF = 1;
+    sub_2213A60(&SummonConfirmDlgComponent_CallbackFunc_TypeInfo);
+    byte_596C9FE = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -4042,13 +4042,13 @@ void SummonConfirmDlgComponent__add_callbackFunc(
       if ( (SummonConfirmDlgComponent_CallbackFunc_c *)v6->klass != SummonConfirmDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SummonConfirmDlgComponent_CallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SummonConfirmDlgComponent_CallbackFunc_TypeInfo, v7, v8);
   SummonConfirmDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -4067,10 +4067,10 @@ void SummonConfirmDlgComponent__remove_callbackFunc(
   SummonConfirmDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_59348D0 & 1) == 0 )
+  if ( (byte_596C9FF & 1) == 0 )
   {
-    sub_21FFC50(&SummonConfirmDlgComponent_CallbackFunc_TypeInfo);
-    byte_59348D0 = 1;
+    sub_2213A60(&SummonConfirmDlgComponent_CallbackFunc_TypeInfo);
+    byte_596C9FF = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -4081,13 +4081,13 @@ void SummonConfirmDlgComponent__remove_callbackFunc(
       if ( (SummonConfirmDlgComponent_CallbackFunc_c *)v6->klass != SummonConfirmDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SummonConfirmDlgComponent_CallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SummonConfirmDlgComponent_CallbackFunc_TypeInfo, v7, v8);
   SummonConfirmDlgComponent__Init(v11, v12);
 }
 
@@ -4101,11 +4101,11 @@ void SummonConfirmDlgComponent__setBtnInfoActive(SummonConfirmDlgComponent_o *th
   int32_t v7; // w8
   UILabel_o *settingBtnLb; // x20
 
-  if ( (byte_59348DF & 1) == 0 )
+  if ( (byte_596CA0E & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/);
-    byte_59348DF = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12940/*"SUMMON_AUTOSALE_BUTTON"*/);
+    byte_596CA0E = 1;
   }
   state = this->fields.state;
   if ( state > 9 )
@@ -4145,7 +4145,7 @@ void SummonConfirmDlgComponent__setBtnInfoActive(SummonConfirmDlgComponent_o *th
       closeBtnObject = this->fields.closeBtnObject;
       if ( !closeBtnObject )
 LABEL_32:
-        sub_21FFECC(closeBtnObject, method);
+        sub_2213CDC(closeBtnObject, method);
     }
 LABEL_30:
     UnityEngine_GameObject__SetActive(closeBtnObject, 1, 0);
@@ -4171,7 +4171,7 @@ LABEL_30:
     settingBtnLb = this->fields.settingBtnLb;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
-    closeBtnObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12914/*"SUMMON_AUTOSALE_BUTTON"*/, 0);
+    closeBtnObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12940/*"SUMMON_AUTOSALE_BUTTON"*/, 0);
     if ( !settingBtnLb )
       goto LABEL_32;
     UILabel__set_text(settingBtnLb, (System_String_o *)closeBtnObject, 0);
@@ -4193,7 +4193,7 @@ void SummonConfirmDlgComponent__setTutorial(
 
   closeBtn = this->fields.closeBtn;
   if ( !closeBtn )
-    sub_21FFECC(0, isTutorial);
+    sub_2213CDC(0, isTutorial);
   ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))closeBtn->klass->vtable._5_set_isEnabled.methodPtr)(
     closeBtn,
     isTutorial,
@@ -4235,15 +4235,15 @@ void SummonConfirmDlgComponent__settingResult(SummonConfirmDlgComponent_o *this,
       return;
     }
 LABEL_8:
-    sub_21FFECC(autoSaleDlgInfo, res);
+    sub_2213CDC(autoSaleDlgInfo, res);
   }
   autoSaleDialogCloseCallbackFunc = this->fields.autoSaleDialogCloseCallbackFunc;
   if ( autoSaleDialogCloseCallbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v6, v7, v8, v9, v10, v11);
     this->fields.autoSaleDialogCloseCallbackFunc = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.autoSaleDialogCloseCallbackFunc,
       0,
       v13,
@@ -4252,7 +4252,7 @@ LABEL_8:
       v16,
       v17,
       v18);
-    SummonConfirmDlgComponent__Close_42170740(this, 0, v19);
+    SummonConfirmDlgComponent__Close_42185804(this, 0, v19);
     ((void (__fastcall *)(intptr_t, intptr_t))autoSaleDialogCloseCallbackFunc->fields.invoke_impl)(
       autoSaleDialogCloseCallbackFunc->fields.method_code,
       autoSaleDialogCloseCallbackFunc->fields.method);
@@ -4279,7 +4279,7 @@ void SummonConfirmDlgComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -4290,12 +4290,12 @@ void SummonConfirmDlgComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -4307,9 +4307,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF3520;
+  this->fields.invoke_impl = (intptr_t)sub_20064FC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF34D8;
+  this->fields.extra_arg = (intptr_t)sub_20064B4;
 }
 
 
@@ -4325,8 +4325,8 @@ System_IAsyncResult_o *SummonConfirmDlgComponent_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -4335,7 +4335,7 @@ void SummonConfirmDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -4361,15 +4361,15 @@ void SummonConfirmDlgComponent___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59348E9 & 1) == 0 )
+  if ( (byte_596CA18 & 1) == 0 )
   {
-    sub_21FFC50(&SummonConfirmDlgComponent___c_TypeInfo);
-    byte_59348E9 = 1;
+    sub_2213A60(&SummonConfirmDlgComponent___c_TypeInfo);
+    byte_596CA18 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(SummonConfirmDlgComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(SummonConfirmDlgComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SummonConfirmDlgComponent___c_TypeInfo->static_fields->__9 = (struct SummonConfirmDlgComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SummonConfirmDlgComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -4393,7 +4393,7 @@ int32_t SummonConfirmDlgComponent___c___Open_b__75_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return entity->fields.giftId;
 }
 
@@ -4408,7 +4408,7 @@ void SummonConfirmDlgComponent___c___SetBonusText_b__80_0(
                                                     (UnityEngine_Component_o *)obj,
                                                     0)) == 0 )
   {
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -4420,7 +4420,7 @@ int32_t SummonConfirmDlgComponent___c___SetGroupSummonBonusMsg_b__79_1(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return entity->fields.giftId;
 }
 
@@ -4439,7 +4439,7 @@ bool SummonConfirmDlgComponent___c__DisplayClass75_0___Open_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return entity->fields.giftId
       && entity->fields.idx == this->fields.shopIdIdx
       && entity->fields.bonusType == this->fields.bonusType;
@@ -4460,7 +4460,7 @@ bool SummonConfirmDlgComponent___c__DisplayClass79_0___SetGroupSummonBonusMsg_b_
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return entity->fields.giftId
       && entity->fields.idx == this->fields.shopIdIdx
       && entity->fields.bonusType == this->fields.bonusType;

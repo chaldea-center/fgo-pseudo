@@ -16,13 +16,13 @@ void EventMissionProgressRequest__beginRequest(
   __int128 v8; // [xsp+20h] [xbp-40h]
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_593A21B & 1) == 0 )
+  if ( (byte_59723F8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___get_Current__);
-    this = (EventMissionProgressRequest_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ValueTuple_string__string___GetEnumerator__);
-    byte_593A21B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___get_Current__);
+    this = (EventMissionProgressRequest_o *)sub_2213A60(&Method_System_Collections_Generic_List_ValueTuple_string__string___GetEnumerator__);
+    byte_59723F8 = 1;
   }
   v7 = 0u;
   v8 = 0u;
@@ -31,21 +31,21 @@ void EventMissionProgressRequest__beginRequest(
                                                   arg,
                                                   (const MethodInfo *)arg)) == 0 )
   {
-    sub_21FFECC(this, arg);
+    sub_2213CDC(this, arg);
   }
   System_Collections_Generic_List_ValueTuple_object__object____GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     (System_Collections_Generic_List_T__o *)this,
-    (const MethodInfo_43CBA4C *)Method_System_Collections_Generic_List_ValueTuple_string__string___GetEnumerator__);
+    (const MethodInfo_43FFB84 *)Method_System_Collections_Generic_List_ValueTuple_string__string___GetEnumerator__);
   v5 = 0;
   v6 = &v7;
   while ( System_Collections_Generic_List_Enumerator_ValueTuple_object__object____MoveNext(
             (System_Collections_Generic_List_Enumerator_T__o *)&v7,
-            (const MethodInfo_40B6970 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___MoveNext__) )
-    RequestBase__addField_51187332(v4, (System_String_o *)v8, *((System_String_o **)&v8 + 1), 0);
+            (const MethodInfo_40EA4FC *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___MoveNext__) )
+    RequestBase__addField_51259256(v4, (System_String_o *)v8, *((System_String_o **)&v8 + 1), 0);
   System_Collections_Generic_List_Enumerator_ValueTuple_object__object____Dispose(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
-    (const MethodInfo_40B696C *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___Dispose__);
+    (const MethodInfo_40EA4F8 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_string__string___Dispose__);
   RequestBase__beginRequest(v4, 0);
 }
 
@@ -54,16 +54,16 @@ System_String_o *EventMissionProgressRequest__getURL(EventMissionProgressRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A21A & 1) == 0 )
+  if ( (byte_59723F7 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_19998/*"eventMission/progress"*/);
-    byte_593A21A = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20040/*"eventMission/progress"*/);
+    byte_59723F7 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_19998/*"eventMission/progress"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20040/*"eventMission/progress"*/, 0);
 }
 
 
@@ -80,23 +80,23 @@ void EventMissionProgressRequest_Argument___ctor(
   bool v11; // w6
   bool v12; // w7
 
-  if ( (byte_593A21C & 1) == 0 )
+  if ( (byte_59723F9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
-    byte_593A21C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+    byte_59723F9 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.deemedTime = deemedTime;
   if ( !progressDataList )
   {
-    progressDataList = (System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *)sub_21FFEBC(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+    progressDataList = (System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       (System_Collections_Generic_List_object__o *)progressDataList,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___ctor__);
   }
   this->fields.progressDataList = progressDataList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.progressDataList,
     (int32_t)progressDataList,
     v7,
@@ -117,9 +117,9 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
   Il2CppObject *v5; // x21
   System_String_o *v6; // x0
   Il2CppObject *v7; // x2
-  const MethodInfo_3CC5524 *v8; // x4
+  const MethodInfo_3CF8CCC *v8; // x4
   Il2CppObject *v9; // x0
-  System_ValueTuple_object__object__o v10; // x1 OVERLAPPED
+  System_ValueTuple_object__object__o v10; // x1
   System_String_o *v11; // x3
   int32_t v12; // w4
   int32_t v13; // w5
@@ -163,7 +163,7 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
   bool v51; // w6
   bool v52; // w7
   Il2CppObject *v53; // x2
-  const MethodInfo_3CC5524 *v54; // x4
+  const MethodInfo_3CF8CCC *v54; // x4
   System_String_o *v55; // x3
   int32_t v56; // w4
   int32_t v57; // w5
@@ -183,38 +183,38 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
   System_ValueTuple_object__object__o v72; // 0:x0.16
   System_ValueTuple_object__object__o v73; // 0:x0.16
 
-  if ( (byte_593A21D & 1) == 0 )
+  if ( (byte_59723FA & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object____TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyCollection_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ValueTuple_string__string___Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ValueTuple_string__string____ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ValueTuple_string__string___TypeInfo);
-    sub_21FFC50(&Method_System_ValueTuple_string__string___ctor__);
-    sub_21FFC50(&StringLiteral_22661/*"missionConditionDetailId"*/);
-    sub_21FFC50(&StringLiteral_19995/*"eventId"*/);
-    sub_21FFC50(&StringLiteral_19326/*"deemedTime"*/);
-    sub_21FFC50(&StringLiteral_25226/*"targetId"*/);
-    sub_21FFC50(&StringLiteral_22666/*"missionTargetId"*/);
-    sub_21FFC50(&StringLiteral_23935/*"progress"*/);
-    sub_21FFC50(&StringLiteral_17315/*"addCount"*/);
-    byte_593A21D = 1;
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object____TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyCollection_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ValueTuple_string__string___Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ValueTuple_string__string____ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ValueTuple_string__string___TypeInfo);
+    sub_2213A60(&Method_System_ValueTuple_string__string___ctor__);
+    sub_2213A60(&StringLiteral_22707/*"missionConditionDetailId"*/);
+    sub_2213A60(&StringLiteral_20037/*"eventId"*/);
+    sub_2213A60(&StringLiteral_19367/*"deemedTime"*/);
+    sub_2213A60(&StringLiteral_25274/*"targetId"*/);
+    sub_2213A60(&StringLiteral_22712/*"missionTargetId"*/);
+    sub_2213A60(&StringLiteral_23982/*"progress"*/);
+    sub_2213A60(&StringLiteral_17351/*"addCount"*/);
+    byte_59723FA = 1;
   }
-  v3 = (System_Collections_Generic_List_T__o *)sub_21FFEBC(System_Collections_Generic_List_ValueTuple_string__string___TypeInfo);
+  v3 = (System_Collections_Generic_List_T__o *)sub_2213CCC(System_Collections_Generic_List_ValueTuple_string__string___TypeInfo);
   System_Collections_Generic_List_ValueTuple_object__object_____ctor(
     v3,
-    (const MethodInfo_43CA67C *)Method_System_Collections_Generic_List_ValueTuple_string__string____ctor__);
+    (const MethodInfo_43FE7B4 *)Method_System_Collections_Generic_List_ValueTuple_string__string____ctor__);
   deemedTime = this->fields.deemedTime;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &deemedTime);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &deemedTime);
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v4);
   v6 = JsonManager__toJson(v5, 0, 0, 0);
-  v72.fields.Item2 = (Il2CppObject *)StringLiteral_19326/*"deemedTime"*/;
+  v72.fields.Item2 = (Il2CppObject *)StringLiteral_19367/*"deemedTime"*/;
   v7 = (Il2CppObject *)v6;
   v72.fields.Item1 = (Il2CppObject *)&v70;
   v70.fields.Item1 = 0;
@@ -238,14 +238,14 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
     System_Collections_Generic_List_ValueTuple_object__object____AddWithResize(
       v3,
       v10,
-      *(const MethodInfo_43CAF28 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_43FF060 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj + size;
     v3->fields._size = size + 1;
     v19[2] = (Il2CppObject)v10;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v19[2],
       0,
       (System_String_o *)v10.fields.Item2,
@@ -277,7 +277,7 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
   else
   {
 LABEL_15:
-    v24 = sub_2237E2C(
+    v24 = sub_224BC3C(
             progressDataList,
             System_Collections_Generic_IReadOnlyCollection_EventMissionProgressRequest_Argument_ProgressData__TypeInfo,
             0);
@@ -285,7 +285,7 @@ LABEL_15:
   v25 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *, _QWORD))v24)(
           progressDataList,
           *(_QWORD *)(v24 + 8));
-  v9 = (Il2CppObject *)sub_21FFD10(System_Collections_Generic_Dictionary_string__object____TypeInfo, v25);
+  v9 = (Il2CppObject *)sub_2213B20(System_Collections_Generic_Dictionary_string__object____TypeInfo, v25);
   v26 = this->fields.progressDataList;
   if ( !v26 )
     goto LABEL_39;
@@ -312,7 +312,7 @@ LABEL_15:
     else
     {
 LABEL_23:
-      v33 = sub_2237E2C(
+      v33 = sub_224BC3C(
               v26,
               System_Collections_Generic_IReadOnlyCollection_EventMissionProgressRequest_Argument_ProgressData__TypeInfo,
               0);
@@ -343,7 +343,7 @@ LABEL_23:
       else
       {
 LABEL_31:
-        v38 = sub_2237E2C(
+        v38 = sub_224BC3C(
                 this->fields.progressDataList,
                 System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__TypeInfo,
                 0);
@@ -352,61 +352,61 @@ LABEL_31:
                         v34,
                         (unsigned int)v28,
                         *(_QWORD *)(v38 + 8));
-      v40 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v40 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v40,
-        (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       if ( v39 )
       {
         LODWORD(v70.fields.Item1) = v39[4];
-        v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v70);
+        v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v70);
         if ( v40 )
         {
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v40,
-            (Il2CppObject *)StringLiteral_22666/*"missionTargetId"*/,
+            (Il2CppObject *)StringLiteral_22712/*"missionTargetId"*/,
             v9,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           LODWORD(deemedTime) = v39[5];
-          v41 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &deemedTime);
+          v41 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &deemedTime);
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v40,
-            (Il2CppObject *)StringLiteral_22661/*"missionConditionDetailId"*/,
+            (Il2CppObject *)StringLiteral_22707/*"missionConditionDetailId"*/,
             v41,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v69 = v39[6];
-          v42 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v69);
+          v42 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v69);
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v40,
-            (Il2CppObject *)StringLiteral_25226/*"targetId"*/,
+            (Il2CppObject *)StringLiteral_25274/*"targetId"*/,
             v42,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v68 = v39[7];
-          v43 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v68);
+          v43 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v68);
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v40,
-            (Il2CppObject *)StringLiteral_19995/*"eventId"*/,
+            (Il2CppObject *)StringLiteral_20037/*"eventId"*/,
             v43,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v67 = v39[8];
-          v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v67);
+          v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v67);
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v40,
-            (Il2CppObject *)StringLiteral_17315/*"addCount"*/,
+            (Il2CppObject *)StringLiteral_17351/*"addCount"*/,
             v44,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           if ( v27 )
           {
-            v45 = sub_21FFDA4(v40, *(_QWORD *)(*(_QWORD *)v27 + 64LL));
+            v45 = sub_2213BB4(v40, *(_QWORD *)(*(_QWORD *)v27 + 64LL));
             if ( !v45 )
             {
-              v65 = sub_21FFEF0(0, v46);
-              sub_21FFD90(v65, 0);
+              v65 = sub_2213D00(0, v46);
+              sub_2213BA0(v65, 0);
             }
             if ( v28 >= v27[6] )
-              sub_21FFED4(v45);
+              sub_2213CE4(v45);
             *(_QWORD *)&v27[2 * v28 + 8] = v40;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)(&v29->klass + v28),
               (int32_t)v40,
               v47,
@@ -429,7 +429,7 @@ LABEL_31:
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v10.fields.Item1);
   v53 = (Il2CppObject *)JsonManager__toJson((Il2CppObject *)v27, 0, 0, 0);
   v73.fields.Item1 = (Il2CppObject *)&v70;
-  v73.fields.Item2 = (Il2CppObject *)StringLiteral_23935/*"progress"*/;
+  v73.fields.Item2 = (Il2CppObject *)StringLiteral_23982/*"progress"*/;
   v70 = (System_ValueTuple_object__object__o)0LL;
   System_ValueTuple_object__object____ctor(
     v73,
@@ -442,21 +442,21 @@ LABEL_31:
   ++v66->fields._version;
   if ( !v60 )
 LABEL_39:
-    sub_21FFECC(v9, v10.fields.Item1);
+    sub_2213CDC(v9, v10.fields.Item1);
   v62 = v66->fields._size;
   if ( (unsigned int)v62 >= LODWORD(v60->max_length) )
   {
     System_Collections_Generic_List_ValueTuple_object__object____AddWithResize(
       v66,
       v10,
-      *(const MethodInfo_43CAF28 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+      *(const MethodInfo_43FF060 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
   }
   else
   {
     v63 = &v60->obj + v62;
     v66->fields._size = v62 + 1;
     v63[2] = (Il2CppObject)v10;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v63[2],
       0,
       (System_String_o *)v10.fields.Item2,

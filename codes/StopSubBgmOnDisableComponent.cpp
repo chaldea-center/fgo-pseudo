@@ -19,25 +19,25 @@ void StopSubBgmOnDisableComponent__Awake(StopSubBgmOnDisableComponent_o *this, c
   struct System_String_o *monitor; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937C28 & 1) == 0 )
+  if ( (byte_596FD8D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    byte_5937C28 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    byte_596FD8D = 1;
   }
   v3 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v3 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BgmMaster___);
   if ( !Master_object )
     goto LABEL_12;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.subBgmId,
-                                    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !entity )
@@ -47,10 +47,10 @@ void StopSubBgmOnDisableComponent__Awake(StopSubBgmOnDisableComponent_o *this, c
     return;
   if ( !entity )
 LABEL_12:
-    sub_21FFECC(Master_object, v5);
+    sub_2213CDC(Master_object, v5);
   monitor = (struct System_String_o *)entity[1].monitor;
   this->fields.subBgmName = monitor;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.subBgmName, (int32_t)monitor, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.subBgmName, (int32_t)monitor, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -59,10 +59,10 @@ void StopSubBgmOnDisableComponent__OnDisable(StopSubBgmOnDisableComponent_o *thi
   BgmManager_c *v3; // x0
   System_String_o *subBgmName; // x19
 
-  if ( (byte_5937C29 & 1) == 0 )
+  if ( (byte_596FD8E & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    byte_5937C29 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    byte_596FD8E = 1;
   }
   if ( this->fields.subBgmId < 0 || System_String__IsNullOrEmpty(this->fields.subBgmName, 0) )
   {

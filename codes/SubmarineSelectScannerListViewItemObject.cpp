@@ -4,10 +4,10 @@ void SubmarineSelectScannerListViewItemObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5934E53 & 1) == 0 )
+  if ( (byte_596CF82 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5934E53 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596CF82 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -29,20 +29,20 @@ void SubmarineSelectScannerListViewItemObject__Awake(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934E51 & 1) == 0 )
+  if ( (byte_596CF80 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
-    byte_5934E51 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
+    byte_596CF80 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
   this->fields.itemDraw = (struct SubmarineSelectScannerListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -66,23 +66,23 @@ void SubmarineSelectScannerListViewItemObject__SetItem(
   SubmarineSelectScannerListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_5934E52 & 1) == 0 )
+  if ( (byte_596CF81 & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineSelectScannerListViewItem_TypeInfo);
-    byte_5934E52 = 1;
+    sub_2213A60(&SubmarineSelectScannerListViewItem_TypeInfo);
+    byte_596CF81 = 1;
   }
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_21FFECC(itemDraw, v7);
+    sub_2213CDC(itemDraw, v7);
   if ( item )
   {
     naturalAligment = SubmarineSelectScannerListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (SubmarineSelectScannerListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != SubmarineSelectScannerListViewItem_TypeInfo )
     {
-      sub_220024C(item, SubmarineSelectScannerListViewItem_TypeInfo, v8, v9);
+      sub_221405C(item, SubmarineSelectScannerListViewItem_TypeInfo, v8, v9);
       goto LABEL_9;
     }
   }

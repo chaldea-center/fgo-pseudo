@@ -1,13 +1,13 @@
 void BoostEntity___ctor(BoostEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593833B & 1) == 0 )
+  if ( (byte_59704E8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_593833B = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_59704E8 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ bool BoostEntity__IsValidPeriod(BoostEntity_o *this, const MethodInfo *method)
 {
   int64_t Time; // x0
 
-  if ( (byte_593833A & 1) == 0 )
+  if ( (byte_59704E7 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593833A = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59704E7 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);

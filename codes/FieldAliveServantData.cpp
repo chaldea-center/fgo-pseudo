@@ -15,24 +15,24 @@ void FieldAliveServantData___ctor(FieldAliveServantData_o *this, const MethodInf
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_593B149 & 1) == 0 )
+  if ( (byte_5973338 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_593B149 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_5973338 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.enemyIdList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -57,10 +57,10 @@ void FieldAliveServantData__addSvtData(
   Il2CppClass **v16; // x0
 
   v10 = this;
-  if ( (byte_593B148 & 1) == 0 )
+  if ( (byte_5973337 & 1) == 0 )
   {
-    this = (FieldAliveServantData_o *)sub_21FFC50(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    byte_593B148 = 1;
+    this = (FieldAliveServantData_o *)sub_2213A60(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    byte_5973337 = 1;
   }
   v11 = 16;
   if ( isEnemySide )
@@ -72,7 +72,7 @@ void FieldAliveServantData__addSvtData(
         ++v12->fields._version,
         !items) )
   {
-    sub_21FFECC(this, isEnemySide);
+    sub_2213CDC(this, isEnemySide);
   }
   size = v12->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -80,14 +80,14 @@ void FieldAliveServantData__addSvtData(
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v16[4] = (Il2CppClass *)svtData;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)(v16 + 4),
       (int32_t)svtData,
       (System_String_o *)svtData,

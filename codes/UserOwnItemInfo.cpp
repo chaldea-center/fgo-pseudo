@@ -4,7 +4,7 @@ void UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo *method)
 }
 
 
-void UserOwnItemInfo___ctor_50580916(
+void UserOwnItemInfo___ctor_50646108(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
@@ -20,7 +20,7 @@ void UserOwnItemInfo___ctor_50580916(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -45,12 +45,12 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_5939C5B & 1) == 0 )
+  if ( (byte_5971E1F & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
-    byte_5939C5B = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_long__get_HasValue__);
+    byte_5971E1F = 1;
   }
   if ( !hasValue )
   {
@@ -60,8 +60,8 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_21FFECC(0, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_49319480(ItemEntity_k__BackingField, value, 0);
+    sub_2213CDC(0, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_49376108(ItemEntity_k__BackingField, value, 0);
 }
 
 
@@ -71,7 +71,7 @@ int32_t UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const MethodInfo *
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -97,7 +97,7 @@ void UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEntity_o *valu
   bool v7; // w7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

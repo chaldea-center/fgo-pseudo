@@ -8,20 +8,20 @@ void TransformServantInfo___ctor(TransformServantInfo_o *this, const MethodInfo 
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939C24 & 1) == 0 )
+  if ( (byte_5971DE8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939C24 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971DE8 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v3 = (int)StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
   *(_QWORD *)&this->fields.svtId = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.titleText, v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.titleText, v3, v4, v5, v6, v7, v8, v9);
 }
 
 
-void TransformServantInfo___ctor_50562184(
+void TransformServantInfo___ctor_50627376(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -39,7 +39,7 @@ void TransformServantInfo___ctor_50562184(
   this->fields.titleText = titleText;
   this->fields.svtId = svtId;
   this->fields.dispLimitCount = dispLimitCount;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.titleText,
     (int32_t)titleText,
     v9,
@@ -61,10 +61,10 @@ int32_t TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_5939C25 & 1) == 0 )
+  if ( (byte_5971DE9 & 1) == 0 )
   {
-    sub_21FFC50(&ImageLimitCount_TypeInfo);
-    byte_5939C25 = 1;
+    sub_2213A60(&ImageLimitCount_TypeInfo);
+    byte_5971DE9 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

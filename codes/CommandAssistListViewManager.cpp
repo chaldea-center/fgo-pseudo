@@ -19,7 +19,7 @@ void CommandAssistListViewManager__CreateList(
   int32_t v10; // w23
   void *v11; // x25
   SkillLvEntity_o *Entity; // x0
-  System_String_o *Detail_49837896; // x26
+  System_String_o *Detail_49901180; // x26
   int32_t v14; // w27
   int32_t v15; // w28
   System_String_o *v16; // x29
@@ -32,22 +32,22 @@ void CommandAssistListViewManager__CreateList(
   Il2CppClass **v23; // x0
   const MethodInfo *v24; // [xsp+0h] [xbp-80h]
 
-  if ( (byte_5931D41 & 1) == 0 )
+  if ( (byte_5969EE1 & 1) == 0 )
   {
-    sub_21FFC50(&CommandAssistListViewItem_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
-    byte_5931D41 = 1;
+    sub_2213A60(&CommandAssistListViewItem_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+    byte_5969EE1 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  ValidEntityList = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  ValidEntityList = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !ValidEntityList )
     goto LABEL_22;
   ValidEntityList = EventCommandAssistMaster__GetValidEntityList(
@@ -67,7 +67,7 @@ void CommandAssistListViewManager__CreateList(
       ValidEntityList = System_Collections_Generic_List_object___get_Item(
                           v9,
                           v10,
-                          (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
       if ( !ValidEntityList || !Master_object )
         break;
       v11 = ValidEntityList;
@@ -76,15 +76,15 @@ void CommandAssistListViewManager__CreateList(
                  *((_DWORD *)ValidEntityList + 13),
                  *((_DWORD *)ValidEntityList + 14),
                  0);
-      if ( !Entity || (Detail_49837896 = SkillLvEntity__getDetail_49837896(Entity, Entity->fields.lv, 0, 0)) == 0 )
-        Detail_49837896 = **(System_String_o ***)(qword_594C0B8 + 184);
+      if ( !Entity || (Detail_49901180 = SkillLvEntity__getDetail_49901180(Entity, Entity->fields.lv, 0, 0)) == 0 )
+        Detail_49901180 = **(System_String_o ***)(qword_5984390 + 184);
       v14 = *((_DWORD *)v11 + 4);
       v15 = *((_DWORD *)v11 + 12);
       v16 = (System_String_o *)*((_QWORD *)v11 + 4);
       size = v9->fields._size;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-      v19 = (CommandAssistListViewItem_o *)sub_21FFEBC(CommandAssistListViewItem_TypeInfo);
-      CommandAssistListViewItem___ctor(v19, v10, eventId, v14, v15, v16, Detail_49837896, v10 == size - 1, v24);
+      v19 = (CommandAssistListViewItem_o *)sub_2213CCC(CommandAssistListViewItem_TypeInfo);
+      CommandAssistListViewItem___ctor(v19, v10, eventId, v14, v15, v16, Detail_49901180, v10 == size - 1, v24);
       if ( !itemList )
         break;
       items = itemList->fields._items;
@@ -98,20 +98,20 @@ void CommandAssistListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v19,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = &items->obj.klass + v22;
         itemList->fields._size = v22 + 1;
         v23[4] = (Il2CppClass *)v19;
-        sub_21FFBF4(v23 + 4, v19);
+        sub_2213A04(v23 + 4, v19);
       }
       if ( v8 == ++v10 )
         goto LABEL_20;
     }
 LABEL_22:
-    sub_21FFECC(ValidEntityList, v7);
+    sub_2213CDC(ValidEntityList, v7);
   }
 LABEL_20:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0);

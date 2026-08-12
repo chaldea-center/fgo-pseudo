@@ -22,10 +22,10 @@ void SubmarineSpotInfo___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields, (int32_t)spot, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields, (int32_t)spot, v9, v10, v11, v12, v13, v14);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
   LODWORD(v8->monitor) = panelId;
 }
 
@@ -68,7 +68,7 @@ void SubmarineSpotInfo__set_EventPanelSpotEntity(
   bool v7; // w7
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -95,7 +95,7 @@ void SubmarineSpotInfo__set_SpotEntity(SubmarineSpotInfo_o *this, SpotEntity_o *
   bool v7; // w7
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

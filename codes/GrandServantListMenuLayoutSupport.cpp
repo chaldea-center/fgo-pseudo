@@ -13,11 +13,11 @@ void GrandServantListMenuLayoutSupport__OnClickSupportInfoButton(
   __int64 v5; // x1
   PlayMakerFSM_o *v6; // x0
 
-  if ( (byte_5933241 & 1) == 0 )
+  if ( (byte_596B348 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_3623/*"CLICK_SUPPORT_BUTTON"*/);
-    byte_5933241 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_3628/*"CLICK_SUPPORT_BUTTON"*/);
+    byte_596B348 = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -26,8 +26,8 @@ void GrandServantListMenuLayoutSupport__OnClickSupportInfoButton(
   {
     v6 = this->fields.fsm;
     if ( !v6 )
-      sub_21FFECC(0, v5);
-    PlayMakerFSM__SendEvent(v6, (System_String_o *)StringLiteral_3623/*"CLICK_SUPPORT_BUTTON"*/, 0);
+      sub_2213CDC(0, v5);
+    PlayMakerFSM__SendEvent(v6, (System_String_o *)StringLiteral_3628/*"CLICK_SUPPORT_BUTTON"*/, 0);
   }
 }
 
@@ -57,32 +57,32 @@ void GrandServantListMenuLayoutSupport__SetupSupportInfo(
   System_String_o *v22; // x0
   __int64 v23; // x0
 
-  if ( (byte_5933240 & 1) == 0 )
+  if ( (byte_596B347 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_21FFC50(&StringLiteral_7293/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/);
-    sub_21FFC50(&StringLiteral_7292/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/);
-    byte_5933240 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_2213A60(&StringLiteral_7305/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/);
+    sub_2213A60(&StringLiteral_7304/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/);
+    byte_596B347 = 1;
   }
   kind = (unsigned __int8)this->fields.kind;
   if ( kind == 1 )
   {
-    v8 = &StringLiteral_7293/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/;
+    v8 = &StringLiteral_7305/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/;
   }
   else
   {
     if ( kind != 2 )
     {
-      v19 = sub_21FFC64(&System_ArgumentOutOfRangeException_TypeInfo);
-      v20 = (System_ArgumentOutOfRangeException_o *)sub_21FFEBC(v19);
-      v21 = (System_String_o *)sub_21FFC64(&StringLiteral_22146/*"kind"*/);
-      v22 = (System_String_o *)sub_21FFC64(&StringLiteral_26804/*"予期されないタイプです。"*/);
-      System_ArgumentOutOfRangeException___ctor_76416484(v20, v21, v22, 0);
-      v23 = sub_21FFC64(&Method_GrandServantListMenuLayoutSupport_SetupSupportInfo__);
-      sub_21FFD90(v20, v23);
+      v19 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
+      v20 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v19);
+      v21 = (System_String_o *)sub_2213A74(&StringLiteral_22189/*"kind"*/);
+      v22 = (System_String_o *)sub_2213A74(&StringLiteral_26856/*"予期されないタイプです。"*/);
+      System_ArgumentOutOfRangeException___ctor_76629788(v20, v21, v22, 0);
+      v23 = sub_2213A74(&Method_GrandServantListMenuLayoutSupport_SetupSupportInfo__);
+      sub_2213BA0(v20, v23);
     }
-    v8 = &StringLiteral_7292/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/;
+    v8 = &StringLiteral_7304/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/;
   }
   v9 = (System_String_o *)*v8;
   descriptionLabel = this->fields.descriptionLabel;
@@ -108,12 +108,12 @@ void GrandServantListMenuLayoutSupport__SetupSupportInfo(
       goto LABEL_18;
     }
 LABEL_19:
-    sub_21FFECC(supportInfoButton, v12);
+    sub_2213CDC(supportInfoButton, v12);
   }
   if ( !questData )
     goto LABEL_19;
   QuestRestriction_k__BackingField = questData->fields._QuestRestriction_k__BackingField;
-  supportInfoButton = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  supportInfoButton = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !supportInfoButton || !followerQuestInfomationDraw )
     goto LABEL_19;
   stringLength = supportInfoButton[3].fields._stringLength;
@@ -135,7 +135,7 @@ void GrandServantListMenuLayoutSupport__UpdateView(
 
   GrandServantListMenuLayout__UpdateView((GrandServantListMenuLayout_o *)this, grandServantListData, method);
   if ( !grandServantListData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   GrandServantListMenuLayoutSupport__SetupSupportInfo(
     this,
     grandServantListData->fields._QuestData_k__BackingField,

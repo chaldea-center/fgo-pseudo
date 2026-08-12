@@ -24,10 +24,10 @@ int32_t Ai__getCond(int32_t intype, const MethodInfo *method)
 {
   __int64 v2; // x2
 
-  if ( (byte_5937405 & 1) == 0 )
+  if ( (byte_596F55D & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5937405 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596F55D = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method, v2);

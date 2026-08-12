@@ -11,16 +11,16 @@ void ExchangeAppendPassiveSkillRequest__beginRequest(
         int32_t baseSkillNum,
         const MethodInfo *method)
 {
-  if ( (byte_593A231 & 1) == 0 )
+  if ( (byte_597240E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17739/*"baseUserSvtId"*/);
-    sub_21FFC50(&StringLiteral_17733/*"baseSkillNum"*/);
-    sub_21FFC50(&StringLiteral_25229/*"targetSkillNum"*/);
-    byte_593A231 = 1;
+    sub_2213A60(&StringLiteral_17776/*"baseUserSvtId"*/);
+    sub_2213A60(&StringLiteral_17770/*"baseSkillNum"*/);
+    sub_2213A60(&StringLiteral_25277/*"targetSkillNum"*/);
+    byte_597240E = 1;
   }
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_17739/*"baseUserSvtId"*/, baseUsrSvtId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25229/*"targetSkillNum"*/, targetSkillNum, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17733/*"baseSkillNum"*/, baseSkillNum, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_17776/*"baseUserSvtId"*/, baseUsrSvtId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25277/*"targetSkillNum"*/, targetSkillNum, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17770/*"baseSkillNum"*/, baseSkillNum, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -31,16 +31,16 @@ System_String_o *ExchangeAppendPassiveSkillRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A230 & 1) == 0 )
+  if ( (byte_597240D & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18500/*"card/exchangeAppendPassiveSkill"*/);
-    byte_593A230 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18538/*"card/exchangeAppendPassiveSkill"*/);
+    byte_597240D = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18500/*"card/exchangeAppendPassiveSkill"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_18538/*"card/exchangeAppendPassiveSkill"*/, 0);
 }
 
 
@@ -55,17 +55,17 @@ void ExchangeAppendPassiveSkillRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_593A232 & 1) == 0 )
+  if ( (byte_597240F & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A232 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_597240F = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(135, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_51190916(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_51257228(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
@@ -74,7 +74,7 @@ void ExchangeAppendPassiveSkillRequest__requestCompleted(
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_23290/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_23336/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

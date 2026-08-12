@@ -1,14 +1,14 @@
 void EventRewardExtraMaster___ctor(EventRewardExtraMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59388AE & 1) == 0 )
+  if ( (byte_5970978 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
-    byte_59388AE = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
+    byte_5970978 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     139,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ EventRewardExtraEntity_o *EventRewardExtraMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59388AC & 1) == 0 )
+  if ( (byte_5970976 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
-    byte_59388AC = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
+    byte_5970976 = 1;
   }
   PK = (Il2CppObject *)EventRewardExtraEntity__CreatePK(eventId, point, (const MethodInfo *)point);
   return (EventRewardExtraEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
+                                       (const MethodInfo_3F157EC *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool EventRewardExtraMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59388AD & 1) == 0 )
+  if ( (byte_5970977 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
-    byte_59388AD = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
+    byte_5970977 = 1;
   }
   PK = (Il2CppObject *)EventRewardExtraEntity__CreatePK(eventId, point, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
 }

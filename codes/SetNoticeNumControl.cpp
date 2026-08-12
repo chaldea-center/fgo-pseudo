@@ -20,10 +20,10 @@ void SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const MethodInfo *m
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5932292 & 1) == 0 )
+  if ( (byte_596A391 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932292 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A391 = 1;
   }
   noticeNumObj = this->fields.noticeNumObj;
   p_noticeNumObj = (MissionNaviTransitionBoardItem_o *)&this->fields.noticeNumObj;
@@ -35,9 +35,9 @@ void SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const MethodInfo *m
     klass = (UnityEngine_Object_o *)p_noticeNumObj->klass;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-    UnityEngine_Object__Destroy_83246496(klass, 0);
+    UnityEngine_Object__Destroy_83459800(klass, 0);
     p_noticeNumObj->klass = 0;
-    sub_21FFBF4(p_noticeNumObj, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_noticeNumObj, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -60,10 +60,10 @@ void SetNoticeNumControl__setNoticeNum(SetNoticeNumControl_o *this, int32_t resN
   UnityEngine_Transform_o *v17; // x22
   bool v18; // w1
 
-  if ( (byte_5932291 & 1) == 0 )
+  if ( (byte_596A390 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    byte_5932291 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    byte_596A390 = 1;
   }
   SetNoticeNumControl__clear(this, *(const MethodInfo **)&resNum);
   if ( resNum < 1 )
@@ -75,14 +75,14 @@ void SetNoticeNumControl__setNoticeNum(SetNoticeNumControl_o *this, int32_t resN
       goto LABEL_14;
     }
 LABEL_15:
-    sub_21FFECC(gameObject, v15);
+    sub_2213CDC(gameObject, v15);
   }
   noticeNumberPrefab = this->fields.noticeNumberPrefab;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, noticeNumberPrefab, transform, 0, 0);
   this->fields.noticeNumObj = Object;
   p_noticeNumObj = &this->fields.noticeNumObj;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.noticeNumObj,
     (int32_t)Object,
     v9,
@@ -96,10 +96,10 @@ LABEL_15:
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
   v17 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v17 )
     goto LABEL_15;
@@ -109,7 +109,7 @@ LABEL_15:
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
   if ( !gameObject )
     goto LABEL_15;
   NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)gameObject, resNum, 0);

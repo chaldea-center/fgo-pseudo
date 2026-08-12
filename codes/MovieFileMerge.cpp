@@ -16,20 +16,20 @@ void MovieFileMerge___ctor(MovieFileMerge_o *this, const MethodInfo *method)
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_59375BD & 1) == 0 )
+  if ( (byte_596F71F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
-    byte_59375BD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    byte_596F71F = 1;
   }
   v3 = System_Collections_Generic_Dictionary_string__uint__TypeInfo;
   this->fields._OverrideDepth_k__BackingField = -1;
-  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(v3);
+  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(v3);
   System_Collections_Generic_Dictionary_object__uint____ctor(
     v4,
-    (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
   this->fields.AllDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)v4;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.AllDownLoadFilePathCRCDictionary,
     (int32_t)v4,
     v5,
@@ -38,12 +38,12 @@ void MovieFileMerge___ctor(MovieFileMerge_o *this, const MethodInfo *method)
     v8,
     v9,
     v10);
-  v11 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+  v11 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
   System_Collections_Generic_Dictionary_object__uint____ctor(
     v11,
-    (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
   this->fields.RequireDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.RequireDownLoadFilePathCRCDictionary,
     (int32_t)v11,
     v12,
@@ -123,69 +123,69 @@ void MovieFileMerge__AssetLoadLogError(MovieFileMerge_o *this, System_String_o *
   __int64 v67; // x1
   __int64 v68; // x2
 
-  if ( (byte_59375BB & 1) == 0 )
+  if ( (byte_596F71D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_14709/*"The request timed out."*/);
-    sub_21FFC50(&StringLiteral_14649/*"The network connection was lost."*/);
-    sub_21FFC50(&StringLiteral_4834/*"Connection reset by peer"*/);
-    sub_21FFC50(&StringLiteral_5198/*"DLErrorType"*/);
-    sub_21FFC50(&StringLiteral_5197/*"DLErrorAsset"*/);
-    sub_21FFC50(&StringLiteral_4833/*"Connection refused"*/);
-    sub_21FFC50(&StringLiteral_9833/*"No address associated with hostname"*/);
-    sub_21FFC50(&StringLiteral_2481/*"AssetBundle file download time over"*/);
-    sub_21FFC50(&StringLiteral_13443/*"Software caused connection abort"*/);
-    sub_21FFC50(&StringLiteral_4835/*"Connection timed out"*/);
-    sub_21FFC50(&StringLiteral_2484/*"AssetLoadError"*/);
-    byte_59375BB = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_14739/*"The request timed out."*/);
+    sub_2213A60(&StringLiteral_14679/*"The network connection was lost."*/);
+    sub_2213A60(&StringLiteral_4842/*"Connection reset by peer"*/);
+    sub_2213A60(&StringLiteral_5210/*"DLErrorType"*/);
+    sub_2213A60(&StringLiteral_5209/*"DLErrorAsset"*/);
+    sub_2213A60(&StringLiteral_4841/*"Connection refused"*/);
+    sub_2213A60(&StringLiteral_9846/*"No address associated with hostname"*/);
+    sub_2213A60(&StringLiteral_2482/*"AssetBundle file download time over"*/);
+    sub_2213A60(&StringLiteral_13470/*"Software caused connection abort"*/);
+    sub_2213A60(&StringLiteral_4843/*"Connection timed out"*/);
+    sub_2213A60(&StringLiteral_2485/*"AssetLoadError"*/);
+    byte_596F71D = 1;
   }
-  Instance = (Il2CppObject *)sub_21FFD10(string___TypeInfo, 8);
+  Instance = (Il2CppObject *)sub_2213B20(string___TypeInfo, 8);
   if ( !Instance )
     goto LABEL_28;
   v13 = Instance;
   if ( !LODWORD(Instance[1].monitor) )
     goto LABEL_27;
-  v14 = StringLiteral_9833/*"No address associated with hostname"*/;
-  Instance[2].klass = (Il2CppClass *)StringLiteral_9833/*"No address associated with hostname"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&Instance[2], v14, v7, v8, v9, v10, v11, v12);
+  v14 = StringLiteral_9846/*"No address associated with hostname"*/;
+  Instance[2].klass = (Il2CppClass *)StringLiteral_9846/*"No address associated with hostname"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&Instance[2], v14, v7, v8, v9, v10, v11, v12);
   if ( ((__int64)v13[1].monitor & 0xFFFFFFFE) == 0 )
     goto LABEL_27;
-  v21 = StringLiteral_2481/*"AssetBundle file download time over"*/;
-  v13[2].monitor = (void *)StringLiteral_2481/*"AssetBundle file download time over"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[2].monitor, v21, v15, v16, v17, v18, v19, v20);
+  v21 = StringLiteral_2482/*"AssetBundle file download time over"*/;
+  v13[2].monitor = (void *)StringLiteral_2482/*"AssetBundle file download time over"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[2].monitor, v21, v15, v16, v17, v18, v19, v20);
   if ( LODWORD(v13[1].monitor) <= 2 )
     goto LABEL_27;
-  v28 = StringLiteral_14649/*"The network connection was lost."*/;
-  v13[3].klass = (Il2CppClass *)StringLiteral_14649/*"The network connection was lost."*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[3], v28, v22, v23, v24, v25, v26, v27);
+  v28 = StringLiteral_14679/*"The network connection was lost."*/;
+  v13[3].klass = (Il2CppClass *)StringLiteral_14679/*"The network connection was lost."*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[3], v28, v22, v23, v24, v25, v26, v27);
   if ( ((__int64)v13[1].monitor & 0xFFFFFFFC) == 0 )
     goto LABEL_27;
-  v35 = StringLiteral_4834/*"Connection reset by peer"*/;
-  v13[3].monitor = (void *)StringLiteral_4834/*"Connection reset by peer"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[3].monitor, v35, v29, v30, v31, v32, v33, v34);
+  v35 = StringLiteral_4842/*"Connection reset by peer"*/;
+  v13[3].monitor = (void *)StringLiteral_4842/*"Connection reset by peer"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[3].monitor, v35, v29, v30, v31, v32, v33, v34);
   if ( LODWORD(v13[1].monitor) <= 4 )
     goto LABEL_27;
-  v42 = StringLiteral_13443/*"Software caused connection abort"*/;
-  v13[4].klass = (Il2CppClass *)StringLiteral_13443/*"Software caused connection abort"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[4], v42, v36, v37, v38, v39, v40, v41);
+  v42 = StringLiteral_13470/*"Software caused connection abort"*/;
+  v13[4].klass = (Il2CppClass *)StringLiteral_13470/*"Software caused connection abort"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[4], v42, v36, v37, v38, v39, v40, v41);
   if ( LODWORD(v13[1].monitor) <= 5
-    || (v49 = StringLiteral_4835/*"Connection timed out"*/,
-        v13[4].monitor = (void *)StringLiteral_4835/*"Connection timed out"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[4].monitor, v49, v43, v44, v45, v46, v47, v48),
+    || (v49 = StringLiteral_4843/*"Connection timed out"*/,
+        v13[4].monitor = (void *)StringLiteral_4843/*"Connection timed out"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[4].monitor, v49, v43, v44, v45, v46, v47, v48),
         LODWORD(v13[1].monitor) <= 6)
-    || (v56 = StringLiteral_4833/*"Connection refused"*/,
-        v13[5].klass = (Il2CppClass *)StringLiteral_4833/*"Connection refused"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[5], v56, v50, v51, v52, v53, v54, v55),
+    || (v56 = StringLiteral_4841/*"Connection refused"*/,
+        v13[5].klass = (Il2CppClass *)StringLiteral_4841/*"Connection refused"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[5], v56, v50, v51, v52, v53, v54, v55),
         ((__int64)v13[1].monitor & 0xFFFFFFF8) == 0) )
   {
 LABEL_27:
-    sub_21FFED4(Instance);
+    sub_2213CE4(Instance);
   }
-  v63 = StringLiteral_14709/*"The request timed out."*/;
-  v13[5].monitor = (void *)StringLiteral_14709/*"The request timed out."*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[5].monitor, v63, v57, v58, v59, v60, v61, v62);
+  v63 = StringLiteral_14739/*"The request timed out."*/;
+  v13[5].monitor = (void *)StringLiteral_14739/*"The request timed out."*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[5].monitor, v63, v57, v58, v59, v60, v61, v62);
   if ( (int)v13[1].monitor < 1 )
   {
 LABEL_18:
@@ -207,28 +207,28 @@ LABEL_18:
     if ( monitor == ++v65 )
       goto LABEL_18;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( !Instance )
 LABEL_28:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)Instance,
-    (System_String_o *)StringLiteral_5197/*"DLErrorAsset"*/,
+    (System_String_o *)StringLiteral_5209/*"DLErrorAsset"*/,
     this->fields.downloadingURL,
     0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( (unsigned int)v65 >= LODWORD(v13[1].monitor) )
     goto LABEL_27;
   if ( !Instance )
     goto LABEL_28;
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)Instance,
-    (System_String_o *)StringLiteral_5198/*"DLErrorType"*/,
+    (System_String_o *)StringLiteral_5210/*"DLErrorType"*/,
     *((System_String_o **)&v13[2].klass + v65),
     0);
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v67, v68);
-  errorCode = (System_String_o *)StringLiteral_2484/*"AssetLoadError"*/;
+  errorCode = (System_String_o *)StringLiteral_2485/*"AssetLoadError"*/;
 LABEL_26:
   UnityEngine_Debug__LogError((Il2CppObject *)errorCode, 0);
 }
@@ -244,16 +244,16 @@ System_Collections_IEnumerator_o *MovieFileMerge__CRCDownloadAndCheck(MovieFileM
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59375B2 & 1) == 0 )
+  if ( (byte_596F714 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__CRCDownloadAndCheck_d__38_TypeInfo);
-    byte_59375B2 = 1;
+    sub_2213A60(&MovieFileMerge__CRCDownloadAndCheck_d__38_TypeInfo);
+    byte_596F714 = 1;
   }
-  v3 = sub_21FFEBC(MovieFileMerge__CRCDownloadAndCheck_d__38_TypeInfo);
+  v3 = sub_2213CCC(MovieFileMerge__CRCDownloadAndCheck_d__38_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -272,22 +272,22 @@ System_Collections_Generic_Dictionary_string__uint__o *MovieFileMerge__CreateDic
   System_String_array *v10; // x21
   uint32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_59375B9 & 1) == 0 )
+  if ( (byte_596F71B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
-    byte_59375B9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    byte_596F71B = 1;
   }
   result = 0;
-  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
   System_Collections_Generic_Dictionary_object__uint____ctor(
     v4,
-    (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
   AllLines = System_IO_File__ReadAllLines(dataPath, 0);
   if ( !AllLines )
 LABEL_17:
-    sub_21FFECC(AllLines, v6);
+    sub_2213CDC(AllLines, v6);
   max_length = AllLines->max_length;
   v8 = AllLines;
   if ( max_length >= 1 )
@@ -297,7 +297,7 @@ LABEL_17:
     {
       if ( (unsigned int)v9 >= max_length )
 LABEL_18:
-        sub_21FFED4(AllLines);
+        sub_2213CE4(AllLines);
       AllLines = (System_String_array *)v8->m_Items[v9];
       if ( !AllLines )
         goto LABEL_17;
@@ -319,7 +319,7 @@ LABEL_18:
         v4,
         (Il2CppObject *)v10->m_Items[0],
         result,
-        (const MethodInfo_3FF18AC *)Method_System_Collections_Generic_Dictionary_string__uint__Add__);
+        (const MethodInfo_4025054 *)Method_System_Collections_Generic_Dictionary_string__uint__Add__);
       max_length = v8->max_length;
       if ( (int)++v9 >= max_length )
         return (System_Collections_Generic_Dictionary_string__uint__o *)v4;
@@ -339,23 +339,23 @@ void MovieFileMerge__Delete(System_String_o *folder, const MethodInfo *method)
   System_String_o *v7; // x19
 
   v2 = folder;
-  if ( (byte_59375B5 & 1) == 0 )
+  if ( (byte_596F717 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    folder = (System_String_o *)sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_59375B5 = 1;
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    folder = (System_String_o *)sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_596F717 = 1;
   }
   if ( !v2 )
-    sub_21FFECC(folder, method);
+    sub_2213CDC(folder, method);
   if ( System_String__EndsWith(v2, (System_String_o *)StringLiteral_1123/*"/"*/, 0) )
-    v2 = System_String__TrimEnd_75500280(v2, 0x2Fu, 0);
+    v2 = System_String__TrimEnd_75713584(v2, 0x2Fu, 0);
   if ( !*(&System_IO_Path_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v3, v4);
   FileName = System_IO_Path__GetFileName(v2, 0);
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)FileName);
-  v7 = System_String__Format_75484576(
-         (System_String_o *)StringLiteral_26497/*"{0}/{1}"*/,
+  v7 = System_String__Format_75697880(
+         (System_String_o *)StringLiteral_26548/*"{0}/{1}"*/,
          LocalDataPath,
          (Il2CppObject *)FileName,
          0);
@@ -364,7 +364,7 @@ void MovieFileMerge__Delete(System_String_o *folder, const MethodInfo *method)
 }
 
 
-void MovieFileMerge__Delete_47422412(const MethodInfo *method)
+void MovieFileMerge__Delete_47453612(const MethodInfo *method)
 {
   System_String_o *LocalDataPath; // x0
   _BOOL8 v2; // x0
@@ -399,23 +399,21 @@ System_Collections_IEnumerator_o *MovieFileMerge__Download(
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_59375B8 & 1) == 0 )
+  if ( (byte_596F71A & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__Download_d__47_TypeInfo);
-    byte_59375B8 = 1;
+    sub_2213A60(&MovieFileMerge__Download_d__47_TypeInfo);
+    byte_596F71A = 1;
   }
-  v7 = sub_21FFEBC(MovieFileMerge__Download_d__47_TypeInfo);
+  v7 = sub_2213CCC(MovieFileMerge__Download_d__47_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = fileName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 40), (int32_t)fileName, v14, v15, v16, v17, v18, v19);
-  result = (System_Collections_IEnumerator_o *)v7;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 40), (int32_t)fileName, v14, v15, v16, v17, v18, v19);
   *(_DWORD *)(v7 + 48) = crc;
-  return result;
+  return (System_Collections_IEnumerator_o *)v7;
 }
 
 
@@ -435,16 +433,16 @@ System_Collections_IEnumerator_o *MovieFileMerge__DownloadMovie(MovieFileMerge_o
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59375B3 & 1) == 0 )
+  if ( (byte_596F715 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__DownloadMovie_d__39_TypeInfo);
-    byte_59375B3 = 1;
+    sub_2213A60(&MovieFileMerge__DownloadMovie_d__39_TypeInfo);
+    byte_596F715 = 1;
   }
-  v3 = sub_21FFEBC(MovieFileMerge__DownloadMovie_d__39_TypeInfo);
+  v3 = sub_2213CCC(MovieFileMerge__DownloadMovie_d__39_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -493,28 +491,28 @@ bool MovieFileMerge__ExistCRCCheckedMovieFile(
   FileMergeAndSplit_c *v14; // x8
   System_String_o *v15; // x0
 
-  if ( (byte_59375A9 & 1) == 0 )
+  if ( (byte_596F70B & 1) == 0 )
   {
-    sub_21FFC50(&FileMergeAndSplit_TypeInfo);
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    sub_21FFC50(&StringLiteral_26502/*"{0}/{1}/{2}"*/);
-    sub_21FFC50(&StringLiteral_26501/*"{0}/{1}/{1}.usm"*/);
-    byte_59375A9 = 1;
+    sub_2213A60(&FileMergeAndSplit_TypeInfo);
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    sub_2213A60(&StringLiteral_26553/*"{0}/{1}/{2}"*/);
+    sub_2213A60(&StringLiteral_26552/*"{0}/{1}/{1}.usm"*/);
+    byte_596F70B = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(assetFolderURL, 0);
   if ( IsNullOrEmpty )
     return 0;
   if ( !assetFolderURL )
-    sub_21FFECC(IsNullOrEmpty, v5);
+    sub_2213CDC(IsNullOrEmpty, v5);
   if ( System_String__EndsWith(assetFolderURL, (System_String_o *)StringLiteral_1123/*"/"*/, 0) )
-    assetFolderURL = System_String__TrimEnd_75500280(assetFolderURL, 0x2Fu, 0);
+    assetFolderURL = System_String__TrimEnd_75713584(assetFolderURL, 0x2Fu, 0);
   if ( !*(&System_IO_Path_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v6, v7);
   FileName = System_IO_Path__GetFileName(assetFolderURL, 0);
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)FileName);
-  v10 = System_String__Format_75484576(
-          (System_String_o *)StringLiteral_26501/*"{0}/{1}/{1}.usm"*/,
+  v10 = System_String__Format_75697880(
+          (System_String_o *)StringLiteral_26552/*"{0}/{1}/{1}.usm"*/,
           LocalDataPath,
           (Il2CppObject *)FileName,
           0);
@@ -525,8 +523,8 @@ bool MovieFileMerge__ExistCRCCheckedMovieFile(
     j_il2cpp_runtime_class_init_0(FileMergeAndSplit_TypeInfo, v11, v12);
     v14 = FileMergeAndSplit_TypeInfo;
   }
-  v15 = System_String__Format_75484644(
-          (System_String_o *)StringLiteral_26502/*"{0}/{1}/{2}"*/,
+  v15 = System_String__Format_75697948(
+          (System_String_o *)StringLiteral_26553/*"{0}/{1}/{2}"*/,
           v13,
           (Il2CppObject *)FileName,
           (Il2CppObject *)v14->static_fields->PathCRCFileName,
@@ -543,26 +541,26 @@ float MovieFileMerge__GetDownloadProgress(MovieFileMerge_o *this, const MethodIn
   System_Collections_Generic_Dictionary_TKey__TValue__o *v6; // x0
   int32_t downloadProgress; // s8
 
-  if ( (byte_59375AD & 1) == 0 )
+  if ( (byte_596F70F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
-    byte_59375AD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
+    byte_596F70F = 1;
   }
   v3 = 0.0;
   RequireDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.RequireDownLoadFilePathCRCDictionary;
   if ( RequireDownLoadFilePathCRCDictionary
     && System_Collections_Generic_Dictionary_object__uint___get_Count(
          RequireDownLoadFilePathCRCDictionary,
-         (const MethodInfo_3FF1564 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__) )
+         (const MethodInfo_4024D0C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__) )
   {
     v6 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.RequireDownLoadFilePathCRCDictionary;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     downloadProgress = this->fields.downloadProgress;
     return (float)downloadProgress
          / (float)System_Collections_Generic_Dictionary_object__uint___get_Count(
                     v6,
-                    (const MethodInfo_3FF1564 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
+                    (const MethodInfo_4024D0C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
   }
   return v3;
 }
@@ -572,17 +570,17 @@ double MovieFileMerge__GetDownloadSize(MovieFileMerge_o *this, const MethodInfo 
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *RequireDownLoadFilePathCRCDictionary; // x0
 
-  if ( (byte_59375AC & 1) == 0 )
+  if ( (byte_596F70E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
-    byte_59375AC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
+    byte_596F70E = 1;
   }
   RequireDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.RequireDownLoadFilePathCRCDictionary;
   if ( !RequireDownLoadFilePathCRCDictionary )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return (double)(System_Collections_Generic_Dictionary_object__uint___get_Count(
                     RequireDownLoadFilePathCRCDictionary,
-                    (const MethodInfo_3FF1564 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__) << 20);
+                    (const MethodInfo_4024D0C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__) << 20);
 }
 
 
@@ -592,16 +590,16 @@ System_String_o *MovieFileMerge__GetLocalDataPath(const MethodInfo *method)
   __int64 v2; // x2
   System_String_o *persistentDataPath; // x0
 
-  if ( (byte_59375AA & 1) == 0 )
+  if ( (byte_596F70C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&StringLiteral_1176/*"/extend-data/movie"*/);
-    byte_59375AA = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&StringLiteral_1176/*"/extend-data/movie"*/);
+    byte_596F70C = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v1, v2);
   persistentDataPath = UnityEngine_Application__get_persistentDataPath(0);
-  return System_String__Concat_75438412(persistentDataPath, (System_String_o *)StringLiteral_1176/*"/extend-data/movie"*/, 0);
+  return System_String__Concat_75651716(persistentDataPath, (System_String_o *)StringLiteral_1176/*"/extend-data/movie"*/, 0);
 }
 
 
@@ -611,14 +609,14 @@ System_String_o *MovieFileMerge__GetLocalFolderPath(MovieFileMerge_o *this, cons
   Il2CppObject *LocalDataPath; // x0
 
   v2 = this;
-  if ( (byte_59375B6 & 1) == 0 )
+  if ( (byte_596F718 & 1) == 0 )
   {
-    this = (MovieFileMerge_o *)sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    byte_59375B6 = 1;
+    this = (MovieFileMerge_o *)sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    byte_596F718 = 1;
   }
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)this);
-  return System_String__Format_75484576(
-           (System_String_o *)StringLiteral_26497/*"{0}/{1}"*/,
+  return System_String__Format_75697880(
+           (System_String_o *)StringLiteral_26548/*"{0}/{1}"*/,
            LocalDataPath,
            (Il2CppObject *)v2->fields.assetFolder,
            0);
@@ -651,104 +649,106 @@ System_Collections_Generic_Dictionary_string__uint__o *MovieFileMerge__GetNeedDo
   __int64 v4; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *AllDownLoadFilePathCRCDictionary; // x0
   const MethodInfo *v6; // x1
-  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  Il2CppObject *key; // x21
+  uint32_t value; // w22
   Il2CppObject *LocalFolderPath; // x1
-  System_String_o *v9; // x23
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
+  System_String_o *v10; // x23
+  _BOOL8 v11; // x0
   __int64 v12; // x1
-  __int64 v13; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
   System_Byte_array *AllBytes; // x24
-  uint32_t v15; // w1
+  uint32_t v16; // w1
   System_IO_DirectoryInfo_o *Parent; // x0
-  __int64 v17; // x1
-  System_IO_DirectoryInfo_o *v18; // x21
-  System_String_o *v19; // x0
+  __int64 v18; // x1
+  System_IO_DirectoryInfo_o *v19; // x21
   System_String_o *v20; // x0
+  System_String_o *v21; // x0
   struct System_Collections_Generic_Dictionary_TKey__TValue__o *dictionary; // x20
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v23; // [xsp+0h] [xbp-C0h] BYREF
-  int value; // [xsp+2Ch] [xbp-94h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+0h] [xbp-C0h] BYREF
+  uint32_t v25; // [xsp+2Ch] [xbp-94h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v26; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_59375B7 & 1) == 0 )
+  if ( (byte_596F719 & 1) == 0 )
   {
-    sub_21FFC50(&Crc32_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Value__);
-    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    byte_59375B7 = 1;
+    sub_2213A60(&Crc32_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Value__);
+    sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    byte_596F719 = 1;
   }
-  value = 0;
-  memset(&v25, 0, sizeof(v25));
-  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+  v25 = 0;
+  memset(&v26, 0, sizeof(v26));
+  v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
   System_Collections_Generic_Dictionary_object__uint____ctor(
     v3,
-    (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
   AllDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.AllDownLoadFilePathCRCDictionary;
   if ( !AllDownLoadFilePathCRCDictionary )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_Dictionary_object__uint___GetEnumerator(
-    &v23,
+    &v24,
     AllDownLoadFilePathCRCDictionary,
-    (const MethodInfo_3FF1CA8 *)Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
-  v25 = v23;
-  v23.fields._dictionary = 0;
-  *(_QWORD *)&v23.fields._version = &v25;
+    (const MethodInfo_4025450 *)Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
+  v26 = v24;
+  v24.fields._dictionary = 0;
+  *(_QWORD *)&v24.fields._version = &v26;
   while ( System_Collections_Generic_Dictionary_Enumerator_object__uint___MoveNext(
-            &v25,
-            (const MethodInfo_41392E0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__) )
+            &v26,
+            (const MethodInfo_416CE6C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__) )
   {
-    current = v25.fields._current;
+    key = v26.fields._current.fields.key;
+    value = (uint32_t)v26.fields._current.fields.value;
     LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v6);
-    v9 = System_String__Format_75484576((System_String_o *)StringLiteral_26497/*"{0}/{1}"*/, LocalFolderPath, current.fields.key, 0);
-    v10 = System_IO_File__Exists(v9, 0);
-    if ( !v10 )
+    v10 = System_String__Format_75697880((System_String_o *)StringLiteral_26548/*"{0}/{1}"*/, LocalFolderPath, key, 0);
+    v11 = System_IO_File__Exists(v10, 0);
+    if ( !v11 )
       goto LABEL_11;
-    AllBytes = System_IO_File__ReadAllBytes(v9, 0);
-    value = (int)current.fields.value;
+    AllBytes = System_IO_File__ReadAllBytes(v10, 0);
+    v25 = value;
     if ( !*(&Crc32_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v12, v13);
-    v15 = Crc32__Compute(AllBytes, 0);
-    if ( !System_UInt32__Equals_77052880((uint32_t)&value, v15, 0) )
+      j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v13, v14);
+    v16 = Crc32__Compute(AllBytes, 0);
+    if ( !System_UInt32__Equals_77266184((uint32_t)&v25, v16, 0) )
     {
-      System_IO_File__Delete(v9, 0);
+      System_IO_File__Delete(v10, 0);
 LABEL_11:
       if ( !v3 )
-        sub_21FFECC(v10, v11);
+        sub_2213CDC(v11, v12);
       System_Collections_Generic_Dictionary_object__uint___Add(
         v3,
-        current.fields.key,
-        (uint32_t)current.fields.value,
-        (const MethodInfo_3FF18AC *)Method_System_Collections_Generic_Dictionary_string__uint__Add__);
-      Parent = System_IO_Directory__GetParent(v9, 0);
-      v18 = Parent;
+        key,
+        value,
+        (const MethodInfo_4025054 *)Method_System_Collections_Generic_Dictionary_string__uint__Add__);
+      Parent = System_IO_Directory__GetParent(v10, 0);
+      v19 = Parent;
       if ( !Parent )
-        sub_21FFECC(0, v17);
-      v19 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._8_get_FullName.methodPtr)(
+        sub_2213CDC(0, v18);
+      v20 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._8_get_FullName.methodPtr)(
                                  Parent,
                                  Parent->klass->vtable._8_get_FullName.method);
-      if ( !System_IO_Directory__Exists(v19, 0) )
+      if ( !System_IO_Directory__Exists(v20, 0) )
       {
-        v20 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))v18->klass->vtable._8_get_FullName.methodPtr)(
-                                   v18,
-                                   v18->klass->vtable._8_get_FullName.method);
-        System_IO_Directory__CreateDirectory(v20, 0);
+        v21 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))v19->klass->vtable._8_get_FullName.methodPtr)(
+                                   v19,
+                                   v19->klass->vtable._8_get_FullName.method);
+        System_IO_Directory__CreateDirectory(v21, 0);
       }
     }
   }
-  dictionary = v23.fields._dictionary;
+  dictionary = v24.fields._dictionary;
   System_Collections_Generic_Dictionary_Enumerator_object__uint___Dispose(
-    &v25,
-    (const MethodInfo_4139404 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
+    &v26,
+    (const MethodInfo_416CF90 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
   if ( dictionary )
-    sub_21FFEC4(dictionary);
+    sub_2213CD4(dictionary);
   return (System_Collections_Generic_Dictionary_string__uint__o *)v3;
 }
 
@@ -782,25 +782,25 @@ System_Collections_Generic_List_string__o *MovieFileMerge__GetSplitFileList(
   System_Collections_Generic_List_Enumerator_object__o *v26; // [xsp+10h] [xbp-60h]
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_59375BA & 1) == 0 )
+  if ( (byte_596F71C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Keys__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    byte_59375BA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Keys__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    byte_596F71C = 1;
   }
   memset(&v27, 0, sizeof(v27));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   LocalFolderPath = MovieFileMerge__GetLocalFolderPath(this, v4);
   if ( System_IO_Directory__Exists(LocalFolderPath, 0) )
   {
@@ -808,24 +808,24 @@ System_Collections_Generic_List_string__o *MovieFileMerge__GetSplitFileList(
     if ( !AllDownLoadFilePathCRCDictionary
       || (Keys = System_Collections_Generic_Dictionary_object__uint___get_Keys(
                    AllDownLoadFilePathCRCDictionary,
-                   (const MethodInfo_3FF1574 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Keys__),
-          (AllDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Linq_Enumerable__ToList_object_((System_Collections_Generic_IEnumerable_TSource__o *)Keys, (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_string___)) == 0) )
+                   (const MethodInfo_4024D1C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Keys__),
+          (AllDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Linq_Enumerable__ToList_object_((System_Collections_Generic_IEnumerable_TSource__o *)Keys, (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_string___)) == 0) )
     {
-      sub_21FFECC(AllDownLoadFilePathCRCDictionary, v6);
+      sub_2213CDC(AllDownLoadFilePathCRCDictionary, v6);
     }
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v27,
       (System_Collections_Generic_List_object__o *)AllDownLoadFilePathCRCDictionary,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v25 = 0;
     v26 = &v27;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v27,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
       current = v27.fields._current;
       v11 = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v9);
-      v12 = (Il2CppObject *)System_String__Format_75484576((System_String_o *)StringLiteral_26497/*"{0}/{1}"*/, v11, current, 0);
+      v12 = (Il2CppObject *)System_String__Format_75697880((System_String_o *)StringLiteral_26548/*"{0}/{1}"*/, v11, current, 0);
       v19 = v12;
       if ( !v3
         || (items = v3->fields._items,
@@ -833,7 +833,7 @@ System_Collections_Generic_List_string__o *MovieFileMerge__GetSplitFileList(
             ++v3->fields._version,
             !items) )
       {
-        sub_21FFECC(v12, v12);
+        sub_2213CDC(v12, v12);
       }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -841,19 +841,19 @@ System_Collections_Generic_List_string__o *MovieFileMerge__GetSplitFileList(
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           v12,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v23[4] = (Il2CppClass *)v19;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v19, v13, v14, v15, v16, v17, v18);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v19, v13, v14, v15, v16, v17, v18);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v27,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
   }
   return (System_Collections_Generic_List_string__o *)v3;
 }
@@ -864,21 +864,21 @@ double MovieFileMerge__GetTotalRequireSize(MovieFileMerge_o *this, const MethodI
   struct System_Collections_Generic_Dictionary_string__uint__o *AllDownLoadFilePathCRCDictionary; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *RequireDownLoadFilePathCRCDictionary; // x8
 
-  if ( (byte_59375AB & 1) == 0 )
+  if ( (byte_596F70D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
-    byte_59375AB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Count__);
+    byte_596F70D = 1;
   }
   AllDownLoadFilePathCRCDictionary = this->fields.AllDownLoadFilePathCRCDictionary;
   if ( !AllDownLoadFilePathCRCDictionary
-    || (AllDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)System_Collections_Generic_Dictionary_object__uint___get_Count((System_Collections_Generic_Dictionary_TKey__TValue__o *)AllDownLoadFilePathCRCDictionary, (const MethodInfo_3FF1564 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__),
+    || (AllDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)System_Collections_Generic_Dictionary_object__uint___get_Count((System_Collections_Generic_Dictionary_TKey__TValue__o *)AllDownLoadFilePathCRCDictionary, (const MethodInfo_4024D0C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__),
         (RequireDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.RequireDownLoadFilePathCRCDictionary) == 0) )
   {
-    sub_21FFECC(AllDownLoadFilePathCRCDictionary, method);
+    sub_2213CDC(AllDownLoadFilePathCRCDictionary, method);
   }
   return (double)((System_Collections_Generic_Dictionary_object__uint___get_Count(
                      RequireDownLoadFilePathCRCDictionary,
-                     (const MethodInfo_3FF1564 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__)
+                     (const MethodInfo_4024D0C *)Method_System_Collections_Generic_Dictionary_string__uint__get_Count__)
                  + (int)AllDownLoadFilePathCRCDictionary) << 20);
 }
 
@@ -967,18 +967,18 @@ void MovieFileMerge__Initialize(
   bool v82; // w6
   bool v83; // w7
 
-  if ( (byte_59375B1 & 1) == 0 )
+  if ( (byte_596F713 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
-    sub_21FFC50(&FileMergeAndSplit_TypeInfo);
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    sub_21FFC50(&StringLiteral_26493/*"{0}/SplitFile"*/);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    sub_21FFC50(&StringLiteral_26499/*"{0}/{1}.usm"*/);
-    byte_59375B1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    sub_2213A60(&FileMergeAndSplit_TypeInfo);
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    sub_2213A60(&StringLiteral_26544/*"{0}/SplitFile"*/);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    sub_2213A60(&StringLiteral_26550/*"{0}/{1}.usm"*/);
+    byte_596F713 = 1;
   }
   v7 = enableSkipButton;
   AllDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.AllDownLoadFilePathCRCDictionary;
@@ -986,16 +986,16 @@ void MovieFileMerge__Initialize(
   {
     System_Collections_Generic_Dictionary_object__uint___Clear(
       AllDownLoadFilePathCRCDictionary,
-      (const MethodInfo_3FF1A34 *)Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
+      (const MethodInfo_40251DC *)Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
   }
   else
   {
-    v9 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    v9 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
     System_Collections_Generic_Dictionary_object__uint____ctor(
       v9,
-      (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+      (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
     this->fields.AllDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)v9;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.AllDownLoadFilePathCRCDictionary,
       (int32_t)v9,
       v10,
@@ -1010,16 +1010,16 @@ void MovieFileMerge__Initialize(
   {
     System_Collections_Generic_Dictionary_object__uint___Clear(
       RequireDownLoadFilePathCRCDictionary,
-      (const MethodInfo_3FF1A34 *)Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
+      (const MethodInfo_40251DC *)Method_System_Collections_Generic_Dictionary_string__uint__Clear__);
   }
   else
   {
-    v23 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
+    v23 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
     System_Collections_Generic_Dictionary_object__uint____ctor(
       v23,
-      (const MethodInfo_3FF0F18 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
+      (const MethodInfo_40246C0 *)Method_System_Collections_Generic_Dictionary_string__uint___ctor__);
     this->fields.RequireDownLoadFilePathCRCDictionary = (struct System_Collections_Generic_Dictionary_string__uint__o *)v23;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.RequireDownLoadFilePathCRCDictionary,
       (int32_t)v23,
       v24,
@@ -1032,16 +1032,16 @@ void MovieFileMerge__Initialize(
   this->fields.downloadProgress = 0;
   this->fields.isDownloadCancel = 0;
   this->fields.mergeClass = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mergeClass, 0, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mergeClass, 0, v17, v18, v19, v20, v21, v22);
   this->fields.crcCheckerClass = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.crcCheckerClass, 0, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.crcCheckerClass, 0, v30, v31, v32, v33, v34, v35);
   this->fields.isEnableSkipButton = v7;
   if ( !assetFolderURL )
-    sub_21FFECC(v36, v37);
+    sub_2213CDC(v36, v37);
   if ( System_String__EndsWith(assetFolderURL, (System_String_o *)StringLiteral_1123/*"/"*/, 0) )
-    assetFolderURL = System_String__TrimEnd_75500280(assetFolderURL, 0x2Fu, 0);
+    assetFolderURL = System_String__TrimEnd_75713584(assetFolderURL, 0x2Fu, 0);
   this->fields.assetFolderURL = assetFolderURL;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.assetFolderURL,
     (int32_t)assetFolderURL,
     v38,
@@ -1054,7 +1054,7 @@ void MovieFileMerge__Initialize(
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v44, v45);
   FileName = System_IO_Path__GetFileName(assetFolderURL, 0);
   this->fields.assetFolder = FileName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.assetFolder,
     (int32_t)FileName,
     v47,
@@ -1064,9 +1064,9 @@ void MovieFileMerge__Initialize(
     v51,
     v52);
   LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v53);
-  v55 = System_String__Format((System_String_o *)StringLiteral_26493/*"{0}/SplitFile"*/, LocalFolderPath, 0);
+  v55 = System_String__Format((System_String_o *)StringLiteral_26544/*"{0}/SplitFile"*/, LocalFolderPath, 0);
   this->fields.outputSplitFileFolder = v55;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.outputSplitFileFolder,
     (int32_t)v55,
     v56,
@@ -1076,13 +1076,13 @@ void MovieFileMerge__Initialize(
     v60,
     v61);
   v63 = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v62);
-  v64 = System_String__Format_75484576(
-          (System_String_o *)StringLiteral_26499/*"{0}/{1}.usm"*/,
+  v64 = System_String__Format_75697880(
+          (System_String_o *)StringLiteral_26550/*"{0}/{1}.usm"*/,
           v63,
           (Il2CppObject *)this->fields.assetFolder,
           0);
   this->fields.outputMergeFile = v64;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.outputMergeFile,
     (int32_t)v64,
     v65,
@@ -1099,13 +1099,13 @@ void MovieFileMerge__Initialize(
     j_il2cpp_runtime_class_init_0(FileMergeAndSplit_TypeInfo, v73, v74);
     v75 = FileMergeAndSplit_TypeInfo;
   }
-  v77 = System_String__Format_75484576(
-          (System_String_o *)StringLiteral_26497/*"{0}/{1}"*/,
+  v77 = System_String__Format_75697880(
+          (System_String_o *)StringLiteral_26548/*"{0}/{1}"*/,
           v76,
           (Il2CppObject *)v75->static_fields->PathCRCFileName,
           0);
   this->fields.outputMergeFileCRC = v77;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.outputMergeFileCRC,
     (int32_t)v77,
     v78,
@@ -1175,16 +1175,16 @@ System_Collections_IEnumerator_o *MovieFileMerge__Merge(MovieFileMerge_o *this, 
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59375B4 & 1) == 0 )
+  if ( (byte_596F716 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__Merge_d__40_TypeInfo);
-    byte_59375B4 = 1;
+    sub_2213A60(&MovieFileMerge__Merge_d__40_TypeInfo);
+    byte_596F716 = 1;
   }
-  v3 = sub_21FFEBC(MovieFileMerge__Merge_d__40_TypeInfo);
+  v3 = sub_2213CCC(MovieFileMerge__Merge_d__40_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1208,18 +1208,18 @@ System_Collections_IEnumerator_o *MovieFileMerge__PlayCRIMovie(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_59375B0 & 1) == 0 )
+  if ( (byte_596F712 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__PlayCRIMovie_d__36_TypeInfo);
-    byte_59375B0 = 1;
+    sub_2213A60(&MovieFileMerge__PlayCRIMovie_d__36_TypeInfo);
+    byte_596F712 = 1;
   }
-  v5 = sub_21FFEBC(MovieFileMerge__PlayCRIMovie_d__36_TypeInfo);
+  v5 = sub_2213CCC(MovieFileMerge__PlayCRIMovie_d__36_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = filePath;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)filePath, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)filePath, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1234,21 +1234,21 @@ System_Collections_IEnumerator_o *MovieFileMerge__PlayMP4(MovieFileMerge_o *this
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59375AE & 1) == 0 )
+  if ( (byte_596F710 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__PlayMP4_d__34_TypeInfo);
-    byte_59375AE = 1;
+    sub_2213A60(&MovieFileMerge__PlayMP4_d__34_TypeInfo);
+    byte_596F710 = 1;
   }
-  v3 = sub_21FFEBC(MovieFileMerge__PlayMP4_d__34_TypeInfo);
+  v3 = sub_2213CCC(MovieFileMerge__PlayMP4_d__34_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
-System_Collections_IEnumerator_o *MovieFileMerge__PlayMP4_47420544(
+System_Collections_IEnumerator_o *MovieFileMerge__PlayMP4_47451744(
         MovieFileMerge_o *this,
         System_String_o *filePath,
         const MethodInfo *method)
@@ -1267,18 +1267,18 @@ System_Collections_IEnumerator_o *MovieFileMerge__PlayMP4_47420544(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_59375AF & 1) == 0 )
+  if ( (byte_596F711 & 1) == 0 )
   {
-    sub_21FFC50(&MovieFileMerge__PlayMP4_d__35_TypeInfo);
-    byte_59375AF = 1;
+    sub_2213A60(&MovieFileMerge__PlayMP4_d__35_TypeInfo);
+    byte_596F711 = 1;
   }
-  v5 = sub_21FFEBC(MovieFileMerge__PlayMP4_d__35_TypeInfo);
+  v5 = sub_2213CCC(MovieFileMerge__PlayMP4_d__35_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 32) = filePath;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)filePath, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)filePath, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1299,12 +1299,12 @@ void MovieFileMerge__Reboot(MovieFileMerge_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v15; // x1
 
-  if ( (byte_59375BC & 1) == 0 )
+  if ( (byte_596F71E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&ManagementManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_59375BC = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&ManagementManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_596F71E = 1;
   }
   loader = this->fields.loader;
   p_loader = (MissionNaviTransitionBoardItem_o *)&this->fields.loader;
@@ -1313,14 +1313,14 @@ void MovieFileMerge__Reboot(MovieFileMerge_o *this, const MethodInfo *method)
   {
     UnityEngine_Networking_UnityWebRequest__Dispose(v4, 0);
     p_loader->klass = 0;
-    sub_21FFBF4(p_loader, 0, v7, v8, v9, v10, v11, v12);
+    sub_2213A04(p_loader, 0, v7, v8, v9, v10, v11, v12);
   }
   if ( !*(&ManagementManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method, v2);
-  if ( !byte_5937656 )
+  if ( !byte_596F739 )
   {
-    sub_21FFC50(&ManagementManager_TypeInfo);
-    byte_5937656 = 1;
+    sub_2213A60(&ManagementManager_TypeInfo);
+    byte_596F739 = 1;
   }
   v13 = ManagementManager_TypeInfo;
   if ( !*(&ManagementManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1332,13 +1332,13 @@ void MovieFileMerge__Reboot(MovieFileMerge_o *this, const MethodInfo *method)
   {
     if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
-    UnityEngine_Application__Quit_82963804(0);
+    UnityEngine_Application__Quit_83177108(0);
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0);
   }
 }
@@ -1362,16 +1362,16 @@ void MovieFileMerge___Merge_b__40_0(MovieFileMerge_o *this, System_Exception_o *
   System_String_o *v11; // x1
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_59375BE & 1) == 0 )
+  if ( (byte_596F720 & 1) == 0 )
   {
-    sub_21FFC50(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_MovieFileMerge_EndMergeRetryDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_5471/*"Disk full"*/);
-    sub_21FFC50(&StringLiteral_9623/*"NETWORK_ERROR_DISK_FULL"*/);
-    this = (MovieFileMerge_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59375BE = 1;
+    sub_2213A60(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_MovieFileMerge_EndMergeRetryDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_5483/*"Disk full"*/);
+    sub_2213A60(&StringLiteral_9636/*"NETWORK_ERROR_DISK_FULL"*/);
+    this = (MovieFileMerge_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596F720 = 1;
   }
   if ( !e )
     goto LABEL_12;
@@ -1381,24 +1381,24 @@ void MovieFileMerge___Merge_b__40_0(MovieFileMerge_o *this, System_Exception_o *
                                method);
   if ( !this )
     goto LABEL_12;
-  if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_5471/*"Disk full"*/, 0) )
+  if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_5483/*"Disk full"*/, 0) )
   {
     v11 = (System_String_o *)((__int64 (__fastcall *)(System_Exception_o *, const MethodInfo *))e->klass->vtable._5_get_Message.methodPtr)(
                                e,
                                e->klass->vtable._5_get_Message.method);
     goto LABEL_11;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9623/*"NETWORK_ERROR_DISK_FULL"*/, 0);
-  v9 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9636/*"NETWORK_ERROR_DISK_FULL"*/, 0);
+  v9 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v9, v4, Method_MovieFileMerge_EndMergeRetryDialog__, 0);
   if ( !Instance )
 LABEL_12:
-    sub_21FFECC(this, e);
+    sub_2213CDC(this, e);
   CommonUI__OpenErrorDialog((CommonUI_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, v8, v9, 1, 0);
-  v11 = (System_String_o *)StringLiteral_5471/*"Disk full"*/;
+  v11 = (System_String_o *)StringLiteral_5483/*"Disk full"*/;
 LABEL_11:
   MovieFileMerge__AssetLoadLogError((MovieFileMerge_o *)v4, v11, v10);
 }
@@ -1443,7 +1443,6 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
-  bool result; // w0
   System_Collections_Generic_Dictionary_string__uint__o *Dic; // x0
   System_String_o *v17; // x2
   System_String_o *v18; // x3
@@ -1481,13 +1480,13 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
   struct FileMergeAndSplit_CRCChecker_o *crcCheckerClass; // x8
 
   v4 = this;
-  if ( (byte_59375BF & 1) == 0 )
+  if ( (byte_596F721 & 1) == 0 )
   {
-    sub_21FFC50(&FileMergeAndSplit_CRCChecker_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_uint___);
-    this = (MovieFileMerge__CRCDownloadAndCheck_d__38_o *)sub_21FFC50(&FileMergeAndSplit_TypeInfo);
-    byte_59375BF = 1;
+    sub_2213A60(&FileMergeAndSplit_CRCChecker_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_uint___);
+    this = (MovieFileMerge__CRCDownloadAndCheck_d__38_o *)sub_2213A60(&FileMergeAndSplit_TypeInfo);
+    byte_596F721 = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -1498,7 +1497,7 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
       goto LABEL_22;
     NeedDownloadDictionary = MovieFileMerge__GetNeedDownloadDictionary(_4__this, method);
     _4__this->fields.RequireDownLoadFilePathCRCDictionary = NeedDownloadDictionary;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&_4__this->fields.RequireDownLoadFilePathCRCDictionary,
       (int32_t)NeedDownloadDictionary,
       v44,
@@ -1530,13 +1529,12 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
         v7 = MovieFileMerge__Download(_4__this, FileMergeAndSplit_TypeInfo->static_fields->PathCRCFileName, 0, v3);
         v4->fields.__2__current = (Il2CppObject *)v7;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
-        sub_21FFBF4(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
-        result = 1;
+        sub_2213A04(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return result;
+        return 1;
       }
 LABEL_22:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
     return 0;
   }
@@ -1545,7 +1543,7 @@ LABEL_22:
     goto LABEL_22;
   Dic = MovieFileMerge__CreateDic((MovieFileMerge_o *)this, _4__this->fields.outputMergeFileCRC, v2);
   _4__this->fields.AllDownLoadFilePathCRCDictionary = Dic;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields.AllDownLoadFilePathCRCDictionary,
     (int32_t)Dic,
     v17,
@@ -1560,25 +1558,24 @@ LABEL_22:
   outputMergeFile = _4__this->fields.outputMergeFile;
   Values = System_Collections_Generic_Dictionary_object__uint___get_Values(
              (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
-             (const MethodInfo_3FF16D0 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
+             (const MethodInfo_4024E78 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
   v25 = (System_Collections_Generic_List_uint__o *)System_Linq_Enumerable__ToList_uint_(
                                                      (System_Collections_Generic_IEnumerable_TSource__o *)Values,
-                                                     (const MethodInfo_386DAA8 *)Method_System_Linq_Enumerable_ToList_uint___);
-  v26 = (FileMergeAndSplit_CRCChecker_o *)sub_21FFEBC(FileMergeAndSplit_CRCChecker_TypeInfo);
+                                                     (const MethodInfo_38A0F70 *)Method_System_Linq_Enumerable_ToList_uint___);
+  v26 = (FileMergeAndSplit_CRCChecker_o *)sub_2213CCC(FileMergeAndSplit_CRCChecker_TypeInfo);
   FileMergeAndSplit_CRCChecker___ctor(v26, outputMergeFile, v25, v27);
   _4__this->fields.crcCheckerClass = v26;
   p_crcCheckerClass = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.crcCheckerClass;
-  sub_21FFBF4(p_crcCheckerClass, (int32_t)v26, v29, v30, v31, v32, v33, v34);
+  sub_2213A04(p_crcCheckerClass, (int32_t)v26, v29, v30, v31, v32, v33, v34);
   this = (MovieFileMerge__CRCDownloadAndCheck_d__38_o *)p_crcCheckerClass->klass;
   if ( !p_crcCheckerClass->klass )
     goto LABEL_22;
   v35 = FileMergeAndSplit_CRCChecker__Run((FileMergeAndSplit_CRCChecker_o *)this, method);
   v4->fields.__2__current = (Il2CppObject *)v35;
   v36 = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
-  sub_21FFBF4(v36, (int32_t)v35, v37, v38, v39, v40, v41, v42);
-  result = 1;
+  sub_2213A04(v36, (int32_t)v35, v37, v38, v39, v40, v41, v42);
   v36[-1].fields._BoardType_k__BackingField = 2;
-  return result;
+  return 1;
 }
 
 
@@ -1598,11 +1595,11 @@ void __noreturn MovieFileMerge__CRCDownloadAndCheck_d__38__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__CRCDownloadAndCheck_d__38_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__CRCDownloadAndCheck_d__38_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -1686,14 +1683,14 @@ bool MovieFileMerge__DownloadMovie_d__39__MoveNext(
 
   v48 = this;
   v8 = this;
-  if ( (byte_59375C1 & 1) == 0 )
+  if ( (byte_596F723 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Key__);
-    this = (MovieFileMerge__DownloadMovie_d__39_o *)sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Value__);
-    byte_59375C1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Key__);
+    this = (MovieFileMerge__DownloadMovie_d__39_o *)sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Value__);
+    byte_596F723 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -1718,16 +1715,16 @@ bool MovieFileMerge__DownloadMovie_d__39__MoveNext(
     }
     v8->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     RequireDownLoadFilePathCRCDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)_4__this->fields.RequireDownLoadFilePathCRCDictionary;
     _4__this->fields.downloadProgress = 0;
     _4__this->fields.isDownloading = 1;
     if ( !RequireDownLoadFilePathCRCDictionary )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     System_Collections_Generic_Dictionary_object__uint___GetEnumerator(
       v45,
       RequireDownLoadFilePathCRCDictionary,
-      (const MethodInfo_3FF1CA8 *)Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
+      (const MethodInfo_4025450 *)Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
     current = v45[0].fields._current;
     v13 = *(_QWORD *)&v45[0].fields._getEnumeratorRetType;
     v14 = v48;
@@ -1735,13 +1732,13 @@ bool MovieFileMerge__DownloadMovie_d__39__MoveNext(
     *(_OWORD *)&v48->fields.__7__wrap1.fields._dictionary = *(_OWORD *)&v45[0].fields._dictionary;
     v14->fields.__7__wrap1.fields._current = current;
     *(_QWORD *)&v14->fields.__7__wrap1.fields._getEnumeratorRetType = v13;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->fields.__7__wrap1, 0, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->fields.__7__wrap1, 0, v15, v16, v17, v18, v19, v20);
     v8 = v48;
   }
   v8->fields.__1__state = -3;
   v28 = System_Collections_Generic_Dictionary_Enumerator_object__uint___MoveNext(
           (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v8->fields.__7__wrap1,
-          (const MethodInfo_41392E0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
+          (const MethodInfo_416CE6C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__);
   v29 = v48;
   if ( !v28 )
   {
@@ -1751,23 +1748,23 @@ bool MovieFileMerge__DownloadMovie_d__39__MoveNext(
     *(_OWORD *)&v34->fields.__7__wrap1.fields._dictionary = 0u;
     v34->fields.__7__wrap1.fields._current = 0u;
     if ( !_4__this )
-      sub_21FFECC(v32, v33);
+      sub_2213CDC(v32, v33);
     result = 0;
     _4__this->fields.isDownloading = 0;
     goto LABEL_22;
   }
   v48->fields._dic_5__3 = (struct System_Collections_Generic_KeyValuePair_string__uint__o)v48->fields.__7__wrap1.fields._current;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v29->fields._dic_5__3, 0, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v29->fields._dic_5__3, 0, v22, v23, v24, v25, v26, v27);
 LABEL_13:
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   if ( _4__this->fields.isDownloadPause )
   {
     if ( !_4__this->fields.isDownloadCancel )
     {
       v30 = v48;
       v48->fields.__2__current = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v30->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
       result = 1;
       v48->fields.__1__state = 1;
       goto LABEL_22;
@@ -1790,15 +1787,15 @@ LABEL_21:
                           (const MethodInfo *)v3);
   v38 = v48;
   v48->fields.__2__current = v37;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v38->fields.__2__current, (int32_t)v37, v39, v40, v41, v42, v43, v44);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38->fields.__2__current, (int32_t)v37, v39, v40, v41, v42, v43, v44);
   result = 1;
   v48->fields.__1__state = 2;
 LABEL_22:
   v36 = v46;
   if ( v46 )
   {
-    sub_1FF99C0(&v47);
-    sub_21FFEC4(v36);
+    sub_200C518(&v47);
+    sub_2213CD4(v36);
   }
   return result;
 }
@@ -1820,11 +1817,11 @@ void __noreturn MovieFileMerge__DownloadMovie_d__39__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__DownloadMovie_d__39_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__DownloadMovie_d__39_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -1849,14 +1846,14 @@ void MovieFileMerge__DownloadMovie_d__39____m__Finally1(
         MovieFileMerge__DownloadMovie_d__39_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo_4139404 *v3; // x1
+  const MethodInfo_416CF90 *v3; // x1
 
-  if ( (byte_59375C2 & 1) == 0 )
+  if ( (byte_596F724 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
-    byte_59375C2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
+    byte_596F724 = 1;
   }
-  v3 = (const MethodInfo_4139404 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__;
+  v3 = (const MethodInfo_416CF90 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__;
   this->fields.__1__state = -1;
   System_Collections_Generic_Dictionary_Enumerator_object__uint___Dispose(
     (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&this->fields.__7__wrap1,
@@ -2211,41 +2208,41 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
   System_Nullable_Vector2__o effectDistancea; // [xsp+0h] [xbp-70h]
   Il2CppObject *value; // [xsp+38h] [xbp-38h] BYREF
 
-  if ( (byte_59375C0 & 1) == 0 )
+  if ( (byte_596F722 & 1) == 0 )
   {
-    sub_21FFC50(&char___TypeInfo);
-    sub_21FFC50(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&CommonServicePluginScript_TypeInfo);
-    sub_21FFC50(&Crc32_TypeInfo);
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&ManagementManager_TypeInfo);
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&Method_MovieFileMerge_EndRetryDialog__);
-    sub_21FFC50(&Method_MovieFileMerge_EndWarningDialog__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_21FFC50(&StringLiteral_7549/*"HTTP"*/);
-    sub_21FFC50(&StringLiteral_792/*")\n\n503 Auto retry count "*/);
-    sub_21FFC50(&StringLiteral_795/*")\nfile crc ("*/);
-    sub_21FFC50(&StringLiteral_1501/*"503"*/);
-    sub_21FFC50(&StringLiteral_2138/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_16519/*"[FFFF80]Download error for debug"*/);
-    sub_21FFC50(&StringLiteral_26497/*"{0}/{1}"*/);
-    sub_21FFC50(&StringLiteral_12846/*"STATUS"*/);
-    sub_21FFC50(&StringLiteral_791/*")\n\n"*/);
-    sub_21FFC50(&StringLiteral_681/*"("*/);
-    sub_21FFC50(&StringLiteral_793/*")\n\nAssetBundle file check sum error\nlist crc ("*/);
-    sub_21FFC50(&StringLiteral_789/*")"*/);
-    sub_21FFC50(&StringLiteral_2139/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_794/*")\n\nAssetBundle file download time over"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59375C0 = 1;
+    sub_2213A60(&char___TypeInfo);
+    sub_2213A60(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&CommonServicePluginScript_TypeInfo);
+    sub_2213A60(&Crc32_TypeInfo);
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&ManagementManager_TypeInfo);
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&Method_MovieFileMerge_EndRetryDialog__);
+    sub_2213A60(&Method_MovieFileMerge_EndWarningDialog__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_2213A60(&StringLiteral_7561/*"HTTP"*/);
+    sub_2213A60(&StringLiteral_792/*")\n\n503 Auto retry count "*/);
+    sub_2213A60(&StringLiteral_795/*")\nfile crc ("*/);
+    sub_2213A60(&StringLiteral_1502/*"503"*/);
+    sub_2213A60(&StringLiteral_2139/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_16551/*"[FFFF80]Download error for debug"*/);
+    sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
+    sub_2213A60(&StringLiteral_12872/*"STATUS"*/);
+    sub_2213A60(&StringLiteral_791/*")\n\n"*/);
+    sub_2213A60(&StringLiteral_681/*"("*/);
+    sub_2213A60(&StringLiteral_793/*")\n\nAssetBundle file check sum error\nlist crc ("*/);
+    sub_2213A60(&StringLiteral_789/*")"*/);
+    sub_2213A60(&StringLiteral_2140/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_794/*")\n\nAssetBundle file download time over"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596F722 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -2269,10 +2266,10 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
           _4__this->fields.isErrorDialog = 1;
           if ( !*(&ManagementManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method, v2);
-          if ( !byte_5937656 )
+          if ( !byte_596F739 )
           {
-            sub_21FFC50(&ManagementManager_TypeInfo);
-            byte_5937656 = 1;
+            sub_2213A60(&ManagementManager_TypeInfo);
+            byte_596F739 = 1;
           }
           v123 = ManagementManager_TypeInfo;
           if ( !*(&ManagementManager_TypeInfo->_2.cctor_finished + 1) )
@@ -2281,14 +2278,14 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
             v123 = ManagementManager_TypeInfo;
           }
           isDuringStartup = v123->static_fields->isDuringStartup;
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v128 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
           if ( isDuringStartup )
           {
             if ( !v128 )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v125, v126);
-            v129 = LocalizationManager__Get((System_String_o *)StringLiteral_2138/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0);
-            v130 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+            v129 = LocalizationManager__Get((System_String_o *)StringLiteral_2139/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0);
+            v130 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(v130, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0);
             if ( !Instance )
               goto LABEL_197;
@@ -2298,8 +2295,8 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
           {
             if ( !v128 )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v125, v126);
-            v152 = LocalizationManager__Get((System_String_o *)StringLiteral_2139/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0);
-            v153 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+            v152 = LocalizationManager__Get((System_String_o *)StringLiteral_2140/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0);
+            v153 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(v153, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0);
             if ( !Instance )
               goto LABEL_197;
@@ -2316,11 +2313,11 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
       }
       if ( _4__this->fields.isErrorDialog )
       {
-        v154 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v154 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v154, 0);
         this->fields.__2__current = (Il2CppObject *)v154;
         p__2__current = &this->fields.__2__current;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)p__2__current,
           (int32_t)v154,
           v155,
@@ -2334,9 +2331,9 @@ bool MovieFileMerge__Download_d__47__MoveNext(MovieFileMerge__Download_d__47_o *
       }
 LABEL_145:
       this->fields._wait_5__8 = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._wait_5__8, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._wait_5__8, 0, v2, v3, v4, v5, v6, v7);
       this->fields._errorCode_5__11 = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11,
         0,
         v252,
@@ -2346,7 +2343,7 @@ LABEL_145:
         v256,
         v257);
       this->fields._errorLocalizeCode_5__12 = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields._errorLocalizeCode_5__12,
         0,
         v258,
@@ -2358,7 +2355,7 @@ LABEL_145:
       do
       {
         this->fields._readData_5__5 = 0;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5,
           0,
           v264,
@@ -2369,20 +2366,20 @@ LABEL_145:
           v269);
 LABEL_193:
         this->fields._readData_5__5 = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5, 0, v93, v94, v95, v96, v97, v98);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5, 0, v93, v94, v95, v96, v97, v98);
       }
       while ( !this->fields._isDownload_5__4 );
       v319 = UnityEngine_Networking_UnityWebRequest__Get(_4__this->fields.downloadingURL, 0);
       _4__this->fields.loader = v319;
       p_loader = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.loader;
-      sub_21FFBF4(p_loader, (int32_t)v319, v321, v322, v323, v324, v325, v326);
+      sub_2213A04(p_loader, (int32_t)v319, v321, v322, v323, v324, v325, v326);
       klass = (__int64)p_loader->klass;
       if ( p_loader->klass )
       {
         UnityEngine_Networking_UnityWebRequest__SendWebRequest((UnityEngine_Networking_UnityWebRequest_o *)klass, 0);
         this->fields.__2__current = 0;
         v327 = &this->fields.__2__current;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v327, 0, v328, v329, v330, v331, v332, v333);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)v327, 0, v328, v329, v330, v331, v332, v333);
         LOBYTE(klass) = 1;
         *((_DWORD *)v327 - 2) = 1;
         return klass;
@@ -2414,13 +2411,13 @@ LABEL_193:
         this->fields.__1__state = -1;
         if ( _4__this )
         {
-          v77 = System_String__Format_75484576(
-                  (System_String_o *)StringLiteral_26497/*"{0}/{1}"*/,
+          v77 = System_String__Format_75697880(
+                  (System_String_o *)StringLiteral_26548/*"{0}/{1}"*/,
                   (Il2CppObject *)_4__this->fields.assetFolderURL,
                   (Il2CppObject *)this->fields.fileName,
                   0);
           _4__this->fields.downloadingURL = v77;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&_4__this->fields.downloadingURL,
             (int32_t)v77,
             v78,
@@ -2431,13 +2428,13 @@ LABEL_193:
             v83);
           _4__this->fields.downloadingCRC = this->fields.crc;
           LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(_4__this, v84);
-          v86 = System_String__Format_75484576(
-                  (System_String_o *)StringLiteral_26497/*"{0}/{1}"*/,
+          v86 = System_String__Format_75697880(
+                  (System_String_o *)StringLiteral_26548/*"{0}/{1}"*/,
                   LocalFolderPath,
                   (Il2CppObject *)this->fields.fileName,
                   0);
           this->fields._dlFilePath_5__2 = v86;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields._dlFilePath_5__2,
             (int32_t)v86,
             v87,
@@ -2465,10 +2462,10 @@ LABEL_193:
         if ( !_4__this )
           goto LABEL_197;
         this->fields._loadProgress_5__7 = 0.0;
-        v108 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v108 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v108, 0);
         this->fields._wait_5__8 = v108;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields._wait_5__8,
           (int32_t)v108,
           v109,
@@ -2500,9 +2497,9 @@ LABEL_193:
       v137 = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.loader;
       _4__this->fields.loader = 0;
 LABEL_75:
-      sub_21FFBF4(v137, 0, v131, v132, v133, v134, v135, v136);
-      LOBYTE(klass) = 0;
+      sub_2213A04(v137, 0, v131, v132, v133, v134, v135, v136);
       _4__this->fields.isDownloading = 0;
+      LOBYTE(klass) = 0;
       return klass;
     }
     if ( !klass )
@@ -2535,7 +2532,7 @@ LABEL_154:
       wait_5__8 = (Il2CppObject *)this->fields._wait_5__8;
       this->fields.__2__current = wait_5__8;
       p__2__current = &this->fields.__2__current;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)wait_5__8, v2, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)wait_5__8, v2, v3, v4, v5, v6, v7);
       v20 = 2;
       goto LABEL_155;
     }
@@ -2548,7 +2545,7 @@ LABEL_50:
       {
         this->fields.__2__current = 0;
         p__2__current = &this->fields.__2__current;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
         v20 = 3;
         goto LABEL_155;
       }
@@ -2568,9 +2565,9 @@ LABEL_73:
     *(_WORD *)&this->fields._isAutoRetry_5__9 = 0;
     this->fields._errorCode_5__11 = 0;
     p_errorCode_5__11 = &this->fields._errorCode_5__11;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11, 0, v2, v3, v4, v5, v6, v7);
     this->fields._errorLocalizeCode_5__12 = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._errorLocalizeCode_5__12,
       0,
       v168,
@@ -2584,7 +2581,7 @@ LABEL_73:
       goto LABEL_197;
     if ( !UnityEngine_Networking_UnityWebRequest__get_isDone((UnityEngine_Networking_UnityWebRequest_o *)klass, 0) )
     {
-      v188 = System_String__Concat_75481624(
+      v188 = System_String__Concat_75694928(
                (System_String_o *)StringLiteral_681/*"("*/,
                _4__this->fields.downloadingURL,
                (System_String_o *)StringLiteral_794/*")\n\nAssetBundle file download time over"*/,
@@ -2592,7 +2589,7 @@ LABEL_73:
       v195 = (int)v188;
       *p_errorCode_5__11 = v188;
 LABEL_107:
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11,
         v195,
         v189,
@@ -2619,7 +2616,7 @@ LABEL_107:
         {
           data = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)klass, 0);
           this->fields._readData_5__5 = data;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5,
             (int32_t)data,
             v176,
@@ -2630,27 +2627,27 @@ LABEL_107:
             v181);
           this->fields.__2__current = 0;
           p__2__current = &this->fields.__2__current;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v182, v183, v184, v185, v186, v187);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v182, v183, v184, v185, v186, v187);
           v20 = 4;
           goto LABEL_155;
         }
       }
 LABEL_197:
-      sub_21FFECC(klass, method);
+      sub_2213CDC(klass, method);
     }
     klass = (__int64)_4__this->fields.loader;
     if ( !klass )
       goto LABEL_197;
     downloadingURL = _4__this->fields.downloadingURL;
     v296 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)klass, 0);
-    v297 = System_String__Concat_75483552(
+    v297 = System_String__Concat_75696856(
              (System_String_o *)StringLiteral_681/*"("*/,
              downloadingURL,
              (System_String_o *)StringLiteral_791/*")\n\n"*/,
              v296,
              0);
     *p_errorCode_5__11 = v297;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11,
       (int32_t)v297,
       v298,
@@ -2670,17 +2667,17 @@ LABEL_197:
     v305 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
     if ( System_Collections_Generic_Dictionary_object__object___get_Count(
            (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders,
-           (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
+           (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
       || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             v305,
-            (Il2CppObject *)StringLiteral_12846/*"STATUS"*/,
+            (Il2CppObject *)StringLiteral_12872/*"STATUS"*/,
             &value,
-            (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+            (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
     {
       goto LABEL_108;
     }
     v306 = value;
-    klass = sub_21FFD10(char___TypeInfo, 1);
+    klass = sub_2213B20(char___TypeInfo, 1);
     if ( !klass )
       goto LABEL_197;
     method = (const MethodInfo *)klass;
@@ -2689,7 +2686,7 @@ LABEL_197:
       *(_WORD *)(klass + 32) = 32;
       if ( !v306 )
         goto LABEL_197;
-      klass = (__int64)System_String__Split_75492796((System_String_o *)v306, (System_Char_array *)klass, 1, 0);
+      klass = (__int64)System_String__Split_75706100((System_String_o *)v306, (System_Char_array *)klass, 1, 0);
       if ( !klass )
         goto LABEL_197;
       v307 = klass;
@@ -2698,7 +2695,7 @@ LABEL_197:
       klass = *(_QWORD *)(klass + 32);
       if ( !klass )
         goto LABEL_197;
-      klass = System_String__StartsWith((System_String_o *)klass, (System_String_o *)StringLiteral_7549/*"HTTP"*/, 0);
+      klass = System_String__StartsWith((System_String_o *)klass, (System_String_o *)StringLiteral_7561/*"HTTP"*/, 0);
       if ( (klass & 1) == 0 )
         goto LABEL_108;
       if ( (*(_DWORD *)(v307 + 24) & 0xFFFFFFFE) != 0 )
@@ -2706,14 +2703,14 @@ LABEL_197:
         klass = *(_QWORD *)(v307 + 40);
         if ( !klass )
           goto LABEL_197;
-        if ( !System_String__Equals_75473208((System_String_o *)klass, (System_String_o *)StringLiteral_1501/*"503"*/, 0) )
+        if ( !System_String__Equals_75686512((System_String_o *)klass, (System_String_o *)StringLiteral_1502/*"503"*/, 0) )
           goto LABEL_108;
         v308 = _4__this->fields.downloadingURL;
         autoRetryCount_5__3 = this->fields._autoRetryCount_5__3;
         this->fields._isAutoRetry_5__9 = 1;
         this->fields._autoRetryCount_5__3 = autoRetryCount_5__3 + 1;
         v310 = System_Int32__ToString((int)this + 64, 0);
-        v311 = System_String__Concat_75483552(
+        v311 = System_String__Concat_75696856(
                  (System_String_o *)StringLiteral_681/*"("*/,
                  v308,
                  (System_String_o *)StringLiteral_792/*")\n\n503 Auto retry count "*/,
@@ -2725,7 +2722,7 @@ LABEL_197:
       }
     }
 LABEL_189:
-    sub_21FFED4(klass);
+    sub_2213CE4(klass);
   }
   if ( _1__state == 3 )
   {
@@ -2744,7 +2741,7 @@ LABEL_189:
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     *((_DWORD *)p__2__current + 24) = v116;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v117, v118, v119, v120, v121, v122);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v117, v118, v119, v120, v121, v122);
     v20 = 5;
     goto LABEL_155;
   }
@@ -2757,7 +2754,7 @@ LABEL_189:
     Parent = System_IO_Directory__GetParent(this->fields._dlFilePath_5__2, 0);
     v140 = Parent;
     if ( !Parent )
-      sub_21FFECC(0, v139);
+      sub_2213CDC(0, v139);
     if ( (((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._10_get_Exists.methodPtr)(
             Parent,
             Parent->klass->vtable._10_get_Exists.method)
@@ -2783,12 +2780,12 @@ LABEL_189:
     if ( FreeSize < v149->static_fields->LIMIT_FREE_SIZE )
     {
 LABEL_190:
-      v315 = sub_21FFC64(&System_IO_IOException_TypeInfo);
-      v316 = (System_IO_IOException_o *)sub_21FFEBC(v315);
-      v317 = (System_String_o *)sub_21FFC64(&StringLiteral_5471/*"Disk full"*/);
-      System_IO_IOException___ctor_76656180(v316, v317, 0);
-      v318 = sub_21FFC64(&Method_MovieFileMerge__Download_d__47_MoveNext__);
-      sub_21FFD90(v316, v318);
+      v315 = sub_2213A74(&System_IO_IOException_TypeInfo);
+      v316 = (System_IO_IOException_o *)sub_2213CCC(v315);
+      v317 = (System_String_o *)sub_2213A74(&StringLiteral_5483/*"Disk full"*/);
+      System_IO_IOException___ctor_76869484(v316, v317, 0);
+      v318 = sub_2213A74(&Method_MovieFileMerge__Download_d__47_MoveNext__);
+      sub_2213BA0(v316, v318);
     }
     if ( System_IO_File__Exists(this->fields._dlFilePath_5__2, 0) )
       System_IO_File__Delete(this->fields._dlFilePath_5__2, 0);
@@ -2799,7 +2796,7 @@ LABEL_190:
     this->fields._isDownload_5__4 = 0;
     goto LABEL_108;
   }
-  klass = sub_21FFD10(string___TypeInfo, 7);
+  klass = sub_2213B20(string___TypeInfo, 7);
   if ( !klass )
     goto LABEL_197;
   v28 = klass;
@@ -2807,40 +2804,40 @@ LABEL_190:
     goto LABEL_189;
   v29 = StringLiteral_681/*"("*/;
   *(_QWORD *)(klass + 32) = StringLiteral_681/*"("*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(klass + 32), v29, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(klass + 32), v29, v22, v23, v24, v25, v26, v27);
   if ( (*(_DWORD *)(v28 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_189;
   v36 = _4__this->fields.downloadingURL;
   *(_QWORD *)(v28 + 40) = v36;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 40), (int32_t)v36, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 40), (int32_t)v36, v30, v31, v32, v33, v34, v35);
   if ( *(_DWORD *)(v28 + 24) <= 2u )
     goto LABEL_189;
   v43 = StringLiteral_793/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
   *(_QWORD *)(v28 + 48) = StringLiteral_793/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 48), v43, v37, v38, v39, v40, v41, v42);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 48), v43, v37, v38, v39, v40, v41, v42);
   klass = (__int64)System_UInt32__ToString((int)_4__this + 96, 0);
   if ( (*(_DWORD *)(v28 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_189;
   *(_QWORD *)(v28 + 56) = klass;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 56), klass, v44, v45, v46, v47, v48, v49);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 56), klass, v44, v45, v46, v47, v48, v49);
   if ( *(_DWORD *)(v28 + 24) <= 4u )
     goto LABEL_189;
   v56 = StringLiteral_795/*")\nfile crc ("*/;
   *(_QWORD *)(v28 + 64) = StringLiteral_795/*")\nfile crc ("*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 64), v56, v50, v51, v52, v53, v54, v55);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 64), v56, v50, v51, v52, v53, v54, v55);
   klass = (__int64)System_UInt32__ToString((int)this + 120, 0);
   if ( *(_DWORD *)(v28 + 24) <= 5u )
     goto LABEL_189;
   *(_QWORD *)(v28 + 72) = klass;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 72), klass, v57, v58, v59, v60, v61, v62);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 72), klass, v57, v58, v59, v60, v61, v62);
   if ( *(_DWORD *)(v28 + 24) <= 6u )
     goto LABEL_189;
   v69 = StringLiteral_789/*")"*/;
   *(_QWORD *)(v28 + 80) = StringLiteral_789/*")"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 80), v69, v63, v64, v65, v66, v67, v68);
-  v70 = System_String__Concat_75483816((System_String_array *)v28, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 80), v69, v63, v64, v65, v66, v67, v68);
+  v70 = System_String__Concat_75697120((System_String_array *)v28, 0);
   this->fields._errorCode_5__11 = v70;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._errorCode_5__11,
     (int32_t)v70,
     v71,
@@ -2864,9 +2861,9 @@ LABEL_108:
   if ( !v196->static_fields->UseDebugCommand )
     goto LABEL_116;
   _4__this->fields.isErrorDialog = 1;
-  v197 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v197 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   errorCode_5__11 = this->fields._errorCode_5__11;
-  v199 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+  v199 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v199, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndWarningDialog__, 0);
   if ( !v197 )
     goto LABEL_197;
@@ -2874,7 +2871,7 @@ LABEL_108:
   effectDistance.fields.value.fields.y = 0.0;
   CommonUI__OpenWarningDialog(
     (CommonUI_o *)v197,
-    (System_String_o *)StringLiteral_16519/*"[FFFF80]Download error for debug"*/,
+    (System_String_o *)StringLiteral_16551/*"[FFFF80]Download error for debug"*/,
     errorCode_5__11,
     v199,
     1,
@@ -2886,11 +2883,11 @@ LABEL_108:
 LABEL_114:
   if ( _4__this->fields.isErrorDialog )
   {
-    v200 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v200 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v200, 0);
     this->fields.__2__current = (Il2CppObject *)v200;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v200, v201, v202, v203, v204, v205, v206);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v200, v201, v202, v203, v204, v205, v206);
     v20 = 6;
     goto LABEL_155;
   }
@@ -2905,13 +2902,13 @@ LABEL_116:
       v208 = ManagerConfig_TypeInfo;
     }
     DOWNLOAD_RETRY_DELAY_TIME = v208->static_fields->DOWNLOAD_RETRY_DELAY_TIME;
-    v210 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+    v210 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
     v211 = (float)v207;
     v212 = (Il2CppObject *)v210;
     UnityEngine_WaitForSeconds___ctor(v210, DOWNLOAD_RETRY_DELAY_TIME * v211, 0);
     this->fields.__2__current = v212;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v212, v213, v214, v215, v216, v217, v218);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v212, v213, v214, v215, v216, v217, v218);
     v20 = 7;
     goto LABEL_155;
   }
@@ -2927,8 +2924,8 @@ LABEL_116:
   _4__this->fields.isErrorDialog = 1;
   if ( !*(&ManagementManager_TypeInfo->_2.cctor_finished + 1) )
     *(__n128 *)&v284 = j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, v282, v283);
-  v285 = sub_2D4C010(0, v284);
-  v288 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v285 = sub_2D466BC(0, v284);
+  v288 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   errorLocalizeCode_5__12 = this->fields._errorLocalizeCode_5__12;
   v290 = (System_String_o *)StringLiteral_1/*""*/;
   v291 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
@@ -2937,11 +2934,11 @@ LABEL_116:
     if ( errorLocalizeCode_5__12 )
       v292 = this->fields._errorLocalizeCode_5__12;
     else
-      v292 = (System_String_o *)StringLiteral_2138/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
+      v292 = (System_String_o *)StringLiteral_2139/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
     if ( !v291 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v286, v287);
     v293 = LocalizationManager__Get(v292, 0);
-    v294 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+    v294 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
     ErrorDialog_ClickDelegate___ctor(v294, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0);
     if ( !v288 )
       goto LABEL_197;
@@ -2952,11 +2949,11 @@ LABEL_116:
     if ( errorLocalizeCode_5__12 )
       v312 = this->fields._errorLocalizeCode_5__12;
     else
-      v312 = (System_String_o *)StringLiteral_2139/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
+      v312 = (System_String_o *)StringLiteral_2140/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
     if ( !v291 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v286, v287);
     v313 = LocalizationManager__Get(v312, 0);
-    v314 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+    v314 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
     ErrorDialog_ClickDelegate___ctor(v314, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0);
     if ( !v288 )
       goto LABEL_197;
@@ -2965,11 +2962,11 @@ LABEL_116:
 LABEL_14:
   if ( _4__this->fields.isErrorDialog )
   {
-    v12 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v12 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v12, 0);
     this->fields.__2__current = (Il2CppObject *)v12;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v12, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v12, v14, v15, v16, v17, v18, v19);
     v20 = 8;
 LABEL_155:
     *((_DWORD *)p__2__current - 2) = v20;
@@ -2979,10 +2976,10 @@ LABEL_155:
 LABEL_124:
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
-  if ( !byte_5933778 )
+  if ( !byte_596B88D )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5933778 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596B88D = 1;
   }
   klass = (__int64)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3001,11 +2998,11 @@ LABEL_124:
       goto LABEL_197;
     UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)klass, 0);
     v220->klass = 0;
-    sub_21FFBF4(v220, 0, v222, v223, v224, v225, v226, v227);
+    sub_2213A04(v220, 0, v222, v223, v224, v225, v226, v227);
     this->fields._readData_5__5 = 0;
     p_readData_5__5 = &this->fields._readData_5__5;
 LABEL_134:
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_readData_5__5, 0, v228, v229, v230, v231, v232, v233);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_readData_5__5, 0, v228, v229, v230, v231, v232, v233);
     LOBYTE(klass) = 0;
     return klass;
   }
@@ -3018,9 +3015,9 @@ LABEL_134:
       goto LABEL_197;
     UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)klass, 0);
     _4__this->fields.loader = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_4__this->fields.loader, 0, v235, v236, v237, v238, v239, v240);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields.loader, 0, v235, v236, v237, v238, v239, v240);
     this->fields._readData_5__5 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5, 0, v241, v242, v243, v244, v245, v246);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._readData_5__5, 0, v241, v242, v243, v244, v245, v246);
     if ( this->fields._isCrcError_5__10 )
     {
       if ( !this->fields._errorCode_5__11 )
@@ -3034,9 +3031,9 @@ LABEL_134:
       if ( !v248->static_fields->UseDebugCommand )
         goto LABEL_146;
       _4__this->fields.isErrorDialog = 1;
-      v249 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v249 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v250 = this->fields._errorCode_5__11;
-      v251 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+      v251 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(v251, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndWarningDialog__, 0);
       if ( !v249 )
         goto LABEL_197;
@@ -3044,7 +3041,7 @@ LABEL_134:
       effectDistancea.fields.value.fields.y = 0.0;
       CommonUI__OpenWarningDialog(
         (CommonUI_o *)v249,
-        (System_String_o *)StringLiteral_16519/*"[FFFF80]Download error for debug"*/,
+        (System_String_o *)StringLiteral_16551/*"[FFFF80]Download error for debug"*/,
         v250,
         v251,
         1,
@@ -3056,20 +3053,20 @@ LABEL_134:
 LABEL_42:
       if ( _4__this->fields.isErrorDialog )
       {
-        v99 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v99 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v99, 0);
         this->fields.__2__current = (Il2CppObject *)v99;
         p__2__current = &this->fields.__2__current;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v99, v100, v101, v102, v103, v104, v105);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v99, v100, v101, v102, v103, v104, v105);
         v20 = 9;
         goto LABEL_155;
       }
 LABEL_146:
-      v270 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+      v270 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v270, 1.0, 0);
       this->fields.__2__current = (Il2CppObject *)v270;
       p__2__current = &this->fields.__2__current;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v270, v271, v272, v273, v274, v275, v276);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v270, v271, v272, v273, v274, v275, v276);
       v20 = 10;
       goto LABEL_155;
     }
@@ -3107,11 +3104,11 @@ void __noreturn MovieFileMerge__Download_d__47__System_Collections_IEnumerator_R
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__Download_d__47_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__Download_d__47_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3167,7 +3164,6 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
   int32_t v23; // w5
   bool v24; // w6
   bool v25; // w7
-  bool result; // w0
   struct FileMergeAndSplit_Merge_o *v27; // x8
   System_String_o *v28; // x21
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x0
@@ -3192,15 +3188,15 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
   struct FileMergeAndSplit_CRCChecker_o *crcCheckerClass; // x8
 
   v2 = this;
-  if ( (byte_59375C3 & 1) == 0 )
+  if ( (byte_596F725 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_Exception__TypeInfo);
-    sub_21FFC50(&FileMergeAndSplit_CRCChecker_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_uint___);
-    sub_21FFC50(&FileMergeAndSplit_Merge_TypeInfo);
-    this = (MovieFileMerge__Merge_d__40_o *)sub_21FFC50(&Method_MovieFileMerge__Merge_b__40_0__);
-    byte_59375C3 = 1;
+    sub_2213A60(&System_Action_Exception__TypeInfo);
+    sub_2213A60(&FileMergeAndSplit_CRCChecker_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_uint___);
+    sub_2213A60(&FileMergeAndSplit_Merge_TypeInfo);
+    this = (MovieFileMerge__Merge_d__40_o *)sub_2213A60(&Method_MovieFileMerge__Merge_b__40_0__);
+    byte_596F725 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -3228,10 +3224,10 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
       {
         SplitFileList = MovieFileMerge__GetSplitFileList(_4__this, method);
         outputMergeFile = _4__this->fields.outputMergeFile;
-        v7 = (FileMergeAndSplit_Merge_o *)sub_21FFEBC(FileMergeAndSplit_Merge_TypeInfo);
+        v7 = (FileMergeAndSplit_Merge_o *)sub_2213CCC(FileMergeAndSplit_Merge_TypeInfo);
         FileMergeAndSplit_Merge___ctor(v7, SplitFileList, outputMergeFile, v8);
         _4__this->fields.mergeClass = v7;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&_4__this->fields.mergeClass,
           (int32_t)v7,
           v9,
@@ -3241,21 +3237,20 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
           v13,
           v14);
         mergeClass = _4__this->fields.mergeClass;
-        v16 = (System_Action_object__o *)sub_21FFEBC(System_Action_Exception__TypeInfo);
+        v16 = (System_Action_object__o *)sub_2213CCC(System_Action_Exception__TypeInfo);
         System_Action_object____ctor(v16, (Il2CppObject *)_4__this, Method_MovieFileMerge__Merge_b__40_0__, 0);
         if ( mergeClass )
         {
           v18 = FileMergeAndSplit_Merge__Run(mergeClass, (System_Action_Exception__o *)v16, v17);
           v2->fields.__2__current = (Il2CppObject *)v18;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-          sub_21FFBF4(p__2__current, (int32_t)v18, v20, v21, v22, v23, v24, v25);
-          result = 1;
+          sub_2213A04(p__2__current, (int32_t)v18, v20, v21, v22, v23, v24, v25);
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return result;
+          return 1;
         }
       }
 LABEL_23:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
     return 0;
   }
@@ -3273,25 +3268,24 @@ LABEL_23:
   v28 = _4__this->fields.outputMergeFile;
   Values = System_Collections_Generic_Dictionary_object__uint___get_Values(
              (System_Collections_Generic_Dictionary_TKey__TValue__o *)this,
-             (const MethodInfo_3FF16D0 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
+             (const MethodInfo_4024E78 *)Method_System_Collections_Generic_Dictionary_string__uint__get_Values__);
   v30 = (System_Collections_Generic_List_uint__o *)System_Linq_Enumerable__ToList_uint_(
                                                      (System_Collections_Generic_IEnumerable_TSource__o *)Values,
-                                                     (const MethodInfo_386DAA8 *)Method_System_Linq_Enumerable_ToList_uint___);
-  v31 = (FileMergeAndSplit_CRCChecker_o *)sub_21FFEBC(FileMergeAndSplit_CRCChecker_TypeInfo);
+                                                     (const MethodInfo_38A0F70 *)Method_System_Linq_Enumerable_ToList_uint___);
+  v31 = (FileMergeAndSplit_CRCChecker_o *)sub_2213CCC(FileMergeAndSplit_CRCChecker_TypeInfo);
   FileMergeAndSplit_CRCChecker___ctor(v31, v28, v30, v32);
   _4__this->fields.crcCheckerClass = v31;
   p_crcCheckerClass = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.crcCheckerClass;
-  sub_21FFBF4(p_crcCheckerClass, (int32_t)v31, v34, v35, v36, v37, v38, v39);
+  sub_2213A04(p_crcCheckerClass, (int32_t)v31, v34, v35, v36, v37, v38, v39);
   this = (MovieFileMerge__Merge_d__40_o *)p_crcCheckerClass->klass;
   if ( !p_crcCheckerClass->klass )
     goto LABEL_23;
   v40 = FileMergeAndSplit_CRCChecker__Run((FileMergeAndSplit_CRCChecker_o *)this, method);
   v2->fields.__2__current = (Il2CppObject *)v40;
   v41 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-  sub_21FFBF4(v41, (int32_t)v40, v42, v43, v44, v45, v46, v47);
-  result = 1;
+  sub_2213A04(v41, (int32_t)v40, v42, v43, v44, v45, v46, v47);
   v41[-1].fields._BoardType_k__BackingField = 2;
-  return result;
+  return 1;
 }
 
 
@@ -3311,11 +3305,11 @@ void __noreturn MovieFileMerge__Merge_d__40__System_Collections_IEnumerator_Rese
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__Merge_d__40_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__Merge_d__40_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3385,22 +3379,21 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
   System_Action_o *v37; // x23
   struct MovieFileMerge___c__DisplayClass36_0_o *_8__1; // x8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  bool result; // w0
 
   v8 = this;
-  if ( (byte_59375C4 & 1) == 0 )
+  if ( (byte_596F726 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_21FFC50(&Method_MovieFileMerge___c__DisplayClass36_0__PlayCRIMovie_b__0__);
-    sub_21FFC50(&MovieFileMerge___c__DisplayClass36_0_TypeInfo);
-    this = (MovieFileMerge__PlayCRIMovie_d__36_o *)sub_21FFC50(&StringLiteral_4059/*"CRIMovie/CRIMoviePlayerWithPanel"*/);
-    byte_59375C4 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_2213A60(&Method_MovieFileMerge___c__DisplayClass36_0__PlayCRIMovie_b__0__);
+    sub_2213A60(&MovieFileMerge___c__DisplayClass36_0_TypeInfo);
+    this = (MovieFileMerge__PlayCRIMovie_d__36_o *)sub_2213A60(&StringLiteral_4064/*"CRIMovie/CRIMoviePlayerWithPanel"*/);
+    byte_596F726 = 1;
   }
   _1__state = v8->fields.__1__state;
   if ( _1__state == 1 )
@@ -3413,36 +3406,36 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
       return 0;
     _4__this = v8->fields.__4__this;
     v8->fields.__1__state = -1;
-    v11 = (Il2CppObject *)sub_21FFEBC(MovieFileMerge___c__DisplayClass36_0_TypeInfo);
+    v11 = (Il2CppObject *)sub_2213CCC(MovieFileMerge___c__DisplayClass36_0_TypeInfo);
     System_Object___ctor(v11, 0);
     v8->fields.__8__1 = (struct MovieFileMerge___c__DisplayClass36_0_o *)v11;
     p__8__1 = (Il2CppObject **)&v8->fields.__8__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v13, v14, v15, v16, v17, v18);
     object = UnityEngine_Resources__Load_object_(
-               (System_String_o *)StringLiteral_4059/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
-               (const MethodInfo_3945260 *)Method_UnityEngine_Resources_Load_GameObject___);
+               (System_String_o *)StringLiteral_4064/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
+               (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_GameObject___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
     this = (MovieFileMerge__PlayCRIMovie_d__36_o *)UnityEngine_Object__Instantiate_object_(
                                                      object,
-                                                     (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                     (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !this )
       goto LABEL_32;
     v22 = this;
     v23 = *p__8__1;
     this = (MovieFileMerge__PlayCRIMovie_d__36_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
     if ( !v23 )
       goto LABEL_32;
     v23[1].klass = (Il2CppClass *)this;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23[1], (int32_t)this, v24, v25, v26, v27, v28, v29);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23[1], (int32_t)this, v24, v25, v26, v27, v28, v29);
     if ( !*p__8__1 )
       goto LABEL_32;
     LOBYTE((*p__8__1)[1].monitor) = 1;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v22,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
     this = (MovieFileMerge__PlayCRIMovie_d__36_o *)UnityEngine_Object__op_Inequality(
                                                      (UnityEngine_Object_o *)Component_object,
                                                      0,
@@ -3466,10 +3459,10 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
     filePath = v8->fields.filePath;
     if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method, v31);
-    if ( !byte_593205D )
+    if ( !byte_596B2FF )
     {
-      sub_21FFC50(&BgmManager_TypeInfo);
-      byte_593205D = 1;
+      sub_2213A60(&BgmManager_TypeInfo);
+      byte_596B2FF = 1;
     }
     v34 = BgmManager_TypeInfo;
     if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3479,7 +3472,7 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
     }
     v35 = *p__8__1;
     masterVolume = v34->static_fields->masterVolume;
-    v37 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v37 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v37, v35, Method_MovieFileMerge___c__DisplayClass36_0__PlayCRIMovie_b__0__, 0);
     if ( !_4__this
       || !klass
@@ -3504,7 +3497,7 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
       || (this = (MovieFileMerge__PlayCRIMovie_d__36_o *)(*p__8__1)[1].klass) == 0 )
     {
 LABEL_32:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
     CRIMoviePlayer__MoviePlay((CRIMoviePlayer_o *)this, 1, 1, 1, 0, 0);
   }
@@ -3515,10 +3508,9 @@ LABEL_32:
   {
     v8->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
-    sub_21FFBF4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -3540,11 +3532,11 @@ void __noreturn MovieFileMerge__PlayCRIMovie_d__36__System_Collections_IEnumerat
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__PlayCRIMovie_d__36_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__PlayCRIMovie_d__36_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3594,10 +3586,10 @@ bool MovieFileMerge__PlayMP4_d__34__MoveNext(MovieFileMerge__PlayMP4_d__34_o *th
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(0, method);
-    v7 = (Il2CppObject *)MovieFileMerge__PlayMP4_47420544(_4__this, _4__this->fields.outputMergeFile, v2);
+      sub_2213CDC(0, method);
+    v7 = (Il2CppObject *)MovieFileMerge__PlayMP4_47451744(_4__this, _4__this->fields.outputMergeFile, v2);
     this->fields.__2__current = v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     v5 = 1;
     goto LABEL_6;
   }
@@ -3627,11 +3619,11 @@ void __noreturn MovieFileMerge__PlayMP4_d__34__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__PlayMP4_d__34_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__PlayMP4_d__34_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3693,10 +3685,10 @@ bool MovieFileMerge__PlayMP4_d__35__MoveNext(MovieFileMerge__PlayMP4_d__35_o *th
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_59375C5 & 1) == 0 )
+  if ( (byte_596F727 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_59375C5 = 1;
+    sub_2213A60(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_596F727 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -3705,10 +3697,10 @@ bool MovieFileMerge__PlayMP4_d__35__MoveNext(MovieFileMerge__PlayMP4_d__35_o *th
     if ( _1__state == 2 )
     {
       this->fields.__1__state = -1;
-      v18 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v18 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v18, 0);
       this->fields.__2__current = (Il2CppObject *)v18;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
         (int32_t)v18,
         v19,
@@ -3732,10 +3724,10 @@ bool MovieFileMerge__PlayMP4_d__35__MoveNext(MovieFileMerge__PlayMP4_d__35_o *th
     if ( _1__state != 1 )
       return result;
     this->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_21FFEBC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v5, 0);
     this->fields.__2__current = (Il2CppObject *)v5;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7, v8, v9, v10, v11);
     result = 1;
     v12 = 2;
   }
@@ -3748,10 +3740,10 @@ bool MovieFileMerge__PlayMP4_d__35__MoveNext(MovieFileMerge__PlayMP4_d__35_o *th
     if ( IsNullOrEmpty )
       return 0;
     if ( !_4__this )
-      sub_21FFECC(IsNullOrEmpty, v16);
+      sub_2213CDC(IsNullOrEmpty, v16);
     v25 = (Il2CppObject *)MovieFileMerge__PlayCRIMovie(_4__this, this->fields.filePath, v17);
     this->fields.__2__current = v25;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
       (int32_t)v25,
       v26,
@@ -3784,11 +3776,11 @@ void __noreturn MovieFileMerge__PlayMP4_d__35__System_Collections_IEnumerator_Re
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_MovieFileMerge__PlayMP4_d__35_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_MovieFileMerge__PlayMP4_d__35_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -3824,7 +3816,7 @@ void MovieFileMerge___c__DisplayClass36_0___PlayCRIMovie_b__0(
 
   player = this->fields.player;
   if ( !player )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CRIMoviePlayer__Dispose(player, 0);
   this->fields.wait = 0;
 }

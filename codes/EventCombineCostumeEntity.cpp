@@ -1,13 +1,13 @@
 void EventCombineCostumeEntity___ctor(EventCombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938589 & 1) == 0 )
+  if ( (byte_597073C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938589 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597073C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventCombineCostumeEntity__CreatePK(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_5938587 & 1) == 0 )
+  if ( (byte_597073A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_5938587 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_597073A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            costumeId,
            eventId,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,26 +49,26 @@ bool EventCombineCostumeEntity__IsShortEventItem(EventCombineCostumeEntity_o *th
   struct System_Int32_array *itemNums; // x9
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5938588 & 1) == 0 )
+  if ( (byte_597073B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938588 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_597073B = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -83,7 +83,7 @@ bool EventCombineCostumeEntity__IsShortEventItem(EventCombineCostumeEntity_o *th
     goto LABEL_20;
   if ( !MasterData_object )
 LABEL_19:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   Instance = (DataManager_o *)UserItemMaster__TryGetEntity(
                                 (UserItemMaster_o *)MasterData_object,
                                 &entity,
@@ -100,7 +100,7 @@ LABEL_19:
         if ( LODWORD(itemNums->max_length) )
           return entity->fields.num < itemNums->m_Items[0];
 LABEL_20:
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       }
     }
     goto LABEL_19;

@@ -2,15 +2,15 @@ void UserFriendPointGachaFreeDrawCampaignLogMaster___ctor(
         UserFriendPointGachaFreeDrawCampaignLogMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_59395A0 & 1) == 0 )
+  if ( (byte_5971760 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
-    byte_59395A0 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    byte_5971760 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     400,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserFriendPointGachaFreeDrawCampaignLogMaster__UserFriendPointGachaFreeDrawCampaignLogEntity__string___ctor__);
 }
 
 
@@ -50,23 +50,23 @@ int32_t UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
   __int64 v35; // x0
   System_Collections_Generic_IEnumerator_T__o *v37; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_59395A1 & 1) == 0 )
+  if ( (byte_5971761 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_59395A1 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_5971761 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, startAt);
+    sub_2213CDC(0, startAt);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_UserFriendPointGachaFreeDrawCampaignLogEntity__GetEnumerator__);
   v37 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v9);
+    sub_2213CDC(Enumerator, v9);
   v10 = Enumerator;
   v11 = 0;
   while ( 1 )
@@ -88,7 +88,7 @@ int32_t UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
     else
     {
 LABEL_10:
-      v15 = sub_2237E2C(v10, System_Collections_IEnumerator_TypeInfo, 0);
+      v15 = sub_224BC3C(v10, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
             v10,
@@ -96,7 +96,7 @@ LABEL_10:
     if ( (v16 & 1) == 0 )
       break;
     if ( !v37 )
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     v18 = v37->klass;
     v19 = *(unsigned __int16 *)&v37->klass->_2.rank;
     if ( *(_WORD *)&v37->klass->_2.rank )
@@ -114,7 +114,7 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v21 = sub_2237E2C(
+      v21 = sub_224BC3C(
               v37,
               System_Collections_Generic_IEnumerator_UserFriendPointGachaFreeDrawCampaignLogEntity__TypeInfo,
               0);
@@ -123,10 +123,10 @@ LABEL_18:
             v37,
             *(_QWORD *)(v21 + 8));
     if ( !v22 )
-      sub_21FFECC(0, v23);
+      sub_2213CDC(0, v23);
     v24 = *(_QWORD *)(v22 + 16);
     if ( !v24 )
-      sub_21FFECC(v22, v23);
+      sub_2213CDC(v22, v23);
     v25 = *(_QWORD *)(v24 + 24);
     if ( (int)v25 >= 1 )
     {
@@ -136,7 +136,7 @@ LABEL_18:
       do
       {
         if ( !v27 )
-          sub_21FFED4(v22);
+          sub_2213CE4(v22);
         v30 = *v28++;
         v29 = v30;
         --v26;
@@ -167,7 +167,7 @@ LABEL_18:
     else
     {
 LABEL_37:
-      v35 = sub_2237E2C(v37, System_IDisposable_TypeInfo, 0);
+      v35 = sub_224BC3C(v37, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v35)(v37, *(_QWORD *)(v35 + 8));
   }

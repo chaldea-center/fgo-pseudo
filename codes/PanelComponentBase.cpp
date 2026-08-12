@@ -24,7 +24,7 @@ void PanelComponentBase__Initialize(PanelComponentBase_o *this, const MethodInfo
   bool v7; // w7
 
   this->fields._OnClickPanel_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickPanel_k__BackingField,
     0,
     v2,
@@ -43,10 +43,10 @@ void PanelComponentBase__SetClosedPanelVisible(PanelComponentBase_o *this, bool 
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_59329AF & 1) == 0 )
+  if ( (byte_596AAAF & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59329AF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AAAF = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -55,7 +55,7 @@ void PanelComponentBase__SetClosedPanelVisible(PanelComponentBase_o *this, bool 
   {
     v7 = this->fields.closedPanel;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     UnityEngine_GameObject__SetActive(v7, value, 0);
   }
 }
@@ -73,7 +73,7 @@ void PanelComponentBase__SetTheCallBackWhenClickPanel(
   bool v7; // w7
 
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickPanel_k__BackingField,
     (int32_t)callback,
     (System_String_o *)method,
@@ -100,7 +100,7 @@ void PanelComponentBase__set_OnClickPanel(PanelComponentBase_o *this, System_Act
   bool v7; // w7
 
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickPanel_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

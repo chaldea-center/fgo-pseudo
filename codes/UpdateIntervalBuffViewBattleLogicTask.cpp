@@ -13,7 +13,7 @@ void UpdateIntervalBuffViewBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)actData);
   this->fields.actiontype = 58;
   this->fields.baseActData = actData;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.baseActData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.baseActData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
   this->fields.isSkipStep = 1;
 }
 
@@ -26,13 +26,13 @@ BattleActionData_o *UpdateIntervalBuffViewBattleLogicTask__MakeActionData(
   BattleActionData_o *baseActData; // x19
   UpdateViewIntervalBuffActionData_o *v5; // x20
 
-  if ( (byte_593BB40 & 1) == 0 )
+  if ( (byte_5973D4C & 1) == 0 )
   {
-    sub_21FFC50(&UpdateViewIntervalBuffActionData_TypeInfo);
-    byte_593BB40 = 1;
+    sub_2213A60(&UpdateViewIntervalBuffActionData_TypeInfo);
+    byte_5973D4C = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_21FFEBC(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_2213CCC(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0);
   return (BattleActionData_o *)v5;
 }

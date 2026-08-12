@@ -25,20 +25,20 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
   __int64 v27; // x1
   struct System_Int32_array *v28; // x1
 
-  if ( (byte_59380CC & 1) == 0 )
+  if ( (byte_5970272 & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
-    sub_21FFC50(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
-    sub_21FFC50(&System_Func_List_object___List_int___TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&StringLiteral_17384/*"aiIds"*/);
-    sub_21FFC50(&StringLiteral_21740/*"individuality"*/);
-    sub_21FFC50(&StringLiteral_17503/*"applySvtType"*/);
-    byte_59380CC = 1;
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+    sub_2213A60(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
+    sub_2213A60(&System_Func_List_object___List_int___TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&StringLiteral_17420/*"aiIds"*/);
+    sub_2213A60(&StringLiteral_21782/*"individuality"*/);
+    sub_2213A60(&StringLiteral_17539/*"applySvtType"*/);
+    byte_5970272 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v5 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_List_object___List_int___TypeInfo);
+  v5 = (System_Func_object__object__o *)sub_2213CCC(System_Func_List_object___List_int___TypeInfo);
   System_Func_object__object____ctor(v5, 0, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0);
   if ( obj )
   {
@@ -46,18 +46,18 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
     if ( obj->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (System_Collections_Generic_Dictionary_string__object__c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_220024C(obj, System_Collections_Generic_Dictionary_string__object__TypeInfo, v6, v7);
+      sub_221405C(obj, System_Collections_Generic_Dictionary_string__object__TypeInfo, v6, v7);
       goto LABEL_13;
     }
   }
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                 (System_String_o *)StringLiteral_17384/*"aiIds"*/,
+                                 (System_String_o *)StringLiteral_17420/*"aiIds"*/,
                                  (System_Func_TSource__TDestination__o *)v5,
                                  0,
-                                 (const MethodInfo_382DCA0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+                                 (const MethodInfo_3861168 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
   this->fields._AiIdList_k__BackingField = (struct System_Collections_Generic_List_int__o *)ScriptValue_object__object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)ScriptValue_object__object,
     v10,
@@ -68,10 +68,10 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
     v15);
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)obj,
-               (System_String_o *)StringLiteral_17503/*"applySvtType"*/,
+               (System_String_o *)StringLiteral_17539/*"applySvtType"*/,
                0,
                0);
-  v17 = (System_String_o *)StringLiteral_21740/*"individuality"*/;
+  v17 = (System_String_o *)StringLiteral_21782/*"individuality"*/;
   this->fields._ApplyType_k__BackingField = IntValue;
   v18 = EntityScriptUtil__GetIntValue((System_Collections_Generic_Dictionary_string__object__o *)obj, v17, 0, 0);
   if ( v18 < 1 )
@@ -80,17 +80,17 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
     goto LABEL_11;
   }
   v25 = v18;
-  v26 = sub_21FFD10(int___TypeInfo, 1);
+  v26 = sub_2213B20(int___TypeInfo, 1);
   if ( !v26 )
 LABEL_13:
-    sub_21FFECC(v26, v27);
+    sub_2213CDC(v26, v27);
   v28 = (struct System_Int32_array *)v26;
   if ( !*(_DWORD *)(v26 + 24) )
-    sub_21FFED4(v26);
+    sub_2213CE4(v26);
   *(_DWORD *)(v26 + 32) = v25;
 LABEL_11:
   this->fields._AiIndividuality_k__BackingField = v28;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AiIndividuality_k__BackingField,
     (int32_t)v28,
     v19,
@@ -114,10 +114,10 @@ bool AiAllocationInfo__IsMatch(
   const MethodInfo *v10; // x3
   struct BattleDeckServantData_o *deckSvt; // x8
 
-  if ( (byte_59380CD & 1) == 0 )
+  if ( (byte_5970273 & 1) == 0 )
   {
-    sub_21FFC50(&Individuality_TypeInfo);
-    byte_59380CD = 1;
+    sub_2213A60(&Individuality_TypeInfo);
+    byte_5970273 = 1;
   }
   AiIndividuality_k__BackingField = this->fields._AiIndividuality_k__BackingField;
   if ( !*(&Individuality_TypeInfo->_2.cctor_finished + 1) )
@@ -126,7 +126,7 @@ bool AiAllocationInfo__IsMatch(
   if ( !v8 )
     return 0;
   if ( !svt || (deckSvt = svt->fields.deckSvt) == 0 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   return AiAllocationInfo__IsMatchApplyType(this, deckSvt->fields.isFollowerSvt, svt->fields.followerType, v10);
 }
 
@@ -195,7 +195,7 @@ void AiAllocationInfo__set_AiIdList(
   bool v7; // w7
 
   this->fields._AiIdList_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -219,7 +219,7 @@ void AiAllocationInfo__set_AiIndividuality(
   bool v7; // w7
 
   this->fields._AiIndividuality_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AiIndividuality_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

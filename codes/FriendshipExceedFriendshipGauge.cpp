@@ -1,7 +1,7 @@
 void FriendshipExceedFriendshipGauge___ctor(FriendshipExceedFriendshipGauge_o *this, const MethodInfo *method)
 {
-  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_E94590;
-  this->fields.EXCEEDED_COLOR = (struct UnityEngine_Color_o)xmmword_E92CE0;
+  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_E9D730;
+  this->fields.EXCEEDED_COLOR = (struct UnityEngine_Color_o)xmmword_E9BE80;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -12,18 +12,18 @@ void FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
 {
   UISprite_o *exceededIconUISprite; // x20
 
-  if ( (byte_593C8C3 & 1) == 0 )
+  if ( (byte_5974AFB & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_21283/*"img_bondsgage_11"*/);
-    byte_593C8C3 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&StringLiteral_21324/*"img_bondsgage_11"*/);
+    byte_5974AFB = 1;
   }
   if ( !this->fields.isInitUISpriteAtlas )
   {
     exceededIconUISprite = this->fields.exceededIconUISprite;
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method);
-    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_21283/*"img_bondsgage_11"*/, 0);
+    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_21324/*"img_bondsgage_11"*/, 0);
     this->fields.isInitUISpriteAtlas = 1;
   }
 }
@@ -47,10 +47,10 @@ void FriendshipExceedFriendshipGauge__Set(
   int v17; // w2
   int v18; // w3
 
-  if ( (byte_593C8C2 & 1) == 0 )
+  if ( (byte_5974AFA & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIGrid___);
-    byte_593C8C2 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIGrid___);
+    byte_5974AFA = 1;
   }
   FriendshipExceedFriendshipGauge__InitUISpriteAtlas(this, *(const MethodInfo **)&level);
   FriendshipExceedFriendshipGauge__SetLabel(this, level, max, type, v11);
@@ -89,10 +89,10 @@ void FriendshipExceedFriendshipGauge__Set(
   if ( !normalRoot
     || (normalRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    normalRoot,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0 )
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0 )
   {
 LABEL_14:
-    sub_21FFECC(normalRoot, v12);
+    sub_2213CDC(normalRoot, v12);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))normalRoot->klass[1]._1.element_class)(
     normalRoot,
@@ -123,7 +123,7 @@ void FriendshipExceedFriendshipGauge__SetGaugeList(
     while ( 1 )
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v12 = &sliderList->obj.klass + v11;
       v13 = (UIProgressBar_o *)v12[4];
       if ( !v13 )
@@ -146,12 +146,11 @@ void FriendshipExceedFriendshipGauge__SetGaugeList(
         return;
     }
 LABEL_14:
-    sub_21FFECC(this, sliderList);
+    sub_2213CDC(this, sliderList);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void FriendshipExceedFriendshipGauge__SetLabel(
         FriendshipExceedFriendshipGauge_o *this,
         int32_t level,
@@ -163,27 +162,21 @@ void FriendshipExceedFriendshipGauge__SetLabel(
   System_String_o *v8; // x0
   __int64 v9; // x1
   UILabel_o *maxLabel; // x21
-  float v11; // s0 OVERLAPPED
-  float v12; // s1
-  float v13; // s2
-  float v14; // s3
-  float r; // s0 OVERLAPPED
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  int32_t v19; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v17; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
+  UnityEngine_Color_o DISABLE_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o EXCEEDED_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v19 = max;
-  v20 = level;
+  v17 = max;
+  v18 = level;
   levelLabel = this->fields.levelLabel;
-  v8 = System_Int32__ToString((int32_t)&v20, 0);
+  v8 = System_Int32__ToString((int32_t)&v18, 0);
   if ( !levelLabel )
     goto LABEL_17;
   UIExtrusionLabel__set_text(levelLabel, v8, 0);
   maxLabel = this->fields.maxLabel;
-  v8 = System_Int32__ToString((int32_t)&v19, 0);
+  v8 = System_Int32__ToString((int32_t)&v17, 0);
   if ( !maxLabel )
     goto LABEL_17;
   UILabel__set_text(maxLabel, v8, 0);
@@ -200,10 +193,7 @@ void FriendshipExceedFriendshipGauge__SetLabel(
       v8 = (System_String_o *)this->fields.maxLabel;
       if ( v8 )
       {
-        b = this->fields.EXCEEDED_COLOR.fields.b;
-        a = this->fields.EXCEEDED_COLOR.fields.a;
-        r = this->fields.EXCEEDED_COLOR.fields.r;
-        g = this->fields.EXCEEDED_COLOR.fields.g;
+        EXCEEDED_COLOR = this->fields.EXCEEDED_COLOR;
         goto LABEL_15;
       }
     }
@@ -216,31 +206,28 @@ void FriendshipExceedFriendshipGauge__SetLabel(
     v8 = (System_String_o *)this->fields.levelLabel;
     if ( v8 )
     {
-      v11 = 1.0;
-      v12 = 1.0;
-      v13 = 1.0;
-      v14 = 1.0;
+      DISABLE_COLOR.fields.r = 1.0;
+      DISABLE_COLOR.fields.g = 1.0;
+      DISABLE_COLOR.fields.b = 1.0;
+      DISABLE_COLOR.fields.a = 1.0;
       goto LABEL_10;
     }
 LABEL_17:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
   v8 = (System_String_o *)this->fields.levelLabel;
   if ( !v8 )
     goto LABEL_17;
-  v13 = this->fields.DISABLE_COLOR.fields.b;
-  v14 = this->fields.DISABLE_COLOR.fields.a;
-  v11 = this->fields.DISABLE_COLOR.fields.r;
-  v12 = this->fields.DISABLE_COLOR.fields.g;
+  DISABLE_COLOR = this->fields.DISABLE_COLOR;
 LABEL_10:
-  UIWidget__set_color((UIWidget_o *)v8, *(UnityEngine_Color_o *)&v11, 0);
+  UIWidget__set_color((UIWidget_o *)v8, DISABLE_COLOR, 0);
   v8 = (System_String_o *)this->fields.maxLabel;
   if ( !v8 )
     goto LABEL_17;
-  r = 1.0;
-  g = 1.0;
-  b = 1.0;
-  a = 1.0;
+  EXCEEDED_COLOR.fields.r = 1.0;
+  EXCEEDED_COLOR.fields.g = 1.0;
+  EXCEEDED_COLOR.fields.b = 1.0;
+  EXCEEDED_COLOR.fields.a = 1.0;
 LABEL_15:
-  UIWidget__set_color((UIWidget_o *)v8, *(UnityEngine_Color_o *)&r, 0);
+  UIWidget__set_color((UIWidget_o *)v8, EXCEEDED_COLOR, 0);
 }

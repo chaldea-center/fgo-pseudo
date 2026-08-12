@@ -1,37 +1,31 @@
 BgmPlayArgs_o *SubBgmPlayArgs__Clone(SubBgmPlayArgs_o *this, const MethodInfo *method)
 {
   float Volume_k__BackingField; // s0
-  System_Nullable_float__o p_volume; // x0
   System_String_o *BgmName_k__BackingField; // x20
   float FadeTime_k__BackingField; // s8
   int64_t StartTime_k__BackingField; // x19
-  BgmPlayArgs_o *v8; // x0
-  System_Nullable_float__o v9; // x2
-  BgmPlayArgs_o *v10; // x21
-  const MethodInfo *v11; // x4
+  BgmPlayArgs_o *v7; // x21
+  const MethodInfo *v8; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5937CA5 & 1) == 0 )
+  if ( (byte_596FE10 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_float___ctor__);
-    sub_21FFC50(&SubBgmPlayArgs_TypeInfo);
-    byte_5937CA5 = 1;
+    sub_2213A60(&Method_System_Nullable_float___ctor__);
+    sub_2213A60(&SubBgmPlayArgs_TypeInfo);
+    byte_596FE10 = 1;
   }
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
-  p_volume = (System_Nullable_float__o)&volume;
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   volume = 0;
   System_Nullable_float____ctor(
-    p_volume,
+    (System_Nullable_float__o)&volume,
     Volume_k__BackingField,
-    (const MethodInfo_45B27E0 *)Method_System_Nullable_float___ctor__);
+    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v8 = (BgmPlayArgs_o *)sub_21FFEBC(SubBgmPlayArgs_TypeInfo);
-  v9 = volume;
-  v10 = v8;
-  BgmPlayArgs___ctor(v8, BgmName_k__BackingField, v9, FadeTime_k__BackingField, StartTime_k__BackingField, v11);
-  return v10;
+  v7 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+  BgmPlayArgs___ctor(v7, BgmName_k__BackingField, volume, FadeTime_k__BackingField, StartTime_k__BackingField, v8);
+  return v7;
 }
 
 
@@ -50,43 +44,40 @@ SubBgmPlayArgs_array *SubBgmPlayArgs__ConvertFromEntityScript(
   int32_t v11; // w21
   float v12; // s0
   System_String_o *monitor; // x22
-  System_Nullable_float__o p_volume; // x0
-  BgmPlayArgs_o *v15; // x0
-  System_Nullable_float__o v16; // x2
-  Il2CppObject *v17; // x21
-  const MethodInfo *v18; // x4
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
+  BgmPlayArgs_o *v14; // x21
+  const MethodInfo *v15; // x4
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
+  Il2CppClass **v25; // x0
   System_Nullable_float__o volume; // [xsp+0h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_5937CA6 & 1) == 0 )
+  if ( (byte_596FE11 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_float___ctor__);
-    sub_21FFC50(&SubBgmPlayArgs_TypeInfo);
-    byte_5937CA6 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
+    sub_2213A60(&Method_System_Nullable_float___ctor__);
+    sub_2213A60(&SubBgmPlayArgs_TypeInfo);
+    byte_596FE11 = 1;
   }
   entity = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SubBgmPlayArgs__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SubBgmPlayArgs___ctor__);
   Master_object = EntityScriptValueConvertLogic__ObjectListTo2DimensionalIntArray(rawValue, 0x2Cu, 0);
   if ( !Master_object )
     goto LABEL_28;
@@ -99,7 +90,7 @@ SubBgmPlayArgs_array *SubBgmPlayArgs__ConvertFromEntityScript(
     {
       if ( v8 >= v6 )
 LABEL_29:
-        sub_21FFED4(Master_object);
+        sub_2213CE4(Master_object);
       v9 = *((_QWORD *)v7 + (int)v8 + 4);
       if ( !v9 )
         goto LABEL_28;
@@ -111,14 +102,14 @@ LABEL_29:
         v11 = *(_DWORD *)(v9 + 32);
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BgmMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BgmMaster___);
         if ( !Master_object )
           goto LABEL_28;
         Master_object = (void *)DataMasterBase_object__object__int___TryGetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                   &entity,
                                   v11,
-                                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           if ( *(int *)(v9 + 24) <= 1 )
@@ -138,20 +129,17 @@ LABEL_29:
           if ( !entity )
             goto LABEL_28;
           monitor = (System_String_o *)entity[1].monitor;
-          p_volume = (System_Nullable_float__o)&volume;
           volume = 0;
           System_Nullable_float____ctor(
-            p_volume,
+            (System_Nullable_float__o)&volume,
             v12,
-            (const MethodInfo_45B27E0 *)Method_System_Nullable_float___ctor__);
-          v15 = (BgmPlayArgs_o *)sub_21FFEBC(SubBgmPlayArgs_TypeInfo);
-          v16 = volume;
-          v17 = (Il2CppObject *)v15;
-          BgmPlayArgs___ctor(v15, monitor, v16, 0.0, 0, v18);
+            (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+          v14 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+          BgmPlayArgs___ctor(v14, monitor, volume, 0.0, 0, v15);
           if ( !v3 )
             goto LABEL_28;
           items = v3->fields._items;
-          v26 = Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__;
+          v23 = Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__;
           ++v3->fields._version;
           if ( !items )
             goto LABEL_28;
@@ -160,15 +148,15 @@ LABEL_29:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v3,
-              v17,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+              (Il2CppObject *)v14,
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
           }
           else
           {
-            v28 = &items->obj.klass + size;
+            v25 = &items->obj.klass + size;
             v3->fields._size = size + 1;
-            v28[4] = (Il2CppClass *)v17;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v17, v19, v20, v21, v22, v23, v24);
+            v25[4] = (Il2CppClass *)v14;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v14, v16, v17, v18, v19, v20, v21);
           }
         }
       }
@@ -178,8 +166,8 @@ LABEL_29:
   }
   if ( !v3 )
 LABEL_28:
-    sub_21FFECC(Master_object, v5);
+    sub_2213CDC(Master_object, v5);
   return (SubBgmPlayArgs_array *)System_Collections_Generic_List_object___ToArray(
                                    v3,
-                                   (const MethodInfo_445164C *)Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
+                                   (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_SubBgmPlayArgs__ToArray__);
 }

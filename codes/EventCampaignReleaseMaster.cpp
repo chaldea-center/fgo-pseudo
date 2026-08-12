@@ -1,14 +1,14 @@
 void EventCampaignReleaseMaster___ctor(EventCampaignReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938585 & 1) == 0 )
+  if ( (byte_5970738 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
-    byte_5938585 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
+    byte_5970738 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     273,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventCampaignReleaseEntity_o *EventCampaignReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938583 & 1) == 0 )
+  if ( (byte_5970736 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
-    byte_5938583 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
+    byte_5970736 = 1;
   }
   PK = (Il2CppObject *)EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&idx);
   return (EventCampaignReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            PK,
-                                           (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
+                                           (const MethodInfo_3F157EC *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool EventCampaignReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938584 & 1) == 0 )
+  if ( (byte_5970737 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
-    byte_5938584 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
+    byte_5970737 = 1;
   }
   PK = (Il2CppObject *)EventCampaignReleaseEntity__CreatePK(eventId, target, idx, *(const MethodInfo **)&target);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -83,12 +83,12 @@ bool EventCampaignReleaseMaster__isRelease(
   int32_t v21; // w24
   _DWORD *v23; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_5938586 & 1) == 0 )
+  if ( (byte_5970739 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__get_lookup__);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__EventCampaignReleaseEntity__TypeInfo);
-    byte_5938586 = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__get_lookup__);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyDictionary_string__EventCampaignReleaseEntity__TypeInfo);
+    byte_5970739 = 1;
   }
   v7 = 0;
   IsOpen = 1;
@@ -100,10 +100,10 @@ bool EventCampaignReleaseMaster__isRelease(
     Primarykey = EventCampaignReleaseEntity__getCreatePrimarykey(eventId, target, v9, method);
     lookup = DataMasterBase_object__object__object___get_lookup(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-               (const MethodInfo_3EDFD10 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__get_lookup__);
+               (const MethodInfo_3F134B8 *)Method_DataMasterBase_EventCampaignReleaseMaster__EventCampaignReleaseEntity__string__get_lookup__);
     if ( !lookup )
 LABEL_22:
-      sub_21FFECC(lookup, v13);
+      sub_2213CDC(lookup, v13);
     klass = lookup->klass;
     v15 = lookup;
     v16 = *(unsigned __int16 *)&lookup->klass->_2.rank;
@@ -122,7 +122,7 @@ LABEL_22:
     else
     {
 LABEL_9:
-      v18 = sub_2237E2C(
+      v18 = sub_224BC3C(
               lookup,
               System_Collections_Generic_IReadOnlyDictionary_string__EventCampaignReleaseEntity__TypeInfo,
               1);

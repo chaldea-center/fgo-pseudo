@@ -7,10 +7,10 @@ void QuestBoardListEffectDisappearComponent___ctor(
   int v5; // w8
   int POS_Y_ITVL_AREA; // s0
 
-  if ( (byte_5935185 & 1) == 0 )
+  if ( (byte_596D274 & 1) == 0 )
   {
-    sub_21FFC50(&QuestBoardListViewItemDraw_TypeInfo);
-    byte_5935185 = 1;
+    sub_2213A60(&QuestBoardListViewItemDraw_TypeInfo);
+    byte_596D274 = 1;
   }
   v4 = QuestBoardListViewItemDraw_TypeInfo;
   this->fields.boardMoveeasingType = 17;

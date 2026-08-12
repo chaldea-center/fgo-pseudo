@@ -1,27 +1,27 @@
 void RestrictionWholeEntity___ctor(RestrictionWholeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938EF6 & 1) == 0 )
+  if ( (byte_59710B4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938EF6 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59710B4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *RestrictionWholeEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_5938EF5 & 1) == 0 )
+  if ( (byte_59710B3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938EF5 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59710B3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -46,12 +46,12 @@ System_Boolean_array *RestrictionWholeEntity__GetSetPossiblePosition(
   _BOOL8 v9; // x0
   char v10; // w8
 
-  if ( (byte_5938EF4 & 1) == 0 )
+  if ( (byte_59710B2 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&bool___TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_5938EF4 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&bool___TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_59710B2 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -59,7 +59,7 @@ System_Boolean_array *RestrictionWholeEntity__GetSetPossiblePosition(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
     v3 = BalanceConfig_TypeInfo;
   }
-  v5 = sub_21FFD10(bool___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
+  v5 = sub_2213B20(bool___TypeInfo, (unsigned int)v3->static_fields->DeckMemberMax);
   for ( i = 32; ; ++i )
   {
     v7 = BalanceConfig_TypeInfo;
@@ -74,7 +74,7 @@ System_Boolean_array *RestrictionWholeEntity__GetSetPossiblePosition(
     v9 = System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.targetVals2,
            i - 31,
-           (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
     if ( v9 )
     {
       if ( !v5 )
@@ -87,10 +87,10 @@ System_Boolean_array *RestrictionWholeEntity__GetSetPossiblePosition(
     {
       if ( !v5 )
 LABEL_18:
-        sub_21FFECC(v9, v4);
+        sub_2213CDC(v9, v4);
       if ( v8 >= *(unsigned int *)(v5 + 24) )
 LABEL_19:
-        sub_21FFED4(v9);
+        sub_2213CE4(v9);
       v10 = 0;
     }
     *(_BYTE *)(v5 + i) = v10;

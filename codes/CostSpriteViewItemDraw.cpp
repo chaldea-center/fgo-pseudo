@@ -10,7 +10,7 @@ bool CostSpriteViewItemDraw__IsCostSpriteEnabled(CostSpriteViewItemDraw_o *this,
 
   costSprite = (UnityEngine_Behaviour_o *)this->fields.costSprite;
   if ( !costSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UnityEngine_Behaviour__get_enabled(costSprite, 0);
 }
 
@@ -28,11 +28,11 @@ void CostSpriteViewItemDraw__SetItem(
   UISprite_o *costSprite; // x21
 
   v4 = this;
-  if ( (byte_5935A69 & 1) == 0 )
+  if ( (byte_596DBAB & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    this = (CostSpriteViewItemDraw_o *)sub_21FFC50(&QuestBoardListViewItemDraw_TypeInfo);
-    byte_5935A69 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    this = (CostSpriteViewItemDraw_o *)sub_2213A60(&QuestBoardListViewItemDraw_TypeInfo);
+    byte_596DBAB = 1;
   }
   if ( !viewItem )
     goto LABEL_12;
@@ -53,7 +53,7 @@ void CostSpriteViewItemDraw__SetItem(
         (this = (CostSpriteViewItemDraw_o *)v4->fields.costSprite) == 0) )
   {
 LABEL_12:
-    sub_21FFECC(this, viewItem);
+    sub_2213CDC(this, viewItem);
   }
   ((void (__fastcall *)(CostSpriteViewItemDraw_o *, void *))this->klass[2]._1.parent)(
     this,

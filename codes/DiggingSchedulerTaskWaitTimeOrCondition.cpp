@@ -14,7 +14,7 @@ void DiggingSchedulerTaskWaitTimeOrCondition___ctor(
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0);
   *(_QWORD *)&this->fields.waitTime = cond;
   *(float *)(&this->fields._IsPause_k__BackingField + 3) = waitTime;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.waitTime, (int32_t)cond, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.waitTime, (int32_t)cond, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -30,16 +30,16 @@ System_Collections_IEnumerator_o *DiggingSchedulerTaskWaitTimeOrCondition__Execu
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59329AE & 1) == 0 )
+  if ( (byte_596AAAE & 1) == 0 )
   {
-    sub_21FFC50(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
-    byte_59329AE = 1;
+    sub_2213A60(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
+    byte_596AAAE = 1;
   }
-  v3 = sub_21FFEBC(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
+  v3 = sub_2213CCC(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -70,7 +70,6 @@ bool DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   float v12; // s1
   float espTime_5__2; // s8
   __int64 v14; // x8
-  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   _1__state = this->fields.__1__state;
@@ -93,7 +92,7 @@ bool DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   this->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v11 = *(float *)(&_4__this->fields._IsPause_k__BackingField + 3);
   if ( v11 < 0.0 )
     return 0;
@@ -110,10 +109,9 @@ LABEL_8:
   }
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
-  result = 1;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
   *((_DWORD *)p__2__current - 2) = 1;
-  return result;
+  return 1;
 }
 
 
@@ -133,11 +131,11 @@ void __noreturn DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

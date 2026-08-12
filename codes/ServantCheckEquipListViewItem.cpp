@@ -33,18 +33,18 @@ void ServantCheckEquipListViewItem___ctor(
   int32_t v34; // w22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_5934484 & 1) == 0 )
+  if ( (byte_596C5B3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_21FFC50(&IconLabelInfo_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5934484 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_2213A60(&IconLabelInfo_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C5B3 = 1;
   }
-  v9 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
+  v9 = (IconLabelInfo_o *)sub_2213CCC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v9, 0);
   this->fields.materialIconLabelInfo = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.materialIconLabelInfo,
     (int32_t)v9,
     v10,
@@ -56,7 +56,7 @@ void ServantCheckEquipListViewItem___ctor(
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.materialUserServantEntity = materialUserSvtEntity;
   p_materialUserServantEntity = &this->fields.materialUserServantEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.materialUserServantEntity,
     (int32_t)materialUserSvtEntity,
     v17,
@@ -65,12 +65,12 @@ void ServantCheckEquipListViewItem___ctor(
     v20,
     v21,
     v22);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   v26 = *p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_13;
@@ -81,12 +81,12 @@ void ServantCheckEquipListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v24, v25);
   *(_QWORD *)&v35.fields.currentCryptoKey = v28;
   *(_QWORD *)&v35.fields.fakeValue = v29;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v35, 0);
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v35, 0);
   v30 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)*p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_13;
   v31 = (int)Instance;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v30[6], 0);
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v30[6], 0);
   if ( !v27 )
     goto LABEL_13;
   Instance = ServantLimitMaster__GetEntity(v27, v31, (int32_t)Instance, 0);
@@ -102,9 +102,9 @@ void ServantCheckEquipListViewItem___ctor(
         !materialIconLabelInfo) )
   {
 LABEL_13:
-    sub_21FFECC(Instance, v24);
+    sub_2213CDC(Instance, v24);
   }
-  IconLabelInfo__Set_47932852(materialIconLabelInfo, 2, v34, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_47880948(materialIconLabelInfo, 2, v34, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
   this->fields.warningTextType = warningType;
 }
 
@@ -136,16 +136,16 @@ void ServantCheckEquipListViewItem__SetMaterialUserServantEntity(
   int32_t v24; // w20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
 
-  if ( (byte_5934485 & 1) == 0 )
+  if ( (byte_596C5B4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5934485 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596C5B4 = 1;
   }
   this->fields.materialUserServantEntity = userServantEntity;
   p_materialUserServantEntity = &this->fields.materialUserServantEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.materialUserServantEntity,
     (int32_t)userServantEntity,
     (System_String_o *)method,
@@ -156,7 +156,7 @@ void ServantCheckEquipListViewItem__SetMaterialUserServantEntity(
     v7);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11, v12);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___);
   v16 = *p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_14;
@@ -167,12 +167,12 @@ void ServantCheckEquipListViewItem__SetMaterialUserServantEntity(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14, v15);
   *(_QWORD *)&v25.fields.currentCryptoKey = v18;
   *(_QWORD *)&v25.fields.fakeValue = v19;
-  Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v25, 0);
+  Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v25, 0);
   v20 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)*p_materialUserServantEntity;
   if ( !*p_materialUserServantEntity )
     goto LABEL_14;
   v21 = (int)Master_object;
-  Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v20[6], 0);
+  Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v20[6], 0);
   if ( !v17
     || (Master_object = ServantLimitMaster__GetEntity(v17, v21, (int32_t)Master_object, 0)) == 0
     || (v22 = *((_DWORD *)Master_object + 6),
@@ -185,9 +185,9 @@ void ServantCheckEquipListViewItem__SetMaterialUserServantEntity(
         !materialIconLabelInfo) )
   {
 LABEL_14:
-    sub_21FFECC(Master_object, v14);
+    sub_2213CDC(Master_object, v14);
   }
-  IconLabelInfo__Set_47932852(materialIconLabelInfo, 2, v24, (int32_t)Master_object, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_47880948(materialIconLabelInfo, 2, v24, (int32_t)Master_object, 0, 0, 0, 0, 0, 0);
 }
 
 
@@ -196,14 +196,12 @@ bool ServantCheckEquipListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  bool result; // w0
   int32_t partyIndex; // w9
 
-  result = 1;
   partyIndex = this->fields.partyIndex;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = -partyIndex;
-  return result;
+  return 1;
 }
 
 

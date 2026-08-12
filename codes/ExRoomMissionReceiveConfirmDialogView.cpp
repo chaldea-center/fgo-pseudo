@@ -4,10 +4,10 @@ void ExRoomMissionReceiveConfirmDialogView___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5932E2C & 1) == 0 )
+  if ( (byte_596AF32 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5932E2C = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596AF32 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -52,26 +52,26 @@ void ExRoomMissionReceiveConfirmDialogView__Close(
   bool v26; // w7
   System_Action_o *v27; // x21
 
-  if ( (byte_5932E2B & 1) == 0 )
+  if ( (byte_596AF31 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0__Close_b__0__);
-    sub_21FFC50(&ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_TypeInfo);
-    byte_5932E2B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0__Close_b__0__);
+    sub_2213A60(&ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_TypeInfo);
+    byte_596AF31 = 1;
   }
-  v5 = sub_21FFEBC(ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_2213CCC(ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_BYTE *)(v5 + 32) = isDecide;
   closedCallback = this->fields.closedCallback;
   *(_QWORD *)(v5 + 24) = closedCallback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)closedCallback, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)closedCallback, v15, v16, v17, v18, v19, v20);
   this->fields.closedCallback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closedCallback, 0, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closedCallback, 0, v21, v22, v23, v24, v25, v26);
+  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v27,
     (Il2CppObject *)v5,
@@ -89,17 +89,17 @@ void ExRoomMissionReceiveConfirmDialogView__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5932E2A & 1) == 0 )
+  if ( (byte_596AF30 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__);
-    byte_5932E2A = 1;
+    sub_2213A60(&Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__);
+    byte_596AF30 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__;
     if ( (*((_BYTE *)Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ExRoomMissionReceiveConfirmDialogView_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ExRoomMissionReceiveConfirmDialogView__Close(this, 0, v5);
   }
@@ -114,17 +114,17 @@ void ExRoomMissionReceiveConfirmDialogView__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5932E29 & 1) == 0 )
+  if ( (byte_596AF2F & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__);
-    byte_5932E29 = 1;
+    sub_2213A60(&Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__);
+    byte_596AF2F = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__;
     if ( (*((_BYTE *)Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ExRoomMissionReceiveConfirmDialogView_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     ExRoomMissionReceiveConfirmDialogView__Close(this, 1, v5);
   }
@@ -150,14 +150,14 @@ void ExRoomMissionReceiveConfirmDialogView__Open(
   ExRoomMissionReceiveConfirmListViewManager_o *v17; // x0
   const MethodInfo *v18; // x2
 
-  if ( (byte_5932E28 & 1) == 0 )
+  if ( (byte_596AF2E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E28 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF2E = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closedCallback = onClosed;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closedCallback,
     (int32_t)onClosed,
     v7,
@@ -193,7 +193,7 @@ LABEL_9:
           goto LABEL_9;
       }
     }
-    sub_21FFECC(v17, Items_k__BackingField);
+    sub_2213CDC(v17, Items_k__BackingField);
   }
 LABEL_10:
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -219,11 +219,11 @@ void ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0___Close_b__0(
   struct ExRoomMissionReceiveConfirmDialogView_o *v6; // x8
 
   v3 = this;
-  if ( (byte_5932E2D & 1) == 0 )
+  if ( (byte_596AF33 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    this = (ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E2D = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    this = (ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF33 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -250,11 +250,11 @@ void ExRoomMissionReceiveConfirmDialogView___c__DisplayClass6_0___Close_b__0(
       }
     }
 LABEL_11:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_10:
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)v3->fields.callback,
     v3->fields.isDecide,
-    (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
 }

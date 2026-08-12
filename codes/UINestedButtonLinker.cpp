@@ -8,18 +8,18 @@ void UINestedButtonLinker___ctor(UINestedButtonLinker_o *this, const MethodInfo 
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939FF0 & 1) == 0 )
+  if ( (byte_59721C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_5939FF0 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_59721C4 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.nestedGameObjects = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.nestedGameObjects, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.nestedGameObjects, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -44,10 +44,10 @@ void UINestedButtonLinker__Awake(UINestedButtonLinker_o *this, const MethodInfo 
   Il2CppClass **v17; // x0
 
   v2 = this;
-  if ( (byte_5939FEC & 1) == 0 )
+  if ( (byte_59721C0 & 1) == 0 )
   {
-    this = (UINestedButtonLinker_o *)sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    byte_5939FEC = 1;
+    this = (UINestedButtonLinker_o *)sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    byte_59721C0 = 1;
   }
   nestedBoxColliders = v2->fields.nestedBoxColliders;
   if ( !nestedBoxColliders )
@@ -59,7 +59,7 @@ void UINestedButtonLinker__Awake(UINestedButtonLinker_o *this, const MethodInfo 
     while ( 1 )
     {
       if ( v5 >= max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       this = (UINestedButtonLinker_o *)nestedBoxColliders->m_Items[v5];
       if ( !this )
         break;
@@ -79,21 +79,21 @@ void UINestedButtonLinker__Awake(UINestedButtonLinker_o *this, const MethodInfo 
         System_Collections_Generic_List_object___AddWithResize(
           nestedGameObjects,
           (Il2CppObject *)this,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
       }
       else
       {
         v17 = &items->obj.klass + size;
         nestedGameObjects->fields._size = size + 1;
         v17[4] = (Il2CppClass *)v16;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
       }
       max_length = nestedBoxColliders->max_length;
       if ( (int)++v5 >= max_length )
         return;
     }
 LABEL_15:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -121,12 +121,12 @@ void UINestedButtonLinker__OnDragOut(
   __int64 v11; // x1
   System_Collections_Generic_List_object__o *nestedGameObjects; // x0
 
-  if ( (byte_5939FEE & 1) == 0 )
+  if ( (byte_59721C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Contains__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FEE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Contains__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721C2 = 1;
   }
   v4 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -159,7 +159,7 @@ void UINestedButtonLinker__OnDragOut(
       if ( System_Collections_Generic_List_object___Contains(
              nestedGameObjects,
              (Il2CppObject *)pressed,
-             (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_GameObject__Contains__) )
+             (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_GameObject__Contains__) )
       {
 LABEL_19:
         nestedGameObjects = (System_Collections_Generic_List_object__o *)this->fields.targetButton;
@@ -173,7 +173,7 @@ LABEL_19:
           return;
         }
 LABEL_22:
-        sub_21FFECC(nestedGameObjects, v11);
+        sub_2213CDC(nestedGameObjects, v11);
       }
     }
   }
@@ -195,12 +195,12 @@ void UINestedButtonLinker__OnDragOver(
   __int64 v11; // x1
   System_Collections_Generic_List_object__o *nestedGameObjects; // x0
 
-  if ( (byte_5939FED & 1) == 0 )
+  if ( (byte_59721C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Contains__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FED = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Contains__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721C1 = 1;
   }
   v4 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -233,7 +233,7 @@ void UINestedButtonLinker__OnDragOver(
       if ( System_Collections_Generic_List_object___Contains(
              nestedGameObjects,
              (Il2CppObject *)pressed,
-             (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_GameObject__Contains__) )
+             (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_GameObject__Contains__) )
       {
 LABEL_19:
         nestedGameObjects = (System_Collections_Generic_List_object__o *)this->fields.targetButton;
@@ -247,7 +247,7 @@ LABEL_19:
           return;
         }
 LABEL_22:
-        sub_21FFECC(nestedGameObjects, v11);
+        sub_2213CDC(nestedGameObjects, v11);
       }
     }
   }
@@ -272,10 +272,10 @@ void UINestedButtonLinker__SetOtherBoxCollidersEnabled(
   unsigned __int64 v9; // x22
   UnityEngine_Object_o *v10; // x20
 
-  if ( (byte_5939FEF & 1) == 0 )
+  if ( (byte_59721C3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FEF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721C3 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.nestedBoxColliders, 0);
   if ( !IsNullOrEmpty )
@@ -283,7 +283,7 @@ void UINestedButtonLinker__SetOtherBoxCollidersEnabled(
     nestedBoxColliders = this->fields.nestedBoxColliders;
     if ( !nestedBoxColliders )
 LABEL_16:
-      sub_21FFECC(IsNullOrEmpty, v6);
+      sub_2213CDC(IsNullOrEmpty, v6);
     max_length = nestedBoxColliders->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -291,7 +291,7 @@ LABEL_16:
       do
       {
         if ( v9 >= (unsigned int)max_length )
-          sub_21FFED4(IsNullOrEmpty);
+          sub_2213CE4(IsNullOrEmpty);
         v10 = (UnityEngine_Object_o *)nestedBoxColliders->m_Items[v9];
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);

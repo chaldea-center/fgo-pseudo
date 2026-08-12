@@ -1,13 +1,13 @@
 void EffectMovieEntity___ctor(EffectMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384E5 & 1) == 0 )
+  if ( (byte_5970696 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_59384E5 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5970696 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -39,10 +39,10 @@ System_String_o *EffectMovieEntity__GetFilePath(
   int32_t v20; // [xsp+8h] [xbp-38h] BYREF
   int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_59384E4 & 1) == 0 )
+  if ( (byte_5970695 & 1) == 0 )
   {
-    sub_21FFC50(&EffectMovieMaster_TypeInfo);
-    byte_59384E4 = 1;
+    sub_2213A60(&EffectMovieMaster_TypeInfo);
+    byte_5970695 = 1;
   }
   folderType = this->fields.folderType;
   if ( folderType <= 2 )
@@ -60,7 +60,7 @@ System_String_o *EffectMovieEntity__GetFilePath(
       NOBLE_PATH = v8->static_fields->NOBLE_PATH;
       goto LABEL_23;
     }
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   }
   if ( folderType == 3 )
   {
@@ -76,11 +76,11 @@ System_String_o *EffectMovieEntity__GetFilePath(
       static_fields = v12->static_fields;
       v21 = additionalId;
       WEAPON_SUB_PATH = static_fields->WEAPON_SUB_PATH;
-      v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21);
+      v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21);
       v20 = effectFolder;
-      v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
-      v18 = System_String__Format_75484576(WEAPON_SUB_PATH, v16, v17, 0);
-      return System_String__Concat_75438412(v18, this->fields.name, 0);
+      v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v20);
+      v18 = System_String__Format_75697880(WEAPON_SUB_PATH, v16, v17, 0);
+      return System_String__Concat_75651716(v18, this->fields.name, 0);
     }
     if ( !v13 )
     {
@@ -90,19 +90,19 @@ System_String_o *EffectMovieEntity__GetFilePath(
     NOBLE_PATH = v12->static_fields->WEAPON_PATH;
 LABEL_23:
     v21 = additionalId;
-    v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21);
+    v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21);
     v18 = System_String__Format(NOBLE_PATH, v19, 0);
-    return System_String__Concat_75438412(v18, this->fields.name, 0);
+    return System_String__Concat_75651716(v18, this->fields.name, 0);
   }
   if ( folderType != 5 )
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   v10 = EffectMovieMaster_TypeInfo;
   if ( !*(&EffectMovieMaster_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
     v10 = EffectMovieMaster_TypeInfo;
   }
-  return System_String__Concat_75438412(v10->static_fields->BATTLECOMMON_PATH, this->fields.name, 0);
+  return System_String__Concat_75651716(v10->static_fields->BATTLECOMMON_PATH, this->fields.name, 0);
 }
 
 

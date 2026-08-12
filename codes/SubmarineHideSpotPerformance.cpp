@@ -12,7 +12,7 @@ void SubmarineHideSpotPerformance___ctor(
 
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0);
   this->fields.spot = spot;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.spot, (int32_t)spot, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -28,16 +28,16 @@ System_Collections_IEnumerator_o *SubmarineHideSpotPerformance__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5934E59 & 1) == 0 )
+  if ( (byte_596CF88 & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
-    byte_5934E59 = 1;
+    sub_2213A60(&SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
+    byte_596CF88 = 1;
   }
-  v3 = sub_21FFEBC(SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
+  v3 = sub_2213CCC(SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -50,20 +50,20 @@ void SubmarineHideSpotPerformance__OnStart(SubmarineHideSpotPerformance_o *this,
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_5934E58 & 1) == 0 )
+  if ( (byte_596CF87 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SubmarineHideSpotPerformance__OnStart_b__3_0__);
-    byte_5934E58 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SubmarineHideSpotPerformance__OnStart_b__3_0__);
+    byte_596CF87 = 1;
   }
   SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0);
   v3 = System_Action_TypeInfo;
   spot = this->fields.spot;
   this->fields.spotAnimFinished = 0;
-  v5 = (System_Action_o *)sub_21FFEBC(v3);
+  v5 = (System_Action_o *)sub_2213CCC(v3);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineHideSpotPerformance__OnStart_b__3_0__, 0);
   if ( !spot )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   SrcSpotBasePrefab__SetState(spot, 2, v5, 0);
 }
 
@@ -81,7 +81,7 @@ void SubmarineHideSpotPerformance___OnStart_b__3_0(SubmarineHideSpotPerformance_
 
   spot = this->fields.spot;
   if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   mMapCtrl_SpotInfo->fields.dispType = 0;
   this->fields.spotAnimFinished = 1;
 }
@@ -113,24 +113,24 @@ bool SubmarineHideSpotPerformance__Execute_d__4__MoveNext(
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5934E5A & 1) == 0 )
+  if ( (byte_596CF89 & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&Method_SubmarineHideSpotPerformance__Execute_b__4_0__);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    byte_5934E5A = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&Method_SubmarineHideSpotPerformance__Execute_b__4_0__);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    byte_596CF89 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( !_1__state )
   {
     _4__this = (Il2CppObject *)this->fields.__4__this;
     this->fields.__1__state = -1;
-    v6 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v6, _4__this, Method_SubmarineHideSpotPerformance__Execute_b__4_0__, 0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     v4 = 1;
     goto LABEL_7;
   }
@@ -160,11 +160,11 @@ void __noreturn SubmarineHideSpotPerformance__Execute_d__4__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SubmarineHideSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SubmarineHideSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

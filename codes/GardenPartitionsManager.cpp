@@ -50,29 +50,29 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
   bool v50; // w6
   bool v51; // w7
 
-  if ( (byte_5932816 & 1) == 0 )
+  if ( (byte_596A83C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_GardenItem__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_GardenObject__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_AssetData__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GardenObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GameObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Queue_GardenObject__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Queue_GameObject__TypeInfo);
-    sub_21FFC50(&StringLiteral_19408/*"diagonal_line"*/);
-    byte_5932816 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_GardenItem__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_GardenObject__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_AssetData__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GardenObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GameObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_Queue_GardenObject__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Queue_GameObject__TypeInfo);
+    sub_2213A60(&StringLiteral_19450/*"diagonal_line"*/);
+    byte_596A83C = 1;
   }
-  v3 = (System_Collections_Generic_Queue_T__o *)sub_21FFEBC(System_Collections_Generic_Queue_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_Queue_T__o *)sub_2213CCC(System_Collections_Generic_Queue_GameObject__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v3,
-    (const MethodInfo_469F6A0 *)Method_System_Collections_Generic_Queue_GameObject___ctor__);
+    (const MethodInfo_46D37D8 *)Method_System_Collections_Generic_Queue_GameObject___ctor__);
   this->fields.partitionSpritePool = (struct System_Collections_Generic_Queue_GameObject__o *)v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.partitionSpritePool,
     (int32_t)v3,
     v4,
@@ -81,12 +81,12 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v7,
     v8,
     v9);
-  v10 = (System_Collections_Generic_Queue_T__o *)sub_21FFEBC(System_Collections_Generic_Queue_GardenObject__TypeInfo);
+  v10 = (System_Collections_Generic_Queue_T__o *)sub_2213CCC(System_Collections_Generic_Queue_GardenObject__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v10,
-    (const MethodInfo_469F6A0 *)Method_System_Collections_Generic_Queue_GardenObject___ctor__);
+    (const MethodInfo_46D37D8 *)Method_System_Collections_Generic_Queue_GardenObject___ctor__);
   this->fields.gardenObjectPool = (struct System_Collections_Generic_Queue_GardenObject__o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.gardenObjectPool,
     (int32_t)v10,
     v11,
@@ -95,12 +95,12 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v14,
     v15,
     v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.activePartitionSprites = (struct System_Collections_Generic_List_GameObject__o *)v17;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.activePartitionSprites,
     (int32_t)v17,
     v18,
@@ -109,12 +109,12 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v21,
     v22,
     v23);
-  v24 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GardenObject__TypeInfo);
+  v24 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GardenObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v24,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GardenObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GardenObject___ctor__);
   this->fields.activeGardenObjects = (struct System_Collections_Generic_List_GardenObject__o *)v24;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.activeGardenObjects,
     (int32_t)v24,
     v25,
@@ -123,12 +123,12 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v28,
     v29,
     v30);
-  v31 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_AssetData__TypeInfo);
+  v31 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v31,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_AssetData___ctor__);
   this->fields.loadAssetDataList = (struct System_Collections_Generic_List_AssetData__o *)v31;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetDataList,
     (int32_t)v31,
     v32,
@@ -137,16 +137,16 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v35,
     v36,
     v37);
-  *(_OWORD *)&this->fields.imagePartsGroupId = xmmword_E949C0;
-  v38 = StringLiteral_19408/*"diagonal_line"*/;
-  this->fields.lineSpriteName = (struct System_String_o *)StringLiteral_19408/*"diagonal_line"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.lineSpriteName, v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GardenItem__TypeInfo);
+  *(_OWORD *)&this->fields.imagePartsGroupId = xmmword_E9DB60;
+  v38 = StringLiteral_19450/*"diagonal_line"*/;
+  this->fields.lineSpriteName = (struct System_String_o *)StringLiteral_19450/*"diagonal_line"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.lineSpriteName, v38, v39, v40, v41, v42, v43, v44);
+  v45 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GardenItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v45,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GardenItem___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GardenItem___ctor__);
   this->fields.gardenItemList = (struct System_Collections_Generic_List_GardenItem__o *)v45;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.gardenItemList,
     (int32_t)v45,
     v46,
@@ -155,7 +155,7 @@ void GardenPartitionsManager___ctor(GardenPartitionsManager_o *this, const Metho
     v49,
     v50,
     v51);
-  *(_OWORD *)&this->fields.maskDiv3 = xmmword_E94620;
+  *(_OWORD *)&this->fields.maskDiv3 = xmmword_E9D7C0;
   *(_QWORD *)&this->fields.positionAdjustX = 0x3D15B3AC42440000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -170,10 +170,10 @@ float GardenPartitionsManager__CalcGameScreenAspectRatio(GardenPartitionsManager
   float v6; // s8
   float result; // s0
 
-  if ( (byte_5932814 & 1) == 0 )
+  if ( (byte_596A83A & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_5932814 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_596A83A = 1;
   }
   LODWORD(v4) = *(_QWORD *)&FSWindowUtil__GetSize(0);
   v5 = ManagerConfig_TypeInfo;
@@ -252,7 +252,7 @@ void GardenPartitionsManager__CallBackOpened(GardenPartitionsManager_o *this, co
   {
     ActionExtensions__Call(callback, 0);
     p_callback->klass = 0;
-    sub_21FFBF4(p_callback, 0, v4, v5, v6, v7, v8, v9);
+    sub_2213A04(p_callback, 0, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -303,39 +303,39 @@ void GardenPartitionsManager__CreateGardenObject(GardenPartitionsManager_o *this
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_5932812 & 1) == 0 )
+  if ( (byte_596A838 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_GardenObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenItem__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenItem__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenItem__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem__get_Count__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GardenObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GardenObject__Dequeue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GardenObject__get_Count__);
-    byte_5932812 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_GardenObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenItem__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenItem__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenItem__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem__get_Count__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GardenObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GardenObject__Dequeue__);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GardenObject__get_Count__);
+    byte_596A838 = 1;
   }
   gardenItemList = (System_Collections_Generic_List_object__o *)this->fields.gardenItemList;
   memset(&v45, 0, sizeof(v45));
   if ( !gardenItemList )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v44,
     gardenItemList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GardenItem__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GardenItem__GetEnumerator__);
   v45 = v44;
   v44.fields._list = 0;
   *(_QWORD *)&v44.fields._index = &v45;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v45,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GardenItem__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GardenItem__MoveNext__) )
   {
     gardenObjectPool = (System_Collections_Generic_Queue_T__o *)this->fields.gardenObjectPool;
     if ( !gardenObjectPool )
-      sub_21FFECC(0, v4);
+      sub_2213CDC(0, v4);
     current = (GardenItem_o *)v45.fields._current;
     if ( gardenObjectPool->fields._size < 1 )
     {
@@ -344,28 +344,28 @@ void GardenPartitionsManager__CreateGardenObject(GardenPartitionsManager_o *this
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
       v12 = UnityEngine_Object__Instantiate_object_(
               gardenObjectBase,
-              (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GardenObject___);
+              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GardenObject___);
       if ( !v12 )
-        sub_21FFECC(0, v13);
+        sub_2213CDC(0, v13);
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v12,
-                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_GardenObject___);
+                           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_GardenObject___);
     }
     else
     {
       Component_object = System_Collections_Generic_Queue_object___Dequeue(
                            gardenObjectPool,
-                           (const MethodInfo_469FDFC *)Method_System_Collections_Generic_Queue_GardenObject__Dequeue__);
+                           (const MethodInfo_46D3F34 *)Method_System_Collections_Generic_Queue_GardenObject__Dequeue__);
     }
     v14 = (UnityEngine_Component_o *)Component_object;
     if ( !Component_object )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     GardenObject__SetItem((GardenObject_o *)Component_object, current, v10);
     gameObject = UnityEngine_Component__get_gameObject(v14, 0);
     GameObjectExtensions__SafeSetParent(gameObject, (UnityEngine_Component_o *)this, 0);
     v16 = UnityEngine_Component__get_gameObject(v14, 0);
     if ( !v16 )
-      sub_21FFECC(0, v17);
+      sub_2213CDC(0, v17);
     UnityEngine_GameObject__SetActive(v16, 1, 0);
     activeGardenObjects = (System_Collections_Generic_List_object__o *)this->fields.activeGardenObjects;
     if ( !activeGardenObjects
@@ -374,7 +374,7 @@ void GardenPartitionsManager__CreateGardenObject(GardenPartitionsManager_o *this
           ++activeGardenObjects->fields._version,
           !items) )
     {
-      sub_21FFECC(activeGardenObjects, v18);
+      sub_2213CDC(activeGardenObjects, v18);
     }
     size = activeGardenObjects->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -382,35 +382,35 @@ void GardenPartitionsManager__CreateGardenObject(GardenPartitionsManager_o *this
       System_Collections_Generic_List_object___AddWithResize(
         activeGardenObjects,
         (Il2CppObject *)v14,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     }
     else
     {
       v29 = &items->obj.klass + size;
       activeGardenObjects->fields._size = size + 1;
       v29[4] = (Il2CppClass *)v14;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v14, v19, v20, v21, v22, v23, v24);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v14, v19, v20, v21, v22, v23, v24);
     }
     if ( !current )
-      sub_21FFECC(v30, v31);
+      sub_2213CDC(v30, v31);
     imagePartsGroupEntity = current->fields.imagePartsGroupEntity;
     if ( !imagePartsGroupEntity )
-      sub_21FFECC(v30, v31);
+      sub_2213CDC(v30, v31);
     v34 = this->fields.gardenItemList;
     if ( !v34 )
-      sub_21FFECC(v30, v31);
+      sub_2213CDC(v30, v31);
     typeValue = imagePartsGroupEntity->fields.typeValue;
     MaskOffsetValue = GardenPartitionsManager__GetMaskOffsetValue(this, v34->fields._size, typeValue, v32);
     v40 = this->fields.gardenItemList;
     if ( !v40 )
-      sub_21FFECC(v36, v37);
+      sub_2213CDC(v36, v37);
     v41 = MaskOffsetValue;
     GardenOffsetValue = GardenPartitionsManager__GetGardenOffsetValue(this, v40->fields._size, typeValue, v38);
     GardenObject__ApplyCustomMaterial((GardenObject_o *)v14, v41, GardenOffsetValue, typeValue, v43);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v45,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GardenItem__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GardenItem__Dispose__);
 }
 
 
@@ -465,7 +465,7 @@ void GardenPartitionsManager__CreateItem(
   System_String_o *v31; // x24
   __int64 v32; // x1
   __int64 v33; // x2
-  Il2CppObject *Object_object__58323140; // x25
+  Il2CppObject *Object_object__58532980; // x25
   Il2CppObject *Component_object; // x26
   System_String_o *v36; // x25
   GardenItem_o *v37; // x24
@@ -481,26 +481,26 @@ void GardenPartitionsManager__CreateItem(
   __int64 MasterName_k__BackingField_low; // x10
   __int64 v48; // x8
 
-  if ( (byte_5932811 & 1) == 0 )
+  if ( (byte_596A837 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_DataManager_GetMaster_ImagePartsGroupMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
-    sub_21FFC50(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&GardenItem_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem__Add__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_GardenPartitionsManager___c__CreateItem_b__30_0__);
-    sub_21FFC50(&GardenPartitionsManager___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_17840/*"bg_"*/);
-    byte_5932811 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+    sub_2213A60(&System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&GardenItem_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem__Add__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_GardenPartitionsManager___c__CreateItem_b__30_0__);
+    sub_2213A60(&GardenPartitionsManager___c_TypeInfo);
+    sub_2213A60(&StringLiteral_17878/*"bg_"*/);
+    byte_596A837 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, mask, assetData);
-  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
   if ( !Master_object )
     goto LABEL_29;
   OpenEntities = (System_Collections_Generic_IEnumerable_TSource__o *)ImagePartsGroupMaster__GetOpenEntities(
@@ -509,7 +509,7 @@ void GardenPartitionsManager__CreateItem(
                                                                         0);
   v9 = System_Linq_Enumerable__ToArray_object_(
          OpenEntities,
-         (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+         (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
   v12 = GardenPartitionsManager___c_TypeInfo;
   v13 = (System_Collections_Generic_IEnumerable_TSource__o *)v9;
   if ( !*(&GardenPartitionsManager___c_TypeInfo->_2.cctor_finished + 1) )
@@ -527,19 +527,19 @@ void GardenPartitionsManager__CreateItem(
       static_fields = GardenPartitionsManager___c_TypeInfo->static_fields;
     }
     v16 = (Il2CppObject *)static_fields->__9;
-    _9__30_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
+    _9__30_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_ImagePartsGroupEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__30_0, v16, Method_GardenPartitionsManager___c__CreateItem_b__30_0__, 0);
     v17 = GardenPartitionsManager___c_TypeInfo->static_fields;
     v17->__9__30_0 = (struct System_Func_ImagePartsGroupEntity__bool__o *)_9__30_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->__9__30_0, (int32_t)_9__30_0, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->__9__30_0, (int32_t)_9__30_0, v18, v19, v20, v21, v22, v23);
   }
   v24 = System_Linq_Enumerable__Where_object_(
           v13,
           (System_Func_TSource__bool__o *)_9__30_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_ImagePartsGroupEntity___);
   Master_object = (ImagePartsGroupMaster_o *)System_Linq_Enumerable__ToArray_object_(
                                                v24,
-                                               (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
+                                               (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_ImagePartsGroupEntity___);
   if ( !Master_object )
     goto LABEL_29;
   MasterName_k__BackingField = Master_object->fields._MasterName_k__BackingField;
@@ -551,33 +551,33 @@ void GardenPartitionsManager__CreateItem(
     while ( 1 )
     {
       if ( v28 >= (unsigned int)MasterName_k__BackingField )
-        sub_21FFED4(Master_object);
+        sub_2213CE4(Master_object);
       v30 = *(ImagePartsGroupEntity_o **)&p_revision[2 * v28];
       Master_object = (ImagePartsGroupMaster_o *)GardenPartitionsManager__GetAtlasName(this, v30, v25);
       if ( !assetData )
         break;
       v31 = (System_String_o *)Master_object;
-      Object_object__58323140 = AssetData__GetObject_object__58323140(
+      Object_object__58532980 = AssetData__GetObject_object__58532980(
                                   assetData,
                                   (System_String_o *)Master_object,
-                                  (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                  (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32, v33);
       Master_object = (ImagePartsGroupMaster_o *)UnityEngine_Object__op_Inequality(
-                                                   (UnityEngine_Object_o *)Object_object__58323140,
+                                                   (UnityEngine_Object_o *)Object_object__58532980,
                                                    0,
                                                    0);
       Component_object = 0;
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
-        if ( !Object_object__58323140 )
+        if ( !Object_object__58532980 )
           break;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)Object_object__58323140,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                             (UnityEngine_GameObject_o *)Object_object__58532980,
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       }
-      v36 = System_String__Concat_75438412((System_String_o *)StringLiteral_17840/*"bg_"*/, v31, 0);
-      v37 = (GardenItem_o *)sub_21FFEBC(GardenItem_TypeInfo);
+      v36 = System_String__Concat_75651716((System_String_o *)StringLiteral_17878/*"bg_"*/, v31, 0);
+      v37 = (GardenItem_o *)sub_2213CCC(GardenItem_TypeInfo);
       GardenItem___ctor(v37, (UIAtlas_o *)Component_object, v30, v36, mask, v38);
       Master_object = (ImagePartsGroupMaster_o *)this->fields.gardenItemList;
       if ( !Master_object )
@@ -593,26 +593,25 @@ void GardenPartitionsManager__CreateItem(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Master_object,
           (Il2CppObject *)v37,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
       }
       else
       {
         v48 = v45 + 8 * MasterName_k__BackingField_low;
         LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
         *(_QWORD *)(v48 + 32) = v37;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v48 + 32), (int32_t)v37, v39, v40, v41, v42, v43, v44);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v48 + 32), (int32_t)v37, v39, v40, v41, v42, v43, v44);
       }
       LODWORD(MasterName_k__BackingField) = v27->fields._MasterName_k__BackingField;
       if ( (__int64)++v28 >= (int)MasterName_k__BackingField )
         return;
     }
 LABEL_29:
-    sub_21FFECC(Master_object, v7);
+    sub_2213CDC(Master_object, v7);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void GardenPartitionsManager__CreatePartition(GardenPartitionsManager_o *this, const MethodInfo *method)
 {
   GardenPartitionsManager_o *v2; // x19
@@ -627,44 +626,42 @@ void GardenPartitionsManager__CreatePartition(GardenPartitionsManager_o *this, c
   const MethodInfo *v11; // x3
   struct System_Collections_Generic_List_GardenItem__o *v12; // x8
   GardenPartitionsManager_o *v13; // x22
-  float v14; // s0 OVERLAPPED
-  int v15; // s1
-  int v16; // s2
+  __int64 v14; // x1
+  __int64 v15; // x2
+  Il2CppObject *Component_object; // x22
   __int64 v17; // x1
   __int64 v18; // x2
-  Il2CppObject *Component_object; // x22
-  __int64 v20; // x1
-  __int64 v21; // x2
   int32_t eventId; // w24
   System_String_o *lineSpriteName; // x23
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
   intptr_t m_CachedPtr; // x8
-  _QWORD *v31; // x9
+  _QWORD *v28; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v33; // x8
+  intptr_t v30; // x8
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_5932813 & 1) == 0 )
+  if ( (byte_596A839 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem__get_Count__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GameObject__Dequeue__);
-    this = (GardenPartitionsManager_o *)sub_21FFC50(&Method_System_Collections_Generic_Queue_GameObject__get_Count__);
-    byte_5932813 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem__get_Count__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GameObject__Dequeue__);
+    this = (GardenPartitionsManager_o *)sub_2213A60(&Method_System_Collections_Generic_Queue_GameObject__get_Count__);
+    byte_596A839 = 1;
   }
   gardenItemList = v2->fields.gardenItemList;
   if ( !gardenItemList )
 LABEL_28:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v4 = 0;
   while ( v4 < gardenItemList->fields._size - 1 )
   {
@@ -677,10 +674,10 @@ LABEL_28:
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
-      this = (GardenPartitionsManager_o *)UnityEngine_Object__Instantiate_object__59506996(
+      this = (GardenPartitionsManager_o *)UnityEngine_Object__Instantiate_object__59717116(
                                             partitionSpriteBase,
                                             transform,
-                                            (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                            (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
       v5 = this;
       if ( !this )
         goto LABEL_28;
@@ -689,7 +686,7 @@ LABEL_28:
     {
       this = (GardenPartitionsManager_o *)System_Collections_Generic_Queue_object___Dequeue(
                                             (System_Collections_Generic_Queue_T__o *)this,
-                                            (const MethodInfo_469FDFC *)Method_System_Collections_Generic_Queue_GameObject__Dequeue__);
+                                            (const MethodInfo_46D3F34 *)Method_System_Collections_Generic_Queue_GameObject__Dequeue__);
       if ( !this )
         goto LABEL_28;
       v5 = this;
@@ -697,38 +694,38 @@ LABEL_28:
       this = (GardenPartitionsManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
       if ( !v6 )
         goto LABEL_28;
-      UnityEngine_Transform__SetParent_83279140(v6, (UnityEngine_Transform_o *)this, 0, 0);
+      UnityEngine_Transform__SetParent_83492444(v6, (UnityEngine_Transform_o *)this, 0, 0);
     }
     this = (GardenPartitionsManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v5, 0);
     v12 = v2->fields.gardenItemList;
     if ( v12 )
     {
       v13 = this;
-      v14 = GardenPartitionsManager__CalcPartitionPosition(v2, v4, v12->fields._size, v11);
+      v31.fields.x = GardenPartitionsManager__CalcPartitionPosition(v2, v4, v12->fields._size, v11);
       if ( v13 )
       {
-        v15 = 0;
-        v16 = 0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v13, *(UnityEngine_Vector3_o *)&v14, 0);
+        v31.fields.y = 0.0;
+        v31.fields.z = 0.0;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v13, v31, 0);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v5,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
         {
           eventId = v2->fields.eventId;
           lineSpriteName = v2->fields.lineSpriteName;
           if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v20, v21);
-          AtlasManager__SetEventUI_47538316(eventId, (UISprite_o *)Component_object, lineSpriteName, 0);
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v17, v18);
+          AtlasManager__SetEventUI_47569484(eventId, (UISprite_o *)Component_object, lineSpriteName, 0);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v5, 1, 0);
         this = (GardenPartitionsManager_o *)v2->fields.activePartitionSprites;
         if ( this )
         {
           m_CachedPtr = this->fields.m_CachedPtr;
-          v31 = Method_System_Collections_Generic_List_GameObject__Add__;
+          v28 = Method_System_Collections_Generic_List_GameObject__Add__;
           ++HIDWORD(this->fields.m_CancellationTokenSource);
           if ( m_CachedPtr )
           {
@@ -738,14 +735,14 @@ LABEL_28:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)v5,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
             }
             else
             {
-              v33 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+              v30 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-              *(_QWORD *)(v33 + 32) = v5;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v33 + 32), (int32_t)v5, v24, v25, v26, v27, v28, v29);
+              *(_QWORD *)(v30 + 32) = v5;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 32), (int32_t)v5, v21, v22, v23, v24, v25, v26);
             }
             gardenItemList = v2->fields.gardenItemList;
             ++v4;
@@ -769,7 +766,7 @@ System_String_o *GardenPartitionsManager__GetAtlasName(
 
   v4 = 0;
   if ( !imagePartsGroupEntity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   v4 = 100 * imagePartsGroupEntity->fields.imageValue
      + 300 * imagePartsGroupEntity->fields.typeValue
      + this->fields.baseAssetName
@@ -794,33 +791,33 @@ float GardenPartitionsManager__GetGardenOffsetValue(
   Il2CppObject *v14; // x0
   float v15; // s0
 
-  if ( (byte_5932815 & 1) == 0 )
+  if ( (byte_596A83B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_GardenPartitionsManager_MainTextureOffsetInfo___);
-    sub_21FFC50(&System_Func_GardenPartitionsManager_MainTextureOffsetInfo__bool__TypeInfo);
-    sub_21FFC50(&Method_GardenPartitionsManager___c__DisplayClass37_0__GetGardenOffsetValue_b__0__);
-    sub_21FFC50(&GardenPartitionsManager___c__DisplayClass37_0_TypeInfo);
-    byte_5932815 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_FirstOrDefault_GardenPartitionsManager_MainTextureOffsetInfo___);
+    sub_2213A60(&System_Func_GardenPartitionsManager_MainTextureOffsetInfo__bool__TypeInfo);
+    sub_2213A60(&Method_GardenPartitionsManager___c__DisplayClass37_0__GetGardenOffsetValue_b__0__);
+    sub_2213A60(&GardenPartitionsManager___c__DisplayClass37_0_TypeInfo);
+    byte_596A83B = 1;
   }
-  v7 = (GardenPartitionsManager___c__DisplayClass37_0_o *)sub_21FFEBC(GardenPartitionsManager___c__DisplayClass37_0_TypeInfo);
+  v7 = (GardenPartitionsManager___c__DisplayClass37_0_o *)sub_2213CCC(GardenPartitionsManager___c__DisplayClass37_0_TypeInfo);
   GardenPartitionsManager___c__DisplayClass37_0___ctor(v7, 0);
   if ( !v7 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   v7->fields.gardenNum = gardenNum;
   v7->fields.split = split;
   v10 = GardenPartitionsManager__CalcGameScreenAspectRatio(v8, v9);
   gardenMainTextureOffsetInfoList = this->fields.gardenMainTextureOffsetInfoList;
   v12 = v10;
-  v13 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GardenPartitionsManager_MainTextureOffsetInfo__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GardenPartitionsManager_MainTextureOffsetInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v13,
     (Il2CppObject *)v7,
     Method_GardenPartitionsManager___c__DisplayClass37_0__GetGardenOffsetValue_b__0__,
     0);
-  v14 = System_Linq_Enumerable__FirstOrDefault_object__59044732(
+  v14 = System_Linq_Enumerable__FirstOrDefault_object__59254852(
           (System_Collections_Generic_IEnumerable_TSource__o *)gardenMainTextureOffsetInfoList,
           (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_GardenPartitionsManager_MainTextureOffsetInfo___);
+          (const MethodInfo_3882844 *)Method_System_Linq_Enumerable_FirstOrDefault_GardenPartitionsManager_MainTextureOffsetInfo___);
   if ( v14 )
     v15 = *(float *)&v14[1].monitor;
   else
@@ -913,22 +910,22 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+20h] [xbp-90h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+40h] [xbp-70h] BYREF
 
-  if ( (byte_593280E & 1) == 0 )
+  if ( (byte_596A834 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GardenObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenItem__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenObject__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GardenObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GameObject__Enqueue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Queue_GardenObject__Enqueue__);
-    byte_593280E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GardenObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenItem__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenObject__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GardenObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GameObject__Enqueue__);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_GardenObject__Enqueue__);
+    byte_596A834 = 1;
   }
   activePartitionSprites = (System_Collections_Generic_List_object__o *)this->fields.activePartitionSprites;
   memset(&v27, 0, sizeof(v27));
@@ -938,7 +935,7 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v25,
     activePartitionSprites,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v27 = v25;
   v25.fields._list = 0;
   *(_QWORD *)&v25.fields._index = &v27;
@@ -946,24 +943,24 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v27,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
     if ( !v4 )
       break;
     current = v27.fields._current;
     if ( !v27.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v27.fields._current, 0, 0);
     partitionSpritePool = (System_Collections_Generic_Queue_T__o *)this->fields.partitionSpritePool;
     if ( !partitionSpritePool )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     System_Collections_Generic_Queue_object___Enqueue(
       partitionSpritePool,
       current,
-      (const MethodInfo_469FC6C *)Method_System_Collections_Generic_Queue_GameObject__Enqueue__);
+      (const MethodInfo_46D3DA4 *)Method_System_Collections_Generic_Queue_GameObject__Enqueue__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v9 = this->fields.activePartitionSprites;
   if ( !v9 )
     goto LABEL_31;
@@ -979,7 +976,7 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v25,
     activePartitionSprites,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GardenObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GardenObject__GetEnumerator__);
   v26 = v25;
   v25.fields._list = 0;
   *(_QWORD *)&v25.fields._index = &v26;
@@ -987,27 +984,27 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v26,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GardenObject__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GardenObject__MoveNext__);
     if ( !v12 )
       break;
     v14 = v26.fields._current;
     if ( !v26.fields._current )
-      sub_21FFECC(v12, v13);
+      sub_2213CDC(v12, v13);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v26.fields._current, 0);
     if ( !gameObject )
-      sub_21FFECC(0, v16);
+      sub_2213CDC(0, v16);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
     gardenObjectPool = (System_Collections_Generic_Queue_T__o *)this->fields.gardenObjectPool;
     if ( !gardenObjectPool )
-      sub_21FFECC(0, v17);
+      sub_2213CDC(0, v17);
     System_Collections_Generic_Queue_object___Enqueue(
       gardenObjectPool,
       v14,
-      (const MethodInfo_469FC6C *)Method_System_Collections_Generic_Queue_GardenObject__Enqueue__);
+      (const MethodInfo_46D3DA4 *)Method_System_Collections_Generic_Queue_GardenObject__Enqueue__);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v26,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GardenObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GardenObject__Dispose__);
   activeGardenObjects = this->fields.activeGardenObjects;
   if ( !activeGardenObjects )
     goto LABEL_31;
@@ -1020,7 +1017,7 @@ void GardenPartitionsManager__Init(GardenPartitionsManager_o *this, const Method
   gardenItemList = this->fields.gardenItemList;
   if ( !gardenItemList )
 LABEL_31:
-    sub_21FFECC(activePartitionSprites, method);
+    sub_2213CDC(activePartitionSprites, method);
   v23 = gardenItemList->fields._size;
   v24 = gardenItemList->fields._version + 1;
   gardenItemList->fields._size = 0;
@@ -1043,15 +1040,15 @@ void GardenPartitionsManager__OnDestroy(GardenPartitionsManager_o *this, const M
   int v11; // w9
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_593280F & 1) == 0 )
+  if ( (byte_596A835 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
-    byte_593280F = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+    byte_596A835 = 1;
   }
   loadAssetDataList = this->fields.loadAssetDataList;
   memset(&v12, 0, sizeof(v12));
@@ -1060,22 +1057,22 @@ void GardenPartitionsManager__OnDestroy(GardenPartitionsManager_o *this, const M
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v12,
       (System_Collections_Generic_List_object__o *)loadAssetDataList,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v12,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__) )
     {
       current = v12.fields._current;
       if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v4, v5);
-      AssetManager__releaseAsset_47465556((AssetData_o *)current, 0);
+      AssetManager__releaseAsset_47496972((AssetData_o *)current, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v12,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
     v9 = this->fields.loadAssetDataList;
     if ( !v9 )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     size = v9->fields._size;
     v11 = v9->fields._version + 1;
     v9->fields._size = 0;
@@ -1096,18 +1093,18 @@ void GardenPartitionsManager__Open(GardenPartitionsManager_o *this, const Method
   const MethodInfo *v8; // x1
   int32_t myRoomFolder; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5932810 & 1) == 0 )
+  if ( (byte_596A836 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_GardenPartitionsManager__Open_b__29_0__);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&StringLiteral_9585/*"MyRoom/BackObject/{0}"*/);
-    byte_5932810 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_GardenPartitionsManager__Open_b__29_0__);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&StringLiteral_9598/*"MyRoom/BackObject/{0}"*/);
+    byte_596A836 = 1;
   }
   myRoomFolder = this->fields.myRoomFolder;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &myRoomFolder);
-  v4 = System_String__Format((System_String_o *)StringLiteral_9585/*"MyRoom/BackObject/{0}"*/, v3, 0);
-  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &myRoomFolder);
+  v4 = System_String__Format((System_String_o *)StringLiteral_9598/*"MyRoom/BackObject/{0}"*/, v3, 0);
+  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v5, (Il2CppObject *)this, Method_GardenPartitionsManager__Open_b__29_0__, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v6, v7);
@@ -1128,7 +1125,7 @@ void GardenPartitionsManager__SetCallBackOpened(
   bool v7; // w7
 
   this->fields.callback = action;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
     (int32_t)action,
     (System_String_o *)method,
@@ -1196,27 +1193,27 @@ void GardenPartitionsManager___Open_b__29_0(
   __int64 v44; // x2
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5932817 & 1) == 0 )
+  if ( (byte_596A83D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__1__);
-    sub_21FFC50(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__2__);
-    sub_21FFC50(&GardenPartitionsManager___c__DisplayClass29_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_6526/*"EventUI/Prefabs/{0}"*/);
-    byte_5932817 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__1__);
+    sub_2213A60(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__2__);
+    sub_2213A60(&GardenPartitionsManager___c__DisplayClass29_0_TypeInfo);
+    sub_2213A60(&StringLiteral_6538/*"EventUI/Prefabs/{0}"*/);
+    byte_596A83D = 1;
   }
-  v5 = sub_21FFEBC(GardenPartitionsManager___c__DisplayClass29_0_TypeInfo);
+  v5 = sub_2213CCC(GardenPartitionsManager___c__DisplayClass29_0_TypeInfo);
   GardenPartitionsManager___c__DisplayClass29_0___ctor((GardenPartitionsManager___c__DisplayClass29_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_16;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = assetData;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)assetData, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)assetData, v14, v15, v16, v17, v18, v19);
   loadAssetDataList = (System_Collections_Generic_List_object__o *)this->fields.loadAssetDataList;
   if ( !loadAssetDataList
     || (items = loadAssetDataList->fields._items,
@@ -1226,7 +1223,7 @@ void GardenPartitionsManager___Open_b__29_0(
         !items) )
   {
 LABEL_16:
-    sub_21FFECC(loadAssetDataList, v7);
+    sub_2213CDC(loadAssetDataList, v7);
   }
   size = loadAssetDataList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -1234,21 +1231,21 @@ LABEL_16:
     System_Collections_Generic_List_object___AddWithResize(
       loadAssetDataList,
       v7,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
     v29 = &items->obj.klass + size;
     loadAssetDataList->fields._size = size + 1;
     v29[4] = (Il2CppClass *)v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v7, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v7, v20, v21, v22, v23, v24, v25);
   }
   *(_QWORD *)(v5 + 16) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), 0, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), 0, v30, v31, v32, v33, v34, v35);
   eventId = this->fields.eventId;
-  v36 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &eventId);
-  v37 = System_String__Format((System_String_o *)StringLiteral_6526/*"EventUI/Prefabs/{0}"*/, v36, 0);
-  v38 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v36 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &eventId);
+  v37 = System_String__Format((System_String_o *)StringLiteral_6538/*"EventUI/Prefabs/{0}"*/, v36, 0);
+  v38 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v38,
     (Il2CppObject *)v5,
@@ -1259,11 +1256,11 @@ LABEL_16:
   if ( !AssetManager__loadAssetStorage(v37, v38, 1, 0, 0) )
   {
     v41 = this->fields.eventId;
-    v42 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v42, (Il2CppObject *)v5, Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__2__, 0);
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v43, v44);
-    AtlasManager__LoadEventUI_47538036(v41, v42, 1, 0);
+    AtlasManager__LoadEventUI_47569188(v41, v42, 1, 0);
   }
 }
 
@@ -1286,15 +1283,15 @@ void GardenPartitionsManager___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5932831 & 1) == 0 )
+  if ( (byte_596A931 & 1) == 0 )
   {
-    sub_21FFC50(&GardenPartitionsManager___c_TypeInfo);
-    byte_5932831 = 1;
+    sub_2213A60(&GardenPartitionsManager___c_TypeInfo);
+    byte_596A931 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(GardenPartitionsManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(GardenPartitionsManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GardenPartitionsManager___c_TypeInfo->static_fields->__9 = (struct GardenPartitionsManager___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)GardenPartitionsManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1318,7 +1315,7 @@ bool GardenPartitionsManager___c___CreateItem_b__30_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return v->fields.imageValue > 0;
 }
 
@@ -1347,7 +1344,7 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__1(
   _QWORD *v12; // x9
   __int64 assetData_low; // x10
   UnityEngine_Texture_c **v14; // x8
-  Il2CppObject *Object_object__58323140; // x0
+  Il2CppObject *Object_object__58532980; // x0
   System_String_o *v16; // x2
   System_String_o *v17; // x3
   int32_t v18; // w4
@@ -1366,15 +1363,15 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__1(
   bool v31; // w7
 
   v9 = this;
-  if ( (byte_5932832 & 1) == 0 )
+  if ( (byte_596A932 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_AssetData_GetObject_Texture___);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_21FFC50(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__3__);
-    this = (GardenPartitionsManager___c__DisplayClass29_0_o *)sub_21FFC50(&StringLiteral_22488/*"mask_div2_01"*/);
-    byte_5932832 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_Texture___);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_2213A60(&Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__3__);
+    this = (GardenPartitionsManager___c__DisplayClass29_0_o *)sub_2213A60(&StringLiteral_22532/*"mask_div2_01"*/);
+    byte_596A932 = 1;
   }
   _4__this = v9->fields.__4__this;
   if ( !_4__this )
@@ -1393,14 +1390,14 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__1(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)eventUIData,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &mask->klass + assetData_low;
     LODWORD(this->fields.assetData) = assetData_low + 1;
     v14[4] = (UnityEngine_Texture_c *)eventUIData;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)(v14 + 4),
       (int32_t)eventUIData,
       (System_String_o *)method,
@@ -1411,14 +1408,14 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__1(
       v7);
   }
   if ( !eventUIData
-    || (Object_object__58323140 = AssetData__GetObject_object__58323140(
+    || (Object_object__58532980 = AssetData__GetObject_object__58532980(
                                     eventUIData,
-                                    (System_String_o *)StringLiteral_22488/*"mask_div2_01"*/,
-                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture___),
-        v9->fields.mask = (struct UnityEngine_Texture_o *)Object_object__58323140,
-        sub_21FFBF4(
+                                    (System_String_o *)StringLiteral_22532/*"mask_div2_01"*/,
+                                    (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture___),
+        v9->fields.mask = (struct UnityEngine_Texture_o *)Object_object__58532980,
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v9->fields,
-          (int32_t)Object_object__58323140,
+          (int32_t)Object_object__58532980,
           v16,
           v17,
           v18,
@@ -1428,24 +1425,24 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__1(
         (v23 = v9->fields.__4__this) == 0) )
   {
 LABEL_16:
-    sub_21FFECC(this, eventUIData);
+    sub_2213CDC(this, eventUIData);
   }
   _9__3 = v9->fields.__9__3;
   eventId = v23->fields.eventId;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__3,
       (Il2CppObject *)v9,
       Method_GardenPartitionsManager___c__DisplayClass29_0__Open_b__3__,
       0);
     v9->fields.__9__3 = _9__3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->fields.__9__3, (int32_t)_9__3, v26, v27, v28, v29, v30, v31);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->fields.__9__3, (int32_t)_9__3, v26, v27, v28, v29, v30, v31);
   }
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, eventUIData, v22);
-  AtlasManager__LoadEventUI_47538036(eventId, _9__3, 1, 0);
+  AtlasManager__LoadEventUI_47569188(eventId, _9__3, 1, 0);
 }
 
 
@@ -1457,7 +1454,7 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   GardenPartitionsManager__CreateGardens(_4__this, this->fields.mask, this->fields.assetData, 0);
 }
 
@@ -1470,7 +1467,7 @@ void GardenPartitionsManager___c__DisplayClass29_0___Open_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   GardenPartitionsManager__CreateGardens(_4__this, this->fields.mask, this->fields.assetData, 0);
 }
 
@@ -1489,6 +1486,6 @@ bool GardenPartitionsManager___c__DisplayClass37_0___GetGardenOffsetValue_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.gardenNum == this->fields.gardenNum && x->fields.split == this->fields.split;
 }

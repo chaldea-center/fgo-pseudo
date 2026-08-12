@@ -53,17 +53,17 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
   bool v51; // w6
   bool v52; // w7
 
-  if ( (byte_5932E3E & 1) == 0 )
+  if ( (byte_596AF44 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
-    sub_21FFC50(&System_Func_ServantEntity__string__TypeInfo);
-    sub_21FFC50(&System_Func_int__bool__TypeInfo);
-    sub_21FFC50(&System_Func_string__string__TypeInfo);
-    sub_21FFC50(&Method_LocalizationManager_Get__);
-    sub_21FFC50(&Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_0__);
-    sub_21FFC50(&Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_1__);
-    sub_21FFC50(&ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
-    byte_5932E3E = 1;
+    sub_2213A60(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
+    sub_2213A60(&System_Func_ServantEntity__string__TypeInfo);
+    sub_2213A60(&System_Func_int__bool__TypeInfo);
+    sub_2213A60(&System_Func_string__string__TypeInfo);
+    sub_2213A60(&Method_LocalizationManager_Get__);
+    sub_2213A60(&Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_0__);
+    sub_2213A60(&Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_1__);
+    sub_2213A60(&ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
+    byte_596AF44 = 1;
   }
   v3 = ExRoomMissionReceiveSingleResultDialog___c_TypeInfo;
   if ( !*(&ExRoomMissionReceiveSingleResultDialog___c_TypeInfo->_2.cctor_finished + 1) )
@@ -72,10 +72,10 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
     v3 = ExRoomMissionReceiveSingleResultDialog___c_TypeInfo;
   }
   v4 = (Il2CppObject *)v3->static_fields->__9;
-  v5 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+  v5 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(v5, v4, Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_0__, 0);
   ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields->DefaultIsGetItemEffectResolver = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields,
     (int32_t)v5,
     v6,
@@ -84,11 +84,11 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
     v9,
     v10,
     v11);
-  v12 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_string__string__TypeInfo);
+  v12 = (System_Func_object__object__o *)sub_2213CCC(System_Func_string__string__TypeInfo);
   System_Func_object__object____ctor(v12, 0, Method_LocalizationManager_Get__, 0);
   static_fields = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields;
   static_fields->DefaultLocalizationResolver = (struct System_Func_string__string__o *)v12;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->DefaultLocalizationResolver,
     (int32_t)v12,
     v14,
@@ -98,11 +98,11 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
     v18,
     v19);
   v20 = (Il2CppObject *)ExRoomMissionReceiveSingleResultDialog___c_TypeInfo->static_fields->__9;
-  v21 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_ServantEntity__string__TypeInfo);
+  v21 = (System_Func_object__object__o *)sub_2213CCC(System_Func_ServantEntity__string__TypeInfo);
   System_Func_object__object____ctor(v21, v20, Method_ExRoomMissionReceiveSingleResultDialog___c___cctor_b__18_1__, 0);
   v22 = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields;
   v22->DefaultServantNameResolver = (struct System_Func_ServantEntity__string__o *)v21;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v22->DefaultServantNameResolver,
     (int32_t)v21,
     v23,
@@ -114,7 +114,7 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
   v29 = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields;
   DefaultIsGetItemEffectResolver = v29->DefaultIsGetItemEffectResolver;
   v29->isGetItemEffectResolver = v29->DefaultIsGetItemEffectResolver;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v29->isGetItemEffectResolver,
     (int32_t)DefaultIsGetItemEffectResolver,
     v31,
@@ -126,7 +126,7 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
   v37 = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields;
   DefaultLocalizationResolver = v37->DefaultLocalizationResolver;
   v37->localizationResolver = DefaultLocalizationResolver;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v37->localizationResolver,
     (int32_t)DefaultLocalizationResolver,
     v39,
@@ -138,7 +138,7 @@ void ExRoomMissionReceiveSingleResultDialog___cctor(const MethodInfo *method)
   v45 = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields;
   DefaultServantNameResolver = v45->DefaultServantNameResolver;
   v45->servantNameResolver = DefaultServantNameResolver;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v45->servantNameResolver,
     (int32_t)DefaultServantNameResolver,
     v47,
@@ -164,7 +164,7 @@ void ExRoomMissionReceiveSingleResultDialog___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.exRoomMissionListOutput = missionOutput;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)missionOutput, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)missionOutput, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -177,7 +177,7 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
   System_Text_StringBuilder_o *v6; // x22
   __int64 v7; // x1
   __int64 v8; // x2
-  __int64 IsItem_47357376; // x0
+  __int64 IsItem_47387928; // x0
   __int64 v10; // x8
   int max_length; // w8
   __int64 v12; // x23
@@ -224,41 +224,41 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
   int32_t v54; // [xsp+8h] [xbp-68h] BYREF
   int32_t num; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_5932E3D & 1) == 0 )
+  if ( (byte_596AF43 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
-    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
-    sub_21FFC50(&StringLiteral_9023/*"MISSION_ACTION_MULTIPLE_GET_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_9027/*"MISSION_ACTION_SUCCESS_MULTIPLE2"*/);
-    sub_21FFC50(&StringLiteral_9026/*"MISSION_ACTION_SUCCESS"*/);
-    sub_21FFC50(&StringLiteral_3834/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/);
-    sub_21FFC50(&StringLiteral_51/*"\n \n "*/);
-    sub_21FFC50(&StringLiteral_9022/*"MISSION_ACTION_ITEM_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_49/*"\n "*/);
-    sub_21FFC50(&StringLiteral_9029/*"MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2"*/);
-    byte_5932E3D = 1;
+    sub_2213A60(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
+    sub_2213A60(&System_Text_StringBuilder_TypeInfo);
+    sub_2213A60(&StringLiteral_9036/*"MISSION_ACTION_MULTIPLE_GET_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_9040/*"MISSION_ACTION_SUCCESS_MULTIPLE2"*/);
+    sub_2213A60(&StringLiteral_9039/*"MISSION_ACTION_SUCCESS"*/);
+    sub_2213A60(&StringLiteral_3839/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/);
+    sub_2213A60(&StringLiteral_51/*"\n \n "*/);
+    sub_2213A60(&StringLiteral_9035/*"MISSION_ACTION_ITEM_FORMAT"*/);
+    sub_2213A60(&StringLiteral_49/*"\n "*/);
+    sub_2213A60(&StringLiteral_9042/*"MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2"*/);
+    byte_596AF43 = 1;
   }
   if ( !rewards || !rewards->max_length )
-    return **(System_String_o ***)(qword_594C0B8 + 184);
-  v5 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+    return **(System_String_o ***)(qword_5984390 + 184);
+  v5 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v5, 0);
-  v6 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+  v6 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v6, 0);
-  IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+  IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
   if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v8);
-    IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+    IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
   }
-  v10 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+  v10 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
   if ( !v10 )
     goto LABEL_87;
-  IsItem_47357376 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v10 + 24))(
+  IsItem_47387928 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v10 + 24))(
                       *(_QWORD *)(v10 + 64),
-                      StringLiteral_3834/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/,
+                      StringLiteral_3839/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/,
                       *(_QWORD *)(v10 + 40));
   max_length = rewards->max_length;
-  format = (System_String_o *)IsItem_47357376;
+  format = (System_String_o *)IsItem_47387928;
   if ( max_length < 1 )
   {
     v13 = 0;
@@ -274,10 +274,10 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
       v14 = rewards->m_Items[v12];
       if ( !v14 )
         goto LABEL_87;
-      IsItem_47357376 = Gift__IsItem_47357376(v14->fields.type, 0);
+      IsItem_47387928 = Gift__IsItem_47387928(v14->fields.type, 0);
       max_length = rewards->max_length;
       ++v12;
-      v13 += IsItem_47357376 & 1;
+      v13 += IsItem_47387928 & 1;
     }
     while ( (int)v12 < max_length );
     if ( max_length >= 1 )
@@ -290,44 +290,44 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
         if ( !v17 )
           goto LABEL_87;
         type = v17->fields.type;
-        IsItem_47357376 = Gift__IsServant_47357416(type, 0);
-        if ( (IsItem_47357376 & 1) != 0 )
+        IsItem_47387928 = Gift__IsServant_47387968(type, 0);
+        if ( (IsItem_47387928 & 1) != 0 )
         {
           if ( (unsigned int)v15 >= LODWORD(rewards->max_length) )
             break;
           v19 = m_Items[v15];
           if ( !v19 )
             goto LABEL_87;
-          IsItem_47357376 = (__int64)this->fields.exRoomMissionListOutput;
-          if ( IsItem_47357376 )
+          IsItem_47387928 = (__int64)this->fields.exRoomMissionListOutput;
+          if ( IsItem_47387928 )
           {
-            IsItem_47357376 = (__int64)ExRoomMissionListOutput__FindRewardResolvedRewardByObjectId(
-                                         (ExRoomMissionListOutput_o *)IsItem_47357376,
+            IsItem_47387928 = (__int64)ExRoomMissionListOutput__FindRewardResolvedRewardByObjectId(
+                                         (ExRoomMissionListOutput_o *)IsItem_47387928,
                                          v19->fields.objectId,
                                          0);
-            if ( IsItem_47357376 )
+            if ( IsItem_47387928 )
             {
-              v20 = *(_QWORD *)(IsItem_47357376 + 32);
+              v20 = *(_QWORD *)(IsItem_47387928 + 32);
               if ( v20 )
               {
                 IsCombineMaterial = SvtType__IsCombineMaterial(*(_DWORD *)(v20 + 84), 0);
-                IsItem_47357376 = SvtType__IsStatusUp(*(_DWORD *)(v20 + 84), 0);
-                if ( IsCombineMaterial || (IsItem_47357376 & 1) != 0 )
+                IsItem_47387928 = SvtType__IsStatusUp(*(_DWORD *)(v20 + 84), 0);
+                if ( IsCombineMaterial || (IsItem_47387928 & 1) != 0 )
                 {
                   if ( !v5 )
                     goto LABEL_87;
                   if ( System_Text_StringBuilder__get_Length(v5, 0) >= 1 )
-                    System_Text_StringBuilder__Append_75521760(v5, (System_String_o *)StringLiteral_49/*"\n "*/, 0);
-                  IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                    System_Text_StringBuilder__Append_75735064(v5, (System_String_o *)StringLiteral_49/*"\n "*/, 0);
+                  IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                   if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
                   {
                     j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v22);
-                    IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                    IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                   }
-                  v23 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 40LL);
+                  v23 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 40LL);
                   if ( !v23 )
                     goto LABEL_87;
-                  IsItem_47357376 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v23 + 24))(
+                  IsItem_47387928 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v23 + 24))(
                                       *(_QWORD *)(v23 + 64),
                                       v20,
                                       *(_QWORD *)(v23 + 40));
@@ -336,19 +336,19 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
                   v24 = m_Items[v15];
                   if ( !v24 )
                     goto LABEL_87;
-                  v25 = (Il2CppObject *)IsItem_47357376;
+                  v25 = (Il2CppObject *)IsItem_47387928;
                   num = v24->fields.num;
-                  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &num);
-                  IsItem_47357376 = (__int64)System_String__Format_75484576(format, v25, v26, 0);
+                  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &num);
+                  IsItem_47387928 = (__int64)System_String__Format_75697880(format, v25, v26, 0);
                   localizationResolver = ExRoomMissionReceiveSingleResultDialog_TypeInfo->static_fields->localizationResolver;
                   if ( !localizationResolver )
                     goto LABEL_87;
-                  v28 = (Il2CppObject *)IsItem_47357376;
+                  v28 = (Il2CppObject *)IsItem_47387928;
                   v29 = (System_String_o *)((__int64 (__fastcall *)(intptr_t, __int64, intptr_t))localizationResolver->fields.invoke_impl)(
                                              localizationResolver->fields.method_code,
-                                             StringLiteral_9022/*"MISSION_ACTION_ITEM_FORMAT"*/,
+                                             StringLiteral_9035/*"MISSION_ACTION_ITEM_FORMAT"*/,
                                              localizationResolver->fields.method);
-                  IsItem_47357376 = (__int64)System_Text_StringBuilder__AppendFormat(v5, v29, v28, 0);
+                  IsItem_47387928 = (__int64)System_Text_StringBuilder__AppendFormat(v5, v29, v28, 0);
                 }
               }
             }
@@ -356,88 +356,88 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
         }
         else
         {
-          IsItem_47357376 = Gift__IsItem_47357376(type, 0);
-          if ( (IsItem_47357376 & 1) != 0 )
+          IsItem_47387928 = Gift__IsItem_47387928(type, 0);
+          if ( (IsItem_47387928 & 1) != 0 )
           {
             if ( (unsigned int)v15 >= LODWORD(rewards->max_length) )
               break;
             v30 = m_Items[v15];
             if ( !v30 )
               goto LABEL_87;
-            IsItem_47357376 = (__int64)this->fields.exRoomMissionListOutput;
-            if ( IsItem_47357376 )
+            IsItem_47387928 = (__int64)this->fields.exRoomMissionListOutput;
+            if ( IsItem_47387928 )
             {
-              IsItem_47357376 = (__int64)ExRoomMissionListOutput__FindRewardResolvedRewardByObjectId(
-                                           (ExRoomMissionListOutput_o *)IsItem_47357376,
+              IsItem_47387928 = (__int64)ExRoomMissionListOutput__FindRewardResolvedRewardByObjectId(
+                                           (ExRoomMissionListOutput_o *)IsItem_47387928,
                                            v30->fields.objectId,
                                            0);
-              if ( IsItem_47357376 )
+              if ( IsItem_47387928 )
               {
-                v31 = *(_QWORD *)(IsItem_47357376 + 24);
+                v31 = *(_QWORD *)(IsItem_47387928 + 24);
                 if ( v31 )
                 {
                   CountableString = (Il2CppObject *)ItemType__GetCountableString(*(_DWORD *)(v31 + 48), 0);
-                  v33 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+                  v33 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
                   System_Text_StringBuilder___ctor(v33, 0);
                   if ( !v33 )
                     goto LABEL_87;
-                  System_Text_StringBuilder__Append_75521760(v33, *(System_String_o **)(v31 + 24), 0);
-                  IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                  System_Text_StringBuilder__Append_75735064(v33, *(System_String_o **)(v31 + 24), 0);
+                  IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                   if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
                   {
                     j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v34);
-                    IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                    IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                   }
-                  v35 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+                  v35 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
                   if ( !v35 )
                     goto LABEL_87;
-                  IsItem_47357376 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v35 + 24))(
+                  IsItem_47387928 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v35 + 24))(
                                       *(_QWORD *)(v35 + 64),
-                                      StringLiteral_9027/*"MISSION_ACTION_SUCCESS_MULTIPLE2"*/,
+                                      StringLiteral_9040/*"MISSION_ACTION_SUCCESS_MULTIPLE2"*/,
                                       *(_QWORD *)(v35 + 40));
                   if ( (unsigned int)v15 >= LODWORD(rewards->max_length) )
                     break;
                   v36 = m_Items[v15];
                   if ( !v36 )
                     goto LABEL_87;
-                  v37 = (System_String_o *)IsItem_47357376;
+                  v37 = (System_String_o *)IsItem_47387928;
                   v54 = v36->fields.num;
-                  v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v54);
-                  System_Text_StringBuilder__AppendFormat_75527968(v33, v37, CountableString, v38, 0);
+                  v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v54);
+                  System_Text_StringBuilder__AppendFormat_75741272(v33, v37, CountableString, v38, 0);
                   if ( v13 >= 2 )
                   {
-                    IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                    IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                     if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
                     {
                       j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v39);
-                      IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+                      IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
                     }
-                    v41 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+                    v41 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
                     if ( !v41 )
                       goto LABEL_87;
-                    IsItem_47357376 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v41 + 24))(
+                    IsItem_47387928 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v41 + 24))(
                                         *(_QWORD *)(v41 + 64),
-                                        StringLiteral_9022/*"MISSION_ACTION_ITEM_FORMAT"*/,
+                                        StringLiteral_9035/*"MISSION_ACTION_ITEM_FORMAT"*/,
                                         *(_QWORD *)(v41 + 40));
                     if ( !v6 )
                       goto LABEL_87;
                     System_Text_StringBuilder__AppendFormat(
                       v6,
-                      (System_String_o *)IsItem_47357376,
+                      (System_String_o *)IsItem_47387928,
                       (Il2CppObject *)v33,
                       0);
                     v40 = (System_String_o *)StringLiteral_49/*"\n "*/;
                   }
                   else
                   {
-                    IsItem_47357376 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v33->klass->vtable._3_ToString.methodPtr)(
+                    IsItem_47387928 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v33->klass->vtable._3_ToString.methodPtr)(
                                         v33,
                                         v33->klass->vtable._3_ToString.method);
                     if ( !v6 )
                       goto LABEL_87;
-                    v40 = (System_String_o *)IsItem_47357376;
+                    v40 = (System_String_o *)IsItem_47387928;
                   }
-                  IsItem_47357376 = (__int64)System_Text_StringBuilder__Append_75521760(v6, v40, 0);
+                  IsItem_47387928 = (__int64)System_Text_StringBuilder__Append_75735064(v6, v40, 0);
                 }
               }
             }
@@ -448,114 +448,114 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog__BuildDisplayMessage(
           goto LABEL_60;
       }
 LABEL_88:
-      sub_21FFED4(IsItem_47357376);
+      sub_2213CE4(IsItem_47387928);
     }
   }
 LABEL_60:
-  v43 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+  v43 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v43, 0);
   if ( !v6 )
     goto LABEL_87;
-  IsItem_47357376 = System_Text_StringBuilder__get_Length(v6, 0);
-  if ( (int)IsItem_47357376 < 1 )
+  IsItem_47387928 = System_Text_StringBuilder__get_Length(v6, 0);
+  if ( (int)IsItem_47387928 < 1 )
   {
     if ( !v5 )
       goto LABEL_87;
   }
   else
   {
-    IsItem_47357376 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
+    IsItem_47387928 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
                         v6,
                         v6->klass->vtable._3_ToString.method);
-    v45 = (Il2CppObject *)IsItem_47357376;
+    v45 = (Il2CppObject *)IsItem_47387928;
     if ( v13 >= 2 )
     {
-      if ( !IsItem_47357376 )
+      if ( !IsItem_47387928 )
         goto LABEL_87;
-      IsItem_47357376 = (__int64)System_String__Substring_75489544(
-                                   (System_String_o *)IsItem_47357376,
+      IsItem_47387928 = (__int64)System_String__Substring_75702848(
+                                   (System_String_o *)IsItem_47387928,
                                    0,
-                                   *(_DWORD *)(IsItem_47357376 + 16) - 2,
+                                   *(_DWORD *)(IsItem_47387928 + 16) - 2,
                                    0);
       if ( !v43 )
         goto LABEL_87;
-      System_Text_StringBuilder__Append_75521760(v43, (System_String_o *)IsItem_47357376, 0);
-      IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+      System_Text_StringBuilder__Append_75735064(v43, (System_String_o *)IsItem_47387928, 0);
+      IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
       if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v47);
-        IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+        IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
       }
-      v48 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+      v48 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
       if ( !v48 )
         goto LABEL_87;
       v49 = (System_String_o *)(*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v48 + 24))(
                                  *(_QWORD *)(v48 + 64),
-                                 StringLiteral_9023/*"MISSION_ACTION_MULTIPLE_GET_MESSAGE"*/,
+                                 StringLiteral_9036/*"MISSION_ACTION_MULTIPLE_GET_MESSAGE"*/,
                                  *(_QWORD *)(v48 + 40));
-      IsItem_47357376 = (__int64)System_Text_StringBuilder__Append_75521760(v43, v49, 0);
+      IsItem_47387928 = (__int64)System_Text_StringBuilder__Append_75735064(v43, v49, 0);
     }
     else
     {
-      IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+      IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
       if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v44);
-        IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+        IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
       }
-      v46 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+      v46 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
       if ( !v46 )
         goto LABEL_87;
-      IsItem_47357376 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v46 + 24))(
+      IsItem_47387928 = (*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v46 + 24))(
                           *(_QWORD *)(v46 + 64),
-                          StringLiteral_9026/*"MISSION_ACTION_SUCCESS"*/,
+                          StringLiteral_9039/*"MISSION_ACTION_SUCCESS"*/,
                           *(_QWORD *)(v46 + 40));
       if ( !v43 )
         goto LABEL_87;
-      IsItem_47357376 = (__int64)System_Text_StringBuilder__AppendFormat(
+      IsItem_47387928 = (__int64)System_Text_StringBuilder__AppendFormat(
                                    v43,
-                                   (System_String_o *)IsItem_47357376,
+                                   (System_String_o *)IsItem_47387928,
                                    v45,
                                    0);
     }
     if ( !v5 )
       goto LABEL_87;
     if ( System_Text_StringBuilder__get_Length(v5, 0) >= 1 )
-      System_Text_StringBuilder__Append_75521760(v43, (System_String_o *)StringLiteral_51/*"\n \n "*/, 0);
+      System_Text_StringBuilder__Append_75735064(v43, (System_String_o *)StringLiteral_51/*"\n \n "*/, 0);
   }
-  IsItem_47357376 = System_Text_StringBuilder__get_Length(v5, 0);
-  if ( (int)IsItem_47357376 < 1 )
+  IsItem_47387928 = System_Text_StringBuilder__get_Length(v5, 0);
+  if ( (int)IsItem_47387928 < 1 )
   {
     if ( v43 )
-      return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
-                                  v43,
-                                  v43->klass->vtable._3_ToString.method);
+      return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
+               v43,
+               v43->klass->vtable._3_ToString.method);
 LABEL_87:
-    sub_21FFECC(IsItem_47357376, v7);
+    sub_2213CDC(IsItem_47387928, v7);
   }
-  IsItem_47357376 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
+  IsItem_47387928 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
                       v5,
                       v5->klass->vtable._3_ToString.method);
   if ( !v43 )
     goto LABEL_87;
-  System_Text_StringBuilder__Append_75521760(v43, (System_String_o *)IsItem_47357376, 0);
-  IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+  System_Text_StringBuilder__Append_75735064(v43, (System_String_o *)IsItem_47387928, 0);
+  IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
   if ( !*(&ExRoomMissionReceiveSingleResultDialog_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ExRoomMissionReceiveSingleResultDialog_TypeInfo, v7, v50);
-    IsItem_47357376 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
+    IsItem_47387928 = (__int64)ExRoomMissionReceiveSingleResultDialog_TypeInfo;
   }
-  v51 = *(_QWORD *)(*(_QWORD *)(IsItem_47357376 + 184) + 32LL);
+  v51 = *(_QWORD *)(*(_QWORD *)(IsItem_47387928 + 184) + 32LL);
   if ( !v51 )
     goto LABEL_87;
   v52 = (System_String_o *)(*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD))(v51 + 24))(
                              *(_QWORD *)(v51 + 64),
-                             StringLiteral_9029/*"MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2"*/,
+                             StringLiteral_9042/*"MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2"*/,
                              *(_QWORD *)(v51 + 40));
-  System_Text_StringBuilder__Append_75521760(v43, v52, 0);
-  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
-                              v43,
-                              v43->klass->vtable._3_ToString.method);
+  System_Text_StringBuilder__Append_75735064(v43, v52, 0);
+  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
+           v43,
+           v43->klass->vtable._3_ToString.method);
 }
 
 
@@ -600,17 +600,17 @@ GiftEntity_array *ExRoomMissionReceiveSingleResultDialog__BuildDisplayRewardGift
   int32_t v37; // w23
   System_Collections_Generic_List_object__o *v38; // x19
 
-  if ( (byte_5932E3C & 1) == 0 )
+  if ( (byte_596AF42 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity___ctor___91425792);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    byte_5932E3C = 1;
+    sub_2213A60(&ExRoomMissionReceiveSingleResultDialog_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity___ctor___91651912);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_2213A60(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    byte_596AF42 = 1;
   }
   exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
   if ( !exRoomMissionListOutput )
@@ -618,14 +618,14 @@ GiftEntity_array *ExRoomMissionReceiveSingleResultDialog__BuildDisplayRewardGift
   RewardGiftEntities_k__BackingField = exRoomMissionListOutput->fields._RewardGiftEntities_k__BackingField;
   if ( !RewardGiftEntities_k__BackingField || !RewardGiftEntities_k__BackingField->max_length )
     return 0;
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+  v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
   max_length = RewardGiftEntities_k__BackingField->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -649,15 +649,15 @@ GiftEntity_array *ExRoomMissionReceiveSingleResultDialog__BuildDisplayRewardGift
       }
       if ( (unsigned int)v10 >= (unsigned int)max_length )
 LABEL_48:
-        sub_21FFED4(RewardResolvedReward);
+        sub_2213CE4(RewardResolvedReward);
       v13 = m_Items[v10];
       if ( !v13 )
         goto LABEL_47;
       type = v13->fields.type;
-      RewardResolvedReward = (ExRoomMissionListOutput_o *)Gift__IsServant_47357416(type, 0);
+      RewardResolvedReward = (ExRoomMissionListOutput_o *)Gift__IsServant_47387968(type, 0);
       if ( ((unsigned __int8)RewardResolvedReward & 1) != 0 )
         break;
-      RewardResolvedReward = (ExRoomMissionListOutput_o *)Gift__IsItem_47357376(type, 0);
+      RewardResolvedReward = (ExRoomMissionListOutput_o *)Gift__IsItem_47387928(type, 0);
       if ( ((unsigned __int8)RewardResolvedReward & 1) != 0 )
       {
         if ( v12 )
@@ -700,7 +700,7 @@ LABEL_40:
                 System_Collections_Generic_List_object___AddWithResize(
                   v35,
                   v8,
-                  *(const MethodInfo_444FB2C **)(*(_QWORD *)(v34 + 192) + 112LL));
+                  *(const MethodInfo_4483C64 **)(*(_QWORD *)(v34 + 192) + 112LL));
                 goto LABEL_41;
               }
               v28 = &items->obj.klass + size;
@@ -751,7 +751,7 @@ LABEL_41:
     v6->fields._size = v27 + 1;
 LABEL_37:
     v28[4] = (Il2CppClass *)v8;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v8, v19, v20, v21, v22, v23, v24);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v8, v19, v20, v21, v22, v23, v24);
     goto LABEL_41;
   }
 LABEL_42:
@@ -759,27 +759,27 @@ LABEL_42:
     || !v6
     || (v36 = v5->fields._size,
         v37 = v6->fields._size,
-        v38 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo),
-        System_Collections_Generic_List_object____ctor_71627580(
+        v38 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GiftEntity__TypeInfo),
+        System_Collections_Generic_List_object____ctor_71840884(
           v38,
           v37 + v36,
-          (const MethodInfo_444F33C *)Method_System_Collections_Generic_List_GiftEntity___ctor___91425792),
+          (const MethodInfo_4483474 *)Method_System_Collections_Generic_List_GiftEntity___ctor___91651912),
         !v38) )
   {
 LABEL_47:
-    sub_21FFECC(RewardResolvedReward, v8);
+    sub_2213CDC(RewardResolvedReward, v8);
   }
   System_Collections_Generic_List_object___AddRange(
     v38,
     (System_Collections_Generic_IEnumerable_T__o *)v5,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
   System_Collections_Generic_List_object___AddRange(
     v38,
     (System_Collections_Generic_IEnumerable_T__o *)v6,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
   return (GiftEntity_array *)System_Collections_Generic_List_object___ToArray(
                                v38,
-                               (const MethodInfo_445164C *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+                               (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
 }
 
 
@@ -870,15 +870,15 @@ void ExRoomMissionReceiveSingleResultDialog___c___cctor(const MethodInfo *method
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5932E3F & 1) == 0 )
+  if ( (byte_596AF45 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
-    byte_5932E3F = 1;
+    sub_2213A60(&ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
+    byte_596AF45 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ExRoomMissionReceiveSingleResultDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ExRoomMissionReceiveSingleResultDialog___c_TypeInfo->static_fields->__9 = (struct ExRoomMissionReceiveSingleResultDialog___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ExRoomMissionReceiveSingleResultDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -909,20 +909,20 @@ bool ExRoomMissionReceiveSingleResultDialog___c____cctor_b__18_0(
   Il2CppObject *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_5932E40 & 1) == 0 )
+  if ( (byte_596AF46 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932E40 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF46 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
     return 0;
-  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !v7 )
-    sub_21FFECC(0, v8);
+    sub_2213CDC(0, v8);
   return CommonUI__IsGetItemEffect((CommonUI_o *)v7, itemId, 0);
 }
 
@@ -933,6 +933,6 @@ System_String_o *ExRoomMissionReceiveSingleResultDialog___c____cctor_b__18_1(
         const MethodInfo *method)
 {
   if ( !servantEntity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return ServantEntity__getName(servantEntity, -1, -1, 0, 0, 0);
 }

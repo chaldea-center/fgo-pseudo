@@ -2,10 +2,10 @@ void ExRoomQuestBoardListViewManager___cctor(const MethodInfo *method)
 {
   struct ExRoomQuestBoardListViewManager_StaticFields *static_fields; // x8
 
-  if ( (byte_5932D18 & 1) == 0 )
+  if ( (byte_596AE1C & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomQuestBoardListViewManager_TypeInfo);
-    byte_5932D18 = 1;
+    sub_2213A60(&ExRoomQuestBoardListViewManager_TypeInfo);
+    byte_596AE1C = 1;
   }
   static_fields = ExRoomQuestBoardListViewManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ALPHA_ANIM_SPD_RATE = 0x404000003F000000LL;
@@ -58,21 +58,21 @@ void ExRoomQuestBoardListViewManager__CreateList(
   const MethodInfo *v37; // x1
   bool v38; // [xsp+Ch] [xbp-64h]
 
-  if ( (byte_5932D0D & 1) == 0 )
+  if ( (byte_596AE11 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomQuestBoardListViewItem_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__FindIndex__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&System_Predicate_ListViewItem__TypeInfo);
-    sub_21FFC50(&Method_ExRoomQuestBoardListViewManager___c__DisplayClass16_0__CreateList_b__0__);
-    sub_21FFC50(&ExRoomQuestBoardListViewManager___c__DisplayClass16_0_TypeInfo);
-    byte_5932D0D = 1;
+    sub_2213A60(&ExRoomQuestBoardListViewItem_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__FindIndex__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&System_Predicate_ListViewItem__TypeInfo);
+    sub_2213A60(&Method_ExRoomQuestBoardListViewManager___c__DisplayClass16_0__CreateList_b__0__);
+    sub_2213A60(&ExRoomQuestBoardListViewManager___c__DisplayClass16_0_TypeInfo);
+    byte_596AE11 = 1;
   }
-  v9 = sub_21FFEBC(ExRoomQuestBoardListViewManager___c__DisplayClass16_0_TypeInfo);
+  v9 = sub_2213CCC(ExRoomQuestBoardListViewManager___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_21;
@@ -99,7 +99,7 @@ void ExRoomQuestBoardListViewManager__CreateList(
         Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               (System_Collections_Generic_List_object__o *)questInfoList,
                                                               v18,
-                                                              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Item__);
+                                                              (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__get_Item__);
         if ( Item )
         {
           itemList = this->fields.itemList;
@@ -107,7 +107,7 @@ void ExRoomQuestBoardListViewManager__CreateList(
             goto LABEL_21;
           v20 = (MapControl_QuestInfo_o *)Item;
           v21 = itemList->fields._size;
-          v22 = (ExRoomQuestBoardListViewItem_o *)sub_21FFEBC(ExRoomQuestBoardListViewItem_TypeInfo);
+          v22 = (ExRoomQuestBoardListViewItem_o *)sub_2213CCC(ExRoomQuestBoardListViewItem_TypeInfo);
           ExRoomQuestBoardListViewItem___ctor(v22, v21, v20, 0);
           Item = (System_Collections_Generic_List_object__o *)this->fields.itemList;
           if ( !Item )
@@ -123,14 +123,14 @@ void ExRoomQuestBoardListViewManager__CreateList(
             System_Collections_Generic_List_object___AddWithResize(
               Item,
               (Il2CppObject *)v22,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
           }
           else
           {
             v32 = &items->obj.klass + v31;
             Item->fields._size = v31 + 1;
             v32[4] = (Il2CppClass *)v22;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v32 + 4), (int32_t)v22, v23, v24, v25, v26, v27, v28);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v32 + 4), (int32_t)v22, v23, v24, v25, v26, v27, v28);
           }
         }
       }
@@ -139,7 +139,7 @@ void ExRoomQuestBoardListViewManager__CreateList(
   }
   ListViewManager__SortItem((ListViewManager_o *)this, -1, v38, -1, 0);
   v33 = this->fields.itemList;
-  v34 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ListViewItem__TypeInfo);
+  v34 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ListViewItem__TypeInfo);
   System_Predicate_object____ctor(
     v34,
     (Il2CppObject *)v9,
@@ -147,11 +147,11 @@ void ExRoomQuestBoardListViewManager__CreateList(
     0);
   if ( !v33 )
 LABEL_21:
-    sub_21FFECC(Item, v11);
+    sub_2213CDC(Item, v11);
   Index = System_Collections_Generic_List_object___FindIndex(
             (System_Collections_Generic_List_object__o *)v33,
             (System_Predicate_T__o *)v34,
-            (const MethodInfo_4450380 *)Method_System_Collections_Generic_List_ListViewItem__FindIndex__);
+            (const MethodInfo_44844B8 *)Method_System_Collections_Generic_List_ListViewItem__FindIndex__);
   if ( Index >= 1 )
     ListViewManager__SetTopItem((ListViewManager_o *)this, Index, 0);
   ExRoomQuestBoardListViewManager__UpdateScrollEnabled(this, v36);
@@ -201,10 +201,10 @@ void ExRoomQuestBoardListViewManager__NormalizeForVerticalList(
   UIScrollView_o *v6; // x0
   UIScrollView_o *v7; // x19
 
-  if ( (byte_5932D0E & 1) == 0 )
+  if ( (byte_596AE12 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D0E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE12 = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -216,14 +216,14 @@ void ExRoomQuestBoardListViewManager__NormalizeForVerticalList(
       goto LABEL_12;
     UIScrollView__DisableSpring(v6, 0);
     v7 = this->fields.scrollView;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      v6 = (UIScrollView_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      v6 = (UIScrollView_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v7 )
 LABEL_12:
-      sub_21FFECC(v6, v5);
+      sub_2213CDC(v6, v5);
     UIScrollView__set_currentMomentum(v7, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   }
 }
@@ -241,43 +241,43 @@ void ExRoomQuestBoardListViewManager__OnChangeAlphaAnim(
   System_Collections_Generic_List_Enumerator_object__o *v8; // [xsp+10h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_5932D17 & 1) == 0 )
+  if ( (byte_596AE1B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
-    byte_5932D17 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    byte_596AE1B = 1;
   }
   memset(&v9, 0, sizeof(v9));
   ObjectList = (System_Collections_Generic_List_object__o *)ExRoomQuestBoardListViewManager__get_ObjectList(
                                                               this,
                                                               method);
   if ( !ObjectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     ObjectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
   v7 = 0;
   v8 = &v9;
   while ( 1 )
   {
     v5 = (ExRoomQuestBoardListViewItemDraw_o *)System_Collections_Generic_List_Enumerator_object___MoveNext(
                                                  &v9,
-                                                 (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+                                                 (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
     if ( ((unsigned __int8)v5 & 1) == 0 )
       break;
     if ( !v9.fields._current
       || (v5 = *(ExRoomQuestBoardListViewItemDraw_o **)((char *)&v9.fields._current->klass + (unsigned __int64)&dword_78)) == 0 )
     {
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
     ExRoomQuestBoardListViewItemDraw__OnChangeAlphaAnim(v5, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
   this->fields.consumeColorReset = 0;
 }
 
@@ -295,11 +295,11 @@ void ExRoomQuestBoardListViewManager__OnClickListView(
   System_Reflection_MethodBase_o *v10; // x0
   struct System_Action_MapControl_QuestInfo__o *onClickQuestBoard; // x8
 
-  if ( (byte_5932D11 & 1) == 0 )
+  if ( (byte_596AE15 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomQuestBoardListViewManager_OnClickListView__);
-    sub_21FFC50(&ExRoomQuestBoardListViewObject_TypeInfo);
-    byte_5932D11 = 1;
+    sub_2213A60(&Method_ExRoomQuestBoardListViewManager_OnClickListView__);
+    sub_2213A60(&ExRoomQuestBoardListViewObject_TypeInfo);
+    byte_596AE15 = 1;
   }
   if ( this->fields.initMode == 2 )
   {
@@ -319,15 +319,15 @@ void ExRoomQuestBoardListViewManager__OnClickListView(
             if ( QuestInfo_k__BackingField->fields.dispType == 2 )
             {
               if ( (*((_BYTE *)Method_ExRoomQuestBoardListViewManager_OnClickListView__ + 83) & 2) != 0 )
-                v8 = (_QWORD *)sub_21FFC68(Method_ExRoomQuestBoardListViewManager_OnClickListView__);
-              v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+                v8 = (_QWORD *)sub_2213A78(Method_ExRoomQuestBoardListViewManager_OnClickListView__);
+              v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
               OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0);
             }
             else
             {
               if ( (*((_BYTE *)Method_ExRoomQuestBoardListViewManager_OnClickListView__ + 83) & 2) != 0 )
-                v8 = (_QWORD *)sub_21FFC68(Method_ExRoomQuestBoardListViewManager_OnClickListView__);
-              v10 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+                v8 = (_QWORD *)sub_2213A78(Method_ExRoomQuestBoardListViewManager_OnClickListView__);
+              v10 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
               OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
               onClickQuestBoard = this->fields.onClickQuestBoard;
               if ( onClickQuestBoard )
@@ -356,43 +356,43 @@ void ExRoomQuestBoardListViewManager__OnStartFadeOutAlphaAnim(
   System_Collections_Generic_List_Enumerator_object__o *v8; // [xsp+10h] [xbp-40h]
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_5932D16 & 1) == 0 )
+  if ( (byte_596AE1A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
-    byte_5932D16 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    byte_596AE1A = 1;
   }
   memset(&v9, 0, sizeof(v9));
   ObjectList = (System_Collections_Generic_List_object__o *)ExRoomQuestBoardListViewManager__get_ObjectList(
                                                               this,
                                                               method);
   if ( !ObjectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     ObjectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
   v7 = 0;
   v8 = &v9;
   while ( 1 )
   {
     v5 = (ExRoomQuestBoardListViewItemDraw_o *)System_Collections_Generic_List_Enumerator_object___MoveNext(
                                                  &v9,
-                                                 (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+                                                 (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
     if ( ((unsigned __int8)v5 & 1) == 0 )
       break;
     if ( !v9.fields._current
       || (v5 = *(ExRoomQuestBoardListViewItemDraw_o **)((char *)&v9.fields._current->klass + (unsigned __int64)&dword_78)) == 0 )
     {
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
     ExRoomQuestBoardListViewItemDraw__OnStartFadeOutAlphaAnim(v5, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
 }
 
 
@@ -424,11 +424,11 @@ void ExRoomQuestBoardListViewManager__ResetAlphaAnimTime(
   __int64 v16; // x1
   AlphaTransitionCalculator_o *rewardIconAlphaCalculator; // x0
 
-  if ( (byte_5932D15 & 1) == 0 )
+  if ( (byte_596AE19 & 1) == 0 )
   {
-    sub_21FFC50(&AlphaTransitionCalculator_TypeInfo);
-    sub_21FFC50(&ExRoomQuestBoardListViewManager_TypeInfo);
-    byte_5932D15 = 1;
+    sub_2213A60(&AlphaTransitionCalculator_TypeInfo);
+    sub_2213A60(&ExRoomQuestBoardListViewManager_TypeInfo);
+    byte_596AE19 = 1;
   }
   this->fields.alphaAnimNow = 1.0;
   realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
@@ -444,10 +444,10 @@ void ExRoomQuestBoardListViewManager__ResetAlphaAnimTime(
          ExRoomQuestBoardListViewManager_TypeInfo->static_fields->ALPHA_ANIM_SPD_RATE,
          (float)ExRoomQuestBoardListViewManager_TypeInfo->static_fields->REWARD_ICON_FADE_FRAME_NUM,
          0);
-  v9 = (AlphaTransitionCalculator_o *)sub_21FFEBC(AlphaTransitionCalculator_TypeInfo);
+  v9 = (AlphaTransitionCalculator_o *)sub_2213CCC(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v9, v7, v8, 0);
   this->fields.rewardIconAlphaCalculator = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rewardIconAlphaCalculator,
     (int32_t)v9,
     v10,
@@ -458,7 +458,7 @@ void ExRoomQuestBoardListViewManager__ResetAlphaAnimTime(
     v15);
   rewardIconAlphaCalculator = this->fields.rewardIconAlphaCalculator;
   if ( !rewardIconAlphaCalculator )
-    sub_21FFECC(0, v16);
+    sub_2213CDC(0, v16);
   AlphaTransitionCalculator__MakeFadeInFinished(rewardIconAlphaCalculator, 0);
 }
 
@@ -484,7 +484,7 @@ void ExRoomQuestBoardListViewManager__SetOnClickQuestBoard(
   bool v7; // w7
 
   this->fields.onClickQuestBoard = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClickQuestBoard,
     (int32_t)callback,
     (System_String_o *)method,
@@ -506,10 +506,10 @@ void ExRoomQuestBoardListViewManager__SetPanelClipping(
   __int64 v6; // x1
   UIPanel_o *v7; // x0
 
-  if ( (byte_5932D13 & 1) == 0 )
+  if ( (byte_596AE17 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D13 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE17 = 1;
   }
   scrollViewPanel = (UnityEngine_Object_o *)this->fields.scrollViewPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -518,7 +518,7 @@ void ExRoomQuestBoardListViewManager__SetPanelClipping(
   {
     v7 = this->fields.scrollViewPanel;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     UIPanel__set_clipping(v7, clipping, 0);
   }
 }
@@ -537,43 +537,43 @@ void ExRoomQuestBoardListViewManager__SetShowingInfoAllOff(
   System_Collections_Generic_List_Enumerator_object__o *v9; // [xsp+10h] [xbp-40h]
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_5932D12 & 1) == 0 )
+  if ( (byte_596AE16 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
-    byte_5932D12 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    byte_596AE16 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   ObjectList = (System_Collections_Generic_List_object__o *)ExRoomQuestBoardListViewManager__get_ObjectList(
                                                               this,
                                                               method);
   if ( !ObjectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     ObjectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__GetEnumerator__);
   v8 = 0;
   v9 = &v10;
   while ( 1 )
   {
     v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v10,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__MoveNext__);
     if ( !v5 )
       break;
     if ( !v10.fields._current )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     v7 = *(ExRoomQuestBoardListViewItemDraw_o **)((char *)&v10.fields._current->klass + (unsigned __int64)&dword_78);
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     ExRoomQuestBoardListViewItemDraw__SetInfoShowing(v7, 0, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v10,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ExRoomQuestBoardListViewObject__Dispose__);
 }
 
 
@@ -591,10 +591,10 @@ void ExRoomQuestBoardListViewManager__SetupQuestListViewBg(
   UIWidget_o *v10; // x0
   int v11; // w8
 
-  if ( (byte_5932D10 & 1) == 0 )
+  if ( (byte_596AE14 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D10 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE14 = 1;
   }
   questListViewBgSprite = (UnityEngine_Object_o *)this->fields.questListViewBgSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -607,16 +607,16 @@ void ExRoomQuestBoardListViewManager__SetupQuestListViewBg(
       y = 0x80000000;
     else
       y = (int)Pitch.fields.y;
-    if ( !byte_5932DF6 )
+    if ( !byte_596AEF6 )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_5932DF6 = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596AEF6 = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, v6, v7);
     v10 = (UIWidget_o *)this->fields.questListViewBgSprite;
     if ( !v10 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     if ( y >= 0 )
       v11 = y;
     else
@@ -657,18 +657,18 @@ void ExRoomQuestBoardListViewManager__UpdateAlphaAnim(
   int32_t ALPHA_ANIM_COUNT_RESET_VAL; // w8
   int32_t v19; // w21
 
-  if ( (byte_5932D14 & 1) == 0 )
+  if ( (byte_596AE18 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomQuestBoardListViewManager_TypeInfo);
-    sub_21FFC50(&Method_TransitionCalculator_float__Update__);
-    byte_5932D14 = 1;
+    sub_2213A60(&ExRoomQuestBoardListViewManager_TypeInfo);
+    sub_2213A60(&Method_TransitionCalculator_float__Update__);
+    byte_596AE18 = 1;
   }
   rewardIconAlphaCalculator = (TransitionCalculator_float__o *)this->fields.rewardIconAlphaCalculator;
   if ( rewardIconAlphaCalculator )
   {
     v5 = TransitionCalculator_float___Update(
            rewardIconAlphaCalculator,
-           (const MethodInfo_3BB5C64 *)Method_TransitionCalculator_float__Update__);
+           (const MethodInfo_3BE940C *)Method_TransitionCalculator_float__Update__);
     v6 = this->fields.rewardIconAlphaCalculator;
     this->fields.alphaAnimNow = v5;
     if ( !v6 )
@@ -693,7 +693,7 @@ void ExRoomQuestBoardListViewManager__UpdateAlphaAnim(
           return;
         }
 LABEL_22:
-        sub_21FFECC(v6, v4);
+        sub_2213CDC(v6, v4);
       }
     }
     else
@@ -757,10 +757,10 @@ void ExRoomQuestBoardListViewManager__UpdateScrollEnabled(
   bool isBottom; // [xsp+18h] [xbp-28h] BYREF
   bool isTop; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_5932D0F & 1) == 0 )
+  if ( (byte_596AE13 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D0F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE13 = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   isTop = 0;
@@ -802,10 +802,10 @@ void ExRoomQuestBoardListViewManager__UpdateScrollEnabled(
     goto LABEL_25;
   UIScrollView__DisableSpring((UIScrollView_o *)gameObject, 0);
   v13 = this->fields.scrollView;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    gameObject = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v13 )
     goto LABEL_25;
@@ -828,7 +828,7 @@ LABEL_18:
       }
     }
 LABEL_25:
-    sub_21FFECC(gameObject, v7);
+    sub_2213CDC(gameObject, v7);
   }
 }
 
@@ -876,37 +876,37 @@ System_Collections_Generic_List_ExRoomQuestBoardListViewObject__o *ExRoomQuestBo
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5932D0C & 1) == 0 )
+  if ( (byte_596AE10 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ExRoomQuestBoardListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomQuestBoardListViewObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D0C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ExRoomQuestBoardListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomQuestBoardListViewObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE10 = 1;
   }
   memset(&v25, 0, sizeof(v25));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomQuestBoardListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomQuestBoardListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomQuestBoardListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v25 = v24;
   v24.fields._list = 0;
   *(_QWORD *)&v24.fields._index = &v25;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v25,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v25.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -915,10 +915,10 @@ System_Collections_Generic_List_ExRoomQuestBoardListViewObject__o *ExRoomQuestBo
     if ( v9 )
     {
       if ( !current )
-        sub_21FFECC(v9, v10);
+        sub_2213CDC(v9, v10);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ExRoomQuestBoardListViewObject___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ExRoomQuestBoardListViewObject___);
       v18 = Component_object;
       if ( !v3
         || (items = v3->fields._items,
@@ -926,7 +926,7 @@ System_Collections_Generic_List_ExRoomQuestBoardListViewObject__o *ExRoomQuestBo
             ++v3->fields._version,
             !items) )
       {
-        sub_21FFECC(Component_object, Component_object);
+        sub_2213CDC(Component_object, Component_object);
       }
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -934,20 +934,20 @@ System_Collections_Generic_List_ExRoomQuestBoardListViewObject__o *ExRoomQuestBo
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
         v22 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v22[4] = (Il2CppClass *)v18;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v18, v12, v13, v14, v15, v16, v17);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v25,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ExRoomQuestBoardListViewObject__o *)v3;
 }
 
@@ -973,20 +973,20 @@ bool ExRoomQuestBoardListViewManager___c__DisplayClass16_0___CreateList_b__0(
 
   v4 = n;
   v5 = this;
-  if ( (byte_5932D19 & 1) == 0 )
+  if ( (byte_596AE1D & 1) == 0 )
   {
-    this = (ExRoomQuestBoardListViewManager___c__DisplayClass16_0_o *)sub_21FFC50(&ExRoomQuestBoardListViewItem_TypeInfo);
-    byte_5932D19 = 1;
+    this = (ExRoomQuestBoardListViewManager___c__DisplayClass16_0_o *)sub_2213A60(&ExRoomQuestBoardListViewItem_TypeInfo);
+    byte_596AE1D = 1;
   }
   if ( !v4 )
 LABEL_9:
-    sub_21FFECC(this, n);
+    sub_2213CDC(this, n);
   n = (ListViewItem_o *)ExRoomQuestBoardListViewItem_TypeInfo;
   naturalAligment = ExRoomQuestBoardListViewItem_TypeInfo->_2.naturalAligment;
   if ( v4->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (ExRoomQuestBoardListViewItem_c *)v4->klass->_2.typeHierarchy[naturalAligment - 1] != ExRoomQuestBoardListViewItem_TypeInfo )
   {
-    this = (ExRoomQuestBoardListViewManager___c__DisplayClass16_0_o *)sub_220024C(
+    this = (ExRoomQuestBoardListViewManager___c__DisplayClass16_0_o *)sub_221405C(
                                                                         v4,
                                                                         ExRoomQuestBoardListViewItem_TypeInfo,
                                                                         method,

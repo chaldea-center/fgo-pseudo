@@ -30,7 +30,7 @@ void ScriptConnectData___ctor(
 
   v11 = this;
   this->fields.ConnectPath = connectPath;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)this,
     (int32_t)connectPath,
     objectPath,
@@ -40,7 +40,7 @@ void ScriptConnectData___ctor(
     isView,
     (bool)method);
   v11->fields.ObjectPath = objectPath;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields.ObjectPath,
     (int32_t)objectPath,
     v14,
@@ -50,7 +50,7 @@ void ScriptConnectData___ctor(
     v18,
     v19);
   v11->fields.EndCallback = endCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields.EndCallback,
     (int32_t)endCallback,
     v20,
@@ -61,7 +61,7 @@ void ScriptConnectData___ctor(
     v25);
   v11->fields.ErrorCallback = errorCallback;
   v11 = (ScriptConnectData_o *)((char *)v11 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v11, (int32_t)errorCallback, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v11, (int32_t)errorCallback, v26, v27, v28, v29, v30, v31);
   LODWORD(v11->fields.ObjectPath) = jumpLine;
   BYTE4(v11->fields.ObjectPath) = isView;
   BYTE5(v11->fields.ObjectPath) = 0;

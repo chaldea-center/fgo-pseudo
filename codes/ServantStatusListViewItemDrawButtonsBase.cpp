@@ -11,15 +11,15 @@ int32_t ServantStatusListViewItemDrawButtonsBase__GetButtonIndex(
         UICommonButton_o *buttonObj,
         const MethodInfo *method)
 {
-  if ( (byte_5935147 & 1) == 0 )
+  if ( (byte_596D333 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_UICommonButton___);
-    byte_5935147 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_UICommonButton___);
+    byte_596D333 = 1;
   }
   return System_Array__IndexOf_object_(
            (System_Object_array *)this->fields.tdSpeedButtonList,
            (Il2CppObject *)buttonObj,
-           (const MethodInfo_39FB15C *)Method_System_Array_IndexOf_UICommonButton___);
+           (const MethodInfo_3A2E6EC *)Method_System_Array_IndexOf_UICommonButton___);
 }
 
 
@@ -77,27 +77,24 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
   struct UISprite_array *tdSpeedButtonSpriteList; // x8
   System_String_o **v26; // x8
   struct UIRangeLabel_array *tdSpeedRangeLabelList; // x8
-  float v28; // s0 OVERLAPPED
-  float v29; // s1
-  float v30; // s2
-  float v31; // s3
+  UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5935146 & 1) == 0 )
+  if ( (byte_596D332 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18171/*"btn_bg_20"*/);
-    sub_21FFC50(&StringLiteral_18173/*"btn_bg_21"*/);
-    byte_5935146 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18209/*"btn_bg_20"*/);
+    sub_2213A60(&StringLiteral_18211/*"btn_bg_21"*/);
+    byte_596D332 = 1;
   }
   this->fields.dispMode = mode;
   if ( item && mode )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, *(_QWORD *)&mode);
-    if ( !byte_5932AD3 )
+    if ( !byte_596ABD5 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      byte_5932AD3 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      byte_596ABD5 = 1;
     }
     v7 = LocalizationManager_TypeInfo;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -110,11 +107,11 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
     v10 = static_fields[21];
     v11 = static_fields[22];
     v12 = static_fields[23];
-    if ( !byte_5932AD4 )
+    if ( !byte_596ABD6 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
+      sub_2213A60(&LocalizationManager_TypeInfo);
       v7 = LocalizationManager_TypeInfo;
-      byte_5932AD4 = 1;
+      byte_596ABD6 = 1;
     }
     if ( !*(&v7->_2.cctor_finished + 1) )
     {
@@ -158,39 +155,39 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
         v18 = (UICommonButton_o *)tdSpeedButtonSpriteList->m_Items[v22];
         if ( !v18 )
           break;
-        v26 = (System_String_o **)(v23 == (_DWORD)v22 ? &StringLiteral_18173/*"btn_bg_21"*/ : &StringLiteral_18171/*"btn_bg_20"*/);
+        v26 = (System_String_o **)(v23 == (_DWORD)v22 ? &StringLiteral_18211/*"btn_bg_21"*/ : &StringLiteral_18209/*"btn_bg_20"*/);
         UISprite__set_spriteName((UISprite_o *)v18, *v26, 0);
         tdSpeedRangeLabelList = this->fields.tdSpeedRangeLabelList;
         if ( !tdSpeedRangeLabelList )
           break;
         if ( (unsigned int)v22 >= LODWORD(tdSpeedRangeLabelList->max_length) )
 LABEL_45:
-          sub_21FFED4(v18);
+          sub_2213CE4(v18);
         v18 = (UICommonButton_o *)tdSpeedRangeLabelList->m_Items[v22];
         if ( !v18 )
           break;
         if ( v23 == (_DWORD)v22 )
-          v28 = v14;
+          v31.fields.r = v14;
         else
-          v28 = v9;
+          v31.fields.r = v9;
         if ( v23 == (_DWORD)v22 )
-          v29 = v15;
+          v31.fields.g = v15;
         else
-          v29 = v10;
+          v31.fields.g = v10;
         if ( v23 == (_DWORD)v22 )
-          v30 = v16;
+          v31.fields.b = v16;
         else
-          v30 = v11;
+          v31.fields.b = v11;
         if ( v23 == (_DWORD)v22 )
-          v31 = v17;
+          v31.fields.a = v17;
         else
-          v31 = v12;
-        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v18, *(UnityEngine_Color_o *)&v28, 0);
+          v31.fields.a = v12;
+        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v18, v31, 0);
         if ( (_DWORD)max_length == (_DWORD)++v22 )
           return;
       }
 LABEL_44:
-      sub_21FFECC(v18, v19);
+      sub_2213CDC(v18, v19);
     }
   }
 }

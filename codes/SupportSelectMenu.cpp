@@ -3,14 +3,14 @@ void SupportSelectMenu___ctor(SupportSelectMenu_o *this, const MethodInfo *metho
   __int64 v2; // x2
   BaseMenu_c *v4; // x0
 
-  if ( (byte_5934B6F & 1) == 0 )
+  if ( (byte_596CC9E & 1) == 0 )
   {
-    sub_21FFC50(&BaseMenu_TypeInfo);
-    byte_5934B6F = 1;
+    sub_2213A60(&BaseMenu_TypeInfo);
+    byte_596CC9E = 1;
   }
   v4 = BaseMenu_TypeInfo;
   *(_QWORD *)&this->fields.SUPPORT_EDIT_BUTTON_POSITION_NOT_EDIT.fields.y = 0;
-  *(_OWORD *)&this->fields.SUPPORT_EDIT_BUTTON_POSITION_EDTTING.fields.x = xmmword_E94020;
+  *(_OWORD *)&this->fields.SUPPORT_EDIT_BUTTON_POSITION_EDTTING.fields.x = xmmword_E9D1C0;
   if ( !*(&v4->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v4, method, v2);
   BaseMenu___ctor((BaseMenu_o *)this, 0);
@@ -24,7 +24,7 @@ void SupportSelectMenu__Active(SupportSelectMenu_o *this, const MethodInfo *meth
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
 
@@ -83,7 +83,7 @@ SupportSelectListViewItem_o *SupportSelectMenu__GetCenterItem(SupportSelectMenu_
                                         v2),
         (supportSelectListViewManager = v4->fields.supportSelectListViewManager) == 0) )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   v7 = (SupportSelectListViewItem_o *)this;
   SupportSelectListViewManager__SetSurface(supportSelectListViewManager, (SupportSelectListViewItem_o *)this, v5);
@@ -119,7 +119,7 @@ void SupportSelectMenu__HideActiveSupportApplyIcon(SupportSelectMenu_o *this, co
                                                              0)) == 0 )
   {
 LABEL_10:
-    sub_21FFECC(applyMainQuestSupport, method);
+    sub_2213CDC(applyMainQuestSupport, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)applyMainQuestSupport, 0, 0);
 }
@@ -137,10 +137,10 @@ void SupportSelectMenu__Init(SupportSelectMenu_o *this, const MethodInfo *method
   ListViewManager_o *supportSelectListViewManager; // x0
 
   this->fields.supportServantData = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData, 0, v2, v3, v4, v5, v6, v7);
   supportSelectListViewManager = (ListViewManager_o *)this->fields.supportSelectListViewManager;
   if ( !supportSelectListViewManager )
-    sub_21FFECC(0, v9);
+    sub_2213CDC(0, v9);
   ListViewManager__DestroyList(supportSelectListViewManager, 0);
   BaseMenu__Init((BaseMenu_o *)this, 0);
 }
@@ -152,15 +152,15 @@ void SupportSelectMenu__OnClickCancel(SupportSelectMenu_o *this, const MethodInf
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
 
-  if ( (byte_5934B6C & 1) == 0 )
+  if ( (byte_596CC9B & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_OnClickCancel__);
-    byte_5934B6C = 1;
+    sub_2213A60(&Method_SupportSelectMenu_OnClickCancel__);
+    byte_596CC9B = 1;
   }
   v3 = Method_SupportSelectMenu_OnClickCancel__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickCancel__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickCancel__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -194,15 +194,15 @@ void SupportSelectMenu__OnClickDeckName(SupportSelectMenu_o *this, const MethodI
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
 
-  if ( (byte_5934B6B & 1) == 0 )
+  if ( (byte_596CC9A & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_OnClickDeckName__);
-    byte_5934B6B = 1;
+    sub_2213A60(&Method_SupportSelectMenu_OnClickDeckName__);
+    byte_596CC9A = 1;
   }
   v3 = Method_SupportSelectMenu_OnClickDeckName__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickDeckName__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickDeckName__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickDeckName__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -221,15 +221,15 @@ void SupportSelectMenu__OnClickGrandListInfoButton(SupportSelectMenu_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
 
-  if ( (byte_5934B6E & 1) == 0 )
+  if ( (byte_596CC9D & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_OnClickGrandListInfoButton__);
-    byte_5934B6E = 1;
+    sub_2213A60(&Method_SupportSelectMenu_OnClickGrandListInfoButton__);
+    byte_596CC9D = 1;
   }
   v3 = Method_SupportSelectMenu_OnClickGrandListInfoButton__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickGrandListInfoButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickGrandListInfoButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickGrandListInfoButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -248,15 +248,15 @@ void SupportSelectMenu__OnClickSupportEdit(SupportSelectMenu_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
 
-  if ( (byte_5934B69 & 1) == 0 )
+  if ( (byte_596CC98 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_OnClickSupportEdit__);
-    byte_5934B69 = 1;
+    sub_2213A60(&Method_SupportSelectMenu_OnClickSupportEdit__);
+    byte_596CC98 = 1;
   }
   v3 = Method_SupportSelectMenu_OnClickSupportEdit__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickSupportEdit__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickSupportEdit__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickSupportEdit__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -275,15 +275,15 @@ void SupportSelectMenu__OnClickSwap(SupportSelectMenu_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectMenu_CallbackFunc_o *callbackFunc; // x8
 
-  if ( (byte_5934B6A & 1) == 0 )
+  if ( (byte_596CC99 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_OnClickSwap__);
-    byte_5934B6A = 1;
+    sub_2213A60(&Method_SupportSelectMenu_OnClickSwap__);
+    byte_596CC99 = 1;
   }
   v3 = Method_SupportSelectMenu_OnClickSwap__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickSwap__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickSwap__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickSwap__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -310,10 +310,10 @@ void SupportSelectMenu__OnClickTab(
   const MethodInfo *v10; // x3
 
   v4 = this;
-  if ( (byte_5934B68 & 1) == 0 )
+  if ( (byte_596CC97 & 1) == 0 )
   {
-    this = (SupportSelectMenu_o *)sub_21FFC50(&Method_SupportSelectMenu_OnClickTab__);
-    byte_5934B68 = 1;
+    this = (SupportSelectMenu_o *)sub_2213A60(&Method_SupportSelectMenu_OnClickTab__);
+    byte_596CC97 = 1;
   }
   if ( !idxSprite )
     goto LABEL_8;
@@ -322,13 +322,13 @@ void SupportSelectMenu__OnClickTab(
   v7 = Method_SupportSelectMenu_OnClickTab__;
   v8 = v6;
   if ( (*((_BYTE *)Method_SupportSelectMenu_OnClickTab__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_OnClickTab__);
-  v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v7, v7[4]);
+    v7 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_OnClickTab__);
+  v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 7, 0, 0);
   this = (SupportSelectMenu_o *)v4->fields.supportSelectListViewManager;
   if ( !this )
 LABEL_8:
-    sub_21FFECC(this, idxSprite);
+    sub_2213CDC(this, idxSprite);
   SupportSelectListViewManager__MoveCenterItem((SupportSelectListViewManager_o *)this, v8, 1, v10);
 }
 
@@ -365,19 +365,17 @@ void SupportSelectMenu__Open(
   bool v31; // w8
   struct SupportServantData_array *v32; // x8
   SupportServantData_o *v33; // x8
-  float v34; // s1 OVERLAPPED
-  int v35; // s2
-  int v36; // s0
-  const MethodInfo *v37; // x2
-  const MethodInfo *v38; // x1
+  const MethodInfo *v35; // x2
+  const MethodInfo *v36; // x1
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5934B63 & 1) == 0 )
+  if ( (byte_596CC92 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Count_SupportServantData___);
-    byte_5934B63 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Count_SupportServantData___);
+    byte_596CC92 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     *(System_String_o **)&mainDeckIdx,
@@ -387,7 +385,7 @@ void SupportSelectMenu__Open(
     v6,
     v7);
   this->fields.dragSwapCallbackFunc = dragSwapCallbackFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.dragSwapCallbackFunc,
     (int32_t)dragSwapCallbackFunc,
     v13,
@@ -397,7 +395,7 @@ void SupportSelectMenu__Open(
     v17,
     v18);
   this->fields.supportServantData = supportServantData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.supportServantData,
     (int32_t)supportServantData,
     v19,
@@ -412,7 +410,7 @@ void SupportSelectMenu__Open(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   v27 = System_Linq_Enumerable__Count_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)supportServantData,
-          (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_SupportServantData___);
+          (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_SupportServantData___);
   SupportSelectMenu__createIndexItem(this, v27, v28);
   gameObject = (UnityEngine_GameObject_o *)this->fields.supportSelectListViewManager;
   if ( !gameObject )
@@ -427,14 +425,14 @@ void SupportSelectMenu__Open(
   supportSelectListViewManager = this->fields.supportSelectListViewManager;
   gameObject = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Count_object_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)supportServantData,
-                                             (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_SupportServantData___);
+                                             (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_SupportServantData___);
   if ( (int)gameObject >= 3 )
   {
     if ( !supportServantData )
       goto LABEL_20;
     if ( LODWORD(supportServantData->max_length) <= 2 )
 LABEL_21:
-      sub_21FFED4(gameObject);
+      sub_2213CE4(gameObject);
     v31 = supportServantData->m_Items[2] != 0;
   }
   else
@@ -454,24 +452,21 @@ LABEL_21:
         (v32 = this->fields.supportServantData) == 0) )
   {
 LABEL_20:
-    sub_21FFECC(gameObject, v26);
+    sub_2213CDC(gameObject, v26);
   }
   if ( !LODWORD(v32->max_length) )
     goto LABEL_21;
   v33 = v32->m_Items[0];
   if ( !v33 || !gameObject )
     goto LABEL_20;
-  v34 = 278.0;
-  v35 = 0;
+  v37.fields.y = 278.0;
+  v37.fields.z = 0.0;
   if ( v33->fields.isFriendInfo )
-    v34 = -215.0;
-  v36 = 0;
-  UnityEngine_Transform__set_localPosition(
-    (UnityEngine_Transform_o *)gameObject,
-    *(UnityEngine_Vector3_o *)(&v34 - 1),
-    0);
-  SupportSelectMenu__moveCenterItem(this, mainDeckIdx, v37);
-  SupportSelectMenu__Redisp(this, v38);
+    v37.fields.y = -215.0;
+  v37.fields.x = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v37, 0);
+  SupportSelectMenu__moveCenterItem(this, mainDeckIdx, v35);
+  SupportSelectMenu__Redisp(this, v36);
   BaseMenu__Open((BaseMenu_o *)this, 0, 0);
 }
 
@@ -490,7 +485,7 @@ void SupportSelectMenu__Redisp(SupportSelectMenu_o *this, const MethodInfo *meth
     || (SupportSelectListViewManager__setItem((SupportSelectListViewManager_o *)gameObject, v4),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.supportSelectListViewManager) == 0) )
   {
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
   SupportSelectListViewManager__reDisp((SupportSelectListViewManager_o *)gameObject, v4);
 }
@@ -520,7 +515,7 @@ void SupportSelectMenu__Reset(SupportSelectMenu_o *this, int32_t classPos, const
         !indicator) )
   {
 LABEL_7:
-    sub_21FFECC(gameObject, v5);
+    sub_2213CDC(gameObject, v5);
   }
   SupportSelectListViewIndicator__DrawPartyInfo(indicator, (SupportSelectListViewItem_o *)gameObject, v8);
 }
@@ -536,7 +531,7 @@ void SupportSelectMenu__SetAbleToSwapDrag(SupportSelectMenu_o *this, bool flag, 
 
   supportSelectListViewManager = this->fields.supportSelectListViewManager;
   if ( !supportSelectListViewManager )
-    sub_21FFECC(this, flag);
+    sub_2213CDC(this, flag);
   v4 = flag;
   v5 = this->fields.supportSelectListViewManager;
   supportSelectListViewManager->fields.ableToSwapDragObj = v4;
@@ -567,13 +562,13 @@ void SupportSelectMenu__SetActiveCurrentSupportSprite(
   int32_t v18; // [xsp+8h] [xbp-38h] BYREF
   int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5934B65 & 1) == 0 )
+  if ( (byte_596CC94 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_21127/*"icon_event_2_{0}"*/);
-    sub_21FFC50(&StringLiteral_21126/*"icon_event_2"*/);
-    sub_21FFC50(&StringLiteral_21125/*"icon_event_1_{0}"*/);
-    sub_21FFC50(&StringLiteral_21124/*"icon_event_1"*/);
-    byte_5934B65 = 1;
+    sub_2213A60(&StringLiteral_21168/*"icon_event_2_{0}"*/);
+    sub_2213A60(&StringLiteral_21167/*"icon_event_2"*/);
+    sub_2213A60(&StringLiteral_21166/*"icon_event_1_{0}"*/);
+    sub_2213A60(&StringLiteral_21165/*"icon_event_1"*/);
+    byte_596CC94 = 1;
   }
   currentMainQuestSupportSprite = (UnityEngine_Component_o *)this->fields.currentMainQuestSupportSprite;
   if ( !currentMainQuestSupportSprite )
@@ -597,9 +592,9 @@ void SupportSelectMenu__SetActiveCurrentSupportSprite(
   if ( mainNo )
   {
     v19 = mainNo;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v19);
     currentMainQuestSupportSprite = (UnityEngine_Component_o *)System_String__Format(
-                                                                 (System_String_o *)StringLiteral_21127/*"icon_event_2_{0}"*/,
+                                                                 (System_String_o *)StringLiteral_21168/*"icon_event_2_{0}"*/,
                                                                  v13,
                                                                  0);
     if ( !v12 )
@@ -610,16 +605,16 @@ void SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     if ( !v12 )
       goto LABEL_24;
-    v14 = (System_String_o *)StringLiteral_21126/*"icon_event_2"*/;
+    v14 = (System_String_o *)StringLiteral_21167/*"icon_event_2"*/;
   }
   UISprite__set_spriteName(v12, v14, 0);
   currentEventQuestSupportSprite = this->fields.currentEventQuestSupportSprite;
   if ( eventNo )
   {
     v18 = eventNo;
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v18);
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v18);
     currentMainQuestSupportSprite = (UnityEngine_Component_o *)System_String__Format(
-                                                                 (System_String_o *)StringLiteral_21125/*"icon_event_1_{0}"*/,
+                                                                 (System_String_o *)StringLiteral_21166/*"icon_event_1_{0}"*/,
                                                                  v16,
                                                                  0);
     if ( !currentEventQuestSupportSprite )
@@ -630,7 +625,7 @@ void SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     if ( !currentEventQuestSupportSprite )
       goto LABEL_24;
-    v17 = (System_String_o *)StringLiteral_21124/*"icon_event_1"*/;
+    v17 = (System_String_o *)StringLiteral_21165/*"icon_event_1"*/;
   }
   UISprite__set_spriteName(currentEventQuestSupportSprite, v17, 0);
   currentMainQuestSupportSprite = (UnityEngine_Component_o *)this->fields.currentSupportDeckSpriteGrid;
@@ -648,7 +643,7 @@ void SupportSelectMenu__SetActiveCurrentSupportSprite(
         (currentMainQuestSupportSprite = (UnityEngine_Component_o *)this->fields.currentSupportDeckSpriteGrid) == 0) )
   {
 LABEL_24:
-    sub_21FFECC(currentMainQuestSupportSprite, mainQuestActive);
+    sub_2213CDC(currentMainQuestSupportSprite, mainQuestActive);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))currentMainQuestSupportSprite->klass[1]._1.element_class)(
     currentMainQuestSupportSprite,
@@ -711,13 +706,13 @@ void SupportSelectMenu__SetActiveFixDeckButton(SupportSelectMenu_o *this, bool a
         goto LABEL_14;
     }
 LABEL_23:
-    sub_21FFED4(fixMainQuestFrameSprite);
+    sub_2213CE4(fixMainQuestFrameSprite);
   }
 LABEL_14:
   fixEventQuestSupportDeckButtons = this->fields.fixEventQuestSupportDeckButtons;
   if ( !fixEventQuestSupportDeckButtons )
 LABEL_22:
-    sub_21FFECC(fixMainQuestFrameSprite, active);
+    sub_2213CDC(fixMainQuestFrameSprite, active);
   v10 = fixEventQuestSupportDeckButtons->max_length;
   if ( v10 >= 1 )
   {
@@ -749,7 +744,7 @@ void SupportSelectMenu__SetActiveHeader(SupportSelectMenu_o *this, bool active, 
 
   headerObject = this->fields.headerObject;
   if ( !headerObject )
-    sub_21FFECC(0, active);
+    sub_2213CDC(0, active);
   UnityEngine_GameObject__SetActive(headerObject, active, 0);
 }
 
@@ -802,21 +797,21 @@ void SupportSelectMenu__SetActiveSupportApplyIcon(
   int v47; // w20
   bool v48; // w1
 
-  if ( (byte_5934B64 & 1) == 0 )
+  if ( (byte_596CC93 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Count_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_int___);
-    sub_21FFC50(&System_Func_int__bool__TypeInfo);
-    sub_21FFC50(&Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_0__);
-    sub_21FFC50(&Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_1__);
-    sub_21FFC50(&SupportSelectMenu___c_TypeInfo);
-    byte_5934B64 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Count_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_int___);
+    sub_2213A60(&System_Func_int__bool__TypeInfo);
+    sub_2213A60(&Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_0__);
+    sub_2213A60(&Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_1__);
+    sub_2213A60(&SupportSelectMenu___c_TypeInfo);
+    byte_596CC93 = 1;
   }
   v9 = System_Array__IndexOf_int_(
          fixMainDeckIds,
          nowDeckId,
-         (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+         (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
   v12 = SupportSelectMenu___c_TypeInfo;
   v13 = v9;
   if ( !*(&SupportSelectMenu___c_TypeInfo->_2.cctor_finished + 1) )
@@ -834,19 +829,19 @@ void SupportSelectMenu__SetActiveSupportApplyIcon(
       static_fields = SupportSelectMenu___c_TypeInfo->static_fields;
     }
     v16 = (Il2CppObject *)static_fields->__9;
-    _9__47_0 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+    _9__47_0 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(_9__47_0, v16, Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_0__, 0);
     v17 = SupportSelectMenu___c_TypeInfo->static_fields;
     v17->__9__47_0 = _9__47_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->__9__47_0, (int32_t)_9__47_0, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->__9__47_0, (int32_t)_9__47_0, v18, v19, v20, v21, v22, v23);
   }
   v24 = System_Linq_Enumerable__Where_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)fixMainDeckIds,
           (System_Func_TSource__bool__o *)_9__47_0,
-          (const MethodInfo_386F9A8 *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_38A2E70 *)Method_System_Linq_Enumerable_Where_int___);
   gameObject = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Count_int_(
                                              v24,
-                                             (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
+                                             (const MethodInfo_38790D4 *)Method_System_Linq_Enumerable_Count_int___);
   applyMainQuestSupport = this->fields.applyMainQuestSupport;
   if ( v13 <= 0x7FFFFFFE )
   {
@@ -885,7 +880,7 @@ void SupportSelectMenu__SetActiveSupportApplyIcon(
   v30 = System_Array__IndexOf_int_(
           fixEventDeckIds,
           nowDeckId,
-          (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+          (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
   v33 = SupportSelectMenu___c_TypeInfo;
   v34 = v30;
   if ( !*(&SupportSelectMenu___c_TypeInfo->_2.cctor_finished + 1) )
@@ -903,19 +898,19 @@ void SupportSelectMenu__SetActiveSupportApplyIcon(
       v35 = SupportSelectMenu___c_TypeInfo->static_fields;
     }
     v37 = (Il2CppObject *)v35->__9;
-    _9__47_1 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+    _9__47_1 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(_9__47_1, v37, Method_SupportSelectMenu___c__SetActiveSupportApplyIcon_b__47_1__, 0);
     v38 = SupportSelectMenu___c_TypeInfo->static_fields;
     v38->__9__47_1 = _9__47_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v38->__9__47_1, (int32_t)_9__47_1, v39, v40, v41, v42, v43, v44);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38->__9__47_1, (int32_t)_9__47_1, v39, v40, v41, v42, v43, v44);
   }
   v45 = System_Linq_Enumerable__Where_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)fixEventDeckIds,
           (System_Func_TSource__bool__o *)_9__47_1,
-          (const MethodInfo_386F9A8 *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_38A2E70 *)Method_System_Linq_Enumerable_Where_int___);
   gameObject = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Count_int_(
                                              v45,
-                                             (const MethodInfo_3845C0C *)Method_System_Linq_Enumerable_Count_int___);
+                                             (const MethodInfo_38790D4 *)Method_System_Linq_Enumerable_Count_int___);
   applyEventQuestSupport = this->fields.applyEventQuestSupport;
   if ( v34 <= 0x7FFFFFFE )
   {
@@ -940,7 +935,7 @@ void SupportSelectMenu__SetActiveSupportApplyIcon(
       }
     }
 LABEL_44:
-    sub_21FFECC(gameObject, v26);
+    sub_2213CDC(gameObject, v26);
   }
   if ( !applyEventQuestSupport )
     goto LABEL_44;
@@ -1006,12 +1001,12 @@ void SupportSelectMenu__SetFixDeckButton(
   UISprite_o *v18; // x23
   int32_t v19; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_5934B67 & 1) == 0 )
+  if ( (byte_596CC96 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&StringLiteral_18340/*"btn_txt_set0_1"*/);
-    sub_21FFC50(&StringLiteral_18341/*"btn_txt_set{0}_1"*/);
-    byte_5934B67 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&StringLiteral_18378/*"btn_txt_set0_1"*/);
+    sub_2213A60(&StringLiteral_18379/*"btn_txt_set{0}_1"*/);
+    byte_596CC96 = 1;
   }
   gameObject = (UnityEngine_Component_o *)BalanceConfig_TypeInfo;
   v9 = *(&BalanceConfig_TypeInfo->_2.cctor_finished + 1);
@@ -1038,25 +1033,25 @@ void SupportSelectMenu__SetFixDeckButton(
   {
     if ( !fixDeckIds )
 LABEL_30:
-      sub_21FFECC(gameObject, *(_QWORD *)&currentId);
+      sub_2213CDC(gameObject, *(_QWORD *)&currentId);
     for ( i = 0; v11 != (_DWORD)i; ++i )
     {
       if ( (unsigned int)i >= LODWORD(fixDeckIds->max_length) )
 LABEL_31:
-        sub_21FFED4(gameObject);
+        sub_2213CE4(gameObject);
       v13 = fixDeckIds->m_Items[i];
       if ( v13 )
       {
         v19 = fixDeckIds->m_Items[i];
-        v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
-        gameObject = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_18341/*"btn_txt_set{0}_1"*/, v14, 0);
+        v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v19);
+        gameObject = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_18379/*"btn_txt_set{0}_1"*/, v14, 0);
         v15 = (System_String_o *)gameObject;
         if ( isEventButton )
           goto LABEL_16;
       }
       else
       {
-        v15 = (System_String_o *)StringLiteral_18340/*"btn_txt_set0_1"*/;
+        v15 = (System_String_o *)StringLiteral_18378/*"btn_txt_set0_1"*/;
         if ( isEventButton )
         {
 LABEL_16:
@@ -1109,23 +1104,23 @@ void SupportSelectMenu__SetGrandListInfoButton(SupportSelectMenu_o *this, bool a
   __int64 v7; // x2
   UISprite_o *grandListInfoButtonSprite; // x19
 
-  if ( (byte_5934B66 & 1) == 0 )
+  if ( (byte_596CC95 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18260/*"btn_supportform_grand"*/);
-    byte_5934B66 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18298/*"btn_supportform_grand"*/);
+    byte_596CC95 = 1;
   }
   grandListInfoButton = (UnityEngine_Component_o *)this->fields.grandListInfoButton;
   if ( !grandListInfoButton
     || (grandListInfoButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(grandListInfoButton, 0)) == 0 )
   {
-    sub_21FFECC(grandListInfoButton, active);
+    sub_2213CDC(grandListInfoButton, active);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)grandListInfoButton, active, 0);
   grandListInfoButtonSprite = this->fields.grandListInfoButtonSprite;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v7);
-  AtlasManager__SetPartyOrganizationImage(grandListInfoButtonSprite, (System_String_o *)StringLiteral_18260/*"btn_supportform_grand"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(grandListInfoButtonSprite, (System_String_o *)StringLiteral_18298/*"btn_supportform_grand"*/, 0);
 }
 
 
@@ -1181,7 +1176,7 @@ void SupportSelectMenu__SetupFooterButtons(SupportSelectMenu_o *this, bool isEdi
         (helpButton = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(helpButton, 0)) == 0) )
   {
 LABEL_16:
-    sub_21FFECC(helpButton, isEditting);
+    sub_2213CDC(helpButton, isEditting);
   }
   v12.fields.x = v9;
   v12.fields.y = v10;
@@ -1205,10 +1200,10 @@ void SupportSelectMenu__add_callbackFunc(
   SupportSelectMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5934B5E & 1) == 0 )
+  if ( (byte_596CC8D & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_5934B5E = 1;
+    sub_2213A60(&SupportSelectMenu_CallbackFunc_TypeInfo);
+    byte_596CC8D = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -1219,13 +1214,13 @@ void SupportSelectMenu__add_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v6->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SupportSelectMenu_CallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SupportSelectMenu_CallbackFunc_TypeInfo, v7, v8);
   SupportSelectMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1245,10 +1240,10 @@ void SupportSelectMenu__add_dragSwapCallbackFunc(
   SupportSelectMenu_DragSwapCallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5934B60 & 1) == 0 )
+  if ( (byte_596CC8F & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
-    byte_5934B60 = 1;
+    sub_2213A60(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
+    byte_596CC8F = 1;
   }
   dragSwapCallbackFunc = (System_Delegate_o *)this->fields.dragSwapCallbackFunc;
   while ( 1 )
@@ -1259,13 +1254,13 @@ void SupportSelectMenu__add_dragSwapCallbackFunc(
       if ( (SupportSelectMenu_DragSwapCallbackFunc_c *)v6->klass != SupportSelectMenu_DragSwapCallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.dragSwapCallbackFunc, v6, dragSwapCallbackFunc);
+    v9 = sub_224B48C(&this->fields.dragSwapCallbackFunc, v6, dragSwapCallbackFunc);
     v10 = v9 == (_QWORD)dragSwapCallbackFunc;
     dragSwapCallbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v7, v8);
   SupportSelectMenu__remove_dragSwapCallbackFunc(v11, v12, v13);
 }
 
@@ -1301,7 +1296,7 @@ void SupportSelectMenu__buttonDispSetting(SupportSelectMenu_o *this, bool flag, 
     || (helpButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(helpButton, 0)) == 0 )
   {
 LABEL_12:
-    sub_21FFECC(helpButton, flag);
+    sub_2213CDC(helpButton, flag);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)helpButton, flag, 0);
   SupportSelectMenu__SetActiveFixDeckButton(this, flag, v6);
@@ -1333,13 +1328,13 @@ void SupportSelectMenu__createIndexItem(SupportSelectMenu_o *this, int32_t deckN
   struct SupportSelectListViewIndicator_o *v24; // x19
   int32_t index; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_5934B62 & 1) == 0 )
+  if ( (byte_596CC91 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B62 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC91 = 1;
   }
   indexGrid = (UnityEngine_Component_o *)this->fields.indexGrid;
   index = 0;
@@ -1390,7 +1385,7 @@ void SupportSelectMenu__createIndexItem(SupportSelectMenu_o *this, int32_t deckN
       }
     }
 LABEL_37:
-    sub_21FFECC(indexGrid, *(_QWORD *)&deckNum);
+    sub_2213CDC(indexGrid, *(_QWORD *)&deckNum);
   }
   indexGrid = (UnityEngine_Component_o *)this->fields.indicator;
   if ( !indexGrid )
@@ -1414,7 +1409,7 @@ LABEL_37:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&deckNum, v11);
     indexGrid = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object_(
                                              indexItemSeed,
-                                             (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !indexGrid )
       goto LABEL_37;
     v14 = this->fields.indexGrid;
@@ -1438,7 +1433,7 @@ LABEL_37:
     v19 = index;
     indexGrid = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                              v15,
-                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !indicator )
       goto LABEL_37;
     SupportSelectListViewIndicator__setPageSprite(indicator, v19, (UISprite_o *)indexGrid, v20);
@@ -1483,7 +1478,7 @@ int32_t SupportSelectMenu__getPageIdx(SupportSelectMenu_o *this, const MethodInf
 
   indicator = this->fields.indicator;
   if ( !indicator )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return indicator->fields.pageIndex;
 }
 
@@ -1496,7 +1491,7 @@ void SupportSelectMenu__moveCenterItem(SupportSelectMenu_o *this, int32_t center
 
   supportSelectListViewManager = this->fields.supportSelectListViewManager;
   if ( !supportSelectListViewManager )
-    sub_21FFECC(0, *(_QWORD *)&centerIdx);
+    sub_2213CDC(0, *(_QWORD *)&centerIdx);
   SupportSelectListViewManager__MoveCenterItem(supportSelectListViewManager, centerIdx, 0, v3);
 }
 
@@ -1506,15 +1501,15 @@ void SupportSelectMenu__onClickHelpButton(SupportSelectMenu_o *this, const Metho
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_5934B6D & 1) == 0 )
+  if ( (byte_596CC9C & 1) == 0 )
   {
-    sub_21FFC50(&Method_SupportSelectMenu_onClickHelpButton__);
-    byte_5934B6D = 1;
+    sub_2213A60(&Method_SupportSelectMenu_onClickHelpButton__);
+    byte_596CC9C = 1;
   }
   v2 = Method_SupportSelectMenu_onClickHelpButton__;
   if ( (*((_BYTE *)Method_SupportSelectMenu_onClickHelpButton__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_21FFC68(Method_SupportSelectMenu_onClickHelpButton__);
-  v3 = (System_Reflection_MethodBase_o *)sub_21FFC34(v2, v2[4]);
+    v2 = (_QWORD *)sub_2213A78(Method_SupportSelectMenu_onClickHelpButton__);
+  v3 = (System_Reflection_MethodBase_o *)sub_2213A44(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 0, 0, 0);
   EventTutorialMaster__ShowTutorialWithoutCheck(-1, 48, 0, 0, 0);
 }
@@ -1535,10 +1530,10 @@ void SupportSelectMenu__remove_callbackFunc(
   SupportSelectMenu_DragSwapCallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5934B5F & 1) == 0 )
+  if ( (byte_596CC8E & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_5934B5F = 1;
+    sub_2213A60(&SupportSelectMenu_CallbackFunc_TypeInfo);
+    byte_596CC8E = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -1549,13 +1544,13 @@ void SupportSelectMenu__remove_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v6->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SupportSelectMenu_CallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SupportSelectMenu_CallbackFunc_TypeInfo, v7, v8);
   SupportSelectMenu__add_dragSwapCallbackFunc(v11, v12, v13);
 }
 
@@ -1574,10 +1569,10 @@ void SupportSelectMenu__remove_dragSwapCallbackFunc(
   SupportSelectMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_5934B61 & 1) == 0 )
+  if ( (byte_596CC90 & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
-    byte_5934B61 = 1;
+    sub_2213A60(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
+    byte_596CC90 = 1;
   }
   dragSwapCallbackFunc = (System_Delegate_o *)this->fields.dragSwapCallbackFunc;
   while ( 1 )
@@ -1588,13 +1583,13 @@ void SupportSelectMenu__remove_dragSwapCallbackFunc(
       if ( (SupportSelectMenu_DragSwapCallbackFunc_c *)v6->klass != SupportSelectMenu_DragSwapCallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.dragSwapCallbackFunc, v6, dragSwapCallbackFunc);
+    v9 = sub_224B48C(&this->fields.dragSwapCallbackFunc, v6, dragSwapCallbackFunc);
     v10 = v9 == (_QWORD)dragSwapCallbackFunc;
     dragSwapCallbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_220024C(v6, SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v7, v8);
+  sub_221405C(v6, SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v7, v8);
   SupportSelectMenu__Init(v11, v12);
 }
 
@@ -1606,7 +1601,7 @@ void SupportSelectMenu__setActiveDeckNameChangeButton(SupportSelectMenu_o *this,
 
   namePanelCollider = (UnityEngine_Collider_o *)this->fields.namePanelCollider;
   if ( !namePanelCollider )
-    sub_21FFECC(0, active);
+    sub_2213CDC(0, active);
   UnityEngine_Collider__set_enabled(namePanelCollider, active, 0);
 }
 
@@ -1630,7 +1625,7 @@ void SupportSelectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1641,12 +1636,12 @@ void SupportSelectMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1658,9 +1653,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF42F8;
+  this->fields.invoke_impl = (intptr_t)sub_20072D4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF4298;
+  this->fields.extra_arg = (intptr_t)sub_2007274;
 }
 
 
@@ -1682,16 +1677,16 @@ System_IAsyncResult_o *SupportSelectMenu_CallbackFunc__BeginInvoke(
   v14 = d;
   v15 = result;
   v13 = n;
-  if ( (byte_5934B70 & 1) == 0 )
+  if ( (byte_596CC9F & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu_ResultKind_TypeInfo);
-    byte_5934B70 = 1;
+    sub_2213A60(&SupportSelectMenu_ResultKind_TypeInfo);
+    byte_596CC9F = 1;
   }
   v12 = 0u;
   v11[0] = j_il2cpp_value_box_0(SupportSelectMenu_ResultKind_TypeInfo, &v15);
-  v11[1] = j_il2cpp_value_box_0(qword_594C070, &v14);
-  *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_594C070, &v13);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v11, callback, object);
+  v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
+  *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
+  return sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -1700,7 +1695,7 @@ void SupportSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -1739,7 +1734,7 @@ void SupportSelectMenu_DragSwapCallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1750,12 +1745,12 @@ void SupportSelectMenu_DragSwapCallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1767,9 +1762,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF439C;
+  this->fields.invoke_impl = (intptr_t)sub_2007378;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF4324;
+  this->fields.extra_arg = (intptr_t)sub_2007300;
 }
 
 
@@ -1793,18 +1788,18 @@ System_IAsyncResult_o *SupportSelectMenu_DragSwapCallbackFunc__BeginInvoke(
   v18 = classPos1;
   v19 = kind;
   v17 = classPos2;
-  if ( (byte_5934B71 & 1) == 0 )
+  if ( (byte_596CCA0 & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectRootComponent_SwapKind_TypeInfo);
-    byte_5934B71 = 1;
+    sub_2213A60(&SupportSelectRootComponent_SwapKind_TypeInfo);
+    byte_596CCA0 = 1;
   }
   v16 = 0u;
   v15[0] = j_il2cpp_value_box_0(SupportSelectRootComponent_SwapKind_TypeInfo, &v19);
-  v15[1] = j_il2cpp_value_box_0(qword_594C070, &v18);
+  v15[1] = j_il2cpp_value_box_0(qword_5984348, &v18);
   v15[2] = leader1;
-  v15[3] = j_il2cpp_value_box_0(qword_594C070, &v17);
+  v15[3] = j_il2cpp_value_box_0(qword_5984348, &v17);
   *(_QWORD *)&v16 = leader2;
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v15, callback, object);
+  return sub_2213A14(this, v15, callback, object);
 }
 
 
@@ -1813,7 +1808,7 @@ void SupportSelectMenu_DragSwapCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -1847,15 +1842,15 @@ void SupportSelectMenu___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5934B72 & 1) == 0 )
+  if ( (byte_596CCA1 & 1) == 0 )
   {
-    sub_21FFC50(&SupportSelectMenu___c_TypeInfo);
-    byte_5934B72 = 1;
+    sub_2213A60(&SupportSelectMenu___c_TypeInfo);
+    byte_596CCA1 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(SupportSelectMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(SupportSelectMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SupportSelectMenu___c_TypeInfo->static_fields->__9 = (struct SupportSelectMenu___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SupportSelectMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

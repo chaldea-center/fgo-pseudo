@@ -16,11 +16,11 @@ void UIDragDropRoot__OnDisable(UIDragDropRoot_o *this, const MethodInfo *method)
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593CCE6 & 1) == 0 )
+  if ( (byte_5974FBD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIDragDropRoot_TypeInfo);
-    byte_593CCE6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIDragDropRoot_TypeInfo);
+    byte_5974FBD = 1;
   }
   root = (UnityEngine_Object_o *)UIDragDropRoot_TypeInfo->static_fields->root;
   transform = (UnityEngine_Object_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -29,7 +29,7 @@ void UIDragDropRoot__OnDisable(UIDragDropRoot_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Equality(root, transform, 0) )
   {
     UIDragDropRoot_TypeInfo->static_fields->root = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)UIDragDropRoot_TypeInfo->static_fields, 0, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)UIDragDropRoot_TypeInfo->static_fields, 0, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -44,14 +44,14 @@ void UIDragDropRoot__OnEnable(UIDragDropRoot_o *this, const MethodInfo *method)
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593CCE5 & 1) == 0 )
+  if ( (byte_5974FBC & 1) == 0 )
   {
-    sub_21FFC50(&UIDragDropRoot_TypeInfo);
-    byte_593CCE5 = 1;
+    sub_2213A60(&UIDragDropRoot_TypeInfo);
+    byte_5974FBC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   UIDragDropRoot_TypeInfo->static_fields->root = transform;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UIDragDropRoot_TypeInfo->static_fields,
     (int32_t)transform,
     v4,

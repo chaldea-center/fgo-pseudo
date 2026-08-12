@@ -21,10 +21,10 @@ void UISlider__OnDragBackground(
   struct UnityEngine_Camera_o *currentCamera; // x1
   float v13; // s0
 
-  if ( (byte_593CDA5 & 1) == 0 )
+  if ( (byte_597507C & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CDA5 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_597507C = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -42,7 +42,7 @@ void UISlider__OnDragBackground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)method,
@@ -74,10 +74,10 @@ void UISlider__OnDragForeground(
   float mOffset; // s8
   float v14; // s0
 
-  if ( (byte_593CDA7 & 1) == 0 )
+  if ( (byte_597507E & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CDA7 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_597507E = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -95,7 +95,7 @@ void UISlider__OnDragForeground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)method,
@@ -192,10 +192,10 @@ void UISlider__OnPressBackground(
   float v13; // s0
   struct UIProgressBar_OnDragFinished_o *onDragFinished; // x8
 
-  if ( (byte_593CDA4 & 1) == 0 )
+  if ( (byte_597507B & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CDA4 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_597507B = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -213,7 +213,7 @@ void UISlider__OnPressBackground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)isPressed,
@@ -260,11 +260,11 @@ void UISlider__OnPressForeground(
   float v20; // s8
   struct UIProgressBar_OnDragFinished_o *onDragFinished; // x8
 
-  if ( (byte_593CDA6 & 1) == 0 )
+  if ( (byte_597507D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CDA6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_597507D = 1;
   }
   v10 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -282,7 +282,7 @@ void UISlider__OnPressForeground(
     }
     currentCamera = static_fields->currentCamera;
     this->fields.mCam = currentCamera;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
       (int32_t)currentCamera,
       (System_String_o *)isPressed,
@@ -386,18 +386,18 @@ void UISlider__OnStart(UISlider_o *this, const MethodInfo *method)
   bool v60; // w6
   bool v61; // w7
 
-  if ( (byte_593CDA3 & 1) == 0 )
+  if ( (byte_597507A & 1) == 0 )
   {
-    sub_21FFC50(&UIEventListener_BoolDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UISlider_OnDragBackground__);
-    sub_21FFC50(&Method_UISlider_OnDragForeground__);
-    sub_21FFC50(&Method_UISlider_OnPressBackground__);
-    sub_21FFC50(&Method_UISlider_OnPressForeground__);
-    sub_21FFC50(&UIEventListener_VectorDelegate_TypeInfo);
-    byte_593CDA3 = 1;
+    sub_2213A60(&UIEventListener_BoolDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UISlider_OnDragBackground__);
+    sub_2213A60(&Method_UISlider_OnDragForeground__);
+    sub_2213A60(&Method_UISlider_OnPressBackground__);
+    sub_2213A60(&Method_UISlider_OnPressForeground__);
+    sub_2213A60(&UIEventListener_VectorDelegate_TypeInfo);
+    byte_597507A = 1;
   }
   mBG = (UnityEngine_Object_o *)this->fields.mBG;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -411,7 +411,7 @@ void UISlider__OnStart(UISlider_o *this, const MethodInfo *method)
       goto LABEL_58;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v6,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -421,7 +421,7 @@ void UISlider__OnStart(UISlider_o *this, const MethodInfo *method)
       goto LABEL_58;
     v10 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0);
@@ -438,11 +438,11 @@ LABEL_14:
   v6 = (UnityEngine_Component_o *)UIEventListener__Get(gameObject, 0);
   if ( !v6 )
 LABEL_58:
-    sub_21FFECC(v6, v4);
+    sub_2213CDC(v6, v4);
   v13 = v6;
   v14 = (MissionNaviTransitionBoardItem_o *)&v6[3];
   klass = (System_Delegate_o *)v6[3].klass;
-  v16 = (UIEventListener_BoolDelegate_o *)sub_21FFEBC(UIEventListener_BoolDelegate_TypeInfo);
+  v16 = (UIEventListener_BoolDelegate_o *)sub_2213CCC(UIEventListener_BoolDelegate_TypeInfo);
   UIEventListener_BoolDelegate___ctor(v16, (Il2CppObject *)this, Method_UISlider_OnPressBackground__, 0);
   v17 = System_Delegate__Combine(klass, (System_Delegate_o *)v16, 0);
   v24 = v17;
@@ -459,10 +459,10 @@ LABEL_58:
   {
     v14->klass = 0;
   }
-  sub_21FFBF4(v14, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_2213A04(v14, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   monitor = (System_Delegate_o *)v13[4].monitor;
   v13 = (UnityEngine_Component_o *)((char *)v13 + 104);
-  v27 = (UIEventListener_VectorDelegate_o *)sub_21FFEBC(UIEventListener_VectorDelegate_TypeInfo);
+  v27 = (UIEventListener_VectorDelegate_o *)sub_2213CCC(UIEventListener_VectorDelegate_TypeInfo);
   UIEventListener_VectorDelegate___ctor(v27, (Il2CppObject *)this, Method_UISlider_OnDragBackground__, 0);
   v28 = System_Delegate__Combine(monitor, (System_Delegate_o *)v27, 0);
   v24 = v28;
@@ -479,7 +479,7 @@ LABEL_58:
   {
     v13->klass = 0;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v28, v18, v29, v30, v31, v32, v33);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v28, v18, v29, v30, v31, v32, v33);
   thumb = (UnityEngine_Object_o *)this->fields.thumb;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34);
@@ -490,7 +490,7 @@ LABEL_58:
       goto LABEL_58;
     v37 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v37, 0, 0) )
@@ -500,7 +500,7 @@ LABEL_58:
       goto LABEL_58;
     v39 = UnityEngine_Component__GetComponent_object_(
             v6,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v39, 0, 0) )
@@ -531,7 +531,7 @@ LABEL_44:
             v13 = v6;
             v45 = (MissionNaviTransitionBoardItem_o *)&v6[3];
             v46 = (System_Delegate_o *)v6[3].klass;
-            v47 = (UIEventListener_BoolDelegate_o *)sub_21FFEBC(UIEventListener_BoolDelegate_TypeInfo);
+            v47 = (UIEventListener_BoolDelegate_o *)sub_2213CCC(UIEventListener_BoolDelegate_TypeInfo);
             UIEventListener_BoolDelegate___ctor(v47, (Il2CppObject *)this, Method_UISlider_OnPressForeground__, 0);
             v48 = System_Delegate__Combine(v46, (System_Delegate_o *)v47, 0);
             v24 = v48;
@@ -548,10 +548,10 @@ LABEL_44:
             {
               v45->klass = 0;
             }
-            sub_21FFBF4(v45, (int32_t)v48, v18, v49, v50, v51, v52, v53);
+            sub_2213A04(v45, (int32_t)v48, v18, v49, v50, v51, v52, v53);
             v54 = (System_Delegate_o *)v13[4].monitor;
             v13 = (UnityEngine_Component_o *)((char *)v13 + 104);
-            v55 = (UIEventListener_VectorDelegate_o *)sub_21FFEBC(UIEventListener_VectorDelegate_TypeInfo);
+            v55 = (UIEventListener_VectorDelegate_o *)sub_2213CCC(UIEventListener_VectorDelegate_TypeInfo);
             UIEventListener_VectorDelegate___ctor(v55, (Il2CppObject *)this, Method_UISlider_OnDragForeground__, 0);
             v56 = System_Delegate__Combine(v54, (System_Delegate_o *)v55, 0);
             v24 = v56;
@@ -560,7 +560,7 @@ LABEL_44:
 LABEL_56:
               v13->klass = 0;
 LABEL_57:
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v24, v18, v57, v58, v59, v60, v61);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v24, v18, v57, v58, v59, v60, v61);
               return;
             }
             v25 = (System_Delegate_c *)UIEventListener_VectorDelegate_TypeInfo;
@@ -571,7 +571,7 @@ LABEL_57:
                 goto LABEL_57;
             }
 LABEL_55:
-            sub_220024C(v24, v25, v18);
+            sub_221405C(v24, v25, v18);
             goto LABEL_56;
           }
         }
@@ -599,11 +599,11 @@ void UISlider__Upgrade(UISlider_o *this, const MethodInfo *method)
   int32_t direction; // w9
   int v16; // w11
 
-  if ( (byte_593CDA2 & 1) == 0 )
+  if ( (byte_5975079 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDA2 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975079 = 1;
   }
   if ( this->fields.direction != 2 )
   {
@@ -616,12 +616,12 @@ void UISlider__Upgrade(UISlider_o *this, const MethodInfo *method)
     {
       v6 = (UnityEngine_Component_o *)this->fields.foreground;
       if ( !v6 )
-        sub_21FFECC(0, v5);
+        sub_2213CDC(0, v5);
       Component_object = UnityEngine_Component__GetComponent_object_(
                            v6,
-                           (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.mFG = (struct UIWidget_o *)Component_object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mFG,
         (int32_t)Component_object,
         v8,

@@ -10,13 +10,13 @@ void BattlePerformanceContinue___ctor(BattlePerformanceContinue_o *this, const M
   struct System_String_o **v10; // x8
   struct System_String_o *v11; // x1
 
-  v9 = qword_594C0B8;
-  this->fields.spellBtnColor = (struct UnityEngine_Color_o)xmmword_E92E30;
-  this->fields.spellnowColor = (struct UnityEngine_Color_o)xmmword_E943B0;
+  v9 = qword_5984390;
+  this->fields.spellBtnColor = (struct UnityEngine_Color_o)xmmword_E9BFD0;
+  this->fields.spellnowColor = (struct UnityEngine_Color_o)xmmword_E9D550;
   v10 = *(struct System_String_o ***)(v9 + 184);
   v11 = *v10;
   this->fields.cancelInterruptionEvent = *v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cancelInterruptionEvent,
     (int32_t)v11,
     v2,
@@ -36,14 +36,14 @@ void BattlePerformanceContinue__AttachStoneCountRefreshComponent(
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_int__o *v4; // x21
 
-  if ( (byte_593BDBD & 1) == 0 )
+  if ( (byte_5973FCA & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__AttachStoneCountRefreshComponent_b__86_0__);
-    byte_593BDBD = 1;
+    sub_2213A60(&System_Action_int__TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__AttachStoneCountRefreshComponent_b__86_0__);
+    byte_5973FCA = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v4 = (System_Action_int__o *)sub_21FFEBC(System_Action_int__TypeInfo);
+  v4 = (System_Action_int__o *)sub_2213CCC(System_Action_int__TypeInfo);
   System_Action_int____ctor(
     v4,
     (Il2CppObject *)this,
@@ -62,21 +62,21 @@ void BattlePerformanceContinue__CallbackConfirmDialog(
   __int64 v5; // x1
   const MethodInfo *v6; // x1
 
-  if ( (byte_593BDB0 & 1) == 0 )
+  if ( (byte_5973FBD & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_5141/*"DEADLINE"*/);
-    byte_593BDB0 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_5153/*"DEADLINE"*/);
+    byte_5973FBD = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseConfirmDialog(Instance, 0),
         BattlePerformanceContinue__closeContinueItem(this, v6),
         (Instance = (CommonUI_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5141/*"DEADLINE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5153/*"DEADLINE"*/, 0);
 }
 
 
@@ -86,11 +86,11 @@ void BattlePerformanceContinue__CheckContinueItem(BattlePerformanceContinue_o *t
   BattleData_o *data; // x0
   __int64 *v5; // x8
 
-  if ( (byte_593BDBB & 1) == 0 )
+  if ( (byte_5973FC8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDBB = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5973FC8 = 1;
   }
   BattlePerformanceContinue__ResetContinueItemInfo(this, method);
   data = this->fields.data;
@@ -101,17 +101,17 @@ void BattlePerformanceContinue__CheckContinueItem(BattlePerformanceContinue_o *t
     data = (BattleData_o *)this->fields.myFsm;
     if ( data )
     {
-      v5 = &StringLiteral_9639/*"NG"*/;
+      v5 = &StringLiteral_9652/*"NG"*/;
       goto LABEL_9;
     }
 LABEL_10:
-    sub_21FFECC(data, v3);
+    sub_2213CDC(data, v3);
   }
   data = (BattleData_o *)this->fields.myFsm;
   this->fields.IsContinueItem = 1;
   if ( !data )
     goto LABEL_10;
-  v5 = &StringLiteral_10006/*"OK"*/;
+  v5 = &StringLiteral_10019/*"OK"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)*v5, 0);
 }
@@ -125,13 +125,13 @@ void BattlePerformanceContinue__CheckDefenceTargetBroken(BattlePerformanceContin
   NGUIFader_OnFinished_o *v6; // x21
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593BDE7 & 1) == 0 )
+  if ( (byte_5973FF4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__CheckDefenceTargetBroken_b__130_0__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
-    sub_21FFC50(&NGUIFader_OnFinished_TypeInfo);
-    sub_21FFC50(&StringLiteral_5795/*"EVENT_FALSE"*/);
-    byte_593BDE7 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__CheckDefenceTargetBroken_b__130_0__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
+    sub_2213A60(&NGUIFader_OnFinished_TypeInfo);
+    sub_2213A60(&StringLiteral_5807/*"EVENT_FALSE"*/);
+    byte_5973FF4 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -148,8 +148,8 @@ void BattlePerformanceContinue__CheckDefenceTargetBroken(BattlePerformanceContin
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)data,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
-        v6 = (NGUIFader_OnFinished_o *)sub_21FFEBC(NGUIFader_OnFinished_TypeInfo);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
+        v6 = (NGUIFader_OnFinished_o *)sub_2213CCC(NGUIFader_OnFinished_TypeInfo);
         NGUIFader_OnFinished___ctor(
           v6,
           (Il2CppObject *)this,
@@ -167,13 +167,13 @@ void BattlePerformanceContinue__CheckDefenceTargetBroken(BattlePerformanceContin
       }
     }
 LABEL_11:
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   data = (BattleData_o *)this->fields.myFsm;
   this->fields._isDefenceTargetBroken_k__BackingField = 0;
   if ( !data )
     goto LABEL_11;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_5795/*"EVENT_FALSE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_5807/*"EVENT_FALSE"*/, 0);
 }
 
 
@@ -181,19 +181,19 @@ void BattlePerformanceContinue__CloseGiveUp(BattlePerformanceContinue_o *this, c
 {
   UnityEngine_GameObject_o *giveUpWindow; // x0
 
-  if ( (byte_593BDB6 & 1) == 0 )
+  if ( (byte_5973FC3 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9636/*"NEXT"*/);
-    byte_593BDB6 = 1;
+    sub_2213A60(&StringLiteral_9649/*"NEXT"*/);
+    byte_5973FC3 = 1;
   }
   giveUpWindow = this->fields.giveUpWindow;
   if ( !giveUpWindow
     || (UnityEngine_GameObject__SetActive(giveUpWindow, 0, 0),
         (giveUpWindow = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(giveUpWindow, method);
+    sub_2213CDC(giveUpWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)giveUpWindow, (System_String_o *)StringLiteral_9636/*"NEXT"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)giveUpWindow, (System_String_o *)StringLiteral_9649/*"NEXT"*/, 0);
 }
 
 
@@ -211,17 +211,17 @@ System_Collections_IEnumerator_o *BattlePerformanceContinue__CoEndContinue(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593BDE9 & 1) == 0 )
+  if ( (byte_5973FF6 & 1) == 0 )
   {
-    sub_21FFC50(&BattlePerformanceContinue__CoEndContinue_d__133_TypeInfo);
-    byte_593BDE9 = 1;
+    sub_2213A60(&BattlePerformanceContinue__CoEndContinue_d__133_TypeInfo);
+    byte_5973FF6 = 1;
   }
-  v3 = sub_21FFEBC(BattlePerformanceContinue__CoEndContinue_d__133_TypeInfo);
+  v3 = sub_2213CCC(BattlePerformanceContinue__CoEndContinue_d__133_TypeInfo);
   BattlePerformanceContinue__CoEndContinue_d__133___ctor((BattlePerformanceContinue__CoEndContinue_d__133_o *)v3, 0, 0);
   if ( !v3 )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -233,7 +233,7 @@ void BattlePerformanceContinue__EndContinue(BattlePerformanceContinue_o *this, c
   if ( this->fields._isDefenceTargetBroken_k__BackingField )
   {
     v3 = BattlePerformanceContinue__CoEndContinue(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v3, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v3, 0);
   }
   this->fields._isDefenceTargetBroken_k__BackingField = 0;
 }
@@ -246,7 +246,7 @@ int32_t BattlePerformanceContinue__GetPayableStoneNum(BattlePerformanceContinue_
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return UserGameEntity__get_PayableStoneNum(SelfUserGame, 0);
 }
 
@@ -282,17 +282,17 @@ void BattlePerformanceContinue__Initialize(
   UILabel_o *checkUseGem; // x20
   UILabel_o *checkUseBuyGem; // x20
 
-  if ( (byte_593BDB1 & 1) == 0 )
+  if ( (byte_5973FBE & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2841/*"BATTLE_CONTINUE_NO_STONE"*/);
-    sub_21FFC50(&StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
-    sub_21FFC50(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/);
-    sub_21FFC50(&StringLiteral_2958/*"BATTLE_RETIRE_CHECKSTR"*/);
-    byte_593BDB1 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2842/*"BATTLE_CONTINUE_NO_STONE"*/);
+    sub_2213A60(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
+    sub_2213A60(&StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/);
+    sub_2213A60(&StringLiteral_2961/*"BATTLE_RETIRE_CHECKSTR"*/);
+    byte_5973FBE = 1;
   }
   this->fields.perf = inperf;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.perf,
     (int32_t)inperf,
     (System_String_o *)indata,
@@ -302,18 +302,18 @@ void BattlePerformanceContinue__Initialize(
     v6,
     v7);
   this->fields.data = indata;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)indata, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)indata, v12, v13, v14, v15, v16, v17);
   this->fields.logic = inlogic;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.logic, (int32_t)inlogic, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.logic, (int32_t)inlogic, v18, v19, v20, v21, v22, v23);
   window = (UnityEngine_Component_o *)this->fields.window;
   if ( !window )
     goto LABEL_26;
   window = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(window, 0);
   v26 = (UnityEngine_Transform_o *)window;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    window = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    window = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v26 )
     goto LABEL_26;
@@ -364,21 +364,21 @@ void BattlePerformanceContinue__Initialize(
   checkGiveUpLabel = this->fields.checkGiveUpLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27);
-  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2958/*"BATTLE_RETIRE_CHECKSTR"*/, 0);
+  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2961/*"BATTLE_RETIRE_CHECKSTR"*/, 0);
   if ( !checkGiveUpLabel )
     goto LABEL_26;
   UILabel__set_text(checkGiveUpLabel, (System_String_o *)window, 0);
   checkUseCommandSpell = this->fields.checkUseCommandSpell;
-  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/, 0);
+  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/, 0);
   if ( !checkUseCommandSpell )
     goto LABEL_26;
   UILabel__set_text(checkUseCommandSpell, (System_String_o *)window, 0);
   checkUseGem = this->fields.checkUseGem;
-  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/, 0);
+  window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/, 0);
   if ( !checkUseGem
     || (UILabel__set_text(checkUseGem, (System_String_o *)window, 0),
         checkUseBuyGem = this->fields.checkUseBuyGem,
-        window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2841/*"BATTLE_CONTINUE_NO_STONE"*/, 0),
+        window = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2842/*"BATTLE_CONTINUE_NO_STONE"*/, 0),
         !checkUseBuyGem)
     || (UILabel__set_text(checkUseBuyGem, (System_String_o *)window, 0),
         (window = (UnityEngine_Component_o *)this->fields.continueWaveRestartWindow) == 0)
@@ -388,7 +388,7 @@ void BattlePerformanceContinue__Initialize(
         (window = (UnityEngine_Component_o *)this->fields.continueWaveRestartWindow) == 0) )
   {
 LABEL_26:
-    sub_21FFECC(window, v24);
+    sub_2213CDC(window, v24);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, void *))window->klass[1]._1.fields)(
     window,
@@ -404,7 +404,7 @@ bool BattlePerformanceContinue__IsAvailableStone(BattlePerformanceContinue_o *th
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return UserGameEntity__get_PayableStoneNum(SelfUserGame, 0) > 0;
 }
 
@@ -425,16 +425,16 @@ void BattlePerformanceContinue__OpenBrokenMessage(BattlePerformanceContinue_o *t
   int v13; // [xsp+3Ch] [xbp-44h] BYREF
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_593BDE8 & 1) == 0 )
+  if ( (byte_5973FF5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenBrokenMessage_b__131_0__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_26544/*"{0}_{1}"*/);
-    sub_21FFC50(&StringLiteral_2852/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593BDE8 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenBrokenMessage_b__131_0__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_26596/*"{0}_{1}"*/);
+    sub_2213A60(&StringLiteral_2853/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973FF5 = 1;
   }
   klass = v2[3].klass;
   if ( !klass )
@@ -442,10 +442,10 @@ void BattlePerformanceContinue__OpenBrokenMessage(BattlePerformanceContinue_o *t
   methodPtr = klass->vtable[36].methodPtr;
   if ( !methodPtr )
     goto LABEL_13;
-  v5 = (Il2CppObject *)StringLiteral_2852/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/;
+  v5 = (Il2CppObject *)StringLiteral_2853/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/;
   v13 = *((_DWORD *)methodPtr + 8);
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v13);
-  v8 = System_String__Format_75484576((System_String_o *)StringLiteral_26544/*"{0}_{1}"*/, v5, v6, 0);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v13);
+  v8 = System_String__Format_75697880((System_String_o *)StringLiteral_26596/*"{0}_{1}"*/, v5, v6, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7);
   if ( LocalizationManager__ContainsKey(v8, 0) )
@@ -453,12 +453,12 @@ void BattlePerformanceContinue__OpenBrokenMessage(BattlePerformanceContinue_o *t
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9);
   v10 = LocalizationManager__Get((System_String_o *)v5, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v12, v2, Method_BattlePerformanceContinue__OpenBrokenMessage_b__131_0__, 0);
   if ( !Instance )
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   CommonUI__OpenNotificationDialog(
     (CommonUI_o *)Instance,
     (System_String_o *)StringLiteral_1/*""*/,
@@ -486,21 +486,21 @@ void BattlePerformanceContinue__OpenContinueInterruption(BattlePerformanceContin
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDF0 & 1) == 0 )
+  if ( (byte_5973FFD & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueInterruption_b__140_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDF0 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueInterruption_b__140_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FFD = 1;
   }
   continueInterruptionWindow = this->fields.continueInterruptionWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__OpenContinueInterruption_b__140_0__,
     0);
   if ( !continueInterruptionWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowInterruptionComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueInterruptionWindow->klass->vtable._10_Open.methodPtr)(
     continueInterruptionWindow,
     v4,
@@ -573,28 +573,28 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
   UnityEngine_Color_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593BDBC & 1) == 0 )
+  if ( (byte_5973FC9 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue_endOpenContinueItem__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    sub_21FFC50(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    sub_21FFC50(&StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/);
-    sub_21FFC50(&StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
-    sub_21FFC50(&StringLiteral_2846/*"BATTLE_CONTINUE_USE_SPELL"*/);
-    sub_21FFC50(&StringLiteral_10007/*"OK_CONTINUE_ITEM"*/);
-    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
-    sub_21FFC50(&StringLiteral_2833/*"BATTLE_CONTINUE_ITEM_BTN"*/);
-    sub_21FFC50(&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_SELECT"*/);
-    sub_21FFC50(&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_2842/*"BATTLE_CONTINUE_RETIRE"*/);
-    byte_593BDBC = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue_endOpenContinueItem__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    sub_2213A60(&StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    sub_2213A60(&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/);
+    sub_2213A60(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
+    sub_2213A60(&StringLiteral_2847/*"BATTLE_CONTINUE_USE_SPELL"*/);
+    sub_2213A60(&StringLiteral_10020/*"OK_CONTINUE_ITEM"*/);
+    sub_2213A60(&StringLiteral_26432/*"{0:#,0}"*/);
+    sub_2213A60(&StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_BTN"*/);
+    sub_2213A60(&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT"*/);
+    sub_2213A60(&StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_2843/*"BATTLE_CONTINUE_RETIRE"*/);
+    byte_5973FC9 = 1;
   }
   ContinueItemWindow = this->fields.ContinueItemWindow;
   v62 = 0;
@@ -625,8 +625,8 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
     goto LABEL_79;
   ContinueStoneNum = this->fields.ContinueStoneNum;
   stone = v4->fields.stone;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &stone);
-  ContinueItemWindow = System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v10, 0);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &stone);
+  ContinueItemWindow = System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v10, 0);
   if ( !ContinueStoneNum )
     goto LABEL_79;
   UILabel__set_text(ContinueStoneNum, (System_String_o *)ContinueItemWindow, 0);
@@ -639,8 +639,8 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
     goto LABEL_79;
   ContinueItemNumLabel = this->fields.ContinueItemNumLabel;
   ContinueItemNum = BattleData__GetContinueItemNum((BattleData_o *)ContinueItemWindow, 0);
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &ContinueItemNum);
-  ContinueItemWindow = System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v12, 0);
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &ContinueItemNum);
+  ContinueItemWindow = System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v12, 0);
   if ( !ContinueItemNumLabel )
     goto LABEL_79;
   UILabel__set_text(ContinueItemNumLabel, (System_String_o *)ContinueItemWindow, 0);
@@ -663,7 +663,7 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
     UIWidget__set_color((UIWidget_o *)ContinueItemWindow, this->fields.spellBtnColor, 0);
@@ -672,10 +672,10 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
-    v23 = StringLiteral_5645/*"END_PROC"*/;
+    v23 = StringLiteral_5657/*"END_PROC"*/;
   }
   else
   {
@@ -683,7 +683,7 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
     v63.fields.r = 1.0;
@@ -696,22 +696,22 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
-    v23 = StringLiteral_10007/*"OK_CONTINUE_ITEM"*/;
+    v23 = StringLiteral_10020/*"OK_CONTINUE_ITEM"*/;
   }
   *((_QWORD *)ContinueItemWindow + 5) = v23;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)ContinueItemWindow + 40), v23, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)ContinueItemWindow + 40), v23, v17, v18, v19, v20, v21, v22);
   ContinueItemBtnLabel = this->fields.ContinueItemBtnLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24);
-  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2833/*"BATTLE_CONTINUE_ITEM_BTN"*/, 0);
+  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_BTN"*/, 0);
   if ( !ContinueItemBtnLabel )
     goto LABEL_79;
   UILabel__set_text(ContinueItemBtnLabel, (System_String_o *)ContinueItemWindow, 0);
   deadLine = this->fields.deadLine;
-  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/, 0);
+  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/, 0);
   if ( !this->fields.data )
     goto LABEL_79;
   v27 = (System_String_o *)ContinueItemWindow;
@@ -728,7 +728,7 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
     v64.fields.r = 1.0;
@@ -741,10 +741,10 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
-    v36 = StringLiteral_10006/*"OK"*/;
+    v36 = StringLiteral_10019/*"OK"*/;
   }
   else
   {
@@ -752,7 +752,7 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
     UIWidget__set_color((UIWidget_o *)ContinueItemWindow, this->fields.spellBtnColor, 0);
@@ -761,17 +761,17 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
       goto LABEL_79;
     ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)ContinueItemWindow,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
     if ( !ContinueItemWindow )
       goto LABEL_79;
-    v36 = StringLiteral_5645/*"END_PROC"*/;
+    v36 = StringLiteral_5657/*"END_PROC"*/;
   }
   *((_QWORD *)ContinueItemWindow + 5) = v36;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)ContinueItemWindow + 40), v36, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)ContinueItemWindow + 40), v36, v30, v31, v32, v33, v34, v35);
   ContinueCommandSpellBtnLabel = this->fields.ContinueCommandSpellBtnLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v37);
-  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2846/*"BATTLE_CONTINUE_USE_SPELL"*/, 0);
+  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2847/*"BATTLE_CONTINUE_USE_SPELL"*/, 0);
   if ( !ContinueCommandSpellBtnLabel )
     goto LABEL_79;
   UILabel__set_text(ContinueCommandSpellBtnLabel, (System_String_o *)ContinueItemWindow, 0);
@@ -782,13 +782,13 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
   {
     if ( !v42 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39);
-    v43 = (System_String_o *)StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/;
+    v43 = (System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/;
   }
   else
   {
     if ( !v42 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39);
-    v43 = (System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/;
+    v43 = (System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/;
   }
   ContinueItemWindow = LocalizationManager__Get(v43, 0);
   if ( !ContinueStoneBtnLabel )
@@ -798,17 +798,17 @@ void BattlePerformanceContinue__OpenContinueItemWindow(BattlePerformanceContinue
   ContinueRetireBtnLabel = this->fields.ContinueRetireBtnLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v45);
-  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2842/*"BATTLE_CONTINUE_RETIRE"*/, 0);
+  ContinueItemWindow = LocalizationManager__Get((System_String_o *)StringLiteral_2843/*"BATTLE_CONTINUE_RETIRE"*/, 0);
   if ( !ContinueRetireBtnLabel
     || ((UILabel__set_text(ContinueRetireBtnLabel, (System_String_o *)ContinueItemWindow, 0), v62 >= 3)
-      ? (v48 = (System_String_o **)&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_SELECT"*/)
-      : (v48 = (System_String_o **)&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/),
+      ? (v48 = (System_String_o **)&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT"*/)
+      : (v48 = (System_String_o **)&StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/),
         (BattlePerformanceContinue__SetContinueMessage(this, this->fields.ContinueLabel, *v48, 0x80000000, v47),
          (v49 = this->fields.data) == 0)
      || (ContinueItemWindow = v49->fields.quest_ent) == 0) )
   {
 LABEL_79:
-    sub_21FFECC(ContinueItemWindow, method);
+    sub_2213CDC(ContinueItemWindow, method);
   }
   ContinueItemWindow = (void *)QuestEntity__HasFlag((QuestEntity_o *)ContinueItemWindow, 0x400000000LL, 0);
   if ( ((unsigned __int8)ContinueItemWindow & 1) != 0 )
@@ -832,7 +832,7 @@ LABEL_71:
     {
       ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)ContinueItemWindow,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( ContinueItemWindow )
       {
         UIWidget__set_color((UIWidget_o *)ContinueItemWindow, this->fields.spellBtnColor, 0);
@@ -841,12 +841,12 @@ LABEL_71:
         {
           ContinueItemWindow = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)ContinueItemWindow,
-                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
           if ( ContinueItemWindow )
           {
-            v57 = StringLiteral_5645/*"END_PROC"*/;
-            *((_QWORD *)ContinueItemWindow + 5) = StringLiteral_5645/*"END_PROC"*/;
-            sub_21FFBF4(
+            v57 = StringLiteral_5657/*"END_PROC"*/;
+            *((_QWORD *)ContinueItemWindow + 5) = StringLiteral_5657/*"END_PROC"*/;
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)((char *)ContinueItemWindow + 40),
               v57,
               v51,
@@ -869,7 +869,7 @@ LABEL_71:
   }
 LABEL_77:
   window = this->fields.window;
-  v59 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v59 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v59,
     (Il2CppObject *)this,
@@ -891,21 +891,21 @@ void BattlePerformanceContinue__OpenContinueWaveRestart(BattlePerformanceContinu
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDEC & 1) == 0 )
+  if ( (byte_5973FF9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveRestart_b__136_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDEC = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveRestart_b__136_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FF9 = 1;
   }
   continueWaveRestartWindow = this->fields.continueWaveRestartWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__OpenContinueWaveRestart_b__136_0__,
     0);
   if ( !continueWaveRestartWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowContinueWaveRestartComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueWaveRestartWindow->klass->vtable._10_Open.methodPtr)(
     continueWaveRestartWindow,
     v4,
@@ -947,24 +947,24 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
   WaveBattleSelectWaveDialog_o *v30; // x20
   System_Action_o *v31; // x21
 
-  if ( (byte_593BDF4 & 1) == 0 )
+  if ( (byte_5974001 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_0__);
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_2__);
-    sub_21FFC50(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventDeckMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&QuestRestrictionInfo_TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_593BDF4 = 1;
+    sub_2213A60(&System_Action_int__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_0__);
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_2__);
+    sub_2213A60(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventDeckMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&QuestRestrictionInfo_TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_5974001 = 1;
   }
   waveSelectDialog = (UnityEngine_Object_o *)this->fields.waveSelectDialog;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -978,9 +978,9 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
       goto LABEL_40;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)Object,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
     this->fields.waveSelectDialog = (struct WaveBattleSelectWaveDialog_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.waveSelectDialog,
       (int32_t)Component_object,
       v9,
@@ -1000,17 +1000,17 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
   Phase = BattleData__getPhase(this->fields.data, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v16);
-  Object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+  Object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_QuestGroupMaster___);
   if ( !Object )
     goto LABEL_40;
   EventId = QuestGroupMaster__GetEventId((QuestGroupMaster_o *)Object, v15, 0);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventDeckMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventDeckMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Object = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1031,10 +1031,10 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
   if ( !Object )
     goto LABEL_40;
   if ( !*((_DWORD *)Object + 6) )
-    sub_21FFED4(Object);
+    sub_2213CE4(Object);
   v20 = (UserEventDeckEntity_o *)*((_QWORD *)Object + 4);
-  v21 = (QuestRestrictionInfo_o *)sub_21FFEBC(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_50438788(v21, EventId, v15, Phase, 0);
+  v21 = (QuestRestrictionInfo_o *)sub_2213CCC(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_50415132(v21, EventId, v15, Phase, 0);
   Object = this->fields.data;
   if ( !Object )
     goto LABEL_40;
@@ -1049,10 +1049,10 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
   DispWaveCount = BattleData__getDispWaveCount(this->fields.data, 0);
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v4);
-  if ( !byte_59354E0 )
+  if ( !byte_596D622 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_59354E0 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D622 = 1;
   }
   Object = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1065,7 +1065,7 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
     goto LABEL_40;
   if ( QuestRestrictionInfo__IsWaveSetupSwitchParty(v21, 0) )
   {
-    Object = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    Object = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     data = this->fields.data;
     if ( data && Object )
     {
@@ -1073,11 +1073,11 @@ void BattlePerformanceContinue__OpenContinueWaveSelectWindow(
       goto LABEL_36;
     }
 LABEL_40:
-    sub_21FFECC(Object, v4);
+    sub_2213CDC(Object, v4);
   }
 LABEL_36:
   v26 = this->fields.waveSelectDialog;
-  v27 = (WaveBattleSelectWaveDialog_CloseDelegate_o *)sub_21FFEBC(WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
+  v27 = (WaveBattleSelectWaveDialog_CloseDelegate_o *)sub_2213CCC(WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
   WaveBattleSelectWaveDialog_CloseDelegate___ctor(
     v27,
     (Il2CppObject *)this,
@@ -1087,7 +1087,7 @@ LABEL_36:
     goto LABEL_40;
   WaveBattleSelectWaveDialog__SetDialog(v26, v20, v21, v22, v23, 1, v27, 0);
   v28 = this->fields.waveSelectDialog;
-  v29 = (System_Action_int__o *)sub_21FFEBC(System_Action_int__TypeInfo);
+  v29 = (System_Action_int__o *)sub_2213CCC(System_Action_int__TypeInfo);
   System_Action_int____ctor(
     v29,
     (Il2CppObject *)this,
@@ -1097,7 +1097,7 @@ LABEL_36:
     goto LABEL_40;
   WaveBattleSelectWaveDialog__OverwriteMoveToPartyButton(v28, v29, 0);
   v30 = this->fields.waveSelectDialog;
-  v31 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v31,
     (Il2CppObject *)this,
@@ -1105,7 +1105,7 @@ LABEL_36:
     0);
   if ( !v30 )
     goto LABEL_40;
-  WaveBattleSelectWaveDialog__Open_41481028(v30, v31, 0);
+  WaveBattleSelectWaveDialog__Open_41497060(v30, v31, 0);
 }
 
 
@@ -1138,17 +1138,17 @@ void BattlePerformanceContinue__OpenGiveUp(BattlePerformanceContinue_o *this, co
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593BDB5 & 1) == 0 )
+  if ( (byte_5973FC2 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_21FFC50(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_2958/*"BATTLE_RETIRE_CHECKSTR"*/);
-    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
-    sub_21FFC50(&StringLiteral_2959/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/);
-    byte_593BDB5 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_2213A60(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_2961/*"BATTLE_RETIRE_CHECKSTR"*/);
+    sub_2213A60(&StringLiteral_26432/*"{0:#,0}"*/);
+    sub_2213A60(&StringLiteral_2962/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/);
+    byte_5973FC2 = 1;
   }
   giveUpWindow = this->fields.giveUpWindow;
   if ( !giveUpWindow )
@@ -1219,12 +1219,12 @@ void BattlePerformanceContinue__OpenGiveUp(BattlePerformanceContinue_o *this, co
   if ( !giveUpWindow )
     goto LABEL_56;
   UnityEngine_GameObject__SetActive(giveUpWindow, 0, 0);
-  giveUpWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  giveUpWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !giveUpWindow )
     goto LABEL_56;
   giveUpWindow = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)giveUpWindow,
-                                               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_QuestMaster___);
   data = this->fields.data;
   if ( !data )
     goto LABEL_56;
@@ -1234,7 +1234,7 @@ void BattlePerformanceContinue__OpenGiveUp(BattlePerformanceContinue_o *this, co
   giveUpWindow = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)giveUpWindow,
                                                battle_ent->fields.questId,
-                                               (const MethodInfo_3EDD388 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                                               (const MethodInfo_3F10B30 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   v6 = (QuestEntity_o *)giveUpWindow;
   if ( this->fields.IsContinueItem )
   {
@@ -1325,9 +1325,9 @@ void BattlePerformanceContinue__OpenGiveUp(BattlePerformanceContinue_o *this, co
                                   {
                                     giveUpContinueItemNum = this->fields.giveUpContinueItemNum;
                                     ContinueItemNum = BattleData__GetContinueItemNum((BattleData_o *)giveUpWindow, 0);
-                                    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &ContinueItemNum);
+                                    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &ContinueItemNum);
                                     giveUpWindow = (UnityEngine_GameObject_o *)System_String__Format(
-                                                                                 (System_String_o *)StringLiteral_26381/*"{0:#,0}"*/,
+                                                                                 (System_String_o *)StringLiteral_26432/*"{0:#,0}"*/,
                                                                                  v8,
                                                                                  0);
                                     if ( giveUpContinueItemNum )
@@ -1350,7 +1350,7 @@ void BattlePerformanceContinue__OpenGiveUp(BattlePerformanceContinue_o *this, co
 LABEL_44:
                                         j_il2cpp_runtime_class_init_0(v13, v12);
 LABEL_45:
-                                        v15 = &StringLiteral_2958/*"BATTLE_RETIRE_CHECKSTR"*/;
+                                        v15 = &StringLiteral_2961/*"BATTLE_RETIRE_CHECKSTR"*/;
                                         goto LABEL_51;
                                       }
                                     }
@@ -1370,7 +1370,7 @@ LABEL_45:
         }
       }
 LABEL_56:
-      sub_21FFECC(giveUpWindow, method);
+      sub_2213CDC(giveUpWindow, method);
     }
   }
   if ( !v6 )
@@ -1387,7 +1387,7 @@ LABEL_56:
   }
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
-  v15 = &StringLiteral_2959/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
+  v15 = &StringLiteral_2962/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
 LABEL_51:
   giveUpWindow = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v15, 0);
   if ( !checkGiveUpLabel )
@@ -1414,30 +1414,30 @@ void BattlePerformanceContinue__OpenInterruptionConfirmWindow(
   System_String_o *v10; // x24
   CommonConfirmDialog_ClickDelegate_o *v11; // x25
 
-  if ( (byte_593BDF2 & 1) == 0 )
+  if ( (byte_5973FFF & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenInterruptionConfirmWindow_b__142_0__);
-    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_2897/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_2894/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/);
-    byte_593BDF2 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenInterruptionConfirmWindow_b__142_0__);
+    sub_2213A60(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_2898/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/);
+    sub_2213A60(&StringLiteral_2896/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/);
+    byte_5973FFF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   CommonUI__SetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0, 0);
-  v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, 0);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2894/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, 0);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2897/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
-  v11 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2896/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2898/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  v11 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v11,
     (Il2CppObject *)this,
@@ -1445,7 +1445,7 @@ void BattlePerformanceContinue__OpenInterruptionConfirmWindow(
     0);
   if ( !v6 )
 LABEL_8:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   CommonUI__OpenConfirmDecideDialog((CommonUI_o *)v6, v7, v8, v9, v10, v11, 23, 280, 13.0, 22, 1, 0);
 }
 
@@ -1486,20 +1486,20 @@ void BattlePerformanceContinue__OpenWaveSelectConfirmDialog(
   int32_t decideTxtSize; // w8
   int32_t DispWaveCount; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_593BDF5 & 1) == 0 )
+  if ( (byte_5974002 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenWaveSelectConfirmDialog_b__145_0__);
-    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_2901/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/);
-    sub_21FFC50(&StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/);
-    sub_21FFC50(&StringLiteral_1205/*"00"*/);
-    sub_21FFC50(&StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/);
-    byte_593BDF5 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenWaveSelectConfirmDialog_b__145_0__);
+    sub_2213A60(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/);
+    sub_2213A60(&StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/);
+    sub_2213A60(&StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/);
+    sub_2213A60(&StringLiteral_1205/*"00"*/);
+    sub_2213A60(&StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/);
+    byte_5974002 = 1;
   }
   data = this->fields.data;
   DispWaveCount = 0;
@@ -1512,33 +1512,33 @@ void BattlePerformanceContinue__OpenWaveSelectConfirmDialog(
   {
     if ( !v7 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, 0);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, 0);
     v8 = this->fields.data;
     if ( !v8 )
       goto LABEL_34;
     v9 = (System_String_o *)data;
-    v10 = (Il2CppObject *)System_Int32__ToString_76925352((int)v8 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
+    v10 = (Il2CppObject *)System_Int32__ToString_77138656((int)v8 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
     v11 = System_String__Format(v9, v10, 0);
   }
   else
   {
     if ( !v7 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0);
     v12 = this->fields.data;
     if ( !v12 )
       goto LABEL_34;
     v13 = (System_String_o *)data;
-    data = (BattleData_o *)System_Int32__ToString_76925352((int)v12 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
+    data = (BattleData_o *)System_Int32__ToString_77138656((int)v12 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
     if ( !this->fields.data )
       goto LABEL_34;
     v14 = (Il2CppObject *)data;
     DispWaveCount = BattleData__getDispWaveCount(this->fields.data, 0);
-    v15 = (Il2CppObject *)System_Int32__ToString_76925352(
+    v15 = (Il2CppObject *)System_Int32__ToString_77138656(
                             (int32_t)&DispWaveCount,
                             (System_String_o *)StringLiteral_1205/*"00"*/,
                             0);
-    v11 = System_String__Format_75484576(v13, v14, v15, 0);
+    v11 = System_String__Format_75697880(v13, v14, v15, 0);
   }
   v16 = v11;
   data = this->fields.data;
@@ -1551,21 +1551,21 @@ void BattlePerformanceContinue__OpenWaveSelectConfirmDialog(
   {
     if ( !v19 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18);
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0);
     v21 = this->fields.data;
     if ( v21 )
     {
       v22 = (System_String_o *)data;
-      v23 = (Il2CppObject *)System_Int32__ToString_76925352((int)v21 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
+      v23 = (Il2CppObject *)System_Int32__ToString_77138656((int)v21 + 1176, (System_String_o *)StringLiteral_1205/*"00"*/, 0);
       v20 = System_String__Format(v22, v23, 0);
       goto LABEL_25;
     }
 LABEL_34:
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   if ( !v19 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, 0);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, 0);
 LABEL_25:
   v24 = v20;
   data = this->fields.data;
@@ -1573,16 +1573,16 @@ LABEL_25:
     goto LABEL_34;
   v25 = data->fields.selectedInterruptionWave;
   v26 = BattleData__getDispWaveCount(data, 0);
-  data = (BattleData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  data = (BattleData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !data )
     goto LABEL_34;
   CommonUI__SetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)data, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27);
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, 0);
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_2901/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, 0);
-  v31 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, 0);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, 0);
+  v31 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v31,
     (Il2CppObject *)this,
@@ -1605,21 +1605,21 @@ void BattlePerformanceContinue__ProcInterruption(BattlePerformanceContinue_o *th
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDF3 & 1) == 0 )
+  if ( (byte_5974000 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__ProcInterruption_b__143_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDF3 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__ProcInterruption_b__143_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5974000 = 1;
   }
   continueInterruptionWindow = this->fields.continueInterruptionWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__ProcInterruption_b__143_0__,
     0);
   if ( !continueInterruptionWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowInterruptionComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueInterruptionWindow->klass->vtable._12_Close.methodPtr)(
     continueInterruptionWindow,
     v4,
@@ -1636,12 +1636,12 @@ void BattlePerformanceContinue__ProcSelectWaveRestart(BattlePerformanceContinue_
   struct BattleWindowInterruptionComponent_o *v7; // x20
   BattleWindowComponent_EndCall_o *v8; // x21
 
-  if ( (byte_593BDF6 & 1) == 0 )
+  if ( (byte_5974003 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__ProcSelectWaveRestart_b__146_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BDF6 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__ProcSelectWaveRestart_b__146_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974003 = 1;
   }
   waveSelectDialog = (UnityEngine_Object_o *)this->fields.waveSelectDialog;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1659,7 +1659,7 @@ void BattlePerformanceContinue__ProcSelectWaveRestart(BattlePerformanceContinue_
   if ( UnityEngine_Object__op_Inequality(continueInterruptionWindow, 0, 0) )
   {
     v7 = this->fields.continueInterruptionWindow;
-    v8 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+    v8 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
     BattleWindowComponent_EndCall___ctor(
       v8,
       (Il2CppObject *)this,
@@ -1674,7 +1674,7 @@ void BattlePerformanceContinue__ProcSelectWaveRestart(BattlePerformanceContinue_
       return;
     }
 LABEL_14:
-    sub_21FFECC(v5, v4);
+    sub_2213CDC(v5, v4);
   }
 }
 
@@ -1688,21 +1688,21 @@ void BattlePerformanceContinue__ProcWaveRestartFromInterruption(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDF1 & 1) == 0 )
+  if ( (byte_5973FFE & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__ProcWaveRestartFromInterruption_b__141_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDF1 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__ProcWaveRestartFromInterruption_b__141_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FFE = 1;
   }
   continueInterruptionWindow = this->fields.continueInterruptionWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__ProcWaveRestartFromInterruption_b__141_0__,
     0);
   if ( !continueInterruptionWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowInterruptionComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueInterruptionWindow->klass->vtable._12_Close.methodPtr)(
     continueInterruptionWindow,
     v4,
@@ -1719,7 +1719,7 @@ void BattlePerformanceContinue__ResetContinueItemInfo(BattlePerformanceContinue_
     || (UnityEngine_GameObject__SetActive(ContinueItemWindow, 0, 0),
         (ContinueItemWindow = (UnityEngine_GameObject_o *)this->fields.data) == 0) )
   {
-    sub_21FFECC(ContinueItemWindow, method);
+    sub_2213CDC(ContinueItemWindow, method);
   }
   BattleData__UpdateContinueItemInfo((BattleData_o *)ContinueItemWindow, 0);
   *(_WORD *)&this->fields.IsContinueItem = 0;
@@ -1751,13 +1751,13 @@ void BattlePerformanceContinue__SetContinueMessage(
   System_String_o *v24; // x0
   int32_t uiId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BDEA & 1) == 0 )
+  if ( (byte_5973FF7 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2832/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/);
-    sub_21FFC50(&StringLiteral_26544/*"{0}_{1}"*/);
-    sub_21FFC50(&StringLiteral_2840/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/);
-    byte_593BDEA = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2833/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/);
+    sub_2213A60(&StringLiteral_26596/*"{0}_{1}"*/);
+    sub_2213A60(&StringLiteral_2841/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/);
+    byte_5973FF7 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, label);
@@ -1777,8 +1777,8 @@ void BattlePerformanceContinue__SetContinueMessage(
     mText = label->fields.mText;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v10);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2840/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/, 0);
-    v13 = System_String__Concat_75438412(mText, v12, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2841/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/, 0);
+    v13 = System_String__Concat_75651716(mText, v12, 0);
     UILabel__set_text(label, v13, 0);
   }
   SelfUserGame = (System_String_o *)this->fields.data;
@@ -1790,11 +1790,11 @@ void BattlePerformanceContinue__SetContinueMessage(
   data = this->fields.data;
   if ( !data || (defenceTargetData = data->fields.defenceTargetData) == 0 )
 LABEL_25:
-    sub_21FFECC(SelfUserGame, v10);
-  v16 = (Il2CppObject *)StringLiteral_2832/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/;
+    sub_2213CDC(SelfUserGame, v10);
+  v16 = (Il2CppObject *)StringLiteral_2833/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/;
   uiId = defenceTargetData->fields.uiId;
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &uiId);
-  v18 = System_String__Format_75484576((System_String_o *)StringLiteral_26544/*"{0}_{1}"*/, v16, v17, 0);
+  v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &uiId);
+  v18 = System_String__Format_75697880((System_String_o *)StringLiteral_26596/*"{0}_{1}"*/, v16, v17, 0);
   v20 = label->fields.mText;
   v21 = v18;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1804,7 +1804,7 @@ LABEL_25:
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v22);
   v23 = LocalizationManager__Get((System_String_o *)v16, 0);
-  v24 = System_String__Concat_75438412(v20, v23, 0);
+  v24 = System_String__Concat_75651716(v20, v23, 0);
   UILabel__set_text(label, v24, 0);
 }
 
@@ -1817,29 +1817,29 @@ void BattlePerformanceContinue__SkipCommandSpellRequest(BattlePerformanceContinu
   __int64 v6; // x1
   BattleData_c *v7; // x0
 
-  if ( (byte_593BDE6 & 1) == 0 )
+  if ( (byte_5973FF3 & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandSpellMaster___);
-    sub_21FFC50(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_3933/*"CONNECT_OK"*/);
-    sub_21FFC50(&StringLiteral_7202/*"GAME_OVER_COMMAND_SPELL_ID"*/);
-    byte_593BDE6 = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandSpellMaster___);
+    sub_2213A60(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_3938/*"CONNECT_OK"*/);
+    sub_2213A60(&StringLiteral_7214/*"GAME_OVER_COMMAND_SPELL_ID"*/);
+    byte_5973FF3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
-  Instance = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_7202/*"GAME_OVER_COMMAND_SPELL_ID"*/, 0);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+  Instance = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_7214/*"GAME_OVER_COMMAND_SPELL_ID"*/, 0);
   if ( !MasterData_object )
     goto LABEL_12;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                (int32_t)Instance,
-               (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+               (const MethodInfo_3F10B30 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_12;
   if ( !this->fields.data )
@@ -1857,8 +1857,8 @@ void BattlePerformanceContinue__SkipCommandSpellRequest(BattlePerformanceContinu
   Instance = this->fields.myFsm;
   if ( !Instance )
 LABEL_12:
-    sub_21FFECC(Instance, v4);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3933/*"CONNECT_OK"*/, 0);
+    sub_2213CDC(Instance, v4);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3938/*"CONNECT_OK"*/, 0);
 }
 
 
@@ -1874,7 +1874,7 @@ void BattlePerformanceContinue__StartContinue(
   BattlePerformanceContinue__StartContinueImpl(this, 0, method);
   perf = this->fields.perf;
   if ( !perf )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   BattlePerformance__SetTimeScale(perf, 1.0, 0);
 }
 
@@ -1900,14 +1900,14 @@ void BattlePerformanceContinue__StartContinueImpl(
   const MethodInfo *v17; // x1
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BDB4 & 1) == 0 )
+  if ( (byte_5973FC1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_StartContinueImpl__);
-    sub_21FFC50(&Method_BattlePerformanceContinue_showConf__);
-    sub_21FFC50(&BattleDropItemComponent_ClickDelegate_TypeInfo);
-    sub_21FFC50(&StringLiteral_12812/*"START_CONTINUE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593BDB4 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_StartContinueImpl__);
+    sub_2213A60(&Method_BattlePerformanceContinue_showConf__);
+    sub_2213A60(&BattleDropItemComponent_ClickDelegate_TypeInfo);
+    sub_2213A60(&StringLiteral_12838/*"START_CONTINUE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973FC1 = 1;
   }
   v18 = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
@@ -1916,7 +1916,7 @@ void BattlePerformanceContinue__StartContinueImpl(
   v6 = SelfUserGame;
   itemWindow = this->fields.itemWindow;
   DropItems = BattleData__getDropItems(this->fields.data, 0);
-  v9 = (BattleDropItemComponent_ClickDelegate_o *)sub_21FFEBC(BattleDropItemComponent_ClickDelegate_TypeInfo);
+  v9 = (BattleDropItemComponent_ClickDelegate_o *)sub_2213CCC(BattleDropItemComponent_ClickDelegate_TypeInfo);
   BattleDropItemComponent_ClickDelegate___ctor(v9, (Il2CppObject *)this, Method_BattlePerformanceContinue_showConf__, 0);
   if ( !itemWindow )
     goto LABEL_20;
@@ -1960,15 +1960,15 @@ void BattlePerformanceContinue__StartContinueImpl(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SelfUserGame, 1, 0);
   v15 = Method_BattlePerformanceContinue_StartContinueImpl__;
   if ( (*((_BYTE *)Method_BattlePerformanceContinue_StartContinueImpl__ + 83) & 2) != 0 )
-    v15 = (_QWORD *)sub_21FFC68(Method_BattlePerformanceContinue_StartContinueImpl__);
-  v16 = (System_Reflection_MethodBase_o *)sub_21FFC34(v15, v15[4]);
+    v15 = (_QWORD *)sub_2213A78(Method_BattlePerformanceContinue_StartContinueImpl__);
+  v16 = (System_Reflection_MethodBase_o *)sub_2213A44(v15, v15[4]);
   OverwriteAssetSoundName__PlaySystemSe(v16, 7, 0, 0);
   BattlePerformanceContinue__ResetContinueItemInfo(this, v17);
   SelfUserGame = (UserGameEntity_o *)this->fields.myFsm;
   if ( !SelfUserGame )
 LABEL_20:
-    sub_21FFECC(SelfUserGame, v5);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)SelfUserGame, (System_String_o *)StringLiteral_12812/*"START_CONTINUE"*/, 0);
+    sub_2213CDC(SelfUserGame, v5);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)SelfUserGame, (System_String_o *)StringLiteral_12838/*"START_CONTINUE"*/, 0);
 }
 
 
@@ -1992,16 +1992,16 @@ void BattlePerformanceContinue__StartContinueInterruption(BattlePerformanceConti
   System_Action_o *v18; // x22
   System_Action_o *v19; // x23
 
-  if ( (byte_593BDEF & 1) == 0 )
+  if ( (byte_5973FFC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_0__);
-    sub_21FFC50(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_1__);
-    sub_21FFC50(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_2__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_12813/*"START_CONTINUE_INTERRUPTION"*/);
-    byte_593BDEF = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_0__);
+    sub_2213A60(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_1__);
+    sub_2213A60(&Method_BattlePerformanceContinue__StartContinueInterruption_b__139_2__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_12839/*"START_CONTINUE_INTERRUPTION"*/);
+    byte_5973FFC = 1;
   }
   continueInterruptionWindow = (UnityEngine_Object_o *)this->fields.continueInterruptionWindow;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2021,9 +2021,9 @@ void BattlePerformanceContinue__StartContinueInterruption(BattlePerformanceConti
       goto LABEL_15;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Object,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
     *p_continueInterruptionWindow = (struct BattleWindowInterruptionComponent_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.continueInterruptionWindow,
       (int32_t)Component_object,
       v10,
@@ -2051,19 +2051,19 @@ void BattlePerformanceContinue__StartContinueInterruption(BattlePerformanceConti
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(Object, 0, 0);
   v16 = this->fields.continueInterruptionWindow;
-  v17 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v17 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v17,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__StartContinueInterruption_b__139_0__,
     0);
-  v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v18,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__StartContinueInterruption_b__139_1__,
     0);
-  v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v19,
     (Il2CppObject *)this,
@@ -2074,9 +2074,9 @@ void BattlePerformanceContinue__StartContinueInterruption(BattlePerformanceConti
         (Object = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
 LABEL_15:
-    sub_21FFECC(Object, v5);
+    sub_2213CDC(Object, v5);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Object, (System_String_o *)StringLiteral_12813/*"START_CONTINUE_INTERRUPTION"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Object, (System_String_o *)StringLiteral_12839/*"START_CONTINUE_INTERRUPTION"*/, 0);
 }
 
 
@@ -2088,22 +2088,22 @@ void BattlePerformanceContinue__StartContinueWaveRestart(BattlePerformanceContin
   PlayMakerFSM_o *myFsm; // x0
   __int64 v7; // x1
 
-  if ( (byte_593BDEB & 1) == 0 )
+  if ( (byte_5973FF8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__StartContinueWaveRestart_b__135_0__);
-    sub_21FFC50(&Method_BattlePerformanceContinue__StartContinueWaveRestart_b__135_1__);
-    sub_21FFC50(&StringLiteral_12814/*"START_CONTINUE_WAVE_RESTART"*/);
-    byte_593BDEB = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__StartContinueWaveRestart_b__135_0__);
+    sub_2213A60(&Method_BattlePerformanceContinue__StartContinueWaveRestart_b__135_1__);
+    sub_2213A60(&StringLiteral_12840/*"START_CONTINUE_WAVE_RESTART"*/);
+    byte_5973FF8 = 1;
   }
   continueWaveRestartWindow = this->fields.continueWaveRestartWindow;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__StartContinueWaveRestart_b__135_0__,
     0);
-  v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
@@ -2113,9 +2113,9 @@ void BattlePerformanceContinue__StartContinueWaveRestart(BattlePerformanceContin
     || (BattleWindowContinueWaveRestartComponent__SetWindow(continueWaveRestartWindow, v4, v5, 0),
         (myFsm = this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(myFsm, v7);
+    sub_2213CDC(myFsm, v7);
   }
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12814/*"START_CONTINUE_WAVE_RESTART"*/, 0);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12840/*"START_CONTINUE_WAVE_RESTART"*/, 0);
 }
 
 
@@ -2141,20 +2141,20 @@ void BattlePerformanceContinue__Update(BattlePerformanceContinue_o *this, const 
   ErrorDialog_ClickDelegate_o *v20; // x22
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_593BDAF & 1) == 0 )
+  if ( (byte_5973FBC & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_CallbackConfirmDialog__);
-    sub_21FFC50(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/);
-    sub_21FFC50(&StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/);
-    sub_21FFC50(&StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/);
-    sub_21FFC50(&StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_END_TIME"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593BDAF = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_CallbackConfirmDialog__);
+    sub_2213A60(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_2840/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/);
+    sub_2213A60(&StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/);
+    sub_2213A60(&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/);
+    sub_2213A60(&StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_END_TIME"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973FBC = 1;
   }
   data = (UnityEngine_Object_o *)this->fields.data;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2169,19 +2169,19 @@ void BattlePerformanceContinue__Update(BattlePerformanceContinue_o *this, const 
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
     RestTime = (Il2CppObject *)LocalizationManager__GetRestTime(ContinueDeadLine, 0);
     giveUpContinueItemLabel = this->fields.giveUpContinueItemLabel;
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, 0);
     v5 = (BattleData_o *)System_String__Format(v10, RestTime, 0);
     if ( !giveUpContinueItemLabel )
       goto LABEL_23;
     UILabel__set_text(giveUpContinueItemLabel, (System_String_o *)v5, 0);
     deadLine = this->fields.deadLine;
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2836/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/, 0);
     v5 = (BattleData_o *)System_String__Format(v12, RestTime, 0);
     if ( !deadLine )
       goto LABEL_23;
     UILabel__set_text(deadLine, (System_String_o *)v5, 0);
     useCheckContinueItemLabel = this->fields.useCheckContinueItemLabel;
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/, 0);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2840/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/, 0);
     v5 = (BattleData_o *)System_String__Format(v14, RestTime, 0);
     if ( !useCheckContinueItemLabel )
       goto LABEL_23;
@@ -2195,11 +2195,11 @@ void BattlePerformanceContinue__Update(BattlePerformanceContinue_o *this, const 
     if ( v16 < NetworkManager__getTime(0) && !this->fields.isShowDeadLineDialog )
     {
       this->fields.isShowDeadLineDialog = 1;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17);
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0);
-      v20 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0);
+      v20 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(
         v20,
         (Il2CppObject *)this,
@@ -2223,7 +2223,7 @@ void BattlePerformanceContinue__Update(BattlePerformanceContinue_o *this, const 
         return;
       }
 LABEL_23:
-      sub_21FFECC(v5, v4);
+      sub_2213CDC(v5, v4);
     }
   }
 }
@@ -2236,21 +2236,21 @@ void BattlePerformanceContinue__WaveRestartNg(BattlePerformanceContinue_o *this,
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDEE & 1) == 0 )
+  if ( (byte_5973FFB & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__WaveRestartNg_b__138_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDEE = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__WaveRestartNg_b__138_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FFB = 1;
   }
   continueWaveRestartWindow = this->fields.continueWaveRestartWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__WaveRestartNg_b__138_0__,
     0);
   if ( !continueWaveRestartWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowContinueWaveRestartComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueWaveRestartWindow->klass->vtable._12_Close.methodPtr)(
     continueWaveRestartWindow,
     v4,
@@ -2265,21 +2265,21 @@ void BattlePerformanceContinue__WaveRestartOk(BattlePerformanceContinue_o *this,
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDED & 1) == 0 )
+  if ( (byte_5973FFA & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__WaveRestartOk_b__137_0__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDED = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__WaveRestartOk_b__137_0__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FFA = 1;
   }
   continueWaveRestartWindow = this->fields.continueWaveRestartWindow;
-  v4 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v4 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue__WaveRestartOk_b__137_0__,
     0);
   if ( !continueWaveRestartWindow )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   ((void (__fastcall *)(struct BattleWindowContinueWaveRestartComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))continueWaveRestartWindow->klass->vtable._12_Close.methodPtr)(
     continueWaveRestartWindow,
     v4,
@@ -2327,23 +2327,23 @@ void BattlePerformanceContinue___AttachStoneCountRefreshComponent_b__86_0(
   const MethodInfo *v37; // x4
   int32_t v38; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BDF7 & 1) == 0 )
+  if ( (byte_5974004 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
-    sub_21FFC50(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
-    sub_21FFC50(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/);
-    sub_21FFC50(&StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
-    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
-    sub_21FFC50(&StringLiteral_13190/*"Select_NoStone"*/);
-    sub_21FFC50(&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_SELECT"*/);
-    sub_21FFC50(&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/);
-    sub_21FFC50(&StringLiteral_13191/*"Select_Stone"*/);
-    byte_593BDF7 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
+    sub_2213A60(&StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
+    sub_2213A60(&StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/);
+    sub_2213A60(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
+    sub_2213A60(&StringLiteral_26432/*"{0:#,0}"*/);
+    sub_2213A60(&StringLiteral_13217/*"Select_NoStone"*/);
+    sub_2213A60(&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT"*/);
+    sub_2213A60(&StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/);
+    sub_2213A60(&StringLiteral_13218/*"Select_Stone"*/);
+    byte_5974004 = 1;
   }
   v38 = stoneCount;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v38);
-  myFsm = System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v38);
+  myFsm = System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v5, 0);
   if ( !this->fields.stoneNumInStonelessWindow )
     goto LABEL_28;
   v8 = myFsm;
@@ -2367,12 +2367,12 @@ void BattlePerformanceContinue___AttachStoneCountRefreshComponent_b__86_0(
   {
     if ( !v17 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14);
-    myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/, 0);
+    myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/, 0);
     if ( ContinueStoneBtnLabel )
     {
       UILabel__set_text(ContinueStoneBtnLabel, myFsm, 0);
       stoneBtnLabel = this->fields.stoneBtnLabel;
-      myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/, 0);
+      myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/, 0);
       if ( stoneBtnLabel )
       {
         UILabel__set_text(stoneBtnLabel, myFsm, 0);
@@ -2380,7 +2380,7 @@ void BattlePerformanceContinue___AttachStoneCountRefreshComponent_b__86_0(
         if ( myFsm )
         {
           ActiveStateName = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)myFsm, 0);
-          if ( !System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_13190/*"Select_NoStone"*/, 0) )
+          if ( !System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_13217/*"Select_NoStone"*/, 0) )
             goto LABEL_23;
           myFsm = (System_String_o *)this->fields.nostoneObject;
           if ( myFsm )
@@ -2393,7 +2393,7 @@ void BattlePerformanceContinue___AttachStoneCountRefreshComponent_b__86_0(
               myFsm = (System_String_o *)this->fields.myFsm;
               if ( myFsm )
               {
-                PlayMakerFSM__SetState((PlayMakerFSM_o *)myFsm, (System_String_o *)StringLiteral_13191/*"Select_Stone"*/, 0);
+                PlayMakerFSM__SetState((PlayMakerFSM_o *)myFsm, (System_String_o *)StringLiteral_13218/*"Select_Stone"*/, 0);
                 goto LABEL_23;
               }
             }
@@ -2402,16 +2402,16 @@ void BattlePerformanceContinue___AttachStoneCountRefreshComponent_b__86_0(
       }
     }
 LABEL_28:
-    sub_21FFECC(myFsm, v7);
+    sub_2213CDC(myFsm, v7);
   }
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14);
-  myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/, 0);
+  myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/, 0);
   if ( !ContinueStoneBtnLabel )
     goto LABEL_28;
   UILabel__set_text(ContinueStoneBtnLabel, myFsm, 0);
   v20 = this->fields.stoneBtnLabel;
-  myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/, 0);
+  myFsm = LocalizationManager__Get((System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/, 0);
   if ( !v20 )
     goto LABEL_28;
   UILabel__set_text(v20, myFsm, 0);
@@ -2425,9 +2425,9 @@ LABEL_23:
                                          0);
   ContinueLabel = this->fields.ContinueLabel;
   if ( (int)v21 <= 2 )
-    v24 = (System_String_o **)&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/;
+    v24 = (System_String_o **)&StringLiteral_2839/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/;
   else
-    v24 = (System_String_o **)&StringLiteral_2837/*"BATTLE_CONTINUE_ITEM_SELECT"*/;
+    v24 = (System_String_o **)&StringLiteral_2838/*"BATTLE_CONTINUE_ITEM_SELECT"*/;
   v25 = *v24;
   PayableStoneNum = BattlePerformanceContinue__GetPayableStoneNum(v21, v22);
   BattlePerformanceContinue__SetContinueMessage(this, ContinueLabel, v25, PayableStoneNum, v27);
@@ -2436,12 +2436,12 @@ LABEL_23:
   BattlePerformanceContinue__SetContinueMessage(
     this,
     checkUseCommandSpell,
-    (System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/,
+    (System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/,
     v31,
     v32);
   checkUseGem = this->fields.checkUseGem;
   v36 = BattlePerformanceContinue__GetPayableStoneNum(v34, v35);
-  BattlePerformanceContinue__SetContinueMessage(this, checkUseGem, (System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/, v36, v37);
+  BattlePerformanceContinue__SetContinueMessage(this, checkUseGem, (System_String_o *)StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/, v36, v37);
 }
 
 
@@ -2451,15 +2451,15 @@ void BattlePerformanceContinue___CheckDefenceTargetBroken_b__130_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDF8 & 1) == 0 )
+  if ( (byte_5974005 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5960/*"EVENT_TRUE"*/);
-    byte_593BDF8 = 1;
+    sub_2213A60(&StringLiteral_5972/*"EVENT_TRUE"*/);
+    byte_5974005 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5960/*"EVENT_TRUE"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5972/*"EVENT_TRUE"*/, 0);
 }
 
 
@@ -2469,15 +2469,15 @@ void BattlePerformanceContinue___OpenBrokenMessage_b__131_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDF9 & 1) == 0 )
+  if ( (byte_5974006 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5626/*"END_CLOSE"*/);
-    byte_593BDF9 = 1;
+    sub_2213A60(&StringLiteral_5638/*"END_CLOSE"*/);
+    byte_5974006 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5626/*"END_CLOSE"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5638/*"END_CLOSE"*/, 0);
 }
 
 
@@ -2487,15 +2487,15 @@ void BattlePerformanceContinue___OpenContinueInterruption_b__140_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BE02 & 1) == 0 )
+  if ( (byte_597400F & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BE02 = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_597400F = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -2505,15 +2505,15 @@ void BattlePerformanceContinue___OpenContinueWaveRestart_b__136_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDFC & 1) == 0 )
+  if ( (byte_5974009 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDFC = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5974009 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -2535,13 +2535,13 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_0(
   System_Action_o *v13; // x21
 
   v9 = this;
-  if ( (byte_593BE06 & 1) == 0 )
+  if ( (byte_5974013 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_3__);
-    sub_21FFC50(&StringLiteral_3407/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_7785/*"INTERRUPTION"*/);
-    byte_593BE06 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_3__);
+    sub_2213A60(&StringLiteral_3412/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_7797/*"INTERRUPTION"*/);
+    byte_5974013 = 1;
   }
   data = v9->fields.data;
   if ( isDecide )
@@ -2549,9 +2549,9 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_0(
     if ( data )
     {
       data->fields.selectedInterruptionWave = -1;
-      v11 = StringLiteral_3407/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
-      v9->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3407/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
-      sub_21FFBF4(
+      v11 = StringLiteral_3412/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
+      v9->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3412/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v9->fields.cancelInterruptionEvent,
         v11,
         (System_String_o *)method,
@@ -2563,18 +2563,18 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_0(
       this = (BattlePerformanceContinue_o *)v9->fields.myFsm;
       if ( this )
       {
-        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7785/*"INTERRUPTION"*/, 0);
+        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_7797/*"INTERRUPTION"*/, 0);
         return;
       }
     }
 LABEL_10:
-    sub_21FFECC(this, isDecide);
+    sub_2213CDC(this, isDecide);
   }
   if ( !data )
     goto LABEL_10;
   waveSelectDialog = v9->fields.waveSelectDialog;
   data->fields.selectedInterruptionWave = -1;
-  v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v13,
     (Il2CppObject *)v9,
@@ -2582,7 +2582,7 @@ LABEL_10:
     0);
   if ( !waveSelectDialog )
     goto LABEL_10;
-  WaveBattleSelectWaveDialog__Close_41476500(waveSelectDialog, v13, 0);
+  WaveBattleSelectWaveDialog__Close_41494860(waveSelectDialog, v13, 0);
 }
 
 
@@ -2597,21 +2597,21 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_1(
   __int64 v8; // x1
   struct BattleData_o *data; // x8
 
-  if ( (byte_593BE08 & 1) == 0 )
+  if ( (byte_5974015 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
-    sub_21FFC50(&StringLiteral_12040/*"SELECT_WAVE"*/);
-    byte_593BE08 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
+    sub_2213A60(&StringLiteral_12063/*"SELECT_WAVE"*/);
+    byte_5974015 = 1;
   }
   v5 = Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__;
   if ( (*((_BYTE *)Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_21FFC68(Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
-  v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+    v5 = (_QWORD *)sub_2213A78(Method_BattlePerformanceContinue__OpenContinueWaveSelectWindow_b__144_1__);
+  v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   data = this->fields.data;
   if ( !data || (myFsm = this->fields.myFsm, data->fields.selectedInterruptionWave = wave, !myFsm) )
-    sub_21FFECC(myFsm, v8);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12040/*"SELECT_WAVE"*/, 0);
+    sub_2213CDC(myFsm, v8);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12063/*"SELECT_WAVE"*/, 0);
 }
 
 
@@ -2621,15 +2621,15 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_2(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BE09 & 1) == 0 )
+  if ( (byte_5974016 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BE09 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5974016 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -2647,11 +2647,11 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_3(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593BE07 & 1) == 0 )
+  if ( (byte_5974014 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BE07 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5974014 = 1;
   }
   waveSelectDialog = (UnityEngine_Component_o *)this->fields.waveSelectDialog;
   if ( !waveSelectDialog )
@@ -2659,14 +2659,14 @@ void BattlePerformanceContinue___OpenContinueWaveSelectWindow_b__144_3(
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(waveSelectDialog, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
   this->fields.waveSelectDialog = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.waveSelectDialog, 0, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.waveSelectDialog, 0, v6, v7, v8, v9, v10, v11);
   waveSelectDialog = (UnityEngine_Component_o *)this->fields.myFsm;
   if ( !waveSelectDialog )
 LABEL_8:
-    sub_21FFECC(waveSelectDialog, method);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)waveSelectDialog, (System_String_o *)StringLiteral_9639/*"NG"*/, 0);
+    sub_2213CDC(waveSelectDialog, method);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)waveSelectDialog, (System_String_o *)StringLiteral_9652/*"NG"*/, 0);
 }
 
 
@@ -2695,29 +2695,29 @@ void BattlePerformanceContinue___OpenInterruptionConfirmWindow_b__142_0(
   Il2CppObject *Instance; // x19
   System_Action_o *v23; // x20
 
-  if ( (byte_593BE04 & 1) == 0 )
+  if ( (byte_5974011 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_BattlePerformanceContinue___c__DisplayClass142_0__OpenInterruptionConfirmWindow_b__1__);
-    sub_21FFC50(&BattlePerformanceContinue___c__DisplayClass142_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_5148/*"DECIDE_INTERRUPTION"*/);
-    byte_593BE04 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_BattlePerformanceContinue___c__DisplayClass142_0__OpenInterruptionConfirmWindow_b__1__);
+    sub_2213A60(&BattlePerformanceContinue___c__DisplayClass142_0_TypeInfo);
+    sub_2213A60(&StringLiteral_5160/*"DECIDE_INTERRUPTION"*/);
+    byte_5974011 = 1;
   }
-  v5 = sub_21FFEBC(BattlePerformanceContinue___c__DisplayClass142_0_TypeInfo);
+  v5 = sub_2213CCC(BattlePerformanceContinue___c__DisplayClass142_0_TypeInfo);
   BattlePerformanceContinue___c__DisplayClass142_0___ctor((BattlePerformanceContinue___c__DisplayClass142_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   p_cancelInterruptionEvent = &this->fields.cancelInterruptionEvent;
   if ( isDecide )
-    p_cancelInterruptionEvent = (struct System_String_o **)&StringLiteral_5148/*"DECIDE_INTERRUPTION"*/;
+    p_cancelInterruptionEvent = (struct System_String_o **)&StringLiteral_5160/*"DECIDE_INTERRUPTION"*/;
   v21 = *p_cancelInterruptionEvent;
   *(_QWORD *)(v5 + 16) = *p_cancelInterruptionEvent;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)v21, v14, v15, v16, v17, v18, v19);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v23 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)v21, v14, v15, v16, v17, v18, v19);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v23 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v23,
     (Il2CppObject *)v5,
@@ -2725,8 +2725,8 @@ void BattlePerformanceContinue___OpenInterruptionConfirmWindow_b__142_0(
     0);
   if ( !Instance )
 LABEL_8:
-    sub_21FFECC(v6, v7);
-  CommonUI__CloseConfirmDialog_37292452((CommonUI_o *)Instance, v23, 0);
+    sub_2213CDC(v6, v7);
+  CommonUI__CloseConfirmDialog_37373868((CommonUI_o *)Instance, v23, 0);
 }
 
 
@@ -2744,31 +2744,31 @@ void BattlePerformanceContinue___OpenWaveSelectConfirmDialog_b__145_0(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
-  const MethodInfo_476E8C0 *v14; // x0
+  const MethodInfo_47A29F8 *v14; // x0
   Il2CppObject *Instance; // x21
   System_Action_o *v16; // x22
   __int64 v17; // x1
   UnityEngine_Object_o *waveSelectDialog; // x20
 
-  if ( (byte_593BE0A & 1) == 0 )
+  if ( (byte_5974017 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_BattlePerformanceContinue___c__DisplayClass145_0__OpenWaveSelectConfirmDialog_b__1__);
-    sub_21FFC50(&BattlePerformanceContinue___c__DisplayClass145_0_TypeInfo);
-    byte_593BE0A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_BattlePerformanceContinue___c__DisplayClass145_0__OpenWaveSelectConfirmDialog_b__1__);
+    sub_2213A60(&BattlePerformanceContinue___c__DisplayClass145_0_TypeInfo);
+    byte_5974017 = 1;
   }
-  v5 = sub_21FFEBC(BattlePerformanceContinue___c__DisplayClass145_0_TypeInfo);
+  v5 = sub_2213CCC(BattlePerformanceContinue___c__DisplayClass145_0_TypeInfo);
   BattlePerformanceContinue___c__DisplayClass145_0___ctor((BattlePerformanceContinue___c__DisplayClass145_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_12;
   *(_QWORD *)(v5 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
-  v14 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  v14 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
   *(_BYTE *)(v5 + 16) = isDecide;
   Instance = SingletonMonoBehaviour_object___get_Instance(v14);
-  v16 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v5,
@@ -2776,7 +2776,7 @@ void BattlePerformanceContinue___OpenWaveSelectConfirmDialog_b__145_0(
     0);
   if ( !Instance )
     goto LABEL_12;
-  CommonUI__CloseConfirmDialog_37292452((CommonUI_o *)Instance, v16, 0);
+  CommonUI__CloseConfirmDialog_37373868((CommonUI_o *)Instance, v16, 0);
   if ( *(_BYTE *)(v5 + 16) )
   {
     waveSelectDialog = (UnityEngine_Object_o *)this->fields.waveSelectDialog;
@@ -2791,7 +2791,7 @@ void BattlePerformanceContinue___OpenWaveSelectConfirmDialog_b__145_0(
         return;
       }
 LABEL_12:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
   }
 }
@@ -2801,15 +2801,15 @@ void BattlePerformanceContinue___ProcInterruption_b__143_0(BattlePerformanceCont
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BE05 & 1) == 0 )
+  if ( (byte_5974012 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10892/*"PROC_INTERRUPTION"*/);
-    byte_593BE05 = 1;
+    sub_2213A60(&StringLiteral_10905/*"PROC_INTERRUPTION"*/);
+    byte_5974012 = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, method);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10892/*"PROC_INTERRUPTION"*/, 0);
+    sub_2213CDC(0, method);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10905/*"PROC_INTERRUPTION"*/, 0);
 }
 
 
@@ -2819,15 +2819,15 @@ void BattlePerformanceContinue___ProcSelectWaveRestart_b__146_0(
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BE0B & 1) == 0 )
+  if ( (byte_5974018 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10893/*"PROC_PARTY_REORGANIZATION"*/);
-    byte_593BE0B = 1;
+    sub_2213A60(&StringLiteral_10906/*"PROC_PARTY_REORGANIZATION"*/);
+    byte_5974018 = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, method);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10893/*"PROC_PARTY_REORGANIZATION"*/, 0);
+    sub_2213CDC(0, method);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10906/*"PROC_PARTY_REORGANIZATION"*/, 0);
 }
 
 
@@ -2837,15 +2837,15 @@ void BattlePerformanceContinue___ProcWaveRestartFromInterruption_b__141_0(
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BE03 & 1) == 0 )
+  if ( (byte_5974010 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10895/*"PROC_WAVE_RESTART"*/);
-    byte_593BE03 = 1;
+    sub_2213A60(&StringLiteral_10908/*"PROC_WAVE_RESTART"*/);
+    byte_5974010 = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, method);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10895/*"PROC_WAVE_RESTART"*/, 0);
+    sub_2213CDC(0, method);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10908/*"PROC_WAVE_RESTART"*/, 0);
 }
 
 
@@ -2855,15 +2855,15 @@ void BattlePerformanceContinue___StartContinueInterruption_b__139_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDFF & 1) == 0 )
+  if ( (byte_597400C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16126/*"WAVE_RESTART"*/);
-    byte_593BDFF = 1;
+    sub_2213A60(&StringLiteral_16157/*"WAVE_RESTART"*/);
+    byte_597400C = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_16126/*"WAVE_RESTART"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_16157/*"WAVE_RESTART"*/, 0);
 }
 
 
@@ -2873,15 +2873,15 @@ void BattlePerformanceContinue___StartContinueInterruption_b__139_1(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BE00 & 1) == 0 )
+  if ( (byte_597400D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_12041/*"SELECT_WAVE_RESTART"*/);
-    byte_593BE00 = 1;
+    sub_2213A60(&StringLiteral_12064/*"SELECT_WAVE_RESTART"*/);
+    byte_597400D = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12041/*"SELECT_WAVE_RESTART"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12064/*"SELECT_WAVE_RESTART"*/, 0);
 }
 
 
@@ -2899,19 +2899,19 @@ void BattlePerformanceContinue___StartContinueInterruption_b__139_2(
   __int64 v10; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BE01 & 1) == 0 )
+  if ( (byte_597400E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_7785/*"INTERRUPTION"*/);
-    sub_21FFC50(&StringLiteral_3406/*"CANCEL_INTERRUPTION"*/);
-    byte_593BE01 = 1;
+    sub_2213A60(&StringLiteral_7797/*"INTERRUPTION"*/);
+    sub_2213A60(&StringLiteral_3411/*"CANCEL_INTERRUPTION"*/);
+    byte_597400E = 1;
   }
-  v9 = StringLiteral_3406/*"CANCEL_INTERRUPTION"*/;
-  this->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3406/*"CANCEL_INTERRUPTION"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cancelInterruptionEvent, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_3411/*"CANCEL_INTERRUPTION"*/;
+  this->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3411/*"CANCEL_INTERRUPTION"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cancelInterruptionEvent, v9, v2, v3, v4, v5, v6, v7);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, v10);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_7785/*"INTERRUPTION"*/, 0);
+    sub_2213CDC(0, v10);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_7797/*"INTERRUPTION"*/, 0);
 }
 
 
@@ -2921,15 +2921,15 @@ void BattlePerformanceContinue___StartContinueWaveRestart_b__135_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDFA & 1) == 0 )
+  if ( (byte_5974007 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    byte_593BDFA = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    byte_5974007 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_10006/*"OK"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_10019/*"OK"*/, 0);
 }
 
 
@@ -2939,15 +2939,15 @@ void BattlePerformanceContinue___StartContinueWaveRestart_b__135_1(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDFB & 1) == 0 )
+  if ( (byte_5974008 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDFB = 1;
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5974008 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9639/*"NG"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9652/*"NG"*/, 0);
 }
 
 
@@ -2955,15 +2955,15 @@ void BattlePerformanceContinue___WaveRestartNg_b__138_0(BattlePerformanceContinu
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BDFE & 1) == 0 )
+  if ( (byte_597400B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDFE = 1;
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_597400B = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, method);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_9639/*"NG"*/, 0);
+    sub_2213CDC(0, method);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_9652/*"NG"*/, 0);
 }
 
 
@@ -2971,15 +2971,15 @@ void BattlePerformanceContinue___WaveRestartOk_b__137_0(BattlePerformanceContinu
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BDFD & 1) == 0 )
+  if ( (byte_597400A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    byte_593BDFD = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    byte_597400A = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, method);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10006/*"OK"*/, 0);
+    sub_2213CDC(0, method);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10019/*"OK"*/, 0);
 }
 
 
@@ -2990,17 +2990,17 @@ void BattlePerformanceContinue__atlasLoadEnd(BattlePerformanceContinue_o *this, 
   BattleDropItem_array *DropItems; // x21
   BattleDropItemComponent_ClickDelegate_o *v6; // x22
 
-  if ( (byte_593BDB3 & 1) == 0 )
+  if ( (byte_5973FC0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_showConf__);
-    sub_21FFC50(&BattleDropItemComponent_ClickDelegate_TypeInfo);
-    byte_593BDB3 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_showConf__);
+    sub_2213A60(&BattleDropItemComponent_ClickDelegate_TypeInfo);
+    byte_5973FC0 = 1;
   }
   data = this->fields.data;
   if ( !data
     || (itemWindow = this->fields.itemWindow,
         DropItems = BattleData__getDropItems(data, 0),
-        v6 = (BattleDropItemComponent_ClickDelegate_o *)sub_21FFEBC(BattleDropItemComponent_ClickDelegate_TypeInfo),
+        v6 = (BattleDropItemComponent_ClickDelegate_o *)sub_2213CCC(BattleDropItemComponent_ClickDelegate_TypeInfo),
         BattleDropItemComponent_ClickDelegate___ctor(
           v6,
           (Il2CppObject *)this,
@@ -3008,7 +3008,7 @@ void BattlePerformanceContinue__atlasLoadEnd(BattlePerformanceContinue_o *this, 
           0),
         !itemWindow) )
   {
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   BattleViewItemlistComponent__setListDataCustomColumn(itemWindow, DropItems, v6, this->fields.itemColumnCount, 0);
 }
@@ -3024,18 +3024,18 @@ void BattlePerformanceContinue__callBackCommandSpell(
   __int64 *v6; // x8
 
   v4 = this;
-  if ( (byte_593BDC5 & 1) == 0 )
+  if ( (byte_5973FD2 & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&StringLiteral_3932/*"CONNECT_NG"*/);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_3933/*"CONNECT_OK"*/);
-    byte_593BDC5 = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&StringLiteral_3937/*"CONNECT_NG"*/);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_3938/*"CONNECT_OK"*/);
+    byte_5973FD2 = 1;
   }
   if ( !ret )
     goto LABEL_14;
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23468/*"ok"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23515/*"ok"*/, 0) )
   {
     v4->fields.continueRetryFlg = 0;
     if ( !*(&BattleData_TypeInfo->_2.cctor_finished + 1) )
@@ -3044,24 +3044,24 @@ void BattlePerformanceContinue__callBackCommandSpell(
     this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
     if ( this )
     {
-      v6 = &StringLiteral_3933/*"CONNECT_OK"*/;
+      v6 = &StringLiteral_3938/*"CONNECT_OK"*/;
 LABEL_12:
       PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v6, 0);
       return;
     }
     goto LABEL_14;
   }
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23290/*"ng"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23336/*"ng"*/, 0) )
   {
     this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
     v4->fields.continueRetryFlg = 1;
     if ( this )
     {
-      v6 = &StringLiteral_3932/*"CONNECT_NG"*/;
+      v6 = &StringLiteral_3937/*"CONNECT_NG"*/;
       goto LABEL_12;
     }
 LABEL_14:
-    sub_21FFECC(this, ret);
+    sub_2213CDC(this, ret);
   }
 }
 
@@ -3076,18 +3076,18 @@ void BattlePerformanceContinue__callBackContinueItem(
   __int64 *v6; // x8
 
   v4 = this;
-  if ( (byte_593BDDF & 1) == 0 )
+  if ( (byte_5973FEC & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&StringLiteral_3932/*"CONNECT_NG"*/);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_3933/*"CONNECT_OK"*/);
-    byte_593BDDF = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&StringLiteral_3937/*"CONNECT_NG"*/);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_3938/*"CONNECT_OK"*/);
+    byte_5973FEC = 1;
   }
   if ( !ret )
     goto LABEL_17;
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23468/*"ok"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23515/*"ok"*/, 0) )
   {
     this = (BattlePerformanceContinue_o *)v4->fields.data;
     v4->fields.continueRetryFlg = 0;
@@ -3105,7 +3105,7 @@ void BattlePerformanceContinue__callBackContinueItem(
         this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
         if ( this )
         {
-          v6 = &StringLiteral_3933/*"CONNECT_OK"*/;
+          v6 = &StringLiteral_3938/*"CONNECT_OK"*/;
 LABEL_15:
           PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v6, 0);
           return;
@@ -3114,7 +3114,7 @@ LABEL_15:
     }
     goto LABEL_17;
   }
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23290/*"ng"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23336/*"ng"*/, 0) )
   {
     this = (BattlePerformanceContinue_o *)v4->fields.data;
     v4->fields.continueRetryFlg = 1;
@@ -3124,12 +3124,12 @@ LABEL_15:
       this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
       if ( this )
       {
-        v6 = &StringLiteral_3932/*"CONNECT_NG"*/;
+        v6 = &StringLiteral_3937/*"CONNECT_NG"*/;
         goto LABEL_15;
       }
     }
 LABEL_17:
-    sub_21FFECC(this, ret);
+    sub_2213CDC(this, ret);
   }
 }
 
@@ -3144,18 +3144,18 @@ void BattlePerformanceContinue__callBackStone(
   __int64 *v6; // x8
 
   v4 = this;
-  if ( (byte_593BDD2 & 1) == 0 )
+  if ( (byte_5973FDF & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&StringLiteral_3932/*"CONNECT_NG"*/);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_3933/*"CONNECT_OK"*/);
-    byte_593BDD2 = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&StringLiteral_3937/*"CONNECT_NG"*/);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_3938/*"CONNECT_OK"*/);
+    byte_5973FDF = 1;
   }
   if ( !ret )
     goto LABEL_15;
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23468/*"ok"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23515/*"ok"*/, 0) )
   {
     this = (BattlePerformanceContinue_o *)v4->fields.data;
     v4->fields.continueRetryFlg = 0;
@@ -3168,7 +3168,7 @@ void BattlePerformanceContinue__callBackStone(
       this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
       if ( this )
       {
-        v6 = &StringLiteral_3933/*"CONNECT_OK"*/;
+        v6 = &StringLiteral_3938/*"CONNECT_OK"*/;
 LABEL_13:
         PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v6, 0);
         return;
@@ -3176,17 +3176,17 @@ LABEL_13:
     }
     goto LABEL_15;
   }
-  if ( System_String__Equals_75473208(ret, (System_String_o *)StringLiteral_23290/*"ng"*/, 0) )
+  if ( System_String__Equals_75686512(ret, (System_String_o *)StringLiteral_23336/*"ng"*/, 0) )
   {
     this = (BattlePerformanceContinue_o *)v4->fields.myFsm;
     v4->fields.continueRetryFlg = 1;
     if ( this )
     {
-      v6 = &StringLiteral_3932/*"CONNECT_NG"*/;
+      v6 = &StringLiteral_3937/*"CONNECT_NG"*/;
       goto LABEL_13;
     }
 LABEL_15:
-    sub_21FFECC(this, ret);
+    sub_2213CDC(this, ret);
   }
 }
 
@@ -3201,7 +3201,7 @@ void BattlePerformanceContinue__callbackContinueCommandSpell(
 
   data = this->fields.data;
   if ( !data )
-    sub_21FFECC(0, ret);
+    sub_2213CDC(0, ret);
   BattleData__SuccessContinue(data, 0);
   BattlePerformanceContinue__callBackCommandSpell(this, ret, v6);
 }
@@ -3218,14 +3218,14 @@ void BattlePerformanceContinue__callbaclStoneShop(
   const MethodInfo *v8; // x2
   __int64 *v9; // x8
 
-  if ( (byte_593BDDA & 1) == 0 )
+  if ( (byte_5973FE7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_3932/*"CONNECT_NG"*/);
-    sub_21FFC50(&StringLiteral_3933/*"CONNECT_OK"*/);
-    byte_593BDDA = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_3937/*"CONNECT_NG"*/);
+    sub_2213A60(&StringLiteral_3938/*"CONNECT_OK"*/);
+    byte_5973FE7 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   CommonUI__CloseStonePurchaseMenu(Instance, 0);
@@ -3235,17 +3235,17 @@ void BattlePerformanceContinue__callbaclStoneShop(
     Instance = (CommonUI_o *)this->fields.myFsm;
     if ( Instance )
     {
-      v9 = &StringLiteral_3932/*"CONNECT_NG"*/;
+      v9 = &StringLiteral_3937/*"CONNECT_NG"*/;
       goto LABEL_9;
     }
 LABEL_10:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   BattlePerformanceContinue__refreshStoneNow(this, 0, v8);
   Instance = (CommonUI_o *)this->fields.myFsm;
   if ( !Instance )
     goto LABEL_10;
-  v9 = &StringLiteral_3933/*"CONNECT_OK"*/;
+  v9 = &StringLiteral_3938/*"CONNECT_OK"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)*v9, 0);
 }
@@ -3256,10 +3256,10 @@ void BattlePerformanceContinue__checkCountStone(BattlePerformanceContinue_o *thi
   UserGameEntity_o *SelfUserGame; // x0
   __int64 v4; // x1
 
-  if ( (byte_593BDE4 & 1) == 0 )
+  if ( (byte_5973FF1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9636/*"NEXT"*/);
-    byte_593BDE4 = 1;
+    sub_2213A60(&StringLiteral_9649/*"NEXT"*/);
+    byte_5973FF1 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
@@ -3270,8 +3270,8 @@ void BattlePerformanceContinue__checkCountStone(BattlePerformanceContinue_o *thi
   this->fields.IsContinueItem = 0;
   if ( !SelfUserGame )
 LABEL_7:
-    sub_21FFECC(SelfUserGame, v4);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)SelfUserGame, (System_String_o *)StringLiteral_9636/*"NEXT"*/, 0);
+    sub_2213CDC(SelfUserGame, v4);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)SelfUserGame, (System_String_o *)StringLiteral_9649/*"NEXT"*/, 0);
 }
 
 
@@ -3286,17 +3286,17 @@ void BattlePerformanceContinue__checkDeadLineStoneShopEnd(BattlePerformanceConti
   ErrorDialog_ClickDelegate_o *v9; // x22
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_593BDE5 & 1) == 0 )
+  if ( (byte_5973FF2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_CallbackConfirmDialog__);
-    sub_21FFC50(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_9636/*"NEXT"*/);
-    sub_21FFC50(&StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_END_TIME"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593BDE5 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_CallbackConfirmDialog__);
+    sub_2213A60(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_9649/*"NEXT"*/);
+    sub_2213A60(&StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_END_TIME"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973FF2 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -3306,11 +3306,11 @@ void BattlePerformanceContinue__checkDeadLineStoneShopEnd(BattlePerformanceConti
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
   if ( ContinueDeadLine < NetworkManager__getTime(0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2834/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0);
-    v9 = (ErrorDialog_ClickDelegate_o *)sub_21FFEBC(ErrorDialog_ClickDelegate_TypeInfo);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2835/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0);
+    v9 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
     ErrorDialog_ClickDelegate___ctor(
       v9,
       (Il2CppObject *)this,
@@ -3334,12 +3334,12 @@ void BattlePerformanceContinue__checkDeadLineStoneShopEnd(BattlePerformanceConti
       return;
     }
 LABEL_13:
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   data = (BattleData_o *)this->fields.myFsm;
   if ( !data )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_9636/*"NEXT"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_9649/*"NEXT"*/, 0);
 }
 
 
@@ -3350,11 +3350,11 @@ void BattlePerformanceContinue__checkSpell(BattlePerformanceContinue_o *this, co
   int32_t OverwriteCommandSpellContinue; // w8
   __int64 *v6; // x8
 
-  if ( (byte_593BDBF & 1) == 0 )
+  if ( (byte_5973FCC & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDBF = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5973FCC = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !this->fields.data )
@@ -3371,15 +3371,15 @@ void BattlePerformanceContinue__checkSpell(BattlePerformanceContinue_o *this, co
   {
     if ( SelfUserGame )
     {
-      v6 = &StringLiteral_10006/*"OK"*/;
+      v6 = &StringLiteral_10019/*"OK"*/;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_21FFECC(SelfUserGame, v4);
+    sub_2213CDC(SelfUserGame, v4);
   }
   if ( !SelfUserGame )
     goto LABEL_11;
-  v6 = &StringLiteral_9639/*"NG"*/;
+  v6 = &StringLiteral_9652/*"NG"*/;
 LABEL_10:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)SelfUserGame, (System_String_o *)*v6, 0);
 }
@@ -3394,11 +3394,11 @@ void BattlePerformanceContinue__checkStone(BattlePerformanceContinue_o *this, co
   int32_t PayableStoneNum; // w8
   __int64 *v8; // x8
 
-  if ( (byte_593BDCC & 1) == 0 )
+  if ( (byte_5973FD9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDCC = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5973FD9 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   BattlePerformanceContinue__refreshStoneNow(this, SelfUserGame, v4);
@@ -3410,15 +3410,15 @@ void BattlePerformanceContinue__checkStone(BattlePerformanceContinue_o *this, co
   {
     if ( myFsm )
     {
-      v8 = &StringLiteral_9639/*"NG"*/;
+      v8 = &StringLiteral_9652/*"NG"*/;
       goto LABEL_9;
     }
 LABEL_10:
-    sub_21FFECC(myFsm, v6);
+    sub_2213CDC(myFsm, v6);
   }
   if ( !myFsm )
     goto LABEL_10;
-  v8 = &StringLiteral_10006/*"OK"*/;
+  v8 = &StringLiteral_10019/*"OK"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v8, 0);
 }
@@ -3430,17 +3430,17 @@ void BattlePerformanceContinue__closeContinueItem(BattlePerformanceContinue_o *t
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v5; // x21
 
-  if ( (byte_593BDDC & 1) == 0 )
+  if ( (byte_5973FE9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endCloseContinueItem__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDDC = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endCloseContinueItem__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FE9 = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
     || (BattleViewItemlistComponent__setHide(itemWindow, 0),
         window = this->fields.window,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v5 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v5,
           (Il2CppObject *)this,
@@ -3448,7 +3448,7 @@ void BattlePerformanceContinue__closeContinueItem(BattlePerformanceContinue_o *t
           0),
         !window) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._12_Close.methodPtr)(
     window,
@@ -3463,17 +3463,17 @@ void BattlePerformanceContinue__closeNoStone(BattlePerformanceContinue_o *this, 
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v5; // x21
 
-  if ( (byte_593BDD7 & 1) == 0 )
+  if ( (byte_5973FE4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endCloseNoStone__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDD7 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endCloseNoStone__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FE4 = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
     || (BattleViewItemlistComponent__setHide(itemWindow, 0),
         window = this->fields.window,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v5 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v5,
           (Il2CppObject *)this,
@@ -3481,7 +3481,7 @@ void BattlePerformanceContinue__closeNoStone(BattlePerformanceContinue_o *this, 
           0),
         !window) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._12_Close.methodPtr)(
     window,
@@ -3496,17 +3496,17 @@ void BattlePerformanceContinue__closeSpell(BattlePerformanceContinue_o *this, co
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v5; // x21
 
-  if ( (byte_593BDC2 & 1) == 0 )
+  if ( (byte_5973FCF & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endCloseSpell__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDC2 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endCloseSpell__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FCF = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
     || (BattleViewItemlistComponent__setHide(itemWindow, 0),
         window = this->fields.window,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v5 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v5,
           (Il2CppObject *)this,
@@ -3514,7 +3514,7 @@ void BattlePerformanceContinue__closeSpell(BattlePerformanceContinue_o *this, co
           0),
         !window) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._12_Close.methodPtr)(
     window,
@@ -3529,17 +3529,17 @@ void BattlePerformanceContinue__closeStone(BattlePerformanceContinue_o *this, co
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v5; // x21
 
-  if ( (byte_593BDCF & 1) == 0 )
+  if ( (byte_5973FDC & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endCloseStone__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    byte_593BDCF = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endCloseStone__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    byte_5973FDC = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
     || (BattleViewItemlistComponent__setHide(itemWindow, 0),
         window = this->fields.window,
-        v5 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v5 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v5,
           (Il2CppObject *)this,
@@ -3547,7 +3547,7 @@ void BattlePerformanceContinue__closeStone(BattlePerformanceContinue_o *this, co
           0),
         !window) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._12_Close.methodPtr)(
     window,
@@ -3564,7 +3564,7 @@ void BattlePerformanceContinue__closeUseCheck(BattlePerformanceContinue_o *this,
   if ( !useCheckWindow
     || (useCheckWindow = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useCheckWindow, 0)) == 0 )
   {
-    sub_21FFECC(useCheckWindow, method);
+    sub_2213CDC(useCheckWindow, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)useCheckWindow, 0, 0);
 }
@@ -3581,14 +3581,14 @@ void BattlePerformanceContinue__connectContinueItem(BattlePerformanceContinue_o 
   struct BattleData_o *v9; // x8
   struct BattleEntity_o *battle_ent; // x9
 
-  if ( (byte_593BDDE & 1) == 0 )
+  if ( (byte_5973FEB & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue_callBackContinueItem__);
-    sub_21FFC50(&Method_NetworkManager_getRequest_BattleUseContinueItemRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_593BDDE = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue_callBackContinueItem__);
+    sub_2213A60(&Method_NetworkManager_getRequest_BattleUseContinueItemRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_5973FEB = 1;
   }
   BattlePerformanceContinue__closeContinueItem(this, method);
   if ( !*(&BattleData_TypeInfo->_2.cctor_finished + 1) )
@@ -3603,7 +3603,7 @@ void BattlePerformanceContinue__connectContinueItem(BattlePerformanceContinue_o 
   if ( !data )
     goto LABEL_16;
   BattleData__procPlayerContinue(data, this->fields.isProgress, 0);
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -3613,7 +3613,7 @@ void BattlePerformanceContinue__connectContinueItem(BattlePerformanceContinue_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v8);
   data = (BattleData_o *)NetworkManager__getRequest_object_(
                            v7,
-                           (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_BattleUseContinueItemRequest___);
+                           (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_BattleUseContinueItemRequest___);
   v9 = this->fields.data;
   if ( !v9 )
     goto LABEL_16;
@@ -3625,7 +3625,7 @@ void BattlePerformanceContinue__connectContinueItem(BattlePerformanceContinue_o 
       return;
     }
 LABEL_16:
-    sub_21FFECC(data, v4);
+    sub_2213CDC(data, v4);
   }
   battle_ent = v9->fields.battle_ent;
   if ( !battle_ent || !data )
@@ -3657,16 +3657,16 @@ void BattlePerformanceContinue__connectSpell(BattlePerformanceContinue_o *this, 
   struct BattleEntity_o *battle_ent; // x22
   struct BattleData_o *v16; // x8
 
-  if ( (byte_593BDC4 & 1) == 0 )
+  if ( (byte_5973FD1 & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue_callBackCommandSpell__);
-    sub_21FFC50(&Method_BattlePerformanceContinue_callbackContinueCommandSpell__);
-    sub_21FFC50(&Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&StringLiteral_7202/*"GAME_OVER_COMMAND_SPELL_ID"*/);
-    byte_593BDC4 = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue_callBackCommandSpell__);
+    sub_2213A60(&Method_BattlePerformanceContinue_callbackContinueCommandSpell__);
+    sub_2213A60(&Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&StringLiteral_7214/*"GAME_OVER_COMMAND_SPELL_ID"*/);
+    byte_5973FD1 = 1;
   }
   BattlePerformanceContinue__closeSpell(this, method);
   if ( !*(&BattleData_TypeInfo->_2.cctor_finished + 1) )
@@ -3685,7 +3685,7 @@ void BattlePerformanceContinue__connectSpell(BattlePerformanceContinue_o *this, 
     return;
   }
   continueRetryFlg = this->fields.continueRetryFlg;
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   v9 = v8;
   if ( continueRetryFlg )
   {
@@ -3698,14 +3698,14 @@ void BattlePerformanceContinue__connectSpell(BattlePerformanceContinue_o *this, 
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v10);
     data = (BattleData_o *)NetworkManager__getRequest_object_(
                              v9,
-                             (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
+                             (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
     if ( data )
     {
       RequestBase__beginRetryRequest((RequestBase_o *)data, 0, 0);
       return;
     }
 LABEL_21:
-    sub_21FFECC(data, v4);
+    sub_2213CDC(data, v4);
   }
   NetworkManager_ResultCallbackFunc___ctor(
     v8,
@@ -3716,14 +3716,14 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11);
   data = (BattleData_o *)NetworkManager__getRequest_object_(
                            v9,
-                           (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
+                           (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_BattleCommandSpellRequest___);
   v12 = this->fields.data;
   if ( !v12 )
     goto LABEL_21;
   v13 = (BattleCommandSpellRequest_o *)data;
   continueCount = v12->fields.continueCount;
   battle_ent = v12->fields.battle_ent;
-  data = (BattleData_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_7202/*"GAME_OVER_COMMAND_SPELL_ID"*/, 0);
+  data = (BattleData_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_7214/*"GAME_OVER_COMMAND_SPELL_ID"*/, 0);
   if ( !battle_ent )
     goto LABEL_21;
   v16 = this->fields.data;
@@ -3750,14 +3750,14 @@ void BattlePerformanceContinue__connectStone(BattlePerformanceContinue_o *this, 
   struct BattleData_o *v8; // x8
   struct BattleEntity_o *battle_ent; // x9
 
-  if ( (byte_593BDD1 & 1) == 0 )
+  if ( (byte_5973FDE & 1) == 0 )
   {
-    sub_21FFC50(&BattleData_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue_callBackStone__);
-    sub_21FFC50(&Method_NetworkManager_getRequest_BattleUseContinueRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_593BDD1 = 1;
+    sub_2213A60(&BattleData_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue_callBackStone__);
+    sub_2213A60(&Method_NetworkManager_getRequest_BattleUseContinueRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_5973FDE = 1;
   }
   BattlePerformanceContinue__closeStone(this, method);
   if ( !*(&BattleData_TypeInfo->_2.cctor_finished + 1) )
@@ -3767,7 +3767,7 @@ void BattlePerformanceContinue__connectStone(BattlePerformanceContinue_o *this, 
   if ( !data )
     goto LABEL_15;
   BattleData__procPlayerContinue(data, this->fields.isProgress, 0);
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -3777,7 +3777,7 @@ void BattlePerformanceContinue__connectStone(BattlePerformanceContinue_o *this, 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7);
   data = (BattleData_o *)NetworkManager__getRequest_object_(
                            v6,
-                           (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_BattleUseContinueRequest___);
+                           (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_BattleUseContinueRequest___);
   v8 = this->fields.data;
   if ( !v8 )
     goto LABEL_15;
@@ -3789,7 +3789,7 @@ void BattlePerformanceContinue__connectStone(BattlePerformanceContinue_o *this, 
       return;
     }
 LABEL_15:
-    sub_21FFECC(data, v4);
+    sub_2213CDC(data, v4);
   }
   battle_ent = v8->fields.battle_ent;
   if ( !battle_ent || !data )
@@ -3807,10 +3807,10 @@ void BattlePerformanceContinue__endCloseContinueItem(BattlePerformanceContinue_o
 {
   UnityEngine_GameObject_o *ContinueItemWindow; // x0
 
-  if ( (byte_593BDDD & 1) == 0 )
+  if ( (byte_5973FEA & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5626/*"END_CLOSE"*/);
-    byte_593BDDD = 1;
+    sub_2213A60(&StringLiteral_5638/*"END_CLOSE"*/);
+    byte_5973FEA = 1;
   }
   ContinueItemWindow = this->fields.ContinueItemWindow;
   if ( !ContinueItemWindow
@@ -3819,9 +3819,9 @@ void BattlePerformanceContinue__endCloseContinueItem(BattlePerformanceContinue_o
     || (BattleViewItemlistComponent__ClearObj((BattleViewItemlistComponent_o *)ContinueItemWindow, 0),
         (ContinueItemWindow = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(ContinueItemWindow, method);
+    sub_2213CDC(ContinueItemWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)ContinueItemWindow, (System_String_o *)StringLiteral_5626/*"END_CLOSE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)ContinueItemWindow, (System_String_o *)StringLiteral_5638/*"END_CLOSE"*/, 0);
 }
 
 
@@ -3829,19 +3829,19 @@ void BattlePerformanceContinue__endCloseNoStone(BattlePerformanceContinue_o *thi
 {
   UnityEngine_GameObject_o *nostoneObject; // x0
 
-  if ( (byte_593BDD8 & 1) == 0 )
+  if ( (byte_5973FE5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5626/*"END_CLOSE"*/);
-    byte_593BDD8 = 1;
+    sub_2213A60(&StringLiteral_5638/*"END_CLOSE"*/);
+    byte_5973FE5 = 1;
   }
   nostoneObject = this->fields.nostoneObject;
   if ( !nostoneObject
     || (UnityEngine_GameObject__SetActive(nostoneObject, 0, 0),
         (nostoneObject = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(nostoneObject, method);
+    sub_2213CDC(nostoneObject, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)nostoneObject, (System_String_o *)StringLiteral_5626/*"END_CLOSE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)nostoneObject, (System_String_o *)StringLiteral_5638/*"END_CLOSE"*/, 0);
 }
 
 
@@ -3849,10 +3849,10 @@ void BattlePerformanceContinue__endCloseSpell(BattlePerformanceContinue_o *this,
 {
   UnityEngine_GameObject_o *commandspellObject; // x0
 
-  if ( (byte_593BDC3 & 1) == 0 )
+  if ( (byte_5973FD0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5626/*"END_CLOSE"*/);
-    byte_593BDC3 = 1;
+    sub_2213A60(&StringLiteral_5638/*"END_CLOSE"*/);
+    byte_5973FD0 = 1;
   }
   commandspellObject = this->fields.commandspellObject;
   if ( !commandspellObject
@@ -3861,9 +3861,9 @@ void BattlePerformanceContinue__endCloseSpell(BattlePerformanceContinue_o *this,
     || (BattleViewItemlistComponent__ClearObj((BattleViewItemlistComponent_o *)commandspellObject, 0),
         (commandspellObject = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(commandspellObject, method);
+    sub_2213CDC(commandspellObject, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)commandspellObject, (System_String_o *)StringLiteral_5626/*"END_CLOSE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)commandspellObject, (System_String_o *)StringLiteral_5638/*"END_CLOSE"*/, 0);
 }
 
 
@@ -3871,10 +3871,10 @@ void BattlePerformanceContinue__endCloseStone(BattlePerformanceContinue_o *this,
 {
   UnityEngine_GameObject_o *stoneObject; // x0
 
-  if ( (byte_593BDD0 & 1) == 0 )
+  if ( (byte_5973FDD & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5626/*"END_CLOSE"*/);
-    byte_593BDD0 = 1;
+    sub_2213A60(&StringLiteral_5638/*"END_CLOSE"*/);
+    byte_5973FDD = 1;
   }
   stoneObject = this->fields.stoneObject;
   if ( !stoneObject
@@ -3883,9 +3883,9 @@ void BattlePerformanceContinue__endCloseStone(BattlePerformanceContinue_o *this,
     || (BattleViewItemlistComponent__ClearObj((BattleViewItemlistComponent_o *)stoneObject, 0),
         (stoneObject = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(stoneObject, method);
+    sub_2213CDC(stoneObject, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)stoneObject, (System_String_o *)StringLiteral_5626/*"END_CLOSE"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)stoneObject, (System_String_o *)StringLiteral_5638/*"END_CLOSE"*/, 0);
 }
 
 
@@ -3894,16 +3894,16 @@ void BattlePerformanceContinue__endDialog(BattlePerformanceContinue_o *this, boo
   CommonUI_o *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_593BDBA & 1) == 0 )
+  if ( (byte_5973FC7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BDBA = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_5973FC7 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance || (CommonUI__CloseNotificationDialog(Instance, 0), (Instance = (CommonUI_o *)this->fields.logic) == 0) )
-    sub_21FFECC(Instance, v5);
-  BattleLogic__sendFsmEvent((BattleLogic_o *)Instance, (System_String_o *)StringLiteral_9639/*"NG"*/, 0);
+    sub_2213CDC(Instance, v5);
+  BattleLogic__sendFsmEvent((BattleLogic_o *)Instance, (System_String_o *)StringLiteral_9652/*"NG"*/, 0);
 }
 
 
@@ -3934,16 +3934,16 @@ void BattlePerformanceContinue__endLoadCommandSPell(
   int32_t v24; // [xsp+8h] [xbp-48h] BYREF
   int v25; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_593BDCA & 1) == 0 )
+  if ( (byte_5973FD7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    sub_21FFC50(&StringLiteral_19644/*"ef_commandspell_{0:D2}"*/);
-    sub_21FFC50(&StringLiteral_19645/*"ef_commandspell{0:D4}"*/);
-    byte_593BDCA = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    sub_2213A60(&StringLiteral_19686/*"ef_commandspell_{0:D2}"*/);
+    sub_2213A60(&StringLiteral_19687/*"ef_commandspell{0:D4}"*/);
+    byte_5973FD7 = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -3959,14 +3959,14 @@ void BattlePerformanceContinue__endLoadCommandSPell(
   v7 = (int)perf;
   v8 = BattleData__CheckCurrentTemporaryCommandSpell(this->fields.data, v6, 0);
   v25 = v7;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v25);
-  perf = (BattlePerformance_o *)System_String__Format((System_String_o *)StringLiteral_19645/*"ef_commandspell{0:D4}"*/, v9, 0);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
+  perf = (BattlePerformance_o *)System_String__Format((System_String_o *)StringLiteral_19687/*"ef_commandspell{0:D4}"*/, v9, 0);
   if ( !aData )
     goto LABEL_29;
-  perf = (BattlePerformance_o *)AssetData__GetObject_object__58323140(
+  perf = (BattlePerformance_o *)AssetData__GetObject_object__58532980(
                                   aData,
                                   (System_String_o *)perf,
-                                  (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                  (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   v10 = this->fields.perf;
   if ( !v10 )
     goto LABEL_29;
@@ -3977,17 +3977,17 @@ void BattlePerformanceContinue__endLoadCommandSPell(
              0,
              0);
   v24 = v8;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-  perf = (BattlePerformance_o *)System_String__Format((System_String_o *)StringLiteral_19644/*"ef_commandspell_{0:D2}"*/, v12, 0);
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+  perf = (BattlePerformance_o *)System_String__Format((System_String_o *)StringLiteral_19686/*"ef_commandspell_{0:D2}"*/, v12, 0);
   if ( !Object )
     goto LABEL_29;
   v13 = (System_String_o *)perf;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        Object,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   v16 = UnityEngine_GameObject__GetComponent_object_(
           Object,
-          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
   perf = (BattlePerformance_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -4003,11 +4003,11 @@ void BattlePerformanceContinue__endLoadCommandSPell(
     else
     {
       v25 = 3;
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v25);
-      v18 = System_String__Format((System_String_o *)StringLiteral_19644/*"ef_commandspell_{0:D2}"*/, v22, 0);
+      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
+      v18 = System_String__Format((System_String_o *)StringLiteral_19686/*"ef_commandspell_{0:D2}"*/, v22, 0);
       v17 = (SimpleAnimation_o *)Component_object;
     }
-    SimpleAnimation__Play_78338864(v17, v18, 0);
+    SimpleAnimation__Play_78552168(v17, v18, 0);
   }
   else
   {
@@ -4027,11 +4027,11 @@ void BattlePerformanceContinue__endLoadCommandSPell(
       else
       {
         v25 = 3;
-        v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v25);
-        v21 = System_String__Format((System_String_o *)StringLiteral_19644/*"ef_commandspell_{0:D2}"*/, v23, 0);
+        v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
+        v21 = System_String__Format((System_String_o *)StringLiteral_19686/*"ef_commandspell_{0:D2}"*/, v23, 0);
         v20 = (UnityEngine_Animation_o *)v16;
       }
-      UnityEngine_Animation__Play_82865240(v20, v21, 0);
+      UnityEngine_Animation__Play_83078544(v20, v21, 0);
     }
   }
   perf = (BattlePerformance_o *)this->fields.logic;
@@ -4040,9 +4040,9 @@ void BattlePerformanceContinue__endLoadCommandSPell(
     || (BattlePerformance__playMasterCommandSpellCutIn(perf, 0), (perf = (BattlePerformance_o *)this->fields.myFsm) == 0) )
   {
 LABEL_29:
-    sub_21FFECC(perf, aData);
+    sub_2213CDC(perf, aData);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)perf, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)perf, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4050,10 +4050,10 @@ void BattlePerformanceContinue__endOpenContinueItem(BattlePerformanceContinue_o 
 {
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_593BDBE & 1) == 0 )
+  if ( (byte_5973FCB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDBE = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5973FCB = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
@@ -4061,9 +4061,9 @@ void BattlePerformanceContinue__endOpenContinueItem(BattlePerformanceContinue_o 
     || (BattleViewItemlistComponent__setShow(itemWindow, 0),
         (itemWindow = (BattleViewItemlistComponent_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -4071,10 +4071,10 @@ void BattlePerformanceContinue__endOpenNoStone(BattlePerformanceContinue_o *this
 {
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_593BDD6 & 1) == 0 )
+  if ( (byte_5973FE3 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDD6 = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5973FE3 = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
@@ -4082,9 +4082,9 @@ void BattlePerformanceContinue__endOpenNoStone(BattlePerformanceContinue_o *this
     || (BattleViewItemlistComponent__setShow(itemWindow, 0),
         (itemWindow = (BattleViewItemlistComponent_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -4092,10 +4092,10 @@ void BattlePerformanceContinue__endOpenSpell(BattlePerformanceContinue_o *this, 
 {
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_593BDC1 & 1) == 0 )
+  if ( (byte_5973FCE & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDC1 = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5973FCE = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
@@ -4103,9 +4103,9 @@ void BattlePerformanceContinue__endOpenSpell(BattlePerformanceContinue_o *this, 
     || (BattleViewItemlistComponent__setShow(itemWindow, 0),
         (itemWindow = (BattleViewItemlistComponent_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -4113,10 +4113,10 @@ void BattlePerformanceContinue__endOpenStone(BattlePerformanceContinue_o *this, 
 {
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_593BDCE & 1) == 0 )
+  if ( (byte_5973FDB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDCE = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5973FDB = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow
@@ -4124,9 +4124,9 @@ void BattlePerformanceContinue__endOpenStone(BattlePerformanceContinue_o *this, 
     || (BattleViewItemlistComponent__setShow(itemWindow, 0),
         (itemWindow = (BattleViewItemlistComponent_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(itemWindow, method);
+    sub_2213CDC(itemWindow, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -4134,15 +4134,15 @@ void BattlePerformanceContinue__endOpenUsecheck(BattlePerformanceContinue_o *thi
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDE3 & 1) == 0 )
+  if ( (byte_5973FF0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5640/*"END_OPEN"*/);
-    byte_593BDE3 = 1;
+    sub_2213A60(&StringLiteral_5652/*"END_OPEN"*/);
+    byte_5973FF0 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5640/*"END_OPEN"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5652/*"END_OPEN"*/, 0);
 }
 
 
@@ -4151,15 +4151,15 @@ void BattlePerformanceContinue__endRetryDialog(BattlePerformanceContinue_o *this
 {
   BattleLogic_o *logic; // x0
 
-  if ( (byte_593BDC7 & 1) == 0 )
+  if ( (byte_5973FD4 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    byte_593BDC7 = 1;
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    byte_5973FD4 = 1;
   }
   logic = this->fields.logic;
   if ( !logic )
-    sub_21FFECC(0, flg);
-  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10006/*"OK"*/, 0);
+    sub_2213CDC(0, flg);
+  BattleLogic__sendFsmEvent(logic, (System_String_o *)StringLiteral_10019/*"OK"*/, 0);
 }
 
 
@@ -4172,25 +4172,25 @@ void BattlePerformanceContinue__endSpell(BattlePerformanceContinue_o *this, cons
   System_String_o *v7; // x20
   int32_t SpellImageIdBattle; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593BDCB & 1) == 0 )
+  if ( (byte_5973FD8 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_4762/*"CommandSpellEffect/ef_commandspell{0:D4}"*/);
-    byte_593BDCB = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&StringLiteral_4770/*"CommandSpellEffect/ef_commandspell{0:D4}"*/);
+    byte_5973FD8 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
     goto LABEL_8;
   SpellImageIdBattle = UserGameEntity__get_SpellImageIdBattle(SelfUserGame, 0);
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &SpellImageIdBattle);
-  v7 = System_String__Format((System_String_o *)StringLiteral_4762/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &SpellImageIdBattle);
+  v7 = System_String__Format((System_String_o *)StringLiteral_4770/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v5, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v6);
   AssetManager__releaseAssetStorage(v7, 0);
   SelfUserGame = (UserGameEntity_o *)this->fields.logic;
   if ( !SelfUserGame )
 LABEL_8:
-    sub_21FFECC(SelfUserGame, v4);
+    sub_2213CDC(SelfUserGame, v4);
   BattleLogic__resetTimeAcceleration((BattleLogic_o *)SelfUserGame, 0, 0);
 }
 
@@ -4209,25 +4209,25 @@ void BattlePerformanceContinue__openNoStone(BattlePerformanceContinue_o *this, c
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v7; // x21
 
-  if ( (byte_593BDD5 & 1) == 0 )
+  if ( (byte_5973FE2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endOpenNoStone__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_21FFC50(&StringLiteral_2841/*"BATTLE_CONTINUE_NO_STONE"*/);
-    byte_593BDD5 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endOpenNoStone__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    sub_2213A60(&StringLiteral_2842/*"BATTLE_CONTINUE_NO_STONE"*/);
+    byte_5973FE2 = 1;
   }
   BattlePerformanceContinue__AttachStoneCountRefreshComponent(this, method);
   BattlePerformanceContinue__SetContinueMessage(
     this,
     this->fields.checkUseBuyGem,
-    (System_String_o *)StringLiteral_2841/*"BATTLE_CONTINUE_NO_STONE"*/,
+    (System_String_o *)StringLiteral_2842/*"BATTLE_CONTINUE_NO_STONE"*/,
     0x80000000,
     v3);
   nostoneObject = this->fields.nostoneObject;
   if ( !nostoneObject
     || (UnityEngine_GameObject__SetActive(nostoneObject, 1, 0),
         window = this->fields.window,
-        v7 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v7 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v7,
           (Il2CppObject *)this,
@@ -4235,7 +4235,7 @@ void BattlePerformanceContinue__openNoStone(BattlePerformanceContinue_o *this, c
           0),
         !window) )
   {
-    sub_21FFECC(nostoneObject, v4);
+    sub_2213CDC(nostoneObject, v4);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._10_Open.methodPtr)(
     window,
@@ -4251,28 +4251,28 @@ void BattlePerformanceContinue__openReTry(BattlePerformanceContinue_o *this, con
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDC6 & 1) == 0 )
+  if ( (byte_5973FD3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endRetryDialog__);
-    sub_21FFC50(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_26859/*"通信に失敗したので再度通信を行います"*/);
-    sub_21FFC50(&StringLiteral_26860/*"通信失敗"*/);
-    byte_593BDC6 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endRetryDialog__);
+    sub_2213A60(&NotificationDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_26911/*"通信に失敗したので再度通信を行います"*/);
+    sub_2213A60(&StringLiteral_26912/*"通信失敗"*/);
+    byte_5973FD3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v4 = (NotificationDialog_ClickDelegate_o *)sub_21FFEBC(NotificationDialog_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = (NotificationDialog_ClickDelegate_o *)sub_2213CCC(NotificationDialog_ClickDelegate_TypeInfo);
   NotificationDialog_ClickDelegate___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue_endRetryDialog__,
     0);
   if ( !Instance )
-    sub_21FFECC(v5, v6);
-  CommonUI__OpenNotificationDialog_37294692(
+    sub_2213CDC(v5, v6);
+  CommonUI__OpenNotificationDialog_37376108(
     (CommonUI_o *)Instance,
-    (System_String_o *)StringLiteral_26860/*"通信失敗"*/,
-    (System_String_o *)StringLiteral_26859/*"通信に失敗したので再度通信を行います"*/,
+    (System_String_o *)StringLiteral_26912/*"通信失敗"*/,
+    (System_String_o *)StringLiteral_26911/*"通信に失敗したので再度通信を行います"*/,
     v4,
     -1,
     0,
@@ -4318,18 +4318,18 @@ void BattlePerformanceContinue__openSpell(BattlePerformanceContinue_o *this, con
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v24; // x21
 
-  if ( (byte_593BDC0 & 1) == 0 )
+  if ( (byte_5973FCD & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endOpenSpell__);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SendEventToFsm___);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
-    sub_21FFC50(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    sub_21FFC50(&StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
-    byte_593BDC0 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endOpenSpell__);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_SendEventToFsm___);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/);
+    sub_2213A60(&StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/);
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    sub_2213A60(&StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/);
+    byte_5973FCD = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
@@ -4341,13 +4341,13 @@ void BattlePerformanceContinue__openSpell(BattlePerformanceContinue_o *this, con
   {
     if ( !v8 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
-    v9 = (System_String_o *)StringLiteral_2828/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/;
+    v9 = (System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/;
   }
   else
   {
     if ( !v8 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
-    v9 = (System_String_o *)StringLiteral_2829/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/;
+    v9 = (System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/;
   }
   SelfUserGame = (UserGameEntity_o *)LocalizationManager__Get(v9, 0);
   if ( !stoneBtnLabel )
@@ -4390,7 +4390,7 @@ LABEL_21:
       {
         Component_object = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)SelfUserGame,
-                             (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SendEventToFsm___);
+                             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SendEventToFsm___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
         SelfUserGame = (UserGameEntity_o *)UnityEngine_Object__op_Inequality(
@@ -4401,9 +4401,9 @@ LABEL_21:
         {
           if ( !Component_object )
             goto LABEL_32;
-          v22 = StringLiteral_5645/*"END_PROC"*/;
-          Component_object[2].monitor = (void *)StringLiteral_5645/*"END_PROC"*/;
-          sub_21FFBF4(
+          v22 = StringLiteral_5657/*"END_PROC"*/;
+          Component_object[2].monitor = (void *)StringLiteral_5657/*"END_PROC"*/;
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&Component_object[2].monitor,
             v22,
             v16,
@@ -4422,17 +4422,17 @@ LABEL_21:
       }
     }
 LABEL_32:
-    sub_21FFECC(SelfUserGame, v4);
+    sub_2213CDC(SelfUserGame, v4);
   }
 LABEL_30:
   BattlePerformanceContinue__SetContinueMessage(
     this,
     this->fields.checkUseCommandSpell,
-    (System_String_o *)StringLiteral_2830/*"BATTLE_CONTINUE_CHECK_SPELL"*/,
+    (System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_SPELL"*/,
     0x80000000,
     v13);
   window = this->fields.window;
-  v24 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo);
+  v24 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(v24, (Il2CppObject *)this, Method_BattlePerformanceContinue_endOpenSpell__, 0);
   if ( !window )
     goto LABEL_32;
@@ -4451,25 +4451,25 @@ void BattlePerformanceContinue__openStone(BattlePerformanceContinue_o *this, con
   struct BattleWindowComponent_o *window; // x20
   BattleWindowComponent_EndCall_o *v7; // x21
 
-  if ( (byte_593BDCD & 1) == 0 )
+  if ( (byte_5973FDA & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endOpenStone__);
-    sub_21FFC50(&BattleWindowComponent_EndCall_TypeInfo);
-    sub_21FFC50(&StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/);
-    byte_593BDCD = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endOpenStone__);
+    sub_2213A60(&BattleWindowComponent_EndCall_TypeInfo);
+    sub_2213A60(&StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/);
+    byte_5973FDA = 1;
   }
   BattlePerformanceContinue__AttachStoneCountRefreshComponent(this, method);
   BattlePerformanceContinue__SetContinueMessage(
     this,
     this->fields.checkUseGem,
-    (System_String_o *)StringLiteral_2831/*"BATTLE_CONTINUE_CHECK_STONE"*/,
+    (System_String_o *)StringLiteral_2832/*"BATTLE_CONTINUE_CHECK_STONE"*/,
     0x80000000,
     v3);
   stoneObject = this->fields.stoneObject;
   if ( !stoneObject
     || (UnityEngine_GameObject__SetActive(stoneObject, 1, 0),
         window = this->fields.window,
-        v7 = (BattleWindowComponent_EndCall_o *)sub_21FFEBC(BattleWindowComponent_EndCall_TypeInfo),
+        v7 = (BattleWindowComponent_EndCall_o *)sub_2213CCC(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v7,
           (Il2CppObject *)this,
@@ -4477,7 +4477,7 @@ void BattlePerformanceContinue__openStone(BattlePerformanceContinue_o *this, con
           0),
         !window) )
   {
-    sub_21FFECC(stoneObject, v4);
+    sub_2213CDC(stoneObject, v4);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, const MethodInfo *))window->klass->vtable._10_Open.methodPtr)(
     window,
@@ -4493,23 +4493,23 @@ void BattlePerformanceContinue__openStoneShop(BattlePerformanceContinue_o *this,
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDD9 & 1) == 0 )
+  if ( (byte_5973FE6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_callbaclStoneShop__);
-    sub_21FFC50(&StonePurchaseMenu_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593BDD9 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_callbaclStoneShop__);
+    sub_2213A60(&StonePurchaseMenu_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5973FE6 = 1;
   }
   BattlePerformanceContinue__closeNoStone(this, method);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v4 = (StonePurchaseMenu_CallbackFunc_o *)sub_21FFEBC(StonePurchaseMenu_CallbackFunc_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = (StonePurchaseMenu_CallbackFunc_o *)sub_2213CCC(StonePurchaseMenu_CallbackFunc_TypeInfo);
   StonePurchaseMenu_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
     Method_BattlePerformanceContinue_callbaclStoneShop__,
     0);
   if ( !Instance )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   CommonUI__OpenStonePurchaseMenu((CommonUI_o *)Instance, v4, 0, 1, 0);
 }
 
@@ -4532,14 +4532,14 @@ void BattlePerformanceContinue__openUseCheck(BattlePerformanceContinue_o *this, 
   __int64 v17; // x1
   const MethodInfo *v18; // x1
 
-  if ( (byte_593BDE2 & 1) == 0 )
+  if ( (byte_5973FEF & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_2845/*"BATTLE_CONTINUE_USECHECK_STONE"*/);
-    sub_21FFC50(&StringLiteral_2843/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/);
-    sub_21FFC50(&StringLiteral_2844/*"BATTLE_CONTINUE_USECHECK_SPELL"*/);
-    byte_593BDE2 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_2846/*"BATTLE_CONTINUE_USECHECK_STONE"*/);
+    sub_2213A60(&StringLiteral_2844/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/);
+    sub_2213A60(&StringLiteral_2845/*"BATTLE_CONTINUE_USECHECK_SPELL"*/);
+    byte_5973FEF = 1;
   }
   usecheckLabel = (UnityEngine_Component_o *)this->fields.usecheckLabel;
   if ( !usecheckLabel )
@@ -4611,13 +4611,13 @@ void BattlePerformanceContinue__openUseCheck(BattlePerformanceContinue_o *this, 
     addMsgLabel = this->fields.usecheckLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&type);
-    v11 = &StringLiteral_2844/*"BATTLE_CONTINUE_USECHECK_SPELL"*/;
+    v11 = &StringLiteral_2845/*"BATTLE_CONTINUE_USECHECK_SPELL"*/;
     goto LABEL_34;
   }
   v12 = this->fields.usecheckLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&type);
-  usecheckLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2845/*"BATTLE_CONTINUE_USECHECK_STONE"*/, 0);
+  usecheckLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2846/*"BATTLE_CONTINUE_USECHECK_STONE"*/, 0);
   if ( !v12 )
     goto LABEL_44;
   UILabel__set_text(v12, (System_String_o *)usecheckLabel, 0);
@@ -4642,13 +4642,13 @@ void BattlePerformanceContinue__openUseCheck(BattlePerformanceContinue_o *this, 
         (usecheckLabel = (UnityEngine_Component_o *)this->fields.addMsgInfo) == 0) )
   {
 LABEL_44:
-    sub_21FFECC(usecheckLabel, *(_QWORD *)&type);
+    sub_2213CDC(usecheckLabel, *(_QWORD *)&type);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)usecheckLabel, 1, 0);
   addMsgLabel = this->fields.addMsgLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17);
-  v11 = &StringLiteral_2843/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/;
+  v11 = &StringLiteral_2844/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/;
 LABEL_34:
   usecheckLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v11, 0);
   if ( !addMsgLabel )
@@ -4670,15 +4670,15 @@ void BattlePerformanceContinue__procContinueItem(BattlePerformanceContinue_o *th
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDE1 & 1) == 0 )
+  if ( (byte_5973FEE & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDE1 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FEE = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4689,17 +4689,17 @@ void BattlePerformanceContinue__procNG(BattlePerformanceContinue_o *this, const 
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BDB9 & 1) == 0 )
+  if ( (byte_5973FC6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePerformanceContinue_endDialog__);
-    sub_21FFC50(&NotificationDialog_ClickDelegate_TypeInfo);
-    byte_593BDB9 = 1;
+    sub_2213A60(&Method_BattlePerformanceContinue_endDialog__);
+    sub_2213A60(&NotificationDialog_ClickDelegate_TypeInfo);
+    byte_5973FC6 = 1;
   }
   logic = this->fields.logic;
-  v4 = (NotificationDialog_ClickDelegate_o *)sub_21FFEBC(NotificationDialog_ClickDelegate_TypeInfo);
+  v4 = (NotificationDialog_ClickDelegate_o *)sub_2213CCC(NotificationDialog_ClickDelegate_TypeInfo);
   NotificationDialog_ClickDelegate___ctor(v4, (Il2CppObject *)this, Method_BattlePerformanceContinue_endDialog__, 0);
   if ( !logic )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   BattleLogic__OpenBattleLoseDlg(logic, 1, 0, v4, 1, 0);
 }
 
@@ -4709,16 +4709,16 @@ void BattlePerformanceContinue__procNGContinueItem(BattlePerformanceContinue_o *
   __int64 v3; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDE0 & 1) == 0 )
+  if ( (byte_5973FED & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDE0 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FED = 1;
   }
   BattlePerformanceContinue__closeContinueItem(this, method);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, v3);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, v3);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4727,17 +4727,17 @@ void BattlePerformanceContinue__procNGGiveUpContinueItem(BattlePerformanceContin
   __int64 v3; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDB7 & 1) == 0 )
+  if ( (byte_5973FC4 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDB7 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FC4 = 1;
   }
   BattlePerformanceContinue__closeContinueItem(this, method);
   myFsm = this->fields.myFsm;
   this->fields.IsContinueItem = 0;
   if ( !myFsm )
-    sub_21FFECC(0, v3);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, v3);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4746,10 +4746,10 @@ void BattlePerformanceContinue__procNGNoStone(BattlePerformanceContinue_o *this,
   __int64 v3; // x1
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_593BDDB & 1) == 0 )
+  if ( (byte_5973FE8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDDB = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FE8 = 1;
   }
   BattlePerformanceContinue__closeNoStone(this, method);
   itemWindow = this->fields.itemWindow;
@@ -4757,9 +4757,9 @@ void BattlePerformanceContinue__procNGNoStone(BattlePerformanceContinue_o *this,
     || (BattleViewItemlistComponent__ClearObj(itemWindow, 0),
         (itemWindow = (BattleViewItemlistComponent_o *)this->fields.myFsm) == 0) )
   {
-    sub_21FFECC(itemWindow, v3);
+    sub_2213CDC(itemWindow, v3);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)itemWindow, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4768,16 +4768,16 @@ void BattlePerformanceContinue__procNGSpell(BattlePerformanceContinue_o *this, c
   __int64 v3; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDC8 & 1) == 0 )
+  if ( (byte_5973FD5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDC8 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FD5 = 1;
   }
   BattlePerformanceContinue__closeSpell(this, method);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, v3);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, v3);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4786,16 +4786,16 @@ void BattlePerformanceContinue__procNGStone(BattlePerformanceContinue_o *this, c
   __int64 v3; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDD3 & 1) == 0 )
+  if ( (byte_5973FE0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDD3 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FE0 = 1;
   }
   BattlePerformanceContinue__closeStone(this, method);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, v3);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, v3);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4811,12 +4811,12 @@ void BattlePerformanceContinue__procOK(BattlePerformanceContinue_o *this, const 
   AdManager_o *v9; // x19
 
   v2 = this;
-  if ( (byte_593BDB8 & 1) == 0 )
+  if ( (byte_5973FC5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (BattlePerformanceContinue_o *)sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    byte_593BDB8 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (BattlePerformanceContinue_o *)sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    byte_5973FC5 = 1;
   }
   perf = v2->fields.perf;
   if ( !perf )
@@ -4831,7 +4831,7 @@ void BattlePerformanceContinue__procOK(BattlePerformanceContinue_o *this, const 
   this = (BattlePerformanceContinue_o *)v2->fields.logic;
   if ( !this )
     goto LABEL_18;
-  BattleLogic__sendFsmEvent((BattleLogic_o *)this, (System_String_o *)StringLiteral_10006/*"OK"*/, 0);
+  BattleLogic__sendFsmEvent((BattleLogic_o *)this, (System_String_o *)StringLiteral_10019/*"OK"*/, 0);
   this = (BattlePerformanceContinue_o *)v2->fields.data;
   if ( !this )
     goto LABEL_18;
@@ -4844,7 +4844,7 @@ void BattlePerformanceContinue__procOK(BattlePerformanceContinue_o *this, const 
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v7);
     if ( TerminalPramsManager__CanSendTrackEvent(QuestId, 0) )
     {
-      this = (BattlePerformanceContinue_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+      this = (BattlePerformanceContinue_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
       data = v2->fields.data;
       if ( data )
       {
@@ -4857,7 +4857,7 @@ void BattlePerformanceContinue__procOK(BattlePerformanceContinue_o *this, const 
         }
       }
 LABEL_18:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
   }
 }
@@ -4873,21 +4873,21 @@ void BattlePerformanceContinue__procSpell(BattlePerformanceContinue_o *this, con
   __int64 v8; // x1
   int32_t SpellImageIdBattle; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BDC9 & 1) == 0 )
+  if ( (byte_5973FD6 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_BattlePerformanceContinue_endLoadCommandSPell__);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&StringLiteral_4762/*"CommandSpellEffect/ef_commandspell{0:D4}"*/);
-    byte_593BDC9 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_BattlePerformanceContinue_endLoadCommandSPell__);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&StringLiteral_4770/*"CommandSpellEffect/ef_commandspell{0:D4}"*/);
+    byte_5973FD6 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   SpellImageIdBattle = UserGameEntity__get_SpellImageIdBattle(SelfUserGame, 0);
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &SpellImageIdBattle);
-  v6 = System_String__Format((System_String_o *)StringLiteral_4762/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v5, 0);
-  v7 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &SpellImageIdBattle);
+  v6 = System_String__Format((System_String_o *)StringLiteral_4770/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v5, 0);
+  v7 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v7,
     (Il2CppObject *)this,
@@ -4903,15 +4903,15 @@ void BattlePerformanceContinue__procStone(BattlePerformanceContinue_o *this, con
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_593BDD4 & 1) == 0 )
+  if ( (byte_5973FE1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5645/*"END_PROC"*/);
-    byte_593BDD4 = 1;
+    sub_2213A60(&StringLiteral_5657/*"END_PROC"*/);
+    byte_5973FE1 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_21FFECC(0, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5645/*"END_PROC"*/, 0);
+    sub_2213CDC(0, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5657/*"END_PROC"*/, 0);
 }
 
 
@@ -4930,10 +4930,10 @@ void BattlePerformanceContinue__refreshStoneNow(
   System_String_o *v12; // x21
   int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BDB2 & 1) == 0 )
+  if ( (byte_5973FBF & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
-    byte_593BDB2 = 1;
+    sub_2213A60(&StringLiteral_26432/*"{0:#,0}"*/);
+    byte_5973FBF = 1;
   }
   if ( !userGame )
   {
@@ -4947,8 +4947,8 @@ void BattlePerformanceContinue__refreshStoneNow(
   stone_now = this->fields.stone_now;
   stoneNumInStonelessWindow = this->fields.stoneNumInStonelessWindow;
   v13 = stone;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v13);
-  SelfUserGame = (UserGameEntity_o *)System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v11, 0);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v13);
+  SelfUserGame = (UserGameEntity_o *)System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v11, 0);
   if ( !stoneNumInStonelessWindow
     || (v12 = (System_String_o *)SelfUserGame,
         UILabel__set_text(stoneNumInStonelessWindow, (System_String_o *)SelfUserGame, 0),
@@ -4956,7 +4956,7 @@ void BattlePerformanceContinue__refreshStoneNow(
     || (UILabel__set_text(stone_now, v12, 0), !gem_now) )
   {
 LABEL_9:
-    sub_21FFECC(SelfUserGame, v6);
+    sub_2213CDC(SelfUserGame, v6);
   }
   UILabel__set_text(gem_now, v12, 0);
 }
@@ -4999,7 +4999,6 @@ bool BattlePerformanceContinue__CoEndContinue_d__133__MoveNext(
   float timer_5__2; // s8
   struct BattlePerformanceContinue_o *_4__this; // x8
   struct BattlePerformance_o *perf; // x8
-  bool result; // w0
   float deltaTime; // s0
   Il2CppObject **p__2__current; // x19
   System_String_o *v10; // x2
@@ -5011,10 +5010,10 @@ bool BattlePerformanceContinue__CoEndContinue_d__133__MoveNext(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_593BE0E & 1) == 0 )
+  if ( (byte_597401B & 1) == 0 )
   {
-    this = (BattlePerformanceContinue__CoEndContinue_d__133_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
-    byte_593BE0E = 1;
+    this = (BattlePerformanceContinue__CoEndContinue_d__133_o *)sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_NGUIFader___);
+    byte_597401B = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -5029,9 +5028,9 @@ bool BattlePerformanceContinue__CoEndContinue_d__133__MoveNext(
       || (this = (BattlePerformanceContinue__CoEndContinue_d__133_o *)perf->fields.fadeObject) == 0
       || (this = (BattlePerformanceContinue__CoEndContinue_d__133_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                         (UnityEngine_GameObject_o *)this,
-                                                                        (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NGUIFader___)) == 0 )
+                                                                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_NGUIFader___)) == 0 )
     {
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
     v16.fields.r = 1.0;
     v16.fields.g = 1.0;
@@ -5050,10 +5049,9 @@ LABEL_13:
   v2->fields.__2__current = 0;
   p__2__current = &v2->fields.__2__current;
   *((float *)p__2__current + 4) = timer_5__2 + deltaTime;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v10, v11, v12, v13, v14, v15);
-  result = 1;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v10, v11, v12, v13, v14, v15);
   *((_DWORD *)p__2__current - 2) = 1;
-  return result;
+  return 1;
 }
 
 
@@ -5073,11 +5071,11 @@ void __noreturn BattlePerformanceContinue__CoEndContinue_d__133__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_BattlePerformanceContinue__CoEndContinue_d__133_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_BattlePerformanceContinue__CoEndContinue_d__133_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -5113,18 +5111,18 @@ void BattlePerformanceContinue___c__DisplayClass142_0___OpenInterruptionConfirmW
   __int64 v4; // x1
   struct BattlePerformanceContinue_o *_4__this; // x8
 
-  if ( (byte_593BE0C & 1) == 0 )
+  if ( (byte_5974019 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593BE0C = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_5974019 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0),
         (_4__this = this->fields.__4__this) == 0)
     || (Instance = (Il2CppObject *)_4__this->fields.myFsm) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, this->fields.eventName, 0);
 }
@@ -5147,24 +5145,24 @@ void BattlePerformanceContinue___c__DisplayClass145_0___OpenWaveSelectConfirmDia
   struct BattlePerformanceContinue_o *_4__this; // x8
   System_String_o *v6; // x1
 
-  if ( (byte_593BE0D & 1) == 0 )
+  if ( (byte_597401A & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_10006/*"OK"*/);
-    sub_21FFC50(&StringLiteral_9639/*"NG"*/);
-    byte_593BE0D = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_10019/*"OK"*/);
+    sub_2213A60(&StringLiteral_9652/*"NG"*/);
+    byte_597401A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0),
         (_4__this = this->fields.__4__this) == 0)
     || (Instance = (Il2CppObject *)_4__this->fields.myFsm) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   if ( this->fields.isDecide )
-    v6 = (System_String_o *)StringLiteral_10006/*"OK"*/;
+    v6 = (System_String_o *)StringLiteral_10019/*"OK"*/;
   else
-    v6 = (System_String_o *)StringLiteral_9639/*"NG"*/;
+    v6 = (System_String_o *)StringLiteral_9652/*"NG"*/;
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, v6, 0);
 }

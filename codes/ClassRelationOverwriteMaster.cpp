@@ -1,14 +1,14 @@
 void ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938406 & 1) == 0 )
+  if ( (byte_59705B6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
-    byte_5938406 = 1;
+    sub_2213A60(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    byte_59705B6 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     300,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938404 & 1) == 0 )
+  if ( (byte_59705B4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
-    byte_5938404 = 1;
+    sub_2213A60(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+    byte_59705B4 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -37,7 +37,7 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_3EE2044 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_3F157EC *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938405 & 1) == 0 )
+  if ( (byte_59705B5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
-    byte_5938405 = 1;
+    sub_2213A60(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+    byte_59705B5 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -68,7 +68,7 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -101,13 +101,13 @@ bool ClassRelationOverwriteMaster__getEntity(
   int32_t v30; // w2
   int32_t v31; // w3
 
-  if ( (byte_5938407 & 1) == 0 )
+  if ( (byte_59705B7 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    byte_5938407 = 1;
+    sub_2213A60(&int___TypeInfo);
+    byte_59705B7 = 1;
   }
   *outEnt = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)outEnt,
     0,
     *(System_String_o **)&relationId,
@@ -116,9 +116,9 @@ bool ClassRelationOverwriteMaster__getEntity(
     defClass,
     (bool)method,
     v7);
-  Entity = sub_21FFD10(int___TypeInfo, 4);
+  Entity = sub_2213B20(int___TypeInfo, 4);
   if ( !Entity )
-    sub_21FFECC(0, v15);
+    sub_2213CDC(0, v15);
   v17 = *(_DWORD *)(Entity + 24);
   v18 = (_DWORD *)Entity;
   if ( !v17 )
@@ -163,7 +163,7 @@ bool ClassRelationOverwriteMaster__getEntity(
   v29 = v18[6];
   if ( v29 <= 2 || (v18[10] = 0, v29 == 3) )
 LABEL_19:
-    sub_21FFED4(Entity);
+    sub_2213CE4(Entity);
   v30 = v18[8];
   v31 = v18[9];
   v18[11] = 0;

@@ -53,14 +53,14 @@ void CardFavoriteRequest__beginRequest(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
 
   v10 = this;
-  if ( (byte_593A195 & 1) == 0 )
+  if ( (byte_5972372 & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (CardFavoriteRequest_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593A195 = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (CardFavoriteRequest_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5972372 = 1;
   }
   if ( !userServantEntity )
-    sub_21FFECC(this, userServantEntity);
+    sub_2213CDC(this, userServantEntity);
   v44 = isFavorite;
   v11 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
   v12 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
@@ -72,7 +72,7 @@ void CardFavoriteRequest__beginRequest(
   v42 = commonFlag;
   v43 = v10;
   v45 = v46;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v45, 0);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v45, 0);
   v15 = *(_QWORD *)&userServantEntity->fields.imageLimitCount.fields.currentCryptoKey;
   v16 = *(_QWORD *)&userServantEntity->fields.imageLimitCount.fields.fakeValue;
   targetUsrSVtId = v13;
@@ -80,59 +80,59 @@ void CardFavoriteRequest__beginRequest(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
   *(_QWORD *)&v47.fields.currentCryptoKey = v15;
   *(_QWORD *)&v47.fields.fakeValue = v16;
-  v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v47, 0);
-  v38 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.dispLimitCount, 0);
-  v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v47, 0);
+  v38 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.dispLimitCount, 0);
+  v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
           userServantEntity->fields.commandCardLimitCount,
           0);
-  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.iconLimitCount, 0);
-  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.iconLimitCount, 0);
+  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
           userServantEntity->fields.portraitLimitCount,
           0);
   IsLock = UserServantEntity__IsLock(userServantEntity, 0);
   IsChoice = UserServantEntity__IsChoice(userServantEntity, 0);
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                   userServantEntity->fields.battleVoice,
                   0);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                        userServantEntity->fields.randomLimitCount,
                        0);
-  randomSettingSupport = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  randomSettingSupport = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                            userServantEntity->fields.randomLimitCountSupport,
                            0);
-  limitCountSupport = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  limitCountSupport = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                         userServantEntity->fields.limitCountSupport,
                         0);
-  imageLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  imageLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                        userServantEntity->fields.imageLimitCount2,
                        0);
-  dispLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  dispLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                       userServantEntity->fields.dispLimitCount2,
                       0);
-  commandCardLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  commandCardLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                              userServantEntity->fields.commandCardLimitCount2,
                              0);
-  iconLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  iconLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                       userServantEntity->fields.iconLimitCount2,
                       0);
-  portraitLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  portraitLimitCount2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                           userServantEntity->fields.portraitLimitCount2,
                           0);
-  randomSettingOwn2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  randomSettingOwn2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                         userServantEntity->fields.randomLimitCount2,
                         0);
-  randomSettingSupport2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  randomSettingSupport2 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                             userServantEntity->fields.randomLimitCountSupport2,
                             0);
-  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
           userServantEntity->fields.limitCountSupport2,
           0);
   v28 = *(_QWORD *)&userServantEntity->fields.transformVal.fields.currentCryptoKey;
   *(_QWORD *)&v48.fields.fakeValue = *(_QWORD *)&userServantEntity->fields.transformVal.fields.fakeValue;
   limitCountSupport2 = v27;
   *(_QWORD *)&v48.fields.currentCryptoKey = v28;
-  transformVal = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v48, 0);
-  CardFavoriteRequest__beginRequest_51140696(
+  transformVal = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v48, 0);
+  CardFavoriteRequest__beginRequest_51214180(
     v43,
     targetUsrSVtId,
     v39,
@@ -185,18 +185,18 @@ void CardFavoriteRequest__beginRequestFavorite(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-60h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_593A193 & 1) == 0 )
+  if ( (byte_5972370 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593A193 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5972370 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !SelfUserGame || !userServantEntity )
     goto LABEL_14;
   v9 = (UserServantCollectionMaster_o *)Master_object;
@@ -207,7 +207,7 @@ void CardFavoriteRequest__beginRequestFavorite(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
   *(_QWORD *)&v21.fields.currentCryptoKey = v10;
   *(_QWORD *)&v21.fields.fakeValue = v11;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v21, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v21, 0);
   if ( !v9 )
     goto LABEL_14;
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v9, userId, Master_object, 0);
@@ -219,10 +219,10 @@ void CardFavoriteRequest__beginRequestFavorite(
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v13);
   v19 = v20;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v19, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v19, 0);
   if ( !EntityDefinitely )
 LABEL_14:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   CardFavoriteRequest__beginRequest(
     this,
     userServantEntity,
@@ -261,18 +261,18 @@ void CardFavoriteRequest__beginRequestPush(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+40h] [xbp-60h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
 
-  if ( (byte_593A194 & 1) == 0 )
+  if ( (byte_5972371 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593A194 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5972371 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !SelfUserGame || !userServantEntity )
     goto LABEL_14;
   v9 = (UserServantCollectionMaster_o *)Master_object;
@@ -283,7 +283,7 @@ void CardFavoriteRequest__beginRequestPush(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
   *(_QWORD *)&v26.fields.currentCryptoKey = v10;
   *(_QWORD *)&v26.fields.fakeValue = v11;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v26, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v26, 0);
   if ( !v9 )
     goto LABEL_14;
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v9, userId, Master_object, 0);
@@ -295,16 +295,16 @@ void CardFavoriteRequest__beginRequestPush(
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v13);
   v24 = v25;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v24, 0);
+  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v24, 0);
   v19 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
   v20 = v18;
   pushUserSvtId = SelfUserGame->fields.pushUserSvtId;
   *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v23.fields.fakeValue = v19;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v23, 0);
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v23, 0);
   if ( !EntityDefinitely )
 LABEL_14:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   CardFavoriteRequest__beginRequest(
     this,
     userServantEntity,
@@ -315,7 +315,7 @@ LABEL_14:
 }
 
 
-void CardFavoriteRequest__beginRequest_51140696(
+void CardFavoriteRequest__beginRequest_51214180(
         CardFavoriteRequest_o *this,
         int64_t targetUsrSVtId,
         int32_t imageLimitCount,
@@ -344,93 +344,93 @@ void CardFavoriteRequest__beginRequest_51140696(
         const MethodInfo *method)
 {
   __int64 v33; // x1
-  _BOOL8 _47357952; // x0
+  _BOOL8 _47388504; // x0
   __int64 v35; // x1
   int32_t v36; // w21
   int32_t v37; // w29
 
-  if ( (byte_593A196 & 1) == 0 )
+  if ( (byte_5972373 & 1) == 0 )
   {
-    sub_21FFC50(&TutorialFlag_TypeInfo);
-    sub_21FFC50(&StringLiteral_22262/*"limitCountSupport"*/);
-    sub_21FFC50(&StringLiteral_21053/*"iconLimitCount"*/);
-    sub_21FFC50(&StringLiteral_23865/*"portraitLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_24099/*"randomLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_25086/*"svtCommonFlag"*/);
-    sub_21FFC50(&StringLiteral_21932/*"isPush"*/);
-    sub_21FFC50(&StringLiteral_21228/*"imageLimitCount"*/);
-    sub_21FFC50(&StringLiteral_25893/*"userSvtId"*/);
-    sub_21FFC50(&StringLiteral_24098/*"randomLimitCount"*/);
-    sub_21FFC50(&StringLiteral_21054/*"iconLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_23864/*"portraitLimitCount"*/);
-    sub_21FFC50(&StringLiteral_19451/*"dispLimitCount"*/);
-    sub_21FFC50(&StringLiteral_22263/*"limitCountSupport2"*/);
-    sub_21FFC50(&StringLiteral_25434/*"transformVal"*/);
-    sub_21FFC50(&StringLiteral_21229/*"imageLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_17789/*"battleVoice"*/);
-    sub_21FFC50(&StringLiteral_19452/*"dispLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_18923/*"commandCardLimitCount2"*/);
-    sub_21FFC50(&StringLiteral_24101/*"randomLimitCountSupport2"*/);
-    sub_21FFC50(&StringLiteral_21905/*"isLock"*/);
-    sub_21FFC50(&StringLiteral_21872/*"isChoice"*/);
-    sub_21FFC50(&StringLiteral_24100/*"randomLimitCountSupport"*/);
-    sub_21FFC50(&StringLiteral_18922/*"commandCardLimitCount"*/);
-    sub_21FFC50(&StringLiteral_21893/*"isFavorite"*/);
-    byte_593A196 = 1;
+    sub_2213A60(&TutorialFlag_TypeInfo);
+    sub_2213A60(&StringLiteral_22305/*"limitCountSupport"*/);
+    sub_2213A60(&StringLiteral_21094/*"iconLimitCount"*/);
+    sub_2213A60(&StringLiteral_23912/*"portraitLimitCount2"*/);
+    sub_2213A60(&StringLiteral_24146/*"randomLimitCount2"*/);
+    sub_2213A60(&StringLiteral_25134/*"svtCommonFlag"*/);
+    sub_2213A60(&StringLiteral_21974/*"isPush"*/);
+    sub_2213A60(&StringLiteral_21269/*"imageLimitCount"*/);
+    sub_2213A60(&StringLiteral_25941/*"userSvtId"*/);
+    sub_2213A60(&StringLiteral_24145/*"randomLimitCount"*/);
+    sub_2213A60(&StringLiteral_21095/*"iconLimitCount2"*/);
+    sub_2213A60(&StringLiteral_23911/*"portraitLimitCount"*/);
+    sub_2213A60(&StringLiteral_19493/*"dispLimitCount"*/);
+    sub_2213A60(&StringLiteral_22306/*"limitCountSupport2"*/);
+    sub_2213A60(&StringLiteral_25482/*"transformVal"*/);
+    sub_2213A60(&StringLiteral_21270/*"imageLimitCount2"*/);
+    sub_2213A60(&StringLiteral_17827/*"battleVoice"*/);
+    sub_2213A60(&StringLiteral_19494/*"dispLimitCount2"*/);
+    sub_2213A60(&StringLiteral_18961/*"commandCardLimitCount2"*/);
+    sub_2213A60(&StringLiteral_24148/*"randomLimitCountSupport2"*/);
+    sub_2213A60(&StringLiteral_21947/*"isLock"*/);
+    sub_2213A60(&StringLiteral_21914/*"isChoice"*/);
+    sub_2213A60(&StringLiteral_24147/*"randomLimitCountSupport"*/);
+    sub_2213A60(&StringLiteral_18960/*"commandCardLimitCount"*/);
+    sub_2213A60(&StringLiteral_21935/*"isFavorite"*/);
+    byte_5972373 = 1;
   }
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_25893/*"userSvtId"*/, targetUsrSVtId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21228/*"imageLimitCount"*/, imageLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19451/*"dispLimitCount"*/, dispLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18922/*"commandCardLimitCount"*/, commandCardLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21053/*"iconLimitCount"*/, iconLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23864/*"portraitLimitCount"*/, portraitLimitCount, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_25941/*"userSvtId"*/, targetUsrSVtId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21269/*"imageLimitCount"*/, imageLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19493/*"dispLimitCount"*/, dispLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18960/*"commandCardLimitCount"*/, commandCardLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21094/*"iconLimitCount"*/, iconLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23911/*"portraitLimitCount"*/, portraitLimitCount, 0);
   if ( !*(&TutorialFlag_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v33);
-  _47357952 = TutorialFlag__Get_47357952(106, 0);
-  if ( !_47357952 )
+  _47388504 = TutorialFlag__Get_47388504(106, 0);
+  if ( !_47388504 )
   {
     v36 = limitCountSupport2;
     v37 = transformVal;
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21893/*"isFavorite"*/, -1, 0);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21935/*"isFavorite"*/, -1, 0);
     if ( this )
       goto LABEL_9;
 LABEL_10:
-    sub_21FFECC(_47357952, v35);
+    sub_2213CDC(_47388504, v35);
   }
   if ( !this )
     goto LABEL_10;
   v36 = limitCountSupport2;
   v37 = transformVal;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21893/*"isFavorite"*/, isFavorite, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21935/*"isFavorite"*/, isFavorite, 0);
 LABEL_9:
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21905/*"isLock"*/, isLock, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21872/*"isChoice"*/, isChoice, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25086/*"svtCommonFlag"*/, commonFlag, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17789/*"battleVoice"*/, battleVoice, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24098/*"randomLimitCount"*/, randomSettingOwn, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24100/*"randomLimitCountSupport"*/, randomSettingSupport, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22262/*"limitCountSupport"*/, limitCountSupport, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21932/*"isPush"*/, isPush, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21229/*"imageLimitCount2"*/, imageLimitCount2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19452/*"dispLimitCount2"*/, dispLimitCount2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18923/*"commandCardLimitCount2"*/, commandCardLimitCount2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21054/*"iconLimitCount2"*/, iconLimitCount2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23865/*"portraitLimitCount2"*/, portraitLimitCount2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24099/*"randomLimitCount2"*/, randomSettingOwn2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24101/*"randomLimitCountSupport2"*/, randomSettingSupport2, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22263/*"limitCountSupport2"*/, v36, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25434/*"transformVal"*/, v37, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21947/*"isLock"*/, isLock, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21914/*"isChoice"*/, isChoice, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25134/*"svtCommonFlag"*/, commonFlag, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17827/*"battleVoice"*/, battleVoice, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24145/*"randomLimitCount"*/, randomSettingOwn, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24147/*"randomLimitCountSupport"*/, randomSettingSupport, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22305/*"limitCountSupport"*/, limitCountSupport, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21974/*"isPush"*/, isPush, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21270/*"imageLimitCount2"*/, imageLimitCount2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19494/*"dispLimitCount2"*/, dispLimitCount2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18961/*"commandCardLimitCount2"*/, commandCardLimitCount2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21095/*"iconLimitCount2"*/, iconLimitCount2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23912/*"portraitLimitCount2"*/, portraitLimitCount2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24146/*"randomLimitCount2"*/, randomSettingOwn2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24148/*"randomLimitCountSupport2"*/, randomSettingSupport2, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22306/*"limitCountSupport2"*/, v36, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25482/*"transformVal"*/, v37, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *CardFavoriteRequest__getMockData(CardFavoriteRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A192 & 1) == 0 )
+  if ( (byte_597236F & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A192 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597236F = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -442,16 +442,16 @@ System_String_o *CardFavoriteRequest__getURL(CardFavoriteRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A191 & 1) == 0 )
+  if ( (byte_597236E & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18501/*"card/favorite"*/);
-    byte_593A191 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18539/*"card/favorite"*/);
+    byte_597236E = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18501/*"card/favorite"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_18539/*"card/favorite"*/, 0);
 }
 
 
@@ -463,19 +463,19 @@ void CardFavoriteRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_593A197 & 1) == 0 )
+  if ( (byte_5972374 & 1) == 0 )
   {
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A197 = 1;
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972374 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
   v5 = ResponseCommandKind__SearchData(34, responseList, 0);
-  if ( v5 && ResponseData__checkError_51190916(v5, 0) )
-    v6 = &StringLiteral_23468/*"ok"*/;
+  if ( v5 && ResponseData__checkError_51257228(v5, 0) )
+    v6 = &StringLiteral_23515/*"ok"*/;
   else
-    v6 = &StringLiteral_23290/*"ng"*/;
+    v6 = &StringLiteral_23336/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

@@ -14,7 +14,7 @@ void ItemLinkInfoDetailObject__Awake(ItemLinkInfoDetailObject_o *this, const Met
 
   widget = this->fields.widget;
   if ( !widget || (itemDetailLabel = this->fields.itemDetailLabel) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   mHeight = itemDetailLabel->fields.mHeight;
   v5 = (float)widget->fields.mHeight;
   this->fields.itemDetailLabelFontSize = itemDetailLabel->fields.mFontSize;
@@ -49,7 +49,7 @@ void ItemLinkInfoDetailObject__Setup(
     itemIcon = this->fields.itemIcon;
     ImageId = ItemEntity__GetImageId(itemEnt, 0);
     if ( !itemIcon )
-      sub_21FFECC(ImageId, v12);
+      sub_2213CDC(ImageId, v12);
     ItemIconComponent__SetCombineItemImage(itemIcon, ImageId, itemEnt->fields.bgImageId, -1, type == 29, 0);
   }
   if ( isDispStoneDetail )
@@ -76,14 +76,14 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
   UserExternalPaymentStoneEntity_o *v17; // [xsp+8h] [xbp-38h] BYREF
   UserGameEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_593AE07 & 1) == 0 )
+  if ( (byte_59730C0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AE07 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59730C0 = 1;
   }
   entity = 0;
   v17 = 0;
@@ -91,13 +91,13 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
-    if ( !byte_5931D52 )
+    if ( !byte_5969EF2 )
     {
-      sub_21FFC50(&NetworkManager_TypeInfo);
-      byte_5931D52 = 1;
+      sub_2213A60(&NetworkManager_TypeInfo);
+      byte_5969EF2 = 1;
     }
     UnitInfo = (System_String_o *)NetworkManager_TypeInfo;
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -168,7 +168,7 @@ void ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this
         }
       }
 LABEL_40:
-      sub_21FFECC(UnitInfo, v4);
+      sub_2213CDC(UnitInfo, v4);
     }
   }
 }
@@ -180,7 +180,7 @@ float ItemLinkInfoDetailObject__get_AreaHeight(ItemLinkInfoDetailObject_o *this,
 
   itemDetailLabel = this->fields.itemDetailLabel;
   if ( !itemDetailLabel )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return this->fields.itemDetailLabelMargin + (float)itemDetailLabel->fields.mHeight;
 }
 
@@ -191,6 +191,6 @@ float ItemLinkInfoDetailObject__get_Height(ItemLinkInfoDetailObject_o *this, con
 
   widget = this->fields.widget;
   if ( !widget )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return (float)widget->fields.mHeight;
 }

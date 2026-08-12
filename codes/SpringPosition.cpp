@@ -4,10 +4,10 @@ void SpringPosition___ctor(SpringPosition_o *this, const MethodInfo *method)
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -42,18 +42,18 @@ SpringPosition_o *SpringPosition__Begin(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = go;
-  if ( (byte_593CF0A & 1) == 0 )
+  if ( (byte_59751E1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
-    go = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF0A = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+    go = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751E1 = 1;
   }
   if ( !v8 )
     goto LABEL_12;
   Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                v8,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SpringPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   go = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -61,18 +61,18 @@ SpringPosition_o *SpringPosition__Begin(
   {
     go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                        v8,
-                                       (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
+                                       (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_SpringPosition___);
     Component_object = (char *)go;
   }
   if ( !Component_object )
 LABEL_12:
-    sub_21FFECC(go, method);
+    sub_2213CDC(go, method);
   *((float *)Component_object + 8) = x;
   *((float *)Component_object + 9) = y;
   *((float *)Component_object + 10) = z;
   *((float *)Component_object + 11) = strength;
   *((_QWORD *)Component_object + 7) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Component_object + 56), 0, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(Component_object + 56), 0, v11, v12, v13, v14, v15, v16);
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0) )
   {
     *((_DWORD *)Component_object + 22) = 0;
@@ -102,14 +102,14 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   __int64 v18; // x1
   UnityEngine_GameObject_o *v19; // x0
 
-  if ( (byte_593CF09 & 1) == 0 )
+  if ( (byte_59751E0 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SpringPosition_TypeInfo);
-    byte_593CF09 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SpringPosition_TypeInfo);
+    byte_59751E0 = 1;
   }
   SpringPosition_TypeInfo->static_fields->current = this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SpringPosition_TypeInfo->static_fields,
     (int32_t)this,
     v2,
@@ -131,11 +131,11 @@ void SpringPosition__NotifyListeners(SpringPosition_o *this, const MethodInfo *m
   {
     v19 = this->fields.eventReceiver;
     if ( !v19 )
-      sub_21FFECC(0, v18);
-    UnityEngine_GameObject__SendMessage_83220264(v19, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
+      sub_2213CDC(0, v18);
+    UnityEngine_GameObject__SendMessage_83433568(v19, this->fields.callWhenFinished, (Il2CppObject *)this, 1, 0);
   }
   SpringPosition_TypeInfo->static_fields->current = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SpringPosition_TypeInfo->static_fields,
     0,
     v12,
@@ -166,15 +166,15 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CF07 & 1) == 0 )
+  if ( (byte_59751DE & 1) == 0 )
   {
-    sub_21FFC50(&Method_NGUITools_FindInParents_UIScrollView___);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_593CF07 = 1;
+    sub_2213A60(&Method_NGUITools_FindInParents_UIScrollView___);
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_59751DE = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
   if ( this->fields.updateScrollView )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -182,9 +182,9 @@ void SpringPosition__Start(SpringPosition_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v10);
     v12 = NGUITools__FindInParents_object_(
             gameObject,
-            (const MethodInfo_38BD680 *)Method_NGUITools_FindInParents_UIScrollView___);
+            (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIScrollView___);
     this->fields.mSv = (struct UIScrollView_o *)v12;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSv, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSv, (int32_t)v12, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -214,19 +214,19 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
   float v23; // s10
   float v24; // s11
   UnityEngine_Object_o *mSv; // x20
-  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o v27; // 0:kr34_12.12
+  UnityEngine_Vector3_o localPosition; // 0:kr40_12.12
+  UnityEngine_Vector3_o v29; // 0:kr74_12.12
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593CF08 & 1) == 0 )
+  if ( (byte_59751DF & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF08 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751DF = 1;
   }
   if ( this->fields.ignoreTimeScale )
     deltaTime = RealTime__get_deltaTime(0);
@@ -253,9 +253,9 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
     v11 = this->fields.mTrans;
     if ( v11 )
     {
-      v27 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
-      v28 = NGUIMath__SpringLerp_56160220(v27, this->fields.target, this->fields.strength, v6, 0);
-      UnityEngine_Transform__set_position(v11, v28, 0);
+      v30 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
+      v31 = NGUIMath__SpringLerp_56364876(v30, this->fields.target, this->fields.strength, v6, 0);
+      UnityEngine_Transform__set_position(v11, v31, 0);
       mTrans = this->fields.mTrans;
       if ( mTrans )
       {
@@ -263,10 +263,10 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
         v12 = this->fields.target.fields.z;
         v14 = this->fields.target.fields.x;
         v15 = this->fields.mThreshold;
-        v29 = UnityEngine_Transform__get_position(mTrans, 0);
-        if ( v15 < (float)((float)((float)(v12 - v29.fields.z) * (float)(v12 - v29.fields.z))
-                         + (float)((float)((float)(v14 - v29.fields.x) * (float)(v14 - v29.fields.x))
-                                 + (float)((float)(v13 - v29.fields.y) * (float)(v13 - v29.fields.y)))) )
+        v27 = UnityEngine_Transform__get_position(mTrans, 0);
+        if ( v15 < (float)((float)((float)(v12 - v27.fields.z) * (float)(v12 - v27.fields.z))
+                         + (float)((float)((float)(v14 - v27.fields.x) * (float)(v14 - v27.fields.x))
+                                 + (float)((float)(v13 - v27.fields.y) * (float)(v13 - v27.fields.y)))) )
           goto LABEL_24;
         mTrans = this->fields.mTrans;
         if ( !mTrans )
@@ -276,7 +276,7 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
       }
     }
 LABEL_30:
-    sub_21FFECC(mTrans, v4);
+    sub_2213CDC(mTrans, v4);
   }
   if ( mThreshold == 0.0 )
   {
@@ -298,9 +298,9 @@ LABEL_30:
   v20 = this->fields.mTrans;
   if ( !v20 )
     goto LABEL_30;
-  v31 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v32 = NGUIMath__SpringLerp_56160220(v31, this->fields.target, this->fields.strength, v6, 0);
-  UnityEngine_Transform__set_localPosition(v20, v32, 0);
+  v32 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
+  v33 = NGUIMath__SpringLerp_56364876(v32, this->fields.target, this->fields.strength, v6, 0);
+  UnityEngine_Transform__set_localPosition(v20, v33, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_30;
@@ -308,10 +308,10 @@ LABEL_30:
   v21 = this->fields.target.fields.z;
   v23 = this->fields.target.fields.x;
   v24 = this->fields.mThreshold;
-  v33 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  if ( v24 < (float)((float)((float)(v21 - v33.fields.z) * (float)(v21 - v33.fields.z))
-                   + (float)((float)((float)(v23 - v33.fields.x) * (float)(v23 - v33.fields.x))
-                           + (float)((float)(v22 - v33.fields.y) * (float)(v22 - v33.fields.y)))) )
+  v29 = UnityEngine_Transform__get_localPosition(mTrans, 0);
+  if ( v24 < (float)((float)((float)(v21 - v29.fields.z) * (float)(v21 - v29.fields.z))
+                   + (float)((float)((float)(v23 - v29.fields.x) * (float)(v23 - v29.fields.x))
+                           + (float)((float)(v22 - v29.fields.y) * (float)(v22 - v29.fields.y)))) )
     goto LABEL_24;
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -359,7 +359,7 @@ void SpringPosition_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -370,12 +370,12 @@ void SpringPosition_OnFinished___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -387,9 +387,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_2004A0C;
+  this->fields.invoke_impl = (intptr_t)sub_2017CF4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_20049CC;
+  this->fields.extra_arg = (intptr_t)sub_2017CB4;
 }
 
 
@@ -399,9 +399,9 @@ System_IAsyncResult_o *SpringPosition_OnFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -410,7 +410,7 @@ void SpringPosition_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

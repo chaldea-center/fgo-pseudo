@@ -1,27 +1,27 @@
 void UserEventMissionEntity___ctor(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593951D & 1) == 0 )
+  if ( (byte_59716DD & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593951D = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716DD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventMissionEntity__CreatePK(int64_t userId, int32_t missionId, const MethodInfo *method)
 {
-  if ( (byte_593951B & 1) == 0 )
+  if ( (byte_59716DB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_593951B = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_59716DB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3854538 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -39,10 +39,10 @@ bool UserEventMissionEntity__IsTodayMissionData(UserEventMissionEntity_o *this, 
   __int64 v4; // x1
   int64_t updatedAt; // x19
 
-  if ( (byte_593951C & 1) == 0 )
+  if ( (byte_59716DC & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593951C = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59716DC = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);

@@ -3,12 +3,12 @@ void TutorialSetRequest__beginRequest(TutorialSetRequest_o *this, int32_t flagId
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_593A33F & 1) == 0 )
+  if ( (byte_597251C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_20350/*"flagId"*/);
-    byte_593A33F = 1;
+    sub_2213A60(&StringLiteral_20391/*"flagId"*/);
+    byte_597251C = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20350/*"flagId"*/, flagId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20391/*"flagId"*/, flagId, v3);
   *((_DWORD *)&this->fields.shouldShowConnect + 1) = flagId;
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
@@ -16,10 +16,10 @@ void TutorialSetRequest__beginRequest(TutorialSetRequest_o *this, int32_t flagId
 
 System_String_o *TutorialSetRequest__getMockData(TutorialSetRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A33E & 1) == 0 )
+  if ( (byte_597251B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A33E = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597251B = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -29,16 +29,16 @@ System_String_o *TutorialSetRequest__getURL(TutorialSetRequest_o *this, const Me
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A33D & 1) == 0 )
+  if ( (byte_597251A & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_25498/*"tutorial/set"*/);
-    byte_593A33D = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_25546/*"tutorial/set"*/);
+    byte_597251A = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_25498/*"tutorial/set"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_25546/*"tutorial/set"*/, 0);
 }
 
 
@@ -54,17 +54,17 @@ void TutorialSetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_593A340 & 1) == 0 )
+  if ( (byte_597251D & 1) == 0 )
   {
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A340 = 1;
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_597251D = 1;
   }
-  if ( (byte_593A313 & 1) == 0 )
+  if ( (byte_59724F0 & 1) == 0 )
   {
-    sub_21FFC50(&TopHomeRequest_TypeInfo);
-    byte_593A313 = 1;
+    sub_2213A60(&TopHomeRequest_TypeInfo);
+    byte_59724F0 = 1;
   }
   v5 = ResponseCommandKind_TypeInfo;
   v6 = *(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1);
@@ -77,14 +77,14 @@ void TutorialSetRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_23468/*"ok"*/;
+    v10 = &StringLiteral_23515/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_23290/*"ng"*/;
+    v10 = &StringLiteral_23336/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

@@ -40,19 +40,19 @@ void EventInfoJobSkillConfirmDialog___cctor(const MethodInfo *method)
   bool v38; // w6
   bool v39; // w7
 
-  if ( (byte_59386C8 & 1) == 0 )
+  if ( (byte_5970A23 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobSkillConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_5846/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_5848/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_5849/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5847/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/);
-    byte_59386C8 = 1;
+    sub_2213A60(&EventInfoJobSkillConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_5858/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_5860/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_5861/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5859/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/);
+    byte_5970A23 = 1;
   }
-  v7 = StringLiteral_5848/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/;
-  EventInfoJobSkillConfirmDialog_TypeInfo->static_fields->SkillGetConfirmLocalizationKey = (struct System_String_o *)StringLiteral_5848/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_5860/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/;
+  EventInfoJobSkillConfirmDialog_TypeInfo->static_fields->SkillGetConfirmLocalizationKey = (struct System_String_o *)StringLiteral_5860/*"EVENT_JOB_SKILL_CONFIRM_SKILL_FORMAT"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoJobSkillConfirmDialog_TypeInfo->static_fields,
     v7,
     v1,
@@ -61,10 +61,10 @@ void EventInfoJobSkillConfirmDialog___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_5849/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/;
+  v8 = StringLiteral_5861/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/;
   static_fields = EventInfoJobSkillConfirmDialog_TypeInfo->static_fields;
-  static_fields->StartQuestConfirmLocalizationKey = (struct System_String_o *)StringLiteral_5849/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/;
-  sub_21FFBF4(
+  static_fields->StartQuestConfirmLocalizationKey = (struct System_String_o *)StringLiteral_5861/*"EVENT_JOB_SKILL_CONFIRM_START_QUEST_FORMAT"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->StartQuestConfirmLocalizationKey,
     v8,
     v10,
@@ -73,27 +73,27 @@ void EventInfoJobSkillConfirmDialog___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/;
+  v16 = StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/;
   v17 = EventInfoJobSkillConfirmDialog_TypeInfo->static_fields;
-  v17->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->CloseButtonLocalizationKey, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_5846/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/;
+  v17->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->CloseButtonLocalizationKey, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_5858/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/;
   v25 = EventInfoJobSkillConfirmDialog_TypeInfo->static_fields;
-  v25->DecideButtonLocalizationKey = (struct System_String_o *)StringLiteral_5846/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->DecideButtonLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
-  v32 = StringLiteral_5847/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/;
+  v25->DecideButtonLocalizationKey = (struct System_String_o *)StringLiteral_5858/*"EVENT_JOB_SKILL_CONFIRM_DIALOG_DECIDE"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->DecideButtonLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
+  v32 = StringLiteral_5859/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/;
   v33 = EventInfoJobSkillConfirmDialog_TypeInfo->static_fields;
-  v33->JobQuestLevelLocalizationKey = (struct System_String_o *)StringLiteral_5847/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->JobQuestLevelLocalizationKey, v32, v34, v35, v36, v37, v38, v39);
+  v33->JobQuestLevelLocalizationKey = (struct System_String_o *)StringLiteral_5859/*"EVENT_JOB_SKILL_CONFIRM_RECOMMEND_LV"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->JobQuestLevelLocalizationKey, v32, v34, v35, v36, v37, v38, v39);
 }
 
 
 void EventInfoJobSkillConfirmDialog___ctor(EventInfoJobSkillConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_59386C7 & 1) == 0 )
+  if ( (byte_5970A22 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59386C7 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5970A22 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -115,21 +115,21 @@ void EventInfoJobSkillConfirmDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_59386C6 & 1) == 0 )
+  if ( (byte_5970A21 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__);
-    sub_21FFC50(&Method_EventInfoJobSkillConfirmDialog__OnClickCancelButton_b__24_0__);
-    byte_59386C6 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__);
+    sub_2213A60(&Method_EventInfoJobSkillConfirmDialog__OnClickCancelButton_b__24_0__);
+    byte_5970A21 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoJobSkillConfirmDialog_OnClickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -148,21 +148,21 @@ void EventInfoJobSkillConfirmDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_59386C5 & 1) == 0 )
+  if ( (byte_5970A20 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__);
-    sub_21FFC50(&Method_EventInfoJobSkillConfirmDialog__OnClickDecideButton_b__23_0__);
-    byte_59386C5 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__);
+    sub_2213A60(&Method_EventInfoJobSkillConfirmDialog__OnClickDecideButton_b__23_0__);
+    byte_5970A20 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoJobSkillConfirmDialog_OnClickDecideButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -220,12 +220,12 @@ void EventInfoJobSkillConfirmDialog__Open(
   bool v50; // w7
   const MethodInfo *v51; // [xsp+8h] [xbp-78h]
 
-  if ( (byte_59386C4 & 1) == 0 )
+  if ( (byte_5970A1F & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&EventInfoJobSkillConfirmDialog_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_59386C4 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&EventInfoJobSkillConfirmDialog_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5970A1F = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   if ( !questEntity )
@@ -315,7 +315,7 @@ void EventInfoJobSkillConfirmDialog__Open(
   if ( !questExtensionEntity
     || (JobDialogQuestLevel = (Il2CppObject *)QuestExtensionEntity__GetJobDialogQuestLevel(questExtensionEntity, 0)) == 0 )
   {
-    JobDialogQuestLevel = **(Il2CppObject ***)(qword_594C0B8 + 184);
+    JobDialogQuestLevel = **(Il2CppObject ***)(qword_5984390 + 184);
   }
   selectQuestNameLabel = (UILabel_o *)System_String__Format(v38, JobDialogQuestLevel, 0);
   if ( !recommendedLevelLabel )
@@ -341,7 +341,7 @@ void EventInfoJobSkillConfirmDialog__Open(
         !closeButtonLabel)
     || (UILabel__set_text(closeButtonLabel, (System_String_o *)selectQuestNameLabel, 0),
         this->fields.clickCallback = callback,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.clickCallback,
           (int32_t)callback,
           v45,
@@ -354,13 +354,13 @@ void EventInfoJobSkillConfirmDialog__Open(
     || !maxPointBonusEntity )
   {
 LABEL_41:
-    sub_21FFECC(selectQuestNameLabel, name);
+    sub_2213CDC(selectQuestNameLabel, name);
   }
   EventInfoJobSkillConfirmDialog__SetupJobDialogItems(
     this,
     questEntity->fields.name,
     skillEntity->fields.name,
-    **(System_String_o ***)(qword_594C0B8 + 184),
+    **(System_String_o ***)(qword_5984390 + 184),
     jobDialogItemIds,
     pointBonusEntity->fields.calcType,
     pointBonusEntity->fields.value,
@@ -413,7 +413,7 @@ void EventInfoJobSkillConfirmDialog__SetupJobDialogItems(
       }
     }
 LABEL_8:
-    sub_21FFECC(this, title);
+    sub_2213CDC(this, title);
   }
   if ( !this )
     goto LABEL_8;
@@ -459,10 +459,10 @@ UnityEngine_GameObject_o *EventInfoJobSkillConfirmDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_59386C3 & 1) == 0 )
+  if ( (byte_5970A1E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386C3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A1E = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -471,6 +471,6 @@ UnityEngine_GameObject_o *EventInfoJobSkillConfirmDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

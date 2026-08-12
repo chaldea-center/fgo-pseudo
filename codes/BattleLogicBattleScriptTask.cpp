@@ -24,7 +24,7 @@ void BattleLogicBattleScriptTask__Init(
   bool v16; // w7
 
   this->fields.battleScriptEntities = entities;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.battleScriptEntities,
     (int32_t)entities,
     (System_String_o *)arg,
@@ -34,7 +34,7 @@ void BattleLogicBattleScriptTask__Init(
     v6,
     v7);
   this->fields.aiActArg = arg;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.aiActArg, (int32_t)arg, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.aiActArg, (int32_t)arg, v11, v12, v13, v14, v15, v16);
   this->fields.isEachLoad = isEach;
 }
 
@@ -48,19 +48,19 @@ BattleActionData_o *BattleLogicBattleScriptTask__MakeActionData(
   __int64 ActorId; // x0
   __int64 v7; // x1
 
-  if ( (byte_593BC23 & 1) == 0 )
+  if ( (byte_5973E2F & 1) == 0 )
   {
-    sub_21FFC50(&BattleScriptActionData_TypeInfo);
-    byte_593BC23 = 1;
+    sub_2213A60(&BattleScriptActionData_TypeInfo);
+    byte_5973E2F = 1;
   }
   v5 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleScriptEntities, 0) )
   {
-    v5 = (BattleScriptActionData_o *)sub_21FFEBC(BattleScriptActionData_TypeInfo);
+    v5 = (BattleScriptActionData_o *)sub_2213CCC(BattleScriptActionData_TypeInfo);
     BattleScriptActionData___ctor(v5, 0);
     ActorId = BattleLogicTask__getActorId((BattleLogicTask_o *)this, 0);
     if ( !v5 || (v5->fields.actorId = ActorId, !logic) )
-      sub_21FFECC(ActorId, v7);
+      sub_2213CDC(ActorId, v7);
     BattleScriptActionData__SetBattleScript(
       v5,
       logic->fields.logicBattleScript,

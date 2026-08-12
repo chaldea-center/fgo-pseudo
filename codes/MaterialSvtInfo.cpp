@@ -8,15 +8,15 @@ void MaterialSvtInfo___ctor(MaterialSvtInfo_o *this, const MethodInfo *method)
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5932236 & 1) == 0 )
+  if ( (byte_596A335 & 1) == 0 )
   {
-    sub_21FFC50(&IconLabelInfo_TypeInfo);
-    byte_5932236 = 1;
+    sub_2213A60(&IconLabelInfo_TypeInfo);
+    byte_596A335 = 1;
   }
-  v3 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
+  v3 = (IconLabelInfo_o *)sub_2213CCC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v3, 0);
   this->fields.iconLabelInfo = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.iconLabelInfo, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.iconLabelInfo, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -30,10 +30,10 @@ void MaterialSvtInfo__OnClickMaterialStatus(MaterialSvtInfo_o *this, const Metho
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_5932235 & 1) == 0 )
+  if ( (byte_596A334 & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5932235 = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_596A334 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -44,7 +44,7 @@ void MaterialSvtInfo__OnClickMaterialStatus(MaterialSvtInfo_o *this, const Metho
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method, v2);
     v7 = v8;
-    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v7, 0);
+    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v7, 0);
     ((void (__fastcall *)(intptr_t, __int64, int64_t, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
       2,
@@ -63,10 +63,10 @@ void MaterialSvtInfo__OnClickMaterialSvt(MaterialSvtInfo_o *this, const MethodIn
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_5932234 & 1) == 0 )
+  if ( (byte_596A333 & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5932234 = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_596A333 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -77,7 +77,7 @@ void MaterialSvtInfo__OnClickMaterialSvt(MaterialSvtInfo_o *this, const MethodIn
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method, v2);
     v7 = v8;
-    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v7, 0);
+    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v7, 0);
     ((void (__fastcall *)(intptr_t, __int64, int64_t, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
       1,
@@ -104,13 +104,13 @@ void MaterialSvtInfo__checkIsLimitTarget(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
   v7 = this;
-  if ( (byte_5932233 & 1) == 0 )
+  if ( (byte_596A332 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&StringLiteral_11924/*"SAME_SVTEQUIP_COMBINE"*/);
-    this = (MaterialSvtInfo_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932233 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&StringLiteral_11947/*"SAME_SVTEQUIP_COMBINE"*/);
+    this = (MaterialSvtInfo_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A332 = 1;
   }
   if ( !baseData )
     goto LABEL_18;
@@ -120,11 +120,11 @@ void MaterialSvtInfo__checkIsLimitTarget(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, baseData, selectUsrSvtId);
   *(_QWORD *)&v14.fields.currentCryptoKey = v8;
   *(_QWORD *)&v14.fields.fakeValue = v9;
-  this = (MaterialSvtInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v14, 0);
+  this = (MaterialSvtInfo_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v14, 0);
   selectUsrSvtEnt = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v7->fields.selectUsrSvtEnt;
   if ( !selectUsrSvtEnt )
     goto LABEL_18;
-  if ( (_DWORD)this == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(selectUsrSvtEnt[5], 0) )
+  if ( (_DWORD)this == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(selectUsrSvtEnt[5], 0) )
   {
     this = (MaterialSvtInfo_o *)UserServantEntity__isLimitCountMax(baseData, 0);
     if ( ((unsigned __int8)this & 1) == 0 )
@@ -144,7 +144,7 @@ LABEL_17:
       {
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, baseData, v11);
-        this = (MaterialSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11924/*"SAME_SVTEQUIP_COMBINE"*/, 0);
+        this = (MaterialSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SAME_SVTEQUIP_COMBINE"*/, 0);
         if ( statusLb )
         {
           v13 = this;
@@ -152,7 +152,7 @@ LABEL_17:
         }
       }
 LABEL_18:
-      sub_21FFECC(this, baseData);
+      sub_2213CDC(this, baseData);
     }
   }
 }
@@ -178,7 +178,7 @@ void MaterialSvtInfo__setMaterialSvtInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_c *v15; // x0
   int v16; // w8
   __int128 v17; // q1
-  const MethodInfo_476E8C0 *v18; // x0
+  const MethodInfo_47A29F8 *v18; // x0
   void *Instance; // x0
   __int64 v20; // x1
   Il2CppObject *Entity; // x0
@@ -200,14 +200,14 @@ void MaterialSvtInfo__setMaterialSvtInfo(
   bool v37; // w7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+10h] [xbp-70h] BYREF
 
-  if ( (byte_5932232 & 1) == 0 )
+  if ( (byte_596A331 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932232 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A331 = 1;
   }
   v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo;
   v16 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
@@ -216,7 +216,7 @@ void MaterialSvtInfo__setMaterialSvtInfo(
     j_il2cpp_runtime_class_init_0(v15, *(_QWORD *)&idx, baseData);
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v38, selectUsrSvtId, 0);
   v17 = *(_OWORD *)&v38.fields.fakeValue;
-  v18 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v18 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   *(_OWORD *)&this->fields.selectUsrSvtId.fields.currentCryptoKey = *(_OWORD *)&v38.fields.currentCryptoKey;
   *(_OWORD *)&this->fields.selectUsrSvtId.fields.fakeValue = v17;
   Instance = SingletonMonoBehaviour_object___get_Instance(v18);
@@ -224,15 +224,15 @@ void MaterialSvtInfo__setMaterialSvtInfo(
     goto LABEL_16;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_16;
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              selectUsrSvtId,
-             (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+             (const MethodInfo_3F13190 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   this->fields.selectUsrSvtEnt = (struct UserServantEntity_o *)Entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectUsrSvtEnt,
     (int32_t)Entity,
     v22,
@@ -249,11 +249,11 @@ void MaterialSvtInfo__setMaterialSvtInfo(
   Instance = (void *)UserServantEntity__getLevelMax((UserServantEntity_o *)Instance, 0);
   if ( !iconLabelInfo )
     goto LABEL_16;
-  IconLabelInfo__Set_47932852(iconLabelInfo, 2, v29, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_47880948(iconLabelInfo, 2, v29, (int32_t)Instance, 0, 0, 0, 0, 0, 0);
   Instance = this->fields.svtFaseIconComp;
   if ( !Instance )
     goto LABEL_16;
-  ServantFaceIconComponent__Set_48018012(
+  ServantFaceIconComponent__Set_48049308(
     (ServantFaceIconComponent_o *)Instance,
     selectUsrSvtId,
     this->fields.iconLabelInfo,
@@ -270,11 +270,11 @@ void MaterialSvtInfo__setMaterialSvtInfo(
     || (Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0)) == 0 )
   {
 LABEL_16:
-    sub_21FFECC(Instance, v20);
+    sub_2213CDC(Instance, v20);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     v32,
@@ -286,7 +286,7 @@ LABEL_16:
 }
 
 
-void MaterialSvtInfo__setMaterialSvtInfo_37861504(
+void MaterialSvtInfo__setMaterialSvtInfo_37859096(
         MaterialSvtInfo_o *this,
         int32_t idx,
         UserServantEntity_o *baseData,
@@ -313,7 +313,7 @@ void MaterialSvtInfo__setMaterialSvtInfo_37861504(
   if ( !equipSprite
     || (equipSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(equipSprite, 0)) == 0 )
   {
-    sub_21FFECC(equipSprite, v11);
+    sub_2213CDC(equipSprite, v11);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)equipSprite, isEquip, 0);
 }
@@ -338,7 +338,7 @@ void MaterialSvtInfo_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -349,12 +349,12 @@ void MaterialSvtInfo_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -366,9 +366,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FEC194;
+  this->fields.invoke_impl = (intptr_t)sub_1FFF020;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FEC13C;
+  this->fields.extra_arg = (intptr_t)sub_1FFEFC8;
 }
 
 
@@ -386,15 +386,15 @@ System_IAsyncResult_o *MaterialSvtInfo_ClickDelegate__BeginInvoke(
 
   v12 = type;
   v11 = usrSvtId;
-  if ( (byte_5932237 & 1) == 0 )
+  if ( (byte_596A336 & 1) == 0 )
   {
-    sub_21FFC50(&CombineMenuControl_TargetType_TypeInfo);
-    byte_5932237 = 1;
+    sub_2213A60(&CombineMenuControl_TargetType_TypeInfo);
+    byte_596A336 = 1;
   }
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(CombineMenuControl_TargetType_TypeInfo, &v12);
-  v10[1] = j_il2cpp_value_box_0(qword_594C090, &v11);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v10, callback, object);
+  v10[1] = j_il2cpp_value_box_0(qword_5984368, &v11);
+  return sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -403,7 +403,7 @@ void MaterialSvtInfo_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

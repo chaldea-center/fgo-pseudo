@@ -24,12 +24,12 @@ void EventInfoJobLevelNoticeElement__SetJobLevelInfo(
   UILabel_o *descriptionLabel; // x19
   System_String_o *Description; // x1
 
-  if ( (byte_59386B3 & 1) == 0 )
+  if ( (byte_5970A0E & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_TypeInfo);
-    byte_59386B3 = 1;
+    sub_2213A60(&EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_TypeInfo);
+    byte_5970A0E = 1;
   }
-  v9 = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_21FFEBC(EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_TypeInfo);
+  v9 = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_2213CCC(EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_TypeInfo);
   EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter___ctor(
     v9,
     eventJobEntity,
@@ -37,7 +37,7 @@ void EventInfoJobLevelNoticeElement__SetJobLevelInfo(
     dispType,
     v10);
   if ( !v9 )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   descriptionLabel = this->fields.descriptionLabel;
   Description = EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__GetDescription(v9, v12);
   UILabelHelper__SetTextSafely(descriptionLabel, Description, 0);
@@ -68,10 +68,10 @@ void EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter___ct
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.eventJobEntity = inEventJobEntity;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields, (int32_t)inEventJobEntity, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields, (int32_t)inEventJobEntity, v9, v10, v11, v12, v13, v14);
   v8->fields.eventJobPointBonusEntity = inEventJobPointBonusEntity;
   v8 = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)((char *)v8 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)inEventJobPointBonusEntity, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)inEventJobPointBonusEntity, v15, v16, v17, v18, v19, v20);
   LODWORD(v8->monitor) = inDispType;
 }
 
@@ -120,76 +120,76 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
   __int64 v41; // x0
   int32_t lv; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59386B4 & 1) == 0 )
+  if ( (byte_5970A0F & 1) == 0 )
   {
-    sub_21FFC50(&object___TypeInfo);
-    byte_59386B4 = 1;
+    sub_2213A60(&object___TypeInfo);
+    byte_5970A0F = 1;
   }
   DescriptionFormat = EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__GetDescriptionFormat(
                         this,
                         method);
-  v4 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 4);
+  v4 = (System_Object_array *)sub_2213B20(object___TypeInfo, 4);
   JobName = EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__GetJobName(this, v5);
   if ( !v4 )
     goto LABEL_20;
   v14 = (Il2CppObject *)JobName;
   if ( JobName )
   {
-    JobName = (System_String_o *)sub_21FFDA4(JobName, v4->obj.klass->_1.element_class);
+    JobName = (System_String_o *)sub_2213BB4(JobName, v4->obj.klass->_1.element_class);
     if ( !JobName )
       goto LABEL_19;
   }
   if ( !LODWORD(v4->max_length) )
     goto LABEL_18;
   v4->m_Items[0] = v14;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v4->m_Items, (int32_t)v14, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v4->m_Items, (int32_t)v14, v8, v9, v10, v11, v12, v13);
   eventJobPointBonusEntity = this->fields.eventJobPointBonusEntity;
   if ( !eventJobPointBonusEntity )
 LABEL_20:
-    sub_21FFECC(JobName, v7);
+    sub_2213CDC(JobName, v7);
   lv = eventJobPointBonusEntity->fields.lv;
-  JobName = (System_String_o *)j_il2cpp_value_box_0(qword_594C070, &lv);
+  JobName = (System_String_o *)j_il2cpp_value_box_0(qword_5984348, &lv);
   v23 = (Il2CppObject *)JobName;
   if ( JobName )
   {
-    JobName = (System_String_o *)sub_21FFDA4(JobName, v4->obj.klass->_1.element_class);
+    JobName = (System_String_o *)sub_2213BB4(JobName, v4->obj.klass->_1.element_class);
     if ( !JobName )
       goto LABEL_19;
   }
   if ( (v4->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_18;
   v4->m_Items[1] = v23;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
   JobName = EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__GetEffectText(this, v24);
   v31 = (Il2CppObject *)JobName;
   if ( JobName )
   {
-    JobName = (System_String_o *)sub_21FFDA4(JobName, v4->obj.klass->_1.element_class);
+    JobName = (System_String_o *)sub_2213BB4(JobName, v4->obj.klass->_1.element_class);
     if ( !JobName )
       goto LABEL_19;
   }
   if ( LODWORD(v4->max_length) <= 2 )
     goto LABEL_18;
   v4->m_Items[2] = v31;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->m_Items[2], (int32_t)v31, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->m_Items[2], (int32_t)v31, v25, v26, v27, v28, v29, v30);
   JobName = EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__GetEffectValue(this, v32);
   v39 = (Il2CppObject *)JobName;
   if ( JobName )
   {
-    JobName = (System_String_o *)sub_21FFDA4(JobName, v4->obj.klass->_1.element_class);
+    JobName = (System_String_o *)sub_2213BB4(JobName, v4->obj.klass->_1.element_class);
     if ( !JobName )
     {
 LABEL_19:
-      v41 = sub_21FFEF0(JobName, v15);
-      sub_21FFD90(v41, 0);
+      v41 = sub_2213D00(JobName, v15);
+      sub_2213BA0(v41, 0);
     }
   }
   if ( (v4->max_length & 0xFFFFFFFC) == 0 )
 LABEL_18:
-    sub_21FFED4(JobName);
+    sub_2213CE4(JobName);
   v4->m_Items[3] = v39;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->m_Items[3], (int32_t)v39, v33, v34, v35, v36, v37, v38);
-  return System_String__Format_75484712(DescriptionFormat, v4, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->m_Items[3], (int32_t)v39, v33, v34, v35, v36, v37, v38);
+  return System_String__Format_75698016(DescriptionFormat, v4, 0);
 }
 
 
@@ -200,29 +200,29 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
   int32_t dispType; // w8
   __int64 *v4; // x8
 
-  if ( (byte_59386B8 & 1) == 0 )
+  if ( (byte_5970A13 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5811/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_BEFORE_DESCRIPTION"*/);
-    sub_21FFC50(&StringLiteral_5810/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_AFTER_DESCRIPTION"*/);
-    byte_59386B8 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5823/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_BEFORE_DESCRIPTION"*/);
+    sub_2213A60(&StringLiteral_5822/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_AFTER_DESCRIPTION"*/);
+    byte_5970A13 = 1;
   }
   dispType = this->fields.dispType;
   if ( dispType == 1 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-    v4 = &StringLiteral_5810/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_AFTER_DESCRIPTION"*/;
+    v4 = &StringLiteral_5822/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_AFTER_DESCRIPTION"*/;
     return LocalizationManager__Get((System_String_o *)*v4, 0);
   }
   if ( !dispType )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-    v4 = &StringLiteral_5811/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_BEFORE_DESCRIPTION"*/;
+    v4 = &StringLiteral_5823/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_BEFORE_DESCRIPTION"*/;
     return LocalizationManager__Get((System_String_o *)*v4, 0);
   }
-  return **(System_String_o ***)(qword_594C0B8 + 184);
+  return **(System_String_o ***)(qword_5984390 + 184);
 }
 
 
@@ -238,18 +238,18 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
   int32_t calcType; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_59386B6 & 1) == 0 )
+  if ( (byte_5970A11 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_21FFC50(&StringLiteral_5814/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_{0}"*/);
-    byte_59386B6 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_2213A60(&StringLiteral_5826/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_{0}"*/);
+    byte_5970A11 = 1;
   }
   eventJobPointBonusEntity = v2->fields.eventJobPointBonusEntity;
   if ( !eventJobPointBonusEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   calcType = eventJobPointBonusEntity->fields.calcType;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &calcType);
-  v6 = System_String__Format((System_String_o *)StringLiteral_5814/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_{0}"*/, v4, 0);
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &calcType);
+  v6 = System_String__Format((System_String_o *)StringLiteral_5826/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_{0}"*/, v4, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
   return LocalizationManager__Get(v6, 0);
@@ -274,12 +274,12 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
   int32_t value; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_59386B5 & 1) == 0 )
+  if ( (byte_5970A10 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5812/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_1"*/);
-    this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_21FFC50(&StringLiteral_5813/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_2"*/);
-    byte_59386B5 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5824/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_1"*/);
+    this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)sub_2213A60(&StringLiteral_5825/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_2"*/);
+    byte_5970A10 = 1;
   }
   eventJobPointBonusEntity = v2->fields.eventJobPointBonusEntity;
   if ( !eventJobPointBonusEntity )
@@ -290,7 +290,7 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
     this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)LocalizationManager__Get(
-                                                                                         (System_String_o *)StringLiteral_5813/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_2"*/,
+                                                                                         (System_String_o *)StringLiteral_5825/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_2"*/,
                                                                                          0);
     v9 = v2->fields.eventJobPointBonusEntity;
     if ( v9 )
@@ -299,25 +299,25 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
       MultiplyValue = EventJobPointBonusEntity__GetMultiplyValue(v9, 0);
       v7 = &v13;
       v13 = MultiplyValue;
-      v8 = qword_594C0A0;
+      v8 = qword_5984378;
       goto LABEL_14;
     }
 LABEL_16:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( calcType == 1 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
     this = (EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter_o *)LocalizationManager__Get(
-                                                                                         (System_String_o *)StringLiteral_5812/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_1"*/,
+                                                                                         (System_String_o *)StringLiteral_5824/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_EFFECT_VALUE_1"*/,
                                                                                          0);
     v5 = v2->fields.eventJobPointBonusEntity;
     if ( v5 )
     {
       v6 = this;
       v7 = (float *)&value;
-      v8 = qword_594C070;
+      v8 = qword_5984348;
       value = v5->fields.value;
 LABEL_14:
       v11 = (Il2CppObject *)j_il2cpp_value_box_0(v8, v7);
@@ -325,7 +325,7 @@ LABEL_14:
     }
     goto LABEL_16;
   }
-  return **(System_String_o ***)(qword_594C0B8 + 184);
+  return **(System_String_o ***)(qword_5984390 + 184);
 }
 
 
@@ -336,11 +336,11 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
   EventJobEntity_o *eventJobEntity; // x0
   struct EventJobEntity_o *v5; // x8
 
-  if ( (byte_59386B7 & 1) == 0 )
+  if ( (byte_5970A12 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5815/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_HIDE_JOB_NAME"*/);
-    byte_59386B7 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5827/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_HIDE_JOB_NAME"*/);
+    byte_5970A12 = 1;
   }
   eventJobEntity = this->fields.eventJobEntity;
   if ( !eventJobEntity )
@@ -352,11 +352,11 @@ System_String_o *EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementPa
     if ( v5 )
       return v5->fields.name;
 LABEL_10:
-    sub_21FFECC(eventJobEntity, method);
+    sub_2213CDC(eventJobEntity, method);
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_5815/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_HIDE_JOB_NAME"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_5827/*"EVENT_INFO_JOB_LEVEL_NOTICE_DIALOG_HIDE_JOB_NAME"*/, 0);
 }
 
 
@@ -368,6 +368,6 @@ int32_t EventInfoJobLevelNoticeElement_EventInfoJobLevelNoticeElementParameter__
 
   eventJobPointBonusEntity = this->fields.eventJobPointBonusEntity;
   if ( !eventJobPointBonusEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return eventJobPointBonusEntity->fields.lv;
 }

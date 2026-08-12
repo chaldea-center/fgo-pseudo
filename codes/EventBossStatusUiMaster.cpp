@@ -1,14 +1,14 @@
 void EventBossStatusUiMaster___ctor(EventBossStatusUiMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593854A & 1) == 0 )
+  if ( (byte_59706FD & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string___ctor__);
-    byte_593854A = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string___ctor__);
+    byte_59706FD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     296,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ EventBossStatusUiEntity_o *EventBossStatusUiMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938548 & 1) == 0 )
+  if ( (byte_59706FB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__GetEntity__);
-    byte_5938548 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__GetEntity__);
+    byte_59706FB = 1;
   }
   PK = (Il2CppObject *)EventBossStatusUiEntity__CreatePK(eventId, idx, *(const MethodInfo **)&idx);
   return (EventBossStatusUiEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__GetEntity__);
+                                        (const MethodInfo_3F157EC *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__GetEntity__);
 }
 
 
@@ -58,15 +58,15 @@ bool EventBossStatusUiMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938549 & 1) == 0 )
+  if ( (byte_59706FC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__TryGetEntity__);
-    byte_5938549 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__TryGetEntity__);
+    byte_59706FC = 1;
   }
   PK = (Il2CppObject *)EventBossStatusUiEntity__CreatePK(eventId, idx, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventBossStatusUiMaster__EventBossStatusUiEntity__string__TryGetEntity__);
 }

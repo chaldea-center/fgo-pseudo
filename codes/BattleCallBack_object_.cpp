@@ -2,7 +2,7 @@ void BattleCallBack_object____ctor(
         BattleCallBack_T__o *this,
         Il2CppObject *argument,
         System_Action_T__o *callBack,
-        const MethodInfo_3E39850 *method)
+        const MethodInfo_3E6CFF8 *method)
 {
   System_String_o *v7; // x2
   System_String_o *v8; // x3
@@ -19,9 +19,9 @@ void BattleCallBack_object____ctor(
 
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0);
   this->fields.argument = argument;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)argument, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)argument, v7, v8, v9, v10, v11, v12);
   this->fields.callBack = callBack;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callBack,
     (int32_t)callBack,
     v13,
@@ -33,13 +33,13 @@ void BattleCallBack_object____ctor(
 }
 
 
-void BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_3E39894 *method)
+void BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_3E6D03C *method)
 {
   struct System_Action_T__o *callBack; // x8
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ((void (__fastcall *)(intptr_t, Il2CppObject *, intptr_t))callBack->fields.invoke_impl)(
     callBack->fields.method_code,
     this->fields.argument,

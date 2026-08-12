@@ -1,13 +1,13 @@
 void WarReleaseEntity___ctor(WarReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939A67 & 1) == 0 )
+  if ( (byte_5971B4A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5939A67 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971B4A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *WarReleaseEntity__CreatePK(
         int64_t condNum,
         const MethodInfo *method)
 {
-  if ( (byte_5939A66 & 1) == 0 )
+  if ( (byte_5971B49 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_5939A66 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+    byte_5971B49 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            warId,
            condType,
            condId,
            condNum,
-           (const MethodInfo_382195C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_3854E24 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -81,10 +81,10 @@ bool WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const MethodInfo *met
   int32_t condId; // w21
   int64_t condNum; // x19
 
-  if ( (byte_5939A64 & 1) == 0 )
+  if ( (byte_5971B47 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    byte_5939A64 = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    byte_5971B47 = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
@@ -123,33 +123,33 @@ bool WarReleaseEntity__TryGetTransitionDialogData(
   bool v19; // w7
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5939A65 & 1) == 0 )
+  if ( (byte_5971B48 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_25791/*"useTransitionDialog"*/);
-    byte_5939A65 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&StringLiteral_25839/*"useTransitionDialog"*/);
+    byte_5971B48 = 1;
   }
   value = 0;
   *data = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)data, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)data, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
   script = this->fields.script;
   if ( script
     && System_Collections_Generic_Dictionary_object__object___TryGetValue(
          (System_Collections_Generic_Dictionary_object__object__o *)script,
-         (Il2CppObject *)StringLiteral_25791/*"useTransitionDialog"*/,
+         (Il2CppObject *)StringLiteral_25839/*"useTransitionDialog"*/,
          &value,
-         (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     v12 = value;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v11);
     v13 = JsonManager__Deserialize_object_(
             v12,
-            (const MethodInfo_38A041C *)Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
+            (const MethodInfo_38D38E4 *)Method_JsonManager_Deserialize_WarReleaseEntity_TransitionDialogData___);
     *data = (WarReleaseEntity_TransitionDialogData_o *)v13;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)data, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)data, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   }
   return *data != 0;
 }

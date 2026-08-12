@@ -9,15 +9,15 @@ void AssetLoadWrapperBase___ctor(AssetLoadWrapperBase_o *this, const MethodInfo 
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5937666 & 1) == 0 )
+  if ( (byte_596F7C7 & 1) == 0 )
   {
-    sub_21FFC50(&AssetPathLoadCounter_TypeInfo);
-    byte_5937666 = 1;
+    sub_2213A60(&AssetPathLoadCounter_TypeInfo);
+    byte_596F7C7 = 1;
   }
-  v3 = (AssetPathLoadCounter_o *)sub_21FFEBC(AssetPathLoadCounter_TypeInfo);
+  v3 = (AssetPathLoadCounter_o *)sub_2213CCC(AssetPathLoadCounter_TypeInfo);
   AssetPathLoadCounter___ctor(v3, v4);
   this->fields.pathCounter = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -28,7 +28,7 @@ void AssetLoadWrapperBase__AddLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   AssetPathLoadCounter__AddCount(pathCounter, path, method);
 }
 
@@ -58,14 +58,14 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
   __int64 v23; // x0
   System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *v24; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5937665 & 1) == 0 )
+  if ( (byte_596F7C6 & 1) == 0 )
   {
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
-    byte_5937665 = 1;
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__);
+    byte_596F7C6 = 1;
   }
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
@@ -73,7 +73,7 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
   Enumerator = AssetPathLoadCounter__GetEnumerator(pathCounter, method);
   v24 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   for ( i = Enumerator; ; i = v24 )
   {
     klass = i->klass;
@@ -93,7 +93,7 @@ void AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, const Method
     else
     {
 LABEL_10:
-      v10 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v10 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v11 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v10)(
             i,
@@ -101,7 +101,7 @@ LABEL_10:
     if ( (v11 & 1) == 0 )
       break;
     if ( !v24 )
-      sub_21FFECC(v11, method);
+      sub_2213CDC(v11, method);
     v12 = v24->klass;
     v13 = *(unsigned __int16 *)&v24->klass->_2.rank;
     if ( *(_WORD *)&v24->klass->_2.rank )
@@ -119,7 +119,7 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v15 = sub_2237E2C(v24, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
+      v15 = sub_224BC3C(v24, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0);
     }
     v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v15)(
             v24,
@@ -158,7 +158,7 @@ LABEL_18:
     else
     {
 LABEL_30:
-      v23 = sub_2237E2C(v24, System_IDisposable_TypeInfo, 0);
+      v23 = sub_224BC3C(v24, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v23)(
       v24,
@@ -167,7 +167,7 @@ LABEL_30:
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
 LABEL_36:
-    sub_21FFECC(pathCounter, method);
+    sub_2213CDC(pathCounter, method);
   AssetPathLoadCounter__Clear(pathCounter, method);
 }
 
@@ -178,6 +178,6 @@ void AssetLoadWrapperBase__SubLoadCount(AssetLoadWrapperBase_o *this, System_Str
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   AssetPathLoadCounter__SubCount(pathCounter, path, method);
 }

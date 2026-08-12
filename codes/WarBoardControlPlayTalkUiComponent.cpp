@@ -61,13 +61,13 @@ void WarBoardControlPlayTalkUiComponent__SetDispLocal(
   bool v34; // w7
 
   v11 = this;
-  if ( (byte_5935E33 & 1) == 0 )
+  if ( (byte_596DEF5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_GetOrAddComponent_UIWidget___);
-    sub_21FFC50(&bool___TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    this = (WarBoardControlPlayTalkUiComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935E33 = 1;
+    sub_2213A60(&Method_BasicHelper_GetOrAddComponent_UIWidget___);
+    sub_2213A60(&bool___TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    this = (WarBoardControlPlayTalkUiComponent_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596DEF5 = 1;
   }
   if ( isDisp || v11->fields.activeStates )
   {
@@ -78,10 +78,10 @@ void WarBoardControlPlayTalkUiComponent__SetDispLocal(
     controlUiObjects = v11->fields.controlUiObjects;
     if ( !controlUiObjects )
 LABEL_28:
-      sub_21FFECC(this, isDisp);
-    v28 = sub_21FFD10(bool___TypeInfo, LODWORD(controlUiObjects->max_length));
+      sub_2213CDC(this, isDisp);
+    v28 = sub_2213B20(bool___TypeInfo, LODWORD(controlUiObjects->max_length));
     v11->fields.activeStates = (struct System_Boolean_array *)v28;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->fields.activeStates, v28, v29, v30, v31, v32, v33, v34);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->fields.activeStates, v28, v29, v30, v31, v32, v33, v34);
     v12 = 1;
   }
   v13 = v11->fields.controlUiObjects;
@@ -105,7 +105,7 @@ LABEL_28:
       goto LABEL_28;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v17[4],
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
     this = (WarBoardControlPlayTalkUiComponent_o *)UnityEngine_Object__op_Inequality(
@@ -134,7 +134,7 @@ LABEL_28:
           goto LABEL_28;
         if ( v14 >= LODWORD(v25->max_length) )
 LABEL_34:
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         v24 = 0;
         v25->m_Items[v14] = (unsigned __int8)this & 1;
       }
@@ -148,7 +148,7 @@ LABEL_27:
     transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v18, 0);
     BasicHelper__GetOrAddComponent_object_(
       transform,
-      (const MethodInfo_37E0A68 *)Method_BasicHelper_GetOrAddComponent_UIWidget___);
+      (const MethodInfo_3813E18 *)Method_BasicHelper_GetOrAddComponent_UIWidget___);
     this = (WarBoardControlPlayTalkUiComponent_o *)TweenAlpha__Begin(v18, time, v15, 0);
     v13 = v11->fields.controlUiObjects;
     ++v14;
@@ -158,7 +158,7 @@ LABEL_27:
   if ( isDisp )
   {
     v11->fields.activeStates = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v11->fields.activeStates,
       0,
       (System_String_o *)method,

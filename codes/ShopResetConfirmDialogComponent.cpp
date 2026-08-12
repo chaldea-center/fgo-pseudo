@@ -2,10 +2,10 @@ void ShopResetConfirmDialogComponent___ctor(ShopResetConfirmDialogComponent_o *t
 {
   __int64 v2; // x2
 
-  if ( (byte_593477E & 1) == 0 )
+  if ( (byte_596C8AD & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593477E = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596C8AD = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -27,7 +27,7 @@ void ShopResetConfirmDialogComponent__CallOnClose(ShopResetConfirmDialogComponen
   if ( onClose )
   {
     this->fields.onClose = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClose, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onClose, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))onClose->fields.invoke_impl)(
       onClose->fields.method_code,
       onClose->fields.method);
@@ -55,7 +55,7 @@ void ShopResetConfirmDialogComponent__CallOnMenuSelect(
   if ( onMenuSelect )
   {
     p_onMenuSelect->klass = 0;
-    sub_21FFBF4(p_onMenuSelect, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_onMenuSelect, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       isDecide,
@@ -76,11 +76,11 @@ void ShopResetConfirmDialogComponent__Close(ShopResetConfirmDialogComponent_o *t
 {
   const MethodInfo *v2; // x2
 
-  ShopResetConfirmDialogComponent__Close_42010400(this, 0, v2);
+  ShopResetConfirmDialogComponent__Close_42025464(this, 0, v2);
 }
 
 
-void ShopResetConfirmDialogComponent__Close_42010400(
+void ShopResetConfirmDialogComponent__Close_42025464(
         ShopResetConfirmDialogComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -93,14 +93,14 @@ void ShopResetConfirmDialogComponent__Close_42010400(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_5934779 & 1) == 0 )
+  if ( (byte_596C8A8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ShopResetConfirmDialogComponent_EndClose__);
-    byte_5934779 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ShopResetConfirmDialogComponent_EndClose__);
+    byte_596C8A8 = 1;
   }
   this->fields.onClose = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClose,
     (int32_t)callback,
     (System_String_o *)method,
@@ -111,7 +111,7 @@ void ShopResetConfirmDialogComponent__Close_42010400(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ShopResetConfirmDialogComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -136,10 +136,10 @@ void ShopResetConfirmDialogComponent__Init(ShopResetConfirmDialogComponent_o *th
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_5934776 & 1) == 0 )
+  if ( (byte_596C8A5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5934776 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C8A5 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -205,7 +205,7 @@ void ShopResetConfirmDialogComponent__Init(ShopResetConfirmDialogComponent_o *th
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_21:
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -218,18 +218,18 @@ void ShopResetConfirmDialogComponent__OnClickCancel(ShopResetConfirmDialogCompon
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_593477B & 1) == 0 )
+  if ( (byte_596C8AA & 1) == 0 )
   {
-    sub_21FFC50(&Method_ShopResetConfirmDialogComponent_OnClickCancel__);
-    byte_593477B = 1;
+    sub_2213A60(&Method_ShopResetConfirmDialogComponent_OnClickCancel__);
+    byte_596C8AA = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ShopResetConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_ShopResetConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ShopResetConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ShopResetConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ShopResetConfirmDialogComponent__CallOnMenuSelect(this, 0, v5);
   }
@@ -242,18 +242,18 @@ void ShopResetConfirmDialogComponent__OnClickClose(ShopResetConfirmDialogCompone
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_593477C & 1) == 0 )
+  if ( (byte_596C8AB & 1) == 0 )
   {
-    sub_21FFC50(&Method_ShopResetConfirmDialogComponent_OnClickClose__);
-    byte_593477C = 1;
+    sub_2213A60(&Method_ShopResetConfirmDialogComponent_OnClickClose__);
+    byte_596C8AB = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ShopResetConfirmDialogComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_ShopResetConfirmDialogComponent_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ShopResetConfirmDialogComponent_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ShopResetConfirmDialogComponent_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ShopResetConfirmDialogComponent__CallOnMenuSelect(this, 0, v5);
   }
@@ -266,18 +266,18 @@ void ShopResetConfirmDialogComponent__OnClickDecide(ShopResetConfirmDialogCompon
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_593477A & 1) == 0 )
+  if ( (byte_596C8A9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ShopResetConfirmDialogComponent_OnClickDecide__);
-    byte_593477A = 1;
+    sub_2213A60(&Method_ShopResetConfirmDialogComponent_OnClickDecide__);
+    byte_596C8A9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ShopResetConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_ShopResetConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ShopResetConfirmDialogComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ShopResetConfirmDialogComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     ShopResetConfirmDialogComponent__CallOnMenuSelect(this, 1, v5);
   }
@@ -289,16 +289,16 @@ void ShopResetConfirmDialogComponent__OnEnable(ShopResetConfirmDialogComponent_o
   UnityEngine_Transform_o *transform; // x0
   UnityEngine_Transform_o *v4; // x0
 
-  if ( (byte_593477D & 1) == 0 )
+  if ( (byte_596C8AC & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4825/*"ConfirmWindow/ResultInfo/CloseButton"*/);
-    sub_21FFC50(&StringLiteral_4823/*"ConfirmWindow/ConfirmInfo/CancelButton"*/);
-    byte_593477D = 1;
+    sub_2213A60(&StringLiteral_4833/*"ConfirmWindow/ResultInfo/CloseButton"*/);
+    sub_2213A60(&StringLiteral_4831/*"ConfirmWindow/ConfirmInfo/CancelButton"*/);
+    byte_596C8AC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_4823/*"ConfirmWindow/ConfirmInfo/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_4831/*"ConfirmWindow/ConfirmInfo/CancelButton"*/, 0);
   v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(v4, (System_String_o *)StringLiteral_4825/*"ConfirmWindow/ResultInfo/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(v4, (System_String_o *)StringLiteral_4833/*"ConfirmWindow/ResultInfo/CloseButton"*/, 0);
 }
 
 
@@ -311,7 +311,7 @@ void ShopResetConfirmDialogComponent__Open(
   const MethodInfo *v4; // x4
 
   if ( !this->fields.state )
-    ShopResetConfirmDialogComponent__Open_42008052(this, 0, item, onMenuSelect, v4);
+    ShopResetConfirmDialogComponent__Open_42023116(this, 0, item, onMenuSelect, v4);
 }
 
 
@@ -324,11 +324,11 @@ void ShopResetConfirmDialogComponent__OpenResultDialog(
   const MethodInfo *v4; // x4
 
   if ( !this->fields.state )
-    ShopResetConfirmDialogComponent__Open_42008052(this, 1, item, onMenuSelect, v4);
+    ShopResetConfirmDialogComponent__Open_42023116(this, 1, item, onMenuSelect, v4);
 }
 
 
-void ShopResetConfirmDialogComponent__Open_42008052(
+void ShopResetConfirmDialogComponent__Open_42023116(
         ShopResetConfirmDialogComponent_o *this,
         int32_t type,
         ShopBuyItemListViewItem_o *item,
@@ -364,23 +364,23 @@ void ShopResetConfirmDialogComponent__Open_42008052(
   System_Action_c *v35; // x0
   System_Action_o *v36; // x20
 
-  if ( (byte_5934777 & 1) == 0 )
+  if ( (byte_596C8A6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_ShopBuyItemListViewItemDraw___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_ShopResetConfirmDialogComponent_EndOpen__);
-    byte_5934777 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_ShopBuyItemListViewItemDraw___);
+    sub_2213A60(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_ShopResetConfirmDialogComponent_EndOpen__);
+    byte_596C8A6 = 1;
   }
   ShopResetConfirmDialogComponent__SetObjectsOnInit(this, type, onMenuSelect, (const MethodInfo *)onMenuSelect);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-  Master_object = (char *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (char *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_30;
   EntityByType = ItemMaster__GetEntityByType((ItemMaster_o *)Master_object, 37, 0);
@@ -396,25 +396,25 @@ void ShopResetConfirmDialogComponent__Open_42008052(
   if ( !Master_object )
     goto LABEL_30;
   *((_QWORD *)Master_object + 20) = item;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Master_object + 160), (int32_t)item, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(Master_object + 160), (int32_t)item, v18, v19, v20, v21, v22, v23);
   Master_object = (char *)this->fields.itemInfoPrefab;
   if ( !Master_object )
     goto LABEL_30;
-  Master_object = (char *)UnityEngine_Component__GetComponentInChildren_object__58644924(
+  Master_object = (char *)UnityEngine_Component__GetComponentInChildren_object__58855044(
                             (UnityEngine_Component_o *)Master_object,
-                            (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_ShopBuyItemListViewItemDraw___);
+                            (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_ShopBuyItemListViewItemDraw___);
   if ( !Master_object )
     goto LABEL_30;
   ShopBuyItemListViewItemDraw__SetItem((ShopBuyItemListViewItemDraw_o *)Master_object, item, 2, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v24, v25);
-  v28 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  v28 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v26, v27);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v29 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -423,7 +423,7 @@ void ShopResetConfirmDialogComponent__Open_42008052(
     v29 = NetworkManager_TypeInfo;
   }
   userIdNumber = v29->static_fields->userIdNumber;
-  Master_object = (char *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (char *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_30;
   if ( !v28 )
@@ -442,11 +442,11 @@ void ShopResetConfirmDialogComponent__Open_42008052(
   Master_object = (char *)LocalizationManager__GetNumberFormat(v33, 0);
   if ( !itemNum || (UILabel__set_text(itemNum, (System_String_o *)Master_object, 0), !item) )
 LABEL_30:
-    sub_21FFECC(Master_object, v12);
+    sub_2213CDC(Master_object, v12);
   ShopResetConfirmDialogComponent__SetMessageLabels(this, type, item->fields._Shop_k__BackingField, v34);
   v35 = System_Action_TypeInfo;
   this->fields.state = 1;
-  v36 = (System_Action_o *)sub_21FFEBC(v35);
+  v36 = (System_Action_o *)sub_2213CCC(v35);
   System_Action___ctor(v36, (Il2CppObject *)this, Method_ShopResetConfirmDialogComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v36, 0, 0, 0);
 }
@@ -506,45 +506,45 @@ void ShopResetConfirmDialogComponent__SetMessageLabels(
   int32_t v51; // [xsp+Ch] [xbp-64h] BYREF
   ShopResetEntity_o *entity; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_5934778 & 1) == 0 )
+  if ( (byte_596C8A7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ShopResetMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserShopMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12637/*"SHOP_RESET_DIALOG_RESULT_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_12639/*"SHOP_RESET_DIALOG_WARNING_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_12633/*"SHOP_RESET_DIALOG_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_12636/*"SHOP_RESET_DIALOG_NUM"*/);
-    sub_21FFC50(&StringLiteral_12640/*"SHOP_RESET_NEED_INFO"*/);
-    sub_21FFC50(&StringLiteral_12630/*"SHOP_RESET_DIALOG_AFTER_NUM_TITLE"*/);
-    sub_21FFC50(&StringLiteral_12632/*"SHOP_RESET_DIALOG_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_12638/*"SHOP_RESET_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_12635/*"SHOP_RESET_DIALOG_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_12634/*"SHOP_RESET_DIALOG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_12631/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/);
-    byte_5934778 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ShopResetMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserShopMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12663/*"SHOP_RESET_DIALOG_RESULT_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_12665/*"SHOP_RESET_DIALOG_WARNING_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_12659/*"SHOP_RESET_DIALOG_CLOSE"*/);
+    sub_2213A60(&StringLiteral_12662/*"SHOP_RESET_DIALOG_NUM"*/);
+    sub_2213A60(&StringLiteral_12666/*"SHOP_RESET_NEED_INFO"*/);
+    sub_2213A60(&StringLiteral_12656/*"SHOP_RESET_DIALOG_AFTER_NUM_TITLE"*/);
+    sub_2213A60(&StringLiteral_12658/*"SHOP_RESET_DIALOG_CANCEL"*/);
+    sub_2213A60(&StringLiteral_12664/*"SHOP_RESET_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_12661/*"SHOP_RESET_DIALOG_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_12660/*"SHOP_RESET_DIALOG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_12657/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/);
+    byte_596C8A7 = 1;
   }
   v7 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v7 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&type, shopEntity);
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12640/*"SHOP_RESET_NEED_INFO"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12666/*"SHOP_RESET_NEED_INFO"*/, 0);
   if ( !shopEntity )
     goto LABEL_47;
   v11 = (Il2CppObject *)EntityDefinitely;
   limitNum = shopEntity->fields.limitNum;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserShopMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserShopMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9, v13);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   EntityDefinitely = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -563,7 +563,7 @@ void ShopResetConfirmDialogComponent__SetMessageLabels(
     goto LABEL_47;
   v15 = *((_DWORD *)EntityDefinitely + 7);
   titleLabel = this->fields.titleLabel;
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12638/*"SHOP_RESET_DIALOG_TITLE"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12664/*"SHOP_RESET_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_47;
   v17 = limitNum - v15;
@@ -573,86 +573,86 @@ void ShopResetConfirmDialogComponent__SetMessageLabels(
     resultMessageLabel = this->fields.resultMessageLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
-    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_12637/*"SHOP_RESET_DIALOG_RESULT_MESSAGE"*/, 0);
+    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_12663/*"SHOP_RESET_DIALOG_RESULT_MESSAGE"*/, 0);
     EntityDefinitely = System_String__Format(v46, (Il2CppObject *)shopEntity->fields.name, 0);
     if ( resultMessageLabel )
     {
       UILabel__set_text(resultMessageLabel, (System_String_o *)EntityDefinitely, 0);
       resultAfterNumLabel = this->fields.resultAfterNumLabel;
-      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12636/*"SHOP_RESET_DIALOG_NUM"*/, 0);
+      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12662/*"SHOP_RESET_DIALOG_NUM"*/, 0);
       v51 = v17;
-      v49 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v51);
+      v49 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v51);
       EntityDefinitely = System_String__Format(v48, v49, 0);
       if ( resultAfterNumLabel )
       {
         UILabel__set_text(resultAfterNumLabel, (System_String_o *)EntityDefinitely, 0);
         resultAfterNumTextLabel = this->fields.resultAfterNumTextLabel;
-        EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/, 0);
+        EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12657/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/, 0);
         if ( resultAfterNumTextLabel )
         {
           UILabel__set_text(resultAfterNumTextLabel, (System_String_o *)EntityDefinitely, 0);
           closeBtnLabel = this->fields.closeBtnLabel;
-          EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12633/*"SHOP_RESET_DIALOG_CLOSE"*/, 0);
+          EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12659/*"SHOP_RESET_DIALOG_CLOSE"*/, 0);
           if ( closeBtnLabel )
             goto LABEL_45;
         }
       }
     }
 LABEL_47:
-    sub_21FFECC(EntityDefinitely, v9);
+    sub_2213CDC(EntityDefinitely, v9);
   }
   if ( type )
     return;
   messageLabel = this->fields.messageLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12635/*"SHOP_RESET_DIALOG_MESSAGE"*/, 0);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12661/*"SHOP_RESET_DIALOG_MESSAGE"*/, 0);
   name = (Il2CppObject *)shopEntity->fields.name;
   v51 = limitNum;
-  v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v51);
-  EntityDefinitely = System_String__Format_75484644(v21, v11, name, v23, 0);
+  v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v51);
+  EntityDefinitely = System_String__Format_75697948(v21, v11, name, v23, 0);
   if ( !messageLabel )
     goto LABEL_47;
   UILabel__set_text(messageLabel, (System_String_o *)EntityDefinitely, 0);
   beforeNumLabel = this->fields.beforeNumLabel;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12636/*"SHOP_RESET_DIALOG_NUM"*/, 0);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12662/*"SHOP_RESET_DIALOG_NUM"*/, 0);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v17, 0);
   EntityDefinitely = System_String__Format(v25, NumberFormat, 0);
   if ( !beforeNumLabel )
     goto LABEL_47;
   UILabel__set_text(beforeNumLabel, (System_String_o *)EntityDefinitely, 0);
   afterNumLabel = this->fields.afterNumLabel;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12636/*"SHOP_RESET_DIALOG_NUM"*/, 0);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12662/*"SHOP_RESET_DIALOG_NUM"*/, 0);
   v29 = (Il2CppObject *)LocalizationManager__GetNumberFormat(limitNum, 0);
   EntityDefinitely = System_String__Format(v28, v29, 0);
   if ( !afterNumLabel )
     goto LABEL_47;
   UILabel__set_text(afterNumLabel, (System_String_o *)EntityDefinitely, 0);
   beforeNumTextLabel = this->fields.beforeNumTextLabel;
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12657/*"SHOP_RESET_DIALOG_BEFORE_NUM_TITLE"*/, 0);
   if ( !beforeNumTextLabel )
     goto LABEL_47;
   UILabel__set_text(beforeNumTextLabel, (System_String_o *)EntityDefinitely, 0);
   afterNumTextLabel = this->fields.afterNumTextLabel;
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12630/*"SHOP_RESET_DIALOG_AFTER_NUM_TITLE"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12656/*"SHOP_RESET_DIALOG_AFTER_NUM_TITLE"*/, 0);
   if ( !afterNumTextLabel )
     goto LABEL_47;
   UILabel__set_text(afterNumTextLabel, (System_String_o *)EntityDefinitely, 0);
   decideBtnLabel = this->fields.decideBtnLabel;
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12634/*"SHOP_RESET_DIALOG_DECIDE"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12660/*"SHOP_RESET_DIALOG_DECIDE"*/, 0);
   if ( !decideBtnLabel )
     goto LABEL_47;
   UILabel__set_text(decideBtnLabel, (System_String_o *)EntityDefinitely, 0);
   cancelBtnLabel = this->fields.cancelBtnLabel;
-  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12632/*"SHOP_RESET_DIALOG_CANCEL"*/, 0);
+  EntityDefinitely = LocalizationManager__Get((System_String_o *)StringLiteral_12658/*"SHOP_RESET_DIALOG_CANCEL"*/, 0);
   if ( !cancelBtnLabel )
     goto LABEL_47;
   UILabel__set_text(cancelBtnLabel, (System_String_o *)EntityDefinitely, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v34, v35);
-  v36 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ShopResetMaster___);
+  v36 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopResetMaster___);
   baseShopId = shopEntity->fields.baseShopId;
-  EntityDefinitely = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
+  EntityDefinitely = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !EntityDefinitely || !v36 )
     goto LABEL_47;
   EntityDefinitely = (void *)ShopResetMaster__TryGetEntity(
@@ -674,10 +674,10 @@ LABEL_47:
   mText = closeBtnLabel->fields.mText;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v38);
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_12639/*"SHOP_RESET_DIALOG_WARNING_MESSAGE"*/, 0);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_12665/*"SHOP_RESET_DIALOG_WARNING_MESSAGE"*/, 0);
   v43 = (Il2CppObject *)LocalizationManager__GetNumberFormat(resetLimitNum, 0);
   v44 = System_String__Format(v42, v43, 0);
-  EntityDefinitely = System_String__Concat_75438412(mText, v44, 0);
+  EntityDefinitely = System_String__Concat_75651716(mText, v44, 0);
 LABEL_45:
   UILabel__set_text(closeBtnLabel, (System_String_o *)EntityDefinitely, 0);
 }
@@ -697,7 +697,7 @@ void ShopResetConfirmDialogComponent__SetObjectsOnInit(
   __int64 v11; // x1
 
   this->fields.onMenuSelect = onMenuSelect;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onMenuSelect,
     (int32_t)onMenuSelect,
     (System_String_o *)onMenuSelect,
@@ -711,7 +711,7 @@ void ShopResetConfirmDialogComponent__SetObjectsOnInit(
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0), (gameObject = this->fields.confirmInfo) == 0)
     || (UnityEngine_GameObject__SetActive(gameObject, type == 0, 0), (gameObject = this->fields.resultInfo) == 0) )
   {
-    sub_21FFECC(gameObject, v11);
+    sub_2213CDC(gameObject, v11);
   }
   UnityEngine_GameObject__SetActive(gameObject, type == 1, 0);
 }

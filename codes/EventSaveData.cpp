@@ -37,11 +37,11 @@ void EventSaveData__SetValueByArray(
   v14 = separator;
   if ( valueArray )
   {
-    if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C0B0, valueArray, separator);
+    if ( !*(_DWORD *)(qword_5984388 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_5984388, valueArray, separator);
     v6 = System_Char__ToString((uint16_t)&v14, 0);
     v7 = System_String__Join(v6, valueArray, 0);
     this->fields.value = v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

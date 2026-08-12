@@ -2,18 +2,18 @@ void EventDelegate___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_593CDEF & 1) == 0 )
+  if ( (byte_59750C6 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&StringLiteral_6458/*"EventDelegate"*/);
-    byte_593CDEF = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&StringLiteral_6470/*"EventDelegate"*/);
+    byte_59750C6 = 1;
   }
-  if ( !StringLiteral_6458/*"EventDelegate"*/ )
-    sub_21FFECC(0, v1);
-  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6458/*"EventDelegate"*/
+  if ( !StringLiteral_6470/*"EventDelegate"*/ )
+    sub_2213CDC(0, v1);
+  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6470/*"EventDelegate"*/
                                                                                             + 344LL))(
-                                                    StringLiteral_6458/*"EventDelegate"*/,
-                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6458/*"EventDelegate"*/ + 352LL));
+                                                    StringLiteral_6470/*"EventDelegate"*/,
+                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6470/*"EventDelegate"*/ + 352LL));
 }
 
 
@@ -23,7 +23,7 @@ void EventDelegate___ctor(EventDelegate_o *this, const MethodInfo *method)
 }
 
 
-void EventDelegate___ctor_56132624(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
+void EventDelegate___ctor_56337280(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
 {
   const MethodInfo *v5; // x2
 
@@ -32,7 +32,7 @@ void EventDelegate___ctor_56132624(EventDelegate_o *this, EventDelegate_Callback
 }
 
 
-void EventDelegate___ctor_56133096(
+void EventDelegate___ctor_56337752(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -41,7 +41,7 @@ void EventDelegate___ctor_56133096(
   const MethodInfo *v7; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
-  EventDelegate__Set_56133148(this, target, methodName, v7);
+  EventDelegate__Set_56337804(this, target, methodName, v7);
 }
 
 
@@ -52,18 +52,18 @@ EventDelegate_o *EventDelegate__Add(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_593CDE9 & 1) == 0 )
+  if ( (byte_59750C0 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    byte_593CDE9 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    byte_59750C0 = 1;
   }
   if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, callback);
-  return EventDelegate__Add_56137100(list, callback, 0, v3);
+  return EventDelegate__Add_56341756(list, callback, 0, v3);
 }
 
 
-EventDelegate_o *EventDelegate__Add_56137100(
+EventDelegate_o *EventDelegate__Add_56341756(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         bool oneShot,
@@ -88,15 +88,15 @@ EventDelegate_o *EventDelegate__Add_56137100(
   __int64 v23; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_593CDEA & 1) == 0 )
+  if ( (byte_59750C1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_21FFC50(&StringLiteral_2568/*"Attempting to add a callback to a list that's null"*/);
-    byte_593CDEA = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_2213A60(&StringLiteral_2569/*"Attempting to add a callback to a list that's null"*/);
+    byte_59750C1 = 1;
   }
   if ( list )
   {
@@ -104,7 +104,7 @@ EventDelegate_o *EventDelegate__Add_56137100(
     if ( size < 1 )
     {
 LABEL_9:
-      v10 = sub_21FFEBC(EventDelegate_TypeInfo);
+      v10 = sub_2213CCC(EventDelegate_TypeInfo);
       System_Object___ctor((Il2CppObject *)v10, 0);
       EventDelegate__Set((EventDelegate_o *)v10, callback, v11);
       if ( !v10
@@ -115,7 +115,7 @@ LABEL_9:
             list->fields._version = version + 1,
             !items) )
       {
-        sub_21FFECC(v12, v13);
+        sub_2213CDC(v12, v13);
       }
       v23 = list->fields._size;
       if ( (unsigned int)v23 >= LODWORD(items->max_length) )
@@ -123,14 +123,14 @@ LABEL_9:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)list,
           (Il2CppObject *)v10,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
         v24 = &items->obj.klass + v23;
         list->fields._size = v23 + 1;
         v24[4] = (Il2CppClass *)v10;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 4), v10, v14, v15, v16, v17, v18, v19);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v24 + 4), v10, v14, v15, v16, v17, v18, v19);
       }
     }
     else
@@ -141,7 +141,7 @@ LABEL_9:
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)list,
                  v8,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
         if ( Item )
         {
           v10 = (__int64)Item;
@@ -161,14 +161,14 @@ LABEL_9:
   {
     if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, callback);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2568/*"Attempting to add a callback to a list that's null"*/, 0);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2569/*"Attempting to add a callback to a list that's null"*/, 0);
     return 0;
   }
   return (EventDelegate_o *)v10;
 }
 
 
-void EventDelegate__Add_56137536(
+void EventDelegate__Add_56342192(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -178,21 +178,21 @@ void EventDelegate__Add_56137536(
   _BOOL4 oneShot; // w21
 
   v5 = list;
-  if ( (byte_593CDEB & 1) == 0 )
+  if ( (byte_59750C2 & 1) == 0 )
   {
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_21FFC50(&EventDelegate_TypeInfo);
-    byte_593CDEB = 1;
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_2213A60(&EventDelegate_TypeInfo);
+    byte_59750C2 = 1;
   }
   if ( !ev )
-    sub_21FFECC(list, ev);
+    sub_2213CDC(list, ev);
   oneShot = ev->fields.oneShot;
   if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, ev);
-  EventDelegate__Add_56137648(v5, ev, oneShot, v3);
+  EventDelegate__Add_56342304(v5, ev, oneShot, v3);
 }
 
 
-void EventDelegate__Add_56137648(
+void EventDelegate__Add_56342304(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         bool oneShot,
@@ -240,17 +240,17 @@ void EventDelegate__Add_56137648(
 
   v5 = ev;
   v6 = list;
-  if ( (byte_593CDEC & 1) == 0 )
+  if ( (byte_59750C3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&EventDelegate_Parameter___TypeInfo);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_21FFC50(&StringLiteral_2568/*"Attempting to add a callback to a list that's null"*/);
-    byte_593CDEC = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&EventDelegate_Parameter___TypeInfo);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_2213A60(&StringLiteral_2569/*"Attempting to add a callback to a list that's null"*/);
+    byte_59750C3 = 1;
   }
   if ( !v5 )
     goto LABEL_30;
@@ -265,14 +265,14 @@ LABEL_9:
     mCachedCallback = v5->fields.mCachedCallback;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, ev);
-    EventDelegate__Add_56137100(v6, mCachedCallback, oneShot, method);
+    EventDelegate__Add_56341756(v6, mCachedCallback, oneShot, method);
     return;
   }
   if ( !v6 )
   {
     if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, ev);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2568/*"Attempting to add a callback to a list that's null"*/, 0);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2569/*"Attempting to add a callback to a list that's null"*/, 0);
     return;
   }
   size = v6->fields._size;
@@ -281,9 +281,9 @@ LABEL_9:
 LABEL_18:
     v12 = v5->fields.mTarget;
     mMethodName = v5->fields.mMethodName;
-    v14 = sub_21FFEBC(EventDelegate_TypeInfo);
+    v14 = sub_2213CCC(EventDelegate_TypeInfo);
     System_Object___ctor((Il2CppObject *)v14, 0);
-    EventDelegate__Set_56133148((EventDelegate_o *)v14, v12, mMethodName, v15);
+    EventDelegate__Set_56337804((EventDelegate_o *)v14, v12, mMethodName, v15);
     if ( !v14 )
       goto LABEL_30;
     mParameters = v5->fields.mParameters;
@@ -293,10 +293,10 @@ LABEL_18:
       ev = (EventDelegate_o *)mParameters->max_length;
       if ( ev )
       {
-        v23 = sub_21FFD10(EventDelegate_Parameter___TypeInfo, ev);
+        v23 = sub_2213B20(EventDelegate_Parameter___TypeInfo, ev);
         *(_QWORD *)(v14 + 32) = v23;
         v24 = (unsigned int **)(v14 + 32);
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 32), v23, v25, v26, v27, v28, v29, v30);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v14 + 32), v23, v25, v26, v27, v28, v29, v30);
         v31 = v5->fields.mParameters;
         if ( !v31 )
           goto LABEL_30;
@@ -316,20 +316,20 @@ LABEL_18:
             v37 = *((_QWORD *)&v31->obj.klass + v32);
             if ( v37 )
             {
-              list = (System_Collections_Generic_List_EventDelegate__o *)sub_21FFDA4(
+              list = (System_Collections_Generic_List_EventDelegate__o *)sub_2213BB4(
                                                                            v37,
                                                                            *(_QWORD *)(*(_QWORD *)v36 + 64LL));
               if ( !list )
               {
-                v43 = sub_21FFEF0(0, v38);
-                sub_21FFD90(v43, 0);
+                v43 = sub_2213D00(0, v38);
+                sub_2213BA0(v43, 0);
               }
             }
             if ( v35 >= v36[6] )
 LABEL_39:
-              sub_21FFED4(list);
+              sub_2213CE4(list);
             *(_QWORD *)&v36[2 * v32] = v37;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v36[v33], v37, v16, v17, v18, v19, v20, v21);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36[v33], v37, v16, v17, v18, v19, v20, v21);
             v31 = v5->fields.mParameters;
             ++v32;
             v33 += 2;
@@ -351,19 +351,19 @@ LABEL_39:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)v6,
           (Il2CppObject *)v14,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
         v42 = &items->obj.klass + v41;
         v6->fields._size = v41 + 1;
         v42[4] = (Il2CppClass *)v14;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v42 + 4), v14, v16, v17, v18, v19, v20, v21);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v42 + 4), v14, v16, v17, v18, v19, v20, v21);
       }
       return;
     }
 LABEL_30:
-    sub_21FFECC(list, ev);
+    sub_2213CDC(list, ev);
   }
   v10 = 0;
   while ( 1 )
@@ -371,7 +371,7 @@ LABEL_30:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v6,
              v10,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -412,7 +412,7 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   __int64 v23; // x1
   _BOOL8 v24; // x0
   __int64 v25; // x1
-  System_Reflection_MethodInfo_o *Method_77043820; // x0
+  System_Reflection_MethodInfo_o *Method_77257124; // x0
   System_String_o *v27; // x2
   System_String_o *v28; // x3
   int32_t v29; // w4
@@ -453,76 +453,75 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   __int64 v64; // x1
   Il2CppObject *v65; // x20
   UnityEngine_Object_o *v66; // x19
-  System_RuntimeTypeHandle_o v67; // x0
-  System_Type_o *v68; // x0
-  System_Delegate_o *Delegate_77237212; // x0
-  System_String_o *v70; // x2
-  System_String_o *v71; // x3
-  int32_t v72; // w4
-  int32_t v73; // w5
-  bool v74; // w6
-  bool v75; // w7
-  EventDelegate_Callback_c *v76; // x1
-  EventDelegate_c *v77; // x0
-  System_String_o *v78; // x2
-  System_String_o *v79; // x3
-  int32_t v80; // w4
-  int32_t v81; // w5
-  bool v82; // w6
-  bool v83; // w7
-  unsigned __int64 v84; // x22
-  __int64 v85; // x24
-  __int64 v86; // x25
-  unsigned int *v87; // x26
-  EventDelegate_Parameter_o *v88; // x20
-  const MethodInfo *v89; // x1
-  System_String_o *v90; // x2
-  System_String_o *v91; // x3
-  int32_t v92; // w4
-  int32_t v93; // w5
-  bool v94; // w6
-  bool v95; // w7
-  __int64 v96; // x1
+  System_Type_o *v67; // x0
+  System_Delegate_o *Delegate_77450516; // x0
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  EventDelegate_Callback_c *v75; // x1
+  EventDelegate_c *v76; // x0
+  System_String_o *v77; // x2
+  System_String_o *v78; // x3
+  int32_t v79; // w4
+  int32_t v80; // w5
+  bool v81; // w6
+  bool v82; // w7
+  unsigned __int64 v83; // x22
+  __int64 v84; // x24
+  __int64 v85; // x25
+  unsigned int *v86; // x26
+  EventDelegate_Parameter_o *v87; // x20
+  const MethodInfo *v88; // x1
+  System_String_o *v89; // x2
+  System_String_o *v90; // x3
+  int32_t v91; // w4
+  int32_t v92; // w5
+  bool v93; // w6
+  bool v94; // w7
+  __int64 v95; // x1
   const char *namespaze; // x22
-  __int64 v98; // x23
+  __int64 v97; // x23
   EventDelegate_c *klass; // x8
-  __int64 v100; // x9
-  __int64 v101; // x20
-  System_String_o *v102; // x2
-  System_String_o *v103; // x3
-  int32_t v104; // w4
-  int32_t v105; // w5
-  bool v106; // w6
-  bool v107; // w7
-  System_String_o *v108; // x2
-  System_String_o *v109; // x3
-  int32_t v110; // w4
-  int32_t v111; // w5
-  bool v112; // w6
-  bool v113; // w7
-  System_String_o *v114; // x2
-  System_String_o *v115; // x3
-  int32_t v116; // w4
-  int32_t v117; // w5
-  bool v118; // w6
-  bool v119; // w7
-  __int64 v120; // x0
+  __int64 v99; // x9
+  __int64 v100; // x20
+  System_String_o *v101; // x2
+  System_String_o *v102; // x3
+  int32_t v103; // w4
+  int32_t v104; // w5
+  bool v105; // w6
+  bool v106; // w7
+  System_String_o *v107; // x2
+  System_String_o *v108; // x3
+  int32_t v109; // w4
+  int32_t v110; // w5
+  bool v111; // w6
+  bool v112; // w7
+  System_String_o *v113; // x2
+  System_String_o *v114; // x3
+  int32_t v115; // w4
+  int32_t v116; // w5
+  bool v117; // w6
+  bool v118; // w7
+  __int64 v119; // x0
 
-  if ( (byte_593CDE2 & 1) == 0 )
+  if ( (byte_59750B9 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_var);
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&EventDelegate_Parameter___TypeInfo);
-    sub_21FFC50(&EventDelegate_Parameter_TypeInfo);
-    sub_21FFC50(&StringLiteral_581/*"' on "*/);
-    sub_21FFC50(&StringLiteral_289/*" must have a 'void' return type."*/);
-    sub_21FFC50(&StringLiteral_4960/*"Could not find method '"*/);
-    sub_21FFC50(&StringLiteral_1063/*"."*/);
-    byte_593CDE2 = 1;
+    sub_2213A60(&EventDelegate_Callback_var);
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&EventDelegate_Parameter___TypeInfo);
+    sub_2213A60(&EventDelegate_Parameter_TypeInfo);
+    sub_2213A60(&StringLiteral_581/*"' on "*/);
+    sub_2213A60(&StringLiteral_289/*" must have a 'void' return type."*/);
+    sub_2213A60(&StringLiteral_4968/*"Could not find method '"*/);
+    sub_2213A60(&StringLiteral_1063/*"."*/);
+    byte_59750B9 = 1;
   }
   mRawDelegate = this->fields.mRawDelegate;
   this->fields.mCached = 1;
@@ -577,21 +576,21 @@ LABEL_18:
     Type = System_Object__GetType((Il2CppObject *)v14, 0);
     this->fields.mMethod = 0;
     p_mMethod = &this->fields.mMethod;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v17, v18, v19, v20, v21, v22);
     while ( 1 )
     {
-      if ( !*(_DWORD *)(qword_594C108 + 228) )
-        j_il2cpp_runtime_class_init_0(qword_594C108, v23);
+      if ( !*(_DWORD *)(qword_59843E0 + 228) )
+        j_il2cpp_runtime_class_init_0(qword_59843E0, v23);
       v24 = System_Type__op_Inequality(Type, 0, 0);
       if ( !v24 )
         break;
       if ( !Type )
-        sub_21FFECC(v24, v25);
-      Method_77043820 = System_Type__GetMethod_77043820(Type, this->fields.mMethodName, 52, 0);
-      *p_mMethod = Method_77043820;
-      sub_21FFBF4(
+        sub_2213CDC(v24, v25);
+      Method_77257124 = System_Type__GetMethod_77257124(Type, this->fields.mMethodName, 52, 0);
+      *p_mMethod = Method_77257124;
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mMethod,
-        (int32_t)Method_77043820,
+        (int32_t)Method_77257124,
         v27,
         v28,
         v29,
@@ -612,7 +611,7 @@ LABEL_18:
         mMethodName = this->fields.mMethodName;
         v34 = System_Object__GetType((Il2CppObject *)v14, 0);
         v35 = StringLiteral_581/*"' on "*/;
-        v36 = StringLiteral_4960/*"Could not find method '"*/;
+        v36 = StringLiteral_4968/*"Could not find method '"*/;
         if ( v34 )
           v37 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))v34->klass->vtable._3_ToString.methodPtr)(
                                      v34,
@@ -623,11 +622,11 @@ LABEL_18:
         v46 = mMethodName;
         v45 = (System_String_o *)v35;
 LABEL_53:
-        v65 = (Il2CppObject *)System_String__Concat_75483552(v44, v46, v45, v37, 0);
+        v65 = (Il2CppObject *)System_String__Concat_75696856(v44, v46, v45, v37, 0);
         v66 = (UnityEngine_Object_o *)this->fields.mTarget;
         if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v64);
-        UnityEngine_Debug__LogError_82995424(v65, v66, 0);
+        UnityEngine_Debug__LogError_83208728(v65, v66, 0);
         return;
       }
       goto LABEL_84;
@@ -638,10 +637,10 @@ LABEL_53:
     v38 = ((__int64 (__fastcall *)(System_Reflection_MethodInfo_o *, const MethodInfo *))v14->klass->vtable._40_get_ReturnType.methodPtr)(
             v14,
             v14->klass->vtable._40_get_ReturnType.method);
-    v40 = qword_594C048;
+    v40 = qword_5984320;
     v41 = (System_Type_o *)v38;
-    if ( !*(_DWORD *)(qword_594C108 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C108, v39);
+    if ( !*(_DWORD *)(qword_59843E0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v39);
     v42.fields.value = v40 + 32;
     TypeFromHandle = System_Type__GetTypeFromHandle(v42, 0);
     if ( System_Type__op_Inequality(v41, TypeFromHandle, 0) )
@@ -660,7 +659,7 @@ LABEL_53:
         goto LABEL_53;
       }
 LABEL_84:
-      sub_21FFECC(v14, v13);
+      sub_2213CDC(v14, v13);
     }
     v14 = *p_mMethod;
     if ( !*p_mMethod )
@@ -670,7 +669,7 @@ LABEL_84:
                                                             v14->klass->vtable._16_unknown.method);
     this->fields.mParameterInfos = v47;
     p_mParameterInfos = (__int64 *)&this->fields.mParameterInfos;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos,
       (int32_t)v47,
       v49,
@@ -684,7 +683,7 @@ LABEL_84:
     if ( this->fields.mParameterInfos->max_length )
     {
       this->fields.mCachedCallback = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v55, v56, v57, v58, v59, v60);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v55, v56, v57, v58, v59, v60);
       mParameters = this->fields.mParameters;
       this = (EventDelegate_o *)((char *)this + 32);
       v61 = (EventDelegate_c *)mParameters;
@@ -699,79 +698,79 @@ LABEL_72:
           namespaze = v61->_1.namespaze;
           if ( (int)namespaze < 1 )
             return;
-          v98 = 0;
+          v97 = 0;
           while ( 1 )
           {
             klass = this->klass;
             if ( !this->klass )
               goto LABEL_84;
-            if ( (unsigned int)v98 >= LODWORD(klass->_1.namespaze) )
+            if ( (unsigned int)v97 >= LODWORD(klass->_1.namespaze) )
               goto LABEL_85;
-            v100 = *p_mParameterInfos;
+            v99 = *p_mParameterInfos;
             if ( !*p_mParameterInfos )
               goto LABEL_84;
-            if ( (unsigned int)v98 >= *(_DWORD *)(v100 + 24) )
+            if ( (unsigned int)v97 >= *(_DWORD *)(v99 + 24) )
               goto LABEL_85;
-            v14 = *(System_Reflection_MethodInfo_o **)(v100 + 8 * v98 + 32);
+            v14 = *(System_Reflection_MethodInfo_o **)(v99 + 8 * v97 + 32);
             if ( !v14 )
               goto LABEL_84;
-            v101 = *((_QWORD *)&klass->_1.byval_arg.data + v98);
+            v100 = *((_QWORD *)&klass->_1.byval_arg.data + v97);
             v14 = (System_Reflection_MethodInfo_o *)((__int64 (__fastcall *)(System_Reflection_MethodInfo_o *, const MethodInfo *))v14->klass->vtable._11_get_Module.methodPtr)(
                                                       v14,
                                                       v14->klass->vtable._11_get_Module.method);
-            if ( !v101 )
+            if ( !v100 )
               goto LABEL_84;
-            *(_QWORD *)(v101 + 40) = v14;
-            sub_21FFBF4(
-              (MissionNaviTransitionBoardItem_o *)(v101 + 40),
+            *(_QWORD *)(v100 + 40) = v14;
+            sub_2213A04(
+              (MissionNaviTransitionBoardItem_o *)(v100 + 40),
               (int32_t)v14,
+              v101,
               v102,
               v103,
               v104,
               v105,
-              v106,
-              v107);
-            if ( (_DWORD)namespaze == (_DWORD)++v98 )
+              v106);
+            if ( (_DWORD)namespaze == (_DWORD)++v97 )
               return;
           }
         }
 LABEL_63:
-        v77 = (EventDelegate_c *)sub_21FFD10(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v63 + 24));
-        this->klass = v77;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)this, (int32_t)v77, v78, v79, v80, v81, v82, v83);
+        v76 = (EventDelegate_c *)sub_2213B20(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v63 + 24));
+        this->klass = v76;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)this, (int32_t)v76, v77, v78, v79, v80, v81, v82);
         v61 = this->klass;
         if ( !this->klass )
           goto LABEL_84;
         if ( (int)v61->_1.namespaze >= 1 )
         {
-          v84 = 0;
-          v85 = (unsigned int)v61->_1.namespaze;
-          v86 = 8;
+          v83 = 0;
+          v84 = (unsigned int)v61->_1.namespaze;
+          v85 = 8;
           do
           {
-            v87 = (unsigned int *)this->klass;
-            v88 = (EventDelegate_Parameter_o *)sub_21FFEBC(EventDelegate_Parameter_TypeInfo);
-            EventDelegate_Parameter___ctor(v88, v89);
-            if ( !v87 )
+            v86 = (unsigned int *)this->klass;
+            v87 = (EventDelegate_Parameter_o *)sub_2213CCC(EventDelegate_Parameter_TypeInfo);
+            EventDelegate_Parameter___ctor(v87, v88);
+            if ( !v86 )
               goto LABEL_84;
-            if ( v88 )
+            if ( v87 )
             {
-              v14 = (System_Reflection_MethodInfo_o *)sub_21FFDA4(v88, *(_QWORD *)(*(_QWORD *)v87 + 64LL));
+              v14 = (System_Reflection_MethodInfo_o *)sub_2213BB4(v87, *(_QWORD *)(*(_QWORD *)v86 + 64LL));
               if ( !v14 )
               {
-                v120 = sub_21FFEF0(0, v96);
-                sub_21FFD90(v120, 0);
+                v119 = sub_2213D00(0, v95);
+                sub_2213BA0(v119, 0);
               }
             }
-            if ( v84 >= v87[6] )
+            if ( v83 >= v86[6] )
 LABEL_85:
-              sub_21FFED4(v14);
-            *(_QWORD *)&v87[v86] = v88;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v87[v86], (int32_t)v88, v90, v91, v92, v93, v94, v95);
-            ++v84;
-            v86 += 2;
+              sub_2213CE4(v14);
+            *(_QWORD *)&v86[v85] = v87;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v86[v85], (int32_t)v87, v89, v90, v91, v92, v93, v94);
+            ++v83;
+            v85 += 2;
           }
-          while ( v85 != v84 );
+          while ( v84 != v83 );
           v61 = this->klass;
           if ( !this->klass )
             goto LABEL_84;
@@ -784,23 +783,22 @@ LABEL_62:
       goto LABEL_63;
     }
     p_mParameterInfos = (__int64 *)EventDelegate_Callback_var;
-    if ( !*(_DWORD *)(qword_594C108 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C108, v13);
-    v67.fields.value = (intptr_t)p_mParameterInfos;
-    v68 = System_Type__GetTypeFromHandle(v67, 0);
-    Delegate_77237212 = System_Delegate__CreateDelegate_77237212(
-                          v68,
+    if ( !*(_DWORD *)(qword_59843E0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v13);
+    v67 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)p_mParameterInfos, 0);
+    Delegate_77450516 = System_Delegate__CreateDelegate_77450516(
+                          v67,
                           (Il2CppObject *)this->fields.mTarget,
                           this->fields.mMethodName,
                           0);
-    if ( Delegate_77237212 )
+    if ( Delegate_77450516 )
     {
-      v76 = EventDelegate_Callback_TypeInfo;
-      if ( (EventDelegate_Callback_c *)Delegate_77237212->klass != EventDelegate_Callback_TypeInfo
-        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_77237212,
-            (EventDelegate_Callback_c *)Delegate_77237212->klass != v76) )
+      v75 = EventDelegate_Callback_TypeInfo;
+      if ( (EventDelegate_Callback_c *)Delegate_77450516->klass != EventDelegate_Callback_TypeInfo
+        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_77450516,
+            (EventDelegate_Callback_c *)Delegate_77450516->klass != v75) )
       {
-        sub_220024C(Delegate_77237212, v76, v70);
+        sub_221405C(Delegate_77450516, v75, v69);
         goto LABEL_62;
       }
     }
@@ -808,19 +806,19 @@ LABEL_62:
     {
       *p_mCachedCallback = 0;
     }
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback,
-      (int32_t)Delegate_77237212,
+      (int32_t)Delegate_77450516,
+      v69,
       v70,
       v71,
       v72,
       v73,
-      v74,
-      v75);
+      v74);
     this->fields.mArgs = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v108, v109, v110, v111, v112, v113);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v107, v108, v109, v110, v111, v112);
     this->fields.mParameters = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v114, v115, v116, v117, v118, v119);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v113, v114, v115, v116, v117, v118);
   }
 }
 
@@ -871,21 +869,21 @@ void EventDelegate__Clear(EventDelegate_o *this, const MethodInfo *method)
   bool v44; // w7
 
   this->fields.mTarget = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
   this->fields.mMethodName = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName, 0, v9, v10, v11, v12, v13, v14);
   this->fields.mRawDelegate = 0;
   this->fields.mCachedCallback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameters = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mCached = 0;
   this->fields.mMethod = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v27, v28, v29, v30, v31, v32);
   this->fields.mParameterInfos = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v33, v34, v35, v36, v37, v38);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v33, v34, v35, v36, v37, v38);
   this->fields.mArgs = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v39, v40, v41, v42, v43, v44);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -905,13 +903,13 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
   const MethodInfo *v17; // x1
   struct System_String_o *v18; // x20
 
-  if ( (byte_593CDDF & 1) == 0 )
+  if ( (byte_59750B6 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDDF = 1;
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750B6 = 1;
   }
   if ( obj )
   {
@@ -930,7 +928,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
         {
           mMethodName = this->fields.mMethodName;
           monitor = (System_String_o *)obj[1].monitor;
-          return System_String__Equals_75473952(mMethodName, monitor, 0);
+          return System_String__Equals_75687256(mMethodName, monitor, 0);
         }
       }
       return 0;
@@ -965,7 +963,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v17);
         monitor = EventDelegate__GetMethodName((EventDelegate_Callback_o *)obj, v17);
         mMethodName = v18;
-        return System_String__Equals_75473952(mMethodName, monitor, 0);
+        return System_String__Equals_75687256(mMethodName, monitor, 0);
       }
       return 0;
     }
@@ -1024,10 +1022,10 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
   struct System_Object_array *v45; // x8
   __int64 v46; // x0
 
-  if ( (byte_593CDE3 & 1) == 0 )
+  if ( (byte_59750BA & 1) == 0 )
   {
-    sub_21FFC50(&object___TypeInfo);
-    byte_593CDE3 = 1;
+    sub_2213A60(&object___TypeInfo);
+    byte_59750BA = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1049,9 +1047,9 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
       p_mArgs = &this->fields.mArgs;
       mArgs = this->fields.mArgs;
       if ( mArgs && LODWORD(mArgs->max_length) == (_DWORD)max_length_low
-        || (v10 = (struct System_Object_array *)sub_21FFD10(object___TypeInfo, max_length_low),
+        || (v10 = (struct System_Object_array *)sub_2213B20(object___TypeInfo, max_length_low),
             this->fields.mArgs = v10,
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields.mArgs,
               (int32_t)v10,
               v11,
@@ -1068,7 +1066,7 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
 LABEL_24:
           mMethod = (System_Reflection_MethodBase_o *)this->fields.mMethod;
           if ( !mMethod )
-            sub_21FFECC(0, max_length_low);
+            sub_2213CDC(0, max_length_low);
           IsOut = (__int64)System_Reflection_MethodBase__Invoke(
                              mMethod,
                              (Il2CppObject *)this->fields.mTarget,
@@ -1120,7 +1118,7 @@ LABEL_36:
                   break;
                 v44 = *(__int64 *)((char *)&v43->obj.klass + i);
                 *(_QWORD *)(IsOut + 32) = v44;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(IsOut + 32), v44, v35, v36, v37, v38, v39, v40);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)(IsOut + 32), v44, v35, v36, v37, v38, v39, v40);
               }
               v45 = *p_mArgs;
               if ( !*p_mArgs )
@@ -1128,7 +1126,7 @@ LABEL_36:
               if ( v32 >= LODWORD(v45->max_length) )
                 goto LABEL_52;
               *(Il2CppClass **)((char *)&v45->obj.klass + i) = 0;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)v45 + i), 0, v35, v36, v37, v38, v39, v40);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v45 + i), 0, v35, v36, v37, v38, v39, v40);
               if ( v31 == ++v32 )
                 return 1;
             }
@@ -1155,18 +1153,18 @@ LABEL_36:
             v28 = (Il2CppClass *)IsOut;
             if ( IsOut )
             {
-              IsOut = sub_21FFDA4(IsOut, v21->obj.klass->_1.element_class);
+              IsOut = sub_2213BB4(IsOut, v21->obj.klass->_1.element_class);
               if ( !IsOut )
               {
-                v46 = sub_21FFEF0(0, v29);
-                sub_21FFD90(v46, 0);
+                v46 = sub_2213D00(0, v29);
+                sub_2213BA0(v46, 0);
               }
             }
             if ( v18 >= LODWORD(v21->max_length) )
 LABEL_52:
-              sub_21FFED4(IsOut);
+              sub_2213CE4(IsOut);
             *(Il2CppClass **)((char *)&v21->obj.klass + v19) = v28;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)((char *)v21 + v19),
               (int32_t)v28,
               v22,
@@ -1196,13 +1194,13 @@ LABEL_52:
         return 1;
       }
     }
-    sub_21FFECC(IsOut, max_length_low);
+    sub_2213CDC(IsOut, max_length_low);
   }
   return 0;
 }
 
 
-void EventDelegate__Execute_56080488(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+void EventDelegate__Execute_56285144(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t v3; // w22
   Il2CppObject *Item; // x0
@@ -1210,12 +1208,12 @@ void EventDelegate__Execute_56080488(System_Collections_Generic_List_EventDelega
   Il2CppObject *v6; // x23
   int32_t size; // w8
 
-  if ( (byte_593CDE5 & 1) == 0 )
+  if ( (byte_59750BC & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_593CDE5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_59750BC = 1;
   }
   if ( list && list->fields._size >= 1 )
   {
@@ -1225,7 +1223,7 @@ void EventDelegate__Execute_56080488(System_Collections_Generic_List_EventDelega
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)list,
                v3,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
       if ( !Item )
         break;
       v6 = Item;
@@ -1235,14 +1233,14 @@ void EventDelegate__Execute_56080488(System_Collections_Generic_List_EventDelega
       if ( System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v3,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
       {
         if ( !LOBYTE(v6[2].monitor) )
           break;
         System_Collections_Generic_List_object___RemoveAt(
           (System_Collections_Generic_List_object__o *)list,
           v3,
-          (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+          (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
       }
       size = list->fields._size;
 LABEL_12:
@@ -1260,10 +1258,10 @@ int32_t EventDelegate__GetHashCode(EventDelegate_o *this, const MethodInfo *meth
 {
   EventDelegate_c *v2; // x0
 
-  if ( (byte_593CDE0 & 1) == 0 )
+  if ( (byte_59750B7 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    byte_593CDE0 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    byte_59750B7 = 1;
   }
   v2 = EventDelegate_TypeInfo;
   if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
@@ -1280,11 +1278,11 @@ System_String_o *EventDelegate__GetMethodName(EventDelegate_Callback_o *callback
   if ( !callback
     || (callback = (EventDelegate_Callback_o *)System_Delegate__get_Method((System_Delegate_o *)callback, 0)) == 0 )
   {
-    sub_21FFECC(callback, method);
+    sub_2213CDC(callback, method);
   }
-  return (System_String_o *)((__int64 (__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
-                              callback,
-                              callback->klass->vtable._8_GetObjectData.method);
+  return ((System_String_o *(__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
+           callback,
+           callback->klass->vtable._8_GetObjectData.method);
 }
 
 
@@ -1301,18 +1299,18 @@ bool EventDelegate__IsValid(EventDelegate_Callback_o *callback, const MethodInfo
 }
 
 
-bool EventDelegate__IsValid_56108212(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+bool EventDelegate__IsValid_56312868(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t size; // w21
   int32_t v4; // w20
   Il2CppObject *Item; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_593CDE6 & 1) == 0 )
+  if ( (byte_59750BD & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_593CDE6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_59750BD = 1;
   }
   if ( !list )
     return 0;
@@ -1325,7 +1323,7 @@ bool EventDelegate__IsValid_56108212(System_Collections_Generic_List_EventDelega
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v4,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( EventDelegate__get_isValid((EventDelegate_o *)Item, v6) )
@@ -1347,12 +1345,12 @@ bool EventDelegate__Remove(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_593CDED & 1) == 0 )
+  if ( (byte_59750C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_593CDED = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_59750C4 = 1;
   }
   if ( !list )
     return 0;
@@ -1365,7 +1363,7 @@ bool EventDelegate__Remove(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_Callback_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1381,12 +1379,12 @@ bool EventDelegate__Remove(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
 
-bool EventDelegate__Remove_56138484(
+bool EventDelegate__Remove_56343140(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -1395,12 +1393,12 @@ bool EventDelegate__Remove_56138484(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_593CDEE & 1) == 0 )
+  if ( (byte_59750C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_593CDEE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_59750C5 = 1;
   }
   if ( !list )
     return 0;
@@ -1413,7 +1411,7 @@ bool EventDelegate__Remove_56138484(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1429,7 +1427,7 @@ bool EventDelegate__Remove_56138484(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
@@ -1473,12 +1471,12 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
   bool v39; // w6
   bool v40; // w7
 
-  if ( (byte_593CDE1 & 1) == 0 )
+  if ( (byte_59750B8 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDE1 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750B8 = 1;
   }
   EventDelegate__Clear(this, (const MethodInfo *)call);
   if ( call )
@@ -1523,7 +1521,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         this->fields.mTarget = 0;
         p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
       }
-      sub_21FFBF4(p_fields, v16, v6, v7, v8, v9, v10, v11);
+      sub_2213A04(p_fields, v16, v6, v7, v8, v9, v10, v11);
       klass = (UnityEngine_Object_o *)p_fields->klass;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
@@ -1531,7 +1529,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
       {
         this->fields.mRawDelegate = 1;
         this->fields.mCachedCallback = call;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback,
           (int32_t)call,
           v21,
@@ -1541,7 +1539,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
           v25,
           v26);
         this->fields.mMethodName = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName, 0, v27, v28, v29, v30, v31, v32);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName, 0, v27, v28, v29, v30, v31, v32);
       }
       else
       {
@@ -1550,7 +1548,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         MethodName = EventDelegate__GetMethodName(call, v20);
         this->fields.mMethodName = MethodName;
         p_mMethodName = &this->fields.mMethodName;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)p_mMethodName,
           (int32_t)MethodName,
           v35,
@@ -1566,7 +1564,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
 }
 
 
-EventDelegate_o *EventDelegate__Set_56117672(
+EventDelegate_o *EventDelegate__Set_56322328(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         const MethodInfo *method)
@@ -1587,16 +1585,16 @@ EventDelegate_o *EventDelegate__Set_56117672(
   _QWORD *v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_593CDE7 & 1) == 0 )
+  if ( (byte_59750BE & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_593CDE7 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_59750BE = 1;
   }
   if ( !list )
     return 0;
-  v5 = (Il2CppObject *)sub_21FFEBC(EventDelegate_TypeInfo);
+  v5 = (Il2CppObject *)sub_2213CCC(EventDelegate_TypeInfo);
   System_Object___ctor(v5, 0);
   EventDelegate__Set((EventDelegate_o *)v5, callback, v6);
   size = (System_String_o *)(unsigned int)list->fields._size;
@@ -1617,26 +1615,26 @@ EventDelegate_o *EventDelegate__Set_56117672(
   v18 = Method_System_Collections_Generic_List_EventDelegate__Add__;
   list->fields._version = version + 1;
   if ( !items )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( (unsigned int)v16 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)list,
       v5,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + v16;
     list->fields._size = v16 + 1;
     v19[4] = (Il2CppClass *)v5;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v5, size, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v5, size, v9, v10, v11, v12, v13);
   }
   return (EventDelegate_o *)v5;
 }
 
 
-void EventDelegate__Set_56133148(
+void EventDelegate__Set_56337804(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -1657,9 +1655,9 @@ void EventDelegate__Set_56133148(
 
   EventDelegate__Clear(this, (const MethodInfo *)target);
   this->fields.mTarget = target;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)target, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)target, v7, v8, v9, v10, v11, v12);
   this->fields.mMethodName = methodName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName,
     (int32_t)methodName,
     v13,
@@ -1671,7 +1669,7 @@ void EventDelegate__Set_56133148(
 }
 
 
-void EventDelegate__Set_56136868(
+void EventDelegate__Set_56341524(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *del,
         const MethodInfo *method)
@@ -1690,11 +1688,11 @@ void EventDelegate__Set_56136868(
   Il2CppClass **v15; // x0
 
   v9 = list;
-  if ( (byte_593CDE8 & 1) == 0 )
+  if ( (byte_59750BF & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_593CDE8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_59750BF = 1;
   }
   if ( v9 )
   {
@@ -1716,20 +1714,20 @@ void EventDelegate__Set_56136868(
     v14 = Method_System_Collections_Generic_List_EventDelegate__Add__;
     v9->fields._version = version + 1;
     if ( !items )
-      sub_21FFECC(list, del);
+      sub_2213CDC(list, del);
     if ( (unsigned int)v12 >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
         (Il2CppObject *)del,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
       v15 = &items->obj.klass + v12;
       v9->fields._size = v12 + 1;
       v15[4] = (Il2CppClass *)del;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v15 + 4), (int32_t)del, size, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v15 + 4), (int32_t)del, size, v3, v4, v5, v6, v7);
     }
   }
 }
@@ -1743,13 +1741,13 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
   System_String_o *v6; // x20
   int32_t IndexOf; // w0
 
-  if ( (byte_593CDE4 & 1) == 0 )
+  if ( (byte_59750BB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_16573/*"[delegate]"*/);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    sub_21FFC50(&StringLiteral_1169/*"/[delegate]"*/);
-    byte_593CDE4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_16605/*"[delegate]"*/);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    sub_2213A60(&StringLiteral_1169/*"/[delegate]"*/);
+    byte_59750BB = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1763,20 +1761,20 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
                                    Type,
                                    Type->klass->vtable[3].method)) == 0 )
     {
-      sub_21FFECC(Type, v4);
+      sub_2213CDC(Type, v4);
     }
     v6 = (System_String_o *)Type;
     IndexOf = System_String__LastIndexOf((System_String_o *)Type, 0x2Eu, 0);
     if ( IndexOf >= 1 )
       v6 = System_String__Substring(v6, IndexOf + 1, 0);
     if ( System_String__IsNullOrEmpty(this->fields.mMethodName, 0) )
-      return System_String__Concat_75438412(v6, (System_String_o *)StringLiteral_1169/*"/[delegate]"*/, 0);
+      return System_String__Concat_75651716(v6, (System_String_o *)StringLiteral_1169/*"/[delegate]"*/, 0);
     else
-      return System_String__Concat_75481624(v6, (System_String_o *)StringLiteral_1123/*"/"*/, this->fields.mMethodName, 0);
+      return System_String__Concat_75694928(v6, (System_String_o *)StringLiteral_1123/*"/"*/, this->fields.mMethodName, 0);
   }
   else if ( this->fields.mRawDelegate )
   {
-    return (System_String_o *)StringLiteral_16573/*"[delegate]"*/;
+    return (System_String_o *)StringLiteral_16605/*"[delegate]"*/;
   }
   else
   {
@@ -1793,10 +1791,10 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_593CDDE & 1) == 0 )
+  if ( (byte_59750B5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDDE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750B5 = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1814,7 +1812,7 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   if ( v7 )
     return 1;
   if ( !v6 )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v6, 0);
 }
 
@@ -1823,10 +1821,10 @@ bool EventDelegate__get_isValid(EventDelegate_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mTarget; // x20
 
-  if ( (byte_593CDDD & 1) == 0 )
+  if ( (byte_59750B4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDDD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750B4 = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1898,7 +1896,7 @@ void EventDelegate__set_methodName(EventDelegate_o *this, System_String_o *value
   bool v32; // w7
 
   this->fields.mMethodName = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mMethodName,
     (int32_t)value,
     (System_String_o *)method,
@@ -1908,14 +1906,14 @@ void EventDelegate__set_methodName(EventDelegate_o *this, System_String_o *value
     v6,
     v7);
   this->fields.mCachedCallback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameterInfos = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mParameters = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -1952,7 +1950,7 @@ void EventDelegate__set_target(EventDelegate_o *this, UnityEngine_MonoBehaviour_
   bool v32; // w7
 
   this->fields.mTarget = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -1962,14 +1960,14 @@ void EventDelegate__set_target(EventDelegate_o *this, UnityEngine_MonoBehaviour_
     v6,
     v7);
   this->fields.mCachedCallback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameterInfos = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mParameters = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -1992,7 +1990,7 @@ void EventDelegate_Callback___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -2003,12 +2001,12 @@ void EventDelegate_Callback___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2020,9 +2018,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_2003E50;
+  this->fields.invoke_impl = (intptr_t)sub_2017138;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_2003E10;
+  this->fields.extra_arg = (intptr_t)sub_20170F8;
 }
 
 
@@ -2032,9 +2030,9 @@ System_IAsyncResult_o *EventDelegate_Callback__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -2043,7 +2041,7 @@ void EventDelegate_Callback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -2065,13 +2063,13 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
   bool v10; // w6
   bool v11; // w7
 
-  v3 = qword_594C048;
-  if ( !*(_DWORD *)(qword_594C108 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C108, method);
+  v3 = qword_5984320;
+  if ( !*(_DWORD *)(qword_59843E0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, method);
   v4.fields.value = v3 + 32;
   TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v6,
@@ -2084,7 +2082,7 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
 }
 
 
-void EventDelegate_Parameter___ctor_56138808(
+void EventDelegate_Parameter___ctor_56343464(
         EventDelegate_Parameter_o *this,
         UnityEngine_Object_o *obj,
         System_String_o *field,
@@ -2112,13 +2110,13 @@ void EventDelegate_Parameter___ctor_56138808(
   bool v26; // w6
   bool v27; // w7
 
-  v7 = qword_594C048;
-  if ( !*(_DWORD *)(qword_594C108 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C108, obj);
+  v7 = qword_5984320;
+  if ( !*(_DWORD *)(qword_59843E0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, obj);
   v8.fields.value = v7 + 32;
   TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v10,
@@ -2129,13 +2127,13 @@ void EventDelegate_Parameter___ctor_56138808(
     v15);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.obj = obj;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)obj, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)obj, v16, v17, v18, v19, v20, v21);
   this->fields.field = field;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.field, (int32_t)field, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.field, (int32_t)field, v22, v23, v24, v25, v26, v27);
 }
 
 
-void EventDelegate_Parameter___ctor_56138948(
+void EventDelegate_Parameter___ctor_56343604(
         EventDelegate_Parameter_o *this,
         Il2CppObject *val,
         const MethodInfo *method)
@@ -2156,13 +2154,13 @@ void EventDelegate_Parameter___ctor_56138948(
   bool v18; // w6
   bool v19; // w7
 
-  v5 = qword_594C048;
-  if ( !*(_DWORD *)(qword_594C108 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C108, val);
+  v5 = qword_5984320;
+  if ( !*(_DWORD *)(qword_59843E0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, val);
   v6.fields.value = v5 + 32;
   TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v8,
@@ -2173,7 +2171,7 @@ void EventDelegate_Parameter___ctor_56138948(
     v13);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mValue = val;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mValue, (int32_t)val, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mValue, (int32_t)val, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -2185,10 +2183,10 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   __int64 v6; // x19
   System_RuntimeTypeHandle_o v7; // x0
 
-  if ( (byte_593CDF1 & 1) == 0 )
+  if ( (byte_59750C8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDF1 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750C8 = 1;
   }
   mValue = this->fields.mValue;
   if ( mValue )
@@ -2200,12 +2198,12 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   {
     mValue = (Il2CppObject *)this->fields.obj;
     if ( !mValue )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     return System_Object__GetType(mValue, 0);
   }
-  v6 = qword_594C048;
-  if ( !*(_DWORD *)(qword_594C108 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C108, v5);
+  v6 = qword_5984320;
+  if ( !*(_DWORD *)(qword_59843E0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, v5);
   v7.fields.value = v6 + 32;
   return System_Type__GetTypeFromHandle(v7, 0);
 }
@@ -2251,11 +2249,11 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
   bool IsValueType; // w8
   System_Type_o *v39; // x19
 
-  if ( (byte_593CDF0 & 1) == 0 )
+  if ( (byte_59750C7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDF0 = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750C7 = 1;
   }
   result = this->fields.mValue;
   if ( !result )
@@ -2264,9 +2262,9 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
     {
       this->fields.fieldInfo = 0;
       this->fields.cached = 1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fieldInfo, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fieldInfo, 0, v2, v3, v4, v5, v6, v7);
       this->fields.propInfo = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.propInfo, 0, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.propInfo, 0, v10, v11, v12, v13, v14, v15);
       obj = this->fields.obj;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
@@ -2281,7 +2279,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v20 = (System_Type_o *)Type;
         Property = System_Type__GetProperty((System_Type_o *)Type, this->fields.field, 0);
         this->fields.propInfo = Property;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.propInfo,
           (int32_t)Property,
           v22,
@@ -2294,7 +2292,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         {
           Field = System_Type__GetField(v20, this->fields.field, 0);
           this->fields.fieldInfo = Field;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.fieldInfo,
             (int32_t)Field,
             v29,
@@ -2310,11 +2308,11 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
     {
       Type = (Il2CppObject *)this->fields.propInfo;
       if ( Type )
-        return (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, _QWORD, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
-                                 Type,
-                                 this->fields.obj,
-                                 0,
-                                 Type->klass->vtable[25].method);
+        return ((Il2CppObject *(__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, _QWORD, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
+                 Type,
+                 this->fields.obj,
+                 0,
+                 Type->klass->vtable[25].method);
     }
     else
     {
@@ -2326,8 +2324,8 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         if ( UnityEngine_Object__op_Inequality(v35, 0, 0) )
           return (Il2CppObject *)this->fields.obj;
         expectedType = this->fields.expectedType;
-        if ( !*(_DWORD *)(qword_594C108 + 228) )
-          j_il2cpp_runtime_class_init_0(qword_594C108, v36);
+        if ( !*(_DWORD *)(qword_59843E0 + 228) )
+          j_il2cpp_runtime_class_init_0(qword_59843E0, v36);
         if ( System_Type__op_Inequality(expectedType, 0, 0) )
         {
           Type = (Il2CppObject *)this->fields.expectedType;
@@ -2341,17 +2339,17 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v39 = this->fields.expectedType;
         if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v18);
-        return System_Convert__ChangeType_76462452(0, v39, 0);
+        return System_Convert__ChangeType_76675756(0, v39, 0);
       }
       Type = (Il2CppObject *)this->fields.fieldInfo;
       if ( Type )
-        return (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
-                                 Type,
-                                 this->fields.obj,
-                                 Type->klass->vtable[25].method);
+        return ((Il2CppObject *(__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
+                 Type,
+                 this->fields.obj,
+                 Type->klass->vtable[25].method);
     }
 LABEL_32:
-    sub_21FFECC(Type, v18);
+    sub_2213CDC(Type, v18);
   }
   return result;
 }
@@ -2366,7 +2364,7 @@ void EventDelegate_Parameter__set_value(EventDelegate_Parameter_o *this, Il2CppO
   bool v7; // w7
 
   this->fields.mValue = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mValue,
     (int32_t)value,
     (System_String_o *)method,

@@ -25,10 +25,10 @@ void TerminalBoardOptionTextData___ctor(
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._ForwardText_k__BackingField = forwardText;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->fields, (int32_t)forwardText, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->fields, (int32_t)forwardText, v13, v14, v15, v16, v17, v18);
   v12->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v12 = (TerminalBoardOptionTextData_o *)((char *)v12 + 32);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v12, (int32_t)behindTextFormat, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v12, (int32_t)behindTextFormat, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = itemImageId;
   HIDWORD(v12->monitor) = alignment;
 }
@@ -54,13 +54,13 @@ void TerminalBoardOptionTextData__SetParamsToBehindText(
   bool v16; // w7
 
   if ( !args )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
   if ( args->max_length )
   {
-    v10 = System_String__Format_75484712(this->fields._BehindTextFormat_k__BackingField, args, 0);
+    v10 = System_String__Format_75698016(this->fields._BehindTextFormat_k__BackingField, args, 0);
     this->fields._BehindText_k__BackingField = v10;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)v10,
       v11,
@@ -73,7 +73,7 @@ void TerminalBoardOptionTextData__SetParamsToBehindText(
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
       (System_String_o *)method,
@@ -140,7 +140,7 @@ void TerminalBoardOptionTextData__set_BehindText(
   bool v7; // w7
 
   this->fields._BehindText_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BehindText_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -164,7 +164,7 @@ void TerminalBoardOptionTextData__set_BehindTextFormat(
   bool v7; // w7
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -188,7 +188,7 @@ void TerminalBoardOptionTextData__set_ForwardText(
   bool v7; // w7
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

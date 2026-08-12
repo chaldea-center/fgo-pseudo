@@ -18,11 +18,11 @@ void ScriptSelectListViewItem___ctor(
   bool v18; // w6
   bool v19; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.message, (int32_t)message, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.message, (int32_t)message, v8, v9, v10, v11, v12, v13);
   this->fields.fontType = fontType;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.fontType,
     (int32_t)fontType,
     v14,

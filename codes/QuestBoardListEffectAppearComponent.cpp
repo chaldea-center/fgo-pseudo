@@ -5,10 +5,10 @@ void QuestBoardListEffectAppearComponent___ctor(QuestBoardListEffectAppearCompon
   int v10; // w8
   float v11; // s0
 
-  if ( (byte_593517C & 1) == 0 )
+  if ( (byte_596D26B & 1) == 0 )
   {
-    sub_21FFC50(&QuestBoardListViewItemDraw_TypeInfo);
-    byte_593517C = 1;
+    sub_2213A60(&QuestBoardListViewItemDraw_TypeInfo);
+    byte_596D26B = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
   v9 = QuestBoardListViewItemDraw_TypeInfo;

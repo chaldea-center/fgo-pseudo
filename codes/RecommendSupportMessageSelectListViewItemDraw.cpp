@@ -35,22 +35,22 @@ void RecommendSupportMessageSelectListViewItemDraw__Init(
   __int64 v7; // x2
   UISprite_o *frameSprite; // x19
 
-  if ( (byte_5934364 & 1) == 0 )
+  if ( (byte_596C493 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_21351/*"img_frameselect"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5934364 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&StringLiteral_21392/*"img_frameselect"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C493 = 1;
   }
   RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v2);
   button = this->fields.button;
   if ( !button || (UICommonButton__SetEnable(button, 1, 0), (button = (UICommonButton_o *)this->fields.wordLabel) == 0) )
-    sub_21FFECC(button, v4);
+    sub_2213CDC(button, v4);
   UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0);
   frameSprite = this->fields.frameSprite;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v7);
-  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_21351/*"img_frameselect"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_21392/*"img_frameselect"*/, 0);
 }
 
 
@@ -85,7 +85,7 @@ LABEL_10:
       goto LABEL_12;
     }
 LABEL_13:
-    sub_21FFECC(button, isUse);
+    sub_2213CDC(button, isUse);
   }
   if ( !isSelectLimit )
   {
@@ -121,7 +121,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
   if ( !frameSprite
     || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0)) == 0 )
   {
-    sub_21FFECC(frameSprite, isActive);
+    sub_2213CDC(frameSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0);
 }
@@ -141,10 +141,10 @@ void RecommendSupportMessageSelectListViewItemDraw__SetInput(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_593443A )
+    if ( !byte_596C543 )
     {
-      sub_21FFC50(&RecommendSupportMessageSelectDialog_TypeInfo);
-      byte_593443A = 1;
+      sub_2213A60(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_596C543 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -153,7 +153,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetInput(
       method);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
-      sub_21FFECC(wordLabel, v8);
+      sub_2213CDC(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
@@ -173,10 +173,10 @@ void RecommendSupportMessageSelectListViewItemDraw__SetItem(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_593443A )
+    if ( !byte_596C543 )
     {
-      sub_21FFC50(&RecommendSupportMessageSelectDialog_TypeInfo);
-      byte_593443A = 1;
+      sub_2213A60(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_596C543 = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -185,7 +185,7 @@ void RecommendSupportMessageSelectListViewItemDraw__SetItem(
       v3);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
-      sub_21FFECC(wordLabel, v8);
+      sub_2213CDC(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
@@ -201,6 +201,6 @@ void RecommendSupportMessageSelectListViewItemDraw__SetMask(
 
   mask = this->fields.mask;
   if ( !mask )
-    sub_21FFECC(0, isActive);
+    sub_2213CDC(0, isActive);
   UnityEngine_GameObject__SetActive(mask, isActive, 0);
 }

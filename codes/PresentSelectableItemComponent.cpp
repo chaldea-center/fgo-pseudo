@@ -12,10 +12,10 @@ void PresentSelectableItemComponent__OnClickItem(PresentSelectableItemComponent_
   const MethodInfo *v6; // x4
   struct PresentSelectableDlgComponent_o *v7; // x0
 
-  if ( (byte_5937308 & 1) == 0 )
+  if ( (byte_596F463 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937308 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F463 = 1;
   }
   if ( this->fields.isEnableSelect )
   {
@@ -26,7 +26,7 @@ void PresentSelectableItemComponent__OnClickItem(PresentSelectableItemComponent_
     {
       v7 = this->fields.dialog;
       if ( !v7 )
-        sub_21FFECC(0, v5);
+        sub_2213CDC(0, v5);
       if ( !v7->fields.isClosed )
         PresentSelectableDlgComponent__OpenItemConfirmDlg(
           v7,
@@ -49,7 +49,7 @@ void PresentSelectableItemComponent__setEnableSelectItem(
   {
     maskImg = this->fields.maskImg;
     if ( !maskImg )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     UnityEngine_GameObject__SetActive(maskImg, 1, 0);
   }
 }
@@ -96,32 +96,29 @@ int32_t PresentSelectableItemComponent__setItemInfo(
   Il2CppObject *v40; // x0
   UILabel_o *spendNumLb; // x22
   int32_t v42; // w8
-  float v43; // s1 OVERLAPPED
-  float v44; // s3
-  float v45; // s0
-  float v46; // s2
-  int32_t v48; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t v45; // [xsp+4h] [xbp-4Ch] BYREF
   int32_t giftNum; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v50; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v47; // [xsp+Ch] [xbp-44h] BYREF
+  UnityEngine_Color_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5937307 & 1) == 0 )
+  if ( (byte_596F462 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_26423/*"{0:N0}"*/);
-    sub_21FFC50(&StringLiteral_923/*"-"*/);
-    sub_21FFC50(&StringLiteral_10867/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/);
-    sub_21FFC50(&StringLiteral_350/*" ×{0}"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5937307 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_26474/*"{0:N0}"*/);
+    sub_2213A60(&StringLiteral_923/*"-"*/);
+    sub_2213A60(&StringLiteral_10880/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/);
+    sub_2213A60(&StringLiteral_350/*" ×{0}"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596F462 = 1;
   }
-  v50 = 0;
+  v47 = 0;
   this->fields.itemSelectEnt = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemSelectEnt,
     (int32_t)data,
     *(System_String_o **)&ticketsHave,
@@ -132,7 +129,7 @@ int32_t PresentSelectableItemComponent__setItemInfo(
     v7);
   this->fields.dialog = dlg;
   this->fields.isEnableSelect = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dialog, (int32_t)dlg, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dialog, (int32_t)dlg, v13, v14, v15, v16, v17, v18);
   maskImg = this->fields.maskImg;
   if ( !maskImg )
     goto LABEL_54;
@@ -156,7 +153,7 @@ int32_t PresentSelectableItemComponent__setItemInfo(
   currentInfoLb = this->fields.currentInfoLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21, v22);
-  maskImg = LocalizationManager__Get((System_String_o *)StringLiteral_10867/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0);
+  maskImg = LocalizationManager__Get((System_String_o *)StringLiteral_10880/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0);
   if ( !currentInfoLb )
     goto LABEL_54;
   UILabel__set_text(currentInfoLb, (System_String_o *)maskImg, 0);
@@ -176,7 +173,7 @@ int32_t PresentSelectableItemComponent__setItemInfo(
     if ( v24 )
     {
       if ( !(_DWORD)v24 )
-        sub_21FFED4(maskImg);
+        sub_2213CE4(maskImg);
       v25 = (_DWORD *)*((_QWORD *)maskImg + 4);
       if ( !v25 )
         goto LABEL_54;
@@ -184,19 +181,19 @@ int32_t PresentSelectableItemComponent__setItemInfo(
       this->fields.giftNum = v25[7];
       if ( v26 == 2 )
       {
-        maskImg = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        maskImg = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !maskImg )
           goto LABEL_54;
         maskImg = DataManager__GetMasterData_object_(
                     (DataManager_o *)maskImg,
-                    (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
         if ( !maskImg )
           goto LABEL_54;
         maskImg = (void *)DataMasterBase_object__object__int___TryGetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)maskImg,
                             (Il2CppObject **)&this->fields.itemEnt,
                             v25[6],
-                            (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                            (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)maskImg & 1) != 0 )
         {
           itemEnt = this->fields.itemEnt;
@@ -235,25 +232,25 @@ int32_t PresentSelectableItemComponent__setItemInfo(
                 else
                 {
                   giftNum = this->fields.giftNum;
-                  v31 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &giftNum);
+                  v31 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &giftNum);
                   v32 = System_String__Format((System_String_o *)StringLiteral_350/*" ×{0}"*/, v31, 0);
                 }
-                maskImg = System_String__Concat_75438412(name, v32, 0);
+                maskImg = System_String__Concat_75651716(name, v32, 0);
                 if ( itemNameLb )
                 {
                   UILabel__set_text(itemNameLb, (System_String_o *)maskImg, 0);
-                  maskImg = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                  maskImg = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                   if ( maskImg )
                   {
                     MasterData_object = DataManager__GetMasterData_object_(
                                           (DataManager_o *)maskImg,
-                                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
                     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
                       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v19, v33);
-                    if ( !byte_5931D52 )
+                    if ( !byte_5969EF2 )
                     {
-                      sub_21FFC50(&NetworkManager_TypeInfo);
-                      byte_5931D52 = 1;
+                      sub_2213A60(&NetworkManager_TypeInfo);
+                      byte_5969EF2 = 1;
                     }
                     maskImg = NetworkManager_TypeInfo;
                     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -275,18 +272,18 @@ int32_t PresentSelectableItemComponent__setItemInfo(
                         {
                           v36 = *((_DWORD *)maskImg + 7);
                           requireNum = data->fields.requireNum;
-                          v38 = qword_594C070;
+                          v38 = qword_5984348;
                           currentNumLb = this->fields.currentNumLb;
                           this->fields.itemHold = v36;
-                          v50 = requireNum;
-                          v48 = v36;
-                          v40 = (Il2CppObject *)j_il2cpp_value_box_0(v38, &v48);
-                          maskImg = System_String__Format((System_String_o *)StringLiteral_26423/*"{0:N0}"*/, v40, 0);
+                          v47 = requireNum;
+                          v45 = v36;
+                          v40 = (Il2CppObject *)j_il2cpp_value_box_0(v38, &v45);
+                          maskImg = System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v40, 0);
                           if ( currentNumLb )
                           {
                             UILabel__set_text(currentNumLb, (System_String_o *)maskImg, 0);
                             spendNumLb = this->fields.spendNumLb;
-                            maskImg = System_Int32__ToString((int32_t)&v50, 0);
+                            maskImg = System_Int32__ToString((int32_t)&v47, 0);
                             if ( spendNumLb )
                             {
                               UILabel__set_text(spendNumLb, (System_String_o *)maskImg, 0);
@@ -294,18 +291,18 @@ int32_t PresentSelectableItemComponent__setItemInfo(
                               if ( maskImg )
                               {
                                 UILabel__set_text((UILabel_o *)maskImg, data->fields.detail, 0);
-                                v42 = v50;
+                                v42 = v47;
                                 maskImg = this->fields.spendNumLb;
-                                this->fields.isEnableSelect = v50 <= ticketsHave;
+                                this->fields.isEnableSelect = v47 <= ticketsHave;
                                 if ( maskImg )
                                 {
-                                  v43 = 1.0;
-                                  v44 = 1.0;
+                                  v48.fields.g = 1.0;
+                                  v48.fields.a = 1.0;
                                   if ( v42 > ticketsHave )
-                                    v43 = 0.0;
-                                  v45 = 1.0;
-                                  v46 = v43;
-                                  UIWidget__set_color((UIWidget_o *)maskImg, *(UnityEngine_Color_o *)(&v43 - 1), 0);
+                                    v48.fields.g = 0.0;
+                                  v48.fields.r = 1.0;
+                                  v48.fields.b = v48.fields.g;
+                                  UIWidget__set_color((UIWidget_o *)maskImg, v48, 0);
                                   maskImg = this->fields.maskImg;
                                   if ( maskImg )
                                   {
@@ -328,7 +325,7 @@ int32_t PresentSelectableItemComponent__setItemInfo(
             }
           }
 LABEL_54:
-          sub_21FFECC(maskImg, v19);
+          sub_2213CDC(maskImg, v19);
         }
       }
     }

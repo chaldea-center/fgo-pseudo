@@ -12,17 +12,17 @@ void EventCraftRewardDialogComponent___ctor(EventCraftRewardDialogComponent_o *t
   __int64 v12; // x2
   BaseDialog_c *v13; // x0
 
-  if ( (byte_5932451 & 1) == 0 )
+  if ( (byte_596A550 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&UnityEngine_Color___TypeInfo);
-    byte_5932451 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&UnityEngine_Color___TypeInfo);
+    byte_596A550 = 1;
   }
   v3 = UnityEngine_Color___TypeInfo;
   this->fields.iconScale = 0.85;
-  v4 = (struct UnityEngine_Color_array *)sub_21FFD10(v3, 2);
+  v4 = (struct UnityEngine_Color_array *)sub_2213B20(v3, 2);
   this->fields.viewChangeButtonLabelEffectColors = v4;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.viewChangeButtonLabelEffectColors,
     (int32_t)v4,
     v5,
@@ -52,7 +52,7 @@ void EventCraftRewardDialogComponent__OnClickCloseButton(
         const MethodInfo *method)
 {
   System_Action_T__o *eventRootMaskSetActiveAction; // x0
-  const MethodInfo_36CDE1C *v4; // x2
+  const MethodInfo_36FFD8C *v4; // x2
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
   __int64 v7; // x1
@@ -71,28 +71,28 @@ void EventCraftRewardDialogComponent__OnClickCloseButton(
   bool v20; // w7
   System_Action_o *v21; // x20
 
-  if ( (byte_593244D & 1) == 0 )
+  if ( (byte_596A54C & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    sub_21FFC50(&System_Action_ItemIconComponent__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent_OnClickCloseButton__);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent__OnClickCloseButton_b__21_1__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent___c__OnClickCloseButton_b__21_0__);
-    sub_21FFC50(&EventCraftRewardDialogComponent___c_TypeInfo);
-    byte_593244D = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    sub_2213A60(&System_Action_ItemIconComponent__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent_OnClickCloseButton__);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent__OnClickCloseButton_b__21_1__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent___c__OnClickCloseButton_b__21_0__);
+    sub_2213A60(&EventCraftRewardDialogComponent___c_TypeInfo);
+    byte_596A54C = 1;
   }
   if ( this->fields.state == 2 )
   {
     eventRootMaskSetActiveAction = (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction;
-    v4 = (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___;
+    v4 = (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___;
     this->fields.state = 3;
     ActionExtensions__Call_bool_(eventRootMaskSetActiveAction, 1, v4);
     v5 = Method_EventCraftRewardDialogComponent_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventCraftRewardDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_EventCraftRewardDialogComponent_OnClickCloseButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_EventCraftRewardDialogComponent_OnClickCloseButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     v9 = EventCraftRewardDialogComponent___c_TypeInfo;
     resultItemObjList = (System_Collections_Generic_List_object__o *)this->fields.resultItemObjList;
@@ -111,7 +111,7 @@ void EventCraftRewardDialogComponent__OnClickCloseButton(
         static_fields = EventCraftRewardDialogComponent___c_TypeInfo->static_fields;
       }
       v13 = (Il2CppObject *)static_fields->__9;
-      _9__21_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_ItemIconComponent__TypeInfo);
+      _9__21_0 = (System_Action_object__o *)sub_2213CCC(System_Action_ItemIconComponent__TypeInfo);
       System_Action_object____ctor(
         _9__21_0,
         v13,
@@ -119,15 +119,15 @@ void EventCraftRewardDialogComponent__OnClickCloseButton(
         0);
       v14 = EventCraftRewardDialogComponent___c_TypeInfo->static_fields;
       v14->__9__21_0 = (struct System_Action_ItemIconComponent__o *)_9__21_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->__9__21_0, (int32_t)_9__21_0, v15, v16, v17, v18, v19, v20);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->__9__21_0, (int32_t)_9__21_0, v15, v16, v17, v18, v19, v20);
     }
     if ( !resultItemObjList )
-      sub_21FFECC(v9, v7);
+      sub_2213CDC(v9, v7);
     System_Collections_Generic_List_object___ForEach(
       resultItemObjList,
       (System_Action_T__o *)_9__21_0,
-      (const MethodInfo_445054C *)Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
-    v21 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
+    v21 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v21,
       (Il2CppObject *)this,
@@ -162,39 +162,39 @@ void EventCraftRewardDialogComponent__OnClickSwitchShowMode(
   System_Action_object__o *v20; // x21
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593244E & 1) == 0 )
+  if ( (byte_596A54D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ItemIconComponent__TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent__OnClickSwitchShowMode_b__22_0__);
-    sub_21FFC50(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
-    sub_21FFC50(&StringLiteral_25463/*"treasurechest_btn"*/);
-    sub_21FFC50(&StringLiteral_25465/*"treasurechest_btn_on"*/);
-    byte_593244E = 1;
+    sub_2213A60(&System_Action_ItemIconComponent__TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent__OnClickSwitchShowMode_b__22_0__);
+    sub_2213A60(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
+    sub_2213A60(&StringLiteral_25511/*"treasurechest_btn"*/);
+    sub_2213A60(&StringLiteral_25513/*"treasurechest_btn_on"*/);
+    byte_596A54D = 1;
   }
   v3 = Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__;
   if ( (*((_BYTE *)Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_EventCraftRewardDialogComponent_OnClickSwitchShowMode__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   isShowPossessionNum = this->fields.isShowPossessionNum;
   viewChangeButton = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton
     || (isShowPossessionNum
-      ? (v8 = (System_String_o **)&StringLiteral_25463/*"treasurechest_btn"*/)
-      : (v8 = (System_String_o **)&StringLiteral_25465/*"treasurechest_btn_on"*/),
+      ? (v8 = (System_String_o **)&StringLiteral_25511/*"treasurechest_btn"*/)
+      : (v8 = (System_String_o **)&StringLiteral_25513/*"treasurechest_btn_on"*/),
         (UIButton__set_normalSprite(viewChangeButton, *v8, 0), (viewChangeButton = this->fields.viewChangeButton) == 0)
      || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)viewChangeButton, 0),
          viewChangeButton = (UIButton_o *)GameObjectExtensions__SafeGetComponent_object_(
                                             gameObject,
-                                            (const MethodInfo_38852A8 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___),
+                                            (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___),
          !this->fields.viewChangeButton)) )
   {
 LABEL_23:
-    sub_21FFECC(viewChangeButton, v5);
+    sub_2213CDC(viewChangeButton, v5);
   }
   v10 = (UISprite_o *)viewChangeButton;
   normalSprite = UIButton__get_normalSprite(this->fields.viewChangeButton, 0);
@@ -218,7 +218,7 @@ LABEL_23:
       goto LABEL_21;
     }
 LABEL_24:
-    sub_21FFED4(viewChangeButton);
+    sub_2213CE4(viewChangeButton);
   }
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_23;
@@ -237,7 +237,7 @@ LABEL_21:
   v21.fields.r = *p_r;
   UILabel__set_effectColor((UILabel_o *)viewChangeButton, v21, 0);
   resultItemObjList = (System_Collections_Generic_List_object__o *)this->fields.resultItemObjList;
-  v20 = (System_Action_object__o *)sub_21FFEBC(System_Action_ItemIconComponent__TypeInfo);
+  v20 = (System_Action_object__o *)sub_2213CCC(System_Action_ItemIconComponent__TypeInfo);
   System_Action_object____ctor(
     v20,
     (Il2CppObject *)this,
@@ -248,7 +248,7 @@ LABEL_21:
   System_Collections_Generic_List_object___ForEach(
     resultItemObjList,
     (System_Action_T__o *)v20,
-    (const MethodInfo_445054C *)Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
+    (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_ItemIconComponent__ForEach__);
 }
 
 
@@ -329,44 +329,44 @@ void EventCraftRewardDialogComponent__Open(
   int32_t key; // [xsp+4h] [xbp-6Ch]
   UserItemEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_593244B & 1) == 0 )
+  if ( (byte_596A54A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_21FFC50(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ItemIconComponent__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_EventCraftRewardDialogComponent___c__DisplayClass19_0__Open_b__0__);
-    sub_21FFC50(&EventCraftRewardDialogComponent___c__DisplayClass19_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_14067/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
-    sub_21FFC50(&StringLiteral_25463/*"treasurechest_btn"*/);
-    sub_21FFC50(&StringLiteral_14066/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_3845/*"COMMON_VIEW_CHANGE"*/);
-    sub_21FFC50(&StringLiteral_4046/*"CRAFT_EVENT_REWARD_DIALOG_TITLE"*/);
-    byte_593244B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_2213A60(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ItemIconComponent__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_EventCraftRewardDialogComponent___c__DisplayClass19_0__Open_b__0__);
+    sub_2213A60(&EventCraftRewardDialogComponent___c__DisplayClass19_0_TypeInfo);
+    sub_2213A60(&StringLiteral_14097/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
+    sub_2213A60(&StringLiteral_25511/*"treasurechest_btn"*/);
+    sub_2213A60(&StringLiteral_14096/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/);
+    sub_2213A60(&StringLiteral_3850/*"COMMON_VIEW_CHANGE"*/);
+    sub_2213A60(&StringLiteral_4051/*"CRAFT_EVENT_REWARD_DIALOG_TITLE"*/);
+    byte_596A54A = 1;
   }
   entity = 0;
-  v15 = sub_21FFEBC(EventCraftRewardDialogComponent___c__DisplayClass19_0_TypeInfo);
+  v15 = sub_2213CCC(EventCraftRewardDialogComponent___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
   if ( !v15 )
     goto LABEL_57;
   *(_QWORD *)(v15 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v15 + 16), (int32_t)this, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v15 + 16), (int32_t)this, v18, v19, v20, v21, v22, v23);
   *(_QWORD *)(v15 + 24) = rewardItems;
   v24 = v15 + 24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v15 + 24), (int32_t)rewardItems, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v15 + 24), (int32_t)rewardItems, v25, v26, v27, v28, v29, v30);
   if ( BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v15 + 24), 0) )
     return;
   this->fields.state = 1;
   this->fields.eventRootMaskSetActiveAction = setMaskMethod;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventRootMaskSetActiveAction,
     (int32_t)setMaskMethod,
     v31,
@@ -376,7 +376,7 @@ void EventCraftRewardDialogComponent__Open(
     v35,
     v36);
   this->fields.closeCallbackFunc = closeCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)closeCallback,
     v37,
@@ -386,12 +386,12 @@ void EventCraftRewardDialogComponent__Open(
     v41,
     v42);
   this->fields.isShowPossessionNum = 0;
-  v43 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ItemIconComponent__TypeInfo);
+  v43 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ItemIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v43,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
   this->fields.resultItemObjList = (struct System_Collections_Generic_List_ItemIconComponent__o *)v43;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.resultItemObjList,
     (int32_t)v43,
     v44,
@@ -403,9 +403,9 @@ void EventCraftRewardDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v50, v51);
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_4046/*"CRAFT_EVENT_REWARD_DIALOG_TITLE"*/, 0);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_4051/*"CRAFT_EVENT_REWARD_DIALOG_TITLE"*/, 0);
   if ( !eventTradeGoodsEntity || (name = (Il2CppObject *)eventTradeGoodsEntity->fields.name) == 0 )
-    name = **(Il2CppObject ***)(qword_594C0B8 + 184);
+    name = **(Il2CppObject ***)(qword_5984390 + 184);
   viewChangeButton = System_String__Format(v53, name, 0);
   if ( !titleLabel )
     goto LABEL_57;
@@ -413,7 +413,7 @@ void EventCraftRewardDialogComponent__Open(
   viewChangeButton = this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_57;
-  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_25463/*"treasurechest_btn"*/, 0);
+  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_25511/*"treasurechest_btn"*/, 0);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_57;
@@ -426,7 +426,7 @@ void EventCraftRewardDialogComponent__Open(
   viewChangeButtonLabel = this->fields.viewChangeButtonLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v56, v57);
-  viewChangeButton = LocalizationManager__Get((System_String_o *)StringLiteral_3845/*"COMMON_VIEW_CHANGE"*/, 0);
+  viewChangeButton = LocalizationManager__Get((System_String_o *)StringLiteral_3850/*"COMMON_VIEW_CHANGE"*/, 0);
   if ( !viewChangeButtonLabel )
     goto LABEL_57;
   UILabel__set_text(viewChangeButtonLabel, (System_String_o *)viewChangeButton, 0);
@@ -435,14 +435,14 @@ void EventCraftRewardDialogComponent__Open(
     goto LABEL_57;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)viewChangeButton,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v59, v60);
-  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_25463/*"treasurechest_btn"*/, 0);
+  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_25511/*"treasurechest_btn"*/, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v62, v63);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
-  viewChangeButton = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
+  viewChangeButton = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( eventTradeGoodsEntity )
   {
     commonConsumeId = (unsigned int)eventTradeGoodsEntity->fields.commonConsumeId;
@@ -474,10 +474,10 @@ void EventCraftRewardDialogComponent__Open(
       v70 = *((_QWORD *)v67 + v69 + 4);
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, commonConsumeId, v65);
-      if ( !byte_5931D52 )
+      if ( !byte_5969EF2 )
       {
-        sub_21FFC50(&NetworkManager_TypeInfo);
-        byte_5931D52 = 1;
+        sub_2213A60(&NetworkManager_TypeInfo);
+        byte_5969EF2 = 1;
       }
       viewChangeButton = NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -507,18 +507,18 @@ void EventCraftRewardDialogComponent__Open(
       goto LABEL_43;
     }
 LABEL_58:
-    sub_21FFED4(viewChangeButton);
+    sub_2213CE4(viewChangeButton);
   }
 LABEL_43:
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, commonConsumeId, v65);
-  viewChangeButton = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+  viewChangeButton = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !viewChangeButton )
     goto LABEL_57;
   viewChangeButton = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)viewChangeButton,
                        key,
-                       (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                       (const MethodInfo_3F10B30 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( !viewChangeButton )
     goto LABEL_57;
   IsEventPeriod = EventEntity__IsEventPeriod((EventEntity_o *)viewChangeButton, 0, 0);
@@ -526,9 +526,9 @@ LABEL_43:
   v75 = v68 || v78 || !IsEventPeriod;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v71, v72);
-  v76 = (System_String_o **)&StringLiteral_14066/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/;
+  v76 = (System_String_o **)&StringLiteral_14096/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/;
   if ( !v75 )
-    v76 = (System_String_o **)&StringLiteral_14067/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/;
+    v76 = (System_String_o **)&StringLiteral_14097/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/;
   viewChangeButton = LocalizationManager__Get(*v76, 0);
   if ( !closeButtonLabel
     || (UILabel__set_text(closeButtonLabel, (System_String_o *)viewChangeButton, 0),
@@ -538,13 +538,13 @@ LABEL_43:
     || !viewChangeButton )
   {
 LABEL_57:
-    sub_21FFECC(viewChangeButton, commonConsumeId);
+    sub_2213CDC(viewChangeButton, commonConsumeId);
   }
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)viewChangeButton,
     this->fields.maxItemDrawNum < *(_DWORD *)(*(_QWORD *)v24 + 24LL),
     0);
-  v77 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v77 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v77,
     (Il2CppObject *)v15,
@@ -568,24 +568,24 @@ void EventCraftRewardDialogComponent__SetPossessionNum(
   NetworkManager_c *v10; // x0
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593244F & 1) == 0 )
+  if ( (byte_596A54E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593244F = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596A54E = 1;
   }
   v6 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v6 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, item, *(_QWORD *)&objectId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v8);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v10 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -605,7 +605,7 @@ void EventCraftRewardDialogComponent__SetPossessionNum(
     return;
   if ( !entity || !item )
 LABEL_17:
-    sub_21FFECC(v10, v7);
+    sub_2213CDC(v10, v7);
   ItemIconComponent__SetPossession(item, entity->fields.num, 0);
 }
 
@@ -643,13 +643,13 @@ void EventCraftRewardDialogComponent__SetResultData(
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_593244C & 1) == 0 )
+  if ( (byte_596A54B & 1) == 0 )
   {
-    sub_21FFC50(&Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ItemIconComponent__Add__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_ItemIconComponent___);
-    this = (EventCraftRewardDialogComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593244C = 1;
+    sub_2213A60(&Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ItemIconComponent__Add__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_ItemIconComponent___);
+    this = (EventCraftRewardDialogComponent_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A54B = 1;
   }
   if ( !rewards )
     goto LABEL_31;
@@ -660,7 +660,7 @@ void EventCraftRewardDialogComponent__SetResultData(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v7 = rewards->m_Items[v6];
       if ( !v7 )
         break;
@@ -673,10 +673,10 @@ void EventCraftRewardDialogComponent__SetResultData(
       v12 = *(_DWORD *)((char *)&v7->klass + v10);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, rewards, method);
-      this = (EventCraftRewardDialogComponent_o *)UnityEngine_Object__Instantiate_object__59506996(
+      this = (EventCraftRewardDialogComponent_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                     prefabResultItem,
                                                     listRoot,
-                                                    (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_ItemIconComponent___);
+                                                    (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_ItemIconComponent___);
       if ( !this )
         break;
       v13 = (UnityEngine_Component_o *)this;
@@ -684,10 +684,10 @@ void EventCraftRewardDialogComponent__SetResultData(
                                                     (UnityEngine_Component_o *)this,
                                                     0);
       v14 = this;
-      if ( !byte_5931940 )
+      if ( !byte_5969AE0 )
       {
-        this = (EventCraftRewardDialogComponent_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931940 = 1;
+        this = (EventCraftRewardDialogComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE0 = 1;
       }
       if ( !v14 )
         break;
@@ -703,7 +703,7 @@ void EventCraftRewardDialogComponent__SetResultData(
       v29.fields.z = v29.fields.x;
       UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v29, 0);
       v15 = v12 <= 1 ? -1 : v12;
-      ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)v13, v7->fields.type, objectId, v15, 0, 0);
+      ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)v13, v7->fields.type, objectId, v15, 0, 0);
       EventCraftRewardDialogComponent__SetPossessionNum(v16, (ItemIconComponent_o *)v13, objectId, v17);
       this = (EventCraftRewardDialogComponent_o *)UnityEngine_Component__get_gameObject(v13, 0);
       if ( !this )
@@ -723,21 +723,21 @@ void EventCraftRewardDialogComponent__SetResultData(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)v13,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
         v27 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v27 + 32) = v13;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v27 + 32), (int32_t)v13, v18, v19, v20, v21, v22, v23);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 32), (int32_t)v13, v18, v19, v20, v21, v22, v23);
       }
       max_length = rewards->max_length;
       if ( (int)++v6 >= max_length )
         goto LABEL_27;
     }
 LABEL_31:
-    sub_21FFECC(this, rewards);
+    sub_2213CDC(this, rewards);
   }
 LABEL_27:
   this = (EventCraftRewardDialogComponent_o *)v4->fields.scrollView;
@@ -750,7 +750,7 @@ LABEL_27:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   this = (EventCraftRewardDialogComponent_o *)GameObjectExtensions__SafeGetComponent_object_(
                                                 gameObject,
-                                                (const MethodInfo_38852A8 *)Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
+                                                (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_UIGrid___);
   if ( !this )
     goto LABEL_31;
   ((void (__fastcall *)(EventCraftRewardDialogComponent_o *, const char *))this->klass[1]._1.name)(
@@ -763,10 +763,10 @@ void EventCraftRewardDialogComponent___OnClickCloseButton_b__21_1(
         EventCraftRewardDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_5932452 & 1) == 0 )
+  if ( (byte_596A551 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    byte_5932452 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    byte_596A551 = 1;
   }
   this->fields.state = 0;
   EventCraftListViewManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, method);
@@ -774,7 +774,7 @@ void EventCraftRewardDialogComponent___OnClickCloseButton_b__21_1(
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
   ActionExtensions__Call(this->fields.closeCallbackFunc, 0);
 }
 
@@ -785,7 +785,7 @@ void EventCraftRewardDialogComponent___OnClickSwitchShowMode_b__22_0(
         const MethodInfo *method)
 {
   if ( !item )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   ItemIconComponent__ShowPossession(item, this->fields.isShowPossessionNum, 0);
 }
 
@@ -799,10 +799,10 @@ UnityEngine_GameObject_o *EventCraftRewardDialogComponent__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5932450 & 1) == 0 )
+  if ( (byte_596A54F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932450 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A54F = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -811,7 +811,7 @@ UnityEngine_GameObject_o *EventCraftRewardDialogComponent__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
@@ -826,15 +826,15 @@ void EventCraftRewardDialogComponent___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5932453 & 1) == 0 )
+  if ( (byte_596A552 & 1) == 0 )
   {
-    sub_21FFC50(&EventCraftRewardDialogComponent___c_TypeInfo);
-    byte_5932453 = 1;
+    sub_2213A60(&EventCraftRewardDialogComponent___c_TypeInfo);
+    byte_596A552 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventCraftRewardDialogComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventCraftRewardDialogComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventCraftRewardDialogComponent___c_TypeInfo->static_fields->__9 = (struct EventCraftRewardDialogComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventCraftRewardDialogComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -864,13 +864,13 @@ void EventCraftRewardDialogComponent___c___OnClickCloseButton_b__21_0(
   __int64 v8; // x2
   UnityEngine_Object_o *v9; // x19
 
-  if ( (byte_5932454 & 1) == 0 )
+  if ( (byte_596A553 & 1) == 0 )
   {
-    this = (EventCraftRewardDialogComponent___c_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932454 = 1;
+    this = (EventCraftRewardDialogComponent___c_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A553 = 1;
   }
   if ( !obj )
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)obj, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
@@ -879,7 +879,7 @@ void EventCraftRewardDialogComponent___c___OnClickCloseButton_b__21_0(
     v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)obj, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-    UnityEngine_Object__Destroy_83246496(v9, 0);
+    UnityEngine_Object__Destroy_83459800(v9, 0);
   }
 }
 
@@ -900,22 +900,22 @@ void EventCraftRewardDialogComponent___c__DisplayClass19_0___Open_b__0(
   EventCraftRewardDialogComponent_o *_4__this; // x0
   struct EventCraftRewardDialogComponent_o *v5; // x8
   System_Action_T__o *eventRootMaskSetActiveAction; // x0
-  const MethodInfo_36CDE1C *v7; // x2
+  const MethodInfo_36FFD8C *v7; // x2
 
-  if ( (byte_5932455 & 1) == 0 )
+  if ( (byte_596A554 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    byte_5932455 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    byte_596A554 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (EventCraftRewardDialogComponent__SetResultData(_4__this, this->fields.rewardItems, v2),
         (v5 = this->fields.__4__this) == 0) )
   {
-    sub_21FFECC(_4__this, method);
+    sub_2213CDC(_4__this, method);
   }
   eventRootMaskSetActiveAction = (System_Action_T__o *)v5->fields.eventRootMaskSetActiveAction;
-  v7 = (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___;
+  v7 = (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___;
   v5->fields.state = 2;
   ActionExtensions__Call_bool_(eventRootMaskSetActiveAction, 0, v7);
 }

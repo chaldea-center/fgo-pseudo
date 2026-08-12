@@ -47,17 +47,17 @@ void PropertyBinding__OnValidate(PropertyBinding_o *this, const MethodInfo *meth
   if ( source )
   {
     source->fields.mField = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&source->fields.mField, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&source->fields.mField, 0, v2, v3, v4, v5, v6, v7);
     source->fields.mProperty = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&source->fields.mProperty, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&source->fields.mProperty, 0, v10, v11, v12, v13, v14, v15);
   }
   target = this->fields.target;
   if ( target )
   {
     target->fields.mField = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&target->fields.mField, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&target->fields.mField, 0, v2, v3, v4, v5, v6, v7);
     target->fields.mProperty = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&target->fields.mProperty, 0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&target->fields.mProperty, 0, v17, v18, v19, v20, v21, v22);
   }
 }
 
@@ -135,11 +135,11 @@ LABEL_12:
           v9 = (Il2CppObject *)target;
           target = v7;
 LABEL_14:
-          PropertyReference__Set_56228016(target, v9, v8);
+          PropertyReference__Set_56432672(target, v9, v8);
           return;
         }
 LABEL_30:
-        sub_21FFECC(target, v4);
+        sub_2213CDC(target, v4);
       }
       target = this->fields.source;
       if ( !target )
@@ -149,8 +149,8 @@ LABEL_30:
         goto LABEL_30;
       v10 = (System_Type_o *)target;
       PropertyType = PropertyReference__GetPropertyType(this->fields.target, v4);
-      if ( !*(_DWORD *)(qword_594C108 + 228) )
-        j_il2cpp_runtime_class_init_0(qword_594C108, v11);
+      if ( !*(_DWORD *)(qword_59843E0 + 228) )
+        j_il2cpp_runtime_class_init_0(qword_59843E0, v11);
       if ( System_Type__op_Equality(v10, PropertyType, 0) )
       {
         target = this->fields.source;
@@ -182,7 +182,7 @@ LABEL_30:
               & 1) != 0 )
             return;
           this->fields.mLastValue = v19;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.mLastValue,
             (int32_t)v19,
             v22,
@@ -198,7 +198,7 @@ LABEL_30:
         else
         {
           this->fields.mLastValue = v19;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.mLastValue,
             (int32_t)v19,
             v13,

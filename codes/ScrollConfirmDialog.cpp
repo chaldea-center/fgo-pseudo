@@ -2,10 +2,10 @@ void ScrollConfirmDialog___cctor(const MethodInfo *method)
 {
   struct ScrollConfirmDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_5935516 & 1) == 0 )
+  if ( (byte_596D658 & 1) == 0 )
   {
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    byte_5935516 = 1;
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    byte_596D658 = 1;
   }
   static_fields = ScrollConfirmDialog_TypeInfo->static_fields;
   static_fields->TITLE_WIDTH = 700;
@@ -19,15 +19,15 @@ void ScrollConfirmDialog___ctor(ScrollConfirmDialog_o *this, const MethodInfo *m
   __int64 v2; // x2
   BaseDialog_c *v4; // x0
 
-  if ( (byte_5935515 & 1) == 0 )
+  if ( (byte_596D657 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5935515 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596D657 = 1;
   }
   v4 = BaseDialog_TypeInfo;
-  *(_OWORD *)&this->fields.CANCEL_BUTTON_DEFAULT_POSITION.fields.x = xmmword_E94030;
-  *(_OWORD *)&this->fields.DECIDE_BUTTON_DEFAULT_POSITION.fields.y = xmmword_E93850;
-  *(_OWORD *)&this->fields.CANCEL_BUTTON_AP_AND_ITEM_POSITION.fields.z = xmmword_E931C0;
+  *(_OWORD *)&this->fields.CANCEL_BUTTON_DEFAULT_POSITION.fields.x = xmmword_E9D1D0;
+  *(_OWORD *)&this->fields.DECIDE_BUTTON_DEFAULT_POSITION.fields.y = xmmword_E9C9F0;
+  *(_OWORD *)&this->fields.CANCEL_BUTTON_AP_AND_ITEM_POSITION.fields.z = xmmword_E9C360;
   if ( !*(&v4->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v4, method, v2);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -44,11 +44,11 @@ void ScrollConfirmDialog__Close(ScrollConfirmDialog_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x2
 
-  ScrollConfirmDialog__Close_43755752(this, 0, v2);
+  ScrollConfirmDialog__Close_43776688(this, 0, v2);
 }
 
 
-void ScrollConfirmDialog__Close_43755752(
+void ScrollConfirmDialog__Close_43776688(
         ScrollConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -61,14 +61,14 @@ void ScrollConfirmDialog__Close_43755752(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_593550A & 1) == 0 )
+  if ( (byte_596D64C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndClose__);
-    byte_593550A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndClose__);
+    byte_596D64C = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -79,7 +79,7 @@ void ScrollConfirmDialog__Close_43755752(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -100,13 +100,13 @@ void ScrollConfirmDialog__EndClose(ScrollConfirmDialog_o *this, const MethodInfo
   ScrollConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))closeCallbackFunc->fields.invoke_impl)(
       closeCallbackFunc->fields.method_code,
       closeCallbackFunc->fields.method);
@@ -142,12 +142,12 @@ void ScrollConfirmDialog__Init(ScrollConfirmDialog_o *this, const MethodInfo *me
   ScrollConfirmDialog_c *v20; // x0
   const MethodInfo *v21; // x2
 
-  if ( (byte_5935502 & 1) == 0 )
+  if ( (byte_596D644 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935502 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D644 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -216,7 +216,7 @@ void ScrollConfirmDialog__Init(ScrollConfirmDialog_o *this, const MethodInfo *me
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_38:
-    sub_21FFECC(gameObject, v5);
+    sub_2213CDC(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   this->fields.decideSe = 8;
   ScrollConfirmDialog__SetDecideButtonActive(this, 1, v17);
@@ -287,10 +287,10 @@ void ScrollConfirmDialog__OffsetApAndItemLayout(
   UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5935514 & 1) == 0 )
+  if ( (byte_596D656 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935514 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D656 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -435,7 +435,7 @@ void ScrollConfirmDialog__OffsetApAndItemLayout(
                       (v34 = (UnityEngine_Component_o *)this->fields.buttonDecideLabel) == 0) )
                 {
 LABEL_70:
-                  sub_21FFECC(v34, v35);
+                  sub_2213CDC(v34, v35);
                 }
                 v48 = UnityEngine_Component__get_gameObject(v34, 0);
                 GameObjectExtensions__SetLocalPositionY(v48, v32, 0);
@@ -495,31 +495,31 @@ void ScrollConfirmDialog__OnClickCancel(ScrollConfirmDialog_o *this, const Metho
   UnityEngine_Object_o *questDialogIconImageComponent; // x20
   struct ScrollConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_593550D & 1) == 0 )
+  if ( (byte_596D64F & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_string___);
-    sub_21FFC50(&System_Func_string__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_OnClickCancel__);
-    sub_21FFC50(&Method_ScrollConfirmDialog__OnClickCancel_b__76_0__);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_593550D = 1;
+    sub_2213A60(&Method_BasicHelper_Any_string___);
+    sub_2213A60(&System_Func_string__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_OnClickCancel__);
+    sub_2213A60(&Method_ScrollConfirmDialog__OnClickCancel_b__76_0__);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_596D64F = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
-    v4 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
-    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
-    v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v4 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    v5 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0);
+    v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v6,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     if ( v6 )
     {
       items = v6->fields._items;
@@ -533,14 +533,14 @@ void ScrollConfirmDialog__OnClickCancel(ScrollConfirmDialog_o *this, const Metho
           System_Collections_Generic_List_object___AddWithResize(
             v6,
             v4,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
           v18 = &items->obj.klass + size;
           v6->fields._size = size + 1;
           v18[4] = (Il2CppClass *)v4;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v18 + 4), (int32_t)v4, v9, v10, v11, v12, v13, v14);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v18 + 4), (int32_t)v4, v9, v10, v11, v12, v13, v14);
         }
         v25 = v6->fields._items;
         v26 = Method_System_Collections_Generic_List_string__Add__;
@@ -553,21 +553,21 @@ void ScrollConfirmDialog__OnClickCancel(ScrollConfirmDialog_o *this, const Metho
             System_Collections_Generic_List_object___AddWithResize(
               v6,
               v5,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
           }
           else
           {
             v28 = &v25->obj.klass + v27;
             v6->fields._size = v27 + 1;
             v28[4] = (Il2CppClass *)v5;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v5, v19, v20, v21, v22, v23, v24);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v5, v19, v20, v21, v22, v23, v24);
           }
           buttonDecideObject = this->fields.buttonDecideObject;
           if ( buttonDecideObject )
           {
             if ( UnityEngine_GameObject__get_activeSelf(buttonDecideObject, 0) )
             {
-              v29 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_string__bool__TypeInfo);
+              v29 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_string__bool__TypeInfo);
               System_Func_object__bool____ctor(
                 v29,
                 (Il2CppObject *)this,
@@ -576,7 +576,7 @@ void ScrollConfirmDialog__OnClickCancel(ScrollConfirmDialog_o *this, const Metho
               v30 = BasicHelper__Any_object_(
                       (System_Collections_Generic_List_T__o *)v6,
                       (System_Func_T__bool__o *)v29,
-                      (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_string___);
+                      (const MethodInfo_380FDE0 *)Method_BasicHelper_Any_string___);
             }
             else
             {
@@ -584,8 +584,8 @@ void ScrollConfirmDialog__OnClickCancel(ScrollConfirmDialog_o *this, const Metho
             }
             v31 = Method_ScrollConfirmDialog_OnClickCancel__;
             if ( (*((_BYTE *)Method_ScrollConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-              v31 = (_QWORD *)sub_21FFC68(Method_ScrollConfirmDialog_OnClickCancel__);
-            v32 = (System_Reflection_MethodBase_o *)sub_21FFC34(v31, v31[4]);
+              v31 = (_QWORD *)sub_2213A78(Method_ScrollConfirmDialog_OnClickCancel__);
+            v32 = (System_Reflection_MethodBase_o *)sub_2213A44(v31, v31[4]);
             OverwriteAssetSoundName__PlaySystemSe(v32, v30, 0, 0);
             v35 = UnityEngine_Object_TypeInfo;
             questDialogIconImageComponent = (UnityEngine_Object_o *)this->fields.questDialogIconImageComponent;
@@ -622,7 +622,7 @@ LABEL_28:
         }
       }
     }
-    sub_21FFECC(buttonDecideObject, v8);
+    sub_2213CDC(buttonDecideObject, v8);
   }
 }
 
@@ -633,17 +633,17 @@ void ScrollConfirmDialog__OnClickClose(ScrollConfirmDialog_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   struct ScrollConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_593550E & 1) == 0 )
+  if ( (byte_596D650 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ScrollConfirmDialog_OnClickClose__);
-    byte_593550E = 1;
+    sub_2213A60(&Method_ScrollConfirmDialog_OnClickClose__);
+    byte_596D650 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ScrollConfirmDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ScrollConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ScrollConfirmDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ScrollConfirmDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -668,11 +668,11 @@ void ScrollConfirmDialog__OnClickDecide(ScrollConfirmDialog_o *this, const Metho
   UnityEngine_Component_o *gameObject; // x0
   struct ScrollConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_593550B & 1) == 0 )
+  if ( (byte_596D64D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_OnClickDecide__);
-    byte_593550B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_OnClickDecide__);
+    byte_596D64D = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -680,15 +680,15 @@ void ScrollConfirmDialog__OnClickDecide(ScrollConfirmDialog_o *this, const Metho
     if ( this->fields.isDecideBtnSe )
     {
       if ( (*((_BYTE *)Method_ScrollConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_21FFC68(Method_ScrollConfirmDialog_OnClickDecide__);
-      v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+        v3 = (_QWORD *)sub_2213A78(Method_ScrollConfirmDialog_OnClickDecide__);
+      v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
       decideSe = this->fields.decideSe;
     }
     else
     {
       if ( (*((_BYTE *)Method_ScrollConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_21FFC68(Method_ScrollConfirmDialog_OnClickDecide__);
-      v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+        v3 = (_QWORD *)sub_2213A78(Method_ScrollConfirmDialog_OnClickDecide__);
+      v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
       decideSe = 0;
     }
     OverwriteAssetSoundName__PlaySystemSe(v4, decideSe, 0, 0);
@@ -703,7 +703,7 @@ void ScrollConfirmDialog__OnClickDecide(ScrollConfirmDialog_o *this, const Metho
         || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0),
             (gameObject = (UnityEngine_Component_o *)this->fields.questDialogIconImageComponent) == 0) )
       {
-        sub_21FFECC(gameObject, v9);
+        sub_2213CDC(gameObject, v9);
       }
       QuestDialogIconImageComponent__DestroyIcon((QuestDialogIconImageComponent_o *)gameObject, 0);
     }
@@ -730,18 +730,18 @@ void ScrollConfirmDialog__OnClickDecide2(ScrollConfirmDialog_o *this, const Meth
   UnityEngine_Component_o *gameObject; // x0
   struct ScrollConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_593550C & 1) == 0 )
+  if ( (byte_596D64E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_OnClickDecide2__);
-    byte_593550C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_OnClickDecide2__);
+    byte_596D64E = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ScrollConfirmDialog_OnClickDecide2__;
     if ( (*((_BYTE *)Method_ScrollConfirmDialog_OnClickDecide2__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ScrollConfirmDialog_OnClickDecide2__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ScrollConfirmDialog_OnClickDecide2__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     v7 = UnityEngine_Object_TypeInfo;
     questDialogIconImageComponent = (UnityEngine_Object_o *)this->fields.questDialogIconImageComponent;
@@ -756,7 +756,7 @@ void ScrollConfirmDialog__OnClickDecide2(ScrollConfirmDialog_o *this, const Meth
         || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0),
             (gameObject = (UnityEngine_Component_o *)this->fields.questDialogIconImageComponent) == 0) )
       {
-        sub_21FFECC(gameObject, v9);
+        sub_2213CDC(gameObject, v9);
       }
       QuestDialogIconImageComponent__DestroyIcon((QuestDialogIconImageComponent_o *)gameObject, 0);
     }
@@ -804,19 +804,19 @@ void ScrollConfirmDialog__Open(
   __int64 v34; // x2
   UILabel_o *v35; // x20
 
-  if ( (byte_5935503 & 1) == 0 )
+  if ( (byte_596D645 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&StringLiteral_3826/*"COMMON_CONFIRM_NO"*/);
-    sub_21FFC50(&StringLiteral_3831/*"COMMON_CONFIRM_YES"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935503 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&StringLiteral_3831/*"COMMON_CONFIRM_NO"*/);
+    sub_2213A60(&StringLiteral_3836/*"COMMON_CONFIRM_YES"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D645 = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     scrollMessage,
@@ -825,7 +825,7 @@ void ScrollConfirmDialog__Open(
     (int32_t)method,
     v6,
     v7);
-  v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v14);
@@ -879,7 +879,7 @@ void ScrollConfirmDialog__Open(
     v31 = this->fields.buttonDecideLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v29, v30);
-    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"COMMON_CONFIRM_YES"*/, 0);
+    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3836/*"COMMON_CONFIRM_YES"*/, 0);
     if ( !v31 )
       goto LABEL_40;
     UILabel__set_text(v31, (System_String_o *)gameObject, 0);
@@ -892,14 +892,14 @@ void ScrollConfirmDialog__Open(
     v35 = this->fields.buttonCancelLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v33, v34);
-    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3826/*"COMMON_CONFIRM_NO"*/, 0);
+    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"COMMON_CONFIRM_NO"*/, 0);
     if ( v35 )
     {
       UILabel__set_text(v35, (System_String_o *)gameObject, 0);
       goto LABEL_39;
     }
 LABEL_40:
-    sub_21FFECC(gameObject, v18);
+    sub_2213CDC(gameObject, v18);
   }
 LABEL_39:
   *(_WORD *)&this->fields.isButtonEnable = 0;
@@ -958,22 +958,22 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
   UnityEngine_Object_o *buttonCancelLabel; // x20
   const MethodInfo *v54; // x2
 
-  if ( (byte_5935509 & 1) == 0 )
+  if ( (byte_596D64B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_11324/*"QUEST_CONFIRM_POSSESSION_ITEM"*/);
-    sub_21FFC50(&StringLiteral_11304/*"QUEST_CONFIRM_AP"*/);
-    sub_21FFC50(&StringLiteral_11310/*"QUEST_CONFIRM_CONSUME_AP"*/);
-    sub_21FFC50(&StringLiteral_11316/*"QUEST_CONFIRM_CONSUME_ITEM"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935509 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_11344/*"QUEST_CONFIRM_POSSESSION_ITEM"*/);
+    sub_2213A60(&StringLiteral_11324/*"QUEST_CONFIRM_AP"*/);
+    sub_2213A60(&StringLiteral_11330/*"QUEST_CONFIRM_CONSUME_AP"*/);
+    sub_2213A60(&StringLiteral_11336/*"QUEST_CONFIRM_CONSUME_ITEM"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D64B = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     explanationText,
@@ -982,7 +982,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
     (int32_t)itemName,
     (bool)itemCostNumText,
     itemNum);
-  v20 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v21);
@@ -1062,7 +1062,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
     consumeApCountHeadLabel = this->fields.consumeApCountHeadLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39, v40);
-    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11310/*"QUEST_CONFIRM_CONSUME_AP"*/, 0);
+    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11330/*"QUEST_CONFIRM_CONSUME_AP"*/, 0);
     if ( !consumeApCountHeadLabel )
       goto LABEL_63;
     UILabel__set_text(consumeApCountHeadLabel, (System_String_o *)gameObject, 0);
@@ -1071,7 +1071,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
       goto LABEL_63;
     UILabel__set_text(gameObject, consumeApCountText, 0);
     apCountHeadLabel = this->fields.apCountHeadLabel;
-    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11304/*"QUEST_CONFIRM_AP"*/, 0);
+    gameObject = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11324/*"QUEST_CONFIRM_AP"*/, 0);
     if ( !apCountHeadLabel )
       goto LABEL_63;
     UILabel__set_text(apCountHeadLabel, (System_String_o *)gameObject, 0);
@@ -1080,7 +1080,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
       goto LABEL_63;
     UILabel__set_text(gameObject, apCountText, 0);
     consumeItemCountLabel = this->fields.consumeItemCountLabel;
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11316/*"QUEST_CONFIRM_CONSUME_ITEM"*/, 0);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11336/*"QUEST_CONFIRM_CONSUME_ITEM"*/, 0);
     gameObject = (UILabel_o *)System_String__Format(v44, (Il2CppObject *)itemName, 0);
     if ( !consumeItemCountLabel )
       goto LABEL_63;
@@ -1090,7 +1090,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
       goto LABEL_63;
     UILabel__set_text(gameObject, itemCostNumText, 0);
     itemCountLabel = this->fields.itemCountLabel;
-    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11324/*"QUEST_CONFIRM_POSSESSION_ITEM"*/, 0);
+    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11344/*"QUEST_CONFIRM_POSSESSION_ITEM"*/, 0);
     gameObject = (UILabel_o *)System_String__Format(v46, (Il2CppObject *)itemName, 0);
     if ( !itemCountLabel )
       goto LABEL_63;
@@ -1137,7 +1137,7 @@ void ScrollConfirmDialog__OpenApAndItemDialog(
       goto LABEL_62;
     }
 LABEL_63:
-    sub_21FFECC(gameObject, v25);
+    sub_2213CDC(gameObject, v25);
   }
 LABEL_62:
   ScrollConfirmDialog__OffsetApAndItemLayout(this, 1, v54);
@@ -1184,16 +1184,16 @@ void ScrollConfirmDialog__OpenDecideDlg(
   __int64 v41; // x2
   UnityEngine_Object_o *buttonCancelLabel; // x22
 
-  if ( (byte_5935505 & 1) == 0 )
+  if ( (byte_596D647 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935505 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D647 = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     scrollMessage,
@@ -1202,7 +1202,7 @@ void ScrollConfirmDialog__OpenDecideDlg(
     (int32_t)cancleTxt,
     (bool)func,
     decideSe);
-  v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v20);
@@ -1307,7 +1307,7 @@ void ScrollConfirmDialog__OpenDecideDlg(
   gameObject = (UILabel_o *)this->fields.scrollView;
   if ( !gameObject )
 LABEL_54:
-    sub_21FFECC(gameObject, v24);
+    sub_2213CDC(gameObject, v24);
   UIScrollView__ResetPosition((UIScrollView_o *)gameObject, 0);
   this->fields.decideSe = decideSe;
   *(_WORD *)&this->fields.isButtonEnable = 256;
@@ -1350,18 +1350,18 @@ void ScrollConfirmDialog__OpenImageDlg(
   __int64 v38; // x2
   UnityEngine_Object_o *buttonCancelLabel; // x22
 
-  if ( (byte_5935508 & 1) == 0 )
+  if ( (byte_596D64A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935508 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D64A = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     imageName,
@@ -1370,7 +1370,7 @@ void ScrollConfirmDialog__OpenImageDlg(
     (int32_t)cancleTxt,
     (bool)func,
     decideSe);
-  v16 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v17);
@@ -1421,7 +1421,7 @@ void ScrollConfirmDialog__OpenImageDlg(
     v33 = UnityEngine_Component__get_gameObject(gameObject, 0);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v31, v32);
-    NGUITools__UpdateWidgetCollider_56209572(v33, 1, 0);
+    NGUITools__UpdateWidgetCollider_56414228(v33, 1, 0);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1459,7 +1459,7 @@ void ScrollConfirmDialog__OpenImageDlg(
       goto LABEL_43;
     }
 LABEL_44:
-    sub_21FFECC(gameObject, v21);
+    sub_2213CDC(gameObject, v21);
   }
 LABEL_43:
   this->fields.decideSe = decideSe;
@@ -1503,33 +1503,31 @@ void ScrollConfirmDialog__OpenItemIconDlg(
   bool v37; // w0
   __int64 v38; // x2
   __int64 v39; // x2
-  float x; // s8
-  float z; // s9
   int method_ptr; // s10
   UnityEngine_Object_o *apAndItemDialogRoot; // x23
-  __int64 v44; // x2
+  __int64 v42; // x2
   UnityEngine_Object_o *messageLabel; // x23
-  __int64 v46; // x2
-  System_String_o *v47; // x1
+  __int64 v44; // x2
+  System_String_o *v45; // x1
   UnityEngine_Object_o *buttonDecideLabel; // x22
-  __int64 v49; // x2
+  __int64 v47; // x2
   UnityEngine_Object_o *buttonCancelLabel; // x21
-  System_String_o *v51; // [xsp+8h] [xbp-88h]
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v49; // [xsp+8h] [xbp-88h]
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5935506 & 1) == 0 )
+  if ( (byte_596D648 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935506 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D648 = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     scrollMessage,
@@ -1538,7 +1536,7 @@ void ScrollConfirmDialog__OpenItemIconDlg(
     (int32_t)footMessage,
     (bool)decideTxt,
     (bool)cancleTxt);
-  v17 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v17 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v17, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v17, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v18);
@@ -1602,7 +1600,7 @@ void ScrollConfirmDialog__OpenItemIconDlg(
     v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v33, v34);
-    NGUITools__UpdateWidgetCollider_56209572(v35, 1, 0);
+    NGUITools__UpdateWidgetCollider_56414228(v35, 1, 0);
     gameObject = (UILabel_o *)this->fields.scrollView;
     if ( !gameObject )
       goto LABEL_70;
@@ -1634,8 +1632,6 @@ void ScrollConfirmDialog__OpenItemIconDlg(
     if ( !gameObject )
       goto LABEL_70;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
-    x = localPosition.fields.x;
-    z = localPosition.fields.z;
     gameObject = (UILabel_o *)ScrollConfirmDialog_TypeInfo;
     if ( !*(&ScrollConfirmDialog_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -1650,10 +1646,10 @@ void ScrollConfirmDialog__OpenItemIconDlg(
                                 0);
     if ( !gameObject )
       goto LABEL_70;
-    v54.fields.y = (float)method_ptr;
-    v54.fields.x = x;
-    v54.fields.z = z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v54, 0);
+    v52.fields.y = (float)method_ptr;
+    v52.fields.x = localPosition.fields.x;
+    v52.fields.z = localPosition.fields.z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v52, 0);
     gameObject = (UILabel_o *)this->fields.scrollView;
     if ( !gameObject )
       goto LABEL_70;
@@ -1672,21 +1668,21 @@ void ScrollConfirmDialog__OpenItemIconDlg(
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v44);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v42);
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0, 0) )
   {
     gameObject = this->fields.messageLabel;
     if ( !gameObject )
       goto LABEL_70;
     if ( footMessage )
-      v47 = footMessage;
+      v45 = footMessage;
     else
-      v47 = (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text(gameObject, v47, 0);
+      v45 = (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text(gameObject, v45, 0);
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v46);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v44);
   if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
   {
     gameObject = this->fields.buttonDecideLabel;
@@ -1696,17 +1692,17 @@ void ScrollConfirmDialog__OpenItemIconDlg(
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v49);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v47);
   if ( UnityEngine_Object__op_Inequality(buttonCancelLabel, 0, 0) )
   {
     gameObject = this->fields.buttonCancelLabel;
     if ( gameObject )
     {
-      UILabel__set_text(gameObject, v51, 0);
+      UILabel__set_text(gameObject, v49, 0);
       goto LABEL_69;
     }
 LABEL_70:
-    sub_21FFECC(gameObject, v22);
+    sub_2213CDC(gameObject, v22);
   }
 LABEL_69:
   *(_WORD *)&this->fields.isButtonEnable = 256;
@@ -1730,11 +1726,11 @@ void ScrollConfirmDialog__OpenNoticeDlg(
   ScrollConfirmDialog_c *v19; // x0
   const MethodInfo *v20; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_5935507 & 1) == 0 )
+  if ( (byte_596D649 & 1) == 0 )
   {
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935507 = 1;
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D649 = 1;
   }
   ScrollConfirmDialog__SetDecideButtonActive(this, 0, (const MethodInfo *)scrollMessage);
   v19 = ScrollConfirmDialog_TypeInfo;
@@ -1759,7 +1755,7 @@ void ScrollConfirmDialog__OpenNoticeDlg(
 }
 
 
-void ScrollConfirmDialog__Open_43750444(
+void ScrollConfirmDialog__Open_43771380(
         ScrollConfirmDialog_o *this,
         System_String_o *title,
         System_String_o *scrollMessage,
@@ -1794,16 +1790,16 @@ void ScrollConfirmDialog__Open_43750444(
   __int64 v37; // x2
   UnityEngine_Object_o *buttonCancelLabel; // x21
 
-  if ( (byte_5935504 & 1) == 0 )
+  if ( (byte_596D646 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrollConfirmDialog_EndOpen__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935504 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrollConfirmDialog_EndOpen__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D646 = 1;
   }
   this->fields.clickFunc = func;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     scrollMessage,
@@ -1812,7 +1808,7 @@ void ScrollConfirmDialog__Open_43750444(
     (int32_t)cancleTxt,
     (bool)func,
     (bool)method);
-  v15 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)this, Method_ScrollConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v15, 0, 0, 0);
   ScrollConfirmDialog__SetTitleText(this, title, v16);
@@ -1916,7 +1912,7 @@ void ScrollConfirmDialog__Open_43750444(
       goto LABEL_52;
     }
 LABEL_53:
-    sub_21FFECC(gameObject, v20);
+    sub_2213CDC(gameObject, v20);
   }
 LABEL_52:
   *(_WORD *)&this->fields.isButtonEnable = 0;
@@ -1946,17 +1942,15 @@ void ScrollConfirmDialog__ResetScrollPosition(
   UIRect_o *v20; // x0
   int v21; // w8
   int32_t v22; // w5
-  float x; // s9
-  float z; // s10
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593550F & 1) == 0 )
+  if ( (byte_596D651 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593550F = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D651 = 1;
   }
   scrollLabel = (UnityEngine_Component_o *)this->fields.scrollLabel;
   if ( !scrollLabel )
@@ -1964,7 +1958,7 @@ void ScrollConfirmDialog__ResetScrollPosition(
   gameObject = UnityEngine_Component__get_gameObject(scrollLabel, 0);
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v8, v9);
-  NGUITools__UpdateWidgetCollider_56209572(gameObject, 1, 0);
+  NGUITools__UpdateWidgetCollider_56414228(gameObject, 1, 0);
   if ( centering )
   {
     scrollView = this->fields.scrollView;
@@ -1993,7 +1987,7 @@ void ScrollConfirmDialog__ResetScrollPosition(
       goto LABEL_36;
     scrollLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)scrollLabel,
-                                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     v17 = this->fields.scrollLabel;
     v18 = scrollLabel;
     if ( offY >= 0.0 )
@@ -2026,7 +2020,7 @@ void ScrollConfirmDialog__ResetScrollPosition(
         v21 = (int)offY;
       v22 = -v21;
     }
-    UIRect__SetAnchor_56273980(v20, v19, 0, 0, 0, v22, 0);
+    UIRect__SetAnchor_56478636(v20, v19, 0, 0, 0, v22, 0);
   }
   scrollLabel = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollLabel )
@@ -2039,17 +2033,15 @@ void ScrollConfirmDialog__ResetScrollPosition(
     || (scrollLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollLabel, 0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollLabel, 0),
         (scrollLabel = (UnityEngine_Component_o *)this->fields.scrollLabel) == 0)
-    || (x = localPosition.fields.x,
-        z = localPosition.fields.z,
-        (scrollLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollLabel, 0)) == 0) )
+    || (scrollLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollLabel, 0)) == 0 )
   {
 LABEL_36:
-    sub_21FFECC(scrollLabel, centering);
+    sub_2213CDC(scrollLabel, centering);
   }
-  v26.fields.x = x;
-  v26.fields.y = offY;
-  v26.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollLabel, v26, 0);
+  v24.fields.x = localPosition.fields.x;
+  v24.fields.y = offY;
+  v24.fields.z = localPosition.fields.z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollLabel, v24, 0);
 }
 
 
@@ -2058,10 +2050,10 @@ void ScrollConfirmDialog__SetCanelButtonPositionX(ScrollConfirmDialog_o *this, f
   __int64 v3; // x2
   UnityEngine_Object_o *buttonCancelObject; // x20
 
-  if ( (byte_5935512 & 1) == 0 )
+  if ( (byte_596D654 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935512 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D654 = 1;
   }
   buttonCancelObject = (UnityEngine_Object_o *)this->fields.buttonCancelObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2078,10 +2070,10 @@ void ScrollConfirmDialog__SetDecideButtonActive(ScrollConfirmDialog_o *this, boo
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_5935511 & 1) == 0 )
+  if ( (byte_596D653 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935511 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D653 = 1;
   }
   buttonDecideObject = (UnityEngine_Object_o *)this->fields.buttonDecideObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2090,7 +2082,7 @@ void ScrollConfirmDialog__SetDecideButtonActive(ScrollConfirmDialog_o *this, boo
   {
     v7 = this->fields.buttonDecideObject;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     UnityEngine_GameObject__SetActive(v7, isActive, 0);
   }
 }
@@ -2105,12 +2097,12 @@ void ScrollConfirmDialog__SetTitleText(ScrollConfirmDialog_o *this, System_Strin
   __int64 v9; // x2
   UILabel_o *v10; // x19
 
-  if ( (byte_5935510 & 1) == 0 )
+  if ( (byte_596D652 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScrollConfirmDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935510 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScrollConfirmDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D652 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2128,7 +2120,7 @@ void ScrollConfirmDialog__SetTitleText(ScrollConfirmDialog_o *this, System_Strin
       j_il2cpp_runtime_class_init_0(ScrollConfirmDialog_TypeInfo, v6, v9);
     if ( !v10 )
 LABEL_15:
-      sub_21FFECC(v7, v6);
+      sub_2213CDC(v7, v6);
     UILabel__SetCondensedScale(v10, ScrollConfirmDialog_TypeInfo->static_fields->TITLE_WIDTH, 0, 0);
   }
 }
@@ -2143,8 +2135,8 @@ bool ScrollConfirmDialog___OnClickCancel_b__76_0(
 
   buttonCancelLabel = this->fields.buttonCancelLabel;
   if ( !buttonCancelLabel || !x )
-    sub_21FFECC(this, x);
-  return System_String__Equals_75473208(x, buttonCancelLabel->fields.mText, 0);
+    sub_2213CDC(this, x);
+  return System_String__Equals_75686512(x, buttonCancelLabel->fields.mText, 0);
 }
 
 
@@ -2168,12 +2160,12 @@ UILabel_o *ScrollConfirmDialog__get_ScrollLabel(ScrollConfirmDialog_o *this, con
 
 System_String_o *ScrollConfirmDialog__get_closeBtnPath(ScrollConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_5935513 & 1) == 0 )
+  if ( (byte_596D655 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16227/*"Window/CancelButton"*/);
-    byte_5935513 = 1;
+    sub_2213A60(&StringLiteral_16259/*"Window/CancelButton"*/);
+    byte_596D655 = 1;
   }
-  return (System_String_o *)StringLiteral_16227/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_16259/*"Window/CancelButton"*/;
 }
 
 
@@ -2196,7 +2188,7 @@ void ScrollConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -2207,12 +2199,12 @@ void ScrollConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2224,9 +2216,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF4EE8;
+  this->fields.invoke_impl = (intptr_t)sub_2007F24;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF4EA0;
+  this->fields.extra_arg = (intptr_t)sub_2007EDC;
 }
 
 
@@ -2242,8 +2234,8 @@ System_IAsyncResult_o *ScrollConfirmDialog_ClickDelegate__BeginInvoke(
 
   v10[0] = isDecide;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -2252,7 +2244,7 @@ void ScrollConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

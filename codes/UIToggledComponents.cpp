@@ -24,18 +24,18 @@ void UIToggledComponents__Awake(UIToggledComponents_o *this, const MethodInfo *m
   const MethodInfo *v18; // x2
   _QWORD *v19; // x9
   __int64 v20; // x8
-  const MethodInfo_444FB2C *v21; // x2
+  const MethodInfo_4483C64 *v21; // x2
 
-  if ( (byte_593CDB7 & 1) == 0 )
+  if ( (byte_597508E & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UIToggledComponents_Toggle__);
-    byte_593CDB7 = 1;
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_MonoBehaviour__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UIToggledComponents_Toggle__);
+    byte_597508E = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -57,7 +57,7 @@ LABEL_10:
       LODWORD(v4) = 0;
       this->fields.target = 0;
 LABEL_11:
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_target, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)p_target, (int32_t)v4, v5, v6, v7, v8, v9, v10);
       goto LABEL_12;
     }
     v4 = (Il2CppObject *)this->fields.target;
@@ -76,7 +76,7 @@ LABEL_11:
           goto LABEL_11;
         }
         activate = (char *)deactivate;
-        v21 = *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL);
+        v21 = *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL);
         goto LABEL_25;
       }
     }
@@ -93,7 +93,7 @@ LABEL_11:
           p_target = (struct UnityEngine_MonoBehaviour_o **)(v20 + 32);
           goto LABEL_11;
         }
-        v21 = *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL);
+        v21 = *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL);
 LABEL_25:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)activate,
@@ -103,16 +103,16 @@ LABEL_25:
       }
     }
 LABEL_26:
-    sub_21FFECC(activate, v4);
+    sub_2213CDC(activate, v4);
   }
 LABEL_12:
   activate = (char *)UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   if ( !activate )
     goto LABEL_26;
   v14 = (System_Collections_Generic_List_EventDelegate__o *)*((_QWORD *)activate + 8);
-  v15 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+  v15 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v15, (Il2CppObject *)this, Method_UIToggledComponents_Toggle__, v16);
   if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v17);
@@ -135,12 +135,12 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
   struct UIToggle_o *v13; // x8
   __int64 v14; // x9
 
-  if ( (byte_593CDB8 & 1) == 0 )
+  if ( (byte_597508F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
-    sub_21FFC50(&UIToggle_TypeInfo);
-    byte_593CDB8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MonoBehaviour__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+    sub_2213A60(&UIToggle_TypeInfo);
+    byte_597508F = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -153,7 +153,7 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
                                                                 v5,
-                                                                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+                                                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
       v6 = UIToggle_TypeInfo;
       v7 = (UnityEngine_Behaviour_o *)activate;
       if ( !*(&UIToggle_TypeInfo->_2.cctor_finished + 1) )
@@ -176,14 +176,14 @@ void UIToggledComponents__Toggle(UIToggledComponents_o *this, const MethodInfo *
     activate = (System_Collections_Generic_List_object__o *)this->fields.deactivate;
     if ( !activate )
 LABEL_27:
-      sub_21FFECC(activate, v3);
+      sub_2213CDC(activate, v3);
     v10 = 0;
     while ( v10 < activate->fields._size )
     {
       activate = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activate,
                                                                 v10,
-                                                                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
+                                                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MonoBehaviour__get_Item__);
       v11 = UIToggle_TypeInfo;
       v12 = (UnityEngine_Behaviour_o *)activate;
       if ( !*(&UIToggle_TypeInfo->_2.cctor_finished + 1) )

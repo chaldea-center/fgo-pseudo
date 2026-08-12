@@ -8,18 +8,18 @@ void CheckCombineEnalbleControl___ctor(CheckCombineEnalbleControl_o *this, const
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593C770 & 1) == 0 )
+  if ( (byte_59749A8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
-    byte_593C770 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+    byte_59749A8 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v3,
-    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+    (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
   this->fields.cachedUserServantNpLvDict = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cachedUserServantNpLvDict,
     (int32_t)v3,
     v4,
@@ -78,14 +78,14 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
 
   v4 = this;
-  if ( (byte_593C76E & 1) == 0 )
+  if ( (byte_59749A6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (CheckCombineEnalbleControl_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593C76E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (CheckCombineEnalbleControl_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_59749A6 = 1;
   }
   if ( !userSvtEntity )
     goto LABEL_44;
@@ -96,7 +96,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userSvtEntity);
   *(_QWORD *)&v39.fields.currentCryptoKey = v5;
   *(_QWORD *)&v39.fields.fakeValue = v6;
-  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v39, 0);
+  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v39, 0);
   if ( !servantCostumeMaster )
     goto LABEL_44;
   if ( ServantCostumeMaster__GetIsServantCostumeExist(servantCostumeMaster, (int32_t)this, 0) )
@@ -112,11 +112,11 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
         *(_QWORD *)&v40.fields.currentCryptoKey = v10;
         *(_QWORD *)&v40.fields.fakeValue = v11;
-        v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v40, 0);
+        v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v40, 0);
         if ( System_Collections_Generic_List_int___Contains(
                costumeSvtIdList,
                v12,
-               (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__) )
+               (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
         {
           v14 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
           v15 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
@@ -125,7 +125,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
           *(_QWORD *)&v41.fields.currentCryptoKey = v14;
           *(_QWORD *)&v41.fields.fakeValue = v15;
-          this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+          this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                    v41,
                                                    0);
           if ( !v16 )
@@ -145,7 +145,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
             for ( i = 0; i < m_CancellationTokenSource; ++i )
             {
               if ( i >= (unsigned int)m_CancellationTokenSource )
-                sub_21FFED4(this);
+                sub_2213CE4(this);
               userServantCollectionMaster = v4->fields.userServantCollectionMaster;
               v21 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
               v22 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
@@ -154,7 +154,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userSvtEntity);
               *(_QWORD *)&v42.fields.currentCryptoKey = v21;
               *(_QWORD *)&v42.fields.fakeValue = v22;
-              this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+              this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                        v42,
                                                        0);
               if ( !v23 || !userServantCollectionMaster )
@@ -188,7 +188,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
                     if ( !v29 )
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v25);
                     v37 = v38;
-                    this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(
+                    this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(
                                                              &v37,
                                                              0);
                     if ( !cosReleaseMaster )
@@ -211,7 +211,7 @@ bool CheckCombineEnalbleControl__GetIsCombineCostumeEnable(
                     if ( !v31 )
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v25);
                     v36 = v38;
-                    this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(
+                    this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(
                                                              &v36,
                                                              0);
                     if ( !cosReleaseMaster )
@@ -234,7 +234,7 @@ LABEL_40:
                           userSvtEntity);
                       *(_QWORD *)&v43.fields.currentCryptoKey = v34;
                       *(_QWORD *)&v43.fields.fakeValue = v33;
-                      this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+                      this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                                v43,
                                                                0);
                       if ( v35 )
@@ -242,11 +242,11 @@ LABEL_40:
                         System_Collections_Generic_List_int___Remove(
                           v35,
                           (int32_t)this,
-                          (const MethodInfo_44345F8 *)Method_System_Collections_Generic_List_int__Remove__);
+                          (const MethodInfo_4468730 *)Method_System_Collections_Generic_List_int__Remove__);
                         return 1;
                       }
 LABEL_44:
-                      sub_21FFECC(this, userSvtEntity);
+                      sub_2213CDC(this, userSvtEntity);
                     }
                   }
                 }
@@ -298,17 +298,17 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v34; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_593C76F & 1) == 0 )
+  if ( (byte_59749A7 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593C76F = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_59749A7 = 1;
   }
   isExceedFriendshipMax = BalanceConfig_TypeInfo;
   entity = 0;
@@ -342,14 +342,14 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userServantEntity);
     *(_QWORD *)&v33.fields.currentCryptoKey = v8;
     *(_QWORD *)&v33.fields.fakeValue = v9;
-    isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v33, 0);
+    isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v33, 0);
     if ( this->fields.friendshipExceedSvtIdList )
     {
       v10 = (int)isExceedFriendshipMax;
       isExceedFriendshipMax = (void *)System_Collections_Generic_List_int___get_Item(
                                         this->fields.friendshipExceedSvtIdList,
                                         v7,
-                                        (const MethodInfo_4432E40 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                        (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( v10 == (_DWORD)isExceedFriendshipMax )
         return 0;
       friendshipExceedSvtIdList = this->fields.friendshipExceedSvtIdList;
@@ -366,13 +366,13 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userServantEntity);
   *(_QWORD *)&v34.fields.currentCryptoKey = v11;
   *(_QWORD *)&v34.fields.fakeValue = v12;
-  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v34, 0);
+  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v34, 0);
   if ( !servantMaster )
     goto LABEL_19;
   v15 = DataMasterBase_object__object__int___GetEntity(
           servantMaster,
           (int32_t)isExceedFriendshipMax,
-          (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+          (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   v16 = *(_OWORD *)&userServantEntity->fields.userId.fields.fakeValue;
   userServantCollectionMaster = this->fields.userServantCollectionMaster;
   *(_OWORD *)&v31.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.userId.fields.currentCryptoKey;
@@ -380,8 +380,8 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
   v30 = v31;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v30, 0);
-  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v30, 0);
+  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                     userServantEntity->fields.svtId,
                                     0);
   if ( !userServantCollectionMaster )
@@ -394,7 +394,7 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
   if ( !isExceedFriendshipMax )
     goto LABEL_19;
   v19 = isExceedFriendshipMax;
-  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                     *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)((char *)isExceedFriendshipMax
                                                                                        + 108),
                                     0);
@@ -413,7 +413,7 @@ bool CheckCombineEnalbleControl__GetIsFriendshipExceedEnable(
     || (v21 = *((_QWORD *)isExceedFriendshipMax + 5), v22 = (int *)isExceedFriendshipMax, !v21) )
   {
 LABEL_19:
-    sub_21FFECC(isExceedFriendshipMax, userServantEntity);
+    sub_2213CDC(isExceedFriendshipMax, userServantEntity);
   }
   if ( *(int *)(v21 + 24) >= 1 )
   {
@@ -424,10 +424,10 @@ LABEL_19:
       userItemMaster = this->fields.userItemMaster;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, userServantEntity);
-      if ( !byte_5931D52 )
+      if ( !byte_5969EF2 )
       {
-        sub_21FFC50(&NetworkManager_TypeInfo);
-        byte_5931D52 = 1;
+        sub_2213A60(&NetworkManager_TypeInfo);
+        byte_5969EF2 = 1;
       }
       isExceedFriendshipMax = NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -437,7 +437,7 @@ LABEL_19:
       }
       if ( v24 >= *(_DWORD *)(v21 + 24) )
 LABEL_55:
-        sub_21FFED4(isExceedFriendshipMax);
+        sub_2213CE4(isExceedFriendshipMax);
       if ( !userItemMaster )
         goto LABEL_19;
       isExceedFriendshipMax = (void *)UserItemMaster__TryGetEntity(
@@ -466,10 +466,10 @@ LABEL_55:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userServantEntity);
     *(_QWORD *)&v35.fields.currentCryptoKey = v28;
     *(_QWORD *)&v35.fields.fakeValue = v27;
-    isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v35, 0);
+    isExceedFriendshipMax = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v35, 0);
     if ( v29 )
     {
-      sub_1FF1854(v29, (unsigned int)isExceedFriendshipMax, Method_System_Collections_Generic_List_int__Add__);
+      sub_20047CC(v29, (unsigned int)isExceedFriendshipMax, Method_System_Collections_Generic_List_int__Add__);
       return 1;
     }
     goto LABEL_19;
@@ -532,16 +532,16 @@ bool CheckCombineEnalbleControl__GetIsLimitUpEnable(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
 
   v6 = this;
-  if ( (byte_593C76B & 1) == 0 )
+  if ( (byte_59749A3 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_CombineLimitReleaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    this = (CheckCombineEnalbleControl_o *)sub_21FFC50(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    byte_593C76B = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_CombineLimitReleaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    this = (CheckCombineEnalbleControl_o *)sub_2213A60(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    byte_59749A3 = 1;
   }
   entity = 0;
   v48 = 0;
@@ -555,12 +555,12 @@ bool CheckCombineEnalbleControl__GetIsLimitUpEnable(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
   *(_QWORD *)&v49.fields.currentCryptoKey = v9;
   *(_QWORD *)&v49.fields.fakeValue = v10;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v49, 0);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v49, 0);
   if ( UserServantEntity__IsHeroine(usrData, 0) )
     goto LABEL_7;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !v11 )
   {
     this = (CheckCombineEnalbleControl_o *)UserServantEntity__isLevelMax(usrData, 0);
@@ -591,15 +591,15 @@ LABEL_42:
                 v34 = v6->fields.haveQpVal >= SLODWORD(v43->fields.m_CancellationTokenSource);
                 if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, usrData);
-                v36 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CombineLimitReleaseMaster___);
+                v36 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CombineLimitReleaseMaster___);
                 v37 = *(_QWORD *)&usrData->fields.svtId.fields.currentCryptoKey;
                 v38 = *(_QWORD *)&usrData->fields.svtId.fields.fakeValue;
                 if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v35);
                 *(_QWORD *)&v52.fields.currentCryptoKey = v37;
                 *(_QWORD *)&v52.fields.fakeValue = v38;
-                v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v52, 0);
-                this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+                v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v52, 0);
+                this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                          usrData->fields.limitCount,
                                                          0);
                 if ( v36 )
@@ -637,7 +637,7 @@ LABEL_42:
                     break;
                   if ( v28 >= LODWORD(servantMaster->fields._MasterName_k__BackingField) )
 LABEL_53:
-                    sub_21FFED4(this);
+                    sub_2213CE4(this);
                   v29 = *(_OWORD *)&usrData->fields.userId.fields.fakeValue;
                   v30 = *(&userServantMaster->fields.revision + v28);
                   v31 = *(&servantMaster->fields.revision + v28);
@@ -648,7 +648,7 @@ LABEL_53:
                   if ( !v33 )
                     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, usrData);
                   v45 = v46;
-                  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(
+                  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(
                                                            &v45,
                                                            0);
                   if ( !userItemMaster )
@@ -679,7 +679,7 @@ LABEL_53:
         }
       }
 LABEL_52:
-      sub_21FFECC(this, usrData);
+      sub_2213CDC(this, usrData);
     }
 LABEL_7:
     LOBYTE(ServantLimitCountSealedQuestOpen) = 0;
@@ -692,7 +692,7 @@ LABEL_7:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
   *(_QWORD *)&v50.fields.currentCryptoKey = v19;
   *(_QWORD *)&v50.fields.fakeValue = v20;
-  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v50, 0);
+  this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v50, 0);
   if ( !v18 )
     goto LABEL_52;
   if ( !ServantLimitImageMaster__IsServantLimitCountSeal(v18, (int32_t)this, v12, 0) )
@@ -703,11 +703,11 @@ LABEL_7:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
   *(_QWORD *)&v51.fields.currentCryptoKey = v23;
   *(_QWORD *)&v51.fields.fakeValue = v22;
-  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v51, 0);
+  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v51, 0);
   ServantLimitCountSealedQuestOpen = ServantLimitImageMaster__GetServantLimitCountSealedQuestOpen(v18, v24, v12, 0);
   if ( !ServantLimitCountSealedQuestOpen )
     return ServantLimitCountSealedQuestOpen;
-  this = (CheckCombineEnalbleControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  this = (CheckCombineEnalbleControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   if ( !this )
     goto LABEL_52;
   return clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)this, ServantLimitCountSealedQuestOpen, 0, 0);
@@ -748,18 +748,18 @@ bool CheckCombineEnalbleControl__GetIsLvExceedEnable(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v31; // 0:x0.16
 
   v4 = this;
-  if ( (byte_593C76D & 1) == 0 )
+  if ( (byte_59749A5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SvtCoinMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
-    this = (CheckCombineEnalbleControl_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593C76D = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_SvtCoinMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_HashSet_int__TypeInfo);
+    this = (CheckCombineEnalbleControl_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_59749A5 = 1;
   }
   if ( !usrData )
     goto LABEL_36;
@@ -772,7 +772,7 @@ bool CheckCombineEnalbleControl__GetIsLvExceedEnable(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
   *(_QWORD *)&v30.fields.currentCryptoKey = v8;
   *(_QWORD *)&v30.fields.fakeValue = v9;
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v30, 0);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v30, 0);
   if ( UserServantEntity__IsHeroine(usrData, 0) )
   {
     if ( isExceedLvMax | !UserServantEntity__IsUseLevelExceedItemHeroine(usrData, 0) )
@@ -792,21 +792,21 @@ bool CheckCombineEnalbleControl__GetIsLvExceedEnable(
   v13 = (int32_t *)SvtExceedEnt;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v12);
-  this = (CheckCombineEnalbleControl_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  this = (CheckCombineEnalbleControl_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !this )
     goto LABEL_36;
   IdEntityList = CommonConsumeMaster__GetIdEntityList((CommonConsumeMaster_o *)this, v13[12], 0);
   if ( IdEntityList )
   {
     v15 = IdEntityList;
-    v16 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
+    v16 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
     System_Collections_Generic_HashSet_int____ctor(
       v16,
-      (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-    v17 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
+      (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    v17 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
     System_Collections_Generic_HashSet_int____ctor(
       v17,
-      (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+      (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
     max_length = v15->max_length;
     if ( max_length < 1 )
     {
@@ -815,7 +815,7 @@ LABEL_24:
       {
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, usrData);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SvtCoinMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SvtCoinMaster___);
         v23 = *(_QWORD *)&usrData->fields.svtId.fields.currentCryptoKey;
         v24 = *(_QWORD *)&usrData->fields.svtId.fields.fakeValue;
         v25 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -823,7 +823,7 @@ LABEL_24:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v22);
         *(_QWORD *)&v31.fields.currentCryptoKey = v23;
         *(_QWORD *)&v31.fields.fakeValue = v24;
-        this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+        this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                  v31,
                                                  0);
         if ( !v25 )
@@ -831,7 +831,7 @@ LABEL_24:
         this = (CheckCombineEnalbleControl_o *)DataMasterBase_object__object__int___GetEntity(
                                                  v25,
                                                  (int32_t)this,
-                                                 (const MethodInfo_3EDD388 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
+                                                 (const MethodInfo_3F10B30 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
         if ( !this )
           goto LABEL_36;
         if ( !v16 )
@@ -839,27 +839,27 @@ LABEL_24:
         this = (CheckCombineEnalbleControl_o *)System_Collections_Generic_HashSet_int___Add(
                                                  v16,
                                                  (int32_t)this->fields.m_CancellationTokenSource,
-                                                 (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                                 (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
         if ( !v17 )
           goto LABEL_36;
         System_Collections_Generic_HashSet_int___Add(
           v17,
           v13[13],
-          (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+          (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
       }
       v26 = System_Linq_Enumerable__ToArray_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v16,
-              (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+              (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
       v27 = System_Linq_Enumerable__ToArray_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-              (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+              (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
       return CombineUtility__CheckCombineNeedItemsEnough(usrData, v26, v27, v4->fields.haveQpVal, v13[8], v28);
     }
     v19 = 0;
     while ( 1 )
     {
       if ( (unsigned int)v19 >= max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v20 = v15->m_Items[v19];
       if ( !v20 )
         break;
@@ -868,19 +868,19 @@ LABEL_24:
       this = (CheckCombineEnalbleControl_o *)System_Collections_Generic_HashSet_int___Add(
                                                v16,
                                                v20->fields.objectId,
-                                               (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                               (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
       if ( !v17 )
         break;
       this = (CheckCombineEnalbleControl_o *)System_Collections_Generic_HashSet_int___Add(
                                                v17,
                                                v20->fields.num,
-                                               (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                                               (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
       max_length = v15->max_length;
       if ( (int)++v19 >= max_length )
         goto LABEL_24;
     }
 LABEL_36:
-    sub_21FFECC(this, usrData);
+    sub_2213CDC(this, usrData);
   }
   return 0;
 }
@@ -925,7 +925,7 @@ bool CheckCombineEnalbleControl__GetIsNpUpEnable(
   this = (CheckCombineEnalbleControl_o *)UserServantEntity__checkTreasureDeviceLevelUp(usrData, SameSvtNpLvCache, 0);
   if ( !tdInfo )
 LABEL_22:
-    sub_21FFECC(this, usrData);
+    sub_2213CDC(this, usrData);
   lv = tdInfo->fields.lv;
   v7 = (int)this;
   if ( lv >= (int)this )
@@ -991,11 +991,11 @@ bool CheckCombineEnalbleControl__GetIsSkillUpEnable(
 
   v5 = usrData;
   v26 = this;
-  if ( (byte_593C76C & 1) == 0 )
+  if ( (byte_59749A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    this = (CheckCombineEnalbleControl_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593C76C = 1;
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    this = (CheckCombineEnalbleControl_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_59749A4 = 1;
   }
   entity = 0;
   if ( !v5
@@ -1006,7 +1006,7 @@ bool CheckCombineEnalbleControl__GetIsSkillUpEnable(
         !SkillIdList) )
   {
 LABEL_38:
-    sub_21FFECC(this, usrData);
+    sub_2213CDC(this, usrData);
   }
   max_length = SkillIdList->max_length;
   v8 = (int)max_length > 0;
@@ -1033,7 +1033,7 @@ LABEL_38:
         this = (CheckCombineEnalbleControl_o *)DataMasterBase_object__object__int___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                  (int32_t)usrData,
-                                                 (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                 (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
         if ( !this )
           goto LABEL_38;
         if ( v10 < SLODWORD(this->fields.userServantMaster) )
@@ -1077,7 +1077,7 @@ LABEL_38:
                 if ( !v20 )
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, usrData);
                 v27 = v28;
-                this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(
+                this = (CheckCombineEnalbleControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(
                                                          &v27,
                                                          0);
                 if ( !userItemMaster )
@@ -1104,7 +1104,7 @@ LABEL_38:
                   goto LABEL_34;
               }
 LABEL_39:
-              sub_21FFED4(this);
+              sub_2213CE4(this);
             }
             v23 = 0;
 LABEL_34:
@@ -1180,15 +1180,15 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
   int32_t v55; // [xsp+Ch] [xbp-64h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v56; // 0:x0.16
 
-  if ( (byte_593C769 & 1) == 0 )
+  if ( (byte_59749A1 & 1) == 0 )
   {
-    sub_21FFC50(&CombineEnableData_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593C769 = 1;
+    sub_2213A60(&CombineEnableData_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_59749A1 = 1;
   }
   CheckCombineEnalbleControl__SetMasters(this, method);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
@@ -1201,7 +1201,7 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
     goto LABEL_26;
   CostumeSvtIdList = ServantCostumeMaster__GetCostumeSvtIdList((ServantCostumeMaster_o *)SelfUserGame, 0);
   this->fields.costumeSvtIdList = CostumeSvtIdList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.costumeSvtIdList,
     (int32_t)CostumeSvtIdList,
     v7,
@@ -1210,12 +1210,12 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
     v10,
     v11,
     v12);
-  v13 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  v13 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v13,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.friendshipExceedSvtIdList = v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.friendshipExceedSvtIdList,
     (int32_t)v13,
     v14,
@@ -1229,7 +1229,7 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
     goto LABEL_26;
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)SelfUserGame,
-    (const MethodInfo_3F68E90 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
+    (const MethodInfo_3F9C638 *)Method_System_Collections_Generic_Dictionary_int__List_int___Clear__);
   SelfUserGame = this->fields.userServantMaster;
   if ( !SelfUserGame )
     goto LABEL_26;
@@ -1262,13 +1262,13 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
       *(_QWORD *)&v56.fields.currentCryptoKey = v32;
       *(_QWORD *)&v56.fields.fakeValue = v33;
-      SelfUserGame = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v56, 0);
+      SelfUserGame = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v56, 0);
       if ( !servantMaster )
         goto LABEL_26;
       Entity = DataMasterBase_object__object__int___GetEntity(
                  servantMaster,
                  (int32_t)SelfUserGame,
-                 (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                 (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       this = v30;
       v28 += CheckCombineEnalbleControl__GetIsLimitUpEnable(
                v30,
@@ -1295,7 +1295,7 @@ void CheckCombineEnalbleControl__SetCombineEnableInfo(CheckCombineEnalbleControl
         goto LABEL_18;
     }
 LABEL_27:
-    sub_21FFED4(SelfUserGame);
+    sub_2213CE4(SelfUserGame);
   }
   v28 = 0;
   v27 = 0;
@@ -1327,15 +1327,15 @@ LABEL_18:
     goto LABEL_27;
   }
 LABEL_24:
-  v45 = (CombineEnableData_o *)sub_21FFEBC(CombineEnableData_TypeInfo);
+  v45 = (CombineEnableData_o *)sub_2213CCC(CombineEnableData_TypeInfo);
   CombineEnableData___ctor(v45, 0);
   this->fields.combineEnalbeInfo = v45;
   p_combineEnalbeInfo = &this->fields.combineEnalbeInfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_combineEnalbeInfo, (int32_t)v45, v47, v48, v49, v50, v51, v52);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_combineEnalbeInfo, (int32_t)v45, v47, v48, v49, v50, v51, v52);
   v53 = *p_combineEnalbeInfo;
   if ( !*p_combineEnalbeInfo )
 LABEL_26:
-    sub_21FFECC(SelfUserGame, v4);
+    sub_2213CDC(SelfUserGame, v4);
   v53->fields.limitUpEnableNum = v28;
   v53->fields.skillUpEnableNum = v27;
   v53->fields.npUpEnableNum = v26;
@@ -1441,32 +1441,32 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
   bool v94; // w6
   bool v95; // w7
 
-  if ( (byte_593C76A & 1) == 0 )
+  if ( (byte_59749A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CombineLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_CombineSkillMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_FriendshipMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantStorageMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593C76A = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CombineLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_CombineSkillMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_FriendshipMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_TreasureDvcMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantStorageMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59749A2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
   this->fields.servantMaster = (struct ServantMaster_o *)MasterData_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.servantMaster,
     (int32_t)MasterData_object,
     v6,
@@ -1475,14 +1475,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v9,
     v10,
     v11);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v12 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantMaster___);
   this->fields.userServantMaster = (struct UserServantMaster_o *)v12;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userServantMaster,
     (int32_t)v12,
     v13,
@@ -1491,14 +1491,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v16,
     v17,
     v18);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v19 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
   this->fields.userServantStorageMaster = (struct UserServantStorageMaster_o *)v19;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userServantStorageMaster,
     (int32_t)v19,
     v20,
@@ -1507,14 +1507,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v23,
     v24,
     v25);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v26 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   this->fields.userServantCollectionMaster = (struct UserServantCollectionMaster_o *)v26;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userServantCollectionMaster,
     (int32_t)v26,
     v27,
@@ -1523,14 +1523,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v30,
     v31,
     v32);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v33 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CombineLimitMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CombineLimitMaster___);
   this->fields.combineLimitMaster = (struct CombineLimitMaster_o *)v33;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.combineLimitMaster,
     (int32_t)v33,
     v34,
@@ -1539,14 +1539,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v37,
     v38,
     v39);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v40 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   this->fields.userItemMaster = (struct UserItemMaster_o *)v40;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userItemMaster,
     (int32_t)v40,
     v41,
@@ -1555,22 +1555,22 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v44,
     v45,
     v46);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v47 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SkillMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SkillMaster___);
   this->fields.skillMaster = (struct SkillMaster_o *)v47;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.skillMaster, (int32_t)v47, v48, v49, v50, v51, v52, v53);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.skillMaster, (int32_t)v47, v48, v49, v50, v51, v52, v53);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v54 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CombineSkillMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CombineSkillMaster___);
   this->fields.combineSkillMaster = (struct CombineSkillMaster_o *)v54;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.combineSkillMaster,
     (int32_t)v54,
     v55,
@@ -1579,14 +1579,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v58,
     v59,
     v60);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v61 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   this->fields.treasureDvcMaster = (struct TreasureDvcMaster_o *)v61;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.treasureDvcMaster,
     (int32_t)v61,
     v62,
@@ -1595,14 +1595,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v65,
     v66,
     v67);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v68 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
   this->fields.treasureDvcLvMaster = (struct TreasureDvcLvMaster_o *)v68;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.treasureDvcLvMaster,
     (int32_t)v68,
     v69,
@@ -1611,14 +1611,14 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v72,
     v73,
     v74);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v75 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
   this->fields.servantCostumeMaster = (struct ServantCostumeMaster_o *)v75;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.servantCostumeMaster,
     (int32_t)v75,
     v76,
@@ -1627,13 +1627,13 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
     v79,
     v80,
     v81);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (v82 = DataManager__GetMasterData_object_(
                 (DataManager_o *)Instance,
-                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___),
+                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___),
         this->fields.cosReleaseMaster = (struct ServantCostumeReleaseMaster_o *)v82,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.cosReleaseMaster,
           (int32_t)v82,
           v83,
@@ -1642,16 +1642,16 @@ void CheckCombineEnalbleControl__SetMasters(CheckCombineEnalbleControl_o *this, 
           v86,
           v87,
           v88),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
   {
 LABEL_17:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   v89 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_FriendshipMaster___);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_FriendshipMaster___);
   this->fields.friendshipMaster = (struct FriendshipMaster_o *)v89;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.friendshipMaster,
     (int32_t)v89,
     v90,

@@ -8,15 +8,15 @@ void BoardOptionEventTargetListViewItemDraw___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5934D22 & 1) == 0 )
+  if ( (byte_596CE51 & 1) == 0 )
   {
-    sub_21FFC50(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
-    sub_21FFC50(&StringLiteral_22682/*"missiontarget_bg"*/);
-    byte_5934D22 = 1;
+    sub_2213A60(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
+    sub_2213A60(&StringLiteral_22728/*"missiontarget_bg"*/);
+    byte_596CE51 = 1;
   }
-  v7 = StringLiteral_22682/*"missiontarget_bg"*/;
-  BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields->BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_22682/*"missiontarget_bg"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_22728/*"missiontarget_bg"*/;
+  BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields->BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_22728/*"missiontarget_bg"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields,
     v7,
     v1,
@@ -34,10 +34,10 @@ void BoardOptionEventTargetListViewItemDraw___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5934D21 & 1) == 0 )
+  if ( (byte_596CE50 & 1) == 0 )
   {
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    byte_5934D21 = 1;
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    byte_596CE50 = 1;
   }
   if ( !*(&QuestInformationListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, method, v2);
@@ -61,7 +61,7 @@ UnityEngine_Material_o *BoardOptionEventTargetListViewItemDraw__GetNewChocoMater
                eventTargetComponent,
                (const MethodInfo *)isSprite);
 LABEL_6:
-    sub_21FFECC(eventTargetComponent, isSprite);
+    sub_2213CDC(eventTargetComponent, isSprite);
   }
   if ( !eventTargetComponent )
     goto LABEL_6;
@@ -85,7 +85,7 @@ UnityEngine_Material_o *BoardOptionEventTargetListViewItemDraw__GetNewColorShado
                eventTargetComponent,
                (const MethodInfo *)isSprite);
 LABEL_6:
-    sub_21FFECC(eventTargetComponent, isSprite);
+    sub_2213CDC(eventTargetComponent, isSprite);
   }
   if ( !eventTargetComponent )
     goto LABEL_6;
@@ -104,7 +104,7 @@ void BoardOptionEventTargetListViewItemDraw__SetAlpha(
 
   iconBaseSprite = this->fields.iconBaseSprite;
   if ( !iconBaseSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *, float))iconBaseSprite->klass->vtable._8_set_alpha.methodPtr)(
     iconBaseSprite,
     iconBaseSprite->klass->vtable._8_set_alpha.method,
@@ -123,11 +123,11 @@ void BoardOptionEventTargetListViewItemDraw__SetFrame(
   __int64 v7; // x1
   struct UISprite_o *v8; // x0
 
-  if ( (byte_5934D20 & 1) == 0 )
+  if ( (byte_596CE4F & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
-    byte_5934D20 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&BoardOptionEventTargetListViewItemDraw_TypeInfo);
+    byte_596CE4F = 1;
   }
   v4 = BoardOptionEventTargetListViewItemDraw_TypeInfo;
   iconBaseSprite = this->fields.iconBaseSprite;
@@ -142,7 +142,7 @@ void BoardOptionEventTargetListViewItemDraw__SetFrame(
   AtlasManager__SetEventUI(iconBaseSprite, BASE_SPRITE_NAME, 0);
   v8 = this->fields.iconBaseSprite;
   if ( !v8 )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v8->klass->vtable._33_MakePixelPerfect.methodPtr)(
     v8,
     v8->klass->vtable._33_MakePixelPerfect.method);
@@ -202,26 +202,26 @@ void BoardOptionEventTargetListViewItemDraw__SetItem(
   QuestInformationListViewItem_o *v51; // x20
   System_Action_o *v52; // x22
 
-  if ( (byte_5934D1F & 1) == 0 )
+  if ( (byte_596CE4E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&QuestInformationListViewItemDraw_TypeInfo);
-    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0__SetItem_b__0__);
-    sub_21FFC50(&BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
-    byte_5934D1F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&QuestInformationListViewItemDraw_TypeInfo);
+    sub_2213A60(&ServantAssetLoadManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0__SetItem_b__0__);
+    sub_2213A60(&BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
+    byte_596CE4E = 1;
   }
-  v7 = sub_21FFEBC(BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
+  v7 = sub_2213CCC(BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_54;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = item;
   v16 = (QuestInformationListViewItem_o **)(v7 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)item, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)item, v17, v18, v19, v20, v21, v22);
   BoardOptionEventTargetListViewItemDraw__SetFrame(this, v23);
   v24 = *(QuestInformationListViewItem_o **)(v7 + 24);
   if ( !v24 )
@@ -264,10 +264,10 @@ LABEL_29:
             enemySp = (UISprite_o *)this->fields.enemySp;
             if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v25);
-            if ( !byte_5931EF0 )
+            if ( !byte_596A090 )
             {
-              sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-              byte_5931EF0 = 1;
+              sub_2213A60(&TerminalSceneComponent_TypeInfo);
+              byte_596A090 = 1;
             }
             SvtImg = (UnityEngine_Component_o *)TerminalSceneComponent_TypeInfo;
             if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -328,7 +328,7 @@ LABEL_24:
       j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v9, v36);
     Manager__loadCommandCard = ServantAssetLoadManager__loadCommandCard(v38, targetId, targetCnt, targetCnt, 0);
     *p_SvtImg = Manager__loadCommandCard;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.SvtImg,
       (int32_t)Manager__loadCommandCard,
       v42,
@@ -339,7 +339,7 @@ LABEL_24:
       v47);
     if ( !*v16 )
       goto LABEL_54;
-    QuestInformationListViewItemDraw__SetDispType_43347392(
+    QuestInformationListViewItemDraw__SetDispType_43367988(
       (QuestInformationListViewItemDraw_o *)this,
       (*v16)->fields.dispType,
       this->fields.SvtImg,
@@ -387,10 +387,10 @@ LABEL_24:
       }
     }
 LABEL_54:
-    sub_21FFECC(SvtImg, v9);
+    sub_2213CDC(SvtImg, v9);
   }
   v51 = *(QuestInformationListViewItem_o **)(v7 + 24);
-  v52 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v52 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v52,
     (Il2CppObject *)v7,
@@ -429,12 +429,12 @@ void BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0___SetItem_b__0(
     || (this = (BoardOptionEventTargetListViewItemDraw___c__DisplayClass3_0_o *)v3->fields.__4__this) == 0 )
   {
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     (QuestInformationListViewItemDraw_o *)this,
     item->fields.dispType,
-    (UITexture_o *)this[4].fields.__4__this,
+    *((UITexture_o **)this + 18),
     item,
     0);
 }

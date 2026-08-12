@@ -13,7 +13,7 @@ void BattlePlayMovieActionData___ctor(
 
   ExecInActionData___ctor((ExecInActionData_o *)this, (const MethodInfo *)inMovieName);
   this->fields.movieName = inMovieName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.movieName,
     (int32_t)inMovieName,
     v7,
@@ -32,6 +32,6 @@ void BattlePlayMovieActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   BattlePerformance__PlayMovie(perf, this->fields.movieName, 0, this->fields.isBgmPause, 0);
 }

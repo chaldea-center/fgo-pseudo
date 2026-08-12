@@ -1,27 +1,27 @@
 void EquipAddEntity___ctor(EquipAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384F3 & 1) == 0 )
+  if ( (byte_59706A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59384F3 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59706A4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EquipAddEntity__CreatePK(int32_t id, int32_t equipId, const MethodInfo *method)
 {
-  if ( (byte_59384F1 & 1) == 0 )
+  if ( (byte_59706A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59384F1 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59706A2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            equipId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -49,16 +49,16 @@ bool EquipAddEntity__IsOpen(EquipAddEntity_o *this, const MethodInfo *method)
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_59384F2 & 1) == 0 )
+  if ( (byte_59706A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_59384F2 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_59706A3 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0, 0, v5);
 }

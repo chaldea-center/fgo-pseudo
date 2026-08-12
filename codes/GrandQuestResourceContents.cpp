@@ -16,7 +16,7 @@ void GrandQuestResourceContents__SetBoardUIAtlas(
   bool v7; // w7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)boardUiAtlasManagerUnit,
     (System_String_o *)method,
@@ -56,7 +56,7 @@ void GrandQuestResourceContents__set_BoardUiAtlasManagerUnit(
   bool v7; // w7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -80,7 +80,7 @@ void GrandQuestResourceContents__set_GrandQuestFolderBoardPrefab(
   bool v7; // w7
 
   this->fields._GrandQuestFolderBoardPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandQuestFolderBoardPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

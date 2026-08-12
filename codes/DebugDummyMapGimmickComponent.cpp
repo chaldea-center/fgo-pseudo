@@ -11,20 +11,20 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickId(
   System_String_o *name; // x0
   __int64 v4; // x1
 
-  if ( (byte_5934DA2 & 1) == 0 )
+  if ( (byte_596CED1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Last_string___);
-    byte_5934DA2 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Last_string___);
+    byte_596CED1 = 1;
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !name || (name = (System_String_o *)System_String__Split(name, 0x5Fu, 0, 0)) == 0 )
-    sub_21FFECC(name, v4);
+    sub_2213CDC(name, v4);
   if ( LODWORD(name[1].klass) == 1 )
     return 0;
   else
     return (System_String_o *)System_Linq_Enumerable__Last_object_(
                                 (System_Collections_Generic_IEnumerable_TSource__o *)name,
-                                (const MethodInfo_3850810 *)Method_System_Linq_Enumerable_Last_string___);
+                                (const MethodInfo_3883CD8 *)Method_System_Linq_Enumerable_Last_string___);
 }
 
 
@@ -34,35 +34,35 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickLayerMasterData(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
-  const MethodInfo *v5; // x1
-  int z; // w20
+  int v5; // w20
   Il2CppObject *MapGimmickId; // x19
-  Il2CppObject *v8; // x0
-  int v10; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppObject *v7; // x0
+  const MethodInfo *v9; // x1
+  float z; // s2
+  int v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5934DA1 & 1) == 0 )
+  if ( (byte_596CED0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_22994/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/);
-    byte_5934DA1 = 1;
+    sub_2213A60(&StringLiteral_23040/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/);
+    byte_596CED0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
   {
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
-  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
-  if ( localPosition.fields.z == INFINITY )
-    z = 0x80000000;
+  z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0).fields.z;
+  if ( z == INFINITY )
+    v5 = 0x80000000;
   else
-    z = (int)localPosition.fields.z;
-  if ( !z )
+    v5 = (int)z;
+  if ( !v5 )
     return 0;
-  MapGimmickId = (Il2CppObject *)DebugDummyMapGimmickComponent__GetMapGimmickId(this, v5);
-  v10 = z;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v10);
-  return System_String__Format_75484576((System_String_o *)StringLiteral_22994/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/, MapGimmickId, v8, 0);
+  MapGimmickId = (Il2CppObject *)DebugDummyMapGimmickComponent__GetMapGimmickId(this, v9);
+  v11 = v5;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v11);
+  return System_String__Format_75697880((System_String_o *)StringLiteral_23040/*"mstMapGimmickLayer: mapGimmickId: {0}, z: {1}"*/, MapGimmickId, v7, 0);
 }
 
 
@@ -73,43 +73,43 @@ System_String_o *DebugDummyMapGimmickComponent__GetMapGimmickMasterData(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   UnityEngine_Transform_o *v5; // x20
-  float v6; // s0
-  int v7; // w23
-  const MethodInfo *v8; // x1
-  int y; // w22
+  int v6; // w23
+  int v7; // w22
   Il2CppObject *MapGimmickId; // x19
-  Il2CppObject *v11; // x20
-  Il2CppObject *v12; // x0
-  int v14; // [xsp+8h] [xbp-48h] BYREF
-  int v15; // [xsp+Ch] [xbp-44h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppObject *v9; // x20
+  Il2CppObject *v10; // x0
+  float v12; // s0
+  const MethodInfo *v13; // x1
+  float v14; // s1
+  int v15; // [xsp+8h] [xbp-48h] BYREF
+  int v16; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_5934DA0 & 1) == 0 )
+  if ( (byte_596CECF & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_22992/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/);
-    byte_5934DA0 = 1;
+    sub_2213A60(&StringLiteral_23038/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/);
+    byte_596CECF = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
   {
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
   v5 = (UnityEngine_Transform_o *)gameObject;
-  v6 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0));
-  if ( v6 == INFINITY )
+  v12 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0));
+  if ( v12 == INFINITY )
+    v6 = 0x80000000;
+  else
+    v6 = (int)v12;
+  v14 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(v5, 0).fields.y));
+  if ( v14 == INFINITY )
     v7 = 0x80000000;
   else
-    v7 = (int)v6;
-  localPosition = UnityEngine_Transform__get_localPosition(v5, 0);
-  if ( localPosition.fields.y == INFINITY )
-    y = 0x80000000;
-  else
-    y = (int)localPosition.fields.y;
-  MapGimmickId = (Il2CppObject *)DebugDummyMapGimmickComponent__GetMapGimmickId(this, v8);
+    v7 = (int)v14;
+  MapGimmickId = (Il2CppObject *)DebugDummyMapGimmickComponent__GetMapGimmickId(this, v13);
+  v16 = v6;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
   v15 = v7;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v15);
-  v14 = y;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v14);
-  return System_String__Format_75484644((System_String_o *)StringLiteral_22992/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/, MapGimmickId, v11, v12, 0);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v15);
+  return System_String__Format_75697948((System_String_o *)StringLiteral_23038/*"mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}"*/, MapGimmickId, v9, v10, 0);
 }

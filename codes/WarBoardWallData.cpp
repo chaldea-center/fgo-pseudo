@@ -14,7 +14,7 @@ void WarBoardWallData___ctor(
   bool v14; // w6
   bool v15; // w7
   int32_t breakPoint; // w8
-  const MethodInfo_476E8C0 *v17; // x0
+  const MethodInfo_47A29F8 *v17; // x0
   System_String_o *v18; // x2
   System_String_o *v19; // x3
   int32_t v20; // w4
@@ -25,11 +25,11 @@ void WarBoardWallData___ctor(
   int32_t breakPoint_k__BackingField; // w8
   WarBoardStageWallEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593618D & 1) == 0 )
+  if ( (byte_596E2E7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593618D = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596E2E7 = 1;
   }
   entity = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -39,7 +39,7 @@ void WarBoardWallData___ctor(
   this->fields._wallId_k__BackingField = layout->fields.effectId;
   Individuality = WarBoardStageLayoutEntity__GetIndividuality(layout, 0);
   this->fields._individuality_k__BackingField = Individuality;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)Individuality,
     v10,
@@ -49,17 +49,17 @@ void WarBoardWallData___ctor(
     v14,
     v15);
   breakPoint = layout->fields.breakPoint;
-  v17 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v17 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields._breakPoint_k__BackingField = breakPoint;
   this->fields._breakPointMax_k__BackingField = breakPoint;
   Instance = SingletonMonoBehaviour_object___get_Instance(v17);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0 )
   {
 LABEL_12:
-    sub_21FFECC(Instance, v8);
+    sub_2213CDC(Instance, v8);
   }
   if ( WarBoardStageWallMaster__TryGetEntity(
          (WarBoardStageWallMaster_o *)Instance,
@@ -70,7 +70,7 @@ LABEL_12:
   {
     v24 = (int)entity;
     this->fields.wallEntity = entity;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.wallEntity, v24, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.wallEntity, v24, v18, v19, v20, v21, v22, v23);
   }
   if ( wallData )
   {
@@ -95,16 +95,16 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardWallData__Decrement
   __int64 breakPoint_k__BackingField; // x1
   WarBoardWallComponent_o *component; // x0
 
-  if ( (byte_593618F & 1) == 0 )
+  if ( (byte_596E2E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
-    byte_593618F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    byte_596E2E9 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   breakPoint_k__BackingField = (unsigned int)this->fields._breakPoint_k__BackingField;
   component = this->fields.component;
   if ( (int)breakPoint_k__BackingField - decPoint < 1 )
@@ -126,7 +126,7 @@ System_Collections_Generic_List_WarBoardTaskBase__o *WarBoardWallData__Decrement
       }
     }
 LABEL_10:
-    sub_21FFECC(component, breakPoint_k__BackingField);
+    sub_2213CDC(component, breakPoint_k__BackingField);
   }
   if ( !component )
     goto LABEL_10;
@@ -158,10 +158,10 @@ WarBoardStageWallEntity_o *WarBoardWallData__GetWallEntity(WarBoardWallData_o *t
 // local variable allocation has failed, the output may be wrong!
 void WarBoardWallData__SetBreakPoint(WarBoardWallData_o *this, int32_t point, const MethodInfo *method)
 {
-  if ( (byte_593618E & 1) == 0 )
+  if ( (byte_596E2E8 & 1) == 0 )
   {
-    sub_21FFC50(&AStarSearch_TypeInfo);
-    byte_593618E = 1;
+    sub_2213A60(&AStarSearch_TypeInfo);
+    byte_596E2E8 = 1;
   }
   this->fields._breakPoint_k__BackingField = point;
   if ( point <= 0 )
@@ -186,7 +186,7 @@ void WarBoardWallData__SetComponent(
   bool v7; // w7
 
   this->fields.component = component;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.component,
     (int32_t)component,
     (System_String_o *)method,
@@ -205,7 +205,7 @@ void WarBoardWallData__SetTouchEnable(WarBoardWallData_o *this, bool enable, con
 
   component = this->fields.component;
   if ( !component )
-    sub_21FFECC(0, enable);
+    sub_2213CDC(0, enable);
   WarBoardWallComponent__SetTouchEnable(component, enable, 0);
 }
 
@@ -217,7 +217,7 @@ void WarBoardWallData__SetWallEnable(WarBoardWallData_o *this, bool enable, cons
 
   component = this->fields.component;
   if ( !component )
-    sub_21FFECC(0, enable);
+    sub_2213CDC(0, enable);
   WarBoardWallComponent__SetColliderEnable(component, enable, 0);
 }
 
@@ -351,7 +351,7 @@ System_String_o *WarBoardWallData__get_wallMessage(WarBoardWallData_o *this, con
   if ( wallEntity )
     p_message = &wallEntity->fields.message;
   else
-    p_message = *(System_String_o ***)(qword_594C0B8 + 184);
+    p_message = *(System_String_o ***)(qword_5984390 + 184);
   return *p_message;
 }
 
@@ -365,7 +365,7 @@ System_String_o *WarBoardWallData__get_wallName(WarBoardWallData_o *this, const 
   if ( wallEntity )
     p_name = &wallEntity->fields.name;
   else
-    p_name = *(System_String_o ***)(qword_594C0B8 + 184);
+    p_name = *(System_String_o ***)(qword_5984390 + 184);
   return *p_name;
 }
 
@@ -391,7 +391,7 @@ void WarBoardWallData__set_individuality(WarBoardWallData_o *this, System_Int32_
   bool v7; // w7
 
   this->fields._individuality_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._individuality_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -436,7 +436,7 @@ void WarBoardWallData_SaveData___ctor(WarBoardWallData_SaveData_o *this, const M
 }
 
 
-void WarBoardWallData_SaveData___ctor_45001012(
+void WarBoardWallData_SaveData___ctor_45025276(
         WarBoardWallData_SaveData_o *this,
         WarBoardWallData_o *owner,
         const MethodInfo *method)
@@ -462,10 +462,10 @@ void WarBoardWallData_SaveData___ctor_45001012(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.owner = owner;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)owner, v5, v6, v7, v8, v9, v10);
   v18 = this->fields.owner;
   if ( !v18 )
-    sub_21FFECC(0, v11);
+    sub_2213CDC(0, v11);
   v18->fields.localSaveData = this;
   p_localSaveData = (MissionNaviTransitionBoardItem_o *)&v18->fields.localSaveData;
   IconName_k__BackingField_high = HIDWORD(p_localSaveData[-1].fields._IconName_k__BackingField);
@@ -475,7 +475,7 @@ void WarBoardWallData_SaveData___ctor_45001012(
   this->fields.squareIndex = IconName_k__BackingField_high;
   this->fields.isDestroy = QuestId_k__BackingField;
   this->fields.breakPoint = Name_k__BackingField;
-  sub_21FFBF4(p_localSaveData, (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_2213A04(p_localSaveData, (int32_t)this, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -544,15 +544,15 @@ void WarBoardWallData_SaveData__SetOwner(
   struct WarBoardWallData_o *owner; // x0
 
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   Wall = WarBoardData__GetWall(data, this->fields.squareIndex, 1, 0);
   this->fields.owner = Wall;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)Wall, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.owner, (int32_t)Wall, v5, v6, v7, v8, v9, v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&owner->fields.localSaveData,
       (int32_t)this,
       v11,

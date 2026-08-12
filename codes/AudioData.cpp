@@ -18,16 +18,16 @@ void AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *clip, const Me
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !clip )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
   this->fields.name = name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v8, v9, v10, v11, v12, v13);
   this->fields.data = clip;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)clip, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)clip, v14, v15, v16, v17, v18, v19);
 }
 
 
-void AudioData___ctor_47592564(
+void AudioData___ctor_47623588(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -48,13 +48,13 @@ void AudioData___ctor_47592564(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
   this->fields.data = clip;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)clip, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.data, (int32_t)clip, v13, v14, v15, v16, v17, v18);
 }
 
 
-void AudioData___ctor_47592632(
+void AudioData___ctor_47623656(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -79,17 +79,17 @@ void AudioData___ctor_47592632(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
   if ( !buf
     || (v15 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0),
         this->fields.data = v15,
         p_data = &this->fields.data,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_data, (int32_t)v15, v17, v18, v19, v20, v21, v22),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)p_data, (int32_t)v15, v17, v18, v19, v20, v21, v22),
         (v13 = *p_data) == 0) )
   {
-    sub_21FFECC(v13, v14);
+    sub_2213CDC(v13, v14);
   }
-  UnityEngine_AudioClip__SetData_82918564(v13, buf, 0, 0);
+  UnityEngine_AudioClip__SetData_83131868(v13, buf, 0, 0);
 }
 
 
@@ -99,8 +99,8 @@ bool AudioData__IsSame(AudioData_o *this, System_String_o *name, const MethodInf
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_21FFECC(0, name);
-  return System_String__Equals_75473208(v3, name, 0);
+    sub_2213CDC(0, name);
+  return System_String__Equals_75686512(v3, name, 0);
 }
 
 

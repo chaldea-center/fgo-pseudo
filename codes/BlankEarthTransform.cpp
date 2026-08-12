@@ -55,12 +55,12 @@ void BlankEarthTransform__Reset(BlankEarthTransform_o *this, const MethodInfo *m
   struct UnityEngine_Vector3_StaticFields *v7; // x8
   float v8; // s1
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  v3 = (unsigned __int8)byte_5931945;
+  v3 = (unsigned __int8)byte_5969AE5;
   v4 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -68,9 +68,9 @@ void BlankEarthTransform__Reset(BlankEarthTransform_o *this, const MethodInfo *m
   this->fields.earthRootLocalPosition.fields.z = z;
   if ( !v3 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     v4 = UnityEngine_Vector3_TypeInfo;
-    byte_5931945 = 1;
+    byte_5969AE5 = 1;
   }
   v7 = v4->static_fields;
   v8 = v7->oneVector.fields.z;

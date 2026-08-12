@@ -19,20 +19,20 @@ void BattleActorAnimationDuringAct__Init(BattleActorAnimationDuringAct_o *this, 
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_593BC9A & 1) == 0 )
+  if ( (byte_5973EA6 & 1) == 0 )
   {
-    sub_21FFC50(&BattleActorAnimationDuringAct_ChangeAlphaProcess_TypeInfo);
-    byte_593BC9A = 1;
+    sub_2213A60(&BattleActorAnimationDuringAct_ChangeAlphaProcess_TypeInfo);
+    byte_5973EA6 = 1;
   }
   AlphaCurve = this->fields.AlphaCurve;
   if ( AlphaCurve && UnityEngine_AnimationCurve__get_length(AlphaCurve, 0) >= 1 )
   {
     v4 = this->fields.AlphaCurve;
     AlphaChangeMeshRenderers = this->fields.AlphaChangeMeshRenderers;
-    v6 = (BattleActorAnimationDuringAct_ChangeAlphaProcess_o *)sub_21FFEBC(BattleActorAnimationDuringAct_ChangeAlphaProcess_TypeInfo);
+    v6 = (BattleActorAnimationDuringAct_ChangeAlphaProcess_o *)sub_2213CCC(BattleActorAnimationDuringAct_ChangeAlphaProcess_TypeInfo);
     BattleActorAnimationDuringAct_ChangeAlphaProcess___ctor(v6, v4, AlphaChangeMeshRenderers, v7);
     this->fields._changeAlphaProc = v6;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._changeAlphaProc,
       (int32_t)v6,
       v8,
@@ -72,9 +72,9 @@ void BattleActorAnimationDuringAct__OnExec(
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0);
     changeAlphaProc = this->fields._changeAlphaProc;
     if ( !changeAlphaProc )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     changeAlphaProc->fields._battleActor = actor;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&changeAlphaProc->fields, (int32_t)actor, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&changeAlphaProc->fields, (int32_t)actor, v7, v8, v9, v10, v11, v12);
     changeAlphaProc->fields._elapsedTime = 0.0;
     BattleActorAnimationDuringAct_ChangeAlphaProcess__Exec(changeAlphaProc, 0.0, v14);
   }
@@ -119,7 +119,7 @@ void BattleActorAnimationDuringAct_ChangeAlphaProcess___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._animCurve = animCurve;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._animCurve,
     (int32_t)animCurve,
     v7,
@@ -131,7 +131,7 @@ void BattleActorAnimationDuringAct_ChangeAlphaProcess___ctor(
   KeyTime = BasicHelper__LastKeyTime(animCurve, 0.0, 0);
   this->fields._meshRenderers = meshRenderers;
   this->fields._totalTime = KeyTime;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._meshRenderers,
     (int32_t)meshRenderers,
     v14,
@@ -169,16 +169,16 @@ bool BattleActorAnimationDuringAct_ChangeAlphaProcess__Exec(
   System_Collections_Generic_IEnumerable_T__o *v23; // x23
   System_Action_object__o *v24; // x24
 
-  if ( (byte_593BC9B & 1) == 0 )
+  if ( (byte_5973EA7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_Material__TypeInfo);
-    sub_21FFC50(&Method_BattleActorControl_UpdateMaterialsOnRenderers_SkinnedMeshRenderer___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0__Exec_b__0__);
-    sub_21FFC50(&BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_TypeInfo);
-    byte_593BC9B = 1;
+    sub_2213A60(&System_Action_Material__TypeInfo);
+    sub_2213A60(&Method_BattleActorControl_UpdateMaterialsOnRenderers_SkinnedMeshRenderer___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0__Exec_b__0__);
+    sub_2213A60(&BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_TypeInfo);
+    byte_5973EA7 = 1;
   }
-  v5 = sub_21FFEBC(BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_2213CCC(BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   battleActor = (UnityEngine_Object_o *)this->fields._battleActor;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -212,10 +212,10 @@ bool BattleActorAnimationDuringAct_ChangeAlphaProcess__Exec(
       goto LABEL_18;
     }
 LABEL_23:
-    sub_21FFECC(IsNullOrEmpty, v11);
+    sub_2213CDC(IsNullOrEmpty, v11);
   }
   v23 = (System_Collections_Generic_IEnumerable_T__o *)this->fields._meshRenderers;
-  v24 = (System_Action_object__o *)sub_21FFEBC(System_Action_Material__TypeInfo);
+  v24 = (System_Action_object__o *)sub_2213CCC(System_Action_Material__TypeInfo);
   System_Action_object____ctor(
     v24,
     (Il2CppObject *)v5,
@@ -227,12 +227,12 @@ LABEL_23:
     v16,
     v23,
     (System_Action_Material__o *)v24,
-    (const MethodInfo_37E36C0 *)Method_BattleActorControl_UpdateMaterialsOnRenderers_SkinnedMeshRenderer___);
+    (const MethodInfo_3816A70 *)Method_BattleActorControl_UpdateMaterialsOnRenderers_SkinnedMeshRenderer___);
 LABEL_18:
   if ( this->fields._totalTime <= this->fields._elapsedTime )
   {
     this->fields._battleActor = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v17, v18, v19, v20, v21, v22);
 LABEL_21:
     LOBYTE(animCurve) = 0;
     return (char)animCurve;
@@ -255,7 +255,7 @@ void BattleActorAnimationDuringAct_ChangeAlphaProcess__Start(
   const MethodInfo *v9; // x1
 
   this->fields._battleActor = actor;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)actor,
     (System_String_o *)method,
@@ -285,12 +285,12 @@ void BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0___Exe
   BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_593BC9C & 1) == 0 )
+  if ( (byte_5973EA8 & 1) == 0 )
   {
-    this = (BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_o *)sub_21FFC50(&StringLiteral_17187/*"_fade"*/);
-    byte_593BC9C = 1;
+    this = (BattleActorAnimationDuringAct_ChangeAlphaProcess___c__DisplayClass7_0_o *)sub_2213A60(&StringLiteral_17223/*"_fade"*/);
+    byte_5973EA8 = 1;
   }
   if ( !material )
-    sub_21FFECC(this, material);
-  UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_17187/*"_fade"*/, v4->fields.alpha, 0);
+    sub_2213CDC(this, material);
+  UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_17223/*"_fade"*/, v4->fields.alpha, 0);
 }

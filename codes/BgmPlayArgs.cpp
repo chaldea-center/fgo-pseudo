@@ -16,16 +16,16 @@ void BgmPlayArgs___ctor(
   unsigned __int64 v18; // x8
   BgmManager_c *v19; // x0
 
-  if ( (byte_5937CA2 & 1) == 0 )
+  if ( (byte_596FE0D & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
-    byte_5937CA2 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_float__get_HasValue__);
+    byte_596FE0D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)bgmName, v11, v12, v13, v14, v15, v16);
   if ( volume.fields.hasValue )
   {
     v18 = HIDWORD(*(unsigned __int64 *)&volume);
@@ -62,18 +62,18 @@ void BgmPlayArgs__Update(
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_5937CA3 & 1) == 0 )
+  if ( (byte_596FE0E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_float__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
-    this = (BgmPlayArgs_o *)sub_21FFC50(&Method_System_Nullable_float__get_HasValue__);
-    byte_5937CA3 = 1;
+    sub_2213A60(&Method_System_Nullable_float__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_long__get_HasValue__);
+    this = (BgmPlayArgs_o *)sub_2213A60(&Method_System_Nullable_float__get_HasValue__);
+    byte_596FE0E = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      sub_21FFECC(this, volume);
+      sub_2213CDC(this, volume);
     v10 = HIDWORD(*(unsigned __int64 *)&volume);
   }
   else
@@ -125,7 +125,7 @@ void BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *value, const
   bool v7; // w7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

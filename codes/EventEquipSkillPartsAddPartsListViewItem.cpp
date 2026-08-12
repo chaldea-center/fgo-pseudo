@@ -22,10 +22,10 @@ void EventEquipSkillPartsAddPartsListViewItem___ctor(
   bool v23; // w7
 
   v11 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v11->fields._SkillId_k__BackingField = skillId;
   v11->fields._Name_k__BackingField = name;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields._Name_k__BackingField,
     (int32_t)name,
     v12,
@@ -36,7 +36,7 @@ void EventEquipSkillPartsAddPartsListViewItem___ctor(
     v17);
   v11->fields._Detail_k__BackingField = detail;
   v11 = (EventEquipSkillPartsAddPartsListViewItem_o *)((char *)v11 + 136);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v11, (int32_t)detail, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v11, (int32_t)detail, v18, v19, v20, v21, v22, v23);
   LOBYTE(v11->monitor) = isLast;
 }
 
@@ -85,7 +85,7 @@ void EventEquipSkillPartsAddPartsListViewItem__set_Detail(
   bool v7; // w7
 
   this->fields._Detail_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Detail_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -118,7 +118,7 @@ void EventEquipSkillPartsAddPartsListViewItem__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

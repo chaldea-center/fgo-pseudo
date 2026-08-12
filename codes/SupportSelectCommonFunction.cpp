@@ -11,33 +11,33 @@ int64_t SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(const Metho
   EventCampaignEntity_o *v9; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5934ADF & 1) == 0 )
+  if ( (byte_596CC0E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_21FFC50(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5934ADF = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventCampaignMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_2213A60(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596CC0E = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !Instance )
     goto LABEL_24;
   FriendPointCampaigns = EventCampaignMaster__GetFriendPointCampaigns((EventCampaignMaster_o *)Instance, 1, 0);
   if ( FriendPointCampaigns )
   {
     v4 = FriendPointCampaigns;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMaster___);
+                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMaster___);
     max_length = v4->max_length;
     if ( max_length >= 1 )
     {
@@ -47,7 +47,7 @@ int64_t SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(const Metho
       while ( 1 )
       {
         if ( (unsigned int)v7 >= max_length )
-          sub_21FFED4(Instance);
+          sub_2213CE4(Instance);
         v9 = v4->m_Items[v7];
         if ( !v9 || !v6 )
           break;
@@ -55,7 +55,7 @@ int64_t SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(const Metho
                                      v6,
                                      &entity,
                                      v9->fields.eventId,
-                                     (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                     (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
           if ( monitor )
@@ -77,7 +77,7 @@ int64_t SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(const Metho
           return (int64_t)monitor;
       }
 LABEL_24:
-      sub_21FFECC(Instance, v2);
+      sub_2213CDC(Instance, v2);
     }
   }
   return 0;

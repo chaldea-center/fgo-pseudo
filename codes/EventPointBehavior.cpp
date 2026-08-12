@@ -16,5 +16,5 @@ void EventPointBehavior___ctor(EventPointBehavior_o *this, const MethodInfo *met
   v2[-1].fields._NaviAction_k__BackingField = 0;
   *(_QWORD *)&v2[-1].fields._QuestId_k__BackingField = 0;
   v2[-1].fields._BoardType_k__BackingField = 0;
-  sub_21FFBF4(v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04(v2, 0, v3, v4, v5, v6, v7, v8);
 }

@@ -1,9 +1,9 @@
 void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939F0A & 1) == 0 )
+  if ( (byte_59720DD & 1) == 0 )
   {
-    sub_21FFC50(&UILabel_TypeInfo);
-    byte_5939F0A = 1;
+    sub_2213A60(&UILabel_TypeInfo);
+    byte_59720DD = 1;
   }
   if ( !*(&UILabel_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UILabel_TypeInfo, method);
@@ -11,7 +11,6 @@ void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *met
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UICrossNarrowLabel__SetCrossNarrowText(
         UICrossNarrowLabel_o *this,
         System_String_o *text,
@@ -23,17 +22,13 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   UnityEngine_Transform_o *transform; // x0
   __int64 v9; // x1
   int32_t baseWidth; // w20
-  float y; // s9
-  float z; // s10
-  float v13; // s0 OVERLAPPED
-  float v14; // s1
-  float v15; // s2
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5939F09 & 1) == 0 )
+  if ( (byte_59720DC & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_5939F09 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_59720DC = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -54,17 +49,15 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   if ( !transform
     || (localScale = UnityEngine_Transform__get_localScale(transform, 0),
         baseWidth = this->fields.baseWidth,
-        y = localScale.fields.y,
-        z = localScale.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v9);
+    sub_2213CDC(transform, v9);
   }
   if ( v7 <= (float)baseWidth )
-    v13 = 1.0;
+    v12.fields.x = 1.0;
   else
-    v13 = (float)baseWidth / v7;
-  v14 = y;
-  v15 = z;
-  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v13, 0);
+    v12.fields.x = (float)baseWidth / v7;
+  v12.fields.y = localScale.fields.y;
+  v12.fields.z = localScale.fields.z;
+  UnityEngine_Transform__set_localScale(transform, v12, 0);
 }

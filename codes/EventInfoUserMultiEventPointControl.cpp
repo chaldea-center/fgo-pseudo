@@ -16,17 +16,17 @@ void EventInfoUserMultiEventPointControl__Awake(EventInfoUserMultiEventPointCont
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593ADA3 & 1) == 0 )
+  if ( (byte_597305C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventPointMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_593ADA3 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_597305C = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = (struct UserEventPointMaster_o *)Master_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userEventPointMaster,
     (int32_t)Master_object,
     v4,
@@ -48,20 +48,20 @@ int64_t EventInfoUserMultiEventPointControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   NetworkManager_c *v8; // x0
 
-  if ( (byte_593ADA5 & 1) == 0 )
+  if ( (byte_597305E & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593ADA5 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_597305E = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
     return 0;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v8 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -85,7 +85,7 @@ void EventInfoUserMultiEventPointControl__Initialization(
   bool v7; // w7
 
   this->fields.eventUiEntity = entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (System_String_o *)method,
@@ -109,7 +109,7 @@ void EventInfoUserMultiEventPointControl__OnDestroy(
   {
     eventUiEntity = this->fields.eventUiEntity;
     if ( !eventUiEntity )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, v2);
     EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, v5);
   }
@@ -147,11 +147,11 @@ void EventInfoUserMultiEventPointControl__Redisplay(
       do
       {
         if ( (unsigned int)v5 >= max_length )
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         v8 = eventUiValueEntityList->m_Items[v5];
         if ( !v8 )
 LABEL_15:
-          sub_21FFECC(this, method);
+          sub_2213CDC(this, method);
         if ( v8->fields.type == 2 )
         {
           this = (EventInfoUserMultiEventPointControl_o *)System_Int32__Parse(v8->fields.value, 0);
@@ -207,13 +207,13 @@ void EventInfoUserMultiEventPointControl__SetPointLabel(
   int64_t v15; // [xsp+8h] [xbp-28h] BYREF
 
   v6 = this;
-  if ( (byte_593ADA6 & 1) == 0 )
+  if ( (byte_597305F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    this = (EventInfoUserMultiEventPointControl_o *)sub_21FFC50(&StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_593ADA6 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    this = (EventInfoUserMultiEventPointControl_o *)sub_2213A60(&StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_597305F = 1;
   }
   pointLabels = v6->fields.pointLabels;
   if ( !pointLabels )
@@ -222,11 +222,11 @@ void EventInfoUserMultiEventPointControl__SetPointLabel(
   if ( max_length >= 1 && max_length > idx )
   {
     if ( max_length <= (unsigned int)idx )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     v9 = pointLabels->m_Items[idx];
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&idx);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v12 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -236,8 +236,8 @@ void EventInfoUserMultiEventPointControl__SetPointLabel(
     UserPointEventMax = v12->static_fields->UserPointEventMax;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v10);
-    v15 = System_Math__Min_76940304(point, UserPointEventMax, 0);
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v15);
+    v15 = System_Math__Min_77153608(point, UserPointEventMax, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v15);
     this = (EventInfoUserMultiEventPointControl_o *)System_String__Format(v11, v14, 0);
     if ( v9 )
     {
@@ -245,7 +245,7 @@ void EventInfoUserMultiEventPointControl__SetPointLabel(
       return;
     }
 LABEL_17:
-    sub_21FFECC(this, *(_QWORD *)&idx);
+    sub_2213CDC(this, *(_QWORD *)&idx);
   }
 }
 
@@ -291,17 +291,17 @@ void EventInfoUserMultiEventPointControl__Setup(
   bool v38; // w7
   const MethodInfo *v39; // x1
 
-  if ( (byte_593ADA4 & 1) == 0 )
+  if ( (byte_597305D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_EventUiValueEntity___);
-    sub_21FFC50(&System_Func_EventUiValueEntity__int__TypeInfo);
-    sub_21FFC50(&System_Func_EventUiValueEntity__bool__TypeInfo);
-    sub_21FFC50(&Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_0__);
-    sub_21FFC50(&Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_1__);
-    sub_21FFC50(&EventInfoUserMultiEventPointControl___c_TypeInfo);
-    byte_593ADA4 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_EventUiValueEntity___);
+    sub_2213A60(&System_Func_EventUiValueEntity__int__TypeInfo);
+    sub_2213A60(&System_Func_EventUiValueEntity__bool__TypeInfo);
+    sub_2213A60(&Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_0__);
+    sub_2213A60(&Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_1__);
+    sub_2213A60(&EventInfoUserMultiEventPointControl___c_TypeInfo);
+    byte_597305D = 1;
   }
   if ( entitys )
   {
@@ -321,16 +321,16 @@ void EventInfoUserMultiEventPointControl__Setup(
         static_fields = EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields;
       }
       v8 = (Il2CppObject *)static_fields->__9;
-      _9__13_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_EventUiValueEntity__bool__TypeInfo);
+      _9__13_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_EventUiValueEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__13_0, v8, Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_0__, 0);
       v9 = EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields;
       v9->__9__13_0 = (struct System_Func_EventUiValueEntity__bool__o *)_9__13_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__13_0, (int32_t)_9__13_0, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->__9__13_0, (int32_t)_9__13_0, v10, v11, v12, v13, v14, v15);
     }
     v16 = System_Linq_Enumerable__Where_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)entitys,
             (System_Func_TSource__bool__o *)_9__13_0,
-            (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_EventUiValueEntity___);
+            (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_EventUiValueEntity___);
     v18 = EventInfoUserMultiEventPointControl___c_TypeInfo;
     v19 = v16;
     if ( !*(&EventInfoUserMultiEventPointControl___c_TypeInfo->_2.cctor_finished + 1) )
@@ -348,23 +348,23 @@ void EventInfoUserMultiEventPointControl__Setup(
         v20 = EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields;
       }
       v22 = (Il2CppObject *)v20->__9;
-      _9__13_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_EventUiValueEntity__int__TypeInfo);
+      _9__13_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_EventUiValueEntity__int__TypeInfo);
       System_Func_object__int____ctor(_9__13_1, v22, Method_EventInfoUserMultiEventPointControl___c__Setup_b__13_1__, 0);
       v23 = EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields;
       v23->__9__13_1 = (struct System_Func_EventUiValueEntity__int__o *)_9__13_1;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23->__9__13_1, (int32_t)_9__13_1, v24, v25, v26, v27, v28, v29);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->__9__13_1, (int32_t)_9__13_1, v24, v25, v26, v27, v28, v29);
     }
     v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                  v19,
                                                                  (System_Func_TSource__TKey__o *)_9__13_1,
-                                                                 (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+                                                                 (const MethodInfo_38891C4 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
     v31 = (struct EventUiValueEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                v30,
-                                               (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+                                               (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
     if ( !this )
-      sub_21FFECC(v31, v32);
+      sub_2213CDC(v31, v32);
     this->fields.eventUiValueEntityList = v31;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiValueEntityList,
       (int32_t)v31,
       v33,
@@ -407,18 +407,18 @@ void EventInfoUserMultiEventPointControl__SetupSprite(
   System_String_o *v22; // x21
   struct UISprite_array *v23; // x8
 
-  if ( (byte_593ADA7 & 1) == 0 )
+  if ( (byte_5973060 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_EventInfoUserMultiEventPointControl__SetupSprite_b__17_0__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593ADA7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_EventInfoUserMultiEventPointControl__SetupSprite_b__17_0__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973060 = 1;
   }
   if ( this->fields.isUseLocalAtlas )
   {
     eventUiEntity = this->fields.eventUiEntity;
-    v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_EventInfoUserMultiEventPointControl__SetupSprite_b__17_0__, 0);
     EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v4, v5);
   }
@@ -464,7 +464,7 @@ void EventInfoUserMultiEventPointControl__SetupSprite(
   bgSpriteNames = this->fields.bgSpriteNames;
   if ( !bgSpriteNames )
 LABEL_41:
-    sub_21FFECC(IsNullOrEmpty, v8);
+    sub_2213CDC(IsNullOrEmpty, v8);
   if ( (_DWORD)max_length == LODWORD(bgSpriteNames->max_length) )
   {
     v15 = 4;
@@ -514,7 +514,7 @@ LABEL_41:
           goto LABEL_41;
         if ( v18 >= LODWORD(v23->max_length) )
 LABEL_42:
-          sub_21FFED4(IsNullOrEmpty);
+          sub_2213CE4(IsNullOrEmpty);
         IsNullOrEmpty = (struct UISprite_o *)*((_QWORD *)&v23->obj.klass + v15);
         if ( !IsNullOrEmpty )
           goto LABEL_41;
@@ -538,7 +538,7 @@ void EventInfoUserMultiEventPointControl___SetupSprite_b__17_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, v2);
 }
 
@@ -553,15 +553,15 @@ void EventInfoUserMultiEventPointControl___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593ADA8 & 1) == 0 )
+  if ( (byte_5973061 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUserMultiEventPointControl___c_TypeInfo);
-    byte_593ADA8 = 1;
+    sub_2213A60(&EventInfoUserMultiEventPointControl___c_TypeInfo);
+    byte_5973061 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventInfoUserMultiEventPointControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventInfoUserMultiEventPointControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields->__9 = (struct EventInfoUserMultiEventPointControl___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoUserMultiEventPointControl___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -596,6 +596,6 @@ int32_t EventInfoUserMultiEventPointControl___c___Setup_b__13_1(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return ent->fields.priority;
 }

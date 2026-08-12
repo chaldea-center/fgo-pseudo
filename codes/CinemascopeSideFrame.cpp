@@ -12,10 +12,10 @@ void CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const MethodInfo *
   __int64 v2; // x2
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_5932361 & 1) == 0 )
+  if ( (byte_596A460 & 1) == 0 )
   {
-    sub_21FFC50(&CommonUI_TypeInfo);
-    byte_5932361 = 1;
+    sub_2213A60(&CommonUI_TypeInfo);
+    byte_596A460 = 1;
   }
   if ( this->fields.hide )
   {
@@ -32,10 +32,10 @@ void CinemascopeSideFrame__HideLater(CinemascopeSideFrame_o *this, const MethodI
   __int64 v2; // x2
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_5932362 & 1) == 0 )
+  if ( (byte_596A461 & 1) == 0 )
   {
-    sub_21FFC50(&CommonUI_TypeInfo);
-    byte_5932362 = 1;
+    sub_2213A60(&CommonUI_TypeInfo);
+    byte_596A461 = 1;
   }
   if ( !this->fields.hide )
   {
@@ -63,18 +63,17 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
   bool IsFullScreenMovie; // w8
   bool v14; // w21
   int32_t v15; // w19
-  System_Nullable_int__o v16; // x0
-  System_Nullable_int__o v18; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v16; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5932360 & 1) == 0 )
+  if ( (byte_596A45F & 1) == 0 )
   {
-    sub_21FFC50(&CommonUI_TypeInfo);
-    sub_21FFC50(&FSUtility_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_int___ctor__);
-    byte_5932360 = 1;
+    sub_2213A60(&CommonUI_TypeInfo);
+    sub_2213A60(&FSUtility_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_int___ctor__);
+    byte_596A45F = 1;
   }
   show = this->fields.show;
-  v18 = 0;
+  v16 = 0;
   if ( show )
   {
     if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
@@ -94,8 +93,10 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
     if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v11, v12);
     CommonUI__SetForceObi_16_9(v14, 0);
-    v16 = (System_Nullable_int__o)&v18;
-    System_Nullable_int____ctor(v16, v15, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
+    System_Nullable_int____ctor(
+      (System_Nullable_int__o)&v16,
+      v15,
+      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   }
-  return v18;
+  return v16;
 }

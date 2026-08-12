@@ -43,13 +43,13 @@ void RuntimeProcessRunner___ctor(
   bool v41; // w6
   bool v42; // w7
 
-  if ( (byte_5936402 & 1) == 0 )
+  if ( (byte_596E55C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_RuntimeProcessRunner___c___ctor_b__12_0__);
-    sub_21FFC50(&Method_RuntimeProcessRunner___c___ctor_b__12_1__);
-    sub_21FFC50(&RuntimeProcessRunner___c_TypeInfo);
-    byte_5936402 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_RuntimeProcessRunner___c___ctor_b__12_0__);
+    sub_2213A60(&Method_RuntimeProcessRunner___c___ctor_b__12_1__);
+    sub_2213A60(&RuntimeProcessRunner___c_TypeInfo);
+    byte_596E55C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v14 = RuntimeProcessRunner___c_TypeInfo;
@@ -68,16 +68,16 @@ void RuntimeProcessRunner___ctor(
       static_fields = RuntimeProcessRunner___c_TypeInfo->static_fields;
     }
     v17 = (Il2CppObject *)static_fields->__9;
-    _9__12_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__12_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__12_0, v17, Method_RuntimeProcessRunner___c___ctor_b__12_0__, 0);
     v18 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     v18->__9__12_0 = _9__12_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->__9__12_0, (int32_t)_9__12_0, v19, v20, v21, v22, v23, v24);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->__9__12_0, (int32_t)_9__12_0, v19, v20, v21, v22, v23, v24);
   }
   if ( !this )
-    sub_21FFECC(v14, v7);
+    sub_2213CDC(v14, v7);
   this->fields._OnProcessSuccesful_k__BackingField = _9__12_0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
   v32 = RuntimeProcessRunner___c_TypeInfo;
   if ( !*(&RuntimeProcessRunner___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -94,14 +94,14 @@ void RuntimeProcessRunner___ctor(
       v33 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     }
     v35 = (Il2CppObject *)v33->__9;
-    _9__12_1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__12_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__12_1, v35, Method_RuntimeProcessRunner___c___ctor_b__12_1__, 0);
     v36 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     v36->__9__12_1 = _9__12_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v36->__9__12_1, (int32_t)_9__12_1, v37, v38, v39, v40, v41, v42);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36->__9__12_1, (int32_t)_9__12_1, v37, v38, v39, v40, v41, v42);
   }
   this->fields._OnProcessFailed_k__BackingField = _9__12_1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnProcessFailed_k__BackingField,
     (int32_t)_9__12_1,
     v26,
@@ -113,7 +113,7 @@ void RuntimeProcessRunner___ctor(
 }
 
 
-void RuntimeProcessRunner___ctor_45337640(
+void RuntimeProcessRunner___ctor_45361904(
         RuntimeProcessRunner_o *this,
         System_String_o *executable,
         System_String_o *args,
@@ -156,13 +156,13 @@ void RuntimeProcessRunner___ctor_45337640(
   bool v39; // w6
   bool v40; // w7
 
-  if ( (byte_5936403 & 1) == 0 )
+  if ( (byte_596E55D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_RuntimeProcessRunner___c___ctor_b__13_0__);
-    sub_21FFC50(&Method_RuntimeProcessRunner___c___ctor_b__13_1__);
-    sub_21FFC50(&RuntimeProcessRunner___c_TypeInfo);
-    byte_5936403 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_RuntimeProcessRunner___c___ctor_b__13_0__);
+    sub_2213A60(&Method_RuntimeProcessRunner___c___ctor_b__13_1__);
+    sub_2213A60(&RuntimeProcessRunner___c_TypeInfo);
+    byte_596E55D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v12 = RuntimeProcessRunner___c_TypeInfo;
@@ -181,16 +181,16 @@ void RuntimeProcessRunner___ctor_45337640(
       static_fields = RuntimeProcessRunner___c_TypeInfo->static_fields;
     }
     v15 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__13_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__13_0, v15, Method_RuntimeProcessRunner___c___ctor_b__13_0__, 0);
     v16 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     v16->__9__13_0 = _9__13_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->__9__13_0, (int32_t)_9__13_0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16->__9__13_0, (int32_t)_9__13_0, v17, v18, v19, v20, v21, v22);
   }
   if ( !this )
-    sub_21FFECC(v12, v5);
+    sub_2213CDC(v12, v5);
   this->fields._OnProcessSuccesful_k__BackingField = _9__13_0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)_9__13_0, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)_9__13_0, v6, v7, v8, v9, v10, v11);
   v30 = RuntimeProcessRunner___c_TypeInfo;
   if ( !*(&RuntimeProcessRunner___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -207,14 +207,14 @@ void RuntimeProcessRunner___ctor_45337640(
       v31 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     }
     v33 = (Il2CppObject *)v31->__9;
-    _9__13_1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__13_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__13_1, v33, Method_RuntimeProcessRunner___c___ctor_b__13_1__, 0);
     v34 = RuntimeProcessRunner___c_TypeInfo->static_fields;
     v34->__9__13_1 = _9__13_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v34->__9__13_1, (int32_t)_9__13_1, v35, v36, v37, v38, v39, v40);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->__9__13_1, (int32_t)_9__13_1, v35, v36, v37, v38, v39, v40);
   }
   this->fields._OnProcessFailed_k__BackingField = _9__13_1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnProcessFailed_k__BackingField,
     (int32_t)_9__13_1,
     v24,
@@ -258,15 +258,15 @@ void RuntimeProcessRunner__ProcessFailed(
   int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
   v7 = this;
-  if ( (byte_5936405 & 1) == 0 )
+  if ( (byte_596E55F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    this = (RuntimeProcessRunner_o *)sub_21FFC50(&StringLiteral_11193/*"Process Failed : {0} with code : {1}"*/);
-    byte_5936405 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    this = (RuntimeProcessRunner_o *)sub_2213A60(&StringLiteral_11213/*"Process Failed : {0} with code : {1}"*/);
+    byte_596E55F = 1;
   }
   OnProcessFailed_k__BackingField = v7->fields._OnProcessFailed_k__BackingField;
   if ( !OnProcessFailed_k__BackingField )
-    sub_21FFECC(this, timedOut);
+    sub_2213CDC(this, timedOut);
   ((void (__fastcall *)(intptr_t, intptr_t, System_String_o *, _QWORD, const MethodInfo *))OnProcessFailed_k__BackingField->fields.invoke_impl)(
     OnProcessFailed_k__BackingField->fields.method_code,
     OnProcessFailed_k__BackingField->fields.method,
@@ -274,9 +274,9 @@ void RuntimeProcessRunner__ProcessFailed(
     *(_QWORD *)&errorCode,
     method);
   v13 = errorCode;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v13);
-  v12 = (Il2CppObject *)System_String__Format_75484576(
-                          (System_String_o *)StringLiteral_11193/*"Process Failed : {0} with code : {1}"*/,
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v13);
+  v12 = (Il2CppObject *)System_String__Format_75697880(
+                          (System_String_o *)StringLiteral_11213/*"Process Failed : {0} with code : {1}"*/,
                           (Il2CppObject *)errorMessage,
                           v9,
                           0);
@@ -294,21 +294,21 @@ void RuntimeProcessRunner__ProcessSuccesful(RuntimeProcessRunner_o *this, const 
   __int64 v5; // x2
 
   v2 = this;
-  if ( (byte_5936404 & 1) == 0 )
+  if ( (byte_596E55E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    this = (RuntimeProcessRunner_o *)sub_21FFC50(&StringLiteral_11191/*"Process Complete"*/);
-    byte_5936404 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    this = (RuntimeProcessRunner_o *)sub_2213A60(&StringLiteral_11211/*"Process Complete"*/);
+    byte_596E55E = 1;
   }
   OnProcessSuccesful_k__BackingField = v2->fields._OnProcessSuccesful_k__BackingField;
   if ( !OnProcessSuccesful_k__BackingField )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ((void (__fastcall *)(intptr_t, intptr_t))OnProcessSuccesful_k__BackingField->fields.invoke_impl)(
     OnProcessSuccesful_k__BackingField->fields.method_code,
     OnProcessSuccesful_k__BackingField->fields.method);
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v4, v5);
-  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_11191/*"Process Complete"*/, 0);
+  UnityEngine_Debug__Log((Il2CppObject *)StringLiteral_11211/*"Process Complete"*/, 0);
 }
 
 
@@ -348,7 +348,7 @@ void RuntimeProcessRunner__set_OnProcessFailed(
   bool v7; // w7
 
   this->fields._OnProcessFailed_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnProcessFailed_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -372,7 +372,7 @@ void RuntimeProcessRunner__set_OnProcessSuccesful(
   bool v7; // w7
 
   this->fields._OnProcessSuccesful_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -394,15 +394,15 @@ void RuntimeProcessRunner___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5936406 & 1) == 0 )
+  if ( (byte_596E560 & 1) == 0 )
   {
-    sub_21FFC50(&RuntimeProcessRunner___c_TypeInfo);
-    byte_5936406 = 1;
+    sub_2213A60(&RuntimeProcessRunner___c_TypeInfo);
+    byte_596E560 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(RuntimeProcessRunner___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(RuntimeProcessRunner___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RuntimeProcessRunner___c_TypeInfo->static_fields->__9 = (struct RuntimeProcessRunner___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)RuntimeProcessRunner___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

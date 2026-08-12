@@ -31,13 +31,13 @@ void CharaGraphServantCollectionListViewItem___ctor(
   bool v32; // w7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
 
-  if ( (byte_593793A & 1) == 0 )
+  if ( (byte_596FA9D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593793A = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596FA9D = 1;
   }
   CharaGraphListViewItemBase___ctor(
     (CharaGraphListViewItemBase_o *)this,
@@ -45,7 +45,7 @@ void CharaGraphServantCollectionListViewItem___ctor(
     listViewPattern,
     (const MethodInfo *)userSvtCollectionEntity);
   this->fields._UserServantCollectionEntity_k__BackingField = userSvtCollectionEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantCollectionEntity_k__BackingField,
     (int32_t)userSvtCollectionEntity,
     v9,
@@ -63,22 +63,22 @@ void CharaGraphServantCollectionListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16, v17);
   *(_QWORD *)&v33.fields.currentCryptoKey = v19;
   *(_QWORD *)&v33.fields.fakeValue = v20;
-  v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v33, 0);
+  v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v33, 0);
   v24 = DataManager_TypeInfo;
   this->fields._SvtId_k__BackingField = v21;
   if ( !*(&v24->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v24, v22, v23);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
 LABEL_10:
-    sub_21FFECC(Master_object, v16);
+    sub_2213CDC(Master_object, v16);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields._SvtId_k__BackingField,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields._ServantEntity_k__BackingField = (struct ServantEntity_o *)Entity;
   p_ServantEntity_k__BackingField = &this->fields._ServantEntity_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_ServantEntity_k__BackingField,
     (int32_t)Entity,
     v27,
@@ -103,21 +103,21 @@ int64_t CharaGraphServantCollectionListViewItem__get_ObjectId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
   v3 = this;
-  if ( (byte_5937937 & 1) == 0 )
+  if ( (byte_596FA9A & 1) == 0 )
   {
-    this = (CharaGraphServantCollectionListViewItem_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5937937 = 1;
+    this = (CharaGraphServantCollectionListViewItem_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596FA9A = 1;
   }
   UserServantCollectionEntity_k__BackingField = v3->fields._UserServantCollectionEntity_k__BackingField;
   if ( !UserServantCollectionEntity_k__BackingField )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v5 = *(_QWORD *)&UserServantCollectionEntity_k__BackingField->fields.svtId.fields.currentCryptoKey;
   v6 = *(_QWORD *)&UserServantCollectionEntity_k__BackingField->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method, v2);
   *(_QWORD *)&v8.fields.currentCryptoKey = v5;
   *(_QWORD *)&v8.fields.fakeValue = v6;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v8, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v8, 0);
 }
 
 
@@ -130,7 +130,7 @@ int32_t CharaGraphServantCollectionListViewItem__get_Rarity(
 
   ServantLimitEntity = CharaGraphServantCollectionListViewItem__get_ServantLimitEntity(this, method);
   if ( !ServantLimitEntity )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return ServantLimitEntity->fields.rarity;
 }
 
@@ -151,28 +151,28 @@ ServantClassEntity_o *CharaGraphServantCollectionListViewItem__get_ServantClassE
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5937938 & 1) == 0 )
+  if ( (byte_596FA9B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantClassMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    byte_5937938 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantClassMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    byte_596FA9B = 1;
   }
   servantClassEntity = this->fields.servantClassEntity;
   if ( !servantClassEntity )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantClassMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantClassMaster___);
     ServantEntity_k__BackingField = this->fields._ServantEntity_k__BackingField;
     if ( !ServantEntity_k__BackingField || !Master_object )
-      sub_21FFECC(Master_object, v6);
+      sub_2213CDC(Master_object, v6);
     servantClassEntity = (struct ServantClassEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                           ServantEntity_k__BackingField->fields.classId,
-                                                          (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+                                                          (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
     this->fields.servantClassEntity = servantClassEntity;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.servantClassEntity,
       (int32_t)servantClassEntity,
       v8,
@@ -210,28 +210,28 @@ ServantLimitEntity_o *CharaGraphServantCollectionListViewItem__get_ServantLimitE
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5937939 & 1) == 0 )
+  if ( (byte_596FA9C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5937939 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_596FA9C = 1;
   }
   servantLimitEntity = this->fields.servantLimitEntity;
   if ( !servantLimitEntity )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___);
     UserServantCollectionEntity_k__BackingField = this->fields._UserServantCollectionEntity_k__BackingField;
     if ( !UserServantCollectionEntity_k__BackingField || !Master_object )
-      sub_21FFECC(Master_object, v6);
+      sub_2213CDC(Master_object, v6);
     servantLimitEntity = ServantLimitMaster__GetEntity(
                            (ServantLimitMaster_o *)Master_object,
                            this->fields._SvtId_k__BackingField,
                            UserServantCollectionEntity_k__BackingField->fields.maxLimitCount,
                            0);
     this->fields.servantLimitEntity = servantLimitEntity;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.servantLimitEntity,
       (int32_t)servantLimitEntity,
       v8,
@@ -254,7 +254,7 @@ int32_t CharaGraphServantCollectionListViewItem__get_SortPriority(
 
   ServantClassEntity = CharaGraphServantCollectionListViewItem__get_ServantClassEntity(this, method);
   if ( !ServantClassEntity )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   return ServantClassEntity->fields.priority;
 }
 
@@ -287,7 +287,7 @@ void CharaGraphServantCollectionListViewItem__set_ServantEntity(
   bool v7; // w7
 
   this->fields._ServantEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ServantEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -320,7 +320,7 @@ void CharaGraphServantCollectionListViewItem__set_UserServantCollectionEntity(
   bool v7; // w7
 
   this->fields._UserServantCollectionEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantCollectionEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

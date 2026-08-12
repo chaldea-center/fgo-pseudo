@@ -1,31 +1,31 @@
 void UserEventPointEntity___ctor(UserEventPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593952C & 1) == 0 )
+  if ( (byte_59716EC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593952C = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716EC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserEventPointEntity___ctor_50004064(
+void UserEventPointEntity___ctor_50067440(
         UserEventPointEntity_o *this,
         int64_t userId,
         int32_t eventId,
         int32_t groupId,
         const MethodInfo *method)
 {
-  if ( (byte_593952D & 1) == 0 )
+  if ( (byte_59716ED & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593952D = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716ED = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.groupId = groupId;
@@ -39,16 +39,16 @@ System_String_o *UserEventPointEntity__CreatePK(
         int32_t groupId,
         const MethodInfo *method)
 {
-  if ( (byte_593952B & 1) == 0 )
+  if ( (byte_59716EB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_593952B = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_59716EB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            groupId,
-           (const MethodInfo_38215B8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_3854A80 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

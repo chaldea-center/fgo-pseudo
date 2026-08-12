@@ -22,10 +22,10 @@ int32_t SetLoginNotificationControl__GetLoginNotificationHour(float value, const
   double v10; // d1
   double iptr; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( !byte_593220B )
+  if ( !byte_596A30A )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593220B = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A30A = 1;
   }
   v5 = value * 23.0;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -71,10 +71,10 @@ void SetLoginNotificationControl__Init(SetLoginNotificationControl_o *this, cons
   UIProgressBar_o *hourSlider; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_5933485 & 1) == 0 )
+  if ( (byte_596B58D & 1) == 0 )
   {
-    sub_21FFC50(&OptionManager_TypeInfo);
-    byte_5933485 = 1;
+    sub_2213A60(&OptionManager_TypeInfo);
+    byte_596B58D = 1;
   }
   if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, method, v2);
@@ -83,7 +83,7 @@ void SetLoginNotificationControl__Init(SetLoginNotificationControl_o *this, cons
   hourSlider = (UIProgressBar_o *)this->fields.hourSlider;
   this->fields.hourValue = LoginNotificationHourSetting;
   if ( !hourSlider )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   hourSlider->fields.numberOfSteps = 24;
   UIProgressBar__set_value(hourSlider, LoginNotificationHourSetting, 0);
   SetLoginNotificationControl__RefreshDisplay(this, v7);
@@ -105,10 +105,10 @@ void SetLoginNotificationControl__OnClickButton(SetLoginNotificationControl_o *t
   System_Reflection_MethodBase_o *v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_5933488 & 1) == 0 )
+  if ( (byte_596B590 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SetLoginNotificationControl_OnClickButton__);
-    byte_5933488 = 1;
+    sub_2213A60(&Method_SetLoginNotificationControl_OnClickButton__);
+    byte_596B590 = 1;
   }
   methodPtr = this->klass->vtable._5_Reflection.methodPtr;
   v3 = this->klass->vtable._5_Reflection.method;
@@ -117,8 +117,8 @@ void SetLoginNotificationControl__OnClickButton(SetLoginNotificationControl_o *t
   v5 = Method_SetLoginNotificationControl_OnClickButton__;
   isFlag = this->fields.isFlag;
   if ( (*((_BYTE *)Method_SetLoginNotificationControl_OnClickButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_21FFC68(Method_SetLoginNotificationControl_OnClickButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+    v5 = (_QWORD *)sub_2213A78(Method_SetLoginNotificationControl_OnClickButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, !isFlag, 0, 0);
   SetLoginNotificationControl__RefreshDisplay(this, v8);
 }
@@ -129,16 +129,16 @@ void SetLoginNotificationControl__Reflection(SetLoginNotificationControl_o *this
   __int64 v2; // x2
   _BOOL4 isFlag; // w20
 
-  if ( (byte_5933486 & 1) == 0 )
+  if ( (byte_596B58E & 1) == 0 )
   {
-    sub_21FFC50(&OptionManager_TypeInfo);
-    byte_5933486 = 1;
+    sub_2213A60(&OptionManager_TypeInfo);
+    byte_596B58E = 1;
   }
   isFlag = this->fields.isFlag;
   if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, method, v2);
   OptionManager__SetLoginNotificationSetting(isFlag, 0);
-  OptionManager__SetLoginNotificationSetting_48362036(this->fields.hourValue, 0);
+  OptionManager__SetLoginNotificationSetting_48397920(this->fields.hourValue, 0);
 }
 
 
@@ -147,23 +147,23 @@ void SetLoginNotificationControl__RefreshDisplay(SetLoginNotificationControl_o *
   UIButton_o *switchButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_5933487 & 1) == 0 )
+  if ( (byte_596B58F & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18237/*"btn_on"*/);
-    sub_21FFC50(&StringLiteral_18236/*"btn_off"*/);
-    byte_5933487 = 1;
+    sub_2213A60(&StringLiteral_18275/*"btn_on"*/);
+    sub_2213A60(&StringLiteral_18274/*"btn_off"*/);
+    byte_596B58F = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
     goto LABEL_8;
-  v4 = &StringLiteral_18236/*"btn_off"*/;
+  v4 = &StringLiteral_18274/*"btn_off"*/;
   if ( this->fields.isFlag )
-    v4 = &StringLiteral_18237/*"btn_on"*/;
+    v4 = &StringLiteral_18275/*"btn_on"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v4, 0);
   switchButton = (UIButton_o *)this->fields.sliderMask;
   if ( !switchButton )
 LABEL_8:
-    sub_21FFECC(switchButton, method);
+    sub_2213CDC(switchButton, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchButton, !this->fields.isFlag, 0);
 }
 
@@ -180,20 +180,20 @@ void SetLoginNotificationControl__SliderValueChange(SetLoginNotificationControl_
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_5933489 & 1) == 0 )
+  if ( (byte_596B591 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SetLoginNotificationControl_SliderValueChange__);
-    byte_5933489 = 1;
+    sub_2213A60(&Method_SetLoginNotificationControl_SliderValueChange__);
+    byte_596B591 = 1;
   }
   hourSlider = (UIProgressBar_o *)this->fields.hourSlider;
   if ( !hourSlider )
     goto LABEL_16;
   hourValue = this->fields.hourValue;
   value = UIProgressBar__get_value(hourSlider, 0);
-  if ( !byte_5931944 )
+  if ( !byte_5969AE4 )
   {
-    sub_21FFC50(&UnityEngine_Mathf_TypeInfo);
-    byte_5931944 = 1;
+    sub_2213A60(&UnityEngine_Mathf_TypeInfo);
+    byte_5969AE4 = 1;
   }
   v6 = fabsf(hourValue);
   v7 = fabsf(value);
@@ -207,13 +207,13 @@ void SetLoginNotificationControl__SliderValueChange(SetLoginNotificationControl_
   {
     v10 = Method_SetLoginNotificationControl_SliderValueChange__;
     if ( (*((_BYTE *)Method_SetLoginNotificationControl_SliderValueChange__ + 83) & 2) != 0 )
-      v10 = (_QWORD *)sub_21FFC68(Method_SetLoginNotificationControl_SliderValueChange__);
-    v11 = (System_Reflection_MethodBase_o *)sub_21FFC34(v10, v10[4]);
+      v10 = (_QWORD *)sub_2213A78(Method_SetLoginNotificationControl_SliderValueChange__);
+    v11 = (System_Reflection_MethodBase_o *)sub_2213A44(v10, v10[4]);
     OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
   }
   hourSlider = (UIProgressBar_o *)this->fields.hourSlider;
   if ( !hourSlider )
 LABEL_16:
-    sub_21FFECC(hourSlider, method);
+    sub_2213CDC(hourSlider, method);
   this->fields.hourValue = UIProgressBar__get_value(hourSlider, 0);
 }

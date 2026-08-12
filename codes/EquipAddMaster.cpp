@@ -1,14 +1,14 @@
 void EquipAddMaster___ctor(EquipAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384F4 & 1) == 0 )
+  if ( (byte_59706A5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
-    byte_59384F4 = 1;
+    sub_2213A60(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
+    byte_59706A5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     413,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string___ctor__);
 }
 
 
@@ -21,14 +21,14 @@ EquipAddEntity_o *EquipAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59384F5 & 1) == 0 )
+  if ( (byte_59706A6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
-    byte_59384F5 = 1;
+    sub_2213A60(&Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
+    byte_59706A6 = 1;
   }
   PK = (Il2CppObject *)EquipAddEntity__CreatePK(id, equipId, *(const MethodInfo **)&equipId);
   return (EquipAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_3EE2044 *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
+                               (const MethodInfo_3F157EC *)Method_DataMasterBase_EquipAddMaster__EquipAddEntity__string__GetEntity__);
 }

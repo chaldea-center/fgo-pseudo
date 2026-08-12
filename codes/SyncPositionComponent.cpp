@@ -24,7 +24,7 @@ void SyncPositionComponent__SetTarget(
   const MethodInfo *v9; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetTransform,
     (int32_t)targetTransform,
     (System_String_o *)method,
@@ -47,10 +47,10 @@ void SyncPositionComponent__SyncPosition(SyncPositionComponent_o *this, const Me
   UnityEngine_Transform_o *v8; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5932807 & 1) == 0 )
+  if ( (byte_596A82D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932807 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A82D = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -60,7 +60,7 @@ void SyncPositionComponent__SyncPosition(SyncPositionComponent_o *this, const Me
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     v7 = this->fields.targetTransform;
     if ( !v7 || (v8 = transform, position = UnityEngine_Transform__get_position(v7, 0), !v8) )
-      sub_21FFECC(transform, v6);
+      sub_2213CDC(transform, v6);
     UnityEngine_Transform__set_position(v8, position, 0);
   }
 }

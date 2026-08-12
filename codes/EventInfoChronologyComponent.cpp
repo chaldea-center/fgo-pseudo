@@ -29,18 +29,18 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
   __int64 v9; // x1
   UnityEngine_Object_o *widget; // x21
   UnityEngine_BoxCollider_o *collider; // x21
-  unsigned int size; // s0
   int monitor_high; // w22
-  float v14; // s8
+  float v13; // s8
   UnityEngine_Object_o *spriteLineH; // x21
+  unsigned int size; // s0
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5938727 & 1) == 0 )
+  if ( (byte_5970A82 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938727 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A82 = 1;
   }
   objHistory = this->fields.objHistory;
   if ( !objHistory )
@@ -72,7 +72,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  objHistory,
-                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
             objHistory = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -95,7 +95,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
                   goto LABEL_21;
                 v4 = UnityEngine_GameObject__GetComponent_object_(
                        objHistory,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
               }
               objHistory = this->fields.objHistory;
               ++v5;
@@ -132,9 +132,9 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
       if ( !objHistory )
         goto LABEL_21;
       monitor_high = HIDWORD(v4[10].monitor);
-      v14 = *(float *)&size;
-      v16 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0);
-      v16.fields.x = v14;
+      v13 = *(float *)&size;
+      v16.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0).fields.z;
+      v16.fields.x = v13;
       v16.fields.y = (float)(monitor_high + 7);
       UnityEngine_BoxCollider__set_size(collider, v16, 0);
     }
@@ -154,7 +154,7 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
         }
       }
 LABEL_21:
-      sub_21FFECC(objHistory, method);
+      sub_2213CDC(objHistory, method);
     }
   }
 }
@@ -167,7 +167,7 @@ void EventInfoChronologyComponent__SetSprite(
         const MethodInfo *method)
 {
   if ( !src || !dest )
-    sub_21FFECC(this, src);
+    sub_2213CDC(this, src);
   UISprite__set_atlas(dest, src->fields.mAtlas, 0);
   UISprite__set_spriteName(dest, src->fields.mSpriteName, 0);
 }

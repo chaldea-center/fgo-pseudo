@@ -3,10 +3,10 @@ void ShopBuyItemListViewObject___ctor(ShopBuyItemListViewObject_o *this, const M
   __int64 v2; // x2
   ListViewObject_c *v4; // x0
 
-  if ( (byte_59346F0 & 1) == 0 )
+  if ( (byte_596C81F & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_59346F0 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596C81F = 1;
   }
   v4 = ListViewObject_TypeInfo;
   this->fields.itemDetailDialogOverwriteDepth = 0x80000000;
@@ -35,19 +35,19 @@ void ShopBuyItemListViewObject__Awake(ShopBuyItemListViewObject_o *this, const M
   bool v17; // w7
   struct ShopBuyItemListViewItemDraw_o *itemDraw; // x8
 
-  if ( (byte_59346D9 & 1) == 0 )
+  if ( (byte_596C808 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewItemDraw___);
-    byte_59346D9 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewItemDraw___);
+    byte_596C808 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewItemDraw___),
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewItemDraw___),
         this->fields.itemDraw = (struct ShopBuyItemListViewItemDraw_o *)Component_object,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
           (int32_t)Component_object,
           v6,
@@ -58,10 +58,10 @@ void ShopBuyItemListViewObject__Awake(ShopBuyItemListViewObject_o *this, const M
           v11),
         (itemDraw = this->fields.itemDraw) == 0) )
   {
-    sub_21FFECC(dispObject, v3);
+    sub_2213CDC(dispObject, v3);
   }
   itemDraw->fields.listViewObject = this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&itemDraw->fields.listViewObject,
     (int32_t)this,
     v12,
@@ -91,7 +91,7 @@ void ShopBuyItemListViewObject__CallOnMoveEnd(ShopBuyItemListViewObject_o *this,
   if ( onMoveEnd )
   {
     p_onMoveEnd->klass = 0;
-    sub_21FFBF4(p_onMoveEnd, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_onMoveEnd, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -105,10 +105,10 @@ void ShopBuyItemListViewObject__ChangeNextAnotherItemIcon(ShopBuyItemListViewObj
   struct ListViewManager_o *v6; // x1
   ShopBuyItemListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_59346EF & 1) == 0 )
+  if ( (byte_596C81E & 1) == 0 )
   {
-    sub_21FFC50(&ShopBuyItemListViewManager_TypeInfo);
-    byte_59346EF = 1;
+    sub_2213A60(&ShopBuyItemListViewManager_TypeInfo);
+    byte_596C81E = 1;
   }
   manager = this->fields.manager;
   if ( manager
@@ -126,7 +126,7 @@ void ShopBuyItemListViewObject__ChangeNextAnotherItemIcon(ShopBuyItemListViewObj
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   ShopBuyItemListViewItemDraw__ChangeNextAnotherItemIcon(itemDraw, (ShopBuyItemListViewManager_o *)v6, v2);
 }
 
@@ -140,21 +140,21 @@ UnityEngine_GameObject_o *ShopBuyItemListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_59346DD & 1) == 0 )
+  if ( (byte_596C80C & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___);
-    byte_59346DD = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___);
+    byte_596C80C = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___)) == 0) )
+                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___)) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
-  ShopBuyItemListViewObject__Init_41945496((ShopBuyItemListViewObject_o *)DragObject, 2, 0, 0.0, v6);
+  ShopBuyItemListViewObject__Init_41960560((ShopBuyItemListViewObject_o *)DragObject, 2, 0, 0.0, v6);
   return v5;
 }
 
@@ -169,38 +169,38 @@ void ShopBuyItemListViewObject__EndShowItemDetailDialog(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_59346EC & 1) == 0 )
+  if ( (byte_596C81B & 1) == 0 )
   {
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59346EC = 1;
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C81B = 1;
   }
   v3 = Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__;
   if ( (*((_BYTE *)Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   if ( CommonUI__get_IsEnableItemLinkInfoWindow((CommonUI_o *)Instance, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_13;
     if ( CommonUI__get_IsActiveItemLinkInfoWindow((CommonUI_o *)Instance, 0) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__CloseItemLinkInfoDetailWindow((CommonUI_o *)Instance, 0, 0);
         return;
       }
 LABEL_13:
-      sub_21FFECC(Instance, v6);
+      sub_2213CDC(Instance, v6);
     }
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0);
@@ -215,14 +215,14 @@ void ShopBuyItemListViewObject__EndShowServantEquipStatusDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_59346EB & 1) == 0 )
+  if ( (byte_596C81A & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59346EB = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C81A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -235,14 +235,14 @@ void ShopBuyItemListViewObject__EndShowServantStatusDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_59346EA & 1) == 0 )
+  if ( (byte_596C819 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_59346EA = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C819 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -252,70 +252,60 @@ void ShopBuyItemListViewObject__EventMove(ShopBuyItemListViewObject_o *this, con
   const MethodInfo *v2; // x2
   __int64 v4; // x1
   __int64 v5; // x2
-  float x; // s8
-  float y; // s9
-  ListViewObject_c *v8; // x0
-  float z; // s10
+  ListViewObject_c *v6; // x0
   UnityEngine_GameObject_o *dragObject; // x20
-  TweenPosition_o *v11; // x0
-  __int64 v12; // x1
-  TweenPosition_o *v13; // x20
+  TweenPosition_o *v8; // x0
+  __int64 v9; // x1
+  TweenPosition_o *v10; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v15; // x2
-  System_String_o *v16; // x3
-  int32_t v17; // w4
-  int32_t v18; // w5
-  bool v19; // w6
-  bool v20; // w7
-  int32_t v21; // w1
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  UnityEngine_Vector3_o TargetPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  int32_t v18; // w1
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  UnityEngine_Vector3_o TargetPosition; // 0:kr00_12.12
 
-  if ( (byte_59346E1 & 1) == 0 )
+  if ( (byte_596C810 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    sub_21FFC50(&StringLiteral_6487/*"EventMoveFinish"*/);
-    byte_59346E1 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    sub_2213A60(&StringLiteral_6499/*"EventMoveFinish"*/);
+    byte_596C810 = 1;
   }
   TargetPosition = ShopBuyItemListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
-  x = TargetPosition.fields.x;
-  y = TargetPosition.fields.y;
-  v8 = ListViewObject_TypeInfo;
-  z = TargetPosition.fields.z;
+  v6 = ListViewObject_TypeInfo;
   dragObject = this->fields.dragObject;
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v4, v5);
-    v8 = ListViewObject_TypeInfo;
+    v6 = ListViewObject_TypeInfo;
   }
-  v29.fields.x = x;
-  v29.fields.y = y;
-  v29.fields.z = z;
-  v11 = TweenPosition__Begin(dragObject, v8->static_fields->BASE_MOVE_TIME, v29, 0);
-  if ( !v11 )
-    sub_21FFECC(0, v12);
-  v13 = v11;
-  v11->fields.method = 3;
+  v8 = TweenPosition__Begin(dragObject, v6->static_fields->BASE_MOVE_TIME, TargetPosition, 0);
+  if ( !v8 )
+    sub_2213CDC(0, v9);
+  v10 = v8;
+  v8->fields.method = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v13->fields.eventReceiver = gameObject;
-  sub_21FFBF4(
-    (MissionNaviTransitionBoardItem_o *)&v13->fields.eventReceiver,
+  v10->fields.eventReceiver = gameObject;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v10->fields.eventReceiver,
     (int32_t)gameObject,
+    v12,
+    v13,
+    v14,
     v15,
     v16,
-    v17,
-    v18,
-    v19,
-    v20);
-  v21 = StringLiteral_6487/*"EventMoveFinish"*/;
-  v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6487/*"EventMoveFinish"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
+    v17);
+  v18 = StringLiteral_6499/*"EventMoveFinish"*/;
+  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6499/*"EventMoveFinish"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->fields.callWhenFinished, v18, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -332,10 +322,10 @@ void ShopBuyItemListViewObject__EventMoveFinish(ShopBuyItemListViewObject_o *thi
   bool v11; // w7
   const MethodInfo *v12; // x1
 
-  if ( (byte_59346E2 & 1) == 0 )
+  if ( (byte_596C811 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    byte_59346E2 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    byte_596C811 = 1;
   }
   if ( this->fields.initMode == 4 )
   {
@@ -348,7 +338,7 @@ void ShopBuyItemListViewObject__EventMoveFinish(ShopBuyItemListViewObject_o *thi
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, method, v2);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, 0, v6, v7, v8, v9, v10, v11);
   this->fields.isBusy = 0;
   this->fields.state = 1;
   ShopBuyItemListViewObject__CallOnMoveEnd(this, v12);
@@ -377,11 +367,11 @@ void ShopBuyItemListViewObject__EventStart(
   const MethodInfo *v19; // x2
   UnityEngine_Vector3_o StartPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_59346E0 & 1) == 0 )
+  if ( (byte_596C80F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___);
-    sub_21FFC50(&StringLiteral_6485/*"EventMove"*/);
-    byte_59346E0 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___);
+    sub_2213A60(&StringLiteral_6497/*"EventMove"*/);
+    byte_596C80F = 1;
   }
   this->fields.isBusy = 1;
   ShopBuyItemListViewObject__SetupDisp(this, *(const MethodInfo **)&initMode);
@@ -391,24 +381,24 @@ void ShopBuyItemListViewObject__EventStart(
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v7;
   p_dragObject = &this->fields.dragObject;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dragObject, (int32_t)v7, v9, v10, v11, v12, v13, v14);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___)) == 0
-    || (ShopBuyItemListViewObject__Init_41945496((ShopBuyItemListViewObject_o *)dragObject, 2, 0, 0.0, v17),
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___)) == 0
+    || (ShopBuyItemListViewObject__Init_41960560((ShopBuyItemListViewObject_o *)dragObject, 2, 0, 0.0, v17),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         StartPosition = ShopBuyItemListViewObject__GetStartPosition(this, initMode, v19),
         !transform) )
   {
-    sub_21FFECC(dragObject, v15);
+    sub_2213CDC(dragObject, v15);
   }
   UnityEngine_Transform__set_position(transform, StartPosition, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6485/*"EventMove"*/,
+    (System_String_o *)StringLiteral_6497/*"EventMove"*/,
     delay,
     0);
 }
@@ -419,7 +409,7 @@ int32_t ShopBuyItemListViewObject__GetInitMode(int32_t initMode, const MethodInf
   if ( (unsigned int)initMode > 5 )
     return 0;
   else
-    return dword_ED0274[initMode];
+    return dword_ED93A8[initMode];
 }
 
 
@@ -430,10 +420,10 @@ ShopBuyItemListViewItem_o *ShopBuyItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_59346DC & 1) == 0 )
+  if ( (byte_596C80B & 1) == 0 )
   {
-    sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    byte_59346DC = 1;
+    sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    byte_596C80B = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -454,18 +444,31 @@ UnityEngine_Vector3_o ShopBuyItemListViewObject__GetStartPosition(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v5; // x1
+  UnityEngine_Vector3_o v9; // 0:kr00_12.12
+  UnityEngine_Vector3_o position; // 0:kr14_12.12
+  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( initMode == 4 )
   {
     if ( transform )
-      return UnityEngine_Transform__TransformPoint_83283144(transform, 1000.0, 0.0, 0.0, 0);
+    {
+      v9 = UnityEngine_Transform__TransformPoint_83496448(transform, 1000.0, 0.0, 0.0, 0);
+      result.fields.x = v9.fields.x;
+      result.fields.y = v9.fields.y;
+      result.fields.z = v9.fields.z;
+      return result;
+    }
 LABEL_6:
-    sub_21FFECC(transform, v5);
+    sub_2213CDC(transform, v5);
   }
   if ( !transform )
     goto LABEL_6;
-  return UnityEngine_Transform__get_position(transform, 0);
+  position = UnityEngine_Transform__get_position(transform, 0);
+  result.fields.x = position.fields.x;
+  result.fields.y = position.fields.y;
+  result.fields.z = position.fields.z;
+  return result;
 }
 
 
@@ -477,7 +480,7 @@ int32_t ShopBuyItemListViewObject__GetState(
   if ( (unsigned int)initMode > 7 )
     return 0;
   else
-    return dword_ECFEC4[initMode];
+    return dword_ED8FF4[initMode];
 }
 
 
@@ -489,17 +492,15 @@ UnityEngine_Vector3_o ShopBuyItemListViewObject__GetTargetPosition(
 {
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Transform_o *v5; // x20
-  float v6; // s0 OVERLAPPED
-  float v7; // s1
   UnityEngine_Transform_o *parent; // x20
-  float v9; // s0
-  float v10; // s1
-  float v11; // s2
-  UnityEngine_Transform_o *v12; // x20
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Transform_o *v10; // x20
+  float z; // s2
+  UnityEngine_Vector3_o v12; // 0:kr14_12.12
+  UnityEngine_Vector3_o v13; // 0:kr34_12.12
+  UnityEngine_Vector3_o v14; // 0:kr54_12.12
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   dragObject = this->fields.dragObject;
@@ -519,35 +520,41 @@ UnityEngine_Vector3_o ShopBuyItemListViewObject__GetTargetPosition(
           position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
           if ( parent )
           {
-            v14 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-            v6 = v9 + 1000.0;
-            v7 = v10 + 0.0;
+            v13 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+            z = v13.fields.z;
+            result.fields.x = v13.fields.x + 1000.0;
+            result.fields.y = v13.fields.y + 0.0;
             goto LABEL_13;
           }
         }
       }
     }
 LABEL_19:
-    sub_21FFECC(dragObject, *(_QWORD *)&initMode);
+    sub_2213CDC(dragObject, *(_QWORD *)&initMode);
   }
-  if ( initMode != 5 )
+  if ( initMode == 5 )
   {
     if ( dragObject )
     {
       dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
       if ( dragObject )
       {
-        v12 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+        v5 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
         dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)this,
                                                    0);
         if ( dragObject )
         {
-          v16 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
-          if ( v12 )
+          v15 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+          if ( v5 )
           {
-            *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__InverseTransformPoint(v12, v16, 0);
-            goto LABEL_20;
+            v12 = UnityEngine_Transform__InverseTransformPoint(v5, v15, 0);
+            z = v12.fields.z;
+            result.fields.x = v12.fields.x + 0.0;
+            result.fields.y = v12.fields.y + 1000.0;
+LABEL_13:
+            result.fields.z = z + 0.0;
+            return result;
           }
         }
       }
@@ -559,22 +566,17 @@ LABEL_19:
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
   if ( !dragObject )
     goto LABEL_19;
-  v5 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+  v10 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !dragObject )
     goto LABEL_19;
-  v13 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
-  if ( !v5 )
+  v17 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !v10 )
     goto LABEL_19;
-  v14 = UnityEngine_Transform__InverseTransformPoint(v5, v13, 0);
-  v6 = v14.fields.x + 0.0;
-  v7 = v14.fields.y + 1000.0;
-LABEL_13:
-  v11 = v14.fields.z + 0.0;
-LABEL_20:
-  result.fields.z = v11;
-  result.fields.y = v7;
-  result.fields.x = v6;
+  v14 = UnityEngine_Transform__InverseTransformPoint(v10, v17, 0);
+  result.fields.x = v14.fields.x;
+  result.fields.y = v14.fields.y;
+  result.fields.z = v14.fields.z;
   return result;
 }
 
@@ -583,11 +585,11 @@ void ShopBuyItemListViewObject__Init(ShopBuyItemListViewObject_o *this, int32_t 
 {
   const MethodInfo *v3; // x3
 
-  ShopBuyItemListViewObject__Init_41945496(this, initMode, 0, 0.0, v3);
+  ShopBuyItemListViewObject__Init_41960560(this, initMode, 0, 0.0, v3);
 }
 
 
-void ShopBuyItemListViewObject__Init_41945496(
+void ShopBuyItemListViewObject__Init_41960560(
         ShopBuyItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *onMoveEnd,
@@ -617,11 +619,11 @@ void ShopBuyItemListViewObject__Init_41945496(
   const MethodInfo *v29; // x1
   const MethodInfo *v30; // x2
 
-  if ( (byte_59346DE & 1) == 0 )
+  if ( (byte_596C80D & 1) == 0 )
   {
-    sub_21FFC50(&ShopBuyItemListViewItemDraw_TypeInfo);
-    sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    byte_59346DE = 1;
+    sub_2213A60(&ShopBuyItemListViewItemDraw_TypeInfo);
+    sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    byte_596C80D = 1;
   }
   linkItem = this->fields.linkItem;
   this->fields.initMode = initMode;
@@ -647,11 +649,11 @@ void ShopBuyItemListViewObject__Init_41945496(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v16);
+    sub_2213CDC(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.onMoveEnd = onMoveEnd;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onMoveEnd,
     (int32_t)onMoveEnd,
     v17,
@@ -707,17 +709,17 @@ void ShopBuyItemListViewObject__OnClickReturnItemButton(ShopBuyItemListViewObjec
   System_String_o *v16; // x22
   System_String_o *v17; // x23
 
-  if ( (byte_59346E4 & 1) == 0 )
+  if ( (byte_596C813 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_OnClickReturnItemButton__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_11613/*"RETURN_ITEM_LIST_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_11612/*"RETURN_ITEM_LIST_DIALOG_SUB_TITLE"*/);
-    sub_21FFC50(&StringLiteral_11610/*"RETURN_ITEM_LIST_COUNTER_TITLE1"*/);
-    sub_21FFC50(&StringLiteral_11611/*"RETURN_ITEM_LIST_COUNTER_TITLE2"*/);
-    byte_59346E4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_OnClickReturnItemButton__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_11633/*"RETURN_ITEM_LIST_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_11632/*"RETURN_ITEM_LIST_DIALOG_SUB_TITLE"*/);
+    sub_2213A60(&StringLiteral_11630/*"RETURN_ITEM_LIST_COUNTER_TITLE1"*/);
+    sub_2213A60(&StringLiteral_11631/*"RETURN_ITEM_LIST_COUNTER_TITLE2"*/);
+    byte_596C813 = 1;
   }
   p_klass = &this->fields.linkItem->klass;
   if ( p_klass
@@ -728,10 +730,10 @@ void ShopBuyItemListViewObject__OnClickReturnItemButton(ShopBuyItemListViewObjec
   {
     v5 = Method_ShopBuyItemListViewObject_OnClickReturnItemButton__;
     if ( (*((_BYTE *)Method_ShopBuyItemListViewObject_OnClickReturnItemButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_ShopBuyItemListViewObject_OnClickReturnItemButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_ShopBuyItemListViewObject_OnClickReturnItemButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
-    Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v9 = (ShopEntity_o *)p_klass[15];
     if ( !v9 )
       goto LABEL_15;
@@ -740,13 +742,13 @@ void ShopBuyItemListViewObject__OnClickReturnItemButton(ShopBuyItemListViewObjec
     ClassBoardReleaseItemList = ShopRootComponent__GetClassBoardReleaseItemList(TargetId, 0);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11613/*"RETURN_ITEM_LIST_DIALOG_TITLE"*/, 0);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11612/*"RETURN_ITEM_LIST_DIALOG_SUB_TITLE"*/, 0);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11610/*"RETURN_ITEM_LIST_COUNTER_TITLE1"*/, 0);
-    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_11611/*"RETURN_ITEM_LIST_COUNTER_TITLE2"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11633/*"RETURN_ITEM_LIST_DIALOG_TITLE"*/, 0);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11632/*"RETURN_ITEM_LIST_DIALOG_SUB_TITLE"*/, 0);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11630/*"RETURN_ITEM_LIST_COUNTER_TITLE1"*/, 0);
+    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_11631/*"RETURN_ITEM_LIST_COUNTER_TITLE2"*/, 0);
     if ( !v10 )
 LABEL_15:
-      sub_21FFECC(Instance, v8);
+      sub_2213CDC(Instance, v8);
     CommonUI__OpenItemIconListViewDialog(v10, ClassBoardReleaseItemList, v15, v16, v17, Instance, 0, 0, 0);
   }
 }
@@ -768,11 +770,11 @@ void ShopBuyItemListViewObject__OnDestroy(ShopBuyItemListViewObject_o *this, con
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59346DA & 1) == 0 )
+  if ( (byte_596C809 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59346DA = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C809 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -786,7 +788,7 @@ void ShopBuyItemListViewObject__OnDestroy(ShopBuyItemListViewObject_o *this, con
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -812,10 +814,10 @@ void ShopBuyItemListViewObject__OnInformationButton(ShopBuyItemListViewObject_o 
   System_String_o *message; // [xsp+18h] [xbp-18h] BYREF
 
   v3 = this;
-  if ( (byte_59346E3 & 1) == 0 )
+  if ( (byte_596C812 & 1) == 0 )
   {
-    this = (ShopBuyItemListViewObject_o *)sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    byte_59346E3 = 1;
+    this = (ShopBuyItemListViewObject_o *)sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    byte_596C812 = 1;
   }
   linkItem = v3->fields.linkItem;
   message = 0;
@@ -887,7 +889,7 @@ LABEL_21:
   }
   if ( !this )
 LABEL_29:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
 LABEL_19:
   this = (ShopBuyItemListViewObject_o *)ShopEntity__get_TargetId((ShopEntity_o *)this, 0);
   v11 = *((_QWORD *)linkItem + 15);
@@ -920,17 +922,17 @@ void ShopBuyItemListViewObject__PlayShowInfomationSound(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_59346E9 & 1) == 0 )
+  if ( (byte_596C818 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_PlayShowInfomationSound__);
-    byte_59346E9 = 1;
+    sub_2213A60(&Method_ShopBuyItemListViewObject_PlayShowInfomationSound__);
+    byte_596C818 = 1;
   }
   if ( (seKind & 0x80000000) == 0 )
   {
     v4 = Method_ShopBuyItemListViewObject_PlayShowInfomationSound__;
     if ( (*((_BYTE *)Method_ShopBuyItemListViewObject_PlayShowInfomationSound__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_21FFC68(Method_ShopBuyItemListViewObject_PlayShowInfomationSound__);
-    v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, v4[4]);
+      v4 = (_QWORD *)sub_2213A78(Method_ShopBuyItemListViewObject_PlayShowInfomationSound__);
+    v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, seKind, 0, 0);
   }
 }
@@ -943,7 +945,7 @@ void ShopBuyItemListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -959,7 +961,7 @@ void ShopBuyItemListViewObject__SetShopBuyItem(
   bool v7; // w7
 
   this->fields.shopBuyItem = item;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.shopBuyItem,
     (int32_t)item,
     (System_String_o *)method,
@@ -983,11 +985,11 @@ void ShopBuyItemListViewObject__SetupDisp(ShopBuyItemListViewObject_o *this, con
   const MethodInfo *v10; // x3
   ShopBuyItemListViewItemDraw_o *v11; // x0
 
-  if ( (byte_59346DF & 1) == 0 )
+  if ( (byte_596C80E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    byte_59346DF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    byte_596C80E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -1011,7 +1013,7 @@ LABEL_8:
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     ShopBuyItemListViewItemDraw__SetItem(v11, (ShopBuyItemListViewItem_o *)linkItem, this->fields.dispMode, v10);
   }
 }
@@ -1029,34 +1031,34 @@ int32_t ShopBuyItemListViewObject__ShowCommandCodeInfomation(
   ServantStatusDialog_EndDelegate_o *v9; // x22
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_59346E7 & 1) == 0 )
+  if ( (byte_596C816 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_21FFC50(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__TryGetEntity__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowServantEquipStatusDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_59346E7 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_2213A60(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__TryGetEntity__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowServantEquipStatusDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C816 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   if ( !Instance )
     goto LABEL_9;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          commandCodeId,
-         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__TryGetEntity__) )
+         (const MethodInfo_3F10B80 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__TryGetEntity__) )
   {
-    v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v8 = entity;
-    v9 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v9 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v9,
       (Il2CppObject *)this,
@@ -1064,11 +1066,11 @@ int32_t ShopBuyItemListViewObject__ShowCommandCodeInfomation(
       0);
     if ( v7 )
     {
-      CommonUI__OpenServantEquipStatusDialog_37307760((CommonUI_o *)v7, 25, (CommandCodeEntity_o *)v8, 0, v9, 0, 0);
+      CommonUI__OpenServantEquipStatusDialog_37389176((CommonUI_o *)v7, 25, (CommandCodeEntity_o *)v8, 0, v9, 0, 0);
       return 0;
     }
 LABEL_9:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   return -1;
 }
@@ -1094,41 +1096,41 @@ int32_t ShopBuyItemListViewObject__ShowItemInfomation(
   int32_t v18; // w3
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59346E6 & 1) == 0 )
+  if ( (byte_596C815 & 1) == 0 )
   {
-    sub_21FFC50(&ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_59346E6 = 1;
+    sub_2213A60(&ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C815 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_20;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           itemId,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     return -1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   if ( !CommonUI__get_IsEnableItemLinkInfoWindow((CommonUI_o *)Instance, 0) )
   {
     itemDetailDialogOverwriteDepth = this->fields.itemDetailDialogOverwriteDepth;
-    v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v13 = entity;
-    v14 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_21FFEBC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v14 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_2213CCC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
       v14,
       (Il2CppObject *)this,
@@ -1155,11 +1157,11 @@ int32_t ShopBuyItemListViewObject__ShowItemInfomation(
     CommonUI__OpenItemDetailDialog(v15, v16, v17, v18, 0);
     return 0;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (UserItemData = CommonUI__CreateUserItemData((CommonUI_o *)Instance, (ItemEntity_o *)entity, 0),
-        v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v9 = (ItemLinkInfoWindowComponent_CallbackFunc_o *)sub_21FFEBC(ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo),
+        v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v9 = (ItemLinkInfoWindowComponent_CallbackFunc_o *)sub_2213CCC(ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo),
         ItemLinkInfoWindowComponent_CallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -1168,9 +1170,9 @@ int32_t ShopBuyItemListViewObject__ShowItemInfomation(
         !v8) )
   {
 LABEL_20:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
-  CommonUI__OpenItemLinkInfoDetailWindow_37398352((CommonUI_o *)v8, UserItemData, v9, 0);
+  CommonUI__OpenItemLinkInfoDetailWindow_37479768((CommonUI_o *)v8, UserItemData, v9, 0);
   return 0;
 }
 
@@ -1191,13 +1193,13 @@ int32_t ShopBuyItemListViewObject__ShowOtherInfomation(
   ItemDetailInfoComponent_CallbackFunc_o *v13; // x23
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_59346E8 & 1) == 0 )
+  if ( (byte_596C817 & 1) == 0 )
   {
-    sub_21FFC50(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (ShopBuyItemListViewObject_o *)sub_21FFC50(&StringLiteral_9648/*"NONE"*/);
-    byte_59346E8 = 1;
+    sub_2213A60(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (ShopBuyItemListViewObject_o *)sub_2213A60(&StringLiteral_9661/*"NONE"*/);
+    byte_596C817 = 1;
   }
   if ( !item )
     goto LABEL_12;
@@ -1210,15 +1212,15 @@ int32_t ShopBuyItemListViewObject__ShowOtherInfomation(
   v6 = item->fields._Shop_k__BackingField;
   if ( !v6 )
     goto LABEL_12;
-  if ( System_String__op_Equality(v6->fields.infoMessage, (System_String_o *)StringLiteral_9648/*"NONE"*/, 0) )
+  if ( System_String__op_Equality(v6->fields.infoMessage, (System_String_o *)StringLiteral_9661/*"NONE"*/, 0) )
     return -1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   this = (ShopBuyItemListViewObject_o *)ShopBuyItemListViewItem__get_NameText(item, v9);
   v10 = item->fields._Shop_k__BackingField;
   if ( !v10
     || (v11 = this,
         infoMessage = v10->fields.infoMessage,
-        v13 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_21FFEBC(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
+        v13 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_2213CCC(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v13,
           v4,
@@ -1227,9 +1229,9 @@ int32_t ShopBuyItemListViewObject__ShowOtherInfomation(
         !Instance) )
   {
 LABEL_12:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
-  CommonUI__OpenItemDetailDialog_37368776((CommonUI_o *)Instance, (System_String_o *)v11, infoMessage, v13, 0);
+  CommonUI__OpenItemDetailDialog_37450192((CommonUI_o *)Instance, (System_String_o *)v11, infoMessage, v13, 0);
   return 0;
 }
 
@@ -1253,34 +1255,34 @@ int32_t ShopBuyItemListViewObject__ShowServantInfomation(
   ServantStatusDialog_EndDelegate_o *v19; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59346E5 & 1) == 0 )
+  if ( (byte_596C814 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&EquipTargetInfo_TypeInfo);
-    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowServantEquipStatusDialog__);
-    sub_21FFC50(&Method_ShopBuyItemListViewObject_EndShowServantStatusDialog__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_59346E5 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&EquipTargetInfo_TypeInfo);
+    sub_2213A60(&ServantLeaderInfo_TypeInfo);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowServantEquipStatusDialog__);
+    sub_2213A60(&Method_ShopBuyItemListViewObject_EndShowServantStatusDialog__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_596C814 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_25;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
           servantId,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return -1;
   Instance = entity;
   if ( !entity )
@@ -1303,10 +1305,10 @@ int32_t ShopBuyItemListViewObject__ShowServantInfomation(
   if ( ServantEntity__get_IsServantMaterialTd((ServantEntity_o *)entity, 0) )
   {
 LABEL_14:
-    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v12 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
-    ServantLeaderInfo___ctor_50518380(v12, servantId, 0, 1, 0);
-    v13 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = (ServantLeaderInfo_o *)sub_2213CCC(ServantLeaderInfo_TypeInfo);
+    ServantLeaderInfo___ctor_50583572(v12, servantId, 0, 1, 0);
+    v13 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v13,
       (Il2CppObject *)this,
@@ -1314,7 +1316,7 @@ LABEL_14:
       0);
     if ( v11 )
     {
-      CommonUI__OpenServantStatusDialog_37304188((CommonUI_o *)v11, 7, v12, v13, 0);
+      CommonUI__OpenServantStatusDialog_37385604((CommonUI_o *)v11, 7, v12, v13, 0);
       return 0;
     }
     goto LABEL_25;
@@ -1327,10 +1329,10 @@ LABEL_14:
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v15, v16);
     UICamera__set_selectedObject(0, 0);
-    v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v18 = (EquipTargetInfo_o *)sub_21FFEBC(EquipTargetInfo_TypeInfo);
-    EquipTargetInfo___ctor_48662504(v18, servantId, limitCount, level, 0, 0);
-    v19 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v18 = (EquipTargetInfo_o *)sub_2213CCC(EquipTargetInfo_TypeInfo);
+    EquipTargetInfo___ctor_48715996(v18, servantId, limitCount, level, 0, 0);
+    v19 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v19,
       (Il2CppObject *)this,
@@ -1338,11 +1340,11 @@ LABEL_14:
       0);
     if ( v17 )
     {
-      CommonUI__OpenServantEquipStatusDialog_37307296((CommonUI_o *)v17, 7, v18, v19, 0, 0);
+      CommonUI__OpenServantEquipStatusDialog_37388712((CommonUI_o *)v17, 7, v18, v19, 0, 0);
       return 0;
     }
 LABEL_25:
-    sub_21FFECC(Instance, v10);
+    sub_2213CDC(Instance, v10);
   }
   return 2;
 }
@@ -1360,11 +1362,11 @@ System_String_o *ShopBuyItemListViewObject__ToString(ShopBuyItemListViewObject_o
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_59346EE & 1) == 0 )
+  if ( (byte_596C81D & 1) == 0 )
   {
-    sub_21FFC50(&ShopBuyItemListViewItemDraw_DispMode_TypeInfo);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    byte_59346EE = 1;
+    sub_2213A60(&ShopBuyItemListViewItemDraw_DispMode_TypeInfo);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    byte_596C81D = 1;
   }
   dispMode = this->fields.dispMode;
   v12 = 0.0;
@@ -1377,8 +1379,8 @@ System_String_o *ShopBuyItemListViewObject__ToString(ShopBuyItemListViewObject_o
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_240362C(&v11, 0, 0, 0);
-  return System_String__Concat_75481624(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
+  v7 = (System_String_o *)sub_2402C74(&v11, 0, 0, 0);
+  return System_String__Concat_75694928(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
 }
 
 
@@ -1390,10 +1392,10 @@ void ShopBuyItemListViewObject__Update(ShopBuyItemListViewObject_o *this, const 
   struct ListViewManager_o *v6; // x2
   ShopBuyItemListViewItemDraw_o *itemDraw; // x0
 
-  if ( (byte_59346DB & 1) == 0 )
+  if ( (byte_596C80A & 1) == 0 )
   {
-    sub_21FFC50(&ShopBuyItemListViewManager_TypeInfo);
-    byte_59346DB = 1;
+    sub_2213A60(&ShopBuyItemListViewManager_TypeInfo);
+    byte_596C80A = 1;
   }
   manager = this->fields.manager;
   if ( manager
@@ -1411,7 +1413,7 @@ void ShopBuyItemListViewObject__Update(ShopBuyItemListViewObject_o *this, const 
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ShopBuyItemListViewItemDraw__UpdateListViewDraw(
     itemDraw,
     this->fields.dispMode,
@@ -1432,10 +1434,10 @@ void ShopBuyItemListViewObject__UpdateRemaingTime(ShopBuyItemListViewObject_o *t
   ShopBuyItemListViewObject_o *v9; // x3
 
   v2 = this;
-  if ( (byte_59346ED & 1) == 0 )
+  if ( (byte_596C81C & 1) == 0 )
   {
-    this = (ShopBuyItemListViewObject_o *)sub_21FFC50(&ShopBuyItemListViewItem_TypeInfo);
-    byte_59346ED = 1;
+    this = (ShopBuyItemListViewObject_o *)sub_2213A60(&ShopBuyItemListViewItem_TypeInfo);
+    byte_596C81C = 1;
   }
   linkItem = (ShopBuyItemListViewItem_o *)v2->fields.linkItem;
   if ( linkItem )
@@ -1472,7 +1474,7 @@ LABEL_8:
           goto LABEL_8;
       }
     }
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -1494,10 +1496,10 @@ void ShopBuyItemListViewObject__add_onMoveEnd(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_59346D7 & 1) == 0 )
+  if ( (byte_596C806 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_59346D7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C806 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -1510,13 +1512,13 @@ void ShopBuyItemListViewObject__add_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_onMoveEnd, v8, v6);
+    v11 = sub_224B48C(p_onMoveEnd, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ShopBuyItemListViewObject__remove_onMoveEnd(v13, v14, v15);
 }
 
@@ -1537,10 +1539,10 @@ void ShopBuyItemListViewObject__remove_onMoveEnd(
   ShopBuyItemListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_59346D8 & 1) == 0 )
+  if ( (byte_596C807 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_59346D8 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596C807 = 1;
   }
   onMoveEnd = this->fields.onMoveEnd;
   p_onMoveEnd = &this->fields.onMoveEnd;
@@ -1553,12 +1555,12 @@ void ShopBuyItemListViewObject__remove_onMoveEnd(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_onMoveEnd, v8, v6);
+    v11 = sub_224B48C(p_onMoveEnd, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   ShopBuyItemListViewObject__Awake(v13, v14);
 }

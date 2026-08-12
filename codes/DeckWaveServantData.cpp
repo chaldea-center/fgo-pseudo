@@ -10,11 +10,11 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5938193 & 1) == 0 )
+  if ( (byte_5970339 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    byte_5938193 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    byte_5970339 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v4 = BalanceConfig_TypeInfo;
@@ -23,7 +23,7 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v3);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct System_Int32_array *)sub_21FFD10(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
+  v5 = (struct System_Int32_array *)sub_2213B20(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
   this->fields.uniqueIds = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.uniqueIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.uniqueIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }

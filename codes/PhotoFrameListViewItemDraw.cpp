@@ -13,7 +13,7 @@ void PhotoFrameListViewItemDraw__SetAtlas(
 
   frameSampleSprite = this->fields.frameSampleSprite;
   if ( !frameSampleSprite )
-    sub_21FFECC(0, atlas);
+    sub_2213CDC(0, atlas);
   UISprite__set_atlas(frameSampleSprite, atlas, 0);
 }
 
@@ -27,22 +27,22 @@ void PhotoFrameListViewItemDraw__SetButton(
   __int64 v5; // x2
   UILabel_o *frameNameLabel; // x21
   int v7; // w8
-  struct UISprite_o *v8; // x11
-  float *p_mTrans; // x8
-  float *p_mUpdateFrame; // x9
-  float *p_mChildren; // x10
+  float *v8; // x11
+  float *v9; // x8
+  float *v10; // x9
+  float *v11; // x10
   float *v12; // x11
-  struct UISprite_o *frameSetButtonSprite; // x11
+  float *v13; // x11
   __int64 *v14; // x8
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_5933ADD & 1) == 0 )
+  if ( (byte_596BBF6 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18171/*"btn_bg_20"*/);
-    this = (PhotoFrameListViewItemDraw_o *)sub_21FFC50(&StringLiteral_18173/*"btn_bg_21"*/);
-    byte_5933ADD = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18209/*"btn_bg_20"*/);
+    this = (PhotoFrameListViewItemDraw_o *)sub_2213A60(&StringLiteral_18211/*"btn_bg_21"*/);
+    byte_596BBF6 = 1;
   }
   if ( !item )
     goto LABEL_25;
@@ -56,10 +56,10 @@ void PhotoFrameListViewItemDraw__SetButton(
   {
     if ( !v7 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
-    if ( !byte_5932AD3 )
+    if ( !byte_596ABD5 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      byte_5932AD3 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      byte_596ABD5 = 1;
     }
     this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -67,22 +67,22 @@ void PhotoFrameListViewItemDraw__SetButton(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
       this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
     }
-    frameSetButtonSprite = this[2].fields.frameSetButtonSprite;
-    p_mTrans = (float *)&frameSetButtonSprite->fields.mTrans;
-    p_mUpdateFrame = (float *)&frameSetButtonSprite->fields.mTrans + 1;
-    p_mChildren = (float *)&frameSetButtonSprite->fields.mChildren;
-    v12 = (float *)&frameSetButtonSprite->fields.mChildren + 1;
+    v13 = (float *)*((_QWORD *)this + 23);
+    v9 = v13 + 20;
+    v10 = v13 + 21;
+    v11 = v13 + 22;
+    v12 = v13 + 23;
     if ( frameNameLabel )
       goto LABEL_21;
 LABEL_25:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   if ( !v7 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
-  if ( !byte_5932AD4 )
+  if ( !byte_596ABD6 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5932AD4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596ABD6 = 1;
   }
   this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -90,25 +90,25 @@ LABEL_25:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
     this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
   }
-  v8 = this[2].fields.frameSetButtonSprite;
-  p_mTrans = (float *)&v8->fields.mChanged;
-  p_mUpdateFrame = (float *)&v8->fields.mUpdateFrame;
-  p_mChildren = (float *)&v8->fields.mAnchorsCached;
-  v12 = (float *)(&v8->fields.mAnchorsCached + 4);
+  v8 = (float *)*((_QWORD *)this + 23);
+  v9 = v8 + 24;
+  v10 = v8 + 25;
+  v11 = v8 + 26;
+  v12 = v8 + 27;
   if ( !frameNameLabel )
     goto LABEL_25;
 LABEL_21:
   v15.fields.a = *v12;
-  v15.fields.b = *p_mChildren;
-  v15.fields.g = *p_mUpdateFrame;
-  v15.fields.r = *p_mTrans;
+  v15.fields.b = *v11;
+  v15.fields.g = *v10;
+  v15.fields.r = *v9;
   UILabel__set_effectColor(frameNameLabel, v15, 0);
   this = (PhotoFrameListViewItemDraw_o *)v4->fields.frameSetButtonSprite;
   if ( !this )
     goto LABEL_25;
-  v14 = &StringLiteral_18171/*"btn_bg_20"*/;
+  v14 = &StringLiteral_18209/*"btn_bg_20"*/;
   if ( item->fields._IsSelected_k__BackingField )
-    v14 = &StringLiteral_18173/*"btn_bg_21"*/;
+    v14 = &StringLiteral_18211/*"btn_bg_21"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v14, 0);
 }
 
@@ -125,11 +125,11 @@ void PhotoFrameListViewItemDraw__SetInput(
   const MethodInfo *v9; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_5933ADC & 1) == 0 )
+  if ( (byte_596BBF5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933ADC = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BBF5 = 1;
   }
   if ( item )
   {
@@ -142,11 +142,11 @@ void PhotoFrameListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.button) == 0) )
       {
-        sub_21FFECC(Component_object, v8);
+        sub_2213CDC(Component_object, v8);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,
@@ -171,10 +171,10 @@ void PhotoFrameListViewItemDraw__SetItem(
   UnityEngine_Object_o *Atlas_k__BackingField; // x21
   const MethodInfo *v11; // x2
 
-  if ( (byte_5933ADB & 1) == 0 )
+  if ( (byte_596BBF4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933ADB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BBF4 = 1;
   }
   if ( item && mode )
   {
@@ -185,7 +185,7 @@ void PhotoFrameListViewItemDraw__SetItem(
       frameSampleSprite = this->fields.frameSampleSprite;
       if ( frameSampleSprite )
       {
-        UISprite__set_spriteName(frameSampleSprite, **(System_String_o ***)(qword_594C0B8 + 184), 0);
+        UISprite__set_spriteName(frameSampleSprite, **(System_String_o ***)(qword_5984390 + 184), 0);
         Atlas_k__BackingField = (UnityEngine_Object_o *)item->fields._Atlas_k__BackingField;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
@@ -204,6 +204,6 @@ LABEL_13:
         }
       }
     }
-    sub_21FFECC(frameSampleSprite, item);
+    sub_2213CDC(frameSampleSprite, item);
   }
 }

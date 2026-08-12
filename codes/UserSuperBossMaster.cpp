@@ -1,14 +1,14 @@
 void UserSuperBossMaster___ctor(UserSuperBossMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59397B0 & 1) == 0 )
+  if ( (byte_5971971 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string___ctor__);
-    byte_59397B0 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string___ctor__);
+    byte_5971971 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     177,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserSuperBossEntity_o *UserSuperBossMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59397AE & 1) == 0 )
+  if ( (byte_597196F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__GetEntity__);
-    byte_59397AE = 1;
+    sub_2213A60(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__GetEntity__);
+    byte_597196F = 1;
   }
   PK = (Il2CppObject *)UserSuperBossEntity__CreatePK(userId, eventId, superBossId, *(const MethodInfo **)&superBossId);
   return (UserSuperBossEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__GetEntity__);
+                                    (const MethodInfo_3F157EC *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool UserSuperBossMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59397AF & 1) == 0 )
+  if ( (byte_5971970 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__TryGetEntity__);
-    byte_59397AF = 1;
+    sub_2213A60(&Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__TryGetEntity__);
+    byte_5971970 = 1;
   }
   PK = (Il2CppObject *)UserSuperBossEntity__CreatePK(userId, eventId, superBossId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_UserSuperBossMaster__UserSuperBossEntity__string__TryGetEntity__);
 }
 
 
@@ -91,23 +91,23 @@ int64_t UserSuperBossMaster__getTotalDamagePoint(
   int64_t UserSuperBossDamagePointMax; // x20
   System_Collections_Generic_IEnumerator_T__o *v29; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_59397B1 & 1) == 0 )
+  if ( (byte_5971972 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_UserSuperBossEntity__GetEnumerator__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_UserSuperBossEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59397B1 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_UserSuperBossEntity__GetEnumerator__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_UserSuperBossEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5971972 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v5 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -116,14 +116,14 @@ int64_t UserSuperBossMaster__getTotalDamagePoint(
     v5 = NetworkManager_TypeInfo;
   }
   if ( !this->fields.list )
-    sub_21FFECC(v5, *(_QWORD *)&eventId);
+    sub_2213CDC(v5, *(_QWORD *)&eventId);
   userIdNumber = v5->static_fields->userIdNumber;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_UserSuperBossEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_UserSuperBossEntity__GetEnumerator__);
   v29 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v8);
+    sub_2213CDC(Enumerator, v8);
   v9 = Enumerator;
   v10 = 0;
   while ( 1 )
@@ -145,7 +145,7 @@ int64_t UserSuperBossMaster__getTotalDamagePoint(
     else
     {
 LABEL_16:
-      v14 = sub_2237E2C(v9, System_Collections_IEnumerator_TypeInfo, 0);
+      v14 = sub_224BC3C(v9, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
             v9,
@@ -153,7 +153,7 @@ LABEL_16:
     if ( (v15 & 1) == 0 )
       break;
     if ( !v29 )
-      sub_21FFECC(v15, v16);
+      sub_2213CDC(v15, v16);
     v17 = v29->klass;
     v18 = *(unsigned __int16 *)&v29->klass->_2.rank;
     if ( *(_WORD *)&v29->klass->_2.rank )
@@ -171,7 +171,7 @@ LABEL_16:
     else
     {
 LABEL_24:
-      v20 = sub_2237E2C(v29, System_Collections_Generic_IEnumerator_UserSuperBossEntity__TypeInfo, 0);
+      v20 = sub_224BC3C(v29, System_Collections_Generic_IEnumerator_UserSuperBossEntity__TypeInfo, 0);
     }
     v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             v29,
@@ -205,7 +205,7 @@ LABEL_24:
     else
     {
 LABEL_39:
-      v25 = sub_2237E2C(v29, System_IDisposable_TypeInfo, 0);
+      v25 = sub_224BC3C(v29, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(v29, *(_QWORD *)(v25 + 8));
   }
@@ -218,5 +218,5 @@ LABEL_39:
   UserSuperBossDamagePointMax = v26->static_fields->UserSuperBossDamagePointMax;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16);
-  return System_Math__Min_76940304(v10, UserSuperBossDamagePointMax, 0);
+  return System_Math__Min_77153608(v10, UserSuperBossDamagePointMax, 0);
 }

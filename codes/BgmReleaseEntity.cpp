@@ -1,27 +1,27 @@
 void BgmReleaseEntity___ctor(BgmReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59382F5 & 1) == 0 )
+  if ( (byte_59704A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59382F5 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59704A2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BgmReleaseEntity__CreatePK(int32_t bgmId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_59382F4 & 1) == 0 )
+  if ( (byte_59704A1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59382F4 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59704A1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            bgmId,
            id,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

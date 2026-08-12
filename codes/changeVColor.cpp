@@ -22,18 +22,18 @@ void changeVColor__UpdateVColor(changeVColor_o *this, const MethodInfo *method)
   unsigned __int64 v9; // x8
   __int64 klass; // x9
 
-  if ( (byte_59373BC & 1) == 0 )
+  if ( (byte_596F517 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
-    byte_59373BC = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_MeshFilter___);
+    byte_596F517 = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
   isPlaying = UnityEngine_Application__get_isPlaying(0);
   Component_object = (UnityEngine_MeshFilter_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)this,
-                                                   (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                                                   (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
   if ( isPlaying )
   {
     if ( !Component_object )
@@ -57,13 +57,13 @@ void changeVColor__UpdateVColor(changeVColor_o *this, const MethodInfo *method)
     goto LABEL_17;
   if ( !colors )
 LABEL_19:
-    sub_21FFECC(Component_object, v6);
+    sub_2213CDC(Component_object, v6);
   v9 = 0;
   klass = (unsigned int)Component_object[1].klass;
   do
   {
     if ( v9 >= LODWORD(colors->max_length) )
-      sub_21FFED4(Component_object);
+      sub_2213CE4(Component_object);
     colors->m_Items[v9++] = this->fields.color;
   }
   while ( klass != v9 );

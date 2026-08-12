@@ -47,7 +47,7 @@ void ExRoomMissionResolvedReward___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._RewardGiftEntity_k__BackingField = rewardGiftEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)rewardGiftEntity,
     v15,
@@ -57,7 +57,7 @@ void ExRoomMissionResolvedReward___ctor(
     v19,
     v20);
   this->fields._RewardItemEntity_k__BackingField = rewardItemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardItemEntity_k__BackingField,
     (int32_t)rewardItemEntity,
     v21,
@@ -67,7 +67,7 @@ void ExRoomMissionResolvedReward___ctor(
     v25,
     v26);
   this->fields._RewardServantEntity_k__BackingField = rewardServantEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantEntity_k__BackingField,
     (int32_t)rewardServantEntity,
     v27,
@@ -77,7 +77,7 @@ void ExRoomMissionResolvedReward___ctor(
     v31,
     v32);
   this->fields._RewardCommandCodeEntity_k__BackingField = rewardCommandCodeEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCommandCodeEntity_k__BackingField,
     (int32_t)rewardCommandCodeEntity,
     v33,
@@ -87,7 +87,7 @@ void ExRoomMissionResolvedReward___ctor(
     v37,
     v38);
   this->fields._RewardServantCostumeEntity_k__BackingField = rewardServantCostumeEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantCostumeEntity_k__BackingField,
     (int32_t)rewardServantCostumeEntity,
     v39,
@@ -97,7 +97,7 @@ void ExRoomMissionResolvedReward___ctor(
     v43,
     v44);
   this->fields._RewardEquipEntity_k__BackingField = rewardEquipEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardEquipEntity_k__BackingField,
     (int32_t)rewardEquipEntity,
     v45,
@@ -169,7 +169,7 @@ void ExRoomMissionResolvedReward__set_RewardCommandCodeEntity(
   bool v7; // w7
 
   this->fields._RewardCommandCodeEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCommandCodeEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -193,7 +193,7 @@ void ExRoomMissionResolvedReward__set_RewardEquipEntity(
   bool v7; // w7
 
   this->fields._RewardEquipEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardEquipEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -217,7 +217,7 @@ void ExRoomMissionResolvedReward__set_RewardGiftEntity(
   bool v7; // w7
 
   this->fields._RewardGiftEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -241,7 +241,7 @@ void ExRoomMissionResolvedReward__set_RewardItemEntity(
   bool v7; // w7
 
   this->fields._RewardItemEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardItemEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -265,7 +265,7 @@ void ExRoomMissionResolvedReward__set_RewardServantCostumeEntity(
   bool v7; // w7
 
   this->fields._RewardServantCostumeEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantCostumeEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -289,7 +289,7 @@ void ExRoomMissionResolvedReward__set_RewardServantEntity(
   bool v7; // w7
 
   this->fields._RewardServantEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardServantEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

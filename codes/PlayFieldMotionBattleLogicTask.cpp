@@ -17,6 +17,6 @@ void PlayFieldMotionBattleLogicTask___ctor(
   v6->fields.motionName = motionName;
   v6 = (PlayFieldMotionBattleLogicTask_o *)((char *)v6 + 120);
   *(_DWORD *)&v6[-1].fields._IsBattleScriptRelationTask_k__BackingField = 44;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v6, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v6, (int32_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v6->fields.combo) = isForcedSpeedOne;
 }

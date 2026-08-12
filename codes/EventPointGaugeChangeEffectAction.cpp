@@ -20,10 +20,10 @@ bool EventPointGaugeChangeEffectAction__IsEnd(EventPointGaugeChangeEffectAction_
   UnityEngine_Animation_o *v14; // x19
   System_String_o *v15; // x0
 
-  if ( (byte_59323C8 & 1) == 0 )
+  if ( (byte_596A4C7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59323C8 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A4C7 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -44,7 +44,7 @@ bool EventPointGaugeChangeEffectAction__IsEnd(EventPointGaugeChangeEffectAction_
     v11 = this->fields.simpleAnimation;
     if ( !v11 || (m_Clip = (CommonEffectComponent_o *)v11->fields.m_Clip) == 0 )
 LABEL_23:
-      sub_21FFECC(m_Clip, v5);
+      sub_2213CDC(m_Clip, v5);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)m_Clip, 0);
     if ( !SimpleAnimation__IsPlaying(v11, name, 0) )
       return 1;
@@ -84,7 +84,7 @@ void EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = (MissionNaviTransitionBoardItem_o *)&this->fields.gaugeChangeAction;
   v9 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0;
-  sub_21FFBF4(p_gaugeChangeAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_gaugeChangeAction, 0, v2, v3, v4, v5, v6, v7);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v9, 0);
 }
@@ -98,7 +98,7 @@ void EventPointGaugeChangeEffectAction__Setup(
 {
   UnityEngine_Component_o *transform; // x0
   __int64 v8; // x1
-  Il2CppObject *ComponentInChildren_object__58644924; // x0
+  Il2CppObject *ComponentInChildren_object__58855044; // x0
   System_String_o *v10; // x2
   System_String_o *v11; // x3
   int32_t v12; // w4
@@ -132,23 +132,23 @@ void EventPointGaugeChangeEffectAction__Setup(
   bool v40; // w6
   bool v41; // w7
 
-  if ( (byte_59323C7 & 1) == 0 )
+  if ( (byte_596A4C6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    byte_59323C7 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    byte_596A4C6 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
+  ComponentInChildren_object__58855044 = UnityEngine_Component__GetComponentInChildren_object__58855044(
                                            transform,
-                                           (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__58644924;
-  sub_21FFBF4(
+                                           (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__58855044;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.commonEffectComponent,
-    (int32_t)ComponentInChildren_object__58644924,
+    (int32_t)ComponentInChildren_object__58855044,
     v10,
     v11,
     v12,
@@ -157,11 +157,11 @@ void EventPointGaugeChangeEffectAction__Setup(
     v15);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (v16 = UnityEngine_Component__GetComponentInChildren_object__58644924(
+    || (v16 = UnityEngine_Component__GetComponentInChildren_object__58855044(
                 transform,
-                (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+                (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
         this->fields.simpleAnimation = (struct SimpleAnimation_o *)v16,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.simpleAnimation,
           (int32_t)v16,
           v17,
@@ -173,15 +173,15 @@ void EventPointGaugeChangeEffectAction__Setup(
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(transform, v8);
+    sub_2213CDC(transform, v8);
   }
-  v23 = UnityEngine_Component__GetComponentInChildren_object__58644924(
+  v23 = UnityEngine_Component__GetComponentInChildren_object__58855044(
           transform,
-          (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+          (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.animation = (struct UnityEngine_Animation_o *)v23;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.animation, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.animation, (int32_t)v23, v24, v25, v26, v27, v28, v29);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.gaugeChangeAction,
     (int32_t)gaugeChangeAct,
     v30,
@@ -191,7 +191,7 @@ LABEL_7:
     v34,
     v35);
   this->fields.endAction = endAct;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.endAction,
     (int32_t)endAct,
     v36,
@@ -217,7 +217,7 @@ void EventPointGaugeChangeEffectAction__Update(EventPointGaugeChangeEffectAction
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.endAction, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.endAction, 0, v3, v4, v5, v6, v7, v8);
     if ( endAction )
       ActionExtensions__Call(endAction, 0);
   }

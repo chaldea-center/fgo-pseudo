@@ -26,19 +26,19 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   bool v24; // w6
   bool v25; // w7
 
-  if ( (byte_593B16E & 1) == 0 )
+  if ( (byte_597335D & 1) == 0 )
   {
-    sub_21FFC50(&BuffAggregationArgs_TypeInfo);
-    byte_593B16E = 1;
+    sub_2213A60(&BuffAggregationArgs_TypeInfo);
+    byte_597335D = 1;
   }
-  v1 = sub_21FFEBC(BuffAggregationArgs_TypeInfo);
+  v1 = sub_2213CCC(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v1 + 16) = 1;
   *(_WORD *)(v1 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v1, 0);
   v2 = BuffAggregationArgs_TypeInfo;
   *(_WORD *)(v1 + 16) = 256;
   v2->static_fields->DisplaySet = (struct BuffAggregationArgs_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BuffAggregationArgs_TypeInfo->static_fields,
     v1,
     v3,
@@ -47,14 +47,14 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
     v6,
     v7,
     v8);
-  v9 = sub_21FFEBC(BuffAggregationArgs_TypeInfo);
+  v9 = sub_2213CCC(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v9 + 16) = 1;
   *(_WORD *)(v9 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v9, 0);
   static_fields = BuffAggregationArgs_TypeInfo->static_fields;
   static_fields->LogicSet = (struct BuffAggregationArgs_o *)v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->LogicSet, v9, v11, v12, v13, v14, v15, v16);
-  v17 = sub_21FFEBC(BuffAggregationArgs_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->LogicSet, v9, v11, v12, v13, v14, v15, v16);
+  v17 = sub_2213CCC(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v17 + 16) = 1;
   *(_WORD *)(v17 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v17, 0);
@@ -63,7 +63,7 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   *(_BYTE *)(v17 + 19) = 0;
   v19 = v18->static_fields;
   v19->EndMotionDisplaySet = (struct BuffAggregationArgs_o *)v17;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->EndMotionDisplaySet, v17, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->EndMotionDisplaySet, v17, v20, v21, v22, v23, v24, v25);
 }
 
 

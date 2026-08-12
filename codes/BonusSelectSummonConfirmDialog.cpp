@@ -2,10 +2,10 @@ void BonusSelectSummonConfirmDialog___ctor(BonusSelectSummonConfirmDialog_o *thi
 {
   __int64 v2; // x2
 
-  if ( (byte_5934846 & 1) == 0 )
+  if ( (byte_596C975 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5934846 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596C975 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -23,11 +23,11 @@ void BonusSelectSummonConfirmDialog__Close(BonusSelectSummonConfirmDialog_o *thi
 {
   const MethodInfo *v2; // x2
 
-  BonusSelectSummonConfirmDialog__Close_42087816(this, 0, v2);
+  BonusSelectSummonConfirmDialog__Close_42102880(this, 0, v2);
 }
 
 
-void BonusSelectSummonConfirmDialog__Close_42087816(
+void BonusSelectSummonConfirmDialog__Close_42102880(
         BonusSelectSummonConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -44,16 +44,16 @@ void BonusSelectSummonConfirmDialog__Close_42087816(
   __int64 v14; // x1
   System_Action_o *v15; // x20
 
-  if ( (byte_593483A & 1) == 0 )
+  if ( (byte_596C969 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog__Close_b__25_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593483A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog__Close_b__25_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C969 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -67,11 +67,11 @@ void BonusSelectSummonConfirmDialog__Close_42087816(
   if ( !*(&v12->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v12, v10, v11);
   AtlasManager__ReleasePartyOrganizationAtlas(0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v14);
+    sub_2213CDC(0, v14);
   CommonUI__SetFadeMaskCollider((CommonUI_o *)Instance, 1, 0);
-  v15 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)this, Method_BonusSelectSummonConfirmDialog__Close_b__25_0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v15, 0);
 }
@@ -110,24 +110,24 @@ void BonusSelectSummonConfirmDialog__CreateList(BonusSelectSummonConfirmDialog_o
   __int64 v31; // x8
   GachaBonusSelectEntity_array *entityArray; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_593483C & 1) == 0 )
+  if ( (byte_596C96B & 1) == 0 )
   {
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog_OnClick__);
-    sub_21FFC50(&BonusSelectSummonPartyOrganizationListViewItem_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_GachaBonusSelectMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyOrganizationListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__Add__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_TypeInfo);
-    byte_593483C = 1;
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog_OnClick__);
+    sub_2213A60(&BonusSelectSummonPartyOrganizationListViewItem_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_GachaBonusSelectMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyOrganizationListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__Add__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_TypeInfo);
+    byte_596C96B = 1;
   }
   v4 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entityArray = 0;
   if ( !v4 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-  Master_object = (GachaBonusSelectMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaBonusSelectMaster___);
+  Master_object = (GachaBonusSelectMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GachaBonusSelectMaster___);
   if ( !Master_object )
     goto LABEL_24;
   Master_object = (GachaBonusSelectMaster_o *)GachaBonusSelectMaster__TryGetEntityArray(
@@ -147,12 +147,12 @@ void BonusSelectSummonConfirmDialog__CreateList(BonusSelectSummonConfirmDialog_o
       while ( 1 )
       {
         if ( v9 >= max_length )
-          sub_21FFED4(Master_object);
+          sub_2213CE4(Master_object);
         v10 = v7->m_Items[v9];
         if ( !v10 )
           break;
         slot = v10->fields.slot;
-        v12 = (BonusSelectSummonPartyOrganizationListViewItem_o *)sub_21FFEBC(BonusSelectSummonPartyOrganizationListViewItem_TypeInfo);
+        v12 = (BonusSelectSummonPartyOrganizationListViewItem_o *)sub_2213CCC(BonusSelectSummonPartyOrganizationListViewItem_TypeInfo);
         BonusSelectSummonPartyOrganizationListViewItem___ctor(v12, slot, 0, v10, v13);
         Master_object = (GachaBonusSelectMaster_o *)this->fields.rootObj;
         if ( !Master_object )
@@ -161,16 +161,16 @@ void BonusSelectSummonConfirmDialog__CreateList(BonusSelectSummonConfirmDialog_o
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Master_object, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
-        Master_object = (GachaBonusSelectMaster_o *)UnityEngine_Object__Instantiate_object__59506996(
+        Master_object = (GachaBonusSelectMaster_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                       prefab,
                                                       transform,
-                                                      (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                                      (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
         if ( !Master_object )
           break;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)Master_object,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyOrganizationListViewObject___);
-        v19 = (BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *)sub_21FFEBC(BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_TypeInfo);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyOrganizationListViewObject___);
+        v19 = (BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_o *)sub_2213CCC(BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent_TypeInfo);
         BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent___ctor(
           v19,
           (Il2CppObject *)this,
@@ -197,14 +197,14 @@ void BonusSelectSummonConfirmDialog__CreateList(BonusSelectSummonConfirmDialog_o
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Master_object,
             Component_object,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
         }
         else
         {
           v31 = v28 + 8 * MasterName_k__BackingField_low;
           LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
           *(_QWORD *)(v31 + 32) = Component_object;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)(v31 + 32),
             (int32_t)Component_object,
             v22,
@@ -219,7 +219,7 @@ void BonusSelectSummonConfirmDialog__CreateList(BonusSelectSummonConfirmDialog_o
           return;
       }
 LABEL_24:
-      sub_21FFECC(Master_object, v6);
+      sub_2213CDC(Master_object, v6);
     }
   }
 }
@@ -244,47 +244,47 @@ void BonusSelectSummonConfirmDialog__EndClose(BonusSelectSummonConfirmDialog_o *
   struct System_Action_o *closeCallbackFunc; // t1
   System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_593483B & 1) == 0 )
+  if ( (byte_596C96A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593483B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C96A = 1;
   }
   memset(&v18, 0, sizeof(v18));
   BaseDialog__Init((BaseDialog_o *)this, 0);
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v18,
     itemList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v18,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__) )
   {
     if ( !v18.fields._current )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)v18.fields._current,
                                            0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v18,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc;
   v16 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v9, v10, v11, v12, v13, v14);
+    sub_2213A04(p_closeCallbackFunc, 0, v9, v10, v11, v12, v13, v14);
     ((void (__fastcall *)(intptr_t, intptr_t))v16->fields.invoke_impl)(v16->fields.method_code, v16->fields.method);
   }
 }
@@ -307,10 +307,10 @@ void BonusSelectSummonConfirmDialog__EndShowServantStatusDialog(
   const MethodInfo *v5; // x1
 
   v3 = this;
-  if ( (byte_593483E & 1) == 0 )
+  if ( (byte_596C96D & 1) == 0 )
   {
-    this = (BonusSelectSummonConfirmDialog_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593483E = 1;
+    this = (BonusSelectSummonConfirmDialog_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C96D = 1;
   }
   enableBtn = v3->fields.enableBtn;
   if ( !enableBtn
@@ -319,9 +319,9 @@ void BonusSelectSummonConfirmDialog__EndShowServantStatusDialog(
           1,
           enableBtn->fields.method),
         BonusSelectSummonConfirmDialog__SetBackBtn(v3, v5),
-        (this = (BonusSelectSummonConfirmDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (this = (BonusSelectSummonConfirmDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_21FFECC(this, isDecide);
+    sub_2213CDC(this, isDecide);
   }
   CommonUI__CloseServantStatusDialog((CommonUI_o *)this, 0, 0);
 }
@@ -367,32 +367,32 @@ SelectBonusData_o *BonusSelectSummonConfirmDialog__GetSelectBonusData(
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_5934842 & 1) == 0 )
+  if ( (byte_596C971 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonus__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonus__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonus___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_SelectBonus__TypeInfo);
-    sub_21FFC50(&SelectBonusData_TypeInfo);
-    sub_21FFC50(&SelectBonus_TypeInfo);
-    byte_5934842 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonus__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonus__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonus___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_SelectBonus__TypeInfo);
+    sub_2213A60(&SelectBonusData_TypeInfo);
+    sub_2213A60(&SelectBonus_TypeInfo);
+    byte_596C971 = 1;
   }
   memset(&v38, 0, sizeof(v38));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SelectBonus__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SelectBonus__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SelectBonus___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SelectBonus___ctor__);
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
     goto LABEL_25;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     itemList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
   v38 = v37;
   v37.fields._list = 0;
   *(_QWORD *)&v37.fields._index = &v38;
@@ -400,14 +400,14 @@ SelectBonusData_o *BonusSelectSummonConfirmDialog__GetSelectBonusData(
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v38,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
     if ( !v6 )
       break;
     if ( !v38.fields._current )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     klass = v38.fields._current[8].klass;
     if ( !klass )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     events = klass->_1.events;
     if ( events )
     {
@@ -430,7 +430,7 @@ SelectBonusData_o *BonusSelectSummonConfirmDialog__GetSelectBonusData(
       v13 = -1;
       v14 = -1;
     }
-    v15 = (SelectBonus_o *)sub_21FFEBC(SelectBonus_TypeInfo);
+    v15 = (SelectBonus_o *)sub_2213CCC(SelectBonus_TypeInfo);
     SelectBonus___ctor(v15, v10, v11, v13, v14, 0);
     if ( !v3
       || (items = v3->fields._items,
@@ -438,7 +438,7 @@ SelectBonusData_o *BonusSelectSummonConfirmDialog__GetSelectBonusData(
           ++v3->fields._version,
           !items) )
     {
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     }
     size = v3->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -446,29 +446,29 @@ SelectBonusData_o *BonusSelectSummonConfirmDialog__GetSelectBonusData(
       System_Collections_Generic_List_object___AddWithResize(
         v3,
         (Il2CppObject *)v15,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
       v27 = &items->obj.klass + size;
       v3->fields._size = size + 1;
       v27[4] = (Il2CppClass *)v15;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v27 + 4), (int32_t)v15, v18, v19, v20, v21, v22, v23);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 4), (int32_t)v15, v18, v19, v20, v21, v22, v23);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v38,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-  v28 = sub_21FFEBC(SelectBonusData_TypeInfo);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+  v28 = sub_2213CCC(SelectBonusData_TypeInfo);
   SelectBonusData___ctor((SelectBonusData_o *)v28, 0);
   if ( !v28 || (*(_DWORD *)(v28 + 16) = this->fields.gachaId, !v3) )
 LABEL_25:
-    sub_21FFECC(itemList, v4);
+    sub_2213CDC(itemList, v4);
   v29 = System_Collections_Generic_List_object___ToArray(
           v3,
-          (const MethodInfo_445164C *)Method_System_Collections_Generic_List_SelectBonus__ToArray__);
+          (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_SelectBonus__ToArray__);
   *(_QWORD *)(v28 + 24) = v29;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 24), (int32_t)v29, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 24), (int32_t)v29, v30, v31, v32, v33, v34, v35);
   return (SelectBonusData_o *)v28;
 }
 
@@ -515,15 +515,15 @@ void BonusSelectSummonConfirmDialog__Init(
   bool v39; // w6
   bool v40; // w7
 
-  if ( (byte_5934838 & 1) == 0 )
+  if ( (byte_596C967 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantSelectMenu___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5934838 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantSelectMenu___);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C967 = 1;
   }
   prefab = (UnityEngine_Object_o *)this->fields.prefab;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -535,7 +535,7 @@ void BonusSelectSummonConfirmDialog__Init(
       goto LABEL_25;
     OrganizationListViewItemPrefab_k__BackingField = assetManager->fields._OrganizationListViewItemPrefab_k__BackingField;
     this->fields.prefab = OrganizationListViewItemPrefab_k__BackingField;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.prefab,
       (int32_t)OrganizationListViewItemPrefab_k__BackingField,
       v8,
@@ -558,18 +558,18 @@ void BonusSelectSummonConfirmDialog__Init(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18, v19);
-    titleLabel = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59506996(
+    titleLabel = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                ServantSelectMenuPrefab_k__BackingField,
                                                transform,
-                                               (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                               (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
     if ( !titleLabel )
 LABEL_25:
-      sub_21FFECC(titleLabel, v7);
+      sub_2213CDC(titleLabel, v7);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          titleLabel,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantSelectMenu___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonPartyServantSelectMenu___);
     *p_servantSelectMenu = (struct BonusSelectSummonPartyServantSelectMenu_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.servantSelectMenu,
       (int32_t)Component_object,
       v22,
@@ -583,12 +583,12 @@ LABEL_25:
   if ( !*p_servantSelectMenu )
     goto LABEL_25;
   BonusSelectSummonPartyServantSelectMenu__Init((BonusSelectSummonPartyServantSelectMenu_o *)titleLabel, v7);
-  v28 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__TypeInfo);
+  v28 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v28,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject___ctor__);
   this->fields.itemList = (struct System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__o *)v28;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.itemList, (int32_t)v28, v29, v30, v31, v32, v33, v34);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.itemList, (int32_t)v28, v29, v30, v31, v32, v33, v34);
   titleLabel = (UnityEngine_GameObject_o *)this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_25;
@@ -622,7 +622,7 @@ LABEL_25:
     goto LABEL_25;
   UnityEngine_GameObject__SetActive(titleLabel, 0, 0);
   this->fields.gachaDetailEntity = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.gachaDetailEntity, 0, v35, v36, v37, v38, v39, v40);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.gachaDetailEntity, 0, v35, v36, v37, v38, v39, v40);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -649,17 +649,17 @@ void BonusSelectSummonConfirmDialog__Modify(BonusSelectSummonConfirmDialog_o *th
   const MethodInfo *v20; // x1
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_593483F & 1) == 0 )
+  if ( (byte_596C96E & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
-    sub_21FFC50(&System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog___c__Modify_b__30_0__);
-    sub_21FFC50(&BonusSelectSummonConfirmDialog___c_TypeInfo);
-    byte_593483F = 1;
+    sub_2213A60(&Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
+    sub_2213A60(&System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog___c__Modify_b__30_0__);
+    sub_2213A60(&BonusSelectSummonConfirmDialog___c_TypeInfo);
+    byte_596C96E = 1;
   }
   itemList = this->fields.itemList;
   memset(&v21, 0, sizeof(v21));
@@ -668,20 +668,20 @@ void BonusSelectSummonConfirmDialog__Modify(BonusSelectSummonConfirmDialog_o *th
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v21,
     (System_Collections_Generic_List_object__o *)itemList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v21,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__) )
   {
     if ( !v21.fields._current )
-      sub_21FFECC(0, v4);
+      sub_2213CDC(0, v4);
     BonusSelectSummonPartyOrganizationListViewObject__Modfy(
       (BonusSelectSummonPartyOrganizationListViewObject_o *)v21.fields._current,
       v4);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
   v7 = BonusSelectSummonConfirmDialog___c_TypeInfo;
   buttonDecide = this->fields.buttonDecide;
   v9 = (System_Collections_Generic_List_T__o *)this->fields.itemList;
@@ -700,16 +700,16 @@ void BonusSelectSummonConfirmDialog__Modify(BonusSelectSummonConfirmDialog_o *th
       static_fields = BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__30_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
+    _9__30_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__30_0, v12, Method_BonusSelectSummonConfirmDialog___c__Modify_b__30_0__, 0);
     v13 = BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields;
     v13->__9__30_0 = (struct System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__o *)_9__30_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->__9__30_0, (int32_t)_9__30_0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__30_0, (int32_t)_9__30_0, v14, v15, v16, v17, v18, v19);
   }
-  itemList = (struct System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__o *)BasicHelper__Any_object_(v9, (System_Func_T__bool__o *)_9__30_0, (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
+  itemList = (struct System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__o *)BasicHelper__Any_object_(v9, (System_Func_T__bool__o *)_9__30_0, (const MethodInfo_380FDE0 *)Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
   if ( !buttonDecide )
 LABEL_17:
-    sub_21FFECC(itemList, method);
+    sub_2213CDC(itemList, method);
   ((void (__fastcall *)(struct UICommonButton_o *, bool, const MethodInfo *))buttonDecide->klass->vtable._5_set_isEnabled.methodPtr)(
     buttonDecide,
     ((unsigned __int8)itemList & 1) == 0,
@@ -761,25 +761,25 @@ void BonusSelectSummonConfirmDialog__OnClick(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
   v6 = this;
-  if ( (byte_593483D & 1) == 0 )
+  if ( (byte_596C96C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog_EndShowServantStatusDialog__);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog_OnClick__);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog__OnClick_b__28_0__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
-    this = (BonusSelectSummonConfirmDialog_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593483D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog_EndShowServantStatusDialog__);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog_OnClick__);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog__OnClick_b__28_0__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&ServantLeaderInfo_TypeInfo);
+    this = (BonusSelectSummonConfirmDialog_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C96C = 1;
   }
   memset(&v38, 0, sizeof(v38));
   if ( isLongTap )
@@ -798,10 +798,10 @@ void BonusSelectSummonConfirmDialog__OnClick(
           method);
         v8 = Method_BonusSelectSummonConfirmDialog_OnClick__;
         if ( (*((_BYTE *)Method_BonusSelectSummonConfirmDialog_OnClick__ + 83) & 2) != 0 )
-          v8 = (_QWORD *)sub_21FFC68(Method_BonusSelectSummonConfirmDialog_OnClick__);
-        v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+          v8 = (_QWORD *)sub_2213A78(Method_BonusSelectSummonConfirmDialog_OnClick__);
+        v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
         OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
-        this = (BonusSelectSummonConfirmDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        this = (BonusSelectSummonConfirmDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         servantEntity = memberItem->fields.servantEntity;
         if ( servantEntity )
         {
@@ -812,10 +812,10 @@ void BonusSelectSummonConfirmDialog__OnClick(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, memberItem, v10);
           *(_QWORD *)&v39.fields.currentCryptoKey = v13;
           *(_QWORD *)&v39.fields.fakeValue = v14;
-          v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v39, 0);
-          v16 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
-          ServantLeaderInfo___ctor_50518380(v16, v15, 0, 1, 0);
-          v17 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+          v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v39, 0);
+          v16 = (ServantLeaderInfo_o *)sub_2213CCC(ServantLeaderInfo_TypeInfo);
+          ServantLeaderInfo___ctor_50583572(v16, v15, 0, 1, 0);
+          v17 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
           ServantStatusDialog_EndDelegate___ctor(
             v17,
             (Il2CppObject *)v6,
@@ -823,13 +823,13 @@ void BonusSelectSummonConfirmDialog__OnClick(
             0);
           if ( v12 )
           {
-            CommonUI__OpenServantStatusDialog_37304188(v12, 7, v16, v17, 0);
+            CommonUI__OpenServantStatusDialog_37385604(v12, 7, v16, v17, 0);
             return;
           }
         }
       }
 LABEL_41:
-      sub_21FFECC(this, memberItem);
+      sub_2213CDC(this, memberItem);
     }
   }
   else
@@ -844,20 +844,20 @@ LABEL_41:
       method);
     v19 = Method_BonusSelectSummonConfirmDialog_OnClick__;
     if ( (*((_BYTE *)Method_BonusSelectSummonConfirmDialog_OnClick__ + 83) & 2) != 0 )
-      v19 = (_QWORD *)sub_21FFC68(Method_BonusSelectSummonConfirmDialog_OnClick__);
-    v20 = (System_Reflection_MethodBase_o *)sub_21FFC34(v19, v19[4]);
+      v19 = (_QWORD *)sub_2213A78(Method_BonusSelectSummonConfirmDialog_OnClick__);
+    v20 = (System_Reflection_MethodBase_o *)sub_2213A44(v19, v19[4]);
     OverwriteAssetSoundName__PlaySystemSe(v20, 0, 0, 0);
-    v21 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+    v21 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v21,
-      (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
     this = (BonusSelectSummonConfirmDialog_o *)v6->fields.itemList;
     if ( !this )
       goto LABEL_41;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v37,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
     v38 = v37;
     v37.fields._list = 0;
     *(_QWORD *)&v37.fields._index = &v38;
@@ -865,14 +865,14 @@ LABEL_41:
     {
       v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v38,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
       if ( !v22 )
         break;
       if ( !v38.fields._current )
-        sub_21FFECC(v22, v23);
+        sub_2213CDC(v22, v23);
       klass = v38.fields._current[8].klass;
       if ( !klass )
-        sub_21FFECC(v22, v23);
+        sub_2213CDC(v22, v23);
       fields = klass->_1.fields;
       if ( fields )
       {
@@ -882,14 +882,14 @@ LABEL_41:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v23, v24);
         *(_QWORD *)&v40.fields.currentCryptoKey = v27;
         *(_QWORD *)&v40.fields.fakeValue = v28;
-        v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v40, 0);
+        v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v40, 0);
         if ( !v21
           || (items = v21->fields._items,
               v31 = Method_System_Collections_Generic_List_int__Add__,
               ++v21->fields._version,
               !items) )
         {
-          sub_21FFECC(v29, (unsigned int)v29);
+          sub_2213CDC(v29, (unsigned int)v29);
         }
         size = v21->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -897,7 +897,7 @@ LABEL_41:
           System_Collections_Generic_List_int___AddWithResize(
             v21,
             v29,
-            *(const MethodInfo_4433138 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            *(const MethodInfo_4467270 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
         else
         {
@@ -908,7 +908,7 @@ LABEL_41:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v38,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
     this = (BonusSelectSummonConfirmDialog_o *)v6->fields.baseWindow;
     if ( !this )
       goto LABEL_41;
@@ -930,8 +930,8 @@ LABEL_41:
     servantSelectMenu = v6->fields.servantSelectMenu;
     v34 = System_Collections_Generic_List_int___ToArray(
             v21,
-            (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
-    v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+            (const MethodInfo_4468CF0 *)Method_System_Collections_Generic_List_int__ToArray__);
+    v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v35, (Il2CppObject *)v6, Method_BonusSelectSummonConfirmDialog__OnClick_b__28_0__, 0);
     if ( !servantSelectMenu )
       goto LABEL_41;
@@ -953,17 +953,17 @@ void BonusSelectSummonConfirmDialog__OnClickCancel(BonusSelectSummonConfirmDialo
   const MethodInfo *v5; // x2
   struct BonusSelectSummonConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_5934844 & 1) == 0 )
+  if ( (byte_596C973 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog_OnClickCancel__);
-    byte_5934844 = 1;
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog_OnClickCancel__);
+    byte_596C973 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_BonusSelectSummonConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_BonusSelectSummonConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BonusSelectSummonConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BonusSelectSummonConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -972,7 +972,7 @@ void BonusSelectSummonConfirmDialog__OnClickCancel(BonusSelectSummonConfirmDialo
         clickFunc->fields.method_code,
         0,
         clickFunc->fields.method);
-    BonusSelectSummonConfirmDialog__Close_42087816(this, 0, v5);
+    BonusSelectSummonConfirmDialog__Close_42102880(this, 0, v5);
   }
 }
 
@@ -985,17 +985,17 @@ void BonusSelectSummonConfirmDialog__OnClickDecide(BonusSelectSummonConfirmDialo
   struct BonusSelectSummonConfirmDialog_ClickDelegate_o *clickFunc; // x8
   System_Reflection_MethodBase_o *v7; // x0
 
-  if ( (byte_5934843 & 1) == 0 )
+  if ( (byte_596C972 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
-    byte_5934843 = 1;
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
+    byte_596C972 = 1;
   }
   v3 = Method_BonusSelectSummonConfirmDialog_OnClickDecide__;
   if ( this->fields.isButtonEnable )
   {
     if ( (*((_BYTE *)Method_BonusSelectSummonConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -1004,13 +1004,13 @@ void BonusSelectSummonConfirmDialog__OnClickDecide(BonusSelectSummonConfirmDialo
         clickFunc->fields.method_code,
         1,
         clickFunc->fields.method);
-    BonusSelectSummonConfirmDialog__Close_42087816(this, 0, v5);
+    BonusSelectSummonConfirmDialog__Close_42102880(this, 0, v5);
   }
   else
   {
     if ( (*((_BYTE *)Method_BonusSelectSummonConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
-    v7 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BonusSelectSummonConfirmDialog_OnClickDecide__);
+    v7 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
   }
 }
@@ -1078,33 +1078,33 @@ void BonusSelectSummonConfirmDialog__Open(
   __int64 v63; // x1
   __int64 v64; // x2
 
-  if ( (byte_5934839 & 1) == 0 )
+  if ( (byte_596C968 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_GachaDetailMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass22_0__Open_b__0__);
-    sub_21FFC50(&BonusSelectSummonConfirmDialog___c__DisplayClass22_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_3072/*"BONUS_SELECT_SERVANT_SELECT_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_12923/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/);
-    byte_5934839 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_GachaDetailMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass22_0__Open_b__0__);
+    sub_2213A60(&BonusSelectSummonConfirmDialog___c__DisplayClass22_0_TypeInfo);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_3075/*"BONUS_SELECT_SERVANT_SELECT_DECIDE"*/);
+    sub_2213A60(&StringLiteral_12949/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/);
+    byte_596C968 = 1;
   }
-  v13 = sub_21FFEBC(BonusSelectSummonConfirmDialog___c__DisplayClass22_0_TypeInfo);
+  v13 = sub_2213CCC(BonusSelectSummonConfirmDialog___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_17;
   *(_QWORD *)(v13 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)this, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 24) = endOpenCallback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 24), (int32_t)endOpenCallback, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 24), (int32_t)endOpenCallback, v22, v23, v24, v25, v26, v27);
   this->fields.clickFunc = func;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v28, v29, v30, v31, v32, v33);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v28, v29, v30, v31, v32, v33);
   this->fields.enableBtn = enableBtn;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.enableBtn,
     (int32_t)enableBtn,
     v34,
@@ -1114,7 +1114,7 @@ void BonusSelectSummonConfirmDialog__Open(
     v38,
     v39);
   this->fields.tryGetBonusSelectData = tryGetBonusSelectData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.tryGetBonusSelectData,
     (int32_t)tryGetBonusSelectData,
     v40,
@@ -1127,15 +1127,15 @@ void BonusSelectSummonConfirmDialog__Open(
   this->fields.gachaId = gachaId;
   if ( !*(&v48->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v48, v46, v47);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaDetailMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GachaDetailMaster___);
   if ( !Master_object )
     goto LABEL_17;
   Entity = DataMasterBase_object__object__int___GetEntity(
              Master_object,
              gachaId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int__GetEntity__);
   this->fields.gachaDetailEntity = (struct GachaDetailEntity_o *)Entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.gachaDetailEntity,
     (int32_t)Entity,
     v50,
@@ -1148,7 +1148,7 @@ void BonusSelectSummonConfirmDialog__Open(
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v56, v57);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_12923/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/,
+                                                                  (System_String_o *)StringLiteral_12949/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/,
                                                                   0);
   if ( !titleLabel )
     goto LABEL_17;
@@ -1164,23 +1164,23 @@ void BonusSelectSummonConfirmDialog__Open(
     || (UILabel__set_text(messageLabel, (System_String_o *)Master_object, 0),
         buttonDecideLabel = this->fields.buttonDecideLabel,
         Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                        (System_String_o *)StringLiteral_3072/*"BONUS_SELECT_SERVANT_SELECT_DECIDE"*/,
+                                                                        (System_String_o *)StringLiteral_3075/*"BONUS_SELECT_SERVANT_SELECT_DECIDE"*/,
                                                                         0),
         !buttonDecideLabel)
     || (UILabel__set_text(buttonDecideLabel, (System_String_o *)Master_object, 0),
         buttonCancelLabel = this->fields.buttonCancelLabel,
         Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                        (System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                        (System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/,
                                                                         0),
         !buttonCancelLabel) )
   {
 LABEL_17:
-    sub_21FFECC(Master_object, v15);
+    sub_2213CDC(Master_object, v15);
   }
   UILabel__set_text(buttonCancelLabel, (System_String_o *)Master_object, 0);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0);
-  v62 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v62 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v62,
     (Il2CppObject *)v13,
@@ -1210,7 +1210,7 @@ void BonusSelectSummonConfirmDialog__SaveSelectBonusData(
   __int64 v14; // x1
   __int64 v15; // x2
   SummonControl_c *v16; // x0
-  Il2CppObject *String_83184936; // x22
+  Il2CppObject *String_83398240; // x22
   System_Collections_Generic_List_object__o *v18; // x20
   __int64 v19; // x1
   __int64 v20; // x2
@@ -1233,58 +1233,58 @@ void BonusSelectSummonConfirmDialog__SaveSelectBonusData(
   System_String_o *v37; // x19
   SummonControl_c *v38; // x0
 
-  if ( (byte_5934841 & 1) == 0 )
+  if ( (byte_596C970 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_SelectBonusData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_SelectBonusData___);
-    sub_21FFC50(&System_Func_SelectBonusData__bool__TypeInfo);
-    sub_21FFC50(&Method_JsonManager_DeserializeArray_SelectBonusData___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SelectBonusData__set_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_SelectBonusData__TypeInfo);
-    sub_21FFC50(&SummonControl_TypeInfo);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass32_0__SaveSelectBonusData_b__0__);
-    sub_21FFC50(&BonusSelectSummonConfirmDialog___c__DisplayClass32_0_TypeInfo);
-    byte_5934841 = 1;
+    sub_2213A60(&Method_BasicHelper_Any_SelectBonusData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_SelectBonusData___);
+    sub_2213A60(&System_Func_SelectBonusData__bool__TypeInfo);
+    sub_2213A60(&Method_JsonManager_DeserializeArray_SelectBonusData___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SelectBonusData__set_Item__);
+    sub_2213A60(&System_Collections_Generic_List_SelectBonusData__TypeInfo);
+    sub_2213A60(&SummonControl_TypeInfo);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass32_0__SaveSelectBonusData_b__0__);
+    sub_2213A60(&BonusSelectSummonConfirmDialog___c__DisplayClass32_0_TypeInfo);
+    byte_596C970 = 1;
   }
-  v3 = sub_21FFEBC(BonusSelectSummonConfirmDialog___c__DisplayClass32_0_TypeInfo);
+  v3 = sub_2213CCC(BonusSelectSummonConfirmDialog___c__DisplayClass32_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   SelectBonusData = BonusSelectSummonConfirmDialog__GetSelectBonusData(this, v4);
   if ( !v3 )
     goto LABEL_33;
   *(_QWORD *)(v3 + 16) = SelectBonusData;
   v13 = (Il2CppObject **)(v3 + 16);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)SelectBonusData, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)SelectBonusData, v7, v8, v9, v10, v11, v12);
   v16 = SummonControl_TypeInfo;
   if ( !*(&SummonControl_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(SummonControl_TypeInfo, v14, v15);
     v16 = SummonControl_TypeInfo;
   }
-  String_83184936 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_83184936(
+  String_83398240 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_83398240(
                                       v16->static_fields->BONUS_SELECTSUMMON_SAVEKEY,
                                       0);
-  v18 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SelectBonusData__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SelectBonusData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SelectBonusData___ctor__);
-  if ( !System_String__IsNullOrEmpty((System_String_o *)String_83184936, 0) )
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SelectBonusData___ctor__);
+  if ( !System_String__IsNullOrEmpty((System_String_o *)String_83398240, 0) )
   {
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v19, v20);
     v21 = (System_Collections_Generic_IEnumerable_TSource__o *)JsonManager__DeserializeArray_object_(
-                                                                 String_83184936,
-                                                                 (const MethodInfo_38A056C *)Method_JsonManager_DeserializeArray_SelectBonusData___);
+                                                                 String_83398240,
+                                                                 (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_SelectBonusData___);
     v18 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                          v21,
-                                                         (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_SelectBonusData___);
+                                                         (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_SelectBonusData___);
   }
-  v22 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_SelectBonusData__bool__TypeInfo);
+  v22 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_SelectBonusData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v22,
     (Il2CppObject *)v3,
@@ -1293,7 +1293,7 @@ void BonusSelectSummonConfirmDialog__SaveSelectBonusData(
   SelectBonusData = (void *)BasicHelper__Any_object_(
                               (System_Collections_Generic_List_T__o *)v18,
                               (System_Func_T__bool__o *)v22,
-                              (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_SelectBonusData___);
+                              (const MethodInfo_380FDE0 *)Method_BasicHelper_Any_SelectBonusData___);
   if ( ((unsigned __int8)SelectBonusData & 1) != 0 )
   {
     if ( !v18 )
@@ -1306,7 +1306,7 @@ void BonusSelectSummonConfirmDialog__SaveSelectBonusData(
         SelectBonusData = System_Collections_Generic_List_object___get_Item(
                             v18,
                             v29,
-                            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SelectBonusData__get_Item__);
+                            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_SelectBonusData__get_Item__);
         if ( !SelectBonusData )
           break;
         v23 = *v13;
@@ -1317,12 +1317,12 @@ void BonusSelectSummonConfirmDialog__SaveSelectBonusData(
             v18,
             v29,
             v23,
-            (const MethodInfo_444F8B0 *)Method_System_Collections_Generic_List_SelectBonusData__set_Item__);
+            (const MethodInfo_44839E8 *)Method_System_Collections_Generic_List_SelectBonusData__set_Item__);
         if ( ++v29 >= v18->fields._size )
           goto LABEL_25;
       }
 LABEL_33:
-      sub_21FFECC(SelectBonusData, v6);
+      sub_2213CDC(SelectBonusData, v6);
     }
   }
   else
@@ -1341,14 +1341,14 @@ LABEL_33:
       System_Collections_Generic_List_object___AddWithResize(
         v18,
         v6,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
     }
     else
     {
       v33 = &items->obj.klass + size;
       v18->fields._size = size + 1;
       v33[4] = (Il2CppClass *)v6;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)(v33 + 4),
         (int32_t)v6,
         (System_String_o *)v23,
@@ -1362,13 +1362,13 @@ LABEL_33:
 LABEL_25:
   if ( v18->fields._size <= 0 )
   {
-    v37 = **(System_String_o ***)(qword_594C0B8 + 184);
+    v37 = **(System_String_o ***)(qword_5984390 + 184);
   }
   else
   {
     v36 = System_Collections_Generic_List_object___ToArray(
             v18,
-            (const MethodInfo_445164C *)Method_System_Collections_Generic_List_SelectBonusData__ToArray__);
+            (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_SelectBonusData__ToArray__);
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v34, v35);
     v37 = JsonManager__toJson(&v36->obj, 0, 0, 0);
@@ -1388,13 +1388,13 @@ void BonusSelectSummonConfirmDialog__SetBackBtn(BonusSelectSummonConfirmDialog_o
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_5934845 & 1) == 0 )
+  if ( (byte_596C974 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16227/*"Window/CancelButton"*/);
-    byte_5934845 = 1;
+    sub_2213A60(&StringLiteral_16259/*"Window/CancelButton"*/);
+    byte_596C974 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16227/*"Window/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16259/*"Window/CancelButton"*/, 0);
 }
 
 
@@ -1420,13 +1420,13 @@ void BonusSelectSummonConfirmDialog__SetLoadSelectBonusData(
   __int64 v17; // [xsp+48h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_5934840 & 1) == 0 )
+  if ( (byte_596C96F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
-    this = (BonusSelectSummonConfirmDialog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
-    byte_5934840 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__get_Current__);
+    this = (BonusSelectSummonConfirmDialog_o *)sub_2213A60(&Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+    byte_596C96F = 1;
   }
   tryGetBonusSelectData = v2->fields.tryGetBonusSelectData;
   v17 = 0;
@@ -1452,7 +1452,7 @@ void BonusSelectSummonConfirmDialog__SetLoadSelectBonusData(
         while ( 1 )
         {
           if ( v6 >= (unsigned int)v5 )
-            sub_21FFED4(this);
+            sub_2213CE4(this);
           this = (BonusSelectSummonConfirmDialog_o *)v2->fields.itemList;
           if ( !this )
             break;
@@ -1460,7 +1460,7 @@ void BonusSelectSummonConfirmDialog__SetLoadSelectBonusData(
           System_Collections_Generic_List_object___GetEnumerator(
             &v15,
             (System_Collections_Generic_List_object__o *)this,
-            (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
+            (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__GetEnumerator__);
           v8 = *(_OWORD *)&v15.fields._list;
           v15.fields._list = 0;
           *(_QWORD *)&v15.fields._index = &v16;
@@ -1470,25 +1470,25 @@ void BonusSelectSummonConfirmDialog__SetLoadSelectBonusData(
           {
             v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                    &v16,
-                   (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
+                   (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__MoveNext__);
             if ( !v9 )
               break;
             if ( !v16.fields._current )
-              sub_21FFECC(v9, v10);
+              sub_2213CDC(v9, v10);
             klass = (BonusSelectSummonPartyOrganizationListViewItem_o *)v16.fields._current[8].klass;
             if ( !klass )
-              sub_21FFECC(0, v10);
+              sub_2213CDC(0, v10);
             gachaBonusSelectEntity = klass->fields.gachaBonusSelectEntity;
             if ( gachaBonusSelectEntity )
             {
               if ( !v7 )
-                sub_21FFECC(klass, v10);
+                sub_2213CDC(klass, v10);
               slot = gachaBonusSelectEntity->fields.slot;
               if ( slot == *(_DWORD *)(v7 + 20) )
               {
                 if ( !v17 )
-                  sub_21FFECC(klass, v10);
-                BonusSelectSummonPartyOrganizationListViewItem__Modify_42094212(
+                  sub_2213CDC(klass, v10);
+                BonusSelectSummonPartyOrganizationListViewItem__Modify_42109276(
                   klass,
                   *(_DWORD *)(v17 + 16),
                   slot,
@@ -1499,13 +1499,13 @@ void BonusSelectSummonConfirmDialog__SetLoadSelectBonusData(
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v16,
-            (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
+            (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BonusSelectSummonPartyOrganizationListViewObject__Dispose__);
           LODWORD(v5) = *(_DWORD *)(v4 + 24);
           if ( (__int64)++v6 >= (int)v5 )
             goto LABEL_26;
         }
 LABEL_28:
-        sub_21FFECC(this, method);
+        sub_2213CDC(this, method);
       }
 LABEL_26:
       BonusSelectSummonConfirmDialog__Modify(v2, method);
@@ -1519,15 +1519,15 @@ void BonusSelectSummonConfirmDialog___Close_b__25_0(BonusSelectSummonConfirmDial
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5934847 & 1) == 0 )
+  if ( (byte_596C976 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934847 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596C976 = 1;
   }
   BonusSelectSummonConfirmDialog__EndClose(this, method);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   CommonUI__SetFadeMaskCollider((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -1553,7 +1553,7 @@ void BonusSelectSummonConfirmDialog___OnClick_b__28_0(BonusSelectSummonConfirmDi
         (baseWindow = (UnityEngine_GameObject_o *)this->fields.maskSprite) == 0)
     || (baseWindow = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0)) == 0 )
   {
-    sub_21FFECC(baseWindow, v4);
+    sub_2213CDC(baseWindow, v4);
   }
   UnityEngine_GameObject__SetActive(baseWindow, 1, 0);
 }
@@ -1578,7 +1578,7 @@ void BonusSelectSummonConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1589,12 +1589,12 @@ void BonusSelectSummonConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1606,9 +1606,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF2F14;
+  this->fields.invoke_impl = (intptr_t)sub_2005EF0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF2ECC;
+  this->fields.extra_arg = (intptr_t)sub_2005EA8;
 }
 
 
@@ -1624,8 +1624,8 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_ClickDelegate__BeginInvoke
 
   v10[0] = isDecide;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1634,7 +1634,7 @@ void BonusSelectSummonConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -1672,7 +1672,7 @@ void BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1683,11 +1683,11 @@ void BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) != 0 )
+  if ( (sub_2213B38(method) & 1) != 0 )
   {
     if ( v12 == 2 )
     {
-      v13 = sub_1FF2C88;
+      v13 = sub_2005C64;
 LABEL_16:
       this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_17;
@@ -1699,41 +1699,41 @@ LABEL_16:
     {
       if ( this->fields.method_is_virtual )
       {
-        v14 = sub_21FFD20(method);
-        v15 = sub_22002A4(method);
+        v14 = sub_2213B30(method);
+        v15 = sub_22140B4(method);
         if ( (v14 & 1) != 0 )
         {
           if ( (v15 & 1) != 0 )
-            v13 = sub_1FF2DA0;
+            v13 = sub_2005D7C;
           else
-            v13 = sub_1FF2D54;
+            v13 = sub_2005D30;
         }
         else if ( (v15 & 1) != 0 )
         {
-          v13 = sub_1FF2CC8;
+          v13 = sub_2005CA4;
         }
         else
         {
-          v13 = sub_1FF2C9C;
+          v13 = sub_2005C78;
         }
       }
       else
       {
-        v13 = sub_1FF2C64;
+        v13 = sub_2005C40;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v17, 0);
+      v17 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v17, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_17:
-  this->fields.extra_arg = (intptr_t)sub_1FF2C0C;
+  this->fields.extra_arg = (intptr_t)sub_2005BE8;
 }
 
 
@@ -1751,8 +1751,8 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__Beg
   v11[0] = isLongTap;
   v10[0] = memberItem;
   v10[2] = 0;
-  v10[1] = j_il2cpp_value_box_0(qword_594C050, v11);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v10, callback, object);
+  v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
+  return sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -1761,7 +1761,7 @@ void BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -1799,7 +1799,7 @@ void BonusSelectSummonConfirmDialog_TryGetBonusSelectData___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -1810,17 +1810,17 @@ void BonusSelectSummonConfirmDialog_TryGetBonusSelectData___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = sub_1FF2E98;
+      v13 = sub_2005E74;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v15 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v15, 0);
+      v15 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v15, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -1830,11 +1830,11 @@ LABEL_8:
   }
   if ( v12 != 2 )
     goto LABEL_8;
-  v13 = sub_1FF2EB8;
+  v13 = sub_2005E94;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v13;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1FF2E34;
+  this->fields.extra_arg = (intptr_t)sub_2005E10;
 }
 
 
@@ -1854,8 +1854,8 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_TryGetBonusSelectData__Beg
   v7 = *data;
   v11[2] = 0;
   v11[0] = v7;
-  v11[1] = j_il2cpp_value_box_0(qword_594C070, &v12);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v11, callback, object);
+  v11[1] = j_il2cpp_value_box_0(qword_5984348, &v12);
+  return sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -1872,9 +1872,9 @@ bool BonusSelectSummonConfirmDialog_TryGetBonusSelectData__EndInvoke(
   SelectBonusData_o **v9; // [xsp+8h] [xbp-8h] BYREF
 
   v9 = data;
-  v4 = sub_21FFC08(result, &v9, result);
+  v4 = sub_2213A18(result, &v9, result);
   if ( !v4 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return *(_BYTE *)j_il2cpp_object_unbox_0(v4, v5, v6, v7);
 }
 
@@ -1885,7 +1885,7 @@ bool BonusSelectSummonConfirmDialog_TryGetBonusSelectData__Invoke(
         int32_t gachaId,
         const MethodInfo *method)
 {
-  return ((__int64 (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
+  return ((bool (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            data,
            gachaId,
@@ -1903,15 +1903,15 @@ void BonusSelectSummonConfirmDialog___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5934848 & 1) == 0 )
+  if ( (byte_596C977 & 1) == 0 )
   {
-    sub_21FFC50(&BonusSelectSummonConfirmDialog___c_TypeInfo);
-    byte_5934848 = 1;
+    sub_2213A60(&BonusSelectSummonConfirmDialog___c_TypeInfo);
+    byte_596C977 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BonusSelectSummonConfirmDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BonusSelectSummonConfirmDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields->__9 = (struct BonusSelectSummonConfirmDialog___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1937,7 +1937,7 @@ bool BonusSelectSummonConfirmDialog___c___Modify_b__30_0(
   struct BonusSelectSummonPartyOrganizationListViewItem_o *listViewItem; // x8
 
   if ( !itemObj || (listViewItem = itemObj->fields.listViewItem) == 0 )
-    sub_21FFECC(this, itemObj);
+    sub_2213CDC(this, itemObj);
   return listViewItem->fields.servantEntity == 0;
 }
 
@@ -1950,7 +1950,7 @@ bool BonusSelectSummonConfirmDialog___c___Open_b__22_1(
   struct BonusSelectSummonPartyOrganizationListViewItem_o *listViewItem; // x8
 
   if ( !itemObj || (listViewItem = itemObj->fields.listViewItem) == 0 )
-    sub_21FFECC(this, itemObj);
+    sub_2213CDC(this, itemObj);
   return listViewItem->fields.servantEntity == 0;
 }
 
@@ -1997,17 +1997,17 @@ void BonusSelectSummonConfirmDialog___c__DisplayClass22_0___Open_b__0(
   bool v29; // w7
 
   v3 = this;
-  if ( (byte_5934849 & 1) == 0 )
+  if ( (byte_596C978 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
-    sub_21FFC50(&System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog___c__Open_b__22_1__);
-    sub_21FFC50(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass22_0__Open_b__2__);
-    sub_21FFC50(&BonusSelectSummonConfirmDialog___c_TypeInfo);
-    this = (BonusSelectSummonConfirmDialog___c__DisplayClass22_0_o *)sub_21FFC50(&StringLiteral_17842/*"bg_white"*/);
-    byte_5934849 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
+    sub_2213A60(&System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog___c__Open_b__22_1__);
+    sub_2213A60(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass22_0__Open_b__2__);
+    sub_2213A60(&BonusSelectSummonConfirmDialog___c_TypeInfo);
+    this = (BonusSelectSummonConfirmDialog___c__DisplayClass22_0_o *)sub_2213A60(&StringLiteral_17880/*"bg_white"*/);
+    byte_596C978 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -2015,7 +2015,7 @@ void BonusSelectSummonConfirmDialog___c__DisplayClass22_0___Open_b__0(
   messageBg = _4__this->fields.messageBg;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v2);
-  AtlasManager__SetPartyOrganizationImage(messageBg, (System_String_o *)StringLiteral_17842/*"bg_white"*/, 0);
+  AtlasManager__SetPartyOrganizationImage(messageBg, (System_String_o *)StringLiteral_17880/*"bg_white"*/, 0);
   this = (BonusSelectSummonConfirmDialog___c__DisplayClass22_0_o *)v3->fields.__4__this;
   if ( !this )
     goto LABEL_22;
@@ -2052,16 +2052,16 @@ void BonusSelectSummonConfirmDialog___c__DisplayClass22_0___Open_b__0(
       static_fields = BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields;
     }
     v14 = (Il2CppObject *)static_fields->__9;
-    _9__22_1 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
+    _9__22_1 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__22_1, v14, Method_BonusSelectSummonConfirmDialog___c__Open_b__22_1__, 0);
     v15 = BonusSelectSummonConfirmDialog___c_TypeInfo->static_fields;
     v15->__9__22_1 = (struct System_Func_BonusSelectSummonPartyOrganizationListViewObject__bool__o *)_9__22_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15->__9__22_1, (int32_t)_9__22_1, v16, v17, v18, v19, v20, v21);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15->__9__22_1, (int32_t)_9__22_1, v16, v17, v18, v19, v20, v21);
   }
   this = (BonusSelectSummonConfirmDialog___c__DisplayClass22_0_o *)BasicHelper__Any_object_(
                                                                      itemList,
                                                                      (System_Func_T__bool__o *)_9__22_1,
-                                                                     (const MethodInfo_37DCA30 *)Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
+                                                                     (const MethodInfo_380FDE0 *)Method_BasicHelper_Any_BonusSelectSummonPartyOrganizationListViewObject___);
   if ( !buttonDecide )
     goto LABEL_22;
   this = (BonusSelectSummonConfirmDialog___c__DisplayClass22_0_o *)((__int64 (__fastcall *)(struct UICommonButton_o *, bool, const MethodInfo *))buttonDecide->klass->vtable._5_set_isEnabled.methodPtr)(
@@ -2072,18 +2072,18 @@ void BonusSelectSummonConfirmDialog___c__DisplayClass22_0___Open_b__0(
   v23 = (BaseDialog_o *)v3->fields.__4__this;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_BonusSelectSummonConfirmDialog___c__DisplayClass22_0__Open_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v24, v25, v26, v27, v28, v29);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v24, v25, v26, v27, v28, v29);
   }
   if ( !v23 )
 LABEL_22:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   BaseDialog__Open(v23, _9__2, 1, 0, 0);
 }
 
@@ -2097,7 +2097,7 @@ void BonusSelectSummonConfirmDialog___c__DisplayClass22_0___Open_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   endOpenCallback = this->fields.endOpenCallback;
   _4__this->fields.isButtonEnable = 1;
   ActionExtensions__Call(endOpenCallback, 0);
@@ -2120,6 +2120,6 @@ bool BonusSelectSummonConfirmDialog___c__DisplayClass32_0___SaveSelectBonusData_
   struct SelectBonusData_o *data; // x8
 
   if ( !x || (data = this->fields.data) == 0 )
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   return x->fields.gachaId == data->fields.gachaId;
 }

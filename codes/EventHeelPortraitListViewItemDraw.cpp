@@ -19,7 +19,7 @@ void EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
 
   newImgSprite = this->fields.newImgSprite;
   if ( !newImgSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ShiningIconComponent__Clear(newImgSprite, 0);
 }
 
@@ -39,13 +39,13 @@ void EventHeelPortraitListViewItemDraw__SetItem(
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_5932837 & 1) == 0 )
+  if ( (byte_596A937 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&StringLiteral_23867/*"portrait_unknown"*/);
-    this = (EventHeelPortraitListViewItemDraw_o *)sub_21FFC50(&StringLiteral_21104/*"icon_common_new01"*/);
-    byte_5932837 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&StringLiteral_23914/*"portrait_unknown"*/);
+    this = (EventHeelPortraitListViewItemDraw_o *)sub_2213A60(&StringLiteral_21145/*"icon_common_new01"*/);
+    byte_596A937 = 1;
   }
   if ( !item )
     goto LABEL_21;
@@ -57,22 +57,22 @@ void EventHeelPortraitListViewItemDraw__SetItem(
     imageId = Entity_k__BackingField->fields.imageId;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, item, method);
-    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_76481856(imageId, 0);
+    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_76695160(imageId, 0);
     v7 = this;
   }
   else
   {
-    v7 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_23867/*"portrait_unknown"*/;
+    v7 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_23914/*"portrait_unknown"*/;
   }
   v8 = item->fields._Entity_k__BackingField;
   if ( !v8 )
 LABEL_21:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   eventId = v8->fields.eventId;
   heelPortraitSprite = v4->fields.heelPortraitSprite;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item, method);
-  AtlasManager__SetEventUI_47538316(eventId, heelPortraitSprite, (System_String_o *)v7, 0);
+  AtlasManager__SetEventUI_47569484(eventId, heelPortraitSprite, (System_String_o *)v7, 0);
   if ( !item->fields._isHavePortrait_k__BackingField || item->fields._isDispDetailDialog_k__BackingField )
   {
     this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
@@ -86,7 +86,7 @@ LABEL_21:
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;
-  ShiningIconComponent__Set_48030064((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_21104/*"icon_common_new01"*/, 0);
+  ShiningIconComponent__Set_48061360((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_21145/*"icon_common_new01"*/, 0);
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;

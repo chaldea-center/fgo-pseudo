@@ -40,7 +40,7 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *DropItemEffectArgs__RandomGe
 
   dropPositionRandomData = this->fields.dropPositionRandomData;
   if ( !dropPositionRandomData )
-    sub_21FFECC(0, *(_QWORD *)&giftId);
+    sub_2213CDC(0, *(_QWORD *)&giftId);
   return BattleDropPositionRandom__RandomGetPositionDataAndRemove(dropPositionRandomData, giftId, 0);
 }
 
@@ -61,24 +61,24 @@ void DropItemEffectArgs__SetDropPointRandomData(
   bool v14; // w7
   __int64 v15; // x1
 
-  if ( (byte_593BD8B & 1) == 0 )
+  if ( (byte_5973F98 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropPositionRandom_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD8B = 1;
+    sub_2213A60(&BattleDropPositionRandom_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F98 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, scriptableObject);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scriptableObject, 0, 0)
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)dropInfoArray, 0) )
   {
-    v7 = (BattleDropPositionRandom_o *)sub_21FFEBC(BattleDropPositionRandom_TypeInfo);
+    v7 = (BattleDropPositionRandom_o *)sub_2213CCC(BattleDropPositionRandom_TypeInfo);
     BattleDropPositionRandom___ctor(v7, 0);
     this->fields.dropPositionRandomData = v7;
     p_dropPositionRandomData = &this->fields.dropPositionRandomData;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_dropPositionRandomData, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_dropPositionRandomData, (int32_t)v7, v9, v10, v11, v12, v13, v14);
     if ( !*p_dropPositionRandomData )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     BattleDropPositionRandom__Initialize(*p_dropPositionRandomData, scriptableObject, dropInfoArray, 0);
   }
 }
@@ -100,24 +100,24 @@ void DropItemEffectArgs__SetDropTimingAdjustData(
   bool v14; // w7
   __int64 v15; // x1
 
-  if ( (byte_593BD8A & 1) == 0 )
+  if ( (byte_5973F97 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropTimingAdjustment_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD8A = 1;
+    sub_2213A60(&BattleDropTimingAdjustment_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F97 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, scriptableObject);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scriptableObject, 0, 0)
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)dropInfoArray, 0) )
   {
-    v7 = (BattleDropTimingAdjustment_o *)sub_21FFEBC(BattleDropTimingAdjustment_TypeInfo);
+    v7 = (BattleDropTimingAdjustment_o *)sub_2213CCC(BattleDropTimingAdjustment_TypeInfo);
     BattleDropTimingAdjustment___ctor(v7, 0);
     this->fields.dropTimingAdjustmentData = v7;
     p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
-    sub_21FFBF4(p_fields, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_2213A04(p_fields, (int32_t)v7, v9, v10, v11, v12, v13, v14);
     if ( !p_fields->klass )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     BattleDropTimingAdjustment__Initialize(
       (BattleDropTimingAdjustment_o *)p_fields->klass,
       scriptableObject,

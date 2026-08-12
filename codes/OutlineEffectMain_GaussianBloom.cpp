@@ -8,15 +8,15 @@ void OutlineEffectMain_GaussianBloom___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5933C8D & 1) == 0 )
+  if ( (byte_596BDA6 & 1) == 0 )
   {
-    sub_21FFC50(&OutlineEffectMain_GaussianBloom_TypeInfo);
-    sub_21FFC50(&StringLiteral_3245/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/);
-    byte_5933C8D = 1;
+    sub_2213A60(&OutlineEffectMain_GaussianBloom_TypeInfo);
+    sub_2213A60(&StringLiteral_3249/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/);
+    byte_596BDA6 = 1;
   }
-  v7 = StringLiteral_3245/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/;
-  OutlineEffectMain_GaussianBloom_TypeInfo->static_fields->NPCameraPath = (struct System_String_o *)StringLiteral_3245/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_3249/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/;
+  OutlineEffectMain_GaussianBloom_TypeInfo->static_fields->NPCameraPath = (struct System_String_o *)StringLiteral_3249/*"BattleScene/Performance/Ground/RootCameraPrefab/CameraObject/BackCamera/MiddleCamera"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)OutlineEffectMain_GaussianBloom_TypeInfo->static_fields,
     v7,
     v1,
@@ -38,17 +38,17 @@ void OutlineEffectMain_GaussianBloom___ctor(OutlineEffectMain_GaussianBloom_o *t
   bool v7; // w7
   struct System_String_o *v14; // x1
 
-  if ( (byte_5933C8C & 1) == 0 )
+  if ( (byte_596BDA5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4114/*"Cameras/BattleCamera"*/);
-    byte_5933C8C = 1;
+    sub_2213A60(&StringLiteral_4119/*"Cameras/BattleCamera"*/);
+    byte_596BDA5 = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
-  v14 = (struct System_String_o *)StringLiteral_4114/*"Cameras/BattleCamera"*/;
+  v14 = (struct System_String_o *)StringLiteral_4119/*"Cameras/BattleCamera"*/;
   this->fields.intensityMultiplication = 1.0;
   this->fields.EditorCameraPath = v14;
   *(_QWORD *)&this->fields.alphaMultiplication = _D0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.EditorCameraPath, (int32_t)v14, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.EditorCameraPath, (int32_t)v14, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -85,10 +85,10 @@ void OutlineEffectMain_GaussianBloom__CleanUp(OutlineEffectMain_GaussianBloom_o 
   const MethodInfo *v22; // x1
   const MethodInfo *v23; // x1
 
-  if ( (byte_5933C8B & 1) == 0 )
+  if ( (byte_596BDA4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933C8B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BDA4 = 1;
   }
   OutlineEffectMain_GaussianBloom__RemoveCommandBuffer(this, 16, this->fields.outlineCmd, v2);
   materialLUT = (UnityEngine_Object_o *)this->fields.materialLUT;
@@ -104,7 +104,7 @@ void OutlineEffectMain_GaussianBloom__CleanUp(OutlineEffectMain_GaussianBloom_o 
   {
     UnityEngine_ComputeBuffer__Dispose(tinyPolygonVertexBuffer, 0);
     this->fields.tinyPolygonVertexBuffer = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.tinyPolygonVertexBuffer,
       0,
       v11,
@@ -192,11 +192,11 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5933C86 & 1) == 0 )
+  if ( (byte_596BD9F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933C86 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BD9F = 1;
   }
   outlineCmd = this->fields.outlineCmd;
   memset(&v51[52], 0, 116);
@@ -245,7 +245,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
       &v47,
       0);
     v10 = this->fields.outlineCmd;
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335520(
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
                                                  &v46,
                                                  (UnityEngine_Texture_o *)this->fields.outlineRT,
                                                  0);
@@ -264,7 +264,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     smr = (UnityEngine_SkinnedMeshRenderer_o *)this->fields.outlineCmd;
     if ( !smr )
       goto LABEL_43;
-    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83346688(
+    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83559992(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       (UnityEngine_Renderer_o *)this->fields.smr,
       this->fields.materialSilhouetteRed,
@@ -272,7 +272,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     smr = (UnityEngine_SkinnedMeshRenderer_o *)this->fields.outlineCmd;
     if ( !smr )
       goto LABEL_43;
-    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83346688(
+    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83559992(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       (UnityEngine_Renderer_o *)this->fields.smr,
       this->fields.materialSilhouetteGreen,
@@ -280,7 +280,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     smr = (UnityEngine_SkinnedMeshRenderer_o *)this->fields.outlineCmd;
     if ( !smr )
       goto LABEL_43;
-    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83346688(
+    UnityEngine_Rendering_CommandBuffer__DrawRenderer_83559992(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       (UnityEngine_Renderer_o *)this->fields.smr,
       this->fields.materialSilhouetteBlue,
@@ -289,7 +289,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     if ( !smr )
       goto LABEL_43;
     v44 = *(UnityEngine_RenderTextureDescriptor_o *)&v51[116];
-    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83343188(
+    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83556492(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       10000,
       &v44,
@@ -298,7 +298,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     if ( !smr )
       goto LABEL_43;
     v43 = *(UnityEngine_RenderTextureDescriptor_o *)&v51[116];
-    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83343188(
+    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83556492(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       20000,
       &v43,
@@ -307,14 +307,14 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     if ( !smr )
       goto LABEL_43;
     v42 = *(UnityEngine_RenderTextureDescriptor_o *)&v51[116];
-    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83343188(
+    UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83556492(
       (UnityEngine_Rendering_CommandBuffer_o *)smr,
       30000,
       &v42,
       0);
     v11 = this->fields.outlineCmd;
     outlineRT = (UnityEngine_Texture_o *)this->fields.outlineRT;
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(
                                                  &v41,
                                                  10000,
                                                  0);
@@ -323,7 +323,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     v40 = v41;
     UnityEngine_Rendering_CommandBuffer__Blit(v11, outlineRT, &v40, 0);
     v13 = this->fields.outlineCmd;
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335520(
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
                                                  &v39,
                                                  (UnityEngine_Texture_o *)this->fields.outlineRT,
                                                  0);
@@ -340,8 +340,8 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     v53.fields.a = 0.0;
     UnityEngine_Rendering_CommandBuffer__ClearRenderTarget((UnityEngine_Rendering_CommandBuffer_o *)smr, 1, 1, v53, 0);
     v14 = this->fields.outlineCmd;
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(&v37, 10000, 0);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v37, 10000, 0);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(
                                                  &v36,
                                                  20000,
                                                  0);
@@ -350,10 +350,10 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     materialGaussianBloom = this->fields.materialGaussianBloom;
     v35 = v37;
     v34 = v36;
-    UnityEngine_Rendering_CommandBuffer__Blit_83347000(v14, &v35, &v34, materialGaussianBloom, 0, 0);
+    UnityEngine_Rendering_CommandBuffer__Blit_83560304(v14, &v35, &v34, materialGaussianBloom, 0, 0);
     v16 = this->fields.outlineCmd;
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(&v33, 20000, 0);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v33, 20000, 0);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(
                                                  &v32,
                                                  30000,
                                                  0);
@@ -362,10 +362,10 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
     v17 = this->fields.materialGaussianBloom;
     v31 = v33;
     v30 = v32;
-    UnityEngine_Rendering_CommandBuffer__Blit_83347000(v16, &v31, &v30, v17, 1, 0);
+    UnityEngine_Rendering_CommandBuffer__Blit_83560304(v16, &v31, &v30, v17, 1, 0);
     v18 = this->fields.outlineCmd;
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335488(&v29, 30000, 0);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83335520(
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v29, 30000, 0);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
                                                  &v28,
                                                  (UnityEngine_Texture_o *)this->fields.outlineRT,
                                                  0);
@@ -373,7 +373,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
       goto LABEL_43;
     v27 = v29;
     v26 = v28;
-    UnityEngine_Rendering_CommandBuffer__Blit_83346796(v18, &v27, &v26, 0);
+    UnityEngine_Rendering_CommandBuffer__Blit_83560100(v18, &v27, &v26, 0);
     smr = (UnityEngine_SkinnedMeshRenderer_o *)this->fields.outlineCmd;
     if ( !smr
       || (UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(
@@ -394,7 +394,7 @@ void OutlineEffectMain_GaussianBloom__GenerateBloomLookUpTexture(
           (smr = (UnityEngine_SkinnedMeshRenderer_o *)this->fields.camera) == 0) )
     {
 LABEL_43:
-      sub_21FFECC(smr, v8);
+      sub_2213CDC(smr, v8);
     }
     UnityEngine_Camera__AddCommandBuffer((UnityEngine_Camera_o *)smr, 16, this->fields.outlineCmd, 0);
     if ( v7 )
@@ -407,13 +407,13 @@ LABEL_43:
       {
         if ( !v25 )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
-        UnityEngine_Object__Destroy_83246496(settings, 0);
+        UnityEngine_Object__Destroy_83459800(settings, 0);
       }
       else
       {
         if ( !v25 )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
-        UnityEngine_Object__DestroyImmediate_83246828(settings, 0);
+        UnityEngine_Object__DestroyImmediate_83460132(settings, 0);
       }
     }
   }
@@ -452,11 +452,11 @@ void OutlineEffectMain_GaussianBloom__OnValidate(OutlineEffectMain_GaussianBloom
   bool v9; // w7
   int32_t v10; // w1
 
-  if ( (byte_5933C85 & 1) == 0 )
+  if ( (byte_596BD9E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&StringLiteral_23854/*"please play!!"*/);
-    byte_5933C85 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&StringLiteral_23901/*"please play!!"*/);
+    byte_596BD9E = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
@@ -470,9 +470,9 @@ void OutlineEffectMain_GaussianBloom__OnValidate(OutlineEffectMain_GaussianBloom
   }
   else
   {
-    v10 = StringLiteral_23854/*"please play!!"*/;
-    this->fields.message = (struct System_String_o *)StringLiteral_23854/*"please play!!"*/;
-    sub_21FFBF4(
+    v10 = StringLiteral_23901/*"please play!!"*/;
+    this->fields.message = (struct System_String_o *)StringLiteral_23901/*"please play!!"*/;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.message,
       v10,
       (System_String_o *)v4,
@@ -504,18 +504,18 @@ void OutlineEffectMain_GaussianBloom__RemoveCommandBuffer(
   System_Collections_Generic_List_Enumerator_object__o *v16; // [xsp+10h] [xbp-70h]
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_5933C87 & 1) == 0 )
+  if ( (byte_596BDA0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CommandBuffer__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CommandBuffer__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CommandBuffer___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CommandBuffer__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CommandBuffer__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_CommandBuffer__TypeInfo);
-    byte_5933C87 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_CommandBuffer__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CommandBuffer__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CommandBuffer__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CommandBuffer___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CommandBuffer__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CommandBuffer__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_CommandBuffer__TypeInfo);
+    byte_596BDA0 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   if ( cmd )
@@ -527,11 +527,11 @@ void OutlineEffectMain_GaussianBloom__RemoveCommandBuffer(
                                                                       camera,
                                                                       cameraEvent,
                                                                       0);
-    v9 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_CommandBuffer__TypeInfo);
-    System_Collections_Generic_List_object____ctor_71627776(
+    v9 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_CommandBuffer__TypeInfo);
+    System_Collections_Generic_List_object____ctor_71841080(
       v9,
       CommandBuffers,
-      (const MethodInfo_444F400 *)Method_System_Collections_Generic_List_CommandBuffer___ctor__);
+      (const MethodInfo_4483538 *)Method_System_Collections_Generic_List_CommandBuffer___ctor__);
     if ( !v9 )
       goto LABEL_19;
     size = v9->fields._size;
@@ -542,7 +542,7 @@ void OutlineEffectMain_GaussianBloom__RemoveCommandBuffer(
         camera = (UnityEngine_Camera_o *)System_Collections_Generic_List_object___get_Item(
                                            v9,
                                            --size,
-                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_CommandBuffer__get_Item__);
+                                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_CommandBuffer__get_Item__);
         if ( !camera )
           break;
         name = UnityEngine_Rendering_CommandBuffer__get_name((UnityEngine_Rendering_CommandBuffer_o *)camera, 0);
@@ -551,12 +551,12 @@ void OutlineEffectMain_GaussianBloom__RemoveCommandBuffer(
           System_Collections_Generic_List_object___RemoveAt(
             v9,
             size,
-            (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_CommandBuffer__RemoveAt__);
+            (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_CommandBuffer__RemoveAt__);
         if ( size <= 0 )
           goto LABEL_11;
       }
 LABEL_19:
-      sub_21FFECC(camera, *(_QWORD *)&cameraEvent);
+      sub_2213CDC(camera, *(_QWORD *)&cameraEvent);
     }
 LABEL_11:
     camera = this->fields.camera;
@@ -566,16 +566,16 @@ LABEL_11:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v17,
       v9,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_CommandBuffer__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_CommandBuffer__GetEnumerator__);
     v15 = 0;
     v16 = &v17;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v17,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_CommandBuffer__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_CommandBuffer__MoveNext__) )
     {
       v14 = this->fields.camera;
       if ( !v14 )
-        sub_21FFECC(0, v13);
+        sub_2213CDC(0, v13);
       UnityEngine_Camera__AddCommandBuffer(
         v14,
         cameraEvent,
@@ -584,7 +584,7 @@ LABEL_11:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v17,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_CommandBuffer__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_CommandBuffer__Dispose__);
   }
 }
 
@@ -669,25 +669,25 @@ void OutlineEffectMain_GaussianBloom__Setup(OutlineEffectMain_GaussianBloom_o *t
   struct System_String_o **v57; // x19
   System_String_o *message; // t1
 
-  if ( (byte_5933C88 & 1) == 0 )
+  if ( (byte_596BDA1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SkinnedMeshRenderer___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&OutlineEffectMain_GaussianBloom_TypeInfo);
-    sub_21FFC50(&StringLiteral_10462/*"OutlineEffectMaterialLUT"*/);
-    sub_21FFC50(&StringLiteral_20263/*"failed to get SkinnedMeshRenderer component from parent"*/);
-    sub_21FFC50(&StringLiteral_23749/*"parent is null. please attach this component to object with parent"*/);
-    sub_21FFC50(&StringLiteral_5120/*"Custom/TwoPassGaussianBloom"*/);
-    sub_21FFC50(&StringLiteral_10463/*"OutlineEffectShaderColorSilhouette_B"*/);
-    sub_21FFC50(&StringLiteral_25041/*"success"*/);
-    sub_21FFC50(&StringLiteral_5087/*"Custom/OutlineEffectShaderLUT"*/);
-    sub_21FFC50(&StringLiteral_10467/*"OutlineRenderTexture"*/);
-    sub_21FFC50(&StringLiteral_5086/*"Custom/OutlineEffectShaderColorSilhouette"*/);
-    sub_21FFC50(&StringLiteral_10464/*"OutlineEffectShaderColorSilhouette_G"*/);
-    sub_21FFC50(&StringLiteral_10466/*"OutlineEffectTwoPassGaussianBloom"*/);
-    sub_21FFC50(&StringLiteral_24602/*"sharedMesh from SkinnedMeshRenderer returned null value"*/);
-    sub_21FFC50(&StringLiteral_10465/*"OutlineEffectShaderColorSilhouette_R"*/);
-    byte_5933C88 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_SkinnedMeshRenderer___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&OutlineEffectMain_GaussianBloom_TypeInfo);
+    sub_2213A60(&StringLiteral_10475/*"OutlineEffectMaterialLUT"*/);
+    sub_2213A60(&StringLiteral_20305/*"failed to get SkinnedMeshRenderer component from parent"*/);
+    sub_2213A60(&StringLiteral_23796/*"parent is null. please attach this component to object with parent"*/);
+    sub_2213A60(&StringLiteral_5132/*"Custom/TwoPassGaussianBloom"*/);
+    sub_2213A60(&StringLiteral_10476/*"OutlineEffectShaderColorSilhouette_B"*/);
+    sub_2213A60(&StringLiteral_25089/*"success"*/);
+    sub_2213A60(&StringLiteral_5095/*"Custom/OutlineEffectShaderLUT"*/);
+    sub_2213A60(&StringLiteral_10480/*"OutlineRenderTexture"*/);
+    sub_2213A60(&StringLiteral_5094/*"Custom/OutlineEffectShaderColorSilhouette"*/);
+    sub_2213A60(&StringLiteral_10477/*"OutlineEffectShaderColorSilhouette_G"*/);
+    sub_2213A60(&StringLiteral_10479/*"OutlineEffectTwoPassGaussianBloom"*/);
+    sub_2213A60(&StringLiteral_24650/*"sharedMesh from SkinnedMeshRenderer returned null value"*/);
+    sub_2213A60(&StringLiteral_10478/*"OutlineEffectShaderColorSilhouette_R"*/);
+    byte_596BDA1 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -697,13 +697,13 @@ void OutlineEffectMain_GaussianBloom__Setup(OutlineEffectMain_GaussianBloom_o *t
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Equality(parent, 0, 0) )
   {
-    v14 = &StringLiteral_23749/*"parent is null. please attach this component to object with parent"*/;
+    v14 = &StringLiteral_23796/*"parent is null. please attach this component to object with parent"*/;
 LABEL_19:
     v29 = (struct System_String_o *)*v14;
     this->fields.message = (struct System_String_o *)*v14;
     p_message = &this->fields.message;
 LABEL_20:
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_message, (int32_t)v29, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_message, (int32_t)v29, v8, v9, v10, v11, v12, v13);
     return;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -714,10 +714,10 @@ LABEL_20:
     goto LABEL_30;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SkinnedMeshRenderer___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SkinnedMeshRenderer___);
   this->fields.smr = (struct UnityEngine_SkinnedMeshRenderer_o *)Component_object;
   p_smr = &this->fields.smr;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.smr,
     (int32_t)Component_object,
     v17,
@@ -731,13 +731,13 @@ LABEL_20:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
   if ( UnityEngine_Object__op_Equality(smr, 0, 0) )
   {
-    v14 = &StringLiteral_20263/*"failed to get SkinnedMeshRenderer component from parent"*/;
+    v14 = &StringLiteral_20305/*"failed to get SkinnedMeshRenderer component from parent"*/;
     goto LABEL_19;
   }
   transform = (UnityEngine_Transform_o *)*p_smr;
   if ( !*p_smr )
 LABEL_30:
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   sharedMesh = (UnityEngine_Object_o *)UnityEngine_SkinnedMeshRenderer__get_sharedMesh(
                                          (UnityEngine_SkinnedMeshRenderer_o *)transform,
                                          0);
@@ -745,39 +745,39 @@ LABEL_30:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
   if ( UnityEngine_Object__op_Equality(sharedMesh, 0, 0) )
   {
-    v14 = &StringLiteral_24602/*"sharedMesh from SkinnedMeshRenderer returned null value"*/;
+    v14 = &StringLiteral_24650/*"sharedMesh from SkinnedMeshRenderer returned null value"*/;
     goto LABEL_19;
   }
   OutlineEffectUtility__CreateShader(
     &this->fields.shaderLUTAsset,
-    (System_String_o *)StringLiteral_5087/*"Custom/OutlineEffectShaderLUT"*/,
+    (System_String_o *)StringLiteral_5095/*"Custom/OutlineEffectShaderLUT"*/,
     (const MethodInfo *)v8);
-  OutlineEffectUtility__CreateShader(&this->fields.shaderColorSilhouette, (System_String_o *)StringLiteral_5086/*"Custom/OutlineEffectShaderColorSilhouette"*/, v31);
-  OutlineEffectUtility__CreateShader(&this->fields.shaderGaussianBloom, (System_String_o *)StringLiteral_5120/*"Custom/TwoPassGaussianBloom"*/, v32);
+  OutlineEffectUtility__CreateShader(&this->fields.shaderColorSilhouette, (System_String_o *)StringLiteral_5094/*"Custom/OutlineEffectShaderColorSilhouette"*/, v31);
+  OutlineEffectUtility__CreateShader(&this->fields.shaderGaussianBloom, (System_String_o *)StringLiteral_5132/*"Custom/TwoPassGaussianBloom"*/, v32);
   OutlineEffectUtility__CreateMaterial(
     &this->fields.materialLUT,
     this->fields.shaderLUTAsset,
-    (System_String_o *)StringLiteral_10462/*"OutlineEffectMaterialLUT"*/,
+    (System_String_o *)StringLiteral_10475/*"OutlineEffectMaterialLUT"*/,
     v33);
   OutlineEffectUtility__CreateMaterial(
     &this->fields.materialSilhouetteRed,
     this->fields.shaderColorSilhouette,
-    (System_String_o *)StringLiteral_10465/*"OutlineEffectShaderColorSilhouette_R"*/,
+    (System_String_o *)StringLiteral_10478/*"OutlineEffectShaderColorSilhouette_R"*/,
     v34);
   OutlineEffectUtility__CreateMaterial(
     &this->fields.materialSilhouetteGreen,
     this->fields.shaderColorSilhouette,
-    (System_String_o *)StringLiteral_10464/*"OutlineEffectShaderColorSilhouette_G"*/,
+    (System_String_o *)StringLiteral_10477/*"OutlineEffectShaderColorSilhouette_G"*/,
     v35);
   OutlineEffectUtility__CreateMaterial(
     &this->fields.materialSilhouetteBlue,
     this->fields.shaderColorSilhouette,
-    (System_String_o *)StringLiteral_10463/*"OutlineEffectShaderColorSilhouette_B"*/,
+    (System_String_o *)StringLiteral_10476/*"OutlineEffectShaderColorSilhouette_B"*/,
     v36);
   OutlineEffectUtility__CreateMaterial(
     &this->fields.materialGaussianBloom,
     this->fields.shaderGaussianBloom,
-    (System_String_o *)StringLiteral_10466/*"OutlineEffectTwoPassGaussianBloom"*/,
+    (System_String_o *)StringLiteral_10479/*"OutlineEffectTwoPassGaussianBloom"*/,
     v37);
   normalDatas = (UnityEngine_Object_o *)this->fields.normalDatas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -793,14 +793,14 @@ LABEL_30:
   }
   Camera = OutlineEffectUtility__GetCamera(EditorCameraPath, v44->static_fields->NPCameraPath, v42);
   this->fields.camera = Camera;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.camera, (int32_t)Camera, v46, v47, v48, v49, v50, v51);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.camera, (int32_t)Camera, v46, v47, v48, v49, v50, v51);
   CommandBufferName = OutlineEffectMain_GaussianBloom__get_CommandBufferName(this, v52);
   OutlineEffectUtility__InstantiateCommandBuffer(&this->fields.outlineCmd, CommandBufferName, v54);
   OutlineEffectUtility__InstantiateRenderTexture(
     &this->fields.outlineRT,
     1024,
     1024,
-    (System_String_o *)StringLiteral_10467/*"OutlineRenderTexture"*/,
+    (System_String_o *)StringLiteral_10480/*"OutlineRenderTexture"*/,
     v55);
   OutlineEffectUtility__RemoveNullMaterials(this->fields.smr, v56);
   message = this->fields.message;
@@ -808,8 +808,8 @@ LABEL_30:
   if ( System_String__IsNullOrEmpty(message, 0) )
   {
     p_message = v57;
-    LODWORD(v29) = StringLiteral_25041/*"success"*/;
-    *v57 = (struct System_String_o *)StringLiteral_25041/*"success"*/;
+    LODWORD(v29) = StringLiteral_25089/*"success"*/;
+    *v57 = (struct System_String_o *)StringLiteral_25089/*"success"*/;
     goto LABEL_20;
   }
 }
@@ -836,34 +836,34 @@ void OutlineEffectMain_GaussianBloom__SetupSkinnedMeshRenderer(
   struct System_String_o *v17; // x1
   const MethodInfo *v18; // x2
 
-  if ( (byte_5933C89 & 1) == 0 )
+  if ( (byte_596BDA2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_13346/*"SetupSkinnedMeshRenderer -> sharedMesh from SkinnedMeshRenderer returned null value"*/);
-    sub_21FFC50(&StringLiteral_13345/*"SetupSkinnedMeshRenderer -> SkinnedMeshRenderer is null"*/);
-    byte_5933C89 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_13373/*"SetupSkinnedMeshRenderer -> sharedMesh from SkinnedMeshRenderer returned null value"*/);
+    sub_2213A60(&StringLiteral_13372/*"SetupSkinnedMeshRenderer -> SkinnedMeshRenderer is null"*/);
+    byte_596BDA2 = 1;
   }
   smr = (UnityEngine_Object_o *)this->fields.smr;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(smr, 0, 0) )
   {
-    v12 = &StringLiteral_13345/*"SetupSkinnedMeshRenderer -> SkinnedMeshRenderer is null"*/;
+    v12 = &StringLiteral_13372/*"SetupSkinnedMeshRenderer -> SkinnedMeshRenderer is null"*/;
 LABEL_12:
     v17 = (struct System_String_o *)*v12;
     this->fields.message = (struct System_String_o *)*v12;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.message, (int32_t)v17, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.message, (int32_t)v17, v6, v7, v8, v9, v10, v11);
     return;
   }
   v13 = this->fields.smr;
   if ( !v13 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   sharedMesh = (UnityEngine_Object_o *)UnityEngine_SkinnedMeshRenderer__get_sharedMesh(v13, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
   if ( UnityEngine_Object__op_Equality(sharedMesh, 0, 0) )
   {
-    v12 = &StringLiteral_13346/*"SetupSkinnedMeshRenderer -> sharedMesh from SkinnedMeshRenderer returned null value"*/;
+    v12 = &StringLiteral_13373/*"SetupSkinnedMeshRenderer -> sharedMesh from SkinnedMeshRenderer returned null value"*/;
     goto LABEL_12;
   }
   OutlineEffectUtility__InsertOutlineMaterialToSharedMaterialsAtLastIndex(
@@ -944,26 +944,26 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   UnityEngine_Vector4_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5933C8A & 1) == 0 )
+  if ( (byte_596BDA3 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17029/*"_VertexScale"*/);
-    sub_21FFC50(&StringLiteral_16869/*"_KernelSize"*/);
-    sub_21FFC50(&StringLiteral_16871/*"_LUTTex"*/);
-    sub_21FFC50(&StringLiteral_16863/*"_Intensity"*/);
-    sub_21FFC50(&StringLiteral_16769/*"_ClipFade"*/);
-    sub_21FFC50(&StringLiteral_16951/*"_ScaledScreenResolution"*/);
-    sub_21FFC50(&StringLiteral_16843/*"_FullscreenUVScale"*/);
-    sub_21FFC50(&StringLiteral_16911/*"_OutlineThickness"*/);
-    sub_21FFC50(&StringLiteral_16945/*"_Scale"*/);
-    sub_21FFC50(&StringLiteral_16962/*"_Sigma"*/);
-    sub_21FFC50(&StringLiteral_16842/*"_FullscreenUVOffset"*/);
-    sub_21FFC50(&StringLiteral_16952/*"_ScaledUVOffset"*/);
-    sub_21FFC50(&StringLiteral_17026/*"_VertexOffset"*/);
-    sub_21FFC50(&StringLiteral_16899/*"_Offset"*/);
-    sub_21FFC50(&StringLiteral_16794/*"_Contrast"*/);
-    sub_21FFC50(&StringLiteral_16944/*"_Saturation"*/);
-    sub_21FFC50(&StringLiteral_16731/*"_AlphaSettings"*/);
-    byte_5933C8A = 1;
+    sub_2213A60(&StringLiteral_17064/*"_VertexScale"*/);
+    sub_2213A60(&StringLiteral_16904/*"_KernelSize"*/);
+    sub_2213A60(&StringLiteral_16906/*"_LUTTex"*/);
+    sub_2213A60(&StringLiteral_16898/*"_Intensity"*/);
+    sub_2213A60(&StringLiteral_16801/*"_ClipFade"*/);
+    sub_2213A60(&StringLiteral_16986/*"_ScaledScreenResolution"*/);
+    sub_2213A60(&StringLiteral_16878/*"_FullscreenUVScale"*/);
+    sub_2213A60(&StringLiteral_16946/*"_OutlineThickness"*/);
+    sub_2213A60(&StringLiteral_16980/*"_Scale"*/);
+    sub_2213A60(&StringLiteral_16997/*"_Sigma"*/);
+    sub_2213A60(&StringLiteral_16877/*"_FullscreenUVOffset"*/);
+    sub_2213A60(&StringLiteral_16987/*"_ScaledUVOffset"*/);
+    sub_2213A60(&StringLiteral_17061/*"_VertexOffset"*/);
+    sub_2213A60(&StringLiteral_16934/*"_Offset"*/);
+    sub_2213A60(&StringLiteral_16826/*"_Contrast"*/);
+    sub_2213A60(&StringLiteral_16979/*"_Saturation"*/);
+    sub_2213A60(&StringLiteral_16763/*"_AlphaSettings"*/);
+    byte_596BDA3 = 1;
   }
   MainTexture = (char *)OutlineEffectUtility__GetMainTexture(this->fields.smr, method);
   if ( !this->fields.materialLUT )
@@ -975,7 +975,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
     goto LABEL_56;
   UnityEngine_Material__SetTexture(
     (UnityEngine_Material_o *)MainTexture,
-    (System_String_o *)StringLiteral_16871/*"_LUTTex"*/,
+    (System_String_o *)StringLiteral_16906/*"_LUTTex"*/,
     (UnityEngine_Texture_o *)this->fields.outlineRT,
     0);
   MainTexture = (char *)this->fields.materialSilhouetteRed;
@@ -1025,21 +1025,21 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v55.fields.x = v14;
   v55.fields.z = this->fields.alphaMultiplication;
   v55.fields.y = *((float *)MainTexture + 56);
-  UnityEngine_Material__SetVector(materialLUT, (System_String_o *)StringLiteral_16731/*"_AlphaSettings"*/, v55, 0);
+  UnityEngine_Material__SetVector(materialLUT, (System_String_o *)StringLiteral_16763/*"_AlphaSettings"*/, v55, 0);
   v15 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v16);
   if ( !MainTexture )
     goto LABEL_56;
   if ( !v15 )
     goto LABEL_56;
-  UnityEngine_Material__SetFloat(v15, (System_String_o *)StringLiteral_16911/*"_OutlineThickness"*/, *((float *)MainTexture + 8), 0);
+  UnityEngine_Material__SetFloat(v15, (System_String_o *)StringLiteral_16946/*"_OutlineThickness"*/, *((float *)MainTexture + 8), 0);
   v17 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v18);
   if ( !MainTexture )
     goto LABEL_56;
   if ( !v17 )
     goto LABEL_56;
-  UnityEngine_Material__SetFloat(v17, (System_String_o *)StringLiteral_16769/*"_ClipFade"*/, *((float *)MainTexture + 10), 0);
+  UnityEngine_Material__SetFloat(v17, (System_String_o *)StringLiteral_16801/*"_ClipFade"*/, *((float *)MainTexture + 10), 0);
   v19 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v20);
   if ( !MainTexture )
@@ -1050,7 +1050,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v56.fields.y = *((float *)MainTexture + 13);
   v56.fields.z = *((float *)MainTexture + 14);
   v56.fields.x = *((float *)MainTexture + 12);
-  UnityEngine_Material__SetVector(v19, (System_String_o *)StringLiteral_17029/*"_VertexScale"*/, v56, 0);
+  UnityEngine_Material__SetVector(v19, (System_String_o *)StringLiteral_17064/*"_VertexScale"*/, v56, 0);
   v21 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v22);
   if ( !MainTexture )
@@ -1061,7 +1061,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v57.fields.y = *((float *)MainTexture + 16);
   v57.fields.z = *((float *)MainTexture + 17);
   v57.fields.x = *((float *)MainTexture + 15);
-  UnityEngine_Material__SetVector(v21, (System_String_o *)StringLiteral_17026/*"_VertexOffset"*/, v57, 0);
+  UnityEngine_Material__SetVector(v21, (System_String_o *)StringLiteral_17061/*"_VertexOffset"*/, v57, 0);
   ScaledScreenResolution = OutlineEffectUtility__GetScaledScreenResolution(v23);
   ScaledUVOffset = OutlineEffectUtility__GetScaledUVOffset(v25);
   MainTexture = (char *)this->fields.materialLUT;
@@ -1071,7 +1071,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v58.fields.w = 0.0;
   v58.fields.x = ScaledScreenResolution.fields.x;
   v58.fields.y = ScaledScreenResolution.fields.y;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)MainTexture, (System_String_o *)StringLiteral_16951/*"_ScaledScreenResolution"*/, v58, 0);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)MainTexture, (System_String_o *)StringLiteral_16986/*"_ScaledScreenResolution"*/, v58, 0);
   MainTexture = (char *)this->fields.materialLUT;
   if ( !MainTexture )
     goto LABEL_56;
@@ -1079,21 +1079,21 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v59.fields.w = 0.0;
   v59.fields.x = ScaledUVOffset.fields.x;
   v59.fields.y = ScaledUVOffset.fields.y;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)MainTexture, (System_String_o *)StringLiteral_16952/*"_ScaledUVOffset"*/, v59, 0);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)MainTexture, (System_String_o *)StringLiteral_16987/*"_ScaledUVOffset"*/, v59, 0);
   v27 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v28);
   if ( !MainTexture )
     goto LABEL_56;
   if ( !v27 )
     goto LABEL_56;
-  UnityEngine_Material__SetFloat(v27, (System_String_o *)StringLiteral_16944/*"_Saturation"*/, *((float *)MainTexture + 57), 0);
+  UnityEngine_Material__SetFloat(v27, (System_String_o *)StringLiteral_16979/*"_Saturation"*/, *((float *)MainTexture + 57), 0);
   v29 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v30);
   if ( !MainTexture )
     goto LABEL_56;
   if ( !v29 )
     goto LABEL_56;
-  UnityEngine_Material__SetFloat(v29, (System_String_o *)StringLiteral_16794/*"_Contrast"*/, *((float *)MainTexture + 58), 0);
+  UnityEngine_Material__SetFloat(v29, (System_String_o *)StringLiteral_16826/*"_Contrast"*/, *((float *)MainTexture + 58), 0);
   v31 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v32);
   if ( !MainTexture )
@@ -1108,7 +1108,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v60.fields.w = 0.0;
   v60.fields.x = v33;
   v60.fields.y = *((float *)MainTexture + 19);
-  UnityEngine_Material__SetVector(v31, (System_String_o *)StringLiteral_16843/*"_FullscreenUVScale"*/, v60, 0);
+  UnityEngine_Material__SetVector(v31, (System_String_o *)StringLiteral_16878/*"_FullscreenUVScale"*/, v60, 0);
   v34 = this->fields.materialLUT;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v35);
   if ( !MainTexture )
@@ -1123,7 +1123,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v61.fields.w = 0.0;
   v61.fields.x = v36;
   v61.fields.y = *((float *)MainTexture + 21);
-  UnityEngine_Material__SetVector(v34, (System_String_o *)StringLiteral_16842/*"_FullscreenUVOffset"*/, v61, 0);
+  UnityEngine_Material__SetVector(v34, (System_String_o *)StringLiteral_16877/*"_FullscreenUVOffset"*/, v61, 0);
   v37 = this->fields.materialSilhouetteRed;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v38);
   if ( !MainTexture )
@@ -1134,7 +1134,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v62.fields.y = *((float *)MainTexture + 44);
   v62.fields.z = *((float *)MainTexture + 45);
   v62.fields.x = *((float *)MainTexture + 43);
-  UnityEngine_Material__SetVector(v37, (System_String_o *)StringLiteral_16899/*"_Offset"*/, v62, 0);
+  UnityEngine_Material__SetVector(v37, (System_String_o *)StringLiteral_16934/*"_Offset"*/, v62, 0);
   v39 = this->fields.materialSilhouetteGreen;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v40);
   if ( !MainTexture )
@@ -1145,7 +1145,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v63.fields.y = *((float *)MainTexture + 47);
   v63.fields.z = *((float *)MainTexture + 48);
   v63.fields.x = *((float *)MainTexture + 46);
-  UnityEngine_Material__SetVector(v39, (System_String_o *)StringLiteral_16899/*"_Offset"*/, v63, 0);
+  UnityEngine_Material__SetVector(v39, (System_String_o *)StringLiteral_16934/*"_Offset"*/, v63, 0);
   v41 = this->fields.materialSilhouetteBlue;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v42);
   if ( !MainTexture )
@@ -1156,7 +1156,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v64.fields.y = *((float *)MainTexture + 50);
   v64.fields.z = *((float *)MainTexture + 51);
   v64.fields.x = *((float *)MainTexture + 49);
-  UnityEngine_Material__SetVector(v41, (System_String_o *)StringLiteral_16899/*"_Offset"*/, v64, 0);
+  UnityEngine_Material__SetVector(v41, (System_String_o *)StringLiteral_16934/*"_Offset"*/, v64, 0);
   v43 = this->fields.materialSilhouetteRed;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v44);
   if ( !MainTexture )
@@ -1167,7 +1167,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v65.fields.y = *((float *)MainTexture + 35);
   v65.fields.z = *((float *)MainTexture + 36);
   v65.fields.x = *((float *)MainTexture + 34);
-  UnityEngine_Material__SetVector(v43, (System_String_o *)StringLiteral_16945/*"_Scale"*/, v65, 0);
+  UnityEngine_Material__SetVector(v43, (System_String_o *)StringLiteral_16980/*"_Scale"*/, v65, 0);
   v45 = this->fields.materialSilhouetteGreen;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v46);
   if ( !MainTexture )
@@ -1178,7 +1178,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v66.fields.y = *((float *)MainTexture + 38);
   v66.fields.z = *((float *)MainTexture + 39);
   v66.fields.x = *((float *)MainTexture + 37);
-  UnityEngine_Material__SetVector(v45, (System_String_o *)StringLiteral_16945/*"_Scale"*/, v66, 0);
+  UnityEngine_Material__SetVector(v45, (System_String_o *)StringLiteral_16980/*"_Scale"*/, v66, 0);
   v47 = this->fields.materialSilhouetteBlue;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v48);
   if ( !MainTexture )
@@ -1189,14 +1189,14 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
   v67.fields.y = *((float *)MainTexture + 41);
   v67.fields.z = *((float *)MainTexture + 42);
   v67.fields.x = *((float *)MainTexture + 40);
-  UnityEngine_Material__SetVector(v47, (System_String_o *)StringLiteral_16945/*"_Scale"*/, v67, 0);
+  UnityEngine_Material__SetVector(v47, (System_String_o *)StringLiteral_16980/*"_Scale"*/, v67, 0);
   materialGaussianBloom = this->fields.materialGaussianBloom;
   MainTexture = (char *)OutlineEffectMain_GaussianBloom__get_Settings(this, v50);
   if ( !MainTexture
     || !materialGaussianBloom
     || (UnityEngine_Material__SetFloat(
           materialGaussianBloom,
-          (System_String_o *)StringLiteral_16962/*"_Sigma"*/,
+          (System_String_o *)StringLiteral_16997/*"_Sigma"*/,
           this->fields.sigmaMultiplication * *((float *)MainTexture + 52),
           0),
         v51 = this->fields.materialGaussianBloom,
@@ -1204,7 +1204,7 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
     || !v51
     || (UnityEngine_Material__SetFloat(
           v51,
-          (System_String_o *)StringLiteral_16863/*"_Intensity"*/,
+          (System_String_o *)StringLiteral_16898/*"_Intensity"*/,
           this->fields.intensityMultiplication * (float)((float)(100.0 - *((float *)MainTexture + 54)) / 100.0),
           0),
         v53 = this->fields.materialGaussianBloom,
@@ -1212,9 +1212,9 @@ void OutlineEffectMain_GaussianBloom__UploadMaterialSettingsToGPU(
     || !v53 )
   {
 LABEL_56:
-    sub_21FFECC(MainTexture, v4);
+    sub_2213CDC(MainTexture, v4);
   }
-  UnityEngine_Material__SetInt(v53, (System_String_o *)StringLiteral_16869/*"_KernelSize"*/, *((_DWORD *)MainTexture + 53), 0);
+  UnityEngine_Material__SetInt(v53, (System_String_o *)StringLiteral_16904/*"_KernelSize"*/, *((_DWORD *)MainTexture + 53), 0);
 }
 
 
@@ -1227,7 +1227,7 @@ void OutlineEffectMain_GaussianBloom__UploadNormalsToMesh(
 
   normalDatas = this->fields.normalDatas;
   if ( !normalDatas || !mesh )
-    sub_21FFECC(this, mesh);
+    sub_2213CDC(this, mesh);
   UnityEngine_Mesh__set_normals(mesh, normalDatas->fields.normals, 0);
 }
 
@@ -1239,14 +1239,14 @@ System_String_o *OutlineEffectMain_GaussianBloom__get_CommandBufferName(
   Il2CppObject *v3; // x0
   int32_t InstanceID; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5933C83 & 1) == 0 )
+  if ( (byte_596BD9C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10460/*"Outline CommandBuffer - {0}"*/);
-    byte_5933C83 = 1;
+    sub_2213A60(&StringLiteral_10473/*"Outline CommandBuffer - {0}"*/);
+    byte_596BD9C = 1;
   }
   InstanceID = UnityEngine_Object__GetInstanceID((UnityEngine_Object_o *)this, 0);
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &InstanceID);
-  return System_String__Format((System_String_o *)StringLiteral_10460/*"Outline CommandBuffer - {0}"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &InstanceID);
+  return System_String__Format((System_String_o *)StringLiteral_10473/*"Outline CommandBuffer - {0}"*/, v3, 0);
 }
 
 
@@ -1260,11 +1260,11 @@ OutlineEffectSettings_o *OutlineEffectMain_GaussianBloom__get_Settings(
   __int64 v6; // x2
   OutlineEffectSettings_c *v7; // x0
 
-  if ( (byte_5933C84 & 1) == 0 )
+  if ( (byte_596BD9D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&OutlineEffectSettings_TypeInfo);
-    byte_5933C84 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&OutlineEffectSettings_TypeInfo);
+    byte_596BD9D = 1;
   }
   settings = (UnityEngine_Object_o *)this->fields.settings;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )

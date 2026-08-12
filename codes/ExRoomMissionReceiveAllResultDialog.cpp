@@ -12,7 +12,7 @@ void ExRoomMissionReceiveAllResultDialog___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.exRoomMissionReceiveOutput = receiveOutput;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)receiveOutput, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)receiveOutput, v5, v6, v7, v8, v9, v10);
 }
 
 

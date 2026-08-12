@@ -33,13 +33,13 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
   float v27; // s0
 
   v11 = this;
-  if ( (byte_5935F28 & 1) == 0 )
+  if ( (byte_596E082 & 1) == 0 )
   {
-    sub_21FFC50(&AStarSearch_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
-    this = (ShortestDistanceFromAllyMaster_o *)sub_21FFC50(&WarBoardAIManager_TypeInfo);
-    byte_5935F28 = 1;
+    sub_2213A60(&AStarSearch_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+    this = (ShortestDistanceFromAllyMaster_o *)sub_2213A60(&WarBoardAIManager_TypeInfo);
+    byte_596E082 = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_22;
@@ -47,12 +47,12 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_3F727A8 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_3FA5F50 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_3F72520 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_3FA5CC8 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !*(&WarBoardAIManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, v13, v14);
     PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0);
@@ -89,7 +89,7 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
                 return 0.0;
             }
 LABEL_22:
-            sub_21FFECC(this, *(_QWORD *)&forceId);
+            sub_2213CDC(this, *(_QWORD *)&forceId);
           }
         }
       }

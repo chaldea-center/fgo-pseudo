@@ -26,62 +26,62 @@ void SetupGrandServantEquipRequest__BeginRequest(
   int32_t v27; // [xsp+8h] [xbp-58h] BYREF
   int32_t v28; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_593A2FE & 1) == 0 )
+  if ( (byte_59724DB & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object____TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_19911/*"equipTarget2SkillChange"*/);
-    sub_21FFC50(&StringLiteral_25889/*"userSvtEquipIds"*/);
-    sub_21FFC50(&StringLiteral_20791/*"grandGraphId"*/);
-    sub_21FFC50(&StringLiteral_20796/*"grandSvtEquipInfos"*/);
-    byte_593A2FE = 1;
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object____TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&StringLiteral_19953/*"equipTarget2SkillChange"*/);
+    sub_2213A60(&StringLiteral_25937/*"userSvtEquipIds"*/);
+    sub_2213A60(&StringLiteral_20832/*"grandGraphId"*/);
+    sub_2213A60(&StringLiteral_20837/*"grandSvtEquipInfos"*/);
+    byte_59724DB = 1;
   }
-  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v9,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
   v28 = grandGraphId;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v28);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v28);
   if ( !v9
     || (System_Collections_Generic_Dictionary_object__object___Add(
           v9,
-          (Il2CppObject *)StringLiteral_20791/*"grandGraphId"*/,
+          (Il2CppObject *)StringLiteral_20832/*"grandGraphId"*/,
           v10,
-          (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
+          (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
         System_Collections_Generic_Dictionary_object__object___Add(
           v9,
-          (Il2CppObject *)StringLiteral_25889/*"userSvtEquipIds"*/,
+          (Il2CppObject *)StringLiteral_25937/*"userSvtEquipIds"*/,
           &userSvtEquipIds->obj,
-          (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
+          (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
         v27 = equipBondSkillChange,
-        v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v27),
+        v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v27),
         System_Collections_Generic_Dictionary_object__object___Add(
           v9,
-          (Il2CppObject *)StringLiteral_19911/*"equipTarget2SkillChange"*/,
+          (Il2CppObject *)StringLiteral_19953/*"equipTarget2SkillChange"*/,
           v12,
-          (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
-        (v10 = (Il2CppObject *)sub_21FFD10(System_Collections_Generic_Dictionary_string__object____TypeInfo, 1)) == 0) )
+          (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__),
+        (v10 = (Il2CppObject *)sub_2213B20(System_Collections_Generic_Dictionary_string__object____TypeInfo, 1)) == 0) )
   {
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   v13 = v10;
-  v14 = sub_21FFDA4(v9, v10->klass->_1.element_class);
+  v14 = sub_2213BB4(v9, v10->klass->_1.element_class);
   if ( !v14 )
   {
-    v26 = sub_21FFEF0(0, v15);
-    sub_21FFD90(v26, 0);
+    v26 = sub_2213D00(0, v15);
+    sub_2213BA0(v26, 0);
   }
   if ( !LODWORD(v13[1].monitor) )
-    sub_21FFED4(v14);
+    sub_2213CE4(v14);
   v13[2].klass = (Il2CppClass *)v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13[2], (int32_t)v9, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[2], (int32_t)v9, v16, v17, v18, v19, v20, v21);
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v22);
   v23 = JsonManager__toJson(v13, 0, 0, 0);
-  RequestBase__addField_51187332((RequestBase_o *)this, (System_String_o *)StringLiteral_20796/*"grandSvtEquipInfos"*/, v23, v24);
+  RequestBase__addField_51259256((RequestBase_o *)this, (System_String_o *)StringLiteral_20837/*"grandSvtEquipInfos"*/, v23, v24);
   RequestBase__beginRequest((RequestBase_o *)this, v25);
 }
 
@@ -90,16 +90,16 @@ System_String_o *SetupGrandServantEquipRequest__getURL(SetupGrandServantEquipReq
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A2FD & 1) == 0 )
+  if ( (byte_59724DA & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_20785/*"grand/SetupSvtEquip"*/);
-    byte_593A2FD = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20826/*"grand/SetupSvtEquip"*/);
+    byte_59724DA = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20785/*"grand/SetupSvtEquip"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20826/*"grand/SetupSvtEquip"*/, 0);
 }
 
 
@@ -117,12 +117,12 @@ void SetupGrandServantEquipRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 v12; // x1
 
-  if ( (byte_593A2FF & 1) == 0 )
+  if ( (byte_59724DC & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A2FF = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_59724DC = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
@@ -132,7 +132,7 @@ void SetupGrandServantEquipRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v12 = StringLiteral_23290/*"ng"*/;
+    v12 = StringLiteral_23336/*"ng"*/;
     goto LABEL_13;
   }
   success = (Il2CppObject *)v7->fields.success;

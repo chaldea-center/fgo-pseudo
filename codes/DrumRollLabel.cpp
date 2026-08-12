@@ -23,7 +23,7 @@ void DrumRollLabel__CancelFinishCallback(
          0) )
   {
     this->fields.callComplete = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callComplete,
       0,
       (System_String_o *)method,
@@ -56,25 +56,25 @@ void DrumRollLabel__ChangeParamNonAnimation(
   struct DigitRollLabel_array *v18; // x8
   int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5939DEE & 1) == 0 )
+  if ( (byte_5971FC1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26375/*"{0,3}"*/);
-    sub_21FFC50(&iTween_TypeInfo);
-    byte_5939DEE = 1;
+    sub_2213A60(&StringLiteral_26426/*"{0,3}"*/);
+    sub_2213A60(&iTween_TypeInfo);
+    byte_5971FC1 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v7);
-  iTween__Stop_75189608(gameObject, 0);
+  iTween__Stop_75402912(gameObject, 0);
   this->fields.nowvalue = nextParam;
   this->fields.nextvalue = nextParam;
   v19 = nextParam;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v19);
-  v10 = (DigitRollLabel_o *)System_String__Format((System_String_o *)StringLiteral_26375/*"{0,3}"*/, v9, 0);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v19);
+  v10 = (DigitRollLabel_o *)System_String__Format((System_String_o *)StringLiteral_26426/*"{0,3}"*/, v9, 0);
   diglabel = this->fields.diglabel;
   if ( !diglabel )
 LABEL_19:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   v13 = (System_String_o *)v10;
   v14 = 0;
   v15 = -1;
@@ -85,7 +85,7 @@ LABEL_19:
       break;
     if ( !v13 )
       goto LABEL_19;
-    v10 = (DigitRollLabel_o *)System_String__Substring_75489544(v13, v15 + (int)max_length, 1, 0);
+    v10 = (DigitRollLabel_o *)System_String__Substring_75702848(v13, v15 + (int)max_length, 1, 0);
     v18 = this->fields.diglabel;
     v11 = (System_String_o *)v10;
     if ( isAllChange )
@@ -105,7 +105,7 @@ LABEL_19:
         goto LABEL_19;
       if ( v14 >= LODWORD(v18->max_length) )
 LABEL_21:
-        sub_21FFED4(v10);
+        sub_2213CE4(v10);
       v10 = v18->m_Items[v14];
       if ( !v10 )
         goto LABEL_19;
@@ -145,7 +145,7 @@ void DrumRollLabel__SetLabelColor(DrumRollLabel_o *this, UnityEngine_Color_o col
     while ( 1 )
     {
       if ( (unsigned int)v7 >= max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       this = (DrumRollLabel_o *)diglabel->m_Items[v7];
       if ( !this )
         break;
@@ -159,7 +159,7 @@ void DrumRollLabel__SetLabelColor(DrumRollLabel_o *this, UnityEngine_Color_o col
         return;
     }
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -180,10 +180,10 @@ void DrumRollLabel__add_callComplete(
   DrumRollLabel_CompleteEventHandler_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_5939DE9 & 1) == 0 )
+  if ( (byte_5971FBC & 1) == 0 )
   {
-    sub_21FFC50(&DrumRollLabel_CompleteEventHandler_TypeInfo);
-    byte_5939DE9 = 1;
+    sub_2213A60(&DrumRollLabel_CompleteEventHandler_TypeInfo);
+    byte_5971FBC = 1;
   }
   callComplete = this->fields.callComplete;
   p_callComplete = &this->fields.callComplete;
@@ -196,13 +196,13 @@ void DrumRollLabel__add_callComplete(
       if ( (DrumRollLabel_CompleteEventHandler_c *)v8->klass != DrumRollLabel_CompleteEventHandler_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callComplete, v8, v6);
+    v10 = sub_224B48C(p_callComplete, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, DrumRollLabel_CompleteEventHandler_TypeInfo, v9);
+  sub_221405C(v8, DrumRollLabel_CompleteEventHandler_TypeInfo, v9);
   DrumRollLabel__remove_callComplete(v12, v13, v14);
 }
 
@@ -324,188 +324,188 @@ void DrumRollLabel__changeParam(
   int32_t v116; // [xsp+8h] [xbp-58h] BYREF
   int32_t nowvalue; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_5939DEB & 1) == 0 )
+  if ( (byte_5971FBE & 1) == 0 )
   {
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20581/*"from"*/);
-    sub_21FFC50(&StringLiteral_25318/*"time"*/);
-    sub_21FFC50(&StringLiteral_23526/*"onupdate"*/);
-    sub_21FFC50(&StringLiteral_19348/*"delay"*/);
-    sub_21FFC50(&StringLiteral_25358/*"to"*/);
-    sub_21FFC50(&StringLiteral_18961/*"completeValues"*/);
-    sub_21FFC50(&StringLiteral_25742/*"updateValues"*/);
-    sub_21FFC50(&StringLiteral_23518/*"oncomplete"*/);
-    sub_21FFC50(&iTween_TypeInfo);
-    byte_5939DEB = 1;
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20622/*"from"*/);
+    sub_2213A60(&StringLiteral_25366/*"time"*/);
+    sub_2213A60(&StringLiteral_23573/*"onupdate"*/);
+    sub_2213A60(&StringLiteral_19390/*"delay"*/);
+    sub_2213A60(&StringLiteral_25406/*"to"*/);
+    sub_2213A60(&StringLiteral_18999/*"completeValues"*/);
+    sub_2213A60(&StringLiteral_25790/*"updateValues"*/);
+    sub_2213A60(&StringLiteral_23565/*"oncomplete"*/);
+    sub_2213A60(&iTween_TypeInfo);
+    byte_5971FBE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v10);
-  iTween__Stop_75189608(gameObject, 0);
+  iTween__Stop_75402912(gameObject, 0);
   v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v13 = (DigitRollLabel_o *)sub_21FFD10(object___TypeInfo, 12);
+  v13 = (DigitRollLabel_o *)sub_2213B20(object___TypeInfo, 12);
   if ( !v13 )
 LABEL_48:
-    sub_21FFECC(v13, v14);
+    sub_2213CDC(v13, v14);
   v21 = (System_Object_array *)v13;
-  v13 = (DigitRollLabel_o *)StringLiteral_20581/*"from"*/;
-  if ( StringLiteral_20581/*"from"*/ )
+  v13 = (DigitRollLabel_o *)StringLiteral_20622/*"from"*/;
+  if ( StringLiteral_20622/*"from"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_20581/*"from"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_20622/*"from"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( !LODWORD(v21->max_length) )
     goto LABEL_50;
-  v23 = StringLiteral_20581/*"from"*/;
-  v21->m_Items[0] = (Il2CppObject *)StringLiteral_20581/*"from"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v21->m_Items, v23, v15, v16, v17, v18, v19, v20);
+  v23 = StringLiteral_20622/*"from"*/;
+  v21->m_Items[0] = (Il2CppObject *)StringLiteral_20622/*"from"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v21->m_Items, v23, v15, v16, v17, v18, v19, v20);
   nowvalue = this->fields.nowvalue;
-  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_594C070, &nowvalue);
+  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_5984348, &nowvalue);
   v30 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(v13, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(v13, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( (v21->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_50;
   v21->m_Items[1] = v30;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[1], (int32_t)v30, v24, v25, v26, v27, v28, v29);
-  v13 = (DigitRollLabel_o *)StringLiteral_25358/*"to"*/;
-  if ( StringLiteral_25358/*"to"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[1], (int32_t)v30, v24, v25, v26, v27, v28, v29);
+  v13 = (DigitRollLabel_o *)StringLiteral_25406/*"to"*/;
+  if ( StringLiteral_25406/*"to"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_25358/*"to"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_25406/*"to"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 2 )
     goto LABEL_50;
-  v37 = StringLiteral_25358/*"to"*/;
-  v21->m_Items[2] = (Il2CppObject *)StringLiteral_25358/*"to"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[2], v37, v31, v32, v33, v34, v35, v36);
+  v37 = StringLiteral_25406/*"to"*/;
+  v21->m_Items[2] = (Il2CppObject *)StringLiteral_25406/*"to"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[2], v37, v31, v32, v33, v34, v35, v36);
   v116 = nextparam;
-  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_594C070, &v116);
+  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_5984348, &v116);
   v44 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(v13, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(v13, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( (v21->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_50;
   v21->m_Items[3] = v44;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[3], (int32_t)v44, v38, v39, v40, v41, v42, v43);
-  v13 = (DigitRollLabel_o *)StringLiteral_23526/*"onupdate"*/;
-  if ( StringLiteral_23526/*"onupdate"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[3], (int32_t)v44, v38, v39, v40, v41, v42, v43);
+  v13 = (DigitRollLabel_o *)StringLiteral_23573/*"onupdate"*/;
+  if ( StringLiteral_23573/*"onupdate"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_23526/*"onupdate"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_23573/*"onupdate"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 4 )
     goto LABEL_50;
-  v51 = StringLiteral_23526/*"onupdate"*/;
-  v21->m_Items[4] = (Il2CppObject *)StringLiteral_23526/*"onupdate"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[4], v51, v45, v46, v47, v48, v49, v50);
-  v13 = (DigitRollLabel_o *)StringLiteral_25742/*"updateValues"*/;
-  if ( StringLiteral_25742/*"updateValues"*/ )
+  v51 = StringLiteral_23573/*"onupdate"*/;
+  v21->m_Items[4] = (Il2CppObject *)StringLiteral_23573/*"onupdate"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[4], v51, v45, v46, v47, v48, v49, v50);
+  v13 = (DigitRollLabel_o *)StringLiteral_25790/*"updateValues"*/;
+  if ( StringLiteral_25790/*"updateValues"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_25742/*"updateValues"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_25790/*"updateValues"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 5 )
     goto LABEL_50;
-  v58 = StringLiteral_25742/*"updateValues"*/;
-  v21->m_Items[5] = (Il2CppObject *)StringLiteral_25742/*"updateValues"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[5], v58, v52, v53, v54, v55, v56, v57);
-  v13 = (DigitRollLabel_o *)StringLiteral_23518/*"oncomplete"*/;
-  if ( StringLiteral_23518/*"oncomplete"*/ )
+  v58 = StringLiteral_25790/*"updateValues"*/;
+  v21->m_Items[5] = (Il2CppObject *)StringLiteral_25790/*"updateValues"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[5], v58, v52, v53, v54, v55, v56, v57);
+  v13 = (DigitRollLabel_o *)StringLiteral_23565/*"oncomplete"*/;
+  if ( StringLiteral_23565/*"oncomplete"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_23518/*"oncomplete"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_23565/*"oncomplete"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 6 )
     goto LABEL_50;
-  v65 = StringLiteral_23518/*"oncomplete"*/;
-  v21->m_Items[6] = (Il2CppObject *)StringLiteral_23518/*"oncomplete"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[6], v65, v59, v60, v61, v62, v63, v64);
-  v13 = (DigitRollLabel_o *)StringLiteral_18961/*"completeValues"*/;
-  if ( StringLiteral_18961/*"completeValues"*/ )
+  v65 = StringLiteral_23565/*"oncomplete"*/;
+  v21->m_Items[6] = (Il2CppObject *)StringLiteral_23565/*"oncomplete"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[6], v65, v59, v60, v61, v62, v63, v64);
+  v13 = (DigitRollLabel_o *)StringLiteral_18999/*"completeValues"*/;
+  if ( StringLiteral_18999/*"completeValues"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_18961/*"completeValues"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_18999/*"completeValues"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( (v21->max_length & 0xFFFFFFF8) == 0 )
     goto LABEL_50;
-  v72 = StringLiteral_18961/*"completeValues"*/;
-  v21->m_Items[7] = (Il2CppObject *)StringLiteral_18961/*"completeValues"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[7], v72, v66, v67, v68, v69, v70, v71);
-  v13 = (DigitRollLabel_o *)StringLiteral_25318/*"time"*/;
-  if ( StringLiteral_25318/*"time"*/ )
+  v72 = StringLiteral_18999/*"completeValues"*/;
+  v21->m_Items[7] = (Il2CppObject *)StringLiteral_18999/*"completeValues"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[7], v72, v66, v67, v68, v69, v70, v71);
+  v13 = (DigitRollLabel_o *)StringLiteral_25366/*"time"*/;
+  if ( StringLiteral_25366/*"time"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_25318/*"time"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_25366/*"time"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 8 )
     goto LABEL_50;
-  v79 = StringLiteral_25318/*"time"*/;
-  v21->m_Items[8] = (Il2CppObject *)StringLiteral_25318/*"time"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[8], v79, v73, v74, v75, v76, v77, v78);
+  v79 = StringLiteral_25366/*"time"*/;
+  v21->m_Items[8] = (Il2CppObject *)StringLiteral_25366/*"time"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[8], v79, v73, v74, v75, v76, v77, v78);
   changetime = this->fields.changetime;
-  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_594C0A0, &changetime);
+  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_5984378, &changetime);
   v86 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(v13, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(v13, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 9 )
     goto LABEL_50;
   v21->m_Items[9] = v86;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[9], (int32_t)v86, v80, v81, v82, v83, v84, v85);
-  v13 = (DigitRollLabel_o *)StringLiteral_19348/*"delay"*/;
-  if ( StringLiteral_19348/*"delay"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[9], (int32_t)v86, v80, v81, v82, v83, v84, v85);
+  v13 = (DigitRollLabel_o *)StringLiteral_19390/*"delay"*/;
+  if ( StringLiteral_19390/*"delay"*/ )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(StringLiteral_19348/*"delay"*/, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(StringLiteral_19390/*"delay"*/, v21->obj.klass->_1.element_class);
     if ( !v13 )
       goto LABEL_51;
   }
   if ( LODWORD(v21->max_length) <= 0xA )
     goto LABEL_50;
-  v93 = StringLiteral_19348/*"delay"*/;
-  v21->m_Items[10] = (Il2CppObject *)StringLiteral_19348/*"delay"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[10], v93, v87, v88, v89, v90, v91, v92);
+  v93 = StringLiteral_19390/*"delay"*/;
+  v21->m_Items[10] = (Il2CppObject *)StringLiteral_19390/*"delay"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[10], v93, v87, v88, v89, v90, v91, v92);
   v114 = delay;
-  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_594C0A0, &v114);
+  v13 = (DigitRollLabel_o *)j_il2cpp_value_box_0(qword_5984378, &v114);
   v100 = (Il2CppObject *)v13;
   if ( v13 )
   {
-    v13 = (DigitRollLabel_o *)sub_21FFDA4(v13, v21->obj.klass->_1.element_class);
+    v13 = (DigitRollLabel_o *)sub_2213BB4(v13, v21->obj.klass->_1.element_class);
     if ( !v13 )
     {
 LABEL_51:
-      v113 = sub_21FFEF0(v13, v22);
-      sub_21FFD90(v113, 0);
+      v113 = sub_2213D00(v13, v22);
+      sub_2213BA0(v113, 0);
     }
   }
   if ( LODWORD(v21->max_length) <= 0xB )
 LABEL_50:
-    sub_21FFED4(v13);
+    sub_2213CE4(v13);
   v21->m_Items[11] = v100;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->m_Items[11], (int32_t)v100, v94, v95, v96, v97, v98, v99);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->m_Items[11], (int32_t)v100, v94, v95, v96, v97, v98, v99);
   v101 = iTween__Hash(v21, 0);
   iTween__ValueTo(v12, v101, 0);
   this->fields.callComplete = callevent;
   this->fields.nextvalue = nextparam;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callComplete,
     (int32_t)callevent,
     v102,
@@ -556,18 +556,18 @@ void DrumRollLabel__completeValues(DrumRollLabel_o *this, const MethodInfo *meth
   struct DrumRollLabel_CompleteEventHandler_o *callComplete; // x8
   int32_t nextvalue; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5939DED & 1) == 0 )
+  if ( (byte_5971FC0 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26375/*"{0,3}"*/);
-    byte_5939DED = 1;
+    sub_2213A60(&StringLiteral_26426/*"{0,3}"*/);
+    byte_5971FC0 = 1;
   }
   nextvalue = this->fields.nextvalue;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &nextvalue);
-  v4 = System_String__Format((System_String_o *)StringLiteral_26375/*"{0,3}"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &nextvalue);
+  v4 = System_String__Format((System_String_o *)StringLiteral_26426/*"{0,3}"*/, v3, 0);
   diglabel = this->fields.diglabel;
   if ( !diglabel )
 LABEL_10:
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   v7 = v4;
   v8 = 0;
   v9 = -1;
@@ -577,11 +577,11 @@ LABEL_10:
     if ( (int)v8 >= max_length )
       break;
     if ( (unsigned int)v8 >= max_length )
-      sub_21FFED4(v4);
+      sub_2213CE4(v4);
     if ( v7 )
     {
       v11 = diglabel->m_Items[v8];
-      v4 = System_String__Substring_75489544(v7, v9 + max_length, 1, 0);
+      v4 = System_String__Substring_75702848(v7, v9 + max_length, 1, 0);
       if ( v11 )
       {
         DigitRollLabel__endChange(v11, v4, v12);
@@ -631,10 +631,10 @@ void DrumRollLabel__remove_callComplete(
   int32_t v13; // w1
   const MethodInfo *v14; // x2
 
-  if ( (byte_5939DEA & 1) == 0 )
+  if ( (byte_5971FBD & 1) == 0 )
   {
-    sub_21FFC50(&DrumRollLabel_CompleteEventHandler_TypeInfo);
-    byte_5939DEA = 1;
+    sub_2213A60(&DrumRollLabel_CompleteEventHandler_TypeInfo);
+    byte_5971FBD = 1;
   }
   callComplete = this->fields.callComplete;
   p_callComplete = &this->fields.callComplete;
@@ -647,13 +647,13 @@ void DrumRollLabel__remove_callComplete(
       if ( (DrumRollLabel_CompleteEventHandler_c *)v8->klass != DrumRollLabel_CompleteEventHandler_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callComplete, v8, v6);
+    v10 = sub_224B48C(p_callComplete, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, DrumRollLabel_CompleteEventHandler_TypeInfo, v9);
+  sub_221405C(v8, DrumRollLabel_CompleteEventHandler_TypeInfo, v9);
   DrumRollLabel__setParam(v12, v13, v14);
 }
 
@@ -686,11 +686,11 @@ void DrumRollLabel__updateValues(DrumRollLabel_o *this, int32_t value, const Met
 
   v3 = value;
   v4 = this;
-  if ( (byte_5939DEC & 1) == 0 )
+  if ( (byte_5971FBF & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26607/*"}"*/);
-    this = (DrumRollLabel_o *)sub_21FFC50(&StringLiteral_26372/*"{0,"*/);
-    byte_5939DEC = 1;
+    sub_2213A60(&StringLiteral_26659/*"}"*/);
+    this = (DrumRollLabel_o *)sub_2213A60(&StringLiteral_26423/*"{0,"*/);
+    byte_5971FBF = 1;
   }
   diglabel = v4->fields.diglabel;
   max_length = 0;
@@ -698,19 +698,19 @@ void DrumRollLabel__updateValues(DrumRollLabel_o *this, int32_t value, const Met
     goto LABEL_12;
   max_length = diglabel->max_length;
   v6 = System_Int32__ToString((int32_t)&max_length, 0);
-  v7 = System_String__Concat_75481624(
-         (System_String_o *)StringLiteral_26372/*"{0,"*/,
+  v7 = System_String__Concat_75694928(
+         (System_String_o *)StringLiteral_26423/*"{0,"*/,
          v6,
-         (System_String_o *)StringLiteral_26607/*"}"*/,
+         (System_String_o *)StringLiteral_26659/*"}"*/,
          0);
   v16 = v3;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v16);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
   this = (DrumRollLabel_o *)System_String__Format(v7, v8, 0);
   v9 = v4->fields.diglabel;
   v4->fields.nowvalue = v3;
   if ( !v9 )
 LABEL_12:
-    sub_21FFECC(this, *(_QWORD *)&value);
+    sub_2213CDC(this, *(_QWORD *)&value);
   v10 = this;
   v11 = 0;
   v12 = -1;
@@ -721,12 +721,12 @@ LABEL_12:
       break;
     if ( v10 )
     {
-      this = (DrumRollLabel_o *)System_String__Substring_75489544((System_String_o *)v10, v12 + v13, 1, 0);
+      this = (DrumRollLabel_o *)System_String__Substring_75702848((System_String_o *)v10, v12 + v13, 1, 0);
       v15 = v4->fields.diglabel;
       if ( v15 )
       {
         if ( (unsigned int)v11 >= LODWORD(v15->max_length) )
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         *(_QWORD *)&value = this;
         this = (DrumRollLabel_o *)v15->m_Items[v11];
         if ( this )
@@ -764,7 +764,7 @@ void DrumRollLabel_CompleteEventHandler___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -775,12 +775,12 @@ void DrumRollLabel_CompleteEventHandler___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -792,9 +792,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFBFD8;
+  this->fields.invoke_impl = (intptr_t)sub_200F014;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FFBF98;
+  this->fields.extra_arg = (intptr_t)sub_200EFD4;
 }
 
 
@@ -804,9 +804,9 @@ System_IAsyncResult_o *DrumRollLabel_CompleteEventHandler__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -815,7 +815,7 @@ void DrumRollLabel_CompleteEventHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

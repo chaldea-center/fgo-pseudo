@@ -1,27 +1,27 @@
 void DropAddEntity___ctor(DropAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384DC & 1) == 0 )
+  if ( (byte_597068C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59384DC = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597068C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *DropAddEntity__CreatePK(int32_t eventId, int32_t giftId, const MethodInfo *method)
 {
-  if ( (byte_59384DB & 1) == 0 )
+  if ( (byte_597068B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59384DB = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_597068B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            giftId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,21 +35,21 @@ System_String_o *DropAddEntity__CreatePrimaryKey(DropAddEntity_o *this, const Me
 
 int32_t DropAddEntity__GetDropEffectId(DropAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384D9 & 1) == 0 )
+  if ( (byte_5970689 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19482/*"dropEffectId"*/);
-    byte_59384D9 = 1;
+    sub_2213A60(&StringLiteral_19524/*"dropEffectId"*/);
+    byte_5970689 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19482/*"dropEffectId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19524/*"dropEffectId"*/, 0, 0);
 }
 
 
 bool DropAddEntity__IsDropDefaultParticleDisable(DropAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384DA & 1) == 0 )
+  if ( (byte_597068A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_19481/*"dropDefaultParticleDisable"*/);
-    byte_59384DA = 1;
+    sub_2213A60(&StringLiteral_19523/*"dropDefaultParticleDisable"*/);
+    byte_597068A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19481/*"dropDefaultParticleDisable"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19523/*"dropDefaultParticleDisable"*/, 0, 0) == 1;
 }

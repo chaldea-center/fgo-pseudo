@@ -1,28 +1,28 @@
 void BattleMessageEntity___ctor(BattleMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59382B2 & 1) == 0 )
+  if ( (byte_597045A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59382B2 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597045A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleMessageEntity__CreatePK(int32_t id, int32_t idx, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_59382B0 & 1) == 0 )
+  if ( (byte_5970458 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_59382B0 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5970458 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            idx,
            priority,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -40,14 +40,14 @@ int32_t BattleMessageEntity__GetScriptInt(
         int64_t def,
         const MethodInfo *method)
 {
-  if ( (byte_59382B1 & 1) == 0 )
+  if ( (byte_5970459 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_GetValue_long___);
-    byte_59382B1 = 1;
+    sub_2213A60(&Method_BasicHelper_GetValue_long___);
+    byte_5970459 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            key,
            def,
-           (const MethodInfo_37E0BF0 *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_3813FA0 *)Method_BasicHelper_GetValue_long___);
 }

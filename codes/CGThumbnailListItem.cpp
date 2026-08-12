@@ -24,7 +24,7 @@ void CGThumbnailListItem___ctor(
   this->fields._Type_k__BackingField = cgType;
   this->fields._HaveDifferenceCG_k__BackingField = haveDifferenceCg;
   this->fields._IsOpened_k__BackingField = isOpened;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
     (int32_t)thumbnailPath,
     v17,
@@ -48,7 +48,7 @@ bool CGThumbnailListItem__SetSortValue(CGThumbnailListItem_o *this, ListViewSort
     return 0;
   this->fields.sortValue1 = this->fields._Priority_k__BackingField;
   if ( !sort )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   Filter = ListViewSort__GetFilter(sort, 101, 0);
   v8 = ListViewSort__GetFilter(sort, 100, 0);
   if ( Filter == v8 || Filter && this->fields._Type_k__BackingField == 1 )
@@ -129,7 +129,7 @@ void CGThumbnailListItem__set_ThumbnailSpritePath(
   bool v7; // w7
 
   this->fields._ThumbnailSpritePath_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

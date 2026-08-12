@@ -1,9 +1,9 @@
 void GrandBondEquipTargetConfirmDialog___ctor(GrandBondEquipTargetConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_593AE05 & 1) == 0 )
+  if ( (byte_59730BE & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593AE05 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_59730BE = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -37,7 +37,7 @@ void GrandBondEquipTargetConfirmDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       (unsigned int)result,
@@ -92,13 +92,13 @@ void GrandBondEquipTargetConfirmDialog__OnEnable(GrandBondEquipTargetConfirmDial
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_593AE03 & 1) == 0 )
+  if ( (byte_59730BC & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16224/*"Window/Buttons/CancelButton"*/);
-    byte_593AE03 = 1;
+    sub_2213A60(&StringLiteral_16256/*"Window/Buttons/CancelButton"*/);
+    byte_59730BC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16224/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16256/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -121,17 +121,17 @@ void GrandBondEquipTargetConfirmDialog__Open(
   __int64 v19; // x1
   System_String_o *resultText; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_593AE04 & 1) == 0 )
+  if ( (byte_59730BD & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Rarity_TypeInfo);
-    sub_21FFC50(&StringLiteral_7273/*"GRAND_BOND_EQUIP_TARGET_CONFIRM_DIALOG_MESSAGE_SERVANT_NAME"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593AE04 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Rarity_TypeInfo);
+    sub_2213A60(&StringLiteral_7285/*"GRAND_BOND_EQUIP_TARGET_CONFIRM_DIALOG_MESSAGE_SERVANT_NAME"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59730BD = 1;
   }
   resultText = 0;
   this->fields.callbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     servantName,
@@ -144,7 +144,7 @@ void GrandBondEquipTargetConfirmDialog__Open(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
   if ( LocalizationManager__TryGet(
          &resultText,
-         (System_String_o *)StringLiteral_7273/*"GRAND_BOND_EQUIP_TARGET_CONFIRM_DIALOG_MESSAGE_SERVANT_NAME"*/,
+         (System_String_o *)StringLiteral_7285/*"GRAND_BOND_EQUIP_TARGET_CONFIRM_DIALOG_MESSAGE_SERVANT_NAME"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0) )
   {
@@ -153,9 +153,9 @@ void GrandBondEquipTargetConfirmDialog__Open(
     if ( !*(&Rarity_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(Rarity_TypeInfo, v14);
     RarityType = (Il2CppObject *)Rarity__getRarityType(rarity, 0);
-    v18 = System_String__Format_75484644(v16, RarityType, (Il2CppObject *)servantName, (Il2CppObject *)className, 0);
+    v18 = System_String__Format_75697948(v16, RarityType, (Il2CppObject *)servantName, (Il2CppObject *)className, 0);
     if ( !messageLabel )
-      sub_21FFECC(v18, v19);
+      sub_2213CDC(v18, v19);
     UILabel__set_text(messageLabel, v18, 0);
   }
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -178,10 +178,10 @@ void GrandBondEquipTargetConfirmDialog__add_callbackFunc(
   GrandBondEquipTargetConfirmDialog_CallbackFunc_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_593AE01 & 1) == 0 )
+  if ( (byte_59730BA & 1) == 0 )
   {
-    sub_21FFC50(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
-    byte_593AE01 = 1;
+    sub_2213A60(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
+    byte_59730BA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -194,13 +194,13 @@ void GrandBondEquipTargetConfirmDialog__add_callbackFunc(
       if ( (GrandBondEquipTargetConfirmDialog_CallbackFunc_c *)v8->klass != GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo, v9);
+  sub_221405C(v8, GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo, v9);
   GrandBondEquipTargetConfirmDialog__remove_callbackFunc(v12, v13, v14);
 }
 
@@ -220,10 +220,10 @@ void GrandBondEquipTargetConfirmDialog__remove_callbackFunc(
   GrandBondEquipTargetConfirmDialog_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593AE02 & 1) == 0 )
+  if ( (byte_59730BB & 1) == 0 )
   {
-    sub_21FFC50(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
-    byte_593AE02 = 1;
+    sub_2213A60(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
+    byte_59730BB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -236,13 +236,13 @@ void GrandBondEquipTargetConfirmDialog__remove_callbackFunc(
       if ( (GrandBondEquipTargetConfirmDialog_CallbackFunc_c *)v8->klass != GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo, v9);
+  sub_221405C(v8, GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo, v9);
   GrandBondEquipTargetConfirmDialog__Awake(v12, v13);
 }
 
@@ -266,7 +266,7 @@ void GrandBondEquipTargetConfirmDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -277,12 +277,12 @@ void GrandBondEquipTargetConfirmDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -294,9 +294,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFDF5C;
+  this->fields.invoke_impl = (intptr_t)sub_2011058;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FFDF14;
+  this->fields.extra_arg = (intptr_t)sub_2011010;
 }
 
 
@@ -311,14 +311,14 @@ System_IAsyncResult_o *GrandBondEquipTargetConfirmDialog_CallbackFunc__BeginInvo
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_593AE06 & 1) == 0 )
+  if ( (byte_59730BF & 1) == 0 )
   {
-    sub_21FFC50(&GrandBondEquipTargetConfirmDialog_Result_TypeInfo);
-    byte_593AE06 = 1;
+    sub_2213A60(&GrandBondEquipTargetConfirmDialog_Result_TypeInfo);
+    byte_59730BF = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(GrandBondEquipTargetConfirmDialog_Result_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -327,7 +327,7 @@ void GrandBondEquipTargetConfirmDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

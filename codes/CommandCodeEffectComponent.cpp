@@ -1,9 +1,9 @@
 void CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_593C858 & 1) == 0 )
+  if ( (byte_5974A90 & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectComponent_TypeInfo);
-    byte_593C858 = 1;
+    sub_2213A60(&CommonEffectComponent_TypeInfo);
+    byte_5974A90 = 1;
   }
   if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
@@ -29,19 +29,19 @@ void CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectComponent_o *thi
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_593C857 & 1) == 0 )
+  if ( (byte_5974A8F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C857 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974A8F = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v5 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -53,7 +53,7 @@ void CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectComponent_o *thi
       return;
     }
 LABEL_14:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
@@ -95,11 +95,11 @@ void CommandCodeEffectComponent__SetCommandCodeImg(
   __int64 v6; // x1
   UISprite_o *v7; // x20
 
-  if ( (byte_593C856 & 1) == 0 )
+  if ( (byte_5974A8E & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C856 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974A8E = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -128,7 +128,7 @@ void CommandCodeEffectComponent__SetDestroyEffectCallback(
   if ( callback )
   {
     this->fields.destroyEffectCallback = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.destroyEffectCallback,
       (int32_t)callback,
       (System_String_o *)method,
@@ -155,7 +155,7 @@ void CommandCodeEffectComponent__SetDetachEffect(
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.commandCodeDetachAction,
       (int32_t)action,
       (System_String_o *)method,
@@ -182,7 +182,7 @@ void CommandCodeEffectComponent__SetEndEffectCallbak(
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.endEffectCallback,
       (int32_t)callback,
       (System_String_o *)method,

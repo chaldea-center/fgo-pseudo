@@ -7,12 +7,12 @@ void ScaleAnimationComponent___ctor(ScaleAnimationComponent_o *this, const Metho
   struct UnityEngine_Vector3_StaticFields *v7; // x8
   float v8; // s1
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  v3 = (unsigned __int8)byte_5931945;
+  v3 = (unsigned __int8)byte_5969AE5;
   v4 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -20,9 +20,9 @@ void ScaleAnimationComponent___ctor(ScaleAnimationComponent_o *this, const Metho
   this->fields.minScale.fields.z = z;
   if ( !v3 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     v4 = UnityEngine_Vector3_TypeInfo;
-    byte_5931945 = 1;
+    byte_5969AE5 = 1;
   }
   v7 = v4->static_fields;
   v8 = v7->oneVector.fields.z;
@@ -73,11 +73,11 @@ void ScaleAnimationComponent__PlayAnimation(
   v11.fields.x = p_minScale->fields.x;
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
-  ScaleAnimationComponent__PlayAnimation_38408736(this, animationType, v10, v11, onFinish, method);
+  ScaleAnimationComponent__PlayAnimation_38497372(this, animationType, v10, v11, onFinish, method);
 }
 
 
-void ScaleAnimationComponent__PlayAnimation_38408736(
+void ScaleAnimationComponent__PlayAnimation_38497372(
         ScaleAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromScale,
@@ -110,10 +110,10 @@ void ScaleAnimationComponent__PlayAnimation_38408736(
   v9 = fromScale.fields.z;
   v10 = fromScale.fields.y;
   v11 = fromScale.fields.x;
-  if ( (byte_59326FD & 1) == 0 )
+  if ( (byte_596A90A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59326FD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A90A = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -123,7 +123,7 @@ void ScaleAnimationComponent__PlayAnimation_38408736(
   transform = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !transform || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
 LABEL_16:
-    sub_21FFECC(transform, v19);
+    sub_2213CDC(transform, v19);
   v24.fields.x = v11;
   v24.fields.y = v10;
   v24.fields.z = v9;

@@ -71,7 +71,7 @@ void BlankEarthShortcutUIButton__SetPressAction(
   bool v7; // w7
 
   this->fields.onPressedAction = pressAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onPressedAction,
     (int32_t)pressAction,
     (System_String_o *)method,

@@ -18,16 +18,16 @@ void CriFsBindRequest___ctor(
   System_String_o *v20; // x0
   __int64 v21; // x0
 
-  if ( (byte_5931500 & 1) == 0 )
+  if ( (byte_59696A0 & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    byte_5931500 = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    byte_59696A0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v11 = System_Guid__NewGuid(0);
   this->fields._path_k__BackingField = path;
   this->fields.guid = v11;
-  v12 = sub_21FFBF4(&this->fields._path_k__BackingField, path);
+  v12 = sub_2213A04(&this->fields._path_k__BackingField, path);
   if ( type == 2 )
   {
     if ( !targetBinder )
@@ -40,12 +40,12 @@ void CriFsBindRequest___ctor(
     {
       if ( type )
       {
-        v18 = sub_21FFC64(&System_Exception_TypeInfo);
-        v19 = (System_Exception_o *)sub_21FFEBC(v18);
-        v20 = (System_String_o *)sub_21FFC64(&StringLiteral_8167/*"Invalid bind type."*/);
-        System_Exception___ctor_77161964(v19, v20, 0);
-        v21 = sub_21FFC64(&Method_CriFsBindRequest__ctor__);
-        sub_21FFD90(v19, v21);
+        v18 = sub_2213A74(&System_Exception_TypeInfo);
+        v19 = (System_Exception_o *)sub_2213CCC(v18);
+        v20 = (System_String_o *)sub_2213A74(&StringLiteral_8179/*"Invalid bind type."*/);
+        System_Exception___ctor_77375268(v19, v20, 0);
+        v21 = sub_2213A74(&Method_CriFsBindRequest__ctor__);
+        sub_2213BA0(v19, v21);
       }
       if ( targetBinder )
       {
@@ -53,7 +53,7 @@ void CriFsBindRequest___ctor(
         goto LABEL_12;
       }
 LABEL_15:
-      sub_21FFECC(v12, v13);
+      sub_2213CDC(v12, v13);
     }
     if ( !targetBinder )
       goto LABEL_15;
@@ -70,10 +70,10 @@ LABEL_12:
 // local variable allocation has failed, the output may be wrong!
 void CriFsBindRequest__Dispose(CriFsBindRequest_o *this, bool disposing, const MethodInfo *method)
 {
-  if ( (byte_5931502 & 1) == 0 )
+  if ( (byte_59696A2 & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    byte_5931502 = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    byte_59696A2 = 1;
   }
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
@@ -93,10 +93,10 @@ void CriFsBindRequest__Update(CriFsBindRequest_o *this, const MethodInfo *method
   __int64 v4; // x1
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
 
-  if ( (byte_5931501 & 1) == 0 )
+  if ( (byte_59696A1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6385/*"Error occurred."*/);
-    byte_5931501 = 1;
+    sub_2213A60(&StringLiteral_6397/*"Error occurred."*/);
+    byte_59696A1 = 1;
   }
   if ( !this->fields._isDone_k__BackingField )
   {
@@ -105,9 +105,9 @@ void CriFsBindRequest__Update(CriFsBindRequest_o *this, const MethodInfo *method
     {
       if ( Status == 6 )
       {
-        v4 = StringLiteral_6385/*"Error occurred."*/;
-        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6385/*"Error occurred."*/;
-        sub_21FFBF4(&this->fields._error_k__BackingField, v4);
+        v4 = StringLiteral_6397/*"Error occurred."*/;
+        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6397/*"Error occurred."*/;
+        sub_2213A04(&this->fields._error_k__BackingField, v4);
       }
       doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
       this->fields._isDone_k__BackingField = 1;
@@ -142,5 +142,5 @@ void CriFsBindRequest__set_bindId(CriFsBindRequest_o *this, uint32_t value, cons
 void CriFsBindRequest__set_path(CriFsBindRequest_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields._path_k__BackingField = value;
-  sub_21FFBF4(&this->fields._path_k__BackingField, value);
+  sub_2213A04(&this->fields._path_k__BackingField, value);
 }

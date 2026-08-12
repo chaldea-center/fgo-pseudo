@@ -22,10 +22,10 @@ void GrandQuestFolderBoardItem___ctor(
   bool v25; // w6
   bool v26; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._WarId_k__BackingField = warId;
   this->fields._Name_k__BackingField = boardName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)boardName,
     v15,
@@ -37,7 +37,7 @@ void GrandQuestFolderBoardItem___ctor(
   this->fields._ClosedMessage_k__BackingField = closedMessage;
   this->fields._IconId_k__BackingField = iconId;
   this->fields._ListCreatedTime_k__BackingField = listCreatedTime;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)closedMessage,
     v21,

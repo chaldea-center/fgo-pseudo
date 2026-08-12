@@ -2,14 +2,14 @@ void ServantStatusListViewItemDrawSkill___cctor(const MethodInfo *method)
 {
   struct ServantStatusListViewItemDrawSkill_StaticFields *static_fields; // x8
 
-  if ( (byte_5935D04 & 1) == 0 )
+  if ( (byte_596DF59 & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusListViewItemDrawSkill_TypeInfo);
-    byte_5935D04 = 1;
+    sub_2213A60(&ServantStatusListViewItemDrawSkill_TypeInfo);
+    byte_596DF59 = 1;
   }
   static_fields = ServantStatusListViewItemDrawSkill_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->TitleStartPosY = 0xC23E000040A00000LL;
-  *(_OWORD *)&static_fields->TransformNameAddHeight = xmmword_E93B00;
+  *(_OWORD *)&static_fields->TransformNameAddHeight = xmmword_E9CCA0;
 }
 
 
@@ -25,11 +25,11 @@ void ServantStatusListViewItemDrawSkill___ctor(ServantStatusListViewItemDrawSkil
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5935D03 & 1) == 0 )
+  if ( (byte_596DF58 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&ServantStatusPossessionSkillComponent___TypeInfo);
-    byte_5935D03 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&ServantStatusPossessionSkillComponent___TypeInfo);
+    byte_596DF58 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -37,11 +37,11 @@ void ServantStatusListViewItemDrawSkill___ctor(ServantStatusListViewItemDrawSkil
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct ServantStatusPossessionSkillComponent_array *)sub_21FFD10(
+  v5 = (struct ServantStatusPossessionSkillComponent_array *)sub_2213B20(
                                                                ServantStatusPossessionSkillComponent___TypeInfo,
                                                                (unsigned int)v4->static_fields->SvtSkillListMax);
   this->fields.skillList = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.skillList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.skillList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0);
 }
 
@@ -60,7 +60,6 @@ int32_t ServantStatusListViewItemDrawSkill__GetKind(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawSkill__SetItem(
         ServantStatusListViewItemDrawSkill_o *this,
         ServantStatusListViewItem_o *item,
@@ -155,32 +154,31 @@ void ServantStatusListViewItemDrawSkill__SetItem(
   unsigned int v92; // w9
   int32_t v93; // w1
   UnityEngine_BoxCollider_o *baseCollider; // x20
-  int v95; // s0 OVERLAPPED
-  int v97; // s2
-  bool v98; // [xsp+0h] [xbp-90h]
-  int32_t v99; // [xsp+4h] [xbp-8Ch]
-  int32_t v100; // [xsp+8h] [xbp-88h]
+  bool v96; // [xsp+0h] [xbp-90h]
+  int32_t v97; // [xsp+4h] [xbp-8Ch]
+  int32_t v98; // [xsp+8h] [xbp-88h]
   int32_t limitCount; // [xsp+Ch] [xbp-84h]
   ServantLimitAddEntity_o *entity; // [xsp+10h] [xbp-80h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+18h] [xbp-78h] BYREF
+  UnityEngine_Vector3_o v102; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5935D02 & 1) == 0 )
+  if ( (byte_596DF57 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ServantStatusPossessionSkillComponent__TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_ServantStatusPossessionSkillComponent___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantSkillAddMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&ServantStatusListViewItemDrawSkill_TypeInfo);
-    sub_21FFC50(&Method_ServantStatusListViewItemDrawSkill___c__SetItem_b__18_0__);
-    sub_21FFC50(&ServantStatusListViewItemDrawSkill___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_12423/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/);
-    sub_21FFC50(&StringLiteral_12421/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/);
-    byte_5935D02 = 1;
+    sub_2213A60(&System_Action_ServantStatusPossessionSkillComponent__TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_ServantStatusPossessionSkillComponent___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantSkillAddMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&ServantStatusListViewItemDrawSkill_TypeInfo);
+    sub_2213A60(&Method_ServantStatusListViewItemDrawSkill___c__SetItem_b__18_0__);
+    sub_2213A60(&ServantStatusListViewItemDrawSkill___c_TypeInfo);
+    sub_2213A60(&StringLiteral_12446/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/);
+    sub_2213A60(&StringLiteral_12444/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/);
+    byte_596DF57 = 1;
   }
   entity = 0;
   skillInfoList = 0;
@@ -202,16 +200,16 @@ void ServantStatusListViewItemDrawSkill__SetItem(
       static_fields = ServantStatusListViewItemDrawSkill___c_TypeInfo->static_fields;
     }
     v13 = (Il2CppObject *)static_fields->__9;
-    _9__18_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_ServantStatusPossessionSkillComponent__TypeInfo);
+    _9__18_0 = (System_Action_object__o *)sub_2213CCC(System_Action_ServantStatusPossessionSkillComponent__TypeInfo);
     System_Action_object____ctor(_9__18_0, v13, Method_ServantStatusListViewItemDrawSkill___c__SetItem_b__18_0__, 0);
     v14 = ServantStatusListViewItemDrawSkill___c_TypeInfo->static_fields;
     v14->__9__18_0 = (struct System_Action_ServantStatusPossessionSkillComponent__o *)_9__18_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->__9__18_0, (int32_t)_9__18_0, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->__9__18_0, (int32_t)_9__18_0, v15, v16, v17, v18, v19, v20);
   }
   BasicHelper__ForEach_object_(
     skillList,
     (System_Action_T__o *)_9__18_0,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_ServantStatusPossessionSkillComponent___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_ServantStatusPossessionSkillComponent___);
   if ( item && mode )
   {
     svtEntity = (__int64)item->fields.svtEntity;
@@ -219,9 +217,9 @@ void ServantStatusListViewItemDrawSkill__SetItem(
     {
       explanationLabel = this->fields.explanationLabel;
       if ( ServantEntity__get_IsServantEquip((ServantEntity_o *)svtEntity, 0) )
-        v26 = (System_String_o **)&StringLiteral_12423/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/;
+        v26 = (System_String_o **)&StringLiteral_12446/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/;
       else
-        v26 = (System_String_o **)&StringLiteral_12421/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/;
+        v26 = (System_String_o **)&StringLiteral_12444/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/;
       v27 = *v26;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24, v25);
@@ -234,7 +232,7 @@ void ServantStatusListViewItemDrawSkill__SetItem(
         SvtId = ServantStatusListViewItem__GetSvtId(item, !v28, 0);
         limitCount = ServantStatusListViewItem__get_LimitCount(item, 0);
         DispLimitCountStageSealAfter = ServantStatusListViewItem__GetDispLimitCountStageSealAfter(item, v29 & 1, 0);
-        v100 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStageSealAfter, 0);
+        v98 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStageSealAfter, 0);
         ServantStatusListViewItem__GetSkillInfo(item, &skillInfoList, v29 & 1, 0);
         if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)skillInfoList, 0) )
           return;
@@ -254,7 +252,7 @@ void ServantStatusListViewItemDrawSkill__SetItem(
             goto LABEL_116;
           if ( v34 - 4 >= (unsigned __int64)LODWORD(skillInfoList->max_length) )
 LABEL_117:
-            sub_21FFED4(svtEntity);
+            sub_2213CE4(svtEntity);
           v35 = (SkillInfo_o *)*((_QWORD *)&skillInfoList->obj.klass + v34);
           if ( v35 )
           {
@@ -329,16 +327,16 @@ LABEL_117:
         v52 = TransformNameAddHeight - v46->SkillStartPosY;
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v44, v45);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
         svtEntity = LimitCountUtility__ConvertStageToLimitCount(limitCount, DispLimitCountStageSealAfter, 0, 0);
         if ( Master_object )
         {
-          v99 = SvtId;
+          v97 = SvtId;
           ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Master_object, &entity, SvtId, svtEntity, 0);
-          v55 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
+          v55 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
           svtEntity = (__int64)BalanceConfig_TypeInfo;
           v56 = 0;
-          v98 = 0;
+          v96 = 0;
           v57 = 0;
           v58 = v33;
           for ( i = 4; ; ++i )
@@ -366,11 +364,11 @@ LABEL_117:
                   goto LABEL_116;
                 svtEntity = (__int64)ServantSkillAddMaster__GetEnableEntity(
                                        (ServantSkillAddMaster_o *)v55,
-                                       v99,
+                                       v97,
                                        limitCount,
                                        id,
                                        0,
-                                       v100,
+                                       v98,
                                        svtEntity & 1,
                                        0);
                 v63 = this->fields.skillList;
@@ -446,15 +444,15 @@ LABEL_117:
                   v76 = *((_QWORD *)&v75->obj.klass + i);
                   if ( !v76 )
                     goto LABEL_116;
-                  v98 = *(_BYTE *)(v76 + 68) != 0;
+                  v96 = *(_BYTE *)(v76 + 68) != 0;
                 }
               }
             }
           }
-          if ( !byte_5931FBB )
+          if ( !byte_596A15B )
           {
-            sub_21FFC50(&System_Math_TypeInfo);
-            byte_5931FBB = 1;
+            sub_2213A60(&System_Math_TypeInfo);
+            byte_596A15B = 1;
           }
           v77 = v52 + (float)v56;
           if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -479,7 +477,7 @@ LABEL_117:
                 }
                 v82 = v81->static_fields;
                 v79 = v79 + (float)v82->CombineAdjustHeight;
-                if ( v98 )
+                if ( v96 )
                 {
                   if ( !*(&v81->_2.cctor_finished + 1) )
                   {
@@ -521,10 +519,10 @@ LABEL_117:
             v88 = ServantStatusListViewItemDrawSkill_TypeInfo;
           }
           TitleStartPosY = v88->static_fields->TitleStartPosY;
-          if ( !byte_593193F )
+          if ( !byte_5969ADF )
           {
-            sub_21FFC50(&System_Math_TypeInfo);
-            byte_593193F = 1;
+            sub_2213A60(&System_Math_TypeInfo);
+            byte_5969ADF = 1;
           }
           svtEntity = (__int64)System_Math_TypeInfo;
           if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -544,8 +542,8 @@ LABEL_117:
                             *(_QWORD *)(*(_QWORD *)svtEntity + 672LL));
               if ( baseCollider )
               {
-                v97 = 0;
-                UnityEngine_BoxCollider__set_size(baseCollider, *(UnityEngine_Vector3_o *)&v95, 0);
+                v102.fields.z = 0.0;
+                UnityEngine_BoxCollider__set_size(baseCollider, v102, 0);
                 svtEntity = (__int64)this->fields.baseSprite;
                 if ( svtEntity )
                 {
@@ -562,7 +560,7 @@ LABEL_117:
       }
     }
 LABEL_116:
-    sub_21FFECC(svtEntity, v21);
+    sub_2213CDC(svtEntity, v21);
   }
 }
 
@@ -577,15 +575,15 @@ void ServantStatusListViewItemDrawSkill___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5935D05 & 1) == 0 )
+  if ( (byte_596DF5A & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusListViewItemDrawSkill___c_TypeInfo);
-    byte_5935D05 = 1;
+    sub_2213A60(&ServantStatusListViewItemDrawSkill___c_TypeInfo);
+    byte_596DF5A = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ServantStatusListViewItemDrawSkill___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ServantStatusListViewItemDrawSkill___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantStatusListViewItemDrawSkill___c_TypeInfo->static_fields->__9 = (struct ServantStatusListViewItemDrawSkill___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ServantStatusListViewItemDrawSkill___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -611,6 +609,6 @@ void ServantStatusListViewItemDrawSkill___c___SetItem_b__18_0(
         const MethodInfo *method)
 {
   if ( !skill || (this = (ServantStatusListViewItemDrawSkill___c_o *)skill->fields.baseObject) == 0 )
-    sub_21FFECC(this, skill);
+    sub_2213CDC(this, skill);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }

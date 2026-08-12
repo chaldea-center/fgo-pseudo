@@ -1,9 +1,9 @@
 void RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939DDB & 1) == 0 )
+  if ( (byte_5971FAE & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectComponent_TypeInfo);
-    byte_5939DDB = 1;
+    sub_2213A60(&CommonEffectComponent_TypeInfo);
+    byte_5971FAE = 1;
   }
   if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
@@ -37,14 +37,14 @@ void RaceResultEffectComponent__SetParam(
   System_Object_array *v17; // x20
   __int64 v18; // x24
 
-  if ( (byte_5939DDA & 1) == 0 )
+  if ( (byte_5971FAD & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_5939DDA = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+    byte_5971FAD = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_param,
     (int32_t)param,
     (System_String_o *)method,
@@ -56,7 +56,7 @@ void RaceResultEffectComponent__SetParam(
   v13 = (__int64)*(p_param - 1);
   if ( !v13 )
 LABEL_16:
-    sub_21FFECC(Components_object, v12);
+    sub_2213CDC(Components_object, v12);
   v14 = *(_DWORD *)(v13 + 24);
   if ( v14 >= 1 )
   {
@@ -70,7 +70,7 @@ LABEL_16:
         goto LABEL_16;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_388420C *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_38B76D4 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -98,6 +98,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_17:
-    sub_21FFED4(Components_object);
+    sub_2213CE4(Components_object);
   }
 }

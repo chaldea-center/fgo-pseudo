@@ -3,10 +3,10 @@ void CGThumbnailDialog___ctor(CGThumbnailDialog_o *this, const MethodInfo *metho
   __int64 v2; // x2
   BaseDialog_c *v4; // x0
 
-  if ( (byte_59333E7 & 1) == 0 )
+  if ( (byte_596B4EF & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59333E7 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596B4EF = 1;
   }
   v4 = BaseDialog_TypeInfo;
   *(_WORD *)&this->fields.isCG = 257;
@@ -32,14 +32,14 @@ void CGThumbnailDialog__CloseFullScreen(CGThumbnailDialog_o *this, const MethodI
   const MethodInfo *v14; // x2
   const MethodInfo *v15; // x2
 
-  if ( (byte_59333E1 & 1) == 0 )
+  if ( (byte_596B4E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OpenFullScreen__);
-    sub_21FFC50(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
-    byte_59333E1 = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OpenFullScreen__);
+    sub_2213A60(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+    byte_596B4E9 = 1;
   }
   cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
-  v4 = (CGThumbnailListViewManager_CallbackFunc_o *)sub_21FFEBC(CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+  v4 = (CGThumbnailListViewManager_CallbackFunc_o *)sub_2213CCC(CGThumbnailListViewManager_CallbackFunc_TypeInfo);
   CGThumbnailListViewManager_CallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
@@ -47,7 +47,7 @@ void CGThumbnailDialog__CloseFullScreen(CGThumbnailDialog_o *this, const MethodI
     v5);
   if ( !cgThumbnailListViewManager
     || (cgThumbnailListViewManager->fields.callbackFunc = v4,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&cgThumbnailListViewManager->fields.callbackFunc,
           (int32_t)v4,
           v8,
@@ -63,7 +63,7 @@ void CGThumbnailDialog__CloseFullScreen(CGThumbnailDialog_o *this, const MethodI
                                                                    (UnityEngine_Component_o *)galleryFullScreenPanel,
                                                                    0)) == 0 )
   {
-    sub_21FFECC(galleryFullScreenPanel, v7);
+    sub_2213CDC(galleryFullScreenPanel, v7);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)galleryFullScreenPanel, 0, 0);
   CGThumbnailDialog__ShowCGThumbnailObjects(this, 1, v15);
@@ -87,10 +87,10 @@ void CGThumbnailDialog__DestryGalleryFullScreenPanel(CGThumbnailDialog_o *this, 
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_59333E6 & 1) == 0 )
+  if ( (byte_596B4EE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59333E6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B4EE = 1;
   }
   galleryFullScreenPanel = this->fields.galleryFullScreenPanel;
   p_galleryFullScreenPanel = (UnityEngine_Component_o **)&this->fields.galleryFullScreenPanel;
@@ -100,13 +100,13 @@ void CGThumbnailDialog__DestryGalleryFullScreenPanel(CGThumbnailDialog_o *this, 
   if ( UnityEngine_Object__op_Inequality(v5, 0, 0) )
   {
     if ( !*p_galleryFullScreenPanel )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_galleryFullScreenPanel, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
     *p_galleryFullScreenPanel = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_galleryFullScreenPanel, 0, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_galleryFullScreenPanel, 0, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -124,15 +124,15 @@ void CGThumbnailDialog__FullScreenPanelSetup(CGThumbnailDialog_o *this, int32_t 
   System_Action_o *v12; // x25
   const MethodInfo *v13; // x6
 
-  if ( (byte_59333E0 & 1) == 0 )
+  if ( (byte_596B4E8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CGThumbnailDialog_CloseFullScreen__);
-    sub_21FFC50(&Method_CGThumbnailDialog__FullScreenPanelSetup_b__23_0__);
-    sub_21FFC50(&Method_CGThumbnailListViewManager_JumpItemForID__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_59333E0 = 1;
+    sub_2213A60(&System_Action_int__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CGThumbnailDialog_CloseFullScreen__);
+    sub_2213A60(&Method_CGThumbnailDialog__FullScreenPanelSetup_b__23_0__);
+    sub_2213A60(&Method_CGThumbnailListViewManager_JumpItemForID__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_596B4E8 = 1;
   }
   cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
   if ( !cgThumbnailListViewManager )
@@ -152,17 +152,17 @@ void CGThumbnailDialog__FullScreenPanelSetup(CGThumbnailDialog_o *this, int32_t 
   Item = System_Collections_Generic_List_int___get_Item(
            (System_Collections_Generic_List_int__o *)cgThumbnailListViewManager,
            index,
-           (const MethodInfo_4432E40 *)Method_System_Collections_Generic_List_int__get_Item__);
-  v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+           (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
+  v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_CGThumbnailDialog__FullScreenPanelSetup_b__23_0__, 0);
   v10 = (Il2CppObject *)this->fields.cgThumbnailListViewManager;
-  v11 = (System_Action_int__o *)sub_21FFEBC(System_Action_int__TypeInfo);
+  v11 = (System_Action_int__o *)sub_2213CCC(System_Action_int__TypeInfo);
   System_Action_int____ctor(v11, v10, Method_CGThumbnailListViewManager_JumpItemForID__, 0);
-  v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_CGThumbnailDialog_CloseFullScreen__, 0);
   if ( !galleryFullScreenPanel )
 LABEL_8:
-    sub_21FFECC(cgThumbnailListViewManager, *(_QWORD *)&index);
+    sub_2213CDC(cgThumbnailListViewManager, *(_QWORD *)&index);
   GalleryFullScreenPanel__Setup(galleryFullScreenPanel, v7, Item, v9, v11, v12, v13);
 }
 
@@ -178,17 +178,17 @@ void CGThumbnailDialog__OnClickBackToGalleryTop(CGThumbnailDialog_o *this, const
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_59333E3 & 1) == 0 )
+  if ( (byte_596B4EB & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OnClickBackToGalleryTop__);
-    byte_59333E3 = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OnClickBackToGalleryTop__);
+    byte_596B4EB = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_CGThumbnailDialog_OnClickBackToGalleryTop__;
     if ( (*((_BYTE *)Method_CGThumbnailDialog_OnClickBackToGalleryTop__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CGThumbnailDialog_OnClickBackToGalleryTop__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CGThumbnailDialog_OnClickBackToGalleryTop__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
     if ( !cgThumbnailListViewManager
@@ -198,7 +198,7 @@ void CGThumbnailDialog__OnClickBackToGalleryTop(CGThumbnailDialog_o *this, const
           ListViewManager__set_IsInput((ListViewManager_o *)cgThumbnailListViewManager, 0, 0),
           (v5 = this->fields.cgThumbnailListViewManager) == 0) )
     {
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
     CGThumbnailListViewManager__UnloadTextureAsset(v5, v6);
     CGThumbnailDialog__SaveFilter(this, v9);
@@ -219,17 +219,17 @@ void CGThumbnailDialog__OnClickClose(CGThumbnailDialog_o *this, const MethodInfo
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_59333E4 & 1) == 0 )
+  if ( (byte_596B4EC & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OnClickClose__);
-    byte_59333E4 = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OnClickClose__);
+    byte_596B4EC = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_CGThumbnailDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_CGThumbnailDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CGThumbnailDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CGThumbnailDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
     if ( !cgThumbnailListViewManager
@@ -239,7 +239,7 @@ void CGThumbnailDialog__OnClickClose(CGThumbnailDialog_o *this, const MethodInfo
           ListViewManager__set_IsInput((ListViewManager_o *)cgThumbnailListViewManager, 0, 0),
           (v5 = this->fields.cgThumbnailListViewManager) == 0) )
     {
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     }
     CGThumbnailListViewManager__UnloadTextureAsset(v5, v6);
     CGThumbnailDialog__SaveFilter(this, v9);
@@ -256,10 +256,10 @@ void CGThumbnailDialog__OnClickIsCG(CGThumbnailDialog_o *this, const MethodInfo 
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_59333DD & 1) == 0 )
+  if ( (byte_596B4E5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OnClickIsCG__);
-    byte_59333DD = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OnClickIsCG__);
+    byte_596B4E5 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
@@ -272,7 +272,7 @@ void CGThumbnailDialog__OnClickIsCG(CGThumbnailDialog_o *this, const MethodInfo 
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)cgFilterCheckBoxSprite, this->fields.isCG, 0),
           (cgFilterCheckBoxSprite = (UnityEngine_Component_o *)this->fields.cgThumbnailListViewManager) == 0) )
     {
-      sub_21FFECC(cgFilterCheckBoxSprite, method);
+      sub_2213CDC(cgFilterCheckBoxSprite, method);
     }
     CGThumbnailListViewManager__SetFilter(
       (CGThumbnailListViewManager_o *)cgFilterCheckBoxSprite,
@@ -281,8 +281,8 @@ void CGThumbnailDialog__OnClickIsCG(CGThumbnailDialog_o *this, const MethodInfo 
       v4);
     v5 = Method_CGThumbnailDialog_OnClickIsCG__;
     if ( (*((_BYTE *)Method_CGThumbnailDialog_OnClickIsCG__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_CGThumbnailDialog_OnClickIsCG__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_CGThumbnailDialog_OnClickIsCG__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   }
 }
@@ -295,10 +295,10 @@ void CGThumbnailDialog__OnClickIsMovie(CGThumbnailDialog_o *this, const MethodIn
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_59333DE & 1) == 0 )
+  if ( (byte_596B4E6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OnClickIsMovie__);
-    byte_59333DE = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OnClickIsMovie__);
+    byte_596B4E6 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
@@ -314,7 +314,7 @@ void CGThumbnailDialog__OnClickIsMovie(CGThumbnailDialog_o *this, const MethodIn
             0),
           (movieFilterCheckBoxSprite = (UnityEngine_Component_o *)this->fields.cgThumbnailListViewManager) == 0) )
     {
-      sub_21FFECC(movieFilterCheckBoxSprite, method);
+      sub_2213CDC(movieFilterCheckBoxSprite, method);
     }
     CGThumbnailListViewManager__SetFilter(
       (CGThumbnailListViewManager_o *)movieFilterCheckBoxSprite,
@@ -323,8 +323,8 @@ void CGThumbnailDialog__OnClickIsMovie(CGThumbnailDialog_o *this, const MethodIn
       v4);
     v5 = Method_CGThumbnailDialog_OnClickIsMovie__;
     if ( (*((_BYTE *)Method_CGThumbnailDialog_OnClickIsMovie__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_CGThumbnailDialog_OnClickIsMovie__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_CGThumbnailDialog_OnClickIsMovie__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   }
 }
@@ -338,17 +338,17 @@ void CGThumbnailDialog__OnClickScaleChange(CGThumbnailDialog_o *this, const Meth
   CGThumbnailListViewManager_o *cgThumbnailListViewManager; // x0
   UISprite_o *scaleChangeTabSprite; // x19
 
-  if ( (byte_59333E2 & 1) == 0 )
+  if ( (byte_596B4EA & 1) == 0 )
   {
-    sub_21FFC50(&Method_CGThumbnailDialog_OnClickScaleChange__);
-    byte_59333E2 = 1;
+    sub_2213A60(&Method_CGThumbnailDialog_OnClickScaleChange__);
+    byte_596B4EA = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_CGThumbnailDialog_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_CGThumbnailDialog_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CGThumbnailDialog_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CGThumbnailDialog_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
     if ( !cgThumbnailListViewManager
@@ -360,7 +360,7 @@ void CGThumbnailDialog__OnClickScaleChange(CGThumbnailDialog_o *this, const Meth
                                                                          v5),
           !scaleChangeTabSprite) )
     {
-      sub_21FFECC(cgThumbnailListViewManager, v5);
+      sub_2213CDC(cgThumbnailListViewManager, v5);
     }
     UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)cgThumbnailListViewManager, 0);
   }
@@ -411,20 +411,20 @@ void CGThumbnailDialog__Open(
   UISprite_o *warTitleSprite; // x22
   System_Action_o *v46; // x21
 
-  if ( (byte_59333DC & 1) == 0 )
+  if ( (byte_596B4E4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_CGThumbnailDialog_OpenFullScreen__);
-    sub_21FFC50(&Method_CGThumbnailDialog__Open_b__19_0__);
-    sub_21FFC50(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_7196/*"GALLERY_CHECKBOX_CG"*/);
-    sub_21FFC50(&StringLiteral_8336/*"IsGalleryCGFilter"*/);
-    sub_21FFC50(&StringLiteral_7197/*"GALLERY_CHECKBOX_MOVIE"*/);
-    sub_21FFC50(&StringLiteral_8337/*"IsGalleryMovieFilter"*/);
-    sub_21FFC50(&StringLiteral_7199/*"GALLERY_EXPLANATION"*/);
-    byte_59333DC = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_CGThumbnailDialog_OpenFullScreen__);
+    sub_2213A60(&Method_CGThumbnailDialog__Open_b__19_0__);
+    sub_2213A60(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_7208/*"GALLERY_CHECKBOX_CG"*/);
+    sub_2213A60(&StringLiteral_8348/*"IsGalleryCGFilter"*/);
+    sub_2213A60(&StringLiteral_7209/*"GALLERY_CHECKBOX_MOVIE"*/);
+    sub_2213A60(&StringLiteral_8349/*"IsGalleryMovieFilter"*/);
+    sub_2213A60(&StringLiteral_7211/*"GALLERY_EXPLANATION"*/);
+    byte_596B4E4 = 1;
   }
   titleInfoControl = this->fields.titleInfoControl;
   if ( !titleInfoControl )
@@ -443,8 +443,8 @@ void CGThumbnailDialog__Open(
     goto LABEL_26;
   TitleInfoControl__SetHelpBtn(titleInfoControl, 0, 0);
   CGThumbnailDialog__ShowCGThumbnailObjects(this, 1, v14);
-  v15 = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8336/*"IsGalleryCGFilter"*/, 0, 0) == 1;
-  v16 = (System_String_o *)StringLiteral_8337/*"IsGalleryMovieFilter"*/;
+  v15 = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8348/*"IsGalleryCGFilter"*/, 0, 0) == 1;
+  v16 = (System_String_o *)StringLiteral_8349/*"IsGalleryMovieFilter"*/;
   this->fields.isCG = v15;
   Int = UnityEngine_PlayerPrefs__GetInt(v16, 0, 0);
   titleInfoControl = (TitleInfoControl_o *)this->fields.cgFilterCheckBoxSprite;
@@ -473,7 +473,7 @@ void CGThumbnailDialog__Open(
   cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
   isCG = this->fields.isCG;
   isMovie = this->fields.isMovie;
-  v22 = (CGThumbnailListViewManager_CallbackFunc_o *)sub_21FFEBC(CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+  v22 = (CGThumbnailListViewManager_CallbackFunc_o *)sub_2213CCC(CGThumbnailListViewManager_CallbackFunc_TypeInfo);
   CGThumbnailListViewManager_CallbackFunc___ctor(
     v22,
     (Il2CppObject *)this,
@@ -495,22 +495,22 @@ void CGThumbnailDialog__Open(
   galleryExplanationLabel = this->fields.galleryExplanationLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v26, v27);
-  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7199/*"GALLERY_EXPLANATION"*/, 0);
+  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7211/*"GALLERY_EXPLANATION"*/, 0);
   if ( !galleryExplanationLabel )
     goto LABEL_26;
   UILabel__set_text(galleryExplanationLabel, (System_String_o *)titleInfoControl, 0);
   cgFilterCheckBoxLabel = this->fields.cgFilterCheckBoxLabel;
-  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7196/*"GALLERY_CHECKBOX_CG"*/, 0);
+  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7208/*"GALLERY_CHECKBOX_CG"*/, 0);
   if ( !cgFilterCheckBoxLabel )
     goto LABEL_26;
   UILabel__set_text(cgFilterCheckBoxLabel, (System_String_o *)titleInfoControl, 0);
   movieFilterCheckBoxLabel = this->fields.movieFilterCheckBoxLabel;
-  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7197/*"GALLERY_CHECKBOX_MOVIE"*/, 0);
+  titleInfoControl = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7209/*"GALLERY_CHECKBOX_MOVIE"*/, 0);
   if ( !movieFilterCheckBoxLabel )
     goto LABEL_26;
   UILabel__set_text(movieFilterCheckBoxLabel, (System_String_o *)titleInfoControl, 0);
   this->fields.backToGalleryTop = backToTop;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.backToGalleryTop,
     (int32_t)backToTop,
     v31,
@@ -520,7 +520,7 @@ void CGThumbnailDialog__Open(
     v35,
     v36);
   this->fields.closeAction = close;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)close,
     v37,
@@ -543,10 +543,10 @@ void CGThumbnailDialog__Open(
       goto LABEL_25;
     }
 LABEL_26:
-    sub_21FFECC(titleInfoControl, galleryEntities);
+    sub_2213CDC(titleInfoControl, galleryEntities);
   }
 LABEL_25:
-  v46 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v46 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v46, (Il2CppObject *)this, Method_CGThumbnailDialog__Open_b__19_0__, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, v46, 0, 0);
   ActionExtensions__Call(action, 0);
@@ -573,26 +573,26 @@ void CGThumbnailDialog__OpenFullScreen(CGThumbnailDialog_o *this, int32_t index,
   __int64 v20; // x1
   __int64 v21; // x2
 
-  if ( (byte_59333DF & 1) == 0 )
+  if ( (byte_596B4E7 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_CGThumbnailDialog___c__DisplayClass22_0__OpenFullScreen_b__0__);
-    sub_21FFC50(&CGThumbnailDialog___c__DisplayClass22_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_9590/*"MyRoom/Gallery/Prefab"*/);
-    byte_59333DF = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_CGThumbnailDialog___c__DisplayClass22_0__OpenFullScreen_b__0__);
+    sub_2213A60(&CGThumbnailDialog___c__DisplayClass22_0_TypeInfo);
+    sub_2213A60(&StringLiteral_9603/*"MyRoom/Gallery/Prefab"*/);
+    byte_596B4E7 = 1;
   }
-  v5 = sub_21FFEBC(CGThumbnailDialog___c__DisplayClass22_0_TypeInfo);
+  v5 = sub_2213CCC(CGThumbnailDialog___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
         cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager,
         *(_DWORD *)(v5 + 24) = index,
         !cgThumbnailListViewManager) )
   {
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   cgThumbnailListViewManager->fields.initMode = 0;
   cgThumbnailListViewManager->fields.callbackCount = ListViewManager__get_ObjectSum(
@@ -604,7 +604,7 @@ void CGThumbnailDialog__OpenFullScreen(CGThumbnailDialog_o *this, int32_t index,
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   if ( UnityEngine_Object__op_Equality(galleryFullScreenPanel, 0, 0) )
   {
-    v19 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v19 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v19,
       (Il2CppObject *)v5,
@@ -612,7 +612,7 @@ void CGThumbnailDialog__OpenFullScreen(CGThumbnailDialog_o *this, int32_t index,
       0);
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v20, v21);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9590/*"MyRoom/Gallery/Prefab"*/, v19, 1, 0, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9603/*"MyRoom/Gallery/Prefab"*/, v19, 1, 0, 0);
   }
   else
   {
@@ -623,14 +623,14 @@ void CGThumbnailDialog__OpenFullScreen(CGThumbnailDialog_o *this, int32_t index,
 
 void CGThumbnailDialog__SaveFilter(CGThumbnailDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_59333E5 & 1) == 0 )
+  if ( (byte_596B4ED & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_8336/*"IsGalleryCGFilter"*/);
-    sub_21FFC50(&StringLiteral_8337/*"IsGalleryMovieFilter"*/);
-    byte_59333E5 = 1;
+    sub_2213A60(&StringLiteral_8348/*"IsGalleryCGFilter"*/);
+    sub_2213A60(&StringLiteral_8349/*"IsGalleryMovieFilter"*/);
+    byte_596B4ED = 1;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8336/*"IsGalleryCGFilter"*/, this->fields.isCG, 0);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8337/*"IsGalleryMovieFilter"*/, this->fields.isMovie, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8348/*"IsGalleryCGFilter"*/, this->fields.isCG, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8349/*"IsGalleryMovieFilter"*/, this->fields.isMovie, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -660,7 +660,7 @@ void CGThumbnailDialog__ShowCGThumbnailObjects(CGThumbnailDialog_o *this, bool i
         (cgFullScreenBgSprite = (UnityEngine_Component_o *)this->fields.basePanel) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(cgFullScreenBgSprite, isShow);
+    sub_2213CDC(cgFullScreenBgSprite, isShow);
   }
   *(_QWORD *)&v6 = 0;
   if ( isShow )
@@ -678,7 +678,7 @@ void CGThumbnailDialog__UnloadListViewAsset(CGThumbnailDialog_o *this, const Met
 
   cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
   if ( !cgThumbnailListViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CGThumbnailListViewManager__UnloadTextureAsset(cgThumbnailListViewManager, method);
 }
 
@@ -698,7 +698,7 @@ void CGThumbnailDialog___Open_b__19_0(CGThumbnailDialog_o *this, const MethodInf
 
   cgThumbnailListViewManager = this->fields.cgThumbnailListViewManager;
   if ( !cgThumbnailListViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CGThumbnailListViewManager__SetMode(cgThumbnailListViewManager, 2, v2);
 }
 
@@ -731,39 +731,39 @@ void CGThumbnailDialog___c__DisplayClass22_0___OpenFullScreen_b__0(
   const MethodInfo *v16; // x2
 
   v4 = this;
-  if ( (byte_59333E8 & 1) == 0 )
+  if ( (byte_596B4F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_GalleryFullScreenPanel___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (CGThumbnailDialog___c__DisplayClass22_0_o *)sub_21FFC50(&StringLiteral_7316/*"GalleryFullScreenListViewPanel"*/);
-    byte_59333E8 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_GalleryFullScreenPanel___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (CGThumbnailDialog___c__DisplayClass22_0_o *)sub_2213A60(&StringLiteral_7328/*"GalleryFullScreenListViewPanel"*/);
+    byte_596B4F0 = 1;
   }
   if ( !assetData )
     goto LABEL_11;
   _4__this = v4->fields.__4__this;
-  this = (CGThumbnailDialog___c__DisplayClass22_0_o *)AssetData__GetObject_object__58323140(
+  this = (CGThumbnailDialog___c__DisplayClass22_0_o *)AssetData__GetObject_object__58532980(
                                                         assetData,
-                                                        (System_String_o *)StringLiteral_7316/*"GalleryFullScreenListViewPanel"*/,
-                                                        (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                                        (System_String_o *)StringLiteral_7328/*"GalleryFullScreenListViewPanel"*/,
+                                                        (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !v4->fields.__4__this )
     goto LABEL_11;
   v6 = (Il2CppObject *)this;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4->fields.__4__this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-  this = (CGThumbnailDialog___c__DisplayClass22_0_o *)UnityEngine_Object__Instantiate_object__59506996(
+  this = (CGThumbnailDialog___c__DisplayClass22_0_o *)UnityEngine_Object__Instantiate_object__59717116(
                                                         v6,
                                                         transform,
-                                                        (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+                                                        (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
   if ( !this
     || (this = (CGThumbnailDialog___c__DisplayClass22_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                               (UnityEngine_GameObject_o *)this,
-                                                              (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_GalleryFullScreenPanel___),
+                                                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_GalleryFullScreenPanel___),
         !_4__this)
     || (_4__this->fields.galleryFullScreenPanel = (struct GalleryFullScreenPanel_o *)this,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&_4__this->fields.galleryFullScreenPanel,
           (int32_t)this,
           v10,
@@ -775,7 +775,7 @@ void CGThumbnailDialog___c__DisplayClass22_0___OpenFullScreen_b__0(
         (this = (CGThumbnailDialog___c__DisplayClass22_0_o *)v4->fields.__4__this) == 0) )
   {
 LABEL_11:
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   }
   CGThumbnailDialog__FullScreenPanelSetup((CGThumbnailDialog_o *)this, v4->fields.index, v16);
 }

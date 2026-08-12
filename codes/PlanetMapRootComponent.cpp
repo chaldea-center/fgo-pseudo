@@ -13,16 +13,16 @@ BlankEarth_o *PlanetMapRootComponent__CreatePlanetEarth(
   AssetData_o *PlanetMapAssetData_k__BackingField; // x8
   __int64 v7; // x1
   __int64 v8; // x2
-  Il2CppObject *Object_object__58323140; // x20
+  Il2CppObject *Object_object__58532980; // x20
   Il2CppObject *v10; // x20
 
-  if ( (byte_593501F & 1) == 0 )
+  if ( (byte_596D14F & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593501F = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D14F = 1;
   }
   if ( !this->fields._PlanetMapAssetData_k__BackingField )
     return 0;
@@ -33,24 +33,24 @@ BlankEarth_o *PlanetMapRootComponent__CreatePlanetEarth(
   PlanetMapAssetData_k__BackingField = this->fields._PlanetMapAssetData_k__BackingField;
   if ( !PlanetMapAssetData_k__BackingField )
     goto LABEL_12;
-  Object_object__58323140 = AssetData__GetObject_object__58323140(
+  Object_object__58532980 = AssetData__GetObject_object__58532980(
                               PlanetMapAssetData_k__BackingField,
                               (System_String_o *)mapEntity,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
   v10 = UnityEngine_Object__Instantiate_object_(
-          Object_object__58323140,
-          (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          Object_object__58532980,
+          (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v10, 0, 0) )
     return 0;
-  GameObjectExtensions__SafeSetParent_42881912((UnityEngine_GameObject_o *)v10, parentObject, 0);
+  GameObjectExtensions__SafeSetParent_42897308((UnityEngine_GameObject_o *)v10, parentObject, 0);
   if ( !v10 )
 LABEL_12:
-    sub_21FFECC(mapEntity, parentObject);
+    sub_2213CDC(mapEntity, parentObject);
   return (BlankEarth_o *)UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v10,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BlankEarth___);
 }
 
 
@@ -81,11 +81,11 @@ void PlanetMapRootComponent__DestroyAll(PlanetMapRootComponent_o *this, const Me
   bool v25; // w7
   UnityEngine_GameObject_o *v26; // x0
 
-  if ( (byte_5935023 & 1) == 0 )
+  if ( (byte_596D153 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935023 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D153 = 1;
   }
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.spotLabelObj, 0, 0);
   p_PlanetEarth_k__BackingField = (UnityEngine_Component_o **)&this->fields._PlanetEarth_k__BackingField;
@@ -96,13 +96,13 @@ void PlanetMapRootComponent__DestroyAll(PlanetMapRootComponent_o *this, const Me
   {
     BasicHelper__SetActiveSafely(*p_PlanetEarth_k__BackingField, 0, 0);
     if ( !*p_PlanetEarth_k__BackingField )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_PlanetEarth_k__BackingField, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
     *p_PlanetEarth_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._PlanetEarth_k__BackingField,
       0,
       v13,
@@ -117,9 +117,9 @@ void PlanetMapRootComponent__DestroyAll(PlanetMapRootComponent_o *this, const Me
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v7, v8);
-    AssetManager__releaseAsset_47465556(PlanetMapAssetData_k__BackingField, 0);
+    AssetManager__releaseAsset_47496972(PlanetMapAssetData_k__BackingField, 0);
     this->fields._PlanetMapAssetData_k__BackingField = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._PlanetMapAssetData_k__BackingField,
       0,
       v20,
@@ -144,18 +144,18 @@ System_String_o *PlanetMapRootComponent__GetPlanetMapAssetPath(
   int32_t PlanetMapAssetId; // [xsp+8h] [xbp-28h] BYREF
   int32_t warId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5935022 & 1) == 0 )
+  if ( (byte_596D152 & 1) == 0 )
   {
-    this = (PlanetMapRootComponent_o *)sub_21FFC50(&StringLiteral_14230/*"Terminal/MapModels/{0:D4}_{1}"*/);
-    byte_5935022 = 1;
+    this = (PlanetMapRootComponent_o *)sub_2213A60(&StringLiteral_14260/*"Terminal/MapModels/{0:D4}_{1}"*/);
+    byte_596D152 = 1;
   }
   if ( !mapEntity )
-    sub_21FFECC(this, mapEntity);
+    sub_2213CDC(this, mapEntity);
   warId = mapEntity->fields.warId;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &warId);
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &warId);
   PlanetMapAssetId = MapEntity__GetPlanetMapAssetId(mapEntity, 0);
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &PlanetMapAssetId);
-  return System_String__Format_75484576((System_String_o *)StringLiteral_14230/*"Terminal/MapModels/{0:D4}_{1}"*/, v4, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &PlanetMapAssetId);
+  return System_String__Format_75697880((System_String_o *)StringLiteral_14260/*"Terminal/MapModels/{0:D4}_{1}"*/, v4, v5, 0);
 }
 
 
@@ -195,28 +195,28 @@ void PlanetMapRootComponent__LoadAssetData(
   __int64 v34; // x1
   __int64 v35; // x2
 
-  if ( (byte_593501D & 1) == 0 )
+  if ( (byte_596D14D & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_PlanetMapRootComponent___c__DisplayClass13_0__LoadAssetData_b__0__);
-    sub_21FFC50(&PlanetMapRootComponent___c__DisplayClass13_0_TypeInfo);
-    byte_593501D = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_PlanetMapRootComponent___c__DisplayClass13_0__LoadAssetData_b__0__);
+    sub_2213A60(&PlanetMapRootComponent___c__DisplayClass13_0_TypeInfo);
+    byte_596D14D = 1;
   }
-  v7 = sub_21FFEBC(PlanetMapRootComponent___c__DisplayClass13_0_TypeInfo);
+  v7 = sub_2213CCC(PlanetMapRootComponent___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = endAction;
   v16 = v7 + 24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)endAction, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)endAction, v17, v18, v19, v20, v21, v22);
   this->fields.mapEntity = mapEnt;
   p_mapEntity = &this->fields.mapEntity;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_mapEntity, (int32_t)mapEnt, v24, v25, v26, v27, v28, v29);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_mapEntity, (int32_t)mapEnt, v24, v25, v26, v27, v28, v29);
   PlanetMapAssetPath = PlanetMapRootComponent__GetPlanetMapAssetPath(v30, *p_mapEntity, v31);
-  v33 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v33 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v33,
     (Il2CppObject *)v7,
@@ -248,7 +248,7 @@ void PlanetMapRootComponent__PutGimmicks(PlanetMapRootComponent_o *this, const M
     {
       PlanetEarth_k__BackingField = this->fields._PlanetEarth_k__BackingField;
       if ( !PlanetEarth_k__BackingField )
-        sub_21FFECC(0, PlanetMapAssetData_k__BackingField);
+        sub_2213CDC(0, PlanetMapAssetData_k__BackingField);
       BlankEarth__PutGimmicksByMapId(
         PlanetEarth_k__BackingField,
         PlanetMapAssetData_k__BackingField,
@@ -267,10 +267,10 @@ void PlanetMapRootComponent__PutSpots(PlanetMapRootComponent_o *this, const Meth
   struct MapEntity_o *mapEntity; // x8
   BlankEarth_o *v7; // x0
 
-  if ( (byte_5935020 & 1) == 0 )
+  if ( (byte_596D150 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935020 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D150 = 1;
   }
   PlanetEarth_k__BackingField = (UnityEngine_Object_o *)this->fields._PlanetEarth_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -282,7 +282,7 @@ void PlanetMapRootComponent__PutSpots(PlanetMapRootComponent_o *this, const Meth
     {
       v7 = this->fields._PlanetEarth_k__BackingField;
       if ( !v7 )
-        sub_21FFECC(0, v5);
+        sub_2213CDC(0, v5);
       BlankEarth__PutSpots(v7, mapEntity->fields.id, 0);
     }
   }
@@ -313,11 +313,11 @@ void PlanetMapRootComponent__Setup(PlanetMapRootComponent_o *this, const MethodI
   __int64 v22; // x2
   UnityEngine_Object_o *PlanetEarth_k__BackingField; // x21
 
-  if ( (byte_593501E & 1) == 0 )
+  if ( (byte_596D14E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_593501E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D14E = 1;
   }
   if ( this->fields._PlanetMapAssetData_k__BackingField )
   {
@@ -336,10 +336,10 @@ void PlanetMapRootComponent__Setup(PlanetMapRootComponent_o *this, const MethodI
         v2);
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v8);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       v9 = TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -355,7 +355,7 @@ void PlanetMapRootComponent__Setup(PlanetMapRootComponent_o *this, const MethodI
       PlanetEarth = PlanetMapRootComponent__CreatePlanetEarth(this, gameObject, v8);
       this->fields._PlanetEarth_k__BackingField = PlanetEarth;
       p_PlanetEarth_k__BackingField = &this->fields._PlanetEarth_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields._PlanetEarth_k__BackingField,
         (int32_t)PlanetEarth,
         v15,
@@ -386,7 +386,7 @@ void PlanetMapRootComponent__Setup(PlanetMapRootComponent_o *this, const MethodI
       }
     }
 LABEL_26:
-    sub_21FFECC(planetMapBackground, method);
+    sub_2213CDC(planetMapBackground, method);
   }
 }
 
@@ -400,10 +400,10 @@ void PlanetMapRootComponent__SwitchDispPlanetEarth(
   UnityEngine_Object_o *PlanetEarth_k__BackingField; // x21
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_5935021 & 1) == 0 )
+  if ( (byte_596D151 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935021 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D151 = 1;
   }
   PlanetEarth_k__BackingField = (UnityEngine_Object_o *)this->fields._PlanetEarth_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -447,7 +447,7 @@ void PlanetMapRootComponent__set_PlanetEarth(
   bool v7; // w7
 
   this->fields._PlanetEarth_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._PlanetEarth_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -471,7 +471,7 @@ void PlanetMapRootComponent__set_PlanetMapAssetData(
   bool v7; // w7
 
   this->fields._PlanetMapAssetData_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._PlanetMapAssetData_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -506,9 +506,9 @@ void PlanetMapRootComponent___c__DisplayClass13_0___LoadAssetData_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, data);
+    sub_2213CDC(0, data);
   _4__this->fields._PlanetMapAssetData_k__BackingField = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields._PlanetMapAssetData_k__BackingField,
     (int32_t)data,
     (System_String_o *)method,

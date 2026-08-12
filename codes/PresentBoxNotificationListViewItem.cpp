@@ -13,11 +13,11 @@ void PresentBoxNotificationListViewItem___ctor(
   __int64 v12; // x0
   __int64 v13; // x1
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.entity = e;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.entity, (int32_t)e, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.entity, (int32_t)e, v6, v7, v8, v9, v10, v11);
   if ( !e )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0);
 }
 

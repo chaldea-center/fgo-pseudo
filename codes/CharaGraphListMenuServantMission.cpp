@@ -28,17 +28,17 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_593450A & 1) == 0 )
+  if ( (byte_596C639 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListViewPatternServantMission_TypeInfo);
-    byte_593450A = 1;
+    sub_2213A60(&CharaGraphListViewPatternServantMission_TypeInfo);
+    byte_596C639 = 1;
   }
-  v6 = sub_21FFEBC(CharaGraphListViewPatternServantMission_TypeInfo);
+  v6 = sub_2213CCC(CharaGraphListViewPatternServantMission_TypeInfo);
   CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v6 + 16),
           (int32_t)SortOwner_k__BackingField,
           v9,
@@ -49,7 +49,7 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
           v14),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v6 + 24),
           (int32_t)RootInfo_k__BackingField,
           v17,
@@ -60,7 +60,7 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
           v22),
         (v7 = this->fields._SortOwner_k__BackingField) == 0) )
   {
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v6;

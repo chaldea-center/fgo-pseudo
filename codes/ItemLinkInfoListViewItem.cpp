@@ -41,18 +41,18 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   bool v43; // w6
   bool v44; // w7
 
-  if ( (byte_593AE08 & 1) == 0 )
+  if ( (byte_59730C1 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593AE08 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59730C1 = 1;
   }
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v5 = (int)StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7, v8, v9, v10, v11);
   v12 = (int)StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     v12,
     v13,
@@ -65,7 +65,7 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   this->fields._ItemEnt_k__BackingField = 0;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEnt_k__BackingField,
     0,
     v19,
@@ -78,7 +78,7 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
   this->fields._ClosedMessage_k__BackingField = v25;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)v25,
     v26,
@@ -89,7 +89,7 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
     v31);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LinkAction_k__BackingField,
     0,
     v32,
@@ -101,7 +101,7 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   v38 = (int)StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields._IsFirst_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
     v38,
     v39,
@@ -239,7 +239,7 @@ void ItemLinkInfoListViewItem__set_ClosedMessage(
   bool v7; // w7
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -263,7 +263,7 @@ void ItemLinkInfoListViewItem__set_IconName(
   bool v7; // w7
 
   this->fields._IconName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -332,7 +332,7 @@ void ItemLinkInfoListViewItem__set_ItemEnt(
   bool v7; // w7
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEnt_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -365,7 +365,7 @@ void ItemLinkInfoListViewItem__set_LinkAction(
   bool v7; // w7
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LinkAction_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -389,7 +389,7 @@ void ItemLinkInfoListViewItem__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -428,7 +428,7 @@ void ItemLinkInfoListViewItem__set_TransitionParam(
   bool v7; // w7
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

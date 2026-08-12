@@ -17,25 +17,25 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager___ctor(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5936421 & 1) == 0 )
+  if ( (byte_596E57B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
-    byte_5936421 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+    byte_596E57B = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
   this->fields.beforeList = (struct System_Collections_Generic_List_SvtUseNpData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SvtUseNpData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SvtUseNpData___ctor__);
   this->fields.afterList = (struct System_Collections_Generic_List_SvtUseNpData__o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.afterList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.afterList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -62,13 +62,13 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddAfterNp(
   __int64 size; // x11
   Il2CppClass **v23; // x0
 
-  if ( (byte_5936423 & 1) == 0 )
+  if ( (byte_596E57D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_21FFC50(&SvtUseNpData_TypeInfo);
-    byte_5936423 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_2213A60(&SvtUseNpData_TypeInfo);
+    byte_596E57D = 1;
   }
-  v9 = (SvtUseNpData_o *)sub_21FFEBC(SvtUseNpData_TypeInfo);
+  v9 = (SvtUseNpData_o *)sub_2213CCC(SvtUseNpData_TypeInfo);
   SvtUseNpData___ctor(v9, 0);
   if ( !v9 )
     goto LABEL_9;
@@ -89,7 +89,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddAfterNp(
         !items) )
   {
 LABEL_9:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   size = afterList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -97,14 +97,14 @@ LABEL_9:
     System_Collections_Generic_List_object___AddWithResize(
       afterList,
       (Il2CppObject *)v9,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
     v23 = &items->obj.klass + size;
     afterList->fields._size = size + 1;
     v23[4] = (Il2CppClass *)v9;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v9, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v9, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -132,13 +132,13 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddBeforeNp(
   __int64 size; // x11
   Il2CppClass **v23; // x0
 
-  if ( (byte_5936422 & 1) == 0 )
+  if ( (byte_596E57C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
-    sub_21FFC50(&SvtUseNpData_TypeInfo);
-    byte_5936422 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData__Add__);
+    sub_2213A60(&SvtUseNpData_TypeInfo);
+    byte_596E57C = 1;
   }
-  v9 = (SvtUseNpData_o *)sub_21FFEBC(SvtUseNpData_TypeInfo);
+  v9 = (SvtUseNpData_o *)sub_2213CCC(SvtUseNpData_TypeInfo);
   SvtUseNpData___ctor(v9, 0);
   if ( !v9 )
     goto LABEL_9;
@@ -159,7 +159,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__AddBeforeNp(
         !items) )
   {
 LABEL_9:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   size = beforeList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -167,14 +167,14 @@ LABEL_9:
     System_Collections_Generic_List_object___AddWithResize(
       beforeList,
       (Il2CppObject *)v9,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
     v23 = &items->obj.klass + size;
     beforeList->fields._size = size + 1;
     v23[4] = (Il2CppClass *)v9;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v9, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v9, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -187,18 +187,18 @@ SvtUseNpData_o *Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfter
 {
   System_Collections_Generic_List_object__o *afterList; // x0
 
-  if ( (byte_5936426 & 1) == 0 )
+  if ( (byte_596E580 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    byte_5936426 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    byte_596E580 = 1;
   }
   afterList = (System_Collections_Generic_List_object__o *)this->fields.afterList;
   if ( !afterList )
-    sub_21FFECC(0, *(_QWORD *)&index);
+    sub_2213CDC(0, *(_QWORD *)&index);
   return (SvtUseNpData_o *)System_Collections_Generic_List_object___get_Item(
                              afterList,
                              index,
-                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
 }
 
 
@@ -210,14 +210,14 @@ int32_t Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetAfterNpCount(
   struct System_Collections_Generic_List_SvtUseNpData__o *afterList; // x8
 
   v2 = this;
-  if ( (byte_5936427 & 1) == 0 )
+  if ( (byte_596E581 & 1) == 0 )
   {
-    this = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
-    byte_5936427 = 1;
+    this = (Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager_o *)sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData__get_Count__);
+    byte_596E581 = 1;
   }
   afterList = v2->fields.afterList;
   if ( !afterList )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return afterList->fields._size;
 }
 
@@ -230,18 +230,18 @@ SvtUseNpData_o *Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetBefor
 {
   System_Collections_Generic_List_object__o *beforeList; // x0
 
-  if ( (byte_5936425 & 1) == 0 )
+  if ( (byte_596E57F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
-    byte_5936425 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+    byte_596E57F = 1;
   }
   beforeList = (System_Collections_Generic_List_object__o *)this->fields.beforeList;
   if ( !beforeList )
-    sub_21FFECC(0, *(_QWORD *)&index);
+    sub_2213CDC(0, *(_QWORD *)&index);
   return (SvtUseNpData_o *)System_Collections_Generic_List_object___get_Item(
                              beforeList,
                              index,
-                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
+                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_SvtUseNpData__get_Item__);
 }
 
 
@@ -261,11 +261,11 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetMaskData(
   __int64 v14; // x1
   int32_t v15; // w1
 
-  if ( (byte_5936424 & 1) == 0 )
+  if ( (byte_596E57E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_int___);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5936424 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_int___);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596E57E = 1;
   }
   tdAddEntity_k__BackingField = this->fields._tdAddEntity_k__BackingField;
   if ( tdAddEntity_k__BackingField )
@@ -273,9 +273,9 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetMaskData(
     v13 = System_Array__IndexOf_int_(
             tdAddEntity_k__BackingField->fields.treasureDeviceIds,
             treasureDeviceId,
-            (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+            (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
     if ( !this->fields._tdAddEntity_k__BackingField )
-      sub_21FFECC(v13, v14);
+      sub_2213CDC(v13, v14);
     ServantTreasureDeviceAddEntity__GetMaskInfo(
       this->fields._tdAddEntity_k__BackingField,
       v13,
@@ -288,7 +288,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__GetMaskData(
     *maskFlag = 0;
     v15 = (int)StringLiteral_1/*""*/;
     *closedMessage = (System_String_o *)StringLiteral_1/*""*/;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)closedMessage,
       v15,
       (System_String_o *)closedMessage,
@@ -313,7 +313,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__SetEntity(
   bool v7; // w7
 
   this->fields._tdAddEntity_k__BackingField = entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._tdAddEntity_k__BackingField,
     (int32_t)entity,
     (System_String_o *)method,
@@ -345,7 +345,7 @@ void Assets_Game_Scripts_Play_Combine_Data_NpInfoAddManager__set_tdAddEntity(
   bool v7; // w7
 
   this->fields._tdAddEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._tdAddEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

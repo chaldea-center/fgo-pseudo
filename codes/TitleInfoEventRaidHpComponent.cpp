@@ -17,22 +17,22 @@ void TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5936F5C & 1) == 0 )
+  if ( (byte_596F0B6 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventRaidHpComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_20095/*"event_raid_ok"*/);
-    sub_21FFC50(&StringLiteral_20093/*"event_raid_ng"*/);
-    byte_5936F5C = 1;
+    sub_2213A60(&TitleInfoEventRaidHpComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_20137/*"event_raid_ok"*/);
+    sub_2213A60(&StringLiteral_20135/*"event_raid_ng"*/);
+    byte_596F0B6 = 1;
   }
-  v7 = StringLiteral_20095/*"event_raid_ok"*/;
+  v7 = StringLiteral_20137/*"event_raid_ok"*/;
   static_fields = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
   static_fields->WIDTH = 31.0;
   static_fields->RESULT_OK_SPNAME = (struct System_String_o *)v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->RESULT_OK_SPNAME, v7, v1, v2, v3, v4, v5, v6);
-  v9 = StringLiteral_20093/*"event_raid_ng"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->RESULT_OK_SPNAME, v7, v1, v2, v3, v4, v5, v6);
+  v9 = StringLiteral_20135/*"event_raid_ng"*/;
   v10 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v10->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_20093/*"event_raid_ng"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->RESULT_NG_SPNAME, v9, v11, v12, v13, v14, v15, v16);
+  v10->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_20135/*"event_raid_ng"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->RESULT_NG_SPNAME, v9, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -53,10 +53,10 @@ void TitleInfoEventRaidHpComponent__Setup(
   UISprite_o *v7; // x20
   System_String_o *RESULT_NG_SPNAME; // x1
 
-  if ( (byte_5936F5B & 1) == 0 )
+  if ( (byte_596F0B5 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventRaidHpComponent_TypeInfo);
-    byte_5936F5B = 1;
+    sub_2213A60(&TitleInfoEventRaidHpComponent_TypeInfo);
+    byte_596F0B5 = 1;
   }
   resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
   if ( !resultSp )
@@ -92,7 +92,7 @@ void TitleInfoEventRaidHpComponent__Setup(
         }
       }
 LABEL_22:
-      sub_21FFECC(resultSp, *(_QWORD *)&dispHpType);
+      sub_2213CDC(resultSp, *(_QWORD *)&dispHpType);
     }
     v7 = this->fields.resultSp;
     resultSp = (UnityEngine_Component_o *)TitleInfoEventRaidHpComponent_TypeInfo;

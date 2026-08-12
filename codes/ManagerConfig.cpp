@@ -514,91 +514,91 @@ void ManagerConfig___cctor(const MethodInfo *method)
   struct ManagerConfig_StaticFields *v512; // x8
   bool IsTrueTargetPlatform; // w9
 
-  if ( (byte_5937E17 & 1) == 0 )
+  if ( (byte_596FF85 & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&StringLiteral_21000/*"https://cdn.data.fate-go.jp/AssetStorages"*/);
-    sub_21FFC50(&StringLiteral_20628/*"game.fate-go.jp"*/);
-    sub_21FFC50(&StringLiteral_20272/*"fe31b7a3cd277e958063291663ed9e3ba370197b2128eea2db0af8924ce7e5c4"*/);
-    sub_21FFC50(&StringLiteral_2370/*"Android"*/);
-    sub_21FFC50(&StringLiteral_6946/*"Fgo_20180629_1"*/);
-    sub_21FFC50(&StringLiteral_1398/*"2.137.0"*/);
-    sub_21FFC50(&StringLiteral_18870/*"com.aniplex.fategrandorder"*/);
-    sub_21FFC50(&StringLiteral_6942/*"Fgo_20150511_1"*/);
-    sub_21FFC50(&StringLiteral_26122/*"webview.fate-go.jp"*/);
-    sub_21FFC50(&StringLiteral_1446/*"20260725_19:23"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_11538/*"RELEASE"*/);
-    sub_21FFC50(&StringLiteral_1373/*"1015521325"*/);
-    byte_5937E17 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&StringLiteral_21041/*"https://cdn.data.fate-go.jp/AssetStorages"*/);
+    sub_2213A60(&StringLiteral_20669/*"game.fate-go.jp"*/);
+    sub_2213A60(&StringLiteral_2371/*"Android"*/);
+    sub_2213A60(&StringLiteral_6958/*"Fgo_20180629_1"*/);
+    sub_2213A60(&StringLiteral_18908/*"com.aniplex.fategrandorder"*/);
+    sub_2213A60(&StringLiteral_1446/*"20260808_00:58"*/);
+    sub_2213A60(&StringLiteral_6954/*"Fgo_20150511_1"*/);
+    sub_2213A60(&StringLiteral_1398/*"2.138.0"*/);
+    sub_2213A60(&StringLiteral_26173/*"webview.fate-go.jp"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_1452/*"2f4081619687cae366b4222c8386d5f6950bb79a0f133596cc6797491feef161"*/);
+    sub_2213A60(&StringLiteral_11558/*"RELEASE"*/);
+    sub_2213A60(&StringLiteral_1373/*"1015521325"*/);
+    byte_596FF85 = 1;
   }
-  v7 = StringLiteral_1398/*"2.137.0"*/;
-  ManagerConfig_TypeInfo->static_fields->AppVer = (struct System_String_o *)StringLiteral_1398/*"2.137.0"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)ManagerConfig_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
-  v8 = StringLiteral_20272/*"fe31b7a3cd277e958063291663ed9e3ba370197b2128eea2db0af8924ce7e5c4"*/;
+  v7 = StringLiteral_1398/*"2.138.0"*/;
+  ManagerConfig_TypeInfo->static_fields->AppVer = (struct System_String_o *)StringLiteral_1398/*"2.138.0"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)ManagerConfig_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
+  v8 = StringLiteral_1452/*"2f4081619687cae366b4222c8386d5f6950bb79a0f133596cc6797491feef161"*/;
   static_fields = ManagerConfig_TypeInfo->static_fields;
-  static_fields->verCode = (struct System_String_o *)StringLiteral_20272/*"fe31b7a3cd277e958063291663ed9e3ba370197b2128eea2db0af8924ce7e5c4"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->verCode, v8, v10, v11, v12, v13, v14, v15);
-  v16 = StringLiteral_1446/*"20260725_19:23"*/;
+  static_fields->verCode = (struct System_String_o *)StringLiteral_1452/*"2f4081619687cae366b4222c8386d5f6950bb79a0f133596cc6797491feef161"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->verCode, v8, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_1446/*"20260808_00:58"*/;
   v17 = ManagerConfig_TypeInfo->static_fields;
-  v17->AppBuildDate = (struct System_String_o *)StringLiteral_1446/*"20260725_19:23"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->AppBuildDate, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_6942/*"Fgo_20150511_1"*/;
+  v17->AppBuildDate = (struct System_String_o *)StringLiteral_1446/*"20260808_00:58"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->AppBuildDate, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_6954/*"Fgo_20150511_1"*/;
   v25 = ManagerConfig_TypeInfo->static_fields;
-  v25->SaveDataVer = (struct System_String_o *)StringLiteral_6942/*"Fgo_20150511_1"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->SaveDataVer, v24, v26, v27, v28, v29, v30, v31);
-  v32 = StringLiteral_6946/*"Fgo_20180629_1"*/;
+  v25->SaveDataVer = (struct System_String_o *)StringLiteral_6954/*"Fgo_20150511_1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->SaveDataVer, v24, v26, v27, v28, v29, v30, v31);
+  v32 = StringLiteral_6958/*"Fgo_20180629_1"*/;
   v33 = ManagerConfig_TypeInfo->static_fields;
-  v33->MasterDataCacheVer = (struct System_String_o *)StringLiteral_6946/*"Fgo_20180629_1"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->MasterDataCacheVer, v32, v34, v35, v36, v37, v38, v39);
-  v40 = StringLiteral_18870/*"com.aniplex.fategrandorder"*/;
+  v33->MasterDataCacheVer = (struct System_String_o *)StringLiteral_6958/*"Fgo_20180629_1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->MasterDataCacheVer, v32, v34, v35, v36, v37, v38, v39);
+  v40 = StringLiteral_18908/*"com.aniplex.fategrandorder"*/;
   v41 = (MissionNaviTransitionBoardItem_o *)ManagerConfig_TypeInfo->static_fields;
-  v41->fields.viewObject = (struct ListViewObject_o *)StringLiteral_18870/*"com.aniplex.fategrandorder"*/;
+  v41->fields.viewObject = (struct ListViewObject_o *)StringLiteral_18908/*"com.aniplex.fategrandorder"*/;
   v41 = (MissionNaviTransitionBoardItem_o *)((char *)v41 + 112);
   v41[-1].fields._IconName_k__BackingField = (struct System_String_o *)&stru_E10;
   LODWORD(v41[-1].fields.viewObject) = 0x40000000;
   LODWORD(v41[-1].fields._Name_k__BackingField) = 1092616192;
-  *(_OWORD *)&v41[-1].fields.isTermination = xmmword_E94470;
+  *(_OWORD *)&v41[-1].fields.isTermination = xmmword_E9D610;
   v41[-1].fields._NaviAction_k__BackingField = (struct System_Action_o *)&loc_3200000;
-  *(_OWORD *)((char *)&v41[-1].fields._Name_k__BackingField + 4) = xmmword_E93E90;
+  *(_OWORD *)((char *)&v41[-1].fields._Name_k__BackingField + 4) = xmmword_E9D030;
   v41[-1].fields._BoardType_k__BackingField = 1000593162;
-  sub_21FFBF4(v41, v40, v42, v43, v44, v45, v46, v47);
+  sub_2213A04(v41, v40, v42, v43, v44, v45, v46, v47);
   v48 = StringLiteral_1373/*"1015521325"*/;
   v49 = ManagerConfig_TypeInfo->static_fields;
   v49->iOSApplicationID = (struct System_String_o *)StringLiteral_1373/*"1015521325"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->iOSApplicationID, v48, v50, v51, v52, v53, v54, v55);
-  v56 = StringLiteral_2370/*"Android"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v49->iOSApplicationID, v48, v50, v51, v52, v53, v54, v55);
+  v56 = StringLiteral_2371/*"Android"*/;
   v57 = ManagerConfig_TypeInfo->static_fields;
-  v57->PlatformName = (struct System_String_o *)StringLiteral_2370/*"Android"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v57->PlatformName, v56, v58, v59, v60, v61, v62, v63);
+  v57->PlatformName = (struct System_String_o *)StringLiteral_2371/*"Android"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v57->PlatformName, v56, v58, v59, v60, v61, v62, v63);
   v64 = (MissionNaviTransitionBoardItem_o *)ManagerConfig_TypeInfo->static_fields;
-  v65 = StringLiteral_20628/*"game.fate-go.jp"*/;
-  v64->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_20628/*"game.fate-go.jp"*/;
+  v65 = StringLiteral_20669/*"game.fate-go.jp"*/;
+  v64->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_20669/*"game.fate-go.jp"*/;
   v64 = (MissionNaviTransitionBoardItem_o *)((char *)v64 + 144);
   LOBYTE(v64[-1].fields._BoardType_k__BackingField) = 1;
-  sub_21FFBF4(v64, v65, v66, v67, v68, v69, v70, v71);
+  sub_2213A04(v64, v65, v66, v67, v68, v69, v70, v71);
   v72 = ManagerConfig_TypeInfo->static_fields;
-  v73 = StringLiteral_21000/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
-  v72->ReleaseDataServerAddress = (struct System_String_o *)StringLiteral_21000/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v72->ReleaseDataServerAddress, v73, v74, v75, v76, v77, v78, v79);
+  v73 = StringLiteral_21041/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
+  v72->ReleaseDataServerAddress = (struct System_String_o *)StringLiteral_21041/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v72->ReleaseDataServerAddress, v73, v74, v75, v76, v77, v78, v79);
   v80 = ManagerConfig_TypeInfo->static_fields;
-  v81 = StringLiteral_26122/*"webview.fate-go.jp"*/;
-  v80->ReleaseWebServerAddress = (struct System_String_o *)StringLiteral_26122/*"webview.fate-go.jp"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v80->ReleaseWebServerAddress, v81, v82, v83, v84, v85, v86, v87);
+  v81 = StringLiteral_26173/*"webview.fate-go.jp"*/;
+  v80->ReleaseWebServerAddress = (struct System_String_o *)StringLiteral_26173/*"webview.fate-go.jp"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v80->ReleaseWebServerAddress, v81, v82, v83, v84, v85, v86, v87);
   v88 = (int)StringLiteral_1/*""*/;
   v89 = (MissionNaviTransitionBoardItem_o *)ManagerConfig_TypeInfo->static_fields;
   v89[1].monitor = StringLiteral_1/*""*/;
   v89 = (MissionNaviTransitionBoardItem_o *)((char *)v89 + 176);
   LOBYTE(v89[-1].fields._BoardType_k__BackingField) = 1;
-  sub_21FFBF4(v89, v88, v90, v91, v92, v93, v94, v95);
+  sub_2213A04(v89, v88, v90, v91, v92, v93, v94, v95);
   v96 = (int)StringLiteral_1/*""*/;
   v97 = ManagerConfig_TypeInfo->static_fields;
   v97->ReviewDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v97->ReviewDataServerAddress, v96, v98, v99, v100, v101, v102, v103);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v97->ReviewDataServerAddress, v96, v98, v99, v100, v101, v102, v103);
   v104 = (int)StringLiteral_1/*""*/;
   v105 = ManagerConfig_TypeInfo->static_fields;
   v105->ReviewWebServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v105->ReviewWebServerAddress,
     v104,
     v106,
@@ -612,11 +612,11 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v113[1].fields.sortValue0B = (int64_t)StringLiteral_1/*""*/;
   v113 = (MissionNaviTransitionBoardItem_o *)((char *)v113 + 208);
   LOBYTE(v113[-1].fields._BoardType_k__BackingField) = 1;
-  sub_21FFBF4(v113, v112, v114, v115, v116, v117, v118, v119);
+  sub_2213A04(v113, v112, v114, v115, v116, v117, v118, v119);
   v120 = (int)StringLiteral_1/*""*/;
   v121 = ManagerConfig_TypeInfo->static_fields;
   v121->StagingDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v121->StagingDataServerAddress,
     v120,
     v122,
@@ -628,7 +628,7 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v128 = (int)StringLiteral_1/*""*/;
   v129 = ManagerConfig_TypeInfo->static_fields;
   v129->StagingWebServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v129->StagingWebServerAddress,
     v128,
     v130,
@@ -642,11 +642,11 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v137[1].fields.sortValue2 = (int64_t)StringLiteral_1/*""*/;
   v137 = (MissionNaviTransitionBoardItem_o *)((char *)v137 + 240);
   LOBYTE(v137[-1].fields._BoardType_k__BackingField) = 1;
-  sub_21FFBF4(v137, v136, v138, v139, v140, v141, v142, v143);
+  sub_2213A04(v137, v136, v138, v139, v140, v141, v142, v143);
   v144 = (int)StringLiteral_1/*""*/;
   v145 = ManagerConfig_TypeInfo->static_fields;
   v145->GameCloneDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v145->GameCloneDataServerAddress,
     v144,
     v146,
@@ -658,12 +658,12 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v152 = (int)StringLiteral_1/*""*/;
   p_GameCloneWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->GameCloneWebServerAddress;
   p_GameCloneWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_GameCloneWebServerAddress, v152, v154, v155, v156, v157, v158, v159);
+  sub_2213A04(p_GameCloneWebServerAddress, v152, v154, v155, v156, v157, v158, v159);
   v160 = (struct System_String_o *)StringLiteral_1/*""*/;
   v161 = ManagerConfig_TypeInfo->static_fields;
   v161->ReleaseCloneNetworkSecurity = 1;
   v161->ReleaseCloneGameServerAddress = v160;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v161->ReleaseCloneGameServerAddress,
     (int32_t)v160,
     v162,
@@ -675,16 +675,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v168 = (int)StringLiteral_1/*""*/;
   p_ReleaseCloneDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->ReleaseCloneDataServerAddress;
   p_ReleaseCloneDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_ReleaseCloneDataServerAddress, v168, v170, v171, v172, v173, v174, v175);
+  sub_2213A04(p_ReleaseCloneDataServerAddress, v168, v170, v171, v172, v173, v174, v175);
   v176 = (int)StringLiteral_1/*""*/;
   p_ReleaseCloneWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->ReleaseCloneWebServerAddress;
   p_ReleaseCloneWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_ReleaseCloneWebServerAddress, v176, v178, v179, v180, v181, v182, v183);
+  sub_2213A04(p_ReleaseCloneWebServerAddress, v176, v178, v179, v180, v181, v182, v183);
   v184 = (struct System_String_o *)StringLiteral_1/*""*/;
   v185 = ManagerConfig_TypeInfo->static_fields;
   v185->DebugNetworkSecurity = 1;
   v185->DebugGameServerAddress = v184;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v185->DebugGameServerAddress,
     (int32_t)v184,
     v186,
@@ -696,16 +696,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v192 = (int)StringLiteral_1/*""*/;
   p_DebugDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DebugDataServerAddress;
   p_DebugDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DebugDataServerAddress, v192, v194, v195, v196, v197, v198, v199);
+  sub_2213A04(p_DebugDataServerAddress, v192, v194, v195, v196, v197, v198, v199);
   v200 = (int)StringLiteral_1/*""*/;
   p_DebugWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DebugWebServerAddress;
   p_DebugWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DebugWebServerAddress, v200, v202, v203, v204, v205, v206, v207);
+  sub_2213A04(p_DebugWebServerAddress, v200, v202, v203, v204, v205, v206, v207);
   v208 = (struct System_String_o *)StringLiteral_1/*""*/;
   v209 = ManagerConfig_TypeInfo->static_fields;
   v209->EventDevNetworkSecurity = 1;
   v209->EventDevGameServerAddress = v208;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v209->EventDevGameServerAddress,
     (int32_t)v208,
     v210,
@@ -717,16 +717,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v216 = (int)StringLiteral_1/*""*/;
   p_EventDevDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->EventDevDataServerAddress;
   p_EventDevDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_EventDevDataServerAddress, v216, v218, v219, v220, v221, v222, v223);
+  sub_2213A04(p_EventDevDataServerAddress, v216, v218, v219, v220, v221, v222, v223);
   v224 = (int)StringLiteral_1/*""*/;
   p_EventDevWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->EventDevWebServerAddress;
   p_EventDevWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_EventDevWebServerAddress, v224, v226, v227, v228, v229, v230, v231);
+  sub_2213A04(p_EventDevWebServerAddress, v224, v226, v227, v228, v229, v230, v231);
   v232 = (struct System_String_o *)StringLiteral_1/*""*/;
   v233 = ManagerConfig_TypeInfo->static_fields;
   v233->DevelopNetworkSecurity = 1;
   v233->DevelopGameServerAddress = v232;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v233->DevelopGameServerAddress,
     (int32_t)v232,
     v234,
@@ -738,16 +738,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v240 = (int)StringLiteral_1/*""*/;
   p_DevelopDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DevelopDataServerAddress;
   p_DevelopDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DevelopDataServerAddress, v240, v242, v243, v244, v245, v246, v247);
+  sub_2213A04(p_DevelopDataServerAddress, v240, v242, v243, v244, v245, v246, v247);
   v248 = (int)StringLiteral_1/*""*/;
   p_DevelopWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DevelopWebServerAddress;
   p_DevelopWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DevelopWebServerAddress, v248, v250, v251, v252, v253, v254, v255);
+  sub_2213A04(p_DevelopWebServerAddress, v248, v250, v251, v252, v253, v254, v255);
   v256 = (struct System_String_o *)StringLiteral_1/*""*/;
   v257 = ManagerConfig_TypeInfo->static_fields;
   v257->QaNetworkSecurity = 1;
   v257->QaGameServerAddress = v256;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v257->QaGameServerAddress,
     (int32_t)v256,
     v258,
@@ -759,16 +759,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v264 = (int)StringLiteral_1/*""*/;
   p_QaDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->QaDataServerAddress;
   p_QaDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_QaDataServerAddress, v264, v266, v267, v268, v269, v270, v271);
+  sub_2213A04(p_QaDataServerAddress, v264, v266, v267, v268, v269, v270, v271);
   v272 = (int)StringLiteral_1/*""*/;
   p_QaWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->QaWebServerAddress;
   p_QaWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_QaWebServerAddress, v272, v274, v275, v276, v277, v278, v279);
+  sub_2213A04(p_QaWebServerAddress, v272, v274, v275, v276, v277, v278, v279);
   v280 = (struct System_String_o *)StringLiteral_1/*""*/;
   v281 = ManagerConfig_TypeInfo->static_fields;
   v281->DevNetworkSecurity = 1;
   v281->DevGameServerAddress = v280;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v281->DevGameServerAddress,
     (int32_t)v280,
     v282,
@@ -781,7 +781,7 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v289 = ManagerConfig_TypeInfo->static_fields;
   v289->PlanNetworkSecurity = 1;
   v289->PlanGameServerAddress = v288;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v289->PlanGameServerAddress,
     (int32_t)v288,
     v290,
@@ -793,12 +793,12 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v296 = (int)StringLiteral_1/*""*/;
   p_PlanDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->PlanDataServerAddress;
   p_PlanDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_PlanDataServerAddress, v296, v298, v299, v300, v301, v302, v303);
+  sub_2213A04(p_PlanDataServerAddress, v296, v298, v299, v300, v301, v302, v303);
   v304 = (struct System_String_o *)StringLiteral_1/*""*/;
   v305 = ManagerConfig_TypeInfo->static_fields;
   v305->LimitNetworkSecurity = 1;
   v305->LimitGameServerAddress = v304;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v305->LimitGameServerAddress,
     (int32_t)v304,
     v306,
@@ -810,12 +810,12 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v312 = (int)StringLiteral_1/*""*/;
   p_LimitDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->LimitDataServerAddress;
   p_LimitDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_LimitDataServerAddress, v312, v314, v315, v316, v317, v318, v319);
+  sub_2213A04(p_LimitDataServerAddress, v312, v314, v315, v316, v317, v318, v319);
   v320 = (struct System_String_o *)StringLiteral_1/*""*/;
   v321 = ManagerConfig_TypeInfo->static_fields;
   v321->PlayNetworkSecurity = 1;
   v321->PlayGameServerAddress = v320;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v321->PlayGameServerAddress,
     (int32_t)v320,
     v322,
@@ -827,12 +827,12 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v328 = (int)StringLiteral_1/*""*/;
   p_PlayDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->PlayDataServerAddress;
   p_PlayDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_PlayDataServerAddress, v328, v330, v331, v332, v333, v334, v335);
+  sub_2213A04(p_PlayDataServerAddress, v328, v330, v331, v332, v333, v334, v335);
   v336 = (struct System_String_o *)StringLiteral_1/*""*/;
   v337 = ManagerConfig_TypeInfo->static_fields;
   v337->DesignNetworkSecurity = 1;
   v337->DesignGameServerAddress = v336;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v337->DesignGameServerAddress,
     (int32_t)v336,
     v338,
@@ -844,12 +844,12 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v344 = (int)StringLiteral_1/*""*/;
   p_DesignDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DesignDataServerAddress;
   p_DesignDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DesignDataServerAddress, v344, v346, v347, v348, v349, v350, v351);
+  sub_2213A04(p_DesignDataServerAddress, v344, v346, v347, v348, v349, v350, v351);
   v352 = (struct System_String_o *)StringLiteral_1/*""*/;
   v353 = ManagerConfig_TypeInfo->static_fields;
   v353->VersionUpNetworkSecurity = 1;
   v353->VersionUp1GameServerAddress = v352;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v353->VersionUp1GameServerAddress,
     (int32_t)v352,
     v354,
@@ -861,16 +861,16 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v360 = (int)StringLiteral_1/*""*/;
   p_VersionUp1DataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->VersionUp1DataServerAddress;
   p_VersionUp1DataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_VersionUp1DataServerAddress, v360, v362, v363, v364, v365, v366, v367);
+  sub_2213A04(p_VersionUp1DataServerAddress, v360, v362, v363, v364, v365, v366, v367);
   v368 = (int)StringLiteral_1/*""*/;
   p_VersionUpWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->VersionUpWebServerAddress;
   p_VersionUpWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_VersionUpWebServerAddress, v368, v370, v371, v372, v373, v374, v375);
+  sub_2213A04(p_VersionUpWebServerAddress, v368, v370, v371, v372, v373, v374, v375);
   v376 = (struct System_String_o *)StringLiteral_1/*""*/;
   v377 = ManagerConfig_TypeInfo->static_fields;
   v377->StressNetworkSecurity = 1;
   v377->StressGameServerAddress = v376;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v377->StressGameServerAddress,
     (int32_t)v376,
     v378,
@@ -882,20 +882,20 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v384 = (int)StringLiteral_1/*""*/;
   p_StressDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->StressDataServerAddress;
   p_StressDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_StressDataServerAddress, v384, v386, v387, v388, v389, v390, v391);
+  sub_2213A04(p_StressDataServerAddress, v384, v386, v387, v388, v389, v390, v391);
   v392 = (int)StringLiteral_1/*""*/;
   p_DevDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DevDataServerAddress;
   p_DevDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DevDataServerAddress, v392, v394, v395, v396, v397, v398, v399);
+  sub_2213A04(p_DevDataServerAddress, v392, v394, v395, v396, v397, v398, v399);
   v400 = (int)StringLiteral_1/*""*/;
   p_DevWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->DevWebServerAddress;
   p_DevWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_DevWebServerAddress, v400, v402, v403, v404, v405, v406, v407);
+  sub_2213A04(p_DevWebServerAddress, v400, v402, v403, v404, v405, v406, v407);
   v408 = (struct System_String_o *)StringLiteral_1/*""*/;
   v409 = ManagerConfig_TypeInfo->static_fields;
   v409->AutotestNetworkSecurity = 1;
   v409->AutotestGameServerAddress = v408;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v409->AutotestGameServerAddress,
     (int32_t)v408,
     v410,
@@ -907,53 +907,53 @@ void ManagerConfig___cctor(const MethodInfo *method)
   v416 = (int)StringLiteral_1/*""*/;
   p_AutotestDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->AutotestDataServerAddress;
   p_AutotestDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_AutotestDataServerAddress, v416, v418, v419, v420, v421, v422, v423);
+  sub_2213A04(p_AutotestDataServerAddress, v416, v418, v419, v420, v421, v422, v423);
   v424 = (int)StringLiteral_1/*""*/;
   p_VerUpGameServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->VerUpGameServerAddress;
   p_VerUpGameServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_VerUpGameServerAddress, v424, v426, v427, v428, v429, v430, v431);
+  sub_2213A04(p_VerUpGameServerAddress, v424, v426, v427, v428, v429, v430, v431);
   v432 = (int)StringLiteral_1/*""*/;
   p_VerUpDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->VerUpDataServerAddress;
   p_VerUpDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_VerUpDataServerAddress, v432, v434, v435, v436, v437, v438, v439);
+  sub_2213A04(p_VerUpDataServerAddress, v432, v434, v435, v436, v437, v438, v439);
   v440 = (int)StringLiteral_1/*""*/;
   p_VerUpWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->VerUpWebServerAddress;
   p_VerUpWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_VerUpWebServerAddress, v440, v442, v443, v444, v445, v446, v447);
+  sub_2213A04(p_VerUpWebServerAddress, v440, v442, v443, v444, v445, v446, v447);
   v448 = (int)StringLiteral_1/*""*/;
   p_StgGameServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->StgGameServerAddress;
   p_StgGameServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_StgGameServerAddress, v448, v450, v451, v452, v453, v454, v455);
+  sub_2213A04(p_StgGameServerAddress, v448, v450, v451, v452, v453, v454, v455);
   v456 = (int)StringLiteral_1/*""*/;
   p_StgDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->StgDataServerAddress;
   p_StgDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_StgDataServerAddress, v456, v458, v459, v460, v461, v462, v463);
+  sub_2213A04(p_StgDataServerAddress, v456, v458, v459, v460, v461, v462, v463);
   v464 = (int)StringLiteral_1/*""*/;
   p_StgWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->StgWebServerAddress;
   p_StgWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_StgWebServerAddress, v464, v466, v467, v468, v469, v470, v471);
+  sub_2213A04(p_StgWebServerAddress, v464, v466, v467, v468, v469, v470, v471);
   v472 = (int)StringLiteral_1/*""*/;
   p_IPAddressDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->IPAddressDataServerAddress;
   p_IPAddressDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_IPAddressDataServerAddress, v472, v474, v475, v476, v477, v478, v479);
+  sub_2213A04(p_IPAddressDataServerAddress, v472, v474, v475, v476, v477, v478, v479);
   v480 = (int)StringLiteral_1/*""*/;
   p_IPAddressWebServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->IPAddressWebServerAddress;
   p_IPAddressWebServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_IPAddressWebServerAddress, v480, v482, v483, v484, v485, v486, v487);
+  sub_2213A04(p_IPAddressWebServerAddress, v480, v482, v483, v484, v485, v486, v487);
   v488 = (int)StringLiteral_1/*""*/;
   p_ScriptGameServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->ScriptGameServerAddress;
   p_ScriptGameServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_ScriptGameServerAddress, v488, v490, v491, v492, v493, v494, v495);
+  sub_2213A04(p_ScriptGameServerAddress, v488, v490, v491, v492, v493, v494, v495);
   v496 = (int)StringLiteral_1/*""*/;
   p_ScriptDataServerAddress = (MissionNaviTransitionBoardItem_o *)&ManagerConfig_TypeInfo->static_fields->ScriptDataServerAddress;
   p_ScriptDataServerAddress->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-  sub_21FFBF4(p_ScriptDataServerAddress, v496, v498, v499, v500, v501, v502, v503);
+  sub_2213A04(p_ScriptDataServerAddress, v496, v498, v499, v500, v501, v502, v503);
   v504 = ManagerConfig_TypeInfo->static_fields;
-  v505 = StringLiteral_11538/*"RELEASE"*/;
+  v505 = StringLiteral_11558/*"RELEASE"*/;
   *(_WORD *)&v504->IsTrueTargetPlatform = 257;
   v504->IsNetworkMock = 0;
   v504->ServerDefaultType = (struct System_String_o *)v505;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v504->ServerDefaultType, v505, v506, v507, v508, v509, v510, v511);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v504->ServerDefaultType, v505, v506, v507, v508, v509, v510, v511);
   v512 = ManagerConfig_TypeInfo->static_fields;
   IsTrueTargetPlatform = v512->IsTrueTargetPlatform;
   *(_DWORD *)&v512->UseDebugCommand = 0;

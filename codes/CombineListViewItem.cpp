@@ -17,7 +17,7 @@ void CombineListViewItem___ctor(
   v6->fields._IconName_k__BackingField = (struct System_String_o *)info;
   v6 = (MissionNaviTransitionBoardItem_o *)((char *)v6 + 120);
   HIDWORD(v6[-1].fields.sortValue1B) = index;
-  sub_21FFBF4(v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
+  sub_2213A04(v6, (int32_t)info, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -33,7 +33,7 @@ System_String_o *CombineListViewItem__get_EventData(CombineListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return info->fields.eventData;
 }
 
@@ -44,6 +44,6 @@ System_String_o *CombineListViewItem__get_SpriteName(CombineListViewItem_o *this
 
   info = this->fields.info;
   if ( !info )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return info->fields.spriteName;
 }

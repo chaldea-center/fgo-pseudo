@@ -15,10 +15,10 @@ void UIDragDropContainer__Start(UIDragDropContainer_o *this, const MethodInfo *m
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_593CCDA & 1) == 0 )
+  if ( (byte_5974FB1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CCDA = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974FB1 = 1;
   }
   reparentTarget = (UnityEngine_Object_o *)this->fields.reparentTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -27,7 +27,7 @@ void UIDragDropContainer__Start(UIDragDropContainer_o *this, const MethodInfo *m
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.reparentTarget = transform;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.reparentTarget,
       (int32_t)transform,
       v5,

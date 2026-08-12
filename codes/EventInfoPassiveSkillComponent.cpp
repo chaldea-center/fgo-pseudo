@@ -15,10 +15,10 @@ void EventInfoPassiveSkillComponent__OnClick(EventInfoPassiveSkillComponent_o *t
   struct SkillEntity_o *skillEntity; // x9
   int32_t id; // w1
 
-  if ( (byte_59399A9 & 1) == 0 )
+  if ( (byte_5971D1F & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_int___);
-    byte_59399A9 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_int___);
+    byte_5971D1F = 1;
   }
   skillEntity = this->fields.skillEntity;
   if ( skillEntity )
@@ -28,7 +28,7 @@ void EventInfoPassiveSkillComponent__OnClick(EventInfoPassiveSkillComponent_o *t
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.onSelectSkill,
     id,
-    (const MethodInfo_36CDE6C *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_36FFDDC *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -74,14 +74,14 @@ void EventInfoPassiveSkillComponent__Setup(
   struct UILabel_o *v31; // x8
   System_String_o *v32; // x1
 
-  if ( (byte_59399A8 & 1) == 0 )
+  if ( (byte_5971D1E & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399A8 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D1E = 1;
   }
   this->fields.skillEntity = inSkillEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.skillEntity,
     (int32_t)inSkillEntity,
     (System_String_o *)isBefore,
@@ -91,7 +91,7 @@ void EventInfoPassiveSkillComponent__Setup(
     v6,
     v7);
   this->fields.onSelectSkill = inOnSelectSkill;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onSelectSkill,
     (int32_t)inOnSelectSkill,
     v12,
@@ -147,7 +147,7 @@ LABEL_19:
       if ( v30 )
         goto LABEL_19;
     }
-    sub_21FFECC(EffectExplanation, v32);
+    sub_2213CDC(EffectExplanation, v32);
   }
 LABEL_20:
   GameObjectHelper__SetActiveSafely(this->fields.beforeObject, isBefore, 0);

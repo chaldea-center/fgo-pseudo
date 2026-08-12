@@ -42,18 +42,18 @@ void SePlayer___ctor(
   float PreDelayTime; // s0
   const MethodInfo *v49; // x3
 
-  if ( (byte_5938025 & 1) == 0 )
+  if ( (byte_59701B6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_5938025 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_59701B6 = 1;
   }
   this->fields.volume = 1.0;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.seType = type;
   this->fields.playNum = num;
   this->fields.objName = name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.objName, (int32_t)name, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.objName, (int32_t)name, v22, v23, v24, v25, v26, v27);
   p_callbackFunc = &this->fields.callbackFunc;
   v29 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callbackFunc, 0);
   v36 = (int)v29;
@@ -63,11 +63,11 @@ void SePlayer___ctor(
   if ( (System_Action_c *)v29->klass != System_Action_TypeInfo
     || (*p_callbackFunc = (struct System_Action_o *)v29, (System_Action_c *)v29->klass != v37) )
   {
-    sub_220024C(v29, v37, v30, v31);
+    sub_221405C(v29, v37, v30, v31);
 LABEL_7:
     *p_callbackFunc = 0;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, v36, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, v36, v30, v31, v32, v33, v34, v35);
   BaseVolume = 0.0;
   this->fields.volume = volume;
   this->fields.fadeinTime = fadeinTime;
@@ -83,7 +83,7 @@ LABEL_7:
     goto LABEL_15;
   v41 = System_String__Replace(pathName, 0x2Fu, 0x5Fu, 0);
   this->fields.cueSheetName = v41;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cueSheetName,
     (int32_t)v41,
     v42,
@@ -96,14 +96,14 @@ LABEL_7:
   this->fields.notOverwrite = notOverwrite;
   if ( !ignorePreDelay )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
     if ( Instance )
     {
       PreDelayTime = SeManager__GetPreDelayTime((SeManager_o *)Instance, this->fields.cueSheetName, name, v49);
       goto LABEL_14;
     }
 LABEL_15:
-    sub_21FFECC(Instance, v39);
+    sub_2213CDC(Instance, v39);
   }
 LABEL_14:
   this->fields.preDelayTime = PreDelayTime;
@@ -125,7 +125,6 @@ void SePlayer__Callback(SePlayer_o *this, const MethodInfo *method)
 
 bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, const MethodInfo *method)
 {
-  bool result; // w0
   UnityEngine_Object_c *v8; // x0
   UnityEngine_Object_o *source; // x20
   _BOOL8 v10; // x0
@@ -138,12 +137,11 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
   const MethodInfo *v17; // x1
   CriAtomSource_o *v18; // x20
   float v19; // s0
-  float v20; // s0
 
-  if ( (byte_5938029 & 1) == 0 )
+  if ( (byte_59701BA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938029 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701BA = 1;
   }
   if ( this->fields.isStop || this->fields.fadeoutTime > 0.0 )
     return 0;
@@ -185,12 +183,24 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
       return 1;
     }
 LABEL_19:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
-  v20 = SePlayer__GetBaseVolume(this, v17);
-  result = 1;
-  this->fields.fadeBaseVolume = v20;
-  return result;
+  this->fields.fadeBaseVolume = SePlayer__GetBaseVolume(this, v17);
+  return 1;
+}
+
+
+void SePlayer__ClearChannelKey(SePlayer_o *this, const MethodInfo *method)
+{
+  System_String_o *v2; // x2
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+
+  this->fields.channelKey = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.channelKey, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -202,35 +212,43 @@ void SePlayer__Destroy(SePlayer_o *this, const MethodInfo *method)
   int32_t v5; // w5
   bool v6; // w6
   bool v7; // w7
-  __int64 v9; // x1
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  __int64 v15; // x1
   CriAtomSource_o **p_source; // x20
   UnityEngine_Object_o *source; // x21
-  __int64 v12; // x1
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
+  __int64 v18; // x1
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
 
-  if ( (byte_5938026 & 1) == 0 )
+  if ( (byte_59701B7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938026 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701B7 = 1;
   }
   this->fields.callbackFunc = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+  this->fields.channelKey = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.channelKey, 0, v9, v10, v11, v12, v13, v14);
   p_source = &this->fields.source;
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
   if ( UnityEngine_Object__op_Inequality(source, 0, 0) )
   {
     if ( !*p_source )
-      sub_21FFECC(0, v12);
+      sub_2213CDC(0, v18);
     CriAtomSource__Stop(*p_source, 0);
     *p_source = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v19, v20, v21, v22, v23, v24);
   }
   *(_DWORD *)&this->fields.isStop = 1;
 }
@@ -246,17 +264,17 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
   float masterVoiceVolume; // s0
   SeManager_c *v9; // x0
 
-  if ( (byte_5938024 & 1) == 0 )
+  if ( (byte_59701B5 & 1) == 0 )
   {
-    sub_21FFC50(&SeManager_TypeInfo);
-    byte_5938024 = 1;
+    sub_2213A60(&SeManager_TypeInfo);
+    byte_59701B5 = 1;
   }
   if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo, method);
-  if ( !byte_593809F )
+  if ( !byte_597022B )
   {
-    sub_21FFC50(&SeManager_TypeInfo);
-    byte_593809F = 1;
+    sub_2213A60(&SeManager_TypeInfo);
+    byte_597022B = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
@@ -273,10 +291,10 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
     {
       if ( !v6 )
         j_il2cpp_runtime_class_init_0(v3, method);
-      if ( !byte_59380A0 )
+      if ( !byte_597022C )
       {
-        sub_21FFC50(&SeManager_TypeInfo);
-        byte_59380A0 = 1;
+        sub_2213A60(&SeManager_TypeInfo);
+        byte_597022C = 1;
       }
       v7 = SeManager_TypeInfo;
       if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
@@ -290,10 +308,10 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
     {
       if ( !v6 )
         j_il2cpp_runtime_class_init_0(v3, method);
-      if ( !byte_5935672 )
+      if ( !byte_596D7B4 )
       {
-        sub_21FFC50(&SeManager_TypeInfo);
-        byte_5935672 = 1;
+        sub_2213A60(&SeManager_TypeInfo);
+        byte_596D7B4 = 1;
       }
       v9 = SeManager_TypeInfo;
       if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
@@ -318,10 +336,10 @@ void SePlayer__MuteSe(SePlayer_o *this, const MethodInfo *method)
   __int64 v7; // x1
   float BaseVolume; // s0
 
-  if ( (byte_593802A & 1) == 0 )
+  if ( (byte_59701BB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593802A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701BB = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -331,7 +349,7 @@ void SePlayer__MuteSe(SePlayer_o *this, const MethodInfo *method)
     v5 = this->fields.source;
     BaseVolume = SePlayer__GetBaseVolume(this, v4);
     if ( !v5 )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     CriAtomSource__set_volume(v5, BaseVolume, 0);
   }
 }
@@ -350,10 +368,10 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
   bool v13; // w7
   System_Action_c *v14; // x1
 
-  if ( (byte_5938027 & 1) == 0 )
+  if ( (byte_59701B8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5938027 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_59701B8 = 1;
   }
   if ( callbackFunc )
   {
@@ -366,7 +384,7 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
         || (p_callbackFunc->klass = (MissionNaviTransitionBoardItem_c *)v7, (System_Action_c *)v7->klass != v14) )
       {
-        sub_220024C(v7, v14, v8, v9);
+        sub_221405C(v7, v14, v8, v9);
         return;
       }
     }
@@ -374,8 +392,29 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
     {
       p_callbackFunc->klass = 0;
     }
-    sub_21FFBF4(p_callbackFunc, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04(p_callbackFunc, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
+}
+
+
+void SePlayer__SetChannelKey(SePlayer_o *this, System_String_o *key, const MethodInfo *method)
+{
+  System_String_o *v3; // x3
+  int32_t v4; // w4
+  int32_t v5; // w5
+  bool v6; // w6
+  bool v7; // w7
+
+  this->fields.channelKey = key;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.channelKey,
+    (int32_t)key,
+    (System_String_o *)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -386,10 +425,10 @@ void SePlayer__SetPause(SePlayer_o *this, bool isPause, const MethodInfo *method
   __int64 v6; // x1
   CriAtomSource_o *v7; // x0
 
-  if ( (byte_5938023 & 1) == 0 )
+  if ( (byte_59701B4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938023 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701B4 = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -398,7 +437,7 @@ void SePlayer__SetPause(SePlayer_o *this, bool isPause, const MethodInfo *method
   {
     v7 = this->fields.source;
     if ( !v7 )
-      sub_21FFECC(0, v6);
+      sub_2213CDC(0, v6);
     CriAtomSource__Pause(v7, isPause, 0);
   }
 }
@@ -422,12 +461,12 @@ void SePlayer__StopSe(SePlayer_o *this, float fadeoutTime, const MethodInfo *met
   BalanceConfig_c *v18; // x0
   const MethodInfo *v19; // x2
 
-  if ( (byte_5938028 & 1) == 0 )
+  if ( (byte_59701B9 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_5938028 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_59701B9 = 1;
   }
   if ( !this->fields.isStop && (fadeoutTime <= 0.0 || this->fields.fadeoutTime <= 0.0) )
   {
@@ -467,9 +506,9 @@ void SePlayer__StopSe(SePlayer_o *this, float fadeoutTime, const MethodInfo *met
           }
         }
         *p_source = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v12, v13, v14, v15, v16, v17);
       }
-      Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+      Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
       if ( Instance )
       {
         SeManager__ReleaseAudioSource((SeManager_o *)Instance, this, v19);
@@ -496,7 +535,7 @@ LABEL_12:
       }
     }
 LABEL_28:
-    sub_21FFECC(Instance, v7);
+    sub_2213CDC(Instance, v7);
   }
 }
 
@@ -510,7 +549,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   const MethodInfo *v9; // x1
   __int64 Instance; // x0
   const MethodInfo *v11; // x5
-  struct CriAtomSource_o *AudioSource_48445684; // x0
+  struct CriAtomSource_o *AudioSource_48483456; // x0
   System_String_o *v13; // x2
   System_String_o *v14; // x3
   int32_t v15; // w4
@@ -564,17 +603,17 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   System_String_o *v63; // x0
   float volume; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593802B & 1) == 0 )
+  if ( (byte_59701BC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SeManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_16679/*"] vol:"*/);
-    sub_21FFC50(&StringLiteral_16663/*"] : ["*/);
-    sub_21FFC50(&StringLiteral_11998/*"SE Play (not found) for debug : ["*/);
-    byte_593802B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SeManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_16711/*"] vol:"*/);
+    sub_2213A60(&StringLiteral_16695/*"] : ["*/);
+    sub_2213A60(&StringLiteral_12021/*"SE Play (not found) for debug : ["*/);
+    byte_59701BC = 1;
   }
   isLoading = this->fields.isLoading;
   volume = 0.0;
@@ -588,20 +627,20 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   {
     if ( !this->fields.isStop && this->fields.isWaitSource && this->fields.cueSheetName && this->fields.objName )
     {
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
       if ( !Instance )
         goto LABEL_93;
-      AudioSource_48445684 = SeManager__GetAudioSource_48445684(
+      AudioSource_48483456 = SeManager__GetAudioSource_48483456(
                                (SeManager_o *)Instance,
                                this,
                                this->fields.cueSheetName,
                                this->fields.objName,
                                this->fields.notOverwrite,
                                v11);
-      this->fields.source = AudioSource_48445684;
-      sub_21FFBF4(
+      this->fields.source = AudioSource_48483456;
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.source,
-        (int32_t)AudioSource_48445684,
+        (int32_t)AudioSource_48483456,
         v13,
         v14,
         v15,
@@ -619,7 +658,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
         goto LABEL_93;
       cueSheetName = this->fields.cueSheetName;
       *(_QWORD *)(Instance + 120) = cueSheetName;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)(Instance + 120),
         (int32_t)cueSheetName,
         v21,
@@ -633,7 +672,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
         goto LABEL_93;
       objName = this->fields.objName;
       *(_QWORD *)(Instance + 112) = objName;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Instance + 112), (int32_t)objName, v28, v29, v30, v31, v32, v33);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(Instance + 112), (int32_t)objName, v28, v29, v30, v31, v32, v33);
       if ( this->fields.fadeoutTime <= 0.0 )
       {
         v53 = this->fields.source;
@@ -677,32 +716,32 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
           goto LABEL_93;
         CriAtomSource__set_pitch((CriAtomSource_o *)Instance, 0.0, 0);
       }
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !Instance )
 LABEL_93:
-        sub_21FFECC(Instance, v9);
+        sub_2213CDC(Instance, v9);
       if ( !SoundManager__IsExistsSound(
               (SoundManager_o *)Instance,
               this->fields.cueSheetName,
               this->fields.objName,
               v58) )
       {
-        Instance = sub_21FFD10(string___TypeInfo, 6);
+        Instance = sub_2213B20(string___TypeInfo, 6);
         if ( Instance )
         {
           v61 = (System_String_array *)Instance;
-          sub_1FEB274(Instance, 0, StringLiteral_11998/*"SE Play (not found) for debug : ["*/);
-          sub_1FEB274(v61, 1, this->fields.cueSheetName);
-          sub_1FEB274(v61, 2, StringLiteral_16663/*"] : ["*/);
-          sub_1FEB274(v61, 3, this->fields.objName);
-          Instance = sub_1FEB274(v61, 4, StringLiteral_16679/*"] vol:"*/);
+          sub_1FFE2C4(Instance, 0, StringLiteral_12021/*"SE Play (not found) for debug : ["*/);
+          sub_1FFE2C4(v61, 1, this->fields.cueSheetName);
+          sub_1FFE2C4(v61, 2, StringLiteral_16695/*"] : ["*/);
+          sub_1FFE2C4(v61, 3, this->fields.objName);
+          Instance = sub_1FFE2C4(v61, 4, StringLiteral_16711/*"] vol:"*/);
           v62 = this->fields.source;
           if ( v62 )
           {
             volume = v62->fields._volume;
             v63 = System_Single__ToString(volume, (const MethodInfo *)&volume);
-            sub_1FEB274(v61, 5, v63);
-            System_String__Concat_75483816(v61, 0);
+            sub_1FFE2C4(v61, 5, v63);
+            System_String__Concat_75697120(v61, 0);
             goto LABEL_4;
           }
         }
@@ -770,15 +809,15 @@ LABEL_63:
         goto LABEL_93;
       CriAtomSource__Stop((CriAtomSource_o *)Instance, 0);
       *p_source = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v46, v47, v48, v49, v50, v51);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.source, 0, v46, v47, v48, v49, v50, v51);
       goto LABEL_63;
     }
     if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo, v9);
-    if ( !byte_593809F )
+    if ( !byte_597022B )
     {
-      sub_21FFC50(&SeManager_TypeInfo);
-      byte_593809F = 1;
+      sub_2213A60(&SeManager_TypeInfo);
+      byte_597022B = 1;
     }
     v38 = SeManager_TypeInfo;
     if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
@@ -824,10 +863,10 @@ LABEL_47:
     }
     if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo, v9);
-    if ( !byte_593809F )
+    if ( !byte_597022B )
     {
-      sub_21FFC50(&SeManager_TypeInfo);
-      byte_593809F = 1;
+      sub_2213A60(&SeManager_TypeInfo);
+      byte_597022B = 1;
     }
     v44 = SeManager_TypeInfo;
     if ( !*(&SeManager_TypeInfo->_2.cctor_finished + 1) )
@@ -888,10 +927,10 @@ bool SePlayer__get_IsBusy(SePlayer_o *this, const MethodInfo *method)
   __int64 v5; // x1
   CriAtomSource_o *v6; // x0
 
-  if ( (byte_5938020 & 1) == 0 )
+  if ( (byte_59701B1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938020 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701B1 = 1;
   }
   if ( this->fields.isLoading || this->fields.isWaitSource || this->fields.isLoop )
   {
@@ -917,7 +956,7 @@ bool SePlayer__get_IsBusy(SePlayer_o *this, const MethodInfo *method)
       v6 = this->fields.source;
       if ( !v6 )
 LABEL_16:
-        sub_21FFECC(v6, v5);
+        sub_2213CDC(v6, v5);
       LOBYTE(status) = CriAtomSource__get_status(v6, 0) == 2;
     }
   }
@@ -932,10 +971,10 @@ bool SePlayer__get_IsLoop(SePlayer_o *this, const MethodInfo *method)
   __int64 v5; // x1
   struct CriAtomSource_o *v6; // x8
 
-  if ( (byte_5938021 & 1) == 0 )
+  if ( (byte_59701B2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938021 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701B2 = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -945,7 +984,7 @@ bool SePlayer__get_IsLoop(SePlayer_o *this, const MethodInfo *method)
     return 0;
   v6 = this->fields.source;
   if ( !v6 )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   return v6->fields._loop;
 }
 
@@ -956,10 +995,10 @@ bool SePlayer__get_IsPause(SePlayer_o *this, const MethodInfo *method)
   __int64 v4; // x1
   CriAtomSource_o *v5; // x0
 
-  if ( (byte_5938022 & 1) == 0 )
+  if ( (byte_59701B3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938022 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59701B3 = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -968,7 +1007,7 @@ bool SePlayer__get_IsPause(SePlayer_o *this, const MethodInfo *method)
     return 0;
   v5 = this->fields.source;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return CriAtomSource__IsPaused(v5, 0);
 }
 

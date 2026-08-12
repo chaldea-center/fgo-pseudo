@@ -14,15 +14,15 @@ void SummonHistoryListViewItem___ctor(
   bool v13; // w7
 
   v7 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v7->fields._Message_k__BackingField = message;
   v7 = (SummonHistoryListViewItem_o *)((char *)v7 + 120);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v7, (int32_t)message, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v7, (int32_t)message, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = layout;
 }
 
 
-void SummonHistoryListViewItem___ctor_42126820(
+void SummonHistoryListViewItem___ctor_42141884(
         SummonHistoryListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -46,9 +46,9 @@ void SummonHistoryListViewItem___ctor_42126820(
   bool v23; // w7
 
   v11 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v11->fields._Message_k__BackingField = message;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v11->fields._Message_k__BackingField,
     (int32_t)message,
     v12,
@@ -60,7 +60,7 @@ void SummonHistoryListViewItem___ctor_42126820(
   v11->fields._Title_k__BackingField = title;
   v11 = (SummonHistoryListViewItem_o *)((char *)v11 + 136);
   v11[-1].fields._itemID_k__BackingField = layout;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v11, (int32_t)title, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v11, (int32_t)title, v18, v19, v20, v21, v22, v23);
   LODWORD(v11->monitor) = objectId;
 }
 
@@ -107,7 +107,7 @@ void SummonHistoryListViewItem__set_Message(
   bool v7; // w7
 
   this->fields._Message_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -131,7 +131,7 @@ void SummonHistoryListViewItem__set_Title(
   bool v7; // w7
 
   this->fields._Title_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Title_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

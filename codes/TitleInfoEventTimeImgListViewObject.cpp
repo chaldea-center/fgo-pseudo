@@ -21,19 +21,19 @@ void TitleInfoEventTimeImgListViewObject__Init(
   bool v13; // w7
   const MethodInfo *v14; // x2
 
-  if ( (byte_5936FA0 & 1) == 0 )
+  if ( (byte_596F0FA & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_5936FA0 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
+    byte_596F0FA = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)p_itemDraw,
           (int32_t)Component_object,
           v8,
@@ -44,7 +44,7 @@ void TitleInfoEventTimeImgListViewObject__Init(
           v13),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0) )
   {
-    sub_21FFECC(dispObject, *(_QWORD *)&state);
+    sub_2213CDC(dispObject, *(_QWORD *)&state);
   }
   TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
 }

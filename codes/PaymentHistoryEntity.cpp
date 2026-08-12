@@ -1,13 +1,13 @@
 void PaymentHistoryEntity___ctor(PaymentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938C9E & 1) == 0 )
+  if ( (byte_5970E5D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938C9E = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970E5D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ System_String_o *PaymentHistoryEntity__GetDispPrice(PaymentHistoryEntity_o *this
 {
   int32_t price; // w19
 
-  if ( (byte_5938C9D & 1) == 0 )
+  if ( (byte_5970E5C & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5938C9D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5970E5C = 1;
   }
   price = this->fields.price;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -40,13 +40,13 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
   __int64 *v5; // x19
   int32_t subType; // w8
 
-  if ( (byte_5938C9C & 1) == 0 )
+  if ( (byte_5970E5B & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_10739/*"PAYMENT_HISTORY_EXTERNAL"*/);
-    sub_21FFC50(&StringLiteral_10740/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/);
-    sub_21FFC50(&StringLiteral_10741/*"PAYMENT_HISTORY_INTERNAL"*/);
-    byte_5938C9C = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_10752/*"PAYMENT_HISTORY_EXTERNAL"*/);
+    sub_2213A60(&StringLiteral_10753/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/);
+    sub_2213A60(&StringLiteral_10754/*"PAYMENT_HISTORY_INTERNAL"*/);
+    byte_5970E5B = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
@@ -55,7 +55,7 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
     if ( subType == 1 )
     {
       v4 = LocalizationManager_TypeInfo;
-      v5 = &StringLiteral_10740/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/;
+      v5 = &StringLiteral_10753/*"PAYMENT_HISTORY_EXTERNAL_GIFT_CARD"*/;
       if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         return LocalizationManager__Get((System_String_o *)*v5, 0);
       goto LABEL_6;
@@ -63,7 +63,7 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
     if ( !subType )
     {
       v4 = LocalizationManager_TypeInfo;
-      v5 = &StringLiteral_10739/*"PAYMENT_HISTORY_EXTERNAL"*/;
+      v5 = &StringLiteral_10752/*"PAYMENT_HISTORY_EXTERNAL"*/;
       if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         return LocalizationManager__Get((System_String_o *)*v5, 0);
       goto LABEL_6;
@@ -72,7 +72,7 @@ System_String_o *PaymentHistoryEntity__GetTypeText(PaymentHistoryEntity_o *this,
   else if ( type == 1 )
   {
     v4 = LocalizationManager_TypeInfo;
-    v5 = &StringLiteral_10741/*"PAYMENT_HISTORY_INTERNAL"*/;
+    v5 = &StringLiteral_10754/*"PAYMENT_HISTORY_INTERNAL"*/;
     if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       return LocalizationManager__Get((System_String_o *)*v5, 0);
 LABEL_6:
@@ -96,10 +96,10 @@ System_String_o *PaymentHistoryEntity__get_CreatedAtToString(PaymentHistoryEntit
   bool v11; // w6
   bool v12; // w7
 
-  if ( (byte_5938C9B & 1) == 0 )
+  if ( (byte_5970E5A & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_5938C9B = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5970E5A = 1;
   }
   p_createdAtString = (MissionNaviTransitionBoardItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0) )
@@ -109,7 +109,7 @@ System_String_o *PaymentHistoryEntity__get_CreatedAtToString(PaymentHistoryEntit
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
     Date = LocalizationManager__GetDate(createdAt, 0);
     p_createdAtString->klass = (MissionNaviTransitionBoardItem_c *)Date;
-    sub_21FFBF4(p_createdAtString, (int32_t)Date, v7, v8, v9, v10, v11, v12);
+    sub_2213A04(p_createdAtString, (int32_t)Date, v7, v8, v9, v10, v11, v12);
   }
   return (System_String_o *)p_createdAtString->klass;
 }

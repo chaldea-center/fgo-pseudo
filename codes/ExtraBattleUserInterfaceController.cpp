@@ -19,9 +19,9 @@ void ExtraBattleUserInterfaceController___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.parentInterface = parent;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)parent, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)parent, v7, v8, v9, v10, v11, v12);
   this->fields.battleData = data;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.battleData, (int32_t)data, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.battleData, (int32_t)data, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -80,37 +80,37 @@ void ExtraBattleUserInterfaceController__AddDataAndComponent(
   __int64 v52; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593C194 & 1) == 0 )
+  if ( (byte_59742EC & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TypeInfo);
-    sub_21FFC50(&ExtraBattleUserInterfaceData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ExtraBattleUserInterfaceData__TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_ExtraBattleUserInterfaceController___c__DisplayClass8_0__AddDataAndComponent_b__0__);
-    sub_21FFC50(&ExtraBattleUserInterfaceController___c__DisplayClass8_0_TypeInfo);
-    byte_593C194 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TypeInfo);
+    sub_2213A60(&ExtraBattleUserInterfaceData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ExtraBattleUserInterfaceData__TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_ExtraBattleUserInterfaceController___c__DisplayClass8_0__AddDataAndComponent_b__0__);
+    sub_2213A60(&ExtraBattleUserInterfaceController___c__DisplayClass8_0_TypeInfo);
+    byte_59742EC = 1;
   }
   value = 0;
-  v5 = sub_21FFEBC(ExtraBattleUserInterfaceController___c__DisplayClass8_0_TypeInfo);
+  v5 = sub_2213CCC(ExtraBattleUserInterfaceController___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_21;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   p_exBattleUiDict = &this->fields.exBattleUiDict;
   if ( !this->fields.exBattleUiDict )
   {
-    v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TypeInfo);
+    v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v21,
-      (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent___ctor__);
+      (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent___ctor__);
     *p_exBattleUiDict = (struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *)v21;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.exBattleUiDict,
       (int32_t)v21,
       v22,
@@ -124,12 +124,12 @@ void ExtraBattleUserInterfaceController__AddDataAndComponent(
   exBattleUiDataList = (System_Collections_Generic_List_object__o *)this->fields.exBattleUiDataList;
   if ( !exBattleUiDataList )
   {
-    v29 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExtraBattleUserInterfaceData__TypeInfo);
+    v29 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExtraBattleUserInterfaceData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v29,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData___ctor__);
     *p_exBattleUiDataList = (struct System_Collections_Generic_List_ExtraBattleUserInterfaceData__o *)v29;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.exBattleUiDataList,
       (int32_t)v29,
       v30,
@@ -153,29 +153,29 @@ void ExtraBattleUserInterfaceController__AddDataAndComponent(
     System_Collections_Generic_List_object___AddWithResize(
       exBattleUiDataList,
       (Il2CppObject *)exUiData,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
   }
   else
   {
     v39 = &items->obj.klass + size;
     exBattleUiDataList->fields._size = size + 1;
     v39[4] = (Il2CppClass *)exUiData;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v39 + 4), (int32_t)exUiData, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v39 + 4), (int32_t)exUiData, v14, v15, v16, v17, v18, v19);
   }
   if ( !exUiData
     || (AssetPath = ExtraBattleUserInterfaceData__get_AssetPath(exUiData, 0),
         *(_QWORD *)(v5 + 24) = AssetPath,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)AssetPath, v41, v42, v43, v44, v45, v46),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)AssetPath, v41, v42, v43, v44, v45, v46),
         (exBattleUiDataList = (System_Collections_Generic_List_object__o *)*p_exBattleUiDict) == 0) )
   {
 LABEL_21:
-    sub_21FFECC(exBattleUiDataList, v7);
+    sub_2213CDC(exBattleUiDataList, v7);
   }
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDataList,
          *(Il2CppObject **)(v5 + 24),
          &value,
-         (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__) )
+         (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__) )
   {
     v49 = ExtraBattleUserInterfaceData_TypeInfo;
     if ( !*(&ExtraBattleUserInterfaceData_TypeInfo->_2.cctor_finished + 1) )
@@ -188,7 +188,7 @@ LABEL_21:
   else
   {
     v50 = *(System_String_o **)(v5 + 24);
-    v51 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v51 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v51,
       (Il2CppObject *)v5,
@@ -218,25 +218,25 @@ void ExtraBattleUserInterfaceController__DestroyAndUnloadAllUi(
   __int64 v13; // x1
   __int64 v14; // x1
 
-  if ( (byte_593C19C & 1) == 0 )
+  if ( (byte_59742F4 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__Remove__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Keys__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_string___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C19C = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__Remove__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Keys__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59742F4 = 1;
   }
   exBattleUiDict = this->fields.exBattleUiDict;
   if ( exBattleUiDict )
   {
     Keys = System_Collections_Generic_Dictionary_object__object___get_Keys(
              (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
-             (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Keys__);
+             (const MethodInfo_3FFD8D8 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Keys__);
     Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Linq_Enumerable__ToArray_object_(
                                                                         (System_Collections_Generic_IEnumerable_TSource__o *)Keys,
-                                                                        (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                                                        (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_string___);
     if ( !Item )
       goto LABEL_16;
     entries = Item->fields._entries;
@@ -248,7 +248,7 @@ void ExtraBattleUserInterfaceController__DestroyAndUnloadAllUi(
       while ( 1 )
       {
         if ( v9 >= (unsigned int)entries )
-          sub_21FFED4(Item);
+          sub_2213CE4(Item);
         Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.exBattleUiDict;
         if ( !Item )
           break;
@@ -256,17 +256,17 @@ void ExtraBattleUserInterfaceController__DestroyAndUnloadAllUi(
         Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             v11,
-                                                                            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Item__);
+                                                                            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Item__);
         if ( !this->fields.exBattleUiDict )
           break;
         v12 = (UnityEngine_Object_o *)Item;
         System_Collections_Generic_Dictionary_object__object___Remove(
           (System_Collections_Generic_Dictionary_object__object__o *)this->fields.exBattleUiDict,
           v11,
-          (const MethodInfo_3FCB984 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__Remove__);
+          (const MethodInfo_3FFF12C *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__Remove__);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
-        UnityEngine_Object__Destroy_83246496(v12, 0);
+        UnityEngine_Object__Destroy_83459800(v12, 0);
         if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v14);
         AssetManager__releaseAssetStorage((System_String_o *)v11, 0);
@@ -275,7 +275,7 @@ void ExtraBattleUserInterfaceController__DestroyAndUnloadAllUi(
           return;
       }
 LABEL_16:
-      sub_21FFECC(Item, v6);
+      sub_2213CDC(Item, v6);
     }
   }
 }
@@ -293,22 +293,20 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x19
   System_String_o *AssetPath; // x0
   __int64 v10; // x1
-  float v11; // s0
-  float v12; // s1
   Il2CppObject *value; // [xsp+18h] [xbp-18h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593C199 & 1) == 0 )
+  if ( (byte_59742F1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    byte_593C199 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    byte_59742F1 = 1;
   }
   value = 0;
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   exBattleUiDataList = this->fields.exBattleUiDataList;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
@@ -319,7 +317,7 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
     v7 = System_Linq_Enumerable__ElementAtOrDefault_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
            this->fields.currentExBattleUiIndex,
-           (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+           (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
     if ( v7 )
     {
       exBattleUiDict = this->fields.exBattleUiDict;
@@ -330,7 +328,7 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
                                        (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
                                        (Il2CppObject *)AssetPath,
                                        &value,
-                                       (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+                                       (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
       if ( ((unsigned __int8)AssetPath & 1) != 0 )
       {
         if ( value )
@@ -340,15 +338,13 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
           goto LABEL_11;
         }
 LABEL_12:
-        sub_21FFECC(AssetPath, v10);
+        sub_2213CDC(AssetPath, v10);
       }
     }
   }
 LABEL_11:
-  v11 = x;
-  v12 = y;
-  result.fields.y = v12;
-  result.fields.x = v11;
+  result.fields.x = x;
+  result.fields.y = y;
   return result;
 }
 
@@ -365,22 +361,20 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x19
   System_String_o *AssetPath; // x0
   __int64 v10; // x1
-  float v11; // s0
-  float v12; // s1
   Il2CppObject *value; // [xsp+18h] [xbp-18h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593C19A & 1) == 0 )
+  if ( (byte_59742F2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    byte_593C19A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    byte_59742F2 = 1;
   }
   value = 0;
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   exBattleUiDataList = this->fields.exBattleUiDataList;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
@@ -391,7 +385,7 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
     v7 = System_Linq_Enumerable__ElementAtOrDefault_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
            this->fields.currentExBattleUiIndex,
-           (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+           (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
     if ( v7 )
     {
       exBattleUiDict = this->fields.exBattleUiDict;
@@ -402,7 +396,7 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
                                        (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
                                        (Il2CppObject *)AssetPath,
                                        &value,
-                                       (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+                                       (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
       if ( ((unsigned __int8)AssetPath & 1) != 0 )
       {
         if ( value )
@@ -412,15 +406,13 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
           goto LABEL_11;
         }
 LABEL_12:
-        sub_21FFECC(AssetPath, v10);
+        sub_2213CDC(AssetPath, v10);
       }
     }
   }
 LABEL_11:
-  v11 = x;
-  v12 = y;
-  result.fields.y = v12;
-  result.fields.x = v11;
+  result.fields.x = x;
+  result.fields.y = y;
   return result;
 }
 
@@ -440,15 +432,15 @@ void ExtraBattleUserInterfaceController__OnTapUi(ExtraBattleUserInterfaceControl
   __int64 v12; // x0
 
   v4 = this;
-  if ( (byte_593C19B & 1) == 0 )
+  if ( (byte_59742F3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
-    this = (ExtraBattleUserInterfaceController_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__get_Count__);
-    byte_593C19B = 1;
+    sub_2213A60(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
+    this = (ExtraBattleUserInterfaceController_o *)sub_2213A60(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__get_Count__);
+    byte_59742F3 = 1;
   }
   exBattleUiDataList = v4->fields.exBattleUiDataList;
   if ( !exBattleUiDataList )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   size = exBattleUiDataList->fields._size;
   if ( size >= 2 )
   {
@@ -462,17 +454,17 @@ void ExtraBattleUserInterfaceController__OnTapUi(ExtraBattleUserInterfaceControl
     v10 = v8[7];
     if ( !v10 )
     {
-      sub_2237B54(v8);
+      sub_224B964(v8);
       v10 = v8[7];
     }
     v11 = *(_QWORD *)(v10 + 16);
     if ( (*(_WORD *)(v11 + 309) & 1) == 0 )
-      v11 = sub_2237AF8(v3);
+      v11 = sub_224B908(v3);
     if ( !*(_DWORD *)(v11 + 228) )
       *(__n128 *)&v3 = j_il2cpp_runtime_class_init_0(v11, method);
     v12 = *(_QWORD *)(v8[7] + 16LL);
     if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
-      v12 = sub_2237AF8(v3);
+      v12 = sub_224B908(v3);
     ExtraBattleUserInterfaceController__UpdateUi(
       v4,
       0,
@@ -514,23 +506,23 @@ void ExtraBattleUserInterfaceController__RemoveDataAndComponents(
   bool v29; // w7
 
   v4 = isResume;
-  if ( (byte_593C195 & 1) == 0 )
+  if ( (byte_59742ED & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ExtraBattleUserInterfaceComponent__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_ExtraBattleUserInterfaceData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    sub_21FFC50(&ExtraBattleUserInterfaceData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__RemoveAll__);
-    sub_21FFC50(&System_Predicate_ExtraBattleUserInterfaceData__TypeInfo);
-    sub_21FFC50(&Method_ExtraBattleUserInterfaceController___c__RemoveDataAndComponents_b__9_1__);
-    sub_21FFC50(&Method_ExtraBattleUserInterfaceController___c__DisplayClass9_0__RemoveDataAndComponents_b__0__);
-    sub_21FFC50(&ExtraBattleUserInterfaceController___c__DisplayClass9_0_TypeInfo);
-    sub_21FFC50(&ExtraBattleUserInterfaceController___c_TypeInfo);
-    byte_593C195 = 1;
+    sub_2213A60(&System_Action_ExtraBattleUserInterfaceComponent__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_ExtraBattleUserInterfaceComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_ExtraBattleUserInterfaceData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    sub_2213A60(&ExtraBattleUserInterfaceData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__RemoveAll__);
+    sub_2213A60(&System_Predicate_ExtraBattleUserInterfaceData__TypeInfo);
+    sub_2213A60(&Method_ExtraBattleUserInterfaceController___c__RemoveDataAndComponents_b__9_1__);
+    sub_2213A60(&Method_ExtraBattleUserInterfaceController___c__DisplayClass9_0__RemoveDataAndComponents_b__0__);
+    sub_2213A60(&ExtraBattleUserInterfaceController___c__DisplayClass9_0_TypeInfo);
+    sub_2213A60(&ExtraBattleUserInterfaceController___c_TypeInfo);
+    byte_59742ED = 1;
   }
-  v7 = sub_21FFEBC(ExtraBattleUserInterfaceController___c__DisplayClass9_0_TypeInfo);
+  v7 = sub_2213CCC(ExtraBattleUserInterfaceController___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_24;
@@ -541,10 +533,10 @@ void ExtraBattleUserInterfaceController__RemoveDataAndComponents(
   v11 = System_Linq_Enumerable__ElementAtOrDefault_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
           this->fields.currentExBattleUiIndex,
-          (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+          (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
   v12 = !v11 || !ExtraBattleUserInterfaceData__get_IsFromQuestPhase((ExtraBattleUserInterfaceData_o *)v11, 0);
   v13 = (System_Collections_Generic_List_object__o *)this->fields.exBattleUiDataList;
-  v14 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ExtraBattleUserInterfaceData__TypeInfo);
+  v14 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ExtraBattleUserInterfaceData__TypeInfo);
   System_Predicate_object____ctor(
     v14,
     (Il2CppObject *)v7,
@@ -555,10 +547,10 @@ void ExtraBattleUserInterfaceController__RemoveDataAndComponents(
   System_Collections_Generic_List_object___RemoveAll(
     v13,
     (System_Predicate_T__o *)v14,
-    (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__RemoveAll__);
+    (const MethodInfo_4485290 *)Method_System_Collections_Generic_List_ExtraBattleUserInterfaceData__RemoveAll__);
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.exBattleUiDataList,
-         (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_ExtraBattleUserInterfaceData___) )
+         (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_ExtraBattleUserInterfaceData___) )
   {
     if ( v12 )
       this->fields.currentExBattleUiIndex = 0;
@@ -575,10 +567,10 @@ void ExtraBattleUserInterfaceController__RemoveDataAndComponents(
   exBattleUiDict = this->fields.exBattleUiDict;
   if ( !exBattleUiDict )
 LABEL_24:
-    sub_21FFECC(exBattleUiDict, v9);
+    sub_2213CDC(exBattleUiDict, v9);
   Values = System_Collections_Generic_Dictionary_object__object___get_Values(
              (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
-             (const MethodInfo_3FCA28C *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
+             (const MethodInfo_3FFDA34 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
   v19 = ExtraBattleUserInterfaceController___c_TypeInfo;
   if ( !*(&ExtraBattleUserInterfaceController___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -595,7 +587,7 @@ LABEL_24:
       static_fields = ExtraBattleUserInterfaceController___c_TypeInfo->static_fields;
     }
     v22 = (Il2CppObject *)static_fields->__9;
-    _9__9_1 = (System_Action_object__o *)sub_21FFEBC(System_Action_ExtraBattleUserInterfaceComponent__TypeInfo);
+    _9__9_1 = (System_Action_object__o *)sub_2213CCC(System_Action_ExtraBattleUserInterfaceComponent__TypeInfo);
     System_Action_object____ctor(
       _9__9_1,
       v22,
@@ -603,12 +595,12 @@ LABEL_24:
       0);
     v23 = ExtraBattleUserInterfaceController___c_TypeInfo->static_fields;
     v23->__9__9_1 = (struct System_Action_ExtraBattleUserInterfaceComponent__o *)_9__9_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23->__9__9_1, (int32_t)_9__9_1, v24, v25, v26, v27, v28, v29);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->__9__9_1, (int32_t)_9__9_1, v24, v25, v26, v27, v28, v29);
   }
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)Values,
     (System_Action_T__o *)_9__9_1,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceComponent___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_ExtraBattleUserInterfaceComponent___);
 }
 
 
@@ -622,7 +614,7 @@ void ExtraBattleUserInterfaceController__SwitchDispAnimation(
   __int64 v7; // x1
   ExtraBattleUserInterfaceData_o *v8; // x20
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x0
-  const MethodInfo_436CCCC *v10; // x4
+  const MethodInfo_43A0E04 *v10; // x4
   System_String_o *v11; // x22
   Il2CppObject *v12; // x21
   System_String_o *AssetPath; // x1
@@ -636,15 +628,15 @@ void ExtraBattleUserInterfaceController__SwitchDispAnimation(
   System_String_o *v21; // [xsp+68h] [xbp-38h] BYREF
   System_Collections_Generic_KeyValuePair_object__object__o v22; // 0:x0.16
 
-  if ( (byte_593C198 & 1) == 0 )
+  if ( (byte_59742F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__ExtraBattleUserInterfaceComponent__Deconstruct__);
-    byte_593C198 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__ExtraBattleUserInterfaceComponent__Deconstruct__);
+    byte_59742F0 = 1;
   }
   exBattleUiDataList = this->fields.exBattleUiDataList;
   current = (struct System_Collections_Generic_KeyValuePair_TKey__TValue__o)0LL;
@@ -656,22 +648,22 @@ void ExtraBattleUserInterfaceController__SwitchDispAnimation(
     v6 = System_Linq_Enumerable__ElementAtOrDefault_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
            this->fields.currentExBattleUiIndex,
-           (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+           (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
     if ( v6 )
     {
       v8 = (ExtraBattleUserInterfaceData_o *)v6;
       exBattleUiDict = this->fields.exBattleUiDict;
       if ( !exBattleUiDict )
-        sub_21FFECC(0, v7);
+        sub_2213CDC(0, v7);
       System_Collections_Generic_Dictionary_object__object___GetEnumerator(
         &v20,
         (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
-        (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
+        (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
       v16 = 0;
       v17 = &v20;
       while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
                 &v20,
-                (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__) )
+                (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__) )
       {
         current = v20.fields._current;
         v22.fields.key = (Il2CppObject *)&current;
@@ -688,13 +680,13 @@ void ExtraBattleUserInterfaceController__SwitchDispAnimation(
         if ( v14 )
         {
           if ( !v12 )
-            sub_21FFECC(v14, v15);
+            sub_2213CDC(v14, v15);
           ExtraBattleUserInterfaceComponent__SwitchDispAnimation((ExtraBattleUserInterfaceComponent_o *)v12, isDisp, 0);
         }
       }
       System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
         &v20,
-        (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
+        (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
     }
   }
 }
@@ -711,7 +703,7 @@ void ExtraBattleUserInterfaceController__UpdateUi(
   __int64 v9; // x1
   ExtraBattleUserInterfaceData_o *v10; // x22
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x0
-  const MethodInfo_436CCCC *v12; // x4
+  const MethodInfo_43A0E04 *v12; // x4
   System_String_o *v13; // x24
   Il2CppObject *v14; // x23
   System_String_o *AssetPath; // x1
@@ -729,16 +721,16 @@ void ExtraBattleUserInterfaceController__UpdateUi(
   System_String_o *v27; // [xsp+78h] [xbp-48h] BYREF
   System_Collections_Generic_KeyValuePair_object__object__o v28; // 0:x0.16
 
-  if ( (byte_593C196 & 1) == 0 )
+  if ( (byte_59742EE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__get_Current__);
-    sub_21FFC50(&IBattlePerformanceExtraUiParent_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__ExtraBattleUserInterfaceComponent__Deconstruct__);
-    byte_593C196 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__get_Current__);
+    sub_2213A60(&IBattlePerformanceExtraUiParent_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__ExtraBattleUserInterfaceComponent__Deconstruct__);
+    byte_59742EE = 1;
   }
   exBattleUiDataList = this->fields.exBattleUiDataList;
   current = (struct System_Collections_Generic_KeyValuePair_TKey__TValue__o)0LL;
@@ -750,7 +742,7 @@ void ExtraBattleUserInterfaceController__UpdateUi(
     v8 = System_Linq_Enumerable__ElementAtOrDefault_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
            this->fields.currentExBattleUiIndex,
-           (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+           (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
     if ( v8 )
     {
       v10 = (ExtraBattleUserInterfaceData_o *)v8;
@@ -760,13 +752,13 @@ void ExtraBattleUserInterfaceController__UpdateUi(
       System_Collections_Generic_Dictionary_object__object___GetEnumerator(
         &v23,
         (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
-        (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
+        (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__GetEnumerator__);
       v26 = v23;
       v23.fields._dictionary = 0;
       *(_QWORD *)&v23.fields._version = &v26;
       while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
                 &v26,
-                (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__) )
+                (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__MoveNext__) )
       {
         current = v26.fields._current;
         v28.fields.key = (Il2CppObject *)&current;
@@ -783,7 +775,7 @@ void ExtraBattleUserInterfaceController__UpdateUi(
         if ( v16 )
         {
           if ( !v14 )
-            sub_21FFECC(v16, v17);
+            sub_2213CDC(v16, v17);
           ((void (__fastcall *)(Il2CppObject *, ExtraBattleUserInterfaceData_o *, struct BattleData_o *, _QWORD, ExtraBattleUserInterfaceData_LabelType_array *, const MethodInfo *))v14->klass->vtable[4].methodPtr)(
             v14,
             v10,
@@ -796,17 +788,17 @@ void ExtraBattleUserInterfaceController__UpdateUi(
         else
         {
           if ( !v14 )
-            sub_21FFECC(v16, v17);
+            sub_2213CDC(v16, v17);
           ExtraBattleUserInterfaceComponent__SetActive((ExtraBattleUserInterfaceComponent_o *)v14, 0, 0);
         }
       }
       System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
         &v26,
-        (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
+        (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__ExtraBattleUserInterfaceComponent__Dispose__);
       parentInterface = this->fields.parentInterface;
       if ( !parentInterface )
 LABEL_24:
-        sub_21FFECC(exBattleUiDict, v9);
+        sub_2213CDC(exBattleUiDict, v9);
       klass = parentInterface->klass;
       v20 = *(unsigned __int16 *)&parentInterface->klass->_2.rank;
       if ( *(_WORD *)&parentInterface->klass->_2.rank )
@@ -824,7 +816,7 @@ LABEL_24:
       else
       {
 LABEL_18:
-        v22 = sub_2237E2C(parentInterface, IBattlePerformanceExtraUiParent_TypeInfo, 1);
+        v22 = sub_224BC3C(parentInterface, IBattlePerformanceExtraUiParent_TypeInfo, 1);
       }
       (*(void (__fastcall **)(struct IBattlePerformanceExtraUiParent_o *, _QWORD))v22)(
         parentInterface,
@@ -849,11 +841,11 @@ void ExtraBattleUserInterfaceController__UpdateUiByBattleValKey(
   __int64 v12; // x0
   __int64 v13; // x0
 
-  if ( (byte_593C197 & 1) == 0 )
+  if ( (byte_59742EF & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
-    byte_593C197 = 1;
+    sub_2213A60(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+    byte_59742EF = 1;
   }
   exBattleUiDataList = this->fields.exBattleUiDataList;
   if ( exBattleUiDataList )
@@ -861,7 +853,7 @@ void ExtraBattleUserInterfaceController__UpdateUiByBattleValKey(
     v6 = System_Linq_Enumerable__ElementAtOrDefault_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)exBattleUiDataList,
            this->fields.currentExBattleUiIndex,
-           (const MethodInfo_384AC00 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
+           (const MethodInfo_387E0C8 *)Method_System_Linq_Enumerable_ElementAtOrDefault_ExtraBattleUserInterfaceData___);
     if ( v6 )
     {
       if ( ExtraBattleUserInterfaceData__ContainsBattleValKey((ExtraBattleUserInterfaceData_o *)v6, key, 0) )
@@ -870,17 +862,17 @@ void ExtraBattleUserInterfaceController__UpdateUiByBattleValKey(
         v11 = *((_QWORD *)Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___ + 7);
         if ( !v11 )
         {
-          sub_2237B54(Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
+          sub_224B964(Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelType___);
           v11 = v10[7];
         }
         v12 = *(_QWORD *)(v11 + 16);
         if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
-          v12 = sub_2237AF8(v9);
+          v12 = sub_224B908(v9);
         if ( !*(_DWORD *)(v12 + 228) )
           *(__n128 *)&v9 = j_il2cpp_runtime_class_init_0(v12, v7);
         v13 = *(_QWORD *)(v10[7] + 16LL);
         if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
-          v13 = sub_2237AF8(v9);
+          v13 = sub_224B908(v9);
         ExtraBattleUserInterfaceController__UpdateUi(
           this,
           0,
@@ -903,32 +895,32 @@ System_Collections_Generic_IEnumerable_ExtraBattleUserInterfaceComponent__o *Ext
   __int64 v8; // x0
   __int64 v9; // x0
 
-  if ( (byte_593C193 & 1) == 0 )
+  if ( (byte_59742EB & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
-    byte_593C193 = 1;
+    sub_2213A60(&Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
+    byte_59742EB = 1;
   }
   exBattleUiDict = this->fields.exBattleUiDict;
   if ( exBattleUiDict )
     return (System_Collections_Generic_IEnumerable_ExtraBattleUserInterfaceComponent__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                             (System_Collections_Generic_Dictionary_object__object__o *)exBattleUiDict,
-                                                                                            (const MethodInfo_3FCA28C *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
+                                                                                            (const MethodInfo_3FFDA34 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__get_Values__);
   v6 = Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___;
   v7 = *((_QWORD *)Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___ + 7);
   if ( !v7 )
   {
-    sub_2237B54(Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___);
+    sub_224B964(Method_System_Array_Empty_ExtraBattleUserInterfaceComponent___);
     v7 = v6[7];
   }
   v8 = *(_QWORD *)(v7 + 16);
   if ( (*(_WORD *)(v8 + 309) & 1) == 0 )
-    v8 = sub_2237AF8(v2);
+    v8 = sub_224B908(v2);
   if ( !*(_DWORD *)(v8 + 228) )
     *(__n128 *)&v2 = j_il2cpp_runtime_class_init_0(v8, method);
   v9 = *(_QWORD *)(v6[7] + 16LL);
   if ( (*(_WORD *)(v9 + 309) & 1) == 0 )
-    v9 = sub_2237AF8(v2);
+    v9 = sub_224B908(v2);
   return **(System_Collections_Generic_IEnumerable_ExtraBattleUserInterfaceComponent__o ***)(v9 + 184);
 }
 
@@ -943,15 +935,15 @@ void ExtraBattleUserInterfaceController___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593C19D & 1) == 0 )
+  if ( (byte_59742F5 & 1) == 0 )
   {
-    sub_21FFC50(&ExtraBattleUserInterfaceController___c_TypeInfo);
-    byte_593C19D = 1;
+    sub_2213A60(&ExtraBattleUserInterfaceController___c_TypeInfo);
+    byte_59742F5 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ExtraBattleUserInterfaceController___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ExtraBattleUserInterfaceController___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ExtraBattleUserInterfaceController___c_TypeInfo->static_fields->__9 = (struct ExtraBattleUserInterfaceController___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ExtraBattleUserInterfaceController___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -977,7 +969,7 @@ void ExtraBattleUserInterfaceController___c___RemoveDataAndComponents_b__9_1(
         const MethodInfo *method)
 {
   if ( !ui )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   ExtraBattleUserInterfaceComponent__SetActive(ui, 0, 0);
 }
 
@@ -1000,7 +992,7 @@ void ExtraBattleUserInterfaceController___c__DisplayClass8_0___AddDataAndCompone
   const MethodInfo *v6; // x3
   ExtraBattleUserInterfaceController_o *v7; // x19
   __int64 v8; // x1
-  Il2CppObject *Object_object__58323140; // x20
+  Il2CppObject *Object_object__58532980; // x20
   struct ExtraBattleUserInterfaceController_o *v10; // x8
   struct IBattlePerformanceExtraUiParent_o *parentInterface; // x21
   IBattlePerformanceExtraUiParent_c *klass; // x8
@@ -1043,24 +1035,24 @@ void ExtraBattleUserInterfaceController___c__DisplayClass8_0___AddDataAndCompone
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_593C19E & 1) == 0 )
+  if ( (byte_59742F6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&BattlePerformanceMaster_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__set_Item__);
-    sub_21FFC50(&ExtraBattleUserInterfaceButtonComponent_TypeInfo);
-    sub_21FFC50(&Method_ExtraBattleUserInterfaceController_OnTapUi__);
-    sub_21FFC50(&ExtraBattleUserInterfaceData_TypeInfo);
-    sub_21FFC50(&FSUtility_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ExtraBattleUserInterfaceComponent___);
-    sub_21FFC50(&IBattlePerformanceExtraUiParent_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject____91575024);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)sub_21FFC50(&StringLiteral_6535/*"ExBattleUI"*/);
-    byte_593C19E = 1;
+    sub_2213A60(&System_Action_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&BattlePerformanceMaster_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__set_Item__);
+    sub_2213A60(&ExtraBattleUserInterfaceButtonComponent_TypeInfo);
+    sub_2213A60(&Method_ExtraBattleUserInterfaceController_OnTapUi__);
+    sub_2213A60(&ExtraBattleUserInterfaceData_TypeInfo);
+    sub_2213A60(&FSUtility_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ExtraBattleUserInterfaceComponent___);
+    sub_2213A60(&IBattlePerformanceExtraUiParent_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)sub_2213A60(&StringLiteral_6547/*"ExBattleUI"*/);
+    byte_59742F6 = 1;
   }
   _4__this = v4->fields.__4__this;
   value = 0;
@@ -1073,7 +1065,7 @@ void ExtraBattleUserInterfaceController___c__DisplayClass8_0___AddDataAndCompone
                                                                         (System_Collections_Generic_Dictionary_object__object__o *)this,
                                                                         (Il2CppObject *)v4->fields.assetPath,
                                                                         &value,
-                                                                        (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
+                                                                        (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__TryGetValue__);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)ExtraBattleUserInterfaceData_TypeInfo;
@@ -1095,14 +1087,14 @@ LABEL_52:
   }
   if ( !assetData )
     goto LABEL_55;
-  Object_object__58323140 = AssetData__GetObject_object__58323140(
+  Object_object__58532980 = AssetData__GetObject_object__58532980(
                               assetData,
-                              (System_String_o *)StringLiteral_6535/*"ExBattleUI"*/,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                              (System_String_o *)StringLiteral_6547/*"ExBattleUI"*/,
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)UnityEngine_Object__op_Equality(
-                                                                        (UnityEngine_Object_o *)Object_object__58323140,
+                                                                        (UnityEngine_Object_o *)Object_object__58532980,
                                                                         0,
                                                                         0);
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -1130,17 +1122,17 @@ LABEL_52:
     else
     {
 LABEL_18:
-      v15 = sub_2237E2C(parentInterface, IBattlePerformanceExtraUiParent_TypeInfo, 0);
+      v15 = sub_224BC3C(parentInterface, IBattlePerformanceExtraUiParent_TypeInfo, 0);
     }
     v17 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(struct IBattlePerformanceExtraUiParent_o *, _QWORD))v15)(
                                        parentInterface,
                                        *(_QWORD *)(v15 + 8));
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
-    v19 = UnityEngine_Object__Instantiate_object__59506996(
-            Object_object__58323140,
+    v19 = UnityEngine_Object__Instantiate_object__59717116(
+            Object_object__58532980,
             v17,
-            (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_GameObject____91575024);
+            (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
     if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v18);
     this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)FSUtility__IsCalcNotch(2, 0);
@@ -1166,21 +1158,21 @@ LABEL_18:
     }
     if ( !v19 )
 LABEL_55:
-      sub_21FFECC(this, assetData);
+      sub_2213CDC(this, assetData);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v19,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ExtraBattleUserInterfaceComponent___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ExtraBattleUserInterfaceComponent___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
     {
       v26 = (Il2CppObject *)v4->fields.__4__this;
-      v27 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v27, v26, Method_ExtraBattleUserInterfaceController_OnTapUi__, 0);
       if ( !Component_object )
         goto LABEL_55;
       Component_object[5].klass = (Il2CppClass *)v27;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&Component_object[5], (int32_t)v27, v28, v29, v30, v31, v32, v33);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&Component_object[5], (int32_t)v27, v28, v29, v30, v31, v32, v33);
       v34 = ExtraBattleUserInterfaceButtonComponent_TypeInfo->_2.naturalAligment;
       if ( Component_object->klass->_2.naturalAligment >= (unsigned int)v34
         && (ExtraBattleUserInterfaceButtonComponent_c *)Component_object->klass->_2.typeHierarchy[v34 - 1] == ExtraBattleUserInterfaceButtonComponent_TypeInfo )
@@ -1189,7 +1181,7 @@ LABEL_55:
         if ( !v35 )
           goto LABEL_55;
         v36 = (Il2CppObject *)v35->fields.parentInterface;
-        this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)sub_21FFEBC(System_Action_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData__TypeInfo);
+        this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)sub_2213CCC(System_Action_ExtraBattleUserInterfaceButtonComponent_ExecType__ExtraBattleUserInterfaceData__TypeInfo);
         if ( !v36 )
           goto LABEL_55;
         v37 = v36->klass;
@@ -1210,11 +1202,11 @@ LABEL_55:
         else
         {
 LABEL_45:
-          v41 = sub_2237E2C(v36, IBattlePerformanceExtraUiParent_TypeInfo, 2);
+          v41 = sub_224BC3C(v36, IBattlePerformanceExtraUiParent_TypeInfo, 2);
         }
         System_Action_Int32Enum__object____ctor((System_Action_T1__T2__o *)v38, v36, *(_QWORD *)(v41 + 8), 0);
         Component_object[10].monitor = v38;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&Component_object[10].monitor,
           (int32_t)v38,
           v42,
@@ -1234,7 +1226,7 @@ LABEL_45:
         (System_Collections_Generic_Dictionary_object__object__o *)this,
         (Il2CppObject *)v4->fields.assetPath,
         Component_object,
-        (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__set_Item__);
+        (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__set_Item__);
       this = (ExtraBattleUserInterfaceController___c__DisplayClass8_0_o *)ExtraBattleUserInterfaceData_TypeInfo;
       v7 = v4->fields.__4__this;
       if ( !*(&ExtraBattleUserInterfaceData_TypeInfo->_2.cctor_finished + 1) )
@@ -1264,6 +1256,6 @@ bool ExtraBattleUserInterfaceController___c__DisplayClass9_0___RemoveDataAndComp
         const MethodInfo *method)
 {
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return data->fields._Wave_k__BackingField == this->fields.wave;
 }

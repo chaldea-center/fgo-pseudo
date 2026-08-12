@@ -8,14 +8,14 @@ void EventInfoCondenseLabel___ctor(EventInfoCondenseLabel_o *this, const MethodI
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_593990B & 1) == 0 )
+  if ( (byte_5971C7E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593990B = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971C7E = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.beforeText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.beforeText, v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.beforeText, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -34,10 +34,10 @@ void EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, c
   struct UILabel_o *v12; // x8
   struct System_String_o *mText; // x1
 
-  if ( (byte_593990A & 1) == 0 )
+  if ( (byte_5971C7D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593990A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971C7D = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -49,7 +49,7 @@ void EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, c
     if ( !v12
       || (mText = v12->fields.mText,
           this->fields.beforeText = mText,
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.beforeText,
             (int32_t)mText,
             v6,
@@ -60,7 +60,7 @@ void EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel_o *this, c
             v11),
           (v4 = this->fields.label) == 0) )
     {
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     }
     UILabel__SetCondensedScale(v4, this->fields.condensedWidth, 0, 0);
   }
@@ -80,19 +80,19 @@ void EventInfoCondenseLabel__Start(EventInfoCondenseLabel_o *this, const MethodI
   bool v11; // w7
   const MethodInfo *v12; // x1
 
-  if ( (byte_5939908 & 1) == 0 )
+  if ( (byte_5971C7B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    byte_5939908 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    byte_5971C7B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   this->fields.label = (struct UILabel_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.label,
     (int32_t)Component_object,
     v6,
@@ -113,10 +113,10 @@ void EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, const Method
   struct UILabel_o *v6; // x8
   const MethodInfo *v7; // x1
 
-  if ( (byte_5939909 & 1) == 0 )
+  if ( (byte_5971C7C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939909 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971C7C = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -126,7 +126,7 @@ void EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, const Method
   {
     v6 = this->fields.label;
     if ( !v6 )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     if ( System_String__op_Inequality(this->fields.beforeText, v6->fields.mText, 0) )
       EventInfoCondenseLabel__SetCondensedScale(this, v7);
   }

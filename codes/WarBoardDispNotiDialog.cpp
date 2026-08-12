@@ -25,16 +25,16 @@ System_Collections_IEnumerator_o *WarBoardDispNotiDialog__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593623B & 1) == 0 )
+  if ( (byte_596E395 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardDispNotiDialog__Execute_d__5_TypeInfo);
-    byte_593623B = 1;
+    sub_2213A60(&WarBoardDispNotiDialog__Execute_d__5_TypeInfo);
+    byte_596E395 = 1;
   }
-  v3 = sub_21FFEBC(WarBoardDispNotiDialog__Execute_d__5_TypeInfo);
+  v3 = sub_2213CCC(WarBoardDispNotiDialog__Execute_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -45,14 +45,14 @@ void WarBoardDispNotiDialog__OnEnd(WarBoardDispNotiDialog_o *this, const MethodI
   __int64 v4; // x1
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_593623C & 1) == 0 )
+  if ( (byte_596E396 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_593623C = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E396 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0);
   EventTutorialMaster__ClearLocalCheckedEntities(0);
   EndCallback = this->fields.EndCallback;
@@ -70,14 +70,14 @@ void WarBoardDispNotiDialog__OnStart(WarBoardDispNotiDialog_o *this, const Metho
   __int64 v4; // x1
   struct WarBoardTaskBase_TaskCallback_o *StartCallback; // x8
 
-  if ( (byte_593623A & 1) == 0 )
+  if ( (byte_596E394 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_593623A = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E394 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 0, 0, 0);
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -120,40 +120,40 @@ bool WarBoardDispNotiDialog__Execute_d__5__MoveNext(
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_593623D & 1) == 0 )
+  if ( (byte_596E397 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__0__);
-    sub_21FFC50(&Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__1__);
-    sub_21FFC50(&WarBoardDispNotiDialog___c__DisplayClass5_0_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    byte_593623D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__0__);
+    sub_2213A60(&Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__1__);
+    sub_2213A60(&WarBoardDispNotiDialog___c__DisplayClass5_0_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    byte_596E397 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( !_1__state )
   {
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
-    v6 = sub_21FFEBC(WarBoardDispNotiDialog___c__DisplayClass5_0_TypeInfo);
+    v6 = sub_2213CCC(WarBoardDispNotiDialog___c__DisplayClass5_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     if ( !v6 || (*(_BYTE *)(v6 + 16) = 0, !_4__this) )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     v9 = *(_DWORD *)(&_4__this->fields._isPause_k__BackingField + 3);
     targetId = _4__this->fields.targetId;
-    v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v11, (Il2CppObject *)v6, Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__0__, 0);
     EventTutorialMaster__CheckTutorial(v9, targetId, v11, _4__this->fields.eventId, 0, 0, 0, 0);
-    v12 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v12 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v12,
       (Il2CppObject *)v6,
       Method_WarBoardDispNotiDialog___c__DisplayClass5_0__Execute_b__1__,
       0);
-    v13 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v13 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v13, v12, 0);
     this->fields.__2__current = (Il2CppObject *)v13;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
       (int32_t)v13,
       v14,
@@ -191,11 +191,11 @@ void __noreturn WarBoardDispNotiDialog__Execute_d__5__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardDispNotiDialog__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardDispNotiDialog__Execute_d__5_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

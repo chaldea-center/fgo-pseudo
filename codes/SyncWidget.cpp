@@ -28,31 +28,31 @@ void SyncWidget___ctor(SyncWidget_o *this, const MethodInfo *method)
   struct System_Action_array **v28; // x8
   struct System_Action_array *v29; // x1
 
-  if ( (byte_5939EB8 & 1) == 0 )
+  if ( (byte_597208B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Empty_Action___);
-    sub_21FFC50(&Method_System_Array_Empty_SyncWidget_SyncParamType___);
-    byte_5939EB8 = 1;
+    sub_2213A60(&Method_System_Array_Empty_Action___);
+    sub_2213A60(&Method_System_Array_Empty_SyncWidget_SyncParamType___);
+    byte_597208B = 1;
   }
   v10 = Method_System_Array_Empty_SyncWidget_SyncParamType___;
   v11 = *((_QWORD *)Method_System_Array_Empty_SyncWidget_SyncParamType___ + 7);
   if ( !v11 )
   {
-    sub_2237B54(Method_System_Array_Empty_SyncWidget_SyncParamType___);
+    sub_224B964(Method_System_Array_Empty_SyncWidget_SyncParamType___);
     v11 = v10[7];
   }
   v12 = *(_QWORD *)(v11 + 16);
   if ( (*(_WORD *)(v12 + 309) & 1) == 0 )
-    v12 = sub_2237AF8(v8);
+    v12 = sub_224B908(v8);
   if ( !*(_DWORD *)(v12 + 228) )
     *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(v12, method);
   v13 = *(_QWORD *)(v10[7] + 16LL);
   if ( (*(_WORD *)(v13 + 309) & 1) == 0 )
-    v13 = sub_2237AF8(v8);
+    v13 = sub_224B908(v8);
   v14 = *(struct SyncWidget_SyncParamType_array ***)(v13 + 184);
   v15 = *v14;
   this->fields.syncParamTypeArray = *v14;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.syncParamTypeArray,
     (int32_t)v15,
     v2,
@@ -61,10 +61,10 @@ void SyncWidget___ctor(SyncWidget_o *this, const MethodInfo *method)
     v5,
     v6,
     v7);
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   v24 = Method_System_Array_Empty_Action___;
   *(struct UnityEngine_Vector2_o *)&v23 = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -72,21 +72,21 @@ void SyncWidget___ctor(SyncWidget_o *this, const MethodInfo *method)
   v25 = v24[7];
   if ( !v25 )
   {
-    sub_2237B54(v24);
+    sub_224B964(v24);
     v25 = v24[7];
   }
   v26 = *(_QWORD *)(v25 + 16);
   if ( (*(_WORD *)(v26 + 309) & 1) == 0 )
-    v26 = sub_2237AF8(v23);
+    v26 = sub_224B908(v23);
   if ( !*(_DWORD *)(v26 + 228) )
     *(__n128 *)&v23 = j_il2cpp_runtime_class_init_0(v26, v16);
   v27 = *(_QWORD *)(v24[7] + 16LL);
   if ( (*(_WORD *)(v27 + 309) & 1) == 0 )
-    v27 = sub_2237AF8(v23);
+    v27 = sub_224B908(v23);
   v28 = *(struct System_Action_array ***)(v27 + 184);
   v29 = *v28;
   this->fields.syncActionArray = *v28;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.syncActionArray,
     (int32_t)v29,
     v17,
@@ -119,21 +119,21 @@ void SyncWidget__Awake(SyncWidget_o *this, const MethodInfo *method)
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_5939EB5 & 1) == 0 )
+  if ( (byte_5972088 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_Action___);
-    sub_21FFC50(&System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
-    byte_5939EB5 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_Action___);
+    sub_2213A60(&System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
+    byte_5972088 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.self = (struct UIWidget_o *)Component_object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.self, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.self, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   syncParamTypeArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.syncParamTypeArray;
-  v11 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
+  v11 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
   System_Func_Int32Enum__object____ctor(
     v11,
     (Il2CppObject *)this,
@@ -142,12 +142,12 @@ void SyncWidget__Awake(SyncWidget_o *this, const MethodInfo *method)
   v12 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_Int32Enum__object_(
                                                                syncParamTypeArray,
                                                                (System_Func_TSource__TResult__o *)v11,
-                                                               (const MethodInfo_385BA04 *)Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
+                                                               (const MethodInfo_388EECC *)Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
   v13 = System_Linq_Enumerable__ToArray_object_(
           v12,
-          (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_Action___);
+          (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_Action___);
   this->fields.syncActionArray = (struct System_Action_array *)v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.syncActionArray,
     (int32_t)v13,
     v14,
@@ -179,28 +179,28 @@ System_Action_o *SyncWidget__ConvertTypeToAction(SyncWidget_o *this, int32_t typ
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5939EB7 & 1) == 0 )
+  if ( (byte_597208A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SyncWidget_SyncColorAlpha__);
-    sub_21FFC50(&Method_SyncWidget__ConvertTypeToAction_b__9_0__);
-    sub_21FFC50(&Method_SyncWidget__ConvertTypeToAction_b__9_1__);
-    sub_21FFC50(&Method_SyncWidget__ConvertTypeToAction_b__9_2__);
-    sub_21FFC50(&Method_SyncWidget___c__ConvertTypeToAction_b__9_3__);
-    sub_21FFC50(&SyncWidget___c_TypeInfo);
-    byte_5939EB7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SyncWidget_SyncColorAlpha__);
+    sub_2213A60(&Method_SyncWidget__ConvertTypeToAction_b__9_0__);
+    sub_2213A60(&Method_SyncWidget__ConvertTypeToAction_b__9_1__);
+    sub_2213A60(&Method_SyncWidget__ConvertTypeToAction_b__9_2__);
+    sub_2213A60(&Method_SyncWidget___c__ConvertTypeToAction_b__9_3__);
+    sub_2213A60(&SyncWidget___c_TypeInfo);
+    byte_597208A = 1;
   }
   if ( type > 1 )
   {
     if ( type == 2 )
     {
-      v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v6 = &Method_SyncWidget__ConvertTypeToAction_b__9_2__;
       goto LABEL_18;
     }
     if ( type == 3 )
     {
-      v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v6 = &Method_SyncWidget_SyncColorAlpha__;
       goto LABEL_18;
     }
@@ -209,13 +209,13 @@ System_Action_o *SyncWidget__ConvertTypeToAction(SyncWidget_o *this, int32_t typ
   {
     if ( !type )
     {
-      v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v6 = &Method_SyncWidget__ConvertTypeToAction_b__9_0__;
       goto LABEL_18;
     }
     if ( type == 1 )
     {
-      v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v6 = &Method_SyncWidget__ConvertTypeToAction_b__9_1__;
 LABEL_18:
       _9__9_3 = v5;
@@ -239,11 +239,11 @@ LABEL_18:
       static_fields = SyncWidget___c_TypeInfo->static_fields;
     }
     v10 = (Il2CppObject *)static_fields->__9;
-    _9__9_3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__9_3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__9_3, v10, Method_SyncWidget___c__ConvertTypeToAction_b__9_3__, 0);
     v11 = SyncWidget___c_TypeInfo->static_fields;
     v11->__9__9_3 = _9__9_3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->__9__9_3, (int32_t)_9__9_3, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->__9__9_3, (int32_t)_9__9_3, v12, v13, v14, v15, v16, v17);
   }
   return _9__9_3;
 }
@@ -287,14 +287,14 @@ void SyncWidget__Sync(SyncWidget_o *this, const MethodInfo *method)
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5939EB6 & 1) == 0 )
+  if ( (byte_5972089 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_Action__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_Action___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SyncWidget___c__Sync_b__8_0__);
-    sub_21FFC50(&SyncWidget___c_TypeInfo);
-    byte_5939EB6 = 1;
+    sub_2213A60(&System_Action_Action__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_Action___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SyncWidget___c__Sync_b__8_0__);
+    sub_2213A60(&SyncWidget___c_TypeInfo);
+    byte_5972089 = 1;
   }
   self = (UnityEngine_Object_o *)this->fields.self;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -327,16 +327,16 @@ void SyncWidget__Sync(SyncWidget_o *this, const MethodInfo *method)
           static_fields = SyncWidget___c_TypeInfo->static_fields;
         }
         v11 = (Il2CppObject *)static_fields->__9;
-        _9__8_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_Action__TypeInfo);
+        _9__8_0 = (System_Action_object__o *)sub_2213CCC(System_Action_Action__TypeInfo);
         System_Action_object____ctor(_9__8_0, v11, Method_SyncWidget___c__Sync_b__8_0__, 0);
         v12 = SyncWidget___c_TypeInfo->static_fields;
         v12->__9__8_0 = (struct System_Action_Action__o *)_9__8_0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__8_0, (int32_t)_9__8_0, v13, v14, v15, v16, v17, v18);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__8_0, (int32_t)_9__8_0, v13, v14, v15, v16, v17, v18);
       }
       BasicHelper__ForEach_object_(
         syncActionArray,
         (System_Action_T__o *)_9__8_0,
-        (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_Action___);
+        (const MethodInfo_381282C *)Method_BasicHelper_ForEach_Action___);
     }
   }
 }
@@ -371,10 +371,10 @@ void SyncWidget__SyncColorAlpha(SyncWidget_o *this, const MethodInfo *method)
   b = self->fields.mColor.fields.b;
   a = self->fields.mColor.fields.a;
   v9 = syncFrom->fields.mColor.fields.a;
-  if ( !byte_5931944 )
+  if ( !byte_5969AE4 )
   {
-    this = (SyncWidget_o *)sub_21FFC50(&UnityEngine_Mathf_TypeInfo);
-    byte_5931944 = 1;
+    this = (SyncWidget_o *)sub_2213A60(&UnityEngine_Mathf_TypeInfo);
+    byte_5969AE4 = 1;
   }
   v10 = fabsf(a);
   v11 = fabsf(v9);
@@ -401,7 +401,7 @@ void SyncWidget__SyncColorAlpha(SyncWidget_o *this, const MethodInfo *method)
       }
     }
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -417,7 +417,7 @@ void SyncWidget___ConvertTypeToAction_b__9_0(SyncWidget_o *this, const MethodInf
 
   syncFrom = this->fields.syncFrom;
   if ( !syncFrom || (v3 = this, (this = (SyncWidget_o *)this->fields.self) == 0) )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   x = v3->fields.blankSize.fields.x;
   mWidth = syncFrom->fields.mWidth;
   v6 = x + x;
@@ -440,7 +440,7 @@ void SyncWidget___ConvertTypeToAction_b__9_1(SyncWidget_o *this, const MethodInf
 
   syncFrom = this->fields.syncFrom;
   if ( !syncFrom || (v3 = this, (this = (SyncWidget_o *)this->fields.self) == 0) )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   y = v3->fields.blankSize.fields.y;
   mHeight = syncFrom->fields.mHeight;
   v6 = y + y;
@@ -467,7 +467,7 @@ void SyncWidget___ConvertTypeToAction_b__9_2(SyncWidget_o *this, const MethodInf
         (self = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(syncFrom, 0)) == 0)
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)self, 0), !v5) )
   {
-    sub_21FFECC(self, method);
+    sub_2213CDC(self, method);
   }
   UnityEngine_Transform__set_localScale(v5, localScale, 0);
 }
@@ -483,15 +483,15 @@ void SyncWidget___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5939EB9 & 1) == 0 )
+  if ( (byte_597208C & 1) == 0 )
   {
-    sub_21FFC50(&SyncWidget___c_TypeInfo);
-    byte_5939EB9 = 1;
+    sub_2213A60(&SyncWidget___c_TypeInfo);
+    byte_597208C = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(SyncWidget___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(SyncWidget___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SyncWidget___c_TypeInfo->static_fields->__9 = (struct SyncWidget___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SyncWidget___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

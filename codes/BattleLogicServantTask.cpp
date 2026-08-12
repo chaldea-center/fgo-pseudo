@@ -11,7 +11,7 @@ void BattleLogicServantTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( svtData->fields.isEnemy )
     v9 = 3;
   else

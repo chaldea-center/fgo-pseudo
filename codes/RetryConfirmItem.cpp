@@ -12,10 +12,10 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
   int32_t klass; // w21
   UnityEngine_GameObject_o *v7; // x20
   int v8; // w21
-  float v9; // s0
-  UnityEngine_GameObject_o *v10; // x20
+  UnityEngine_GameObject_o *v9; // x20
+  const MethodInfo *v10; // x1
   float v11; // s0
-  const MethodInfo *v12; // x1
+  float v12; // s0
 
   useAmount = (UnityEngine_Component_o *)this->fields.useAmount;
   if ( !useAmount )
@@ -42,23 +42,23 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
         if ( useAmount )
         {
           v8 = klass - 1;
-          v9 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
-          GameObjectExtensions__SetLocalPositionX(v7, v9 + (float)v8, 0);
+          v11 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
+          GameObjectExtensions__SetLocalPositionX(v7, v11 + (float)v8, 0);
           useAmount = (UnityEngine_Component_o *)this->fields.possessionAmount;
           if ( useAmount )
           {
             useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0);
             if ( this->fields.possessionName )
             {
-              v10 = (UnityEngine_GameObject_o *)useAmount;
+              v9 = (UnityEngine_GameObject_o *)useAmount;
               useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                        (UnityEngine_Component_o *)this->fields.possessionName,
                                                        0);
               if ( useAmount )
               {
-                v11 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
-                GameObjectExtensions__SetLocalPositionX(v10, v11 + (float)v8, 0);
-                RetryConfirmItem__CenteringWholeLabelHorizontal(this, v12);
+                v12 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
+                GameObjectExtensions__SetLocalPositionX(v9, v12 + (float)v8, 0);
+                RetryConfirmItem__CenteringWholeLabelHorizontal(this, v10);
                 return;
               }
             }
@@ -66,7 +66,7 @@ void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const Meth
         }
       }
 LABEL_15:
-      sub_21FFECC(useAmount, method);
+      sub_2213CDC(useAmount, method);
     }
   }
 }
@@ -79,7 +79,7 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
   RetryConfirmItem_o *v4; // x19
   struct UILabel_o *possessionAmount; // x10
   int32_t mWidth; // w20
-  int useAmount; // w21
+  int v7; // w21
   int32_t v8; // w22
   int32_t v9; // w23
   UnityEngine_GameObject_o *gameObject; // x0
@@ -107,7 +107,7 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
   possessionAmount = v4->fields.possessionAmount;
   if ( !possessionAmount
     || (mWidth = possessionName->fields.mWidth,
-        useAmount = (int)this[2].fields.useAmount,
+        v7 = *((_DWORD *)this + 42),
         v8 = useName->fields.mWidth,
         v9 = possessionAmount->fields.mWidth,
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
@@ -115,13 +115,13 @@ void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, c
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0) )
   {
 LABEL_15:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   v12 = LocalPositionX;
-  if ( v8 + useAmount <= v9 + mWidth )
+  if ( v8 + v7 <= v9 + mWidth )
     v13 = v9 + mWidth;
   else
-    v13 = v8 + useAmount;
+    v13 = v8 + v7;
   v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v15 = GameObjectExtensions__GetLocalPositionX(v14, 0);
   if ( v12 < v15 )
@@ -144,22 +144,20 @@ System_Collections_IEnumerator_o *RetryConfirmItem__SetCondensedScalePossessionA
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_593C302 & 1) == 0 )
+  if ( (byte_597453A & 1) == 0 )
   {
-    sub_21FFC50(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
-    byte_593C302 = 1;
+    sub_2213A60(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+    byte_597453A = 1;
   }
   v5 = isDispUseItemUI;
-  v6 = sub_21FFEBC(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+  v6 = sub_2213CCC(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
-  result = (System_Collections_IEnumerator_o *)v6;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
   *(_BYTE *)(v6 + 40) = v5;
-  return result;
+  return (System_Collections_IEnumerator_o *)v6;
 }
 
 
@@ -203,7 +201,7 @@ bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0);
         v4->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
-        sub_21FFBF4(p__2__current, 0, v7, v8, v9, v10, v11, v12);
+        sub_2213A04(p__2__current, 0, v7, v8, v9, v10, v11, v12);
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
         return _1__state == 0;
       }
@@ -222,9 +220,9 @@ bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
     || (this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *)_4__this->fields.possessionAmount) == 0 )
   {
 LABEL_14:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
-  if ( SLODWORD(this[3].fields.__2__current) > (int)method )
+  if ( *((_DWORD *)this + 42) > (int)method )
     UILabel__SetCondensedScale((UILabel_o *)this, (int32_t)method, 0, 0);
   return _1__state == 0;
 }
@@ -246,11 +244,11 @@ void __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

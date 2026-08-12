@@ -18,10 +18,10 @@ float EventInfoEquipSkillPartsComponent__GetHeight(EventInfoEquipSkillPartsCompo
   struct UILabel_o *v6; // x0
   float v7; // s1
 
-  if ( (byte_593993B & 1) == 0 )
+  if ( (byte_5971CAE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593993B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CAE = 1;
   }
   skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -30,7 +30,7 @@ float EventInfoEquipSkillPartsComponent__GetHeight(EventInfoEquipSkillPartsCompo
     return this->fields.minHeight;
   v6 = this->fields.skillDetailLabel;
   if ( !v6 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))v6->klass->vtable._22_get_localSize.methodPtr)(
     v6,
     v6->klass->vtable._22_get_localSize.method);
@@ -95,15 +95,15 @@ void EventInfoEquipSkillPartsComponent__Setup(
   int32_t SkillChargeTurn; // [xsp+8h] [xbp-58h] BYREF
   int32_t v52; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_593993A & 1) == 0 )
+  if ( (byte_5971CAD & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5807/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_NAME"*/);
-    sub_21FFC50(&StringLiteral_5806/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_CHARGE_TURN"*/);
-    byte_593993A = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5819/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_NAME"*/);
+    sub_2213A60(&StringLiteral_5818/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_CHARGE_TURN"*/);
+    byte_5971CAD = 1;
   }
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -138,61 +138,61 @@ void EventInfoEquipSkillPartsComponent__Setup(
   skillNameLabel = this->fields.skillNameLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5807/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_NAME"*/, 0);
-  v20 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 2);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5819/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_NAME"*/, 0);
+  v20 = (System_Object_array *)sub_2213B20(object___TypeInfo, 2);
   SkillName = (__int64)EventEquipSkillPartsEntity__GetSkillName(entity, 0);
   if ( !v20 )
     goto LABEL_28;
   v27 = (Il2CppObject *)SkillName;
   if ( SkillName )
   {
-    SkillName = sub_21FFDA4(SkillName, v20->obj.klass->_1.element_class);
+    SkillName = sub_2213BB4(SkillName, v20->obj.klass->_1.element_class);
     if ( !SkillName )
       goto LABEL_30;
   }
   if ( !LODWORD(v20->max_length) )
     goto LABEL_29;
   v20->m_Items[0] = v27;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v20->m_Items, (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v20->m_Items, (int32_t)v27, v21, v22, v23, v24, v25, v26);
   v52 = skillLv;
-  SkillName = j_il2cpp_value_box_0(qword_594C070, &v52);
+  SkillName = j_il2cpp_value_box_0(qword_5984348, &v52);
   v35 = (Il2CppObject *)SkillName;
   if ( SkillName )
   {
-    SkillName = sub_21FFDA4(SkillName, v20->obj.klass->_1.element_class);
+    SkillName = sub_2213BB4(SkillName, v20->obj.klass->_1.element_class);
     if ( !SkillName )
     {
 LABEL_30:
-      v50 = sub_21FFEF0(SkillName, v28);
-      sub_21FFD90(v50, 0);
+      v50 = sub_2213D00(SkillName, v28);
+      sub_2213BA0(v50, 0);
     }
   }
   if ( (v20->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_29;
   v20->m_Items[1] = v35;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->m_Items[1], (int32_t)v35, v29, v30, v31, v32, v33, v34);
-  UILabelHelper__SetTextSafely_51104760(skillNameLabel, v19, v20, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->m_Items[1], (int32_t)v35, v29, v30, v31, v32, v33, v34);
+  UILabelHelper__SetTextSafely_51178244(skillNameLabel, v19, v20, 0);
   skillChargeTurnLabel = this->fields.skillChargeTurnLabel;
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_5806/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_CHARGE_TURN"*/, 0);
-  v38 = (System_Object_array *)sub_21FFD10(object___TypeInfo, 1);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_5818/*"EVENT_INFO_EQUIP_SKILL_PARTS_SKILL_CHARGE_TURN"*/, 0);
+  v38 = (System_Object_array *)sub_2213B20(object___TypeInfo, 1);
   SkillChargeTurn = EventEquipSkillPartsEntity__GetSkillChargeTurn(entity, 0);
-  SkillName = j_il2cpp_value_box_0(qword_594C070, &SkillChargeTurn);
+  SkillName = j_il2cpp_value_box_0(qword_5984348, &SkillChargeTurn);
   if ( !v38 )
 LABEL_28:
-    sub_21FFECC(SkillName, v7);
+    sub_2213CDC(SkillName, v7);
   v45 = (Il2CppObject *)SkillName;
   if ( SkillName )
   {
-    SkillName = sub_21FFDA4(SkillName, v38->obj.klass->_1.element_class);
+    SkillName = sub_2213BB4(SkillName, v38->obj.klass->_1.element_class);
     if ( !SkillName )
       goto LABEL_30;
   }
   if ( !LODWORD(v38->max_length) )
 LABEL_29:
-    sub_21FFED4(SkillName);
+    sub_2213CE4(SkillName);
   v38->m_Items[0] = v45;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v38->m_Items, (int32_t)v45, v39, v40, v41, v42, v43, v44);
-  UILabelHelper__SetTextSafely_51104760(skillChargeTurnLabel, v37, v38, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v38->m_Items, (int32_t)v45, v39, v40, v41, v42, v43, v44);
+  UILabelHelper__SetTextSafely_51178244(skillChargeTurnLabel, v37, v38, 0);
   skillDetailLabel = this->fields.skillDetailLabel;
   SkillDetail = EventEquipSkillPartsEntity__GetSkillDetail(entity, 0, 0);
   UILabelHelper__SetTextSafely(skillDetailLabel, SkillDetail, 0);

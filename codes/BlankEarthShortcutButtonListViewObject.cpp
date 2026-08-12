@@ -8,15 +8,15 @@ void BlankEarthShortcutButtonListViewObject___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5934D0B & 1) == 0 )
+  if ( (byte_596CE3A & 1) == 0 )
   {
-    sub_21FFC50(&BlankEarthShortcutButtonListViewObject_TypeInfo);
-    sub_21FFC50(&StringLiteral_6330/*"EntryAnim"*/);
-    byte_5934D0B = 1;
+    sub_2213A60(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    sub_2213A60(&StringLiteral_6342/*"EntryAnim"*/);
+    byte_596CE3A = 1;
   }
-  v7 = StringLiteral_6330/*"EntryAnim"*/;
-  BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6330/*"EntryAnim"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_6342/*"EntryAnim"*/;
+  BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6342/*"EntryAnim"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields,
     v7,
     v1,
@@ -35,10 +35,10 @@ void BlankEarthShortcutButtonListViewObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5934D0A & 1) == 0 )
+  if ( (byte_596CE39 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5934D0A = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596CE39 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -60,20 +60,20 @@ void BlankEarthShortcutButtonListViewObject__Awake(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934D05 & 1) == 0 )
+  if ( (byte_596CE34 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewItemDraw___);
-    byte_5934D05 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewItemDraw___);
+    byte_596CE34 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BlankEarthShortcutButtonListViewItemDraw___);
   this->fields.itemDraw = (struct BlankEarthShortcutButtonListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -110,7 +110,7 @@ void BlankEarthShortcutButtonListViewObject__ExecAnimEndAction(
   animEndAction = this->fields.animEndAction;
   p_animEndAction = (MissionNaviTransitionBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_21FFBF4(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }
 
@@ -132,13 +132,13 @@ void BlankEarthShortcutButtonListViewObject__FrameIn(
   EventDelegate_Callback_c *v13; // x0
   EventDelegate_Callback_o *v14; // x21
 
-  if ( (byte_5934D08 & 1) == 0 )
+  if ( (byte_596CE37 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BlankEarthShortcutButtonListViewObject__FrameIn_b__15_0__);
-    sub_21FFC50(&BlankEarthShortcutButtonListViewObject_TypeInfo);
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_UITweener_Begin_TweenPosition___);
-    byte_5934D08 = 1;
+    sub_2213A60(&Method_BlankEarthShortcutButtonListViewObject__FrameIn_b__15_0__);
+    sub_2213A60(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_UITweener_Begin_TweenPosition___);
+    byte_596CE37 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -155,10 +155,10 @@ void BlankEarthShortcutButtonListViewObject__FrameIn(
   gameObject = (UnityEngine_GameObject_o *)UITweener__Begin_object_(
                                              v9,
                                              v8->static_fields->FRAME_IN_ANIM_DURATION,
-                                             (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenPosition___);
+                                             (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
   if ( !gameObject )
 LABEL_8:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   v10 = *(void **)&this->fields.outPos.fields.x;
   v11 = gameObject;
   *(float *)&gameObject[5].fields.m_CachedPtr = this->fields.outPos.fields.z;
@@ -168,7 +168,7 @@ LABEL_8:
   v13 = EventDelegate_Callback_TypeInfo;
   *(intptr_t *)((char *)&v11[5].fields.m_CachedPtr + 4) = v12;
   LODWORD(v11[1].monitor) = 6;
-  v14 = (EventDelegate_Callback_o *)sub_21FFEBC(v13);
+  v14 = (EventDelegate_Callback_o *)sub_2213CCC(v13);
   EventDelegate_Callback___ctor(
     v14,
     (Il2CppObject *)this,
@@ -193,13 +193,13 @@ void BlankEarthShortcutButtonListViewObject__FrameOut(
   EventDelegate_Callback_c *v11; // x0
   EventDelegate_Callback_o *v12; // x21
 
-  if ( (byte_5934D09 & 1) == 0 )
+  if ( (byte_596CE38 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BlankEarthShortcutButtonListViewObject__FrameOut_b__16_0__);
-    sub_21FFC50(&BlankEarthShortcutButtonListViewObject_TypeInfo);
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_UITweener_Begin_TweenPosition___);
-    byte_5934D09 = 1;
+    sub_2213A60(&Method_BlankEarthShortcutButtonListViewObject__FrameOut_b__16_0__);
+    sub_2213A60(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_UITweener_Begin_TweenPosition___);
+    byte_596CE38 = 1;
   }
   v4 = BlankEarthShortcutButtonListViewObject_TypeInfo;
   if ( !*(&BlankEarthShortcutButtonListViewObject_TypeInfo->_2.cctor_finished + 1) )
@@ -207,7 +207,7 @@ void BlankEarthShortcutButtonListViewObject__FrameOut(
     j_il2cpp_runtime_class_init_0(BlankEarthShortcutButtonListViewObject_TypeInfo, method, v2);
     v4 = BlankEarthShortcutButtonListViewObject_TypeInfo;
   }
-  UnityEngine_MonoBehaviour__CancelInvoke_83229692(
+  UnityEngine_MonoBehaviour__CancelInvoke_83442996(
     (UnityEngine_MonoBehaviour_o *)this,
     v4->static_fields->FUNC_ENTRY_ANIM,
     0);
@@ -215,9 +215,9 @@ void BlankEarthShortcutButtonListViewObject__FrameOut(
   v6 = UITweener__Begin_object_(
          gameObject,
          BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields->FRAME_OUT_ANIM_DURATION,
-         (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenPosition___);
+         (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v6 )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   v8 = *(Il2CppClass **)&this->fields.inPos.fields.x;
   v9 = v6;
   *(float *)&v6[8].monitor = this->fields.inPos.fields.z;
@@ -227,7 +227,7 @@ void BlankEarthShortcutButtonListViewObject__FrameOut(
   v11 = EventDelegate_Callback_TypeInfo;
   *(void **)((char *)&v9[8].monitor + 4) = v10;
   LODWORD(v9[2].klass) = 2;
-  v12 = (EventDelegate_Callback_o *)sub_21FFEBC(v11);
+  v12 = (EventDelegate_Callback_o *)sub_2213CCC(v11);
   EventDelegate_Callback___ctor(
     v12,
     (Il2CppObject *)this,
@@ -246,7 +246,7 @@ void BlankEarthShortcutButtonListViewObject__QuickFrameOut(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0);
 }
 
@@ -271,17 +271,17 @@ void BlankEarthShortcutButtonListViewObject__SetEntryAnim(
   float slideInTimingDelayDivision; // s1
   float v18; // s0
 
-  if ( (byte_5934D07 & 1) == 0 )
+  if ( (byte_596CE36 & 1) == 0 )
   {
-    sub_21FFC50(&BlankEarthShortcutButtonListViewObject_TypeInfo);
-    byte_5934D07 = 1;
+    sub_2213A60(&BlankEarthShortcutButtonListViewObject_TypeInfo);
+    byte_596CE36 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.animEndAction = endAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animEndAction,
     (int32_t)endAction,
     v7,
@@ -330,7 +330,7 @@ void BlankEarthShortcutButtonListViewObject__SetItem(
     goto LABEL_10;
   v8 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&item->fields.viewObject,
     (int32_t)this,
     (System_String_o *)seed,
@@ -340,7 +340,7 @@ void BlankEarthShortcutButtonListViewObject__SetItem(
     v6,
     v7);
   v8->fields.linkItem = item;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.linkItem, (int32_t)item, v11, v12, v13, v14, v15, v16);
   this = (BlankEarthShortcutButtonListViewObject_o *)UnityEngine_Component__get_transform(
                                                        (UnityEngine_Component_o *)v8,
                                                        0);
@@ -373,7 +373,7 @@ void BlankEarthShortcutButtonListViewObject__SetItem(
                     !v19) )
   {
 LABEL_10:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v19, (int32_t)this, 0);
   ListViewObject__SetVisible((ListViewObject_o *)v8, 1, 0);
@@ -394,7 +394,7 @@ void BlankEarthShortcutButtonListViewObject__SetShortcutButtonEnable(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_21FFECC(0, isEnable);
+    sub_2213CDC(0, isEnable);
   BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(itemDraw, isEnable, method);
 }
 
@@ -412,13 +412,15 @@ void BlankEarthShortcutButtonListViewObject__SetupDisp(
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x2
   BlankEarthShortcutButtonListViewItemDraw_o *transform; // x0
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  float listItemWidth; // s0
+  float frameOutPositionMultiple; // s2
+  float v14; // s1
 
-  if ( (byte_5934D06 & 1) == 0 )
+  if ( (byte_596CE35 & 1) == 0 )
   {
-    sub_21FFC50(&BlankEarthShortcutButtonListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934D06 = 1;
+    sub_2213A60(&BlankEarthShortcutButtonListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CE35 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -454,17 +456,17 @@ void BlankEarthShortcutButtonListViewObject__SetupDisp(
                                                                        0)) == 0) )
     {
 LABEL_18:
-      sub_21FFECC(transform, v9);
+      sub_2213CDC(transform, v9);
     }
-    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
-    localPosition.fields.x = this->fields.listItemWidth;
-    localPosition.fields.z = this->fields.frameOutPositionMultiple;
+    v14 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0).fields.y));
+    listItemWidth = this->fields.listItemWidth;
+    frameOutPositionMultiple = this->fields.frameOutPositionMultiple;
     this->fields.inPos.fields.x = 0.0;
     this->fields.inPos.fields.z = 0.0;
-    this->fields.inPos.fields.y = localPosition.fields.y;
+    this->fields.inPos.fields.y = v14;
     this->fields.outPos.fields.z = 0.0;
-    this->fields.outPos.fields.x = (float)(localPosition.fields.x * localPosition.fields.z) + 0.0;
-    this->fields.outPos.fields.y = localPosition.fields.y + 0.0;
+    this->fields.outPos.fields.x = (float)(listItemWidth * frameOutPositionMultiple) + 0.0;
+    this->fields.outPos.fields.y = v14 + 0.0;
   }
 }
 
@@ -485,7 +487,7 @@ void BlankEarthShortcutButtonListViewObject___FrameIn_b__15_0(
   animEndAction = this->fields.animEndAction;
   p_animEndAction = (MissionNaviTransitionBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_21FFBF4(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }
 
@@ -506,6 +508,6 @@ void BlankEarthShortcutButtonListViewObject___FrameOut_b__16_0(
   animEndAction = this->fields.animEndAction;
   p_animEndAction = (MissionNaviTransitionBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_21FFBF4(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }

@@ -45,16 +45,16 @@ void DisplayEffectArgument___ctor(
   bool v49; // w6
   bool v50; // w7
 
-  if ( (byte_593B152 & 1) == 0 )
+  if ( (byte_5973341 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593B152 = 1;
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973341 = 1;
   }
   v17 = (int)StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.attachNodeName,
     v17,
     *(System_String_o **)&funcIndex,
@@ -63,10 +63,10 @@ void DisplayEffectArgument___ctor(
     isTreasureDevice,
     (bool)attachNodeName,
     ispopAdjustment);
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   v19 = int___TypeInfo;
   v20 = UnityEngine_Vector3_TypeInfo;
@@ -78,20 +78,20 @@ void DisplayEffectArgument___ctor(
   v24 = v23->zeroVector.fields.z;
   *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v23->zeroVector.fields.x;
   this->fields.popupOffset.fields.z = v24;
-  v25 = (struct System_Int32_array *)sub_21FFD10(v19, 0);
+  v25 = (struct System_Int32_array *)sub_2213B20(v19, 0);
   this->fields.fieldIndiv = v25;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v25, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v25, v26, v27, v28, v29, v30, v31);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actObj = actObj;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)actObj, v32, v33, v34, v35, v36, v37);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)actObj, v32, v33, v34, v35, v36, v37);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_actData, (int32_t)actData, v39, v40, v41, v42, v43, v44);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_actData, (int32_t)actData, v39, v40, v41, v42, v43, v44);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_attachNodeName,
     (int32_t)attachNodeName,
     v45,
@@ -113,10 +113,10 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
   __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_593B154 & 1) == 0 )
+  if ( (byte_5973343 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593B154 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973343 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, targetObj);
@@ -131,7 +131,7 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0);
 LABEL_13:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
   return 1;
 }
@@ -170,10 +170,10 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
   v14 = buffOffset.fields.y;
   v15 = buffOffset.fields.x;
   v16 = fieldIndiv;
-  if ( (byte_593B153 & 1) == 0 )
+  if ( (byte_5973342 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    byte_593B153 = 1;
+    sub_2213A60(&int___TypeInfo);
+    byte_5973342 = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v15;
@@ -182,7 +182,7 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteEffectIds,
     (int32_t)overwriteEffectIds,
     (System_String_o *)fieldIndiv,
@@ -192,8 +192,8 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
     v8,
     v9);
   if ( !v16 )
-    v16 = (struct System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+    v16 = (struct System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
   this->fields.fieldIndiv = v16;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v16, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v16, v19, v20, v21, v22, v23, v24);
   return this;
 }

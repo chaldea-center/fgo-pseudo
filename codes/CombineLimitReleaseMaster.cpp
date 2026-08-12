@@ -1,14 +1,14 @@
 void CombineLimitReleaseMaster___ctor(CombineLimitReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938422 & 1) == 0 )
+  if ( (byte_59705D2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string___ctor__);
-    byte_5938422 = 1;
+    sub_2213A60(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string___ctor__);
+    byte_59705D2 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     461,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ CombineLimitReleaseEntity_o *CombineLimitReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938423 & 1) == 0 )
+  if ( (byte_59705D3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__GetEntity__);
-    byte_5938423 = 1;
+    sub_2213A60(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__GetEntity__);
+    byte_59705D3 = 1;
   }
   PK = (Il2CppObject *)CombineLimitReleaseEntity__CreatePK(svtId, svtLimit, 0);
   return (CombineLimitReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_3EE2044 *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__GetEntity__);
+                                          (const MethodInfo_3F157EC *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__GetEntity__);
 }
 
 
@@ -65,24 +65,24 @@ bool CombineLimitReleaseMaster__IsExistSealedLimitCount(
   __int64 v28; // x0
   System_Collections_Generic_IEnumerator_T__o *v30; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_5938421 & 1) == 0 )
+  if ( (byte_59705D1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_CombineLimitReleaseEntity__GetEnumerator__);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_CombineLimitReleaseEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_5938421 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_CombineLimitReleaseEntity__GetEnumerator__);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_CombineLimitReleaseEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59705D1 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, *(_QWORD *)&combineLimitId);
+    sub_2213CDC(0, *(_QWORD *)&combineLimitId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_CombineLimitReleaseEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_CombineLimitReleaseEntity__GetEnumerator__);
   v30 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   for ( i = Enumerator; ; i = v30 )
   {
     klass = i->klass;
@@ -102,7 +102,7 @@ bool CombineLimitReleaseMaster__IsExistSealedLimitCount(
     else
     {
 LABEL_10:
-      v12 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v12 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v12)(
             i,
@@ -111,7 +111,7 @@ LABEL_10:
     if ( (v13 & 1) == 0 )
       break;
     if ( !v30 )
-      sub_21FFECC(v13, v14);
+      sub_2213CDC(v13, v14);
     v16 = v30->klass;
     v17 = *(unsigned __int16 *)&v30->klass->_2.rank;
     if ( *(_WORD *)&v30->klass->_2.rank )
@@ -129,13 +129,13 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v19 = sub_2237E2C(v30, System_Collections_Generic_IEnumerator_CombineLimitReleaseEntity__TypeInfo, 0);
+      v19 = sub_224BC3C(v30, System_Collections_Generic_IEnumerator_CombineLimitReleaseEntity__TypeInfo, 0);
     }
     v20 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
                       v30,
                       *(_QWORD *)(v19 + 8));
     if ( !v20 )
-      sub_21FFECC(0, v21);
+      sub_2213CDC(0, v21);
     if ( v20[4] == combineLimitId )
     {
       v22 = (int)v20[8];
@@ -168,7 +168,7 @@ LABEL_28:
     else
     {
 LABEL_33:
-      v28 = sub_2237E2C(v30, System_IDisposable_TypeInfo, 0);
+      v28 = sub_224BC3C(v30, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(v30, *(_QWORD *)(v28 + 8));
   }
@@ -185,15 +185,15 @@ bool CombineLimitReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938424 & 1) == 0 )
+  if ( (byte_59705D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__TryGetEntity__);
-    byte_5938424 = 1;
+    sub_2213A60(&Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__TryGetEntity__);
+    byte_59705D4 = 1;
   }
   PK = (Il2CppObject *)CombineLimitReleaseEntity__CreatePK(svtId, svtLimit, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_CombineLimitReleaseMaster__CombineLimitReleaseEntity__string__TryGetEntity__);
 }

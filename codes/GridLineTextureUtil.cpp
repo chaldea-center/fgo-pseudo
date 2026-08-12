@@ -57,15 +57,15 @@ LABEL_18:
           v24 = &resultColors->obj + v23;
           --v22;
           v23 += resultTextureWidth;
-          v24[2] = (Il2CppObject)xmmword_E93460;
+          v24[2] = (Il2CppObject)xmmword_E9C600;
           if ( !v22 )
             goto LABEL_18;
         }
 LABEL_20:
-        sub_21FFED4(resultColors);
+        sub_2213CE4(resultColors);
       }
 LABEL_21:
-      sub_21FFECC(resultColors, *(_QWORD *)&resultTextureWidth);
+      sub_2213CDC(resultColors, *(_QWORD *)&resultTextureWidth);
     }
   }
   else if ( panelUnitSizeX >= 1 )
@@ -126,7 +126,7 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
   int32_t v12; // w26
   UnityEngine_Texture2D_o *v13; // x21
   UnityEngine_Color_array *v14; // x26
-  UnityEngine_Color_array *Pixels_83107924; // x27
+  UnityEngine_Color_array *Pixels_83321228; // x27
   const MethodInfo *v16; // x4
   unsigned int HorizontalPanelNum_k__BackingField; // w8
   unsigned int VerticalPanelNum_k__BackingField; // w9
@@ -137,11 +137,11 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
   const MethodInfo *v24; // [xsp+8h] [xbp-78h]
 
   v6 = excludePanelUniqueIds;
-  if ( (byte_5934E56 & 1) == 0 )
+  if ( (byte_596CF85 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Color___TypeInfo);
-    excludePanelUniqueIds = (System_Int32_array *)sub_21FFC50(&UnityEngine_Texture2D_TypeInfo);
-    byte_5934E56 = 1;
+    sub_2213A60(&UnityEngine_Color___TypeInfo);
+    excludePanelUniqueIds = (System_Int32_array *)sub_2213A60(&UnityEngine_Texture2D_TypeInfo);
+    byte_596CF85 = 1;
   }
   if ( !positionCalculator )
     goto LABEL_23;
@@ -151,8 +151,8 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
   v10 = y == INFINITY ? 0x80000000 : (int)y;
   v11 = v9 + v9 * positionCalculator->fields._HorizontalPanelNum_k__BackingField;
   v12 = v10 + v10 * positionCalculator->fields._VerticalPanelNum_k__BackingField;
-  v13 = (UnityEngine_Texture2D_o *)sub_21FFEBC(UnityEngine_Texture2D_TypeInfo);
-  UnityEngine_Texture2D___ctor_83105820(v13, v11, v12, 0);
+  v13 = (UnityEngine_Texture2D_o *)sub_2213CCC(UnityEngine_Texture2D_TypeInfo);
+  UnityEngine_Texture2D___ctor_83319124(v13, v11, v12, 0);
   if ( !gridTexture )
     goto LABEL_23;
   if ( ((int (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))gridTexture->klass->vtable._4_get_width.methodPtr)(
@@ -162,8 +162,8 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
          gridTexture,
          gridTexture->klass->vtable._6_get_height.method) >= 3 * v10 )
   {
-    v14 = (UnityEngine_Color_array *)sub_21FFD10(UnityEngine_Color___TypeInfo, (unsigned int)(v12 * v11));
-    Pixels_83107924 = UnityEngine_Texture2D__GetPixels_83107924(gridTexture, 0);
+    v14 = (UnityEngine_Color_array *)sub_2213B20(UnityEngine_Color___TypeInfo, (unsigned int)(v12 * v11));
+    Pixels_83321228 = UnityEngine_Texture2D__GetPixels_83321228(gridTexture, 0);
     excludePanelUniqueIds = (System_Int32_array *)((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))gridTexture->klass->vtable._4_get_width.methodPtr)(
                                                     gridTexture,
                                                     gridTexture->klass->vtable._4_get_width.method);
@@ -181,7 +181,7 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
           do
           {
             sliceIndex = GridLineTextureUtil__GetSliceIndex(v20, v21, v6, positionCalculator, v16);
-            GridLineTextureUtil__ApplyTextureColor(v14, v11, Pixels_83107924, v19, v20, v21, v9, v10, sliceIndex, v24);
+            GridLineTextureUtil__ApplyTextureColor(v14, v11, Pixels_83321228, v19, v20, v21, v9, v10, sliceIndex, v24);
             VerticalPanelNum_k__BackingField = positionCalculator->fields._VerticalPanelNum_k__BackingField;
             ++v21;
           }
@@ -194,12 +194,12 @@ UnityEngine_Texture2D_o *GridLineTextureUtil__CreateWholeGridTexture(
     }
     if ( v13 )
     {
-      UnityEngine_Texture2D__SetPixels_83106836(v13, v14, 0);
-      UnityEngine_Texture2D__Apply_83107520(v13, 0);
+      UnityEngine_Texture2D__SetPixels_83320140(v13, v14, 0);
+      UnityEngine_Texture2D__Apply_83320824(v13, 0);
       return v13;
     }
 LABEL_23:
-    sub_21FFECC(excludePanelUniqueIds, positionCalculator);
+    sub_2213CDC(excludePanelUniqueIds, positionCalculator);
   }
   return v13;
 }
@@ -240,13 +240,13 @@ int32_t GridLineTextureUtil__GetSliceIndex(
   char v34; // w9
 
   v8 = hIndex;
-  if ( (byte_5934E57 & 1) == 0 )
+  if ( (byte_596CF86 & 1) == 0 )
   {
-    *(_QWORD *)&hIndex = sub_21FFC50(&PanelUniqueIDUtil_TypeInfo);
-    byte_5934E57 = 1;
+    *(_QWORD *)&hIndex = sub_2213A60(&PanelUniqueIDUtil_TypeInfo);
+    byte_596CF86 = 1;
   }
   if ( !positionCalculator )
-    sub_21FFECC(*(_QWORD *)&hIndex, *(_QWORD *)&vIndex);
+    sub_2213CDC(*(_QWORD *)&hIndex, *(_QWORD *)&vIndex);
   HorizontalPanelNum_k__BackingField = positionCalculator->fields._HorizontalPanelNum_k__BackingField;
   VerticalPanelNum_k__BackingField = positionCalculator->fields._VerticalPanelNum_k__BackingField;
   v12 = vIndex > 0 && HorizontalPanelNum_k__BackingField > v8;

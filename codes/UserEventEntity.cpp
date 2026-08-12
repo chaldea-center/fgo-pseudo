@@ -1,30 +1,30 @@
 void UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59394E5 & 1) == 0 )
+  if ( (byte_59716A5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59394E5 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716A5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserEventEntity___ctor_49990016(
+void UserEventEntity___ctor_50053392(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_59394E6 & 1) == 0 )
+  if ( (byte_59716A6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59394E6 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716A6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.updatedAt = 0;
@@ -36,15 +36,15 @@ void UserEventEntity___ctor_49990016(
 
 System_String_o *UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_59394E4 & 1) == 0 )
+  if ( (byte_59716A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_59394E4 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_59716A4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3854538 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

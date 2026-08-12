@@ -8,16 +8,16 @@ void ExRoomResourceCatalogAssetBundle___ctor(ExRoomResourceCatalogAssetBundle_o 
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5932D50 & 1) == 0 )
+  if ( (byte_596AE54 & 1) == 0 )
   {
-    sub_21FFC50(&AssetStorageLoadWrapper_TypeInfo);
-    byte_5932D50 = 1;
+    sub_2213A60(&AssetStorageLoadWrapper_TypeInfo);
+    byte_596AE54 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (AssetStorageLoadWrapper_o *)sub_21FFEBC(AssetStorageLoadWrapper_TypeInfo);
+  v3 = (AssetStorageLoadWrapper_o *)sub_2213CCC(AssetStorageLoadWrapper_TypeInfo);
   AssetStorageLoadWrapper___ctor(v3, 0);
   this->fields.assetStorageLoadWrapper = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -36,11 +36,11 @@ UnityEngine_GameObject_o *ExRoomResourceCatalogAssetBundle__CreateGameObject(
   Il2CppObject *v12; // x21
 
   v6 = this;
-  if ( (byte_5932D57 & 1) == 0 )
+  if ( (byte_596AE5B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (ExRoomResourceCatalogAssetBundle_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932D57 = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (ExRoomResourceCatalogAssetBundle_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AE5B = 1;
   }
   GameObject = (Il2CppObject *)ExRoomResourceCatalogAssetBundle__GetGameObject(
                                  this,
@@ -56,9 +56,9 @@ UnityEngine_GameObject_o *ExRoomResourceCatalogAssetBundle__CreateGameObject(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
     v12 = UnityEngine_Object__Instantiate_object_(
             GameObject,
-            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)parent, 0, 0) )
-      GameObjectExtensions__SafeSetParent_42881912((UnityEngine_GameObject_o *)v12, parent, 0);
+      GameObjectExtensions__SafeSetParent_42897308((UnityEngine_GameObject_o *)v12, parent, 0);
   }
   return (UnityEngine_GameObject_o *)v12;
 }
@@ -72,21 +72,21 @@ ExRoomQuestComponent_o *ExRoomResourceCatalogAssetBundle__CreateQuestPanelPrefab
   const MethodInfo *v3; // x3
   ExRoomQuestComponent_o *result; // x0
 
-  if ( (byte_5932D54 & 1) == 0 )
+  if ( (byte_596AE58 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ExRoomQuestComponent___);
-    sub_21FFC50(&StringLiteral_11386/*"QuestPanel"*/);
-    byte_5932D54 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ExRoomQuestComponent___);
+    sub_2213A60(&StringLiteral_11406/*"QuestPanel"*/);
+    byte_596AE58 = 1;
   }
   result = (ExRoomQuestComponent_o *)ExRoomResourceCatalogAssetBundle__CreateGameObject(
                                        this,
-                                       (System_String_o *)StringLiteral_11386/*"QuestPanel"*/,
+                                       (System_String_o *)StringLiteral_11406/*"QuestPanel"*/,
                                        parent,
                                        v3);
   if ( result )
     return (ExRoomQuestComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)result,
-                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ExRoomQuestComponent___);
+                                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ExRoomQuestComponent___);
   return result;
 }
 
@@ -99,21 +99,21 @@ ExRoomShopComponent_o *ExRoomResourceCatalogAssetBundle__CreateShopPanelPrefab(
   const MethodInfo *v3; // x3
   ExRoomShopComponent_o *result; // x0
 
-  if ( (byte_5932D55 & 1) == 0 )
+  if ( (byte_596AE59 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ExRoomShopComponent___);
-    sub_21FFC50(&StringLiteral_13369/*"ShopPanel"*/);
-    byte_5932D55 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ExRoomShopComponent___);
+    sub_2213A60(&StringLiteral_13396/*"ShopPanel"*/);
+    byte_596AE59 = 1;
   }
   result = (ExRoomShopComponent_o *)ExRoomResourceCatalogAssetBundle__CreateGameObject(
                                       this,
-                                      (System_String_o *)StringLiteral_13369/*"ShopPanel"*/,
+                                      (System_String_o *)StringLiteral_13396/*"ShopPanel"*/,
                                       parent,
                                       v3);
   if ( result )
     return (ExRoomShopComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                       (UnityEngine_GameObject_o *)result,
-                                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ExRoomShopComponent___);
+                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ExRoomShopComponent___);
   return result;
 }
 
@@ -126,21 +126,21 @@ ExRoomTopComponent_o *ExRoomResourceCatalogAssetBundle__CreateTopPanelPrefab(
   const MethodInfo *v3; // x3
   ExRoomTopComponent_o *result; // x0
 
-  if ( (byte_5932D53 & 1) == 0 )
+  if ( (byte_596AE57 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ExRoomTopComponent___);
-    sub_21FFC50(&StringLiteral_15122/*"TopPanel"*/);
-    byte_5932D53 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ExRoomTopComponent___);
+    sub_2213A60(&StringLiteral_15152/*"TopPanel"*/);
+    byte_596AE57 = 1;
   }
   result = (ExRoomTopComponent_o *)ExRoomResourceCatalogAssetBundle__CreateGameObject(
                                      this,
-                                     (System_String_o *)StringLiteral_15122/*"TopPanel"*/,
+                                     (System_String_o *)StringLiteral_15152/*"TopPanel"*/,
                                      parent,
                                      v3);
   if ( result )
     return (ExRoomTopComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)result,
-                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ExRoomTopComponent___);
+                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ExRoomTopComponent___);
   return result;
 }
 
@@ -151,36 +151,36 @@ UnityEngine_GameObject_o *ExRoomResourceCatalogAssetBundle__GetGameObject(
         System_String_o *name,
         const MethodInfo *method)
 {
-  if ( (byte_5932D56 & 1) == 0 )
+  if ( (byte_596AE5A & 1) == 0 )
   {
-    this = (ExRoomResourceCatalogAssetBundle_o *)sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    byte_5932D56 = 1;
+    this = (ExRoomResourceCatalogAssetBundle_o *)sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    byte_596AE5A = 1;
   }
   if ( !assetData )
-    sub_21FFECC(this, assetData);
-  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58323140(
+    sub_2213CDC(this, assetData);
+  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58532980(
                                        assetData,
                                        name,
-                                       (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                       (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
 }
 
 
 Il2CppObject *ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object_(
         ExRoomResourceCatalogAssetBundle_o *this,
         System_String_o *prefabName,
-        const MethodInfo_3878E4C *method)
+        const MethodInfo_38AC314 *method)
 {
-  const MethodInfo_3878E8C **rgctx_data; // x8
+  const MethodInfo_38AC354 **rgctx_data; // x8
   ExRoomResourceCatalogAssetBundle_o *v5; // x20
 
-  rgctx_data = (const MethodInfo_3878E8C **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_38AC354 **)method->rgctx_data;
   v5 = this;
   if ( !rgctx_data )
   {
-    this = (ExRoomResourceCatalogAssetBundle_o *)sub_2237B54();
-    rgctx_data = (const MethodInfo_3878E8C **)method->rgctx_data;
+    this = (ExRoomResourceCatalogAssetBundle_o *)sub_224B964();
+    rgctx_data = (const MethodInfo_38AC354 **)method->rgctx_data;
   }
-  return ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object__59215500(
+  return ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object__59425620(
            this,
            v5->fields.prefabAssetData,
            prefabName,
@@ -188,42 +188,42 @@ Il2CppObject *ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object_(
 }
 
 
-Il2CppObject *ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object__59215500(
+Il2CppObject *ExRoomResourceCatalogAssetBundle__GetPrefabComponent_object__59425620(
         ExRoomResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
         System_String_o *assetName,
-        const MethodInfo_3878E8C *method)
+        const MethodInfo_38AC354 *method)
 {
   __int64 v7; // x1
-  Il2CppObject *Object_object__58323140; // x20
+  Il2CppObject *Object_object__58532980; // x20
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    this = (ExRoomResourceCatalogAssetBundle_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    this = (ExRoomResourceCatalogAssetBundle_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      this = (ExRoomResourceCatalogAssetBundle_o *)sub_2237B54();
+      this = (ExRoomResourceCatalogAssetBundle_o *)sub_224B964();
   }
   if ( !assetData )
     goto LABEL_11;
-  Object_object__58323140 = AssetData__GetObject_object__58323140(
+  Object_object__58532980 = AssetData__GetObject_object__58532980(
                               assetData,
                               assetName,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
   this = (ExRoomResourceCatalogAssetBundle_o *)UnityEngine_Object__op_Equality(
-                                                 (UnityEngine_Object_o *)Object_object__58323140,
+                                                 (UnityEngine_Object_o *)Object_object__58532980,
                                                  0,
                                                  0);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0;
-  if ( !Object_object__58323140 )
+  if ( !Object_object__58532980 )
 LABEL_11:
-    sub_21FFECC(this, assetData);
+    sub_2213CDC(this, assetData);
   return UnityEngine_GameObject__GetComponent_object_(
-           (UnityEngine_GameObject_o *)Object_object__58323140,
-           (const MethodInfo_3883A78 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+           (UnityEngine_GameObject_o *)Object_object__58532980,
+           (const MethodInfo_38B6F40 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
@@ -234,18 +234,18 @@ UnityEngine_GameObject_o *ExRoomResourceCatalogAssetBundle__GetPrefabObject(
 {
   AssetData_o *prefabAssetData; // x0
 
-  if ( (byte_5932D52 & 1) == 0 )
+  if ( (byte_596AE56 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    byte_5932D52 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    byte_596AE56 = 1;
   }
   prefabAssetData = this->fields.prefabAssetData;
   if ( !prefabAssetData )
-    sub_21FFECC(0, prefabName);
-  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58323140(
+    sub_2213CDC(0, prefabName);
+  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58532980(
                                        prefabAssetData,
                                        prefabName,
-                                       (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                       (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
 }
 
 
@@ -302,34 +302,34 @@ void ExRoomResourceCatalogAssetBundle__LoadAsset(
   bool v50; // w6
   bool v51; // w7
 
-  if ( (byte_5932D51 & 1) == 0 )
+  if ( (byte_596AE55 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action___TypeInfo);
-    sub_21FFC50(&System_Action_Action____TypeInfo);
-    sub_21FFC50(&System_Action_Action__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManagerUnit_TypeInfo);
-    sub_21FFC50(&ChainableActionParallel_TypeInfo);
-    sub_21FFC50(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__0__);
-    sub_21FFC50(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__1__);
-    sub_21FFC50(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__2__);
-    sub_21FFC50(&ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_6536/*"ExRoom"*/);
-    byte_5932D51 = 1;
+    sub_2213A60(&System_Action___TypeInfo);
+    sub_2213A60(&System_Action_Action____TypeInfo);
+    sub_2213A60(&System_Action_Action__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManagerUnit_TypeInfo);
+    sub_2213A60(&ChainableActionParallel_TypeInfo);
+    sub_2213A60(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__0__);
+    sub_2213A60(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__1__);
+    sub_2213A60(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0__LoadAsset_b__2__);
+    sub_2213A60(&ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0_TypeInfo);
+    sub_2213A60(&StringLiteral_6548/*"ExRoom"*/);
+    byte_596AE55 = 1;
   }
-  v5 = sub_21FFEBC(ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_2213CCC(ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_12;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
-  v21 = (AtlasManagerUnit_o *)sub_21FFEBC(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v21, (System_String_o *)StringLiteral_6536/*"ExRoom"*/, assetStorageLoadWrapper, 0);
+  v21 = (AtlasManagerUnit_o *)sub_2213CCC(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v21, (System_String_o *)StringLiteral_6548/*"ExRoom"*/, assetStorageLoadWrapper, 0);
   this->fields.exRoomAtlasManagerUnit = v21;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.exRoomAtlasManagerUnit,
     (int32_t)v21,
     v22,
@@ -338,8 +338,8 @@ void ExRoomResourceCatalogAssetBundle__LoadAsset(
     v25,
     v26,
     v27);
-  v28 = sub_21FFD10(System_Action_Action____TypeInfo, 2);
-  v29 = (System_Action_object__o *)sub_21FFEBC(System_Action_Action__TypeInfo);
+  v28 = sub_2213B20(System_Action_Action____TypeInfo, 2);
+  v29 = (System_Action_object__o *)sub_2213CCC(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v29,
     (Il2CppObject *)v5,
@@ -350,8 +350,8 @@ void ExRoomResourceCatalogAssetBundle__LoadAsset(
   if ( !*(_DWORD *)(v28 + 24) )
     goto LABEL_13;
   *(_QWORD *)(v28 + 32) = v29;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 32), (int32_t)v29, v30, v31, v32, v33, v34, v35);
-  v36 = (System_Action_object__o *)sub_21FFEBC(System_Action_Action__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 32), (int32_t)v29, v30, v31, v32, v33, v34, v35);
+  v36 = (System_Action_object__o *)sub_2213CCC(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v36,
     (Il2CppObject *)v5,
@@ -360,11 +360,11 @@ void ExRoomResourceCatalogAssetBundle__LoadAsset(
   if ( (*(_DWORD *)(v28 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_13;
   *(_QWORD *)(v28 + 40) = v36;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 40), (int32_t)v36, v37, v38, v39, v40, v41, v42);
-  v43 = (ChainableActionParallel_o *)sub_21FFEBC(ChainableActionParallel_TypeInfo);
-  ChainableActionParallel___ctor_55903544(v43, (System_Action_Action__array *)v28, 0);
-  v44 = sub_21FFD10(System_Action___TypeInfo, 1);
-  v45 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 40), (int32_t)v36, v37, v38, v39, v40, v41, v42);
+  v43 = (ChainableActionParallel_o *)sub_2213CCC(ChainableActionParallel_TypeInfo);
+  ChainableActionParallel___ctor_56108200(v43, (System_Action_Action__array *)v28, 0);
+  v44 = sub_2213B20(System_Action___TypeInfo, 1);
+  v45 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v45,
     (Il2CppObject *)v5,
@@ -374,12 +374,12 @@ void ExRoomResourceCatalogAssetBundle__LoadAsset(
     goto LABEL_12;
   if ( !*(_DWORD *)(v44 + 24) )
 LABEL_13:
-    sub_21FFED4(v6);
+    sub_2213CE4(v6);
   *(_QWORD *)(v44 + 32) = v45;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v44 + 32), (int32_t)v45, v46, v47, v48, v49, v50, v51);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v44 + 32), (int32_t)v45, v46, v47, v48, v49, v50, v51);
   if ( !v43 || (v6 = ChainableActionBase__Final((ChainableActionBase_o *)v43, (System_Action_array *)v44, 0)) == 0 )
 LABEL_12:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   ChainableActionBase__Execute(v6, 0);
 }
 
@@ -405,7 +405,7 @@ void ExRoomResourceCatalogAssetBundle__LoadAssetStorage(
     return;
   if ( !loadCallback )
 LABEL_5:
-    sub_21FFECC(assetStorageLoadWrapper, assetBundlePath);
+    sub_2213CDC(assetStorageLoadWrapper, assetBundlePath);
   ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))loadCallback->fields.invoke_impl)(
     loadCallback->fields.method_code,
     0,
@@ -419,7 +419,7 @@ void ExRoomResourceCatalogAssetBundle__ReleaseAll(ExRoomResourceCatalogAssetBund
 
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
   if ( !assetStorageLoadWrapper )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   AssetStorageLoadWrapper__ReleaseAll(assetStorageLoadWrapper, 0);
 }
 
@@ -434,7 +434,7 @@ void ExRoomResourceCatalogAssetBundle__SetSprite(
 
   exRoomAtlasManagerUnit = this->fields.exRoomAtlasManagerUnit;
   if ( !exRoomAtlasManagerUnit )
-    sub_21FFECC(0, sprite);
+    sub_2213CDC(0, sprite);
   AtlasManagerUnit__SetUI(exRoomAtlasManagerUnit, sprite, spriteName, 0);
 }
 
@@ -471,23 +471,23 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0___LoadAsset_b__0(
   AssetLoader_LoadEndDataHandler_o *v21; // x20
   const MethodInfo *v22; // x3
 
-  if ( (byte_5932D58 & 1) == 0 )
+  if ( (byte_596AE5C & 1) == 0 )
   {
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1__LoadAsset_b__3__);
-    sub_21FFC50(&ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_TypeInfo);
-    sub_21FFC50(&StringLiteral_6536/*"ExRoom"*/);
-    byte_5932D58 = 1;
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1__LoadAsset_b__3__);
+    sub_2213A60(&ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_TypeInfo);
+    sub_2213A60(&StringLiteral_6548/*"ExRoom"*/);
+    byte_596AE5C = 1;
   }
-  v5 = sub_21FFEBC(ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_TypeInfo);
+  v5 = sub_2213CCC(ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_QWORD *)(v5 + 16) = f,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)f, v14, v15, v16, v17, v18, v19),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)f, v14, v15, v16, v17, v18, v19),
         _4__this = this->fields.__4__this,
-        v21 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo),
+        v21 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo),
         AssetLoader_LoadEndDataHandler___ctor(
           v21,
           (Il2CppObject *)v5,
@@ -495,9 +495,9 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0___LoadAsset_b__0(
           0),
         !_4__this) )
   {
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
-  ExRoomResourceCatalogAssetBundle__LoadAssetStorage(_4__this, (System_String_o *)StringLiteral_6536/*"ExRoom"*/, v21, v22);
+  ExRoomResourceCatalogAssetBundle__LoadAssetStorage(_4__this, (System_String_o *)StringLiteral_6548/*"ExRoom"*/, v21, v22);
 }
 
 
@@ -512,7 +512,7 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0___LoadAsset_b__1(
   if ( !_4__this
     || (this = (ExRoomResourceCatalogAssetBundle___c__DisplayClass7_0_o *)_4__this->fields.exRoomAtlasManagerUnit) == 0 )
   {
-    sub_21FFECC(this, f);
+    sub_2213CDC(this, f);
   }
   AtlasManagerUnit__Load((AtlasManagerUnit_o *)this, f, 3, 0);
 }
@@ -558,9 +558,9 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1___LoadAsset_b__3(
   if ( !CS___8__locals1
     || (v9 = this,
         (this = (ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_o *)CS___8__locals1->fields.__4__this) == 0)
-    || (this[1].klass = (ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_c *)asset,
-        sub_21FFBF4(
-          (MissionNaviTransitionBoardItem_o *)&this[1],
+    || (*((_QWORD *)this + 4) = asset,
+        sub_2213A04(
+          (MissionNaviTransitionBoardItem_o *)(this + 1),
           (int32_t)asset,
           (System_String_o *)method,
           v3,
@@ -570,7 +570,7 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1___LoadAsset_b__3(
           v7),
         (f = v9->fields.f) == 0) )
   {
-    sub_21FFECC(this, asset);
+    sub_2213CDC(this, asset);
   }
   ((void (__fastcall *)(intptr_t, intptr_t))f->fields.invoke_impl)(f->fields.method_code, f->fields.method);
 }

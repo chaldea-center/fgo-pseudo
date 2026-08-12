@@ -1,9 +1,9 @@
 void EquipGraphListViewObject___ctor(EquipGraphListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_593868E & 1) == 0 )
+  if ( (byte_59709E9 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_593868E = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_59709E9 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method);
@@ -23,20 +23,20 @@ void EquipGraphListViewObject__Awake(EquipGraphListViewObject_o *this, const Met
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5938685 & 1) == 0 )
+  if ( (byte_59709E0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
-    byte_5938685 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
+    byte_59709E0 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
   this->fields.itemDraw = (struct EquipGraphListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -57,21 +57,21 @@ UnityEngine_GameObject_o *EquipGraphListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_5938689 & 1) == 0 )
+  if ( (byte_59709E4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___);
-    byte_5938689 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___);
+    byte_59709E4 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___)) == 0) )
+                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___)) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
-  EquipGraphListViewObject__Init_48955644((EquipGraphListViewObject_o *)DragObject, 2, 0, v6);
+  EquipGraphListViewObject__Init_49134312((EquipGraphListViewObject_o *)DragObject, 2, 0, v6);
   return v5;
 }
 
@@ -81,10 +81,10 @@ EquipGraphListViewItem_o *EquipGraphListViewObject__GetItem(EquipGraphListViewOb
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5938687 & 1) == 0 )
+  if ( (byte_59709E2 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphListViewItem_TypeInfo);
-    byte_5938687 = 1;
+    sub_2213A60(&EquipGraphListViewItem_TypeInfo);
+    byte_59709E2 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -131,10 +131,10 @@ void EquipGraphListViewObject__Init(
   int32_t v32; // w8
   struct System_Action_o *v33; // x19
 
-  if ( (byte_593868A & 1) == 0 )
+  if ( (byte_59709E5 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphListViewItem_TypeInfo);
-    byte_593868A = 1;
+    sub_2213A60(&EquipGraphListViewItem_TypeInfo);
+    byte_59709E5 = 1;
   }
   if ( initMode == 4 )
   {
@@ -169,12 +169,12 @@ void EquipGraphListViewObject__Init(
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_21FFECC(transform, v18);
+      sub_2213CDC(transform, v18);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
     this->fields.callbackFunc = callbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callbackFunc,
       v20,
@@ -185,7 +185,7 @@ void EquipGraphListViewObject__Init(
       v25);
     if ( v14 <= 3 )
     {
-      v32 = dword_E92F40[v14];
+      v32 = dword_E9C0E0[v14];
       this->fields.dispMode = v14;
       this->fields.state = v32;
     }
@@ -195,7 +195,7 @@ void EquipGraphListViewObject__Init(
     if ( *p_callbackFunc )
     {
       *p_callbackFunc = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
         0,
         (System_String_o *)v26,
@@ -216,8 +216,7 @@ void EquipGraphListViewObject__InitItem(EquipGraphListViewObject_o *this, const 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void EquipGraphListViewObject__Init_48955644(
+void EquipGraphListViewObject__Init_49134312(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
         bool afterEndSelectConfirm,
@@ -225,19 +224,24 @@ void EquipGraphListViewObject__Init_48955644(
 {
   const MethodInfo *v4; // x4
   float v5; // s0
-  int v6; // s1 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
+  UnityEngine_Vector3_o v12; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, 0, v5, *(UnityEngine_Vector3_o *)&v6, afterEndSelectConfirm, v4);
+  v12.fields.x = v6;
+  v12.fields.y = v7;
+  v12.fields.z = v8;
+  EquipGraphListViewObject__Init(this, initMode, 0, v5, v12, afterEndSelectConfirm, v4);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void EquipGraphListViewObject__Init_48956440(
+void EquipGraphListViewObject__Init_49135108(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -245,19 +249,24 @@ void EquipGraphListViewObject__Init_48956440(
         const MethodInfo *method)
 {
   const MethodInfo *v5; // x4
-  int v6; // s1 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
+  UnityEngine_Vector3_o v12; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v6, 0, v5);
+  v12.fields.x = v6;
+  v12.fields.y = v7;
+  v12.fields.z = v8;
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, v12, 0, v5);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void EquipGraphListViewObject__Init_48956528(
+void EquipGraphListViewObject__Init_49135196(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -265,14 +274,20 @@ void EquipGraphListViewObject__Init_48956528(
 {
   const MethodInfo *v4; // x4
   float v5; // s0
-  int v6; // s1 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
+  UnityEngine_Vector3_o v12; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v5, *(UnityEngine_Vector3_o *)&v6, 0, v4);
+  v12.fields.x = v6;
+  v12.fields.y = v7;
+  v12.fields.z = v8;
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v5, v12, 0, v4);
 }
 
 
@@ -283,12 +298,12 @@ void EquipGraphListViewObject__OnClickSelect(EquipGraphListViewObject_o *this, c
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_593868C & 1) == 0 )
+  if ( (byte_59709E7 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphListViewItem_TypeInfo);
-    sub_21FFC50(&Method_EquipGraphListViewObject_OnClickSelect__);
-    sub_21FFC50(&StringLiteral_10254/*"OnClickSelectListView"*/);
-    byte_593868C = 1;
+    sub_2213A60(&EquipGraphListViewItem_TypeInfo);
+    sub_2213A60(&Method_EquipGraphListViewObject_OnClickSelect__);
+    sub_2213A60(&StringLiteral_10267/*"OnClickSelectListView"*/);
+    byte_59709E7 = 1;
   }
   linkItem = (EquipGraphListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -301,8 +316,8 @@ void EquipGraphListViewObject__OnClickSelect(EquipGraphListViewObject_o *this, c
       {
         v5 = Method_EquipGraphListViewObject_OnClickSelect__;
         if ( (*((_BYTE *)Method_EquipGraphListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-          v5 = (_QWORD *)sub_21FFC68(Method_EquipGraphListViewObject_OnClickSelect__);
-        v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+          v5 = (_QWORD *)sub_2213A78(Method_EquipGraphListViewObject_OnClickSelect__);
+        v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
         OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
         return;
       }
@@ -315,14 +330,14 @@ void EquipGraphListViewObject__OnClickSelect(EquipGraphListViewObject_o *this, c
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)linkItem,
-            (System_String_o *)StringLiteral_10254/*"OnClickSelectListView"*/,
+            (System_String_o *)StringLiteral_10267/*"OnClickSelectListView"*/,
             (Il2CppObject *)this,
             0);
           return;
         }
       }
     }
-    sub_21FFECC(linkItem, method);
+    sub_2213CDC(linkItem, method);
   }
 }
 
@@ -341,11 +356,11 @@ void EquipGraphListViewObject__OnDestroy(EquipGraphListViewObject_o *this, const
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5938686 & 1) == 0 )
+  if ( (byte_59709E1 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938686 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59709E1 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -359,7 +374,7 @@ void EquipGraphListViewObject__OnDestroy(EquipGraphListViewObject_o *this, const
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v6);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v8, v9, v10, v11, v12, v13);
+    sub_2213A04(p_dragObject, 0, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -368,17 +383,17 @@ void EquipGraphListViewObject__OnLongPush(EquipGraphListViewObject_o *this, cons
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_593868D & 1) == 0 )
+  if ( (byte_59709E8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10317/*"OnLongPushListView"*/);
-    byte_593868D = 1;
+    sub_2213A60(&StringLiteral_10330/*"OnLongPushListView"*/);
+    byte_59709E8 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_21FFECC(0, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10317/*"OnLongPushListView"*/, (Il2CppObject *)this, 0);
+      sub_2213CDC(0, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10330/*"OnLongPushListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -392,11 +407,11 @@ void EquipGraphListViewObject__SetInput(EquipGraphListViewObject_o *this, bool i
   struct ListViewItem_o *v9; // x1
   EquipGraphListViewItemDraw_o *v10; // x0
 
-  if ( (byte_5938688 & 1) == 0 )
+  if ( (byte_59709E3 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5938688 = 1;
+    sub_2213A60(&EquipGraphListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59709E3 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -420,7 +435,7 @@ void EquipGraphListViewObject__SetInput(EquipGraphListViewObject_o *this, bool i
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     EquipGraphListViewItemDraw__SetInput(v10, (EquipGraphListViewItem_o *)v9, isInput, 0);
   }
 }
@@ -432,12 +447,12 @@ void EquipGraphListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void EquipGraphListViewObject__SetItem_48955252(
+void EquipGraphListViewObject__SetItem_49133920(
         EquipGraphListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -460,11 +475,11 @@ void EquipGraphListViewObject__SetupDisp(
   __int64 v10; // x1
   EquipGraphListViewItemDraw_o *v11; // x0
 
-  if ( (byte_593868B & 1) == 0 )
+  if ( (byte_59709E6 & 1) == 0 )
   {
-    sub_21FFC50(&EquipGraphListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593868B = 1;
+    sub_2213A60(&EquipGraphListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59709E6 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -488,7 +503,7 @@ LABEL_8:
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_21FFECC(0, v10);
+      sub_2213CDC(0, v10);
     EquipGraphListViewItemDraw__SetItem(
       v11,
       (EquipGraphListViewItem_o *)linkItem,
@@ -516,10 +531,10 @@ void EquipGraphListViewObject__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5938683 & 1) == 0 )
+  if ( (byte_59709DE & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5938683 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_59709DE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -532,13 +547,13 @@ void EquipGraphListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   EquipGraphListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -559,10 +574,10 @@ void EquipGraphListViewObject__remove_callbackFunc(
   EquipGraphListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5938684 & 1) == 0 )
+  if ( (byte_59709DF & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5938684 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_59709DF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -575,12 +590,12 @@ void EquipGraphListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   EquipGraphListViewObject__Awake(v13, v14);
 }

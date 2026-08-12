@@ -28,7 +28,7 @@ void ServantStatusBattleListViewItemDraw__SetInput(
         return;
       }
 LABEL_9:
-      sub_21FFECC(baseButton, v6);
+      sub_2213CDC(baseButton, v6);
     }
     if ( !baseButton )
       goto LABEL_9;
@@ -87,17 +87,17 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   int v48; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5933994 & 1) == 0 )
+  if ( (byte_596BB33 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_8610/*"LIMIT_COUNT_SELECT_SEALED"*/);
-    sub_21FFC50(&StringLiteral_12429/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
-    sub_21FFC50(&StringLiteral_18171/*"btn_bg_20"*/);
-    sub_21FFC50(&StringLiteral_12430/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_18173/*"btn_bg_21"*/);
-    byte_5933994 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_8623/*"LIMIT_COUNT_SELECT_SEALED"*/);
+    sub_2213A60(&StringLiteral_12452/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/);
+    sub_2213A60(&StringLiteral_18209/*"btn_bg_20"*/);
+    sub_2213A60(&StringLiteral_12453/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_18211/*"btn_bg_21"*/);
+    byte_596BB33 = 1;
   }
   v48 = 0;
   if ( !item || !mode )
@@ -114,10 +114,10 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   {
     if ( !v16 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
-    if ( !byte_5932AD4 )
+    if ( !byte_596ABD6 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      byte_5932AD4 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      byte_596ABD6 = 1;
     }
     v17 = LocalizationManager_TypeInfo;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -135,10 +135,10 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   {
     if ( !v16 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
-    if ( !byte_5932AD3 )
+    if ( !byte_596ABD5 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      byte_5932AD3 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      byte_596ABD5 = 1;
     }
     v23 = LocalizationManager_TypeInfo;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -175,7 +175,7 @@ void ServantStatusBattleListViewItemDraw__SetItem(
       v29 = this->fields.nameRangeLabel;
       v48 = v28;
       v30 = System_Int32__ToString((int32_t)&v48, 0);
-      v33 = System_String__Concat_75438412((System_String_o *)StringLiteral_12429/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v30, 0);
+      v33 = System_String__Concat_75651716((System_String_o *)StringLiteral_12452/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v30, 0);
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31, v32);
       v34 = LocalizationManager__Get(v33, 0);
@@ -185,7 +185,7 @@ void ServantStatusBattleListViewItemDraw__SetItem(
       v29 = this->fields.nameRangeLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v26);
-      v34 = (System_String_o *)StringLiteral_12430/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
+      v34 = (System_String_o *)StringLiteral_12453/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
     }
     nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get(v34, 0);
     if ( !v29 )
@@ -197,9 +197,9 @@ void ServantStatusBattleListViewItemDraw__SetItem(
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseSpite;
   if ( !nameRangeLabel )
     goto LABEL_68;
-  v35 = &StringLiteral_18173/*"btn_bg_21"*/;
+  v35 = &StringLiteral_18211/*"btn_bg_21"*/;
   if ( !IsSelect )
-    v35 = &StringLiteral_18171/*"btn_bg_20"*/;
+    v35 = &StringLiteral_18209/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)nameRangeLabel, (System_String_o *)*v35, 0);
   nameRangeLabel = (UIRangeLabel_o *)this->fields.baseButton;
   if ( v15 )
@@ -264,7 +264,7 @@ LABEL_56:
     v43 = this->fields.limitSealLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v41, v42);
-    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8610/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
+    nameRangeLabel = (UIRangeLabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8623/*"LIMIT_COUNT_SELECT_SEALED"*/, 0);
     if ( v43 )
     {
       v44 = (System_String_o *)nameRangeLabel;
@@ -274,6 +274,6 @@ LABEL_66:
       return;
     }
 LABEL_68:
-    sub_21FFECC(nameRangeLabel, v12);
+    sub_2213CDC(nameRangeLabel, v12);
   }
 }

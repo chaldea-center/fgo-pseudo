@@ -15,18 +15,18 @@ void FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5939DF9 & 1) == 0 )
+  if ( (byte_5971FCC & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23350/*"none"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939DF9 = 1;
+    sub_2213A60(&StringLiteral_23396/*"none"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971FCC = 1;
   }
-  v9 = StringLiteral_23350/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_23350/*"none"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_23396/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_23396/*"none"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   v10 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -58,7 +58,7 @@ void FsmEventData__set_EventData(FsmEventData_o *this, System_String_o *value, c
   bool v7; // w7
 
   this->fields.eventData = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -79,7 +79,7 @@ void FsmEventData__set_Title(FsmEventData_o *this, System_String_o *value, const
   bool v7; // w7
 
   this->fields.title = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.title,
     (int32_t)value,
     (System_String_o *)method,

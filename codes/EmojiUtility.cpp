@@ -3,8 +3,8 @@ bool EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
   bool result; // w0
   int v4; // w9
 
-  if ( !*(_DWORD *)(qword_594C0B0 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C0B0, method);
+  if ( !*(_DWORD *)(qword_5984388 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984388, method);
   if ( System_Char__IsSurrogate(ch, 0) )
     return 1;
   result = 1;

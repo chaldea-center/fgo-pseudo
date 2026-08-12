@@ -23,10 +23,10 @@ void RankObjectSwitchEffectSubComponent__RecvParam(
   struct UnityEngine_GameObject_array *v15; // x8
 
   v4 = this;
-  if ( (byte_5939DDE & 1) == 0 )
+  if ( (byte_5971FB1 & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_21FFC50(&RaceResultEffectParam_TypeInfo);
-    byte_5939DDE = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_2213A60(&RaceResultEffectParam_TypeInfo);
+    byte_5971FB1 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -79,7 +79,7 @@ void RankObjectSwitchEffectSubComponent__RecvParam(
         break;
       if ( (unsigned int)v14 >= LODWORD(v15->max_length) )
 LABEL_29:
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       this = (RankObjectSwitchEffectSubComponent_o *)v15->m_Items[v14];
       if ( !this )
         break;
@@ -88,6 +88,6 @@ LABEL_29:
         return;
     }
 LABEL_28:
-    sub_21FFECC(this, param);
+    sub_2213CDC(this, param);
   }
 }

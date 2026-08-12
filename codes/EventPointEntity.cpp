@@ -1,27 +1,27 @@
 void EventPointEntity___ctor(EventPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938818 & 1) == 0 )
+  if ( (byte_59708E2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938818 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59708E2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventPointEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_5938816 & 1) == 0 )
+  if ( (byte_59708E0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938816 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59708E0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -74,7 +74,7 @@ bool EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int32_t groupId
 
   group1 = this->fields.group1;
   if ( !group1 )
-    sub_21FFECC(this, *(_QWORD *)&groupId);
+    sub_2213CDC(this, *(_QWORD *)&groupId);
   max_length = group1->max_length;
   if ( max_length < 1 )
   {
@@ -86,7 +86,7 @@ bool EventPointEntity__IsGroupOnGroup1(EventPointEntity_o *this, int32_t groupId
     do
     {
       if ( max_length == v5 )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       if ( group1->m_Items[v5] == groupId )
         break;
       ++v5;
@@ -111,20 +111,20 @@ System_String_o *EventPointEntity__getNameStr(
   unsigned __int64 v11; // x24
   DataManager_o *v12; // x23
 
-  if ( (byte_5938817 & 1) == 0 )
+  if ( (byte_59708E1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_869/*","*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5938817 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_869/*","*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59708E1 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
   if ( !group )
     goto LABEL_15;
   max_length = group->max_length;
@@ -136,7 +136,7 @@ System_String_o *EventPointEntity__getNameStr(
     while ( 1 )
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       if ( !v10 )
         break;
       Instance = (DataManager_o *)EventPointGroupMaster__GetEntity(v10, this->fields.eventId, group->m_Items[v11], v7);
@@ -145,12 +145,12 @@ System_String_o *EventPointEntity__getNameStr(
       v12 = Instance;
       if ( v9->fields._stringLength >= 2 )
       {
-        Instance = (DataManager_o *)System_String__Concat_75438412(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
+        Instance = (DataManager_o *)System_String__Concat_75651716(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
         v9 = (System_String_o *)Instance;
       }
       if ( !v12 )
         break;
-      Instance = (DataManager_o *)System_String__Concat_75438412(
+      Instance = (DataManager_o *)System_String__Concat_75651716(
                                     v9,
                                     (System_String_o *)v12->fields.m_CancellationTokenSource,
                                     0);
@@ -161,7 +161,7 @@ System_String_o *EventPointEntity__getNameStr(
         return v9;
     }
 LABEL_15:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   return v9;
 }

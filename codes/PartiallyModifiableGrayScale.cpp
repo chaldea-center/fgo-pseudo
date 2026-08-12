@@ -30,17 +30,17 @@ void PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_593BC7C & 1) == 0 )
+  if ( (byte_5973E88 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Graphics_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_16866/*"_IsSet"*/);
-    sub_21FFC50(&StringLiteral_16913/*"_OverTex"*/);
-    sub_21FFC50(&StringLiteral_16963/*"_Size"*/);
-    sub_21FFC50(&StringLiteral_16944/*"_Saturation"*/);
-    sub_21FFC50(&StringLiteral_17006/*"_UVPosition"*/);
-    this = (PartiallyModifiableGrayScale_o *)sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_593BC7C = 1;
+    sub_2213A60(&UnityEngine_Graphics_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_16901/*"_IsSet"*/);
+    sub_2213A60(&StringLiteral_16948/*"_OverTex"*/);
+    sub_2213A60(&StringLiteral_16998/*"_Size"*/);
+    sub_2213A60(&StringLiteral_16979/*"_Saturation"*/);
+    sub_2213A60(&StringLiteral_17041/*"_UVPosition"*/);
+    this = (PartiallyModifiableGrayScale_o *)sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_5973E88 = 1;
   }
   if ( !source )
     goto LABEL_39;
@@ -59,7 +59,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_39;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16919/*"_MaskTex"*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0);
   }
@@ -73,7 +73,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_39;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16913/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16948/*"_OverTex"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0);
   }
@@ -82,7 +82,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
     goto LABEL_39;
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)this,
-    (System_String_o *)StringLiteral_16944/*"_Saturation"*/,
+    (System_String_o *)StringLiteral_16979/*"_Saturation"*/,
     v6->fields.saturation,
     0);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
@@ -90,7 +90,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
     goto LABEL_39;
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)this,
-    (System_String_o *)StringLiteral_16963/*"_Size"*/,
+    (System_String_o *)StringLiteral_16998/*"_Size"*/,
     v6->fields.radius,
     0);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
@@ -100,9 +100,9 @@ void PartiallyModifiableGrayScale__OnRenderImage(
   v23.fields.z = 0.0;
   v23.fields.w = 0.0;
   v23.fields.y = v8;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_17006/*"_UVPosition"*/, v23, 0);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_17041/*"_UVPosition"*/, v23, 0);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
-  v14 = (System_String_o *)StringLiteral_16866/*"_IsSet"*/;
+  v14 = (System_String_o *)StringLiteral_16901/*"_IsSet"*/;
   v15 = this;
   if ( v6->fields.radius >= 0.03 )
   {
@@ -146,10 +146,10 @@ LABEL_28:
   }
   if ( !v15 )
 LABEL_39:
-    sub_21FFECC(this, source);
+    sub_2213CDC(this, source);
   UnityEngine_Material__SetInt((UnityEngine_Material_o *)v15, v14, v16, 0);
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
   if ( !*(&UnityEngine_Graphics_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo, v21);
-  UnityEngine_Graphics__Blit_83030636((UnityEngine_Texture_o *)source, destination, material, 0);
+  UnityEngine_Graphics__Blit_83243940((UnityEngine_Texture_o *)source, destination, material, 0);
 }

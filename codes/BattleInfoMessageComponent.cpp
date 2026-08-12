@@ -12,10 +12,10 @@ UnityEngine_Transform_o *BattleInfoMessageComponent__getTargetTr(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v6; // x1
 
-  if ( (byte_593BD2B & 1) == 0 )
+  if ( (byte_5973F38 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD2B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F38 = 1;
   }
   objTarget = (UnityEngine_Object_o *)this->fields.objTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -24,7 +24,7 @@ UnityEngine_Transform_o *BattleInfoMessageComponent__getTargetTr(
     return this->fields.objTarget;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   return UnityEngine_GameObject__get_transform(gameObject, 0);
 }
 
@@ -52,11 +52,11 @@ void BattleInfoMessageComponent__setCommandObject(
   BattleServantData_o *v21; // x1
   struct BattleCommandData_o *data; // x19
 
-  if ( (byte_593BD2C & 1) == 0 )
+  if ( (byte_5973F39 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD2C = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F39 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, command);
@@ -71,20 +71,20 @@ void BattleInfoMessageComponent__setCommandObject(
       v11 = (UnityEngine_Object_o *)this->fields.battleCommand;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
-      UnityEngine_Object__Destroy_83246496(v11, 0);
+      UnityEngine_Object__Destroy_83459800(v11, 0);
     }
     if ( !command )
       goto LABEL_21;
     Component_object = (BattleCommandComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      command,
-                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
     if ( !Component_object )
       goto LABEL_21;
     v12 = Component_object;
     BattleCommandComponent__SetCommandEffectActive(Component_object, 3, 0, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, command, this->fields.commandTarget, 0, 0);
     this->fields.battleCommand = Object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.battleCommand,
       (int32_t)Object,
       v14,
@@ -98,7 +98,7 @@ void BattleInfoMessageComponent__setCommandObject(
       goto LABEL_21;
     Component_object = (BattleCommandComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)Component_object,
-                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
     if ( !Component_object )
       goto LABEL_21;
     v20 = Component_object;
@@ -110,8 +110,8 @@ void BattleInfoMessageComponent__setCommandObject(
     *(_WORD *)&v20->fields.isCodeTextureView = 256;
     if ( !data )
 LABEL_21:
-      sub_21FFECC(Component_object, v10);
-    BattleCommandComponent__SetCommandCodeView_53514536(v20, data->fields.commandCodeId, 0);
+      sub_2213CDC(Component_object, v10);
+    BattleCommandComponent__SetCommandCodeView_53605208(v20, data->fields.commandCodeId, 0);
     BattleCommandComponent__SetCommandAssistView(v20, data->fields.commandAssistId, 0);
   }
 }
@@ -135,11 +135,11 @@ void BattleInfoMessageComponent__setItemSprite(
   int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
 
   v15 = imageId;
-  if ( (byte_593BD2D & 1) == 0 )
+  if ( (byte_5973F3A & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD2D = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F3A = 1;
   }
   itemSprite = (UnityEngine_Object_o *)this->fields.itemSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -177,7 +177,7 @@ void BattleInfoMessageComponent__setItemSprite(
           }
         }
 LABEL_20:
-        sub_21FFECC(v8, v9);
+        sub_2213CDC(v8, v9);
       }
     }
     else
@@ -205,26 +205,26 @@ void BattleInfoMessageComponent__setSkillText(
 
   v5 = this;
   v10 = skillLevel;
-  if ( (byte_593BD2A & 1) == 0 )
+  if ( (byte_5973F37 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    this = (BattleInfoMessageComponent_o *)sub_21FFC50(&StringLiteral_2995/*"BATTLE_SKILL_NAME_LEVEL"*/);
-    byte_593BD2A = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    this = (BattleInfoMessageComponent_o *)sub_2213A60(&StringLiteral_2998/*"BATTLE_SKILL_NAME_LEVEL"*/);
+    byte_5973F37 = 1;
   }
   textLabel = v5->fields.textLabel;
   if ( !textLabel )
     goto LABEL_9;
   if ( !LODWORD(textLabel->max_length) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v7 = textLabel->m_Items[0];
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, str);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2995/*"BATTLE_SKILL_NAME_LEVEL"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2998/*"BATTLE_SKILL_NAME_LEVEL"*/, 0);
   v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v10, 0);
-  this = (BattleInfoMessageComponent_o *)System_String__Format_75484576(v8, (Il2CppObject *)str, v9, 0);
+  this = (BattleInfoMessageComponent_o *)System_String__Format_75697880(v8, (Il2CppObject *)str, v9, 0);
   if ( !v7 )
 LABEL_9:
-    sub_21FFECC(this, str);
+    sub_2213CDC(this, str);
   UILabel__set_text(v7, (System_String_o *)this, 0);
 }
 
@@ -240,16 +240,16 @@ void BattleInfoMessageComponent__setText(
   if ( !textLabel )
     goto LABEL_5;
   if ( !LODWORD(textLabel->max_length) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   this = (BattleInfoMessageComponent_o *)textLabel->m_Items[0];
   if ( !this )
 LABEL_5:
-    sub_21FFECC(this, str);
+    sub_2213CDC(this, str);
   UILabel__set_text((UILabel_o *)this, str, 0);
 }
 
 
-void BattleInfoMessageComponent__setText_54421408(
+void BattleInfoMessageComponent__setText_54524564(
         BattleInfoMessageComponent_o *this,
         System_String_o *str,
         System_String_o *str2,
@@ -262,10 +262,10 @@ void BattleInfoMessageComponent__setText_54421408(
   struct UILabel_array *v10; // x8
 
   v6 = this;
-  if ( (byte_593BD29 & 1) == 0 )
+  if ( (byte_5973F36 & 1) == 0 )
   {
-    this = (BattleInfoMessageComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD29 = 1;
+    this = (BattleInfoMessageComponent_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F36 = 1;
   }
   textLabel = v6->fields.textLabel;
   if ( !textLabel )
@@ -281,7 +281,7 @@ void BattleInfoMessageComponent__setText_54421408(
     goto LABEL_16;
   if ( (v8->max_length & 0xFFFFFFFE) == 0 )
 LABEL_17:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v9 = (UnityEngine_Object_o *)v8->m_Items[1];
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, str);
@@ -300,7 +300,7 @@ LABEL_17:
         return;
       }
 LABEL_16:
-      sub_21FFECC(this, str);
+      sub_2213CDC(this, str);
     }
     goto LABEL_17;
   }

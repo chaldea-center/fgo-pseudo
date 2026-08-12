@@ -17,9 +17,9 @@ FsmEventData_o *FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, c
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   return eventDataList->m_Items[index];
 }
 
@@ -34,11 +34,11 @@ System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   return v4->fields.eventData;
 }
 
@@ -53,11 +53,11 @@ System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t in
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   return v4->fields.title;
 }
 
@@ -71,10 +71,10 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v9; // x8
 
-  if ( (byte_5939DFB & 1) == 0 )
+  if ( (byte_5971FCE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939DFB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971FCE = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -86,11 +86,11 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
     if ( !eventDataList )
       goto LABEL_12;
     if ( LODWORD(eventDataList->max_length) <= index )
-      sub_21FFED4(v6);
+      sub_2213CE4(v6);
     v9 = eventDataList->m_Items[index];
     if ( !v9 || (v6 = this->fields.targetFSM) == 0 )
 LABEL_12:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     PlayMakerFSM__SendEvent(v6, v9->fields.eventData, 0);
   }
 }
@@ -139,11 +139,11 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
   __int64 v25; // x1
   __int64 v26; // x0
 
-  if ( (byte_5939DFA & 1) == 0 )
+  if ( (byte_5971FCD & 1) == 0 )
   {
-    sub_21FFC50(&FsmEventData___TypeInfo);
-    sub_21FFC50(&FsmEventData_TypeInfo);
-    byte_5939DFA = 1;
+    sub_2213A60(&FsmEventData___TypeInfo);
+    sub_2213A60(&FsmEventData_TypeInfo);
+    byte_5971FCD = 1;
   }
   eventDataList = this->fields.eventDataList;
   p_eventDataList = (MissionNaviTransitionBoardItem_o *)&this->fields.eventDataList;
@@ -154,7 +154,7 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
     max_length = 0;
   if ( max_length != value )
   {
-    v9 = sub_21FFD10(FsmEventData___TypeInfo, (unsigned int)value);
+    v9 = sub_2213B20(FsmEventData___TypeInfo, (unsigned int)value);
     v17 = (unsigned int *)v9;
     if ( value >= 1 )
     {
@@ -166,11 +166,11 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
       {
         if ( (__int64)v19 >= v18 )
         {
-          v23 = (FsmEventData_o *)sub_21FFEBC(FsmEventData_TypeInfo);
+          v23 = (FsmEventData_o *)sub_2213CCC(FsmEventData_TypeInfo);
           FsmEventData___ctor(v23, v24);
           if ( !v17 )
 LABEL_20:
-            sub_21FFECC(v9, v10);
+            sub_2213CDC(v9, v10);
         }
         else
         {
@@ -179,31 +179,31 @@ LABEL_20:
             goto LABEL_20;
           if ( v19 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_21FFED4(v9);
+            sub_2213CE4(v9);
           if ( !v17 )
             goto LABEL_20;
           v23 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v19);
         }
         if ( v23 )
         {
-          v9 = sub_21FFDA4(v23, *(_QWORD *)(*(_QWORD *)v17 + 64LL));
+          v9 = sub_2213BB4(v23, *(_QWORD *)(*(_QWORD *)v17 + 64LL));
           if ( !v9 )
           {
-            v26 = sub_21FFEF0(0, v25);
-            sub_21FFD90(v26, 0);
+            v26 = sub_2213D00(0, v25);
+            sub_2213BA0(v26, 0);
           }
         }
         if ( v19 >= v17[6] )
           goto LABEL_21;
         v20->klass = (MissionNaviTransitionBoardItem_c *)v23;
-        sub_21FFBF4(v20, (int32_t)v23, v11, v12, v13, v14, v15, v16);
+        sub_2213A04(v20, (int32_t)v23, v11, v12, v13, v14, v15, v16);
         ++v19;
         v20 = (MissionNaviTransitionBoardItem_o *)((char *)v20 + 8);
       }
       while ( v21 != v19 );
     }
     p_eventDataList->klass = (MissionNaviTransitionBoardItem_c *)v17;
-    sub_21FFBF4(p_eventDataList, (int32_t)v17, v11, v12, v13, v14, v15, v16);
+    sub_2213A04(p_eventDataList, (int32_t)v17, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -217,7 +217,7 @@ void FsmEventDataList__set_TargetFSM(FsmEventDataList_o *this, PlayMakerFSM_o *v
   bool v7; // w7
 
   this->fields.targetFSM = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetFSM,
     (int32_t)value,
     (System_String_o *)method,

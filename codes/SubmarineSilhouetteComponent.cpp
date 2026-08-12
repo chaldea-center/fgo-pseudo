@@ -18,11 +18,11 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934DE9 & 1) == 0 )
+  if ( (byte_596CF18 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934DE9 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CF18 = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -31,9 +31,9 @@ SimpleAnimation_o *SubmarineSilhouetteComponent__get_AnimationComponent(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mAnimation,
       (int32_t)Component_object,
       v6,

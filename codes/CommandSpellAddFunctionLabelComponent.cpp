@@ -14,7 +14,6 @@ void CommandSpellAddFunctionLabelComponent__Awake(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CommandSpellAddFunctionLabelComponent__SetData(
         CommandSpellAddFunctionLabelComponent_o *this,
         BattleServantData_o *svtData,
@@ -36,28 +35,25 @@ void CommandSpellAddFunctionLabelComponent__SetData(
   AddSkillData_o *v20; // x8
   __int64 v21; // x1
   UILabel_o *v22; // x20
-  float v23; // s0 OVERLAPPED
-  float v24; // s1
-  float v25; // s2
-  float v26; // s3
   UILabel_o *addFunctionLabel; // x20
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
+  UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593B680 & 1) == 0 )
+  if ( (byte_5973879 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3812/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
-    sub_21FFC50(&StringLiteral_3811/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
-    byte_593B680 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3817/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/);
+    sub_2213A60(&StringLiteral_3816/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/);
+    byte_5973879 = 1;
   }
   v9 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v9 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, svtData);
-  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_object )
     goto LABEL_39;
   v12 = Master_object;
@@ -98,7 +94,7 @@ void CommandSpellAddFunctionLabelComponent__SetData(
         while ( 1 )
         {
           if ( (unsigned int)v19 >= max_length )
-            sub_21FFED4(Master_object);
+            sub_2213CE4(Master_object);
           v20 = classBoardAddCommandSpells->m_Items[v19];
           if ( !v20 )
             goto LABEL_39;
@@ -126,7 +122,7 @@ void CommandSpellAddFunctionLabelComponent__SetData(
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
           Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3811/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
+                                                              (System_String_o *)StringLiteral_3816/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
                                                               0);
           if ( addFunctionLabel )
           {
@@ -134,9 +130,9 @@ void CommandSpellAddFunctionLabelComponent__SetData(
             Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
             if ( Master_object )
             {
-              v23 = 1.0;
-              v24 = 1.0;
-              v25 = 1.0;
+              v27.fields.r = 1.0;
+              v27.fields.g = 1.0;
+              v27.fields.b = 1.0;
               goto LABEL_30;
             }
           }
@@ -147,7 +143,7 @@ LABEL_25:
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
         Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_3812/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/,
+                                                            (System_String_o *)StringLiteral_3817/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/,
                                                             0);
         if ( v22 )
         {
@@ -155,17 +151,17 @@ LABEL_25:
           Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
           if ( Master_object )
           {
-            v23 = 0.5;
-            v24 = 0.5;
-            v25 = 0.5;
+            v27.fields.r = 0.5;
+            v27.fields.g = 0.5;
+            v27.fields.b = 0.5;
 LABEL_30:
-            v26 = 1.0;
-            UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v23, 0);
+            v27.fields.a = 1.0;
+            UIWidget__set_color((UIWidget_o *)Master_object, v27, 0);
             return;
           }
         }
 LABEL_39:
-        sub_21FFECC(Master_object, v11);
+        sub_2213CDC(Master_object, v11);
       }
 LABEL_23:
       classBoardAddCommandSpells = svtData->fields.classBoardAddCommandSpells;

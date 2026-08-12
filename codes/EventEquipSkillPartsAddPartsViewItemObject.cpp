@@ -4,10 +4,10 @@ void EventEquipSkillPartsAddPartsViewItemObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5932477 & 1) == 0 )
+  if ( (byte_596A576 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5932477 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596A576 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -29,20 +29,20 @@ void EventEquipSkillPartsAddPartsViewItemObject__Awake(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5932475 & 1) == 0 )
+  if ( (byte_596A574 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventEquipSkillPartsAddPartsListViewItemDraw___);
-    byte_5932475 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EventEquipSkillPartsAddPartsListViewItemDraw___);
+    byte_596A574 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventEquipSkillPartsAddPartsListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EventEquipSkillPartsAddPartsListViewItemDraw___);
   this->fields.itemDraw = (struct EventEquipSkillPartsAddPartsListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -66,23 +66,23 @@ void EventEquipSkillPartsAddPartsViewItemObject__SetItem(
   EventEquipSkillPartsAddPartsListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_5932476 & 1) == 0 )
+  if ( (byte_596A575 & 1) == 0 )
   {
-    sub_21FFC50(&EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
-    byte_5932476 = 1;
+    sub_2213A60(&EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
+    byte_596A575 = 1;
   }
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_21FFECC(itemDraw, v7);
+    sub_2213CDC(itemDraw, v7);
   if ( item )
   {
     naturalAligment = EventEquipSkillPartsAddPartsListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (EventEquipSkillPartsAddPartsListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventEquipSkillPartsAddPartsListViewItem_TypeInfo )
     {
-      itemDraw = (EventEquipSkillPartsAddPartsListViewItemDraw_o *)sub_220024C(
+      itemDraw = (EventEquipSkillPartsAddPartsListViewItemDraw_o *)sub_221405C(
                                                                      item,
                                                                      EventEquipSkillPartsAddPartsListViewItem_TypeInfo,
                                                                      v8,

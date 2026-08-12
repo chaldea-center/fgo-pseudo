@@ -1,13 +1,13 @@
 void PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938CA6 & 1) == 0 )
+  if ( (byte_5970E65 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
-    byte_5938CA6 = 1;
+    sub_2213A60(&Method_DataEntityBase_long___ctor__);
+    byte_5970E65 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3F0E560 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -38,7 +38,7 @@ FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
   {
     result = *i;
     if ( !*i )
-      sub_21FFECC(0, followerId);
+      sub_2213CDC(0, followerId);
     if ( result->fields.userId == followerId && (followerType == -1 || result->fields.type == followerType) )
       break;
     if ( !--max_length )

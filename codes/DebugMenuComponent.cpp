@@ -11,7 +11,7 @@ void DebugMenuComponent__OnClickCheckBox(DebugMenuComponent_o *this, const Metho
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v3 = !UnityEngine_GameObject__get_activeSelf(this->fields.checkMark, 0);
   UnityEngine_GameObject__SetActive(checkMark, v3, 0);
 }
@@ -23,16 +23,14 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
   struct DebugPanelRootComponent_paramDelegate_o *v4; // x8
   struct DebugPanelRootComponent_paramStrDelegate_o *paramStrdel; // x8
   int32_t max; // w9
-  struct DebugPanelRootComponent_paramDelegate_o *paramdel; // x8
+  void (__fastcall **paramdel)(_QWORD); // x8
   const MethodInfo *v8; // x1
-  _BOOL4 v9; // w9
-  struct DebugPanelRootComponent_tgrDelegate_o *tgrdel; // x8
   struct DebugPanelRootComponent_menuDelegate_o *menudel; // x8
   _BOOL4 flg; // w9
   struct DebugPanelRootComponent_paramtgrDelegate_o *paramtgrdel; // x8
+  __int64 v12; // x0
+  System_ArgumentOutOfRangeException_o *v13; // x19
   __int64 v14; // x0
-  System_ArgumentOutOfRangeException_o *v15; // x19
-  __int64 v16; // x0
 
   type = this->fields.type;
   if ( type > 2 )
@@ -47,29 +45,17 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
         method = (const MethodInfo *)(unsigned int)this->fields.min;
         this->fields.param = (int)method;
       }
-      paramdel = this->fields.paramdel;
+      paramdel = (void (__fastcall **)(_QWORD))this->fields.paramdel;
       if ( !paramdel )
         goto LABEL_24;
-      ((void (__fastcall *)(intptr_t, const MethodInfo *, intptr_t))paramdel->fields.invoke_impl)(
-        paramdel->fields.method_code,
-        method,
-        paramdel->fields.method);
+LABEL_17:
+      paramdel[3](paramdel[8]);
+LABEL_22:
+      DebugMenuComponent__updateTitleLabel(this, v8);
+      return;
     }
-    else
+    if ( type == 3 )
     {
-      if ( type != 3 )
-      {
-        if ( type != 4 )
-          goto LABEL_25;
-        paramStrdel = this->fields.paramStrdel;
-        if ( !paramStrdel )
-          goto LABEL_24;
-        ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))paramStrdel->fields.invoke_impl)(
-          paramStrdel->fields.method_code,
-          this->fields.strParam,
-          paramStrdel->fields.method);
-        return;
-      }
       flg = this->fields.flg;
       paramtgrdel = this->fields.paramtgrdel;
       this->fields.flg = !flg;
@@ -80,52 +66,57 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
         (unsigned int)this->fields.param,
         !flg,
         paramtgrdel->fields.method);
+      goto LABEL_22;
     }
-LABEL_22:
-    DebugMenuComponent__updateTitleLabel(this, v8);
-    return;
-  }
-  if ( type )
-  {
-    if ( type != 1 )
-    {
-      if ( type == 2 )
-      {
-        v4 = this->fields.paramdel;
-        if ( v4 )
-        {
-          ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
-            v4->fields.method_code,
-            (unsigned int)this->fields.param,
-            v4->fields.method);
-          return;
-        }
-LABEL_24:
-        sub_21FFECC(this, method);
-      }
-LABEL_25:
-      v14 = sub_21FFC64(&System_ArgumentOutOfRangeException_TypeInfo);
-      v15 = (System_ArgumentOutOfRangeException_o *)sub_21FFEBC(v14);
-      System_ArgumentOutOfRangeException___ctor(v15, 0);
-      v16 = sub_21FFC64(&Method_DebugMenuComponent_OnClickMenu__);
-      sub_21FFD90(v15, v16);
-    }
-    v9 = this->fields.flg;
-    tgrdel = this->fields.tgrdel;
-    this->fields.flg = !v9;
-    if ( !tgrdel )
+    if ( type != 4 )
+      goto LABEL_25;
+    paramStrdel = this->fields.paramStrdel;
+    if ( !paramStrdel )
       goto LABEL_24;
-    ((void (__fastcall *)(intptr_t, bool, intptr_t))tgrdel->fields.invoke_impl)(
-      tgrdel->fields.method_code,
-      !v9,
-      tgrdel->fields.method);
-    goto LABEL_22;
+    ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))paramStrdel->fields.invoke_impl)(
+      paramStrdel->fields.method_code,
+      this->fields.strParam,
+      paramStrdel->fields.method);
   }
-  menudel = this->fields.menudel;
-  if ( menudel )
-    ((void (__fastcall *)(intptr_t, intptr_t))menudel->fields.invoke_impl)(
-      menudel->fields.method_code,
-      menudel->fields.method);
+  else
+  {
+    if ( type )
+    {
+      if ( type != 1 )
+      {
+        if ( type == 2 )
+        {
+          v4 = this->fields.paramdel;
+          if ( v4 )
+          {
+            ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
+              v4->fields.method_code,
+              (unsigned int)this->fields.param,
+              v4->fields.method);
+            return;
+          }
+LABEL_24:
+          sub_2213CDC(this, method);
+        }
+LABEL_25:
+        v12 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
+        v13 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v12);
+        System_ArgumentOutOfRangeException___ctor(v13, 0);
+        v14 = sub_2213A74(&Method_DebugMenuComponent_OnClickMenu__);
+        sub_2213BA0(v13, v14);
+      }
+      paramdel = (void (__fastcall **)(_QWORD))this->fields.tgrdel;
+      this->fields.flg ^= 1u;
+      if ( !paramdel )
+        goto LABEL_24;
+      goto LABEL_17;
+    }
+    menudel = this->fields.menudel;
+    if ( menudel )
+      ((void (__fastcall *)(intptr_t, intptr_t))menudel->fields.invoke_impl)(
+        menudel->fields.method_code,
+        menudel->fields.method);
+  }
 }
 
 
@@ -136,7 +127,7 @@ void DebugMenuComponent__SetFavorite(DebugMenuComponent_o *this, bool favorite, 
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_21FFECC(0, favorite);
+    sub_2213CDC(0, favorite);
   UnityEngine_GameObject__SetActive(checkMark, favorite, 0);
 }
 
@@ -162,7 +153,7 @@ bool DebugMenuComponent__get_isFavorite(DebugMenuComponent_o *this, const Method
 
   checkMark = this->fields.checkMark;
   if ( !checkMark )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UnityEngine_GameObject__get_activeSelf(checkMark, 0);
 }
 
@@ -192,7 +183,7 @@ void DebugMenuComponent__setInitDlg(
   const MethodInfo *v22; // x1
 
   this->fields.menudel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.menudel,
     (int32_t)del,
     (System_String_o *)del,
@@ -203,7 +194,7 @@ void DebugMenuComponent__setInitDlg(
     v7);
   this->fields.type = 0;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v10,
@@ -213,13 +204,13 @@ void DebugMenuComponent__setInitDlg(
     v14,
     v15);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v16, v17, v18, v19, v20, v21);
   DebugMenuComponent__updateTitleLabel(this, v22);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_50631520(
+void DebugMenuComponent__setInitDlg_50696712(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_tgrDelegate_o *del,
@@ -244,7 +235,7 @@ void DebugMenuComponent__setInitDlg_50631520(
   const MethodInfo *v23; // x1
 
   this->fields.tgrdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.tgrdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -255,7 +246,7 @@ void DebugMenuComponent__setInitDlg_50631520(
     v7);
   this->fields.type = 1;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v11,
@@ -265,14 +256,14 @@ void DebugMenuComponent__setInitDlg_50631520(
     v15,
     v16);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.flg = flg;
   DebugMenuComponent__updateTitleLabel(this, v23);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_50631612(
+void DebugMenuComponent__setInitDlg_50696804(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -297,7 +288,7 @@ void DebugMenuComponent__setInitDlg_50631612(
   const MethodInfo *v23; // x1
 
   this->fields.paramdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -308,7 +299,7 @@ void DebugMenuComponent__setInitDlg_50631612(
     v7);
   this->fields.type = 2;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v11,
@@ -318,14 +309,14 @@ void DebugMenuComponent__setInitDlg_50631612(
     v15,
     v16);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v23);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_50631704(
+void DebugMenuComponent__setInitDlg_50696896(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramtgrDelegate_o *del,
@@ -350,7 +341,7 @@ void DebugMenuComponent__setInitDlg_50631704(
   const MethodInfo *v24; // x1
 
   this->fields.paramtgrdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramtgrdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -361,7 +352,7 @@ void DebugMenuComponent__setInitDlg_50631704(
     v7);
   this->fields.type = 3;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v12,
@@ -371,14 +362,14 @@ void DebugMenuComponent__setInitDlg_50631704(
     v16,
     v17);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v18, v19, v20, v21, v22, v23);
   this->fields.flg = flg;
   this->fields.param = param;
   DebugMenuComponent__updateTitleLabel(this, v24);
 }
 
 
-void DebugMenuComponent__setInitDlg_50631812(
+void DebugMenuComponent__setInitDlg_50697004(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramStrDelegate_o *del,
@@ -409,7 +400,7 @@ void DebugMenuComponent__setInitDlg_50631812(
   const MethodInfo *v29; // x1
 
   this->fields.paramStrdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramStrdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -420,7 +411,7 @@ void DebugMenuComponent__setInitDlg_50631812(
     v7);
   this->fields.type = 4;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v11,
@@ -430,15 +421,15 @@ void DebugMenuComponent__setInitDlg_50631812(
     v15,
     v16);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v17, v18, v19, v20, v21, v22);
   this->fields.strParam = param;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.strParam, (int32_t)param, v23, v24, v25, v26, v27, v28);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.strParam, (int32_t)param, v23, v24, v25, v26, v27, v28);
   DebugMenuComponent__updateTitleLabel(this, v29);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_50631916(
+void DebugMenuComponent__setInitDlg_50697108(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -463,7 +454,7 @@ void DebugMenuComponent__setInitDlg_50631916(
   const MethodInfo *v25; // x1
 
   this->fields.paramdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -474,7 +465,7 @@ void DebugMenuComponent__setInitDlg_50631916(
     v7);
   this->fields.type = 5;
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v13,
@@ -484,7 +475,7 @@ void DebugMenuComponent__setInitDlg_50631916(
     v17,
     v18);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v19, v20, v21, v22, v23, v24);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -493,7 +484,7 @@ void DebugMenuComponent__setInitDlg_50631916(
 
 
 // local variable allocation has failed, the output may be wrong!
-void DebugMenuComponent__setInitDlg_50632028(
+void DebugMenuComponent__setInitDlg_50697220(
         DebugMenuComponent_o *this,
         System_String_o *txt,
         DebugPanelRootComponent_paramDelegate_o *del,
@@ -524,7 +515,7 @@ void DebugMenuComponent__setInitDlg_50632028(
   const MethodInfo *v32; // x1
 
   this->fields.paramdel = del;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramdel,
     (int32_t)del,
     (System_String_o *)del,
@@ -535,7 +526,7 @@ void DebugMenuComponent__setInitDlg_50632028(
     (bool)method);
   this->fields.type = 6;
   this->fields.paramToStringDictionary = dictionary;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.paramToStringDictionary,
     (int32_t)dictionary,
     v14,
@@ -545,7 +536,7 @@ void DebugMenuComponent__setInitDlg_50632028(
     v18,
     v19);
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     v20,
@@ -555,7 +546,7 @@ void DebugMenuComponent__setInitDlg_50632028(
     v24,
     v25);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v26, v27, v28, v29, v30, v31);
   this->fields.param = param;
   this->fields.min = min;
   this->fields.max = max;
@@ -578,7 +569,7 @@ void DebugMenuComponent__setStringParam(DebugMenuComponent_o *this, System_Strin
   bool v7; // w7
 
   this->fields.strParam = param;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.strParam,
     (int32_t)param,
     (System_String_o *)method,
@@ -611,7 +602,7 @@ void DebugMenuComponent__setTitle(DebugMenuComponent_o *this, System_String_o *t
   bool v15; // w7
 
   this->fields.originalTitle = txt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.originalTitle,
     (int32_t)txt,
     (System_String_o *)method,
@@ -621,7 +612,7 @@ void DebugMenuComponent__setTitle(DebugMenuComponent_o *this, System_String_o *t
     v6,
     v7);
   this->fields.title = txt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.title, (int32_t)txt, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -638,14 +629,14 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
   __int64 v11; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5939CD1 & 1) == 0 )
+  if ( (byte_5971E95 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
-    sub_21FFC50(&StringLiteral_205/*" [ON] "*/);
-    sub_21FFC50(&StringLiteral_16624/*"[​"*/);
-    sub_21FFC50(&StringLiteral_204/*" [OFF] "*/);
-    sub_21FFC50(&StringLiteral_16659/*"]"*/);
-    byte_5939CD1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
+    sub_2213A60(&StringLiteral_205/*" [ON] "*/);
+    sub_2213A60(&StringLiteral_16656/*"[​"*/);
+    sub_2213A60(&StringLiteral_204/*" [OFF] "*/);
+    sub_2213A60(&StringLiteral_16691/*"]"*/);
+    byte_5971E95 = 1;
   }
   type = this->fields.type;
   title = this->fields.title;
@@ -660,7 +651,7 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
           v7 = &StringLiteral_205/*" [ON] "*/;
         else
           v7 = &StringLiteral_204/*" [OFF] "*/;
-        v8 = System_String__Concat_75438412(title, (System_String_o *)*v7, 0);
+        v8 = System_String__Concat_75651716(title, (System_String_o *)*v7, 0);
         goto LABEL_19;
       }
       goto LABEL_24;
@@ -672,11 +663,11 @@ void DebugMenuComponent__updateTitleLabel(DebugMenuComponent_o *this, const Meth
     {
       v6 = System_Int32__ToString((int)this + 64, 0);
 LABEL_16:
-      v8 = System_String__Concat_75483552(
+      v8 = System_String__Concat_75696856(
              title,
-             (System_String_o *)StringLiteral_16624/*"[​"*/,
+             (System_String_o *)StringLiteral_16656/*"[​"*/,
              v6,
-             (System_String_o *)StringLiteral_16659/*"]"*/,
+             (System_String_o *)StringLiteral_16691/*"]"*/,
              0);
 LABEL_19:
       title = v8;
@@ -691,7 +682,7 @@ LABEL_19:
              paramToStringDictionary,
              this->fields.param,
              &value,
-             (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
+             (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__) )
       {
         v6 = (System_String_o *)value;
       }
@@ -703,11 +694,11 @@ LABEL_19:
       goto LABEL_16;
     }
 LABEL_24:
-    v9 = sub_21FFC64(&System_ArgumentOutOfRangeException_TypeInfo);
-    v10 = (System_ArgumentOutOfRangeException_o *)sub_21FFEBC(v9);
+    v9 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
+    v10 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v9);
     System_ArgumentOutOfRangeException___ctor(v10, 0);
-    v11 = sub_21FFC64(&Method_DebugMenuComponent_updateTitleLabel__);
-    sub_21FFD90(v10, v11);
+    v11 = sub_2213A74(&Method_DebugMenuComponent_updateTitleLabel__);
+    sub_2213BA0(v10, v11);
   }
 LABEL_20:
   paramToStringDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.titlelabel;
@@ -716,7 +707,7 @@ LABEL_20:
         (paramToStringDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.titlelabel) == 0) )
   {
 LABEL_23:
-    sub_21FFECC(paramToStringDictionary, method);
+    sub_2213CDC(paramToStringDictionary, method);
   }
   UILabel__set_effectStyle((UILabel_o *)paramToStringDictionary, 2, 0);
 }

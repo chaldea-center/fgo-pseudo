@@ -20,13 +20,13 @@ int32_t EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
   __int64 v4; // x1
   UnityEngine_BoxCollider_o *v5; // x0
   EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
-  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  float v8; // s1
 
-  if ( (byte_593AD33 & 1) == 0 )
+  if ( (byte_5972FEC & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AD33 = 1;
+    sub_2213A60(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972FEC = 1;
   }
   frameCollider = (UnityEngine_Object_o *)this->fields.frameCollider;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -35,12 +35,12 @@ int32_t EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
   {
     v5 = this->fields.frameCollider;
     if ( !v5 )
-      sub_21FFECC(0, v4);
-    size = UnityEngine_BoxCollider__get_size(v5, 0);
-    if ( size.fields.y == INFINITY )
+      sub_2213CDC(0, v4);
+    v8 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size(v5, 0).fields.y));
+    if ( v8 == INFINITY )
       return 0x80000000;
     else
-      return (int)size.fields.y;
+      return (int)v8;
   }
   else
   {
@@ -71,10 +71,10 @@ void EventInfoTipsArchiveListViewItemDrawSub__OnDestroy(
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_593AD30 & 1) == 0 )
+  if ( (byte_5972FE9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AD30 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972FE9 = 1;
   }
   parameterObject = this->fields.parameterObject;
   p_parameterObject = (MissionNaviTransitionBoardItem_o *)&this->fields.parameterObject;
@@ -86,9 +86,9 @@ void EventInfoTipsArchiveListViewItemDrawSub__OnDestroy(
     klass = (UnityEngine_Object_o *)p_parameterObject->klass;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
-    UnityEngine_Object__Destroy_83246496(klass, 0);
+    UnityEngine_Object__Destroy_83459800(klass, 0);
     p_parameterObject->klass = 0;
-    sub_21FFBF4(p_parameterObject, 0, v8, v9, v10, v11, v12, v13);
+    sub_2213A04(p_parameterObject, 0, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -113,14 +113,14 @@ void EventInfoTipsArchiveListViewItemDrawSub__Setup(
   UnityEngine_Object_o *Sprite; // x21
   const MethodInfo *v18; // x3
 
-  if ( (byte_593AD31 & 1) == 0 )
+  if ( (byte_5972FEA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AD31 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972FEA = 1;
   }
   this->fields.viewItem = item;
   p_viewItem = &this->fields.viewItem;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.viewItem,
     (int32_t)item,
     (System_String_o *)method,
@@ -132,7 +132,7 @@ void EventInfoTipsArchiveListViewItemDrawSub__Setup(
   imageInfoList = this->fields.imageInfoList;
   if ( !imageInfoList )
 LABEL_14:
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   v14 = 0;
   while ( 1 )
   {
@@ -140,7 +140,7 @@ LABEL_14:
     if ( (__int64)v14 >= (int)max_length_low )
       break;
     if ( v14 >= max_length_low )
-      sub_21FFED4(v11);
+      sub_2213CE4(v11);
     v16 = imageInfoList->m_Items[v14];
     if ( v16 )
     {
@@ -189,12 +189,12 @@ void EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593AD32 & 1) == 0 )
+  if ( (byte_5972FEB & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AD32 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972FEB = 1;
   }
   parameterParent = (UnityEngine_Object_o *)this->fields.parameterParent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -216,9 +216,9 @@ void EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
         v11 = UnityEngine_Object__Instantiate_object_(
                 parameterBasePrefab,
-                (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
         *p_parameterObject = (UnityEngine_Object_o *)v11;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.parameterObject,
           (int32_t)v11,
           v12,
@@ -229,13 +229,13 @@ void EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
           v17);
         if ( UnityEngine_Object__op_Equality(*p_parameterObject, 0, 0) )
           return;
-        GameObjectExtensions__SafeSetParent_42881912(this->fields.parameterObject, this->fields.parameterParent, 0);
+        GameObjectExtensions__SafeSetParent_42897308(this->fields.parameterObject, this->fields.parameterParent, 0);
         Component_object = this->fields.parameterObject;
         if ( Component_object )
         {
           Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
+                                                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
           if ( Component_object )
           {
             ServantStatusParameterComponent__Setup(
@@ -251,7 +251,7 @@ void EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
           }
         }
       }
-      sub_21FFECC(Component_object, v8);
+      sub_2213CDC(Component_object, v8);
     }
   }
 }

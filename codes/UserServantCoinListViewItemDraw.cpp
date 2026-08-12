@@ -15,10 +15,10 @@ void UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_5933B82 & 1) == 0 )
+  if ( (byte_596BC9B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B82 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC9B = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -33,7 +33,7 @@ void UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._5_set_isEnabled.method),
           (v7 = this->fields.baseButton) == 0) )
     {
-      sub_21FFECC(v7, v6);
+      sub_2213CDC(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v7->klass->vtable._14_SetState.methodPtr)(
       v7,
@@ -58,10 +58,10 @@ void UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v12; // x0
   int v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5933B81 & 1) == 0 )
+  if ( (byte_596BC9A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26381/*"{0:#,0}"*/);
-    byte_5933B81 = 1;
+    sub_2213A60(&StringLiteral_26432/*"{0:#,0}"*/);
+    byte_596BC9A = 1;
   }
   if ( item && mode )
   {
@@ -89,11 +89,11 @@ void UserServantCoinListViewItemDraw__SetItem(
     if ( userSvtCoinEntity )
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v13 = (int)userSvtCoinEntity;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v13);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_26381/*"{0:#,0}"*/, v12, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v13);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v12, 0);
     if ( !possessionNum )
 LABEL_15:
-      sub_21FFECC(itemIcon, itemId);
+      sub_2213CDC(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0);
   }
 }

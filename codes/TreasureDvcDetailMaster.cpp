@@ -1,14 +1,14 @@
 void TreasureDvcDetailMaster___ctor(TreasureDvcDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939400 & 1) == 0 )
+  if ( (byte_59715C0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
-    byte_5939400 = 1;
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    byte_59715C0 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     97,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
 }
 
 
@@ -33,28 +33,28 @@ System_String_o *TreasureDvcDetailMaster__getDetail(int32_t id, const MethodInfo
   int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
 
   v19 = id;
-  if ( (byte_5939401 & 1) == 0 )
+  if ( (byte_59715C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5939401 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59715C1 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v19, 0);
   if ( !MasterData_object )
     goto LABEL_29;
   v5 = Instance;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___get_lookup(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                (const MethodInfo_3EDB054 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+                                (const MethodInfo_3F0E7FC *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
   if ( !Instance )
     goto LABEL_29;
   klass = Instance->klass;
@@ -75,7 +75,7 @@ System_String_o *TreasureDvcDetailMaster__getDetail(int32_t id, const MethodInfo
   else
   {
 LABEL_10:
-    v10 = sub_2237E2C(
+    v10 = sub_224BC3C(
             Instance,
             System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo,
             0);
@@ -84,7 +84,7 @@ LABEL_10:
   {
     Instance = (DataManager_o *)DataMasterBase_object__object__int___get_lookup(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                  (const MethodInfo_3EDB054 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+                                  (const MethodInfo_3F0E7FC *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
     if ( Instance )
     {
       v12 = Instance->klass;
@@ -105,7 +105,7 @@ LABEL_10:
       else
       {
 LABEL_18:
-        v16 = sub_2237E2C(
+        v16 = sub_224BC3C(
                 Instance,
                 System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo,
                 2);
@@ -118,14 +118,14 @@ LABEL_18:
         return TreasureDvcDetailEntity__getDetail((TreasureDvcDetailEntity_o *)Instance, v3);
     }
 LABEL_29:
-    sub_21FFECC(Instance, v3);
+    sub_2213CDC(Instance, v3);
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11);
-  if ( !byte_593385D )
+  if ( !byte_596B976 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593385D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596B976 = 1;
   }
   v17 = LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -158,28 +158,28 @@ System_String_o *TreasureDvcDetailMaster__getDetailShort(int32_t id, const Metho
   int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
 
   v19 = id;
-  if ( (byte_5939402 & 1) == 0 )
+  if ( (byte_59715C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5939402 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_59715C2 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
   Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v19, 0);
   if ( !MasterData_object )
     goto LABEL_29;
   v5 = Instance;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___get_lookup(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                (const MethodInfo_3EDB054 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+                                (const MethodInfo_3F0E7FC *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
   if ( !Instance )
     goto LABEL_29;
   klass = Instance->klass;
@@ -200,7 +200,7 @@ System_String_o *TreasureDvcDetailMaster__getDetailShort(int32_t id, const Metho
   else
   {
 LABEL_10:
-    v10 = sub_2237E2C(
+    v10 = sub_224BC3C(
             Instance,
             System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo,
             0);
@@ -209,7 +209,7 @@ LABEL_10:
   {
     Instance = (DataManager_o *)DataMasterBase_object__object__int___get_lookup(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                  (const MethodInfo_3EDB054 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
+                                  (const MethodInfo_3F0E7FC *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int__get_lookup__);
     if ( Instance )
     {
       v12 = Instance->klass;
@@ -230,7 +230,7 @@ LABEL_10:
       else
       {
 LABEL_18:
-        v16 = sub_2237E2C(
+        v16 = sub_224BC3C(
                 Instance,
                 System_Collections_Generic_IReadOnlyDictionary_string__TreasureDvcDetailEntity__TypeInfo,
                 2);
@@ -243,14 +243,14 @@ LABEL_18:
         return TreasureDvcDetailEntity__getDetailShort((TreasureDvcDetailEntity_o *)Instance, v3);
     }
 LABEL_29:
-    sub_21FFECC(Instance, v3);
+    sub_2213CDC(Instance, v3);
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11);
-  if ( !byte_593385D )
+  if ( !byte_596B976 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593385D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596B976 = 1;
   }
   v17 = LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )

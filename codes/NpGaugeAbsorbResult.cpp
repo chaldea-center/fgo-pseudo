@@ -9,7 +9,7 @@ void NpGaugeAbsorbResult___ctor(NpGaugeAbsorbResult_o *this, BaseNpGaugeConvert_
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Convert_k__BackingField = convert;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Convert_k__BackingField,
     (int32_t)convert,
     v5,
@@ -32,7 +32,7 @@ void NpGaugeAbsorbResult__AddPoint(NpGaugeAbsorbResult_o *this, int32_t point, c
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField + (float)point;
   if ( !Convert_k__BackingField )
-    sub_21FFECC(0, *(_QWORD *)&point);
+    sub_2213CDC(0, *(_QWORD *)&point);
   Turn_k__BackingField = this->fields._Turn_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField
                                      + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._7_PointToTurn.methodPtr)(Convert_k__BackingField);
@@ -50,7 +50,7 @@ void NpGaugeAbsorbResult__AddTurn(NpGaugeAbsorbResult_o *this, int32_t turn, con
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField + (float)turn;
   if ( !Convert_k__BackingField )
-    sub_21FFECC(0, *(_QWORD *)&turn);
+    sub_2213CDC(0, *(_QWORD *)&turn);
   Point_k__BackingField = this->fields._Point_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField
                                       + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._6_TurnToPoint.methodPtr)(Convert_k__BackingField);
@@ -87,7 +87,7 @@ void NpGaugeAbsorbResult__set_Convert(
   bool v7; // w7
 
   this->fields._Convert_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Convert_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

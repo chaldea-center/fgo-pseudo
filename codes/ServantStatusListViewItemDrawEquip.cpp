@@ -1,9 +1,9 @@
 void ServantStatusListViewItemDrawEquip___cctor(const MethodInfo *method)
 {
-  if ( (byte_5935155 & 1) == 0 )
+  if ( (byte_596D342 & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusListViewItemDrawEquip_TypeInfo);
-    byte_5935155 = 1;
+    sub_2213A60(&ServantStatusListViewItemDrawEquip_TypeInfo);
+    byte_596D342 = 1;
   }
   *ServantStatusListViewItemDrawEquip_TypeInfo->static_fields = (struct ServantStatusListViewItemDrawEquip_StaticFields)0x2800000012LL;
 }
@@ -42,14 +42,14 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
   bool v31; // w6
   bool v32; // w7
 
-  if ( (byte_5935154 & 1) == 0 )
+  if ( (byte_596D341 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&UnityEngine_GameObject___TypeInfo);
-    sub_21FFC50(&SkillIconComponent___TypeInfo);
-    sub_21FFC50(&UILabel___TypeInfo);
-    sub_21FFC50(&UIRangeLabel___TypeInfo);
-    byte_5935154 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&UnityEngine_GameObject___TypeInfo);
+    sub_2213A60(&SkillIconComponent___TypeInfo);
+    sub_2213A60(&UILabel___TypeInfo);
+    sub_2213A60(&UIRangeLabel___TypeInfo);
+    byte_596D341 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -57,11 +57,11 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct UnityEngine_GameObject_array *)sub_21FFD10(
+  v5 = (struct UnityEngine_GameObject_array *)sub_2213B20(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)v4->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillBaseList = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.equipSkillBaseList,
     (int32_t)v5,
     v6,
@@ -70,11 +70,11 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
     v9,
     v10,
     v11);
-  v12 = (struct SkillIconComponent_array *)sub_21FFD10(
+  v12 = (struct SkillIconComponent_array *)sub_2213B20(
                                              SkillIconComponent___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillIcon = v12;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.equipSkillIcon,
     (int32_t)v12,
     v13,
@@ -83,11 +83,11 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
     v16,
     v17,
     v18);
-  v19 = (struct UIRangeLabel_array *)sub_21FFD10(
+  v19 = (struct UIRangeLabel_array *)sub_2213B20(
                                        UIRangeLabel___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillTitleRangeLabelList = v19;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.equipSkillTitleRangeLabelList,
     (int32_t)v19,
     v20,
@@ -96,11 +96,11 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
     v23,
     v24,
     v25);
-  v26 = (struct UILabel_array *)sub_21FFD10(
+  v26 = (struct UILabel_array *)sub_2213B20(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillExplanationLabelList = v26;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.equipSkillExplanationLabelList,
     (int32_t)v26,
     v27,
@@ -109,7 +109,7 @@ void ServantStatusListViewItemDrawEquip___ctor(ServantStatusListViewItemDrawEqui
     v30,
     v31,
     v32);
-  this->fields.COLOR_INVALID = (struct UnityEngine_Color_o)xmmword_E93050;
+  this->fields.COLOR_INVALID = (struct UnityEngine_Color_o)xmmword_E9C1F0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -119,7 +119,7 @@ void ServantStatusListViewItemDrawEquip__Awake(ServantStatusListViewItemDrawEqui
   struct UnityEngine_GameObject_array *equipSkillBaseList; // x8
   ServantStatusListViewItemDrawEquip_o *v3; // x19
   struct UnityEngine_GameObject_array *v4; // x8
-  float y; // s8
+  float v5; // s8
   int v6; // w9
   struct UISprite_o *baseSprite; // x9
   int v8; // w20
@@ -128,10 +128,10 @@ void ServantStatusListViewItemDrawEquip__Awake(ServantStatusListViewItemDrawEqui
   int v11; // w8
   float v12; // s8
   struct UnityEngine_GameObject_array *v13; // x8
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s1
+  float v15; // s1
+  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
+  UnityEngine_Vector3_o v17; // 0:kr34_12.12
 
   equipSkillBaseList = this->fields.equipSkillBaseList;
   if ( !equipSkillBaseList )
@@ -147,7 +147,7 @@ void ServantStatusListViewItemDrawEquip__Awake(ServantStatusListViewItemDrawEqui
                                                      0);
     if ( !this )
       goto LABEL_23;
-    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
     v4 = v3->fields.equipSkillBaseList;
     if ( !v4 )
       goto LABEL_23;
@@ -156,16 +156,16 @@ void ServantStatusListViewItemDrawEquip__Awake(ServantStatusListViewItemDrawEqui
     this = (ServantStatusListViewItemDrawEquip_o *)v4->m_Items[1];
     if ( !this )
       goto LABEL_23;
-    y = localPosition.fields.y;
+    v5 = y;
     this = (ServantStatusListViewItemDrawEquip_o *)UnityEngine_GameObject__get_transform(
                                                      (UnityEngine_GameObject_o *)this,
                                                      0);
     if ( !this )
       goto LABEL_23;
-    v15 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    v15 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y));
     equipSkillBaseList = v3->fields.equipSkillBaseList;
-    v6 = (int)(float)(y - v15.fields.y);
-    if ( (float)(y - v15.fields.y) == INFINITY )
+    v6 = (int)(float)(v5 - v15);
+    if ( (float)(v5 - v15) == INFINITY )
       v6 = 0x80000000;
     v3->fields.skillPitch = v6;
     if ( !equipSkillBaseList )
@@ -188,19 +188,19 @@ void ServantStatusListViewItemDrawEquip__Awake(ServantStatusListViewItemDrawEqui
                                                    0);
   if ( !this )
     goto LABEL_23;
-  v16 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-  v3->fields.titleBasePosition.fields.x = v16.fields.x;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  v3->fields.titleBasePosition.fields.x = localPosition.fields.x;
   v11 = v8 >= 0 ? v8 : v8 + 1;
-  v3->fields.titleBasePosition.fields.z = v16.fields.z;
+  v3->fields.titleBasePosition.fields.z = localPosition.fields.z;
   v12 = (float)(v11 >> 1);
   v13 = v3->fields.equipSkillBaseList;
-  v3->fields.titleBasePosition.fields.y = v16.fields.y - v12;
+  v3->fields.titleBasePosition.fields.y = localPosition.fields.y - v12;
   if ( !v13 )
 LABEL_23:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   if ( !LODWORD(v13->max_length) )
 LABEL_24:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   this = (ServantStatusListViewItemDrawEquip_o *)v13->m_Items[0];
   if ( !this )
     goto LABEL_23;
@@ -345,16 +345,16 @@ void ServantStatusListViewItemDrawEquip__SetItem(
   UnityEngine_Vector3_o v118; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v119; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5935153 & 1) == 0 )
+  if ( (byte_596D340 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&ServantStatusListViewItemDrawEquip_TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_21FFC50(&StringLiteral_12406/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935153 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&ServantStatusListViewItemDrawEquip_TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_2213A60(&StringLiteral_12429/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D340 = 1;
   }
   *(_QWORD *)exp = 0;
   skillInfoList = 0;
@@ -365,7 +365,7 @@ void ServantStatusListViewItemDrawEquip__SetItem(
   explanationLabel = this->fields.explanationLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, *(_QWORD *)&mode);
-  equipIcon = (SkillIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12406/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, 0);
+  equipIcon = (SkillIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12429/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, 0);
   if ( !explanationLabel )
     goto LABEL_90;
   UILabel__set_text(explanationLabel, (System_String_o *)equipIcon, 0);
@@ -377,7 +377,7 @@ void ServantStatusListViewItemDrawEquip__SetItem(
     {
       if ( !equipIcon )
         goto LABEL_90;
-      ServantFaceIconComponent__Set_48018012((ServantFaceIconComponent_o *)equipIcon, (int64_t)equipTargetId1, 0, 0, 0);
+      ServantFaceIconComponent__Set_48049308((ServantFaceIconComponent_o *)equipIcon, (int64_t)equipTargetId1, 0, 0, 0);
       goto LABEL_23;
     }
     goto LABEL_21;
@@ -398,14 +398,14 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, equipTargetId1, v10);
   *(_QWORD *)&v114.fields.currentCryptoKey = v13;
   *(_QWORD *)&v114.fields.fakeValue = v14;
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v114, 0);
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v114, 0);
   equipIcon = (SkillIconComponent_o *)this->fields.equipIcon;
   if ( v15 < 1 )
     goto LABEL_21;
   v16 = item->fields.servantLeaderInfo;
   if ( !v16 || !equipIcon )
     goto LABEL_90;
-  ServantFaceIconComponent__Set_48024312((ServantFaceIconComponent_o *)equipIcon, v16->fields.equipTarget1, 0, 0, 0);
+  ServantFaceIconComponent__Set_48055608((ServantFaceIconComponent_o *)equipIcon, v16->fields.equipTarget1, 0, 0, 0);
 LABEL_23:
   equipIcon = (SkillIconComponent_o *)item->fields.equipServantEntity;
   nameRangeLabel = this->fields.nameRangeLabel;
@@ -445,12 +445,12 @@ LABEL_23:
   equipIcon = (SkillIconComponent_o *)ServantStatusListViewItem__get_EquipAtk(item, 0);
   if ( !attackIconLabel )
     goto LABEL_90;
-  UIIconLabel__Set_48040364(attackIconLabel, 5, (int32_t)equipIcon, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_48071660(attackIconLabel, 5, (int32_t)equipIcon, 0, 0, 0, 0, 0, 0, 0, 0);
   hpIconLabel = this->fields.hpIconLabel;
   equipIcon = (SkillIconComponent_o *)ServantStatusListViewItem__get_EquipHp(item, 0);
   if ( !hpIconLabel )
     goto LABEL_90;
-  UIIconLabel__Set_48040364(hpIconLabel, 3, (int32_t)equipIcon, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_48071660(hpIconLabel, 3, (int32_t)equipIcon, 0, 0, 0, 0, 0, 0, 0, 0);
   EquipExpInfo = ServantStatusListViewItem__GetEquipExpInfo(item, exp, (int32_t *)&barExp + 1, (float *)&barExp, 0);
   equipIcon = (SkillIconComponent_o *)this->fields.expBase;
   if ( EquipExpInfo )
@@ -520,7 +520,7 @@ LABEL_23:
       {
         if ( v39 >= max_length_low )
 LABEL_184:
-          sub_21FFED4(equipIcon);
+          sub_2213CE4(equipIcon);
         v40 = skillInfoList->m_Items[v39];
         if ( v40 && v40->fields.id >= 1 )
           v38 = v39 + 1;
@@ -709,7 +709,7 @@ LABEL_96:
         (v80 = this->fields.equipSkillBaseList) == 0) )
   {
 LABEL_90:
-    sub_21FFECC(equipIcon, equipTargetId1);
+    sub_2213CDC(equipIcon, equipTargetId1);
   }
   v81 = this->fields.skillBasePosition.fields.z;
   v82 = 0;
@@ -773,7 +773,7 @@ LABEL_145:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v90, v91);
       *(_QWORD *)&v115.fields.currentCryptoKey = v93;
       *(_QWORD *)&v115.fields.fakeValue = v94;
-      equipIcon = (SkillIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v115, 0);
+      equipIcon = (SkillIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v115, 0);
       if ( !item->fields.userSvtEntity )
         goto LABEL_90;
       v95 = (int)equipIcon;
@@ -794,7 +794,7 @@ LABEL_145:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v90, v91);
       *(_QWORD *)&v116.fields.currentCryptoKey = v104;
       *(_QWORD *)&v116.fields.fakeValue = v105;
-      equipIcon = (SkillIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v116, 0);
+      equipIcon = (SkillIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v116, 0);
       if ( !item->fields.servantLeaderInfo )
         goto LABEL_90;
       v95 = (int)equipIcon;
@@ -802,10 +802,10 @@ LABEL_145:
     }
     v106 = Rarity;
 LABEL_164:
-    equipIcon = (SkillIconComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    equipIcon = (SkillIconComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !equipIcon )
       goto LABEL_90;
-    equipIcon = (SkillIconComponent_o *)PartyOrganizationUtility__IsRarityRestriction_41240800(
+    equipIcon = (SkillIconComponent_o *)PartyOrganizationUtility__IsRarityRestriction_41250980(
                                           (PartyOrganizationUtility_o *)equipIcon,
                                           v95,
                                           v106,

@@ -1,9 +1,9 @@
 void EventInfoJobLevelNoticeDialog___ctor(EventInfoJobLevelNoticeDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_59386AC & 1) == 0 )
+  if ( (byte_5970A07 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59386AC = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5970A07 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -28,7 +28,7 @@ void EventInfoJobLevelNoticeDialog__Init(EventInfoJobLevelNoticeDialog_o *this, 
 
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closeAction = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -38,21 +38,21 @@ void EventInfoJobLevelNoticeDialog__OnClickCloseButton(EventInfoJobLevelNoticeDi
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_59386AB & 1) == 0 )
+  if ( (byte_5970A06 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__);
-    sub_21FFC50(&Method_EventInfoJobLevelNoticeDialog__OnClickCloseButton_b__6_0__);
-    byte_59386AB = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__);
+    sub_2213A60(&Method_EventInfoJobLevelNoticeDialog__OnClickCloseButton_b__6_0__);
+    byte_5970A06 = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoJobLevelNoticeDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoJobLevelNoticeDialog__OnClickCloseButton_b__6_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -88,14 +88,14 @@ void EventInfoJobLevelNoticeDialog__Open(
 
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closeAction = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v13, v14, v15, v16, v17, v18);
   v19 = 1.0;
   if ( maskType == 1 )
     v19 = ColorHelper__ToNormalizedColor(113, 0);
   BaseDialog__SetMaskAlpha((BaseDialog_o *)this, v19, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, maskType, 0);
   this->fields.closeAction = onClose;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)onClose,
     v20,
@@ -114,7 +114,7 @@ void EventInfoJobLevelNoticeDialog__Open(
           v27),
         (before = this->fields.after) == 0) )
   {
-    sub_21FFECC(before, v26);
+    sub_2213CDC(before, v26);
   }
   EventInfoJobLevelNoticeElement__SetJobLevelInfo(before, eventJobEntity, afterLevelEventJobPointBonusEntity, 1, v29);
 }
@@ -136,5 +136,5 @@ void EventInfoJobLevelNoticeDialog___OnClickCloseButton_b__6_0(
   ActionExtensions__Call(this->fields.closeAction, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
   p_closeAction->klass = 0;
-  sub_21FFBF4(p_closeAction, 0, v4, v5, v6, v7, v8, v9);
+  sub_2213A04(p_closeAction, 0, v4, v5, v6, v7, v8, v9);
 }

@@ -11,9 +11,9 @@ void ScriptPlayListViewItem___ctor(
   bool v10; // w6
   bool v11; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -44,7 +44,7 @@ System_String_o *ScriptPlayListViewItem__get_TitleText(ScriptPlayListViewItem_o 
     if ( result )
       return System_String__Substring(result, IndexOf + 1, 0);
 LABEL_6:
-    sub_21FFECC(result, method);
+    sub_2213CDC(result, method);
   }
   return result;
 }

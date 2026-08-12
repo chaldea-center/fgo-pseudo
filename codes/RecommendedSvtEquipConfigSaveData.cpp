@@ -8,15 +8,15 @@ void RecommendedSvtEquipConfigSaveData___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_593C8A3 & 1) == 0 )
+  if ( (byte_5974ADB & 1) == 0 )
   {
-    sub_21FFC50(&RecommendedSvtEquipConfigSaveData_TypeInfo);
-    sub_21FFC50(&StringLiteral_11472/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/);
-    byte_593C8A3 = 1;
+    sub_2213A60(&RecommendedSvtEquipConfigSaveData_TypeInfo);
+    sub_2213A60(&StringLiteral_11492/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/);
+    byte_5974ADB = 1;
   }
-  v7 = StringLiteral_11472/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/;
-  RecommendedSvtEquipConfigSaveData_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_11472/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_11492/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/;
+  RecommendedSvtEquipConfigSaveData_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_11492/*"RECOMMENDED_SVT_EQUIP_CONFIG"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)RecommendedSvtEquipConfigSaveData_TypeInfo->static_fields,
     v7,
     v1,
@@ -52,24 +52,24 @@ void RecommendedSvtEquipConfigSaveData___ctor(RecommendedSvtEquipConfigSaveData_
   bool v22; // w6
   bool v23; // w7
 
-  if ( (byte_593C8A2 & 1) == 0 )
+  if ( (byte_5974ADA & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    byte_593C8A2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5974ADA = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.selectTypeList = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.selectRarityList = v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectRarityList,
     (int32_t)v10,
     v11,
@@ -78,12 +78,12 @@ void RecommendedSvtEquipConfigSaveData___ctor(RecommendedSvtEquipConfigSaveData_
     v14,
     v15,
     v16);
-  v17 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  v17 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v17,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.selectCombineStatusList = v17;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectCombineStatusList,
     (int32_t)v17,
     v18,
@@ -108,10 +108,10 @@ bool RecommendedSvtEquipConfigSaveData__IsExist(RecommendedSvtEquipConfigSaveDat
 {
   RecommendedSvtEquipConfigSaveData_c *v2; // x0
 
-  if ( (byte_593C89F & 1) == 0 )
+  if ( (byte_5974AD7 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendedSvtEquipConfigSaveData_TypeInfo);
-    byte_593C89F = 1;
+    sub_2213A60(&RecommendedSvtEquipConfigSaveData_TypeInfo);
+    byte_5974AD7 = 1;
   }
   v2 = RecommendedSvtEquipConfigSaveData_TypeInfo;
   if ( !*(&RecommendedSvtEquipConfigSaveData_TypeInfo->_2.cctor_finished + 1) )
@@ -127,13 +127,13 @@ RecommendedSvtEquipConfigSaveData_o *RecommendedSvtEquipConfigSaveData__LoadConf
 {
   __int64 v1; // x1
   RecommendedSvtEquipConfigSaveData_c *v2; // x0
-  System_String_o *String_83184936; // x0
+  System_String_o *String_83398240; // x0
 
-  if ( (byte_593C8A0 & 1) == 0 )
+  if ( (byte_5974AD8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_JsonUtility_FromJson_RecommendedSvtEquipConfigSaveData___);
-    sub_21FFC50(&RecommendedSvtEquipConfigSaveData_TypeInfo);
-    byte_593C8A0 = 1;
+    sub_2213A60(&Method_UnityEngine_JsonUtility_FromJson_RecommendedSvtEquipConfigSaveData___);
+    sub_2213A60(&RecommendedSvtEquipConfigSaveData_TypeInfo);
+    byte_5974AD8 = 1;
   }
   v2 = RecommendedSvtEquipConfigSaveData_TypeInfo;
   if ( !*(&RecommendedSvtEquipConfigSaveData_TypeInfo->_2.cctor_finished + 1) )
@@ -141,10 +141,10 @@ RecommendedSvtEquipConfigSaveData_o *RecommendedSvtEquipConfigSaveData__LoadConf
     j_il2cpp_runtime_class_init_0(RecommendedSvtEquipConfigSaveData_TypeInfo, v1);
     v2 = RecommendedSvtEquipConfigSaveData_TypeInfo;
   }
-  String_83184936 = UnityEngine_PlayerPrefs__GetString_83184936(v2->static_fields->SAVE_KEY, 0);
+  String_83398240 = UnityEngine_PlayerPrefs__GetString_83398240(v2->static_fields->SAVE_KEY, 0);
   return (RecommendedSvtEquipConfigSaveData_o *)UnityEngine_JsonUtility__FromJson_object_(
-                                                  String_83184936,
-                                                  (const MethodInfo_38A15A8 *)Method_UnityEngine_JsonUtility_FromJson_RecommendedSvtEquipConfigSaveData___);
+                                                  String_83398240,
+                                                  (const MethodInfo_38D4A70 *)Method_UnityEngine_JsonUtility_FromJson_RecommendedSvtEquipConfigSaveData___);
 }
 
 
@@ -158,10 +158,10 @@ void RecommendedSvtEquipConfigSaveData__SaveConfig(
   RecommendedSvtEquipConfigSaveData_c *v6; // x8
   System_String_o *v7; // x19
 
-  if ( (byte_593C8A1 & 1) == 0 )
+  if ( (byte_5974AD9 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendedSvtEquipConfigSaveData_TypeInfo);
-    byte_593C8A1 = 1;
+    sub_2213A60(&RecommendedSvtEquipConfigSaveData_TypeInfo);
+    byte_5974AD9 = 1;
   }
   v4 = UnityEngine_JsonUtility__ToJson((Il2CppObject *)saveData, 0);
   v6 = RecommendedSvtEquipConfigSaveData_TypeInfo;

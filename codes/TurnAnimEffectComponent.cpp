@@ -16,21 +16,21 @@ void TurnAnimEffectComponent___ctor(TurnAnimEffectComponent_o *this, const Metho
   bool v16; // w7
   __int64 v17; // x1
 
-  if ( (byte_593C330 & 1) == 0 )
+  if ( (byte_5974568 & 1) == 0 )
   {
-    sub_21FFC50(&EffectComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_26542/*"{0}_start"*/);
-    sub_21FFC50(&StringLiteral_26541/*"{0}_loop"*/);
-    byte_593C330 = 1;
+    sub_2213A60(&EffectComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_26594/*"{0}_start"*/);
+    sub_2213A60(&StringLiteral_26593/*"{0}_loop"*/);
+    byte_5974568 = 1;
   }
-  v9 = (struct System_String_o *)StringLiteral_26542/*"{0}_start"*/;
+  v9 = (struct System_String_o *)StringLiteral_26594/*"{0}_start"*/;
   this->fields.leftTurnCount = -1;
   this->fields.CanShowBuff = 1;
   this->fields.startAnimName = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.startAnimName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_26541/*"{0}_loop"*/;
-  this->fields.loopAnimName = (struct System_String_o *)StringLiteral_26541/*"{0}_loop"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loopAnimName, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.startAnimName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_26593/*"{0}_loop"*/;
+  this->fields.loopAnimName = (struct System_String_o *)StringLiteral_26593/*"{0}_loop"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loopAnimName, v10, v11, v12, v13, v14, v15, v16);
   if ( !*(&EffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo, v17);
   EffectComponent___ctor((EffectComponent_o *)this, 0);
@@ -39,21 +39,21 @@ void TurnAnimEffectComponent___ctor(TurnAnimEffectComponent_o *this, const Metho
 
 void TurnAnimEffectComponent__Init(TurnAnimEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_593C32A & 1) == 0 )
+  if ( (byte_5974562 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_TryGetComponent_Animation___);
-    sub_21FFC50(&Method_UnityEngine_Component_TryGetComponent_SimpleAnimation___);
-    byte_593C32A = 1;
+    sub_2213A60(&Method_UnityEngine_Component_TryGetComponent_Animation___);
+    sub_2213A60(&Method_UnityEngine_Component_TryGetComponent_SimpleAnimation___);
+    byte_5974562 = 1;
   }
   EffectComponent__Init((EffectComponent_o *)this, 0);
   if ( !UnityEngine_Component__TryGetComponent_object_(
           (UnityEngine_Component_o *)this,
           (Il2CppObject **)&this->fields.anim,
-          (const MethodInfo_37EE6DC *)Method_UnityEngine_Component_TryGetComponent_Animation___) )
+          (const MethodInfo_3821BA4 *)Method_UnityEngine_Component_TryGetComponent_Animation___) )
     UnityEngine_Component__TryGetComponent_object_(
       (UnityEngine_Component_o *)this,
       (Il2CppObject **)&this->fields.simpleAnim,
-      (const MethodInfo_37EE6DC *)Method_UnityEngine_Component_TryGetComponent_SimpleAnimation___);
+      (const MethodInfo_3821BA4 *)Method_UnityEngine_Component_TryGetComponent_SimpleAnimation___);
   this->fields.isInitialized = 1;
 }
 
@@ -68,10 +68,10 @@ bool TurnAnimEffectComponent__IsAnimationPlaying(
   UnityEngine_Animation_o *v7; // x0
   UnityEngine_Object_o *simpleAnim; // x21
 
-  if ( (byte_593C32F & 1) == 0 )
+  if ( (byte_5974567 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C32F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974567 = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -82,7 +82,7 @@ bool TurnAnimEffectComponent__IsAnimationPlaying(
     if ( v7 )
       return UnityEngine_Animation__IsPlaying(v7, animationName, 0);
 LABEL_14:
-    sub_21FFECC(v7, v6);
+    sub_2213CDC(v7, v6);
   }
   simpleAnim = (UnityEngine_Object_o *)this->fields.simpleAnim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -106,10 +106,10 @@ void TurnAnimEffectComponent__PlayAnimation(
   UnityEngine_Animation_o *v7; // x0
   UnityEngine_Object_o *simpleAnim; // x21
 
-  if ( (byte_593C32E & 1) == 0 )
+  if ( (byte_5974566 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C32E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974566 = 1;
   }
   if ( !this->fields.isInitialized )
     ((void (__fastcall *)(TurnAnimEffectComponent_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._4_Init.methodPtr)(
@@ -124,11 +124,11 @@ void TurnAnimEffectComponent__PlayAnimation(
     v7 = this->fields.anim;
     if ( v7 )
     {
-      UnityEngine_Animation__Play_82865240(v7, animationName, 0);
+      UnityEngine_Animation__Play_83078544(v7, animationName, 0);
       return;
     }
 LABEL_16:
-    sub_21FFECC(v7, v6);
+    sub_2213CDC(v7, v6);
   }
   simpleAnim = (UnityEngine_Object_o *)this->fields.simpleAnim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -138,7 +138,7 @@ LABEL_16:
     v7 = (UnityEngine_Animation_o *)this->fields.simpleAnim;
     if ( !v7 )
       goto LABEL_16;
-    SimpleAnimation__Play_78338864((SimpleAnimation_o *)v7, animationName, 0);
+    SimpleAnimation__Play_78552168((SimpleAnimation_o *)v7, animationName, 0);
   }
 }
 
@@ -153,7 +153,7 @@ void TurnAnimEffectComponent__PlayLoopAnimation(TurnAnimEffectComponent_o *this,
 
   loopAnimName = this->fields.loopAnimName;
   leftTurnCount = this->fields.leftTurnCount;
-  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &leftTurnCount);
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &leftTurnCount);
   v5 = System_String__Format(loopAnimName, v4, 0);
   TurnAnimEffectComponent__PlayAnimation(this, v5, v6);
 }
@@ -164,7 +164,7 @@ void TurnAnimEffectComponent__PlayStartAnimation(TurnAnimEffectComponent_o *this
   System_Collections_IEnumerator_o *started; // x1
 
   started = TurnAnimEffectComponent__PlayStartThenLoop(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, started, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, started, 0);
 }
 
 
@@ -187,18 +187,18 @@ System_Collections_IEnumerator_o *TurnAnimEffectComponent__PlayStartThen(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593C32D & 1) == 0 )
+  if ( (byte_5974565 & 1) == 0 )
   {
-    sub_21FFC50(&TurnAnimEffectComponent__PlayStartThen_d__14_TypeInfo);
-    byte_593C32D = 1;
+    sub_2213A60(&TurnAnimEffectComponent__PlayStartThen_d__14_TypeInfo);
+    byte_5974565 = 1;
   }
-  v5 = sub_21FFEBC(TurnAnimEffectComponent__PlayStartThen_d__14_TypeInfo);
+  v5 = sub_2213CCC(TurnAnimEffectComponent__PlayStartThen_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = onCompleted;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)onCompleted, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)onCompleted, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -210,13 +210,13 @@ System_Collections_IEnumerator_o *TurnAnimEffectComponent__PlayStartThenDestroy(
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_593C32C & 1) == 0 )
+  if ( (byte_5974564 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_TurnAnimEffectComponent__PlayStartThenDestroy_b__13_0__);
-    byte_593C32C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_TurnAnimEffectComponent__PlayStartThenDestroy_b__13_0__);
+    byte_5974564 = 1;
   }
-  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_TurnAnimEffectComponent__PlayStartThenDestroy_b__13_0__, 0);
   return TurnAnimEffectComponent__PlayStartThen(this, v3, v4);
 }
@@ -229,13 +229,13 @@ System_Collections_IEnumerator_o *TurnAnimEffectComponent__PlayStartThenLoop(
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_593C32B & 1) == 0 )
+  if ( (byte_5974563 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_TurnAnimEffectComponent__PlayStartThenLoop_b__12_0__);
-    byte_593C32B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_TurnAnimEffectComponent__PlayStartThenLoop_b__12_0__);
+    byte_5974563 = 1;
   }
-  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_TurnAnimEffectComponent__PlayStartThenLoop_b__12_0__, 0);
   return TurnAnimEffectComponent__PlayStartThen(this, v3, v4);
 }
@@ -266,7 +266,7 @@ void TurnAnimEffectComponent__UpdateTurnCount(
       started = TurnAnimEffectComponent__PlayStartThenDestroy(this, *(const MethodInfo **)&turnCount);
     else
       started = TurnAnimEffectComponent__PlayStartThenLoop(this, *(const MethodInfo **)&turnCount);
-    UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, started, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, started, 0);
   }
 }
 
@@ -276,15 +276,15 @@ void TurnAnimEffectComponent___PlayStartThenDestroy_b__13_0(TurnAnimEffectCompon
   __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_593C331 & 1) == 0 )
+  if ( (byte_5974569 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C331 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974569 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
 }
 
 
@@ -322,7 +322,6 @@ bool TurnAnimEffectComponent__PlayStartThen_d__14__MoveNext(
   bool v20; // w6
   bool v21; // w7
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
   struct System_Action_o *onCompleted; // x8
   int32_t leftTurnCount; // [xsp+Ch] [xbp-24h] BYREF
 
@@ -334,7 +333,7 @@ bool TurnAnimEffectComponent__PlayStartThen_d__14__MoveNext(
     if ( _4__this )
       goto LABEL_6;
 LABEL_12:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( _1__state )
     return 0;
@@ -343,10 +342,10 @@ LABEL_12:
     goto LABEL_12;
   startAnimName = _4__this->fields.startAnimName;
   leftTurnCount = _4__this->fields.leftTurnCount;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &leftTurnCount);
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &leftTurnCount);
   v8 = System_String__Format(startAnimName, v7, 0);
   this->fields._animeName_5__2 = v8;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._animeName_5__2,
     (int32_t)v8,
     v9,
@@ -361,10 +360,9 @@ LABEL_6:
   {
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
-    result = 1;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
     *((_DWORD *)p__2__current - 2) = 1;
-    return result;
+    return 1;
   }
   onCompleted = this->fields.onCompleted;
   _4__this->fields.CanShowBuff = 1;
@@ -392,11 +390,11 @@ void __noreturn TurnAnimEffectComponent__PlayStartThen_d__14__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_TurnAnimEffectComponent__PlayStartThen_d__14_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_TurnAnimEffectComponent__PlayStartThen_d__14_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

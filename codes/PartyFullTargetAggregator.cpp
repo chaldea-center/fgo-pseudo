@@ -33,7 +33,7 @@ System_Int32_array *PartyFullTargetAggregator__GetCandidate(
         return BattleData__getEnemyServantIDList((BattleData_o *)this, 1, 0, 0);
     }
 LABEL_10:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( !v4 )
     goto LABEL_10;

@@ -1,27 +1,27 @@
 void WarBoardQuestEntity___ctor(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59398CE & 1) == 0 )
+  if ( (byte_5971A8F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59398CE = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971A8F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardQuestEntity__CreatePK(int32_t questId, int32_t questPhase, const MethodInfo *method)
 {
-  if ( (byte_59398CC & 1) == 0 )
+  if ( (byte_5971A8D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59398CC = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5971A8D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,10 +35,10 @@ System_String_o *WarBoardQuestEntity__CreatePrimaryKey(WarBoardQuestEntity_o *th
 
 bool WarBoardQuestEntity__IsUseEventUI(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59398CD & 1) == 0 )
+  if ( (byte_5971A8E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_21953/*"isUseEventUI"*/);
-    byte_59398CD = 1;
+    sub_2213A60(&StringLiteral_21995/*"isUseEventUI"*/);
+    byte_5971A8E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21953/*"isUseEventUI"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21995/*"isUseEventUI"*/, 0, 0) > 0;
 }

@@ -8,17 +8,17 @@ void ServantFilterSelectMenu___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593301D & 1) == 0 )
+  if ( (byte_596B222 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_TypeInfo);
-    sub_21FFC50(&ServantFilterSelectMenu_TypeInfo);
-    sub_21FFC50(&StringLiteral_13245/*"ServantFilterSelect1"*/);
-    byte_593301D = 1;
+    sub_2213A60(&ListViewSort_TypeInfo);
+    sub_2213A60(&ServantFilterSelectMenu_TypeInfo);
+    sub_2213A60(&StringLiteral_13272/*"ServantFilterSelect1"*/);
+    byte_596B222 = 1;
   }
-  v1 = (ListViewSort_o *)sub_21FFEBC(ListViewSort_TypeInfo);
-  ListViewSort___ctor_50784632(v1, (System_String_o *)StringLiteral_13245/*"ServantFilterSelect1"*/, 3, 0, 0);
+  v1 = (ListViewSort_o *)sub_2213CCC(ListViewSort_TypeInfo);
+  ListViewSort___ctor_50854784(v1, (System_String_o *)StringLiteral_13272/*"ServantFilterSelect1"*/, 3, 0, 0);
   ServantFilterSelectMenu_TypeInfo->static_fields->commonServantSortInfo = v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ServantFilterSelectMenu_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -49,27 +49,27 @@ void ServantFilterSelectMenu___ctor(ServantFilterSelectMenu_o *this, const Metho
   __int64 v17; // x1
   __int64 v18; // x2
 
-  if ( (byte_593301C & 1) == 0 )
+  if ( (byte_596B221 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
-    byte_593301C = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
+    byte_596B221 = 1;
   }
-  v3 = (System_Collections_Generic_List_T__o *)sub_21FFEBC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v3 = (System_Collections_Generic_List_T__o *)sub_2213CCC(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v3,
-    (const MethodInfo_44350C0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_44691F8 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   this->fields.useFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.useFilterKindList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.useFilterKindList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
   this->fields.useFilterButtonList = (struct System_Collections_Generic_List_ServantFilterButtonControl__o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.useFilterButtonList,
     (int32_t)v10,
     v11,
@@ -97,7 +97,7 @@ void ServantFilterSelectMenu__Callback(ServantFilterSelectMenu_o *this, bool res
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       0,
       (System_String_o *)method,
@@ -114,7 +114,6 @@ void ServantFilterSelectMenu__Callback(ServantFilterSelectMenu_o *this, bool res
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ServantFilterSelectMenu__CheckMatchItemAndDisplayInfo(ServantFilterSelectMenu_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
@@ -123,16 +122,13 @@ void ServantFilterSelectMenu__CheckMatchItemAndDisplayInfo(ServantFilterSelectMe
   __int64 v6; // x1
   ListViewManager_o *warningLabel; // x0
   _BOOL4 v8; // w20
-  float v9; // s0 OVERLAPPED
-  float v10; // s3
-  float v11; // s1
-  float v12; // s2
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5933019 & 1) == 0 )
+  if ( (byte_596B21E & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933019 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B21E = 1;
   }
   kind = this->fields.kind;
   if ( kind <= 0x10 && ((1 << kind) & 0x10060) != 0 )
@@ -169,16 +165,16 @@ void ServantFilterSelectMenu__CheckMatchItemAndDisplayInfo(ServantFilterSelectMe
           {
             warningLabel = (ListViewManager_o *)UnityEngine_Component__GetComponent_object_(
                                                   (UnityEngine_Component_o *)warningLabel,
-                                                  (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                                  (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
             if ( warningLabel )
             {
-              v9 = 1.0;
-              v10 = 1.0;
+              v10.fields.r = 1.0;
+              v10.fields.a = 1.0;
               if ( v8 )
-                v9 = 0.5;
-              v11 = v9;
-              v12 = v9;
-              UIWidget__set_color((UIWidget_o *)warningLabel, *(UnityEngine_Color_o *)&v9, 0);
+                v10.fields.r = 0.5;
+              v10.fields.g = v10.fields.r;
+              v10.fields.b = v10.fields.r;
+              UIWidget__set_color((UIWidget_o *)warningLabel, v10, 0);
               return;
             }
           }
@@ -186,7 +182,7 @@ void ServantFilterSelectMenu__CheckMatchItemAndDisplayInfo(ServantFilterSelectMe
       }
     }
 LABEL_20:
-    sub_21FFECC(warningLabel, v6);
+    sub_2213CDC(warningLabel, v6);
   }
 }
 
@@ -195,11 +191,11 @@ void ServantFilterSelectMenu__Close(ServantFilterSelectMenu_o *this, const Metho
 {
   const MethodInfo *v2; // x2
 
-  ServantFilterSelectMenu__Close_39468060(this, 0, v2);
+  ServantFilterSelectMenu__Close_39552236(this, 0, v2);
 }
 
 
-void ServantFilterSelectMenu__Close_39468060(
+void ServantFilterSelectMenu__Close_39552236(
         ServantFilterSelectMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -213,15 +209,15 @@ void ServantFilterSelectMenu__Close_39468060(
   System_Action_c *v11; // x0
   System_Action_o *v12; // x20
 
-  if ( (byte_5933001 & 1) == 0 )
+  if ( (byte_596B206 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_EndClose__);
-    byte_5933001 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_EndClose__);
+    byte_596B206 = 1;
   }
   ServantFilterSelectMenu__SetButtonEnable(this, 0, method);
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     v5,
@@ -232,7 +228,7 @@ void ServantFilterSelectMenu__Close_39468060(
     v10);
   v11 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v12 = (System_Action_o *)sub_21FFEBC(v11);
+  v12 = (System_Action_o *)sub_2213CCC(v11);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ServantFilterSelectMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v12, 0);
 }
@@ -241,10 +237,10 @@ void ServantFilterSelectMenu__Close_39468060(
 System_Object_array *ServantFilterSelectMenu__CollectCompsRecursive_object_(
         ServantFilterSelectMenu_o *this,
         UnityEngine_Transform_o *parent,
-        const MethodInfo_3952774 *method)
+        const MethodInfo_3985D04 *method)
 {
   long double v3; // q0
-  const MethodInfo_3952774_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3985D04_RGCTXs *rgctx_data; // x8
   __int64 _0_ServantFilterSelectMenu___c__DisplayClass64_0_T; // x0
   __int64 v8; // x20
   UnityEngine_Component_o *v9; // x0
@@ -264,43 +260,43 @@ System_Object_array *ServantFilterSelectMenu__CollectCompsRecursive_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_2237B54();
+    sub_224B964();
     rgctx_data = method->rgctx_data;
   }
   _0_ServantFilterSelectMenu___c__DisplayClass64_0_T = (__int64)rgctx_data->_0_ServantFilterSelectMenu___c__DisplayClass64_0_T_;
   if ( (*((_WORD *)&rgctx_data->_0_ServantFilterSelectMenu___c__DisplayClass64_0_T_->_2.bitflags2 + 1) & 1) == 0 )
-    _0_ServantFilterSelectMenu___c__DisplayClass64_0_T = sub_2237AF8(v3);
-  v8 = sub_21FFEBC(_0_ServantFilterSelectMenu___c__DisplayClass64_0_T);
+    _0_ServantFilterSelectMenu___c__DisplayClass64_0_T = sub_224B908(v3);
+  v8 = sub_2213CCC(_0_ServantFilterSelectMenu___c__DisplayClass64_0_T);
   ServantFilterSelectMenu___c__DisplayClass64_0_object____ctor(
     (ServantFilterSelectMenu___c__DisplayClass64_0_T__o *)v8,
-    (const MethodInfo_3AD28AC *)method->rgctx_data->_1_ServantFilterSelectMenu___c__DisplayClass64_0_T___ctor);
+    (const MethodInfo_3B06054 *)method->rgctx_data->_1_ServantFilterSelectMenu___c__DisplayClass64_0_T___ctor);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = parent,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 16), (int32_t)parent, v11, v12, v13, v14, v15, v16),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 16), (int32_t)parent, v11, v12, v13, v14, v15, v16),
         (v9 = *(UnityEngine_Component_o **)(v8 + 16)) == 0) )
   {
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   }
   ComponentsInChildren_object = (System_Collections_Generic_IEnumerable_TSource__o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                                                        v9,
                                                                                        1,
-                                                                                       (const MethodInfo_37EE304 *)method->rgctx_data->_2_UnityEngine_Component_GetComponentsInChildren_T_);
+                                                                                       (const MethodInfo_38217CC *)method->rgctx_data->_2_UnityEngine_Component_GetComponentsInChildren_T_);
   _5_System_Func_T__bool = method->rgctx_data->_5_System_Func_T__bool_;
   if ( (*((_WORD *)&_5_System_Func_T__bool->_2.bitflags2 + 1) & 1) == 0 )
-    _5_System_Func_T__bool = (Il2CppClass *)sub_2237AF8(v18);
-  v20 = (System_Func_object__bool__o *)sub_21FFEBC(_5_System_Func_T__bool);
+    _5_System_Func_T__bool = (Il2CppClass *)sub_224B908(v18);
+  v20 = (System_Func_object__bool__o *)sub_2213CCC(_5_System_Func_T__bool);
   System_Func_object__bool____ctor(
     v20,
     (Il2CppObject *)v8,
     (intptr_t)method->rgctx_data->_4_ServantFilterSelectMenu___c__DisplayClass64_0_T___CollectCompsRecursive_b__0,
-    (const MethodInfo_42568AC *)method->rgctx_data->_6_System_Func_T__bool___ctor);
+    (const MethodInfo_428A438 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
   v21 = System_Linq_Enumerable__Where_object_(
           ComponentsInChildren_object,
           (System_Func_TSource__bool__o *)v20,
-          (const MethodInfo_386FFB0 *)method->rgctx_data->_7_System_Linq_Enumerable_Where_T_);
+          (const MethodInfo_38A3478 *)method->rgctx_data->_7_System_Linq_Enumerable_Where_T_);
   return System_Linq_Enumerable__ToArray_object_(
            v21,
-           (const MethodInfo_3868664 *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
+           (const MethodInfo_389BB2C *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
 }
 
 
@@ -311,10 +307,10 @@ void ServantFilterSelectMenu__DeleteContinueData(const MethodInfo *method)
   ServantFilterSelectMenu_c *v3; // x0
   ListViewSort_o *commonServantSortInfo; // x0
 
-  if ( (byte_5932FFE & 1) == 0 )
+  if ( (byte_596B203 & 1) == 0 )
   {
-    sub_21FFC50(&ServantFilterSelectMenu_TypeInfo);
-    byte_5932FFE = 1;
+    sub_2213A60(&ServantFilterSelectMenu_TypeInfo);
+    byte_596B203 = 1;
   }
   v3 = ServantFilterSelectMenu_TypeInfo;
   if ( !*(&ServantFilterSelectMenu_TypeInfo->_2.cctor_finished + 1) )
@@ -324,7 +320,7 @@ void ServantFilterSelectMenu__DeleteContinueData(const MethodInfo *method)
   }
   commonServantSortInfo = v3->static_fields->commonServantSortInfo;
   if ( !commonServantSortInfo )
-    sub_21FFECC(0, v1);
+    sub_2213CDC(0, v1);
   ListViewSort__DeleteContinueData(commonServantSortInfo, 0);
 }
 
@@ -345,7 +341,7 @@ void ServantFilterSelectMenu__EndClose(ServantFilterSelectMenu_o *this, const Me
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))closeCallbackFunc->fields.invoke_impl)(
       closeCallbackFunc->fields.method_code,
       closeCallbackFunc->fields.method);
@@ -434,37 +430,37 @@ void ServantFilterSelectMenu__InitCategoryContainer(
   System_Collections_Generic_List_Enumerator_object__o v65; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v66; // [xsp+20h] [xbp-A0h] BYREF
   int v67; // [xsp+4Ch] [xbp-74h]
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o BottomPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o BottomPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5933010 & 1) == 0 )
+  if ( (byte_596B215 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_ListViewSort_FilterCategoryKind___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Last_ListViewSort_FilterCategoryKind___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__get_Current__);
-    sub_21FFC50(&System_Func_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind__TypeInfo);
-    sub_21FFC50(&System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__GetEnumerator__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitCategoryContainer_b__65_0__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__DisplayClass65_0__InitCategoryContainer_b__1__);
-    sub_21FFC50(&ServantFilterSelectMenu___c__DisplayClass65_0_TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__DisplayClass65_1__InitCategoryContainer_b__2__);
-    sub_21FFC50(&ServantFilterSelectMenu___c__DisplayClass65_1_TypeInfo);
-    sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_13236/*"ServantCombineOld"*/);
-    sub_21FFC50(&StringLiteral_13235/*"ServantCombine"*/);
-    byte_5933010 = 1;
+    sub_2213A60(&Method_BasicHelper_Any_ListViewSort_FilterCategoryKind___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Last_ListViewSort_FilterCategoryKind___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__get_Current__);
+    sub_2213A60(&System_Func_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind__TypeInfo);
+    sub_2213A60(&System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__GetEnumerator__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitCategoryContainer_b__65_0__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__DisplayClass65_0__InitCategoryContainer_b__1__);
+    sub_2213A60(&ServantFilterSelectMenu___c__DisplayClass65_0_TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__DisplayClass65_1__InitCategoryContainer_b__2__);
+    sub_2213A60(&ServantFilterSelectMenu___c__DisplayClass65_1_TypeInfo);
+    sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    sub_2213A60(&StringLiteral_13263/*"ServantCombineOld"*/);
+    sub_2213A60(&StringLiteral_13262/*"ServantCombine"*/);
+    byte_596B215 = 1;
   }
   memset(&v66, 0, sizeof(v66));
-  v5 = sub_21FFEBC(ServantFilterSelectMenu___c__DisplayClass65_0_TypeInfo);
+  v5 = sub_2213CCC(ServantFilterSelectMenu___c__DisplayClass65_0_TypeInfo);
   ServantFilterSelectMenu___c__DisplayClass65_0___ctor((ServantFilterSelectMenu___c__DisplayClass65_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_47;
   *(_QWORD *)(v5 + 16) = categoryKindKist;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)categoryKindKist, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)categoryKindKist, v8, v9, v10, v11, v12, v13);
   currentFilterContainer = this->fields.currentFilterContainer;
   if ( !currentFilterContainer )
     goto LABEL_47;
@@ -485,7 +481,7 @@ void ServantFilterSelectMenu__InitCategoryContainer(
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v20 = (Il2CppObject *)static_fields->__9;
-    _9__65_0 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind__TypeInfo);
+    _9__65_0 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind__TypeInfo);
     System_Func_object__Int32Enum____ctor(
       _9__65_0,
       v20,
@@ -493,13 +489,13 @@ void ServantFilterSelectMenu__InitCategoryContainer(
       0);
     v21 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v21->__9__65_0 = (struct System_Func_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind__o *)_9__65_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->__9__65_0, (int32_t)_9__65_0, v22, v23, v24, v25, v26, v27);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->__9__65_0, (int32_t)_9__65_0, v22, v23, v24, v25, v26, v27);
   }
   v28 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__Int32Enum_(
                                                                categoryContainerList,
                                                                (System_Func_TSource__TResult__o *)_9__65_0,
-                                                               (const MethodInfo_385D6B8 *)Method_System_Linq_Enumerable_Select_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind___);
-  v29 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
+                                                               (const MethodInfo_3890B80 *)Method_System_Linq_Enumerable_Select_ServantFilterCategoryContainer__ListViewSort_FilterCategoryKind___);
+  v29 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v29,
     (Il2CppObject *)v5,
@@ -508,17 +504,17 @@ void ServantFilterSelectMenu__InitCategoryContainer(
   Int32Enum = System_Linq_Enumerable__Last_Int32Enum_(
                 v28,
                 (System_Func_TSource__bool__o *)v29,
-                (const MethodInfo_38512A4 *)Method_System_Linq_Enumerable_Last_ListViewSort_FilterCategoryKind___);
+                (const MethodInfo_388476C *)Method_System_Linq_Enumerable_Last_ListViewSort_FilterCategoryKind___);
   v67 = Int32Enum;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    Int32Enum = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    Int32Enum = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   v30 = this->fields.currentFilterContainer;
   if ( !v30 || (Int32Enum = (__int64)v30->fields.categoryContainerList) == 0 )
 LABEL_47:
-    sub_21FFECC(Int32Enum, v7);
+    sub_2213CDC(Int32Enum, v7);
   v31 = UnityEngine_Vector3_TypeInfo->static_fields;
   x = v31->zeroVector.fields.x;
   y = v31->zeroVector.fields.y;
@@ -526,86 +522,86 @@ LABEL_47:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v65,
     (System_Collections_Generic_List_object__o *)Int32Enum,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__GetEnumerator__);
   v66 = v65;
   v65.fields._list = 0;
   *(_QWORD *)&v65.fields._index = &v66;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v66,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__MoveNext__) )
   {
-    v35 = sub_21FFEBC(ServantFilterSelectMenu___c__DisplayClass65_1_TypeInfo);
+    v35 = sub_2213CCC(ServantFilterSelectMenu___c__DisplayClass65_1_TypeInfo);
     ServantFilterSelectMenu___c__DisplayClass65_1___ctor((ServantFilterSelectMenu___c__DisplayClass65_1_o *)v35, 0);
     if ( !v35 )
-      sub_21FFECC(v36, v37);
+      sub_2213CDC(v36, v37);
     current = (int32_t)v66.fields._current;
     *(_QWORD *)(v35 + 16) = v66.fields._current;
     v45 = (UnityEngine_Component_o **)(v35 + 16);
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v35 + 16), current, v38, v39, v40, v41, v42, v43);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v35 + 16), current, v38, v39, v40, v41, v42, v43);
     v46 = *(System_Int32Enum_array **)(v5 + 16);
-    v47 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
+    v47 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_ListViewSort_FilterCategoryKind__bool__TypeInfo);
     System_Func_Int32Enum__bool____ctor(
       v47,
       (Il2CppObject *)v35,
       Method_ServantFilterSelectMenu___c__DisplayClass65_1__InitCategoryContainer_b__2__,
       0);
-    v50 = BasicHelper__Any_Int32Enum__58575096(
+    v50 = BasicHelper__Any_Int32Enum__58784936(
             v46,
             (System_Func_T__bool__o *)v47,
-            (const MethodInfo_37DC8F8 *)Method_BasicHelper_Any_ListViewSort_FilterCategoryKind___);
+            (const MethodInfo_380FCA8 *)Method_BasicHelper_Any_ListViewSort_FilterCategoryKind___);
     v51 = *(UnityEngine_Component_o **)(v35 + 16);
     if ( v50 )
     {
       if ( !v51 )
-        sub_21FFECC(0, v48);
+        sub_2213CDC(0, v48);
       ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v51, 1, v49);
       if ( !ConstantMaster__IsFlag20260802(0) )
       {
         if ( !*v45 )
-          sub_21FFECC(0, v52);
+          sub_2213CDC(0, v52);
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*v45, 0);
         if ( !gameObject )
-          sub_21FFECC(0, v54);
+          sub_2213CDC(0, v54);
         name = UnityEngine_Object__get_name(gameObject, 0);
-        if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_13235/*"ServantCombine"*/, 0) )
+        if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_13262/*"ServantCombine"*/, 0) )
         {
           v51 = *v45;
           if ( !*v45 )
-            sub_21FFECC(0, v56);
+            sub_2213CDC(0, v56);
           goto LABEL_33;
         }
       }
       if ( ConstantMaster__IsFlag20260802(0) )
       {
         if ( !*v45 )
-          sub_21FFECC(0, v57);
+          sub_2213CDC(0, v57);
         v58 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*v45, 0);
         if ( !v58 )
-          sub_21FFECC(0, v59);
+          sub_2213CDC(0, v59);
         v60 = UnityEngine_Object__get_name(v58, 0);
-        if ( System_String__op_Equality(v60, (System_String_o *)StringLiteral_13236/*"ServantCombineOld"*/, 0) )
+        if ( System_String__op_Equality(v60, (System_String_o *)StringLiteral_13263/*"ServantCombineOld"*/, 0) )
         {
           v51 = *v45;
           if ( !*v45 )
-            sub_21FFECC(0, v57);
+            sub_2213CDC(0, v57);
           goto LABEL_33;
         }
       }
       if ( !*v45 )
-        sub_21FFECC(0, v57);
+        sub_2213CDC(0, v57);
       v61 = UnityEngine_Component__get_gameObject(*v45, 0);
-      v68.fields.x = x;
-      v68.fields.y = y;
-      v68.fields.z = z;
-      GameObjectExtensions__SetLocalPosition(v61, v68, 0);
+      v69.fields.x = x;
+      v69.fields.y = y;
+      v69.fields.z = z;
+      GameObjectExtensions__SetLocalPosition(v61, v69, 0);
       if ( !*v45 )
-        sub_21FFECC(0, v62);
+        sub_2213CDC(0, v62);
       ServantFilterCategoryContainer__Layout(
         (ServantFilterCategoryContainer_o *)*v45,
         HIDWORD((*v45)[2].monitor) == v67,
         v63);
       if ( !*v45 )
-        sub_21FFECC(0, v64);
+        sub_2213CDC(0, v64);
       BottomPosition = ServantFilterCategoryContainer__get_BottomPosition((ServantFilterCategoryContainer_o *)*v45, v64);
       x = BottomPosition.fields.x;
       y = BottomPosition.fields.y;
@@ -614,14 +610,14 @@ LABEL_47:
     else
     {
       if ( !v51 )
-        sub_21FFECC(0, v48);
+        sub_2213CDC(0, v48);
 LABEL_33:
       ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v51, 0, v49);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v66,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterCategoryContainer__Dispose__);
 }
 
 
@@ -666,28 +662,26 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
   __int64 v38; // x2
   UnityEngine_Object_o *v39; // x20
   _DWORD *monitor; // x8
-  System_Array_o *v41; // x0
-  System_RuntimeFieldHandle_o v42; // x1
-  ListViewSort_FilterCategoryKind_array *v43; // x20
-  const MethodInfo *v44; // x2
+  System_Array_o *v41; // x20
+  const MethodInfo *v42; // x2
 
   v3 = this;
-  if ( (byte_593300A & 1) == 0 )
+  if ( (byte_596B20F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__44C93D4CE916E1F1370089EFB697AAFABCB63CFF5367F62F96DC74BAF3C6B87A);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitCommandCodeDisp_b__58_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_593300A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__44C93D4CE916E1F1370089EFB697AAFABCB63CFF5367F62F96DC74BAF3C6B87A);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitCommandCodeDisp_b__58_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20F = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -705,7 +699,7 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_27;
@@ -720,7 +714,7 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
@@ -730,7 +724,7 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
   commandCodeFilterContainer = v3->fields.commandCodeFilterContainer;
   v3->fields.currentFilterContainer = commandCodeFilterContainer;
   p_currentFilterContainer = &v3->fields.currentFilterContainer;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)commandCodeFilterContainer,
     v8,
@@ -743,7 +737,7 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
   ServantFilterSelectMenu__InitUseFilterButton(v3, 0, v20);
   commandCodeEffectFilterController = v3->fields.commandCodeEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v23 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v23, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !commandCodeEffectFilterController )
     goto LABEL_27;
@@ -767,11 +761,11 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
       servantFilterConatiner = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v29 = *(Il2CppObject **)servantFilterConatiner;
-    v28 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v28 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v28, v29, Method_ServantFilterSelectMenu___c__InitCommandCodeDisp_b__58_0__, 0);
     static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     static_fields->__9__58_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v28;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__58_0,
       (int32_t)v28,
       v31,
@@ -786,7 +780,7 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
   v39 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v28,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v38);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v39, 0, 0);
@@ -802,14 +796,15 @@ void ServantFilterSelectMenu__InitCommandCodeDisp(ServantFilterSelectMenu_o *thi
       }
     }
 LABEL_27:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_26:
-  v41 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 4);
-  v42.fields.value = Field__PrivateImplementationDetails__44C93D4CE916E1F1370089EFB697AAFABCB63CFF5367F62F96DC74BAF3C6B87A;
-  v43 = (ListViewSort_FilterCategoryKind_array *)v41;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v41, v42, 0);
-  ServantFilterSelectMenu__InitCategoryContainer(v3, v43, v44);
+  v41 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v41,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__44C93D4CE916E1F1370089EFB697AAFABCB63CFF5367F62F96DC74BAF3C6B87A,
+    0);
+  ServantFilterSelectMenu__InitCategoryContainer(v3, (ListViewSort_FilterCategoryKind_array *)v41, v42);
 }
 
 
@@ -839,44 +834,40 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
   struct ServantFilterSelectMenu_FilterContainer_o *servantFilterConatiner; // x1
   const MethodInfo *v23; // x2
   const MethodInfo *v24; // x2
-  System_Array_o *v25; // x0
-  System_RuntimeFieldHandle_o v26; // x1
-  System_Collections_Generic_IEnumerable_T__o *v27; // x23
+  System_Array_o *v25; // x23
   int m_CancellationTokenSource; // w8
-  Il2CppClass *v29; // x8
-  System_Array_o *v30; // x0
-  System_RuntimeFieldHandle_o v31; // x1
-  System_Collections_Generic_IEnumerable_T__o *v32; // x21
-  System_Collections_Generic_List_T__o *v33; // x22
+  Il2CppClass *v27; // x8
+  System_Array_o *v28; // x21
+  System_Collections_Generic_List_T__o *v29; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v35; // x9
+  _QWORD *v31; // x9
   __int64 size; // x10
   ServantEquipEffectFilterController_o *svtEffectFilterController; // x20
   ListViewSort_o *operationSortInfo; // x23
-  System_Action_o *v39; // x24
-  const MethodInfo *v40; // x4
-  const MethodInfo_4435B5C *v41; // x2
-  ListViewSort_FilterCategoryKind_array *v42; // x1
-  const MethodInfo *v43; // x2
+  System_Action_o *v35; // x24
+  const MethodInfo *v36; // x4
+  const MethodInfo_4469C94 *v37; // x2
+  ListViewSort_FilterCategoryKind_array *v38; // x1
+  const MethodInfo *v39; // x2
 
   v6 = this;
-  if ( (byte_593300C & 1) == 0 )
+  if ( (byte_596B211 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ListViewSort_FilterCategoryKind__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__166EEF7450ECE01096094EC62C397B51B03467A83F319F7346716F64D0945C44);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&Field__PrivateImplementationDetails__9CCBF0811DD48B7157D41C61496D2A61F30060848E27E63BD2374BA527C69BFB);
-    byte_593300C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ListViewSort_FilterCategoryKind__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__166EEF7450ECE01096094EC62C397B51B03467A83F319F7346716F64D0945C44);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&Field__PrivateImplementationDetails__9CCBF0811DD48B7157D41C61496D2A61F30060848E27E63BD2374BA527C69BFB);
+    byte_596B211 = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v6->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -894,21 +885,21 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v8->static_fields->BonusSelectCollectionStateFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
   if ( !this )
     goto LABEL_32;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantHaveFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
   if ( !this )
     goto LABEL_32;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSummonCategoryFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   if ( filterKind )
   {
     this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
@@ -917,7 +908,7 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
     System_Collections_Generic_List_Int32Enum___AddRange(
       (System_Collections_Generic_List_T__o *)this,
       (System_Collections_Generic_IEnumerable_T__o *)filterKind,
-      (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+      (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   }
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo;
   v12 = (System_Collections_Generic_List_T__o *)v6->fields.useFilterKindList;
@@ -928,21 +919,21 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
   System_Collections_Generic_List_Int32Enum___AddRange(
     v12,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
   if ( !this )
     goto LABEL_32;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
   if ( !this )
     goto LABEL_32;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v6->fields.useFilterKindList;
   if ( !this )
     goto LABEL_32;
@@ -957,7 +948,7 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
@@ -966,7 +957,7 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
   }
   servantFilterConatiner = v6->fields.servantFilterConatiner;
   v6->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v6->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v13,
@@ -977,68 +968,70 @@ void ServantFilterSelectMenu__InitCommonSummonDisp(
     v18);
   ServantFilterSelectMenu__SetActiveCurrentFilterContainer(v6, 1, v23);
   ServantFilterSelectMenu__InitUseFilterButton(v6, 1, v24);
-  v25 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 4);
-  v26.fields.value = Field__PrivateImplementationDetails__9CCBF0811DD48B7157D41C61496D2A61F30060848E27E63BD2374BA527C69BFB;
-  v27 = (System_Collections_Generic_IEnumerable_T__o *)v25;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v25, v26, 0);
-  this = (ServantFilterSelectMenu_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 2);
+  v25 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 4);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v25,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__9CCBF0811DD48B7157D41C61496D2A61F30060848E27E63BD2374BA527C69BFB,
+    0);
+  this = (ServantFilterSelectMenu_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 2);
   if ( !this )
     goto LABEL_32;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource || (LODWORD(this->fields.basePanel) = 1, m_CancellationTokenSource == 1) )
-    sub_21FFED4(this);
-  v29 = ListViewSort_FilterCategoryKind___TypeInfo;
+    sub_2213CE4(this);
+  v27 = ListViewSort_FilterCategoryKind___TypeInfo;
   HIDWORD(this->fields.basePanel) = 2;
-  v30 = (System_Array_o *)sub_21FFD10(v29, 3);
-  v31.fields.value = Field__PrivateImplementationDetails__166EEF7450ECE01096094EC62C397B51B03467A83F319F7346716F64D0945C44;
-  v32 = (System_Collections_Generic_IEnumerable_T__o *)v30;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v30, v31, 0);
-  v33 = (System_Collections_Generic_List_T__o *)sub_21FFEBC(System_Collections_Generic_List_ListViewSort_FilterCategoryKind__TypeInfo);
+  v28 = (System_Array_o *)sub_2213B20(v27, 3);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v28,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__166EEF7450ECE01096094EC62C397B51B03467A83F319F7346716F64D0945C44,
+    0);
+  v29 = (System_Collections_Generic_List_T__o *)sub_2213CCC(System_Collections_Generic_List_ListViewSort_FilterCategoryKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v33,
-    (const MethodInfo_44350C0 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind___ctor__);
-  if ( !v33 )
+    v29,
+    (const MethodInfo_44691F8 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind___ctor__);
+  if ( !v29 )
     goto LABEL_32;
   System_Collections_Generic_List_Int32Enum___AddRange(
-    v33,
-    v27,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__);
+    v29,
+    (System_Collections_Generic_IEnumerable_T__o *)v25,
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__);
   if ( categoryKind != 999 )
   {
-    items = v33->fields._items;
-    v35 = Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__Add__;
-    ++v33->fields._version;
+    items = v29->fields._items;
+    v31 = Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__Add__;
+    ++v29->fields._version;
     if ( !items )
       goto LABEL_32;
-    size = v33->fields._size;
+    size = v29->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_Int32Enum___AddWithResize(
-        v33,
+        v29,
         categoryKind,
-        *(const MethodInfo_4435950 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+        *(const MethodInfo_4469A88 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
     }
     else
     {
-      v33->fields._size = size + 1;
+      v29->fields._size = size + 1;
       *((_DWORD *)items->m_Items + size) = categoryKind;
     }
   }
   svtEffectFilterController = v6->fields.svtEffectFilterController;
   operationSortInfo = v6->fields.operationSortInfo;
-  v39 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
-  System_Action___ctor(v39, (Il2CppObject *)v6, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
+  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v35, (Il2CppObject *)v6, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
 LABEL_32:
-    sub_21FFECC(this, filterKind);
-  ServantEquipEffectFilterController__Init(svtEffectFilterController, operationSortInfo, 4, v39, v40);
-  v41 = (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__;
+    sub_2213CDC(this, filterKind);
+  ServantEquipEffectFilterController__Init(svtEffectFilterController, operationSortInfo, 4, v35, v36);
+  v37 = (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__AddRange__;
   v6->fields.isDisplayServantEffect = 1;
-  System_Collections_Generic_List_Int32Enum___AddRange(v33, v32, v41);
-  v42 = (ListViewSort_FilterCategoryKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
-                                                   v33,
-                                                   (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__ToArray__);
-  ServantFilterSelectMenu__InitCategoryContainer(v6, v42, v43);
+  System_Collections_Generic_List_Int32Enum___AddRange(v29, (System_Collections_Generic_IEnumerable_T__o *)v28, v37);
+  v38 = (ListViewSort_FilterCategoryKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
+                                                   v29,
+                                                   (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterCategoryKind__ToArray__);
+  ServantFilterSelectMenu__InitCategoryContainer(v6, v38, v39);
 }
 
 
@@ -1077,26 +1070,24 @@ void ServantFilterSelectMenu__InitCostumeDisp(ServantFilterSelectMenu_o *this, c
   __int64 v32; // x2
   UnityEngine_Object_o *v33; // x20
   _DWORD *monitor; // x8
-  System_Array_o *v35; // x0
-  System_RuntimeFieldHandle_o v36; // x1
-  ListViewSort_FilterCategoryKind_array *v37; // x20
-  const MethodInfo *v38; // x2
+  System_Array_o *v35; // x20
+  const MethodInfo *v36; // x2
 
   v3 = this;
-  if ( (byte_593300B & 1) == 0 )
+  if ( (byte_596B210 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Field__PrivateImplementationDetails__770DF87A652F7F22637CFEFB536B97A630566DB6D7CB4FAB152C90E63DAB1A2D);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitCostumeDisp_b__59_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_593300B = 1;
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Field__PrivateImplementationDetails__770DF87A652F7F22637CFEFB536B97A630566DB6D7CB4FAB152C90E63DAB1A2D);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitCostumeDisp_b__59_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B210 = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -1114,37 +1105,37 @@ void ServantFilterSelectMenu__InitCostumeDisp(ServantFilterSelectMenu_o *this, c
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_25;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo->static_fields->ClassFilterKindList;
   if ( !this )
     goto LABEL_25;
   v8 = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   this = (ServantFilterSelectMenu_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                         (System_Collections_Generic_List_T__o *)this,
-                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !v8 )
     goto LABEL_25;
   System_Collections_Generic_List_Int32Enum___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_25;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantCostumeFilterKind,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   costumeFilterContainer = v3->fields.costumeFilterContainer;
   v3->fields.currentFilterContainer = costumeFilterContainer;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)costumeFilterContainer,
     v10,
@@ -1175,11 +1166,11 @@ void ServantFilterSelectMenu__InitCostumeDisp(ServantFilterSelectMenu_o *this, c
       servantFilterConatiner = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v23 = *(Il2CppObject **)servantFilterConatiner;
-    v22 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v22 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v22, v23, Method_ServantFilterSelectMenu___c__InitCostumeDisp_b__59_0__, 0);
     static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     static_fields->__9__59_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v22;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__59_0,
       (int32_t)v22,
       v25,
@@ -1194,7 +1185,7 @@ void ServantFilterSelectMenu__InitCostumeDisp(ServantFilterSelectMenu_o *this, c
   v33 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v22,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31, v32);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v33, 0, 0);
@@ -1210,14 +1201,15 @@ void ServantFilterSelectMenu__InitCostumeDisp(ServantFilterSelectMenu_o *this, c
       }
     }
 LABEL_25:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_24:
-  v35 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 5);
-  v36.fields.value = Field__PrivateImplementationDetails__770DF87A652F7F22637CFEFB536B97A630566DB6D7CB4FAB152C90E63DAB1A2D;
-  v37 = (ListViewSort_FilterCategoryKind_array *)v35;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v35, v36, 0);
-  ServantFilterSelectMenu__InitCategoryContainer(v3, v37, v38);
+  v35 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 5);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v35,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__770DF87A652F7F22637CFEFB536B97A630566DB6D7CB4FAB152C90E63DAB1A2D,
+    0);
+  ServantFilterSelectMenu__InitCategoryContainer(v3, (ListViewSort_FilterCategoryKind_array *)v35, v36);
 }
 
 
@@ -1241,14 +1233,14 @@ void ServantFilterSelectMenu__InitExchangeSvtCoinDisp(ServantFilterSelectMenu_o 
   const MethodInfo *v17; // x2
 
   v3 = this;
-  if ( (byte_593300D & 1) == 0 )
+  if ( (byte_596B212 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    byte_593300D = 1;
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    byte_596B212 = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -1267,14 +1259,14 @@ void ServantFilterSelectMenu__InitExchangeSvtCoinDisp(ServantFilterSelectMenu_o 
     goto LABEL_10;
   v7 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                         (System_Collections_Generic_List_T__o *)this,
-                                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     v7,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v9,
@@ -1285,12 +1277,12 @@ void ServantFilterSelectMenu__InitExchangeSvtCoinDisp(ServantFilterSelectMenu_o 
     v14);
   ServantFilterSelectMenu__SetActiveCurrentFilterContainer(v3, 1, v15);
   ServantFilterSelectMenu__InitUseFilterButton(v3, 0, v16);
-  this = (ServantFilterSelectMenu_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 2);
+  this = (ServantFilterSelectMenu_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 2);
   if ( !this )
 LABEL_10:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   if ( !LODWORD(this->fields.m_CancellationTokenSource) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   LODWORD(this->fields.basePanel) = 9;
   ServantFilterSelectMenu__InitCategoryContainer(v3, (ListViewSort_FilterCategoryKind_array *)this, v17);
 }
@@ -1303,10 +1295,10 @@ void ServantFilterSelectMenu__InitLoad(const MethodInfo *method)
   ServantFilterSelectMenu_c *v3; // x0
   ListViewSort_o *commonServantSortInfo; // x0
 
-  if ( (byte_5932FFF & 1) == 0 )
+  if ( (byte_596B204 & 1) == 0 )
   {
-    sub_21FFC50(&ServantFilterSelectMenu_TypeInfo);
-    byte_5932FFF = 1;
+    sub_2213A60(&ServantFilterSelectMenu_TypeInfo);
+    byte_596B204 = 1;
   }
   v3 = ServantFilterSelectMenu_TypeInfo;
   if ( !*(&ServantFilterSelectMenu_TypeInfo->_2.cctor_finished + 1) )
@@ -1316,7 +1308,7 @@ void ServantFilterSelectMenu__InitLoad(const MethodInfo *method)
   }
   commonServantSortInfo = v3->static_fields->commonServantSortInfo;
   if ( !commonServantSortInfo )
-    sub_21FFECC(0, v1);
+    sub_2213CDC(0, v1);
   ListViewSort__InitLoad(commonServantSortInfo, 0);
 }
 
@@ -1373,24 +1365,24 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
   const MethodInfo *v49; // x2
 
   v3 = this;
-  if ( (byte_5933008 & 1) == 0 )
+  if ( (byte_596B20D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15);
-    sub_21FFC50(&Field__PrivateImplementationDetails__94EF0493E95896C41766380F643579C2C64C6A67545E8C55D29BE83772D8FE81);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitMaterialDisp_b__56_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933008 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15);
+    sub_2213A60(&Field__PrivateImplementationDetails__94EF0493E95896C41766380F643579C2C64C6A67545E8C55D29BE83772D8FE81);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitMaterialDisp_b__56_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20D = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -1408,62 +1400,62 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo->static_fields->ClassFilterKindList;
   if ( !this )
     goto LABEL_41;
   v8 = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   this = (ServantFilterSelectMenu_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                         (System_Collections_Generic_List_T__o *)this,
-                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !v8 )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->CombineMaterialFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
@@ -1478,7 +1470,7 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_41;
@@ -1491,24 +1483,24 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_41;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v13,
@@ -1539,18 +1531,18 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v26 = *(Il2CppObject **)static_fields;
-    v25 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v25 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v25, v26, Method_ServantFilterSelectMenu___c__InitMaterialDisp_b__56_0__, 0);
     v27 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v27->__9__56_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v25;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v27->__9__56_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v27->__9__56_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !categoryContainerList )
     goto LABEL_41;
   v36 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v25,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34, v35);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v36, 0, 0);
@@ -1565,7 +1557,7 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_41;
@@ -1580,7 +1572,7 @@ void ServantFilterSelectMenu__InitMaterialDisp(ServantFilterSelectMenu_o *this, 
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_41:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -1589,10 +1581,10 @@ LABEL_41:
   v44 = 13;
   v45 = &Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15;
 LABEL_40:
-  v46 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v44);
+  v46 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v44);
   v47.fields.value = *v45;
   v48 = (ListViewSort_FilterCategoryKind_array *)v46;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v46, v47, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v46, v47, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v48, v49);
 }
 
@@ -1649,24 +1641,24 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
   const MethodInfo *v49; // x2
 
   v3 = this;
-  if ( (byte_5933007 & 1) == 0 )
+  if ( (byte_596B20C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__3853BEE9137B5366F0BE6423E290AC174C6602DC3CD187BBE90F25DFFA619D07);
-    sub_21FFC50(&Field__PrivateImplementationDetails__DE57747DC3C53A2E8C2F04C11F6425A4F53EEED1C4B518D0A0AEF2F9E6E6AADF);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantBaseDisp_b__55_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933007 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__3853BEE9137B5366F0BE6423E290AC174C6602DC3CD187BBE90F25DFFA619D07);
+    sub_2213A60(&Field__PrivateImplementationDetails__DE57747DC3C53A2E8C2F04C11F6425A4F53EEED1C4B518D0A0AEF2F9E6E6AADF);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantBaseDisp_b__55_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20C = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -1684,55 +1676,55 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo->static_fields->ClassFilterKindList;
   if ( !this )
     goto LABEL_40;
   v8 = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   this = (ServantFilterSelectMenu_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                         (System_Collections_Generic_List_T__o *)this,
-                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !v8 )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->CombineBaseServantFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
@@ -1747,7 +1739,7 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_40;
@@ -1760,24 +1752,24 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v13,
@@ -1808,18 +1800,18 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v26 = *(Il2CppObject **)static_fields;
-    v25 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v25 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v25, v26, Method_ServantFilterSelectMenu___c__InitServantBaseDisp_b__55_0__, 0);
     v27 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v27->__9__55_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v25;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v27->__9__55_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v27->__9__55_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !categoryContainerList )
     goto LABEL_40;
   v36 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v25,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34, v35);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v36, 0, 0);
@@ -1834,7 +1826,7 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_40;
@@ -1849,7 +1841,7 @@ void ServantFilterSelectMenu__InitServantBaseDisp(ServantFilterSelectMenu_o *thi
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_40:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -1858,10 +1850,10 @@ LABEL_40:
   v44 = 13;
   v45 = &Field__PrivateImplementationDetails__3853BEE9137B5366F0BE6423E290AC174C6602DC3CD187BBE90F25DFFA619D07;
 LABEL_39:
-  v46 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v44);
+  v46 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v44);
   v47.fields.value = *v45;
   v48 = (ListViewSort_FilterCategoryKind_array *)v46;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v46, v47, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v46, v47, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v48, v49);
 }
 
@@ -1955,31 +1947,29 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
   __int64 v86; // x2
   UnityEngine_Object_o *v87; // x20
   _DWORD *v88; // x8
-  System_Array_o *v89; // x0
-  System_RuntimeFieldHandle_o v90; // x1
-  ListViewSort_FilterCategoryKind_array *v91; // x20
-  const MethodInfo *v92; // x2
+  System_Array_o *v89; // x20
+  const MethodInfo *v90; // x2
 
   v3 = this;
-  if ( (byte_5933009 & 1) == 0 )
+  if ( (byte_596B20E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__434163685DA7E7D456438B1633B30826A997E32FEB48581A9D2141DD84440456);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_0__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_1__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_2__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_3__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933009 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__434163685DA7E7D456438B1633B30826A997E32FEB48581A9D2141DD84440456);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_0__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_1__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_2__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_3__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20E = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -1997,28 +1987,28 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_72;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEquipTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_72;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEquipCombineStatusFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_72;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEquipHaveStatusFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_72;
@@ -2033,7 +2023,7 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2043,7 +2033,7 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
   servantEquipFilterContainer = v3->fields.servantEquipFilterContainer;
   v3->fields.currentFilterContainer = servantEquipFilterContainer;
   p_currentFilterContainer = &v3->fields.currentFilterContainer;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantEquipFilterContainer,
     v8,
@@ -2056,7 +2046,7 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
   ServantFilterSelectMenu__InitUseFilterButton(v3, 0, v20);
   svtEquipEffectFilterController = v3->fields.svtEquipEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v23 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v23, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEquipEffectFilterController )
     goto LABEL_72;
@@ -2080,11 +2070,11 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
       servantFilterConatiner = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v29 = *(Il2CppObject **)servantFilterConatiner;
-    v28 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v28 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v28, v29, Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_0__, 0);
     static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     static_fields->__9__57_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v28;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__57_0,
       (int32_t)v28,
       v31,
@@ -2099,7 +2089,7 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
   v39 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v28,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v38);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v39, 0, 0);
@@ -2131,18 +2121,18 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
       v43 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v45 = *(Il2CppObject **)v43;
-    v44 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v44 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v44, v45, Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_1__, 0);
     v46 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v46->__9__57_1 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v44;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v46->__9__57_1, (int32_t)v44, v47, v48, v49, v50, v51, v52);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v46->__9__57_1, (int32_t)v44, v47, v48, v49, v50, v51, v52);
   }
   if ( !v42 )
     goto LABEL_72;
   v55 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   v42,
                                   (System_Predicate_T__o *)v44,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v53, v54);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v55, 0, 0);
@@ -2174,18 +2164,18 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
       v59 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v61 = *(Il2CppObject **)v59;
-    v60 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v60 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v60, v61, Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_2__, 0);
     v62 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v62->__9__57_2 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v60;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v62->__9__57_2, (int32_t)v60, v63, v64, v65, v66, v67, v68);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v62->__9__57_2, (int32_t)v60, v63, v64, v65, v66, v67, v68);
   }
   if ( !v58 )
     goto LABEL_72;
   v71 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   v58,
                                   (System_Predicate_T__o *)v60,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v69, v70);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v71, 0, 0);
@@ -2217,19 +2207,19 @@ void ServantFilterSelectMenu__InitServantEquipDisp(ServantFilterSelectMenu_o *th
       v75 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v77 = *(Il2CppObject **)v75;
-    v76 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v76 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v76, v77, Method_ServantFilterSelectMenu___c__InitServantEquipDisp_b__57_3__, 0);
     v78 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v78->__9__57_3 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v76;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v78->__9__57_3, (int32_t)v76, v79, v80, v81, v82, v83, v84);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v78->__9__57_3, (int32_t)v76, v79, v80, v81, v82, v83, v84);
   }
   if ( !v74 )
 LABEL_72:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v87 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   v74,
                                   (System_Predicate_T__o *)v76,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v85, v86);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v87, 0, 0);
@@ -2247,11 +2237,12 @@ LABEL_72:
     goto LABEL_72;
   }
 LABEL_71:
-  v89 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, 7);
-  v90.fields.value = Field__PrivateImplementationDetails__434163685DA7E7D456438B1633B30826A997E32FEB48581A9D2141DD84440456;
-  v91 = (ListViewSort_FilterCategoryKind_array *)v89;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v89, v90, 0);
-  ServantFilterSelectMenu__InitCategoryContainer(v3, v91, v92);
+  v89 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 7);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v89,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__434163685DA7E7D456438B1633B30826A997E32FEB48581A9D2141DD84440456,
+    0);
+  ServantFilterSelectMenu__InitCategoryContainer(v3, (ListViewSort_FilterCategoryKind_array *)v89, v90);
 }
 
 
@@ -2322,24 +2313,24 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
   const MethodInfo *v64; // x2
 
   v3 = this;
-  if ( (byte_5933004 & 1) == 0 )
+  if ( (byte_596B209 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__2738D9B59F2B04667CD06E0EB0FB0C66C361B8C9074D8041DE643269B3B1E560);
-    sub_21FFC50(&Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantExtraClassDisp_b__52_0__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantExtraClassDisp_b__52_1__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933004 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__2738D9B59F2B04667CD06E0EB0FB0C66C361B8C9074D8041DE643269B3B1E560);
+    sub_2213A60(&Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantExtraClassDisp_b__52_0__);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantExtraClassDisp_b__52_1__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B209 = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -2357,49 +2348,49 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupExtraFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassExtra1InShielderFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassExtra2FilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
@@ -2414,7 +2405,7 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_53;
@@ -2427,24 +2418,24 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_53;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v12,
@@ -2475,7 +2466,7 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v25 = *(Il2CppObject **)static_fields;
-    v24 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v24 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(
       v24,
       v25,
@@ -2483,14 +2474,14 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
       0);
     v26 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v26->__9__52_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v24;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->__9__52_0, (int32_t)v24, v27, v28, v29, v30, v31, v32);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->__9__52_0, (int32_t)v24, v27, v28, v29, v30, v31, v32);
   }
   if ( !categoryContainerList )
     goto LABEL_53;
   v35 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v24,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v33, v34);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v35, 0, 0);
@@ -2505,7 +2496,7 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v39 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v39 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v39, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_53;
@@ -2531,7 +2522,7 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
       v44 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v46 = *(Il2CppObject **)v44;
-    v45 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v45 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(
       v45,
       v46,
@@ -2539,14 +2530,14 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
       0);
     v47 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v47->__9__52_1 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v45;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v47->__9__52_1, (int32_t)v45, v48, v49, v50, v51, v52, v53);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v47->__9__52_1, (int32_t)v45, v48, v49, v50, v51, v52, v53);
   }
   if ( !v43 )
     goto LABEL_53;
   v56 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   v43,
                                   (System_Predicate_T__o *)v45,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v54, v55);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v56, 0, 0);
@@ -2568,7 +2559,7 @@ void ServantFilterSelectMenu__InitServantExtraClassDisp(ServantFilterSelectMenu_
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_53:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -2577,10 +2568,10 @@ LABEL_53:
   v59 = 12;
   v60 = &Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1;
 LABEL_52:
-  v61 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v59);
+  v61 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v59);
   v62.fields.value = *v60;
   v63 = (ListViewSort_FilterCategoryKind_array *)v61;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v61, v62, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v61, v62, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v63, v64);
 }
 
@@ -2637,24 +2628,24 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
   const MethodInfo *v49; // x2
 
   v3 = this;
-  if ( (byte_5933006 & 1) == 0 )
+  if ( (byte_596B20B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15);
-    sub_21FFC50(&Field__PrivateImplementationDetails__94EF0493E95896C41766380F643579C2C64C6A67545E8C55D29BE83772D8FE81);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantListDisp_b__54_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933006 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15);
+    sub_2213A60(&Field__PrivateImplementationDetails__94EF0493E95896C41766380F643579C2C64C6A67545E8C55D29BE83772D8FE81);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantListDisp_b__54_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20B = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -2672,55 +2663,55 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo->static_fields->ClassFilterKindList;
   if ( !this )
     goto LABEL_40;
   v8 = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   this = (ServantFilterSelectMenu_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                         (System_Collections_Generic_List_T__o *)this,
-                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !v8 )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
@@ -2735,7 +2726,7 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_40;
@@ -2748,24 +2739,24 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_40;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v13,
@@ -2796,18 +2787,18 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v26 = *(Il2CppObject **)static_fields;
-    v25 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v25 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v25, v26, Method_ServantFilterSelectMenu___c__InitServantListDisp_b__54_0__, 0);
     v27 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v27->__9__54_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v25;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v27->__9__54_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v27->__9__54_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !categoryContainerList )
     goto LABEL_40;
   v36 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v25,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34, v35);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v36, 0, 0);
@@ -2822,7 +2813,7 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_40;
@@ -2837,7 +2828,7 @@ void ServantFilterSelectMenu__InitServantListDisp(ServantFilterSelectMenu_o *thi
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_40:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -2846,10 +2837,10 @@ LABEL_40:
   v44 = 13;
   v45 = &Field__PrivateImplementationDetails__62003B2723002D196000147E31C7396E8E2F15BA0F1CA37B1263402D7652EF15;
 LABEL_39:
-  v46 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v44);
+  v46 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v44);
   v47.fields.value = *v45;
   v48 = (ListViewSort_FilterCategoryKind_array *)v46;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v46, v47, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v46, v47, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v48, v49);
 }
 
@@ -2906,24 +2897,24 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
   const MethodInfo *v49; // x2
 
   v3 = this;
-  if ( (byte_5933003 & 1) == 0 )
+  if ( (byte_596B208 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__2738D9B59F2B04667CD06E0EB0FB0C66C361B8C9074D8041DE643269B3B1E560);
-    sub_21FFC50(&Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantNormalDisp_b__51_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933003 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__2738D9B59F2B04667CD06E0EB0FB0C66C361B8C9074D8041DE643269B3B1E560);
+    sub_2213A60(&Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantNormalDisp_b__51_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B208 = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -2941,48 +2932,48 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ClassGroupFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)FilterKindList_TypeInfo->static_fields->ClassFilterKindList;
   if ( !this )
     goto LABEL_39;
   v8 = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   this = (ServantFilterSelectMenu_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                         (System_Collections_Generic_List_T__o *)this,
-                                        (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                        (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !v8 )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     v8,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
@@ -2997,7 +2988,7 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_39;
@@ -3010,24 +3001,24 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_39;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v13,
@@ -3058,18 +3049,18 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v26 = *(Il2CppObject **)static_fields;
-    v25 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v25 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v25, v26, Method_ServantFilterSelectMenu___c__InitServantNormalDisp_b__51_0__, 0);
     v27 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v27->__9__51_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v25;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v27->__9__51_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v27->__9__51_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !categoryContainerList )
     goto LABEL_39;
   v36 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v25,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34, v35);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v36, 0, 0);
@@ -3084,7 +3075,7 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_39;
@@ -3099,7 +3090,7 @@ void ServantFilterSelectMenu__InitServantNormalDisp(ServantFilterSelectMenu_o *t
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_39:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -3108,10 +3099,10 @@ LABEL_39:
   v44 = 12;
   v45 = &Field__PrivateImplementationDetails__DAEE9DEFA0CADB4554DC82DAB12D8E6A96EAB63587ECCE87C442E4928F2B1CB1;
 LABEL_38:
-  v46 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v44);
+  v46 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v44);
   v47.fields.value = *v45;
   v48 = (ListViewSort_FilterCategoryKind_array *)v46;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v46, v47, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v46, v47, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v48, v49);
 }
 
@@ -3167,23 +3158,23 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
   const MethodInfo *v48; // x2
 
   v3 = this;
-  if ( (byte_5933005 & 1) == 0 )
+  if ( (byte_596B20A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ListViewSort_FilterCategoryKind___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
-    sub_21FFC50(&Field__PrivateImplementationDetails__273DF9EB428871F28E90488FBEE0CD554EDEE41B97AA5AF9453F3C5BA8142CE5);
-    sub_21FFC50(&Field__PrivateImplementationDetails__5B2EEB7A72BF5A5AB8814BE99B9C2B07ED3A1129FB61C60192BC06096E745FB2);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__InitServantNotClassDisp_b__53_0__);
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_5933005 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ListViewSort_FilterCategoryKind___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__);
+    sub_2213A60(&Field__PrivateImplementationDetails__273DF9EB428871F28E90488FBEE0CD554EDEE41B97AA5AF9453F3C5BA8142CE5);
+    sub_2213A60(&Field__PrivateImplementationDetails__5B2EEB7A72BF5A5AB8814BE99B9C2B07ED3A1129FB61C60192BC06096E745FB2);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__InitServantNotClassDisp_b__53_0__);
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B20A = 1;
   }
   useFilterKindList = (System_Collections_Generic_List_T__o *)v3->fields.useFilterKindList;
   if ( !useFilterKindList )
@@ -3201,28 +3192,28 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
   System_Collections_Generic_List_Int32Enum___AddRange(
     useFilterKindList,
     (System_Collections_Generic_IEnumerable_T__o *)v5->static_fields->RarityFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpTypeFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->NpEffectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantEffectApplySubjectFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
@@ -3237,7 +3228,7 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)this,
       39,
-      *(const MethodInfo_4435950 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+      *(const MethodInfo_4469A88 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
     this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
     if ( !this )
       goto LABEL_36;
@@ -3250,24 +3241,24 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriFirstFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantAttriSecondFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   this = (ServantFilterSelectMenu_o *)v3->fields.useFilterKindList;
   if ( !this )
     goto LABEL_36;
   System_Collections_Generic_List_Int32Enum___AddRange(
     (System_Collections_Generic_List_T__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)FilterKindList_TypeInfo->static_fields->ServantSubAttriFilterKindList,
-    (const MethodInfo_4435B5C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
+    (const MethodInfo_4469C94 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__AddRange__);
   servantFilterConatiner = v3->fields.servantFilterConatiner;
   v3->fields.currentFilterContainer = servantFilterConatiner;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v3->fields.currentFilterContainer,
     (int32_t)servantFilterConatiner,
     v12,
@@ -3298,18 +3289,18 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
       static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     }
     v25 = *(Il2CppObject **)static_fields;
-    v24 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
+    v24 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterCategoryContainer__TypeInfo);
     System_Predicate_object____ctor(v24, v25, Method_ServantFilterSelectMenu___c__InitServantNotClassDisp_b__53_0__, 0);
     v26 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
     v26->__9__53_0 = (struct System_Predicate_ServantFilterCategoryContainer__o *)v24;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->__9__53_0, (int32_t)v24, v27, v28, v29, v30, v31, v32);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->__9__53_0, (int32_t)v24, v27, v28, v29, v30, v31, v32);
   }
   if ( !categoryContainerList )
     goto LABEL_36;
   v35 = (UnityEngine_Object_o *)System_Collections_Generic_List_object___Find(
                                   categoryContainerList,
                                   (System_Predicate_T__o *)v24,
-                                  (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
+                                  (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Find__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v33, v34);
   this = (ServantFilterSelectMenu_o *)UnityEngine_Object__op_Inequality(v35, 0, 0);
@@ -3324,7 +3315,7 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
   }
   svtEffectFilterController = v3->fields.svtEffectFilterController;
   operationSortInfo = v3->fields.operationSortInfo;
-  v39 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v39 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v39, (Il2CppObject *)v3, Method_ServantFilterSelectMenu_CheckMatchItemAndDisplayInfo__, 0);
   if ( !svtEffectFilterController )
     goto LABEL_36;
@@ -3339,7 +3330,7 @@ void ServantFilterSelectMenu__InitServantNotClassDisp(ServantFilterSelectMenu_o 
   this = (ServantFilterSelectMenu_o *)v3->fields.svtEventBonusFilterController;
   if ( !this )
 LABEL_36:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ServantEventBonusFilterController__Init(
     (ServantEventBonusFilterController_o *)this,
     v3->fields.operationSortInfo,
@@ -3348,10 +3339,10 @@ LABEL_36:
   v43 = 10;
   v44 = &Field__PrivateImplementationDetails__5B2EEB7A72BF5A5AB8814BE99B9C2B07ED3A1129FB61C60192BC06096E745FB2;
 LABEL_35:
-  v45 = (System_Array_o *)sub_21FFD10(ListViewSort_FilterCategoryKind___TypeInfo, v43);
+  v45 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, v43);
   v46.fields.value = *v44;
   v47 = (ListViewSort_FilterCategoryKind_array *)v45;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v45, v46, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v45, v46, 0);
   ServantFilterSelectMenu__InitCategoryContainer(v3, v47, v48);
 }
 
@@ -3391,20 +3382,20 @@ void ServantFilterSelectMenu__InitUseFilterButton(
   System_Collections_Generic_List_Enumerator_object__o *v32; // [xsp+10h] [xbp-80h]
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+18h] [xbp-78h] BYREF
 
-  if ( (byte_593300E & 1) == 0 )
+  if ( (byte_596B213 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__FindAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
-    sub_21FFC50(&ServantFilterButtonControl_OnClickFilterButton_TypeInfo);
-    sub_21FFC50(&System_Predicate_ServantFilterButtonControl__TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickFilterButton__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu__InitUseFilterButton_b__62_0__);
-    byte_593300E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__FindAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    sub_2213A60(&ServantFilterButtonControl_OnClickFilterButton_TypeInfo);
+    sub_2213A60(&System_Predicate_ServantFilterButtonControl__TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_OnClickFilterButton__);
+    sub_2213A60(&Method_ServantFilterSelectMenu__InitUseFilterButton_b__62_0__);
+    byte_596B213 = 1;
   }
   currentFilterContainer = this->fields.currentFilterContainer;
   memset(&v33, 0, sizeof(v33));
@@ -3422,7 +3413,7 @@ void ServantFilterSelectMenu__InitUseFilterButton(
   if ( !v11 )
     goto LABEL_18;
   filterButtonList = (System_Collections_Generic_List_object__o *)v11->fields.filterButtonList;
-  v13 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ServantFilterButtonControl__TypeInfo);
+  v13 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ServantFilterButtonControl__TypeInfo);
   System_Predicate_object____ctor(
     v13,
     (Il2CppObject *)this,
@@ -3432,9 +3423,9 @@ void ServantFilterSelectMenu__InitUseFilterButton(
     || (All = System_Collections_Generic_List_object___FindAll(
                 filterButtonList,
                 (System_Predicate_T__o *)v13,
-                (const MethodInfo_4450234 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__FindAll__),
+                (const MethodInfo_448436C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__FindAll__),
         this->fields.useFilterButtonList = (struct System_Collections_Generic_List_ServantFilterButtonControl__o *)All,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.useFilterButtonList,
           (int32_t)All,
           v15,
@@ -3447,33 +3438,33 @@ void ServantFilterSelectMenu__InitUseFilterButton(
     || (v6 = (System_Collections_Generic_List_object__o *)v21->fields.filterButtonList) == 0 )
   {
 LABEL_18:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     v6,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
   v31 = 0;
   v32 = &v33;
   while ( 1 )
   {
     v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v33,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
     if ( !v22 )
       break;
     current = v33.fields._current;
     if ( !v33.fields._current )
-      sub_21FFECC(v22, v23);
+      sub_2213CDC(v22, v23);
     useFilterKindList = (System_Collections_Generic_List_T__o *)this->fields.useFilterKindList;
     if ( !useFilterKindList )
-      sub_21FFECC(0, v23);
+      sub_2213CDC(0, v23);
     v26 = System_Collections_Generic_List_Int32Enum___Contains(
             useFilterKindList,
             *(_DWORD *)((char *)&v33.fields._current->klass + (unsigned __int64)&qword_20),
-            (const MethodInfo_4435CD0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
+            (const MethodInfo_4469E08 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
     operationSortInfo = this->fields.operationSortInfo;
-    v28 = (ServantFilterButtonControl_OnClickFilterButton_o *)sub_21FFEBC(ServantFilterButtonControl_OnClickFilterButton_TypeInfo);
+    v28 = (ServantFilterButtonControl_OnClickFilterButton_o *)sub_2213CCC(ServantFilterButtonControl_OnClickFilterButton_TypeInfo);
     ServantFilterButtonControl_OnClickFilterButton___ctor(
       v28,
       (Il2CppObject *)this,
@@ -3490,7 +3481,7 @@ LABEL_18:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v33,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
 }
 
 
@@ -3520,14 +3511,14 @@ bool ServantFilterSelectMenu__IsChangedStatus(ServantFilterSelectMenu_o *this, c
     while ( svtEquipEffectFilterController )
     {
       if ( v7 >= LODWORD(svtEquipEffectFilterController->fields.m_CancellationTokenSource) )
-        sub_21FFED4(svtEquipEffectFilterController);
+        sub_2213CE4(svtEquipEffectFilterController);
       if ( m_Items[v7] != (*((_BYTE *)&svtEquipEffectFilterController->fields.WIDGET_HEIGHT_ADD_VALUE + v7) != 0) )
         return 1;
       if ( max_length == ++v7 )
         goto LABEL_8;
     }
 LABEL_24:
-    sub_21FFECC(svtEquipEffectFilterController, v5);
+    sub_2213CDC(svtEquipEffectFilterController, v5);
   }
 LABEL_8:
   kind = this->fields.kind;
@@ -3587,19 +3578,19 @@ bool ServantFilterSelectMenu__IsEventBonus(ServantFilterSelectMenu_o *this, cons
   struct System_Int32_array *servantFilterEventIds; // x8
   Il2CppObject *v14; // x21
 
-  if ( (byte_5933002 & 1) == 0 )
+  if ( (byte_596B207 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventBonusFilterMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&EventUpValSetupInfo_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Count__);
-    byte_5933002 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventBonusFilterMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&EventUpValSetupInfo_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__get_Count__);
+    sub_2213A60(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Count__);
+    byte_596B207 = 1;
   }
   eventId = this->fields.eventId;
   this->fields.isDisplayEventBonusSkill = 0;
@@ -3611,7 +3602,7 @@ bool ServantFilterSelectMenu__IsEventBonus(ServantFilterSelectMenu_o *this, cons
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
     if ( !Master_object )
       goto LABEL_26;
     Master_object = (EventMaster_o *)EventMaster__GetEventValUpEventIdHash(Master_object, 0, 0, 0);
@@ -3622,22 +3613,22 @@ bool ServantFilterSelectMenu__IsEventBonus(ServantFilterSelectMenu_o *this, cons
     {
       if ( this->fields.eventId >= 1 )
       {
-        v9 = (System_Collections_Generic_HashSet_int__o *)sub_21FFEBC(System_Collections_Generic_HashSet_int__TypeInfo);
+        v9 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
         System_Collections_Generic_HashSet_int____ctor(
           v9,
-          (const MethodInfo_4280264 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+          (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
         if ( !v9 )
           goto LABEL_26;
         System_Collections_Generic_HashSet_int___Add(
           v9,
           this->fields.eventId,
-          (const MethodInfo_42814A4 *)Method_System_Collections_Generic_HashSet_int__Add__);
+          (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
       }
       v10 = System_Linq_Enumerable__ToArray_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)v9,
-              (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
-      v11 = (EventUpValSetupInfo_o *)sub_21FFEBC(EventUpValSetupInfo_TypeInfo);
-      EventUpValSetupInfo___ctor_48687632(v11, v10, 0, 0, 0, 0);
+              (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
+      v11 = (EventUpValSetupInfo_o *)sub_2213CCC(EventUpValSetupInfo_TypeInfo);
+      EventUpValSetupInfo___ctor_48741124(v11, v10, 0, 0, 0, 0);
       if ( v11 )
       {
         servantFilterEventIds = v11->fields.servantFilterEventIds;
@@ -3648,10 +3639,10 @@ bool ServantFilterSelectMenu__IsEventBonus(ServantFilterSelectMenu_o *this, cons
         }
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v8, v12);
-        v14 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventBonusFilterMaster___);
+        v14 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventBonusFilterMaster___);
         Master_object = (EventMaster_o *)System_Linq_Enumerable__ToArray_int_(
                                            (System_Collections_Generic_IEnumerable_TSource__o *)v9,
-                                           (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+                                           (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
         if ( v14 )
         {
           Master_object = (EventMaster_o *)EventBonusFilterMaster__GetBonusSkillFilterList(
@@ -3668,7 +3659,7 @@ LABEL_24:
         }
       }
 LABEL_26:
-      sub_21FFECC(Master_object, v8);
+      sub_2213CDC(Master_object, v8);
     }
     return 0;
   }
@@ -3682,18 +3673,18 @@ void ServantFilterSelectMenu__OnClickCancel(ServantFilterSelectMenu_o *this, con
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_5933015 & 1) == 0 )
+  if ( (byte_596B21A & 1) == 0 )
   {
-    sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickCancel__);
-    byte_5933015 = 1;
+    sub_2213A60(&Method_ServantFilterSelectMenu_OnClickCancel__);
+    byte_596B21A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_ServantFilterSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_ServantFilterSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ServantFilterSelectMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ServantFilterSelectMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     ServantFilterSelectMenu__Callback(this, 0, v5);
   }
@@ -3710,18 +3701,18 @@ void ServantFilterSelectMenu__OnClickClear(ServantFilterSelectMenu_o *this, cons
   unsigned int kind; // w8
   const MethodInfo *v9; // x1
 
-  if ( (byte_5933016 & 1) == 0 )
+  if ( (byte_596B21B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickClear__);
-    byte_5933016 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&Method_ServantFilterSelectMenu_OnClickClear__);
+    byte_596B21B = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ServantFilterSelectMenu_OnClickClear__;
     if ( (*((_BYTE *)Method_ServantFilterSelectMenu_OnClickClear__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ServantFilterSelectMenu_OnClickClear__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ServantFilterSelectMenu_OnClickClear__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     operationSortInfo = this->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3733,7 +3724,7 @@ void ServantFilterSelectMenu__OnClickClear(ServantFilterSelectMenu_o *this, cons
         v7 = this->fields.operationSortInfo;
         operationSortInfo = (ListViewSort_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                 (System_Collections_Generic_List_T__o *)operationSortInfo,
-                                                (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
         if ( v7 )
         {
           ListViewSort__SetFilters(v7, (ListViewSort_FilterKind_array *)operationSortInfo, 0, 0);
@@ -3764,7 +3755,7 @@ LABEL_16:
       }
     }
 LABEL_20:
-    sub_21FFECC(operationSortInfo, v5);
+    sub_2213CDC(operationSortInfo, v5);
   }
 }
 
@@ -3783,10 +3774,10 @@ void ServantFilterSelectMenu__OnClickDecide(ServantFilterSelectMenu_o *this, con
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_5933014 & 1) == 0 )
+  if ( (byte_596B219 & 1) == 0 )
   {
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickDecide__);
-    byte_5933014 = 1;
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&Method_ServantFilterSelectMenu_OnClickDecide__);
+    byte_596B219 = 1;
   }
   if ( v2->fields.state == 2 )
   {
@@ -3807,13 +3798,13 @@ void ServantFilterSelectMenu__OnClickDecide(ServantFilterSelectMenu_o *this, con
     v2->fields.state = 3;
     v7 = Method_ServantFilterSelectMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_ServantFilterSelectMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_21FFC68(Method_ServantFilterSelectMenu_OnClickDecide__);
-    v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v7, v7[4]);
+      v7 = (_QWORD *)sub_2213A78(Method_ServantFilterSelectMenu_OnClickDecide__);
+    v8 = (System_Reflection_MethodBase_o *)sub_2213A44(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
     this = (ServantFilterSelectMenu_o *)v2->fields.baseSortInfo;
     if ( !this )
 LABEL_13:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     ListViewSort__Set((ListViewSort_o *)this, v2->fields.operationSortInfo, 0);
     IsChangedStatus = ServantFilterSelectMenu__IsChangedStatus(v2, v9);
     ServantFilterSelectMenu__Callback(v2, IsChangedStatus, v11);
@@ -3833,21 +3824,21 @@ void ServantFilterSelectMenu__OnClickFilterButton(
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_5933018 & 1) == 0 )
+  if ( (byte_596B21D & 1) == 0 )
   {
-    sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickFilterButton__);
-    byte_5933018 = 1;
+    sub_2213A60(&Method_ServantFilterSelectMenu_OnClickFilterButton__);
+    byte_596B21D = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_ServantFilterSelectMenu_OnClickFilterButton__;
     if ( (*((_BYTE *)Method_ServantFilterSelectMenu_OnClickFilterButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_21FFC68(Method_ServantFilterSelectMenu_OnClickFilterButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+      v5 = (_QWORD *)sub_2213A78(Method_ServantFilterSelectMenu_OnClickFilterButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     operationSortInfo = this->fields.operationSortInfo;
     if ( !operationSortInfo )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     ListViewSort__SwitchFilter(operationSortInfo, filterKind, 0);
     ServantFilterSelectMenu__SetButtonSelect(this, v9);
     ServantFilterSelectMenu__CheckMatchItemAndDisplayInfo(this, v10);
@@ -3868,19 +3859,19 @@ void ServantFilterSelectMenu__OnClickInitialize(ServantFilterSelectMenu_o *this,
   ListViewSort_o *v11; // x20
   FilterKindList_c *v12; // x0
 
-  if ( (byte_5933017 & 1) == 0 )
+  if ( (byte_596B21C & 1) == 0 )
   {
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_OnClickInitialize__);
-    byte_5933017 = 1;
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    sub_2213A60(&Method_ServantFilterSelectMenu_OnClickInitialize__);
+    byte_596B21C = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ServantFilterSelectMenu_OnClickInitialize__;
     if ( (*((_BYTE *)Method_ServantFilterSelectMenu_OnClickInitialize__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ServantFilterSelectMenu_OnClickInitialize__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ServantFilterSelectMenu_OnClickInitialize__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     operationSortInfo = this->fields.operationSortInfo;
     if ( operationSortInfo )
@@ -3892,7 +3883,7 @@ void ServantFilterSelectMenu__OnClickInitialize(ServantFilterSelectMenu_o *this,
         v7 = this->fields.operationSortInfo;
         operationSortInfo = (ListViewSort_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                 (System_Collections_Generic_List_T__o *)operationSortInfo,
-                                                (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
         if ( v7 )
         {
           ListViewSort__SetFilters(v7, (ListViewSort_FilterKind_array *)operationSortInfo, 1, 0);
@@ -3918,7 +3909,7 @@ void ServantFilterSelectMenu__OnClickInitialize(ServantFilterSelectMenu_o *this,
               goto LABEL_25;
             operationSortInfo = (ListViewSort_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                     (System_Collections_Generic_List_T__o *)operationSortInfo,
-                                                    (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                    (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
             if ( !v11 )
               goto LABEL_25;
             ListViewSort__SetFilters(v11, (ListViewSort_FilterKind_array *)operationSortInfo, 0, 0);
@@ -3946,7 +3937,7 @@ LABEL_16:
       }
     }
 LABEL_25:
-    sub_21FFECC(operationSortInfo, v5);
+    sub_2213CDC(operationSortInfo, v5);
   }
 }
 
@@ -4022,27 +4013,27 @@ void ServantFilterSelectMenu__Open(
   struct ListViewSort_o *v72; // x8
   System_Action_o *v73; // x20
 
-  if ( (byte_5933000 & 1) == 0 )
+  if ( (byte_596B205 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&ListViewSort_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_EndOpen__);
-    sub_21FFC50(&ServantFilterSelectMenu_TypeInfo);
-    sub_21FFC50(&StringLiteral_12373/*"SERVANT_SORT_RESET"*/);
-    sub_21FFC50(&StringLiteral_12204/*"SERVANT_SORT_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_12094/*"SERVANT_EQUIP_FILTER_WARNING"*/);
-    sub_21FFC50(&StringLiteral_12208/*"SERVANT_SORT_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_12375/*"SERVANT_SORT_TITLE2"*/);
-    sub_21FFC50(&StringLiteral_12205/*"SERVANT_SORT_CLEAR"*/);
-    byte_5933000 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&ListViewSort_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_EndOpen__);
+    sub_2213A60(&ServantFilterSelectMenu_TypeInfo);
+    sub_2213A60(&StringLiteral_12396/*"SERVANT_SORT_RESET"*/);
+    sub_2213A60(&StringLiteral_12227/*"SERVANT_SORT_CANCEL"*/);
+    sub_2213A60(&StringLiteral_12117/*"SERVANT_EQUIP_FILTER_WARNING"*/);
+    sub_2213A60(&StringLiteral_12231/*"SERVANT_SORT_DECIDE"*/);
+    sub_2213A60(&StringLiteral_12398/*"SERVANT_SORT_TITLE2"*/);
+    sub_2213A60(&StringLiteral_12228/*"SERVANT_SORT_CLEAR"*/);
+    byte_596B205 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.kind = kind;
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (System_String_o *)sort,
@@ -4055,7 +4046,7 @@ void ServantFilterSelectMenu__Open(
     if ( sort )
     {
       this->fields.baseSortInfo = sort;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.baseSortInfo,
         (int32_t)sort,
         v15,
@@ -4076,7 +4067,7 @@ void ServantFilterSelectMenu__Open(
       p_commonServantSortInfo = &v23->static_fields->commonServantSortInfo;
       v25 = *p_commonServantSortInfo;
       this->fields.baseSortInfo = *p_commonServantSortInfo;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.baseSortInfo,
         (int32_t)v25,
         v15,
@@ -4092,7 +4083,7 @@ void ServantFilterSelectMenu__Open(
     }
     v28 = ServantFilterSelectMenu__SetKindStatus(v21, sort, v22);
     this->fields.kindStatus = v28;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.kindStatus,
       (int32_t)v28,
       v29,
@@ -4102,10 +4093,10 @@ void ServantFilterSelectMenu__Open(
       v33,
       v34);
     v35 = this->fields.baseSortInfo;
-    v36 = (ListViewSort_o *)sub_21FFEBC(ListViewSort_TypeInfo);
-    ListViewSort___ctor_50785372(v36, v35, 0);
+    v36 = (ListViewSort_o *)sub_2213CCC(ListViewSort_TypeInfo);
+    ListViewSort___ctor_50855524(v36, v35, 0);
     this->fields.operationSortInfo = v36;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.operationSortInfo,
       (int32_t)v36,
       v37,
@@ -4115,7 +4106,7 @@ void ServantFilterSelectMenu__Open(
       v41,
       v42);
     this->fields.listViewManager = listViewManager;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.listViewManager,
       (int32_t)listViewManager,
       v43,
@@ -4138,32 +4129,32 @@ void ServantFilterSelectMenu__Open(
           titleLabel = this->fields.titleLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v49, v50);
-          baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12375/*"SERVANT_SORT_TITLE2"*/, 0);
+          baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12398/*"SERVANT_SORT_TITLE2"*/, 0);
           if ( titleLabel )
           {
             UILabel__set_text(titleLabel, (System_String_o *)baseSortInfo, 0);
             warningLabel = this->fields.warningLabel;
-            baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12094/*"SERVANT_EQUIP_FILTER_WARNING"*/, 0);
+            baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12117/*"SERVANT_EQUIP_FILTER_WARNING"*/, 0);
             if ( warningLabel )
             {
               UILabel__set_text(warningLabel, (System_String_o *)baseSortInfo, 0);
               decideLabel = this->fields.decideLabel;
-              baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12208/*"SERVANT_SORT_DECIDE"*/, 0);
+              baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12231/*"SERVANT_SORT_DECIDE"*/, 0);
               if ( decideLabel )
               {
                 UILabel__set_text(decideLabel, (System_String_o *)baseSortInfo, 0);
                 clearLabel = this->fields.clearLabel;
-                baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12205/*"SERVANT_SORT_CLEAR"*/, 0);
+                baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SERVANT_SORT_CLEAR"*/, 0);
                 if ( clearLabel )
                 {
                   UILabel__set_text(clearLabel, (System_String_o *)baseSortInfo, 0);
                   cancelLabel = this->fields.cancelLabel;
-                  baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12204/*"SERVANT_SORT_CANCEL"*/, 0);
+                  baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SERVANT_SORT_CANCEL"*/, 0);
                   if ( cancelLabel )
                   {
                     UILabel__set_text(cancelLabel, (System_String_o *)baseSortInfo, 0);
                     initializeLabel = this->fields.initializeLabel;
-                    baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12373/*"SERVANT_SORT_RESET"*/, 0);
+                    baseSortInfo = (ListViewSort_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12396/*"SERVANT_SORT_RESET"*/, 0);
                     if ( initializeLabel )
                     {
                       UILabel__set_text(initializeLabel, (System_String_o *)baseSortInfo, 0);
@@ -4255,7 +4246,7 @@ LABEL_39:
                             {
                               UIProgressBar__set_value((UIProgressBar_o *)baseSortInfo, v72->fields.scrollBarValue, 0);
                               this->fields.state = 1;
-                              v73 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                              v73 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                               System_Action___ctor(
                                 v73,
                                 (Il2CppObject *)this,
@@ -4277,7 +4268,7 @@ LABEL_39:
       }
     }
 LABEL_45:
-    sub_21FFECC(baseSortInfo, v26);
+    sub_2213CDC(baseSortInfo, v26);
   }
 }
 
@@ -4293,10 +4284,10 @@ void ServantFilterSelectMenu__RefreshFilterClippingPosition(ServantFilterSelectM
   struct ServantFilterSelectMenu_FilterContainer_o *v9; // x8
   struct UIScrollView_o *v10; // x9
 
-  if ( (byte_5933011 & 1) == 0 )
+  if ( (byte_596B216 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933011 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B216 = 1;
   }
   currentFilterContainer = this->fields.currentFilterContainer;
   if ( !currentFilterContainer )
@@ -4325,7 +4316,7 @@ void ServantFilterSelectMenu__RefreshFilterClippingPosition(ServantFilterSelectM
   }
   if ( !v9 || (v10 = v9->fields.scrollView) == 0 )
 LABEL_18:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   v10->fields.contentPivot = 4;
 LABEL_16:
   v6 = v9->fields.scrollView;
@@ -4371,23 +4362,23 @@ void ServantFilterSelectMenu__RefreshFilterContainerCache(
   System_Collections_Generic_IEnumerable_T__o *v33; // x20
   int v34; // w9
 
-  if ( (byte_593300F & 1) == 0 )
+  if ( (byte_596B214 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_ServantFilterButtonControl___);
-    sub_21FFC50(&System_Func_ServantFilterButtonControl__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterButtonControl___);
-    sub_21FFC50(&Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterCategoryContainer___);
-    sub_21FFC50(&Method_ServantFilterSelectMenu___c__RefreshFilterContainerCache_b__63_0__);
-    sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_593300F = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_ServantFilterButtonControl___);
+    sub_2213A60(&System_Func_ServantFilterButtonControl__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterButtonControl___);
+    sub_2213A60(&Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterCategoryContainer___);
+    sub_2213A60(&Method_ServantFilterSelectMenu___c__RefreshFilterContainerCache_b__63_0__);
+    sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596B214 = 1;
   }
   if ( target )
   {
@@ -4403,7 +4394,7 @@ void ServantFilterSelectMenu__RefreshFilterContainerCache(
         IsFlag20260802 = (UnityEngine_GameObject_o *)ServantFilterSelectMenu__CollectCompsRecursive_object_(
                                                        this,
                                                        transform,
-                                                       (const MethodInfo_3952774 *)Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterButtonControl___);
+                                                       (const MethodInfo_3985D04 *)Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterButtonControl___);
         filterButtonList = target->fields.filterButtonList;
         if ( filterButtonList )
         {
@@ -4433,7 +4424,7 @@ void ServantFilterSelectMenu__RefreshFilterContainerCache(
               static_fields = ServantFilterSelectMenu___c_TypeInfo->static_fields;
             }
             v16 = (Il2CppObject *)static_fields->__9;
-            _9__63_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_ServantFilterButtonControl__bool__TypeInfo);
+            _9__63_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_ServantFilterButtonControl__bool__TypeInfo);
             System_Func_object__bool____ctor(
               _9__63_0,
               v16,
@@ -4441,7 +4432,7 @@ void ServantFilterSelectMenu__RefreshFilterContainerCache(
               0);
             v17 = ServantFilterSelectMenu___c_TypeInfo->static_fields;
             v17->__9__63_0 = (struct System_Func_ServantFilterButtonControl__bool__o *)_9__63_0;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v17->__9__63_0,
               (int32_t)_9__63_0,
               v18,
@@ -4454,13 +4445,13 @@ void ServantFilterSelectMenu__RefreshFilterContainerCache(
           IsFlag20260802 = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Where_object_(
                                                          v11,
                                                          (System_Func_TSource__bool__o *)_9__63_0,
-                                                         (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_ServantFilterButtonControl___);
+                                                         (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_ServantFilterButtonControl___);
           if ( filterButtonList )
           {
             System_Collections_Generic_List_object___AddRange(
               (System_Collections_Generic_List_object__o *)filterButtonList,
               (System_Collections_Generic_IEnumerable_T__o *)IsFlag20260802,
-              (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__AddRange__);
+              (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__AddRange__);
             IsFlag20260802 = (UnityEngine_GameObject_o *)ConstantMaster__IsFlag20260802(0);
             if ( ((unsigned __int8)IsFlag20260802 & 1) != 0 )
               goto LABEL_31;
@@ -4478,7 +4469,7 @@ LABEL_31:
                 IsFlag20260802 = (UnityEngine_GameObject_o *)ServantFilterSelectMenu__CollectCompsRecursive_object_(
                                                                this,
                                                                v30,
-                                                               (const MethodInfo_3952774 *)Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterCategoryContainer___);
+                                                               (const MethodInfo_3985D04 *)Method_ServantFilterSelectMenu_CollectCompsRecursive_ServantFilterCategoryContainer___);
                 categoryContainerList = target->fields.categoryContainerList;
                 if ( categoryContainerList )
                 {
@@ -4494,7 +4485,7 @@ LABEL_31:
                     System_Collections_Generic_List_object___AddRange(
                       (System_Collections_Generic_List_object__o *)categoryContainerList,
                       v33,
-                      (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__AddRange__);
+                      (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer__AddRange__);
                     return;
                   }
                 }
@@ -4510,7 +4501,7 @@ LABEL_31:
                 IsFlag20260802 = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                                (System_Collections_Generic_List_object__o *)IsFlag20260802,
                                                                --v25,
-                                                               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Item__);
+                                                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__get_Item__);
                 if ( !IsFlag20260802 )
                   break;
                 v26 = (UnityEngine_Component_o *)IsFlag20260802;
@@ -4522,7 +4513,7 @@ LABEL_31:
                   System_Collections_Generic_List_object___RemoveAt(
                     (System_Collections_Generic_List_object__o *)IsFlag20260802,
                     v25,
-                    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__RemoveAt__);
+                    (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_ServantFilterButtonControl__RemoveAt__);
                   IsFlag20260802 = UnityEngine_Component__get_gameObject(v26, 0);
                   if ( !IsFlag20260802 )
                     break;
@@ -4530,7 +4521,7 @@ LABEL_31:
                   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v26, 0);
                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27, v28);
-                  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+                  UnityEngine_Object__Destroy_83459800(gameObject, 0);
                 }
                 if ( v25 <= 0 )
                   goto LABEL_31;
@@ -4540,7 +4531,7 @@ LABEL_31:
         }
       }
 LABEL_36:
-      sub_21FFECC(IsFlag20260802, v6);
+      sub_2213CDC(IsFlag20260802, v6);
     }
   }
 }
@@ -4556,7 +4547,7 @@ void ServantFilterSelectMenu__SetActiveCurrentFilterContainer(
 
   currentFilterContainer = this->fields.currentFilterContainer;
   if ( !currentFilterContainer || (this = (ServantFilterSelectMenu_o *)currentFilterContainer->fields.root) == 0 )
-    sub_21FFECC(this, isActive);
+    sub_2213CDC(this, isActive);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isActive, 0);
 }
 
@@ -4572,13 +4563,13 @@ void ServantFilterSelectMenu__SetButtonEnable(ServantFilterSelectMenu_o *this, b
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_5933013 & 1) == 0 )
+  if ( (byte_596B218 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
-    byte_5933013 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    byte_596B218 = 1;
   }
   decideButton = this->fields.decideButton;
   memset(&v11, 0, sizeof(v11));
@@ -4603,7 +4594,7 @@ void ServantFilterSelectMenu__SetButtonEnable(ServantFilterSelectMenu_o *this, b
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     (System_Collections_Generic_List_object__o *)decideButton,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
   v11 = v10;
   v10.fields._list = 0;
   *(_QWORD *)&v10.fields._index = &v11;
@@ -4611,16 +4602,16 @@ void ServantFilterSelectMenu__SetButtonEnable(ServantFilterSelectMenu_o *this, b
   {
     monitor = (UnityEngine_Behaviour_o *)System_Collections_Generic_List_Enumerator_object___MoveNext(
                                            &v11,
-                                           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+                                           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
     if ( ((unsigned __int8)monitor & 1) == 0 )
       break;
     if ( !v11.fields._current || (monitor = (UnityEngine_Behaviour_o *)v11.fields._current[2].monitor) == 0 )
-      sub_21FFECC(monitor, v7);
+      sub_2213CDC(monitor, v7);
     UnityEngine_Behaviour__set_enabled(monitor, isEnable, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
   kind = this->fields.kind;
   if ( kind == 5 )
   {
@@ -4671,7 +4662,7 @@ LABEL_20:
   decideButton = (UICommonButton_o *)this->fields.svtEffectFilterController;
   if ( !decideButton )
 LABEL_31:
-    sub_21FFECC(decideButton, isEnable);
+    sub_2213CDC(decideButton, isEnable);
   ServantEquipEffectFilterController__SetEnableFilterButton(
     (ServantEquipEffectFilterController_o *)decideButton,
     isEnable,
@@ -4701,15 +4692,15 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5933012 & 1) == 0 )
+  if ( (byte_596B217 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
-    byte_5933012 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__get_Current__);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    byte_596B217 = 1;
   }
   useFilterButtonList = (System_Collections_Generic_List_object__o *)this->fields.useFilterButtonList;
   memset(&v21, 0, sizeof(v21));
@@ -4718,7 +4709,7 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     useFilterButtonList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__);
   v21 = v20;
   v20.fields._list = 0;
   *(_QWORD *)&v20.fields._index = &v21;
@@ -4726,12 +4717,12 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v21,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__MoveNext__);
     if ( !v4 )
       break;
     current = (ServantFilterButtonControl_o *)v21.fields._current;
     if ( !v21.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     ServantFilterButtonControl__RefreshButtonSelectState((ServantFilterButtonControl_o *)v21.fields._current, v5);
     v9 = FilterKindList_TypeInfo;
     if ( !*(&FilterKindList_TypeInfo->_2.cctor_finished + 1) )
@@ -4741,15 +4732,15 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
     }
     ClassFilterKindList = (System_Collections_Generic_List_T__o *)v9->static_fields->ClassFilterKindList;
     if ( !ClassFilterKindList )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     if ( System_Collections_Generic_List_Int32Enum___Contains(
            ClassFilterKindList,
            current->fields.filterKind,
-           (const MethodInfo_4435CD0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__) )
+           (const MethodInfo_4469E08 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__) )
     {
       operationSortInfo = this->fields.operationSortInfo;
       if ( !operationSortInfo )
-        sub_21FFECC(0, v11);
+        sub_2213CDC(0, v11);
       v14 = ListViewSort__CheckSvtGroupFilter(operationSortInfo, current->fields.filterKind, 0);
       ServantFilterButtonControl__SetButtonMask(current, !v14, v15);
     }
@@ -4763,11 +4754,11 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
       }
       EquipRewardUpExcludeTypeList = (System_Collections_Generic_List_T__o *)v16->static_fields->EquipRewardUpExcludeTypeList;
       if ( !EquipRewardUpExcludeTypeList )
-        sub_21FFECC(0, v11);
+        sub_2213CDC(0, v11);
       if ( System_Collections_Generic_List_Int32Enum___Contains(
              EquipRewardUpExcludeTypeList,
              current->fields.filterKind,
-             (const MethodInfo_4435CD0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__) )
+             (const MethodInfo_4469E08 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__) )
       {
         ServantFilterButtonControl__SetButtonMask(current, 1, v18);
       }
@@ -4775,7 +4766,7 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ServantFilterButtonControl__Dispose__);
   kind = this->fields.kind;
   if ( kind == 5 || kind == 16 )
   {
@@ -4810,7 +4801,7 @@ void ServantFilterSelectMenu__SetButtonSelect(ServantFilterSelectMenu_o *this, c
   useFilterButtonList = (System_Collections_Generic_List_object__o *)this->fields.svtEffectFilterController;
   if ( !useFilterButtonList )
 LABEL_37:
-    sub_21FFECC(useFilterButtonList, method);
+    sub_2213CDC(useFilterButtonList, method);
   ServantEquipEffectFilterController__RefreshSelectState(
     (ServantEquipEffectFilterController_o *)useFilterButtonList,
     method);
@@ -4830,13 +4821,13 @@ System_Boolean_array *ServantFilterSelectMenu__SetKindStatus(
   unsigned __int64 v9; // x22
   FilterKindList_c *v10; // x0
 
-  if ( (byte_593301A & 1) == 0 )
+  if ( (byte_596B21F & 1) == 0 )
   {
-    sub_21FFC50(&bool___TypeInfo);
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Item__);
-    byte_593301A = 1;
+    sub_2213A60(&bool___TypeInfo);
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Item__);
+    byte_596B21F = 1;
   }
   AllFilterKindList = (System_Collections_Generic_List_T__o *)FilterKindList_TypeInfo;
   if ( !*(&FilterKindList_TypeInfo->_2.cctor_finished + 1) )
@@ -4848,7 +4839,7 @@ System_Boolean_array *ServantFilterSelectMenu__SetKindStatus(
   if ( !v5 )
     goto LABEL_16;
   size = (unsigned int)v5->fields._size;
-  v8 = sub_21FFD10(bool___TypeInfo, (unsigned int)size);
+  v8 = sub_2213B20(bool___TypeInfo, (unsigned int)size);
   if ( (int)size >= 1 )
   {
     v9 = 0;
@@ -4866,7 +4857,7 @@ System_Boolean_array *ServantFilterSelectMenu__SetKindStatus(
       AllFilterKindList = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                                                     AllFilterKindList,
                                                                     v9,
-                                                                    (const MethodInfo_4435658 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Item__);
+                                                                    (const MethodInfo_4469790 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__get_Item__);
       if ( !sort )
         break;
       AllFilterKindList = (System_Collections_Generic_List_T__o *)ListViewSort__GetFilter(
@@ -4876,13 +4867,13 @@ System_Boolean_array *ServantFilterSelectMenu__SetKindStatus(
       if ( !v8 )
         break;
       if ( v9 >= *(unsigned int *)(v8 + 24) )
-        sub_21FFED4(AllFilterKindList);
+        sub_2213CE4(AllFilterKindList);
       *(_BYTE *)(v8 + 32 + v9++) = (unsigned __int8)AllFilterKindList & 1;
       if ( size == v9 )
         return (System_Boolean_array *)v8;
     }
 LABEL_16:
-    sub_21FFECC(AllFilterKindList, sort);
+    sub_2213CDC(AllFilterKindList, sort);
   }
   return (System_Boolean_array *)v8;
 }
@@ -4896,17 +4887,17 @@ bool ServantFilterSelectMenu___InitUseFilterButton_b__62_0(
   ServantFilterSelectMenu_o *v4; // x20
 
   v4 = this;
-  if ( (byte_593301E & 1) == 0 )
+  if ( (byte_596B223 & 1) == 0 )
   {
-    this = (ServantFilterSelectMenu_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
-    byte_593301E = 1;
+    this = (ServantFilterSelectMenu_o *)sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
+    byte_596B223 = 1;
   }
   if ( !x || (this = (ServantFilterSelectMenu_o *)v4->fields.useFilterKindList) == 0 )
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   return System_Collections_Generic_List_Int32Enum___Contains(
            (System_Collections_Generic_List_T__o *)this,
            x->fields.filterKind,
-           (const MethodInfo_4435CD0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
+           (const MethodInfo_4469E08 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__);
 }
 
 
@@ -4925,10 +4916,10 @@ void ServantFilterSelectMenu__add_callbackFunc(
   ServantFilterSelectMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5932FFC & 1) == 0 )
+  if ( (byte_596B201 & 1) == 0 )
   {
-    sub_21FFC50(&ServantFilterSelectMenu_CallbackFunc_TypeInfo);
-    byte_5932FFC = 1;
+    sub_2213A60(&ServantFilterSelectMenu_CallbackFunc_TypeInfo);
+    byte_596B201 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -4939,25 +4930,25 @@ void ServantFilterSelectMenu__add_callbackFunc(
       if ( (ServantFilterSelectMenu_CallbackFunc_c *)v6->klass != ServantFilterSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ServantFilterSelectMenu_o *)sub_220024C(v6, ServantFilterSelectMenu_CallbackFunc_TypeInfo, v7, v8);
+  v11 = (ServantFilterSelectMenu_o *)sub_221405C(v6, ServantFilterSelectMenu_CallbackFunc_TypeInfo, v7, v8);
   ServantFilterSelectMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *ServantFilterSelectMenu__get_closeBtnPath(ServantFilterSelectMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_593301B & 1) == 0 )
+  if ( (byte_596B220 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16227/*"Window/CancelButton"*/);
-    byte_593301B = 1;
+    sub_2213A60(&StringLiteral_16259/*"Window/CancelButton"*/);
+    byte_596B220 = 1;
   }
-  return (System_String_o *)StringLiteral_16227/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_16259/*"Window/CancelButton"*/;
 }
 
 
@@ -4974,10 +4965,10 @@ void ServantFilterSelectMenu__remove_callbackFunc(
   bool v10; // zf
   const MethodInfo *v11; // x0
 
-  if ( (byte_5932FFD & 1) == 0 )
+  if ( (byte_596B202 & 1) == 0 )
   {
-    sub_21FFC50(&ServantFilterSelectMenu_CallbackFunc_TypeInfo);
-    byte_5932FFD = 1;
+    sub_2213A60(&ServantFilterSelectMenu_CallbackFunc_TypeInfo);
+    byte_596B202 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   while ( 1 )
@@ -4988,13 +4979,13 @@ void ServantFilterSelectMenu__remove_callbackFunc(
       if ( (ServantFilterSelectMenu_CallbackFunc_c *)v6->klass != ServantFilterSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_223767C(&this->fields.callbackFunc, v6, callbackFunc);
+    v9 = sub_224B48C(&this->fields.callbackFunc, v6, callbackFunc);
     v10 = v9 == (_QWORD)callbackFunc;
     callbackFunc = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (const MethodInfo *)sub_220024C(v6, ServantFilterSelectMenu_CallbackFunc_TypeInfo, v7, v8);
+  v11 = (const MethodInfo *)sub_221405C(v6, ServantFilterSelectMenu_CallbackFunc_TypeInfo, v7, v8);
   ServantFilterSelectMenu__DeleteContinueData(v11);
 }
 
@@ -5018,7 +5009,7 @@ void ServantFilterSelectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -5029,12 +5020,12 @@ void ServantFilterSelectMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -5046,9 +5037,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FEFA50;
+  this->fields.invoke_impl = (intptr_t)sub_2002A78;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FEFA08;
+  this->fields.extra_arg = (intptr_t)sub_2002A30;
 }
 
 
@@ -5064,8 +5055,8 @@ System_IAsyncResult_o *ServantFilterSelectMenu_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -5074,7 +5065,7 @@ void ServantFilterSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -5109,20 +5100,20 @@ void ServantFilterSelectMenu_FilterContainer___ctor(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_59338D8 & 1) == 0 )
+  if ( (byte_596BA77 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_ServantFilterCategoryContainer__TypeInfo);
-    byte_59338D8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantFilterCategoryContainer___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_ServantFilterCategoryContainer__TypeInfo);
+    byte_596BA77 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantFilterCategoryContainer__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantFilterCategoryContainer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ServantFilterCategoryContainer___ctor__);
   this->fields.categoryContainerList = (struct System_Collections_Generic_List_ServantFilterCategoryContainer__o *)v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.categoryContainerList,
     (int32_t)v3,
     v4,
@@ -5131,12 +5122,12 @@ void ServantFilterSelectMenu_FilterContainer___ctor(
     v7,
     v8,
     v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantFilterButtonControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ServantFilterButtonControl___ctor__);
   this->fields.filterButtonList = (struct System_Collections_Generic_List_ServantFilterButtonControl__o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.filterButtonList,
     (int32_t)v10,
     v11,
@@ -5159,15 +5150,15 @@ void ServantFilterSelectMenu___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59338D9 & 1) == 0 )
+  if ( (byte_596BA78 & 1) == 0 )
   {
-    sub_21FFC50(&ServantFilterSelectMenu___c_TypeInfo);
-    byte_59338D9 = 1;
+    sub_2213A60(&ServantFilterSelectMenu___c_TypeInfo);
+    byte_596BA78 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ServantFilterSelectMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ServantFilterSelectMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantFilterSelectMenu___c_TypeInfo->static_fields->__9 = (struct ServantFilterSelectMenu___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ServantFilterSelectMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -5191,7 +5182,7 @@ int32_t ServantFilterSelectMenu___c___InitCategoryContainer_b__65_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return e->fields.categoryKind;
 }
 
@@ -5202,7 +5193,7 @@ bool ServantFilterSelectMenu___c___InitCommandCodeDisp_b__58_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5213,7 +5204,7 @@ bool ServantFilterSelectMenu___c___InitCostumeDisp_b__59_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5224,7 +5215,7 @@ bool ServantFilterSelectMenu___c___InitMaterialDisp_b__56_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5235,7 +5226,7 @@ bool ServantFilterSelectMenu___c___InitServantBaseDisp_b__55_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5246,7 +5237,7 @@ bool ServantFilterSelectMenu___c___InitServantEquipDisp_b__57_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5257,7 +5248,7 @@ bool ServantFilterSelectMenu___c___InitServantEquipDisp_b__57_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 12;
 }
 
@@ -5268,7 +5259,7 @@ bool ServantFilterSelectMenu___c___InitServantEquipDisp_b__57_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 19;
 }
 
@@ -5279,7 +5270,7 @@ bool ServantFilterSelectMenu___c___InitServantEquipDisp_b__57_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 20;
 }
 
@@ -5290,7 +5281,7 @@ bool ServantFilterSelectMenu___c___InitServantExtraClassDisp_b__52_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5301,7 +5292,7 @@ bool ServantFilterSelectMenu___c___InitServantExtraClassDisp_b__52_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 0;
 }
 
@@ -5312,7 +5303,7 @@ bool ServantFilterSelectMenu___c___InitServantListDisp_b__54_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5323,7 +5314,7 @@ bool ServantFilterSelectMenu___c___InitServantNormalDisp_b__51_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5334,7 +5325,7 @@ bool ServantFilterSelectMenu___c___InitServantNotClassDisp_b__53_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.categoryKind == 4;
 }
 
@@ -5344,10 +5335,10 @@ bool ServantFilterSelectMenu___c___RefreshFilterContainerCache_b__63_0(
         ServantFilterButtonControl_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_59338DA & 1) == 0 )
+  if ( (byte_596BA79 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59338DA = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BA79 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, x, method);
@@ -5357,7 +5348,7 @@ bool ServantFilterSelectMenu___c___RefreshFilterContainerCache_b__63_0(
 
 void ServantFilterSelectMenu___c__DisplayClass64_0_object____ctor(
         ServantFilterSelectMenu___c__DisplayClass64_0_T__o *this,
-        const MethodInfo_3AD28AC *method)
+        const MethodInfo_3B06054 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -5366,7 +5357,7 @@ void ServantFilterSelectMenu___c__DisplayClass64_0_object____ctor(
 bool ServantFilterSelectMenu___c__DisplayClass64_0_object____CollectCompsRecursive_b__0(
         ServantFilterSelectMenu___c__DisplayClass64_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_3AD28B4 *method)
+        const MethodInfo_3B0605C *method)
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
@@ -5375,10 +5366,10 @@ bool ServantFilterSelectMenu___c__DisplayClass64_0_object____CollectCompsRecursi
   UnityEngine_Object_o *parent; // x19
   UnityEngine_Object_o *v10; // x20
 
-  if ( (byte_593DE81 & 1) == 0 )
+  if ( (byte_5976159 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593DE81 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5976159 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, x);
@@ -5386,7 +5377,7 @@ bool ServantFilterSelectMenu___c__DisplayClass64_0_object____CollectCompsRecursi
   if ( !v5 )
     return 0;
   if ( !x )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)x, 0);
   parent = (UnityEngine_Object_o *)this->fields.parent;
   v10 = (UnityEngine_Object_o *)transform;
@@ -5409,15 +5400,15 @@ bool ServantFilterSelectMenu___c__DisplayClass65_0___InitCategoryContainer_b__1(
         int32_t e,
         const MethodInfo *method)
 {
-  if ( (byte_59338DB & 1) == 0 )
+  if ( (byte_596BA7A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterCategoryKind___);
-    byte_59338DB = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterCategoryKind___);
+    byte_596BA7A = 1;
   }
   return System_Linq_Enumerable__Contains_Int32Enum_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.categoryKindKist,
            e,
-           (const MethodInfo_3843278 *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterCategoryKind___);
+           (const MethodInfo_3876740 *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterCategoryKind___);
 }
 
 
@@ -5439,6 +5430,6 @@ bool ServantFilterSelectMenu___c__DisplayClass65_1___InitCategoryContainer_b__2(
 
   container = this->fields.container;
   if ( !container )
-    sub_21FFECC(this, *(_QWORD *)&x);
+    sub_2213CDC(this, *(_QWORD *)&x);
   return container->fields.categoryKind == x;
 }

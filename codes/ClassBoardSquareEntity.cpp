@@ -1,27 +1,27 @@
 void ClassBoardSquareEntity___ctor(ClassBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59383F5 & 1) == 0 )
+  if ( (byte_59705A5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59383F5 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59705A5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ClassBoardSquareEntity__CreatePK(int32_t classBoardBaseId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_59383F4 & 1) == 0 )
+  if ( (byte_59705A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59383F4 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59705A4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            id,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,31 +40,31 @@ bool ClassBoardSquareEntity__IsGrand(ClassBoardSquareEntity_o *this, const Metho
   __int64 v5; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_59383F2 & 1) == 0 )
+  if ( (byte_59705A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    byte_59383F2 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    byte_59705A2 = 1;
   }
   v3 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v3 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.classBoardBaseId,
-                                    (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3F10B80 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
       return SLODWORD(entity[4].monitor) > 0;
 LABEL_11:
-    sub_21FFECC(Master_object, v5);
+    sub_2213CDC(Master_object, v5);
   }
   return 0;
 }
@@ -102,34 +102,34 @@ bool ClassBoardSquareEntity__IsSetGrandSvt(ClassBoardSquareEntity_o *this, const
   __int64 v30; // x0
   __int64 v32; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_59383F3 & 1) == 0 )
+  if ( (byte_59705A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantGrandMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_59383F3 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantGrandMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59705A3 = 1;
   }
   if ( ClassBoardSquareEntity__IsGrand(this, method) )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3);
-    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
     if ( !Master_object
       || (OpenClassIdArrayFromBaseId = (System_Collections_Generic_IEnumerable_TSource__o *)ClassBoardClassMaster__GetOpenClassIdArrayFromBaseId(
                                                                                               Master_object,
                                                                                               this->fields.classBoardBaseId,
                                                                                               v6),
-          (Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantGrandMaster___)) == 0)
+          (Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantGrandMaster___)) == 0)
       || (Master_object = (ClassBoardClassMaster_o *)UserServantGrandMaster__GetUserServantEntities(
                                                        (UserServantGrandMaster_o *)Master_object,
                                                        0)) == 0 )
     {
-      sub_21FFECC(Master_object, v5);
+      sub_2213CDC(Master_object, v5);
     }
     klass = Master_object->klass;
     v9 = Master_object;
@@ -149,14 +149,14 @@ bool ClassBoardSquareEntity__IsSetGrandSvt(ClassBoardSquareEntity_o *this, const
     else
     {
 LABEL_13:
-      v12 = sub_2237E2C(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0);
+      v12 = sub_224BC3C(Master_object, System_Collections_Generic_IEnumerable_UserServantEntity__TypeInfo, 0);
     }
     v14 = (*(__int64 (__fastcall **)(ClassBoardClassMaster_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
     v32 = v14;
     while ( 1 )
     {
       if ( !v32 )
-        sub_21FFECC(v14, v15);
+        sub_2213CDC(v14, v15);
       v16 = *(_QWORD *)v32;
       v17 = *(unsigned __int16 *)(*(_QWORD *)v32 + 302LL);
       if ( *(_WORD *)(*(_QWORD *)v32 + 302LL) )
@@ -174,7 +174,7 @@ LABEL_13:
       else
       {
 LABEL_22:
-        v19 = sub_2237E2C(v32, System_Collections_IEnumerator_TypeInfo, 0);
+        v19 = sub_224BC3C(v32, System_Collections_IEnumerator_TypeInfo, 0);
       }
       v13 = (*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v32, *(_QWORD *)(v19 + 8));
       if ( (v13 & 1) == 0 )
@@ -196,16 +196,16 @@ LABEL_22:
       else
       {
 LABEL_29:
-        v23 = sub_2237E2C(v32, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0);
+        v23 = sub_224BC3C(v32, System_Collections_Generic_IEnumerator_UserServantEntity__TypeInfo, 0);
       }
       v24 = (UserServantEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v32, *(_QWORD *)(v23 + 8));
       if ( !v24 )
-        sub_21FFECC(0, v25);
+        sub_2213CDC(0, v25);
       SvtClassId = UserServantEntity__getSvtClassId(v24, 0, 1, 0);
       v14 = System_Linq_Enumerable__Contains_int_(
               OpenClassIdArrayFromBaseId,
               SvtClassId,
-              (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+              (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
       if ( (v14 & 1) != 0 )
         goto LABEL_35;
     }
@@ -228,7 +228,7 @@ LABEL_35:
     else
     {
 LABEL_39:
-      v30 = sub_2237E2C(v32, System_IDisposable_TypeInfo, 0);
+      v30 = sub_224BC3C(v32, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v30)(v32, *(_QWORD *)(v30 + 8));
   }

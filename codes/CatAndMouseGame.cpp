@@ -143,22 +143,22 @@ void CatAndMouseGame___cctor(const MethodInfo *method)
   struct System_Byte_array *v141; // x13
   __int64 v142; // x12
 
-  if ( (byte_5937CC2 & 1) == 0 )
+  if ( (byte_596FE2F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__byte______TypeInfo);
-    sub_21FFC50(&StringLiteral_22175/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
-    sub_21FFC50(&StringLiteral_10756/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
-    byte_5937CC2 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__byte______TypeInfo);
+    sub_2213A60(&StringLiteral_22218/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
+    sub_2213A60(&StringLiteral_10769/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
+    byte_596FE2F = 1;
   }
-  v1 = (struct System_Byte_array *)sub_21FFD10(byte___TypeInfo, 32);
+  v1 = (struct System_Byte_array *)sub_2213B20(byte___TypeInfo, 32);
   CatAndMouseGame_TypeInfo->static_fields->ownerTop = v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)CatAndMouseGame_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -167,59 +167,59 @@ void CatAndMouseGame___cctor(const MethodInfo *method)
     v5,
     v6,
     v7);
-  v8 = sub_21FFD10(byte___TypeInfo, 32);
+  v8 = sub_2213B20(byte___TypeInfo, 32);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
   static_fields->ownerData = (struct System_Byte_array *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
-  v16 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
+  v16 = sub_2213B20(byte___TypeInfo, 32);
   v17 = CatAndMouseGame_TypeInfo->static_fields;
   v17->InfoTop = (struct System_Byte_array *)v16;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->InfoTop, v16, v18, v19, v20, v21, v22, v23);
-  v24 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->InfoTop, v16, v18, v19, v20, v21, v22, v23);
+  v24 = sub_2213B20(byte___TypeInfo, 32);
   v25 = CatAndMouseGame_TypeInfo->static_fields;
   v25->infoData = (struct System_Byte_array *)v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->infoData, v24, v26, v27, v28, v29, v30, v31);
-  v32 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->infoData, v24, v26, v27, v28, v29, v30, v31);
+  v32 = sub_2213B20(byte___TypeInfo, 32);
   v33 = CatAndMouseGame_TypeInfo->static_fields;
   v33->stageTop = (struct System_Byte_array *)v32;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->stageTop, v32, v34, v35, v36, v37, v38, v39);
-  v40 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->stageTop, v32, v34, v35, v36, v37, v38, v39);
+  v40 = sub_2213B20(byte___TypeInfo, 32);
   v41 = CatAndMouseGame_TypeInfo->static_fields;
   v41->stageData = (struct System_Byte_array *)v40;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v41->stageData, v40, v42, v43, v44, v45, v46, v47);
-  v48 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v41->stageData, v40, v42, v43, v44, v45, v46, v47);
+  v48 = sub_2213B20(byte___TypeInfo, 32);
   v49 = CatAndMouseGame_TypeInfo->static_fields;
   v49->baseTop = (struct System_Byte_array *)v48;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->baseTop, v48, v50, v51, v52, v53, v54, v55);
-  v56 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v49->baseTop, v48, v50, v51, v52, v53, v54, v55);
+  v56 = sub_2213B20(byte___TypeInfo, 32);
   v57 = CatAndMouseGame_TypeInfo->static_fields;
   v57->baseData = (struct System_Byte_array *)v56;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v57->baseData, v56, v58, v59, v60, v61, v62, v63);
-  v64 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v57->baseData, v56, v58, v59, v60, v61, v62, v63);
+  v64 = sub_2213B20(byte___TypeInfo, 32);
   v65 = CatAndMouseGame_TypeInfo->static_fields;
   v65->BattleKey = (struct System_Byte_array *)v64;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v65->BattleKey, v64, v66, v67, v68, v69, v70, v71);
-  v72 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v65->BattleKey, v64, v66, v67, v68, v69, v70, v71);
+  v72 = sub_2213B20(byte___TypeInfo, 32);
   v73 = CatAndMouseGame_TypeInfo->static_fields;
   v73->BattleIV = (struct System_Byte_array *)v72;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v73->BattleIV, v72, v74, v75, v76, v77, v78, v79);
-  v80 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v73->BattleIV, v72, v74, v75, v76, v77, v78, v79);
+  v80 = sub_2213B20(byte___TypeInfo, 32);
   v81 = CatAndMouseGame_TypeInfo->static_fields;
   v81->sideTop = (struct System_Byte_array *)v80;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v81->sideTop, v80, v82, v83, v84, v85, v86, v87);
-  v88 = sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v81->sideTop, v80, v82, v83, v84, v85, v86, v87);
+  v88 = sub_2213B20(byte___TypeInfo, 32);
   v89 = CatAndMouseGame_TypeInfo->static_fields;
   v89->sideData = (struct System_Byte_array *)v88;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v89->sideData, v88, v90, v91, v92, v93, v94, v95);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v89->sideData, v88, v90, v91, v92, v93, v94, v95);
   v96 = System_Collections_Generic_Dictionary_string__string__TypeInfo;
   *(_QWORD *)&CatAndMouseGame_TypeInfo->static_fields->EncryptedDataLength = 0;
-  v97 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(v96);
+  v97 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(v96);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v97,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   v98 = CatAndMouseGame_TypeInfo->static_fields;
   v98->assetbundleKeyCollection = (struct System_Collections_Generic_Dictionary_string__string__o *)v97;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v98->assetbundleKeyCollection,
     (int32_t)v97,
     v99,
@@ -228,13 +228,13 @@ void CatAndMouseGame___cctor(const MethodInfo *method)
     v102,
     v103,
     v104);
-  v105 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__byte______TypeInfo);
+  v105 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__byte______TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v105,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__byte_______ctor__);
   v106 = CatAndMouseGame_TypeInfo->static_fields;
   v106->keyCollection = (struct System_Collections_Generic_Dictionary_string__byte______o *)v105;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v106->keyCollection,
     (int32_t)v105,
     v107,
@@ -252,14 +252,14 @@ void CatAndMouseGame___cctor(const MethodInfo *method)
       goto LABEL_54;
     v116 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
              UTF8,
-             StringLiteral_22175/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
+             StringLiteral_22218/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/,
              UTF8->klass->vtable._18_GetBytes.method);
     UTF8 = System_Text_Encoding__get_UTF8(0);
     if ( !UTF8 )
       goto LABEL_54;
     UTF8 = (System_Text_Encoding_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
                                        UTF8,
-                                       StringLiteral_10756/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
+                                       StringLiteral_10769/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/,
                                        UTF8->klass->vtable._18_GetBytes.method);
     if ( !v116 )
       goto LABEL_54;
@@ -280,7 +280,7 @@ void CatAndMouseGame___cctor(const MethodInfo *method)
             goto LABEL_54;
           if ( (unsigned int)v117 >> 1 >= LODWORD(stageTop->max_length) )
 LABEL_53:
-            sub_21FFED4(UTF8);
+            sub_2213CE4(UTF8);
           v122 = *(_BYTE *)(v119 + v117);
           v123 = (char *)stageTop + ((unsigned int)v117 >> 1);
         }
@@ -304,7 +304,7 @@ LABEL_53:
     }
     if ( !UTF8 )
 LABEL_54:
-      sub_21FFECC(UTF8, v115);
+      sub_2213CDC(UTF8, v115);
     if ( (int)UTF8->fields.dataItem >= 4 )
     {
       v125 = 0;
@@ -415,19 +415,19 @@ void CatAndMouseGame__AddAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
   unsigned int v7; // w22
   __int64 v8; // x23
 
-  if ( (byte_5937CE4 & 1) == 0 )
+  if ( (byte_596FE51 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    byte_5937CE4 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    byte_596FE51 = 1;
   }
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, method);
   v3 = JsonManager__DeserializeArray_object_(
          obj,
-         (const MethodInfo_38A056C *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+         (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
   if ( !v3 )
     goto LABEL_15;
   v5 = v3[6];
@@ -438,7 +438,7 @@ void CatAndMouseGame__AddAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
     while ( 1 )
     {
       if ( v7 >= v5 )
-        sub_21FFED4(v3);
+        sub_2213CE4(v3);
       v3 = CatAndMouseGame_TypeInfo;
       v8 = *(_QWORD *)&v6[2 * v7 + 8];
       if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -455,13 +455,13 @@ void CatAndMouseGame__AddAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
         (System_Collections_Generic_Dictionary_object__object__o *)v3,
         *(Il2CppObject **)(v8 + 16),
         *(Il2CppObject **)(v8 + 24),
-        (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+        (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
       v5 = v6[6];
       if ( (int)++v7 >= v5 )
         return;
     }
 LABEL_15:
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   }
 }
 
@@ -501,17 +501,17 @@ System_String_o *CatAndMouseGame__CatGame1(System_String_o *str, bool isCompress
   __int64 v35; // x0
   __int64 v36; // x1
 
-  if ( (byte_5937CC3 & 1) == 0 )
+  if ( (byte_596FE30 & 1) == 0 )
   {
-    sub_21FFC50(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-    sub_21FFC50(&StringLiteral_26190/*"wuD6keVr"*/);
-    sub_21FFC50(&StringLiteral_17650/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
-    byte_5937CC3 = 1;
+    sub_2213A60(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    sub_2213A60(&StringLiteral_26241/*"wuD6keVr"*/);
+    sub_2213A60(&StringLiteral_17687/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
+    byte_596FE30 = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8
@@ -522,35 +522,35 @@ System_String_o *CatAndMouseGame__CatGame1(System_String_o *str, bool isCompress
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0)
     || (v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
                UTF8,
-               StringLiteral_17650/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
+               StringLiteral_17687/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
                UTF8->klass->vtable._18_GetBytes.method),
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(UTF8, v6);
+    sub_2213CDC(UTF8, v6);
   }
   v9 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_26190/*"wuD6keVr"*/,
+         StringLiteral_26241/*"wuD6keVr"*/,
          UTF8->klass->vtable._18_GetBytes.method);
-  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_21FFEBC(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_2213CCC(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v10, 0);
-  v11 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v11 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v11, 0);
   if ( !v10 )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   v14 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, const MethodInfo *))v10->klass->vtable._21_CreateEncryptor.methodPtr)(
                                                              v10,
                                                              v8,
                                                              v9,
                                                              v10->klass->vtable._21_CreateEncryptor.method);
-  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v15, (System_IO_Stream_o *)v11, v14, 1, 0);
   if ( isCompress )
   {
-    v18 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    v18 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
     ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor(v18, (System_IO_Stream_o *)v15, 0);
     if ( !v7 || !v18 )
-      sub_21FFECC(v19, v20);
+      sub_2213CDC(v19, v20);
     ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v18->klass->vtable._34_Write.methodPtr)(
       v18,
       v7,
@@ -575,14 +575,14 @@ System_String_o *CatAndMouseGame__CatGame1(System_String_o *str, bool isCompress
     else
     {
 LABEL_14:
-      v24 = sub_2237E2C(v18, System_IDisposable_TypeInfo, 0);
+      v24 = sub_224BC3C(v18, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, _QWORD))v24)(v18, *(_QWORD *)(v24 + 8));
   }
   else
   {
     if ( !v7 || !v15 )
-      sub_21FFECC(v16, v17);
+      sub_2213CDC(v16, v17);
     ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v15->klass->vtable._34_Write.methodPtr)(
       v15,
       v7,
@@ -592,7 +592,7 @@ LABEL_14:
   }
   System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v10, 0);
   if ( !v15 )
-    sub_21FFECC(0, v25);
+    sub_2213CDC(0, v25);
   v15->klass->vtable._18_Close.methodPtr();
   v26 = v15->klass;
   v27 = *(unsigned __int16 *)&v15->klass->_2.rank;
@@ -611,11 +611,11 @@ LABEL_14:
   else
   {
 LABEL_25:
-    v29 = sub_2237E2C(v15, System_IDisposable_TypeInfo, 0);
+    v29 = sub_224BC3C(v15, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v29)(v15, *(_QWORD *)(v29 + 8));
   if ( !v11 )
-    sub_21FFECC(0, v30);
+    sub_2213CDC(0, v30);
   v31 = (System_Byte_array *)((__int64 (*)(void))v11->klass->vtable._40_ToArray.methodPtr)();
   v11->klass->vtable._18_Close.methodPtr();
   v32 = v11->klass;
@@ -635,7 +635,7 @@ LABEL_25:
   else
   {
 LABEL_32:
-    v35 = sub_2237E2C(v11, System_IDisposable_TypeInfo, 0);
+    v35 = sub_224BC3C(v11, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v35)(v11, *(_QWORD *)(v35 + 8));
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
@@ -654,14 +654,14 @@ System_String_o *CatAndMouseGame__CatGame2(System_String_o *str, bool isCompress
   CatAndMouseGame_c *v9; // x8
   System_Byte_array *v10; // x19
 
-  if ( (byte_5937CC5 & 1) == 0 )
+  if ( (byte_596FE32 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CC5 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE32 = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   v6 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
          str,
@@ -687,10 +687,10 @@ System_String_o *CatAndMouseGame__CatGame3(System_String_o *str, const MethodInf
   unsigned __int64 v8; // x10
   CatAndMouseGame_c *v9; // x0
 
-  if ( (byte_5937CCC & 1) == 0 )
+  if ( (byte_596FE39 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CCC = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE39 = 1;
   }
   UTF8 = (unsigned int *)System_Text_Encoding__get_UTF8(0);
   if ( !UTF8
@@ -699,7 +699,7 @@ System_String_o *CatAndMouseGame__CatGame3(System_String_o *str, const MethodInf
                                  str,
                                  *(_QWORD *)(*(_QWORD *)UTF8 + 608LL))) == 0 )
   {
-    sub_21FFECC(UTF8, v4);
+    sub_2213CDC(UTF8, v4);
   }
   v6 = UTF8[6];
   v7 = (System_Byte_array *)UTF8;
@@ -709,7 +709,7 @@ System_String_o *CatAndMouseGame__CatGame3(System_String_o *str, const MethodInf
     do
     {
       if ( v8 >= v6 )
-        sub_21FFED4(UTF8);
+        sub_2213CE4(UTF8);
       *((_BYTE *)UTF8 + v8 + 32) = ~*((_BYTE *)UTF8 + v8 + 32);
       ++v8;
     }
@@ -725,7 +725,7 @@ System_String_o *CatAndMouseGame__CatGame3(System_String_o *str, const MethodInf
 }
 
 
-System_String_o *CatAndMouseGame__CatGame3_48162588(
+System_String_o *CatAndMouseGame__CatGame3_48198192(
         System_String_o *str,
         System_String_o *key,
         const MethodInfo *method)
@@ -740,10 +740,10 @@ System_String_o *CatAndMouseGame__CatGame3_48162588(
   System_Byte_array *v13; // [xsp+0h] [xbp-30h] BYREF
   System_Byte_array *home; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CCD & 1) == 0 )
+  if ( (byte_596FE3A & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CCD = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE3A = 1;
   }
   v13 = 0;
   home = 0;
@@ -757,7 +757,7 @@ System_String_o *CatAndMouseGame__CatGame3_48162588(
   {
     UTF8 = System_Text_Encoding__get_UTF8(0);
     if ( !UTF8 )
-      sub_21FFECC(0, v8);
+      sub_2213CDC(0, v8);
     v11 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
                                  UTF8,
                                  str,
@@ -784,13 +784,13 @@ System_Byte_array *CatAndMouseGame__CatGame4(System_Byte_array *data, const Meth
   CatAndMouseGame_c *v9; // x0
 
   v3 = data;
-  if ( (byte_5937CCF & 1) == 0 )
+  if ( (byte_596FE3C & 1) == 0 )
   {
-    data = (System_Byte_array *)sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CCF = 1;
+    data = (System_Byte_array *)sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE3C = 1;
   }
   if ( !v3 )
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   max_length = v3->max_length;
   if ( max_length >= 1 )
   {
@@ -807,7 +807,7 @@ System_Byte_array *CatAndMouseGame__CatGame4(System_Byte_array *data, const Meth
         if ( (unsigned int)v5 < LODWORD(v3->max_length) )
           continue;
       }
-      sub_21FFED4(data);
+      sub_2213CE4(data);
       v3->m_Items[v5] = v7 ^ 0xD2;
       max_length = v3->max_length;
       v8 = v5 + 1;
@@ -825,7 +825,7 @@ System_Byte_array *CatAndMouseGame__CatGame4(System_Byte_array *data, const Meth
 }
 
 
-System_Byte_array *CatAndMouseGame__CatGame4_48166004(
+System_Byte_array *CatAndMouseGame__CatGame4_48201608(
         System_Byte_array *data,
         System_String_o *key,
         const MethodInfo *method)
@@ -836,10 +836,10 @@ System_Byte_array *CatAndMouseGame__CatGame4_48166004(
   System_Byte_array *v9; // [xsp+0h] [xbp-30h] BYREF
   System_Byte_array *home; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CD0 & 1) == 0 )
+  if ( (byte_596FE3D & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD0 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE3D = 1;
   }
   v9 = 0;
   home = 0;
@@ -878,11 +878,11 @@ System_String_o *CatAndMouseGame__CatGame5(System_String_o *str, const MethodInf
   unsigned __int64 v15; // x24
   int v16; // w9
 
-  if ( (byte_5937CD3 & 1) == 0 )
+  if ( (byte_596FE40 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD3 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE40 = 1;
   }
   p_image = &CatAndMouseGame_TypeInfo->_1.image;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -892,14 +892,14 @@ System_String_o *CatAndMouseGame__CatGame5(System_String_o *str, const MethodInf
   }
   v4 = *(_QWORD *)(p_image[23] + 64LL);
   if ( !v4
-    || (p_image = (_QWORD *)sub_21FFD10(byte___TypeInfo, *(unsigned int *)(v4 + 24)),
+    || (p_image = (_QWORD *)sub_2213B20(byte___TypeInfo, *(unsigned int *)(v4 + 24)),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0)
     || (v6 = p_image,
-        v7 = sub_21FFD10(byte___TypeInfo, LODWORD(BattleIV->max_length)),
+        v7 = sub_2213B20(byte___TypeInfo, LODWORD(BattleIV->max_length)),
         (p_image = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
 LABEL_33:
-    sub_21FFECC(p_image, method);
+    sub_2213CDC(p_image, method);
   }
   v9 = (System_Byte_array *)(*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*p_image + 600LL))(
                               p_image,
@@ -932,7 +932,7 @@ LABEL_33:
       goto LABEL_33;
     if ( v12 >= *((unsigned int *)v6 + 6) )
 LABEL_34:
-      sub_21FFED4(p_image);
+      sub_2213CE4(p_image);
     *((_BYTE *)v6 + i) = *((_BYTE *)&BattleKey->obj.klass + i) ^ 4;
   }
   for ( j = 32; ; ++j )
@@ -987,11 +987,11 @@ System_Byte_array *CatAndMouseGame__CatGame5Bytes(System_Byte_array *data, const
   unsigned __int64 v14; // x24
   int v15; // w9
 
-  if ( (byte_5937CD4 & 1) == 0 )
+  if ( (byte_596FE41 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD4 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE41 = 1;
   }
   v3 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -1001,14 +1001,14 @@ System_Byte_array *CatAndMouseGame__CatGame5Bytes(System_Byte_array *data, const
   }
   BattleKey = v3->static_fields->BattleKey;
   if ( !BattleKey
-    || (v3 = (CatAndMouseGame_c *)sub_21FFD10(byte___TypeInfo, LODWORD(BattleKey->max_length)),
+    || (v3 = (CatAndMouseGame_c *)sub_2213B20(byte___TypeInfo, LODWORD(BattleKey->max_length)),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0) )
   {
 LABEL_32:
-    sub_21FFECC(v3, method);
+    sub_2213CDC(v3, method);
   }
   v6 = v3;
-  v8 = sub_21FFD10(byte___TypeInfo, LODWORD(BattleIV->max_length));
+  v8 = sub_2213B20(byte___TypeInfo, LODWORD(BattleIV->max_length));
   for ( i = 32; ; ++i )
   {
     v3 = CatAndMouseGame_TypeInfo;
@@ -1036,7 +1036,7 @@ LABEL_32:
       goto LABEL_32;
     if ( v11 >= LODWORD(v6->_1.namespaze) )
 LABEL_33:
-      sub_21FFED4(v3);
+      sub_2213CE4(v3);
     *((_BYTE *)&v6->_1.image + i) = *((_BYTE *)&v10->obj.klass + i) ^ 4;
   }
   for ( j = 32; ; ++j )
@@ -1085,14 +1085,14 @@ System_String_o *CatAndMouseGame__CatGame6(System_String_o *str, const MethodInf
   CatAndMouseGame_c *v8; // x8
   System_Byte_array *v9; // x19
 
-  if ( (byte_5937CE7 & 1) == 0 )
+  if ( (byte_596FE54 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CE7 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE54 = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   v5 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
          str,
@@ -1108,15 +1108,15 @@ System_String_o *CatAndMouseGame__CatGame6(System_String_o *str, const MethodInf
 }
 
 
-System_String_o *CatAndMouseGame__CatGame6_48174368(System_Byte_array *data, const MethodInfo *method)
+System_String_o *CatAndMouseGame__CatGame6_48209972(System_Byte_array *data, const MethodInfo *method)
 {
   const MethodInfo *v2; // x4
   CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_5937CE8 & 1) == 0 )
+  if ( (byte_596FE55 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CE8 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE55 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -1138,16 +1138,16 @@ System_Byte_array *CatAndMouseGame__CatGame7(System_Byte_array *data, const Meth
   CatAndMouseGame_c *v7; // x0
 
   v2 = data;
-  if ( (byte_5937CD6 & 1) == 0 )
+  if ( (byte_596FE43 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    data = (System_Byte_array *)sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD6 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    data = (System_Byte_array *)sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE43 = 1;
   }
   if ( !v2 )
 LABEL_14:
-    sub_21FFECC(data, method);
-  data = (System_Byte_array *)sub_21FFD10(byte___TypeInfo, LODWORD(v2->max_length));
+    sub_2213CDC(data, method);
+  data = (System_Byte_array *)sub_2213B20(byte___TypeInfo, LODWORD(v2->max_length));
   v4 = data;
   if ( (int)v2->max_length >= 1 )
   {
@@ -1161,7 +1161,7 @@ LABEL_14:
         goto LABEL_14;
       if ( v5 >= LODWORD(data->max_length) )
 LABEL_13:
-        sub_21FFED4(data);
+        sub_2213CE4(data);
       data->m_Items[v5] = ~v2->m_Items[v5];
       ++v5;
       max_length = v2->max_length;
@@ -1188,10 +1188,10 @@ System_String_o *CatAndMouseGame__CatGame8(System_String_o *str, const MethodInf
   unsigned __int64 v8; // x10
   CatAndMouseGame_c *v9; // x0
 
-  if ( (byte_5937CD8 & 1) == 0 )
+  if ( (byte_596FE45 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD8 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE45 = 1;
   }
   UTF8 = (unsigned int *)System_Text_Encoding__get_UTF8(0);
   if ( !UTF8
@@ -1200,7 +1200,7 @@ System_String_o *CatAndMouseGame__CatGame8(System_String_o *str, const MethodInf
                                  str,
                                  *(_QWORD *)(*(_QWORD *)UTF8 + 608LL))) == 0 )
   {
-    sub_21FFECC(UTF8, v4);
+    sub_2213CDC(UTF8, v4);
   }
   v6 = UTF8[6];
   v7 = (System_Byte_array *)UTF8;
@@ -1210,7 +1210,7 @@ System_String_o *CatAndMouseGame__CatGame8(System_String_o *str, const MethodInf
     do
     {
       if ( v8 >= v6 )
-        sub_21FFED4(UTF8);
+        sub_2213CE4(UTF8);
       *((_BYTE *)UTF8 + v8 + 32) = ~*((_BYTE *)UTF8 + v8 + 32);
       ++v8;
     }
@@ -1231,10 +1231,10 @@ System_IO_Stream_o *CatAndMouseGame__CatGameZ(System_IO_Stream_o *stream, const 
   const MethodInfo *v2; // x4
   CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_5937CCA & 1) == 0 )
+  if ( (byte_596FE37 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CCA = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE37 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -1255,23 +1255,23 @@ System_String_o *CatAndMouseGame__CatHome(
 {
   System_String_o *result; // x0
   __int64 v10; // x1
-  System_String_o *v11; // x19
+  System_Byte_array *v11; // x19
 
-  if ( (byte_5937CEC & 1) == 0 )
+  if ( (byte_596FE59 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CEC = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE59 = 1;
   }
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, home);
   result = (System_String_o *)CatAndMouseGame__CatHomeMain(data, home, info, isCompress, method);
   if ( result )
   {
-    v11 = result;
+    v11 = (System_Byte_array *)result;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v10);
-    return System_Convert__ToBase64String((System_Byte_array *)v11, 0);
+    return System_Convert__ToBase64String(v11, 0);
   }
   return result;
 }
@@ -1304,18 +1304,18 @@ System_Byte_array *CatAndMouseGame__CatHomeMain(
   __int64 v26; // x1
   System_Byte_array *v27; // x19
 
-  if ( (byte_5937CF0 & 1) == 0 )
+  if ( (byte_596FE5D & 1) == 0 )
   {
-    sub_21FFC50(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF0 = 1;
+    sub_2213A60(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE5D = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -1338,24 +1338,24 @@ System_Byte_array *CatAndMouseGame__CatHomeMain(
           info,
           v9->klass->vtable._21_CreateEncryptor.method);
   if ( !data )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   v14 = (System_Security_Cryptography_ICryptoTransform_o *)v12;
-  v15 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v15 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   max_length = data->max_length;
   v17 = (System_IO_Stream_o *)v15;
   v18 = max_length + 255;
   v19 = max_length + 510;
   if ( v18 >= 0 )
     v19 = v18;
-  System_IO_MemoryStream___ctor_76662848(v15, v19 & 0xFFFFFF00, 0);
-  v20 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_IO_MemoryStream___ctor_76876152(v15, v19 & 0xFFFFFF00, 0);
+  v20 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v20, v17, v14, 1, 0);
   if ( isCompress )
   {
-    v23 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor_75043828(v23, (System_IO_Stream_o *)v20, 1, 0);
+    v23 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor_75257132(v23, (System_IO_Stream_o *)v20, 1, 0);
     if ( !v23 )
-      sub_21FFECC(v24, v25);
+      sub_2213CDC(v24, v25);
     ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v23->klass->vtable._34_Write.methodPtr)(
       v23,
       data,
@@ -1369,7 +1369,7 @@ System_Byte_array *CatAndMouseGame__CatHomeMain(
   else
   {
     if ( !v20 )
-      sub_21FFECC(v21, v22);
+      sub_2213CDC(v21, v22);
     ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v20->klass->vtable._34_Write.methodPtr)(
       v20,
       data,
@@ -1379,7 +1379,7 @@ System_Byte_array *CatAndMouseGame__CatHomeMain(
     System_Security_Cryptography_CryptoStream__FlushFinalBlock(v20, 0);
   }
   if ( !v17 )
-    sub_21FFECC(0, v26);
+    sub_2213CDC(0, v26);
   v27 = (System_Byte_array *)((__int64 (*)(void))v17->klass[1]._1.this_arg.data)();
   ((void (__fastcall *)(System_IO_Stream_o *, const MethodInfo *))v17->klass->vtable._18_Close.methodPtr)(
     v17,
@@ -1406,17 +1406,17 @@ System_IO_Stream_o *CatAndMouseGame__CatHomeMainZ(
   System_Security_Cryptography_CryptoStream_o *v13; // x21
   ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *v14; // x19
 
-  if ( (byte_5937CEE & 1) == 0 )
+  if ( (byte_596FE5B & 1) == 0 )
   {
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CEE = 1;
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE5B = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -1438,11 +1438,11 @@ System_IO_Stream_o *CatAndMouseGame__CatHomeMainZ(
                                                              home,
                                                              info,
                                                              v9->klass->vtable._21_CreateEncryptor.method);
-  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v13, stream, v12, 1, 0);
   if ( isCompress )
   {
-    v14 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    v14 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
     ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v14, (System_IO_Stream_o *)v13, 0);
     return (System_IO_Stream_o *)v14;
   }
@@ -1471,18 +1471,18 @@ System_Byte_array *CatAndMouseGame__CatHomeMainZ2(
   __int64 v20; // x1
   System_Byte_array *v21; // x19
 
-  if ( (byte_5937CEF & 1) == 0 )
+  if ( (byte_596FE5C & 1) == 0 )
   {
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CEF = 1;
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE5C = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -1504,16 +1504,16 @@ System_Byte_array *CatAndMouseGame__CatHomeMainZ2(
                                                              home,
                                                              info,
                                                              v9->klass->vtable._21_CreateEncryptor.method);
-  v13 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v13 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v13, 0);
-  v14 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v14 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v14, (System_IO_Stream_o *)v13, v12, 1, 0);
   if ( isCompress )
   {
-    v17 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
+    v17 = (ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_TypeInfo);
     ICSharpCode_SharpZipLib_GZip_GZipOutputStream___ctor(v17, (System_IO_Stream_o *)v14, 0);
     if ( !data || !v17 )
-      sub_21FFECC(v18, v19);
+      sub_2213CDC(v18, v19);
     ((void (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipOutputStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v17->klass->vtable._34_Write.methodPtr)(
       v17,
       data,
@@ -1527,7 +1527,7 @@ System_Byte_array *CatAndMouseGame__CatHomeMainZ2(
   else
   {
     if ( !data || !v14 )
-      sub_21FFECC(v15, v16);
+      sub_2213CDC(v15, v16);
     ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v14->klass->vtable._34_Write.methodPtr)(
       v14,
       data,
@@ -1537,7 +1537,7 @@ System_Byte_array *CatAndMouseGame__CatHomeMainZ2(
     System_Security_Cryptography_CryptoStream__FlushFinalBlock(v14, 0);
   }
   if ( !v13 )
-    sub_21FFECC(0, v20);
+    sub_2213CDC(0, v20);
   v21 = (System_Byte_array *)((__int64 (*)(void))v13->klass->vtable._40_ToArray.methodPtr)();
   ((void (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v13->klass->vtable._18_Close.methodPtr)(
     v13,
@@ -1559,23 +1559,23 @@ System_String_o *CatAndMouseGame__CatHomeZ2(
 {
   System_String_o *result; // x0
   __int64 v10; // x1
-  System_String_o *v11; // x19
+  System_Byte_array *v11; // x19
 
-  if ( (byte_5937CED & 1) == 0 )
+  if ( (byte_596FE5A & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CED = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE5A = 1;
   }
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, home);
   result = (System_String_o *)CatAndMouseGame__CatHomeMainZ2(data, home, info, isCompress, method);
   if ( result )
   {
-    v11 = result;
+    v11 = (System_Byte_array *)result;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v10);
-    return System_Convert__ToBase64String((System_Byte_array *)v11, 0);
+    return System_Convert__ToBase64String(v11, 0);
   }
   return result;
 }
@@ -1606,12 +1606,12 @@ void CatAndMouseGame__ForthHomeBuilding(System_String_o *data, const MethodInfo 
   struct System_Byte_array *v23; // x9
   __int64 v24; // x8
 
-  if ( (byte_5937CDD & 1) == 0 )
+  if ( (byte_596FE4A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_10756/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
-    byte_5937CDD = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_10769/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/);
+    byte_596FE4A = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
@@ -1621,13 +1621,13 @@ void CatAndMouseGame__ForthHomeBuilding(System_String_o *data, const MethodInfo 
   {
     if ( !UTF8 )
 LABEL_47:
-      sub_21FFECC(UTF8, v5);
+      sub_2213CDC(UTF8, v5);
   }
   else
   {
     if ( !UTF8 )
       goto LABEL_47;
-    data = (System_String_o *)StringLiteral_10756/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/;
+    data = (System_String_o *)StringLiteral_10769/*"PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4"*/;
   }
   UTF8 = (_QWORD *)(*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*UTF8 + 600LL))(
                      UTF8,
@@ -1690,7 +1690,7 @@ LABEL_47:
         v24 = v18 | 3;
         if ( (unsigned int)v24 >= LODWORD(v23->max_length) )
 LABEL_46:
-          sub_21FFED4(UTF8);
+          sub_2213CE4(UTF8);
         v23->m_Items[v24] = *((_BYTE *)v10 + v8 + 3);
       }
       else
@@ -1750,11 +1750,11 @@ System_String_o *CatAndMouseGame__GetAssetbundleKey(System_String_o *keyType, co
   System_Collections_Generic_Dictionary_object__object__o *assetbundleKeyCollection; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CE5 & 1) == 0 )
+  if ( (byte_596FE52 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
-    byte_5937CE5 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    byte_596FE52 = 1;
   }
   v3 = CatAndMouseGame_TypeInfo;
   value = 0;
@@ -1765,12 +1765,12 @@ System_String_o *CatAndMouseGame__GetAssetbundleKey(System_String_o *keyType, co
   }
   assetbundleKeyCollection = (System_Collections_Generic_Dictionary_object__object__o *)v3->static_fields->assetbundleKeyCollection;
   if ( !assetbundleKeyCollection )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          assetbundleKeyCollection,
          (Il2CppObject *)keyType,
          &value,
-         (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+         (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
   {
     return (System_String_o *)value;
   }
@@ -1832,18 +1832,18 @@ System_String_o *CatAndMouseGame__MouseGame1(System_String_o *str, bool isCompre
   System_IO_MemoryStream_o *v51; // [xsp+38h] [xbp-68h]
   System_IO_MemoryStream_o *v52; // [xsp+40h] [xbp-60h]
 
-  if ( (byte_5937CC4 & 1) == 0 )
+  if ( (byte_596FE31 & 1) == 0 )
   {
-    sub_21FFC50(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-    sub_21FFC50(&StringLiteral_26190/*"wuD6keVr"*/);
-    sub_21FFC50(&StringLiteral_17650/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
-    byte_5937CC4 = 1;
+    sub_2213A60(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    sub_2213A60(&StringLiteral_26241/*"wuD6keVr"*/);
+    sub_2213A60(&StringLiteral_17687/*"b5nHjsMrqaeNliSs3jyOzgpD"*/);
+    byte_596FE31 = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, isCompress);
@@ -1853,30 +1853,30 @@ System_String_o *CatAndMouseGame__MouseGame1(System_String_o *str, bool isCompre
     goto LABEL_61;
   v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_17650/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
+         StringLiteral_17687/*"b5nHjsMrqaeNliSs3jyOzgpD"*/,
          UTF8->klass->vtable._18_GetBytes.method);
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
     goto LABEL_61;
   v9 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_26190/*"wuD6keVr"*/,
+         StringLiteral_26241/*"wuD6keVr"*/,
          UTF8->klass->vtable._18_GetBytes.method);
-  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_21FFEBC(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  v10 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_2213CCC(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v10, 0);
-  v11 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v11 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v11, 0);
   if ( !v10 )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   v14 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, const MethodInfo *))v10->klass->vtable._23_CreateDecryptor.methodPtr)(
                                                              v10,
                                                              v8,
                                                              v9,
                                                              v10->klass->vtable._23_CreateDecryptor.method);
-  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v15 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v15, (System_IO_Stream_o *)v11, v14, 1, 0);
   if ( !v5 || !v15 )
-    sub_21FFECC(v16, v17);
+    sub_2213CDC(v16, v17);
   ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v15->klass->vtable._34_Write.methodPtr)(
     v15,
     v5,
@@ -1901,11 +1901,11 @@ System_String_o *CatAndMouseGame__MouseGame1(System_String_o *str, bool isCompre
   else
   {
 LABEL_14:
-    v21 = sub_2237E2C(v15, System_IDisposable_TypeInfo, 0);
+    v21 = sub_224BC3C(v15, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v21)(v15, *(_QWORD *)(v21 + 8));
   if ( !v11 )
-    sub_21FFECC(0, v22);
+    sub_2213CDC(0, v22);
   v23 = (System_Byte_array *)((__int64 (*)(void))v11->klass->vtable._40_ToArray.methodPtr)();
   System_Security_Cryptography_SymmetricAlgorithm__Clear((System_Security_Cryptography_SymmetricAlgorithm_o *)v10, 0);
   v11->klass->vtable._18_Close.methodPtr();
@@ -1926,24 +1926,24 @@ LABEL_14:
   else
   {
 LABEL_21:
-    v27 = sub_2237E2C(v11, System_IDisposable_TypeInfo, 0);
+    v27 = sub_224BC3C(v11, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v27)(v11, *(_QWORD *)(v27 + 8));
   if ( isCompress )
   {
-    v28 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+    v28 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
     System_IO_MemoryStream___ctor(v28, 0);
     v52 = v28;
-    v29 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-    System_IO_MemoryStream___ctor_76663240(v29, v23, 0);
+    v29 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+    System_IO_MemoryStream___ctor_76876544(v29, v23, 0);
     v51 = v29;
-    v30 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    v30 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
     ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v30, (System_IO_Stream_o *)v29, 0);
-    v31 = sub_21FFD10(byte___TypeInfo, 0x4000);
+    v31 = sub_2213B20(byte___TypeInfo, 0x4000);
     v33 = v31;
     if ( !v31 )
 LABEL_45:
-      sub_21FFECC(v31, v32);
+      sub_2213CDC(v31, v32);
     while ( 1 )
     {
       v31 = (__int64)v30;
@@ -1954,7 +1954,7 @@ LABEL_45:
              v33) <= 0 )
         break;
       if ( !v52 )
-        sub_21FFECC(0, v34);
+        sub_2213CDC(0, v34);
       ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64))v52->klass->vtable._34_Write.methodPtr)(v52, v33);
     }
     ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, const MethodInfo *))v30->klass->vtable._18_Close.methodPtr)(
@@ -1977,11 +1977,11 @@ LABEL_45:
     else
     {
 LABEL_34:
-      v39 = sub_2237E2C(v30, System_IDisposable_TypeInfo, 0);
+      v39 = sub_224BC3C(v30, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, _QWORD))v39)(v30, *(_QWORD *)(v39 + 8));
     if ( !v51 )
-      sub_21FFECC(0, v40);
+      sub_2213CDC(0, v40);
     ((void (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v51->klass->vtable._18_Close.methodPtr)(
       v51,
       v51->klass->vtable._18_Close.method);
@@ -2002,11 +2002,11 @@ LABEL_34:
     else
     {
 LABEL_41:
-      v44 = sub_2237E2C(v51, System_IDisposable_TypeInfo, 0);
+      v44 = sub_224BC3C(v51, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v44)(v51, *(_QWORD *)(v44 + 8));
     if ( !v52 )
-      sub_21FFECC(0, v45);
+      sub_2213CDC(0, v45);
     v35 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v52->klass->vtable._40_ToArray.methodPtr)(
             v52,
             v52->klass->vtable._40_ToArray.method);
@@ -2030,7 +2030,7 @@ LABEL_41:
     else
     {
 LABEL_56:
-      v49 = sub_2237E2C(v52, System_IDisposable_TypeInfo, 0);
+      v49 = sub_224BC3C(v52, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v49)(v52, *(_QWORD *)(v49 + 8));
   }
@@ -2041,11 +2041,11 @@ LABEL_56:
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
 LABEL_61:
-    sub_21FFECC(UTF8, v7);
-  return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._35_GetString.methodPtr)(
-                              UTF8,
-                              v35,
-                              UTF8->klass->vtable._35_GetString.method);
+    sub_2213CDC(UTF8, v7);
+  return ((System_String_o *(__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._35_GetString.methodPtr)(
+           UTF8,
+           v35,
+           UTF8->klass->vtable._35_GetString.method);
 }
 
 
@@ -2066,12 +2066,12 @@ System_String_o *CatAndMouseGame__MouseGame2(System_Byte_array *data, bool isCom
   bool v15; // w7
   const MethodInfo *v16; // x4
 
-  if ( (byte_5937CC6 & 1) == 0 )
+  if ( (byte_596FE33 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
-    byte_5937CC6 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_596FE33 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2079,21 +2079,21 @@ System_String_o *CatAndMouseGame__MouseGame2(System_Byte_array *data, bool isCom
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, isCompress);
     v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_77078136((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
   if ( !data
-    || (v7 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
-        System_Array__Copy_77078136((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
+    || (v7 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
+        System_Array__Copy_77291440((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(UTF8, v6);
+    sub_2213CDC(UTF8, v6);
   }
   v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+         StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
          UTF8->klass->vtable._18_GetBytes.method);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
   static_fields->ownerData = (struct System_Byte_array *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHome(
            (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
@@ -2120,12 +2120,12 @@ System_Byte_array *CatAndMouseGame__MouseGame2Bytes(System_Byte_array *data, boo
   bool v15; // w7
   const MethodInfo *v16; // x5
 
-  if ( (byte_5937CC9 & 1) == 0 )
+  if ( (byte_596FE36 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
-    byte_5937CC9 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_596FE36 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2133,21 +2133,21 @@ System_Byte_array *CatAndMouseGame__MouseGame2Bytes(System_Byte_array *data, boo
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, isCompress);
     v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_77078136((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
   if ( !data
-    || (v7 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
-        System_Array__Copy_77078136((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
+    || (v7 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
+        System_Array__Copy_77291440((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(UTF8, v6);
+    sub_2213CDC(UTF8, v6);
   }
   v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+         StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
          UTF8->klass->vtable._18_GetBytes.method);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
   static_fields->ownerData = (struct System_Byte_array *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeSub(
            (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
@@ -2175,12 +2175,12 @@ Il2CppObject *CatAndMouseGame__MouseGame2MsgPack(System_Byte_array *data, bool i
   bool v15; // w7
   const MethodInfo *v16; // x4
 
-  if ( (byte_5937CC7 & 1) == 0 )
+  if ( (byte_596FE34 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
-    byte_5937CC7 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_596FE34 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2188,21 +2188,21 @@ Il2CppObject *CatAndMouseGame__MouseGame2MsgPack(System_Byte_array *data, bool i
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, isCompress);
     v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_77078136((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
   if ( !data
-    || (v7 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
-        System_Array__Copy_77078136((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
+    || (v7 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
+        System_Array__Copy_77291440((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(UTF8, v6);
+    sub_2213CDC(UTF8, v6);
   }
   v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+         StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
          UTF8->klass->vtable._18_GetBytes.method);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
   static_fields->ownerData = (struct System_Byte_array *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeMsgPack(
            (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
@@ -2229,12 +2229,12 @@ Il2CppObject *CatAndMouseGame__MouseGame2Unpacker(System_Byte_array *data, bool 
   bool v15; // w7
   const MethodInfo *v16; // x4
 
-  if ( (byte_5937CC8 & 1) == 0 )
+  if ( (byte_596FE35 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
-    byte_5937CC8 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/);
+    byte_596FE35 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2242,21 +2242,21 @@ Il2CppObject *CatAndMouseGame__MouseGame2Unpacker(System_Byte_array *data, bool 
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, isCompress);
     v4 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_77078136((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)data, 0, (System_Array_o *)v4->static_fields->ownerTop, 0, 32, 0);
   if ( !data
-    || (v7 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
-        System_Array__Copy_77078136((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
+    || (v7 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(data->max_length) - 32)),
+        System_Array__Copy_77291440((System_Array_o *)data, 32, v7, 0, LODWORD(data->max_length) - 32, 0),
         (UTF8 = System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(UTF8, v6);
+    sub_2213CDC(UTF8, v6);
   }
   v8 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
          UTF8,
-         StringLiteral_23703/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
+         StringLiteral_23750/*"pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH"*/,
          UTF8->klass->vtable._18_GetBytes.method);
   static_fields = CatAndMouseGame_TypeInfo->static_fields;
   static_fields->ownerData = (struct System_Byte_array *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->ownerData, v8, v10, v11, v12, v13, v14, v15);
   return CatAndMouseGame__MouseHomeMaster(
            (System_Byte_array *)v7,
            CatAndMouseGame_TypeInfo->static_fields->ownerData,
@@ -2280,11 +2280,11 @@ System_String_o *CatAndMouseGame__MouseGame3(System_String_o *str, const MethodI
   System_String_o *UTF8; // x0
   __int64 v13; // x1
 
-  if ( (byte_5937CCE & 1) == 0 )
+  if ( (byte_596FE3B & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CCE = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE3B = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method);
@@ -2312,7 +2312,7 @@ System_String_o *CatAndMouseGame__MouseGame3(System_String_o *str, const MethodI
       do
       {
         if ( v10 >= klass )
-          sub_21FFED4(result);
+          sub_2213CE4(result);
         *((_BYTE *)&result[1].monitor + v10) = ~*((_BYTE *)&result[1].monitor + v10);
         ++v10;
       }
@@ -2325,15 +2325,15 @@ System_String_o *CatAndMouseGame__MouseGame3(System_String_o *str, const MethodI
                                       v9,
                                       UTF8->klass[1]._1.events)) == 0 )
     {
-      sub_21FFECC(UTF8, v13);
+      sub_2213CDC(UTF8, v13);
     }
-    return System_String__TrimEnd_75500280(UTF8, 0, 0);
+    return System_String__TrimEnd_75713584(UTF8, 0, 0);
   }
   return result;
 }
 
 
-System_String_o *CatAndMouseGame__MouseGame3_48172560(
+System_String_o *CatAndMouseGame__MouseGame3_48208164(
         System_String_o *str,
         System_String_o *key,
         const MethodInfo *method)
@@ -2344,10 +2344,10 @@ System_String_o *CatAndMouseGame__MouseGame3_48172560(
   System_Byte_array *v9; // [xsp+0h] [xbp-30h] BYREF
   System_Byte_array *home; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CDE & 1) == 0 )
+  if ( (byte_596FE4B & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CDE = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE4B = 1;
   }
   v9 = 0;
   home = 0;
@@ -2364,12 +2364,12 @@ System_String_o *CatAndMouseGame__MouseGame3_48172560(
     if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v5);
     CatAndMouseGame__OtherHomeBuilding(key, &home, &v9, v6);
-    return CatAndMouseGame__MouseGame3_48172740(str, home, v9, v8);
+    return CatAndMouseGame__MouseGame3_48208344(str, home, v9, v8);
   }
 }
 
 
-System_String_o *CatAndMouseGame__MouseGame3_48172740(
+System_String_o *CatAndMouseGame__MouseGame3_48208344(
         System_String_o *str,
         System_Byte_array *home,
         System_Byte_array *info,
@@ -2383,11 +2383,11 @@ System_String_o *CatAndMouseGame__MouseGame3_48172740(
   System_String_o *UTF8; // x0
   __int64 v13; // x1
 
-  if ( (byte_5937CDF & 1) == 0 )
+  if ( (byte_596FE4C & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CDF = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE4C = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, home);
@@ -2405,9 +2405,9 @@ System_String_o *CatAndMouseGame__MouseGame3_48172740(
                                       v11,
                                       UTF8->klass[1]._1.events)) == 0 )
     {
-      sub_21FFECC(UTF8, v13);
+      sub_2213CDC(UTF8, v13);
     }
-    return System_String__TrimEnd_75500280(UTF8, 0, 0);
+    return System_String__TrimEnd_75713584(UTF8, 0, 0);
   }
   return result;
 }
@@ -2424,10 +2424,10 @@ System_Byte_array *CatAndMouseGame__MouseGame4(System_Byte_array *data, const Me
   unsigned int v9; // w13
   uint8_t v10; // w14
 
-  if ( (byte_5937CD1 & 1) == 0 )
+  if ( (byte_596FE3E & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD1 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE3E = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2455,7 +2455,7 @@ System_Byte_array *CatAndMouseGame__MouseGame4(System_Byte_array *data, const Me
           if ( v8 < LODWORD(result->max_length) )
             continue;
         }
-        sub_21FFED4(result);
+        sub_2213CE4(result);
         v7 += 2;
         result->m_Items[v8] = v10 ^ 0xCE;
       }
@@ -2473,10 +2473,10 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream(
   const MethodInfo *v2; // x4
   CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_5937CD2 & 1) == 0 )
+  if ( (byte_596FE3F & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD2 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE3F = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2493,7 +2493,7 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream(
 }
 
 
-System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream_48173276(
+System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream_48208880(
         System_IO_Stream_o *outputStream,
         System_String_o *key,
         const MethodInfo *method)
@@ -2504,10 +2504,10 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream_4
   System_Byte_array *v9; // [xsp+0h] [xbp-30h] BYREF
   System_Byte_array *home; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CE1 & 1) == 0 )
+  if ( (byte_596FE4E & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CE1 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE4E = 1;
   }
   v9 = 0;
   home = 0;
@@ -2529,7 +2529,7 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseGame4Stream_4
 }
 
 
-System_Byte_array *CatAndMouseGame__MouseGame4_48172984(
+System_Byte_array *CatAndMouseGame__MouseGame4_48208588(
         System_Byte_array *data,
         System_String_o *key,
         const MethodInfo *method)
@@ -2540,10 +2540,10 @@ System_Byte_array *CatAndMouseGame__MouseGame4_48172984(
   System_Byte_array *v9; // [xsp+0h] [xbp-30h] BYREF
   System_Byte_array *home; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937CE0 & 1) == 0 )
+  if ( (byte_596FE4D & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CE0 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE4D = 1;
   }
   v9 = 0;
   home = 0;
@@ -2560,12 +2560,12 @@ System_Byte_array *CatAndMouseGame__MouseGame4_48172984(
     if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v5);
     CatAndMouseGame__OtherHomeBuilding(key, &home, &v9, v6);
-    return CatAndMouseGame__MouseGame4_48173164(data, home, v9, v8);
+    return CatAndMouseGame__MouseGame4_48208768(data, home, v9, v8);
   }
 }
 
 
-System_Byte_array *CatAndMouseGame__MouseGame4_48173164(
+System_Byte_array *CatAndMouseGame__MouseGame4_48208768(
         System_Byte_array *data,
         System_Byte_array *home,
         System_Byte_array *info,
@@ -2573,10 +2573,10 @@ System_Byte_array *CatAndMouseGame__MouseGame4_48173164(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_5937CE2 & 1) == 0 )
+  if ( (byte_596FE4F & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CE2 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE4F = 1;
   }
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, home);
@@ -2602,12 +2602,12 @@ System_String_o *CatAndMouseGame__MouseGame5(System_String_o *str, const MethodI
   unsigned __int64 v16; // x24
   int v17; // w9
 
-  if ( (byte_5937CD5 & 1) == 0 )
+  if ( (byte_596FE42 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CD5 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE42 = 1;
   }
   v3 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2617,14 +2617,14 @@ System_String_o *CatAndMouseGame__MouseGame5(System_String_o *str, const MethodI
   }
   BattleKey = v3->static_fields->BattleKey;
   if ( !BattleKey
-    || (v3 = (CatAndMouseGame_c *)sub_21FFD10(byte___TypeInfo, LODWORD(BattleKey->max_length)),
+    || (v3 = (CatAndMouseGame_c *)sub_2213B20(byte___TypeInfo, LODWORD(BattleKey->max_length)),
         (BattleIV = CatAndMouseGame_TypeInfo->static_fields->BattleIV) == 0) )
   {
 LABEL_34:
-    sub_21FFECC(v3, method);
+    sub_2213CDC(v3, method);
   }
   v6 = v3;
-  v8 = sub_21FFD10(byte___TypeInfo, LODWORD(BattleIV->max_length));
+  v8 = sub_2213B20(byte___TypeInfo, LODWORD(BattleIV->max_length));
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v7);
   v10 = System_Convert__FromBase64String(str, 0);
@@ -2655,7 +2655,7 @@ LABEL_34:
       goto LABEL_34;
     if ( v13 >= LODWORD(v6->_1.namespaze) )
 LABEL_35:
-      sub_21FFED4(v3);
+      sub_2213CE4(v3);
     *((_BYTE *)&v6->_1.image + i) = *((_BYTE *)&v12->obj.klass + i) ^ 4;
   }
   for ( j = 32; ; ++j )
@@ -2702,11 +2702,11 @@ System_String_o *CatAndMouseGame__MouseGame6(System_String_o *str, const MethodI
   CatAndMouseGame_c *v6; // x8
   System_Byte_array *v7; // x19
 
-  if ( (byte_5937CE9 & 1) == 0 )
+  if ( (byte_596FE56 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CE9 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE56 = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method);
@@ -2735,11 +2735,11 @@ System_Byte_array *CatAndMouseGame__MouseGame6ForMsgPack(
   CatAndMouseGame_c *v9; // x8
   System_Byte_array *v10; // x20
 
-  if ( (byte_5937CEA & 1) == 0 )
+  if ( (byte_596FE57 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CEA = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE57 = 1;
   }
   if ( isSendReport )
   {
@@ -2780,10 +2780,10 @@ System_Byte_array *CatAndMouseGame__MouseGame7(System_Byte_array *data, const Me
   unsigned __int64 max_length_low; // x8
   unsigned __int64 v8; // x10
 
-  if ( (byte_5937CD7 & 1) == 0 )
+  if ( (byte_596FE44 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CD7 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE44 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2793,7 +2793,7 @@ System_Byte_array *CatAndMouseGame__MouseGame7(System_Byte_array *data, const Me
   }
   result = CatAndMouseGame__MouseHomeMain(data, v4->static_fields->stageData, v4->static_fields->stageTop, 1, v2);
   if ( !result )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   max_length_low = LODWORD(result->max_length);
   if ( (int)max_length_low >= 1LL )
   {
@@ -2801,7 +2801,7 @@ System_Byte_array *CatAndMouseGame__MouseGame7(System_Byte_array *data, const Me
     do
     {
       if ( v8 >= max_length_low )
-        sub_21FFED4(result);
+        sub_2213CE4(result);
       result->m_Items[v8] = ~result->m_Items[v8];
       ++v8;
     }
@@ -2828,11 +2828,11 @@ System_String_o *CatAndMouseGame__MouseGame8(System_String_o *str, const MethodI
   System_String_o *UTF8; // x0
   __int64 v16; // x1
 
-  if ( (byte_5937CD9 & 1) == 0 )
+  if ( (byte_596FE46 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    byte_5937CD9 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    byte_596FE46 = 1;
   }
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, method);
@@ -2876,7 +2876,7 @@ LABEL_11:
       do
       {
         if ( v13 >= klass )
-          sub_21FFED4(result);
+          sub_2213CE4(result);
         *((_BYTE *)&v11[1].monitor + v13) = ~*((_BYTE *)&v11[1].monitor + v13);
         ++v13;
       }
@@ -2889,9 +2889,9 @@ LABEL_11:
                                       v11,
                                       UTF8->klass[1]._1.events)) == 0 )
     {
-      sub_21FFECC(UTF8, v16);
+      sub_2213CDC(UTF8, v16);
     }
-    return System_String__TrimEnd_75500280(UTF8, 0, 0);
+    return System_String__TrimEnd_75713584(UTF8, 0, 0);
   }
   return result;
 }
@@ -2902,10 +2902,10 @@ System_IO_Stream_o *CatAndMouseGame__MouseGameZ(System_IO_Stream_o *stream, cons
   const MethodInfo *v2; // x4
   CatAndMouseGame_c *v4; // x0
 
-  if ( (byte_5937CCB & 1) == 0 )
+  if ( (byte_596FE38 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CCB = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE38 = 1;
   }
   v4 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -2928,10 +2928,10 @@ System_String_o *CatAndMouseGame__MouseHome(
   System_String_o *UTF8; // x0
   __int64 v11; // x1
 
-  if ( (byte_5937CF1 & 1) == 0 )
+  if ( (byte_596FE5E & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CF1 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE5E = 1;
   }
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, home);
@@ -2943,9 +2943,9 @@ System_String_o *CatAndMouseGame__MouseHome(
                                     v9,
                                     UTF8->klass[1]._1.events)) == 0 )
   {
-    sub_21FFECC(UTF8, v11);
+    sub_2213CDC(UTF8, v11);
   }
-  return System_String__TrimEnd_75500280(UTF8, 0, 0);
+  return System_String__TrimEnd_75713584(UTF8, 0, 0);
 }
 
 
@@ -2975,17 +2975,17 @@ System_Byte_array *CatAndMouseGame__MouseHomeMain(
   __int64 v25; // x0
   System_Security_Cryptography_ICryptoTransform_o *v27; // [xsp+48h] [xbp-38h]
 
-  if ( (byte_5937CF6 & 1) == 0 )
+  if ( (byte_596FE63 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_DataDecryptor_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF6 = 1;
+    sub_2213A60(&CatAndMouseGame_DataDecryptor_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE63 = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -3007,10 +3007,10 @@ System_Byte_array *CatAndMouseGame__MouseHomeMain(
                                                              home,
                                                              info,
                                                              v9->klass->vtable._23_CreateDecryptor.method);
-  v12 = (CatAndMouseGame_DataDecryptor_o *)sub_21FFEBC(CatAndMouseGame_DataDecryptor_TypeInfo);
+  v12 = (CatAndMouseGame_DataDecryptor_o *)sub_2213CCC(CatAndMouseGame_DataDecryptor_TypeInfo);
   CatAndMouseGame_DataDecryptor___ctor(v12, v27, data, isCompress, v13);
   if ( !v12 )
-    sub_21FFECC(v14, v15);
+    sub_2213CDC(v14, v15);
   CatAndMouseGame_DataDecryptor__ApplyWrite(v12, v15);
   v17 = CatAndMouseGame_DataDecryptor__ToByteArray(v12, v16);
   klass = v12->klass;
@@ -3030,7 +3030,7 @@ System_Byte_array *CatAndMouseGame__MouseHomeMain(
   else
   {
 LABEL_9:
-    v21 = sub_2237E2C(v12, System_IDisposable_TypeInfo, 0);
+    v21 = sub_224BC3C(v12, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(CatAndMouseGame_DataDecryptor_o *, _QWORD))v21)(v12, *(_QWORD *)(v21 + 8));
   if ( v27 )
@@ -3052,7 +3052,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v25 = sub_2237E2C(v27, System_IDisposable_TypeInfo, 0);
+      v25 = sub_224BC3C(v27, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Security_Cryptography_ICryptoTransform_o *, _QWORD))v25)(v27, *(_QWORD *)(v25 + 8));
   }
@@ -3073,16 +3073,16 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseHomeMainStrea
   System_Security_Cryptography_ICryptoTransform_o *v11; // x20
   System_Security_Cryptography_CryptoStream_o *v12; // x21
 
-  if ( (byte_5937CF7 & 1) == 0 )
+  if ( (byte_596FE64 & 1) == 0 )
   {
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF7 = 1;
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE64 = 1;
   }
-  v8 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v8 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v8, 0);
   if ( !v8 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v8->klass->vtable._19_set_Padding.methodPtr)(
     v8,
     2,
@@ -3104,7 +3104,7 @@ System_Security_Cryptography_CryptoStream_o *CatAndMouseGame__MouseHomeMainStrea
                                                              home,
                                                              info,
                                                              v8->klass->vtable._23_CreateDecryptor.method);
-  v12 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v12 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v12, outputStream, v11, 1, 0);
   return v12;
 }
@@ -3124,17 +3124,17 @@ System_IO_Stream_o *CatAndMouseGame__MouseHomeMainZ(
   System_Security_Cryptography_CryptoStream_o *v13; // x21
   ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *v14; // x19
 
-  if ( (byte_5937CF4 & 1) == 0 )
+  if ( (byte_596FE61 & 1) == 0 )
   {
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF4 = 1;
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE61 = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -3156,11 +3156,11 @@ System_IO_Stream_o *CatAndMouseGame__MouseHomeMainZ(
                                                              home,
                                                              info,
                                                              v9->klass->vtable._23_CreateDecryptor.method);
-  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v13 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v13, stream, v12, 0, 0);
   if ( isCompress )
   {
-    v14 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    v14 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
     ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v14, (System_IO_Stream_o *)v13, 0);
     return (System_IO_Stream_o *)v14;
   }
@@ -3202,19 +3202,19 @@ System_Byte_array *CatAndMouseGame__MouseHomeMainZ2(
   __int64 v33; // x1
   System_Security_Cryptography_CryptoStream_o *v35; // [xsp+30h] [xbp-50h]
 
-  if ( (byte_5937CF5 & 1) == 0 )
+  if ( (byte_596FE62 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF5 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE62 = 1;
   }
-  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v9 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v9->klass->vtable._19_set_Padding.methodPtr)(
     v9,
     2,
@@ -3237,16 +3237,16 @@ System_Byte_array *CatAndMouseGame__MouseHomeMainZ2(
           info,
           v9->klass->vtable._23_CreateDecryptor.method);
   if ( !data )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   v14 = (System_Security_Cryptography_ICryptoTransform_o *)v12;
-  v15 = sub_21FFD10(byte___TypeInfo, LODWORD(data->max_length));
-  v16 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_76663240(v16, data, 0);
-  v17 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v15 = sub_2213B20(byte___TypeInfo, LODWORD(data->max_length));
+  v16 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_76876544(v16, data, 0);
+  v17 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v17, (System_IO_Stream_o *)v16, v14, 0, 0);
   v35 = v17;
   if ( !v15 || !v17 )
-    sub_21FFECC(v18, v19);
+    sub_2213CDC(v18, v19);
   v20 = ((__int64 (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v17->klass->vtable._31_Read.methodPtr)(
           v17,
           v15,
@@ -3257,11 +3257,11 @@ System_Byte_array *CatAndMouseGame__MouseHomeMainZ2(
   {
     v21 = *(_DWORD *)(v15 + 24);
     if ( !v21 )
-      sub_21FFED4(v20);
+      sub_2213CE4(v20);
     if ( *(_BYTE *)(v15 + 32) != 66 )
       goto LABEL_13;
     if ( v21 == 1 )
-      sub_21FFED4(v20);
+      sub_2213CE4(v20);
     if ( *(_BYTE *)(v15 + 33) == 90 )
     {
       v15 = 0;
@@ -3269,16 +3269,16 @@ System_Byte_array *CatAndMouseGame__MouseHomeMainZ2(
     else
     {
 LABEL_13:
-      v22 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+      v22 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
       System_IO_MemoryStream___ctor(v22, 0);
-      v23 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-      System_IO_MemoryStream___ctor_76663240(v23, (System_Byte_array *)v15, 0);
-      v24 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+      v23 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+      System_IO_MemoryStream___ctor_76876544(v23, (System_Byte_array *)v15, 0);
+      v24 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
       ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v24, (System_IO_Stream_o *)v23, 0);
-      v25 = sub_21FFD10(byte___TypeInfo, 0x4000);
+      v25 = sub_2213B20(byte___TypeInfo, 0x4000);
       v27 = v25;
       if ( !v25 || !v24 )
-        sub_21FFECC(v25, v26);
+        sub_2213CDC(v25, v26);
       while ( 1 )
       {
         v28 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v24->klass->vtable._31_Read.methodPtr)(
@@ -3290,7 +3290,7 @@ LABEL_13:
         if ( (int)v28 <= 0 )
           break;
         if ( !v22 )
-          sub_21FFECC(v28, v29);
+          sub_2213CDC(v28, v29);
         ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v22->klass->vtable._34_Write.methodPtr)(
           v22,
           v27,
@@ -3302,12 +3302,12 @@ LABEL_13:
               v24,
               v24->klass->vtable._18_Close.method);
       if ( !v22 )
-        sub_21FFECC(v30, v31);
+        sub_2213CDC(v30, v31);
       v32 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v22->klass->vtable._40_ToArray.methodPtr)(
               v22,
               v22->klass->vtable._40_ToArray.method);
       if ( !v23 )
-        sub_21FFECC(v32, v33);
+        sub_2213CDC(v32, v33);
       v15 = v32;
       ((void (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v23->klass->vtable._18_Close.methodPtr)(
         v23,
@@ -3342,20 +3342,20 @@ Il2CppObject *CatAndMouseGame__MouseHomeMaster(
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_5937CF3 & 1) == 0 )
+  if ( (byte_596FE60 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&MasterDataUnpakcer_TypeInfo);
-    byte_5937CF3 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&MasterDataUnpakcer_TypeInfo);
+    byte_596FE60 = 1;
   }
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, home);
   v10 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, 0, v5);
-  v11 = (MasterDataUnpakcer_o *)sub_21FFEBC(MasterDataUnpakcer_TypeInfo);
+  v11 = (MasterDataUnpakcer_o *)sub_2213CCC(MasterDataUnpakcer_TypeInfo);
   MasterDataUnpakcer___ctor(v11, 0);
   if ( !v11 )
-    sub_21FFECC(v12, v13);
-  return MasterDataUnpakcer__Unpack_47974576(v11, v10, 0);
+    sub_2213CDC(v12, v13);
+  return MasterDataUnpakcer__Unpack_48005872(v11, v10, 0);
 }
 
 
@@ -3372,20 +3372,20 @@ Il2CppObject *CatAndMouseGame__MouseHomeMsgPack(
   System_Byte_array *v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_5937CF2 & 1) == 0 )
+  if ( (byte_596FE5F & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    byte_5937CF2 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    byte_596FE5F = 1;
   }
-  v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v9, 0);
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v10);
   v12 = CatAndMouseGame__MouseHomeSub(data, home, info, isCompress, 0, v11);
   if ( !v9 )
-    sub_21FFECC(v12, v13);
-  return MiniMessagePack_MiniMessagePacker__Unpack_46621424(v9, v12, 0);
+    sub_2213CDC(v12, v13);
+  return MiniMessagePack_MiniMessagePacker__Unpack_46651700(v9, v12, 0);
 }
 
 
@@ -3424,20 +3424,20 @@ System_Byte_array *CatAndMouseGame__MouseHomeSub(
   struct CatAndMouseGame_StaticFields *static_fields; // x9
   System_IO_MemoryStream_o *v37; // [xsp+38h] [xbp-48h]
 
-  if ( (byte_5937CF8 & 1) == 0 )
+  if ( (byte_596FE65 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
-    byte_5937CF8 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_RijndaelManaged_TypeInfo);
+    byte_596FE65 = 1;
   }
-  v11 = (System_Security_Cryptography_RijndaelManaged_o *)sub_21FFEBC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
+  v11 = (System_Security_Cryptography_RijndaelManaged_o *)sub_2213CCC(System_Security_Cryptography_RijndaelManaged_TypeInfo);
   System_Security_Cryptography_RijndaelManaged___ctor(v11, 0);
   if ( !v11 )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   ((void (__fastcall *)(System_Security_Cryptography_RijndaelManaged_o *, __int64, const MethodInfo *))v11->klass->vtable._19_set_Padding.methodPtr)(
     v11,
     2,
@@ -3459,21 +3459,21 @@ System_Byte_array *CatAndMouseGame__MouseHomeSub(
                                                              home,
                                                              info,
                                                              v11->klass->vtable._23_CreateDecryptor.method);
-  v15 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_76663240(v15, data, 0);
+  v15 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_76876544(v15, data, 0);
   v37 = v15;
-  v16 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v16 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v16, (System_IO_Stream_o *)v15, v14, 0, 0);
   if ( isCompress )
   {
-    v19 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+    v19 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
     System_IO_MemoryStream___ctor(v19, 0);
-    v20 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
+    v20 = (ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_GZip_GZipInputStream_TypeInfo);
     ICSharpCode_SharpZipLib_GZip_GZipInputStream___ctor(v20, (System_IO_Stream_o *)v16, 0);
-    v21 = sub_21FFD10(byte___TypeInfo, 0x4000);
+    v21 = sub_2213B20(byte___TypeInfo, 0x4000);
     v23 = v21;
     if ( !v21 || !v20 )
-      sub_21FFECC(v21, v22);
+      sub_2213CDC(v21, v22);
     while ( 1 )
     {
       v24 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_GZip_GZipInputStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v20->klass->vtable._31_Read.methodPtr)(
@@ -3485,7 +3485,7 @@ System_Byte_array *CatAndMouseGame__MouseHomeSub(
       if ( (int)v24 <= 0 )
         break;
       if ( !v19 )
-        sub_21FFECC(v24, v25);
+        sub_2213CDC(v24, v25);
       ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v19->klass->vtable._34_Write.methodPtr)(
         v19,
         v23,
@@ -3495,7 +3495,7 @@ System_Byte_array *CatAndMouseGame__MouseHomeSub(
     }
     System_IO_Stream__Dispose((System_IO_Stream_o *)v20, 0);
     if ( !v19 )
-      sub_21FFECC(v32, v33);
+      sub_2213CDC(v32, v33);
     v28 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v19->klass->vtable._40_ToArray.methodPtr)(
                                  v19,
                                  v19->klass->vtable._40_ToArray.method);
@@ -3505,7 +3505,7 @@ System_Byte_array *CatAndMouseGame__MouseHomeSub(
     {
 LABEL_17:
       if ( !data )
-        sub_21FFECC(v29, v30);
+        sub_2213CDC(v29, v30);
       v34 = CatAndMouseGame_TypeInfo;
       if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
       {
@@ -3520,11 +3520,11 @@ LABEL_17:
   else
   {
     if ( !data )
-      sub_21FFECC(v17, v18);
-    v26 = sub_21FFD10(byte___TypeInfo, LODWORD(data->max_length));
+      sub_2213CDC(v17, v18);
+    v26 = sub_2213B20(byte___TypeInfo, LODWORD(data->max_length));
     v28 = (System_Byte_array *)v26;
     if ( !v26 || (v26 = (__int64)v16) == 0 )
-      sub_21FFECC(v26, v27);
+      sub_2213CDC(v26, v27);
     v29 = ((__int64 (*)(void))v16->klass->vtable._31_Read.methodPtr)();
     v31 = v29;
     if ( isSendReport )
@@ -3560,22 +3560,22 @@ System_String_o *CatAndMouseGame__MouseInfo(System_Byte_array *data, const Metho
   const MethodInfo *v15; // x4
 
   v2 = data;
-  if ( (byte_5937CDA & 1) == 0 )
+  if ( (byte_596FE47 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    data = (System_Byte_array *)sub_21FFC50(&StringLiteral_15947/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
-    byte_5937CDA = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    data = (System_Byte_array *)sub_2213A60(&StringLiteral_15978/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
+    byte_596FE47 = 1;
   }
   if ( !v2
-    || (v3 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(v2->max_length) - 32)),
+    || (v3 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(v2->max_length) - 32)),
         (data = (System_Byte_array *)System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   v4 = ((__int64 (__fastcall *)(System_Byte_array *, __int64, const MethodInfo *))data->obj.klass->vtable[18].methodPtr)(
          data,
-         StringLiteral_15947/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
+         StringLiteral_15978/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
          data->obj.klass->vtable[18].method);
   v12 = CatAndMouseGame_TypeInfo;
   v13 = v4;
@@ -3586,15 +3586,15 @@ System_String_o *CatAndMouseGame__MouseInfo(System_Byte_array *data, const Metho
   }
   static_fields = v12->static_fields;
   static_fields->infoData = (struct System_Byte_array *)v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->infoData, v13, v6, v7, v8, v9, v10, v11);
-  System_Array__Copy_77078136(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->infoData, v13, v6, v7, v8, v9, v10, v11);
+  System_Array__Copy_77291440(
     (System_Array_o *)v2,
     0,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->InfoTop,
     0,
     32,
     0);
-  System_Array__Copy_77078136((System_Array_o *)v2, 32, v3, 0, LODWORD(v2->max_length) - 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)v2, 32, v3, 0, LODWORD(v2->max_length) - 32, 0);
   return CatAndMouseGame__MouseHome(
            (System_Byte_array *)v3,
            CatAndMouseGame_TypeInfo->static_fields->infoData,
@@ -3622,22 +3622,22 @@ Il2CppObject *CatAndMouseGame__MouseInfoMsgPack(System_Byte_array *data, const M
   const MethodInfo *v15; // x4
 
   v2 = data;
-  if ( (byte_5937CDB & 1) == 0 )
+  if ( (byte_596FE48 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    data = (System_Byte_array *)sub_21FFC50(&StringLiteral_15947/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
-    byte_5937CDB = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    data = (System_Byte_array *)sub_2213A60(&StringLiteral_15978/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/);
+    byte_596FE48 = 1;
   }
   if ( !v2
-    || (v3 = (System_Array_o *)sub_21FFD10(byte___TypeInfo, (unsigned int)(LODWORD(v2->max_length) - 32)),
+    || (v3 = (System_Array_o *)sub_2213B20(byte___TypeInfo, (unsigned int)(LODWORD(v2->max_length) - 32)),
         (data = (System_Byte_array *)System_Text_Encoding__get_UTF8(0)) == 0) )
   {
-    sub_21FFECC(data, method);
+    sub_2213CDC(data, method);
   }
   v4 = ((__int64 (__fastcall *)(System_Byte_array *, __int64, const MethodInfo *))data->obj.klass->vtable[18].methodPtr)(
          data,
-         StringLiteral_15947/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
+         StringLiteral_15978/*"W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7"*/,
          data->obj.klass->vtable[18].method);
   v12 = CatAndMouseGame_TypeInfo;
   v13 = v4;
@@ -3648,15 +3648,15 @@ Il2CppObject *CatAndMouseGame__MouseInfoMsgPack(System_Byte_array *data, const M
   }
   static_fields = v12->static_fields;
   static_fields->infoData = (struct System_Byte_array *)v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->infoData, v13, v6, v7, v8, v9, v10, v11);
-  System_Array__Copy_77078136(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->infoData, v13, v6, v7, v8, v9, v10, v11);
+  System_Array__Copy_77291440(
     (System_Array_o *)v2,
     0,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->InfoTop,
     0,
     32,
     0);
-  System_Array__Copy_77078136((System_Array_o *)v2, 32, v3, 0, LODWORD(v2->max_length) - 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)v2, 32, v3, 0, LODWORD(v2->max_length) - 32, 0);
   return CatAndMouseGame__MouseHomeMsgPack(
            (System_Byte_array *)v3,
            CatAndMouseGame_TypeInfo->static_fields->infoData,
@@ -3728,15 +3728,15 @@ void CatAndMouseGame__OtherHomeBuilding(
   bool v60; // w7
   System_Byte_array *v61; // x1
 
-  if ( (byte_5937CE6 & 1) == 0 )
+  if ( (byte_596FE53 & 1) == 0 )
   {
-    sub_21FFC50(&byte_____TypeInfo);
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__byte______Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
-    byte_5937CE6 = 1;
+    sub_2213A60(&byte_____TypeInfo);
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__byte______Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+    byte_596FE53 = 1;
   }
   v7 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -3750,7 +3750,7 @@ void CatAndMouseGame__OtherHomeBuilding(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)keyCollection,
          (Il2CppObject *)data,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__byte______ContainsKey__) )
   {
     v9 = CatAndMouseGame_TypeInfo;
     if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -3764,32 +3764,32 @@ void CatAndMouseGame__OtherHomeBuilding(
       keyCollection = (char *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                 (System_Collections_Generic_Dictionary_object__object__o *)keyCollection,
                                 (Il2CppObject *)data,
-                                (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+                                (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
       if ( keyCollection )
       {
         if ( !*((_DWORD *)keyCollection + 6) )
           goto LABEL_37;
         v16 = (System_Byte_array *)*((_QWORD *)keyCollection + 4);
         *home = v16;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)home, (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)home, (int32_t)v16, v10, v11, v12, v13, v14, v15);
         keyCollection = (char *)CatAndMouseGame_TypeInfo->static_fields->keyCollection;
         if ( keyCollection )
         {
           keyCollection = (char *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                     (System_Collections_Generic_Dictionary_object__object__o *)keyCollection,
                                     (Il2CppObject *)data,
-                                    (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
+                                    (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__byte______get_Item__);
           if ( keyCollection )
           {
             if ( (*((_DWORD *)keyCollection + 6) & 0xFFFFFFFE) != 0 )
             {
               v23 = (System_Byte_array *)*((_QWORD *)keyCollection + 5);
               *info = v23;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)info, (int32_t)v23, v17, v18, v19, v20, v21, v22);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)info, (int32_t)v23, v17, v18, v19, v20, v21, v22);
               return;
             }
 LABEL_37:
-            sub_21FFED4(keyCollection);
+            sub_2213CE4(keyCollection);
           }
         }
       }
@@ -3803,12 +3803,12 @@ LABEL_37:
           keyCollection,
           data,
           *(_QWORD *)(*(_QWORD *)keyCollection + 608LL));
-  v25 = (System_Byte_array *)sub_21FFD10(byte___TypeInfo, 32);
+  v25 = (System_Byte_array *)sub_2213B20(byte___TypeInfo, 32);
   *home = v25;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)home, (int32_t)v25, v26, v27, v28, v29, v30, v31);
-  v32 = (System_Byte_array *)sub_21FFD10(byte___TypeInfo, 32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)home, (int32_t)v25, v26, v27, v28, v29, v30, v31);
+  v32 = (System_Byte_array *)sub_2213B20(byte___TypeInfo, 32);
   *info = v32;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)info, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)info, (int32_t)v32, v33, v34, v35, v36, v37, v38);
   if ( !v24 )
     goto LABEL_38;
   if ( (int)*(_QWORD *)(v24 + 24) >= 1 )
@@ -3854,7 +3854,7 @@ LABEL_37:
     v45 = CatAndMouseGame_TypeInfo;
   }
   v46 = (System_Collections_Generic_Dictionary_object__object__o *)v45->static_fields->keyCollection;
-  keyCollection = (char *)sub_21FFD10(byte_____TypeInfo, 2);
+  keyCollection = (char *)sub_2213B20(byte_____TypeInfo, 2);
   if ( !keyCollection )
     goto LABEL_38;
   v53 = keyCollection;
@@ -3862,20 +3862,20 @@ LABEL_37:
     goto LABEL_37;
   v54 = *home;
   *((_QWORD *)keyCollection + 4) = *home;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(keyCollection + 32), (int32_t)v54, v47, v48, v49, v50, v51, v52);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(keyCollection + 32), (int32_t)v54, v47, v48, v49, v50, v51, v52);
   if ( (*((_DWORD *)v53 + 6) & 0xFFFFFFFE) == 0 )
     goto LABEL_37;
   v61 = *info;
   *((_QWORD *)v53 + 5) = *info;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v53 + 40), (int32_t)v61, v55, v56, v57, v58, v59, v60);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v53 + 40), (int32_t)v61, v55, v56, v57, v58, v59, v60);
   if ( !v46 )
 LABEL_38:
-    sub_21FFECC(keyCollection, home);
+    sub_2213CDC(keyCollection, home);
   System_Collections_Generic_Dictionary_object__object___Add(
     v46,
     (Il2CppObject *)data,
     (Il2CppObject *)v53,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__byte______Add__);
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__byte______Add__);
 }
 
 
@@ -3889,14 +3889,14 @@ void CatAndMouseGame__SetAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
   unsigned int v8; // w22
   __int64 v9; // x23
 
-  if ( (byte_5937CE3 & 1) == 0 )
+  if ( (byte_596FE50 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    byte_5937CE3 = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    byte_596FE50 = 1;
   }
   v3 = CatAndMouseGame_TypeInfo;
   if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -3909,12 +3909,12 @@ void CatAndMouseGame__SetAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
     goto LABEL_18;
   System_Collections_Generic_Dictionary_object__object___Clear(
     (System_Collections_Generic_Dictionary_object__object__o *)assetbundleKeyCollection,
-    (const MethodInfo_3FCA5F0 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    (const MethodInfo_3FFDD98 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v5);
   assetbundleKeyCollection = JsonManager__DeserializeArray_object_(
                                obj,
-                               (const MethodInfo_38A056C *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
+                               (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_CatAndMouseGame_AssetbundleKeyEntity___);
   if ( !assetbundleKeyCollection )
     goto LABEL_18;
   v6 = *((_DWORD *)assetbundleKeyCollection + 6);
@@ -3925,7 +3925,7 @@ void CatAndMouseGame__SetAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
     while ( 1 )
     {
       if ( v8 >= v6 )
-        sub_21FFED4(assetbundleKeyCollection);
+        sub_2213CE4(assetbundleKeyCollection);
       assetbundleKeyCollection = CatAndMouseGame_TypeInfo;
       v9 = *((_QWORD *)v7 + (int)v8 + 4);
       if ( !*(&CatAndMouseGame_TypeInfo->_2.cctor_finished + 1) )
@@ -3942,13 +3942,13 @@ void CatAndMouseGame__SetAssetbundleKeys(Il2CppObject *obj, const MethodInfo *me
         (System_Collections_Generic_Dictionary_object__object__o *)assetbundleKeyCollection,
         *(Il2CppObject **)(v9 + 16),
         *(Il2CppObject **)(v9 + 24),
-        (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+        (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
       v6 = *((_DWORD *)v7 + 6);
       if ( (int)++v8 >= v6 )
         return;
     }
 LABEL_18:
-    sub_21FFECC(assetbundleKeyCollection, method);
+    sub_2213CDC(assetbundleKeyCollection, method);
   }
 }
 
@@ -3979,10 +3979,10 @@ void CatAndMouseGame__SixHomeBuilding(System_String_o *data, const MethodInfo *m
   bool v24; // w6
   bool v25; // w7
 
-  if ( (byte_5937CEB & 1) == 0 )
+  if ( (byte_596FE58 & 1) == 0 )
   {
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    byte_5937CEB = 1;
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    byte_596FE58 = 1;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !data )
@@ -4004,19 +4004,19 @@ void CatAndMouseGame__SixHomeBuilding(System_String_o *data, const MethodInfo *m
   }
   static_fields = v14->static_fields;
   static_fields->sideData = (struct System_Byte_array *)v15;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->sideData, v15, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->sideData, v15, v8, v9, v10, v11, v12, v13);
   v17 = System_Text_Encoding__get_UTF8(0);
-  UTF8 = System_String__Substring_75489544(data, 0, 32, 0);
+  UTF8 = System_String__Substring_75702848(data, 0, 32, 0);
   if ( !v17 )
 LABEL_9:
-    sub_21FFECC(UTF8, v4);
+    sub_2213CDC(UTF8, v4);
   v18 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, void *, const MethodInfo *))v17->klass->vtable._18_GetBytes.methodPtr)(
           v17,
           UTF8,
           v17->klass->vtable._18_GetBytes.method);
   v19 = CatAndMouseGame_TypeInfo->static_fields;
   v19->sideTop = (struct System_Byte_array *)v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->sideTop, v18, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->sideTop, v18, v20, v21, v22, v23, v24, v25);
 }
 
 
@@ -4037,12 +4037,12 @@ void CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const MethodInfo 
   char v15; // w10
   __int64 v16; // x8
 
-  if ( (byte_5937CDC & 1) == 0 )
+  if ( (byte_596FE49 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&CatAndMouseGame_TypeInfo);
-    sub_21FFC50(&StringLiteral_22175/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
-    byte_5937CDC = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&CatAndMouseGame_TypeInfo);
+    sub_2213A60(&StringLiteral_22218/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/);
+    byte_596FE49 = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
@@ -4057,7 +4057,7 @@ void CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const MethodInfo 
   {
     if ( !UTF8 )
       goto LABEL_31;
-    data = (System_String_o *)StringLiteral_22175/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/;
+    data = (System_String_o *)StringLiteral_22218/*"kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g"*/;
   }
   v6 = (*(__int64 (__fastcall **)(_QWORD *, System_String_o *, _QWORD))(*UTF8 + 600LL))(
          UTF8,
@@ -4070,11 +4070,11 @@ void CatAndMouseGame__ThirdHomeBuilding(System_String_o *data, const MethodInfo 
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v7);
     v8 = CatAndMouseGame_TypeInfo;
   }
-  System_Array__Copy_77078136((System_Array_o *)v9, 0, (System_Array_o *)v8->static_fields->BattleKey, 0, 32, 0);
+  System_Array__Copy_77291440((System_Array_o *)v9, 0, (System_Array_o *)v8->static_fields->BattleKey, 0, 32, 0);
   if ( !v9 )
 LABEL_31:
-    sub_21FFECC(UTF8, v5);
-  System_Array__Copy_77078136(
+    sub_2213CDC(UTF8, v5);
+  System_Array__Copy_77291440(
     (System_Array_o *)v9,
     32,
     (System_Array_o *)CatAndMouseGame_TypeInfo->static_fields->BattleIV,
@@ -4105,7 +4105,7 @@ LABEL_31:
           goto LABEL_31;
         if ( (unsigned int)v11 >> 1 >= *(_DWORD *)(v16 + 24) )
 LABEL_30:
-          sub_21FFED4(UTF8);
+          sub_2213CE4(UTF8);
         v15 = *(_BYTE *)(v12 + v11);
         v10 = v16 + ((unsigned int)v11 >> 1);
       }
@@ -4177,24 +4177,24 @@ void CatAndMouseGame_DataDecryptor___ctor(
   bool v32; // w6
   bool v33; // w7
 
-  if ( (byte_5937CF9 & 1) == 0 )
+  if ( (byte_596FE66 & 1) == 0 )
   {
-    sub_21FFC50(&System_Security_Cryptography_CryptoStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    byte_5937CF9 = 1;
+    sub_2213A60(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    byte_596FE66 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)data, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)data, v9, v10, v11, v12, v13, v14);
   this->fields.isCompress = isCompress;
   if ( !data )
-    sub_21FFECC(v15, v16);
-  v17 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+    sub_2213CDC(v15, v16);
+  v17 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   max_length = data->max_length;
   v19 = v17;
-  System_IO_MemoryStream___ctor_76662848(v17, max_length, 0);
+  System_IO_MemoryStream___ctor_76876152(v17, max_length, 0);
   this->fields.memoryStream = v19;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.memoryStream,
     (int32_t)v19,
     v20,
@@ -4204,10 +4204,10 @@ void CatAndMouseGame_DataDecryptor___ctor(
     v24,
     v25);
   memoryStream = (System_IO_Stream_o *)this->fields.memoryStream;
-  v27 = (System_Security_Cryptography_CryptoStream_o *)sub_21FFEBC(System_Security_Cryptography_CryptoStream_TypeInfo);
+  v27 = (System_Security_Cryptography_CryptoStream_o *)sub_2213CCC(System_Security_Cryptography_CryptoStream_TypeInfo);
   System_Security_Cryptography_CryptoStream___ctor(v27, memoryStream, decryptor, 1, 0);
   this->fields.cryptoStream = v27;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cryptoStream,
     (int32_t)v27,
     v28,
@@ -4249,12 +4249,12 @@ void CatAndMouseGame_DataDecryptor__ApplyWrite(CatAndMouseGame_DataDecryptor_o *
   __int64 v27; // x3
 
   v2 = this;
-  if ( (byte_5937CFA & 1) == 0 )
+  if ( (byte_596FE67 & 1) == 0 )
   {
-    sub_21FFC50(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
-    sub_21FFC50(&byte___TypeInfo);
-    this = (CatAndMouseGame_DataDecryptor_o *)sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    byte_5937CFA = 1;
+    sub_2213A60(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    sub_2213A60(&byte___TypeInfo);
+    this = (CatAndMouseGame_DataDecryptor_o *)sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    byte_596FE67 = 1;
   }
   data = v2->fields.data;
   if ( !data )
@@ -4283,7 +4283,7 @@ void CatAndMouseGame_DataDecryptor__ApplyWrite(CatAndMouseGame_DataDecryptor_o *
         goto LABEL_9;
     }
 LABEL_19:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_9:
   this = (CatAndMouseGame_DataDecryptor_o *)v2->fields.cryptoStream;
@@ -4300,11 +4300,11 @@ LABEL_9:
         0,
         0,
         this->klass[1].vtable._4_Dispose.methodPtr);
-      v8 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+      v8 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
       System_IO_MemoryStream___ctor(v8, 0);
       v2->fields.memoryStreamBZip = v8;
       p_memoryStreamBZip = (CatAndMouseGame_DataDecryptor_o **)&v2->fields.memoryStreamBZip;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v2->fields.memoryStreamBZip,
         (int32_t)v8,
         v10,
@@ -4314,12 +4314,12 @@ LABEL_9:
         v14,
         v15);
       memoryStream = (System_IO_Stream_o *)v2->fields.memoryStream;
-      v17 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_21FFEBC(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+      v17 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_2213CCC(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
       ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v17, memoryStream, 0);
       v2->fields.bzipStream = v17;
       p_bzipStream = (MissionNaviTransitionBoardItem_o *)&v2->fields.bzipStream;
-      sub_21FFBF4(p_bzipStream, (int32_t)v17, v19, v20, v21, v22, v23, v24);
-      this = (CatAndMouseGame_DataDecryptor_o *)sub_21FFD10(byte___TypeInfo, 0x4000);
+      sub_2213A04(p_bzipStream, (int32_t)v17, v19, v20, v21, v22, v23, v24);
+      this = (CatAndMouseGame_DataDecryptor_o *)sub_2213B20(byte___TypeInfo, 0x4000);
       if ( this )
       {
         for ( i = this;
@@ -4358,10 +4358,10 @@ void CatAndMouseGame_DataDecryptor__Dispose(CatAndMouseGame_DataDecryptor_o *thi
 {
   __int64 v3; // x1
 
-  if ( (byte_5937CFC & 1) == 0 )
+  if ( (byte_596FE69 & 1) == 0 )
   {
-    sub_21FFC50(&System_GC_TypeInfo);
-    byte_5937CFC = 1;
+    sub_2213A60(&System_GC_TypeInfo);
+    byte_596FE69 = 1;
   }
   ((void (__fastcall *)(CatAndMouseGame_DataDecryptor_o *, __int64, const MethodInfo *))this->klass->vtable._5_Dispose.methodPtr)(
     this,
@@ -4373,7 +4373,7 @@ void CatAndMouseGame_DataDecryptor__Dispose(CatAndMouseGame_DataDecryptor_o *thi
 }
 
 
-void CatAndMouseGame_DataDecryptor__Dispose_48177292(
+void CatAndMouseGame_DataDecryptor__Dispose_48212896(
         CatAndMouseGame_DataDecryptor_o *this,
         bool isDisposing,
         const MethodInfo *method)
@@ -4416,28 +4416,28 @@ void CatAndMouseGame_DataDecryptor__Dispose_48177292(
       {
         System_IO_Stream__Dispose(memoryStream, 0);
         this->fields.memoryStream = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.memoryStream, 0, v5, v6, v7, v8, v9, v10);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.memoryStream, 0, v5, v6, v7, v8, v9, v10);
       }
       cryptoStream = (System_IO_Stream_o *)this->fields.cryptoStream;
       if ( cryptoStream )
       {
         System_IO_Stream__Dispose(cryptoStream, 0);
         this->fields.cryptoStream = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cryptoStream, 0, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cryptoStream, 0, v12, v13, v14, v15, v16, v17);
       }
       memoryStreamBZip = (System_IO_Stream_o *)this->fields.memoryStreamBZip;
       if ( memoryStreamBZip )
       {
         System_IO_Stream__Dispose(memoryStreamBZip, 0);
         this->fields.memoryStreamBZip = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.memoryStreamBZip, 0, v19, v20, v21, v22, v23, v24);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.memoryStreamBZip, 0, v19, v20, v21, v22, v23, v24);
       }
       bzipStream = (System_IO_Stream_o *)this->fields.bzipStream;
       if ( bzipStream )
       {
         System_IO_Stream__Dispose(bzipStream, 0);
         this->fields.bzipStream = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bzipStream, 0, v26, v27, v28, v29, v30, v31);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.bzipStream, 0, v26, v27, v28, v29, v30, v31);
       }
     }
     this->fields.isDisposed = 1;
@@ -4456,7 +4456,7 @@ System_Byte_array *CatAndMouseGame_DataDecryptor__ToByteArray(
   struct System_IO_MemoryStream_o *v7; // x8
   int v8; // w20
   _QWORD *v9; // x8
-  __int64 (*methodPtr)(void); // x2
+  System_Byte_array *(*methodPtr)(void); // x2
   struct System_IO_MemoryStream_o *memoryStream; // x0
   struct System_IO_MemoryStream_o *v12; // x8
   int v13; // w20
@@ -4476,11 +4476,11 @@ System_Byte_array *CatAndMouseGame_DataDecryptor__ToByteArray(
   __int64 v27; // x2
   __int64 v28; // x3
 
-  if ( (byte_5937CFB & 1) == 0 )
+  if ( (byte_596FE68 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Empty_byte___);
-    byte_5937CFB = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Empty_byte___);
+    byte_596FE68 = 1;
   }
   if ( !this->fields.isCompress )
   {
@@ -4532,44 +4532,44 @@ System_Byte_array *CatAndMouseGame_DataDecryptor__ToByteArray(
 LABEL_16:
       if ( v5 )
       {
-        methodPtr = (__int64 (*)(void))v5->klass->vtable._40_ToArray.methodPtr;
-        return (System_Byte_array *)methodPtr();
+        methodPtr = (System_Byte_array *(*)(void))v5->klass->vtable._40_ToArray.methodPtr;
+        return methodPtr();
       }
       goto LABEL_32;
     }
 LABEL_7:
     if ( v5 )
     {
-      methodPtr = (__int64 (*)(void))v5->klass->vtable._37_GetBuffer.methodPtr;
-      return (System_Byte_array *)methodPtr();
+      methodPtr = (System_Byte_array *(*)(void))v5->klass->vtable._37_GetBuffer.methodPtr;
+      return methodPtr();
     }
 LABEL_32:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
   v20 = Method_System_Linq_Enumerable_Empty_byte___;
   v21 = *((_QWORD *)Method_System_Linq_Enumerable_Empty_byte___ + 7);
   if ( !v21 )
   {
-    sub_2237B54(Method_System_Linq_Enumerable_Empty_byte___);
+    sub_224B964(Method_System_Linq_Enumerable_Empty_byte___);
     v21 = v20[7];
   }
   v22 = *(_QWORD *)(v21 + 16);
   if ( (*(_WORD *)(v22 + 309) & 1) == 0 )
-    v22 = sub_2237AF8(v2);
+    v22 = sub_224B908(v2);
   if ( !*(_DWORD *)(v22 + 228) )
     *(__n128 *)&v2 = j_il2cpp_runtime_class_init_0(v22, method);
   v23 = *(_QWORD *)(v20[7] + 16LL);
   if ( (*(_WORD *)(v23 + 309) & 1) == 0 )
-    v23 = sub_2237AF8(v2);
+    v23 = sub_224B908(v2);
   v24 = *(_QWORD **)(v23 + 184);
   v25 = *v24;
   if ( *v24 )
   {
     v26 = byte___TypeInfo;
-    result = (System_Byte_array *)sub_21FFDA4(*v24, byte___TypeInfo);
+    result = (System_Byte_array *)sub_2213BB4(*v24, byte___TypeInfo);
     if ( result )
       return result;
-    sub_220024C(v25, v26, v27, v28);
+    sub_221405C(v25, v26, v27, v28);
   }
   return 0;
 }

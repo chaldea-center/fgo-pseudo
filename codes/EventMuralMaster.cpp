@@ -1,14 +1,14 @@
 void EventMuralMaster___ctor(EventMuralMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59387FA & 1) == 0 )
+  if ( (byte_59708C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int___ctor__);
-    byte_59387FA = 1;
+    sub_2213A60(&Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int___ctor__);
+    byte_59708C4 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     467,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int___ctor__);
 }
 
 
@@ -39,7 +39,7 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromEventId(
   Il2CppObject *v26; // x23
   int32_t v27; // w24
   int32_t klass_high; // w25
-  _BOOL8 IsQuestPhaseClear_47317140; // x0
+  _BOOL8 IsQuestPhaseClear_47347536; // x0
   __int64 v30; // x1
   System_String_o *v31; // x2
   System_String_o *v32; // x3
@@ -57,20 +57,20 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromEventId(
   __int64 v45; // x0
   System_Collections_Generic_IEnumerator_T__o *v46; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_59387F8 & 1) == 0 )
+  if ( (byte_59708C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&EventMuralEntity___TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_EventMuralEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMuralEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMuralEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMuralEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMuralEntity__TypeInfo);
-    byte_59387F8 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&EventMuralEntity___TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_EventMuralEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMuralEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMuralEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMuralEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventMuralEntity__TypeInfo);
+    byte_59708C2 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   *total = 0;
@@ -78,23 +78,23 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromEventId(
   if ( !list
     || System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__) <= 0 )
+         (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__) <= 0 )
   {
-    return (EventMuralEntity_array *)sub_21FFD10(EventMuralEntity___TypeInfo, 0);
+    return (EventMuralEntity_array *)sub_2213B20(EventMuralEntity___TypeInfo, 0);
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventMuralEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMuralEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMuralEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMuralEntity___ctor__);
   v12 = (__int64)this->fields.list;
   if ( !v12 )
     goto LABEL_50;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)v12,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__GetEnumerator__);
   v46 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v14);
+    sub_2213CDC(Enumerator, v14);
   for ( i = Enumerator; ; i = v46 )
   {
     klass = i->klass;
@@ -114,7 +114,7 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromEventId(
     else
     {
 LABEL_12:
-      v19 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v19 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             i,
@@ -122,7 +122,7 @@ LABEL_12:
     if ( (v12 & 1) == 0 )
       break;
     if ( !v46 )
-      sub_21FFECC(v12, v11);
+      sub_2213CDC(v12, v11);
     v20 = v46->klass;
     v21 = *(unsigned __int16 *)&v46->klass->_2.rank;
     if ( *(_WORD *)&v46->klass->_2.rank )
@@ -140,22 +140,22 @@ LABEL_12:
     else
     {
 LABEL_20:
-      v23 = sub_2237E2C(v46, System_Collections_Generic_IEnumerator_EventMuralEntity__TypeInfo, 0);
+      v23 = sub_224BC3C(v46, System_Collections_Generic_IEnumerator_EventMuralEntity__TypeInfo, 0);
     }
     v24 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
                             v46,
                             *(_QWORD *)(v23 + 8));
     v26 = v24;
     if ( !v24 )
-      sub_21FFECC(0, v25);
+      sub_2213CDC(0, v25);
     if ( LODWORD(v24[2].monitor) == eventId )
     {
       v27 = (int32_t)v24[3].klass;
       klass_high = HIDWORD(v24[3].klass);
       if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v25);
-      IsQuestPhaseClear_47317140 = CondType__IsQuestPhaseClear_47317140(v27, klass_high, -1, 0, 0);
-      if ( IsQuestPhaseClear_47317140 )
+      IsQuestPhaseClear_47347536 = CondType__IsQuestPhaseClear_47347536(v27, klass_high, -1, 0, 0);
+      if ( IsQuestPhaseClear_47347536 )
       {
         if ( !v10
           || (items = v10->fields._items,
@@ -163,7 +163,7 @@ LABEL_20:
               ++v10->fields._version,
               !items) )
         {
-          sub_21FFECC(IsQuestPhaseClear_47317140, v30);
+          sub_2213CDC(IsQuestPhaseClear_47347536, v30);
         }
         size = v10->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -171,14 +171,14 @@ LABEL_20:
           System_Collections_Generic_List_object___AddWithResize(
             v10,
             v26,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
         }
         else
         {
           v40 = &items->obj.klass + size;
           v10->fields._size = size + 1;
           v40[4] = (Il2CppClass *)v26;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v40 + 4), (int32_t)v26, v31, v32, v33, v34, v35, v36);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v40 + 4), (int32_t)v26, v31, v32, v33, v34, v35, v36);
         }
         *dispNum += HIDWORD(v26[2].monitor);
       }
@@ -204,7 +204,7 @@ LABEL_20:
     else
     {
 LABEL_42:
-      v45 = sub_2237E2C(v46, System_IDisposable_TypeInfo, 0);
+      v45 = sub_224BC3C(v46, System_IDisposable_TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v45)(
             v46,
@@ -212,10 +212,10 @@ LABEL_42:
   }
   if ( !v10 )
 LABEL_50:
-    sub_21FFECC(v12, v11);
+    sub_2213CDC(v12, v11);
   return (EventMuralEntity_array *)System_Collections_Generic_List_object___ToArray(
                                      v10,
-                                     (const MethodInfo_445164C *)Method_System_Collections_Generic_List_EventMuralEntity__ToArray__);
+                                     (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_EventMuralEntity__ToArray__);
 }
 
 
@@ -232,12 +232,12 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromId(
   const MethodInfo *v12; // x4
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_59387F9 & 1) == 0 )
+  if ( (byte_59708C3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__);
-    sub_21FFC50(&Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int__TryGetEntity__);
-    sub_21FFC50(&EventMuralEntity___TypeInfo);
-    byte_59387F9 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__);
+    sub_2213A60(&Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int__TryGetEntity__);
+    sub_2213A60(&EventMuralEntity___TypeInfo);
+    byte_59708C3 = 1;
   }
   entity = 0;
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -246,18 +246,18 @@ EventMuralEntity_array *EventMuralMaster__GetOpenedEntitiesFromId(
   if ( !list
     || System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__) <= 0 )
+         (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventMuralEntity__get_Count__) <= 0 )
   {
-    return (EventMuralEntity_array *)sub_21FFD10(EventMuralEntity___TypeInfo, 0);
+    return (EventMuralEntity_array *)sub_2213B20(EventMuralEntity___TypeInfo, 0);
   }
   v10 = DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           &entity,
           id,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int__TryGetEntity__);
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMuralMaster__EventMuralEntity__int__TryGetEntity__);
   if ( !v10 )
-    return (EventMuralEntity_array *)sub_21FFD10(EventMuralEntity___TypeInfo, 0);
+    return (EventMuralEntity_array *)sub_2213B20(EventMuralEntity___TypeInfo, 0);
   if ( !entity )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   return EventMuralMaster__GetOpenedEntitiesFromEventId(this, (int32_t)entity[2].monitor, dispNum, total, v12);
 }

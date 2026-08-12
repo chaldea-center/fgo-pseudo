@@ -21,7 +21,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SkillId_k__BackingField = skillId;
   this->fields._Name_k__BackingField = name;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v9,
@@ -31,7 +31,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem___ctor(
     v13,
     v14);
   this->fields._Detail_k__BackingField = detail;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Detail_k__BackingField,
     (int32_t)detail,
     v15,
@@ -79,7 +79,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem__set_Detail(
   bool v7; // w7
 
   this->fields._Detail_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Detail_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -103,7 +103,7 @@ void EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItem__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

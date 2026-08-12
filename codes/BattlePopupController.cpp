@@ -9,18 +9,18 @@ void BattlePopupController___ctor(BattlePopupController_o *this, BattlePerforman
   bool v11; // w7
   const MethodInfo *v12; // x2
 
-  if ( (byte_593B5CE & 1) == 0 )
+  if ( (byte_59737C7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
-    byte_593B5CE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+    byte_59737C7 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
   this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.popupList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.popupList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   BattlePopupController__InitWrapPopup(this, perf, v12);
 }
@@ -72,21 +72,21 @@ void BattlePopupController__InitWrapPopup(
   bool v43; // w6
   bool v44; // w7
 
-  if ( (byte_593B5CF & 1) == 0 )
+  if ( (byte_59737C8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
-    sub_21FFC50(&WrapBattlePopupControl_TypeInfo);
-    sub_21FFC50(&WrapBattleUIFrontPopupControl_TypeInfo);
-    byte_593B5CF = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+    sub_2213A60(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+    sub_2213A60(&WrapBattlePopupControl_TypeInfo);
+    sub_2213A60(&WrapBattleUIFrontPopupControl_TypeInfo);
+    byte_59737C8 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
-  v6 = (WrapBattlePopupControl_o *)sub_21FFEBC(WrapBattlePopupControl_TypeInfo);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+  v6 = (WrapBattlePopupControl_o *)sub_2213CCC(WrapBattlePopupControl_TypeInfo);
   WrapBattlePopupControl___ctor(v6, perf, v7);
   if ( !v5 )
     goto LABEL_13;
@@ -101,45 +101,45 @@ void BattlePopupController__InitWrapPopup(
     System_Collections_Generic_List_object___AddWithResize(
       v5,
       (Il2CppObject *)v6,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     v5->fields._size = size + 1;
     v19[4] = (Il2CppClass *)v6;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
   }
-  v20 = (WrapBattleUIFrontPopupControl_o *)sub_21FFEBC(WrapBattleUIFrontPopupControl_TypeInfo);
+  v20 = (WrapBattleUIFrontPopupControl_o *)sub_2213CCC(WrapBattleUIFrontPopupControl_TypeInfo);
   WrapBattleUIFrontPopupControl___ctor(v20, perf, v21);
   v28 = v5->fields._items;
   v29 = Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__;
   ++v5->fields._version;
   if ( !v28 )
 LABEL_13:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   v30 = v5->fields._size;
   if ( (unsigned int)v30 >= LODWORD(v28->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v5,
       (Il2CppObject *)v20,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
   }
   else
   {
     v31 = &v28->obj.klass + v30;
     v5->fields._size = v30 + 1;
     v31[4] = (Il2CppClass *)v20;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v31 + 4), (int32_t)v20, v22, v23, v24, v25, v26, v27);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 4), (int32_t)v20, v22, v23, v24, v25, v26, v27);
   }
   this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.popupList, (int32_t)v5, v32, v33, v34, v35, v36, v37);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.popupList, (int32_t)v5, v32, v33, v34, v35, v36, v37);
   object = System_Linq_Enumerable__First_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.popupList,
-             (const MethodInfo_384C73C *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+             (const MethodInfo_387FC04 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
   this->fields._CurPopup_k__BackingField = (struct WrapBaseBattlePopupControl_o *)object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)object, v39, v40, v41, v42, v43, v44);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)object, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -161,37 +161,37 @@ void BattlePopupController__SwitchDisplayPopup(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_593B5D0 & 1) == 0 )
+  if ( (byte_59737C9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
-    sub_21FFC50(&System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
-    sub_21FFC50(&Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__);
-    sub_21FFC50(&BattlePopupController___c__DisplayClass7_0_TypeInfo);
-    byte_593B5D0 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
+    sub_2213A60(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+    sub_2213A60(&System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
+    sub_2213A60(&Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__);
+    sub_2213A60(&BattlePopupController___c__DisplayClass7_0_TypeInfo);
+    byte_59737C9 = 1;
   }
-  v5 = sub_21FFEBC(BattlePopupController___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_2213CCC(BattlePopupController___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   popupList = this->fields.popupList;
   *(_DWORD *)(v5 + 16) = targetLayer;
-  v9 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__,
     0);
-  object = System_Linq_Enumerable__FirstOrDefault_object__59044732(
+  object = System_Linq_Enumerable__FirstOrDefault_object__59254852(
              (System_Collections_Generic_IEnumerable_TSource__o *)popupList,
              (System_Func_TSource__bool__o *)v9,
-             (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
+             (const MethodInfo_3882844 *)Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
   if ( !object )
     object = System_Linq_Enumerable__First_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.popupList,
-               (const MethodInfo_384C73C *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+               (const MethodInfo_387FC04 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
   this->fields._CurPopup_k__BackingField = (struct WrapBaseBattlePopupControl_o *)object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)object, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)object, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -215,7 +215,7 @@ void BattlePopupController__set_CurPopup(
   bool v7; // w7
 
   this->fields._CurPopup_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -241,6 +241,6 @@ bool BattlePopupController___c__DisplayClass7_0___SwitchDisplayPopup_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields._Layer_k__BackingField == this->fields.targetLayer;
 }

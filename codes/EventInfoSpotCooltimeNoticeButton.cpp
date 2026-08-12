@@ -8,14 +8,14 @@ void EventInfoSpotCooltimeNoticeButton___ctor(EventInfoSpotCooltimeNoticeButton_
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_593A486 & 1) == 0 )
+  if ( (byte_597265D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_12773/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/);
-    byte_593A486 = 1;
+    sub_2213A60(&StringLiteral_12799/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/);
+    byte_597265D = 1;
   }
-  v9 = StringLiteral_12773/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12773/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  sub_21FFBF4(
+  v9 = StringLiteral_12799/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
+  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12799/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE,
     v9,
     v2,
@@ -36,10 +36,10 @@ System_String_o *EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameByEventId(
   EventInfoSpotCooltimeNoticeButton_EventInfo_o *EventInfo; // x0
   System_String_o **p_BgSpriteName; // x8
 
-  if ( (byte_593A485 & 1) == 0 )
+  if ( (byte_597265C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A485 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597265C = 1;
   }
   EventInfo = EventInfoSpotCooltimeNoticeButton__GetEventInfo(this, eventId, method);
   p_BgSpriteName = &EventInfo->fields.BgSpriteName;
@@ -90,7 +90,7 @@ EventInfoSpotCooltimeNoticeButton_EventInfo_o *EventInfoSpotCooltimeNoticeButton
         return 0;
     }
 LABEL_9:
-    sub_21FFECC(this, *(_QWORD *)&eventId);
+    sub_2213CDC(this, *(_QWORD *)&eventId);
   }
   return 0;
 }
@@ -122,12 +122,12 @@ void EventInfoSpotCooltimeNoticeButton__Initialization(
   int32_t eventIda; // [xsp+Ch] [xbp-34h] BYREF
 
   eventIda = eventId;
-  if ( (byte_593A482 & 1) == 0 )
+  if ( (byte_5972659 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A482 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972659 = 1;
   }
   this->fields.eventId = eventId;
   BgSpriteNameByEventId = EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameByEventId(this, eventId, method);
@@ -154,7 +154,7 @@ void EventInfoSpotCooltimeNoticeButton__Initialization(
   }
   SPOT_COOLTIME_NOTICE_BUTTON_TITLE = this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE;
   v15 = System_Int32__ToString((int32_t)&eventIda, 0);
-  v17 = System_String__Concat_75438412(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v15, 0);
+  v17 = System_String__Concat_75651716(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v15, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
   if ( LocalizationManager__ContainsKey(v17, 0) )
@@ -166,7 +166,7 @@ void EventInfoSpotCooltimeNoticeButton__Initialization(
     if ( !buttonTextLabel
       || (UILabel__set_text(buttonTextLabel, v20, 0), (v20 = (System_String_o *)this->fields.buttonTextLabel) == 0) )
     {
-      sub_21FFECC(v20, v21);
+      sub_2213CDC(v20, v21);
     }
     UILabel__SetCondensedScale((UILabel_o *)v20, this->fields.buttonTextMaxWidth, 0, 0);
   }
@@ -184,17 +184,17 @@ void EventInfoSpotCooltimeNoticeButton__OnClickButton(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_593A484 & 1) == 0 )
+  if ( (byte_597265B & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__);
-    byte_593A484 = 1;
+    sub_2213A60(&Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__);
+    byte_597265B = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   v4 = Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__;
   this->fields.isButtonOn = isButtonOn ^ 1;
   if ( (v4[83] & 2) != 0 )
-    v4 = (_BYTE *)sub_21FFC68(v4);
-  v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, *((_QWORD *)v4 + 4));
+    v4 = (_BYTE *)sub_2213A78(v4);
+  v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, *((_QWORD *)v4 + 4));
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetSpotCooltimeNotification(this->fields.eventId, this->fields.isButtonOn, 0);
   EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v6);
@@ -216,7 +216,7 @@ void EventInfoSpotCooltimeNoticeButton__SetDispActive(
         (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0)) == 0 )
   {
-    sub_21FFECC(bgSprite, isActive);
+    sub_2213CDC(bgSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0);
 }
@@ -229,18 +229,18 @@ void EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(
   UIButton_o *noticeButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_593A483 & 1) == 0 )
+  if ( (byte_597265A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18237/*"btn_on"*/);
-    sub_21FFC50(&StringLiteral_18236/*"btn_off"*/);
-    byte_593A483 = 1;
+    sub_2213A60(&StringLiteral_18275/*"btn_on"*/);
+    sub_2213A60(&StringLiteral_18274/*"btn_off"*/);
+    byte_597265A = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_21FFECC(0, method);
-  v4 = &StringLiteral_18236/*"btn_off"*/;
+    sub_2213CDC(0, method);
+  v4 = &StringLiteral_18274/*"btn_off"*/;
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_18237/*"btn_on"*/;
+    v4 = &StringLiteral_18275/*"btn_on"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v4, 0);
 }
 

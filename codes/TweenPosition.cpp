@@ -8,16 +8,16 @@ void TweenPosition__Awake(TweenPosition_o *this, const MethodInfo *method)
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593CF1C & 1) == 0 )
+  if ( (byte_59751F3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    byte_593CF1C = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    byte_59751F3 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   this->fields.mRect = (struct UIRect_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mRect,
     (int32_t)Component_object,
     v4,
@@ -46,17 +46,17 @@ TweenPosition_o *TweenPosition__Begin(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_593CF1D & 1) == 0 )
+  if ( (byte_59751F4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UITweener_Begin_TweenPosition___);
-    byte_593CF1D = 1;
+    sub_2213A60(&Method_UITweener_Begin_TweenPosition___);
+    byte_59751F4 = 1;
   }
   v9 = (TweenPosition_o *)UITweener__Begin_object_(
                             go,
                             duration,
-                            (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenPosition___);
+                            (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v9 )
-    sub_21FFECC(0, v10);
+    sub_2213CDC(0, v10);
   v11 = v9;
   v9->fields.from = TweenPosition__get_value(v9, v10);
   v11->fields.to.fields.x = x;
@@ -71,7 +71,7 @@ TweenPosition_o *TweenPosition__Begin(
 }
 
 
-TweenPosition_o *TweenPosition__Begin_56305400(
+TweenPosition_o *TweenPosition__Begin_56510056(
         UnityEngine_GameObject_o *go,
         float duration,
         UnityEngine_Vector3_o pos,
@@ -89,17 +89,17 @@ TweenPosition_o *TweenPosition__Begin_56305400(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_593CF1E & 1) == 0 )
+  if ( (byte_59751F5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UITweener_Begin_TweenPosition___);
-    byte_593CF1E = 1;
+    sub_2213A60(&Method_UITweener_Begin_TweenPosition___);
+    byte_59751F5 = 1;
   }
   v11 = (TweenPosition_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenPosition___);
+                             (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v11 )
-    sub_21FFECC(0, v12);
+    sub_2213CDC(0, v12);
   v13 = v11;
   v11->fields.worldSpace = worldSpace;
   v11->fields.from = TweenPosition__get_value(v11, v12);
@@ -120,9 +120,10 @@ void TweenPosition__OnUpdate(TweenPosition_o *this, float factor, bool isFinishe
 {
   float v4; // s1
   float v5; // s4
-  unsigned __int64 v6; // d0 OVERLAPPED
+  unsigned __int64 v6; // d0
   float v7; // s2
-  int v8; // s1
+  float v8; // s1
+  UnityEngine_Vector3_o v9; // 0:kr00_12.12
 
   v4 = (float)(1.0 - factor) * this->fields.from.fields.z;
   v5 = this->fields.to.fields.z * factor;
@@ -130,8 +131,11 @@ void TweenPosition__OnUpdate(TweenPosition_o *this, float factor, bool isFinishe
          vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
          vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor)).n64_u64[0];
   v7 = v4 + v5;
-  v8 = HIDWORD(v6);
-  TweenPosition__set_value(this, *(UnityEngine_Vector3_o *)&v6, (const MethodInfo *)isFinished);
+  v8 = *((float *)&v6 + 1);
+  LODWORD(v9.fields.x) = v6;
+  v9.fields.y = v8;
+  v9.fields.z = v7;
+  TweenPosition__set_value(this, v9, (const MethodInfo *)isFinished);
 }
 
 
@@ -170,10 +174,10 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_593CF1A & 1) == 0 )
+  if ( (byte_59751F1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF1A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751F1 = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -182,7 +186,7 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
   }
   return this->fields.mTrans;
 }
@@ -200,19 +204,32 @@ UnityEngine_Vector3_o TweenPosition__get_value(TweenPosition_o *this, const Meth
   _BOOL4 worldSpace; // w19
   UnityEngine_Transform_o *cachedTransform; // x0
   __int64 v4; // x1
+  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
+  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   worldSpace = this->fields.worldSpace;
   cachedTransform = TweenPosition__get_cachedTransform(this, method);
   if ( worldSpace )
   {
     if ( cachedTransform )
-      return UnityEngine_Transform__get_position(cachedTransform, 0);
+    {
+      position = UnityEngine_Transform__get_position(cachedTransform, 0);
+      result.fields.x = position.fields.x;
+      result.fields.y = position.fields.y;
+      result.fields.z = position.fields.z;
+      return result;
+    }
 LABEL_6:
-    sub_21FFECC(cachedTransform, v4);
+    sub_2213CDC(cachedTransform, v4);
   }
   if ( !cachedTransform )
     goto LABEL_6;
-  return UnityEngine_Transform__get_localPosition(cachedTransform, 0);
+  localPosition = UnityEngine_Transform__get_localPosition(cachedTransform, 0);
+  result.fields.x = localPosition.fields.x;
+  result.fields.y = localPosition.fields.y;
+  result.fields.z = localPosition.fields.z;
+  return result;
 }
 
 
@@ -232,17 +249,17 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
   const MethodInfo *v8; // x1
   UnityEngine_Transform_o *cachedTransform; // x0
   _BOOL4 worldSpace; // w20
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  unsigned __int64 localPosition; // kr00_8
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_593CF1B & 1) == 0 )
+  if ( (byte_59751F2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF1B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751F2 = 1;
   }
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -261,28 +278,28 @@ LABEL_9:
     {
       if ( cachedTransform )
       {
-        v11.fields.x = x;
-        v11.fields.y = y;
-        v11.fields.z = z;
-        UnityEngine_Transform__set_position(cachedTransform, v11, 0);
+        v12.fields.x = x;
+        v12.fields.y = y;
+        v12.fields.z = z;
+        UnityEngine_Transform__set_position(cachedTransform, v12, 0);
         return;
       }
 LABEL_16:
-      sub_21FFECC(cachedTransform, v8);
+      sub_2213CDC(cachedTransform, v8);
     }
     if ( !cachedTransform )
       goto LABEL_16;
-    v12.fields.x = x;
-    v12.fields.y = y;
-    v12.fields.z = z;
-    UnityEngine_Transform__set_localPosition(cachedTransform, v12, 0);
+    v13.fields.x = x;
+    v13.fields.y = y;
+    v13.fields.z = z;
+    UnityEngine_Transform__set_localPosition(cachedTransform, v13, 0);
   }
   else
   {
     cachedTransform = TweenPosition__get_cachedTransform(this, v8);
     if ( !cachedTransform )
       goto LABEL_16;
-    localPosition = UnityEngine_Transform__get_localPosition(cachedTransform, 0);
-    NGUIMath__MoveRect(this->fields.mRect, x - localPosition.fields.x, y - localPosition.fields.y, 0);
+    localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(cachedTransform, 0);
+    NGUIMath__MoveRect(this->fields.mRect, x - *(float *)&localPosition, y - *((float *)&localPosition + 1), 0);
   }
 }

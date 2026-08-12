@@ -1,9 +1,9 @@
 void BattleBuffListObjectComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_593BCD6 & 1) == 0 )
+  if ( (byte_5973EE2 & 1) == 0 )
   {
-    sub_21FFC50(&BattleBuffListObjectComponent_TypeInfo);
-    byte_593BCD6 = 1;
+    sub_2213A60(&BattleBuffListObjectComponent_TypeInfo);
+    byte_5973EE2 = 1;
   }
   BattleBuffListObjectComponent_TypeInfo->static_fields->DEFAULT_FONT_SIZE = 17;
 }
@@ -43,22 +43,22 @@ void BattleBuffListObjectComponent__SetData(
   int32_t count; // [xsp+8h] [xbp-38h] BYREF
   int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_593BCD4 & 1) == 0 )
+  if ( (byte_5973EE0 & 1) == 0 )
   {
-    sub_21FFC50(&BattleBuffListObjectComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_BuffMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2818/*"BATTLE_BUFF_TURN"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_2812/*"BATTLE_BUFF_COUNT"*/);
-    sub_21FFC50(&StringLiteral_2811/*"BATTLE_BUFF_BOOST"*/);
-    byte_593BCD4 = 1;
+    sub_2213A60(&BattleBuffListObjectComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_BuffMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2819/*"BATTLE_BUFF_TURN"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_2813/*"BATTLE_BUFF_COUNT"*/);
+    sub_2213A60(&StringLiteral_2812/*"BATTLE_BUFF_BOOST"*/);
+    byte_5973EE0 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, buffData);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !buffData )
     goto LABEL_39;
   if ( !Master_object )
@@ -66,11 +66,11 @@ void BattleBuffListObjectComponent__SetData(
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   buffData->fields.buffId,
-                                                                  (const MethodInfo_3EDD388 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                                                  (const MethodInfo_3F10B30 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( !this->fields.buffIcon )
     goto LABEL_39;
   v7 = Master_object;
-  BattleServantBuffIconComponent__setIcon_54623520(this->fields.buffIcon, buffData, 0);
+  BattleServantBuffIconComponent__setIcon_54741996(this->fields.buffIcon, buffData, 0);
   if ( !v7 )
     goto LABEL_39;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.nameLabel;
@@ -113,7 +113,7 @@ void BattleBuffListObjectComponent__SetData(
       atTurnLabel = this->fields.atTurnLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_2818/*"BATTLE_BUFF_TURN"*/, 0);
+      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_2819/*"BATTLE_BUFF_TURN"*/, 0);
       turn = buffData->fields.turn;
       v17 = v15;
       if ( turn + 1 >= 0 )
@@ -121,7 +121,7 @@ void BattleBuffListObjectComponent__SetData(
       else
         v18 = turn + 2;
       v26 = BattleUtility__FloorToInt((float)(v18 >> 1), 0);
-      v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v26);
+      v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v26);
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(v17, v19, 0);
       if ( !atTurnLabel )
         goto LABEL_39;
@@ -132,9 +132,9 @@ void BattleBuffListObjectComponent__SetData(
       atCountLabel = this->fields.atCountLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2812/*"BATTLE_BUFF_COUNT"*/, 0);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2813/*"BATTLE_BUFF_COUNT"*/, 0);
       count = buffData->fields.count;
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &count);
+      v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &count);
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(v21, v22, 0);
       if ( !atCountLabel )
         goto LABEL_39;
@@ -147,7 +147,7 @@ void BattleBuffListObjectComponent__SetData(
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_2811/*"BATTLE_BUFF_BOOST"*/,
+                                                                    (System_String_o *)StringLiteral_2812/*"BATTLE_BUFF_BOOST"*/,
                                                                     0);
     if ( v24 )
     {
@@ -155,7 +155,7 @@ void BattleBuffListObjectComponent__SetData(
       goto LABEL_38;
     }
 LABEL_39:
-    sub_21FFECC(Master_object, v6);
+    sub_2213CDC(Master_object, v6);
   }
   atTurnCondensedScaleLabel = this->fields.atTurnCondensedScaleLabel;
   if ( !atTurnCondensedScaleLabel )
@@ -188,15 +188,15 @@ void BattleBuffListObjectComponent__SetInterval(
   Il2CppObject *v19; // x0
   int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593BCD5 & 1) == 0 )
+  if ( (byte_5973EE1 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_2816/*"BATTLE_BUFF_INTERVAL_REMAIN"*/);
-    sub_21FFC50(&StringLiteral_2817/*"BATTLE_BUFF_INTERVAL_TURN"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_2815/*"BATTLE_BUFF_INTERVAL_COUNT"*/);
-    byte_593BCD5 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_2817/*"BATTLE_BUFF_INTERVAL_REMAIN"*/);
+    sub_2213A60(&StringLiteral_2818/*"BATTLE_BUFF_INTERVAL_TURN"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_2816/*"BATTLE_BUFF_INTERVAL_COUNT"*/);
+    byte_5973EE1 = 1;
   }
   remainLabel = (UnityEngine_Object_o *)this->fields.remainLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -225,20 +225,20 @@ void BattleBuffListObjectComponent__SetInterval(
           v12 = !BattleBuffData_IntervalData__get_HasIntervalTurn(interval, 0);
           v14 = this->fields.remainLabel;
           if ( v12 )
-            v15 = (System_String_o **)&StringLiteral_2815/*"BATTLE_BUFF_INTERVAL_COUNT"*/;
+            v15 = (System_String_o **)&StringLiteral_2816/*"BATTLE_BUFF_INTERVAL_COUNT"*/;
           else
-            v15 = (System_String_o **)&StringLiteral_2817/*"BATTLE_BUFF_INTERVAL_TURN"*/;
+            v15 = (System_String_o **)&StringLiteral_2818/*"BATTLE_BUFF_INTERVAL_TURN"*/;
           v16 = *v15;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
-          v9 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2816/*"BATTLE_BUFF_INTERVAL_REMAIN"*/, 0);
+          v9 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2817/*"BATTLE_BUFF_INTERVAL_REMAIN"*/, 0);
           if ( v14 )
           {
             UILabel__set_text(v14, (System_String_o *)v9, 0);
             v17 = this->fields.intervalLabel;
             v18 = LocalizationManager__Get(v16, 0);
             v20 = v11;
-            v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
+            v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v20);
             v9 = (UILabel_o *)System_String__Format(v18, v19, 0);
             if ( v17 )
             {
@@ -247,7 +247,7 @@ void BattleBuffListObjectComponent__SetInterval(
             }
           }
 LABEL_22:
-          sub_21FFECC(v9, v8);
+          sub_2213CDC(v9, v8);
         }
       }
     }

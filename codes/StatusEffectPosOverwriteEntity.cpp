@@ -1,13 +1,13 @@
 void StatusEffectPosOverwriteEntity___ctor(StatusEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939389 & 1) == 0 )
+  if ( (byte_5971549 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5939389 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971549 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *StatusEffectPosOverwriteEntity__CreatePK(
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_5939388 & 1) == 0 )
+  if ( (byte_5971548 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_5939388 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5971548 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            statusEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,19 +51,15 @@ UnityEngine_Vector3_o StatusEffectPosOverwriteEntity__GetOffset(
 {
   unsigned __int64 v3; // d1
   float offsetX; // s0
-  float v5; // s0
-  float v6; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.offsetY), vdup_n_s32(0x447A0000u)).n64_u64[0];
   offsetX = -(float)this->fields.offsetX;
   if ( !isFlip )
     offsetX = (float)this->fields.offsetX;
-  v5 = offsetX / 1000.0;
-  v6 = *((float *)&v3 + 1);
+  result.fields.x = offsetX / 1000.0;
+  result.fields.z = *((float *)&v3 + 1);
   result.fields.y = *(float *)&v3;
-  result.fields.z = v6;
-  result.fields.x = v5;
   return result;
 }
 
@@ -73,16 +69,12 @@ UnityEngine_Vector3_o StatusEffectPosOverwriteEntity__GetRotation(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s2
-  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.rotationX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  v3 = (float)this->fields.rotationZ / 1000.0;
-  v4 = *((float *)&v2 + 1);
+  result.fields.z = (float)this->fields.rotationZ / 1000.0;
+  result.fields.y = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
-  result.fields.z = v3;
-  result.fields.y = v4;
   return result;
 }
 
@@ -92,15 +84,11 @@ UnityEngine_Vector3_o StatusEffectPosOverwriteEntity__GetScale(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
-  float v3; // s2
-  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.scaleX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  v3 = (float)this->fields.scaleZ / 1000.0;
-  v4 = *((float *)&v2 + 1);
+  result.fields.z = (float)this->fields.scaleZ / 1000.0;
+  result.fields.y = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
-  result.fields.z = v3;
-  result.fields.y = v4;
   return result;
 }

@@ -11,9 +11,9 @@ void DeckListViewItem___ctor(
   bool v10; // w6
   bool v11; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.partyItem = partyItem;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7, v8, v9, v10, v11);
 }
 
 

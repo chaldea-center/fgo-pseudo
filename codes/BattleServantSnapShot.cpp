@@ -8,7 +8,7 @@ void BattleServantSnapShot___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   this->fields._UniqueId_k__BackingField = svtData->fields.uniqueId;
 }
 
@@ -125,7 +125,7 @@ void BattleServantSnapShot__set_BuffArray(
   bool v7; // w7
 
   this->fields._BuffArray_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BuffArray_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -149,7 +149,7 @@ void BattleServantSnapShot__set_CheckIndividualitiesData(
   bool v7; // w7
 
   this->fields._CheckIndividualitiesData_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

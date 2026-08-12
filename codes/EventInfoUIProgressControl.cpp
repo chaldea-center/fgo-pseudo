@@ -8,15 +8,15 @@ void EventInfoUIProgressControl___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_593AD80 & 1) == 0 )
+  if ( (byte_5973039 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUIProgressControl_TypeInfo);
-    sub_21FFC50(&StringLiteral_5881/*"EVENT_PROGRESS_VALUE"*/);
-    byte_593AD80 = 1;
+    sub_2213A60(&EventInfoUIProgressControl_TypeInfo);
+    sub_2213A60(&StringLiteral_5893/*"EVENT_PROGRESS_VALUE"*/);
+    byte_5973039 = 1;
   }
-  v7 = StringLiteral_5881/*"EVENT_PROGRESS_VALUE"*/;
-  EventInfoUIProgressControl_TypeInfo->static_fields->SAVEKEY_EVENT_PROGRESS_VALUE = (struct System_String_o *)StringLiteral_5881/*"EVENT_PROGRESS_VALUE"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_5893/*"EVENT_PROGRESS_VALUE"*/;
+  EventInfoUIProgressControl_TypeInfo->static_fields->SAVEKEY_EVENT_PROGRESS_VALUE = (struct System_String_o *)StringLiteral_5893/*"EVENT_PROGRESS_VALUE"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoUIProgressControl_TypeInfo->static_fields,
     v7,
     v1,
@@ -50,23 +50,23 @@ EventProgressValueEntity_o *EventInfoUIProgressControl__GetEntityByProgressValue
   struct System_Collections_Generic_List_EventProgressValueEntity__o *eventProgressValueEntityList; // x20
   System_Predicate_object__o *v9; // x19
 
-  if ( (byte_593AD7B & 1) == 0 )
+  if ( (byte_5973034 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventProgressValueEntity__Find__);
-    sub_21FFC50(&System_Predicate_EventProgressValueEntity__TypeInfo);
-    sub_21FFC50(&Method_EventInfoUIProgressControl___c__DisplayClass9_0__GetEntityByProgressValue_b__0__);
-    sub_21FFC50(&EventInfoUIProgressControl___c__DisplayClass9_0_TypeInfo);
-    byte_593AD7B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventProgressValueEntity__Find__);
+    sub_2213A60(&System_Predicate_EventProgressValueEntity__TypeInfo);
+    sub_2213A60(&Method_EventInfoUIProgressControl___c__DisplayClass9_0__GetEntityByProgressValue_b__0__);
+    sub_2213A60(&EventInfoUIProgressControl___c__DisplayClass9_0_TypeInfo);
+    byte_5973034 = 1;
   }
-  v5 = sub_21FFEBC(EventInfoUIProgressControl___c__DisplayClass9_0_TypeInfo);
+  v5 = sub_2213CCC(EventInfoUIProgressControl___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   eventProgressValueEntityList = this->fields.eventProgressValueEntityList;
   *(_DWORD *)(v5 + 16) = progressValue;
   if ( !eventProgressValueEntityList )
     return 0;
-  v9 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_EventProgressValueEntity__TypeInfo);
+  v9 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_EventProgressValueEntity__TypeInfo);
   System_Predicate_object____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -75,7 +75,7 @@ EventProgressValueEntity_o *EventInfoUIProgressControl__GetEntityByProgressValue
   return (EventProgressValueEntity_o *)System_Collections_Generic_List_object___Find(
                                          (System_Collections_Generic_List_object__o *)eventProgressValueEntityList,
                                          (System_Predicate_T__o *)v9,
-                                         (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_EventProgressValueEntity__Find__);
+                                         (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_EventProgressValueEntity__Find__);
 }
 
 
@@ -95,24 +95,24 @@ int32_t EventInfoUIProgressControl__GetEventProgressValueSaveData(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t EventInfoUIProgressControl__GetEventProgressValueSaveData_52551696(
+int32_t EventInfoUIProgressControl__GetEventProgressValueSaveData_52750140(
         int32_t eventId,
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  System_String_o *EventProgressValueSaveKey_52551552; // x0
+  System_String_o *EventProgressValueSaveKey_52749996; // x0
 
-  if ( (byte_593AD7F & 1) == 0 )
+  if ( (byte_5973038 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUIProgressControl_TypeInfo);
-    byte_593AD7F = 1;
+    sub_2213A60(&EventInfoUIProgressControl_TypeInfo);
+    byte_5973038 = 1;
   }
   if ( !*(&EventInfoUIProgressControl_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventInfoUIProgressControl_TypeInfo, *(_QWORD *)&defaultValue);
-  EventProgressValueSaveKey_52551552 = EventInfoUIProgressControl__GetEventProgressValueSaveKey_52551552(
+  EventProgressValueSaveKey_52749996 = EventInfoUIProgressControl__GetEventProgressValueSaveKey_52749996(
                                          eventId,
                                          *(const MethodInfo **)&defaultValue);
-  return UnityEngine_PlayerPrefs__GetInt(EventProgressValueSaveKey_52551552, defaultValue, 0);
+  return UnityEngine_PlayerPrefs__GetInt(EventProgressValueSaveKey_52749996, defaultValue, 0);
 }
 
 
@@ -125,22 +125,22 @@ System_String_o *EventInfoUIProgressControl__GetEventProgressValueSaveKey(
   int32_t eventId; // w19
 
   v2 = this;
-  if ( (byte_593AD7D & 1) == 0 )
+  if ( (byte_5973036 & 1) == 0 )
   {
-    this = (EventInfoUIProgressControl_o *)sub_21FFC50(&EventInfoUIProgressControl_TypeInfo);
-    byte_593AD7D = 1;
+    this = (EventInfoUIProgressControl_o *)sub_2213A60(&EventInfoUIProgressControl_TypeInfo);
+    byte_5973036 = 1;
   }
   eventUiEntity = v2->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   eventId = eventUiEntity->fields.eventId;
   if ( !*(&EventInfoUIProgressControl_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventInfoUIProgressControl_TypeInfo, method);
-  return EventInfoUIProgressControl__GetEventProgressValueSaveKey_52551552(eventId, method);
+  return EventInfoUIProgressControl__GetEventProgressValueSaveKey_52749996(eventId, method);
 }
 
 
-System_String_o *EventInfoUIProgressControl__GetEventProgressValueSaveKey_52551552(
+System_String_o *EventInfoUIProgressControl__GetEventProgressValueSaveKey_52749996(
         int32_t eventId,
         const MethodInfo *method)
 {
@@ -150,11 +150,11 @@ System_String_o *EventInfoUIProgressControl__GetEventProgressValueSaveKey_525515
   int32_t v6; // [xsp+Ch] [xbp-14h] BYREF
 
   v6 = eventId;
-  if ( (byte_593AD7E & 1) == 0 )
+  if ( (byte_5973037 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUIProgressControl_TypeInfo);
-    sub_21FFC50(&StringLiteral_16714/*"_"*/);
-    byte_593AD7E = 1;
+    sub_2213A60(&EventInfoUIProgressControl_TypeInfo);
+    sub_2213A60(&StringLiteral_16746/*"_"*/);
+    byte_5973037 = 1;
   }
   v2 = EventInfoUIProgressControl_TypeInfo;
   if ( !*(&EventInfoUIProgressControl_TypeInfo->_2.cctor_finished + 1) )
@@ -164,7 +164,7 @@ System_String_o *EventInfoUIProgressControl__GetEventProgressValueSaveKey_525515
   }
   SAVEKEY_EVENT_PROGRESS_VALUE = v2->static_fields->SAVEKEY_EVENT_PROGRESS_VALUE;
   v4 = System_Int32__ToString((int32_t)&v6, 0);
-  return System_String__Concat_75481624(SAVEKEY_EVENT_PROGRESS_VALUE, (System_String_o *)StringLiteral_16714/*"_"*/, v4, 0);
+  return System_String__Concat_75694928(SAVEKEY_EVENT_PROGRESS_VALUE, (System_String_o *)StringLiteral_16746/*"_"*/, v4, 0);
 }
 
 
@@ -211,27 +211,27 @@ void EventInfoUIProgressControl__InitEventProgressParams(
   bool v39; // w7
   System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_593AD7A & 1) == 0 )
+  if ( (byte_5973033 & 1) == 0 )
   {
-    sub_21FFC50(&System_Comparison_EventProgressValueEntity__TypeInfo);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventProgressValueMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventProgressValueEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventProgressValueEntity__Sort__);
-    sub_21FFC50(&Method_EventInfoUIProgressControl___c__InitEventProgressParams_b__6_0__);
-    sub_21FFC50(&EventInfoUIProgressControl___c_TypeInfo);
-    byte_593AD7A = 1;
+    sub_2213A60(&System_Comparison_EventProgressValueEntity__TypeInfo);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventProgressValueMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventProgressValueEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventProgressValueEntity__Sort__);
+    sub_2213A60(&Method_EventInfoUIProgressControl___c__InitEventProgressParams_b__6_0__);
+    sub_2213A60(&EventInfoUIProgressControl___c_TypeInfo);
+    byte_5973033 = 1;
   }
   v5 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   memset(&v40, 0, sizeof(v40));
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&eventId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventProgressValueMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventProgressValueMaster___);
   if ( !Master_object )
     goto LABEL_27;
   EntityListByEventId = EventProgressValueMaster__GetEntityListByEventId(
@@ -240,7 +240,7 @@ void EventInfoUIProgressControl__InitEventProgressParams(
                           0);
   this->fields.eventProgressValueEntityList = EntityListByEventId;
   p_eventProgressValueEntityList = &this->fields.eventProgressValueEntityList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventProgressValueEntityList,
     (int32_t)EntityListByEventId,
     v10,
@@ -253,7 +253,7 @@ void EventInfoUIProgressControl__InitEventProgressParams(
   if ( !eventProgressValueEntityList
     || !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)eventProgressValueEntityList,
-          (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_EventProgressValueEntity___) )
+          (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_EventProgressValueEntity___) )
   {
     return;
   }
@@ -274,7 +274,7 @@ void EventInfoUIProgressControl__InitEventProgressParams(
       static_fields = EventInfoUIProgressControl___c_TypeInfo->static_fields;
     }
     v20 = (Il2CppObject *)static_fields->__9;
-    _9__6_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventProgressValueEntity__TypeInfo);
+    _9__6_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventProgressValueEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__6_0,
       v20,
@@ -282,32 +282,32 @@ void EventInfoUIProgressControl__InitEventProgressParams(
       0);
     v21 = EventInfoUIProgressControl___c_TypeInfo->static_fields;
     v21->__9__6_0 = (struct System_Comparison_EventProgressValueEntity__o *)_9__6_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v21->__9__6_0, (int32_t)_9__6_0, v22, v23, v24, v25, v26, v27);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v21->__9__6_0, (int32_t)_9__6_0, v22, v23, v24, v25, v26, v27);
   }
   if ( !v17
-    || (System_Collections_Generic_List_object___Sort_71636404(
+    || (System_Collections_Generic_List_object___Sort_71849708(
           v17,
           _9__6_0,
-          (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventProgressValueEntity__Sort__),
+          (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventProgressValueEntity__Sort__),
         (Master_object = *p_eventProgressValueEntityList) == 0) )
   {
 LABEL_27:
-    sub_21FFECC(Master_object, v7);
+    sub_2213CDC(Master_object, v7);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v40,
     (System_Collections_Generic_List_object__o *)Master_object,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventProgressValueEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventProgressValueEntity__GetEnumerator__);
   while ( 1 )
   {
     v28 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v40,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__MoveNext__);
     if ( !v28 )
       break;
     current = v40.fields._current;
     if ( !v40.fields._current )
-      sub_21FFECC(v28, v29);
+      sub_2213CDC(v28, v29);
     v31 = *(int *)((char *)&v40.fields._current->klass + (unsigned __int64)&qword_20);
     v32 = *(_DWORD *)((char *)&v40.fields._current->klass + (unsigned __int64)off_18);
     v33 = *(_DWORD *)((char *)&v40.fields._current->klass + (unsigned __int64)off_18 + 4);
@@ -316,7 +316,7 @@ LABEL_27:
     if ( CondType__IsOpen(v32, v33, v31, 0, 0, 0) )
     {
       this->fields.currentEventProgressValueEntity = (struct EventProgressValueEntity_o *)current;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.currentEventProgressValueEntity,
         (int32_t)current,
         v34,
@@ -328,7 +328,7 @@ LABEL_27:
       break;
     }
     this->fields.nextEventProgressValueEntity = (struct EventProgressValueEntity_o *)current;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.nextEventProgressValueEntity,
       (int32_t)current,
       v34,
@@ -340,7 +340,7 @@ LABEL_27:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v40,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventProgressValueEntity__Dispose__);
 }
 
 
@@ -361,7 +361,7 @@ void EventInfoUIProgressControl__Initialization(
 
   this->fields.eventUiEntity = entity;
   p_eventUiEntity = &this->fields.eventUiEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (System_String_o *)method,
@@ -371,7 +371,7 @@ void EventInfoUIProgressControl__Initialization(
     v6,
     v7);
   if ( !*p_eventUiEntity )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   EventInfoUIProgressControl__InitEventProgressParams(this, (*p_eventUiEntity)->fields.eventId, v12);
 }
 
@@ -382,25 +382,25 @@ bool EventInfoUIProgressControl__IsDispEventProgress(int32_t eventId, const Meth
   __int64 v4; // x1
   System_Collections_Generic_List_EventProgressValueEntity__o *EntityListByEventId; // x0
 
-  if ( (byte_593AD7C & 1) == 0 )
+  if ( (byte_5973035 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventProgressValueMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
-    byte_593AD7C = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventProgressValueMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
+    byte_5973035 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventProgressValueMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventProgressValueMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   EntityListByEventId = EventProgressValueMaster__GetEntityListByEventId(
                           (EventProgressValueMaster_o *)Master_object,
                           eventId,
                           0);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EntityListByEventId,
-           (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
+           (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_EventProgressValueEntity___);
 }
 
 
@@ -450,15 +450,15 @@ void EventInfoUIProgressControl___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593AD81 & 1) == 0 )
+  if ( (byte_597303A & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUIProgressControl___c_TypeInfo);
-    byte_593AD81 = 1;
+    sub_2213A60(&EventInfoUIProgressControl___c_TypeInfo);
+    byte_597303A = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventInfoUIProgressControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventInfoUIProgressControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoUIProgressControl___c_TypeInfo->static_fields->__9 = (struct EventInfoUIProgressControl___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoUIProgressControl___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -483,7 +483,7 @@ int32_t EventInfoUIProgressControl___c___InitEventProgressParams_b__6_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   return b->fields.progressValue - a->fields.progressValue;
 }
 
@@ -502,6 +502,6 @@ bool EventInfoUIProgressControl___c__DisplayClass9_0___GetEntityByProgressValue_
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.progressValue == this->fields.progressValue;
 }

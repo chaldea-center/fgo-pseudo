@@ -22,7 +22,7 @@ void ReceiptViewMenu__Callback(ReceiptViewMenu_o *this, const MethodInfo *method
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -37,7 +37,7 @@ void ReceiptViewMenu__Close(ReceiptViewMenu_o *this, const MethodInfo *method)
   menuRootObject = this->fields.menuRootObject;
   this->fields.state = 0;
   if ( !menuRootObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(menuRootObject, 0, 0);
 }
 
@@ -50,7 +50,7 @@ void ReceiptViewMenu__EndInput(ReceiptViewMenu_o *this, const MethodInfo *method
   {
     menuRootObject = this->fields.menuRootObject;
     if ( !menuRootObject )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     UnityEngine_GameObject__SetActive(menuRootObject, 0, 0);
   }
 }
@@ -87,7 +87,7 @@ void ReceiptViewMenu__Open(
   {
     this->fields.callbackFunc = callback;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (System_String_o *)callback,
@@ -103,7 +103,7 @@ void ReceiptViewMenu__Open(
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)textList, 1, 0),
           (textList = (UITextList_o *)this->fields.cancelButton) == 0) )
     {
-      sub_21FFECC(textList, v11);
+      sub_2213CDC(textList, v11);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)textList, 1, 0);
     this->fields.state = 1;
@@ -128,10 +128,10 @@ void ReceiptViewMenu__add_callbackFunc(
   ReceiptViewMenu_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5935B69 & 1) == 0 )
+  if ( (byte_596DCAB & 1) == 0 )
   {
-    sub_21FFC50(&ReceiptViewMenu_CallbackFunc_TypeInfo);
-    byte_5935B69 = 1;
+    sub_2213A60(&ReceiptViewMenu_CallbackFunc_TypeInfo);
+    byte_596DCAB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -144,13 +144,13 @@ void ReceiptViewMenu__add_callbackFunc(
       if ( (ReceiptViewMenu_CallbackFunc_c *)v8->klass != ReceiptViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, ReceiptViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, ReceiptViewMenu_CallbackFunc_TypeInfo, v9, v10);
   ReceiptViewMenu__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -171,10 +171,10 @@ void ReceiptViewMenu__remove_callbackFunc(
   ReceiptViewMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5935B6A & 1) == 0 )
+  if ( (byte_596DCAC & 1) == 0 )
   {
-    sub_21FFC50(&ReceiptViewMenu_CallbackFunc_TypeInfo);
-    byte_5935B6A = 1;
+    sub_2213A60(&ReceiptViewMenu_CallbackFunc_TypeInfo);
+    byte_596DCAC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -187,13 +187,13 @@ void ReceiptViewMenu__remove_callbackFunc(
       if ( (ReceiptViewMenu_CallbackFunc_c *)v8->klass != ReceiptViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, ReceiptViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, ReceiptViewMenu_CallbackFunc_TypeInfo, v9, v10);
   ReceiptViewMenu__EndInput(v13, v14);
 }
 
@@ -217,7 +217,7 @@ void ReceiptViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -228,12 +228,12 @@ void ReceiptViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -245,9 +245,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF5460;
+  this->fields.invoke_impl = (intptr_t)sub_200849C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF5420;
+  this->fields.extra_arg = (intptr_t)sub_200845C;
 }
 
 
@@ -257,9 +257,9 @@ System_IAsyncResult_o *ReceiptViewMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -268,7 +268,7 @@ void ReceiptViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

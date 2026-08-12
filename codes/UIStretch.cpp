@@ -4,22 +4,22 @@ void UIStretch___ctor(UIStretch_o *this, const MethodInfo *method)
   int v4; // w10
   UnityEngine_Vector2_c *v5; // x8
 
-  v3 = (unsigned __int8)byte_59373DF;
+  v3 = (unsigned __int8)byte_596F578;
   this->fields.runOnlyOnce = 1;
   if ( !v3 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_59373DF = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_596F578 = 1;
   }
-  v4 = (unsigned __int8)byte_5931820;
+  v4 = (unsigned __int8)byte_59699C0;
   v5 = UnityEngine_Vector2_TypeInfo;
   this->fields.relativeSize = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
   this->fields.initialSize = v5->static_fields->oneVector;
   if ( !v4 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
     v5 = UnityEngine_Vector2_TypeInfo;
-    byte_5931820 = 1;
+    byte_59699C0 = 1;
   }
   this->fields.borderPadding = v5->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -80,22 +80,22 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
   MissionNaviTransitionBoardItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_593CFEE & 1) == 0 )
+  if ( (byte_59752C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&UICamera_OnScreenResize_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    sub_21FFC50(&Method_UIStretch_ScreenSizeChanged__);
-    byte_593CFEE = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&UICamera_OnScreenResize_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    sub_2213A60(&Method_UIStretch_ScreenSizeChanged__);
+    byte_59752C5 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.mAnim = (struct UnityEngine_Animation_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mAnim,
     (int32_t)Component_object,
     v4,
@@ -108,7 +108,7 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
   *(_QWORD *)&this->fields.mRect.fields.m_Width = 0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mTrans,
     (int32_t)transform,
     v11,
@@ -119,19 +119,19 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
     v16);
   v17 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)v17;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mWidget, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mWidget, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   v24 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   this->fields.mSprite = (struct UISprite_o *)v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, (int32_t)v24, v25, v26, v27, v28, v29, v30);
   v31 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v31;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mPanel, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mPanel, (int32_t)v31, v32, v33, v34, v35, v36, v37);
   v39 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -139,7 +139,7 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
     v39 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v39->static_fields->onScreenResize;
-  v41 = (UICamera_OnScreenResize_o *)sub_21FFEBC(UICamera_OnScreenResize_TypeInfo);
+  v41 = (UICamera_OnScreenResize_o *)sub_2213CCC(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v41, (Il2CppObject *)this, Method_UIStretch_ScreenSizeChanged__, 0);
   v42 = System_Delegate__Combine(onScreenResize, (System_Delegate_o *)v41, 0);
   v49 = v42;
@@ -152,13 +152,13 @@ void UIStretch__Awake(UIStretch_o *this, const MethodInfo *method)
         p_onScreenResize = (MissionNaviTransitionBoardItem_o *)&v51->onScreenResize,
         (UICamera_OnScreenResize_c *)v49->klass != v50) )
   {
-    sub_220024C(v49, v50, v43);
+    sub_221405C(v49, v50, v43);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = 0;
     p_onScreenResize = (MissionNaviTransitionBoardItem_o *)&static_fields->onScreenResize;
   }
-  sub_21FFBF4(p_onScreenResize, (int32_t)v49, v43, v44, v45, v46, v47, v48);
+  sub_2213A04(p_onScreenResize, (int32_t)v49, v43, v44, v45, v46, v47, v48);
 }
 
 
@@ -180,12 +180,12 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
   MissionNaviTransitionBoardItem_o *p_onScreenResize; // x0
   struct UICamera_StaticFields *static_fields; // x0
 
-  if ( (byte_593CFEF & 1) == 0 )
+  if ( (byte_59752C6 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_OnScreenResize_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    sub_21FFC50(&Method_UIStretch_ScreenSizeChanged__);
-    byte_593CFEF = 1;
+    sub_2213A60(&UICamera_OnScreenResize_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    sub_2213A60(&Method_UIStretch_ScreenSizeChanged__);
+    byte_59752C6 = 1;
   }
   v3 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -194,7 +194,7 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
     v3 = UICamera_TypeInfo;
   }
   onScreenResize = (System_Delegate_o *)v3->static_fields->onScreenResize;
-  v5 = (UICamera_OnScreenResize_o *)sub_21FFEBC(UICamera_OnScreenResize_TypeInfo);
+  v5 = (UICamera_OnScreenResize_o *)sub_2213CCC(UICamera_OnScreenResize_TypeInfo);
   UICamera_OnScreenResize___ctor(v5, (Il2CppObject *)this, Method_UIStretch_ScreenSizeChanged__, 0);
   v6 = System_Delegate__Remove(onScreenResize, (System_Delegate_o *)v5, 0);
   v13 = v6;
@@ -207,13 +207,13 @@ void UIStretch__OnDestroy(UIStretch_o *this, const MethodInfo *method)
         p_onScreenResize = (MissionNaviTransitionBoardItem_o *)&v15->onScreenResize,
         (UICamera_OnScreenResize_c *)v13->klass != v14) )
   {
-    sub_220024C(v13, v14, v7);
+    sub_221405C(v13, v14, v7);
 LABEL_9:
     static_fields = UICamera_TypeInfo->static_fields;
     static_fields->onScreenResize = 0;
     p_onScreenResize = (MissionNaviTransitionBoardItem_o *)&static_fields->onScreenResize;
   }
-  sub_21FFBF4(p_onScreenResize, (int32_t)v13, v7, v8, v9, v10, v11, v12);
+  sub_2213A04(p_onScreenResize, (int32_t)v13, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -265,12 +265,12 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
   bool v39; // w7
   const MethodInfo *v40; // x1
 
-  if ( (byte_593CFF0 & 1) == 0 )
+  if ( (byte_59752C7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_NGUITools_FindInParents_UIRoot___);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFF0 = 1;
+    sub_2213A60(&Method_NGUITools_FindInParents_UIRoot___);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752C7 = 1;
   }
   container = (UnityEngine_Object_o *)this->fields.container;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -288,7 +288,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         goto LABEL_21;
       gameObject = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.container = gameObject;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.container,
         (int32_t)gameObject,
         v9,
@@ -298,7 +298,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         v13,
         v14);
       *p_widgetContainer = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.widgetContainer, 0, v15, v16, v17, v18, v19, v20);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.widgetContainer, 0, v15, v16, v17, v18, v19, v20);
     }
   }
   uiCamera = (UnityEngine_Object_o *)this->fields.uiCamera;
@@ -314,7 +314,7 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v22);
       CameraForLayer = NGUITools__FindCameraForLayer(layer, 0);
       this->fields.uiCamera = CameraForLayer;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.uiCamera,
         (int32_t)CameraForLayer,
         v25,
@@ -326,21 +326,20 @@ void UIStretch__Start(UIStretch_o *this, const MethodInfo *method)
       goto LABEL_18;
     }
 LABEL_21:
-    sub_21FFECC(v7, v4);
+    sub_2213CDC(v7, v4);
   }
 LABEL_18:
   v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v31);
-  v33 = NGUITools__FindInParents_object_(v32, (const MethodInfo_38BD680 *)Method_NGUITools_FindInParents_UIRoot___);
+  v33 = NGUITools__FindInParents_object_(v32, (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRoot___);
   this->fields.mRoot = (struct UIRoot_o *)v33;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mRoot, (int32_t)v33, v34, v35, v36, v37, v38, v39);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mRoot, (int32_t)v33, v34, v35, v36, v37, v38, v39);
   UIStretch__Update(this, v40);
   this->fields.mStarted = 1;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UIStretch__Update(UIStretch_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mAnim; // x20
@@ -379,73 +378,69 @@ void UIStretch__Update(UIStretch_o *this, const MethodInfo *method)
   UnityEngine_Object_o *mWidget; // x20
   struct UIWidget_o *v37; // x8
   float v38; // s10
-  float mWidth; // s0 OVERLAPPED
+  float mWidth; // s0
   float mHeight; // s8
-  float v41; // s1
-  float v42; // s2
   int32_t style; // w8
   float y; // s1
   float x; // s0
-  float v46; // s1
+  float v44; // s1
   UnityEngine_Object_o *mSprite; // x20
-  struct UISprite_o *v48; // x8
+  struct UISprite_o *v46; // x8
   UnityEngine_Object_o *mAtlas; // x20
   float pixelSize; // s10
-  struct UISprite_o *v51; // x8
-  float v52; // s11
-  UIWidget_o *v53; // x20
-  float v54; // s12
-  float v55; // s12
-  double v56; // d9
-  double v57; // d0
-  double v58; // d0
-  double v59; // d1
-  UnityEngine_Object_o *v60; // x20
-  UIWidget_o *v61; // x20
-  float v62; // s10
-  float v63; // s10
-  double v64; // d9
-  double v65; // d0
-  double v66; // d0
-  double v67; // d1
+  struct UISprite_o *v49; // x8
+  float v50; // s11
+  UIWidget_o *v51; // x20
+  float v52; // s12
+  float v53; // s12
+  double v54; // d9
+  double v55; // d0
+  double v56; // d0
+  double v57; // d1
+  UnityEngine_Object_o *v58; // x20
+  UIWidget_o *v59; // x20
+  float v60; // s10
+  float v61; // s10
+  double v62; // d9
+  double v63; // d0
+  double v64; // d0
+  double v65; // d1
   UnityEngine_Object_o *mPanel; // x20
-  int32_t v69; // w8
-  int v70; // s0
-  int v71; // s1
-  float v72; // s2 OVERLAPPED
-  int32_t v73; // w8
-  double v74; // d1
-  UnityEngine_Transform_o *v75; // x0
-  float32x4_t v76; // q1
-  float32x4_t v77; // q3
-  double v78; // d1
-  float v79; // s3
-  int32_t v80; // w1
-  UIWidget_o *v81; // x20
-  float v82; // s9
-  System_Math_c *v83; // x0
-  int32_t v84; // w1
-  float v85; // s9
-  double v86; // d8
-  double v87; // d0
-  double v88; // d0
-  double v89; // d1
-  double v90; // d1
-  int32_t v91; // w1
+  int32_t v67; // w8
+  int32_t v68; // w8
+  double v69; // d1
+  UnityEngine_Transform_o *v70; // x0
+  float32x4_t v71; // q1
+  float32x4_t v72; // q3
+  double v73; // d1
+  int32_t v75; // w1
+  UIWidget_o *v76; // x20
+  float v77; // s9
+  System_Math_c *v78; // x0
+  int32_t v79; // w1
+  float v80; // s9
+  double v81; // d8
+  double v82; // d0
+  double v83; // d0
+  double v84; // d1
+  double v85; // d1
+  int32_t v86; // w1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Bounds_o v93; // [xsp+0h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v95; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o pixelRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Bounds_o v88; // [xsp+0h] [xbp-70h] BYREF
+  UnityEngine_Vector3_o localScale; // 0:kr20_12.12
+  UnityEngine_Vector3_o v90; // 0:kr34_12.12
+  UnityEngine_Vector4_o finalClipRegion; // 0:kr00_16.16
+  UnityEngine_Rect_o pixelRect; // 0:kr10_16.16
+  UnityEngine_Vector3_o v93; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v94; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CFF1 & 1) == 0 )
+  if ( (byte_59752C8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFF1 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752C8 = 1;
   }
   mAnim = (UnityEngine_Object_o *)this->fields.mAnim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -472,7 +467,7 @@ void UIStretch__Update(UIStretch_o *this, const MethodInfo *method)
       goto LABEL_189;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   }
   v9 = (UnityEngine_Object_o *)this->fields.container;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -490,7 +485,7 @@ LABEL_20:
       goto LABEL_189;
     v10 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)transform,
-            (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
@@ -502,12 +497,12 @@ LABEL_20:
     transform = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0);
     if ( !Component_object )
       goto LABEL_189;
-    UIWidget__CalculateBounds_56286400(&v93, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
-    v12.n128_u64[0] = *(_QWORD *)&v93.fields.m_Extents.fields.x;
-    v13.n128_u64[0] = *(_QWORD *)&v93.fields.m_Center.fields.x;
-    v13.n128_u64[1] = *(_QWORD *)&v93.fields.m_Extents.fields.x;
+    UIWidget__CalculateBounds_56491056(&v88, (UIWidget_o *)Component_object, (UnityEngine_Transform_o *)transform, 0);
+    v12.n128_u64[0] = *(_QWORD *)&v88.fields.m_Extents.fields.x;
+    v13.n128_u64[0] = *(_QWORD *)&v88.fields.m_Center.fields.x;
+    v13.n128_u64[1] = *(_QWORD *)&v88.fields.m_Extents.fields.x;
     v12.n128_u64[1] = 0x4000000040000000LL;
-    *(_QWORD *)&v14.fields.m_XMin = vsubq_f32(*(float32x4_t *)&v93.fields.m_Center.fields.x, v12).n128_u64[0];
+    *(_QWORD *)&v14.fields.m_XMin = vsubq_f32(*(float32x4_t *)&v88.fields.m_Center.fields.x, v12).n128_u64[0];
     v15 = vmulq_f32(v13, v12);
     goto LABEL_28;
   }
@@ -570,9 +565,10 @@ LABEL_63:
       transform = this->fields.mTrans;
       if ( !transform )
         goto LABEL_189;
-      *(UnityEngine_Vector3_o *)&mWidth = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
-      mHeight = v41;
-      v38 = v42;
+      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
+      mWidth = localScale.fields.x;
+      mHeight = localScale.fields.y;
+      v38 = localScale.fields.z;
     }
     style = this->fields.style;
     if ( style <= 4 )
@@ -602,8 +598,8 @@ LABEL_78:
     if ( style == 5 )
     {
       x = this->fields.initialSize.fields.x;
-      v46 = this->fields.initialSize.fields.y;
-      if ( (float)(x / v46) < (float)(z / w) )
+      v44 = this->fields.initialSize.fields.y;
+      if ( (float)(x / v44) < (float)(z / w) )
         goto LABEL_77;
     }
     else
@@ -611,16 +607,16 @@ LABEL_78:
       if ( style != 6 )
         goto LABEL_78;
       x = this->fields.initialSize.fields.x;
-      v46 = this->fields.initialSize.fields.y;
-      if ( (float)(x / v46) > (float)(z / w) )
+      v44 = this->fields.initialSize.fields.y;
+      if ( (float)(x / v44) > (float)(z / w) )
       {
 LABEL_77:
-        mHeight = v46 * (float)(z / x);
+        mHeight = v44 * (float)(z / x);
         goto LABEL_83;
       }
     }
     mHeight = w;
-    z = x * (float)(w / v46);
+    z = x * (float)(w / v44);
 LABEL_83:
     mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -628,88 +624,88 @@ LABEL_83:
     transform = (void *)UnityEngine_Object__op_Inequality(mSprite, 0, 0);
     if ( ((unsigned __int8)transform & 1) != 0 )
     {
-      v48 = this->fields.mSprite;
-      if ( !v48 )
+      v46 = this->fields.mSprite;
+      if ( !v46 )
         goto LABEL_189;
-      mAtlas = (UnityEngine_Object_o *)v48->fields.mAtlas;
+      mAtlas = (UnityEngine_Object_o *)v46->fields.mAtlas;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
       transform = (void *)UnityEngine_Object__op_Inequality(mAtlas, 0, 0);
       pixelSize = 1.0;
       if ( ((unsigned __int8)transform & 1) != 0 )
       {
-        v51 = this->fields.mSprite;
-        if ( !v51 )
+        v49 = this->fields.mSprite;
+        if ( !v49 )
           goto LABEL_189;
-        transform = v51->fields.mAtlas;
+        transform = v49->fields.mAtlas;
         if ( !transform )
           goto LABEL_189;
         pixelSize = UIAtlas__get_pixelSize((UIAtlas_o *)transform, 0);
       }
-      v52 = this->fields.borderPadding.fields.y;
+      v50 = this->fields.borderPadding.fields.y;
       if ( this->fields.style == 2 )
         goto LABEL_145;
-      v53 = (UIWidget_o *)this->fields.mSprite;
-      v54 = pixelSize * this->fields.borderPadding.fields.x;
-      if ( !byte_593220B )
+      v51 = (UIWidget_o *)this->fields.mSprite;
+      v52 = pixelSize * this->fields.borderPadding.fields.x;
+      if ( !byte_596A30A )
       {
-        sub_21FFC50(&System_Math_TypeInfo);
-        byte_593220B = 1;
+        sub_2213A60(&System_Math_TypeInfo);
+        byte_596A30A = 1;
       }
-      v55 = z - v54;
+      v53 = z - v52;
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4);
-      v56 = v55;
-      v57 = modf(v55, (double *)&v93.fields.m_Center.fields.x);
-      if ( v55 >= 0.0 )
+      v54 = v53;
+      v55 = modf(v53, (double *)&v88.fields.m_Center.fields.x);
+      if ( v53 >= 0.0 )
       {
-        if ( v57 != 0.5 )
+        if ( v55 != 0.5 )
         {
-          v58 = floor(v56 + 0.5);
+          v56 = floor(v54 + 0.5);
           goto LABEL_140;
         }
-        v59 = 1.0;
-        v58 = *(double *)&v93.fields.m_Center.fields.x;
+        v57 = 1.0;
+        v56 = *(double *)&v88.fields.m_Center.fields.x;
       }
       else
       {
-        if ( v57 != -0.5 )
+        if ( v55 != -0.5 )
         {
-          v58 = ceil(v56 + -0.5);
+          v56 = ceil(v54 + -0.5);
           goto LABEL_140;
         }
-        v58 = *(double *)&v93.fields.m_Center.fields.x;
-        v59 = -1.0;
+        v56 = *(double *)&v88.fields.m_Center.fields.x;
+        v57 = -1.0;
       }
-      v74 = v58 + v59;
-      if ( ((__int64)v58 & 1) != 0 )
-        v58 = v74;
+      v69 = v56 + v57;
+      if ( ((__int64)v56 & 1) != 0 )
+        v56 = v69;
 LABEL_140:
-      if ( !v53 )
+      if ( !v51 )
         goto LABEL_189;
-      if ( v58 == INFINITY )
-        v80 = 0x80000000;
+      if ( v56 == INFINITY )
+        v75 = 0x80000000;
       else
-        v80 = (int)v58;
-      UIWidget__set_width(v53, v80, 0);
+        v75 = (int)v56;
+      UIWidget__set_width(v51, v75, 0);
       if ( this->fields.style != 1 )
       {
 LABEL_145:
-        v81 = (UIWidget_o *)this->fields.mSprite;
-        if ( !byte_593220B )
+        v76 = (UIWidget_o *)this->fields.mSprite;
+        if ( !byte_596A30A )
         {
-          sub_21FFC50(&System_Math_TypeInfo);
-          byte_593220B = 1;
+          sub_2213A60(&System_Math_TypeInfo);
+          byte_596A30A = 1;
         }
-        v82 = mHeight - (float)(pixelSize * v52);
-        v83 = System_Math_TypeInfo;
+        v77 = mHeight - (float)(pixelSize * v50);
+        v78 = System_Math_TypeInfo;
         goto LABEL_159;
       }
 LABEL_176:
-      if ( !byte_5931945 )
+      if ( !byte_5969AE5 )
       {
-        sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931945 = 1;
+        sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE5 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       z = static_fields->oneVector.fields.x;
@@ -717,105 +713,105 @@ LABEL_176:
       v38 = static_fields->oneVector.fields.z;
       goto LABEL_179;
     }
-    v60 = (UnityEngine_Object_o *)this->fields.mWidget;
+    v58 = (UnityEngine_Object_o *)this->fields.mWidget;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
-    if ( UnityEngine_Object__op_Inequality(v60, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality(v58, 0, 0) )
     {
       if ( this->fields.style == 2 )
         goto LABEL_156;
-      v61 = this->fields.mWidget;
-      v62 = this->fields.borderPadding.fields.x;
-      if ( !byte_593220B )
+      v59 = this->fields.mWidget;
+      v60 = this->fields.borderPadding.fields.x;
+      if ( !byte_596A30A )
       {
-        sub_21FFC50(&System_Math_TypeInfo);
-        byte_593220B = 1;
+        sub_2213A60(&System_Math_TypeInfo);
+        byte_596A30A = 1;
       }
-      v63 = z - v62;
+      v61 = z - v60;
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4);
-      v64 = v63;
-      v65 = modf(v63, (double *)&v93.fields.m_Center.fields.x);
-      if ( v63 >= 0.0 )
+      v62 = v61;
+      v63 = modf(v61, (double *)&v88.fields.m_Center.fields.x);
+      if ( v61 >= 0.0 )
       {
-        if ( v65 != 0.5 )
+        if ( v63 != 0.5 )
         {
-          v66 = floor(v64 + 0.5);
+          v64 = floor(v62 + 0.5);
           goto LABEL_151;
         }
-        v67 = 1.0;
-        v66 = *(double *)&v93.fields.m_Center.fields.x;
+        v65 = 1.0;
+        v64 = *(double *)&v88.fields.m_Center.fields.x;
       }
       else
       {
-        if ( v65 != -0.5 )
+        if ( v63 != -0.5 )
         {
-          v66 = ceil(v64 + -0.5);
+          v64 = ceil(v62 + -0.5);
           goto LABEL_151;
         }
-        v66 = *(double *)&v93.fields.m_Center.fields.x;
-        v67 = -1.0;
+        v64 = *(double *)&v88.fields.m_Center.fields.x;
+        v65 = -1.0;
       }
-      v78 = v66 + v67;
-      if ( ((__int64)v66 & 1) != 0 )
-        v66 = v78;
+      v73 = v64 + v65;
+      if ( ((__int64)v64 & 1) != 0 )
+        v64 = v73;
 LABEL_151:
-      if ( !v61 )
+      if ( !v59 )
         goto LABEL_189;
-      if ( v66 == INFINITY )
-        v84 = 0x80000000;
+      if ( v64 == INFINITY )
+        v79 = 0x80000000;
       else
-        v84 = (int)v66;
-      UIWidget__set_width(v61, v84, 0);
+        v79 = (int)v64;
+      UIWidget__set_width(v59, v79, 0);
       if ( this->fields.style == 1 )
         goto LABEL_176;
 LABEL_156:
-      v81 = this->fields.mWidget;
-      v85 = this->fields.borderPadding.fields.y;
-      if ( !byte_593220B )
+      v76 = this->fields.mWidget;
+      v80 = this->fields.borderPadding.fields.y;
+      if ( !byte_596A30A )
       {
-        sub_21FFC50(&System_Math_TypeInfo);
-        byte_593220B = 1;
+        sub_2213A60(&System_Math_TypeInfo);
+        byte_596A30A = 1;
       }
-      v83 = System_Math_TypeInfo;
-      v82 = mHeight - v85;
+      v78 = System_Math_TypeInfo;
+      v77 = mHeight - v80;
 LABEL_159:
-      if ( !*(&v83->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(v83, v4);
-      v86 = v82;
-      v87 = modf(v82, (double *)&v93.fields.m_Center.fields.x);
-      if ( v82 >= 0.0 )
+      if ( !*(&v78->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(v78, v4);
+      v81 = v77;
+      v82 = modf(v77, (double *)&v88.fields.m_Center.fields.x);
+      if ( v77 >= 0.0 )
       {
-        if ( v87 == 0.5 )
+        if ( v82 == 0.5 )
         {
-          v89 = 1.0;
-          v88 = *(double *)&v93.fields.m_Center.fields.x;
+          v84 = 1.0;
+          v83 = *(double *)&v88.fields.m_Center.fields.x;
 LABEL_166:
-          v90 = v88 + v89;
-          if ( ((__int64)v88 & 1) != 0 )
-            v88 = v90;
+          v85 = v83 + v84;
+          if ( ((__int64)v83 & 1) != 0 )
+            v83 = v85;
           goto LABEL_171;
         }
-        v88 = floor(v86 + 0.5);
+        v83 = floor(v81 + 0.5);
       }
       else
       {
-        if ( v87 == -0.5 )
+        if ( v82 == -0.5 )
         {
-          v88 = *(double *)&v93.fields.m_Center.fields.x;
-          v89 = -1.0;
+          v83 = *(double *)&v88.fields.m_Center.fields.x;
+          v84 = -1.0;
           goto LABEL_166;
         }
-        v88 = ceil(v86 + -0.5);
+        v83 = ceil(v81 + -0.5);
       }
 LABEL_171:
-      if ( !v81 )
+      if ( !v76 )
         goto LABEL_189;
-      if ( v88 == INFINITY )
-        v91 = 0x80000000;
+      if ( v83 == INFINITY )
+        v86 = 0x80000000;
       else
-        v91 = (int)v88;
-      UIWidget__set_height(v81, v91, 0);
+        v86 = (int)v83;
+      UIWidget__set_height(v76, v86, 0);
       goto LABEL_176;
     }
     mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
@@ -823,25 +819,25 @@ LABEL_171:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
     if ( !UnityEngine_Object__op_Inequality(mPanel, 0, 0) )
     {
-      v73 = this->fields.style;
-      if ( v73 == 2 || (z = z - this->fields.borderPadding.fields.x, v73 != 1) )
+      v68 = this->fields.style;
+      if ( v68 == 2 || (z = z - this->fields.borderPadding.fields.x, v68 != 1) )
         mHeight = mHeight - this->fields.borderPadding.fields.y;
 LABEL_179:
       transform = this->fields.mTrans;
       if ( transform )
       {
-        localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
-        if ( (float)((float)((float)(localScale.fields.z - v38) * (float)(localScale.fields.z - v38))
-                   + (float)((float)((float)(localScale.fields.x - z) * (float)(localScale.fields.x - z))
-                           + (float)((float)(localScale.fields.y - mHeight) * (float)(localScale.fields.y - mHeight)))) < 1.0e-10 )
+        v90 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
+        if ( (float)((float)((float)(v90.fields.z - v38) * (float)(v90.fields.z - v38))
+                   + (float)((float)((float)(v90.fields.x - z) * (float)(v90.fields.x - z))
+                           + (float)((float)(v90.fields.y - mHeight) * (float)(v90.fields.y - mHeight)))) < 1.0e-10 )
           goto LABEL_183;
         transform = this->fields.mTrans;
         if ( transform )
         {
-          v95.fields.x = z;
-          v95.fields.y = mHeight;
-          v95.fields.z = v38;
-          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v95, 0);
+          v93.fields.x = z;
+          v93.fields.y = mHeight;
+          v93.fields.z = v38;
+          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v93, 0);
 LABEL_183:
           if ( this->fields.runOnlyOnce )
           {
@@ -854,30 +850,30 @@ LABEL_183:
         }
       }
 LABEL_189:
-      sub_21FFECC(transform, v4);
+      sub_2213CDC(transform, v4);
     }
     transform = this->fields.mPanel;
     if ( !transform )
       goto LABEL_189;
-    v69 = this->fields.style;
-    if ( v69 == 2 )
+    v67 = this->fields.style;
+    if ( v67 == 2 )
     {
-      v72 = *((float *)transform + 76);
+      v94.fields.z = *((float *)transform + 76);
     }
     else
     {
-      v72 = z - this->fields.borderPadding.fields.x;
-      if ( v69 == 1 )
+      v94.fields.z = z - this->fields.borderPadding.fields.x;
+      if ( v67 == 1 )
       {
-        v79 = *((float *)transform + 77);
+        v94.fields.w = *((float *)transform + 77);
 LABEL_137:
-        v70 = *((_DWORD *)transform + 74);
-        v71 = *((_DWORD *)transform + 75);
-        UIPanel__set_baseClipRegion((UIPanel_o *)transform, *(UnityEngine_Vector4_o *)(&v72 - 2), 0);
+        v94.fields.x = *((float *)transform + 74);
+        v94.fields.y = *((float *)transform + 75);
+        UIPanel__set_baseClipRegion((UIPanel_o *)transform, v94, 0);
         goto LABEL_176;
       }
     }
-    v79 = mHeight - this->fields.borderPadding.fields.y;
+    v94.fields.w = mHeight - this->fields.borderPadding.fields.y;
     goto LABEL_137;
   }
   v18 = (UnityEngine_Object_o *)this->fields.container;
@@ -898,21 +894,21 @@ LABEL_137:
       if ( !transform )
         goto LABEL_189;
       v23 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
-      NGUIMath__CalculateRelativeWidgetBounds_56085108(&v93, (UnityEngine_Transform_o *)parent, v23, 0);
+      NGUIMath__CalculateRelativeWidgetBounds_56289764(&v88, (UnityEngine_Transform_o *)parent, v23, 0);
     }
     else
     {
       if ( !transform )
         goto LABEL_189;
-      v75 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
-      NGUIMath__CalculateRelativeWidgetBounds(&v93, v75, 0);
+      v70 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
+      NGUIMath__CalculateRelativeWidgetBounds(&v88, v70, 0);
     }
-    v76.n128_u64[0] = *(_QWORD *)&v93.fields.m_Extents.fields.x;
-    v77.n128_u64[0] = *(_QWORD *)&v93.fields.m_Center.fields.x;
-    v77.n128_u64[1] = *(_QWORD *)&v93.fields.m_Extents.fields.x;
-    v76.n128_u64[1] = 0x4000000040000000LL;
-    *(_QWORD *)&v14.fields.m_XMin = vsubq_f32(*(float32x4_t *)&v93.fields.m_Center.fields.x, v76).n128_u64[0];
-    v15 = vmulq_f32(v77, v76);
+    v71.n128_u64[0] = *(_QWORD *)&v88.fields.m_Extents.fields.x;
+    v72.n128_u64[0] = *(_QWORD *)&v88.fields.m_Center.fields.x;
+    v72.n128_u64[1] = *(_QWORD *)&v88.fields.m_Extents.fields.x;
+    v71.n128_u64[1] = 0x4000000040000000LL;
+    *(_QWORD *)&v14.fields.m_XMin = vsubq_f32(*(float32x4_t *)&v88.fields.m_Center.fields.x, v71).n128_u64[0];
+    v15 = vmulq_f32(v72, v71);
 LABEL_28:
     *(_QWORD *)&v14.fields.m_Width = v15.n128_u64[1];
     w = v15.n128_f32[3];

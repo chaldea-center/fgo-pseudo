@@ -29,35 +29,35 @@ void FSAnchor___ctor(FSAnchor_o *this, const MethodInfo *method)
   bool v29; // w6
   bool v30; // w7
 
-  if ( (byte_593A0B9 & 1) == 0 )
+  if ( (byte_5972296 & 1) == 0 )
   {
-    sub_21FFC50(&FSAnchor_Absolute_TypeInfo);
-    byte_593A0B9 = 1;
+    sub_2213A60(&FSAnchor_Absolute_TypeInfo);
+    byte_5972296 = 1;
   }
-  v3 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
+  v3 = sub_2213CCC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_BYTE *)(v3 + 16) = 1;
   this->fields.leftAbsolute = (struct FSAnchor_Absolute_o *)v3;
   *(_QWORD *)(v3 + 20) = 0x4400000000LL;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
-  v10 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.leftAbsolute, v3, v4, v5, v6, v7, v8, v9);
+  v10 = sub_2213CCC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_BYTE *)(v10 + 16) = 1;
   this->fields.rightAbsolute = (struct FSAnchor_Absolute_o *)v10;
   *(_QWORD *)(v10 + 20) = 0xFFFFFFBC00000000LL;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
-  v17 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rightAbsolute, v10, v11, v12, v13, v14, v15, v16);
+  v17 = sub_2213CCC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   *(_BYTE *)(v17 + 16) = 0;
   this->fields.bottomAbsolute = (struct FSAnchor_Absolute_o *)v17;
   *(_QWORD *)(v17 + 20) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
-  v24 = sub_21FFEBC(FSAnchor_Absolute_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.bottomAbsolute, v17, v18, v19, v20, v21, v22, v23);
+  v24 = sub_2213CCC(FSAnchor_Absolute_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0);
   *(_BYTE *)(v24 + 16) = 0;
   this->fields.topAbsolute = (struct FSAnchor_Absolute_o *)v24;
   *(_QWORD *)(v24 + 20) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.topAbsolute, v24, v25, v26, v27, v28, v29, v30);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -95,10 +95,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
   const MethodInfo *v22; // x3
   struct UIWidget_o *v23; // x8
 
-  if ( (byte_593A0B8 & 1) == 0 )
+  if ( (byte_5972295 & 1) == 0 )
   {
-    sub_21FFC50(&FSUtility_TypeInfo);
-    byte_593A0B8 = 1;
+    sub_2213A60(&FSUtility_TypeInfo);
+    byte_5972295 = 1;
   }
   calcNotchSize = this->fields.calcNotchSize;
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
@@ -109,10 +109,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v4);
   SafeAreaWidth = FSUtility__GetSafeAreaWidth((const MethodInfo *)v5);
-  if ( !byte_5931FBB )
+  if ( !byte_596A15B )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5931FBB = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A15B = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6);
@@ -126,10 +126,10 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v11);
   ScreenToConfigSizeRate = FSUtility__GetScreenToConfigSizeRate(width);
   v16 = vcvts_n_f32_s32(v12 - v9, 1u);
-  if ( !byte_593193F )
+  if ( !byte_5969ADF )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593193F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5969ADF = 1;
   }
   v17 = System_Math_TypeInfo;
   v18 = v16 * ScreenToConfigSizeRate;
@@ -145,7 +145,7 @@ bool FSAnchor__CorrectedNotch(FSAnchor_o *this, const MethodInfo *method)
     || (FSAnchor__SetAbsoluteValueForNotch(this->fields.leftAbsolute, widget->fields.leftAnchor, v21, v14),
         (v23 = this->fields.widget) == 0) )
   {
-    sub_21FFECC(v17, v13);
+    sub_2213CDC(v17, v13);
   }
   FSAnchor__SetAbsoluteValueForNotch(this->fields.rightAbsolute, v23->fields.rightAnchor, v21, v22);
   return 1;
@@ -168,7 +168,7 @@ void FSAnchor__SetAbsoluteValueForNotch(
     return;
   if ( !anchorPoint )
 LABEL_10:
-    sub_21FFECC(absolute, anchorPoint);
+    sub_2213CDC(absolute, anchorPoint);
   relative = anchorPoint->fields.relative;
   vista = absolute->fields.vista;
   anchorPoint->fields.absolute = vista;
@@ -239,10 +239,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
   struct UIWidget_o *v51; // x9
   struct UIRect_AnchorPoint_o *v52; // x9
 
-  if ( (byte_593A0B7 & 1) == 0 )
+  if ( (byte_5972294 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A0B7 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972294 = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -298,10 +298,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
         bottomAnchor->fields.absolute = vista;
         if ( v5 < 1.7778 )
         {
-          if ( !byte_593193F )
+          if ( !byte_5969ADF )
           {
-            sub_21FFC50(&System_Math_TypeInfo);
-            byte_593193F = 1;
+            sub_2213A60(&System_Math_TypeInfo);
+            byte_5969ADF = 1;
           }
           v19 = (float)((float)((float)(1.7778 - v5) * 576.0) * 16.0) / 9.0;
           v7 = System_Math_TypeInfo;
@@ -331,10 +331,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
             if ( v5 < 1.7778 )
             {
               v26 = (float)((float)(1.7778 - v5) * 576.0) * 16.0;
-              if ( !byte_593193F )
+              if ( !byte_5969ADF )
               {
-                sub_21FFC50(&System_Math_TypeInfo);
-                byte_593193F = 1;
+                sub_2213A60(&System_Math_TypeInfo);
+                byte_5969ADF = 1;
               }
               v27 = v26 / 9.0;
               if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -368,10 +368,10 @@ void FSAnchor__SetAnchor(FSAnchor_o *this, const MethodInfo *method)
       v32->fields.absolute = v30->fields.scope;
       if ( v5 > 2.3333 )
       {
-        if ( !byte_593193F )
+        if ( !byte_5969ADF )
         {
-          sub_21FFC50(&System_Math_TypeInfo);
-          byte_593193F = 1;
+          sub_2213A60(&System_Math_TypeInfo);
+          byte_5969ADF = 1;
         }
         v33 = (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625;
         v7 = System_Math_TypeInfo;
@@ -417,7 +417,7 @@ LABEL_64:
     v42->fields.absolute = v40->fields.scope;
     if ( v5 <= 2.3333 )
       goto LABEL_76;
-    v7 = (System_Math_c *)sub_30D0D04(0, (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625);
+    v7 = (System_Math_c *)sub_30E1C4C(0, (float)((float)((float)(v5 + -2.3333) * 512.0) * 9.0) * 0.0625);
     v43 = this->fields.widget;
     if ( !v43 )
       goto LABEL_87;
@@ -468,7 +468,7 @@ LABEL_76:
       }
     }
 LABEL_87:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
 }
 

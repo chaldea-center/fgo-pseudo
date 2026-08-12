@@ -45,23 +45,23 @@ void CompensateArgForShowAll___ctor(
   bool v47; // w6
   bool v48; // w7
 
-  if ( (byte_593AC52 & 1) == 0 )
+  if ( (byte_5972E32 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
-    sub_21FFC50(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-    sub_21FFC50(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_21FFC50(&Method_CompensateArgForShowAll___ctor_b__13_1__);
-    sub_21FFC50(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    sub_21FFC50(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
-    sub_21FFC50(&CompensateArgForShowAll___c_TypeInfo);
-    byte_593AC52 = 1;
+    sub_2213A60(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    sub_2213A60(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    sub_2213A60(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_2213A60(&Method_CompensateArgForShowAll___ctor_b__13_1__);
+    sub_2213A60(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    sub_2213A60(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
+    sub_2213A60(&CompensateArgForShowAll___c_TypeInfo);
+    byte_5972E32 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Perf_k__BackingField = perf;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)perf, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)perf, v11, v12, v13, v14, v15, v16);
   this->fields._ActObj_k__BackingField = actObj;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ActObj_k__BackingField,
     (int32_t)actObj,
     v17,
@@ -86,19 +86,19 @@ void CompensateArgForShowAll___ctor(
       static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
     }
     v27 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    _9__13_0 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
     System_Func_Int32Enum__int____ctor(_9__13_0, v27, Method_CompensateArgForShowAll___c___ctor_b__13_0__, 0);
     v28 = CompensateArgForShowAll___c_TypeInfo->static_fields;
     v28->__9__13_0 = (struct System_Func_CompensateArgForShowAll_EffectType__int__o *)_9__13_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v28->__9__13_0, (int32_t)_9__13_0, v29, v30, v31, v32, v33, v34);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v28->__9__13_0, (int32_t)_9__13_0, v29, v30, v31, v32, v33, v34);
   }
-  v35 = (BitValue_T__o *)sub_21FFEBC(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+  v35 = (BitValue_T__o *)sub_2213CCC(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
   BitValue_Int32Enum____ctor(
     v35,
     (System_Func_T__int__o *)_9__13_0,
-    (const MethodInfo_3E435A8 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    (const MethodInfo_3E76D50 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
   this->fields._EffectTypeBit_k__BackingField = (struct BitValue_CompensateArgForShowAll_EffectType__o *)v35;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._EffectTypeBit_k__BackingField,
     (int32_t)v35,
     v36,
@@ -107,14 +107,14 @@ void CompensateArgForShowAll___ctor(
     v39,
     v40,
     v41);
-  v42 = (System_Action_T__o *)sub_21FFEBC(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+  v42 = (System_Action_T__o *)sub_2213CCC(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
   System_Action_Int32Enum____ctor(v42, (Il2CppObject *)this, Method_CompensateArgForShowAll___ctor_b__13_1__, 0);
   BasicHelper__ForEach_Int32Enum_(
     (System_Collections_Generic_IEnumerable_T__o *)effectTypes,
     v42,
-    (const MethodInfo_37DEEDC *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    (const MethodInfo_381228C *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
   this->fields._ExtraEffectIdArray_k__BackingField = extraEffectIdArray;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
     (int32_t)extraEffectIdArray,
     v43,
@@ -131,18 +131,18 @@ void CompensateArgForShowAll____ctor_b__13_1(CompensateArgForShowAll_o *this, in
 {
   BitValue_T__o *EffectTypeBit_k__BackingField; // x0
 
-  if ( (byte_593AC53 & 1) == 0 )
+  if ( (byte_5972E33 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
-    byte_593AC53 = 1;
+    sub_2213A60(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    byte_5972E33 = 1;
   }
   EffectTypeBit_k__BackingField = (BitValue_T__o *)this->fields._EffectTypeBit_k__BackingField;
   if ( !EffectTypeBit_k__BackingField )
-    sub_21FFECC(0, *(_QWORD *)&x);
+    sub_2213CDC(0, *(_QWORD *)&x);
   BitValue_Int32Enum___On(
     EffectTypeBit_k__BackingField,
     x,
-    (const MethodInfo_3E435D8 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    (const MethodInfo_3E76D80 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
 }
 
 
@@ -186,15 +186,15 @@ void CompensateArgForShowAll___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593AC54 & 1) == 0 )
+  if ( (byte_5972E34 & 1) == 0 )
   {
-    sub_21FFC50(&CompensateArgForShowAll___c_TypeInfo);
-    byte_593AC54 = 1;
+    sub_2213A60(&CompensateArgForShowAll___c_TypeInfo);
+    byte_5972E34 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(CompensateArgForShowAll___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(CompensateArgForShowAll___c_TypeInfo);
   System_Object___ctor(v1, 0);
   CompensateArgForShowAll___c_TypeInfo->static_fields->__9 = (struct CompensateArgForShowAll___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

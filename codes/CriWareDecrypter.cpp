@@ -11,7 +11,7 @@ int32_t CriWareDecrypter__CRIWARE3D9A5BE6(
   int v12; // [xsp+28h] [xbp-38h]
   char v13; // [xsp+2Ch] [xbp-34h]
 
-  if ( !off_59316A0 )
+  if ( !off_5969840 )
   {
     v11[0] = "cri_ware_unity";
     v11[1] = 14;
@@ -20,19 +20,19 @@ int32_t CriWareDecrypter__CRIWARE3D9A5BE6(
     v11[4] = 0x200000000LL;
     v12 = 24;
     v13 = 0;
-    off_59316A0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_2200304(v11);
+    off_5969840 = (int32_t (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_2214114(v11);
   }
-  v9 = sub_22002FC(func, enable_mana_decryption, func, obj, method);
-  return off_59316A0(enable_atom_decryption, enable_mana_decryption, v9, obj);
+  v9 = sub_221410C(func, enable_mana_decryption, func, obj, method);
+  return off_5969840(enable_atom_decryption, enable_mana_decryption, v9, obj);
 }
 
 
 uint64_t CriWareDecrypter__CallbackFromNative(intptr_t ptr1, const MethodInfo *method)
 {
-  if ( (byte_593169D & 1) == 0 )
+  if ( (byte_596983D & 1) == 0 )
   {
-    sub_21FFC50(&CriWareDecrypter_TypeInfo);
-    byte_593169D = 1;
+    sub_2213A60(&CriWareDecrypter_TypeInfo);
+    byte_596983D = 1;
   }
   return CriWareDecrypter_TypeInfo->static_fields->temporalStorage;
 }
@@ -43,8 +43,8 @@ bool CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, const Method
   const MethodInfo *v2; // x4
 
   if ( !config )
-    sub_21FFECC(0, method);
-  return CriWareDecrypter__Initialize_36947724(
+    sub_2213CDC(0, method);
+  return CriWareDecrypter__Initialize_37029140(
            config->fields.key,
            config->fields.authenticationFile,
            config->fields.enableAtomDecryption,
@@ -54,7 +54,7 @@ bool CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, const Method
 
 
 // local variable allocation has failed, the output may be wrong!
-bool CriWareDecrypter__Initialize_36947724(
+bool CriWareDecrypter__Initialize_37029140(
         System_String_o *key,
         System_String_o *authenticationFile,
         bool enableAtomDecryption,
@@ -73,17 +73,16 @@ bool CriWareDecrypter__Initialize_36947724(
   CriWareDecrypter_CallbackFromNativeDelegate_o *v18; // x21
   const MethodInfo *v19; // x3
   const MethodInfo *v20; // x4
-  bool result; // w0
 
-  if ( (byte_593169C & 1) == 0 )
+  if ( (byte_596983C & 1) == 0 )
   {
-    sub_21FFC50(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    sub_21FFC50(&Method_CriWareDecrypter_CallbackFromNative__);
-    sub_21FFC50(&CriWareDecrypter_TypeInfo);
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    byte_593169C = 1;
+    sub_2213A60(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    sub_2213A60(&Method_CriWareDecrypter_CallbackFromNative__);
+    sub_2213A60(&CriWareDecrypter_TypeInfo);
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    byte_596983C = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -97,13 +96,13 @@ bool CriWareDecrypter__Initialize_36947724(
   if ( !v10 )
     return 0;
   if ( !key )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   v13 = 0xD47EB533AEF7E5LL;
   if ( key->fields._stringLength )
   {
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v11, v12);
-    v13 = System_Convert__ToUInt64_76477644(key, 0) ^ 0xD47EB533AEF7E5LL;
+    v13 = System_Convert__ToUInt64_76690948(key, 0) ^ 0xD47EB533AEF7E5LL;
   }
   if ( CriWare_Common__IsStreamingAssetsPath(authenticationFile, 0) )
   {
@@ -114,12 +113,11 @@ bool CriWareDecrypter__Initialize_36947724(
   }
   v17 = CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo;
   CriWareDecrypter_TypeInfo->static_fields->temporalStorage = v13;
-  v18 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_21FFEBC(v17);
+  v18 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_2213CCC(v17);
   CriWareDecrypter_CallbackFromNativeDelegate___ctor(v18, 0, Method_CriWareDecrypter_CallbackFromNative__, v19);
   CriWareDecrypter__CRIWARE3D9A5BE6(enableAtomDecryption, enableManaDecryption, v18, 0, v20);
-  result = 1;
   CriWareDecrypter_TypeInfo->static_fields->temporalStorage = 0;
-  return result;
+  return 1;
 }
 
 
@@ -138,15 +136,15 @@ void CriWareDecrypter_CallbackFromNativeDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_21FFBF4(&this->fields.m_target, object);
+  sub_2213A04(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v10, 0);
+      v10 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v10, 0);
     }
     goto LABEL_5;
   }
@@ -158,9 +156,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FE98E8;
+  this->fields.invoke_impl = (intptr_t)sub_1FFC938;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FE9898;
+  this->fields.extra_arg = (intptr_t)sub_1FFC8E8;
 }
 
 
@@ -176,8 +174,8 @@ System_IAsyncResult_o *CriWareDecrypter_CallbackFromNativeDelegate__BeginInvoke(
 
   v9[1] = 0;
   v10 = ptr1;
-  v9[0] = j_il2cpp_value_box_0(qword_594C080, &v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984358, &v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -191,9 +189,9 @@ uint64_t CriWareDecrypter_CallbackFromNativeDelegate__EndInvoke(
   __int64 v5; // x2
   __int64 v6; // x3
 
-  v3 = sub_21FFC08(result, 0, method);
+  v3 = sub_2213A18(result, 0, method);
   if ( !v3 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return *(_QWORD *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 
@@ -203,7 +201,7 @@ uint64_t CriWareDecrypter_CallbackFromNativeDelegate__Invoke(
         intptr_t ptr1,
         const MethodInfo *method)
 {
-  return ((__int64 (__fastcall *)(intptr_t, intptr_t, intptr_t))this->fields.invoke_impl)(
+  return ((uint64_t (__fastcall *)(intptr_t, intptr_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            ptr1,
            this->fields.method);

@@ -10,16 +10,16 @@ System_String_o *AccountLinkageBeginAuthRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A122 & 1) == 0 )
+  if ( (byte_59722FF & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_17281/*"accountLinkageAnx/beginAuth"*/);
-    byte_593A122 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_17317/*"accountLinkageAnx/beginAuth"*/);
+    byte_59722FF = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_17281/*"accountLinkageAnx/beginAuth"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_17317/*"accountLinkageAnx/beginAuth"*/, 0);
 }
 
 
@@ -74,30 +74,30 @@ void AccountLinkageBeginAuthRequest__requestCompleted(
   __int64 *v47; // x8
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_593A123 & 1) == 0 )
+  if ( (byte_5972300 & 1) == 0 )
   {
-    sub_21FFC50(&AccountLinkageParams_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_21FFC50(&StringLiteral_23348/*"nonce"*/);
-    sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    sub_21FFC50(&StringLiteral_20639/*"gameId"*/);
-    sub_21FFC50(&StringLiteral_24142/*"redirectUri"*/);
-    sub_21FFC50(&StringLiteral_18768/*"clientId"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    this = (AccountLinkageBeginAuthRequest_o *)sub_21FFC50(&StringLiteral_17628/*"authorizationUrl"*/);
-    byte_593A123 = 1;
+    sub_2213A60(&AccountLinkageParams_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_2213A60(&StringLiteral_23394/*"nonce"*/);
+    sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    sub_2213A60(&StringLiteral_20680/*"gameId"*/);
+    sub_2213A60(&StringLiteral_24190/*"redirectUri"*/);
+    sub_2213A60(&StringLiteral_18806/*"clientId"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    this = (AccountLinkageBeginAuthRequest_o *)sub_2213A60(&StringLiteral_17665/*"authorizationUrl"*/);
+    byte_5972300 = 1;
   }
   if ( !responseList )
     goto LABEL_16;
   if ( !LODWORD(responseList->max_length) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v5 = responseList->m_Items[0];
   if ( !v5 )
     goto LABEL_16;
-  this = (AccountLinkageBeginAuthRequest_o *)ResponseData__checkError_51190916(v5, 0);
+  this = (AccountLinkageBeginAuthRequest_o *)ResponseData__checkError_51257228(v5, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    v47 = &StringLiteral_23290/*"ng"*/;
+    v47 = &StringLiteral_23336/*"ng"*/;
     goto LABEL_15;
   }
   success = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.success;
@@ -105,8 +105,8 @@ void AccountLinkageBeginAuthRequest__requestCompleted(
     goto LABEL_16;
   this = (AccountLinkageBeginAuthRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                success,
-                                               (Il2CppObject *)StringLiteral_17628/*"authorizationUrl"*/,
-                                               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                               (Il2CppObject *)StringLiteral_17665/*"authorizationUrl"*/,
+                                               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !this )
     goto LABEL_16;
   v7 = ((__int64 (__fastcall *)(AccountLinkageBeginAuthRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
@@ -114,53 +114,53 @@ void AccountLinkageBeginAuthRequest__requestCompleted(
          this->klass->vtable._3_ToString.method);
   this = (AccountLinkageBeginAuthRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                success,
-                                               (Il2CppObject *)StringLiteral_20639/*"gameId"*/,
-                                               (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                               (Il2CppObject *)StringLiteral_20680/*"gameId"*/,
+                                               (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !this
     || (v8 = ((__int64 (__fastcall *)(AccountLinkageBeginAuthRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
                this,
                this->klass->vtable._3_ToString.method),
         (this = (AccountLinkageBeginAuthRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                       success,
-                                                      (Il2CppObject *)StringLiteral_18768/*"clientId"*/,
-                                                      (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0)
+                                                      (Il2CppObject *)StringLiteral_18806/*"clientId"*/,
+                                                      (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0)
     || (v9 = ((__int64 (__fastcall *)(AccountLinkageBeginAuthRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
                this,
                this->klass->vtable._3_ToString.method),
         (this = (AccountLinkageBeginAuthRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                       success,
-                                                      (Il2CppObject *)StringLiteral_24142/*"redirectUri"*/,
-                                                      (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0)
+                                                      (Il2CppObject *)StringLiteral_24190/*"redirectUri"*/,
+                                                      (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0)
     || (v10 = ((__int64 (__fastcall *)(AccountLinkageBeginAuthRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
                 this,
                 this->klass->vtable._3_ToString.method),
         (this = (AccountLinkageBeginAuthRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                       success,
-                                                      (Il2CppObject *)StringLiteral_23348/*"nonce"*/,
-                                                      (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0) )
+                                                      (Il2CppObject *)StringLiteral_23394/*"nonce"*/,
+                                                      (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0) )
   {
 LABEL_16:
-    sub_21FFECC(this, responseList);
+    sub_2213CDC(this, responseList);
   }
   v11 = ((__int64 (__fastcall *)(AccountLinkageBeginAuthRequest_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
           this,
           this->klass->vtable._3_ToString.method);
   static_fields = AccountLinkageParams_TypeInfo->static_fields;
   static_fields->authorizationUrl = (struct System_String_o *)v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->authorizationUrl, v7, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->authorizationUrl, v7, v13, v14, v15, v16, v17, v18);
   v19 = AccountLinkageParams_TypeInfo->static_fields;
   v19->gameId = (struct System_String_o *)v8;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->gameId, v8, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->gameId, v8, v20, v21, v22, v23, v24, v25);
   v26 = AccountLinkageParams_TypeInfo->static_fields;
   v26->clientId = (struct System_String_o *)v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->clientId, v9, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->clientId, v9, v27, v28, v29, v30, v31, v32);
   v33 = AccountLinkageParams_TypeInfo->static_fields;
   v33->redirectUri = (struct System_String_o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->redirectUri, v10, v34, v35, v36, v37, v38, v39);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->redirectUri, v10, v34, v35, v36, v37, v38, v39);
   v40 = AccountLinkageParams_TypeInfo->static_fields;
   v40->nonce = (struct System_String_o *)v11;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v40->nonce, v11, v41, v42, v43, v44, v45, v46);
-  v47 = &StringLiteral_23468/*"ok"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v40->nonce, v11, v41, v42, v43, v44, v45, v46);
+  v47 = &StringLiteral_23515/*"ok"*/;
 LABEL_15:
   RequestBase__completed(v4, (System_String_o *)*v47, 0);
 }

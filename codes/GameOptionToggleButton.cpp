@@ -21,10 +21,10 @@ void GameOptionToggleButton__ChangeSelectedState(GameOptionToggleButton_o *this,
   float *p_a; // x11
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5933468 & 1) == 0 )
+  if ( (byte_596B570 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933468 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B570 = 1;
   }
   Button = GameOptionToggleButton__get_Button(this, (const MethodInfo *)value);
   if ( !Button )
@@ -63,7 +63,7 @@ void GameOptionToggleButton__ChangeSelectedState(GameOptionToggleButton_o *this,
       return;
     }
 LABEL_15:
-    sub_21FFECC(Button, v6);
+    sub_2213CDC(Button, v6);
   }
 }
 
@@ -82,16 +82,16 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
   __int64 v11; // x2
   Il2CppObject *v12; // x20
 
-  if ( (byte_5933469 & 1) == 0 )
+  if ( (byte_596B571 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933469 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B571 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -103,7 +103,7 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
   }
   v12 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
   v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v12, 0, 0);
@@ -115,7 +115,7 @@ void GameOptionToggleButton__SetButtonEnableWithCollider(
       return;
     }
 LABEL_14:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
 }
 
@@ -132,11 +132,11 @@ UIButton_o *GameOptionToggleButton__get_Button(GameOptionToggleButton_o *this, c
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5933467 & 1) == 0 )
+  if ( (byte_596B56F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933467 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B56F = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -145,9 +145,9 @@ UIButton_o *GameOptionToggleButton__get_Button(GameOptionToggleButton_o *this, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIButton___);
     this->fields.button = (struct UIButton_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.button,
       (int32_t)Component_object,
       v6,
@@ -165,7 +165,7 @@ UILabel_o *GameOptionToggleButton__get_Label(GameOptionToggleButton_o *this, con
 {
   __int64 v2; // x2
   UnityEngine_Object_o *defaultLabel; // x21
-  Il2CppObject *ComponentInChildren_object__58644924; // x0
+  Il2CppObject *ComponentInChildren_object__58855044; // x0
   System_String_o *v6; // x2
   System_String_o *v7; // x3
   int32_t v8; // w4
@@ -173,24 +173,24 @@ UILabel_o *GameOptionToggleButton__get_Label(GameOptionToggleButton_o *this, con
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5933466 & 1) == 0 )
+  if ( (byte_596B56E & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933466 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B56E = 1;
   }
   defaultLabel = (UnityEngine_Object_o *)this->fields.defaultLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(defaultLabel, 0, 0) )
   {
-    ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
+    ComponentInChildren_object__58855044 = UnityEngine_Component__GetComponentInChildren_object__58855044(
                                              (UnityEngine_Component_o *)this,
-                                             (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    this->fields.defaultLabel = (struct UILabel_o *)ComponentInChildren_object__58644924;
-    sub_21FFBF4(
+                                             (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    this->fields.defaultLabel = (struct UILabel_o *)ComponentInChildren_object__58855044;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.defaultLabel,
-      (int32_t)ComponentInChildren_object__58644924,
+      (int32_t)ComponentInChildren_object__58855044,
       v6,
       v7,
       v8,

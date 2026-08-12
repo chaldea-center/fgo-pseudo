@@ -1,27 +1,27 @@
 void ShopDailyEntity___ctor(ShopDailyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59391F7 & 1) == 0 )
+  if ( (byte_59713B6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59391F7 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59713B6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ShopDailyEntity__CreatePK(int32_t dayKey, int32_t shopId, const MethodInfo *method)
 {
-  if ( (byte_59391F6 & 1) == 0 )
+  if ( (byte_59713B5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_59391F6 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_59713B5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            dayKey,
            shopId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -38,10 +38,10 @@ bool ShopDailyEntity__IsValid(ShopDailyEntity_o *this, int64_t nowTime, const Me
   int64_t Time; // x20
 
   Time = nowTime;
-  if ( (byte_59391F5 & 1) == 0 )
+  if ( (byte_59713B4 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59391F5 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59713B4 = 1;
   }
   if ( !Time )
   {

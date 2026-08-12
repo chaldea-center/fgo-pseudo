@@ -2,10 +2,10 @@ void AssistEffectListViewItemObject___ctor(AssistEffectListViewItemObject_o *thi
 {
   __int64 v2; // x2
 
-  if ( (byte_5931CAB & 1) == 0 )
+  if ( (byte_5969E4B & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5931CAB = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_5969E4B = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -19,20 +19,20 @@ void AssistEffectListViewItemObject__Awake(AssistEffectListViewItemObject_o *thi
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_5931CA9 & 1) == 0 )
+  if ( (byte_5969E49 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_AssistEffectListViewItemDraw___);
-    byte_5931CA9 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_AssistEffectListViewItemDraw___);
+    byte_5969E49 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_AssistEffectListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_AssistEffectListViewItemDraw___);
   this->fields.itemDraw = (struct AssistEffectListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(&this->fields.itemDraw, Component_object);
+  sub_2213A04(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -48,23 +48,23 @@ void AssistEffectListViewItemObject__SetItem(
   AssistEffectListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_5931CAA & 1) == 0 )
+  if ( (byte_5969E4A & 1) == 0 )
   {
-    sub_21FFC50(&AssistEffectListViewItem_TypeInfo);
-    byte_5931CAA = 1;
+    sub_2213A60(&AssistEffectListViewItem_TypeInfo);
+    byte_5969E4A = 1;
   }
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_21FFECC(itemDraw, v7);
+    sub_2213CDC(itemDraw, v7);
   if ( item )
   {
     naturalAligment = AssistEffectListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (AssistEffectListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != AssistEffectListViewItem_TypeInfo )
     {
-      itemDraw = (AssistEffectListViewItemDraw_o *)sub_220024C(item, AssistEffectListViewItem_TypeInfo, v8, v9);
+      itemDraw = (AssistEffectListViewItemDraw_o *)sub_221405C(item, AssistEffectListViewItem_TypeInfo, v8, v9);
       goto LABEL_9;
     }
   }

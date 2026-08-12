@@ -8,15 +8,15 @@ void EventInfoJobLevelControl___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5939989 & 1) == 0 )
+  if ( (byte_5971CFC & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobLevelControl_TypeInfo);
-    sub_21FFC50(&StringLiteral_22099/*"job_bg_{0:D2}"*/);
-    byte_5939989 = 1;
+    sub_2213A60(&EventInfoJobLevelControl_TypeInfo);
+    sub_2213A60(&StringLiteral_22142/*"job_bg_{0:D2}"*/);
+    byte_5971CFC = 1;
   }
-  v7 = StringLiteral_22099/*"job_bg_{0:D2}"*/;
-  EventInfoJobLevelControl_TypeInfo->static_fields->BgImgKeyFormat = (struct System_String_o *)StringLiteral_22099/*"job_bg_{0:D2}"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_22142/*"job_bg_{0:D2}"*/;
+  EventInfoJobLevelControl_TypeInfo->static_fields->BgImgKeyFormat = (struct System_String_o *)StringLiteral_22142/*"job_bg_{0:D2}"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoJobLevelControl_TypeInfo->static_fields,
     v7,
     v1,
@@ -66,24 +66,24 @@ void EventInfoJobLevelControl___ctor(EventInfoJobLevelControl_o *this, const Met
   bool v36; // w6
   bool v37; // w7
 
-  if ( (byte_5939988 & 1) == 0 )
+  if ( (byte_5971CFB & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoJobInfoComponent__TypeInfo);
-    byte_5939988 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoJobInfoComponent__TypeInfo);
+    byte_5971CFB = 1;
   }
-  v3 = (unsigned __int8)byte_5931940;
+  v3 = (unsigned __int8)byte_5969AE0;
   *(_QWORD *)&this->fields.pointLabelMaxWidth = 0x900000062LL;
   if ( !v3 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   v4 = System_Collections_Generic_List_EventInfoJobInfoComponent__TypeInfo;
   v5 = UnityEngine_Vector3_TypeInfo;
@@ -95,12 +95,12 @@ void EventInfoJobLevelControl___ctor(EventInfoJobLevelControl_o *this, const Met
   v9 = v8->zeroVector.fields.z;
   *(_QWORD *)&this->fields.pointLabelOffset.fields.x = *(_QWORD *)&v8->zeroVector.fields.x;
   this->fields.pointLabelOffset.fields.z = v9;
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v4);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v4);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoJobInfoComponent___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoJobInfoComponent___ctor__);
   this->fields.jobInfoComponentList = (struct System_Collections_Generic_List_EventInfoJobInfoComponent__o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.jobInfoComponentList,
     (int32_t)v10,
     v11,
@@ -109,12 +109,12 @@ void EventInfoJobLevelControl___ctor(EventInfoJobLevelControl_o *this, const Met
     v14,
     v15,
     v16);
-  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TypeInfo);
+  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v17,
-    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent___ctor__);
+    (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent___ctor__);
   this->fields.jobInfoComponentDictionary = (struct System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__o *)v17;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.jobInfoComponentDictionary,
     (int32_t)v17,
     v18,
@@ -123,12 +123,12 @@ void EventInfoJobLevelControl___ctor(EventInfoJobLevelControl_o *this, const Met
     v21,
     v22,
     v23);
-  v24 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TypeInfo);
+  v24 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v24,
-    (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData___ctor__);
+    (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData___ctor__);
   this->fields.jobLevelDataDictionary = (struct System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__o *)v24;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.jobLevelDataDictionary,
     (int32_t)v24,
     v25,
@@ -137,12 +137,12 @@ void EventInfoJobLevelControl___ctor(EventInfoJobLevelControl_o *this, const Met
     v28,
     v29,
     v30);
-  v31 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+  v31 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v31,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
   this->fields.jobLevelDataList = (struct System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *)v31;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.jobLevelDataList,
     (int32_t)v31,
     v32,
@@ -184,14 +184,14 @@ void EventInfoJobLevelControl__Awake(EventInfoJobLevelControl_o *this, const Met
   bool v27; // w6
   bool v28; // w7
 
-  if ( (byte_5939976 & 1) == 0 )
+  if ( (byte_5971CE9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobPointBonusMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventPointMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939976 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobPointBonusMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CE9 = 1;
   }
   EventInfoJobLevelControl__SetupJobInfoGrid(this, method);
   EventInfoJobLevelControl__CacheLabelBasePositions(this, v3);
@@ -204,15 +204,15 @@ void EventInfoJobLevelControl__Awake(EventInfoJobLevelControl_o *this, const Met
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobMaster___);
   this->fields.eventJobMaster = (struct EventJobMaster_o *)Master_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventJobMaster,
     (int32_t)Master_object,
     v9,
@@ -221,9 +221,9 @@ void EventInfoJobLevelControl__Awake(EventInfoJobLevelControl_o *this, const Met
     v12,
     v13,
     v14);
-  v15 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobPointBonusMaster___);
+  v15 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobPointBonusMaster___);
   this->fields.eventJobPointBonusMaster = (struct EventJobPointBonusMaster_o *)v15;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventJobPointBonusMaster,
     (int32_t)v15,
     v16,
@@ -232,9 +232,9 @@ void EventInfoJobLevelControl__Awake(EventInfoJobLevelControl_o *this, const Met
     v19,
     v20,
     v21);
-  v22 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  v22 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = (struct UserEventPointMaster_o *)v22;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userEventPointMaster,
     (int32_t)v22,
     v23,
@@ -255,10 +255,10 @@ void EventInfoJobLevelControl__CacheLabelBasePositions(EventInfoJobLevelControl_
   UnityEngine_Object_o *pointLabel; // x20
   bool v8; // w0
 
-  if ( (byte_5939985 & 1) == 0 )
+  if ( (byte_5971CF8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939985 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF8 = 1;
   }
   efficacySumLabel = (UnityEngine_Object_o *)this->fields.efficacySumLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -297,7 +297,7 @@ void EventInfoJobLevelControl__CacheLabelBasePositions(EventInfoJobLevelControl_
       }
     }
 LABEL_16:
-    sub_21FFECC(transform, v5);
+    sub_2213CDC(transform, v5);
   }
 }
 
@@ -322,15 +322,15 @@ void EventInfoJobLevelControl__ClearJobInfoList(EventInfoJobLevelControl_o *this
   int v11; // w9
 
   v2 = (EventInfoJobLevelControl_o **)this;
-  if ( (byte_5939983 & 1) == 0 )
+  if ( (byte_5971CF6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Item__);
-    this = (EventInfoJobLevelControl_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939983 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Item__);
+    this = (EventInfoJobLevelControl_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF6 = 1;
   }
   v3 = v2[20];
   if ( !v3 )
@@ -346,7 +346,7 @@ void EventInfoJobLevelControl__ClearJobInfoList(EventInfoJobLevelControl_o *this
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)this,
                i,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Item__);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       this = (EventInfoJobLevelControl_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0);
@@ -357,7 +357,7 @@ void EventInfoJobLevelControl__ClearJobInfoList(EventInfoJobLevelControl_o *this
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-        UnityEngine_Object__Destroy_83246496(gameObject, 0);
+        UnityEngine_Object__Destroy_83459800(gameObject, 0);
       }
     }
     v3 = v2[20];
@@ -374,15 +374,15 @@ void EventInfoJobLevelControl__ClearJobInfoList(EventInfoJobLevelControl_o *this
   if ( !this
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           (System_Collections_Generic_Dictionary_int__object__o *)this,
-          (const MethodInfo_3F68E90 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Clear__),
+          (const MethodInfo_3F9C638 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Clear__),
         (this = v2[22]) == 0) )
   {
 LABEL_21:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)this,
-    (const MethodInfo_3F68E90 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
+    (const MethodInfo_3F9C638 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
 }
 
 
@@ -400,9 +400,9 @@ int32_t EventInfoJobLevelControl__CompareJobLevelData(
   if ( !right )
     return -1;
   v5 = (int)left;
-  result = System_Int32__CompareTo_76925088((_DWORD)left + 40, right->fields.Position, 0);
+  result = System_Int32__CompareTo_77138392((_DWORD)left + 40, right->fields.Position, 0);
   if ( !result )
-    return System_Int32__CompareTo_76925088(v5 + 20, right->fields.JobId, 0);
+    return System_Int32__CompareTo_77138392(v5 + 20, right->fields.JobId, 0);
   return result;
 }
 
@@ -425,11 +425,11 @@ EventInfoJobInfoComponent_o *EventInfoJobLevelControl__CreateJobInfoComponent(
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v15; // x2
 
-  if ( (byte_5939980 & 1) == 0 )
+  if ( (byte_5971CF3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_EventInfoJobInfoComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939980 = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_EventInfoJobInfoComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF3 = 1;
   }
   jobInfoTemplate = (UnityEngine_Object_o *)this->fields.jobInfoTemplate;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -448,10 +448,10 @@ EventInfoJobInfoComponent_o *EventInfoJobLevelControl__CreateJobInfoComponent(
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
-    v11 = UnityEngine_Object__Instantiate_object__59506996(
+    v11 = UnityEngine_Object__Instantiate_object__59717116(
             v7,
             transform,
-            (const MethodInfo_38C0134 *)Method_UnityEngine_Object_Instantiate_EventInfoJobInfoComponent___);
+            (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_EventInfoJobInfoComponent___);
     v13 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0, 0);
     result = 0;
     if ( !v13 )
@@ -464,7 +464,7 @@ EventInfoJobInfoComponent_o *EventInfoJobLevelControl__CreateJobInfoComponent(
                                                        (UnityEngine_Component_o *)v11,
                                                        0)) == 0) )
       {
-        sub_21FFECC(result, v12);
+        sub_2213CDC(result, v12);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)result, 1, 0);
       return (EventInfoJobInfoComponent_o *)v11;
@@ -523,39 +523,39 @@ System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *EventI
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v47; // [xsp+10h] [xbp-90h] BYREF
   Il2CppObject *value; // [xsp+38h] [xbp-68h] BYREF
 
-  if ( (byte_5939986 & 1) == 0 )
+  if ( (byte_5971CF9 & 1) == 0 )
   {
-    sub_21FFC50(&System_Comparison_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__set_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__get_Current__);
-    sub_21FFC50(&Method_EventInfoJobLevelControl_CompareJobLevelData__);
-    sub_21FFC50(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_int__EventInfoJobLevelControl_JobLevelData__get_Value__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    byte_5939986 = 1;
+    sub_2213A60(&System_Comparison_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__set_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__get_Current__);
+    sub_2213A60(&Method_EventInfoJobLevelControl_CompareJobLevelData__);
+    sub_2213A60(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_int__EventInfoJobLevelControl_JobLevelData__get_Value__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    byte_5971CF9 = 1;
   }
   value = 0;
   memset(&v47, 0, sizeof(v47));
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
   jobLevelDataDictionary = this->fields.jobLevelDataDictionary;
   if ( !jobLevelDataDictionary )
     goto LABEL_53;
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)jobLevelDataDictionary,
-    (const MethodInfo_3F68E90 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
+    (const MethodInfo_3F9C638 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Clear__);
   if ( dataList )
   {
     klass = dataList->klass;
@@ -575,7 +575,7 @@ System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *EventI
     else
     {
 LABEL_9:
-      v11 = sub_2237E2C(
+      v11 = sub_224BC3C(
               dataList,
               System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
               0);
@@ -605,7 +605,7 @@ LABEL_9:
         else
         {
 LABEL_17:
-          v18 = sub_2237E2C(
+          v18 = sub_224BC3C(
                   dataList,
                   System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo,
                   0);
@@ -635,14 +635,14 @@ LABEL_17:
                 System_Collections_Generic_List_object___AddWithResize(
                   v5,
                   (Il2CppObject *)jobLevelDataDictionary,
-                  *(const MethodInfo_444FB2C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                  *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
               }
               else
               {
                 v32 = &items->obj.klass + size;
                 v5->fields._size = size + 1;
                 v32[4] = (Il2CppClass *)v26;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v32 + 4), (int32_t)v26, v19, v20, v21, v22, v23, v24);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)(v32 + 4), (int32_t)v26, v19, v20, v21, v22, v23, v24);
               }
             }
             else
@@ -654,7 +654,7 @@ LABEL_17:
                      (System_Collections_Generic_Dictionary_int__object__o *)jobLevelDataDictionary,
                      freeCount,
                      &value,
-                     (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TryGetValue__) )
+                     (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__TryGetValue__) )
               {
                 if ( !value )
                   goto LABEL_38;
@@ -671,7 +671,7 @@ LABEL_38:
                       (System_Collections_Generic_Dictionary_int__object__o *)jobLevelDataDictionary,
                       v26->fields._freeCount,
                       (Il2CppObject *)v26,
-                      (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__set_Item__);
+                      (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__set_Item__);
                   }
                 }
                 else if ( SHIDWORD(v26->fields._buckets) < SHIDWORD(value[1].klass) )
@@ -688,7 +688,7 @@ LABEL_38:
                   (System_Collections_Generic_Dictionary_int__object__o *)jobLevelDataDictionary,
                   v26->fields._freeCount,
                   (Il2CppObject *)v26,
-                  (const MethodInfo_3F68D08 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Add__);
+                  (const MethodInfo_3F9C4B0 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__Add__);
               }
             }
           }
@@ -701,12 +701,12 @@ LABEL_38:
       System_Collections_Generic_Dictionary_int__object___GetEnumerator(
         &v47,
         (System_Collections_Generic_Dictionary_int__object__o *)jobLevelDataDictionary,
-        (const MethodInfo_3F69144 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__GetEnumerator__);
+        (const MethodInfo_3F9C8EC *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobLevelControl_JobLevelData__GetEnumerator__);
       while ( 1 )
       {
         v33 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
                 &v47,
-                (const MethodInfo_41249BC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__MoveNext__);
+                (const MethodInfo_4158548 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__MoveNext__);
         if ( !v33 )
           break;
         if ( !v5
@@ -716,7 +716,7 @@ LABEL_38:
               ++v5->fields._version,
               !v41) )
         {
-          sub_21FFECC(v33, v34);
+          sub_2213CDC(v33, v34);
         }
         v43 = v5->fields._size;
         if ( (unsigned int)v43 >= LODWORD(v41->max_length) )
@@ -724,20 +724,20 @@ LABEL_38:
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             v34,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
         }
         else
         {
           v44 = &v41->obj.klass + v43;
           v5->fields._size = v43 + 1;
           v44[4] = (Il2CppClass *)v34;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v44 + 4), (int32_t)v34, v35, v36, v37, v38, v39, v40);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v44 + 4), (int32_t)v34, v35, v36, v37, v38, v39, v40);
         }
       }
       System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
         &v47,
-        (const MethodInfo_4124AE0 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__Dispose__);
-      v45 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+        (const MethodInfo_415866C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__EventInfoJobLevelControl_JobLevelData__Dispose__);
+      v45 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventInfoJobLevelControl_JobLevelData__TypeInfo);
       System_Comparison_object____ctor(
         v45,
         (Il2CppObject *)this,
@@ -745,15 +745,15 @@ LABEL_38:
         0);
       if ( v5 )
       {
-        System_Collections_Generic_List_object___Sort_71636404(
+        System_Collections_Generic_List_object___Sort_71849708(
           v5,
           v45,
-          (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Sort__);
+          (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Sort__);
         return (System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *)v5;
       }
     }
 LABEL_53:
-    sub_21FFECC(jobLevelDataDictionary, freeCount);
+    sub_2213CDC(jobLevelDataDictionary, freeCount);
   }
   return (System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *)v5;
 }
@@ -780,14 +780,14 @@ EventInfoJobLevelControl_JobLevelData_o *EventInfoJobLevelControl__CreateJobLeve
   int32_t calcType[2]; // [xsp+0h] [xbp-40h] BYREF
   EventJobPointBonusEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5939979 & 1) == 0 )
+  if ( (byte_5971CEC & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobLevelControl_JobLevelData_TypeInfo);
-    byte_5939979 = 1;
+    sub_2213A60(&EventInfoJobLevelControl_JobLevelData_TypeInfo);
+    byte_5971CEC = 1;
   }
   *(_QWORD *)calcType = 0;
   entity = 0;
-  v7 = sub_21FFEBC(EventInfoJobLevelControl_JobLevelData_TypeInfo);
+  v7 = sub_2213CCC(EventInfoJobLevelControl_JobLevelData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !eventJobEntity || !v7 )
     goto LABEL_18;
@@ -835,7 +835,7 @@ LABEL_16:
         return (EventInfoJobLevelControl_JobLevelData_o *)v7;
       }
 LABEL_18:
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     }
     v18 = this->fields.eventJobPointBonusMaster;
     if ( v18
@@ -884,36 +884,36 @@ System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *EventI
   Il2CppClass **v24; // x0
   UserEventJobEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5939978 & 1) == 0 )
+  if ( (byte_5971CEB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventJobMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobEntity__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    byte_5939978 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventJobMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobEntity__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    byte_5971CEB = 1;
   }
   entity = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData___ctor__);
   eventUiEntity = this->fields.eventUiEntity;
   if ( eventUiEntity && this->fields.eventJobMaster )
   {
     eventId = eventUiEntity->fields.eventId;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v4);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventJobMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventJobMaster___);
     if ( !Master_object
       || (UserEventJobMaster__TryGetEntity((UserEventJobMaster_o *)Master_object, &entity, eventId, 0),
           (Master_object = this->fields.eventJobMaster) == 0)
       || (Master_object = EventJobMaster__GetVisibleEntityListByEventId((EventJobMaster_o *)Master_object, eventId, 0)) == 0 )
     {
 LABEL_20:
-      sub_21FFECC(Master_object, v8);
+      sub_2213CDC(Master_object, v8);
     }
     v9 = *((_DWORD *)Master_object + 6);
     v10 = (System_Collections_Generic_List_object__o *)Master_object;
@@ -924,7 +924,7 @@ LABEL_20:
         Item = System_Collections_Generic_List_object___get_Item(
                  v10,
                  i,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventJobEntity__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventJobEntity__get_Item__);
         if ( Item )
         {
           Master_object = EventInfoJobLevelControl__CreateJobLevelData(this, (EventJobEntity_o *)Item, entity, v13);
@@ -942,14 +942,14 @@ LABEL_20:
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               (Il2CppObject *)Master_object,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
           }
           else
           {
             v24 = &items->obj.klass + size;
             v3->fields._size = size + 1;
             v24[4] = v23;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)v23, v14, v15, v16, v17, v18, v19);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)v23, v14, v15, v16, v17, v18, v19);
           }
         }
       }
@@ -965,7 +965,7 @@ int32_t EventInfoJobLevelControl__DetermineDisplayState(
         const MethodInfo *method)
 {
   if ( !eventJobEntity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   if ( EventJobEntity__IsOpen(eventJobEntity, 0) )
     return 2;
   if ( EventJobEntity__IsDisplayOpen(eventJobEntity, 0) )
@@ -988,14 +988,14 @@ void EventInfoJobLevelControl__Initialization(
   EventUiEntity_o *eventUiEntity; // x20
   System_Action_o *v11; // x21
 
-  if ( (byte_5939977 & 1) == 0 )
+  if ( (byte_5971CEA & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoJobLevelControl__Initialization_b__27_0__);
-    byte_5939977 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoJobLevelControl__Initialization_b__27_0__);
+    byte_5971CEA = 1;
   }
   this->fields.eventUiEntity = entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (System_String_o *)method,
@@ -1007,7 +1007,7 @@ void EventInfoJobLevelControl__Initialization(
   eventUiEntity = this->fields.eventUiEntity;
   if ( eventUiEntity )
   {
-    v11 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v11, (Il2CppObject *)this, Method_EventInfoJobLevelControl__Initialization_b__27_0__, 0);
     EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v11, 0);
   }
@@ -1018,10 +1018,10 @@ bool EventInfoJobLevelControl__IsJobCountAboveThreshold(EventInfoJobLevelControl
 {
   struct System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__o *jobLevelDataList; // x8
 
-  if ( (byte_5939987 & 1) == 0 )
+  if ( (byte_5971CFA & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Count__);
-    byte_5939987 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Count__);
+    byte_5971CFA = 1;
   }
   jobLevelDataList = this->fields.jobLevelDataList;
   return jobLevelDataList && jobLevelDataList->fields._size >= this->fields.bgSpriteChangeJobThreshold;
@@ -1101,15 +1101,15 @@ void EventInfoJobLevelControl__RefreshJobInfoList(
   __int64 size; // x10
   Il2CppClass **v37; // x8
 
-  if ( (byte_593997D & 1) == 0 )
+  if ( (byte_5971CF0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__ContainsKey__);
-    sub_21FFC50(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__Add__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593997D = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__ContainsKey__);
+    sub_2213A60(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__Add__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF0 = 1;
   }
   EventInfoJobLevelControl__ClearJobInfoList(this, (const MethodInfo *)dataList);
   if ( dataList )
@@ -1131,7 +1131,7 @@ void EventInfoJobLevelControl__RefreshJobInfoList(
     else
     {
 LABEL_8:
-      v8 = sub_2237E2C(
+      v8 = sub_224BC3C(
              dataList,
              System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
              0);
@@ -1161,7 +1161,7 @@ LABEL_8:
         else
         {
 LABEL_17:
-          v16 = sub_2237E2C(
+          v16 = sub_224BC3C(
                   dataList,
                   System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo,
                   0);
@@ -1182,7 +1182,7 @@ LABEL_17:
             if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
                     (System_Collections_Generic_Dictionary_int__object__o *)jobInfoComponentDictionary,
                     v19->fields.JobId,
-                    (const MethodInfo_3F68EFC *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__ContainsKey__) )
+                    (const MethodInfo_3F9C6A4 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__ContainsKey__) )
             {
               JobInfoComponent = (UnityEngine_Object_o *)EventInfoJobLevelControl__CreateJobInfoComponent(this, v10);
               if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1219,14 +1219,14 @@ LABEL_17:
                   System_Collections_Generic_List_object___AddWithResize(
                     jobInfoComponentDictionary,
                     (Il2CppObject *)JobInfoComponent,
-                    *(const MethodInfo_444FB2C **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+                    *(const MethodInfo_4483C64 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v37 = &items->obj.klass + size;
                   jobInfoComponentDictionary->fields._size = size + 1;
                   v37[4] = (Il2CppClass *)JobInfoComponent;
-                  sub_21FFBF4(
+                  sub_2213A04(
                     (MissionNaviTransitionBoardItem_o *)(v37 + 4),
                     (int32_t)JobInfoComponent,
                     v28,
@@ -1239,12 +1239,12 @@ LABEL_17:
                 jobInfoComponentDictionary = (System_Collections_Generic_List_object__o *)this->fields.jobInfoComponentDictionary;
                 if ( !jobInfoComponentDictionary )
 LABEL_38:
-                  sub_21FFECC(jobInfoComponentDictionary, v10);
+                  sub_2213CDC(jobInfoComponentDictionary, v10);
                 System_Collections_Generic_Dictionary_int__object___Add(
                   (System_Collections_Generic_Dictionary_int__object__o *)jobInfoComponentDictionary,
                   v19->fields.JobId,
                   (Il2CppObject *)JobInfoComponent,
-                  (const MethodInfo_3F68D08 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Add__);
+                  (const MethodInfo_3F9C4B0 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__Add__);
               }
             }
           }
@@ -1273,10 +1273,10 @@ void EventInfoJobLevelControl__RepositionJobInfoGrid(EventInfoJobLevelControl_o 
   __int64 v4; // x1
   UIGrid_o *v5; // x0
 
-  if ( (byte_5939982 & 1) == 0 )
+  if ( (byte_5971CF5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939982 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF5 = 1;
   }
   jobInfoGrid = (UnityEngine_Object_o *)this->fields.jobInfoGrid;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1285,7 +1285,7 @@ void EventInfoJobLevelControl__RepositionJobInfoGrid(EventInfoJobLevelControl_o 
   {
     v5 = this->fields.jobInfoGrid;
     if ( !v5 )
-      sub_21FFECC(0, v4);
+      sub_2213CDC(0, v4);
     UIGrid__set_repositionNow(v5, 1, 0);
   }
 }
@@ -1306,16 +1306,16 @@ void EventInfoJobLevelControl__SetJobLevelDataList(
   const MethodInfo *v11; // x2
 
   v4 = this;
-  if ( (byte_593997A & 1) == 0 )
+  if ( (byte_5971CED & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
-    this = (EventInfoJobLevelControl_o *)sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Clear__);
-    byte_593997A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
+    this = (EventInfoJobLevelControl_o *)sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Clear__);
+    byte_5971CED = 1;
   }
   jobLevelDataList = v4->fields.jobLevelDataList;
   if ( !jobLevelDataList )
 LABEL_6:
-    sub_21FFECC(this, dataList);
+    sub_2213CDC(this, dataList);
   size = (const MethodInfo *)(unsigned int)jobLevelDataList->fields._size;
   v7 = jobLevelDataList->fields._version + 1;
   jobLevelDataList->fields._size = 0;
@@ -1335,7 +1335,7 @@ LABEL_6:
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)jobLevelDataList,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
   EventInfoJobLevelControl__RefreshJobInfoList(
     v4,
     (System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__o *)v4->fields.jobLevelDataList,
@@ -1378,10 +1378,10 @@ void EventInfoJobLevelControl__SetupJobInfoGrid(EventInfoJobLevelControl_o *this
   __int64 v5; // x1
   struct UIGrid_o *v6; // x8
 
-  if ( (byte_593997F & 1) == 0 )
+  if ( (byte_5971CF2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593997F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF2 = 1;
   }
   jobInfoGrid = (UnityEngine_Object_o *)this->fields.jobInfoGrid;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1391,7 +1391,7 @@ void EventInfoJobLevelControl__SetupJobInfoGrid(EventInfoJobLevelControl_o *this
   {
     v6 = this->fields.jobInfoGrid;
     if ( !v6 )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     v6->fields.arrangement = 0;
     v6->fields.maxPerLine = 2;
     v6->fields.hideInactive = 1;
@@ -1460,12 +1460,12 @@ void EventInfoJobLevelControl__UpdateBackground(
   bool v29; // w1
   int v30; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5939984 & 1) == 0 )
+  if ( (byte_5971CF7 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobLevelControl_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939984 = 1;
+    sub_2213A60(&EventInfoJobLevelControl_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF7 = 1;
   }
   if ( dataList )
   {
@@ -1486,7 +1486,7 @@ void EventInfoJobLevelControl__UpdateBackground(
     else
     {
 LABEL_8:
-      v8 = sub_2237E2C(
+      v8 = sub_224BC3C(
              dataList,
              System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
              0);
@@ -1523,7 +1523,7 @@ LABEL_8:
     else
     {
 LABEL_20:
-      v16 = sub_2237E2C(
+      v16 = sub_224BC3C(
               dataList,
               System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
               0);
@@ -1545,7 +1545,7 @@ LABEL_20:
     p_BgImgKeyFormat = &v20->static_fields->BgImgKeyFormat;
     v30 = v21;
     v23 = *p_BgImgKeyFormat;
-    v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v30);
+    v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v30);
     v25 = System_String__Format(v23, v24, 0);
     v27 = EventInfoUIBase__SetSpriteByLocalAtlas((EventInfoUIBase_o *)this, v19, v25, 0);
     gameObject = (UnityEngine_Component_o *)this->fields.bgSprite;
@@ -1565,7 +1565,7 @@ LABEL_35:
     }
     else if ( gameObject )
     {
-      UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_594C0B8 + 184), 0);
+      UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_5984390 + 184), 0);
       gameObject = (UnityEngine_Component_o *)this->fields.bgSprite;
       if ( gameObject )
       {
@@ -1577,7 +1577,7 @@ LABEL_35:
         }
       }
     }
-    sub_21FFECC(gameObject, v26);
+    sub_2213CDC(gameObject, v26);
   }
 }
 
@@ -1614,12 +1614,12 @@ void EventInfoJobLevelControl__UpdateEfficacySumLabel(
   int lookup; // w8
   struct UILabel_o *v30; // x19
 
-  if ( (byte_593997E & 1) == 0 )
+  if ( (byte_5971CF1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593997E = 1;
+    sub_2213A60(&System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF1 = 1;
   }
   efficacySumLabel = (UnityEngine_Object_o *)this->fields.efficacySumLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1648,7 +1648,7 @@ void EventInfoJobLevelControl__UpdateEfficacySumLabel(
         else
         {
 LABEL_12:
-          v10 = sub_2237E2C(
+          v10 = sub_224BC3C(
                   dataList,
                   System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
                   0);
@@ -1674,7 +1674,7 @@ LABEL_12:
         else
         {
 LABEL_20:
-          v20 = sub_2237E2C(
+          v20 = sub_224BC3C(
                   dataList,
                   System_Collections_Generic_ICollection_EventInfoJobLevelControl_JobLevelData__TypeInfo,
                   0);
@@ -1712,7 +1712,7 @@ LABEL_20:
             else
             {
 LABEL_28:
-              v28 = sub_2237E2C(
+              v28 = sub_224BC3C(
                       dataList,
                       System_Collections_Generic_IList_EventInfoJobLevelControl_JobLevelData__TypeInfo,
                       0);
@@ -1747,7 +1747,7 @@ LABEL_28:
         eventJobPointBonusMaster = this->fields.eventJobPointBonusMaster;
         if ( !eventJobPointBonusMaster )
 LABEL_44:
-          sub_21FFECC(eventJobPointBonusMaster, v22);
+          sub_2213CDC(eventJobPointBonusMaster, v22);
       }
       else
       {
@@ -1762,7 +1762,7 @@ LABEL_44:
     else
     {
       v11 = this->fields.efficacySumLabel;
-      v12 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v12 = **(System_String_o ***)(qword_5984390 + 184);
     }
     UILabelHelper__SetTextSafely(v11, v12, 0);
   }
@@ -1778,10 +1778,10 @@ void EventInfoJobLevelControl__UpdateJobInfoComponentPosition(
   UnityEngine_Transform_o *transform; // x0
   __int64 v7; // x1
 
-  if ( (byte_5939981 & 1) == 0 )
+  if ( (byte_5971CF4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939981 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CF4 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, jobInfoComponent);
@@ -1791,7 +1791,7 @@ void EventInfoJobLevelControl__UpdateJobInfoComponentPosition(
     if ( !jobInfoComponent
       || (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)jobInfoComponent, 0)) == 0 )
     {
-      sub_21FFECC(transform, v7);
+      sub_2213CDC(transform, v7);
     }
     UnityEngine_Transform__SetSiblingIndex(transform, displayIndex, 0);
   }
@@ -1828,15 +1828,15 @@ void EventInfoJobLevelControl__UpdateJobInfoList(
   const MethodInfo *v27; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_593997B & 1) == 0 )
+  if ( (byte_5971CEE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Item__);
-    byte_593997B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobInfoComponent__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Item__);
+    byte_5971CEE = 1;
   }
   value = 0;
   if ( !dataList )
@@ -1871,11 +1871,11 @@ LABEL_22:
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)jobLevelDataList,
     (System_Collections_Generic_IEnumerable_T__o *)v9,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__AddRange__);
   jobInfoComponentList = this->fields.jobInfoComponentList;
   if ( !jobInfoComponentList || !v9 )
 LABEL_25:
-    sub_21FFECC(JobInfoList, v6);
+    sub_2213CDC(JobInfoList, v6);
   v13 = jobInfoComponentList->fields._size;
   if ( v13 != LODWORD(v9->fields._entries) )
   {
@@ -1903,7 +1903,7 @@ LABEL_19:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v9,
              v14,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventInfoJobLevelControl_JobLevelData__get_Item__);
     if ( !Item )
       goto LABEL_18;
     v16 = (EventInfoJobLevelControl_JobLevelData_o *)Item;
@@ -1914,7 +1914,7 @@ LABEL_19:
             JobInfoList,
             v16->fields.JobId,
             &value,
-            (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TryGetValue__) )
+            (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__EventInfoJobInfoComponent__TryGetValue__) )
       break;
     JobInfoList = (System_Collections_Generic_Dictionary_int__object__o *)value;
     if ( !value )
@@ -1990,10 +1990,10 @@ void EventInfoJobLevelControl__UpdateLabelPositions(
     }
     else
     {
-      if ( !byte_5931940 )
+      if ( !byte_5969AE0 )
       {
-        efficacySumLabel = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931940 = 1;
+        efficacySumLabel = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE0 = 1;
       }
       p_efficacySumLabelOffset = UnityEngine_Vector3_TypeInfo->static_fields;
       p_y = &p_efficacySumLabelOffset->zeroVector.fields.y;
@@ -2024,10 +2024,10 @@ void EventInfoJobLevelControl__UpdateLabelPositions(
       }
       else
       {
-        if ( !byte_5931940 )
+        if ( !byte_5969AE0 )
         {
-          efficacySumLabel = (UnityEngine_Component_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-          byte_5931940 = 1;
+          efficacySumLabel = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          byte_5969AE0 = 1;
         }
         p_pointLabelOffset = UnityEngine_Vector3_TypeInfo->static_fields;
         v18 = &p_pointLabelOffset->zeroVector.fields.y;
@@ -2043,7 +2043,7 @@ void EventInfoJobLevelControl__UpdateLabelPositions(
       }
     }
 LABEL_23:
-    sub_21FFECC(efficacySumLabel, useExtraOffset);
+    sub_2213CDC(efficacySumLabel, useExtraOffset);
   }
 }
 
@@ -2064,15 +2064,15 @@ void EventInfoJobLevelControl__UpdatePointLabel(EventInfoJobLevelControl_o *this
   Il2CppObject *v14; // x0
   int64_t v15; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593997C & 1) == 0 )
+  if ( (byte_5971CEF & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_593997C = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_5971CEF = 1;
   }
   pointLabel = (UnityEngine_Object_o *)this->fields.pointLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2084,10 +2084,10 @@ void EventInfoJobLevelControl__UpdatePointLabel(EventInfoJobLevelControl_o *this
     {
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4);
-      if ( !byte_5931D52 )
+      if ( !byte_5969EF2 )
       {
-        sub_21FFC50(&NetworkManager_TypeInfo);
-        byte_5931D52 = 1;
+        sub_2213A60(&NetworkManager_TypeInfo);
+        byte_5969EF2 = 1;
       }
       v6 = (System_String_o *)NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -2112,7 +2112,7 @@ void EventInfoJobLevelControl__UpdatePointLabel(EventInfoJobLevelControl_o *this
     v9 = this->fields.pointLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v12 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -2122,8 +2122,8 @@ void EventInfoJobLevelControl__UpdatePointLabel(EventInfoJobLevelControl_o *this
     UserPointEventMax = v12->static_fields->UserPointEventMax;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v10);
-    v15 = System_Math__Min_76940304(EventPointTotal, UserPointEventMax, 0);
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v15);
+    v15 = System_Math__Min_77153608(EventPointTotal, UserPointEventMax, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v15);
     v6 = System_String__Format(v11, v14, 0);
     if ( v9 )
     {
@@ -2136,7 +2136,7 @@ void EventInfoJobLevelControl__UpdatePointLabel(EventInfoJobLevelControl_o *this
       }
     }
 LABEL_27:
-    sub_21FFECC(v6, v4);
+    sub_2213CDC(v6, v4);
   }
 }
 
@@ -2147,7 +2147,7 @@ void EventInfoJobLevelControl___Initialization_b__27_0(EventInfoJobLevelControl_
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
 }
 

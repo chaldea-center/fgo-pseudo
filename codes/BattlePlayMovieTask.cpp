@@ -19,10 +19,10 @@ void BattlePlayMovieTask__Init(
   bool v12; // w7
 
   if ( !aiEnt )
-    sub_21FFECC(this, aiActEnt);
+    sub_2213CDC(this, aiActEnt);
   MovieName = AiBaseEntity__GetMovieName(aiEnt, 0);
   this->fields.movieName = MovieName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.movieName,
     (int32_t)MovieName,
     v7,
@@ -44,14 +44,14 @@ BattleActionData_o *BattlePlayMovieTask__MakeActionData(
   bool isBgmPause; // w19
   BattlePlayMovieActionData_o *v6; // x21
 
-  if ( (byte_593BC1E & 1) == 0 )
+  if ( (byte_5973E2A & 1) == 0 )
   {
-    sub_21FFC50(&BattlePlayMovieActionData_TypeInfo);
-    byte_593BC1E = 1;
+    sub_2213A60(&BattlePlayMovieActionData_TypeInfo);
+    byte_5973E2A = 1;
   }
   movieName = this->fields.movieName;
   isBgmPause = this->fields.isBgmPause;
-  v6 = (BattlePlayMovieActionData_o *)sub_21FFEBC(BattlePlayMovieActionData_TypeInfo);
+  v6 = (BattlePlayMovieActionData_o *)sub_2213CCC(BattlePlayMovieActionData_TypeInfo);
   BattlePlayMovieActionData___ctor(v6, movieName, isBgmPause, 0);
   return (BattleActionData_o *)v6;
 }

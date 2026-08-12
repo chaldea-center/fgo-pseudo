@@ -1,13 +1,13 @@
 void MissionNaviTransitionEntity___ctor(MissionNaviTransitionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938BF4 & 1) == 0 )
+  if ( (byte_5970DA7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5938BF4 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5970DA7 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -38,21 +38,21 @@ bool MissionNaviTransitionEntity__TryGetChallengeIconName(
   System_String_o *iconName; // t1
   System_String_o *v20; // x1
 
-  if ( (byte_5938BF3 & 1) == 0 )
+  if ( (byte_5970DA6 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_22443/*"mainquest"*/);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    sub_21FFC50(&StringLiteral_8880/*"MAIN_SCENARIO"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5938BF3 = 1;
+    sub_2213A60(&StringLiteral_22487/*"mainquest"*/);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    sub_2213A60(&StringLiteral_8893/*"MAIN_SCENARIO"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5970DA6 = 1;
   }
   v10 = (int)StringLiteral_1/*""*/;
   *challengeIconName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)challengeIconName, v10, (System_String_o *)method, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)challengeIconName, v10, (System_String_o *)method, v3, v4, v5, v6, v7);
   if ( this->fields.missionTransitionType == 2
-    && System_String__op_Equality(this->fields.transitionParam, (System_String_o *)StringLiteral_8880/*"MAIN_SCENARIO"*/, 0) )
+    && System_String__op_Equality(this->fields.transitionParam, (System_String_o *)StringLiteral_8893/*"MAIN_SCENARIO"*/, 0) )
   {
-    p_iconName = (System_String_o **)&StringLiteral_22443/*"mainquest"*/;
+    p_iconName = (System_String_o **)&StringLiteral_22487/*"mainquest"*/;
   }
   else
   {
@@ -66,7 +66,7 @@ bool MissionNaviTransitionEntity__TryGetChallengeIconName(
   }
   v20 = *p_iconName;
   *challengeIconName = *p_iconName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)challengeIconName, (int32_t)v20, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)challengeIconName, (int32_t)v20, v11, v12, v13, v14, v15, v16);
   return 1;
 }
 
@@ -90,15 +90,15 @@ bool MissionNaviTransitionEntity__TryGetChallengeNaviName(
   bool v16; // w7
   System_String_o *title; // x1
 
-  if ( (byte_5938BF2 & 1) == 0 )
+  if ( (byte_5970DA5 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5938BF2 = 1;
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5970DA5 = 1;
   }
   v10 = (int)StringLiteral_1/*""*/;
   *challengeNaviName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)challengeNaviName, v10, (System_String_o *)method, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)challengeNaviName, v10, (System_String_o *)method, v3, v4, v5, v6, v7);
   if ( System_String__IsNullOrEmpty(this->fields.title, 0)
     || System_String__op_Equality(this->fields.title, (System_String_o *)StringLiteral_113/*" "*/, 0) )
   {
@@ -106,6 +106,6 @@ bool MissionNaviTransitionEntity__TryGetChallengeNaviName(
   }
   title = this->fields.title;
   *challengeNaviName = title;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)challengeNaviName, (int32_t)title, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)challengeNaviName, (int32_t)title, v11, v12, v13, v14, v15, v16);
   return 1;
 }

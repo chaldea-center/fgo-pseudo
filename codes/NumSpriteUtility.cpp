@@ -2,10 +2,10 @@ int32_t NumSpriteUtility__GetDigit(int64_t num, const MethodInfo *method)
 {
   __int64 v2; // x2
 
-  if ( (byte_59348A6 & 1) == 0 )
+  if ( (byte_596C9D5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_59348A6 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596C9D5 = 1;
   }
   if ( !num )
     return 0;
@@ -20,10 +20,10 @@ int64_t NumSpriteUtility__GetDigitNumber(int64_t number, int64_t digit, const Me
   double v5; // d0
   signed __int64 v6; // x8
 
-  if ( (byte_59348A7 & 1) == 0 )
+  if ( (byte_596C9D6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_59348A7 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596C9D6 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, digit, method);
@@ -63,11 +63,11 @@ void NumSpriteUtility__SetNumSprite(
   int64_t DigitNumber; // [xsp+10h] [xbp-70h] BYREF
   int v29; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_59348A5 & 1) == 0 )
+  if ( (byte_596C9D4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Count_UISprite___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59348A5 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Count_UISprite___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C9D4 = 1;
   }
   v29 = 0;
   DigitNumber = 0;
@@ -76,7 +76,7 @@ void NumSpriteUtility__SetNumSprite(
     Digit = NumSpriteUtility__GetDigit(number, (const MethodInfo *)sprites);
     v11 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                               (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_UISprite___);
+                               (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_UISprite___);
     if ( (int)v11 >= 1 )
     {
       v14 = Digit;
@@ -87,7 +87,7 @@ void NumSpriteUtility__SetNumSprite(
         v17 = v16 - 4;
         if ( v16 - 4 >= (unsigned __int64)LODWORD(sprites->max_length) )
 LABEL_26:
-          sub_21FFED4(v11);
+          sub_2213CE4(v11);
         v18 = (UnityEngine_Object_o *)*((_QWORD *)&sprites->obj.klass + v16);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12, v13);
@@ -102,7 +102,7 @@ LABEL_26:
             v24 = *((_QWORD *)&sprites->obj.klass + v16);
             DigitNumber = NumSpriteUtility__GetDigitNumber(number, v15, v20);
             v25 = System_Int64__ToString((int64_t)&DigitNumber, 0);
-            v11 = System_String__Concat_75438412(baseName, v25, 0);
+            v11 = System_String__Concat_75651716(baseName, v25, 0);
             if ( !setSprite )
               goto LABEL_27;
             v11 = (System_String_o *)((__int64 (__fastcall *)(intptr_t, __int64, System_String_o *, intptr_t))setSprite->fields.invoke_impl)(
@@ -126,7 +126,7 @@ LABEL_26:
             v22 = *((_QWORD *)&sprites->obj.klass + v16);
             v29 = 0;
             v23 = System_Int32__ToString((int32_t)&v29, 0);
-            v11 = System_String__Concat_75438412(baseName, v23, 0);
+            v11 = System_String__Concat_75651716(baseName, v23, 0);
             if ( !setSprite )
               goto LABEL_27;
             ((void (__fastcall *)(intptr_t, __int64, System_String_o *, intptr_t))setSprite->fields.invoke_impl)(
@@ -141,18 +141,18 @@ LABEL_26:
               goto LABEL_26;
             if ( !setSprite )
 LABEL_27:
-              sub_21FFECC(v11, v19);
+              sub_2213CDC(v11, v19);
             ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))setSprite->fields.invoke_impl)(
               setSprite->fields.method_code,
               *((_QWORD *)&sprites->obj.klass + v16),
-              **(_QWORD **)(qword_594C0B8 + 184),
+              **(_QWORD **)(qword_5984390 + 184),
               setSprite->fields.method);
           }
           ++v15;
         }
         v11 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                    (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                   (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                   (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_UISprite___);
         v26 = v16 - 3;
         ++v16;
       }

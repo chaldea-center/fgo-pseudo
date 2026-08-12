@@ -2,10 +2,10 @@ void DebugListViewObject___ctor(DebugListViewObject_o *this, const MethodInfo *m
 {
   __int64 v2; // x2
 
-  if ( (byte_5935A83 & 1) == 0 )
+  if ( (byte_596DBC5 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5935A83 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596DBC5 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -25,20 +25,20 @@ void DebugListViewObject__Awake(DebugListViewObject_o *this, const MethodInfo *m
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5935A7C & 1) == 0 )
+  if ( (byte_596DBBE & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_DebugListViewItemDraw___);
-    byte_5935A7C = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_DebugListViewItemDraw___);
+    byte_596DBBE = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewItemDraw___);
   this->fields.itemDraw = (struct DebugListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -57,21 +57,21 @@ UnityEngine_GameObject_o *DebugListViewObject__CreateDragObject(DebugListViewObj
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_5935A7F & 1) == 0 )
+  if ( (byte_596DBC1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
-    byte_5935A7F = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___);
+    byte_596DBC1 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___)) == 0) )
+                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_DebugListViewObject___)) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
-  DebugListViewObject__Init_44216648((DebugListViewObject_o *)DragObject, 2, v6);
+  DebugListViewObject__Init_44237636((DebugListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -96,7 +96,7 @@ void DebugListViewObject__EventMoveEnd(DebugListViewObject_o *this, const Method
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -107,10 +107,10 @@ DebugListViewItem_o *DebugListViewObject__GetItem(DebugListViewObject_o *this, c
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5935A7E & 1) == 0 )
+  if ( (byte_596DBC0 & 1) == 0 )
   {
-    sub_21FFC50(&DebugListViewItem_TypeInfo);
-    byte_5935A7E = 1;
+    sub_2213A60(&DebugListViewItem_TypeInfo);
+    byte_596DBC0 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -157,10 +157,10 @@ void DebugListViewObject__Init(
   int32_t v31; // w8
   MissionNaviTransitionBoardItem_c *v32; // x19
 
-  if ( (byte_5935A80 & 1) == 0 )
+  if ( (byte_596DBC2 & 1) == 0 )
   {
-    sub_21FFC50(&DebugListViewItem_TypeInfo);
-    byte_5935A80 = 1;
+    sub_2213A60(&DebugListViewItem_TypeInfo);
+    byte_596DBC2 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -189,12 +189,12 @@ void DebugListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v16);
+    sub_2213CDC(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callbackFunc,
     v18,
@@ -231,7 +231,7 @@ LABEL_17:
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v25, v26, v27, v28, v29, v30);
+    sub_2213A04(p_callbackFunc, 0, v25, v26, v27, v28, v29, v30);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))v32->_1.namespaze)(
       v32->_1.element_class,
       *(_QWORD *)&v32->_1.byval_arg.bits);
@@ -239,57 +239,72 @@ LABEL_17:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void DebugListViewObject__Init_44216648(DebugListViewObject_o *this, int32_t initMode, const MethodInfo *method)
+void DebugListViewObject__Init_44237636(DebugListViewObject_o *this, int32_t initMode, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v10; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  DebugListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
+  v10.fields.x = v5;
+  v10.fields.y = v6;
+  v10.fields.z = v7;
+  DebugListViewObject__Init(this, initMode, 0, v4, v10, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void DebugListViewObject__Init_44217844(
+void DebugListViewObject__Init_44238832(
         DebugListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v11; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  DebugListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
+  v11.fields.x = v5;
+  v11.fields.y = v6;
+  v11.fields.z = v7;
+  DebugListViewObject__Init(this, initMode, callbackFunc, delay, v11, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void DebugListViewObject__Init_44217928(
+void DebugListViewObject__Init_44238916(
         DebugListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
   float v4; // s0
-  int v5; // s1 OVERLAPPED
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
+  UnityEngine_Vector3_o v11; // 0:kr00_12.12
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  DebugListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
+  v11.fields.x = v5;
+  v11.fields.y = v6;
+  v11.fields.z = v7;
+  DebugListViewObject__Init(this, initMode, callbackFunc, v4, v11, method);
 }
 
 
@@ -309,11 +324,11 @@ void DebugListViewObject__OnDestroy(DebugListViewObject_o *this, const MethodInf
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5935A7D & 1) == 0 )
+  if ( (byte_596DBBF & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935A7D = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596DBBF = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -327,7 +342,7 @@ void DebugListViewObject__OnDestroy(DebugListViewObject_o *this, const MethodInf
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -339,7 +354,7 @@ void DebugListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -355,11 +370,11 @@ void DebugListViewObject__SetupDisp(DebugListViewObject_o *this, const MethodInf
   const MethodInfo *v10; // x3
   DebugListViewItemDraw_o *v11; // x0
 
-  if ( (byte_5935A81 & 1) == 0 )
+  if ( (byte_596DBC3 & 1) == 0 )
   {
-    sub_21FFC50(&DebugListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935A81 = 1;
+    sub_2213A60(&DebugListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596DBC3 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -383,7 +398,7 @@ LABEL_8:
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     DebugListViewItemDraw__SetItem(v11, (DebugListViewItem_o *)linkItem, this->fields.dispMode, v10);
   }
 }
@@ -394,7 +409,7 @@ void DebugListViewObject__Start(DebugListViewObject_o *this, const MethodInfo *m
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    DebugListViewObject__Init_44216648(this, 2, v2);
+    DebugListViewObject__Init_44237636(this, 2, v2);
 }
 
 
@@ -410,11 +425,11 @@ System_String_o *DebugListViewObject__ToString(DebugListViewObject_o *this, cons
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_5935A82 & 1) == 0 )
+  if ( (byte_596DBC4 & 1) == 0 )
   {
-    sub_21FFC50(&DebugListViewItemDraw_DispMode_TypeInfo);
-    sub_21FFC50(&StringLiteral_113/*" "*/);
-    byte_5935A82 = 1;
+    sub_2213A60(&DebugListViewItemDraw_DispMode_TypeInfo);
+    sub_2213A60(&StringLiteral_113/*" "*/);
+    byte_596DBC4 = 1;
   }
   dispMode = this->fields.dispMode;
   v12 = 0.0;
@@ -427,8 +442,8 @@ System_String_o *DebugListViewObject__ToString(DebugListViewObject_o *this, cons
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_240362C(&v11, 0, 0, 0);
-  return System_String__Concat_75481624(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
+  v7 = (System_String_o *)sub_2402C74(&v11, 0, 0, 0);
+  return System_String__Concat_75694928(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0);
 }
 
 
@@ -449,10 +464,10 @@ void DebugListViewObject__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5935A7A & 1) == 0 )
+  if ( (byte_596DBBC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5935A7A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596DBBC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -465,13 +480,13 @@ void DebugListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   DebugListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -492,10 +507,10 @@ void DebugListViewObject__remove_callbackFunc(
   DebugListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5935A7B & 1) == 0 )
+  if ( (byte_596DBBD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5935A7B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596DBBD = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -508,12 +523,12 @@ void DebugListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   DebugListViewObject__Awake(v13, v14);
 }

@@ -14,10 +14,10 @@ void UIAlphaMaskTexture__DestroyMaterial(UIAlphaMaskTexture_o *this, const Metho
   __int64 v8; // x1
   UnityEngine_Object_o *v9; // x20
 
-  if ( (byte_5939ECB & 1) == 0 )
+  if ( (byte_597209E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939ECB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597209E = 1;
   }
   texture = (UnityEngine_Object_o *)this->fields.texture;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -42,7 +42,7 @@ void UIAlphaMaskTexture__DestroyMaterial(UIAlphaMaskTexture_o *this, const Metho
                                        v5->klass->vtable._24_get_material.method);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-        UnityEngine_Object__Destroy_83246496(v9, 0);
+        UnityEngine_Object__Destroy_83459800(v9, 0);
         v5 = this->fields.texture;
         if ( v5 )
         {
@@ -54,7 +54,7 @@ void UIAlphaMaskTexture__DestroyMaterial(UIAlphaMaskTexture_o *this, const Metho
         }
       }
 LABEL_16:
-      sub_21FFECC(v5, v4);
+      sub_2213CDC(v5, v4);
     }
   }
 }
@@ -73,7 +73,7 @@ void UIAlphaMaskTexture__EndLoadAsset(UIAlphaMaskTexture_o *this, AssetData_o *a
   if ( asset )
   {
     this->fields.assetData = asset;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.assetData,
       (int32_t)asset,
       (System_String_o *)method,
@@ -119,10 +119,10 @@ void UIAlphaMaskTexture__Release(UIAlphaMaskTexture_o *this, const MethodInfo *m
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_5939ECA & 1) == 0 )
+  if ( (byte_597209D & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939ECA = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_597209D = 1;
   }
   UIAlphaMaskTexture__SetActive(this, 0, v2);
   UIAlphaMaskTexture__DestroyMaterial(this, v4);
@@ -131,9 +131,9 @@ void UIAlphaMaskTexture__Release(UIAlphaMaskTexture_o *this, const MethodInfo *m
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5);
-    AssetManager__releaseAsset_47465556(assetData, 0);
+    AssetManager__releaseAsset_47496972(assetData, 0);
     this->fields.assetData = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v7, v8, v9, v10, v11, v12);
   }
   loadName = this->fields.loadName;
   if ( loadName )
@@ -142,7 +142,7 @@ void UIAlphaMaskTexture__Release(UIAlphaMaskTexture_o *this, const MethodInfo *m
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5);
     AssetManager__releaseAssetStorage(loadName, 0);
     this->fields.loadName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadName, 0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadName, 0, v14, v15, v16, v17, v18, v19);
   }
 }
 
@@ -156,10 +156,10 @@ void UIAlphaMaskTexture__SetActive(UIAlphaMaskTexture_o *this, bool isActive, co
   __int64 v8; // x1
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_5939EC9 & 1) == 0 )
+  if ( (byte_597209C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939EC9 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597209C = 1;
   }
   texture = (UnityEngine_Object_o *)this->fields.texture;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -185,7 +185,7 @@ void UIAlphaMaskTexture__SetActive(UIAlphaMaskTexture_o *this, bool isActive, co
         }
       }
 LABEL_14:
-      sub_21FFECC(v7, v6);
+      sub_2213CDC(v7, v6);
     }
   }
 }
@@ -219,7 +219,7 @@ void UIAlphaMaskTexture__SetOffsetDirect(
   x = offset.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   v8.fields.y = y;
   v8.fields.z = z;
   v8.fields.x = x;
@@ -238,7 +238,7 @@ void UIAlphaMaskTexture__SetSizeDirect(
 
   texture = (UIWidget_o *)this->fields.texture;
   if ( !texture || (UIWidget__set_width(texture, width, 0), (texture = (UIWidget_o *)this->fields.texture) == 0) )
-    sub_21FFECC(texture, *(_QWORD *)&width);
+    sub_2213CDC(texture, *(_QWORD *)&width);
   UIWidget__set_height(texture, height, 0);
 }
 
@@ -259,16 +259,16 @@ void UIAlphaMaskTexture__SetTexture(UIAlphaMaskTexture_o *this, const MethodInfo
   const MethodInfo *v14; // x2
   UnityEngine_Rect_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5939EC8 & 1) == 0 )
+  if ( (byte_597209B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&StringLiteral_5116/*"Custom/SpriteWithMask"*/);
-    sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_5939EC8 = 1;
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&StringLiteral_5128/*"Custom/SpriteWithMask"*/);
+    sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_597209B = 1;
   }
   texture = this->fields.texture;
-  v4 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5116/*"Custom/SpriteWithMask"*/, 0);
-  v5 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
+  v4 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5128/*"Custom/SpriteWithMask"*/, 0);
+  v5 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v5, v4, 0);
   if ( !texture )
     goto LABEL_10;
@@ -307,11 +307,11 @@ void UIAlphaMaskTexture__SetTexture(UIAlphaMaskTexture_o *this, const MethodInfo
         !v13) )
   {
 LABEL_10:
-    sub_21FFECC(AlphaTexture, v7);
+    sub_2213CDC(AlphaTexture, v7);
   }
   UnityEngine_Material__SetTexture(
     v13,
-    (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
+    (System_String_o *)StringLiteral_16919/*"_MaskTex"*/,
     (UnityEngine_Texture_o *)AlphaTexture,
     0);
 }
@@ -339,12 +339,12 @@ void UIAlphaMaskTexture__StartLoadAsset(
   AssetLoader_LoadEndDataHandler_o *v20; // x21
   __int64 v21; // x1
 
-  if ( (byte_5939EC7 & 1) == 0 )
+  if ( (byte_597209A & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_UIAlphaMaskTexture_EndLoadAsset__);
-    byte_5939EC7 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_UIAlphaMaskTexture_EndLoadAsset__);
+    byte_597209A = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(loadName, 0);
   if ( callback && IsNullOrEmpty )
@@ -352,9 +352,9 @@ void UIAlphaMaskTexture__StartLoadAsset(
       callback->fields.method_code,
       callback->fields.method);
   this->fields.loadName = loadName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadName, (int32_t)loadName, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadName, (int32_t)loadName, v8, v9, v10, v11, v12, v13);
   this->fields.callback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callback,
     (int32_t)callback,
     v14,
@@ -363,7 +363,7 @@ void UIAlphaMaskTexture__StartLoadAsset(
     v17,
     v18,
     v19);
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v20, (Il2CppObject *)this, Method_UIAlphaMaskTexture_EndLoadAsset__, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v21);

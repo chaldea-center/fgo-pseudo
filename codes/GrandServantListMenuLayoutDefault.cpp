@@ -17,23 +17,23 @@ void GrandServantListMenuLayoutDefault__SetupItemInfo(
   UILabel_o *itemNumLabel; // x19
   int32_t v10; // w20
 
-  if ( (byte_593323F & 1) == 0 )
+  if ( (byte_596B346 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593323F = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596B346 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v5);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   EntityDefinitely = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -57,7 +57,7 @@ void GrandServantListMenuLayoutDefault__SetupItemInfo(
   EntityDefinitely = LocalizationManager__GetNumberFormat(v10, 0);
   if ( !itemNumLabel )
 LABEL_17:
-    sub_21FFECC(EntityDefinitely, v4);
+    sub_2213CDC(EntityDefinitely, v4);
   UILabel__set_text(itemNumLabel, (System_String_o *)EntityDefinitely, 0);
 }
 

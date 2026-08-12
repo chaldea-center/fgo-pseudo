@@ -342,6 +342,7 @@ BattleMotionSelectType
 BattleMotionSkipManager
 BattleMoveObject
 BattleMovieParam
+BattleMovieParamExtension
 BattleMoviePlayer
 BattleMultiMessageDisplay
 BattleNextTDgaugeComponent
@@ -373,7 +374,9 @@ BattlePointData
 BattlePointEntity
 BattlePointGaugeCellTypeComponent
 BattlePointGaugeComponent
+BattlePointGaugeManager
 BattlePointGaugeProgressBarTypeComponent
+BattlePointGaugeProgressCellTypeComponent
 BattlePointGaugeSetting
 BattlePointMaster
 BattlePointPhaseEntity
@@ -447,6 +450,7 @@ BattleServantHpShiftDecagramEffectComponent
 BattleServantHpShiftPhaseEffectComponent
 BattleServantNPSpeedChangeComponent
 BattleServantParamComponent
+BattleServantParamDispIndexSetting
 BattleServantParamSetting
 BattleServantRaidParamComponent
 BattleServantShowBuffComponent
@@ -475,6 +479,7 @@ BattleSuperBossInfo
 BattleSwitchPartyConfirmWindow
 BattleSyncFromTargetTransformComponent
 BattleSyncTransformComponent
+BattleSyncUsedTargetBuff
 BattleTDConfWIndowComponent
 BattleTreasureDeviceCommandData
 BattleTreasureDeviceSequenceSelectType
@@ -2144,6 +2149,7 @@ GrandServantResetDialog
 GrandServantServantFaceIconReflection
 GrandServantStatusListViewItemDrawEquip
 GrandSvtInfo
+GrantBuffInFunctionsData
 GridLineTextureUtil
 GuideEntity
 GuideMaster
@@ -3303,6 +3309,7 @@ ServantStatusFlavorTextListViewObject
 ServantStatusFriendshipGauge
 ServantStatusLimitCountGauge
 ServantStatusListViewItem
+ServantStatusListViewItemButton
 ServantStatusListViewItemDraw
 ServantStatusListViewItemDrawAppendSkill
 ServantStatusListViewItemDrawButton
@@ -3324,6 +3331,8 @@ ServantStatusListViewItemDrawServantQuest
 ServantStatusListViewItemDrawSkill
 ServantStatusListViewItemDrawTdSpeed
 ServantStatusListViewItemDrawTerminal
+ServantStatusListViewItemFace
+ServantStatusListViewItemPortrait
 ServantStatusListViewManager
 ServantStatusListViewObject
 ServantStatusNpComponent
@@ -3517,6 +3526,7 @@ SoundPlayerMenu
 SoundPlayerOpenEffectComponent
 SoundPlayerShopItemComponent
 SoundTestMenu
+SoundWithChannelActionUtility
 Spawner
 SpawnerEventHandler
 SpecialAscensionConfirmInfo
@@ -3583,6 +3593,7 @@ StoneShopDetailListViewObject
 StoneShopEffect
 StoneShopEntity
 StoneShopMaster
+StopSeOnDisableComponent
 StopSubBgmOnDisableComponent
 StorageTakeinRequest
 StorageTakeoutRequest
@@ -3590,6 +3601,7 @@ StoreNodeObjectRecover
 StoryGachaAdjustData
 StrengthStatus
 SubBgmPlayArgs
+SubBgmPlayArgsWithChannel
 SubBgmPlayer
 SubEquipEntity
 SubEquipMaster
@@ -3946,6 +3958,7 @@ UIExtrusionLabel
 UIFont
 UIForwardEvents
 UIGeometry
+UIGradientSprite
 UIGrid
 UIHorizontalImageM
 UIHorizontalImageRender
@@ -4312,6 +4325,7 @@ VoiceCondEntity
 VoiceCondMaster
 VoiceCondType
 VoiceEffectComponent
+VoiceEffectSelectDialog
 VoiceEntity
 VoiceInfo
 VoiceMaster

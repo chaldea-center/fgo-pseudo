@@ -1,13 +1,13 @@
 void BoxGachaHistoryEntity___ctor(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593834C & 1) == 0 )
+  if ( (byte_59704F9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_593834C = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_59704F9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -31,7 +31,7 @@ int32_t BoxGachaHistoryEntity__getDrawNum(BoxGachaHistoryEntity_o *this, int32_t
   numbers = this->fields.numbers;
   if ( !numbers )
 LABEL_7:
-    sub_21FFECC(this, *(_QWORD *)&no);
+    sub_2213CDC(this, *(_QWORD *)&no);
   if ( !numbers->max_length )
     return 0;
   v4 = this;
@@ -44,10 +44,10 @@ LABEL_7:
     if ( (__int64)v6 >= (int)max_length_low )
       return v7;
     if ( v6 >= max_length_low )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     v10 = v8 + 4;
     ++v6;
-    this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_76925180((_DWORD)numbers + v8, no, 0);
+    this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_77138484((_DWORD)numbers + v8, no, 0);
     numbers = v4->fields.numbers;
     v7 += (unsigned __int8)this & 1;
     v8 = v10;

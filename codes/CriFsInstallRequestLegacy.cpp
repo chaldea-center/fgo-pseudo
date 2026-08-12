@@ -16,29 +16,29 @@ void CriFsInstallRequestLegacy___ctor(
   __int64 v19; // x1
   const MethodInfo *v20; // x2
 
-  if ( (byte_59314FA & 1) == 0 )
+  if ( (byte_596969A & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    sub_21FFC50(&CriFsInstaller_TypeInfo);
-    byte_59314FA = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    sub_2213A60(&CriFsInstaller_TypeInfo);
+    byte_596969A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._sourcePath_k__BackingField = srcPath;
-  sub_21FFBF4(&this->fields._sourcePath_k__BackingField, srcPath);
+  sub_2213A04(&this->fields._sourcePath_k__BackingField, srcPath);
   this->fields._destinationPath_k__BackingField = dstPath;
-  sub_21FFBF4(&this->fields._destinationPath_k__BackingField, dstPath);
+  sub_2213A04(&this->fields._destinationPath_k__BackingField, dstPath);
   this->fields._doneDelegate_k__BackingField = doneDelegate;
-  sub_21FFBF4(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  sub_2213A04(&this->fields._doneDelegate_k__BackingField, doneDelegate);
   v13 = CriFsInstaller_TypeInfo;
   this->fields._progress_k__BackingField = 0.0;
-  v14 = (CriFsInstaller_o *)sub_21FFEBC(v13);
+  v14 = (CriFsInstaller_o *)sub_2213CCC(v13);
   CriFsInstaller___ctor(v14, v15);
   this->fields.installer = v14;
-  sub_21FFBF4(&this->fields.installer, v14);
+  sub_2213A04(&this->fields.installer, v14);
   installer = this->fields.installer;
   if ( !installer )
-    sub_21FFECC(0, v16);
+    sub_2213CDC(0, v16);
   CriFsInstaller__Copy(installer, srcBinder, srcPath, dstPath, installBufferSize, v17);
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v19, v20);
@@ -53,10 +53,10 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
   struct CriFsInstaller_o **p_installer; // x19
   struct CriFsInstaller_o *installer; // t1
 
-  if ( (byte_59314FC & 1) == 0 )
+  if ( (byte_596969C & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    byte_59314FC = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    byte_596969C = 1;
   }
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
@@ -70,7 +70,7 @@ void CriFsInstallRequestLegacy__Dispose(CriFsInstallRequestLegacy_o *this, bool 
       v4,
       v4->klass->vtable._5_Dispose.method);
     *p_installer = 0;
-    sub_21FFBF4(p_installer, 0);
+    sub_2213A04(p_installer, 0);
   }
 }
 
@@ -103,10 +103,10 @@ void CriFsInstallRequestLegacy__Update(CriFsInstallRequestLegacy_o *this, const 
   float progress; // [xsp+8h] [xbp-18h] BYREF
   int32_t status; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_59314FB & 1) == 0 )
+  if ( (byte_596969B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6385/*"Error occurred."*/);
-    byte_59314FB = 1;
+    sub_2213A60(&StringLiteral_6397/*"Error occurred."*/);
+    byte_596969B = 1;
   }
   p_installer = &this->fields.installer;
   installer = this->fields.installer;
@@ -121,7 +121,7 @@ void CriFsInstallRequestLegacy__Update(CriFsInstallRequestLegacy_o *this, const 
       this->fields._progress_k__BackingField = progress;
       if ( !installer )
 LABEL_16:
-        sub_21FFECC(v7, method);
+        sub_2213CDC(v7, method);
     }
     else
     {
@@ -136,10 +136,10 @@ LABEL_16:
         return;
       if ( status == 3 )
       {
-        v9 = StringLiteral_6385/*"Error occurred."*/;
-        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6385/*"Error occurred."*/;
+        v9 = StringLiteral_6397/*"Error occurred."*/;
+        this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6397/*"Error occurred."*/;
         this->fields._progress_k__BackingField = -1.0;
-        sub_21FFBF4(&this->fields._error_k__BackingField, v9);
+        sub_2213A04(&this->fields._error_k__BackingField, v9);
       }
     }
     v7 = *p_installer;
@@ -149,7 +149,7 @@ LABEL_16:
       v7,
       v7->klass->vtable._5_Dispose.method);
     this->fields.installer = 0;
-    sub_21FFBF4(&this->fields.installer, 0);
+    sub_2213A04(&this->fields.installer, 0);
     doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
     this->fields._isDone_k__BackingField = 1;
     if ( doneDelegate_k__BackingField )

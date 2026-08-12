@@ -7,25 +7,27 @@ void EffectFlipData___ctor(EffectFlipData_o *this, const MethodInfo *method)
 
 void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEffect, const MethodInfo *method)
 {
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( this->fields.rotate >= 1 )
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_83280924(trEffect, 0.0, 180.0, 0.0, 0);
+    UnityEngine_Transform__Rotate_83494228(trEffect, 0.0, 180.0, 0.0, 0);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_21FFECC(this, trEffect);
+    sub_2213CDC(this, trEffect);
   localScale = UnityEngine_Transform__get_localScale(trEffect, 0);
+  v6 = localScale;
   if ( this->fields.scaleX >= 1 )
-    localScale.fields.x = -localScale.fields.x;
+    v6.fields.x = -localScale.fields.x;
   if ( this->fields.scaleZ >= 1 )
-    localScale.fields.z = -localScale.fields.z;
-  UnityEngine_Transform__set_localScale(trEffect, localScale, 0);
+    v6.fields.z = -localScale.fields.z;
+  UnityEngine_Transform__set_localScale(trEffect, v6, 0);
 }
 
 
@@ -55,6 +57,6 @@ void EffectFlipData__OverwriteNodeName(
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6, v7, v8, v9, v10);
   }
 }

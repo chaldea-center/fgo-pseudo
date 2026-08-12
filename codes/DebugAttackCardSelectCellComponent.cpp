@@ -20,14 +20,14 @@ void DebugAttackCardSelectCellComponent__Set(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5939C88 & 1) == 0 )
+  if ( (byte_5971E4C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__string__string__int__TypeInfo);
-    sub_21FFC50(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939C88 = 1;
+    sub_2213A60(&System_Action_int__string__string__int__TypeInfo);
+    sub_2213A60(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971E4C = 1;
   }
-  v9 = (System_Action_T1__T2__T3__T4__o *)sub_21FFEBC(System_Action_int__string__string__int__TypeInfo);
+  v9 = (System_Action_T1__T2__T3__T4__o *)sub_2213CCC(System_Action_int__string__string__int__TypeInfo);
   System_Action_int__object__object__int____ctor(
     v9,
     (Il2CppObject *)this,
@@ -42,7 +42,7 @@ void DebugAttackCardSelectCellComponent__Set(
     (System_Action_int__string__string__int__o *)v9,
     v10);
   this->fields.actionCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.actionCallback,
     (int32_t)callback,
     v11,

@@ -17,26 +17,26 @@ void GachaBannerComponent__OnClickDetail(GachaBannerComponent_o *this, const Met
   __int64 v11; // x2
   System_String_o *v12; // x20
 
-  if ( (byte_5934896 & 1) == 0 )
+  if ( (byte_596C9C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GachaBannerComponent_OnClickDetail__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&WebViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_16135/*"WEB_VIEW_TITLE_SUMMON"*/);
-    byte_5934896 = 1;
+    sub_2213A60(&Method_GachaBannerComponent_OnClickDetail__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&WebViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_16166/*"WEB_VIEW_TITLE_SUMMON"*/);
+    byte_596C9C5 = 1;
   }
   v3 = Method_GachaBannerComponent_OnClickDetail__;
   if ( (*((_BYTE *)Method_GachaBannerComponent_OnClickDetail__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_GachaBannerComponent_OnClickDetail__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_GachaBannerComponent_OnClickDetail__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   info = this->fields.info;
   if ( !info )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   detailUrl = info->fields.detailUrl;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v7);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_16135/*"WEB_VIEW_TITLE_SUMMON"*/, 0);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_16166/*"WEB_VIEW_TITLE_SUMMON"*/, 0);
   if ( !*(&WebViewManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo, v10, v11);
   WebViewManager__OpenView(v12, detailUrl, 0, 0);
@@ -64,19 +64,19 @@ void GachaBannerComponent__UpdateDisplay(GachaBannerComponent_o *this, const Met
   GachaPickupCollateralGroupEntity_o *gachaPickupCollateralGroupEntity; // [xsp+8h] [xbp-38h] BYREF
   UserGachaEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_5934894 & 1) == 0 )
+  if ( (byte_596C9C3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserGachaMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_7195/*"GACHA_PC_MESSAGE_NO_MAX"*/);
-    sub_21FFC50(&StringLiteral_7193/*"GACHA_PC_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_7194/*"GACHA_PC_MESSAGE_END"*/);
-    byte_5934894 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserGachaMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_7207/*"GACHA_PC_MESSAGE_NO_MAX"*/);
+    sub_2213A60(&StringLiteral_7205/*"GACHA_PC_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_7206/*"GACHA_PC_MESSAGE_END"*/);
+    byte_596C9C3 = 1;
   }
   info = this->fields.info;
   entity = 0;
@@ -105,18 +105,18 @@ void GachaBannerComponent__UpdateDisplay(GachaBannerComponent_o *this, const Met
   if ( !info )
     goto LABEL_51;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)info, 1, 0);
-  info = (VaildGachaInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  info = (VaildGachaInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !info )
     goto LABEL_51;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)info,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserGachaMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserGachaMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v5);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   info = (VaildGachaInfo_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -140,10 +140,10 @@ void GachaBannerComponent__UpdateDisplay(GachaBannerComponent_o *this, const Met
   if ( !UserGachaEntity__HasStatus(entity, 2, 0) )
   {
 LABEL_25:
-    v10 = (System_String_o *)StringLiteral_7193/*"GACHA_PC_MESSAGE"*/;
+    v10 = (System_String_o *)StringLiteral_7205/*"GACHA_PC_MESSAGE"*/;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v8);
-    info = (VaildGachaInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
+    info = (VaildGachaInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
     v11 = this->fields.info;
     if ( v11 && info )
     {
@@ -155,7 +155,7 @@ LABEL_25:
         goto LABEL_42;
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v12);
-      info = (VaildGachaInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
+      info = (VaildGachaInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
       if ( !gachaPickupCollateralGroupEntity || !info )
         goto LABEL_51;
       info = (VaildGachaInfo_o *)GachaPickupCollateralMaster__TryGetEntityFromGroupId(
@@ -172,7 +172,7 @@ LABEL_25:
         else
           v9 = 746;
         if ( !v18->fields.maxGetNum )
-          v10 = (System_String_o *)StringLiteral_7195/*"GACHA_PC_MESSAGE_NO_MAX"*/;
+          v10 = (System_String_o *)StringLiteral_7207/*"GACHA_PC_MESSAGE_NO_MAX"*/;
       }
       else
       {
@@ -192,17 +192,17 @@ LABEL_42:
         {
           v16 = (Il2CppObject *)info;
           DateTimeDayOfWeek = (Il2CppObject *)LocalizationManager__GetDateTimeDayOfWeek(v15->fields.closedAt, 0);
-          method = (const MethodInfo *)System_String__Format_75484576(v14, v16, DateTimeDayOfWeek, 0);
+          method = (const MethodInfo *)System_String__Format_75697880(v14, v16, DateTimeDayOfWeek, 0);
           goto LABEL_48;
         }
       }
     }
 LABEL_51:
-    sub_21FFECC(info, method);
+    sub_2213CDC(info, method);
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v8);
-  method = (const MethodInfo *)LocalizationManager__Get((System_String_o *)StringLiteral_7194/*"GACHA_PC_MESSAGE_END"*/, 0);
+  method = (const MethodInfo *)LocalizationManager__Get((System_String_o *)StringLiteral_7206/*"GACHA_PC_MESSAGE_END"*/, 0);
   v9 = 785;
 LABEL_48:
   info = (VaildGachaInfo_o *)this->fields.pickupMessage;
@@ -259,14 +259,14 @@ void GachaBannerComponent__setBannerGachaInfo(
   __int64 v25; // x2
   UnityEngine_Vector4_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5934893 & 1) == 0 )
+  if ( (byte_596C9C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934893 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C9C2 = 1;
   }
   this->fields.info = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.info,
     (int32_t)data,
     *(System_String_o **)&idx,
@@ -318,7 +318,7 @@ void GachaBannerComponent__setBannerGachaInfo(
     {
       height = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              bannerAtlas,
-                                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( this->fields.bannerImg )
       {
         UISprite__set_atlas(this->fields.bannerImg, (UIAtlas_o *)height, 0);
@@ -331,7 +331,7 @@ void GachaBannerComponent__setBannerGachaInfo(
       }
     }
 LABEL_21:
-    sub_21FFECC(height, v16);
+    sub_2213CDC(height, v16);
   }
 }
 
@@ -341,15 +341,15 @@ void GachaBannerComponent__setEnabledCollider(GachaBannerComponent_o *this, bool
   Il2CppObject *Component_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_5934895 & 1) == 0 )
+  if ( (byte_596C9C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_5934895 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_596C9C4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0);
 }

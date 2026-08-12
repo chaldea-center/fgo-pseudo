@@ -70,10 +70,10 @@ bool CharaGraphSortButtonGroup__IsActive(UnityEngine_Component_o *c, const Metho
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_5937996 & 1) == 0 )
+  if ( (byte_596FAF9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937996 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FAF9 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
@@ -81,7 +81,7 @@ bool CharaGraphSortButtonGroup__IsActive(UnityEngine_Component_o *c, const Metho
   if ( ((unsigned __int8)gameObject & 1) == 0 )
     return 0;
   if ( !c || (gameObject = UnityEngine_Component__get_gameObject(c, 0)) == 0 )
-    sub_21FFECC(gameObject, v5);
+    sub_2213CDC(gameObject, v5);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 
@@ -103,7 +103,7 @@ void CharaGraphSortButtonGroup__SetBonusFilterButton(
           !sort)
       || !bonusFilterKindButton )
     {
-      sub_21FFECC(bonusFilterKindButton, sort);
+      sub_2213CDC(bonusFilterKindButton, sort);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusFilterKindButton, sort->fields.isBonusKind, 0);
   }
@@ -119,10 +119,7 @@ void CharaGraphSortButtonGroup__SetBonusFilterButtonState(
 {
   __int64 v7; // x1
   UIWidget_o *bonusFilterKindButton; // x0
-  float v9; // s0 OVERLAPPED
-  float v10; // s3
-  float v11; // s1
-  float v12; // s2
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( CharaGraphSortButtonGroup__IsActive(
          (UnityEngine_Component_o *)this->fields.bonusFilterKindButton,
@@ -137,15 +134,15 @@ void CharaGraphSortButtonGroup__SetBonusFilterButtonState(
             bonusFilterKindButton->klass->vtable._14_OnEnable.method),
           (bonusFilterKindButton = (UIWidget_o *)this->fields.bonusFilterKindLabel) == 0) )
     {
-      sub_21FFECC(bonusFilterKindButton, v7);
+      sub_2213CDC(bonusFilterKindButton, v7);
     }
-    v9 = 1.0;
-    v10 = 1.0;
+    v10.fields.r = 1.0;
+    v10.fields.a = 1.0;
     if ( state == 3 )
-      v9 = 0.5;
-    v11 = v9;
-    v12 = v9;
-    UIWidget__set_color(bonusFilterKindButton, *(UnityEngine_Color_o *)&v9, 0);
+      v10.fields.r = 0.5;
+    v10.fields.g = v10.fields.r;
+    v10.fields.b = v10.fields.r;
+    UIWidget__set_color(bonusFilterKindButton, v10, 0);
   }
 }
 
@@ -160,11 +157,11 @@ void CharaGraphSortButtonGroup__SetFilterButtonImage(
   UISprite_o *filterSprite; // x20
   System_String_o **v8; // x8
 
-  if ( (byte_5937994 & 1) == 0 )
+  if ( (byte_596FAF7 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18217/*"btn_filter_on"*/);
-    sub_21FFC50(&StringLiteral_18216/*"btn_filter"*/);
-    byte_5937994 = 1;
+    sub_2213A60(&StringLiteral_18255/*"btn_filter_on"*/);
+    sub_2213A60(&StringLiteral_18254/*"btn_filter"*/);
+    byte_596FAF7 = 1;
   }
   IsActive = CharaGraphSortButtonGroup__IsActive(
                (UnityEngine_Component_o *)this->fields.filterSprite,
@@ -176,11 +173,11 @@ void CharaGraphSortButtonGroup__SetFilterButtonImage(
           IsActive = ListViewSort__CheckFilterDefaultAll(sort, -1, 0),
           !filterSprite) )
     {
-      sub_21FFECC(IsActive, v6);
+      sub_2213CDC(IsActive, v6);
     }
-    v8 = (System_String_o **)&StringLiteral_18216/*"btn_filter"*/;
+    v8 = (System_String_o **)&StringLiteral_18254/*"btn_filter"*/;
     if ( !IsActive )
-      v8 = (System_String_o **)&StringLiteral_18217/*"btn_filter_on"*/;
+      v8 = (System_String_o **)&StringLiteral_18255/*"btn_filter_on"*/;
     UISprite__set_spriteName(filterSprite, *v8, 0);
   }
 }
@@ -202,7 +199,7 @@ void CharaGraphSortButtonGroup__SetFilterButtonState(
   {
     filterButton = this->fields.filterButton;
     if ( !filterButton )
-      sub_21FFECC(0, v7);
+      sub_2213CDC(0, v7);
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, bool, const MethodInfo *))filterButton->klass->vtable._14_SetState.methodPtr)(
       filterButton,
       (unsigned int)state,
@@ -212,7 +209,6 @@ void CharaGraphSortButtonGroup__SetFilterButtonState(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CharaGraphSortButtonGroup__SetSortButtonImage(
         CharaGraphSortButtonGroup_o *this,
         ListViewSort_o *sort,
@@ -230,20 +226,17 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
   System_String_o **v15; // x8
   UILabel_o *bonusFilterKindLabel; // x22
   struct UICommonButton_o *bonusFilterKindButton; // x8
-  float v18; // s0 OVERLAPPED
-  float v19; // s3
-  float v20; // s1
-  float v21; // s2
+  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5937995 & 1) == 0 )
+  if ( (byte_596FAF8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18253/*"btn_sort_up"*/);
-    sub_21FFC50(&StringLiteral_18357/*"btn_txt_up"*/);
-    sub_21FFC50(&StringLiteral_18306/*"btn_txt_new"*/);
-    sub_21FFC50(&StringLiteral_18296/*"btn_txt_down"*/);
-    sub_21FFC50(&StringLiteral_18314/*"btn_txt_old"*/);
-    sub_21FFC50(&StringLiteral_18250/*"btn_sort_down"*/);
-    byte_5937995 = 1;
+    sub_2213A60(&StringLiteral_18291/*"btn_sort_up"*/);
+    sub_2213A60(&StringLiteral_18395/*"btn_txt_up"*/);
+    sub_2213A60(&StringLiteral_18344/*"btn_txt_new"*/);
+    sub_2213A60(&StringLiteral_18334/*"btn_txt_down"*/);
+    sub_2213A60(&StringLiteral_18352/*"btn_txt_old"*/);
+    sub_2213A60(&StringLiteral_18288/*"btn_sort_down"*/);
+    byte_596FAF8 = 1;
   }
   IsActive = (System_String_o *)CharaGraphSortButtonGroup__IsActive(
                                   (UnityEngine_Component_o *)this->fields.sortKindLabel,
@@ -274,13 +267,13 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
         if ( !IsActive )
           goto LABEL_37;
         p_isAscendingOrder = &sort->fields.isAscendingOrder;
-        v12 = (System_String_o **)(sort->fields.isAscendingOrder ? &StringLiteral_18314/*"btn_txt_old"*/ : &StringLiteral_18306/*"btn_txt_new"*/);
+        v12 = (System_String_o **)(sort->fields.isAscendingOrder ? &StringLiteral_18352/*"btn_txt_old"*/ : &StringLiteral_18344/*"btn_txt_new"*/);
         UISprite__set_spriteName((UISprite_o *)IsActive, *v12, 0);
         IsActive = (System_String_o *)this->fields.sortOrderSprite;
         if ( !IsActive )
           goto LABEL_37;
-        v13 = (System_String_o **)&StringLiteral_18250/*"btn_sort_down"*/;
-        v14 = (System_String_o **)&StringLiteral_18253/*"btn_sort_up"*/;
+        v13 = (System_String_o **)&StringLiteral_18288/*"btn_sort_down"*/;
+        v14 = (System_String_o **)&StringLiteral_18291/*"btn_sort_up"*/;
       }
       else
       {
@@ -288,13 +281,13 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
         if ( !IsActive )
           goto LABEL_37;
         p_isAscendingOrder = &sort->fields.isAscendingOrder;
-        v15 = (System_String_o **)(sort->fields.isAscendingOrder ? &StringLiteral_18357/*"btn_txt_up"*/ : &StringLiteral_18296/*"btn_txt_down"*/);
+        v15 = (System_String_o **)(sort->fields.isAscendingOrder ? &StringLiteral_18395/*"btn_txt_up"*/ : &StringLiteral_18334/*"btn_txt_down"*/);
         UISprite__set_spriteName((UISprite_o *)IsActive, *v15, 0);
         IsActive = (System_String_o *)this->fields.sortOrderSprite;
         if ( !IsActive )
           goto LABEL_37;
-        v13 = (System_String_o **)&StringLiteral_18253/*"btn_sort_up"*/;
-        v14 = (System_String_o **)&StringLiteral_18250/*"btn_sort_down"*/;
+        v13 = (System_String_o **)&StringLiteral_18291/*"btn_sort_up"*/;
+        v14 = (System_String_o **)&StringLiteral_18288/*"btn_sort_down"*/;
       }
       if ( !*p_isAscendingOrder )
         v13 = v14;
@@ -318,15 +311,15 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
     || (IsActive = (System_String_o *)this->fields.bonusFilterKindLabel) == 0 )
   {
 LABEL_37:
-    sub_21FFECC(IsActive, v8);
+    sub_2213CDC(IsActive, v8);
   }
-  v18 = 1.0;
-  v19 = 1.0;
+  v19.fields.r = 1.0;
+  v19.fields.a = 1.0;
   if ( bonusFilterKindButton->fields.mState == 3 )
-    v18 = 0.5;
-  v20 = v18;
-  v21 = v18;
-  UIWidget__set_color((UIWidget_o *)IsActive, *(UnityEngine_Color_o *)&v18, 0);
+    v19.fields.r = 0.5;
+  v19.fields.g = v19.fields.r;
+  v19.fields.b = v19.fields.r;
+  UIWidget__set_color((UIWidget_o *)IsActive, v19, 0);
 }
 
 
@@ -374,7 +367,7 @@ void CharaGraphSortButtonGroup__set_OnClickBonusFilterKind(
   bool v7; // w7
 
   this->fields._OnClickBonusFilterKind_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickBonusFilterKind_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -398,7 +391,7 @@ void CharaGraphSortButtonGroup__set_OnClickFilterKind(
   bool v7; // w7
 
   this->fields._OnClickFilterKind_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickFilterKind_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -422,7 +415,7 @@ void CharaGraphSortButtonGroup__set_OnClickSortAscendingOrder(
   bool v7; // w7
 
   this->fields._OnClickSortAscendingOrder_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickSortAscendingOrder_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -446,7 +439,7 @@ void CharaGraphSortButtonGroup__set_OnClickSortKind(
   bool v7; // w7
 
   this->fields._OnClickSortKind_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickSortKind_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

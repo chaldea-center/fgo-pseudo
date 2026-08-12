@@ -1,14 +1,14 @@
 void BattleMessageGroupMaster___ctor(BattleMessageGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59382B5 & 1) == 0 )
+  if ( (byte_597045D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string___ctor__);
-    byte_59382B5 = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string___ctor__);
+    byte_597045D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     418,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string___ctor__);
 }
 
 
@@ -36,23 +36,23 @@ BattleMessageGroupEntity_array *BattleMessageGroupMaster__GetEntities(
   System_Func_object__bool__o *v21; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
 
-  if ( (byte_59382B8 & 1) == 0 )
+  if ( (byte_5970460 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__BattleMessageGroupEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
-    sub_21FFC50(&System_Func_BattleMessageGroupEntity__bool__TypeInfo);
-    sub_21FFC50(&System_Func_BattleMessageGroupEntity__BattleMessageGroupEntity__TypeInfo);
-    sub_21FFC50(&Method_BattleMessageGroupMaster___c__GetEntities_b__3_0__);
-    sub_21FFC50(&Method_BattleMessageGroupMaster___c__DisplayClass3_0__GetEntities_b__1__);
-    sub_21FFC50(&BattleMessageGroupMaster___c__DisplayClass3_0_TypeInfo);
-    sub_21FFC50(&BattleMessageGroupMaster___c_TypeInfo);
-    byte_59382B8 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__BattleMessageGroupEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
+    sub_2213A60(&System_Func_BattleMessageGroupEntity__bool__TypeInfo);
+    sub_2213A60(&System_Func_BattleMessageGroupEntity__BattleMessageGroupEntity__TypeInfo);
+    sub_2213A60(&Method_BattleMessageGroupMaster___c__GetEntities_b__3_0__);
+    sub_2213A60(&Method_BattleMessageGroupMaster___c__DisplayClass3_0__GetEntities_b__1__);
+    sub_2213A60(&BattleMessageGroupMaster___c__DisplayClass3_0_TypeInfo);
+    sub_2213A60(&BattleMessageGroupMaster___c_TypeInfo);
+    byte_5970460 = 1;
   }
-  v5 = sub_21FFEBC(BattleMessageGroupMaster___c__DisplayClass3_0_TypeInfo);
+  v5 = sub_2213CCC(BattleMessageGroupMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   list = this->fields.list;
   *(_DWORD *)(v5 + 16) = groupId;
   v9 = BattleMessageGroupMaster___c_TypeInfo;
@@ -71,17 +71,17 @@ BattleMessageGroupEntity_array *BattleMessageGroupMaster__GetEntities(
       static_fields = BattleMessageGroupMaster___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_BattleMessageGroupEntity__BattleMessageGroupEntity__TypeInfo);
+    _9__3_0 = (System_Func_object__object__o *)sub_2213CCC(System_Func_BattleMessageGroupEntity__BattleMessageGroupEntity__TypeInfo);
     System_Func_object__object____ctor(_9__3_0, v12, Method_BattleMessageGroupMaster___c__GetEntities_b__3_0__, 0);
     v13 = BattleMessageGroupMaster___c_TypeInfo->static_fields;
     v13->__9__3_0 = (struct System_Func_BattleMessageGroupEntity__BattleMessageGroupEntity__o *)_9__3_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->__9__3_0, (int32_t)_9__3_0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__3_0, (int32_t)_9__3_0, v14, v15, v16, v17, v18, v19);
   }
   v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__BattleMessageGroupEntity___);
-  v21 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BattleMessageGroupEntity__bool__TypeInfo);
+                                                               (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__BattleMessageGroupEntity___);
+  v21 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BattleMessageGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v21,
     (Il2CppObject *)v5,
@@ -90,10 +90,10 @@ BattleMessageGroupEntity_array *BattleMessageGroupMaster__GetEntities(
   v22 = System_Linq_Enumerable__Where_object_(
           v20,
           (System_Func_TSource__bool__o *)v21,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
   return (BattleMessageGroupEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                              v22,
-                                             (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
+                                             (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
 }
 
 
@@ -106,16 +106,16 @@ BattleMessageGroupEntity_o *BattleMessageGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59382B6 & 1) == 0 )
+  if ( (byte_597045E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__GetEntity__);
-    byte_59382B6 = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__GetEntity__);
+    byte_597045E = 1;
   }
   PK = (Il2CppObject *)BattleMessageGroupEntity__CreatePK(groupId, messageId, *(const MethodInfo **)&messageId);
   return (BattleMessageGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3EE2044 *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__GetEntity__);
+                                         (const MethodInfo_3F157EC *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__GetEntity__);
 }
 
 
@@ -129,17 +129,17 @@ bool BattleMessageGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59382B7 & 1) == 0 )
+  if ( (byte_597045F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__TryGetEntity__);
-    byte_59382B7 = 1;
+    sub_2213A60(&Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__TryGetEntity__);
+    byte_597045F = 1;
   }
   PK = (Il2CppObject *)BattleMessageGroupEntity__CreatePK(groupId, messageId, *(const MethodInfo **)&groupId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_BattleMessageGroupMaster__BattleMessageGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -153,15 +153,15 @@ void BattleMessageGroupMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59382B9 & 1) == 0 )
+  if ( (byte_5970461 & 1) == 0 )
   {
-    sub_21FFC50(&BattleMessageGroupMaster___c_TypeInfo);
-    byte_59382B9 = 1;
+    sub_2213A60(&BattleMessageGroupMaster___c_TypeInfo);
+    byte_5970461 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BattleMessageGroupMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BattleMessageGroupMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleMessageGroupMaster___c_TypeInfo->static_fields->__9 = (struct BattleMessageGroupMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleMessageGroupMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

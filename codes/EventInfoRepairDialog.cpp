@@ -1,9 +1,9 @@
 void EventInfoRepairDialog___ctor(EventInfoRepairDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A443 & 1) == 0 )
+  if ( (byte_597261A & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593A443 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_597261A = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -18,13 +18,13 @@ void EventInfoRepairDialog__OnClose(EventInfoRepairDialog_o *this, const MethodI
   System_Reflection_MethodBase_o *v5; // x0
   System_Action_o *v6; // x20
 
-  if ( (byte_593A442 & 1) == 0 )
+  if ( (byte_5972619 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoRepairDialog_OnClose__);
-    sub_21FFC50(&Method_EventInfoRepairDialog__OnClose_b__7_0__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A442 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoRepairDialog_OnClose__);
+    sub_2213A60(&Method_EventInfoRepairDialog__OnClose_b__7_0__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972619 = 1;
   }
   if ( this->fields.canTap )
   {
@@ -36,10 +36,10 @@ void EventInfoRepairDialog__OnClose(EventInfoRepairDialog_o *this, const MethodI
     v4 = Method_EventInfoRepairDialog_OnClose__;
     this->fields.canTap = 0;
     if ( (v4[83] & 2) != 0 )
-      v4 = (_BYTE *)sub_21FFC68(v4);
-    v5 = (System_Reflection_MethodBase_o *)sub_21FFC34(v4, *((_QWORD *)v4 + 4));
+      v4 = (_BYTE *)sub_2213A78(v4);
+    v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, *((_QWORD *)v4 + 4));
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
-    v6 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_EventInfoRepairDialog__OnClose_b__7_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v6, 0);
   }
@@ -72,15 +72,15 @@ void EventInfoRepairDialog__Open(
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v25; // x8
 
-  if ( (byte_593A441 & 1) == 0 )
+  if ( (byte_5972618 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoRepairDialog__Open_b__6_0__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A441 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoRepairDialog__Open_b__6_0__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972618 = 1;
   }
   this->fields.onClosed = inOnClosed;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClosed,
     (int32_t)inOnClosed,
     (System_String_o *)inOnClosed,
@@ -96,7 +96,7 @@ void EventInfoRepairDialog__Open(
     AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0);
   this->fields.canTap = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
-  v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_EventInfoRepairDialog__Open_b__6_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0, 0);
   eventInfoEquipSkillPartsListComponent = (UnityEngine_Object_o *)this->fields.eventInfoEquipSkillPartsListComponent;
@@ -151,7 +151,7 @@ void EventInfoRepairDialog__Open(
         }
       }
 LABEL_29:
-      sub_21FFECC(v18, v16);
+      sub_2213CDC(v18, v16);
     }
   }
 }
@@ -168,18 +168,18 @@ void EventInfoRepairDialog___OnClose_b__7_0(EventInfoRepairDialog_o *this, const
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_593A444 & 1) == 0 )
+  if ( (byte_597261B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A444 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597261B = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
   ActionExtensions__Call(this->fields.onClosed, 0);
   this->fields.onClosed = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClosed, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onClosed, 0, v5, v6, v7, v8, v9, v10);
 }
 
 

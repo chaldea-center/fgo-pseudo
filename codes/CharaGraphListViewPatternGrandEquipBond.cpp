@@ -32,15 +32,15 @@ void CharaGraphListViewPatternGrandEquipBond___ctor(
   bool v32; // w6
   bool v33; // w7
 
-  if ( (byte_5933205 & 1) == 0 )
+  if ( (byte_596B30C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantSkillMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToHashSet_int___);
-    byte_5933205 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantSkillMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToHashSet_int___);
+    byte_596B30C = 1;
   }
   CharaGraphListViewPatternGrandEquipNormal___ctor(
     (CharaGraphListViewPatternGrandEquipNormal_o *)this,
@@ -49,9 +49,9 @@ void CharaGraphListViewPatternGrandEquipBond___ctor(
     *(const MethodInfo **)&grandSvtId);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantSkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantSkillMaster___);
   this->fields.svtSkillMaster = (struct ServantSkillMaster_o *)Master_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.svtSkillMaster,
     (int32_t)Master_object,
     v12,
@@ -60,23 +60,23 @@ void CharaGraphListViewPatternGrandEquipBond___ctor(
     v15,
     v16,
     v17);
-  v18 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
+  v18 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillMaster___);
   this->fields.skillMaster = (struct SkillMaster_o *)v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.skillMaster, (int32_t)v18, v19, v20, v21, v22, v23, v24);
-  Entity = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.skillMaster, (int32_t)v18, v19, v20, v21, v22, v23, v24);
+  Entity = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Entity
     || (Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Entity,
                    grandSvtId,
-                   (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
+                   (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
   {
-    sub_21FFECC(Entity, v26);
+    sub_2213CDC(Entity, v26);
   }
   v27 = (struct System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__ToHashSet_int_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)Entity[11].klass,
-                                                              (const MethodInfo_386D418 *)Method_System_Linq_Enumerable_ToHashSet_int___);
+                                                              (const MethodInfo_38A08E0 *)Method_System_Linq_Enumerable_ToHashSet_int___);
   this->fields.individuality = v27;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.individuality,
     (int32_t)v27,
     v28,
@@ -105,14 +105,14 @@ bool CharaGraphListViewPatternGrandEquipBond__Filter(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_5933206 & 1) == 0 )
+  if ( (byte_596B30D & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_int____91485032);
-    sub_21FFC50(&Method_CharaGraphListViewPatternGrandEquipBond__Filter_b__4_0__);
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_21FFC50(&System_Func_int__bool__TypeInfo);
-    this = (CharaGraphListViewPatternGrandEquipBond_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5933206 = 1;
+    sub_2213A60(&Method_BasicHelper_Any_int____91711248);
+    sub_2213A60(&Method_CharaGraphListViewPatternGrandEquipBond__Filter_b__4_0__);
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_2213A60(&System_Func_int__bool__TypeInfo);
+    this = (CharaGraphListViewPatternGrandEquipBond_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596B30D = 1;
   }
   if ( !userEquipEntity )
     goto LABEL_13;
@@ -126,7 +126,7 @@ bool CharaGraphListViewPatternGrandEquipBond__Filter(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5, v6);
     *(_QWORD *)&v14.fields.currentCryptoKey = v10;
     *(_QWORD *)&v14.fields.fakeValue = v9;
-    this = (CharaGraphListViewPatternGrandEquipBond_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+    this = (CharaGraphListViewPatternGrandEquipBond_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                           v14,
                                                           0);
     if ( monitor )
@@ -139,22 +139,22 @@ bool CharaGraphListViewPatternGrandEquipBond__Filter(
           this = (CharaGraphListViewPatternGrandEquipBond_o *)DataMasterBase_object__object__int___GetEntity(
                                                                 klass,
                                                                 HIDWORD(this->fields._RootInfo_k__BackingField),
-                                                                (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                                                (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
           if ( this )
           {
             ActIndividuality = SkillEntity__getActIndividuality((SkillEntity_o *)this, 0);
-            v12 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+            v12 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
             System_Func_int__bool____ctor(v12, v4, Method_CharaGraphListViewPatternGrandEquipBond__Filter_b__4_0__, 0);
-            return BasicHelper__Any_int__58574768(
+            return BasicHelper__Any_int__58784608(
                      ActIndividuality,
                      (System_Func_T__bool__o *)v12,
-                     (const MethodInfo_37DC7B0 *)Method_BasicHelper_Any_int____91485032);
+                     (const MethodInfo_380FB60 *)Method_BasicHelper_Any_int____91711248);
           }
         }
       }
     }
 LABEL_13:
-    sub_21FFECC(this, userEquipEntity);
+    sub_2213CDC(this, userEquipEntity);
   }
   return 0;
 }
@@ -168,16 +168,16 @@ bool CharaGraphListViewPatternGrandEquipBond___Filter_b__4_0(
 {
   System_Collections_Generic_HashSet_int__o *individuality; // x0
 
-  if ( (byte_5933207 & 1) == 0 )
+  if ( (byte_596B30E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    byte_5933207 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    byte_596B30E = 1;
   }
   individuality = this->fields.individuality;
   if ( !individuality )
-    sub_21FFECC(0, *(_QWORD *)&x);
+    sub_2213CDC(0, *(_QWORD *)&x);
   return System_Collections_Generic_HashSet_int___Contains(
            individuality,
            x,
-           (const MethodInfo_4280968 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_42B44F4 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }

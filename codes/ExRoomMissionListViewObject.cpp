@@ -11,10 +11,10 @@ ExRoomMissionListViewItem_o *ExRoomMissionListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5932E1F & 1) == 0 )
+  if ( (byte_596AF25 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewItem_TypeInfo);
-    byte_5932E1F = 1;
+    sub_2213A60(&ExRoomMissionListViewItem_TypeInfo);
+    byte_596AF25 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -46,11 +46,11 @@ void ExRoomMissionListViewObject__OnChangeAlphaAnim(ExRoomMissionListViewObject_
   __int64 v16; // x1
   const MethodInfo *v17; // x4
 
-  if ( (byte_5932E21 & 1) == 0 )
+  if ( (byte_596AF27 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E21 = 1;
+    sub_2213A60(&ExRoomMissionListViewManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF27 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -85,7 +85,7 @@ void ExRoomMissionListViewObject__OnChangeAlphaAnim(ExRoomMissionListViewObject_
       {
         v15 = ExRoomMissionListViewObject__get_ExRoomItemDraw(this, v14);
         if ( !v15 )
-          sub_21FFECC(0, v16);
+          sub_2213CDC(0, v16);
         ExRoomMissionListViewItemDraw__OnChangeAlphaAnim(
           v15,
           v7,
@@ -117,11 +117,11 @@ void ExRoomMissionListViewObject__Update(ExRoomMissionListViewObject_o *this, co
   __int64 v17; // x1
   const MethodInfo *v18; // x4
 
-  if ( (byte_5932E20 & 1) == 0 )
+  if ( (byte_596AF26 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932E20 = 1;
+    sub_2213A60(&ExRoomMissionListViewManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AF26 = 1;
   }
   MissionListViewObject__RedispResTime((MissionListViewObject_o *)this, 0);
   if ( this->fields.linkItem )
@@ -157,7 +157,7 @@ void ExRoomMissionListViewObject__Update(ExRoomMissionListViewObject_o *this, co
       {
         v16 = ExRoomMissionListViewObject__get_ExRoomItemDraw(this, v15);
         if ( !v16 )
-          sub_21FFECC(0, v17);
+          sub_2213CDC(0, v17);
         ExRoomMissionListViewItemDraw__UpdateItem(
           v16,
           v8,
@@ -177,10 +177,10 @@ ExRoomMissionListViewItemDraw_o *ExRoomMissionListViewObject__get_ExRoomItemDraw
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5932E1E & 1) == 0 )
+  if ( (byte_596AF24 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionListViewItemDraw_TypeInfo);
-    byte_5932E1E = 1;
+    sub_2213A60(&ExRoomMissionListViewItemDraw_TypeInfo);
+    byte_596AF24 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

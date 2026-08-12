@@ -11,10 +11,10 @@ void CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_593C7E5 & 1) == 0 )
+  if ( (byte_5974A1D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1248/*"1"*/);
-    byte_593C7E5 = 1;
+    sub_2213A60(&StringLiteral_1248/*"1"*/);
+    byte_5974A1D = 1;
   }
   if ( item )
   {
@@ -32,7 +32,7 @@ void CombineCommandCodeListViewItemDraw__SetInput(
         }
       }
 LABEL_11:
-      sub_21FFECC(selectImgObj, item);
+      sub_2213CDC(selectImgObj, item);
     }
     if ( !selectImgObj )
       goto LABEL_11;
@@ -53,20 +53,20 @@ void CombineCommandCodeListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x21
   const MethodInfo *v11; // x4
 
-  if ( (byte_593C7E4 & 1) == 0 )
+  if ( (byte_5974A1C & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_9692/*"NOT_SELECT_MAX_EQUIP"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_1248/*"1"*/);
-    byte_593C7E4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_9705/*"NOT_SELECT_MAX_EQUIP"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_1248/*"1"*/);
+    byte_5974A1C = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_38;
-    ServantFaceIconComponent__Set_48025688(
+    ServantFaceIconComponent__Set_48056984(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -121,7 +121,7 @@ void CombineCommandCodeListViewItemDraw__SetItem(
         maskLabel = this->fields.maskLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item);
-        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9692/*"NOT_SELECT_MAX_EQUIP"*/, 0);
+        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9705/*"NOT_SELECT_MAX_EQUIP"*/, 0);
         if ( !maskLabel )
           goto LABEL_38;
         UILabel__set_text(maskLabel, (System_String_o *)icon, 0);
@@ -154,7 +154,7 @@ void CombineCommandCodeListViewItemDraw__SetItem(
         }
       }
 LABEL_38:
-      sub_21FFECC(icon, item);
+      sub_2213CDC(icon, item);
     }
   }
 }

@@ -26,7 +26,7 @@ void SupportSelectUIDragDropListViewSurface__set_DropObject(
   bool v7; // w7
 
   this->fields.dropObject = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.dropObject,
     (int32_t)value,
     (System_String_o *)method,

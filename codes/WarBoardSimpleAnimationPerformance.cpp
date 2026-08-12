@@ -19,7 +19,7 @@ void WarBoardSimpleAnimationPerformance___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)animation);
   this->fields.animation = animation;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animation,
     (int32_t)animation,
     v7,
@@ -29,7 +29,7 @@ void WarBoardSimpleAnimationPerformance___ctor(
     v11,
     v12);
   this->fields.animationName = animationName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animationName,
     (int32_t)animationName,
     v13,
@@ -53,16 +53,16 @@ System_Collections_IEnumerator_o *WarBoardSimpleAnimationPerformance__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593625D & 1) == 0 )
+  if ( (byte_596E3B7 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
-    byte_593625D = 1;
+    sub_2213A60(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+    byte_596E3B7 = 1;
   }
-  v3 = sub_21FFEBC(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+  v3 = sub_2213CCC(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -89,10 +89,10 @@ void WarBoardSimpleAnimationPerformance__OnStart(WarBoardSimpleAnimationPerforma
   __int64 v7; // x1
   SimpleAnimation_o *v8; // x0
 
-  if ( (byte_593625C & 1) == 0 )
+  if ( (byte_596E3B6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593625C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596E3B6 = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -109,8 +109,8 @@ void WarBoardSimpleAnimationPerformance__OnStart(WarBoardSimpleAnimationPerforma
   {
     v8 = this->fields.animation;
     if ( !v8 || (SimpleAnimation__Rewind(v8, 0), (v8 = this->fields.animation) == 0) )
-      sub_21FFECC(v8, v7);
-    if ( SimpleAnimation__Play_78338864(v8, this->fields.animationName, 0) )
+      sub_2213CDC(v8, v7);
+    if ( SimpleAnimation__Play_78552168(v8, this->fields.animationName, 0) )
       this->fields.isStart = 1;
   }
 }
@@ -124,7 +124,7 @@ bool WarBoardSimpleAnimationPerformance___Execute_b__5_0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return !SimpleAnimation__CheckPlaying(animation, 0) || this->fields.IsForceEnd;
 }
 
@@ -156,12 +156,12 @@ bool WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
   bool v13; // w7
   int32_t v14; // w8
 
-  if ( (byte_593625E & 1) == 0 )
+  if ( (byte_596E3B8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    sub_21FFC50(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
-    byte_593625E = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    sub_2213A60(&Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__);
+    byte_596E3B8 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -176,19 +176,19 @@ bool WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     if ( !_4__this->fields.isStart )
       return 0;
-    v6 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v6,
       (Il2CppObject *)_4__this,
       Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
       0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     v14 = 1;
     result = 1;
   }
@@ -213,11 +213,11 @@ void __noreturn WarBoardSimpleAnimationPerformance__Execute_d__5__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

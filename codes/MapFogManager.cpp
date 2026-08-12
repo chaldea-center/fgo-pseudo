@@ -7,23 +7,23 @@ void MapFogManager___ctor(MapFogManager_o *this, const MethodInfo *method)
   int32_t v7; // w5
   bool v8; // w6
   bool v9; // w7
-  const MethodInfo_476EDF0 *v15; // x1
+  const MethodInfo_47A2F28 *v15; // x1
 
-  if ( (byte_5934FBC & 1) == 0 )
+  if ( (byte_596D0EC & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapFogData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_MapFogData__TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_MapFogManager___ctor__);
-    byte_5934FBC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MapFogData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_MapFogData__TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_MapFogManager___ctor__);
+    byte_596D0EC = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MapFogData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MapFogData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MapFogData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MapFogData___ctor__);
   this->fields.fogList = (struct System_Collections_Generic_List_MapFogData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fogList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fogList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   __asm { FMOV            V0.4S, #1.0 }
-  v15 = (const MethodInfo_476EDF0 *)Method_SingletonMonoBehaviour_MapFogManager___ctor__;
+  v15 = (const MethodInfo_47A2F28 *)Method_SingletonMonoBehaviour_MapFogManager___ctor__;
   this->fields.fogColor = _Q0;
   SingletonMonoBehaviour_object____ctor((SingletonMonoBehaviour_T__o *)this, v15);
 }
@@ -41,28 +41,28 @@ void MapFogManager__ApplyColor(MapFogManager_o *this, const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o *v10; // [xsp+20h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_5934FBB & 1) == 0 )
+  if ( (byte_596D0EB & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapFogData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
-    sub_21FFC50(&Method_System_Nullable_Color__get_HasValue__);
-    byte_5934FBB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapFogData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
+    sub_2213A60(&Method_System_Nullable_Color__get_HasValue__);
+    byte_596D0EB = 1;
   }
   fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList;
   memset(&v11, 0, sizeof(v11));
   if ( !fogList )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     fogList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
   v9 = 0;
   v10 = &v11;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v11,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__) )
   {
     current = v11.fields._current;
     if ( v11.fields._current && MapFogData__get_HasRenderer((MapFogData_o *)v11.fields._current, v4) )
@@ -74,7 +74,7 @@ void MapFogManager__ApplyColor(MapFogManager_o *this, const MethodInfo *method)
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
 }
 
 
@@ -93,11 +93,11 @@ void MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogData, const M
   __int64 size; // x11
   Il2CppClass **v16; // x0
 
-  if ( (byte_5934FB9 & 1) == 0 )
+  if ( (byte_596D0E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapFogData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapFogData__Contains__);
-    byte_5934FB9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MapFogData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapFogData__Contains__);
+    byte_596D0E9 = 1;
   }
   fogList = this->fields.fogList;
   if ( !fogList )
@@ -105,7 +105,7 @@ void MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogData, const M
   fogList = (struct System_Collections_Generic_List_MapFogData__o *)System_Collections_Generic_List_object___Contains(
                                                                       (System_Collections_Generic_List_object__o *)fogList,
                                                                       (Il2CppObject *)fogData,
-                                                                      (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_MapFogData__Contains__);
+                                                                      (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_MapFogData__Contains__);
   if ( ((unsigned __int8)fogList & 1) != 0 )
     return;
   if ( !fogData
@@ -117,7 +117,7 @@ void MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogData, const M
         !items) )
   {
 LABEL_11:
-    sub_21FFECC(fogList, fogData);
+    sub_2213CDC(fogList, fogData);
   }
   size = v12->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -125,14 +125,14 @@ LABEL_11:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)fogData,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v16[4] = (Il2CppClass *)fogData;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v16 + 4), (int32_t)fogData, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v16 + 4), (int32_t)fogData, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -141,16 +141,16 @@ void MapFogManager__Detach(MapFogManager_o *this, MapFogData_o *fogData, const M
 {
   System_Collections_Generic_List_object__o *fogList; // x0
 
-  if ( (byte_5934FBA & 1) == 0 )
+  if ( (byte_596D0EA & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapFogData__Remove__);
-    byte_5934FBA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MapFogData__Remove__);
+    byte_596D0EA = 1;
   }
   fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList;
   if ( !fogList )
-    sub_21FFECC(0, fogData);
+    sub_2213CDC(0, fogData);
   System_Collections_Generic_List_object___Remove(
     fogList,
     (Il2CppObject *)fogData,
-    (const MethodInfo_445101C *)Method_System_Collections_Generic_List_MapFogData__Remove__);
+    (const MethodInfo_4485154 *)Method_System_Collections_Generic_List_MapFogData__Remove__);
 }

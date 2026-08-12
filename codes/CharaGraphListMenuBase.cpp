@@ -10,16 +10,16 @@ void CharaGraphListMenuBase___ctor(CharaGraphListMenuBase_o *this, const MethodI
   __int64 v10; // x1
   __int64 v11; // x2
 
-  if ( (byte_5937927 & 1) == 0 )
+  if ( (byte_596FA8A & 1) == 0 )
   {
-    sub_21FFC50(&BaseMenu_TypeInfo);
-    sub_21FFC50(&CharaGraphDefine_CharaGraphRootInfo_TypeInfo);
-    byte_5937927 = 1;
+    sub_2213A60(&BaseMenu_TypeInfo);
+    sub_2213A60(&CharaGraphDefine_CharaGraphRootInfo_TypeInfo);
+    byte_596FA8A = 1;
   }
-  v3 = (CharaGraphDefine_CharaGraphRootInfo_o *)sub_21FFEBC(CharaGraphDefine_CharaGraphRootInfo_TypeInfo);
+  v3 = (CharaGraphDefine_CharaGraphRootInfo_o *)sub_2213CCC(CharaGraphDefine_CharaGraphRootInfo_TypeInfo);
   CharaGraphDefine_CharaGraphRootInfo___ctor(v3, 0);
   this->fields._RootInfo_k__BackingField = v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)v3,
     v4,
@@ -48,18 +48,17 @@ void CharaGraphListMenuBase__AssertionForSerializeField(CharaGraphListMenuBase_o
 
 void CharaGraphListMenuBase__Awake(CharaGraphListMenuBase_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x0
   UnityEngine_GameObject_o *bgTxtObject; // x19
   _BOOL8 IsActiveBgTxt; // x0
-  __int64 v6; // x1
+  __int64 v5; // x1
 
-  v3 = (const MethodInfo *)((__int64 (__fastcall *)(CharaGraphListMenuBase_o *, const MethodInfo *))this->klass->vtable._4_AssertionForSerializeField.methodPtr)(
-                             this,
-                             this->klass->vtable._4_AssertionForSerializeField.method);
+  ((void (__fastcall *)(CharaGraphListMenuBase_o *, const MethodInfo *))this->klass->vtable._4_AssertionForSerializeField.methodPtr)(
+    this,
+    this->klass->vtable._4_AssertionForSerializeField.method);
   bgTxtObject = this->fields.bgTxtObject;
-  IsActiveBgTxt = BgTxtManager__IsActiveBgTxt(v3);
+  IsActiveBgTxt = BgTxtManager__IsActiveBgTxt(0);
   if ( !bgTxtObject )
-    sub_21FFECC(IsActiveBgTxt, v6);
+    sub_2213CDC(IsActiveBgTxt, v5);
   UnityEngine_GameObject__SetActive(bgTxtObject, IsActiveBgTxt, 0);
 }
 
@@ -89,11 +88,11 @@ void CharaGraphListMenuBase__CastItem(
   CharaGraphListViewItemBase_o *v23; // x8
   __int64 v24; // x10
 
-  if ( (byte_5937926 & 1) == 0 )
+  if ( (byte_596FA89 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphCommandCodeListViewItem_TypeInfo);
-    sub_21FFC50(&CharaGraphServantListViewItemBase_TypeInfo);
-    byte_5937926 = 1;
+    sub_2213A60(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    sub_2213A60(&CharaGraphServantListViewItemBase_TypeInfo);
+    byte_596FA89 = 1;
   }
   if ( item )
   {
@@ -122,7 +121,7 @@ void CharaGraphListMenuBase__CastItem(
     {
       v21 = 0;
     }
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)svtItem,
       v21,
       (System_String_o *)commandCodeItem,
@@ -160,7 +159,7 @@ void CharaGraphListMenuBase__CastItem(
   else
   {
     *svtItem = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)svtItem,
       0,
       (System_String_o *)commandCodeItem,
@@ -172,7 +171,7 @@ void CharaGraphListMenuBase__CastItem(
     v19 = 0;
     *commandCodeItem = 0;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)commandCodeItem, v19, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)commandCodeItem, v19, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -189,14 +188,14 @@ void CharaGraphListMenuBase__Close(CharaGraphListMenuBase_o *this, System_Action
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x8
   System_Action_o *v14; // x20
 
-  if ( (byte_5937909 & 1) == 0 )
+  if ( (byte_596FA6C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_EndClose__);
-    byte_5937909 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase_EndClose__);
+    byte_596FA6C = 1;
   }
   this->fields.callbackOnClose = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackOnClose,
     (int32_t)callback,
     (System_String_o *)method,
@@ -208,14 +207,14 @@ void CharaGraphListMenuBase__Close(CharaGraphListMenuBase_o *this, System_Action
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   this->fields.state = 4;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   CharaGraphListMenuBase__SetTabKind(
     this,
     this->fields.tabKind,
     RootInfo_k__BackingField->fields._ModeKind_k__BackingField,
     0,
     v12);
-  v14 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v14, (Il2CppObject *)this, Method_CharaGraphListMenuBase_EndClose__, 0);
   BaseMenu__Close((BaseMenu_o *)this, v14, 0);
 }
@@ -253,32 +252,32 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuBase__CreateListViewPattern(
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_593790C & 1) == 0 )
+  if ( (byte_596FA6F & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListViewPatternCommandCode_TypeInfo);
-    sub_21FFC50(&CharaGraphListViewPatternServantCollection_TypeInfo);
-    sub_21FFC50(&CharaGraphListViewPatternServantEquip_TypeInfo);
-    sub_21FFC50(&CharaGraphListViewPatternServant_TypeInfo);
-    byte_593790C = 1;
+    sub_2213A60(&CharaGraphListViewPatternCommandCode_TypeInfo);
+    sub_2213A60(&CharaGraphListViewPatternServantCollection_TypeInfo);
+    sub_2213A60(&CharaGraphListViewPatternServantEquip_TypeInfo);
+    sub_2213A60(&CharaGraphListViewPatternServant_TypeInfo);
+    byte_596FA6F = 1;
   }
   if ( (unsigned int)(kind - 1) > 2 )
     v7 = &CharaGraphListViewPatternServant_TypeInfo;
   else
-    v7 = (CharaGraphListViewPatternServant_c **)off_52966F0[kind - 1];
-  v8 = sub_21FFEBC(*v7);
+    v7 = (CharaGraphListViewPatternServant_c **)off_52CA860[kind - 1];
+  v8 = sub_2213CCC(*v7);
   System_Object___ctor((Il2CppObject *)v8, 0);
   SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField;
   if ( !SortOwner_k__BackingField
     || (CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(SortOwner_k__BackingField, kind, v10), !v8) )
   {
-    sub_21FFECC(SortOwner_k__BackingField, v9);
+    sub_2213CDC(SortOwner_k__BackingField, v9);
   }
   v18 = this->fields._SortOwner_k__BackingField;
   *(_QWORD *)(v8 + 16) = v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 16), (int32_t)v18, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 16), (int32_t)v18, v12, v13, v14, v15, v16, v17);
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   *(_QWORD *)(v8 + 24) = RootInfo_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)(v8 + 24),
     (int32_t)RootInfo_k__BackingField,
     v20,
@@ -288,7 +287,7 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuBase__CreateListViewPattern(
     v24,
     v25);
   *(_QWORD *)(v8 + 32) = setupInfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 32), (int32_t)setupInfo, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 32), (int32_t)setupInfo, v26, v27, v28, v29, v30, v31);
   return (CharaGraphListViewPatternBase_o *)v8;
 }
 
@@ -308,10 +307,10 @@ int32_t CharaGraphListMenuBase__DisplayPushButton(
   CharaGraphManageButtonGroup_o *v12; // x0
 
   v6 = iModeKind;
-  if ( (byte_5937922 & 1) == 0 )
+  if ( (byte_596FA85 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937922 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA85 = 1;
   }
   charaGraphManageButtonGroup = (UnityEngine_Object_o *)this->fields.charaGraphManageButtonGroup;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -320,7 +319,7 @@ int32_t CharaGraphListMenuBase__DisplayPushButton(
   {
     v12 = this->fields.charaGraphManageButtonGroup;
     if ( !v12 )
-      sub_21FFECC(0, v10);
+      sub_2213CDC(0, v10);
     CharaGraphManageButtonGroup__SetPushButtonActive(v12, value, isInit, v11);
     if ( v6 == 4 && !value )
       return 0;
@@ -361,7 +360,7 @@ void CharaGraphListMenuBase__EndClose(CharaGraphListMenuBase_o *this, const Meth
   if ( callbackOnClose )
   {
     p_callbackOnClose->klass = 0;
-    sub_21FFBF4(p_callbackOnClose, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04(p_callbackOnClose, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -375,7 +374,7 @@ void CharaGraphListMenuBase__EndOpen(CharaGraphListMenuBase_o *this, const Metho
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   this->fields.state = 2;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   CharaGraphListMenuBase__SetTabKind(
     this,
     this->fields.tabKind,
@@ -401,22 +400,22 @@ void CharaGraphListMenuBase__Exit(CharaGraphListMenuBase_o *this, int32_t result
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x2
 
-  if ( (byte_593790A & 1) == 0 )
+  if ( (byte_596FA6D & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase___c__DisplayClass38_0__Exit_g__OnEnd_0__);
-    sub_21FFC50(&CharaGraphListMenuBase___c__DisplayClass38_0_TypeInfo);
-    byte_593790A = 1;
+    sub_2213A60(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase___c__DisplayClass38_0__Exit_g__OnEnd_0__);
+    sub_2213A60(&CharaGraphListMenuBase___c__DisplayClass38_0_TypeInfo);
+    byte_596FA6D = 1;
   }
-  v5 = sub_21FFEBC(CharaGraphListMenuBase___c__DisplayClass38_0_TypeInfo);
+  v5 = sub_2213CCC(CharaGraphListMenuBase___c__DisplayClass38_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   v14 = CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo;
   *(_DWORD *)(v5 + 24) = result;
-  v15 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_21FFEBC(v14);
+  v15 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_2213CCC(v14);
   CharaGraphListMenuBase_RequestCallbackFunc___ctor(
     v15,
     (Il2CppObject *)v5,
@@ -430,12 +429,12 @@ System_String_o *CharaGraphListMenuBase__GetLocalizationKeyForModeKindMain(
         CharaGraphListMenuBase_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593790F & 1) == 0 )
+  if ( (byte_596FA72 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_12144/*"SERVANT_LIST_EXPLANATION_STATUS"*/);
-    byte_593790F = 1;
+    sub_2213A60(&StringLiteral_12167/*"SERVANT_LIST_EXPLANATION_STATUS"*/);
+    byte_596FA72 = 1;
   }
-  return (System_String_o *)StringLiteral_12144/*"SERVANT_LIST_EXPLANATION_STATUS"*/;
+  return (System_String_o *)StringLiteral_12167/*"SERVANT_LIST_EXPLANATION_STATUS"*/;
 }
 
 
@@ -453,7 +452,7 @@ void CharaGraphListMenuBase__Init(CharaGraphListMenuBase_o *this, int32_t defaul
         this->fields.tabKind = defaultTabKind,
         !RootInfo_k__BackingField) )
   {
-    sub_21FFECC(listViewManager, *(_QWORD *)&defaultTabKind);
+    sub_2213CDC(listViewManager, *(_QWORD *)&defaultTabKind);
   }
   this->fields.isInitTab = 0;
   RootInfo_k__BackingField->fields._ModeKind_k__BackingField = 0;
@@ -474,7 +473,7 @@ void CharaGraphListMenuBase__ModifyList(CharaGraphListMenuBase_o *this, bool isN
     || (CharaGraphListViewManager__ModifyList(listViewManager, 0, isNeedSort, v3),
         (v6 = this->fields.listViewManager) == 0) )
   {
-    sub_21FFECC(listViewManager, isNeedSort);
+    sub_2213CDC(listViewManager, isNeedSort);
   }
   v6->fields.initMode = 3;
   ListViewManager__set_IsInput((ListViewManager_o *)v6, 0, 0);
@@ -487,14 +486,14 @@ void CharaGraphListMenuBase__OnClickBonusFilterKind(CharaGraphListMenuBase_o *th
   Il2CppObject *listViewManager; // x21
   System_Action_o *v4; // x20
 
-  if ( (byte_5937919 & 1) == 0 )
+  if ( (byte_596FA7C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListViewManager_OnClickBonusFilterKind__);
-    byte_5937919 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListViewManager_OnClickBonusFilterKind__);
+    byte_596FA7C = 1;
   }
   listViewManager = (Il2CppObject *)this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, listViewManager, (intptr_t)Method_CharaGraphListViewManager_OnClickBonusFilterKind__, 0);
   if ( this->fields.state == 2 )
     ActionExtensions__Call(v4, 0);
@@ -533,19 +532,19 @@ void CharaGraphListMenuBase__OnClickFilterKind(CharaGraphListMenuBase_o *this, c
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_5937916 & 1) == 0 )
+  if ( (byte_596FA79 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_bool__TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnClickFilterKind_b__55_0__);
-    byte_5937916 = 1;
+    sub_2213A60(&System_Action_bool__TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnClickFilterKind_b__55_0__);
+    byte_596FA79 = 1;
   }
   if ( this->fields.state == 2 )
   {
     listViewManager = this->fields.listViewManager;
-    v4 = (System_Action_bool__o *)sub_21FFEBC(System_Action_bool__TypeInfo);
+    v4 = (System_Action_bool__o *)sub_2213CCC(System_Action_bool__TypeInfo);
     System_Action_bool____ctor(v4, (Il2CppObject *)this, Method_CharaGraphListMenuBase__OnClickFilterKind_b__55_0__, 0);
     if ( !listViewManager )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     CharaGraphListViewManager__OnClickFilterKind(listViewManager, v4, v7);
   }
 }
@@ -563,18 +562,18 @@ void CharaGraphListMenuBase__OnClickScaleChange(CharaGraphListMenuBase_o *this, 
   CharaGraphManageButtonGroup_o *v10; // x19
   const MethodInfo *v11; // x2
 
-  if ( (byte_5937914 & 1) == 0 )
+  if ( (byte_596FA77 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickScaleChange__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937914 = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickScaleChange__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA77 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_CharaGraphListMenuBase_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     listViewManager = this->fields.listViewManager;
     if ( listViewManager )
@@ -599,7 +598,7 @@ void CharaGraphListMenuBase__OnClickScaleChange(CharaGraphListMenuBase_o *this, 
         }
       }
     }
-    sub_21FFECC(listViewManager, v5);
+    sub_2213CDC(listViewManager, v5);
   }
 }
 
@@ -609,14 +608,14 @@ void CharaGraphListMenuBase__OnClickSortAscendingOrder(CharaGraphListMenuBase_o 
   Il2CppObject *listViewManager; // x21
   System_Action_o *v4; // x20
 
-  if ( (byte_5937918 & 1) == 0 )
+  if ( (byte_596FA7B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListViewManager_OnClickSortAscendingOrder__);
-    byte_5937918 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListViewManager_OnClickSortAscendingOrder__);
+    byte_596FA7B = 1;
   }
   listViewManager = (Il2CppObject *)this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, listViewManager, (intptr_t)Method_CharaGraphListViewManager_OnClickSortAscendingOrder__, 0);
   if ( this->fields.state == 2 )
     ActionExtensions__Call(v4, 0);
@@ -628,14 +627,14 @@ void CharaGraphListMenuBase__OnClickSortKind(CharaGraphListMenuBase_o *this, con
   Il2CppObject *listViewManager; // x21
   System_Action_o *v4; // x20
 
-  if ( (byte_5937917 & 1) == 0 )
+  if ( (byte_596FA7A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListViewManager_OnClickSortKind__);
-    byte_5937917 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListViewManager_OnClickSortKind__);
+    byte_596FA7A = 1;
   }
   listViewManager = (Il2CppObject *)this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, listViewManager, (intptr_t)Method_CharaGraphListViewManager_OnClickSortKind__, 0);
   if ( this->fields.state == 2 )
     ActionExtensions__Call(v4, 0);
@@ -657,10 +656,10 @@ void CharaGraphListMenuBase__OnClickTab(
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x8
 
   v4 = this;
-  if ( (byte_5937913 & 1) == 0 )
+  if ( (byte_596FA76 & 1) == 0 )
   {
-    this = (CharaGraphListMenuBase_o *)sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTab__);
-    byte_5937913 = 1;
+    this = (CharaGraphListMenuBase_o *)sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTab__);
+    byte_596FA76 = 1;
   }
   if ( v4->fields.state == 2 )
   {
@@ -676,13 +675,13 @@ void CharaGraphListMenuBase__OnClickTab(
     }
     v8 = Method_CharaGraphListMenuBase_OnClickTab__;
     if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnClickTab__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnClickTab__);
-    v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+      v8 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnClickTab__);
+    v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
     RootInfo_k__BackingField = v4->fields._RootInfo_k__BackingField;
     if ( !RootInfo_k__BackingField )
 LABEL_16:
-      sub_21FFECC(this, finishCallback);
+      sub_2213CDC(this, finishCallback);
     if ( (RootInfo_k__BackingField->fields._ModeKind_k__BackingField & 0xFFFFFFFE) == 2 )
     {
       CharaGraphListMenuBase__StatusRequest(v4, finishCallback, v10);
@@ -712,13 +711,13 @@ void CharaGraphListMenuBase__OnClickTabCommandCode(CharaGraphListMenuBase_o *thi
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_5937912 & 1) == 0 )
+  if ( (byte_596FA75 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnClickTabCommandCode_b__47_0__);
-    sub_21FFC50(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
-    byte_5937912 = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnClickTabCommandCode_b__47_0__);
+    sub_2213A60(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    byte_596FA75 = 1;
   }
-  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_21FFEBC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_2213CCC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
   CharaGraphListMenuBase_RequestCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -758,13 +757,13 @@ void CharaGraphListMenuBase__OnClickTabServant(CharaGraphListMenuBase_o *this, c
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_5937910 & 1) == 0 )
+  if ( (byte_596FA73 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnClickTabServant_b__45_0__);
-    sub_21FFC50(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
-    byte_5937910 = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnClickTabServant_b__45_0__);
+    sub_2213A60(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    byte_596FA73 = 1;
   }
-  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_21FFEBC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_2213CCC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
   CharaGraphListMenuBase_RequestCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -780,13 +779,13 @@ void CharaGraphListMenuBase__OnClickTabServantEquip(CharaGraphListMenuBase_o *th
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_5937911 & 1) == 0 )
+  if ( (byte_596FA74 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnClickTabServantEquip_b__46_0__);
-    sub_21FFC50(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
-    byte_5937911 = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnClickTabServantEquip_b__46_0__);
+    sub_2213A60(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    byte_596FA74 = 1;
   }
-  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_21FFEBC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+  v3 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_2213CCC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
   CharaGraphListMenuBase_RequestCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -816,7 +815,7 @@ void CharaGraphListMenuBase__OnCloseServantStatusWithoutQuestId(
 
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CharaGraphListViewManager__ModifyList(listViewManager, 0, 0, v2);
   CharaGraphListMenuBase__ToInputState(this, 1, v5);
 }
@@ -876,20 +875,20 @@ void CharaGraphListMenuBase__OnEndSelectServantStatus(
   Il2CppObject *v25; // x1
   const MethodInfo *v26; // x2
 
-  if ( (byte_593791C & 1) == 0 )
+  if ( (byte_596FA7F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase___c__DisplayClass67_0__OnEndSelectServantStatus_b__0__);
-    sub_21FFC50(&CharaGraphListMenuBase___c__DisplayClass67_0_TypeInfo);
-    byte_593791C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_CharaGraphListMenuBase___c__DisplayClass67_0__OnEndSelectServantStatus_b__0__);
+    sub_2213A60(&CharaGraphListMenuBase___c__DisplayClass67_0_TypeInfo);
+    byte_596FA7F = 1;
   }
-  v9 = sub_21FFEBC(CharaGraphListMenuBase___c__DisplayClass67_0_TypeInfo);
+  v9 = sub_2213CCC(CharaGraphListMenuBase___c__DisplayClass67_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_13;
   *(_QWORD *)(v9 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   listViewManager = this->fields.listViewManager;
   *(_DWORD *)(v9 + 24) = questId;
   if ( !listViewManager )
@@ -901,8 +900,8 @@ void CharaGraphListMenuBase__OnEndSelectServantStatus(
   if ( isDecide )
     CharaGraphListMenuBase__ModifyList(this, isNeedSort, v19);
   v20 = *(_DWORD *)(v9 + 24);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v22 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v22 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   v23 = v20 < 1;
   v24 = v22;
   if ( v23 )
@@ -918,7 +917,7 @@ void CharaGraphListMenuBase__OnEndSelectServantStatus(
   System_Action___ctor(v22, v25, (intptr_t)v26, 0);
   if ( !Instance )
 LABEL_13:
-    sub_21FFECC(scrollView, v11);
+    sub_2213CDC(scrollView, v11);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v24, 0);
 }
 
@@ -933,7 +932,7 @@ bool CharaGraphListMenuBase__OnLongTapServantLocal(
 
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   ModeKind_k__BackingField = RootInfo_k__BackingField->fields._ModeKind_k__BackingField;
   if ( !ModeKind_k__BackingField )
     ((void (__fastcall *)(CharaGraphListMenuBase_o *, CharaGraphListViewItemBase_o *, const MethodInfo *))this->klass->vtable._12_OnSelectServantAtKindStatus.methodPtr)(
@@ -961,7 +960,7 @@ void CharaGraphListMenuBase__OnSelectServant(
       goto LABEL_8;
     listViewManager = this->fields.listViewManager;
     if ( !listViewManager )
-      sub_21FFECC(0, *(_QWORD *)&iKind);
+      sub_2213CDC(0, *(_QWORD *)&iKind);
     Item = CharaGraphListViewManager__GetItem(listViewManager, n, *(const MethodInfo **)&n);
     if ( !Item )
       goto LABEL_8;
@@ -992,18 +991,18 @@ void CharaGraphListMenuBase__OnSelectServantAtKindChoice(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_593791E & 1) == 0 )
+  if ( (byte_596FA81 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__);
-    byte_593791E = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__);
+    byte_596FA81 = 1;
   }
   v5 = Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__;
   if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__);
-  v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+    v5 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnSelectServantAtKindChoice__);
+  v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   if ( !item )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   item->fields._IsSwapChoice_k__BackingField ^= 1u;
   CharaGraphListMenuBase__ToInputState(this, 1, v9);
 }
@@ -1020,18 +1019,18 @@ void CharaGraphListMenuBase__OnSelectServantAtKindLock(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_593791D & 1) == 0 )
+  if ( (byte_596FA80 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__);
-    byte_593791D = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__);
+    byte_596FA80 = 1;
   }
   v5 = Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__;
   if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__);
-  v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+    v5 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnSelectServantAtKindLock__);
+  v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 11, 0, 0);
   if ( !item )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   item->fields._IsSwapLock_k__BackingField ^= 1u;
   CharaGraphListMenuBase__ToInputState(this, 1, v9);
 }
@@ -1066,33 +1065,33 @@ void CharaGraphListMenuBase__OnSelectServantAtKindPush(
   CharaGraphCommandCodeListViewItem_o *v14; // [xsp+0h] [xbp-40h] BYREF
   CharaGraphServantListViewItemBase_o *svtItem; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593791F & 1) == 0 )
+  if ( (byte_596FA82 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_bool__TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnSelectServantAtKindPush_g__EndPushRequest_72_1__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase__OnSelectServantAtKindPush_g__OnCloseDialog_72_0__);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_593791F = 1;
+    sub_2213A60(&System_Action_bool__TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__);
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnSelectServantAtKindPush_g__EndPushRequest_72_1__);
+    sub_2213A60(&Method_CharaGraphListMenuBase__OnSelectServantAtKindPush_g__OnCloseDialog_72_0__);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_596FA82 = 1;
   }
   v5 = Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__;
   v14 = 0;
   svtItem = 0;
   if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__);
-  v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+    v5 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnSelectServantAtKindPush__);
+  v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   CharaGraphListMenuBase__CastItem(item, &svtItem, &v14, v7);
   if ( !svtItem )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   UserServantEntity_k__BackingField = svtItem->fields._UserServantEntity_k__BackingField;
-  v11 = (System_Action_bool__o *)sub_21FFEBC(System_Action_bool__TypeInfo);
+  v11 = (System_Action_bool__o *)sub_2213CCC(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(
     v11,
     (Il2CppObject *)this,
     Method_CharaGraphListMenuBase__OnSelectServantAtKindPush_g__OnCloseDialog_72_0__,
     0);
-  v12 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v12 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v12,
     (Il2CppObject *)this,
@@ -1127,13 +1126,13 @@ void CharaGraphListMenuBase__OnSelectServantAtKindStatus(
   CharaGraphServantListViewItemBase_o *svtItem; // [xsp+18h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_593791B & 1) == 0 )
+  if ( (byte_596FA7E & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__);
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&ServantStatusDialog_ResultDelegate_TypeInfo);
-    this = (CharaGraphListMenuBase_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593791B = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__);
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&ServantStatusDialog_ResultDelegate_TypeInfo);
+    this = (CharaGraphListMenuBase_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596FA7E = 1;
   }
   tabKind = v4->fields.tabKind;
   svtItem = 0;
@@ -1153,8 +1152,8 @@ void CharaGraphListMenuBase__OnSelectServantAtKindStatus(
   CharaGraphListMenuBase__CastItem(item, &svtItem, &commandCodeItem, v7);
   v8 = Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__;
   if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__);
-  v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+    v8 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnSelectServantAtKindStatus__);
+  v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
   v10 = v4->fields.tabKind;
   v4->fields.state = 6;
@@ -1162,12 +1161,12 @@ void CharaGraphListMenuBase__OnSelectServantAtKindStatus(
   {
     if ( v10 == 1 )
     {
-      this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !svtItem )
         goto LABEL_22;
       v14 = (CommonUI_o *)this;
       UserServantEntity_k__BackingField = svtItem->fields._UserServantEntity_k__BackingField;
-      v16 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+      v16 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
       ServantStatusDialog_EndDelegate___ctor(
         v16,
         (Il2CppObject *)v4,
@@ -1175,16 +1174,16 @@ void CharaGraphListMenuBase__OnSelectServantAtKindStatus(
         0);
       if ( !v14 )
         goto LABEL_22;
-      CommonUI__OpenServantStatusDialog_37302172(v14, 0, UserServantEntity_k__BackingField, v16, 0);
+      CommonUI__OpenServantStatusDialog_37383588(v14, 0, UserServantEntity_k__BackingField, v16, 0);
     }
     else if ( v10 == 2 )
     {
-      this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( commandCodeItem )
       {
         v11 = (CommonUI_o *)this;
         UserCommandCodeEntity_k__BackingField = commandCodeItem->fields._UserCommandCodeEntity_k__BackingField;
-        v13 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+        v13 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v13,
           (Il2CppObject *)v4,
@@ -1192,22 +1191,22 @@ void CharaGraphListMenuBase__OnSelectServantAtKindStatus(
           0);
         if ( v11 )
         {
-          CommonUI__OpenServantStatusDialog_37304416(v11, 0, UserCommandCodeEntity_k__BackingField, v13, 0, 0);
+          CommonUI__OpenServantStatusDialog_37385832(v11, 0, UserCommandCodeEntity_k__BackingField, v13, 0, 0);
           return;
         }
       }
 LABEL_22:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
   }
   else
   {
-    this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (CharaGraphListMenuBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !svtItem )
       goto LABEL_22;
     v17 = (CommonUI_o *)this;
     v18 = svtItem->fields._UserServantEntity_k__BackingField;
-    v19 = (ServantStatusDialog_ResultDelegate_o *)sub_21FFEBC(ServantStatusDialog_ResultDelegate_TypeInfo);
+    v19 = (ServantStatusDialog_ResultDelegate_o *)sub_2213CCC(ServantStatusDialog_ResultDelegate_TypeInfo);
     ServantStatusDialog_ResultDelegate___ctor(
       v19,
       (Il2CppObject *)v4,
@@ -1215,7 +1214,7 @@ LABEL_22:
       0);
     if ( !v17 )
       goto LABEL_22;
-    CommonUI__OpenServantStatusDialog_37302652(v17, 0, v18, v19, 0, 0, 0);
+    CommonUI__OpenServantStatusDialog_37384068(v17, 0, v18, v19, 0, 0, 0);
   }
 }
 
@@ -1235,10 +1234,10 @@ void CharaGraphListMenuBase__OnSelectServantLocal(
   const MethodInfo *v11; // x2
 
   v4 = this;
-  if ( (byte_593791A & 1) == 0 )
+  if ( (byte_596FA7D & 1) == 0 )
   {
-    this = (CharaGraphListMenuBase_o *)sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServantLocal__);
-    byte_593791A = 1;
+    this = (CharaGraphListMenuBase_o *)sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServantLocal__);
+    byte_596FA7D = 1;
   }
   if ( !item )
     goto LABEL_23;
@@ -1247,7 +1246,7 @@ void CharaGraphListMenuBase__OnSelectServantLocal(
   RootInfo_k__BackingField = v4->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
 LABEL_23:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   ModeKind_k__BackingField = RootInfo_k__BackingField->fields._ModeKind_k__BackingField;
   if ( ModeKind_k__BackingField > 1 )
   {
@@ -1288,8 +1287,8 @@ LABEL_22:
 LABEL_17:
   v9 = Method_CharaGraphListMenuBase_OnSelectServantLocal__;
   if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnSelectServantLocal__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnSelectServantLocal__);
-  v10 = (System_Reflection_MethodBase_o *)sub_21FFC34(v9, v9[4]);
+    v9 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnSelectServantLocal__);
+  v10 = (System_Reflection_MethodBase_o *)sub_2213A44(v9, v9[4]);
   OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
   CharaGraphListMenuBase__ToInputState(v4, 0, v11);
 }
@@ -1317,20 +1316,20 @@ void CharaGraphListMenuBase__OnServantManageTabSelected(
   const MethodInfo *v19; // x3
   const MethodInfo *v20; // x2
 
-  if ( (byte_5937915 & 1) == 0 )
+  if ( (byte_596FA78 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnServantManageTabSelected__);
-    sub_21FFC50(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase___c__DisplayClass54_0__OnServantManageTabSelected_b__0__);
-    sub_21FFC50(&CharaGraphListMenuBase___c__DisplayClass54_0_TypeInfo);
-    byte_5937915 = 1;
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnServantManageTabSelected__);
+    sub_2213A60(&CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase___c__DisplayClass54_0__OnServantManageTabSelected_b__0__);
+    sub_2213A60(&CharaGraphListMenuBase___c__DisplayClass54_0_TypeInfo);
+    byte_596FA78 = 1;
   }
-  v5 = sub_21FFEBC(CharaGraphListMenuBase___c__DisplayClass54_0_TypeInfo);
+  v5 = sub_2213CCC(CharaGraphListMenuBase___c__DisplayClass54_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_13;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   state = this->fields.state;
   *(_DWORD *)(v5 + 24) = modeKindToUpdate;
   if ( state != 2 )
@@ -1338,17 +1337,17 @@ void CharaGraphListMenuBase__OnServantManageTabSelected(
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
 LABEL_13:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   if ( RootInfo_k__BackingField->fields._ModeKind_k__BackingField != modeKindToUpdate )
   {
     v16 = Method_CharaGraphListMenuBase_OnServantManageTabSelected__;
     if ( (*((_BYTE *)Method_CharaGraphListMenuBase_OnServantManageTabSelected__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_21FFC68(Method_CharaGraphListMenuBase_OnServantManageTabSelected__);
-    v17 = (System_Reflection_MethodBase_o *)sub_21FFC34(v16, v16[4]);
+      v16 = (_QWORD *)sub_2213A78(Method_CharaGraphListMenuBase_OnServantManageTabSelected__);
+    v17 = (System_Reflection_MethodBase_o *)sub_2213A44(v16, v16[4]);
     OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0);
     if ( *(_DWORD *)(v5 + 24) == 4 )
       EventTutorialMaster__CheckTutorial(-1, 68, 0, 0, 0, 0, 0, 0);
-    v18 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_21FFEBC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
+    v18 = (CharaGraphListMenuBase_RequestCallbackFunc_o *)sub_2213CCC(CharaGraphListMenuBase_RequestCallbackFunc_TypeInfo);
     CharaGraphListMenuBase_RequestCallbackFunc___ctor(
       v18,
       (Il2CppObject *)v5,
@@ -1388,19 +1387,19 @@ void CharaGraphListMenuBase__Open(
   struct CharaGraphDefine_CharaGraphRootInfo_o *v26; // x8
   System_Action_o *v27; // x20
 
-  if ( (byte_5937907 & 1) == 0 )
+  if ( (byte_596FA6A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_EndOpen__);
-    sub_21FFC50(&CharaGraphSortOwnerNoSave_TypeInfo);
-    byte_5937907 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase_EndOpen__);
+    sub_2213A60(&CharaGraphSortOwnerNoSave_TypeInfo);
+    byte_596FA6A = 1;
   }
   if ( !this->fields._SortOwner_k__BackingField )
   {
-    v5 = (CharaGraphSortOwnerAllKind_o *)sub_21FFEBC(CharaGraphSortOwnerNoSave_TypeInfo);
+    v5 = (CharaGraphSortOwnerAllKind_o *)sub_2213CCC(CharaGraphSortOwnerNoSave_TypeInfo);
     CharaGraphSortOwnerAllKind___ctor(v5, v6);
     this->fields._SortOwner_k__BackingField = (struct CharaGraphSortOwnerBase_o *)v5;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._SortOwner_k__BackingField,
       (int32_t)v5,
       v7,
@@ -1418,7 +1417,7 @@ void CharaGraphListMenuBase__Open(
   if ( (unsigned int)(state - 2) < 2 )
   {
     this->fields.CallbackOnExit = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.CallbackOnExit,
       (int32_t)callback,
       v13,
@@ -1440,12 +1439,12 @@ void CharaGraphListMenuBase__Open(
       return;
     }
 LABEL_13:
-    sub_21FFECC(gameObject, v21);
+    sub_2213CDC(gameObject, v21);
   }
   if ( !state )
   {
     this->fields.CallbackOnExit = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.CallbackOnExit,
       (int32_t)callback,
       v13,
@@ -1463,7 +1462,7 @@ LABEL_13:
       goto LABEL_13;
     CharaGraphListMenuBase__SetTabKind(this, this->fields.tabKind, v26->fields._ModeKind_k__BackingField, 1, v25);
     this->fields.state = 1;
-    v27 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_CharaGraphListMenuBase_EndOpen__, 0);
     BaseMenu__Open((BaseMenu_o *)this, v27, 0);
   }
@@ -1479,10 +1478,10 @@ void CharaGraphListMenuBase__SetFilterButtonImage(CharaGraphListMenuBase_o *this
   const MethodInfo *v7; // x2
   struct CharaGraphListViewManager_o *listViewManager; // x8
 
-  if ( (byte_5937924 & 1) == 0 )
+  if ( (byte_596FA87 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937924 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA87 = 1;
   }
   charaGraphSortButtonGroup = (UnityEngine_Object_o *)this->fields.charaGraphSortButtonGroup;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1492,7 +1491,7 @@ void CharaGraphListMenuBase__SetFilterButtonImage(CharaGraphListMenuBase_o *this
   {
     listViewManager = this->fields.listViewManager;
     if ( !listViewManager || (v5 = this->fields.charaGraphSortButtonGroup) == 0 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     CharaGraphSortButtonGroup__SetFilterButtonImage(v5, listViewManager->fields.sort, v7);
   }
 }
@@ -1507,10 +1506,10 @@ void CharaGraphListMenuBase__SetSortButtonImage(CharaGraphListMenuBase_o *this, 
   const MethodInfo *v7; // x3
   struct CharaGraphListViewManager_o *listViewManager; // x8
 
-  if ( (byte_5937925 & 1) == 0 )
+  if ( (byte_596FA88 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937925 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA88 = 1;
   }
   charaGraphSortButtonGroup = (UnityEngine_Object_o *)this->fields.charaGraphSortButtonGroup;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1520,7 +1519,7 @@ void CharaGraphListMenuBase__SetSortButtonImage(CharaGraphListMenuBase_o *this, 
   {
     listViewManager = this->fields.listViewManager;
     if ( !listViewManager || (v5 = this->fields.charaGraphSortButtonGroup) == 0 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     CharaGraphSortButtonGroup__SetSortButtonImage(
       v5,
       listViewManager->fields.sort,
@@ -1569,14 +1568,14 @@ void CharaGraphListMenuBase__SetTabKind(
   struct CharaGraphDefine_CharaGraphRootInfo_o *v37; // x8
   int32_t ModeKind_k__BackingField; // w9
 
-  if ( (byte_593790D & 1) == 0 )
+  if ( (byte_596FA70 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&EventUpValSetupInfo_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593790D = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&EventUpValSetupInfo_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA70 = 1;
   }
   if ( !this->fields.isInitTab )
   {
@@ -1612,15 +1611,15 @@ LABEL_10:
 LABEL_12:
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v10, v17);
-    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+    Master_object = (EventMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
     if ( !Master_object )
       goto LABEL_38;
     EventValUpEventIdHash = EventMaster__GetEventValUpEventIdHash(Master_object, 0, 0, 0);
     v21 = System_Linq_Enumerable__ToArray_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
-            (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
-    v22 = (EventUpValSetupInfo_o *)sub_21FFEBC(EventUpValSetupInfo_TypeInfo);
-    EventUpValSetupInfo___ctor_48687632(v22, v21, 0, 0, 0, 0);
+            (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
+    v22 = (EventUpValSetupInfo_o *)sub_2213CCC(EventUpValSetupInfo_TypeInfo);
+    EventUpValSetupInfo___ctor_48741124(v22, v21, 0, 0, 0, 0);
     listViewManager = this->fields.listViewManager;
     Master_object = (EventMaster_o *)((__int64 (__fastcall *)(CharaGraphListMenuBase_o *, _QWORD, EventUpValSetupInfo_o *, const MethodInfo *))this->klass->vtable._7_CreateListViewPattern.methodPtr)(
                                        this,
@@ -1707,7 +1706,7 @@ LABEL_24:
       }
     }
 LABEL_38:
-    sub_21FFECC(Master_object, v10);
+    sub_2213CDC(Master_object, v10);
   }
 }
 
@@ -1830,32 +1829,32 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
   bool v116; // w6
   bool v117; // w7
 
-  if ( (byte_5937908 & 1) == 0 )
+  if ( (byte_596FA6B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickBonusFilterKind__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickFilterKind__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickScaleChange__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickSortAscendingOrder__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickSortKind__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabChoice__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabCommandCode__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabLock__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabMain__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabPush__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabServantEquip__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnClickTabServant__);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_SetSortButtonImage__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937908 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickBonusFilterKind__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickFilterKind__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickScaleChange__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickSortAscendingOrder__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickSortKind__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabChoice__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabCommandCode__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabLock__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabMain__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabPush__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabServantEquip__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnClickTabServant__);
+    sub_2213A60(&Method_CharaGraphListMenuBase_SetSortButtonImage__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA6B = 1;
   }
   listViewManager = this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_CharaGraphListMenuBase_SetSortButtonImage__, 0);
   if ( !listViewManager )
     goto LABEL_29;
   listViewManager->fields._OnSetSortButtonImage_k__BackingField = v4;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&listViewManager->fields._OnSetSortButtonImage_k__BackingField,
     (int32_t)v4,
     v7,
@@ -1870,12 +1869,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
   if ( UnityEngine_Object__op_Inequality(charaGraphKindTabButtonGroup, 0, 0) )
   {
     v18 = this->fields.charaGraphKindTabButtonGroup;
-    v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v19 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v19, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabServant__, 0);
     if ( !v18 )
       goto LABEL_29;
     v18->fields._OnClickTabServant_k__BackingField = v19;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v18->fields._OnClickTabServant_k__BackingField,
       (int32_t)v19,
       v20,
@@ -1885,12 +1884,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v24,
       v25);
     v26 = this->fields.charaGraphKindTabButtonGroup;
-    v27 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabServantEquip__, 0);
     if ( !v26 )
       goto LABEL_29;
     v26->fields._OnClickTabServantEquip_k__BackingField = v27;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v26->fields._OnClickTabServantEquip_k__BackingField,
       (int32_t)v27,
       v28,
@@ -1900,12 +1899,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v32,
       v33);
     v34 = this->fields.charaGraphKindTabButtonGroup;
-    v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v35, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabCommandCode__, 0);
     if ( !v34 )
       goto LABEL_29;
     v34->fields._OnClickTabCommandCode_k__BackingField = v35;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v34->fields._OnClickTabCommandCode_k__BackingField,
       (int32_t)v35,
       v36,
@@ -1921,12 +1920,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
   if ( UnityEngine_Object__op_Inequality(charaGraphManageButtonGroup, 0, 0) )
   {
     v45 = this->fields.charaGraphManageButtonGroup;
-    v46 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v46 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v46, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabMain__, 0);
     if ( !v45 )
       goto LABEL_29;
     v45->fields._OnClickTabMain_k__BackingField = v46;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v45->fields._OnClickTabMain_k__BackingField,
       (int32_t)v46,
       v47,
@@ -1936,12 +1935,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v51,
       v52);
     v53 = this->fields.charaGraphManageButtonGroup;
-    v54 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v54 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v54, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabLock__, 0);
     if ( !v53 )
       goto LABEL_29;
     v53->fields._OnClickTabLock_k__BackingField = v54;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v53->fields._OnClickTabLock_k__BackingField,
       (int32_t)v54,
       v55,
@@ -1951,12 +1950,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v59,
       v60);
     v61 = this->fields.charaGraphManageButtonGroup;
-    v62 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v62 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v62, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabChoice__, 0);
     if ( !v61 )
       goto LABEL_29;
     v61->fields._OnClickTabChoice_k__BackingField = v62;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v61->fields._OnClickTabChoice_k__BackingField,
       (int32_t)v62,
       v63,
@@ -1966,12 +1965,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v67,
       v68);
     v69 = this->fields.charaGraphManageButtonGroup;
-    v70 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v70 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v70, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickTabPush__, 0);
     if ( !v69 )
       goto LABEL_29;
     v69->fields._OnClickTabPush_k__BackingField = v70;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v69->fields._OnClickTabPush_k__BackingField,
       (int32_t)v70,
       v71,
@@ -1981,12 +1980,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       v75,
       v76);
     v77 = this->fields.charaGraphManageButtonGroup;
-    v78 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v78 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v78, (Il2CppObject *)this, (intptr_t)Method_CharaGraphListMenuBase_OnClickScaleChange__, 0);
     if ( !v77 )
       goto LABEL_29;
     v77->fields._OnClickScaleChange_k__BackingField = v78;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v77->fields._OnClickScaleChange_k__BackingField,
       (int32_t)v78,
       v79,
@@ -2002,12 +2001,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
   if ( UnityEngine_Object__op_Inequality(charaGraphSortButtonGroup, 0, 0) )
   {
     v86 = this->fields.charaGraphSortButtonGroup;
-    v87 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v87 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v87, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickFilterKind__, 0);
     if ( v86 )
     {
       v86->fields._OnClickFilterKind_k__BackingField = v87;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v86->fields._OnClickFilterKind_k__BackingField,
         (int32_t)v87,
         v88,
@@ -2017,12 +2016,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
         v92,
         v93);
       v94 = this->fields.charaGraphSortButtonGroup;
-      v95 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v95 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v95, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickSortKind__, 0);
       if ( v94 )
       {
         v94->fields._OnClickSortKind_k__BackingField = v95;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v94->fields._OnClickSortKind_k__BackingField,
           (int32_t)v95,
           v96,
@@ -2032,12 +2031,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
           v100,
           v101);
         v102 = this->fields.charaGraphSortButtonGroup;
-        v103 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        v103 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(v103, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickSortAscendingOrder__, 0);
         if ( v102 )
         {
           v102->fields._OnClickSortAscendingOrder_k__BackingField = v103;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v102->fields._OnClickSortAscendingOrder_k__BackingField,
             (int32_t)v103,
             v104,
@@ -2047,12 +2046,12 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
             v108,
             v109);
           v110 = this->fields.charaGraphSortButtonGroup;
-          v111 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+          v111 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
           System_Action___ctor(v111, (Il2CppObject *)this, Method_CharaGraphListMenuBase_OnClickBonusFilterKind__, 0);
           if ( v110 )
           {
             v110->fields._OnClickBonusFilterKind_k__BackingField = v111;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v110->fields._OnClickBonusFilterKind_k__BackingField,
               (int32_t)v111,
               v112,
@@ -2067,7 +2066,7 @@ void CharaGraphListMenuBase__SetupButtonCallback(CharaGraphListMenuBase_o *this,
       }
     }
 LABEL_29:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
 }
 
@@ -2085,14 +2084,14 @@ void CharaGraphListMenuBase__SetupExplanationLabel(CharaGraphListMenuBase_o *thi
   System_String_o *v11; // x20
   UILabel_o *v12; // x19
 
-  if ( (byte_593790E & 1) == 0 )
+  if ( (byte_596FA71 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_12143/*"SERVANT_LIST_EXPLANATION_PUSH"*/);
-    sub_21FFC50(&StringLiteral_12141/*"SERVANT_LIST_EXPLANATION_CHOICE"*/);
-    sub_21FFC50(&StringLiteral_12142/*"SERVANT_LIST_EXPLANATION_LOCK"*/);
-    byte_593790E = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_12166/*"SERVANT_LIST_EXPLANATION_PUSH"*/);
+    sub_2213A60(&StringLiteral_12164/*"SERVANT_LIST_EXPLANATION_CHOICE"*/);
+    sub_2213A60(&StringLiteral_12165/*"SERVANT_LIST_EXPLANATION_LOCK"*/);
+    byte_596FA71 = 1;
   }
   explanationLabel = (UnityEngine_Object_o *)this->fields.explanationLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2108,13 +2107,13 @@ void CharaGraphListMenuBase__SetupExplanationLabel(CharaGraphListMenuBase_o *thi
   {
     if ( ModeKind_k__BackingField == 3 )
     {
-      v10 = &StringLiteral_12141/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
+      v10 = &StringLiteral_12164/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
     }
     else
     {
       if ( ModeKind_k__BackingField != 4 )
         return;
-      v10 = &StringLiteral_12143/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
+      v10 = &StringLiteral_12166/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
     }
   }
   else
@@ -2130,7 +2129,7 @@ void CharaGraphListMenuBase__SetupExplanationLabel(CharaGraphListMenuBase_o *thi
     }
     if ( ModeKind_k__BackingField != 2 )
       return;
-    v10 = &StringLiteral_12142/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
+    v10 = &StringLiteral_12165/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
   }
   v11 = (System_String_o *)*v10;
   if ( *v10 )
@@ -2146,7 +2145,7 @@ LABEL_18:
       return;
     }
 LABEL_22:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
 }
 
@@ -2164,10 +2163,10 @@ void CharaGraphListMenuBase__SetupServantKindTabButtonGroup(
   CharaGraphKindTabButtonGroup_o *v10; // x0
   const MethodInfo *v11; // x3
 
-  if ( (byte_593790B & 1) == 0 )
+  if ( (byte_596FA6E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593790B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA6E = 1;
   }
   charaGraphKindTabButtonGroup = (UnityEngine_Object_o *)this->fields.charaGraphKindTabButtonGroup;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2179,7 +2178,7 @@ void CharaGraphListMenuBase__SetupServantKindTabButtonGroup(
       || (CharaGraphKindTabButtonGroup__SetupTabLabel(v10, iTabKind, v9),
           (v10 = this->fields.charaGraphKindTabButtonGroup) == 0) )
     {
-      sub_21FFECC(v10, v8);
+      sub_2213CDC(v10, v8);
     }
     CharaGraphKindTabButtonGroup__SetupTabButtons(v10, iTabKind, isInit, v11);
   }
@@ -2197,10 +2196,10 @@ void CharaGraphListMenuBase__SetupSortUi(CharaGraphListMenuBase_o *this, const M
   const MethodInfo *v9; // x2
   struct CharaGraphListViewManager_o *listViewManager; // x8
 
-  if ( (byte_5937923 & 1) == 0 )
+  if ( (byte_596FA86 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937923 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FA86 = 1;
   }
   charaGraphSortButtonGroup = (UnityEngine_Object_o *)this->fields.charaGraphSortButtonGroup;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2214,7 +2213,7 @@ void CharaGraphListMenuBase__SetupSortUi(CharaGraphListMenuBase_o *this, const M
           (listViewManager = this->fields.listViewManager) == 0)
       || (v8 = this->fields.charaGraphSortButtonGroup) == 0 )
     {
-      sub_21FFECC(v8, v6);
+      sub_2213CDC(v8, v6);
     }
     CharaGraphSortButtonGroup__SetBonusFilterButton(v8, listViewManager->fields.sort, v9);
   }
@@ -2249,25 +2248,25 @@ void CharaGraphListMenuBase__StatusRequest(
   System_Collections_ICollection_o *self; // [xsp+0h] [xbp-50h] BYREF
   System_Int64_array *lockArray; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5937920 & 1) == 0 )
+  if ( (byte_596FA83 & 1) == 0 )
   {
-    sub_21FFC50(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
-    sub_21FFC50(&Method_NetworkManager_getRequest_CommandCodeStatusSyncRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase___c__DisplayClass73_0__StatusRequest_g__EndStatusSync_0__);
-    sub_21FFC50(&CharaGraphListMenuBase___c__DisplayClass73_0_TypeInfo);
-    byte_5937920 = 1;
+    sub_2213A60(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+    sub_2213A60(&Method_NetworkManager_getRequest_CommandCodeStatusSyncRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase___c__DisplayClass73_0__StatusRequest_g__EndStatusSync_0__);
+    sub_2213A60(&CharaGraphListMenuBase___c__DisplayClass73_0_TypeInfo);
+    byte_596FA83 = 1;
   }
   self = 0;
   lockArray = 0;
-  v5 = sub_21FFEBC(CharaGraphListMenuBase___c__DisplayClass73_0_TypeInfo);
+  v5 = sub_2213CCC(CharaGraphListMenuBase___c__DisplayClass73_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_26;
   *(_QWORD *)(v5 + 16) = callback;
   v14 = v5 + 16;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   self = 0;
   lockArray = 0;
@@ -2311,11 +2310,11 @@ void CharaGraphListMenuBase__StatusRequest(
         return;
       }
 LABEL_26:
-      sub_21FFECC(listViewManager, v7);
+      sub_2213CDC(listViewManager, v7);
     }
   }
   tabKind = this->fields.tabKind;
-  v21 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v21 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -2328,7 +2327,7 @@ LABEL_26:
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v22, v23);
     listViewManager = (CharaGraphListViewManager_o *)NetworkManager__getRequest_object_(
                                                        v21,
-                                                       (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_CommandCodeStatusSyncRequest___);
+                                                       (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_CommandCodeStatusSyncRequest___);
     if ( !listViewManager )
       goto LABEL_26;
     CommandCodeStatusSyncRequest__beginRequest(
@@ -2345,7 +2344,7 @@ LABEL_26:
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v22, v23);
     listViewManager = (CharaGraphListViewManager_o *)NetworkManager__getRequest_object_(
                                                        v21,
-                                                       (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                       (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
     if ( !listViewManager )
       goto LABEL_26;
     CardStatusSyncRequest__beginRequest(
@@ -2376,16 +2375,16 @@ void CharaGraphListMenuBase__ToInputState(CharaGraphListMenuBase_o *this, bool c
   bool v16; // w7
   const MethodInfo *v17; // x2
 
-  if ( (byte_5937921 & 1) == 0 )
+  if ( (byte_596FA84 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_CharaGraphListMenuBase_OnSelectServant__);
-    byte_5937921 = 1;
+    sub_2213A60(&CharaGraphListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_CharaGraphListMenuBase_OnSelectServant__);
+    byte_596FA84 = 1;
   }
   v5 = CharaGraphListViewManager_CallbackFunc_TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 2;
-  v7 = (CharaGraphListViewManager_CallbackFunc_o *)sub_21FFEBC(v5);
+  v7 = (CharaGraphListViewManager_CallbackFunc_o *)sub_2213CCC(v5);
   CharaGraphListViewManager_CallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -2396,7 +2395,7 @@ void CharaGraphListMenuBase__ToInputState(CharaGraphListMenuBase_o *this, bool c
     if ( listViewManager )
     {
       listViewManager->fields.FuncOnClick = v7;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&listViewManager->fields.FuncOnClick,
         (int32_t)v7,
         v11,
@@ -2411,12 +2410,12 @@ void CharaGraphListMenuBase__ToInputState(CharaGraphListMenuBase_o *this, bool c
       return;
     }
 LABEL_8:
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   }
   if ( !listViewManager )
     goto LABEL_8;
   listViewManager->fields.FuncOnClick = v7;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&listViewManager->fields.FuncOnClick,
     (int32_t)v7,
     v11,
@@ -2450,7 +2449,7 @@ void CharaGraphListMenuBase___OnClickTabCommandCode_b__47_0(
 
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, _);
+    sub_2213CDC(this, _);
   CharaGraphListMenuBase__SetTabKind(this, 2, RootInfo_k__BackingField->fields._ModeKind_k__BackingField, 0, v3);
 }
 
@@ -2468,7 +2467,7 @@ void CharaGraphListMenuBase___OnClickTabServantEquip_b__46_0(
   EventTutorialMaster__CheckTutorial(-1, 54, 0, 0, 0, 0, 0, 0);
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   CharaGraphListMenuBase__SetTabKind(this, 1, RootInfo_k__BackingField->fields._ModeKind_k__BackingField, 0, v6);
 }
 
@@ -2484,7 +2483,7 @@ void CharaGraphListMenuBase___OnClickTabServant_b__45_0(
 
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, _);
+    sub_2213CDC(this, _);
   CharaGraphListMenuBase__SetTabKind(this, 0, RootInfo_k__BackingField->fields._ModeKind_k__BackingField, 0, v3);
 }
 
@@ -2500,7 +2499,7 @@ void CharaGraphListMenuBase___OnSelectServantAtKindPush_g__EndPushRequest_72_1(
 
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, result);
+    sub_2213CDC(0, result);
   CharaGraphListViewManager__ModifyList(listViewManager, 0, 0, v3);
   CharaGraphListMenuBase__ToInputState(this, 1, v6);
 }
@@ -2534,10 +2533,10 @@ void CharaGraphListMenuBase__add_CallbackOnExit(
   CharaGraphListMenuBase_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5937905 & 1) == 0 )
+  if ( (byte_596FA68 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
-    byte_5937905 = 1;
+    sub_2213A60(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
+    byte_596FA68 = 1;
   }
   CallbackOnExit = this->fields.CallbackOnExit;
   p_CallbackOnExit = &this->fields.CallbackOnExit;
@@ -2550,13 +2549,13 @@ void CharaGraphListMenuBase__add_CallbackOnExit(
       if ( (CharaGraphListMenuBase_CallbackFunc_c *)v8->klass != CharaGraphListMenuBase_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_CallbackOnExit, v8, v6);
+    v11 = sub_224B48C(p_CallbackOnExit, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, CharaGraphListMenuBase_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, CharaGraphListMenuBase_CallbackFunc_TypeInfo, v9, v10);
   CharaGraphListMenuBase__remove_CallbackOnExit(v13, v14, v15);
 }
 
@@ -2567,7 +2566,7 @@ int32_t CharaGraphListMenuBase__get_ModeKind(CharaGraphListMenuBase_o *this, con
 
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return RootInfo_k__BackingField->fields._ModeKind_k__BackingField;
 }
 
@@ -2604,10 +2603,10 @@ void CharaGraphListMenuBase__remove_CallbackOnExit(
   CharaGraphListMenuBase_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5937906 & 1) == 0 )
+  if ( (byte_596FA69 & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
-    byte_5937906 = 1;
+    sub_2213A60(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
+    byte_596FA69 = 1;
   }
   CallbackOnExit = this->fields.CallbackOnExit;
   p_CallbackOnExit = &this->fields.CallbackOnExit;
@@ -2620,13 +2619,13 @@ void CharaGraphListMenuBase__remove_CallbackOnExit(
       if ( (CharaGraphListMenuBase_CallbackFunc_c *)v8->klass != CharaGraphListMenuBase_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_CallbackOnExit, v8, v6);
+    v11 = sub_224B48C(p_CallbackOnExit, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, CharaGraphListMenuBase_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, CharaGraphListMenuBase_CallbackFunc_TypeInfo, v9, v10);
   CharaGraphListMenuBase__get_ModeKind(v13, v14);
 }
 
@@ -2638,7 +2637,7 @@ void CharaGraphListMenuBase__set_ModeKind(CharaGraphListMenuBase_o *this, int32_
 
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   if ( !RootInfo_k__BackingField )
-    sub_21FFECC(this, *(_QWORD *)&value);
+    sub_2213CDC(this, *(_QWORD *)&value);
   RootInfo_k__BackingField->fields._ModeKind_k__BackingField = value;
 }
 
@@ -2655,7 +2654,7 @@ void CharaGraphListMenuBase__set_SortOwner(
   bool v7; // w7
 
   this->fields._SortOwner_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SortOwner_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -2686,7 +2685,7 @@ void CharaGraphListMenuBase_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -2697,12 +2696,12 @@ void CharaGraphListMenuBase_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2714,9 +2713,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF9F6C;
+  this->fields.invoke_impl = (intptr_t)sub_200CF78;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FF9F24;
+  this->fields.extra_arg = (intptr_t)sub_200CF30;
 }
 
 
@@ -2731,14 +2730,14 @@ System_IAsyncResult_o *CharaGraphListMenuBase_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_5937928 & 1) == 0 )
+  if ( (byte_596FA8B & 1) == 0 )
   {
-    sub_21FFC50(&CharaGraphListMenuBase_ResultKind_TypeInfo);
-    byte_5937928 = 1;
+    sub_2213A60(&CharaGraphListMenuBase_ResultKind_TypeInfo);
+    byte_596FA8B = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(CharaGraphListMenuBase_ResultKind_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -2747,7 +2746,7 @@ void CharaGraphListMenuBase_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -2782,7 +2781,7 @@ void CharaGraphListMenuBase_RequestCallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -2793,12 +2792,12 @@ void CharaGraphListMenuBase_RequestCallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2810,9 +2809,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF9F08;
+  this->fields.invoke_impl = (intptr_t)sub_200CF14;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FF9EC0;
+  this->fields.extra_arg = (intptr_t)&loc_200CECC;
 }
 
 
@@ -2828,8 +2827,8 @@ System_IAsyncResult_o *CharaGraphListMenuBase_RequestCallbackFunc__BeginInvoke(
 
   v10[0] = isRequest;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -2838,7 +2837,7 @@ void CharaGraphListMenuBase_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -2880,14 +2879,14 @@ void CharaGraphListMenuBase___c__DisplayClass38_0___Exit_g__OnEnd_0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, isRequest);
+    sub_2213CDC(0, isRequest);
   CallbackOnExit = _4__this->fields.CallbackOnExit;
   p_CallbackOnExit = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.CallbackOnExit;
   v11 = CallbackOnExit;
   if ( CallbackOnExit )
   {
     p_CallbackOnExit->klass = 0;
-    sub_21FFBF4(p_CallbackOnExit, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_CallbackOnExit, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v11->fields.invoke_impl)(
       v11->fields.method_code,
       (unsigned int)this->fields.result,
@@ -2923,7 +2922,7 @@ void CharaGraphListMenuBase___c__DisplayClass54_0___OnServantManageTabSelected_b
   _4__this = this->fields.__4__this;
   if ( !_4__this )
 LABEL_6:
-    sub_21FFECC(_4__this, isRequest);
+    sub_2213CDC(_4__this, isRequest);
   CharaGraphListMenuBase__SetTabKind(_4__this, _4__this->fields.tabKind, this->fields.modeKindToUpdate, 0, v3);
 }
 
@@ -2944,7 +2943,7 @@ void CharaGraphListMenuBase___c__DisplayClass67_0___OnEndSelectServantStatus_b__
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ((void (__fastcall *)(struct CharaGraphListMenuBase_o *, _QWORD, const MethodInfo *))_4__this->klass->vtable._16_OnCloseServantStatusWithQuestId.methodPtr)(
     _4__this,
     (unsigned int)this->fields.questId,

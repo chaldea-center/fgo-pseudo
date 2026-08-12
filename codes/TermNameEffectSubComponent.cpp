@@ -17,13 +17,13 @@ void TermNameEffectSubComponent__RecvParam(
   int32_t v10; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5939DE0 & 1) == 0 )
+  if ( (byte_5971FB3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_21FFC50(&RaceResultEffectParam_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939DE0 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_2213A60(&RaceResultEffectParam_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971FB3 = 1;
   }
   entity = 0;
   if ( param )
@@ -39,12 +39,12 @@ void TermNameEffectSubComponent__RecvParam(
         {
           v9 = monitor[8];
           v10 = monitor[10];
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_17;
           Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventRaceMaster___);
           if ( !Instance )
             goto LABEL_17;
           Instance = (DataManager_o *)EventRaceMaster__TryGetEntity((EventRaceMaster_o *)Instance, &entity, v9, v10, 0);
@@ -60,7 +60,7 @@ void TermNameEffectSubComponent__RecvParam(
               }
             }
 LABEL_17:
-            sub_21FFECC(Instance, param);
+            sub_2213CDC(Instance, param);
           }
         }
       }

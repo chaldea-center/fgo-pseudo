@@ -8,18 +8,18 @@ void ScriptBackLog___ctor(ScriptBackLog_o *this, const MethodInfo *method)
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593A625 & 1) == 0 )
+  if ( (byte_5972804 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
-    byte_593A625 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+    byte_5972804 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
   this->fields.logData = (struct System_Collections_Generic_List_ScriptMessageLabel__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.logData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.logData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -38,10 +38,10 @@ void ScriptBackLog__AddLog(ScriptBackLog_o *this, ScriptMessageLabel_o *label, c
   Il2CppClass **v14; // x8
   float LogRangeY; // s0
 
-  if ( (byte_593A622 & 1) == 0 )
+  if ( (byte_5972801 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
-    byte_593A622 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
+    byte_5972801 = 1;
   }
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   if ( !logData )
@@ -57,14 +57,14 @@ void ScriptBackLog__AddLog(ScriptBackLog_o *this, ScriptMessageLabel_o *label, c
     System_Collections_Generic_List_object___AddWithResize(
       logData,
       (Il2CppObject *)label,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     logData->fields._size = size + 1;
     v14[4] = (Il2CppClass *)label;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)(v14 + 4),
       (int32_t)label,
       (System_String_o *)method,
@@ -76,7 +76,7 @@ void ScriptBackLog__AddLog(ScriptBackLog_o *this, ScriptMessageLabel_o *label, c
   }
   if ( !label )
 LABEL_12:
-    sub_21FFECC(logData, label);
+    sub_2213CDC(logData, label);
   LogRangeY = ScriptMessageLabel__GetLogRangeY(label, 0);
   if ( LogRangeY < this->fields.maxRangeY )
     this->fields.maxRangeY = LogRangeY;
@@ -91,14 +91,14 @@ void ScriptBackLog__ClearLog(ScriptBackLog_o *this, const MethodInfo *method)
   int v5; // w9
 
   v2 = this;
-  if ( (byte_593A620 & 1) == 0 )
+  if ( (byte_59727FF & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
-    byte_593A620 = 1;
+    this = (ScriptBackLog_o *)sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
+    byte_59727FF = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   size = logData->fields._size;
   v5 = logData->fields._version + 1;
   logData->fields._size = 0;
@@ -121,10 +121,10 @@ void ScriptBackLog__Close(ScriptBackLog_o *this, const MethodInfo *method)
   struct ScriptBackLogListViewManager_o *listViewManager; // x20
 
   v8 = this;
-  if ( (byte_593A61E & 1) == 0 )
+  if ( (byte_59727FD & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_21FFC50(&SoundManager_TypeInfo);
-    byte_593A61E = 1;
+    this = (ScriptBackLog_o *)sub_2213A60(&SoundManager_TypeInfo);
+    byte_59727FD = 1;
   }
   if ( v8->fields._IsReplayingVoice_k__BackingField )
   {
@@ -135,11 +135,11 @@ void ScriptBackLog__Close(ScriptBackLog_o *this, const MethodInfo *method)
   listViewManager = v8->fields.listViewManager;
   if ( !listViewManager
     || (listViewManager->fields.clickFunc = 0,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
         ListViewManager__DestroyList((ListViewManager_o *)listViewManager, 0),
         (this = (ScriptBackLog_o *)v8->fields.rootObject) == 0) )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -151,22 +151,22 @@ void ScriptBackLog__EraseLog(ScriptBackLog_o *this, int32_t startIndex, const Me
   System_Collections_Generic_List_object__o *logData; // x0
   int32_t size; // w8
 
-  if ( (byte_593A621 & 1) == 0 )
+  if ( (byte_5972800 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_593A621 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_5972800 = 1;
   }
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   if ( !logData )
-    sub_21FFECC(0, *(_QWORD *)&startIndex);
+    sub_2213CDC(0, *(_QWORD *)&startIndex);
   size = logData->fields._size;
   if ( size >= startIndex )
     System_Collections_Generic_List_object___RemoveRange(
       logData,
       startIndex,
       size - startIndex,
-      (const MethodInfo_445135C *)Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
+      (const MethodInfo_4485494 *)Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
 }
 
 
@@ -176,14 +176,14 @@ int32_t ScriptBackLog__GetCount(ScriptBackLog_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_ScriptMessageLabel__o *logData; // x8
 
   v2 = this;
-  if ( (byte_593A624 & 1) == 0 )
+  if ( (byte_5972803 & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_593A624 = 1;
+    this = (ScriptBackLog_o *)sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_5972803 = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return logData->fields._size;
 }
 
@@ -194,14 +194,14 @@ bool ScriptBackLog__IsEmptyLog(ScriptBackLog_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_ScriptMessageLabel__o *logData; // x8
 
   v2 = this;
-  if ( (byte_593A61F & 1) == 0 )
+  if ( (byte_59727FE & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_593A61F = 1;
+    this = (ScriptBackLog_o *)sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_59727FE = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return logData->fields._size < 1;
 }
 
@@ -212,7 +212,7 @@ bool ScriptBackLog__IsOpen(ScriptBackLog_o *this, const MethodInfo *method)
 
   rootObject = this->fields.rootObject;
   if ( !rootObject )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UnityEngine_GameObject__get_activeSelf(rootObject, 0);
 }
 
@@ -261,22 +261,22 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
   const MethodInfo *v32; // x3
   const MethodInfo *v33; // x3
 
-  if ( (byte_593A61D & 1) == 0 )
+  if ( (byte_59727FC & 1) == 0 )
   {
-    sub_21FFC50(&ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScriptBackLog_OnClickEnd__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A61D = 1;
+    sub_2213A60(&ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ScriptBackLog_OnClickEnd__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59727FC = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
     goto LABEL_7;
   UnityEngine_GameObject__SetActive(rootObject, 1, 0);
   this->fields.clickFunc = func;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v6, v7, v8, v9, v10, v11);
   v12 = (int)StringLiteral_1/*""*/;
   this->fields._ReplayingAssetName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ReplayingAssetName_k__BackingField,
     v12,
     v13,
@@ -287,7 +287,7 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
     v18);
   v19 = (int)StringLiteral_1/*""*/;
   this->fields._ReplayingObjectName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ReplayingObjectName_k__BackingField,
     v19,
     v20,
@@ -301,20 +301,20 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
   logData = this->fields.logData;
   maxRangeY = this->fields.maxRangeY;
   this->fields._IsReplayingVoice_k__BackingField = 0;
-  v30 = (ScriptBackLogListViewManager_ClickDelegate_o *)sub_21FFEBC(v26);
+  v30 = (ScriptBackLogListViewManager_ClickDelegate_o *)sub_2213CCC(v26);
   ScriptBackLogListViewManager_ClickDelegate___ctor(v30, (Il2CppObject *)this, Method_ScriptBackLog_OnClickEnd__, v31);
   if ( !listViewManager
     || (ScriptBackLogListViewManager__CreateList(listViewManager, logData, maxRangeY, v30, v32),
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(rootObject, func);
+    sub_2213CDC(rootObject, func);
   }
-  ScriptBackLogListViewManager__SetMode_51726200((ScriptBackLogListViewManager_o *)rootObject, 1, 0, v33);
+  ScriptBackLogListViewManager__SetMode_51800732((ScriptBackLogListViewManager_o *)rootObject, 1, 0, v33);
 }
 
 
-void ScriptBackLog__Open_51723148(ScriptBackLog_o *this, const MethodInfo *method)
+void ScriptBackLog__Open_51797680(ScriptBackLog_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -332,34 +332,34 @@ void ScriptBackLog__StopAllPlayVoiceAnimation(ScriptBackLog_o *this, const Metho
   System_Collections_Generic_List_Enumerator_object__o *v8; // [xsp+10h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_593A623 & 1) == 0 )
+  if ( (byte_5972802 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
-    byte_593A623 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    byte_5972802 = 1;
   }
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   memset(&v9, 0, sizeof(v9));
   if ( !logData )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     logData,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
   v7 = 0;
   v8 = &v9;
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v9,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
     if ( !v4 )
       break;
     current = v9.fields._current;
     if ( !v9.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     if ( !System_String__op_Equality(
             *(System_String_o **)((char *)&v9.fields._current->klass + (unsigned __int64)&qword_90),
             this->fields._ReplayingAssetName_k__BackingField,
@@ -374,7 +374,7 @@ void ScriptBackLog__StopAllPlayVoiceAnimation(ScriptBackLog_o *this, const Metho
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
 }
 
 
@@ -411,7 +411,7 @@ void ScriptBackLog__set_ReplayingAssetName(ScriptBackLog_o *this, System_String_
   bool v7; // w7
 
   this->fields._ReplayingAssetName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ReplayingAssetName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -432,7 +432,7 @@ void ScriptBackLog__set_ReplayingObjectName(ScriptBackLog_o *this, System_String
   bool v7; // w7
 
   this->fields._ReplayingObjectName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ReplayingObjectName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -463,7 +463,7 @@ void ScriptBackLog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -474,12 +474,12 @@ void ScriptBackLog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -491,9 +491,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFC9CC;
+  this->fields.invoke_impl = (intptr_t)sub_200FA08;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FFC98C;
+  this->fields.extra_arg = (intptr_t)sub_200F9C8;
 }
 
 
@@ -503,9 +503,9 @@ System_IAsyncResult_o *ScriptBackLog_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -514,7 +514,7 @@ void ScriptBackLog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

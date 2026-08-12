@@ -19,9 +19,9 @@ void GrandServantListQuestData___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._EventSetupInfo_k__BackingField = eventSetupInfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)eventSetupInfo, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)eventSetupInfo, v7, v8, v9, v10, v11, v12);
   this->fields._QuestRestriction_k__BackingField = questRestriction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._QuestRestriction_k__BackingField,
     (int32_t)questRestriction,
     v13,
@@ -61,7 +61,7 @@ void GrandServantListQuestData__set_EventSetupInfo(
   bool v7; // w7
 
   this->fields._EventSetupInfo_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -85,7 +85,7 @@ void GrandServantListQuestData__set_QuestRestriction(
   bool v7; // w7
 
   this->fields._QuestRestriction_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._QuestRestriction_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

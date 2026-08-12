@@ -29,13 +29,13 @@ void ScriptBackLogListViewItemDraw__SetItem(
           v5->fields.imagePrefab,
           v5->fields.playVoicePrefab,
           v5->fields.playVoiceEffect,
-          (UnityEngine_Font_o *)this[1].fields.m_CachedPtr,
+          *((UnityEngine_Font_o **)this + 11),
           0);
         return;
       }
     }
 LABEL_9:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   if ( !item )
     goto LABEL_9;

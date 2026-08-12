@@ -8,18 +8,18 @@ void BattleRetryConfirmContents___ctor(BattleRetryConfirmContents_o *this, const
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593C2F2 & 1) == 0 )
+  if ( (byte_597452A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_RetryConfirmItem___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_RetryConfirmItem__TypeInfo);
-    byte_593C2F2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_RetryConfirmItem___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_RetryConfirmItem__TypeInfo);
+    byte_597452A = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_RetryConfirmItem__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_RetryConfirmItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_RetryConfirmItem___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_RetryConfirmItem___ctor__);
   this->fields.needSetCondensedScaleList = (struct System_Collections_Generic_List_RetryConfirmItem__o *)v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.needSetCondensedScaleList,
     (int32_t)v3,
     v4,
@@ -49,17 +49,17 @@ void BattleRetryConfirmContents__CostPointLabelCentering(BattleRetryConfirmConte
   bool v14; // w7
 
   v2 = this;
-  if ( (byte_593C2F1 & 1) == 0 )
+  if ( (byte_5974529 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_RetryConfirmItem__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_RetryConfirmItem___);
-    sub_21FFC50(&Method_BattleRetryConfirmContents___c__CostPointLabelCentering_b__7_0__);
-    this = (BattleRetryConfirmContents_o *)sub_21FFC50(&BattleRetryConfirmContents___c_TypeInfo);
-    byte_593C2F1 = 1;
+    sub_2213A60(&System_Action_RetryConfirmItem__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_RetryConfirmItem___);
+    sub_2213A60(&Method_BattleRetryConfirmContents___c__CostPointLabelCentering_b__7_0__);
+    this = (BattleRetryConfirmContents_o *)sub_2213A60(&BattleRetryConfirmContents___c_TypeInfo);
+    byte_5974529 = 1;
   }
   items = v2->fields.items;
   if ( !items )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   if ( SLODWORD(items->max_length) <= 2 )
   {
     v4 = BattleRetryConfirmContents___c_TypeInfo;
@@ -78,7 +78,7 @@ void BattleRetryConfirmContents__CostPointLabelCentering(BattleRetryConfirmConte
         static_fields = BattleRetryConfirmContents___c_TypeInfo->static_fields;
       }
       v7 = (Il2CppObject *)static_fields->__9;
-      _9__7_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_RetryConfirmItem__TypeInfo);
+      _9__7_0 = (System_Action_object__o *)sub_2213CCC(System_Action_RetryConfirmItem__TypeInfo);
       System_Action_object____ctor(
         _9__7_0,
         v7,
@@ -86,12 +86,12 @@ void BattleRetryConfirmContents__CostPointLabelCentering(BattleRetryConfirmConte
         0);
       v8 = BattleRetryConfirmContents___c_TypeInfo->static_fields;
       v8->__9__7_0 = (struct System_Action_RetryConfirmItem__o *)_9__7_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->__9__7_0, (int32_t)_9__7_0, v9, v10, v11, v12, v13, v14);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->__9__7_0, (int32_t)_9__7_0, v9, v10, v11, v12, v13, v14);
     }
     BasicHelper__ForEach_object_(
       (System_Collections_Generic_IEnumerable_T__o *)items,
       (System_Action_T__o *)_9__7_0,
-      (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_RetryConfirmItem___);
+      (const MethodInfo_381282C *)Method_BasicHelper_ForEach_RetryConfirmItem___);
   }
 }
 
@@ -102,18 +102,18 @@ void BattleRetryConfirmContents__Initialized(BattleRetryConfirmContents_o *this,
   System_String_o *v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_593C2EE & 1) == 0 )
+  if ( (byte_5974526 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_2967/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE_SUB"*/);
-    byte_593C2EE = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_2970/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE_SUB"*/);
+    byte_5974526 = 1;
   }
   mainText = this->fields.mainText;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_2967/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE_SUB"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_2970/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE_SUB"*/, 0);
   if ( !mainText )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   UILabel__set_text(mainText, v4, 0);
 }
 
@@ -130,21 +130,21 @@ void BattleRetryConfirmContents__SetCondensedScalePossessionAmount(
   System_Collections_Generic_List_object__o *needSetCondensedScaleList; // x19
   System_Action_object__o *v10; // x20
 
-  if ( (byte_593C2F0 & 1) == 0 )
+  if ( (byte_5974528 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_RetryConfirmItem__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_RetryConfirmItem__ForEach__);
-    sub_21FFC50(&Method_BattleRetryConfirmContents___c__DisplayClass6_0__SetCondensedScalePossessionAmount_b__0__);
-    sub_21FFC50(&BattleRetryConfirmContents___c__DisplayClass6_0_TypeInfo);
-    byte_593C2F0 = 1;
+    sub_2213A60(&System_Action_RetryConfirmItem__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_RetryConfirmItem__ForEach__);
+    sub_2213A60(&Method_BattleRetryConfirmContents___c__DisplayClass6_0__SetCondensedScalePossessionAmount_b__0__);
+    sub_2213A60(&BattleRetryConfirmContents___c__DisplayClass6_0_TypeInfo);
+    byte_5974528 = 1;
   }
-  v5 = sub_21FFEBC(BattleRetryConfirmContents___c__DisplayClass6_0_TypeInfo);
+  v5 = sub_2213CCC(BattleRetryConfirmContents___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (v8 = isDispUseItemUI,
         needSetCondensedScaleList = (System_Collections_Generic_List_object__o *)this->fields.needSetCondensedScaleList,
         *(_BYTE *)(v5 + 16) = v8,
-        v10 = (System_Action_object__o *)sub_21FFEBC(System_Action_RetryConfirmItem__TypeInfo),
+        v10 = (System_Action_object__o *)sub_2213CCC(System_Action_RetryConfirmItem__TypeInfo),
         System_Action_object____ctor(
           v10,
           (Il2CppObject *)v5,
@@ -152,12 +152,12 @@ void BattleRetryConfirmContents__SetCondensedScalePossessionAmount(
           0),
         !needSetCondensedScaleList) )
   {
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   System_Collections_Generic_List_object___ForEach(
     needSetCondensedScaleList,
     (System_Action_T__o *)v10,
-    (const MethodInfo_445054C *)Method_System_Collections_Generic_List_RetryConfirmItem__ForEach__);
+    (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_RetryConfirmItem__ForEach__);
 }
 
 
@@ -190,15 +190,15 @@ void BattleRetryConfirmContents__SetCostValues(
   BattleRetryConfirmComponent_RetryConfirmItemStr_o v25; // [xsp+0h] [xbp-80h] BYREF
 
   v5 = this;
-  if ( (byte_593C2EF & 1) == 0 )
+  if ( (byte_5974527 & 1) == 0 )
   {
-    this = (BattleRetryConfirmContents_o *)sub_21FFC50(&Method_System_Collections_Generic_List_RetryConfirmItem__Add__);
-    byte_593C2EF = 1;
+    this = (BattleRetryConfirmContents_o *)sub_2213A60(&Method_System_Collections_Generic_List_RetryConfirmItem__Add__);
+    byte_5974527 = 1;
   }
   items = v5->fields.items;
   if ( !items )
 LABEL_17:
-    sub_21FFECC(this, costItems);
+    sub_2213CDC(this, costItems);
   v7 = 0;
   v8 = &costItems->m_Items[0].fields.isIndividualLimit + 1;
   while ( 1 )
@@ -212,7 +212,7 @@ LABEL_17:
     if ( (__int64)v7 >= (int)v10 )
       break;
     if ( v7 >= v10 || v7 >= max_length_low )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     v11 = *(_OWORD *)(v8 - 17);
     v12 = *(v8 - 1);
     v13 = *(_DWORD *)v8;
@@ -223,7 +223,7 @@ LABEL_17:
     v25.fields.isIndividualLimit = v12;
     *(_DWORD *)(&v25.fields.isIndividualLimit + 1) = v13;
     *((_DWORD *)&v25.fields.isIndividualLimit + 1) = v15;
-    BattleRetryConfirmContents__SetCostValues_55049776(this, &v25, v14, v3);
+    BattleRetryConfirmContents__SetCostValues_55169976(this, &v25, v14, v3);
     if ( v12 )
     {
       this = (BattleRetryConfirmContents_o *)v5->fields.needSetCondensedScaleList;
@@ -240,14 +240,14 @@ LABEL_17:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)v14,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
         v24 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v24 + 32) = v14;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v24 + 32),
           (int32_t)v14,
           v16,
@@ -267,7 +267,7 @@ LABEL_17:
 }
 
 
-void BattleRetryConfirmContents__SetCostValues_55049776(
+void BattleRetryConfirmContents__SetCostValues_55169976(
         BattleRetryConfirmContents_o *this,
         BattleRetryConfirmComponent_RetryConfirmItemStr_o *value,
         RetryConfirmItem_o *item,
@@ -282,7 +282,7 @@ void BattleRetryConfirmContents__SetCostValues_55049776(
     || (UILabel__set_text((UILabel_o *)this, value->fields.possessionName, 0),
         (this = (BattleRetryConfirmContents_o *)item->fields.possessionAmount) == 0) )
   {
-    sub_21FFECC(this, value);
+    sub_2213CDC(this, value);
   }
   UILabel__set_text((UILabel_o *)this, value->fields.possessionAmount, 0);
 }
@@ -298,15 +298,15 @@ void BattleRetryConfirmContents___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593C2F3 & 1) == 0 )
+  if ( (byte_597452B & 1) == 0 )
   {
-    sub_21FFC50(&BattleRetryConfirmContents___c_TypeInfo);
-    byte_593C2F3 = 1;
+    sub_2213A60(&BattleRetryConfirmContents___c_TypeInfo);
+    byte_597452B = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BattleRetryConfirmContents___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BattleRetryConfirmContents___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleRetryConfirmContents___c_TypeInfo->static_fields->__9 = (struct BattleRetryConfirmContents___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleRetryConfirmContents___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -330,7 +330,7 @@ void BattleRetryConfirmContents___c___CostPointLabelCentering_b__7_0(
         const MethodInfo *method)
 {
   if ( !item )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   RetryConfirmItem__CenteringAmountLabel(item, (const MethodInfo *)item);
 }
 
@@ -351,7 +351,7 @@ void BattleRetryConfirmContents___c__DisplayClass6_0___SetCondensedScalePossessi
   System_Collections_IEnumerator_o *v4; // x1
 
   if ( !item )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   v4 = RetryConfirmItem__SetCondensedScalePossessionAmount(item, this->fields.isDispUseItemUI, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)item, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)item, v4, 0);
 }

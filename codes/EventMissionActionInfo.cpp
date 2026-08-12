@@ -21,13 +21,13 @@ void EventMissionActionInfo___ctor(
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
     *((int32x4_t *)p_vals - 1) = vuzp2q_s32(vextq_s8(v11, v11, 4u), v11);
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void EventMissionActionInfo___ctor_52580824(
+void EventMissionActionInfo___ctor_52779268(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -52,7 +52,7 @@ void EventMissionActionInfo___ctor_52580824(
     *((_DWORD *)p_vals - 4) = id;
     *(struct System_String_array **)((char *)p_vals - 12) = *(struct System_String_array **)&eventMissionActionAddEntity->fields.missionId;
     *((_DWORD *)p_vals - 1) = eventMissionActionAddEntity->fields.missionActionType;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -79,7 +79,7 @@ int32_t EventMissionActionInfo__getValID(EventMissionActionInfo_o *this, const M
     if ( missionActionType == 3 )
     {
       if ( !(_DWORD)max_length )
-        sub_21FFED4(0xFFFFFFFFLL);
+        sub_2213CE4(0xFFFFFFFFLL);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0) )
         return result;
       else
@@ -98,16 +98,16 @@ System_String_o *EventMissionActionInfo__getValMessage(EventMissionActionInfo_o 
   System_String_o **m_Items; // x8
 
   v2 = this;
-  if ( (byte_593ADCF & 1) == 0 )
+  if ( (byte_5973088 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593ADCF = 1;
+    this = (EventMissionActionInfo_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5973088 = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (max_length = vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)max_length )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     m_Items = vals->m_Items;
   }
   else

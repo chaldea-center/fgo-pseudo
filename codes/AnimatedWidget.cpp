@@ -33,10 +33,10 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   int32_t v25; // w1
   double iptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_593CF06 & 1) == 0 )
+  if ( (byte_59751DD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF06 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751DD = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -45,10 +45,10 @@ void AnimatedWidget__LateUpdate(AnimatedWidget_o *this, const MethodInfo *method
   {
     v5 = this->fields.mWidget;
     width = this->fields.width;
-    if ( !byte_593220B )
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4);
@@ -87,10 +87,10 @@ LABEL_21:
     UIWidget__set_width(v5, v15, v10);
     v17 = this->fields.mWidget;
     height = this->fields.height;
-    if ( !byte_593220B )
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16);
@@ -130,7 +130,7 @@ LABEL_39:
       return;
     }
 LABEL_44:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   }
 }
 
@@ -146,16 +146,16 @@ void AnimatedWidget__OnEnable(AnimatedWidget_o *this, const MethodInfo *method)
   bool v9; // w7
   const MethodInfo *v10; // x1
 
-  if ( (byte_593CF05 & 1) == 0 )
+  if ( (byte_59751DC & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_593CF05 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_59751DC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
     (int32_t)Component_object,
     v4,

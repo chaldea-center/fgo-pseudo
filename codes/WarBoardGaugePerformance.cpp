@@ -18,7 +18,7 @@ void WarBoardGaugePerformance___ctor(
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   v10->fields.target = target;
   v10 = (WarBoardGaugePerformance_o *)((char *)v10 + 56);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10, (int32_t)target, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v10, (int32_t)target, v11, v12, v13, v14, v15, v16);
   *(float *)&v10->monitor = startValue;
   *((float *)&v10->monitor + 1) = endValue;
   *(float *)&v10->fields.Key = duration;
@@ -37,16 +37,16 @@ System_Collections_IEnumerator_o *WarBoardGaugePerformance__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936243 & 1) == 0 )
+  if ( (byte_596E39D & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardGaugePerformance__Execute_d__6_TypeInfo);
-    byte_5936243 = 1;
+    sub_2213A60(&WarBoardGaugePerformance__Execute_d__6_TypeInfo);
+    byte_596E39D = 1;
   }
-  v3 = sub_21FFEBC(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
+  v3 = sub_2213CCC(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -58,7 +58,7 @@ void WarBoardGaugePerformance__OnEnd(WarBoardGaugePerformance_o *this, const Met
 
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UIBasicSprite__set_fillAmount(target, this->fields.endValue, 0);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -82,7 +82,7 @@ void WarBoardGaugePerformance__OnStart(WarBoardGaugePerformance_o *this, const M
       StartCallback->fields.method);
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UIBasicSprite__set_fillAmount(target, this->fields.startValue, 0);
 }
 
@@ -118,7 +118,6 @@ bool WarBoardGaugePerformance__Execute_d__6__MoveNext(
   float v17; // s0
   float v18; // s0
   Il2CppObject **p__2__current; // x19
-  bool result; // w0
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -140,7 +139,7 @@ bool WarBoardGaugePerformance__Execute_d__6__MoveNext(
         v16 = v15;
       if ( v15 >= 0.0 )
         v13 = v16;
-      v17 = Easing__Func_55915380(_4__this->fields.startValue, _4__this->fields.endValue, v13, 0, 0);
+      v17 = Easing__Func_56120036(_4__this->fields.startValue, _4__this->fields.endValue, v13, 0, 0);
       if ( target )
       {
         UIBasicSprite__set_fillAmount(target, v17, 0);
@@ -149,7 +148,7 @@ bool WarBoardGaugePerformance__Execute_d__6__MoveNext(
       }
     }
 LABEL_14:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   v18 = 0.0;
   this->fields._now_5__2 = 0.0;
@@ -161,10 +160,9 @@ LABEL_11:
   {
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
     *((_DWORD *)p__2__current - 2) = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -186,11 +184,11 @@ void __noreturn WarBoardGaugePerformance__Execute_d__6__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

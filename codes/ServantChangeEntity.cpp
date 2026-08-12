@@ -1,27 +1,27 @@
 void ServantChangeEntity___ctor(ServantChangeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938F4F & 1) == 0 )
+  if ( (byte_597110D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938F4F = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597110D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantChangeEntity__CreatePK(int32_t svtId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_5938F4D & 1) == 0 )
+  if ( (byte_597110B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938F4D = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_597110B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            priority,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -45,10 +45,10 @@ bool ServantChangeEntity__IsEnable(ServantChangeEntity_o *this, const MethodInfo
   int32_t condTargetId; // w21
   int64_t condValue; // x19
 
-  if ( (byte_5938F4E & 1) == 0 )
+  if ( (byte_597110C & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    byte_5938F4E = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    byte_597110C = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

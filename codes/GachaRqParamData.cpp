@@ -4,7 +4,7 @@ void GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodInfo *method)
 }
 
 
-void GachaRqParamData___ctor_42122256(
+void GachaRqParamData___ctor_42137320(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -42,7 +42,7 @@ void GachaRqParamData___ctor_42122256(
   this->fields.shopIdIdx = shopIdIdx;
   this->fields.gachaSubId = gachaSubId;
   this->fields.storyAdjustIds = storyAdjustIds;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.storyAdjustIds,
     (int32_t)storyAdjustIds,
     v21,
@@ -53,7 +53,7 @@ void GachaRqParamData___ctor_42122256(
     v26);
   this->fields.selectBonusList = selectBonusList;
   this->fields.isAppendSummon = isAppendSummon;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectBonusList,
     (int32_t)selectBonusList,
     v27,

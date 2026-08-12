@@ -16,16 +16,16 @@ void FGOEffectSheetAnimation__OnEnable(FGOEffectSheetAnimation_o *this, const Me
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59373CD & 1) == 0 )
+  if ( (byte_596F528 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_59373CD = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_596F528 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.compRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.compRenderer,
     (int32_t)Component_object,
     v4,
@@ -60,17 +60,17 @@ bool FGOEffectSheetAnimation__TryGetMainTexTiling(
 
   if ( this->fields.uvAnimationTileX < 1 || this->fields.uvAnimationTileY <= 0 )
   {
-    if ( !byte_59373DF )
+    if ( !byte_596F578 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-      byte_59373DF = 1;
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+      byte_596F578 = 1;
     }
-    v24 = (unsigned __int8)byte_5931820;
+    v24 = (unsigned __int8)byte_59699C0;
     *scale = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
     if ( !v24 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-      byte_5931820 = 1;
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+      byte_59699C0 = 1;
     }
     result = 0;
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
@@ -119,11 +119,11 @@ void FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this, const Meth
   UnityEngine_Vector2_o v13; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o v14; // 0:s0.4,4:s1.4
 
-  if ( (byte_59373CE & 1) == 0 )
+  if ( (byte_596F529 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_16879/*"_MainTex"*/);
-    byte_59373CE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_16914/*"_MainTex"*/);
+    byte_596F529 = 1;
   }
   compRenderer = (UnityEngine_Object_o *)this->fields.compRenderer;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -149,20 +149,20 @@ void FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this, const Meth
                        - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v12 / uvAnimationTileX)),
           UnityEngine_Material__SetTextureOffset(
             (UnityEngine_Material_o *)material,
-            (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+            (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
             v13,
             0),
           (material = this->fields.compRenderer) == 0)
       || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
     {
 LABEL_15:
-      sub_21FFECC(material, v5);
+      sub_2213CDC(material, v5);
     }
     v14.fields.x = 1.0 / (float)uvAnimationTileX;
     v14.fields.y = 1.0 / (float)uvAnimationTileY;
     UnityEngine_Material__SetTextureScale(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16879/*"_MainTex"*/,
+      (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
       v14,
       0);
   }

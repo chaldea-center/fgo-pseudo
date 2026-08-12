@@ -4,10 +4,10 @@ void CenterEffectDetailItemListViewObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5931D28 & 1) == 0 )
+  if ( (byte_5969EC8 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5931D28 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_5969EC8 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -23,20 +23,20 @@ void CenterEffectDetailItemListViewObject__Awake(
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_5931D25 & 1) == 0 )
+  if ( (byte_5969EC5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewItemDraw___);
-    byte_5931D25 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewItemDraw___);
+    byte_5969EC5 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewItemDraw___);
   this->fields.itemDraw = (struct CenterEffectDetailItemListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(&this->fields.itemDraw, Component_object);
+  sub_2213A04(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -48,18 +48,18 @@ UnityEngine_GameObject_o *CenterEffectDetailItemListViewObject__CreateDragObject
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x19
 
-  if ( (byte_5931D26 & 1) == 0 )
+  if ( (byte_5969EC6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewObject___);
-    byte_5931D26 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewObject___);
+    byte_5969EC6 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   v5 = DragObject;
   UnityEngine_GameObject__GetComponent_object_(
     DragObject,
-    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewObject___);
+    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CenterEffectDetailItemListViewObject___);
   return v5;
 }
 
@@ -79,7 +79,7 @@ void CenterEffectDetailItemListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_21FFBF4(p_callbackFunc, 0);
+    sub_2213A04(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -101,12 +101,12 @@ void CenterEffectDetailItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v6);
+    sub_2213CDC(transform, v6);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_21FFBF4(&this->fields.callbackFunc, callbackFunc);
+  sub_2213A04(&this->fields.callbackFunc, callbackFunc);
   ((void (__fastcall *)(CenterEffectDetailItemListViewObject_o *, __int64, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
     this,
     1,
@@ -116,7 +116,7 @@ void CenterEffectDetailItemListViewObject__Init(
   if ( *p_callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_21FFBF4(p_callbackFunc, 0);
+    sub_2213A04(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -128,7 +128,7 @@ void CenterEffectDetailItemListViewObject__SetDirectItem(
         const MethodInfo *method)
 {
   this->fields.linkItem = (struct ListViewItem_o *)item;
-  sub_21FFBF4(&this->fields.linkItem, item);
+  sub_2213A04(&this->fields.linkItem, item);
 }
 
 
@@ -138,7 +138,7 @@ void CenterEffectDetailItemListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -156,11 +156,11 @@ void CenterEffectDetailItemListViewObject__SetupDisp(
   const MethodInfo *v10; // x2
   CenterEffectDetailItemListViewItemDraw_o *v11; // x0
 
-  if ( (byte_5931D27 & 1) == 0 )
+  if ( (byte_5969EC7 & 1) == 0 )
   {
-    sub_21FFC50(&CenterEffectDetailItemListViewItem_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931D27 = 1;
+    sub_2213A60(&CenterEffectDetailItemListViewItem_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5969EC7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -184,7 +184,7 @@ void CenterEffectDetailItemListViewObject__SetupDisp(
   {
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     CenterEffectDetailItemListViewItemDraw__SetItem(v11, (CenterEffectDetailItemListViewItem_o *)v5, v10);
   }
 }
@@ -207,10 +207,10 @@ void CenterEffectDetailItemListViewObject__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5931D23 & 1) == 0 )
+  if ( (byte_5969EC3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5931D23 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5969EC3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -223,13 +223,13 @@ void CenterEffectDetailItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (CenterEffectDetailItemListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (CenterEffectDetailItemListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   CenterEffectDetailItemListViewObject__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -250,10 +250,10 @@ void CenterEffectDetailItemListViewObject__remove_callbackFunc(
   CenterEffectDetailItemListViewObject_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5931D24 & 1) == 0 )
+  if ( (byte_5969EC4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5931D24 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5969EC4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -266,12 +266,12 @@ void CenterEffectDetailItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (CenterEffectDetailItemListViewObject_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (CenterEffectDetailItemListViewObject_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   CenterEffectDetailItemListViewObject__Awake(v13, v14);
 }

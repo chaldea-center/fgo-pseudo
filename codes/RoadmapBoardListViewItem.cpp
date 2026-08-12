@@ -27,12 +27,12 @@ void RoadmapBoardListViewItem___ctor(
   bool v30; // w6
   bool v31; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)atlas,
     v14,
@@ -42,7 +42,7 @@ void RoadmapBoardListViewItem___ctor(
     v18,
     v19);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)spriteName,
     v20,
@@ -52,7 +52,7 @@ void RoadmapBoardListViewItem___ctor(
     v24,
     v25);
   this->fields._BoardPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardPrefab_k__BackingField,
     0,
     v26,
@@ -64,7 +64,7 @@ void RoadmapBoardListViewItem___ctor(
 }
 
 
-void RoadmapBoardListViewItem___ctor_38388212(
+void RoadmapBoardListViewItem___ctor_38476848(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -86,12 +86,12 @@ void RoadmapBoardListViewItem___ctor_38388212(
   bool v22; // w6
   bool v23; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardPrefab_k__BackingField,
     (int32_t)boardPrefab,
     v12,
@@ -101,7 +101,7 @@ void RoadmapBoardListViewItem___ctor_38388212(
     v16,
     v17);
   this->fields._Atlas_k__BackingField = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._Atlas_k__BackingField, 0, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._Atlas_k__BackingField, 0, v18, v19, v20, v21, v22, v23);
 }
 
 
@@ -152,7 +152,7 @@ void RoadmapBoardListViewItem__set_Atlas(RoadmapBoardListViewItem_o *this, UIAtl
   bool v7; // w7
 
   this->fields._Atlas_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -182,7 +182,7 @@ void RoadmapBoardListViewItem__set_BoardPrefab(
   bool v7; // w7
 
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -215,7 +215,7 @@ void RoadmapBoardListViewItem__set_SpriteName(
   bool v7; // w7
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

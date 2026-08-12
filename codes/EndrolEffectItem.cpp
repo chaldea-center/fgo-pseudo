@@ -11,20 +11,20 @@ void EndrolEffectItem__LateUpdate(EndrolEffectItem_o *this, const MethodInfo *me
   __int64 v5; // x2
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_593238F & 1) == 0 )
+  if ( (byte_596A48E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593238F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A48E = 1;
   }
   particle = this->fields.particle;
   if ( !particle )
-    sub_21FFECC(0, method);
-  if ( !UnityEngine_ParticleSystem__IsAlive_83624552(particle, 0) )
+    sub_2213CDC(0, method);
+  if ( !UnityEngine_ParticleSystem__IsAlive_83837856(particle, 0) )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
   }
 }
 
@@ -41,19 +41,19 @@ void EndrolEffectItem__Start(EndrolEffectItem_o *this, const MethodInfo *method)
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593238E & 1) == 0 )
+  if ( (byte_596A48D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
-    byte_593238E = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
+    byte_596A48D = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                  gameObject,
-                                 (const MethodInfo_3883C54 *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
+                                 (const MethodInfo_38B711C *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
   this->fields.particle = (struct UnityEngine_ParticleSystem_o *)ComponentInChildren_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.particle,
     (int32_t)ComponentInChildren_object,
     v6,

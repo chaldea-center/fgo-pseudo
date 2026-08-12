@@ -23,28 +23,28 @@ void EventInfoJobInfoComponent___ctor(EventInfoJobInfoComponent_o *this, const M
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_5939975 & 1) == 0 )
+  if ( (byte_5971CE8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    sub_21FFC50(&StringLiteral_935/*"---"*/);
-    sub_21FFC50(&StringLiteral_6661/*"FFFF00"*/);
-    byte_5939975 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_UIAtlas__TypeInfo);
+    sub_2213A60(&StringLiteral_935/*"---"*/);
+    sub_2213A60(&StringLiteral_6673/*"FFFF00"*/);
+    byte_5971CE8 = 1;
   }
-  v9 = StringLiteral_6661/*"FFFF00"*/;
-  this->fields.maxLevelColor = (struct System_String_o *)StringLiteral_6661/*"FFFF00"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.maxLevelColor, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_6673/*"FFFF00"*/;
+  this->fields.maxLevelColor = (struct System_String_o *)StringLiteral_6673/*"FFFF00"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.maxLevelColor, v9, v2, v3, v4, v5, v6, v7);
   v10 = (int)StringLiteral_935/*"---"*/;
   this->fields.unknownValueText = (struct System_String_o *)StringLiteral_935/*"---"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.unknownValueText, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.unknownValueText, v10, v11, v12, v13, v14, v15, v16);
   v17 = System_Collections_Generic_List_UIAtlas__TypeInfo;
-  this->fields.dimmedIconColor = (struct UnityEngine_Color_o)xmmword_E93FD0;
-  v18 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v17);
+  this->fields.dimmedIconColor = (struct UnityEngine_Color_o)xmmword_E9D170;
+  v18 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v17);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.atlasList = (struct System_Collections_Generic_List_UIAtlas__o *)v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.atlasList, (int32_t)v18, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.atlasList, (int32_t)v18, v19, v20, v21, v22, v23, v24);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -68,17 +68,17 @@ void EventInfoJobInfoComponent__Awake(EventInfoJobInfoComponent_o *this, const M
   struct UnityEngine_Color_o v17; // q0
   struct UILabel_o *efficacyLabel; // x8
 
-  if ( (byte_593996C & 1) == 0 )
+  if ( (byte_5971CDF & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobPointBonusMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_593996C = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobPointBonusMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5971CDF = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobPointBonusMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobPointBonusMaster___);
   this->fields.eventJobPointBonusMaster = (struct EventJobPointBonusMaster_o *)Master_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventJobPointBonusMaster,
     (int32_t)Master_object,
     v4,
@@ -104,7 +104,7 @@ void EventInfoJobInfoComponent__Awake(EventInfoJobInfoComponent_o *this, const M
         !efficacyLabel) )
   {
 LABEL_10:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   this->fields.defaultEfficacyLabelColor = efficacyLabel->fields.mColor;
 }
@@ -127,11 +127,11 @@ void EventInfoJobInfoComponent__InitAtlasList(
   int v7; // w9
 
   v4 = this;
-  if ( (byte_593996D & 1) == 0 )
+  if ( (byte_5971CE0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__AddRange__);
-    this = (EventInfoJobInfoComponent_o *)sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
-    byte_593996D = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__AddRange__);
+    this = (EventInfoJobInfoComponent_o *)sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
+    byte_5971CE0 = 1;
   }
   atlasList = v4->fields.atlasList;
   if ( !atlasList )
@@ -150,11 +150,11 @@ void EventInfoJobInfoComponent__InitAtlasList(
       System_Collections_Generic_List_object___AddRange(
         (System_Collections_Generic_List_object__o *)this,
         (System_Collections_Generic_IEnumerable_T__o *)sourceList,
-        (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_UIAtlas__AddRange__);
+        (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_UIAtlas__AddRange__);
       return;
     }
 LABEL_10:
-    sub_21FFECC(this, sourceList);
+    sub_2213CDC(this, sourceList);
   }
 }
 
@@ -182,10 +182,10 @@ void EventInfoJobInfoComponent__UpdateAcquiredInfo(
   UnityEngine_Object_o *calcSprite; // x21
   UnityEngine_Object_o *efficacyLabel; // x21
 
-  if ( (byte_5939970 & 1) == 0 )
+  if ( (byte_5971CE3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939970 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CE3 = 1;
   }
   levelLabel = (UnityEngine_Object_o *)this->fields.levelLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -242,7 +242,7 @@ void EventInfoJobInfoComponent__UpdateAcquiredInfo(
       }
     }
 LABEL_28:
-    sub_21FFECC(gameObject, v6);
+    sub_2213CDC(gameObject, v6);
   }
 }
 
@@ -259,13 +259,13 @@ void EventInfoJobInfoComponent__UpdateCalcSprite(
   bool v8; // w8
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_5939973 & 1) == 0 )
+  if ( (byte_5971CE6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_18433/*"calc_sign_02"*/);
-    sub_21FFC50(&StringLiteral_18432/*"calc_sign_01"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939973 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_18471/*"calc_sign_02"*/);
+    sub_2213A60(&StringLiteral_18470/*"calc_sign_01"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971CE6 = 1;
   }
   calcSprite = (UnityEngine_Object_o *)this->fields.calcSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -274,14 +274,14 @@ void EventInfoJobInfoComponent__UpdateCalcSprite(
     return;
   if ( calcType == 1 )
   {
-    v7 = &StringLiteral_18432/*"calc_sign_01"*/;
+    v7 = &StringLiteral_18470/*"calc_sign_01"*/;
     goto LABEL_10;
   }
   if ( calcType == 2 )
   {
-    v7 = &StringLiteral_18433/*"calc_sign_02"*/;
+    v7 = &StringLiteral_18471/*"calc_sign_02"*/;
 LABEL_10:
-    v8 = UISpriteHelper__SetSprite_51105480(
+    v8 = UISpriteHelper__SetSprite_51178964(
            this->fields.calcSprite,
            (System_String_o *)*v7,
            (System_Collections_Generic_IEnumerable_UIAtlas__o *)this->fields.atlasList,
@@ -308,7 +308,7 @@ LABEL_10:
         }
       }
 LABEL_21:
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     if ( !gameObject )
       goto LABEL_21;
@@ -318,7 +318,7 @@ LABEL_21:
   if ( !gameObject )
     goto LABEL_21;
 LABEL_18:
-  UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_594C0B8 + 184), 0);
+  UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_5984390 + 184), 0);
   gameObject = (UnityEngine_Component_o *)this->fields.calcSprite;
   if ( !gameObject )
     goto LABEL_21;
@@ -348,13 +348,13 @@ void EventInfoJobInfoComponent__UpdateCurrentLevelLabel(
   __int64 v16; // x1
   int32_t v17; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5939971 & 1) == 0 )
+  if ( (byte_5971CE4 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_6662/*"FFFFFF"*/);
-    sub_21FFC50(&StringLiteral_5808/*"EVENT_INFO_JOB_LEVEL_CURRENT"*/);
-    byte_5939971 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_6674/*"FFFFFF"*/);
+    sub_2213A60(&StringLiteral_5820/*"EVENT_INFO_JOB_LEVEL_CURRENT"*/);
+    byte_5971CE4 = 1;
   }
   levelLabel = (UnityEngine_Object_o *)this->fields.levelLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -364,17 +364,17 @@ void EventInfoJobInfoComponent__UpdateCurrentLevelLabel(
     v9 = this->fields.levelLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5808/*"EVENT_INFO_JOB_LEVEL_CURRENT"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5820/*"EVENT_INFO_JOB_LEVEL_CURRENT"*/, 0);
     p_maxLevelColor = &this->fields.maxLevelColor;
     v12 = v10;
     if ( level != maxLevel )
-      p_maxLevelColor = (struct System_String_o **)&StringLiteral_6662/*"FFFFFF"*/;
+      p_maxLevelColor = (struct System_String_o **)&StringLiteral_6674/*"FFFFFF"*/;
     v13 = (Il2CppObject *)*p_maxLevelColor;
     v17 = level;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
-    v15 = System_String__Format_75484576(v12, v13, v14, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v17);
+    v15 = System_String__Format_75697880(v12, v13, v14, 0);
     if ( !v9 )
-      sub_21FFECC(v15, v16);
+      sub_2213CDC(v15, v16);
     UILabel__set_text(v9, v15, 0);
   }
 }
@@ -480,10 +480,10 @@ void EventInfoJobInfoComponent__UpdateDisplayColors(
   UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593996E & 1) == 0 )
+  if ( (byte_5971CE1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593996E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CE1 = 1;
   }
   jobIconSprite = (UnityEngine_Object_o *)this->fields.jobIconSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -599,7 +599,7 @@ void EventInfoJobInfoComponent__UpdateDisplayColors(
       return;
     }
 LABEL_36:
-    sub_21FFECC(v7, v6);
+    sub_2213CDC(v7, v6);
   }
 }
 
@@ -617,10 +617,10 @@ void EventInfoJobInfoComponent__UpdateEfficacyLabel(
   System_String_o *unknownValueText; // x21
   UILabel_o *v11; // x0
 
-  if ( (byte_5939974 & 1) == 0 )
+  if ( (byte_5971CE7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939974 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CE7 = 1;
   }
   efficacyLabel = (UnityEngine_Object_o *)this->fields.efficacyLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -636,7 +636,7 @@ void EventInfoJobInfoComponent__UpdateEfficacyLabel(
     }
     else
     {
-      unknownValueText = **(System_String_o ***)(qword_594C0B8 + 184);
+      unknownValueText = **(System_String_o ***)(qword_5984390 + 184);
       if ( !bonusValue )
         goto LABEL_11;
     }
@@ -645,7 +645,7 @@ void EventInfoJobInfoComponent__UpdateEfficacyLabel(
 LABEL_12:
       v11 = this->fields.efficacyLabel;
       if ( !v11 )
-        sub_21FFECC(0, v8);
+        sub_2213CDC(0, v8);
       UILabel__set_text(v11, unknownValueText, 0);
       return;
     }
@@ -680,12 +680,12 @@ void EventInfoJobInfoComponent__UpdateIcon(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_593996F & 1) == 0 )
+  if ( (byte_5971CE2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_22100/*"job_icon_{0:D2}"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593996F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_22143/*"job_icon_{0:D2}"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5971CE2 = 1;
   }
   jobIconSprite = (UnityEngine_Object_o *)this->fields.jobIconSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -696,9 +696,9 @@ void EventInfoJobInfoComponent__UpdateIcon(
     {
       v12 = this->fields.jobIconSprite;
       v16 = iconId;
-      v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v16);
-      v14 = System_String__Format((System_String_o *)StringLiteral_22100/*"job_icon_{0:D2}"*/, v13, 0);
-      if ( UISpriteHelper__SetSprite_51105480(
+      v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
+      v14 = System_String__Format((System_String_o *)StringLiteral_22143/*"job_icon_{0:D2}"*/, v13, 0);
+      if ( UISpriteHelper__SetSprite_51178964(
              v12,
              v14,
              (System_Collections_Generic_IEnumerable_UIAtlas__o *)this->fields.atlasList,
@@ -733,13 +733,13 @@ void EventInfoJobInfoComponent__UpdateIcon(
           }
         }
 LABEL_18:
-        sub_21FFECC(gameObject, v11);
+        sub_2213CDC(gameObject, v11);
       }
     }
     gameObject = (UIWidget_o *)this->fields.jobIconSprite;
     if ( !gameObject )
       goto LABEL_18;
-    UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_594C0B8 + 184), 0);
+    UISprite__set_spriteName((UISprite_o *)gameObject, **(System_String_o ***)(qword_5984390 + 184), 0);
     gameObject = (UIWidget_o *)this->fields.jobIconSprite;
     if ( !gameObject )
       goto LABEL_18;
@@ -766,12 +766,12 @@ void EventInfoJobInfoComponent__UpdateMaxLevelLabel(
   __int64 v11; // x1
   int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5939972 & 1) == 0 )
+  if ( (byte_5971CE5 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5809/*"EVENT_INFO_JOB_LEVEL_MAX"*/);
-    byte_5939972 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5821/*"EVENT_INFO_JOB_LEVEL_MAX"*/);
+    byte_5971CE5 = 1;
   }
   maxLevelLabel = (UnityEngine_Object_o *)this->fields.maxLevelLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -781,12 +781,12 @@ void EventInfoJobInfoComponent__UpdateMaxLevelLabel(
     v7 = this->fields.maxLevelLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5809/*"EVENT_INFO_JOB_LEVEL_MAX"*/, 0);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5821/*"EVENT_INFO_JOB_LEVEL_MAX"*/, 0);
     v12 = maxLevel;
-    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v12);
+    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v12);
     v10 = System_String__Format(v8, v9, 0);
     if ( !v7 )
-      sub_21FFECC(v10, v11);
+      sub_2213CDC(v10, v11);
     UILabel__set_text(v7, v10, 0);
   }
 }

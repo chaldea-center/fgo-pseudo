@@ -1,14 +1,14 @@
 void TreasureDvcLvMaster___ctor(TreasureDvcLvMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939437 & 1) == 0 )
+  if ( (byte_59715F7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string___ctor__);
-    byte_5939437 = 1;
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string___ctor__);
+    byte_59715F7 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     96,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ TreasureDvcLvEntity_o *TreasureDvcLvMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5939435 & 1) == 0 )
+  if ( (byte_59715F5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__GetEntity__);
-    byte_5939435 = 1;
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__GetEntity__);
+    byte_59715F5 = 1;
   }
   PK = (Il2CppObject *)TreasureDvcLvEntity__CreatePK(treaureDeviceId, lv, *(const MethodInfo **)&lv);
   return (TreasureDvcLvEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_3EE2044 *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__GetEntity__);
+                                    (const MethodInfo_3F157EC *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool TreasureDvcLvMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5939436 & 1) == 0 )
+  if ( (byte_59715F6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__TryGetEntity__);
-    byte_5939436 = 1;
+    sub_2213A60(&Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__TryGetEntity__);
+    byte_59715F6 = 1;
   }
   PK = (Il2CppObject *)TreasureDvcLvEntity__CreatePK(treaureDeviceId, lv, *(const MethodInfo **)&treaureDeviceId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_TreasureDvcLvMaster__TreasureDvcLvEntity__string__TryGetEntity__);
 }

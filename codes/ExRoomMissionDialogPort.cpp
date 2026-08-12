@@ -12,7 +12,7 @@ void ExRoomMissionDialogPort___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.resourceCatalog = inResourceCatalog;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)inResourceCatalog, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)inResourceCatalog, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -22,15 +22,15 @@ System_String_o *ExRoomMissionDialogPort__BuildOverflowMessage(
         int32_t overflowType,
         const MethodInfo *method)
 {
-  if ( (byte_5932DEC & 1) == 0 )
+  if ( (byte_596AEF2 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_8917/*"MASTER_MISSION_SERVANT_OVER_MSG"*/);
-    byte_5932DEC = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_8930/*"MASTER_MISSION_SERVANT_OVER_MSG"*/);
+    byte_596AEF2 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&overflowType, method);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_8917/*"MASTER_MISSION_SERVANT_OVER_MSG"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_8930/*"MASTER_MISSION_SERVANT_OVER_MSG"*/, 0);
 }
 
 
@@ -41,21 +41,21 @@ MasterMissionReceiveResultDialog_o *ExRoomMissionDialogPort__CreateAllResultDial
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5932DEF & 1) == 0 )
+  if ( (byte_596AEF5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomMissionDialogPort_CreateDialog_MasterMissionReceiveResultDialog___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_6537/*"ExRoomMissionReceiveAllResultDialog"*/);
-    byte_5932DEF = 1;
+    sub_2213A60(&Method_ExRoomMissionDialogPort_CreateDialog_MasterMissionReceiveResultDialog___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_6549/*"ExRoomMissionReceiveAllResultDialog"*/);
+    byte_596AEF5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return (MasterMissionReceiveResultDialog_o *)ExRoomMissionDialogPort__CreateDialog_object_(
                                                  this,
-                                                 (System_String_o *)StringLiteral_6537/*"ExRoomMissionReceiveAllResultDialog"*/,
+                                                 (System_String_o *)StringLiteral_6549/*"ExRoomMissionReceiveAllResultDialog"*/,
                                                  (UnityEngine_Transform_o *)Instance[7].monitor,
-                                                 (const MethodInfo_3878D74 *)Method_ExRoomMissionDialogPort_CreateDialog_MasterMissionReceiveResultDialog___);
+                                                 (const MethodInfo_38AC23C *)Method_ExRoomMissionDialogPort_CreateDialog_MasterMissionReceiveResultDialog___);
 }
 
 
@@ -71,20 +71,20 @@ ExRoomMissionReceiveConfirmDialogView_o *ExRoomMissionDialogPort__CreateConfirmD
   Il2CppObject *Instance; // x0
   __int64 v9; // x1
 
-  if ( (byte_5932DED & 1) == 0 )
+  if ( (byte_596AEF3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_GameObjectHelper_Instantiate_ExRoomMissionReceiveConfirmDialogView___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_6538/*"ExRoomMissionReceiveConfirmDialog"*/);
-    byte_5932DED = 1;
+    sub_2213A60(&Method_GameObjectHelper_Instantiate_ExRoomMissionReceiveConfirmDialogView___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_6550/*"ExRoomMissionReceiveConfirmDialog"*/);
+    byte_596AEF3 = 1;
   }
   resourceCatalog = this->fields.resourceCatalog;
   if ( !resourceCatalog )
     return 0;
   PrefabObject = (UnityEngine_Object_o *)ExRoomResourceCatalogAssetBundle__GetPrefabObject(
                                            resourceCatalog,
-                                           (System_String_o *)StringLiteral_6538/*"ExRoomMissionReceiveConfirmDialog"*/,
+                                           (System_String_o *)StringLiteral_6550/*"ExRoomMissionReceiveConfirmDialog"*/,
                                            v2);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
@@ -93,15 +93,15 @@ ExRoomMissionReceiveConfirmDialogView_o *ExRoomMissionDialogPort__CreateConfirmD
     return 0;
   if ( !PrefabObject
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)PrefabObject, 0, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_21FFECC(Instance, v9);
+    sub_2213CDC(Instance, v9);
   }
   return (ExRoomMissionReceiveConfirmDialogView_o *)GameObjectHelper__Instantiate_object_(
                                                       (UnityEngine_GameObject_o *)PrefabObject,
                                                       (UnityEngine_Transform_o *)Instance[7].monitor,
                                                       0,
-                                                      (const MethodInfo_38853E4 *)Method_GameObjectHelper_Instantiate_ExRoomMissionReceiveConfirmDialogView___);
+                                                      (const MethodInfo_38B88AC *)Method_GameObjectHelper_Instantiate_ExRoomMissionReceiveConfirmDialogView___);
 }
 
 
@@ -109,7 +109,7 @@ Il2CppObject *ExRoomMissionDialogPort__CreateDialog_object_(
         ExRoomMissionDialogPort_o *this,
         System_String_o *name,
         UnityEngine_Transform_o *parent,
-        const MethodInfo_3878D74 *method)
+        const MethodInfo_38AC23C *method)
 {
   ExRoomResourceCatalogAssetBundle_o *resourceCatalog; // x0
   __int64 v9; // x1
@@ -119,9 +119,9 @@ Il2CppObject *ExRoomMissionDialogPort__CreateDialog_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_2237B54();
+      sub_224B964();
   }
   resourceCatalog = this->fields.resourceCatalog;
   if ( !resourceCatalog )
@@ -133,13 +133,13 @@ Il2CppObject *ExRoomMissionDialogPort__CreateDialog_object_(
   if ( v11 )
     return 0;
   if ( !PrefabObject )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)PrefabObject, 0, 0);
   return GameObjectHelper__Instantiate_object_(
            (UnityEngine_GameObject_o *)PrefabObject,
            parent,
            0,
-           (const MethodInfo_38853E4 *)method->rgctx_data->_1_GameObjectHelper_Instantiate_T_);
+           (const MethodInfo_38B88AC *)method->rgctx_data->_1_GameObjectHelper_Instantiate_T_);
 }
 
 
@@ -150,21 +150,21 @@ MissionRewardGetDialog_o *ExRoomMissionDialogPort__CreateSingleResultDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5932DEE & 1) == 0 )
+  if ( (byte_596AEF4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomMissionDialogPort_CreateDialog_MissionRewardGetDialog___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_6539/*"ExRoomMissionReceiveSingleResultDialog"*/);
-    byte_5932DEE = 1;
+    sub_2213A60(&Method_ExRoomMissionDialogPort_CreateDialog_MissionRewardGetDialog___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_6551/*"ExRoomMissionReceiveSingleResultDialog"*/);
+    byte_596AEF4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return (MissionRewardGetDialog_o *)ExRoomMissionDialogPort__CreateDialog_object_(
                                        this,
-                                       (System_String_o *)StringLiteral_6539/*"ExRoomMissionReceiveSingleResultDialog"*/,
+                                       (System_String_o *)StringLiteral_6551/*"ExRoomMissionReceiveSingleResultDialog"*/,
                                        (UnityEngine_Transform_o *)Instance[7].monitor,
-                                       (const MethodInfo_3878D74 *)Method_ExRoomMissionDialogPort_CreateDialog_MissionRewardGetDialog___);
+                                       (const MethodInfo_38AC23C *)Method_ExRoomMissionDialogPort_CreateDialog_MissionRewardGetDialog___);
 }
 
 
@@ -190,29 +190,29 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenCommandCodeDetail(
   Il2CppObject *v19; // x21
   ServantStatusDialog_EndDelegate_o *v20; // x22
 
-  if ( (byte_5932DE6 & 1) == 0 )
+  if ( (byte_596AEEC & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass11_0__IExRoomMissionDialogPort_OpenCommandCodeDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass11_0_TypeInfo);
-    byte_5932DE6 = 1;
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass11_0__IExRoomMissionDialogPort_OpenCommandCodeDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass11_0_TypeInfo);
+    byte_596AEEC = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass11_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass11_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass11_0___ctor((ExRoomMissionDialogPort___c__DisplayClass11_0_o *)v6, 0);
   if ( !v6 )
     goto LABEL_11;
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( commandCodeEntity && !v18 )
   {
-    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v20 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v20,
       (Il2CppObject *)v6,
@@ -220,11 +220,11 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenCommandCodeDetail(
       0);
     if ( v19 )
     {
-      CommonUI__OpenServantEquipStatusDialog_37307760((CommonUI_o *)v19, 25, commandCodeEntity, 0, v20, 0, 0);
+      CommonUI__OpenServantEquipStatusDialog_37389176((CommonUI_o *)v19, 25, commandCodeEntity, 0, v20, 0, 0);
       return;
     }
 LABEL_11:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   ActionExtensions__Call(*(System_Action_o **)(v6 + 16), 0);
 }
@@ -253,23 +253,23 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenCostumeReleaseDetail(
   __int64 v20; // x1
   __int64 v21; // x2
 
-  if ( (byte_5932DE7 & 1) == 0 )
+  if ( (byte_596AEED & 1) == 0 )
   {
-    sub_21FFC50(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass12_0__IExRoomMissionDialogPort_OpenCostumeReleaseDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass12_0_TypeInfo);
-    byte_5932DE7 = 1;
+    sub_2213A60(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&MissionInfoMaker_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass12_0__IExRoomMissionDialogPort_OpenCostumeReleaseDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass12_0_TypeInfo);
+    byte_596AEED = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass12_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass12_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass12_0___ctor((ExRoomMissionDialogPort___c__DisplayClass12_0_o *)v6, 0);
   if ( !v6 )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
@@ -279,7 +279,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenCostumeReleaseDetail(
   }
   else
   {
-    v19 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_21FFEBC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v19 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_2213CCC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
       v19,
       (Il2CppObject *)v6,
@@ -315,23 +315,23 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenEquipDetail(
   __int64 v20; // x1
   __int64 v21; // x2
 
-  if ( (byte_5932DE8 & 1) == 0 )
+  if ( (byte_596AEEE & 1) == 0 )
   {
-    sub_21FFC50(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass13_0__IExRoomMissionDialogPort_OpenEquipDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass13_0_TypeInfo);
-    byte_5932DE8 = 1;
+    sub_2213A60(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&MissionInfoMaker_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass13_0__IExRoomMissionDialogPort_OpenEquipDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass13_0_TypeInfo);
+    byte_596AEEE = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass13_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass13_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass13_0___ctor((ExRoomMissionDialogPort___c__DisplayClass13_0_o *)v6, 0);
   if ( !v6 )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
@@ -341,7 +341,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenEquipDetail(
   }
   else
   {
-    v19 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_21FFEBC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v19 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_2213CCC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
       v19,
       (Il2CppObject *)v6,
@@ -376,29 +376,29 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenItemDetail(
   Il2CppObject *v19; // x21
   ItemDetailInfoComponent_CallbackFunc_o *v20; // x22
 
-  if ( (byte_5932DE3 & 1) == 0 )
+  if ( (byte_596AEE9 & 1) == 0 )
   {
-    sub_21FFC50(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass8_0__IExRoomMissionDialogPort_OpenItemDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass8_0_TypeInfo);
-    byte_5932DE3 = 1;
+    sub_2213A60(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass8_0__IExRoomMissionDialogPort_OpenItemDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass8_0_TypeInfo);
+    byte_596AEE9 = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass8_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass8_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass8_0___ctor((ExRoomMissionDialogPort___c__DisplayClass8_0_o *)v6, 0);
   if ( !v6 )
     goto LABEL_11;
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( itemEntity && !v18 )
   {
-    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v20 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_21FFEBC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_2213CCC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
     ItemDetailInfoComponent_CallbackFunc___ctor(
       v20,
       (Il2CppObject *)v6,
@@ -410,7 +410,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenItemDetail(
       return;
     }
 LABEL_11:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   ActionExtensions__Call(*(System_Action_o **)(v6 + 16), 0);
 }
@@ -431,15 +431,15 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenPresentBoxOver(
   System_String_o *v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_5932DEA & 1) == 0 )
+  if ( (byte_596AEF0 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_8907/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/);
-    byte_5932DEA = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_8920/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/);
+    byte_596AEF0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -448,13 +448,13 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenPresentBoxOver(
   }
   else
   {
-    v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = **(System_String_o ***)(qword_594C0B8 + 184);
+    v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = **(System_String_o ***)(qword_5984390 + 184);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7, v8);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8907/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8920/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/, 0);
     if ( !v9 )
-      sub_21FFECC(v11, v12);
+      sub_2213CDC(v11, v12);
     CommonUI__OpenNotificationDialog((CommonUI_o *)v9, v10, v11, onClosed, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0.0, 0, 0);
   }
 }
@@ -472,10 +472,10 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveAllResult(
   System_Int32_array *ReceivedMissionIds; // x0
   __int64 v11; // x1
 
-  if ( (byte_5932DE2 & 1) == 0 )
+  if ( (byte_596AEE8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932DE2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AEE8 = 1;
   }
   AllResultDialog = (UnityEngine_Object_o *)ExRoomMissionDialogPort__CreateAllResultDialog(
                                               this,
@@ -492,7 +492,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveAllResult(
     if ( !dialog
       || (ReceivedMissionIds = ExRoomMissionReceiveAllResultDialog__get_ReceivedMissionIds(dialog, 0), !AllResultDialog) )
     {
-      sub_21FFECC(ReceivedMissionIds, v11);
+      sub_2213CDC(ReceivedMissionIds, v11);
     }
     MasterMissionReceiveResultDialog__Open(
       (MasterMissionReceiveResultDialog_o *)AllResultDialog,
@@ -515,11 +515,11 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveConfirm(
   _BOOL8 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_5932DE0 & 1) == 0 )
+  if ( (byte_596AEE6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932DE0 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AEE6 = 1;
   }
   ConfirmDialogView = (UnityEngine_Object_o *)ExRoomMissionDialogPort__CreateConfirmDialogView(
                                                 this,
@@ -532,12 +532,12 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveConfirm(
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)onClosed,
       0,
-      (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
   }
   else
   {
     if ( !ConfirmDialogView )
-      sub_21FFECC(v10, v11);
+      sub_2213CDC(v10, v11);
     ExRoomMissionReceiveConfirmDialogView__Open(
       (ExRoomMissionReceiveConfirmDialogView_o *)ConfirmDialogView,
       dialog,
@@ -579,23 +579,23 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveSingleResult(
   MissionRewardGetDialog_o *v30; // x21
   MissionRewardGetDialog_ClickDelegate_o *v31; // x23
 
-  if ( (byte_5932DE1 & 1) == 0 )
+  if ( (byte_596AEE7 & 1) == 0 )
   {
-    sub_21FFC50(&MissionRewardGetDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass6_0__IExRoomMissionDialogPort_OpenReceiveSingleResult_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass6_0_TypeInfo);
-    byte_5932DE1 = 1;
+    sub_2213A60(&MissionRewardGetDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass6_0__IExRoomMissionDialogPort_OpenReceiveSingleResult_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass6_0_TypeInfo);
+    byte_596AEE7 = 1;
   }
-  v7 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass6_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0);
+  v7 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass6_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass6_0___ctor((ExRoomMissionDialogPort___c__DisplayClass6_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_13;
   *(_QWORD *)(v7 + 24) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)onClosed, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)onClosed, v10, v11, v12, v13, v14, v15);
   SingleResultDialog = ExRoomMissionDialogPort__CreateSingleResultDialog(this, v16);
   *(_QWORD *)(v7 + 16) = SingleResultDialog;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)SingleResultDialog, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)SingleResultDialog, v18, v19, v20, v21, v22, v23);
   v26 = *(UnityEngine_Object_o **)(v7 + 16);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24, v25);
@@ -611,7 +611,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveSingleResult(
         {
           DisplayMessage = ExRoomMissionReceiveSingleResultDialog__get_DisplayMessage(dialog, 0);
           v30 = *(MissionRewardGetDialog_o **)(v7 + 16);
-          v31 = (MissionRewardGetDialog_ClickDelegate_o *)sub_21FFEBC(MissionRewardGetDialog_ClickDelegate_TypeInfo);
+          v31 = (MissionRewardGetDialog_ClickDelegate_o *)sub_2213CCC(MissionRewardGetDialog_ClickDelegate_TypeInfo);
           MissionRewardGetDialog_ClickDelegate___ctor(
             v31,
             (Il2CppObject *)v7,
@@ -623,7 +623,7 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenReceiveSingleResult(
             return;
           }
 LABEL_13:
-          sub_21FFECC(v8, v9);
+          sub_2213CDC(v8, v9);
         }
       }
     }
@@ -661,29 +661,29 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenServantDetail(
   ServantStatusDialog_EndDelegate_o *v26; // x22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
 
-  if ( (byte_5932DE5 & 1) == 0 )
+  if ( (byte_596AEEB & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass10_0__IExRoomMissionDialogPort_OpenServantDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass10_0_TypeInfo);
-    byte_5932DE5 = 1;
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass10_0__IExRoomMissionDialogPort_OpenServantDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass10_0_TypeInfo);
+    byte_596AEEB = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass10_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass10_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass10_0___ctor((ExRoomMissionDialogPort___c__DisplayClass10_0_o *)v6, 0);
   if ( !v6 )
     goto LABEL_13;
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( servantEntity && !v18 )
   {
-    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v22 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
     v23 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
     v24 = (CommonUI_o *)v19;
@@ -691,8 +691,8 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenServantDetail(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20, v21);
     *(_QWORD *)&v27.fields.currentCryptoKey = v22;
     *(_QWORD *)&v27.fields.fakeValue = v23;
-    v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v27, 0);
-    v26 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v27, 0);
+    v26 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v26,
       (Il2CppObject *)v6,
@@ -700,11 +700,11 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenServantDetail(
       0);
     if ( v24 )
     {
-      CommonUI__OpenServantStatusDialog_37305112(v24, 7, v25, v26, 0);
+      CommonUI__OpenServantStatusDialog_37386528(v24, 7, v25, v26, 0);
       return;
     }
 LABEL_13:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   ActionExtensions__Call(*(System_Action_o **)(v6 + 16), 0);
 }
@@ -732,29 +732,29 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenServantEquipDetail(
   Il2CppObject *v19; // x21
   ServantStatusDialog_EndDelegate_o *v20; // x22
 
-  if ( (byte_5932DE4 & 1) == 0 )
+  if ( (byte_596AEEA & 1) == 0 )
   {
-    sub_21FFC50(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ExRoomMissionDialogPort___c__DisplayClass9_0__IExRoomMissionDialogPort_OpenServantEquipDetail_b__0__);
-    sub_21FFC50(&ExRoomMissionDialogPort___c__DisplayClass9_0_TypeInfo);
-    byte_5932DE4 = 1;
+    sub_2213A60(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ExRoomMissionDialogPort___c__DisplayClass9_0__IExRoomMissionDialogPort_OpenServantEquipDetail_b__0__);
+    sub_2213A60(&ExRoomMissionDialogPort___c__DisplayClass9_0_TypeInfo);
+    byte_596AEEA = 1;
   }
-  v6 = sub_21FFEBC(ExRoomMissionDialogPort___c__DisplayClass9_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0);
+  v6 = sub_2213CCC(ExRoomMissionDialogPort___c__DisplayClass9_0_TypeInfo);
+  ExRoomMissionDialogPort___c__DisplayClass9_0___ctor((ExRoomMissionDialogPort___c__DisplayClass9_0_o *)v6, 0);
   if ( !v6 )
     goto LABEL_11;
   *(_QWORD *)(v6 + 16) = onClosed;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)onClosed, v9, v10, v11, v12, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
   v18 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( giftEntity && !v18 )
   {
-    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v20 = (ServantStatusDialog_EndDelegate_o *)sub_21FFEBC(ServantStatusDialog_EndDelegate_TypeInfo);
+    v19 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (ServantStatusDialog_EndDelegate_o *)sub_2213CCC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
       v20,
       (Il2CppObject *)v6,
@@ -762,11 +762,11 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenServantEquipDetail(
       0);
     if ( v19 )
     {
-      CommonUI__OpenServantStatusDialog_37305676((CommonUI_o *)v19, 7, giftEntity, v20, 0);
+      CommonUI__OpenServantStatusDialog_37387092((CommonUI_o *)v19, 7, giftEntity, v20, 0);
       return;
     }
 LABEL_11:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   ActionExtensions__Call(*(System_Action_o **)(v6 + 16), 0);
 }
@@ -788,13 +788,13 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenUserPresentBoxError(
   Il2CppObject *v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_5932DEB & 1) == 0 )
+  if ( (byte_596AEF1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DEB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AEF1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
@@ -805,12 +805,12 @@ void ExRoomMissionDialogPort__IExRoomMissionDialogPort_OpenUserPresentBoxError(
   else
   {
     v11 = ExRoomMissionDialogPort__BuildOverflowMessage((ExRoomMissionDialogPort_o *)v8, v9, v10);
-    v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !v12 )
-      sub_21FFECC(0, v13);
+      sub_2213CDC(0, v13);
     CommonUI__OpenNotificationDialog(
       (CommonUI_o *)v12,
-      **(System_String_o ***)(qword_594C0B8 + 184),
+      **(System_String_o ***)(qword_5984390 + 184),
       v11,
       onClosed,
       -1,
@@ -834,15 +834,15 @@ void ExRoomMissionDialogPort__PlayCommonCloseSe(const MethodInfo *method)
   _QWORD *v1; // x0
   System_Reflection_MethodBase_o *v2; // x0
 
-  if ( (byte_5932DE9 & 1) == 0 )
+  if ( (byte_596AEEF & 1) == 0 )
   {
-    sub_21FFC50(&Method_ExRoomMissionDialogPort_PlayCommonCloseSe__);
-    byte_5932DE9 = 1;
+    sub_2213A60(&Method_ExRoomMissionDialogPort_PlayCommonCloseSe__);
+    byte_596AEEF = 1;
   }
   v1 = Method_ExRoomMissionDialogPort_PlayCommonCloseSe__;
   if ( (*((_BYTE *)Method_ExRoomMissionDialogPort_PlayCommonCloseSe__ + 83) & 2) != 0 )
-    v1 = (_QWORD *)sub_21FFC68(Method_ExRoomMissionDialogPort_PlayCommonCloseSe__);
-  v2 = (System_Reflection_MethodBase_o *)sub_21FFC34(v1, v1[4]);
+    v1 = (_QWORD *)sub_2213A78(Method_ExRoomMissionDialogPort_PlayCommonCloseSe__);
+  v2 = (System_Reflection_MethodBase_o *)sub_2213A44(v1, v1[4]);
   OverwriteAssetSoundName__PlaySystemSe(v2, 0, 0, 0);
 }
 
@@ -863,14 +863,14 @@ void ExRoomMissionDialogPort___c__DisplayClass10_0___IExRoomMissionDialogPort_Op
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_5932DF0 & 1) == 0 )
+  if ( (byte_596AF02 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF0 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF02 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0, 0);
   ActionExtensions__Call(this->fields.onClosed, 0);
 }
@@ -892,14 +892,14 @@ void ExRoomMissionDialogPort___c__DisplayClass11_0___IExRoomMissionDialogPort_Op
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_5932DF1 & 1) == 0 )
+  if ( (byte_596AF03 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF1 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF03 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, 0, 0);
   ActionExtensions__Call(this->fields.onClosed, 0);
 }
@@ -918,22 +918,20 @@ void ExRoomMissionDialogPort___c__DisplayClass12_0___IExRoomMissionDialogPort_Op
         bool isDecide,
         const MethodInfo *method)
 {
-  ExRoomMissionDialogPort___c__DisplayClass12_0_o *v3; // x19
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  v3 = this;
-  if ( (byte_5932DF2 & 1) == 0 )
+  if ( (byte_596AF04 & 1) == 0 )
   {
-    this = (ExRoomMissionDialogPort___c__DisplayClass12_0_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF2 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF04 = 1;
   }
-  ExRoomMissionDialogPort__PlayCommonCloseSe((const MethodInfo *)this);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  ExRoomMissionDialogPort__PlayCommonCloseSe(0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0);
-  ActionExtensions__Call(v3->fields.onClosed, 0);
+  ActionExtensions__Call(this->fields.onClosed, 0);
 }
 
 
@@ -950,22 +948,20 @@ void ExRoomMissionDialogPort___c__DisplayClass13_0___IExRoomMissionDialogPort_Op
         bool isDecide,
         const MethodInfo *method)
 {
-  ExRoomMissionDialogPort___c__DisplayClass13_0_o *v3; // x19
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  v3 = this;
-  if ( (byte_5932DF3 & 1) == 0 )
+  if ( (byte_596AF05 & 1) == 0 )
   {
-    this = (ExRoomMissionDialogPort___c__DisplayClass13_0_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF3 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF05 = 1;
   }
-  ExRoomMissionDialogPort__PlayCommonCloseSe((const MethodInfo *)this);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  ExRoomMissionDialogPort__PlayCommonCloseSe(0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0);
-  ActionExtensions__Call(v3->fields.onClosed, 0);
+  ActionExtensions__Call(this->fields.onClosed, 0);
 }
 
 
@@ -985,8 +981,8 @@ void ExRoomMissionDialogPort___c__DisplayClass6_0___IExRoomMissionDialogPort_Ope
 
   view = this->fields.view;
   if ( !view )
-    sub_21FFECC(0, method);
-  MissionRewardGetDialog__Close_54798024(view, this->fields.onClosed, 0);
+    sub_2213CDC(0, method);
+  MissionRewardGetDialog__Close_55014960(view, this->fields.onClosed, 0);
 }
 
 
@@ -1003,22 +999,20 @@ void ExRoomMissionDialogPort___c__DisplayClass8_0___IExRoomMissionDialogPort_Ope
         bool isDecide,
         const MethodInfo *method)
 {
-  ExRoomMissionDialogPort___c__DisplayClass8_0_o *v3; // x19
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  v3 = this;
-  if ( (byte_5932DF4 & 1) == 0 )
+  if ( (byte_596AF06 & 1) == 0 )
   {
-    this = (ExRoomMissionDialogPort___c__DisplayClass8_0_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF4 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF06 = 1;
   }
-  ExRoomMissionDialogPort__PlayCommonCloseSe((const MethodInfo *)this);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  ExRoomMissionDialogPort__PlayCommonCloseSe(0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0);
-  ActionExtensions__Call(v3->fields.onClosed, 0);
+  ActionExtensions__Call(this->fields.onClosed, 0);
 }
 
 
@@ -1038,14 +1032,14 @@ void ExRoomMissionDialogPort___c__DisplayClass9_0___IExRoomMissionDialogPort_Ope
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_5932DF5 & 1) == 0 )
+  if ( (byte_596AF07 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5932DF5 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596AF07 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0, 0);
   ActionExtensions__Call(this->fields.onClosed, 0);
 }

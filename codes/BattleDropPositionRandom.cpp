@@ -140,42 +140,42 @@ void BattleDropPositionRandom__Initialize(
   System_Collections_Generic_List_Enumerator_object__o v134; // [xsp+38h] [xbp-D8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v135; // [xsp+50h] [xbp-C0h] BYREF
 
-  if ( (byte_593B215 & 1) == 0 )
+  if ( (byte_5973404 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropPositionRandomSetting_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom____ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Sum_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__get_Current__);
-    sub_21FFC50(&BattleDropPositionRandom_FixedDropPositionRandom_TypeInfo);
-    sub_21FFC50(&System_Func_int__int__TypeInfo);
-    sub_21FFC50(&System_Func_IGrouping_int__DropInfo___int__TypeInfo);
-    sub_21FFC50(&System_Func_DropInfo__int__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandomSetting_PositionRandom__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_BattleDropPositionRandom___c__Initialize_b__5_0__);
-    sub_21FFC50(&Method_BattleDropPositionRandom___c__Initialize_b__5_1__);
-    sub_21FFC50(&Method_BattleDropPositionRandom___c__Initialize_b__5_2__);
-    sub_21FFC50(&Method_BattleDropPositionRandom___c__DisplayClass5_0__Initialize_b__3__);
-    sub_21FFC50(&BattleDropPositionRandom___c__DisplayClass5_0_TypeInfo);
-    sub_21FFC50(&BattleDropPositionRandom___c_TypeInfo);
-    byte_593B215 = 1;
+    sub_2213A60(&BattleDropPositionRandomSetting_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom____ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__int__TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Sum_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__get_Current__);
+    sub_2213A60(&BattleDropPositionRandom_FixedDropPositionRandom_TypeInfo);
+    sub_2213A60(&System_Func_int__int__TypeInfo);
+    sub_2213A60(&System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+    sub_2213A60(&System_Func_DropInfo__int__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandomSetting_PositionRandom__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_BattleDropPositionRandom___c__Initialize_b__5_0__);
+    sub_2213A60(&Method_BattleDropPositionRandom___c__Initialize_b__5_1__);
+    sub_2213A60(&Method_BattleDropPositionRandom___c__Initialize_b__5_2__);
+    sub_2213A60(&Method_BattleDropPositionRandom___c__DisplayClass5_0__Initialize_b__3__);
+    sub_2213A60(&BattleDropPositionRandom___c__DisplayClass5_0_TypeInfo);
+    sub_2213A60(&BattleDropPositionRandom___c_TypeInfo);
+    byte_5973404 = 1;
   }
   memset(&v135, 0, sizeof(v135));
-  v7 = sub_21FFEBC(BattleDropPositionRandom___c__DisplayClass5_0_TypeInfo);
+  v7 = sub_2213CCC(BattleDropPositionRandom___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
@@ -199,13 +199,13 @@ void BattleDropPositionRandom__Initialize(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     if ( !UnityEngine_Object__op_Equality(v11, 0, 0) )
     {
-      v12 = (System_Collections_Generic_Dictionary_int__int__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+      v12 = (System_Collections_Generic_Dictionary_int__int__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__int__TypeInfo);
       System_Collections_Generic_Dictionary_int__int____ctor(
         v12,
-        (const MethodInfo_3F5EAD4 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+        (const MethodInfo_3F9227C *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
       this->fields.giftIdToGroupKeyMap = v12;
       p_giftIdToGroupKeyMap = &this->fields.giftIdToGroupKeyMap;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.giftIdToGroupKeyMap,
         (int32_t)v12,
         v13,
@@ -214,13 +214,13 @@ void BattleDropPositionRandom__Initialize(
         v16,
         v17,
         v18);
-      v19 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TypeInfo);
+      v19 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TypeInfo);
       System_Collections_Generic_Dictionary_int__object____ctor(
         v19,
-        (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom____ctor__);
+        (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom____ctor__);
       this->fields.fixedDropPointRandomList = (struct System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___o *)v19;
       p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
-      sub_21FFBF4(p_fields, (int32_t)v19, v21, v22, v23, v24, v25, v26);
+      sub_2213A04(p_fields, (int32_t)v19, v21, v22, v23, v24, v25, v26);
       v28 = BattleDropPositionRandom___c_TypeInfo;
       if ( !*(&BattleDropPositionRandom___c_TypeInfo->_2.cctor_finished + 1) )
       {
@@ -237,16 +237,16 @@ void BattleDropPositionRandom__Initialize(
           static_fields = BattleDropPositionRandom___c_TypeInfo->static_fields;
         }
         v31 = (Il2CppObject *)static_fields->__9;
-        _9__5_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_DropInfo__int__TypeInfo);
+        _9__5_0 = (System_Func_object__int__o *)sub_2213CCC(System_Func_DropInfo__int__TypeInfo);
         System_Func_object__int____ctor(_9__5_0, v31, Method_BattleDropPositionRandom___c__Initialize_b__5_0__, 0);
         v32 = BattleDropPositionRandom___c_TypeInfo->static_fields;
         v32->__9__5_0 = (struct System_Func_DropInfo__int__o *)_9__5_0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v32->__9__5_0, (int32_t)_9__5_0, v33, v34, v35, v36, v37, v38);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v32->__9__5_0, (int32_t)_9__5_0, v33, v34, v35, v36, v37, v38);
       }
       v39 = System_Linq_Enumerable__GroupBy_object__int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)dropInfoArray,
               (System_Func_TSource__TKey__o *)_9__5_0,
-              (const MethodInfo_384FD10 *)Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
+              (const MethodInfo_38831D8 *)Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
       v41 = BattleDropPositionRandom___c_TypeInfo;
       v42 = (System_Collections_Generic_IEnumerable_TSource__o *)v39;
       if ( !*(&BattleDropPositionRandom___c_TypeInfo->_2.cctor_finished + 1) )
@@ -264,11 +264,11 @@ void BattleDropPositionRandom__Initialize(
           v43 = BattleDropPositionRandom___c_TypeInfo->static_fields;
         }
         v45 = (Il2CppObject *)v43->__9;
-        _9__5_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+        _9__5_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
         System_Func_object__int____ctor(_9__5_1, v45, Method_BattleDropPositionRandom___c__Initialize_b__5_1__, 0);
         v46 = BattleDropPositionRandom___c_TypeInfo->static_fields;
         v46->__9__5_1 = (struct System_Func_IGrouping_int__DropInfo___int__o *)_9__5_1;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v46->__9__5_1, (int32_t)_9__5_1, v47, v48, v49, v50, v51, v52);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v46->__9__5_1, (int32_t)_9__5_1, v47, v48, v49, v50, v51, v52);
         v41 = BattleDropPositionRandom___c_TypeInfo;
       }
       if ( !*(&v41->_2.cctor_finished + 1) )
@@ -286,29 +286,29 @@ void BattleDropPositionRandom__Initialize(
           v53 = BattleDropPositionRandom___c_TypeInfo->static_fields;
         }
         v55 = (Il2CppObject *)v53->__9;
-        _9__5_2 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+        _9__5_2 = (System_Func_object__int__o *)sub_2213CCC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
         System_Func_object__int____ctor(_9__5_2, v55, Method_BattleDropPositionRandom___c__Initialize_b__5_2__, 0);
         v56 = BattleDropPositionRandom___c_TypeInfo->static_fields;
         v56->__9__5_2 = (struct System_Func_IGrouping_int__DropInfo___int__o *)_9__5_2;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v56->__9__5_2, (int32_t)_9__5_2, v57, v58, v59, v60, v61, v62);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v56->__9__5_2, (int32_t)_9__5_2, v57, v58, v59, v60, v61, v62);
       }
       klass = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToDictionary_object__int__int_(
                                                              v42,
                                                              (System_Func_TSource__TKey__o *)_9__5_1,
                                                              (System_Func_TSource__TElement__o *)_9__5_2,
-                                                             (const MethodInfo_3868FB0 *)Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
+                                                             (const MethodInfo_389C478 *)Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
       if ( !v7
         || (*(_QWORD *)(v7 + 16) = klass,
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)klass, v65, v66, v67, v68, v69, v70),
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)klass, v65, v66, v67, v68, v69, v70),
             !v11)
         || (klass = (System_Collections_Generic_List_object__o *)v11[1].klass) == 0 )
       {
-        sub_21FFECC(klass, v64);
+        sub_2213CDC(klass, v64);
       }
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v134,
         klass,
-        (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_BattleDropPositionRandomSetting_PositionRandom__GetEnumerator__);
+        (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BattleDropPositionRandomSetting_PositionRandom__GetEnumerator__);
       v135 = v134;
       v71 = 0;
       v134.fields._list = 0;
@@ -317,53 +317,53 @@ void BattleDropPositionRandom__Initialize(
       {
         v72 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v135,
-                (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__MoveNext__);
+                (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__MoveNext__);
         if ( !v72 )
           break;
         current = v135.fields._current;
         if ( !v135.fields._current )
-          sub_21FFECC(v72, v73);
+          sub_2213CDC(v72, v73);
         v75 = v135.fields._current[1].klass;
         if ( v75 )
         {
           v76 = *(System_Func_int__int__o **)(v7 + 24);
           if ( !v76 )
           {
-            v76 = (System_Func_int__int__o *)sub_21FFEBC(System_Func_int__int__TypeInfo);
+            v76 = (System_Func_int__int__o *)sub_2213CCC(System_Func_int__int__TypeInfo);
             System_Func_int__int____ctor(
               v76,
               (Il2CppObject *)v7,
               Method_BattleDropPositionRandom___c__DisplayClass5_0__Initialize_b__3__,
               0);
             *(_QWORD *)(v7 + 24) = v76;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v76, v77, v78, v79, v80, v81, v82);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v76, v77, v78, v79, v80, v81, v82);
           }
           v84 = System_Linq_Enumerable__Sum_int_(
                   (System_Collections_Generic_IEnumerable_TSource__o *)v75,
                   (System_Func_TSource__int__o *)v76,
-                  (const MethodInfo_3866A50 *)Method_System_Linq_Enumerable_Sum_int___);
+                  (const MethodInfo_3899F18 *)Method_System_Linq_Enumerable_Sum_int___);
           if ( v84 )
           {
             if ( !p_fields->klass )
-              sub_21FFECC(0, v83);
+              sub_2213CDC(0, v83);
             v131 = v84;
             if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
                     (System_Collections_Generic_Dictionary_int__object__o *)p_fields->klass,
                     v71,
-                    (const MethodInfo_3F68EFC *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___ContainsKey__) )
+                    (const MethodInfo_3F9C6A4 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___ContainsKey__) )
             {
               v86 = (System_Collections_Generic_Dictionary_int__object__o *)p_fields->klass;
-              v87 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__TypeInfo);
+              v87 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__TypeInfo);
               System_Collections_Generic_List_object____ctor(
                 v87,
-                (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom___ctor__);
+                (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom___ctor__);
               if ( !v86 )
-                sub_21FFECC(v88, v89);
+                sub_2213CDC(v88, v89);
               System_Collections_Generic_Dictionary_int__object___Add(
                 v86,
                 v71,
                 (Il2CppObject *)v87,
-                (const MethodInfo_3F68D08 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___Add__);
+                (const MethodInfo_3F9C4B0 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___Add__);
               v91 = current[1].klass;
               if ( v91 )
               {
@@ -374,14 +374,14 @@ void BattleDropPositionRandom__Initialize(
                   do
                   {
                     if ( v93 >= (unsigned int)namespaze )
-                      sub_21FFED4(v90);
+                      sub_2213CE4(v90);
                     if ( !*p_giftIdToGroupKeyMap )
-                      sub_21FFECC(0, v85);
+                      sub_2213CDC(0, v85);
                     System_Collections_Generic_Dictionary_int__int___set_Item(
                       *p_giftIdToGroupKeyMap,
                       *((_DWORD *)&v91->_1.byval_arg.data + v93),
                       v71,
-                      (const MethodInfo_3F5F464 *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
+                      (const MethodInfo_3F92C0C *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
                     LODWORD(namespaze) = v91->_1.namespaze;
                     ++v93;
                   }
@@ -397,10 +397,10 @@ void BattleDropPositionRandom__Initialize(
             else
               klass_high = HIDWORD(current[3].klass);
             v129 = *((float *)&current[2].klass + 1);
-            if ( !byte_5931FBB )
+            if ( !byte_596A15B )
             {
-              sub_21FFC50(&System_Math_TypeInfo);
-              byte_5931FBB = 1;
+              sub_2213A60(&System_Math_TypeInfo);
+              byte_596A15B = 1;
             }
             if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v85);
@@ -428,10 +428,10 @@ void BattleDropPositionRandom__Initialize(
                     v104 = current[1].klass;
                     v105 = UnityEngine_Random__Range(-v133, v133, 0);
                     v106 = UnityEngine_Random__Range(-v100, v100, 0);
-                    v107 = sub_21FFEBC(BattleDropPositionRandom_FixedDropPositionRandom_TypeInfo);
+                    v107 = sub_2213CCC(BattleDropPositionRandom_FixedDropPositionRandom_TypeInfo);
                     System_Object___ctor((Il2CppObject *)v107, 0);
                     *(_QWORD *)(v107 + 16) = v104;
-                    sub_21FFBF4(
+                    sub_2213A04(
                       (MissionNaviTransitionBoardItem_o *)(v107 + 16),
                       (int32_t)v104,
                       v108,
@@ -447,18 +447,18 @@ void BattleDropPositionRandom__Initialize(
                                           + v105;
                     *(float *)(v107 + 28) = (float)(v132 + v103) + v106;
                     if ( !p_fields->klass )
-                      sub_21FFECC(0, v114);
+                      sub_2213CDC(0, v114);
                     Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                           (System_Collections_Generic_Dictionary_int__object__o *)p_fields->klass,
                                                                           v71,
-                                                                          (const MethodInfo_3F68C68 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___get_Item__);
+                                                                          (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___get_Item__);
                     if ( !Item
                       || (items = Item->fields._items,
                           v124 = Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__Add__,
                           ++Item->fields._version,
                           !items) )
                     {
-                      sub_21FFECC(Item, v116);
+                      sub_2213CDC(Item, v116);
                     }
                     size = Item->fields._size;
                     if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -466,14 +466,14 @@ void BattleDropPositionRandom__Initialize(
                       System_Collections_Generic_List_object___AddWithResize(
                         Item,
                         (Il2CppObject *)v107,
-                        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v124[4] + 192LL) + 112LL));
+                        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v124[4] + 192LL) + 112LL));
                     }
                     else
                     {
                       v126 = &items->obj.klass + size;
                       Item->fields._size = size + 1;
                       v126[4] = (Il2CppClass *)v107;
-                      sub_21FFBF4(
+                      sub_2213A04(
                         (MissionNaviTransitionBoardItem_o *)(v126 + 4),
                         v107,
                         v117,
@@ -498,7 +498,7 @@ void BattleDropPositionRandom__Initialize(
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v135,
-        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__Dispose__);
+        (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_BattleDropPositionRandomSetting_PositionRandom__Dispose__);
     }
   }
 }
@@ -517,14 +517,14 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *BattleDropPositionRandom__Ra
   System_Collections_ICollection_o *self; // [xsp+0h] [xbp-30h] BYREF
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593B216 & 1) == 0 )
+  if ( (byte_5973405 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Item__);
-    byte_593B216 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Item__);
+    byte_5973405 = 1;
   }
   giftIdToGroupKeyMap = this->fields.giftIdToGroupKeyMap;
   value = 0;
@@ -534,7 +534,7 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *BattleDropPositionRandom__Ra
           giftIdToGroupKeyMap,
           giftId,
           &value,
-          (const MethodInfo_3F60DE4 *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
+          (const MethodInfo_3F9458C *)Method_System_Collections_Generic_Dictionary_int__int__TryGetValue__) )
   {
     return 0;
   }
@@ -545,7 +545,7 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *BattleDropPositionRandom__Ra
           fixedDropPointRandomList,
           value,
           (Il2CppObject **)&self,
-          (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TryGetValue__) )
+          (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__List_BattleDropPositionRandom_FixedDropPositionRandom___TryGetValue__) )
     return 0;
   fixedDropPointRandomList = (System_Collections_Generic_Dictionary_int__object__o *)BasicHelper__IsNullOrEmpty(self, 0);
   v8 = 0;
@@ -553,7 +553,7 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *BattleDropPositionRandom__Ra
   {
     if ( self )
     {
-      fixedDropPointRandomList = (System_Collections_Generic_Dictionary_int__object__o *)UnityEngine_Random__Range_83187376(
+      fixedDropPointRandomList = (System_Collections_Generic_Dictionary_int__object__o *)UnityEngine_Random__Range_83400680(
                                                                                            0,
                                                                                            (int32_t)self[1].monitor,
                                                                                            0);
@@ -563,20 +563,20 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *BattleDropPositionRandom__Ra
         fixedDropPointRandomList = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                              (System_Collections_Generic_List_object__o *)self,
                                                                                              (int32_t)fixedDropPointRandomList,
-                                                                                             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Item__);
+                                                                                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__get_Item__);
         if ( self )
         {
           v8 = (BattleDropPositionRandom_FixedDropPositionRandom_o *)fixedDropPointRandomList;
           System_Collections_Generic_List_object___RemoveAt(
             (System_Collections_Generic_List_object__o *)self,
             v9,
-            (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__RemoveAt__);
+            (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_BattleDropPositionRandom_FixedDropPositionRandom__RemoveAt__);
           return v8;
         }
       }
     }
 LABEL_14:
-    sub_21FFECC(fixedDropPointRandomList, v6);
+    sub_2213CDC(fixedDropPointRandomList, v6);
   }
   return v8;
 }
@@ -609,7 +609,7 @@ void BattleDropPositionRandom_FixedDropPositionRandom___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.giftIdArray = idArray;
   v8 = (BattleDropPositionRandom_FixedDropPositionRandom_o *)((char *)v8 + 16);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)idArray, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)idArray, v9, v10, v11, v12, v13, v14);
   *(float *)&v8->monitor = x;
   *((float *)&v8->monitor + 1) = y;
 }
@@ -625,15 +625,15 @@ void BattleDropPositionRandom___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593B217 & 1) == 0 )
+  if ( (byte_5973406 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropPositionRandom___c_TypeInfo);
-    byte_593B217 = 1;
+    sub_2213A60(&BattleDropPositionRandom___c_TypeInfo);
+    byte_5973406 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BattleDropPositionRandom___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BattleDropPositionRandom___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleDropPositionRandom___c_TypeInfo->static_fields->__9 = (struct BattleDropPositionRandom___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleDropPositionRandom___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -657,7 +657,7 @@ int32_t BattleDropPositionRandom___c___Initialize_b__5_0(
         const MethodInfo *method)
 {
   if ( !dropInfo )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return dropInfo->fields.mstGiftId;
 }
 
@@ -672,13 +672,13 @@ int32_t BattleDropPositionRandom___c___Initialize_b__5_1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_593B218 & 1) == 0 )
+  if ( (byte_5973407 & 1) == 0 )
   {
-    this = (BattleDropPositionRandom___c_o *)sub_21FFC50(&System_Linq_IGrouping_int__DropInfo__TypeInfo);
-    byte_593B218 = 1;
+    this = (BattleDropPositionRandom___c_o *)sub_2213A60(&System_Linq_IGrouping_int__DropInfo__TypeInfo);
+    byte_5973407 = 1;
   }
   if ( !g )
-    sub_21FFECC(this, g);
+    sub_2213CDC(this, g);
   klass = g->klass;
   v5 = *(unsigned __int16 *)&g->klass->_2.rank;
   if ( *(_WORD *)&g->klass->_2.rank )
@@ -696,9 +696,9 @@ int32_t BattleDropPositionRandom___c___Initialize_b__5_1(
   else
   {
 LABEL_8:
-    v7 = sub_2237E2C(g, System_Linq_IGrouping_int__DropInfo__TypeInfo, 0);
+    v7 = sub_224BC3C(g, System_Linq_IGrouping_int__DropInfo__TypeInfo, 0);
   }
-  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
+  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
 }
 
 
@@ -707,14 +707,14 @@ int32_t BattleDropPositionRandom___c___Initialize_b__5_2(
         System_Linq_IGrouping_int__DropInfo__o *g,
         const MethodInfo *method)
 {
-  if ( (byte_593B219 & 1) == 0 )
+  if ( (byte_5973408 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Count_DropInfo___);
-    byte_593B219 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Count_DropInfo___);
+    byte_5973408 = 1;
   }
   return System_Linq_Enumerable__Count_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)g,
-           (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_DropInfo___);
+           (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_DropInfo___);
 }
 
 
@@ -731,14 +731,14 @@ int32_t BattleDropPositionRandom___c__DisplayClass5_0___Initialize_b__3(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_593B21A & 1) == 0 )
+  if ( (byte_5973409 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
-    byte_593B21A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
+    byte_5973409 = 1;
   }
   return System_Collections_Generic_CollectionExtensions__GetValueOrDefault_int__int_(
            (System_Collections_Generic_IReadOnlyDictionary_TKey__TValue__o *)this->fields.giftIdCountDict,
            giftId,
            0,
-           (const MethodInfo_37EAB28 *)Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
+           (const MethodInfo_381DFF0 *)Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
 }

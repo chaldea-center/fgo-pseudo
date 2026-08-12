@@ -1,27 +1,27 @@
 void MapEntity___ctor(MapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938B8E & 1) == 0 )
+  if ( (byte_5970D41 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938B8E = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970D41 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MapEntity__CreatePK(int32_t id, int32_t warId, const MethodInfo *method)
 {
-  if ( (byte_5938B8D & 1) == 0 )
+  if ( (byte_5970D40 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938B8D = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5970D40 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            warId,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -55,7 +55,6 @@ bool MapEntity__GetFirstFadeInfo(
   bool v27; // w6
   bool v28; // w7
   __int64 v29; // x1
-  bool result; // w0
   struct System_Collections_Generic_Dictionary_string__object__o *v31; // x23
   struct System_Collections_Generic_Dictionary_string__object__o *v32; // x22
   System_String_o *v33; // x22
@@ -71,16 +70,16 @@ bool MapEntity__GetFirstFadeInfo(
   const MethodInfo *v44; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_5938B92 & 1) == 0 )
+  if ( (byte_5970D45 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    sub_21FFC50(&StringLiteral_16209/*"White"*/);
-    sub_21FFC50(&StringLiteral_14188/*"TargetColor"*/);
-    sub_21FFC50(&StringLiteral_3299/*"Black"*/);
-    byte_5938B92 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_2213A60(&MapMaster_TypeInfo);
+    sub_2213A60(&StringLiteral_16241/*"White"*/);
+    sub_2213A60(&StringLiteral_14218/*"TargetColor"*/);
+    sub_2213A60(&StringLiteral_3304/*"Black"*/);
+    byte_5970D45 = 1;
   }
   __asm { FMOV            V0.4S, #1.0 }
   *fadeTime = 0;
@@ -99,11 +98,11 @@ bool MapEntity__GetFirstFadeInfo(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v19->static_fields->SCRIPT_KEY_FADE_TYPE,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_14:
     *fadeType = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)fadeType,
       0,
       (System_String_o *)fadeTime,
@@ -123,29 +122,29 @@ LABEL_14:
   Item = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                               (System_Collections_Generic_Dictionary_object__object__o *)v22,
                               (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TYPE,
-                              (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( Item )
   {
-    v29 = qword_594C0B8;
-    if ( Item->klass != (System_String_c *)qword_594C0B8 )
+    v29 = qword_5984390;
+    if ( Item->klass != (System_String_c *)qword_5984390 )
       goto LABEL_51;
     *fadeType = Item;
-    v29 = qword_594C0B8;
-    if ( Item->klass != (System_String_c *)qword_594C0B8 )
+    v29 = qword_5984390;
+    if ( Item->klass != (System_String_c *)qword_5984390 )
       goto LABEL_51;
   }
   else
   {
     *fadeType = 0;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)fadeType, (int32_t)Item, v23, v24, v25, v26, v27, v28);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)fadeType, (int32_t)Item, v23, v24, v25, v26, v27, v28);
   Item = (System_String_o *)this->fields.script;
   if ( !Item )
     goto LABEL_50;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)Item,
          (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TIME,
-         (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = (System_String_o *)MapMaster_TypeInfo;
     v31 = this->fields.script;
@@ -156,17 +155,17 @@ LABEL_14:
     Item = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                 (System_Collections_Generic_Dictionary_object__object__o *)v31,
                                 (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_FADE_TIME,
-                                (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_50;
-    v29 = qword_594C090;
-    if ( Item->klass->_1.element_class != *(Il2CppClass **)(qword_594C090 + 64) )
+    v29 = qword_5984368;
+    if ( Item->klass->_1.element_class != *(Il2CppClass **)(qword_5984368 + 64) )
     {
 LABEL_51:
-      sub_220024C(Item, v29, v23);
+      sub_221405C(Item, v29, v23);
       return MapEntity__TryGetFirstFadeTime(v42, v43, v44);
     }
-    *fadeTime = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_594C090, v23);
+    *fadeTime = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v23);
   }
   Item = (System_String_o *)MapMaster_TypeInfo;
   v32 = this->fields.script;
@@ -178,7 +177,7 @@ LABEL_51:
          (System_Collections_Generic_Dictionary_object__object__o *)v32,
          (Il2CppObject *)MapMaster_TypeInfo->static_fields->ScriptKeyFadeKind,
          &value,
-         (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Item = (System_String_o *)value;
     if ( !value )
@@ -186,15 +185,15 @@ LABEL_51:
     v33 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
                                value,
                                value->klass->vtable[3].method);
-    if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_16209/*"White"*/, 0) )
+    if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_16241/*"White"*/, 0) )
     {
       v34 = 2;
     }
-    else if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_3299/*"Black"*/, 0) )
+    else if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_3304/*"Black"*/, 0) )
     {
       v34 = 1;
     }
-    else if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_14188/*"TargetColor"*/, 0) )
+    else if ( System_String__op_Equality(v33, (System_String_o *)StringLiteral_14218/*"TargetColor"*/, 0) )
     {
       v34 = 3;
     }
@@ -210,11 +209,11 @@ LABEL_51:
     j_il2cpp_runtime_class_init_0(MapMaster_TypeInfo, v20);
   if ( !v35 )
 LABEL_50:
-    sub_21FFECC(Item, v20);
+    sub_2213CDC(Item, v20);
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)v35,
           (Il2CppObject *)MapMaster_TypeInfo->static_fields->ScriptKeyFadeColor,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
     || *fadeColorKind != 3 )
   {
     return 1;
@@ -238,10 +237,9 @@ LABEL_50:
     }
   }
   *(_QWORD *)&fadeColor->fields.r = _D0;
-  result = 1;
   fadeColor->fields.b = v41;
   fadeColor->fields.a = 1.0;
-  return result;
+  return 1;
 }
 
 
@@ -255,13 +253,13 @@ System_String_o *MapEntity__GetOverwriteMapAssetId(MapEntity_o *this, const Meth
   System_String_o *result; // x0
   __int64 v9; // x2
 
-  if ( (byte_5938B95 & 1) == 0 )
+  if ( (byte_5970D48 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5938B95 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_2213A60(&MapMaster_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5970D48 = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -275,21 +273,21 @@ System_String_o *MapEntity__GetOverwriteMapAssetId(MapEntity_o *this, const Meth
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v4->static_fields->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   v6 = MapMaster_TypeInfo;
   v7 = this->fields.script;
   if ( !*(&MapMaster_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(MapMaster_TypeInfo, v5);
   if ( !v7 )
-    sub_21FFECC(v6, v5);
+    sub_2213CDC(v6, v5);
   result = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                 (System_Collections_Generic_Dictionary_object__object__o *)v7,
                                 (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID,
-                                (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( result && result->klass != (System_String_c *)qword_594C0B8 )
+                                (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( result && result->klass != (System_String_c *)qword_5984390 )
   {
-    sub_220024C(result, qword_594C0B8, v9);
+    sub_221405C(result, qword_5984390, v9);
     return (System_String_o *)StringLiteral_1/*""*/;
   }
   return result;
@@ -298,27 +296,27 @@ System_String_o *MapEntity__GetOverwriteMapAssetId(MapEntity_o *this, const Meth
 
 int32_t MapEntity__GetPlanetMapAssetId(MapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938B9A & 1) == 0 )
+  if ( (byte_5970D4D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23832/*"planetMapAssetId"*/);
-    byte_5938B9A = 1;
+    sub_2213A60(&StringLiteral_23879/*"planetMapAssetId"*/);
+    byte_5970D4D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23832/*"planetMapAssetId"*/, this->fields.id, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23879/*"planetMapAssetId"*/, this->fields.id, 0);
 }
 
 
 System_String_o *MapEntity__GetPlanetPrefabName(MapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938B9B & 1) == 0 )
+  if ( (byte_5970D4E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_11062/*"PlanetEarth"*/);
-    sub_21FFC50(&StringLiteral_23833/*"planetPrefabName"*/);
-    byte_5938B9B = 1;
+    sub_2213A60(&StringLiteral_11079/*"PlanetEarth"*/);
+    sub_2213A60(&StringLiteral_23880/*"planetPrefabName"*/);
+    byte_5970D4E = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_23833/*"planetPrefabName"*/,
-           (System_String_o *)StringLiteral_11062/*"PlanetEarth"*/,
+           (System_String_o *)StringLiteral_23880/*"planetPrefabName"*/,
+           (System_String_o *)StringLiteral_11079/*"PlanetEarth"*/,
            0);
 }
 
@@ -331,43 +329,43 @@ System_String_o *MapEntity__GetPrioredBgmName(MapEntity_o *this, const MethodInf
   int32_t PrioredID; // w19
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5938B90 & 1) == 0 )
+  if ( (byte_5970D43 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_BgmMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_21FFC50(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938B90 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_2213A60(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970D43 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MapCondMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_MapCondMaster___);
   if ( !Instance )
     goto LABEL_12;
   PrioredID = MapCondMaster__GetPrioredID((MapCondMaster_o *)Instance, 3, this->fields.id, this->fields.bgmId, 0, 0, v5);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_BgmMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_BgmMaster___);
   if ( !Instance )
     goto LABEL_12;
   Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                &entity,
                                PrioredID,
-                               (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                               (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
       return (System_String_o *)entity[1].monitor;
 LABEL_12:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   return 0;
 }
@@ -383,19 +381,19 @@ int32_t MapEntity__GetPrioredHeaderId(
   __int64 v8; // x1
   const MethodInfo *v9; // x6
 
-  if ( (byte_5938B91 & 1) == 0 )
+  if ( (byte_5970D44 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938B91 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970D44 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v8);
+    sub_2213CDC(Instance, v8);
   }
   return MapCondMaster__GetPrioredID(
            (MapCondMaster_o *)Instance,
@@ -414,19 +412,19 @@ int32_t MapEntity__GetPrioredMapImageId(MapEntity_o *this, const MethodInfo *met
   __int64 v4; // x1
   const MethodInfo *v5; // x6
 
-  if ( (byte_5938B8F & 1) == 0 )
+  if ( (byte_5970D42 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_MapCondMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938B8F = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_MapCondMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970D42 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_MapCondMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   return MapCondMaster__GetPrioredID((MapCondMaster_o *)Instance, 2, this->fields.id, this->fields.mapImageId, 0, 0, v5);
 }
@@ -443,12 +441,12 @@ int32_t MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodInfo *method)
   MapEntity_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_5938B94 & 1) == 0 )
+  if ( (byte_5970D47 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B94 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D47 = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -462,7 +460,7 @@ int32_t MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodInfo *method)
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v4->static_fields->SCRIPT_KEY_REFERRER_MAP_ID,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = MapMaster_TypeInfo;
   v7 = this->fields.script;
@@ -472,13 +470,13 @@ int32_t MapEntity__GetReferrerMapId(MapEntity_o *this, const MethodInfo *method)
     || (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  (System_Collections_Generic_Dictionary_object__object__o *)v7,
                  (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_REFERRER_MAP_ID,
-                 (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                 (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_21FFECC(Item, v5);
+    sub_2213CDC(Item, v5);
   }
-  if ( *(_QWORD *)(*(_QWORD *)Item + 64LL) == *(_QWORD *)(qword_594C090 + 64) )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, qword_594C090, v8);
-  sub_220024C(Item, qword_594C090, v8);
+  if ( *(_QWORD *)(*(_QWORD *)Item + 64LL) == *(_QWORD *)(qword_5984368 + 64) )
+    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v8);
+  sub_221405C(Item, qword_5984368, v8);
   return (unsigned int)MapEntity__GetOverwriteMapAssetId(v10, v11);
 }
 
@@ -489,11 +487,11 @@ float MapEntity__GetSpotScale(MapEntity_o *this, const MethodInfo *method)
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *SPOT_SCALE; // x20
 
-  if ( (byte_5938B97 & 1) == 0 )
+  if ( (byte_5970D4A & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B97 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D4A = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -522,15 +520,15 @@ System_Int32_array *MapEntity__GetUseVoiceSvtIDList(MapEntity_o *this, const Met
   const MethodInfo *v12; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5938B98 & 1) == 0 )
+  if ( (byte_5970D4B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&System_Func_string__int__TypeInfo);
-    sub_21FFC50(&Method_System_Int32_Parse__);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B98 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&System_Func_string__int__TypeInfo);
+    sub_2213A60(&Method_System_Int32_Parse__);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D4B = 1;
   }
   script = this->fields.script;
   value = 0;
@@ -546,30 +544,30 @@ System_Int32_array *MapEntity__GetUseVoiceSvtIDList(MapEntity_o *this, const Met
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v4->static_fields->SCRIPT_KEY_USE_VOICE_SVT_ID_LIST,
           &value,
-          (const MethodInfo_3FCBFD0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return 0;
   if ( !value )
-    sub_21FFECC(0, v5);
-  if ( value->klass == (Il2CppClass *)qword_594C0B8 )
+    sub_2213CDC(0, v5);
+  if ( value->klass == (Il2CppClass *)qword_5984390 )
   {
     v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(
                                                                 (System_String_o *)value,
                                                                 0x2Cu,
                                                                 0,
                                                                 0);
-    v8 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_string__int__TypeInfo);
+    v8 = (System_Func_object__int__o *)sub_2213CCC(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(v8, 0, Method_System_Int32_Parse__, 0);
     v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                 v7,
                                                                 (System_Func_TSource__TResult__o *)v8,
-                                                                (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_string__int___);
     return System_Linq_Enumerable__ToArray_int_(
              v9,
-             (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+             (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
   }
   else
   {
-    sub_220024C(value, qword_594C0B8, v6);
+    sub_221405C(value, qword_5984390, v6);
     return (System_Int32_array *)MapEntity__IsPlanetMap(v11, v12);
   }
 }
@@ -580,10 +578,10 @@ bool MapEntity__IsHeaderHidden(MapEntity_o *this, const MethodInfo *method)
   MapMaster_c *v3; // x0
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
 
-  if ( (byte_5938B9C & 1) == 0 )
+  if ( (byte_5970D4F & 1) == 0 )
   {
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B9C = 1;
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D4F = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -608,12 +606,12 @@ bool MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *method)
   MapEntity_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_5938B96 & 1) == 0 )
+  if ( (byte_5970D49 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B96 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D49 = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -627,7 +625,7 @@ bool MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *method)
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v4->static_fields->SCRIPT_KEY_ON_MAP_MODEL,
-          (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = MapMaster_TypeInfo;
   v7 = this->fields.script;
@@ -637,13 +635,13 @@ bool MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *method)
     || (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  (System_Collections_Generic_Dictionary_object__object__o *)v7,
                  (Il2CppObject *)MapMaster_TypeInfo->static_fields->SCRIPT_KEY_ON_MAP_MODEL,
-                 (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                 (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_21FFECC(Item, v5);
+    sub_2213CDC(Item, v5);
   }
-  if ( *(_QWORD *)(*(_QWORD *)Item + 64LL) == *(_QWORD *)(qword_594C090 + 64) )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, qword_594C090, v8) > 0;
-  sub_220024C(Item, qword_594C090, v8);
+  if ( *(_QWORD *)(*(_QWORD *)Item + 64LL) == *(_QWORD *)(qword_5984368 + 64) )
+    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v8) > 0;
+  sub_221405C(Item, qword_5984368, v8);
   MapEntity__GetSpotScale(v10, v11);
   return result;
 }
@@ -651,12 +649,12 @@ bool MapEntity__IsMapModel(MapEntity_o *this, const MethodInfo *method)
 
 bool MapEntity__IsPlanetMap(MapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938B99 & 1) == 0 )
+  if ( (byte_5970D4C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_21924/*"isPlanetMap"*/);
-    byte_5938B99 = 1;
+    sub_2213A60(&StringLiteral_21966/*"isPlanetMap"*/);
+    byte_5970D4C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21924/*"isPlanetMap"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21966/*"isPlanetMap"*/, 0, 0) > 0;
 }
 
 
@@ -669,31 +667,37 @@ bool MapEntity__TryGetFirstFadeTime(MapEntity_o *this, float *fadeTime, const Me
   ScrTerminalMap_c *v9; // x0
   bool result; // w0
   UnityEngine_Color_o fadeColor; // [xsp+8h] [xbp-48h] BYREF
-  int32_t fadeColorKind[2]; // [xsp+18h] [xbp-38h] BYREF
+  __int64 fadeColorKind; // [xsp+18h] [xbp-38h] BYREF
   System_String_o *fadeType; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_5938B93 & 1) == 0 )
+  if ( (byte_5970D46 & 1) == 0 )
   {
-    sub_21FFC50(&ScrTerminalMap_TypeInfo);
-    byte_5938B93 = 1;
+    sub_2213A60(&ScrTerminalMap_TypeInfo);
+    byte_5970D46 = 1;
   }
   fadeType = 0;
   *(_QWORD *)&fadeColor.fields.b = 0;
-  *(_QWORD *)fadeColorKind = 0;
+  fadeColorKind = 0;
   *(_QWORD *)&fadeColor.fields.r = 0;
   v7 = 0.0;
-  if ( !MapEntity__GetFirstFadeInfo(this, &fadeType, &fadeColorKind[1], fadeColorKind, &fadeColor, v3) )
+  if ( !MapEntity__GetFirstFadeInfo(
+          this,
+          &fadeType,
+          (int32_t *)&fadeColorKind + 1,
+          (int32_t *)&fadeColorKind,
+          &fadeColor,
+          v3) )
     goto LABEL_9;
   v8 = fadeType;
   v9 = ScrTerminalMap_TypeInfo;
   if ( !*(&ScrTerminalMap_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo, v6);
   if ( !v8 )
-    sub_21FFECC(v9, v6);
-  if ( System_String__Equals_75473208(v8, ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION, 0) )
+    sub_2213CDC(v9, v6);
+  if ( System_String__Equals_75686512(v8, ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION, 0) )
   {
     result = 1;
-    v7 = (float)fadeColorKind[1] / 1000.0;
+    v7 = (float)SHIDWORD(fadeColorKind) / 1000.0;
   }
   else
   {
@@ -713,12 +717,12 @@ float MapEntity__get_Camera2DResetDuration(MapEntity_o *this, const MethodInfo *
   System_String_o *CAMERA2D_RESET_DURATION; // x20
   float Camera2DResetDuration; // s8
 
-  if ( (byte_5938B8C & 1) == 0 )
+  if ( (byte_5970D3F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B8C = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D3F = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -749,12 +753,12 @@ int32_t MapEntity__get_MapCameraMoveEasingType(MapEntity_o *this, const MethodIn
   System_String_o *MAP_CAMERA_MOVE_TIME_EASING_TYPE; // x20
   int32_t MapCameraMoveEasingType; // w21
 
-  if ( (byte_5938B8B & 1) == 0 )
+  if ( (byte_5970D3E & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B8B = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D3E = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -773,7 +777,7 @@ int32_t MapEntity__get_MapCameraMoveEasingType(MapEntity_o *this, const MethodIn
   MapCameraMoveEasingType = v5->static_fields->MapCameraMoveEasingType;
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, method);
-  return JsonManager__GetScriptValue_47969284(script, MAP_CAMERA_MOVE_TIME_EASING_TYPE, MapCameraMoveEasingType, 0);
+  return JsonManager__GetScriptValue_48000580(script, MAP_CAMERA_MOVE_TIME_EASING_TYPE, MapCameraMoveEasingType, 0);
 }
 
 
@@ -785,12 +789,12 @@ float MapEntity__get_MapCameraMoveTimeCoefficient(MapEntity_o *this, const Metho
   System_String_o *MAP_CAMERA_MOVE_TIME_COEFFICIENT; // x20
   float MapCameraMoveTimeCoefficient; // s8
 
-  if ( (byte_5938B89 & 1) == 0 )
+  if ( (byte_5970D3C & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B89 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D3C = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -821,12 +825,12 @@ float MapEntity__get_MapCameraMoveTimeConstant(MapEntity_o *this, const MethodIn
   System_String_o *MAP_CAMERA_MOVE_TIME_CONSTANT; // x20
   float MapCameraMoveTimeConstant; // s8
 
-  if ( (byte_5938B88 & 1) == 0 )
+  if ( (byte_5970D3B & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B88 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D3B = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -857,12 +861,12 @@ int32_t MapEntity__get_MapCameraMoveTimeLogarithmBase(MapEntity_o *this, const M
   System_String_o *MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE; // x20
   int32_t MapCameraMoveTimeLogarithmBase; // w21
 
-  if ( (byte_5938B8A & 1) == 0 )
+  if ( (byte_5970D3D & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&MapMaster_TypeInfo);
-    byte_5938B8A = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&MapMaster_TypeInfo);
+    byte_5970D3D = 1;
   }
   v3 = MapMaster_TypeInfo;
   script = this->fields.script;
@@ -881,7 +885,7 @@ int32_t MapEntity__get_MapCameraMoveTimeLogarithmBase(MapEntity_o *this, const M
   MapCameraMoveTimeLogarithmBase = v5->static_fields->MapCameraMoveTimeLogarithmBase;
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, method);
-  return JsonManager__GetScriptValue_47969284(
+  return JsonManager__GetScriptValue_48000580(
            script,
            MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE,
            MapCameraMoveTimeLogarithmBase,

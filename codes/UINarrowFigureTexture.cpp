@@ -1,23 +1,23 @@
 void UINarrowFigureTexture___cctor(const MethodInfo *method)
 {
-  if ( (byte_5939FEB & 1) == 0 )
+  if ( (byte_59721BF & 1) == 0 )
   {
-    sub_21FFC50(&UINarrowFigureTexture_TypeInfo);
-    sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_5939FEB = 1;
+    sub_2213A60(&UINarrowFigureTexture_TypeInfo);
+    sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_59721BF = 1;
   }
   UINarrowFigureTexture_TypeInfo->static_fields->MaskTexId = UnityEngine_Shader__PropertyToID(
-                                                               (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
+                                                               (System_String_o *)StringLiteral_16919/*"_MaskTex"*/,
                                                                0);
 }
 
 
 void UINarrowFigureTexture___ctor(UINarrowFigureTexture_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939FEA & 1) == 0 )
+  if ( (byte_59721BE & 1) == 0 )
   {
-    sub_21FFC50(&UINarrowFigureRender_TypeInfo);
-    byte_5939FEA = 1;
+    sub_2213A60(&UINarrowFigureRender_TypeInfo);
+    byte_59721BE = 1;
   }
   if ( !*(&UINarrowFigureRender_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UINarrowFigureRender_TypeInfo, method);
@@ -31,7 +31,7 @@ void UINarrowFigureTexture__Awake(UINarrowFigureTexture_o *this, const MethodInf
 
   bodyTexture = this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ((void (__fastcall *)(struct UITexture_o *, _QWORD, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
     bodyTexture,
     0,
@@ -51,10 +51,10 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
   __int64 v10; // x1
   UnityEngine_Object_o *v11; // x20
 
-  if ( (byte_5939FE8 & 1) == 0 )
+  if ( (byte_59721BC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FE8 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721BC = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -95,7 +95,7 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
                                       v5->klass[1].vtable._1_Finalize.methodPtr);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
-      UnityEngine_Object__Destroy_83246496(v11, 0);
+      UnityEngine_Object__Destroy_83459800(v11, 0);
       v5 = (UnityEngine_Component_o *)this->fields.bodyTexture;
       if ( !v5 )
         goto LABEL_24;
@@ -114,7 +114,7 @@ void UINarrowFigureTexture__ClearTexture(UINarrowFigureTexture_o *this, const Me
       return;
     }
 LABEL_24:
-    sub_21FFECC(v5, v4);
+    sub_2213CDC(v5, v4);
   }
 }
 
@@ -142,22 +142,22 @@ void UINarrowFigureTexture__EndLoadAsset(
   Il2CppObject *Instance; // x0
   __int64 v21; // x1
 
-  if ( (byte_5939FE7 & 1) == 0 )
+  if ( (byte_59721BB & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_5939FE7 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_59721BB = 1;
   }
   loadingAssetName = this->fields.loadingAssetName;
   if ( !loadingAssetName )
     goto LABEL_8;
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, assetData);
-  if ( AssetManager__compAssetStorage_47463144(assetData, loadingAssetName, 0) )
+  if ( AssetManager__compAssetStorage_47494556(assetData, loadingAssetName, 0) )
   {
     v12 = this->fields.loadingAssetName;
     this->fields.loadedAssetName = v12;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.loadedAssetName,
       (int32_t)v12,
       v6,
@@ -167,15 +167,15 @@ void UINarrowFigureTexture__EndLoadAsset(
       v10,
       v11);
     this->fields.loadingAssetName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadingAssetName, 0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadingAssetName, 0, v13, v14, v15, v16, v17, v18);
     UINarrowFigureTexture__SetTexture(this, v19);
   }
   else
   {
 LABEL_8:
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( !Instance )
-      sub_21FFECC(0, v21);
+      sub_2213CDC(0, v21);
     AssetManager__ReleaseReservation((AssetManager_o *)Instance, assetData, 0);
   }
 }
@@ -201,9 +201,9 @@ void UINarrowFigureTexture__OnDestroy(UINarrowFigureTexture_o *this, const Metho
   UINarrowFigureTexture__ReleaseAssetStorage(this, v3);
   *(_QWORD *)&this->fields.currentSvtId = 0;
   this->fields.maskShader = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.maskShader, 0, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.maskShader, 0, v4, v5, v6, v7, v8, v9);
   this->fields.maskTexture = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.maskTexture, 0, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.maskTexture, 0, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -224,10 +224,10 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5939FE5 & 1) == 0 )
+  if ( (byte_59721B9 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939FE5 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_59721B9 = 1;
   }
   loadedAssetName = this->fields.loadedAssetName;
   if ( loadedAssetName )
@@ -236,7 +236,7 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
     AssetManager__releaseAssetStorage(loadedAssetName, 0);
     this->fields.loadedAssetName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadedAssetName, 0, v4, v5, v6, v7, v8, v9);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadedAssetName, 0, v4, v5, v6, v7, v8, v9);
   }
   loadingAssetName = this->fields.loadingAssetName;
   if ( loadingAssetName )
@@ -245,7 +245,7 @@ void UINarrowFigureTexture__ReleaseAssetStorage(UINarrowFigureTexture_o *this, c
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
     AssetManager__releaseAssetStorage(loadingAssetName, 0);
     this->fields.loadingAssetName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadingAssetName, 0, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadingAssetName, 0, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -269,7 +269,7 @@ void UINarrowFigureTexture__SetActive(UINarrowFigureTexture_o *this, bool isActi
   if ( !bodyTexture
     || (bodyTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bodyTexture, 0)) == 0 )
   {
-    sub_21FFECC(bodyTexture, isActive);
+    sub_2213CDC(bodyTexture, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyTexture, isActive, 0);
 }
@@ -304,13 +304,13 @@ void UINarrowFigureTexture__SetCharacter(
   __int64 v26; // x1
 
   v8 = useGroupImage;
-  if ( (byte_5939FE6 & 1) == 0 )
+  if ( (byte_59721BA & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&UINarrowFigureRender_TypeInfo);
-    sub_21FFC50(&Method_UINarrowFigureTexture_EndLoadAsset__);
-    byte_5939FE6 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&UINarrowFigureRender_TypeInfo);
+    sub_2213A60(&Method_UINarrowFigureTexture_EndLoadAsset__);
+    byte_59721BA = 1;
   }
   v9 = UINarrowFigureRender_TypeInfo;
   currentLimitCountStage = this->fields.currentLimitCountStage;
@@ -333,7 +333,7 @@ LABEL_16:
     UINarrowFigureTexture__ClearTexture(this, v13);
     UINarrowFigureTexture__ReleaseAssetStorage(this, v17);
     this->fields.loadingAssetName = v15;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.loadingAssetName,
       (int32_t)v15,
       v18,
@@ -343,7 +343,7 @@ LABEL_16:
       v22,
       v23);
     v24 = this->fields.loadingAssetName;
-    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v25, (Il2CppObject *)this, Method_UINarrowFigureTexture_EndLoadAsset__, 0);
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v26);
@@ -402,16 +402,16 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
   UnityEngine_Rect_o uvRect; // [xsp+10h] [xbp-40h] BYREF
   UnityEngine_Texture2D_o *texture2d; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_5939FE9 & 1) == 0 )
+  if ( (byte_59721BD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Resources_Load_Texture2D___);
-    sub_21FFC50(&UINarrowFigureRender_TypeInfo);
-    sub_21FFC50(&UINarrowFigureTexture_TypeInfo);
-    sub_21FFC50(&StringLiteral_5116/*"Custom/SpriteWithMask"*/);
-    sub_21FFC50(&StringLiteral_4781/*"CommonUI/NarrowFigure/NarrowFigureMask"*/);
-    byte_5939FE9 = 1;
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Resources_Load_Texture2D___);
+    sub_2213A60(&UINarrowFigureRender_TypeInfo);
+    sub_2213A60(&UINarrowFigureTexture_TypeInfo);
+    sub_2213A60(&StringLiteral_5128/*"Custom/SpriteWithMask"*/);
+    sub_2213A60(&StringLiteral_4789/*"CommonUI/NarrowFigure/NarrowFigureMask"*/);
+    byte_59721BD = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   texture2d = 0;
@@ -445,9 +445,9 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
       if ( UnityEngine_Object__op_Equality(maskShader, 0, 0) )
       {
-        v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5116/*"Custom/SpriteWithMask"*/, 0);
+        v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5128/*"Custom/SpriteWithMask"*/, 0);
         this->fields.maskShader = v13;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.maskShader,
           (int32_t)v13,
           v14,
@@ -463,10 +463,10 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       if ( UnityEngine_Object__op_Equality(maskTexture, 0, 0) )
       {
         object = UnityEngine_Resources__Load_object_(
-                   (System_String_o *)StringLiteral_4781/*"CommonUI/NarrowFigure/NarrowFigureMask"*/,
-                   (const MethodInfo_3945260 *)Method_UnityEngine_Resources_Load_Texture2D___);
+                   (System_String_o *)StringLiteral_4789/*"CommonUI/NarrowFigure/NarrowFigureMask"*/,
+                   (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_Texture2D___);
         this->fields.maskTexture = (struct UnityEngine_Texture2D_o *)object;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.maskTexture,
           (int32_t)object,
           v22,
@@ -478,7 +478,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       }
       v28 = this->fields.bodyTexture;
       v29 = this->fields.maskShader;
-      v30 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
+      v30 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v30, v29, 0);
       if ( !v28 )
         goto LABEL_40;
@@ -497,7 +497,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
         j_il2cpp_runtime_class_init_0(UINarrowFigureTexture_TypeInfo, v5);
       if ( !v31 )
         goto LABEL_40;
-      UnityEngine_Material__SetTexture_83063164(
+      UnityEngine_Material__SetTexture_83276468(
         v31,
         UINarrowFigureTexture_TypeInfo->static_fields->MaskTexId,
         (UnityEngine_Texture_o *)this->fields.maskTexture,
@@ -546,7 +546,7 @@ void UINarrowFigureTexture__SetTexture(UINarrowFigureTexture_o *this, const Meth
       }
     }
 LABEL_40:
-    sub_21FFECC(gameObject, v5);
+    sub_2213CDC(gameObject, v5);
   }
 }
 
@@ -571,7 +571,7 @@ void UINarrowFigureTexture__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_21FFECC(0, v8);
+    sub_2213CDC(0, v8);
   v10.fields.b = b;
   v10.fields.a = a;
   v10.fields.r = r;

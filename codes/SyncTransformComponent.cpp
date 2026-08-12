@@ -24,7 +24,7 @@ void SyncTransformComponent__setChild(
   const MethodInfo *v9; // x1
 
   this->fields.child = trans;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.child,
     (int32_t)trans,
     (System_String_o *)method,
@@ -50,10 +50,10 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5937C06 & 1) == 0 )
+  if ( (byte_596FD69 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937C06 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596FD69 = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -100,7 +100,7 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
       || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v8) )
     {
 LABEL_20:
-      sub_21FFECC(gameObject, v4);
+      sub_2213CDC(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v8, localScale, 0);
   }

@@ -17,20 +17,20 @@ void AssetStorageLoadWrapper___ctor(AssetStorageLoadWrapper_o *this, const Metho
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593766B & 1) == 0 )
+  if ( (byte_596F7CC & 1) == 0 )
   {
-    sub_21FFC50(&AssetLoadWrapper_TypeInfo);
-    sub_21FFC50(&SoundLoadWrapper_TypeInfo);
-    byte_593766B = 1;
+    sub_2213A60(&AssetLoadWrapper_TypeInfo);
+    sub_2213A60(&SoundLoadWrapper_TypeInfo);
+    byte_596F7CC = 1;
   }
-  v3 = (AssetLoadWrapperBase_o *)sub_21FFEBC(AssetLoadWrapper_TypeInfo);
+  v3 = (AssetLoadWrapperBase_o *)sub_2213CCC(AssetLoadWrapper_TypeInfo);
   AssetLoadWrapperBase___ctor(v3, v4);
   this->fields.assetManagerWrapper = (struct AssetLoadWrapper_o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
-  v11 = (AssetLoadWrapperBase_o *)sub_21FFEBC(SoundLoadWrapper_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  v11 = (AssetLoadWrapperBase_o *)sub_2213CCC(SoundLoadWrapper_TypeInfo);
   AssetLoadWrapperBase___ctor(v11, v12);
   this->fields.soundManagerWrapper = (struct SoundLoadWrapper_o *)v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.soundManagerWrapper,
     (int32_t)v11,
     v13,
@@ -54,7 +54,7 @@ bool AssetStorageLoadWrapper__LoadAssetStorage(
 
   assetManagerWrapper = this->fields.assetManagerWrapper;
   if ( !assetManagerWrapper )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   return AssetLoadWrapper__LoadAssetStorage(assetManagerWrapper, path, callbackFunc, maxParallelLoad, method);
 }
 
@@ -70,7 +70,7 @@ void AssetStorageLoadWrapper__LoadAudioAssetStorage(
 
   soundManagerWrapper = this->fields.soundManagerWrapper;
   if ( !soundManagerWrapper )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   SoundLoadWrapper__LoadAudioAssetStorage(soundManagerWrapper, path, callbackFunc, cueType, method);
 }
 
@@ -84,7 +84,7 @@ void AssetStorageLoadWrapper__ReleaseAll(AssetStorageLoadWrapper_o *this, const 
     || (AssetLoadWrapperBase__ReleaseAll(assetManagerWrapper, method),
         (assetManagerWrapper = (AssetLoadWrapperBase_o *)this->fields.soundManagerWrapper) == 0) )
   {
-    sub_21FFECC(assetManagerWrapper, method);
+    sub_2213CDC(assetManagerWrapper, method);
   }
   AssetLoadWrapperBase__ReleaseAll(assetManagerWrapper, method);
 }
@@ -99,7 +99,7 @@ void AssetStorageLoadWrapper__ReleaseAssetStorage(
 
   assetManagerWrapper = this->fields.assetManagerWrapper;
   if ( !assetManagerWrapper )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   AssetLoadWrapper__ReleaseAssetStorage(assetManagerWrapper, path, method);
 }
 
@@ -113,6 +113,6 @@ void AssetStorageLoadWrapper__ReleaseAudioAssetStorage(
 
   soundManagerWrapper = this->fields.soundManagerWrapper;
   if ( !soundManagerWrapper )
-    sub_21FFECC(0, path);
+    sub_2213CDC(0, path);
   SoundLoadWrapper__ReleaseAudioAssetStorage(soundManagerWrapper, path, method);
 }

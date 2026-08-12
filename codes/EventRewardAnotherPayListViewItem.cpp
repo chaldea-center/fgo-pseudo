@@ -22,19 +22,19 @@ void EventRewardAnotherPayListViewItem___ctor(
   _QWORD *p_image; // x0
   int v26; // w8
 
-  if ( (byte_5932ADE & 1) == 0 )
+  if ( (byte_596ABE1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5932ADE = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596ABE1 = 1;
   }
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13, v14);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v16,
@@ -47,10 +47,10 @@ void EventRewardAnotherPayListViewItem___ctor(
   this->fields._IsAnotherPay_k__BackingField = isAnotherPay;
   if ( !*(&v24->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v24, v22, v23);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   p_image = &NetworkManager_TypeInfo->_1.image;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -66,7 +66,7 @@ void EventRewardAnotherPayListViewItem___ctor(
                     itemEntity->fields.id,
                     0)) == 0 )
   {
-    sub_21FFECC(p_image, v22);
+    sub_2213CDC(p_image, v22);
   }
   v26 = *((_DWORD *)p_image + 7);
   this->fields.priority = sortPriority;
@@ -75,7 +75,7 @@ void EventRewardAnotherPayListViewItem___ctor(
 }
 
 
-void EventRewardAnotherPayListViewItem___ctor_38845580(
+void EventRewardAnotherPayListViewItem___ctor_38844764(
         EventRewardAnotherPayListViewItem_o *this,
         int32_t index,
         int32_t eventId,
@@ -106,19 +106,19 @@ void EventRewardAnotherPayListViewItem___ctor_38845580(
   int v32; // w8
   struct SkillEntity_o **p_SkillEntity_k__BackingField; // x22
 
-  if ( (byte_5932ADF & 1) == 0 )
+  if ( (byte_596ABE2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5932ADF = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596ABE2 = 1;
   }
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13, v14);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v16,
@@ -131,10 +131,10 @@ void EventRewardAnotherPayListViewItem___ctor_38845580(
   this->fields._IsAnotherPay_k__BackingField = 1;
   if ( !*(&v24->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v24, v22, v23);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   p_image = &NetworkManager_TypeInfo->_1.image;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -150,14 +150,14 @@ void EventRewardAnotherPayListViewItem___ctor_38845580(
                     itemEntity->fields.id,
                     0)) == 0 )
   {
-    sub_21FFECC(p_image, v22);
+    sub_2213CDC(p_image, v22);
   }
   v32 = *((_DWORD *)p_image + 7);
   this->fields._SkillEntity_k__BackingField = skillEntity;
   p_SkillEntity_k__BackingField = &this->fields._SkillEntity_k__BackingField;
   *((_DWORD *)p_SkillEntity_k__BackingField - 1) = sortPriority;
   *((_BYTE *)p_SkillEntity_k__BackingField - 7) = v32 > 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_SkillEntity_k__BackingField,
     (int32_t)skillEntity,
     v26,

@@ -14,6 +14,6 @@ System_String_o *ChangeCrystalMaterialSettingComponent__get_AlphaTextureProperty
 
   result = this->fields.alphaTexturePropertyName;
   if ( !result )
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   return result;
 }

@@ -1,10 +1,10 @@
-void DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_3EDAD70 *method)
+void DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_3F0E518 *method)
 {
   DataEntityBase___ctor((DataEntityBase_o *)this, 0);
 }
 
 
-System_String_o *DataEntityBase_int___get_PrimaryKey(DataEntityBase_int__o *this, const MethodInfo_3EDAD30 *method)
+System_String_o *DataEntityBase_int___get_PrimaryKey(DataEntityBase_int__o *this, const MethodInfo_3F0E4D8 *method)
 {
   DataEntityBase_int__c *klass; // x8
   int v4; // w0

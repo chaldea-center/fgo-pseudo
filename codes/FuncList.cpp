@@ -32,15 +32,15 @@ bool FuncList__IsRelatedNpDecrease(int32_t funcType, const MethodInfo *method)
 
 bool FuncList__isAddState(int32_t func, const MethodInfo *method)
 {
-  char v2; // w9
+  bool v3; // w8
+  bool v5; // w9
 
-  v2 = (func & 0xFFFFFFFE) == 160;
-  if ( func == 16 )
-    v2 = 1;
-  if ( func == 1 )
-    return 1;
+  v3 = (func & 0x7FFFFFFE) == 0xA0 || (unsigned int)(func - 169) < 2;
+  v5 = func == 1 || func == 16;
+  if ( func <= 16 )
+    return v5;
   else
-    return v2;
+    return v3;
 }
 
 
@@ -51,17 +51,17 @@ bool FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   System_Enum_o v6; // [xsp+8h] [xbp-38h] BYREF
   int32_t v7; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_5937520 & 1) == 0 )
+  if ( (byte_596F67F & 1) == 0 )
   {
-    sub_21FFC50(&FuncList_TYPE_TypeInfo);
-    sub_21FFC50(&StringLiteral_5136/*"DAMAGE"*/);
-    byte_5937520 = 1;
+    sub_2213A60(&FuncList_TYPE_TypeInfo);
+    sub_2213A60(&StringLiteral_5148/*"DAMAGE"*/);
+    byte_596F67F = 1;
   }
   v7 = funcType;
   v6.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
   v6.monitor = (void *)-1LL;
   v3 = System_Enum__ToString(&v6, 0);
   if ( !v3 )
-    sub_21FFECC(0, v4);
-  return System_String__Contains(v3, (System_String_o *)StringLiteral_5136/*"DAMAGE"*/, 0);
+    sub_2213CDC(0, v4);
+  return System_String__Contains(v3, (System_String_o *)StringLiteral_5148/*"DAMAGE"*/, 0);
 }

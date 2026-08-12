@@ -17,27 +17,27 @@ void UITextList___ctor(UITextList_o *this, const MethodInfo *method)
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CFFB & 1) == 0 )
+  if ( (byte_59752D2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BetterList_UITextList_Paragraph___ctor__);
-    sub_21FFC50(&BetterList_UITextList_Paragraph__TypeInfo);
-    sub_21FFC50(&char___TypeInfo);
-    byte_593CFFB = 1;
+    sub_2213A60(&Method_BetterList_UITextList_Paragraph___ctor__);
+    sub_2213A60(&BetterList_UITextList_Paragraph__TypeInfo);
+    sub_2213A60(&char___TypeInfo);
+    byte_59752D2 = 1;
   }
   v3 = char___TypeInfo;
   this->fields.paragraphHistory = 50;
-  v4 = sub_21FFD10(v3, 1);
+  v4 = sub_2213B20(v3, 1);
   if ( !v4 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   if ( !*(_DWORD *)(v4 + 24) )
-    sub_21FFED4(v4);
+    sub_2213CE4(v4);
   *(_WORD *)(v4 + 32) = 10;
   this->fields.mSeparator = (struct System_Char_array *)v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSeparator, v4, v6, v7, v8, v9, v10, v11);
-  v12 = (BetterList_T__o *)sub_21FFEBC(BetterList_UITextList_Paragraph__TypeInfo);
-  BetterList_object____ctor(v12, (const MethodInfo_3E3C988 *)Method_BetterList_UITextList_Paragraph___ctor__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSeparator, v4, v6, v7, v8, v9, v10, v11);
+  v12 = (BetterList_T__o *)sub_2213CCC(BetterList_UITextList_Paragraph__TypeInfo);
+  BetterList_object____ctor(v12, (const MethodInfo_3E70130 *)Method_BetterList_UITextList_Paragraph___ctor__);
   this->fields.mParagraphs = (struct BetterList_UITextList_Paragraph__o *)v12;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mParagraphs, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParagraphs, (int32_t)v12, v13, v14, v15, v16, v17, v18);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -46,11 +46,11 @@ void UITextList__Add(UITextList_o *this, System_String_o *text, const MethodInfo
 {
   const MethodInfo *v3; // x3
 
-  UITextList__Add_56405212(this, text, 0, v3);
+  UITextList__Add_56609868(this, text, 0, v3);
 }
 
 
-void UITextList__Add_56405212(UITextList_o *this, System_String_o *text, bool updateVisible, const MethodInfo *method)
+void UITextList__Add_56609868(UITextList_o *this, System_String_o *text, bool updateVisible, const MethodInfo *method)
 {
   BetterList_T__o *mParagraphs; // x0
   __int64 v7; // x21
@@ -62,13 +62,13 @@ void UITextList__Add_56405212(UITextList_o *this, System_String_o *text, bool up
   bool v13; // w7
   const MethodInfo *v14; // x1
 
-  if ( (byte_593CFF8 & 1) == 0 )
+  if ( (byte_59752CF & 1) == 0 )
   {
-    sub_21FFC50(&Method_BetterList_UITextList_Paragraph__Add__);
-    sub_21FFC50(&Method_BetterList_UITextList_Paragraph__RemoveAt__);
-    sub_21FFC50(&Method_BetterList_UITextList_Paragraph__get_Item__);
-    sub_21FFC50(&UITextList_Paragraph_TypeInfo);
-    byte_593CFF8 = 1;
+    sub_2213A60(&Method_BetterList_UITextList_Paragraph__Add__);
+    sub_2213A60(&Method_BetterList_UITextList_Paragraph__RemoveAt__);
+    sub_2213A60(&Method_BetterList_UITextList_Paragraph__get_Item__);
+    sub_2213A60(&UITextList_Paragraph_TypeInfo);
+    byte_59752CF = 1;
   }
   mParagraphs = (BetterList_T__o *)this->fields.mParagraphs;
   if ( !mParagraphs )
@@ -78,32 +78,32 @@ void UITextList__Add_56405212(UITextList_o *this, System_String_o *text, bool up
     mParagraphs = (BetterList_T__o *)BetterList_object___get_Item(
                                        mParagraphs,
                                        0,
-                                       (const MethodInfo_3E3C040 *)Method_BetterList_UITextList_Paragraph__get_Item__);
+                                       (const MethodInfo_3E6F7E8 *)Method_BetterList_UITextList_Paragraph__get_Item__);
     if ( !this->fields.mParagraphs )
       goto LABEL_11;
     v7 = (__int64)mParagraphs;
     BetterList_object___RemoveAt(
       (BetterList_T__o *)this->fields.mParagraphs,
       0,
-      (const MethodInfo_3E3C66C *)Method_BetterList_UITextList_Paragraph__RemoveAt__);
+      (const MethodInfo_3E6FE14 *)Method_BetterList_UITextList_Paragraph__RemoveAt__);
   }
   else
   {
-    v7 = sub_21FFEBC(UITextList_Paragraph_TypeInfo);
+    v7 = sub_2213CCC(UITextList_Paragraph_TypeInfo);
     System_Object___ctor((Il2CppObject *)v7, 0);
   }
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = text,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)text, v8, v9, v10, v11, v12, v13),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)text, v8, v9, v10, v11, v12, v13),
         (mParagraphs = (BetterList_T__o *)this->fields.mParagraphs) == 0) )
   {
 LABEL_11:
-    sub_21FFECC(mParagraphs, text);
+    sub_2213CDC(mParagraphs, text);
   }
   BetterList_object___Add(
     mParagraphs,
     (Il2CppObject *)v7,
-    (const MethodInfo_3E3C260 *)Method_BetterList_UITextList_Paragraph__Add__);
+    (const MethodInfo_3E6FA08 *)Method_BetterList_UITextList_Paragraph__Add__);
   UITextList__Rebuild(this, v14);
 }
 
@@ -113,15 +113,15 @@ void UITextList__Clear(UITextList_o *this, const MethodInfo *method)
   BetterList_T__o *mParagraphs; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_593CFF5 & 1) == 0 )
+  if ( (byte_59752CC & 1) == 0 )
   {
-    sub_21FFC50(&Method_BetterList_UITextList_Paragraph__Clear__);
-    byte_593CFF5 = 1;
+    sub_2213A60(&Method_BetterList_UITextList_Paragraph__Clear__);
+    byte_59752CC = 1;
   }
   mParagraphs = (BetterList_T__o *)this->fields.mParagraphs;
   if ( !mParagraphs )
-    sub_21FFECC(0, method);
-  BetterList_object___Clear(mParagraphs, (const MethodInfo_3E3C248 *)Method_BetterList_UITextList_Paragraph__Clear__);
+    sub_2213CDC(0, method);
+  BetterList_object___Clear(mParagraphs, (const MethodInfo_3E6F9F0 *)Method_BetterList_UITextList_Paragraph__Clear__);
   UITextList__UpdateVisibleText(this, v4);
 }
 
@@ -169,14 +169,14 @@ void UITextList__OnScrollBar(UITextList_o *this, const MethodInfo *method)
   UIProgressBar_o *current; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_593CFF7 & 1) == 0 )
+  if ( (byte_59752CE & 1) == 0 )
   {
-    sub_21FFC50(&UIProgressBar_TypeInfo);
-    byte_593CFF7 = 1;
+    sub_2213A60(&UIProgressBar_TypeInfo);
+    byte_59752CE = 1;
   }
   current = UIProgressBar_TypeInfo->static_fields->current;
   if ( !current )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   this->fields.mScroll = UIProgressBar__get_value(current, 0);
   UITextList__UpdateVisibleText(this, v4);
 }
@@ -213,12 +213,12 @@ void UITextList__Rebuild(UITextList_o *this, const MethodInfo *method)
   float v29; // s0
   System_String_o *finalText; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593CFF9 & 1) == 0 )
+  if ( (byte_59752D0 & 1) == 0 )
   {
-    sub_21FFC50(&NGUIText_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UIScrollBar_TypeInfo);
-    byte_593CFF9 = 1;
+    sub_2213A60(&NGUIText_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UIScrollBar_TypeInfo);
+    byte_59752D0 = 1;
   }
   finalText = 0;
   if ( UITextList__get_isValid(this, method) )
@@ -263,7 +263,7 @@ void UITextList__Rebuild(UITextList_o *this, const MethodInfo *method)
           v12 = System_String__Split(finalText, 0xAu, 0, 0);
           v10->fields.lines = v12;
           p_lines = (MissionNaviTransitionBoardItem_o *)&v10->fields.lines;
-          sub_21FFBF4(p_lines, (int32_t)v12, v14, v15, v16, v17, v18, v19);
+          sub_2213A04(p_lines, (int32_t)v12, v14, v15, v16, v17, v18, v19);
           if ( p_lines->klass )
           {
             ++v7;
@@ -301,10 +301,10 @@ void UITextList__Rebuild(UITextList_o *this, const MethodInfo *method)
             goto LABEL_26;
         }
 LABEL_45:
-        sub_21FFED4(textLabel);
+        sub_2213CE4(textLabel);
       }
 LABEL_18:
-      sub_21FFECC(textLabel, v3);
+      sub_2213CDC(textLabel, v3);
     }
 LABEL_26:
     scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
@@ -357,7 +357,7 @@ void UITextList__Start(UITextList_o *this, const MethodInfo *method)
   struct UILabel_o **p_textLabel; // x20
   UnityEngine_Object_o *textLabel; // x21
   __int64 v5; // x1
-  Il2CppObject *ComponentInChildren_object__58644924; // x0
+  Il2CppObject *ComponentInChildren_object__58855044; // x0
   System_String_o *v7; // x2
   System_String_o *v8; // x3
   int32_t v9; // w4
@@ -375,14 +375,14 @@ void UITextList__Start(UITextList_o *this, const MethodInfo *method)
   int32_t v21; // w1
   const MethodInfo *v22; // x1
 
-  if ( (byte_593CFF6 & 1) == 0 )
+  if ( (byte_59752CD & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UITextList_OnScrollBar__);
-    byte_593CFF6 = 1;
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UITextList_OnScrollBar__);
+    byte_59752CD = 1;
   }
   p_textLabel = &this->fields.textLabel;
   textLabel = (UnityEngine_Object_o *)this->fields.textLabel;
@@ -390,13 +390,13 @@ void UITextList__Start(UITextList_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(textLabel, 0, 0) )
   {
-    ComponentInChildren_object__58644924 = UnityEngine_Component__GetComponentInChildren_object__58644924(
+    ComponentInChildren_object__58855044 = UnityEngine_Component__GetComponentInChildren_object__58855044(
                                              (UnityEngine_Component_o *)this,
-                                             (const MethodInfo_37ED9BC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    this->fields.textLabel = (struct UILabel_o *)ComponentInChildren_object__58644924;
-    sub_21FFBF4(
+                                             (const MethodInfo_3820E84 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    this->fields.textLabel = (struct UILabel_o *)ComponentInChildren_object__58855044;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.textLabel,
-      (int32_t)ComponentInChildren_object__58644924,
+      (int32_t)ComponentInChildren_object__58855044,
       v7,
       v8,
       v9,
@@ -414,7 +414,7 @@ void UITextList__Start(UITextList_o *this, const MethodInfo *method)
     if ( !v16 )
       goto LABEL_21;
     onChange = v16->fields.onChange;
-    v18 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+    v18 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v18, (Il2CppObject *)this, Method_UITextList_OnScrollBar__, 0);
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v19);
@@ -423,7 +423,7 @@ void UITextList__Start(UITextList_o *this, const MethodInfo *method)
   v14 = *p_textLabel;
   if ( !*p_textLabel )
 LABEL_21:
-    sub_21FFECC(v14, v15);
+    sub_2213CDC(v14, v15);
   UILabel__set_overflowMethod(v14, 1, 0);
   v14 = this->fields.textLabel;
   if ( this->fields.style != 1 )
@@ -459,7 +459,7 @@ void UITextList__Update(UITextList_o *this, const MethodInfo *method)
   {
     textLabel = this->fields.textLabel;
     if ( !textLabel )
-      sub_21FFECC(isValid, v4);
+      sub_2213CDC(isValid, v4);
     mWidth = textLabel->fields.mWidth;
     mHeight = textLabel->fields.mHeight;
     if ( mWidth != this->fields.mLastWidth || mHeight != this->fields.mLastHeight )
@@ -509,12 +509,12 @@ void UITextList__UpdateVisibleText(UITextList_o *this, const MethodInfo *method)
   struct UILabel_o *v35; // x19
   double iptr; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_593CFFA & 1) == 0 )
+  if ( (byte_59752D1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593CFFA = 1;
+    sub_2213A60(&System_Text_StringBuilder_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59752D1 = 1;
   }
   if ( UITextList__get_isValid(this, method) )
   {
@@ -532,10 +532,10 @@ LABEL_58:
       goto LABEL_59;
     mHeight = (float)textLabel->fields.mHeight;
     lineHeight = UITextList__get_lineHeight(this, v3);
-    if ( !byte_593193F )
+    if ( !byte_5969ADF )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593193F = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_5969ADF = 1;
     }
     v8 = mHeight / lineHeight;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -547,10 +547,10 @@ LABEL_58:
     else
       v11 = v9;
     v12 = (float)((this->fields.mTotalLines - v11) & ~((this->fields.mTotalLines - v11) >> 31));
-    if ( !byte_593220B )
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
     v13 = mScroll * v12;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -584,7 +584,7 @@ LABEL_25:
       v20 = ceil(v14 + -0.5);
     }
 LABEL_30:
-    v21 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+    v21 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v21, 0);
     mParagraphs = this->fields.mParagraphs;
     if ( !mParagraphs )
@@ -609,7 +609,7 @@ LABEL_30:
             goto LABEL_59;
           if ( v24 >= LODWORD(buffer->max_length) )
 LABEL_60:
-            sub_21FFED4(textLabel);
+            sub_2213CE4(textLabel);
           v28 = buffer->m_Items[v24];
           if ( !v28 )
             goto LABEL_59;
@@ -639,8 +639,8 @@ LABEL_53:
               break;
             v34 = v33->m_Items[v31];
             if ( System_Text_StringBuilder__get_Length(v21, 0) >= 1 )
-              System_Text_StringBuilder__Append_75521760(v21, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
-            textLabel = (UILabel_o *)System_Text_StringBuilder__Append_75521760(v21, v34, 0);
+              System_Text_StringBuilder__Append_75735064(v21, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+            textLabel = (UILabel_o *)System_Text_StringBuilder__Append_75735064(v21, v34, 0);
             if ( !--v9 )
               goto LABEL_53;
           }
@@ -654,7 +654,7 @@ LABEL_53:
             goto LABEL_53;
         }
 LABEL_59:
-        sub_21FFECC(textLabel, v3);
+        sub_2213CDC(textLabel, v3);
       }
     }
 LABEL_55:
@@ -681,10 +681,10 @@ bool UITextList__get_isValid(UITextList_o *this, const MethodInfo *method)
   __int64 v6; // x1
   UnityEngine_Object_o *ambigiousFont; // x19
 
-  if ( (byte_593CFF2 & 1) == 0 )
+  if ( (byte_59752C9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFF2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752C9 = 1;
   }
   textLabel = (UnityEngine_Object_o *)this->fields.textLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -693,7 +693,7 @@ bool UITextList__get_isValid(UITextList_o *this, const MethodInfo *method)
     return 0;
   v5 = this->fields.textLabel;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   ambigiousFont = UILabel__get_ambigiousFont(v5, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
@@ -710,10 +710,10 @@ float UITextList__get_lineHeight(UITextList_o *this, const MethodInfo *method)
   struct UILabel_o *v7; // x0
   int mFontSize; // s8
 
-  if ( (byte_593CFF4 & 1) == 0 )
+  if ( (byte_59752CB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFF4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752CB = 1;
   }
   textLabel = (UnityEngine_Object_o *)this->fields.textLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -724,7 +724,7 @@ float UITextList__get_lineHeight(UITextList_o *this, const MethodInfo *method)
   {
     v7 = this->fields.textLabel;
     if ( !v7 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     mFontSize = v7->fields.mFontSize;
     return UILabel__get_effectiveSpacingY(v7, 0) + (float)mFontSize;
   }
@@ -749,13 +749,13 @@ int32_t UITextList__get_scrollHeight(UITextList_o *this, const MethodInfo *metho
     return 0;
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_21FFECC(isValid, v4);
+    sub_2213CDC(isValid, v4);
   mHeight = (float)textLabel->fields.mHeight;
   lineHeight = UITextList__get_lineHeight(this, v4);
-  if ( !byte_593193F )
+  if ( !byte_5969ADF )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593193F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5969ADF = 1;
   }
   v9 = mHeight / lineHeight;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -784,10 +784,10 @@ void UITextList__set_scrollValue(UITextList_o *this, float value, const MethodIn
   const MethodInfo *v9; // x1
   UIProgressBar_o *v10; // x0
 
-  if ( (byte_593CFF3 & 1) == 0 )
+  if ( (byte_59752CA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFF3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752CA = 1;
   }
   v5 = 1.0;
   if ( value <= 1.0 )
@@ -805,7 +805,7 @@ void UITextList__set_scrollValue(UITextList_o *this, float value, const MethodIn
     {
       v10 = this->fields.scrollBar;
       if ( !v10 )
-        sub_21FFECC(0, v9);
+        sub_2213CDC(0, v9);
       UIProgressBar__set_value(v10, v6, 0);
     }
     else

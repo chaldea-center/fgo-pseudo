@@ -28,7 +28,7 @@ void OrganizationTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.textCode,
     (int32_t)textCode,
     v11,
@@ -38,7 +38,7 @@ void OrganizationTopItemInfo___ctor(
     v15,
     v16);
   this->fields.imageName = imageName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.imageName,
     (int32_t)imageName,
     v17,
@@ -48,7 +48,7 @@ void OrganizationTopItemInfo___ctor(
     v21,
     v22);
   this->fields.eventData = eventData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventData,
     (int32_t)eventData,
     v23,

@@ -1,14 +1,14 @@
 void StaffPhotoCostumeMaster___ctor(StaffPhotoCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593932A & 1) == 0 )
+  if ( (byte_59714EA & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string___ctor__);
-    byte_593932A = 1;
+    sub_2213A60(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string___ctor__);
+    byte_59714EA = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     215,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ StaffPhotoCostumeEntity_o *StaffPhotoCostumeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_593932B & 1) == 0 )
+  if ( (byte_59714EB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__GetEntity__);
-    byte_593932B = 1;
+    sub_2213A60(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__GetEntity__);
+    byte_59714EB = 1;
   }
   PK = (Il2CppObject *)StaffPhotoCostumeEntity__CreatePK(staffPhotoId, idx, *(const MethodInfo **)&idx);
   return (StaffPhotoCostumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_3EE2044 *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__GetEntity__);
+                                        (const MethodInfo_3F157EC *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__GetEntity__);
 }
 
 
@@ -47,12 +47,12 @@ StaffPhotoEntity_o *StaffPhotoCostumeMaster__GetStaffPhotoEntityByImageId(
   __int64 v10; // x1
   StaffPhotoCostumeEntity_o *costumeEntity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5939329 & 1) == 0 )
+  if ( (byte_59714E9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_StaffPhotoMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int__GetEntity__);
-    byte_5939329 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_StaffPhotoMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int__GetEntity__);
+    byte_59714E9 = 1;
   }
   costumeEntity = 0;
   EntityByImageId = StaffPhotoCostumeMaster__TryGetEntityByImageId(this, &costumeEntity, imageId, v3);
@@ -61,13 +61,13 @@ StaffPhotoEntity_o *StaffPhotoCostumeMaster__GetStaffPhotoEntityByImageId(
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_StaffPhotoMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_StaffPhotoMaster___);
     if ( !costumeEntity || !Master_object )
-      sub_21FFECC(Master_object, v10);
+      sub_2213CDC(Master_object, v10);
     return (StaffPhotoEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                    *(_DWORD *)((char *)&word_10 + (_QWORD)costumeEntity),
-                                   (const MethodInfo_3EDD388 *)Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int__GetEntity__);
+                                   (const MethodInfo_3F10B30 *)Method_DataMasterBase_StaffPhotoMaster__StaffPhotoEntity__int__GetEntity__);
   }
   return result;
 }
@@ -125,33 +125,33 @@ bool StaffPhotoCostumeMaster__TryGetEnableListByStaffId(
   __int64 v50; // x0
   System_Collections_Generic_IEnumerator_T__o *v52; // [xsp+18h] [xbp-58h]
 
-  if ( (byte_5939327 & 1) == 0 )
+  if ( (byte_59714E7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_StaffPhotoCostumeEntity__TypeInfo);
-    byte_5939327 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_StaffPhotoCostumeEntity__TypeInfo);
+    byte_59714E7 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_StaffPhotoCostumeEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_StaffPhotoCostumeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity___ctor__);
   *staffPhotoCostumeList = (System_Collections_Generic_List_StaffPhotoCostumeEntity__o *)v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)staffPhotoCostumeList, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)staffPhotoCostumeList, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, v14);
+    sub_2213CDC(0, v14);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
   v52 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(0, v17);
+    sub_2213CDC(0, v17);
   for ( i = Enumerator; ; i = v52 )
   {
     klass = i->klass;
@@ -171,7 +171,7 @@ bool StaffPhotoCostumeMaster__TryGetEnableListByStaffId(
     else
     {
 LABEL_10:
-      v22 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v22 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             i,
@@ -179,7 +179,7 @@ LABEL_10:
     if ( (v23 & 1) == 0 )
       break;
     if ( !v52 )
-      sub_21FFECC(v23, v24);
+      sub_2213CDC(v23, v24);
     v25 = v52->klass;
     v26 = *(unsigned __int16 *)&v52->klass->_2.rank;
     if ( *(_WORD *)&v52->klass->_2.rank )
@@ -197,14 +197,14 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v28 = sub_2237E2C(v52, System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo, 0);
+      v28 = sub_224BC3C(v52, System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo, 0);
     }
     v29 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(
                             v52,
                             *(_QWORD *)(v28 + 8));
     v31 = v29;
     if ( !v29 )
-      sub_21FFECC(0, v30);
+      sub_2213CDC(0, v30);
     if ( LODWORD(v29[1].klass) == staffPhotoId )
     {
       klass_low = SLODWORD(v29[4].klass);
@@ -221,7 +221,7 @@ LABEL_18:
               ++v42->fields._version,
               !items) )
         {
-          sub_21FFECC(v42, v35);
+          sub_2213CDC(v42, v35);
         }
         size = v42->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -229,14 +229,14 @@ LABEL_18:
           System_Collections_Generic_List_object___AddWithResize(
             v42,
             v31,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
         }
         else
         {
           v46 = &items->obj.klass + size;
           v42->fields._size = size + 1;
           v46[4] = (Il2CppClass *)v31;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v46 + 4), (int32_t)v31, v36, v37, v38, v39, v40, v41);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v46 + 4), (int32_t)v31, v36, v37, v38, v39, v40, v41);
         }
       }
     }
@@ -260,7 +260,7 @@ LABEL_18:
     else
     {
 LABEL_37:
-      v50 = sub_2237E2C(v52, System_IDisposable_TypeInfo, 0);
+      v50 = sub_224BC3C(v52, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v50)(v52, *(_QWORD *)(v50 + 8));
   }
@@ -278,17 +278,17 @@ bool StaffPhotoCostumeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_593932C & 1) == 0 )
+  if ( (byte_59714EC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__TryGetEntity__);
-    byte_593932C = 1;
+    sub_2213A60(&Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__TryGetEntity__);
+    byte_59714EC = 1;
   }
   PK = (Il2CppObject *)StaffPhotoCostumeEntity__CreatePK(staffPhotoId, idx, *(const MethodInfo **)&staffPhotoId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_StaffPhotoCostumeMaster__StaffPhotoCostumeEntity__string__TryGetEntity__);
 }
 
 
@@ -328,16 +328,16 @@ bool StaffPhotoCostumeMaster__TryGetEntityByImageId(
   __int64 v33; // x0
   StaffPhotoCostumeEntity_o *v35; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5939328 & 1) == 0 )
+  if ( (byte_59714E8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_5939328 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59714E8 = 1;
   }
   *costumeEntity = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)costumeEntity,
     0,
     *(System_String_o **)&imageId,
@@ -348,15 +348,15 @@ bool StaffPhotoCostumeMaster__TryGetEntityByImageId(
     v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, v11);
+    sub_2213CDC(0, v11);
   Enumerator = (StaffPhotoCostumeEntity_o *)System_Collections_ObjectModel_Collection_object___GetEnumerator(
                                               list,
-                                              (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
+                                              (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_StaffPhotoCostumeEntity__GetEnumerator__);
   v35 = Enumerator;
   while ( 1 )
   {
     if ( !v35 )
-      sub_21FFECC(Enumerator, v14);
+      sub_2213CDC(Enumerator, v14);
     klass = v35->klass;
     v16 = *(unsigned __int16 *)&v35->klass->_2.rank;
     if ( *(_WORD *)&v35->klass->_2.rank )
@@ -374,7 +374,7 @@ bool StaffPhotoCostumeMaster__TryGetEntityByImageId(
     else
     {
 LABEL_10:
-      v18 = sub_2237E2C(v35, System_Collections_IEnumerator_TypeInfo, 0);
+      v18 = sub_224BC3C(v35, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(StaffPhotoCostumeEntity_o *, _QWORD))v18)(v35, *(_QWORD *)(v18 + 8)) & 1) == 0 )
       break;
@@ -395,18 +395,18 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v22 = sub_2237E2C(v35, System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo, 0);
+      v22 = sub_224BC3C(v35, System_Collections_Generic_IEnumerator_StaffPhotoCostumeEntity__TypeInfo, 0);
     }
     Enumerator = (StaffPhotoCostumeEntity_o *)(*(__int64 (__fastcall **)(StaffPhotoCostumeEntity_o *, _QWORD))v22)(
                                                 v35,
                                                 *(_QWORD *)(v22 + 8));
     v14 = Enumerator;
     if ( !Enumerator )
-      sub_21FFECC(0, 0);
+      sub_2213CDC(0, 0);
     if ( Enumerator->fields.imageId == imageId )
     {
       *costumeEntity = Enumerator;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)costumeEntity, (int32_t)Enumerator, v23, v24, v25, v26, v27, v28);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)costumeEntity, (int32_t)Enumerator, v23, v24, v25, v26, v27, v28);
       v29 = 1;
       goto LABEL_23;
     }
@@ -430,7 +430,7 @@ LABEL_23:
   else
   {
 LABEL_27:
-    v33 = sub_2237E2C(v35, System_IDisposable_TypeInfo, 0);
+    v33 = sub_224BC3C(v35, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(StaffPhotoCostumeEntity_o *, _QWORD))v33)(v35, *(_QWORD *)(v33 + 8));
   return v29;

@@ -1,83 +1,58 @@
-// local variable allocation has failed, the output may be wrong!
 void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_Rect__o *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  int v6; // s0 OVERLAPPED
-  int v7; // s1
-  int v8; // s2
-  int v9; // s3
   struct UnityEngine_Rect_array *items; // x9
-  _QWORD *v11; // x8
+  _QWORD *v10; // x8
   __int64 size; // x10
-  Il2CppObject *v13; // x9
-  int v14; // s0 OVERLAPPED
-  int v15; // s1
-  int v16; // s2
-  int v17; // s3
-  struct UnityEngine_Rect_array *v18; // x8
-  _QWORD *v19; // x9
-  __int64 v20; // x10
-  Il2CppObject *v21; // x8
-  int v22; // s0 OVERLAPPED
-  int v23; // s1
-  int v24; // s2
-  int v25; // s3
-  struct UnityEngine_Rect_array *v26; // x8
-  _QWORD *v27; // x9
-  __int64 v28; // x10
-  Il2CppObject *v29; // x8
-  int v30; // s0 OVERLAPPED
-  int v31; // s1
-  int v32; // s2
-  int v33; // s3
-  struct UnityEngine_Rect_array *v34; // x8
-  _QWORD *v35; // x9
-  __int64 v36; // x10
-  Il2CppObject *v37; // x8
-  int v38; // s0 OVERLAPPED
-  int v39; // s1
-  int v40; // s2
-  int v41; // s3
-  struct UnityEngine_Rect_array *v42; // x8
-  _QWORD *v43; // x9
-  __int64 v44; // x10
-  Il2CppObject *v45; // x8
-  System_String_o *v46; // x2
-  System_String_o *v47; // x3
-  int32_t v48; // w4
-  int32_t v49; // w5
-  bool v50; // w6
-  bool v51; // w7
-  int v52; // s0 OVERLAPPED
-  int v53; // s1
-  int v54; // s2
-  int v55; // s3
-  struct UnityEngine_Rect_array *v56; // x8
-  _QWORD *v57; // x9
-  __int64 v58; // x10
-  Il2CppObject *v59; // x8
+  struct UnityEngine_Rect_array *v15; // x8
+  _QWORD *v16; // x9
+  __int64 v17; // x10
+  struct UnityEngine_Rect_array *v21; // x8
+  _QWORD *v22; // x9
+  __int64 v23; // x10
+  struct UnityEngine_Rect_array *v27; // x8
+  _QWORD *v28; // x9
+  __int64 v29; // x10
+  struct UnityEngine_Rect_array *v33; // x8
+  _QWORD *v34; // x9
+  __int64 v35; // x10
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  struct UnityEngine_Rect_array *v45; // x8
+  _QWORD *v46; // x9
+  __int64 v47; // x10
+  UnityEngine_Rect_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5934DCF & 1) == 0 )
+  if ( (byte_596CEFE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Rect__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Rect___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_Rect__TypeInfo);
-    byte_5934DCF = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Rect__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Rect___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_Rect__TypeInfo);
+    byte_596CEFE = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0);
-  v3 = (System_Collections_Generic_List_Rect__o *)sub_21FFEBC(System_Collections_Generic_List_Rect__TypeInfo);
+  v3 = (System_Collections_Generic_List_Rect__o *)sub_2213CCC(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v3,
-    (const MethodInfo_4467C0C *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_449BD44 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._8_GetScanDialogRect.methodPtr)(
          this,
          this->klass->vtable._8_GetScanDialogRect.method);
   if ( !v3 )
     goto LABEL_29;
   items = v3->fields._items;
-  v11 = Method_System_Collections_Generic_List_Rect__Add__;
+  v10 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
   if ( !items )
     goto LABEL_29;
@@ -86,146 +61,122 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v6,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      v48,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
-    v13 = &items->obj + size;
     v3->fields._size = size + 1;
-    LODWORD(v13[2].klass) = v6;
-    HIDWORD(v13[2].klass) = v7;
-    LODWORD(v13[2].monitor) = v8;
-    HIDWORD(v13[2].monitor) = v9;
+    items->m_Items[size] = v48;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._9_GetStorageRect.methodPtr)(
          this,
          this->klass->vtable._9_GetStorageRect.method);
-  v18 = v3->fields._items;
-  v19 = Method_System_Collections_Generic_List_Rect__Add__;
+  v15 = v3->fields._items;
+  v16 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v18 )
+  if ( !v15 )
     goto LABEL_29;
-  v20 = v3->fields._size;
-  if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
+  v17 = v3->fields._size;
+  if ( (unsigned int)v17 >= LODWORD(v15->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v14,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      v49,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
   }
   else
   {
-    v21 = &v18->obj + v20;
-    v3->fields._size = v20 + 1;
-    LODWORD(v21[2].klass) = v14;
-    HIDWORD(v21[2].klass) = v15;
-    LODWORD(v21[2].monitor) = v16;
-    HIDWORD(v21[2].monitor) = v17;
+    v3->fields._size = v17 + 1;
+    v15->m_Items[v17] = v49;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._4_GetTitleInfoRect.methodPtr)(
          this,
          this->klass->vtable._4_GetTitleInfoRect.method);
-  v26 = v3->fields._items;
-  v27 = Method_System_Collections_Generic_List_Rect__Add__;
+  v21 = v3->fields._items;
+  v22 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v26 )
+  if ( !v21 )
     goto LABEL_29;
-  v28 = v3->fields._size;
-  if ( (unsigned int)v28 >= LODWORD(v26->max_length) )
+  v23 = v3->fields._size;
+  if ( (unsigned int)v23 >= LODWORD(v21->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v22,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      v50,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
-    v29 = &v26->obj + v28;
-    v3->fields._size = v28 + 1;
-    LODWORD(v29[2].klass) = v22;
-    HIDWORD(v29[2].klass) = v23;
-    LODWORD(v29[2].monitor) = v24;
-    HIDWORD(v29[2].monitor) = v25;
+    v3->fields._size = v23 + 1;
+    v21->m_Items[v23] = v50;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._6_GetMapChangeButtonRect.methodPtr)(
          this,
          this->klass->vtable._6_GetMapChangeButtonRect.method);
-  v34 = v3->fields._items;
-  v35 = Method_System_Collections_Generic_List_Rect__Add__;
+  v27 = v3->fields._items;
+  v28 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v34 )
+  if ( !v27 )
     goto LABEL_29;
-  v36 = v3->fields._size;
-  if ( (unsigned int)v36 >= LODWORD(v34->max_length) )
+  v29 = v3->fields._size;
+  if ( (unsigned int)v29 >= LODWORD(v27->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v30,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+      v51,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
   }
   else
   {
-    v37 = &v34->obj + v36;
-    v3->fields._size = v36 + 1;
-    LODWORD(v37[2].klass) = v30;
-    HIDWORD(v37[2].klass) = v31;
-    LODWORD(v37[2].monitor) = v32;
-    HIDWORD(v37[2].monitor) = v33;
+    v3->fields._size = v29 + 1;
+    v27->m_Items[v29] = v51;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._5_GetMenuButtonRect.methodPtr)(
          this,
          this->klass->vtable._5_GetMenuButtonRect.method);
-  v42 = v3->fields._items;
-  v43 = Method_System_Collections_Generic_List_Rect__Add__;
+  v33 = v3->fields._items;
+  v34 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v42 )
+  if ( !v33 )
     goto LABEL_29;
-  v44 = v3->fields._size;
-  if ( (unsigned int)v44 >= LODWORD(v42->max_length) )
+  v35 = v3->fields._size;
+  if ( (unsigned int)v35 >= LODWORD(v33->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v38,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+      v52,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
   }
   else
   {
-    v45 = &v42->obj + v44;
-    v3->fields._size = v44 + 1;
-    LODWORD(v45[2].klass) = v38;
-    HIDWORD(v45[2].klass) = v39;
-    LODWORD(v45[2].monitor) = v40;
-    HIDWORD(v45[2].monitor) = v41;
+    v3->fields._size = v35 + 1;
+    v33->m_Items[v35] = v52;
   }
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._7_GetMasterIconSurroundsRect.methodPtr)(
          this,
          this->klass->vtable._7_GetMasterIconSurroundsRect.method);
-  v56 = v3->fields._items;
-  v57 = Method_System_Collections_Generic_List_Rect__Add__;
+  v45 = v3->fields._items;
+  v46 = Method_System_Collections_Generic_List_Rect__Add__;
   ++v3->fields._version;
-  if ( !v56 )
+  if ( !v45 )
 LABEL_29:
-    sub_21FFECC(v4, v5);
-  v58 = v3->fields._size;
-  if ( (unsigned int)v58 >= LODWORD(v56->max_length) )
+    sub_2213CDC(v4, v5);
+  v47 = v3->fields._size;
+  if ( (unsigned int)v47 >= LODWORD(v45->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
-      *(UnityEngine_Rect_o *)&v52,
-      *(const MethodInfo_44684C8 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+      v53,
+      *(const MethodInfo_449C600 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
   }
   else
   {
-    v59 = &v56->obj + v58;
-    v3->fields._size = v58 + 1;
-    LODWORD(v59[2].klass) = v52;
-    HIDWORD(v59[2].klass) = v53;
-    LODWORD(v59[2].monitor) = v54;
-    HIDWORD(v59[2].monitor) = v55;
+    v3->fields._size = v47 + 1;
+    v45->m_Items[v47] = v53;
   }
   this->fields._rects_k__BackingField = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v46, v47, v48, v49, v50, v51);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v36, v37, v38, v39, v40, v41);
 }
 
 

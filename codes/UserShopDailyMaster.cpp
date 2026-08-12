@@ -1,14 +1,14 @@
 void UserShopDailyMaster___ctor(UserShopDailyMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_593979F & 1) == 0 )
+  if ( (byte_5971960 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
-    byte_593979F = 1;
+    sub_2213A60(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
+    byte_5971960 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     104,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserShopDailyEntity_o *UserShopDailyMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_59397A0 & 1) == 0 )
+  if ( (byte_5971961 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
-    byte_59397A0 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
+    byte_5971961 = 1;
   }
   PK = (Il2CppObject *)UserShopDailyEntity__CreatePK(userId, shopId, *(const MethodInfo **)&shopId);
   return (UserShopDailyEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
+                                    (const MethodInfo_3F157EC *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__GetEntity__);
 }
 
 
@@ -56,19 +56,18 @@ UserShopDailyEntity_o *UserShopDailyMaster__GetEntityDefinitely(
   __int64 v19; // x0
   UserShopDailyEntity_o *v20; // x19
   const MethodInfo *v21; // x1
-  UserShopDailyEntity_o *result; // x0
 
-  if ( (byte_593979E & 1) == 0 )
+  if ( (byte_597195F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
-    sub_21FFC50(&System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo);
-    sub_21FFC50(&UserShopDailyEntity_TypeInfo);
-    byte_593979E = 1;
+    sub_2213A60(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+    sub_2213A60(&System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo);
+    sub_2213A60(&UserShopDailyEntity_TypeInfo);
+    byte_597195F = 1;
   }
   PK = UserShopDailyEntity__CreatePK(userId, shopId, *(const MethodInfo **)&shopId);
   lookup = DataMasterBase_object__object__object___get_lookup(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-             (const MethodInfo_3EDFD10 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+             (const MethodInfo_3F134B8 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
   if ( !lookup )
     goto LABEL_21;
   klass = lookup->klass;
@@ -89,7 +88,7 @@ UserShopDailyEntity_o *UserShopDailyMaster__GetEntityDefinitely(
   else
   {
 LABEL_8:
-    v14 = sub_2237E2C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 0);
+    v14 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 0);
   }
   if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v14)(
           v11,
@@ -97,21 +96,20 @@ LABEL_8:
           *(_QWORD *)(v14 + 8))
       & 1) == 0 )
   {
-    v20 = (UserShopDailyEntity_o *)sub_21FFEBC(UserShopDailyEntity_TypeInfo);
+    v20 = (UserShopDailyEntity_o *)sub_2213CCC(UserShopDailyEntity_TypeInfo);
     UserShopDailyEntity___ctor(v20, v21);
     if ( v20 )
     {
       v20->fields.userId = userId;
-      result = v20;
       v20->fields.shopId = shopId;
-      return result;
+      return v20;
     }
 LABEL_21:
-    sub_21FFECC(lookup, v9);
+    sub_2213CDC(lookup, v9);
   }
   lookup = DataMasterBase_object__object__object___get_lookup(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-             (const MethodInfo_3EDFD10 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
+             (const MethodInfo_3F134B8 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__get_lookup__);
   if ( !lookup )
     goto LABEL_21;
   v15 = lookup->klass;
@@ -132,12 +130,12 @@ LABEL_21:
   else
   {
 LABEL_16:
-    v19 = sub_2237E2C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 2);
+    v19 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 2);
   }
-  return (UserShopDailyEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
-                                    v16,
-                                    PK,
-                                    *(_QWORD *)(v19 + 8));
+  return (*(UserShopDailyEntity_o *(__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
+           v16,
+           PK,
+           *(_QWORD *)(v19 + 8));
 }
 
 
@@ -150,15 +148,15 @@ bool UserShopDailyMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_59397A1 & 1) == 0 )
+  if ( (byte_5971962 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
-    byte_59397A1 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
+    byte_5971962 = 1;
   }
   PK = (Il2CppObject *)UserShopDailyEntity__CreatePK(userId, shopId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_UserShopDailyMaster__UserShopDailyEntity__string__TryGetEntity__);
 }

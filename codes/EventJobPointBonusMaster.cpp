@@ -1,14 +1,14 @@
 void EventJobPointBonusMaster___ctor(EventJobPointBonusMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938777 & 1) == 0 )
+  if ( (byte_5970841 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string___ctor__);
-    byte_5938777 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string___ctor__);
+    byte_5970841 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     563,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string___ctor__);
 }
 
 
@@ -21,7 +21,7 @@ int32_t EventJobPointBonusMaster__CompareByLevel(
 
   v3 = ((unsigned __int64)left | (unsigned __int64)right) != 0;
   if ( left && (v3 = -1, right) )
-    return System_Int32__CompareTo_76925088((_DWORD)left + 24, right->fields.lv, 0);
+    return System_Int32__CompareTo_77138392((_DWORD)left + 24, right->fields.lv, 0);
   else
     return v3;
 }
@@ -52,13 +52,13 @@ System_String_o *EventJobPointBonusMaster__FormatListText(
 
   v4 = bonusValue;
   v20 = bonusValue;
-  if ( (byte_5938773 & 1) == 0 )
+  if ( (byte_597083D & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5819/*"EVENT_INFO_POINT_EFFICACY_MULTIPLICATION"*/);
-    sub_21FFC50(&StringLiteral_5128/*"D1"*/);
-    this = (EventJobPointBonusMaster_o *)sub_21FFC50(&StringLiteral_5818/*"EVENT_INFO_POINT_EFFICACY_ADD"*/);
-    byte_5938773 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5831/*"EVENT_INFO_POINT_EFFICACY_MULTIPLICATION"*/);
+    sub_2213A60(&StringLiteral_5140/*"D1"*/);
+    this = (EventJobPointBonusMaster_o *)sub_2213A60(&StringLiteral_5830/*"EVENT_INFO_POINT_EFFICACY_ADD"*/);
+    byte_597083D = 1;
   }
   v19 = 0;
   if ( calcType == 2 )
@@ -75,19 +75,19 @@ System_String_o *EventJobPointBonusMaster__FormatListText(
     v19 = v12 % 10;
     if ( !v14 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5819/*"EVENT_INFO_POINT_EFFICACY_MULTIPLICATION"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5831/*"EVENT_INFO_POINT_EFFICACY_MULTIPLICATION"*/, 0);
     v18 = v10;
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v18);
-    v17 = (Il2CppObject *)System_Int32__ToString_76925352((int32_t)&v19, (System_String_o *)StringLiteral_5128/*"D1"*/, 0);
-    return System_String__Format_75484576(v15, v16, v17, 0);
+    v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v18);
+    v17 = (Il2CppObject *)System_Int32__ToString_77138656((int32_t)&v19, (System_String_o *)StringLiteral_5140/*"D1"*/, 0);
+    return System_String__Format_75697880(v15, v16, v17, 0);
   }
   else if ( calcType == 1 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&calcType);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5818/*"EVENT_INFO_POINT_EFFICACY_ADD"*/, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5830/*"EVENT_INFO_POINT_EFFICACY_ADD"*/, 0);
     v18 = v4;
-    v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v18);
+    v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v18);
     return System_String__Format(v6, v7, 0);
   }
   else
@@ -110,19 +110,19 @@ System_String_o *EventJobPointBonusMaster__FormatSummary(
   Il2CppObject *v10; // x0
   int32_t SummaryTotalValue; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5938774 & 1) == 0 )
+  if ( (byte_597083E & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5820/*"EVENT_INFO_POINT_EFFICACY_SUM"*/);
-    byte_5938774 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5832/*"EVENT_INFO_POINT_EFFICACY_SUM"*/);
+    byte_597083E = 1;
   }
   if ( !hasAcquiredData )
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, hasAcquiredData);
-  v8 = (EventJobPointBonusMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5820/*"EVENT_INFO_POINT_EFFICACY_SUM"*/, 0);
+  v8 = (EventJobPointBonusMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5832/*"EVENT_INFO_POINT_EFFICACY_SUM"*/, 0);
   SummaryTotalValue = EventJobPointBonusMaster__GetSummaryTotalValue(v8, baseEfficacySum, multiplierPermille, v9);
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &SummaryTotalValue);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &SummaryTotalValue);
   return System_String__Format((System_String_o *)v8, v10, 0);
 }
 
@@ -167,16 +167,16 @@ EventJobPointBonusEntity_o *EventJobPointBonusMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938778 & 1) == 0 )
+  if ( (byte_5970842 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__GetEntity__);
-    byte_5938778 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__GetEntity__);
+    byte_5970842 = 1;
   }
   PK = (Il2CppObject *)EventJobPointBonusEntity__CreatePK(eventId, jobId, lv, *(const MethodInfo **)&lv);
   return (EventJobPointBonusEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__GetEntity__);
+                                         (const MethodInfo_3F157EC *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__GetEntity__);
 }
 
 
@@ -204,28 +204,28 @@ System_Collections_Generic_List_EventJobPointBonusEntity__o *EventJobPointBonusM
   Il2CppClass **v22; // x0
   System_Comparison_T__o *v23; // x19
 
-  if ( (byte_5938771 & 1) == 0 )
+  if ( (byte_597083B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Item__);
-    sub_21FFC50(&System_Comparison_EventJobPointBonusEntity__TypeInfo);
-    sub_21FFC50(&Method_EventJobPointBonusMaster_CompareByLevel__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPointBonusEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventJobPointBonusEntity__TypeInfo);
-    byte_5938771 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Item__);
+    sub_2213A60(&System_Comparison_EventJobPointBonusEntity__TypeInfo);
+    sub_2213A60(&Method_EventJobPointBonusMaster_CompareByLevel__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPointBonusEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventJobPointBonusEntity__TypeInfo);
+    byte_597083B = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventJobPointBonusEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventJobPointBonusEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventJobPointBonusEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventJobPointBonusEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_18;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Count__);
+            (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -238,7 +238,7 @@ System_Collections_Generic_List_EventJobPointBonusEntity__o *EventJobPointBonusM
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v12,
-                                                                 (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Item__);
+                                                                 (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventJobPointBonusEntity__get_Item__);
       if ( list )
       {
         v8 = list;
@@ -257,14 +257,14 @@ System_Collections_Generic_List_EventJobPointBonusEntity__o *EventJobPointBonusM
             System_Collections_Generic_List_object___AddWithResize(
               v7,
               (Il2CppObject *)list,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &items->obj.klass + size;
             v7->fields._size = size + 1;
             v22[4] = (Il2CppClass *)v8;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v8, v13, v14, v15, v16, v17, v18);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)v8, v13, v14, v15, v16, v17, v18);
           }
         }
       }
@@ -272,17 +272,17 @@ System_Collections_Generic_List_EventJobPointBonusEntity__o *EventJobPointBonusM
         goto LABEL_16;
     }
 LABEL_18:
-    sub_21FFECC(list, v8);
+    sub_2213CDC(list, v8);
   }
 LABEL_16:
-  v23 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_EventJobPointBonusEntity__TypeInfo);
+  v23 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventJobPointBonusEntity__TypeInfo);
   System_Comparison_object____ctor(v23, 0, Method_EventJobPointBonusMaster_CompareByLevel__, 0);
   if ( !v7 )
     goto LABEL_18;
-  System_Collections_Generic_List_object___Sort_71636404(
+  System_Collections_Generic_List_object___Sort_71849708(
     v7,
     v23,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__Sort__);
   return (System_Collections_Generic_List_EventJobPointBonusEntity__o *)v7;
 }
 
@@ -315,10 +315,10 @@ int32_t EventJobPointBonusMaster__GetRoundedUpTenths(
   double v4; // d0
   int32_t v5; // w9
 
-  if ( (byte_5938776 & 1) == 0 )
+  if ( (byte_5970840 & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5938776 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5970840 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, *(_QWORD *)&multiplierPermille);
@@ -358,10 +358,10 @@ int32_t EventJobPointBonusMaster__GetSummaryTotalValue(
   double v6; // d0
   int32_t v7; // w9
 
-  if ( (byte_5938775 & 1) == 0 )
+  if ( (byte_597083F & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5938775 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_597083F = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, *(_QWORD *)&baseEfficacySum);
@@ -388,11 +388,11 @@ bool EventJobPointBonusMaster__TryGetDefaultDisplayData(
   int32_t version; // w8
   int32_t v15; // w8
 
-  if ( (byte_5938772 & 1) == 0 )
+  if ( (byte_597083C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
-    byte_5938772 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
+    byte_597083C = 1;
   }
   *calcType = 0;
   *bonusValue = 0;
@@ -413,15 +413,15 @@ bool EventJobPointBonusMaster__TryGetDefaultDisplayData(
       EntityListByEventIdAndJobId = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                    EntityListByEventIdAndJobId,
                                                                                    0,
-                                                                                   (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
+                                                                                   (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
       if ( EntityListByEventIdAndJobId )
       {
         EntityListByEventIdAndJobId = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                      v12,
                                                                                      0,
-                                                                                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
+                                                                                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventJobPointBonusEntity__get_Item__);
         if ( !EntityListByEventIdAndJobId )
-          sub_21FFECC(0, v13);
+          sub_2213CDC(0, v13);
         version = EntityListByEventIdAndJobId->fields._version;
         LOBYTE(EntityListByEventIdAndJobId) = 1;
         *calcType = version;
@@ -448,15 +448,15 @@ bool EventJobPointBonusMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938779 & 1) == 0 )
+  if ( (byte_5970843 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__TryGetEntity__);
-    byte_5938779 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__TryGetEntity__);
+    byte_5970843 = 1;
   }
   PK = (Il2CppObject *)EventJobPointBonusEntity__CreatePK(eventId, jobId, lv, *(const MethodInfo **)&jobId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventJobPointBonusMaster__EventJobPointBonusEntity__string__TryGetEntity__);
 }

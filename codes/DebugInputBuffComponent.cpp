@@ -8,18 +8,18 @@ void DebugInputBuffComponent___ctor(DebugInputBuffComponent_o *this, const Metho
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939CAC & 1) == 0 )
+  if ( (byte_5971E70 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_DebugInputSimpleSelectionElement___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_DebugInputSimpleSelectionElement__TypeInfo);
-    byte_5939CAC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_DebugInputSimpleSelectionElement___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_DebugInputSimpleSelectionElement__TypeInfo);
+    byte_5971E70 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_DebugInputSimpleSelectionElement__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_DebugInputSimpleSelectionElement__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_DebugInputSimpleSelectionElement___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_DebugInputSimpleSelectionElement___ctor__);
   this->fields.paramInputCellList = (struct System_Collections_Generic_List_DebugInputSimpleSelectionElement__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.paramInputCellList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.paramInputCellList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   this->fields.isFirstOpen = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -47,10 +47,10 @@ void DebugInputBuffComponent__CountLeft(DebugInputBuffComponent_o *this, const M
   UIInput_o *v8; // x19
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5939CA8 & 1) == 0 )
+  if ( (byte_5971E6C & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5939CA8 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5971E6C = 1;
   }
   CountInput = this->fields.CountInput;
   result = 0;
@@ -69,13 +69,13 @@ void DebugInputBuffComponent__CountLeft(DebugInputBuffComponent_o *this, const M
   result = v6;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v5);
-  v7 = System_Math__Max_76939956(-1, v6, 0);
+  v7 = System_Math__Max_77153260(-1, v6, 0);
   v8 = this->fields.CountInput;
   result = v7;
   CountInput = (UIInput_o *)System_Int32__ToString((int32_t)&result, 0);
   if ( !v8 )
 LABEL_11:
-    sub_21FFECC(CountInput, method);
+    sub_2213CDC(CountInput, method);
   UIInput__set_value(v8, (System_String_o *)CountInput, 0);
 }
 
@@ -99,7 +99,7 @@ void DebugInputBuffComponent__CountRight(DebugInputBuffComponent_o *this, const 
         CountInput = (UIInput_o *)System_Int32__ToString((int32_t)&result, 0),
         !v6) )
   {
-    sub_21FFECC(CountInput, method);
+    sub_2213CDC(CountInput, method);
   }
   UIInput__set_value(v6, (System_String_o *)CountInput, 0);
 }
@@ -129,19 +129,19 @@ System_Int32_array *DebugInputBuffComponent__GetTargetSvtList(
   _QWORD *v20; // x9
   __int64 v21; // x10
 
-  if ( (byte_5939CA1 & 1) == 0 )
+  if ( (byte_5971E65 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_int____91487608);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    byte_5939CA1 = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_int____91713824);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5971E65 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   TargetPlayerToggleList = this->fields.TargetPlayerToggleList;
   if ( !TargetPlayerToggleList )
     goto LABEL_35;
@@ -167,7 +167,7 @@ System_Int32_array *DebugInputBuffComponent__GetTargetSvtList(
         goto LABEL_35;
       if ( v7 >= LODWORD(p_entryid->max_length) )
 LABEL_38:
-        sub_21FFED4(value);
+        sub_2213CE4(value);
       v5 = (unsigned int)p_entryid->m_Items[v7];
       if ( (int)v5 >= 1 )
       {
@@ -184,7 +184,7 @@ LABEL_38:
           System_Collections_Generic_List_int___AddWithResize(
             v3,
             v5,
-            *(const MethodInfo_4433138 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            *(const MethodInfo_4467270 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
@@ -211,7 +211,7 @@ LABEL_38:
                             v16->fields.e_entryid,
                             v15,
                             -1,
-                            (const MethodInfo_37E1834 *)Method_BasicHelper_IndexValue_int____91487608);
+                            (const MethodInfo_3814BE4 *)Method_BasicHelper_IndexValue_int____91713824);
     v17 = this->fields.TargetEnemyToggleList;
     if ( !v17 )
       goto LABEL_35;
@@ -237,7 +237,7 @@ LABEL_38:
         System_Collections_Generic_List_int___AddWithResize(
           v3,
           v18,
-          *(const MethodInfo_4433138 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_4467270 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
       }
       else
       {
@@ -252,10 +252,10 @@ LABEL_38:
   }
   if ( !v3 )
 LABEL_35:
-    sub_21FFECC(value, v5);
+    sub_2213CDC(value, v5);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_4434BB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_4468CF0 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -290,27 +290,27 @@ void DebugInputBuffComponent__OnSublitSkillId(
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
   int32_t result; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_5939CA9 & 1) == 0 )
+  if ( (byte_5971E6D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_SkillDetailMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_21FFC50(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__getEntitys__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5939CA9 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_SkillDetailMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_2213A60(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__getEntitys__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5971E6D = 1;
   }
   result = 0;
   v11 = 0;
   entity = 0;
   if ( System_Int32__TryParse(value, &result, 0) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_15;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SkillMaster___);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SkillMaster___);
     entity = 0;
     Instance = (DataManager_o *)System_Int32__Parse(value, 0);
     if ( !MasterData_object )
@@ -319,20 +319,20 @@ void DebugInputBuffComponent__OnSublitSkillId(
             (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
             &entity,
             (int32_t)Instance,
-            (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+            (const MethodInfo_3F10B80 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
       return;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_15;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SkillDetailMaster___);
+                                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SkillDetailMaster___);
     if ( !Instance )
       goto LABEL_15;
     v8 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___getEntitys(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                                  (const MethodInfo_3EDC704 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__getEntitys__);
+                                  (const MethodInfo_3F0FEAC *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__getEntitys__);
     v11 = 0;
     if ( !entity )
       goto LABEL_15;
@@ -340,12 +340,12 @@ void DebugInputBuffComponent__OnSublitSkillId(
             v8,
             &v11,
             (int32_t)entity[1].klass,
-            (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
+            (const MethodInfo_3F10B80 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
       return;
     Instance = (DataManager_o *)entity;
     if ( !entity || (v9 = result, Instance = (DataManager_o *)SkillEntity__getName((SkillEntity_o *)entity, 0), !v11) )
 LABEL_15:
-      sub_21FFECC(Instance, v6);
+      sub_2213CDC(Instance, v6);
     DebugInputBuffComponent__TapSkillSelectCallback(
       this,
       v9,
@@ -367,15 +367,15 @@ void DebugInputBuffComponent__OnSubmit(DebugInputBuffComponent_o *this, const Me
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_5939CAB & 1) == 0 )
+  if ( (byte_5971E6F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_21FFC50(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_26781/*"バフID[{0}]はマスターに存在しておりません"*/);
-    sub_21FFC50(&StringLiteral_26816/*"存在しないバフIDです"*/);
-    byte_5939CAB = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_2213A60(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_26833/*"バフID[{0}]はマスターに存在しておりません"*/);
+    sub_2213A60(&StringLiteral_26868/*"存在しないバフIDです"*/);
+    byte_5971E6F = 1;
   }
   BuffIdInput = this->fields.BuffIdInput;
   entity = 0;
@@ -394,32 +394,32 @@ void DebugInputBuffComponent__OnSubmit(DebugInputBuffComponent_o *this, const Me
     v6 = UIInput__get_value(BuffIdInput, 0);
     v5 = System_Int32__Parse(v6, 0);
   }
-  BuffIdInput = (UIInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  BuffIdInput = (UIInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !BuffIdInput )
     goto LABEL_14;
   BuffIdInput = (UIInput_o *)DataManager__GetMasterData_object_(
                                (DataManager_o *)BuffIdInput,
-                               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_BuffMaster___);
+                               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !BuffIdInput )
     goto LABEL_14;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)BuffIdInput,
          &entity,
          v5,
-         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+         (const MethodInfo_3F10B80 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
   {
     return;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v9 = v5;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9);
-  BuffIdInput = (UIInput_o *)System_String__Format((System_String_o *)StringLiteral_26781/*"バフID[{0}]はマスターに存在しておりません"*/, v8, 0);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v9);
+  BuffIdInput = (UIInput_o *)System_String__Format((System_String_o *)StringLiteral_26833/*"バフID[{0}]はマスターに存在しておりません"*/, v8, 0);
   if ( !Instance )
 LABEL_14:
-    sub_21FFECC(BuffIdInput, method);
+    sub_2213CDC(BuffIdInput, method);
   CommonUI__OpenErrorDialog(
     (CommonUI_o *)Instance,
-    (System_String_o *)StringLiteral_26816/*"存在しないバフIDです"*/,
+    (System_String_o *)StringLiteral_26868/*"存在しないバフIDです"*/,
     (System_String_o *)BuffIdInput,
     0,
     0,
@@ -439,23 +439,23 @@ void DebugInputBuffComponent__OnSubmitBuffId(
   Il2CppObject *v9; // [xsp+0h] [xbp-30h] BYREF
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5939CA2 & 1) == 0 )
+  if ( (byte_5971E66 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_21FFC50(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5939CA2 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_2213A60(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5971E66 = 1;
   }
   result = 0;
   v9 = 0;
   if ( System_Int32__TryParse(value, &result, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_10;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_BuffMaster___);
+                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_BuffMaster___);
     Instance = (Il2CppObject *)System_Int32__Parse(value, 0);
     if ( !MasterData_object )
       goto LABEL_10;
@@ -463,12 +463,12 @@ void DebugInputBuffComponent__OnSubmitBuffId(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                  &v9,
                                  (int32_t)Instance,
-                                 (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                 (const MethodInfo_3F10B80 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) == 0 )
       return;
     if ( !v9 )
 LABEL_10:
-      sub_21FFECC(Instance, v6);
+      sub_2213CDC(Instance, v6);
     DebugInputBuffComponent__TapBuffSelectCallback(
       this,
       result,
@@ -500,7 +500,7 @@ void DebugInputBuffComponent__Open(
   __int64 v17; // x1
 
   this->fields.data = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.data,
     (int32_t)data,
     (System_String_o *)debugMenuTran,
@@ -510,7 +510,7 @@ void DebugInputBuffComponent__Open(
     v6,
     v7);
   this->fields.debugMenuTran = debugMenuTran;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.debugMenuTran,
     (int32_t)debugMenuTran,
     v10,
@@ -561,7 +561,7 @@ void DebugInputBuffComponent__Open(
       return;
     }
 LABEL_14:
-    sub_21FFECC(gameObject, v17);
+    sub_2213CDC(gameObject, v17);
   }
 }
 
@@ -573,14 +573,14 @@ void DebugInputBuffComponent__OpenBuffSelect(DebugInputBuffComponent_o *this, co
   __int64 v5; // x1
   UIToggle_o *FilterCheckBox; // x0
 
-  if ( (byte_5939CA3 & 1) == 0 )
+  if ( (byte_5971E67 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__string__string__int__TypeInfo);
-    sub_21FFC50(&Method_DebugInputBuffComponent_TapBuffSelectCallback__);
-    byte_5939CA3 = 1;
+    sub_2213A60(&System_Action_int__string__string__int__TypeInfo);
+    sub_2213A60(&Method_DebugInputBuffComponent_TapBuffSelectCallback__);
+    byte_5971E67 = 1;
   }
   BuffSelect = this->fields.BuffSelect;
-  v4 = (System_Action_T1__T2__T3__T4__o *)sub_21FFEBC(System_Action_int__string__string__int__TypeInfo);
+  v4 = (System_Action_T1__T2__T3__T4__o *)sub_2213CCC(System_Action_int__string__string__int__TypeInfo);
   System_Action_int__object__object__int____ctor(
     v4,
     (Il2CppObject *)this,
@@ -588,7 +588,7 @@ void DebugInputBuffComponent__OpenBuffSelect(DebugInputBuffComponent_o *this, co
     0);
   FilterCheckBox = this->fields.FilterCheckBox;
   if ( !FilterCheckBox || (FilterCheckBox = (UIToggle_o *)UIToggle__get_value(FilterCheckBox, 0), !BuffSelect) )
-    sub_21FFECC(FilterCheckBox, v5);
+    sub_2213CDC(FilterCheckBox, v5);
   DebugBuffSelectComponent__Open(
     BuffSelect,
     (System_Action_int__string__string__int__o *)v4,
@@ -605,21 +605,21 @@ void DebugInputBuffComponent__OpenBuffTypeSelect(DebugInputBuffComponent_o *this
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_5939CA5 & 1) == 0 )
+  if ( (byte_5971E69 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_BuffList_TYPE__TypeInfo);
-    sub_21FFC50(&Method_DebugInputBuffComponent_TapBuffTypeSelectCallback__);
-    byte_5939CA5 = 1;
+    sub_2213A60(&System_Action_BuffList_TYPE__TypeInfo);
+    sub_2213A60(&Method_DebugInputBuffComponent_TapBuffTypeSelectCallback__);
+    byte_5971E69 = 1;
   }
   BuffTypeSelect = this->fields.BuffTypeSelect;
-  v4 = (System_Action_T__o *)sub_21FFEBC(System_Action_BuffList_TYPE__TypeInfo);
+  v4 = (System_Action_T__o *)sub_2213CCC(System_Action_BuffList_TYPE__TypeInfo);
   System_Action_Int32Enum____ctor(
     v4,
     (Il2CppObject *)this,
     Method_DebugInputBuffComponent_TapBuffTypeSelectCallback__,
     0);
   if ( !BuffTypeSelect )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   DebugBuffTypeSelectComponent__Open(BuffTypeSelect, (System_Action_BuffList_TYPE__o *)v4, 0);
 }
 
@@ -632,21 +632,21 @@ void DebugInputBuffComponent__OpenSkillSelect(DebugInputBuffComponent_o *this, c
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_5939CAA & 1) == 0 )
+  if ( (byte_5971E6E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_int__string__string__TypeInfo);
-    sub_21FFC50(&Method_DebugInputBuffComponent_TapSkillSelectCallback__);
-    byte_5939CAA = 1;
+    sub_2213A60(&System_Action_int__string__string__TypeInfo);
+    sub_2213A60(&Method_DebugInputBuffComponent_TapSkillSelectCallback__);
+    byte_5971E6E = 1;
   }
   SkillSelect = this->fields.SkillSelect;
-  v4 = (System_Action_T1__T2__T3__o *)sub_21FFEBC(System_Action_int__string__string__TypeInfo);
+  v4 = (System_Action_T1__T2__T3__o *)sub_2213CCC(System_Action_int__string__string__TypeInfo);
   System_Action_int__object__object____ctor(
     v4,
     (Il2CppObject *)this,
     Method_DebugInputBuffComponent_TapSkillSelectCallback__,
     0);
   if ( !SkillSelect )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   DebugSkillSelectComponent__Open(SkillSelect, (System_Action_int__string__string__o *)v4, v7);
 }
 
@@ -682,10 +682,10 @@ void DebugInputBuffComponent__TapBuffSelectCallback(
   int32_t v18; // [xsp+1Ch] [xbp-34h] BYREF
 
   v18 = id;
-  if ( (byte_5939CA4 & 1) == 0 )
+  if ( (byte_5971E68 & 1) == 0 )
   {
-    sub_21FFC50(&BuffList_TYPE_TypeInfo);
-    byte_5939CA4 = 1;
+    sub_2213A60(&BuffList_TYPE_TypeInfo);
+    byte_5971E68 = 1;
   }
   BuffIdInput = this->fields.BuffIdInput;
   SelectBuffName = System_Int32__ToString((int32_t)&v18, 0);
@@ -715,7 +715,7 @@ void DebugInputBuffComponent__TapBuffSelectCallback(
         !SelectBuffTypeName) )
   {
 LABEL_10:
-    sub_21FFECC(SelectBuffName, v12);
+    sub_2213CDC(SelectBuffName, v12);
   }
   UILabel__set_text(SelectBuffTypeName, SelectBuffName, 0);
   this->fields.selectBuffType = buffType;
@@ -728,7 +728,7 @@ void DebugInputBuffComponent__TapBuffTypeFiler(DebugInputBuffComponent_o *this, 
 
   BuffSelect = this->fields.BuffSelect;
   if ( !BuffSelect )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   DebugBuffSelectComponent__RemoveList(BuffSelect, 0);
 }
 
@@ -744,10 +744,10 @@ void DebugInputBuffComponent__TapBuffTypeSelectCallback(
   System_Enum_o v8; // [xsp+8h] [xbp-48h] BYREF
   int32_t v9; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5939CA6 & 1) == 0 )
+  if ( (byte_5971E6A & 1) == 0 )
   {
-    sub_21FFC50(&BuffList_TYPE_TypeInfo);
-    byte_5939CA6 = 1;
+    sub_2213A60(&BuffList_TYPE_TypeInfo);
+    byte_5971E6A = 1;
   }
   SelectBuffTypeName = this->fields.SelectBuffTypeName;
   v9 = buffType;
@@ -766,7 +766,7 @@ void DebugInputBuffComponent__TapBuffTypeSelectCallback(
   FilterCheckBox = (System_String_o *)this->fields.BuffSelect;
   if ( !FilterCheckBox )
 LABEL_9:
-    sub_21FFECC(FilterCheckBox, v7);
+    sub_2213CDC(FilterCheckBox, v7);
   DebugBuffSelectComponent__RemoveList((DebugBuffSelectComponent_o *)FilterCheckBox, 0);
 }
 
@@ -800,7 +800,7 @@ void DebugInputBuffComponent__TapSkillSelectCallback(
         (SelectSkillName = (System_String_o *)this->fields.SelectSkillDetail) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(SelectSkillName, v10);
+    sub_2213CDC(SelectSkillName, v10);
   }
   UILabel__set_text((UILabel_o *)SelectSkillName, detail, 0);
 }
@@ -816,10 +816,10 @@ void DebugInputBuffComponent__TurnLeft(DebugInputBuffComponent_o *this, const Me
   UIInput_o *v8; // x19
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5939CA7 & 1) == 0 )
+  if ( (byte_5971E6B & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5939CA7 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5971E6B = 1;
   }
   TurnInput = this->fields.TurnInput;
   result = 0;
@@ -838,13 +838,13 @@ void DebugInputBuffComponent__TurnLeft(DebugInputBuffComponent_o *this, const Me
   result = v6;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v5);
-  v7 = System_Math__Max_76939956(-1, v6, 0);
+  v7 = System_Math__Max_77153260(-1, v6, 0);
   v8 = this->fields.TurnInput;
   result = v7;
   TurnInput = (UIInput_o *)System_Int32__ToString((int32_t)&result, 0);
   if ( !v8 )
 LABEL_11:
-    sub_21FFECC(TurnInput, method);
+    sub_2213CDC(TurnInput, method);
   UIInput__set_value(v8, (System_String_o *)TurnInput, 0);
 }
 
@@ -868,7 +868,7 @@ void DebugInputBuffComponent__TurnRight(DebugInputBuffComponent_o *this, const M
         TurnInput = (UIInput_o *)System_Int32__ToString((int32_t)&result, 0),
         !v6) )
   {
-    sub_21FFECC(TurnInput, method);
+    sub_2213CDC(TurnInput, method);
   }
   UIInput__set_value(v6, (System_String_o *)TurnInput, 0);
 }
@@ -886,7 +886,7 @@ void DebugInputBuffComponent__cancel(DebugInputBuffComponent_o *this, const Meth
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_21FFECC(debugMenuTran, method);
+    sub_2213CDC(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }

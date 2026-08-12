@@ -1,26 +1,26 @@
 void UserEventJobEntity___ctor(UserEventJobEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939502 & 1) == 0 )
+  if ( (byte_59716C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5939502 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59716C2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventJobEntity__CreatePK(int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_5939501 & 1) == 0 )
+  if ( (byte_59716C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int___);
-    byte_5939501 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int___);
+    byte_59716C1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            eventId,
-           (const MethodInfo_3820DF8 *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_38542C0 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 
@@ -75,17 +75,17 @@ int32_t UserEventJobEntity__GetMaxLevelJobCount(UserEventJobEntity_o *this, int3
   UserEventJobEntity_JobInfo_o *v15; // x25
   EventJobEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5939500 & 1) == 0 )
+  if ( (byte_59716C0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5939500 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_59716C0 = 1;
   }
   v5 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&eventId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobMaster___);
   if ( Master_object )
   {
     jobList = this->fields.jobList;
@@ -104,7 +104,7 @@ int32_t UserEventJobEntity__GetMaxLevelJobCount(UserEventJobEntity_o *this, int3
         if ( !v14 )
           break;
         if ( v11 >= LODWORD(v14->max_length) )
-          sub_21FFED4(Master_object);
+          sub_2213CE4(Master_object);
         v15 = v14->m_Items[v11];
         if ( v15 )
         {
@@ -121,7 +121,7 @@ int32_t UserEventJobEntity__GetMaxLevelJobCount(UserEventJobEntity_o *this, int3
           return v12;
       }
 LABEL_20:
-      sub_21FFECC(Master_object, v7);
+      sub_2213CDC(Master_object, v7);
     }
   }
   return 0;

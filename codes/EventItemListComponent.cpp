@@ -15,7 +15,7 @@ void EventItemListComponent__Clear(EventItemListComponent_o *this, const MethodI
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_8:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   eventItemDrawList = this->fields.eventItemDrawList;
   if ( eventItemDrawList )
@@ -27,7 +27,7 @@ LABEL_8:
       if ( (int)v6 >= max_length )
         break;
       if ( (unsigned int)v6 >= max_length )
-        sub_21FFED4(gameObject);
+        sub_2213CE4(gameObject);
       gameObject = (UnityEngine_GameObject_o *)eventItemDrawList->m_Items[v6];
       if ( gameObject )
       {
@@ -50,20 +50,20 @@ void EventItemListComponent__GoToEventShop(int32_t eventId, const MethodInfo *me
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_5937AB1 & 1) == 0 )
+  if ( (byte_596FB82 & 1) == 0 )
   {
-    sub_21FFC50(&SceneJumpInfo_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_9921/*"NormalEventShop"*/);
-    byte_5937AB1 = 1;
+    sub_2213A60(&SceneJumpInfo_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_2213A60(&StringLiteral_9934/*"NormalEventShop"*/);
+    byte_596FB82 = 1;
   }
-  v3 = (SceneJumpInfo_o *)sub_21FFEBC(SceneJumpInfo_TypeInfo);
-  SceneJumpInfo___ctor_48427172(v3, (System_String_o *)StringLiteral_9921/*"NormalEventShop"*/, eventId, 0);
+  v3 = (SceneJumpInfo_o *)sub_2213CCC(SceneJumpInfo_TypeInfo);
+  SceneJumpInfo___ctor_48464916(v3, (System_String_o *)StringLiteral_9934/*"NormalEventShop"*/, eventId, 0);
   if ( !v3
     || (SceneJumpInfo__SetReturnNowScene(v3, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
   {
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 72, 1, (Il2CppObject *)v3, 0);
 }
@@ -75,20 +75,20 @@ void EventItemListComponent__GoToShopEventItemExchange(int32_t eventId, const Me
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_5937AB0 & 1) == 0 )
+  if ( (byte_596FB81 & 1) == 0 )
   {
-    sub_21FFC50(&SceneJumpInfo_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_6481/*"EventItem"*/);
-    byte_5937AB0 = 1;
+    sub_2213A60(&SceneJumpInfo_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_2213A60(&StringLiteral_6493/*"EventItem"*/);
+    byte_596FB81 = 1;
   }
-  v3 = (SceneJumpInfo_o *)sub_21FFEBC(SceneJumpInfo_TypeInfo);
-  SceneJumpInfo___ctor_48427172(v3, (System_String_o *)StringLiteral_6481/*"EventItem"*/, eventId, 0);
+  v3 = (SceneJumpInfo_o *)sub_2213CCC(SceneJumpInfo_TypeInfo);
+  SceneJumpInfo___ctor_48464916(v3, (System_String_o *)StringLiteral_6493/*"EventItem"*/, eventId, 0);
   if ( !v3
     || (SceneJumpInfo__SetReturnNowScene(v3, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
   {
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, (Il2CppObject *)v3, 0);
 }
@@ -107,11 +107,11 @@ void EventItemListComponent__Set(EventItemListComponent_o *this, int32_t eventId
   unsigned __int64 max_length_low; // x9
   unsigned __int64 klass_low; // x10
 
-  if ( (byte_5937AB2 & 1) == 0 )
+  if ( (byte_596FB83 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5937AB2 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596FB83 = 1;
   }
   if ( eventId < 1 )
   {
@@ -122,13 +122,13 @@ void EventItemListComponent__Set(EventItemListComponent_o *this, int32_t eventId
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
       || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
-          (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+          (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
       || (gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)gameObject,
-                                                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
+                                                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
     {
 LABEL_20:
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     gameObject = (UnityEngine_GameObject_o *)ShopMaster__GetEventItemList((ShopMaster_o *)gameObject, eventId, 0);
     eventItemDrawList = this->fields.eventItemDrawList;
@@ -158,7 +158,7 @@ LABEL_20:
         {
           if ( v10 >= max_length_low || v10 >= klass_low )
 LABEL_23:
-            sub_21FFED4(gameObject);
+            sub_2213CE4(gameObject);
           gameObject = (UnityEngine_GameObject_o *)eventItemDrawList->m_Items[v10];
           if ( !gameObject )
             goto LABEL_20;

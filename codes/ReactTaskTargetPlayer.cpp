@@ -27,17 +27,17 @@ BattleServantData_array *ReactTaskTargetPlayer__TargetServants(
   bool v17; // w7
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_593BAD0 & 1) == 0 )
+  if ( (byte_5973CDC & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_21FFC50(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_21FFC50(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__);
-    this = (ReactTaskTargetPlayer_o *)sub_21FFC50(&ReactTaskTargetPlayer___c_TypeInfo);
-    byte_593BAD0 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_2213A60(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_2213A60(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__);
+    this = (ReactTaskTargetPlayer_o *)sub_2213A60(&ReactTaskTargetPlayer___c_TypeInfo);
+    byte_5973CDC = 1;
   }
   if ( !data )
-    sub_21FFECC(this, data);
+    sub_2213CDC(this, data);
   FieldPlayerServantList = BattleData__getFieldPlayerServantList(data, 0);
   v6 = ReactTaskTargetPlayer___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)FieldPlayerServantList;
@@ -56,19 +56,19 @@ BattleServantData_array *ReactTaskTargetPlayer__TargetServants(
       static_fields = ReactTaskTargetPlayer___c_TypeInfo->static_fields;
     }
     v10 = (Il2CppObject *)static_fields->__9;
-    _9__0_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BattleServantData__bool__TypeInfo);
+    _9__0_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__0_0, v10, Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, 0);
     v11 = ReactTaskTargetPlayer___c_TypeInfo->static_fields;
     v11->__9__0_0 = (struct System_Func_BattleServantData__bool__o *)_9__0_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->__9__0_0, (int32_t)_9__0_0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->__9__0_0, (int32_t)_9__0_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = System_Linq_Enumerable__Where_object_(
           v7,
           (System_Func_TSource__bool__o *)_9__0_0,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
                                       v18,
-                                      (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                                      (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }
 
 
@@ -82,15 +82,15 @@ void ReactTaskTargetPlayer___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593BAD1 & 1) == 0 )
+  if ( (byte_5973CDD & 1) == 0 )
   {
-    sub_21FFC50(&ReactTaskTargetPlayer___c_TypeInfo);
-    byte_593BAD1 = 1;
+    sub_2213A60(&ReactTaskTargetPlayer___c_TypeInfo);
+    byte_5973CDD = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ReactTaskTargetPlayer___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ReactTaskTargetPlayer___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ReactTaskTargetPlayer___c_TypeInfo->static_fields->__9 = (struct ReactTaskTargetPlayer___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ReactTaskTargetPlayer___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -114,6 +114,6 @@ bool ReactTaskTargetPlayer___c___TargetServants_b__0_0(
         const MethodInfo *method)
 {
   if ( !svt || (this = (ReactTaskTargetPlayer___c_o *)BattleServantData__get_AiStateManager(svt, 0)) == 0 )
-    sub_21FFECC(this, svt);
-  return (bool)this[3].monitor;
+    sub_2213CDC(this, svt);
+  return *((_BYTE *)this + 56);
 }

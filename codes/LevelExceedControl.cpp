@@ -1,9 +1,9 @@
 void LevelExceedControl___ctor(LevelExceedControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_593C8DF & 1) == 0 )
+  if ( (byte_5974B17 & 1) == 0 )
   {
-    sub_21FFC50(&CombineMenuControl_TypeInfo);
-    byte_593C8DF = 1;
+    sub_2213A60(&CombineMenuControl_TypeInfo);
+    byte_5974B17 = 1;
   }
   if ( !*(&CombineMenuControl_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CombineMenuControl_TypeInfo, method);
@@ -35,11 +35,11 @@ void LevelExceedControl__AdjustMaterialItemObjList(
   Il2CppClass **v20; // x0
 
   v4 = this;
-  if ( (byte_593C8D6 & 1) == 0 )
+  if ( (byte_5974B0E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    this = (LevelExceedControl_o *)sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    byte_593C8D6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    this = (LevelExceedControl_o *)sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    byte_5974B0E = 1;
   }
   if ( consumeList )
   {
@@ -77,20 +77,20 @@ void LevelExceedControl__AdjustMaterialItemObjList(
           System_Collections_Generic_List_object___AddWithResize(
             v7,
             (Il2CppObject *)this,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v7->fields._size = size + 1;
           v20[4] = (Il2CppClass *)v19;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
         }
         if ( !--v6 )
           return;
       }
 LABEL_14:
-      sub_21FFECC(this, consumeList);
+      sub_2213CDC(this, consumeList);
     }
   }
 }
@@ -104,12 +104,12 @@ void LevelExceedControl__CheckConductionWire(LevelExceedControl_o *this, const M
   UILabel_o *conductionWireLabel; // x20
   UILabel_o *conductionButtonLabel; // x20
 
-  if ( (byte_593C8D3 & 1) == 0 )
+  if ( (byte_5974B0B & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3852/*"CONDUCTION_COMBINE"*/);
-    sub_21FFC50(&StringLiteral_3853/*"CONDUCTION_COMBINE_MSG"*/);
-    byte_593C8D3 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3857/*"CONDUCTION_COMBINE"*/);
+    sub_2213A60(&StringLiteral_3858/*"CONDUCTION_COMBINE_MSG"*/);
+    byte_5974B0B = 1;
   }
   conductionWireInfo = this->fields.conductionWireInfo;
   if ( !conductionWireInfo )
@@ -134,14 +134,14 @@ LABEL_9:
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
       conductionWireInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3853/*"CONDUCTION_COMBINE_MSG"*/,
+                                                         (System_String_o *)StringLiteral_3858/*"CONDUCTION_COMBINE_MSG"*/,
                                                          0);
       if ( conductionWireLabel )
       {
         UILabel__set_text(conductionWireLabel, (System_String_o *)conductionWireInfo, 0);
         conductionButtonLabel = this->fields.conductionButtonLabel;
         conductionWireInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_3852/*"CONDUCTION_COMBINE"*/,
+                                                           (System_String_o *)StringLiteral_3857/*"CONDUCTION_COMBINE"*/,
                                                            0);
         if ( conductionButtonLabel )
         {
@@ -156,7 +156,7 @@ LABEL_9:
       }
     }
 LABEL_16:
-    sub_21FFECC(conductionWireInfo, method);
+    sub_2213CDC(conductionWireInfo, method);
   }
 }
 
@@ -183,10 +183,10 @@ void LevelExceedControl__CheckIsSelectBaseSvt(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+40h] [xbp-40h]
 
-  if ( (byte_593C8D2 & 1) == 0 )
+  if ( (byte_5974B0A & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593C8D2 = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5974B0A = 1;
   }
   if ( selectBase )
   {
@@ -199,11 +199,11 @@ void LevelExceedControl__CheckIsSelectBaseSvt(
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, selectBase);
       v19 = v20;
-      v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v19, 0);
+      v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v19, 0);
       v13 = *(_OWORD *)&selectBase->fields.id.fields.fakeValue;
       *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&selectBase->fields.id.fields.currentCryptoKey;
       *(_OWORD *)&v18.fields.fakeValue = v13;
-      if ( v12 != CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v18, 0) )
+      if ( v12 != CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v18, 0) )
         LevelExceedControl__InitDispInfo(this, v14);
     }
     v15 = 1;
@@ -213,13 +213,13 @@ void LevelExceedControl__CheckIsSelectBaseSvt(
     LevelExceedControl__InitDispInfo(this, (const MethodInfo *)selectBase);
     conductionWireInfo = this->fields.conductionWireInfo;
     if ( !conductionWireInfo )
-      sub_21FFECC(0, v16);
+      sub_2213CDC(0, v16);
     UnityEngine_GameObject__SetActive(conductionWireInfo, 0, 0);
     v15 = 0;
   }
   this->fields.baseUserServantEntity = selectBase;
   this->fields.isSelectBase = v15;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.baseUserServantEntity,
     (int32_t)selectBase,
     (System_String_o *)method,
@@ -237,16 +237,16 @@ bool LevelExceedControl__CheckItemHaveNum(LevelExceedControl_o *this, const Meth
   int32_t v4; // w20
   int32_t size; // w22
 
-  if ( (byte_593C8D8 & 1) == 0 )
+  if ( (byte_5974B10 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
-    byte_593C8D8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
+    byte_5974B10 = 1;
   }
   itemInfoList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._itemInfoList_k__BackingField;
   if ( !itemInfoList_k__BackingField )
 LABEL_9:
-    sub_21FFECC(itemInfoList_k__BackingField, method);
+    sub_2213CDC(itemInfoList_k__BackingField, method);
   v4 = 0;
   while ( 1 )
   {
@@ -256,7 +256,7 @@ LABEL_9:
     itemInfoList_k__BackingField = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                   itemInfoList_k__BackingField,
                                                                                   v4,
-                                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
+                                                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__);
     if ( !itemInfoList_k__BackingField )
       goto LABEL_9;
     if ( !LOBYTE(itemInfoList_k__BackingField[2].fields._syncRoot) )
@@ -278,10 +278,10 @@ void LevelExceedControl__ClearItemList(LevelExceedControl_o *this, const MethodI
   __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_593C8DA & 1) == 0 )
+  if ( (byte_5974B12 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C8DA = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974B12 = 1;
   }
   itemListGrid = (UnityEngine_Component_o *)this->fields.itemListGrid;
   if ( !itemListGrid )
@@ -310,12 +310,12 @@ void LevelExceedControl__ClearItemList(LevelExceedControl_o *this, const MethodI
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(itemListGrid, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
-      UnityEngine_Object__Destroy_83246496(gameObject, 0);
+      UnityEngine_Object__Destroy_83459800(gameObject, 0);
       if ( (unsigned int)--v5 <= 1 )
         return;
     }
 LABEL_14:
-    sub_21FFECC(itemListGrid, method);
+    sub_2213CDC(itemListGrid, method);
   }
 }
 
@@ -330,11 +330,11 @@ CommonConsumeEntity_array *LevelExceedControl__GetConsumeItemList(LevelExceedCon
   const MethodInfo *v8; // x3
   CommonConsumeEntity_array *consumeList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593C8D4 & 1) == 0 )
+  if ( (byte_5974B0C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_593C8D4 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5974B0C = 1;
   }
   baseData = this->fields.baseData;
   consumeList = 0;
@@ -345,10 +345,10 @@ CommonConsumeEntity_array *LevelExceedControl__GetConsumeItemList(LevelExceedCon
   v7 = SvtExceedEnt ? SvtExceedEnt->fields.consumeId : 0;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-  baseData = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  baseData = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !baseData )
 LABEL_11:
-    sub_21FFECC(baseData, method);
+    sub_2213CDC(baseData, method);
   consumeList = CommonConsumeMaster__GetIdEntityList((CommonConsumeMaster_o *)baseData, v7, 0);
   LevelExceedControl__SetAddConsumeItem(this, v6, &consumeList, v8);
   return consumeList;
@@ -407,13 +407,13 @@ void LevelExceedControl__InitDispInfo(LevelExceedControl_o *this, const MethodIn
   bool v44; // w7
   UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593C8D0 & 1) == 0 )
+  if ( (byte_5974B08 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C8D0 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974B08 = 1;
   }
   LevelExceedControl__SetHaveQpIno(this, method);
   needQpLb = this->fields.needQpLb;
@@ -433,13 +433,13 @@ void LevelExceedControl__InitDispInfo(LevelExceedControl_o *this, const MethodIn
   *(_DWORD *)&this->fields.isMaxLv = 16843009;
   LevelExceedControl__ClearItemList(this, v6);
   this->fields.itemIdList = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.itemIdList, 0, v7, v8, v9, v10, v11, v12);
-  v13 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.itemIdList, 0, v7, v8, v9, v10, v11, v12);
+  v13 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.materialItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.materialItemObjList,
     (int32_t)v13,
     v14,
@@ -474,14 +474,14 @@ void LevelExceedControl__InitDispInfo(LevelExceedControl_o *this, const MethodIn
     System_Collections_Generic_List_object___AddWithResize(
       materialItemObjList,
       (Il2CppObject *)itemListGrid,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
     v33 = &items->obj.klass + size;
     materialItemObjList->fields._size = size + 1;
     v33[4] = (Il2CppClass *)v32;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v32, v22, v23, v24, v25, v26, v27);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v32, v22, v23, v24, v25, v26, v27);
   }
   itemListGrid = (System_String_o *)this->fields.itemListGrid;
   if ( !itemListGrid )
@@ -502,15 +502,15 @@ void LevelExceedControl__InitDispInfo(LevelExceedControl_o *this, const MethodIn
                                            0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
     this->fields.charaGraph = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph, 0, v39, v40, v41, v42, v43, v44);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph, 0, v39, v40, v41, v42, v43, v44);
   }
   CombineMenuControl__ClearCombineItemInfo((CombineMenuControl_o *)this, 0);
   itemListGrid = (System_String_o *)this->fields.combineInfoComp;
   if ( !itemListGrid )
 LABEL_21:
-    sub_21FFECC(itemListGrid, v5);
+    sub_2213CDC(itemListGrid, v5);
   CombineInfoComponent__initStatusInfo((CombineInfoComponent_o *)itemListGrid, 1, 0);
 }
 
@@ -524,11 +524,11 @@ void LevelExceedControl__InitLvExceed(LevelExceedControl_o *this, const MethodIn
   __int64 v7; // x1
   UILabel_o *preSelectBaseLb; // x20
 
-  if ( (byte_593C8CF & 1) == 0 )
+  if ( (byte_5974B07 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_9158/*"MSG_PRESELECT_BASE_SVT"*/);
-    byte_593C8CF = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_9171/*"MSG_PRESELECT_BASE_SVT"*/);
+    byte_5974B07 = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 40, 0, 0, 0, 0, 0, 0);
   CombineMenuControl__InitMenuControl((CombineMenuControl_o *)this, 0);
@@ -548,13 +548,13 @@ void LevelExceedControl__InitLvExceed(LevelExceedControl_o *this, const MethodIn
   preSelectBaseLb = this->fields.preSelectBaseLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7);
-  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9158/*"MSG_PRESELECT_BASE_SVT"*/, 0);
+  helpBtn = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9171/*"MSG_PRESELECT_BASE_SVT"*/, 0);
   if ( !preSelectBaseLb
     || (UILabel__set_text(preSelectBaseLb, (System_String_o *)helpBtn, 0), (helpBtn = this->fields.preSelectBaseObj) == 0)
     || (UnityEngine_GameObject__SetActive(helpBtn, 1, 0), (helpBtn = this->fields.baseSelectInfoLb) == 0) )
   {
 LABEL_11:
-    sub_21FFECC(helpBtn, v3);
+    sub_2213CDC(helpBtn, v3);
   }
   UnityEngine_GameObject__SetActive(helpBtn, 1, 0);
 }
@@ -566,18 +566,18 @@ void LevelExceedControl__OnClickCheckLvExceed(LevelExceedControl_o *this, const 
   __int64 v4; // x1
   SetRarityDialogControl_o *exeCombineDlg; // x8
 
-  if ( (byte_593C8DC & 1) == 0 )
+  if ( (byte_5974B14 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3907/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
-    byte_593C8DC = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3912/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
+    byte_5974B14 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3907/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3912/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
   exeCombineDlg = this->fields.exeCombineDlg;
   if ( !exeCombineDlg )
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   SetRarityDialogControl__SetConfirmLvExceed(
     exeCombineDlg,
     this->fields.baseData,
@@ -595,18 +595,18 @@ void LevelExceedControl__OnClickExeLvExceed(LevelExceedControl_o *this, const Me
   __int64 v4; // x1
   SetRarityDialogControl_o *exeCombineDlg; // x8
 
-  if ( (byte_593C8DB & 1) == 0 )
+  if ( (byte_5974B13 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3907/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
-    byte_593C8DB = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3912/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
+    byte_5974B13 = 1;
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3907/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3912/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
   exeCombineDlg = this->fields.exeCombineDlg;
   if ( !exeCombineDlg )
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   SetRarityDialogControl__SetConfirmLvExceed(
     exeCombineDlg,
     this->fields.baseData,
@@ -628,10 +628,10 @@ void LevelExceedControl__OnClickExecute(LevelExceedControl_o *this, const Method
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
   v2 = this;
-  if ( (byte_593C8DD & 1) == 0 )
+  if ( (byte_5974B15 & 1) == 0 )
   {
-    this = (LevelExceedControl_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_593C8DD = 1;
+    this = (LevelExceedControl_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5974B15 = 1;
   }
   baseData = v2->fields.baseData;
   if ( !baseData )
@@ -643,11 +643,11 @@ void LevelExceedControl__OnClickExecute(LevelExceedControl_o *this, const Method
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
   v6 = v7;
-  this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v6, 0);
+  this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v6, 0);
   if ( !exeCombineDlg )
 LABEL_8:
-    sub_21FFECC(this, method);
-  SetRarityDialogControl__SetConfirmLvExceed_37883916(
+    sub_2213CDC(this, method);
+  SetRarityDialogControl__SetConfirmLvExceed_37881508(
     exeCombineDlg,
     (int64_t)this,
     v2->fields.combineItemInfoList,
@@ -686,23 +686,23 @@ void LevelExceedControl__SetAddConsumeItem(
   __int64 v27; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
 
-  if ( (byte_593C8D5 & 1) == 0 )
+  if ( (byte_5974B0D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_Resize_CommonConsumeEntity___);
-    sub_21FFC50(&CommonConsumeEntity_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_SvtCoinMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593C8D5 = 1;
+    sub_2213A60(&Method_System_Array_Resize_CommonConsumeEntity___);
+    sub_2213A60(&CommonConsumeEntity_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_SvtCoinMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_5974B0D = 1;
   }
   if ( svtExceedEnt && *consumeList && svtExceedEnt->fields.objectNum >= 1 )
   {
-    v7 = (CommonConsumeEntity_o *)sub_21FFEBC(CommonConsumeEntity_TypeInfo);
+    v7 = (CommonConsumeEntity_o *)sub_2213CCC(CommonConsumeEntity_TypeInfo);
     CommonConsumeEntity___ctor(v7, 0);
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v8);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SvtCoinMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SvtCoinMaster___);
     baseData = this->fields.baseData;
     if ( !baseData )
       goto LABEL_20;
@@ -713,12 +713,12 @@ void LevelExceedControl__SetAddConsumeItem(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
     *(_QWORD *)&v28.fields.currentCryptoKey = v13;
     *(_QWORD *)&v28.fields.fakeValue = v14;
-    Master_object = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v28, 0);
+    Master_object = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v28, 0);
     if ( !v12
       || (Master_object = DataMasterBase_object__object__int___GetEntity(
                             v12,
                             (int32_t)Master_object,
-                            (const MethodInfo_3EDD388 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__)) == 0
+                            (const MethodInfo_3F10B30 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__GetEntity__)) == 0
       || !v7
       || (objectNum = svtExceedEnt->fields.objectNum,
           v16 = *consumeList,
@@ -728,23 +728,23 @@ void LevelExceedControl__SetAddConsumeItem(
       || (System_Array__Resize_object_(
             (System_Object_array **)consumeList,
             LODWORD(v16->max_length) + 1,
-            (const MethodInfo_3775044 *)Method_System_Array_Resize_CommonConsumeEntity___),
+            (const MethodInfo_37A83F4 *)Method_System_Array_Resize_CommonConsumeEntity___),
           (v17 = *consumeList) == 0) )
     {
 LABEL_20:
-      sub_21FFECC(Master_object, v10);
+      sub_2213CDC(Master_object, v10);
     }
-    v18 = sub_21FFDA4(v7, v17->obj.klass->_1.element_class);
+    v18 = sub_2213BB4(v7, v17->obj.klass->_1.element_class);
     if ( !v18 )
     {
-      v27 = sub_21FFEF0(0, v19);
-      sub_21FFD90(v27, 0);
+      v27 = sub_2213D00(0, v19);
+      sub_2213BA0(v27, 0);
     }
     if ( !LODWORD(v17->max_length) )
-      sub_21FFED4(v18);
+      sub_2213CE4(v18);
     v26 = (char *)v17 + ((__int64)(((unsigned __int64)LODWORD(v17->max_length) << 32) - 0x100000000LL) >> 29);
     *((_QWORD *)v26 + 4) = v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 32), (int32_t)v7, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 32), (int32_t)v7, v20, v21, v22, v23, v24, v25);
   }
 }
 
@@ -768,7 +768,7 @@ void LevelExceedControl__SetBaseSvtCardImg(
   bool v16; // w7
 
   this->fields.baseData = usrSvtData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.baseData,
     (int32_t)usrSvtData,
     (System_String_o *)method,
@@ -783,7 +783,7 @@ void LevelExceedControl__SetBaseSvtCardImg(
                                           usrSvtData,
                                           this->klass->vtable._7_SetCharaGraph.method);
   this->fields.charaGraph = v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.charaGraph, (int32_t)v10, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -864,21 +864,21 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
   UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_593C8D7 & 1) == 0 )
+  if ( (byte_5974B0F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&CombineSvtData_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_LimitCntUpItemComponent___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_LimitCntUpItemComponent__TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    this = (LevelExceedControl_o *)sub_21FFC50(&StringLiteral_9604/*"N0"*/);
-    byte_593C8D7 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&CombineSvtData_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_LimitCntUpItemComponent___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_LimitCntUpItemComponent__TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    this = (LevelExceedControl_o *)sub_2213A60(&StringLiteral_9617/*"N0"*/);
+    byte_5974B0F = 1;
   }
   baseData = v2->fields.baseData;
   *(_QWORD *)lateExp = 0;
@@ -891,23 +891,23 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
   *(_QWORD *)&v72.fields.currentCryptoKey = v4;
   *(_QWORD *)&v72.fields.fakeValue = v5;
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v72, 0);
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v72, 0);
   this = (LevelExceedControl_o *)v2->fields.combineInfoComp;
   if ( !this )
     goto LABEL_60;
   CombineInfoComponent__setCurrentStatusInfo((CombineInfoComponent_o *)this, v2->fields.baseData, 0);
-  v6 = sub_21FFEBC(CombineSvtData_TypeInfo);
+  v6 = sub_2213CCC(CombineSvtData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
     goto LABEL_60;
   v13 = v2->fields.baseData;
   *(_QWORD *)(v6 + 16) = v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)v13, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)v13, v7, v8, v9, v10, v11, v12);
   v14 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v2->fields.baseData;
   if ( !v14 )
     goto LABEL_60;
   *(_DWORD *)(v6 + 24) = v14[25].fields.currentCryptoKey;
-  this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v14[6], 0);
+  this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v14[6], 0);
   v15 = v2->fields.baseData;
   *(_DWORD *)(v6 + 28) = (_DWORD)this;
   if ( !v15 )
@@ -945,10 +945,10 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
   if ( !this )
     goto LABEL_60;
   CombineQpSvtExceed = UserServantEntity__getCombineQpSvtExceed((UserServantEntity_o *)this, 0);
-  v23 = (System_String_o *)StringLiteral_9604/*"N0"*/;
+  v23 = (System_String_o *)StringLiteral_9617/*"N0"*/;
   needQpLb = v2->fields.needQpLb;
   v2->fields.spendQpVal = CombineQpSvtExceed;
-  this = (LevelExceedControl_o *)System_Int32__ToString_76925352((int)v2 + 352, v23, 0);
+  this = (LevelExceedControl_o *)System_Int32__ToString_77138656((int)v2 + 352, v23, 0);
   if ( !needQpLb )
     goto LABEL_60;
   UILabel__set_text(needQpLb, (System_String_o *)this, 0);
@@ -956,20 +956,20 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
   LevelExceedControl__AdjustMaterialItemObjList(v2, ConsumeItemList, v27);
   if ( ConsumeItemList )
   {
-    v28 = sub_21FFD10(int___TypeInfo, LODWORD(ConsumeItemList->max_length));
+    v28 = sub_2213B20(int___TypeInfo, LODWORD(ConsumeItemList->max_length));
     v2->fields.itemIdList = (struct System_Int32_array *)v28;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.itemIdList, v28, v29, v30, v31, v32, v33, v34);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.itemIdList, v28, v29, v30, v31, v32, v33, v34);
   }
   materialItemObjList = v2->fields.materialItemObjList;
   if ( !materialItemObjList )
     goto LABEL_60;
   size = (unsigned int)materialItemObjList->fields._size;
-  v37 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_LimitCntUpItemComponent__TypeInfo);
+  v37 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_LimitCntUpItemComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v37,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_LimitCntUpItemComponent___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_LimitCntUpItemComponent___ctor__);
   v2->fields._itemInfoList_k__BackingField = (struct System_Collections_Generic_List_LimitCntUpItemComponent__o *)v37;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v2->fields._itemInfoList_k__BackingField,
     (int32_t)v37,
     v38,
@@ -989,12 +989,12 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
       this = (LevelExceedControl_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)this,
                                        v44,
-                                       (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                       (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !this )
         break;
       this = (LevelExceedControl_o *)UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)this,
-                                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+                                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
       v45 = this;
       if ( ConsumeItemList && LODWORD(ConsumeItemList->max_length) )
       {
@@ -1008,7 +1008,7 @@ void LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, const MethodI
           break;
         if ( v44 >= LODWORD(itemIdList->max_length) )
 LABEL_61:
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         objectId = v46->fields.objectId;
         num = v46->fields.num;
         itemIdList->m_Items[v44] = objectId;
@@ -1046,7 +1046,7 @@ LABEL_61:
       if ( !v54 )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
       v68 = v69;
-      this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v68, 0);
+      this = (LevelExceedControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v68, 0);
       if ( !v45 )
         break;
       LimitCntUpItemComponent__setLimitUpItemInfo((LimitCntUpItemComponent_o *)v45, (int64_t)this, objectId, num, v55);
@@ -1064,21 +1064,21 @@ LABEL_61:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)v45,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
       }
       else
       {
         v65 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v65 + 32) = v45;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v65 + 32), (int32_t)v45, v56, v57, v58, v59, v60, v61);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v65 + 32), (int32_t)v45, v56, v57, v58, v59, v60, v61);
       }
       CombineMenuControl__AddCombineItemInfo((CombineMenuControl_o *)v2, objectId, num, 0);
       if ( size == ++v44 )
         goto LABEL_46;
     }
 LABEL_60:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_46:
   this = (LevelExceedControl_o *)v2->fields.itemListGrid;
@@ -1142,24 +1142,24 @@ void LevelExceedControl__SetExeBtnState(LevelExceedControl_o *this, const Method
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593C8D9 & 1) == 0 )
+  if ( (byte_5974B11 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_TweenScale___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_593C8D9 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_TweenScale___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_5974B11 = 1;
   }
   combineBtnBg = (UnityEngine_Component_o *)this->fields.combineBtnBg;
   if ( !combineBtnBg )
     goto LABEL_12;
   combineBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               combineBtnBg,
-                                              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !this->fields.combineTxtImg )
     goto LABEL_12;
   v4 = (UIWidget_o *)combineBtnBg;
   combineBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this->fields.combineTxtImg,
-                                              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
+                                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_TweenScale___);
   IsExeCombine_k__BackingField = this->fields._IsExeCombine_k__BackingField;
   v6 = (UnityEngine_Behaviour_o *)combineBtnBg;
   if ( IsExeCombine_k__BackingField )
@@ -1179,7 +1179,7 @@ void LevelExceedControl__SetExeBtnState(LevelExceedControl_o *this, const Method
       }
     }
 LABEL_12:
-    sub_21FFECC(combineBtnBg, method);
+    sub_2213CDC(combineBtnBg, method);
   }
   if ( !v4 )
     goto LABEL_12;
@@ -1201,20 +1201,20 @@ void LevelExceedControl__SetHaveQpIno(LevelExceedControl_o *this, const MethodIn
   UILabel_o *haveQpLb; // x20
   System_String_o *v6; // x1
 
-  if ( (byte_593C8D1 & 1) == 0 )
+  if ( (byte_5974B09 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9604/*"N0"*/);
-    byte_593C8D1 = 1;
+    sub_2213A60(&StringLiteral_9617/*"N0"*/);
+    byte_5974B09 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame
     || (haveQpLb = this->fields.haveQpLb,
-        v6 = (System_String_o *)StringLiteral_9604/*"N0"*/,
+        v6 = (System_String_o *)StringLiteral_9617/*"N0"*/,
         this->fields.haveQpVal = *((_QWORD *)SelfUserGame + 12),
-        SelfUserGame = System_Int64__ToString_76930560((int64_t)&this->fields.haveQpVal, v6, 0),
+        SelfUserGame = System_Int64__ToString_77143864((int64_t)&this->fields.haveQpVal, v6, 0),
         !haveQpLb) )
   {
-    sub_21FFECC(SelfUserGame, v4);
+    sub_2213CDC(SelfUserGame, v4);
   }
   UILabel__set_text(haveQpLb, (System_String_o *)SelfUserGame, 0);
 }
@@ -1235,26 +1235,26 @@ void LevelExceedControl__SetStateInfoMsg(LevelExceedControl_o *this, int32_t sta
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = state;
-  if ( (byte_593C8DE & 1) == 0 )
+  if ( (byte_5974B16 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_9154/*"MSG_MAX_LVEXCEED"*/);
-    sub_21FFC50(&StringLiteral_6009/*"EXE_SUMMON_COMBINE_TXT"*/);
-    sub_21FFC50(&StringLiteral_12679/*"SHORT_ITEM_INFO_MSG"*/);
-    sub_21FFC50(&StringLiteral_12680/*"SHORT_QP_INFO_MSG"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_7758/*"INFO_MSG_LVEXCEED"*/);
-    byte_593C8DE = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_9167/*"MSG_MAX_LVEXCEED"*/);
+    sub_2213A60(&StringLiteral_6021/*"EXE_SUMMON_COMBINE_TXT"*/);
+    sub_2213A60(&StringLiteral_12705/*"SHORT_ITEM_INFO_MSG"*/);
+    sub_2213A60(&StringLiteral_12706/*"SHORT_QP_INFO_MSG"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_7770/*"INFO_MSG_LVEXCEED"*/);
+    byte_5974B16 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
   if ( !detailInfoLb
     || (detailInfoLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     detailInfoLb,
-                                                    (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___)) == 0 )
+                                                    (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___)) == 0 )
   {
 LABEL_26:
-    sub_21FFECC(detailInfoLb, *(_QWORD *)&state);
+    sub_2213CDC(detailInfoLb, *(_QWORD *)&state);
   }
   v10.fields.r = 0.0;
   v10.fields.a = 1.0;
@@ -1274,7 +1274,7 @@ LABEL_26:
         v12.fields.a = 1.0;
         UIWidget__set_color(v6, v12, 0);
         v8 = LocalizationManager_TypeInfo;
-        v9 = &StringLiteral_9154/*"MSG_MAX_LVEXCEED"*/;
+        v9 = &StringLiteral_9167/*"MSG_MAX_LVEXCEED"*/;
         if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           goto LABEL_9;
         goto LABEL_8;
@@ -1287,7 +1287,7 @@ LABEL_26:
         v13.fields.a = 1.0;
         UIWidget__set_color(v6, v13, 0);
         v8 = LocalizationManager_TypeInfo;
-        v9 = &StringLiteral_12679/*"SHORT_ITEM_INFO_MSG"*/;
+        v9 = &StringLiteral_12705/*"SHORT_ITEM_INFO_MSG"*/;
         if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           goto LABEL_9;
         goto LABEL_8;
@@ -1300,14 +1300,14 @@ LABEL_26:
         v11.fields.a = 1.0;
         UIWidget__set_color(v6, v11, 0);
         v8 = LocalizationManager_TypeInfo;
-        v9 = &StringLiteral_12680/*"SHORT_QP_INFO_MSG"*/;
+        v9 = &StringLiteral_12706/*"SHORT_QP_INFO_MSG"*/;
         if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           goto LABEL_9;
         goto LABEL_8;
       }
     }
     v8 = LocalizationManager_TypeInfo;
-    v9 = &StringLiteral_6009/*"EXE_SUMMON_COMBINE_TXT"*/;
+    v9 = &StringLiteral_6021/*"EXE_SUMMON_COMBINE_TXT"*/;
     if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       goto LABEL_9;
     goto LABEL_8;
@@ -1315,7 +1315,7 @@ LABEL_26:
   if ( !v3 )
   {
     v8 = LocalizationManager_TypeInfo;
-    v9 = &StringLiteral_7758/*"INFO_MSG_LVEXCEED"*/;
+    v9 = &StringLiteral_7770/*"INFO_MSG_LVEXCEED"*/;
     if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     {
 LABEL_9:
@@ -1347,7 +1347,7 @@ void LevelExceedControl__ShowItemListInfo(LevelExceedControl_o *this, const Meth
     || (UnityEngine_GameObject__SetActive(preSelectBaseObj, !this->fields.isSelectBase, 0),
         (preSelectBaseObj = this->fields.itemListInfo) == 0) )
   {
-    sub_21FFECC(preSelectBaseObj, method);
+    sub_2213CDC(preSelectBaseObj, method);
   }
   UnityEngine_GameObject__SetActive(preSelectBaseObj, 1, 0);
   if ( this->fields.isSelectBase )
@@ -1376,7 +1376,7 @@ void LevelExceedControl__set_itemInfoList(
   bool v7; // w7
 
   this->fields._itemInfoList_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._itemInfoList_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

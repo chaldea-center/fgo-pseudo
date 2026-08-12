@@ -10,7 +10,7 @@ int32_t BattleFieldEffectComponent__getAmbientColors(BattleFieldEffectComponent_
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ambientlist->max_length;
 }
 
@@ -33,15 +33,15 @@ System_String_array *BattleFieldEffectComponent__getFieldEffects(
   bool v13; // w7
 
   v2 = this;
-  if ( (byte_593B2D4 & 1) == 0 )
+  if ( (byte_59734C3 & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_21FFC50(&string___TypeInfo);
-    byte_593B2D4 = 1;
+    this = (BattleFieldEffectComponent_o *)sub_2213A60(&string___TypeInfo);
+    byte_59734C3 = 1;
   }
   fieldeffect = v2->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_13;
-  this = (BattleFieldEffectComponent_o *)sub_21FFD10(string___TypeInfo, LODWORD(fieldeffect->max_length));
+  this = (BattleFieldEffectComponent_o *)sub_2213B20(string___TypeInfo, LODWORD(fieldeffect->max_length));
   if ( !this )
     goto LABEL_13;
   v4 = this;
@@ -61,14 +61,14 @@ System_String_array *BattleFieldEffectComponent__getFieldEffects(
       this = (BattleFieldEffectComponent_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
       if ( v5 >= LODWORD(v4->fields.m_CancellationTokenSource) )
 LABEL_14:
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       *(BattleFieldEffectComponent_c **)((char *)&v4->klass + i) = (BattleFieldEffectComponent_c *)this;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)v4 + i), (int32_t)this, v8, v9, v10, v11, v12, v13);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v4 + i), (int32_t)this, v8, v9, v10, v11, v12, v13);
       if ( (signed int)++v5 >= SLODWORD(v4->fields.m_CancellationTokenSource) )
         return (System_String_array *)v4;
     }
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   return (System_String_array *)v4;
 }
@@ -84,9 +84,9 @@ void BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_21FFECC(this, *(_QWORD *)&index);
+    sub_2213CDC(this, *(_QWORD *)&index);
   if ( LODWORD(ambientlist->max_length) <= index )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   UnityEngine_RenderSettings__set_ambientLight(ambientlist->m_Items[index], 0);
 }
 
@@ -110,10 +110,10 @@ void BattleFieldEffectComponent__setFieldEffect(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_593B2D5 & 1) == 0 )
+  if ( (byte_59734C4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593B2D5 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59734C4 = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -124,13 +124,13 @@ void BattleFieldEffectComponent__setFieldEffect(
     v8 = (UnityEngine_Object_o *)this->fields.viewobject;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-    UnityEngine_Object__Destroy_83246496(v8, 0);
+    UnityEngine_Object__Destroy_83459800(v8, 0);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     if ( SLODWORD(fieldeffect->max_length) > index )
     {
       Object = BaseMonoBehaviour__createObject(
@@ -140,7 +140,7 @@ void BattleFieldEffectComponent__setFieldEffect(
                  0,
                  0);
       this->fields.viewobject = Object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.viewobject,
         (int32_t)Object,
         v11,

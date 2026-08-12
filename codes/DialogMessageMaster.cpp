@@ -16,16 +16,16 @@ void DialogMessageMaster___cctor(const MethodInfo *method)
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59384D7 & 1) == 0 )
+  if ( (byte_5970687 & 1) == 0 )
   {
-    sub_21FFC50(&DialogMessageMaster_TypeInfo);
-    sub_21FFC50(&StringLiteral_19410/*"dialogMessage_{0}_{1}"*/);
-    sub_21FFC50(&StringLiteral_24179/*"remindDialogMessage_{0}_{1}"*/);
-    byte_59384D7 = 1;
+    sub_2213A60(&DialogMessageMaster_TypeInfo);
+    sub_2213A60(&StringLiteral_19452/*"dialogMessage_{0}_{1}"*/);
+    sub_2213A60(&StringLiteral_24227/*"remindDialogMessage_{0}_{1}"*/);
+    byte_5970687 = 1;
   }
-  v7 = StringLiteral_19410/*"dialogMessage_{0}_{1}"*/;
-  DialogMessageMaster_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_19410/*"dialogMessage_{0}_{1}"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_19452/*"dialogMessage_{0}_{1}"*/;
+  DialogMessageMaster_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_19452/*"dialogMessage_{0}_{1}"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)DialogMessageMaster_TypeInfo->static_fields,
     v7,
     v1,
@@ -34,24 +34,24 @@ void DialogMessageMaster___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_24179/*"remindDialogMessage_{0}_{1}"*/;
+  v8 = StringLiteral_24227/*"remindDialogMessage_{0}_{1}"*/;
   static_fields = DialogMessageMaster_TypeInfo->static_fields;
-  static_fields->SAVE_REMIND_KEY = (struct System_String_o *)StringLiteral_24179/*"remindDialogMessage_{0}_{1}"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->SAVE_REMIND_KEY, v8, v10, v11, v12, v13, v14, v15);
+  static_fields->SAVE_REMIND_KEY = (struct System_String_o *)StringLiteral_24227/*"remindDialogMessage_{0}_{1}"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->SAVE_REMIND_KEY, v8, v10, v11, v12, v13, v14, v15);
 }
 
 
 void DialogMessageMaster___ctor(DialogMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384D1 & 1) == 0 )
+  if ( (byte_5970681 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
-    byte_59384D1 = 1;
+    sub_2213A60(&Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
+    byte_5970681 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     236,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_DialogMessageMaster__DialogMessageEntity__int___ctor__);
 }
 
 
@@ -97,28 +97,28 @@ void DialogMessageMaster__DeleteContinueData(DialogMessageMaster_o *this, const 
   System_Collections_Generic_IEnumerator_T__o **v40; // [xsp+20h] [xbp-50h]
   System_Collections_Generic_IEnumerator_T__o *v41; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_59384D2 & 1) == 0 )
+  if ( (byte_5970682 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
-    sub_21FFC50(&DialogMessageMaster_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_59384D2 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
+    sub_2213A60(&DialogMessageMaster_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_5970682 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   v41 = 0;
   if ( !list )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
   v41 = Enumerator;
   v39 = 0;
   v40 = &v41;
   if ( !Enumerator )
 LABEL_24:
-    sub_21FFECC(Enumerator, v5);
+    sub_2213CDC(Enumerator, v5);
   v6 = Enumerator;
   while ( 1 )
   {
@@ -139,7 +139,7 @@ LABEL_24:
     else
     {
 LABEL_10:
-      v10 = sub_2237E2C(v6, System_Collections_IEnumerator_TypeInfo, 0);
+      v10 = sub_224BC3C(v6, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v11 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v10)(
             v6,
@@ -148,7 +148,7 @@ LABEL_10:
       break;
     v13 = v41;
     if ( !v41 )
-      sub_21FFECC(v11, v12);
+      sub_2213CDC(v11, v12);
     v14 = v41->klass;
     v15 = *(unsigned __int16 *)&v41->klass->_2.rank;
     if ( *(_WORD *)&v41->klass->_2.rank )
@@ -166,7 +166,7 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v17 = sub_2237E2C(v41, System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo, 0);
+      v17 = sub_224BC3C(v41, System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo, 0);
     }
     v19 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                       v13,
@@ -178,21 +178,21 @@ LABEL_18:
       v20 = DialogMessageMaster_TypeInfo;
     }
     if ( !v19 )
-      sub_21FFECC(v20, v18);
+      sub_2213CDC(v20, v18);
     SAVE_KEY = v20->static_fields->SAVE_KEY;
     v38 = v19[4];
-    v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v38);
+    v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v38);
     v37 = v19[17];
-    v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v37);
-    v24 = System_String__Format_75484576(SAVE_KEY, v22, v23, 0);
+    v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v37);
+    v24 = System_String__Format_75697880(SAVE_KEY, v22, v23, 0);
     UnityEngine_PlayerPrefs__DeleteKey(v24, 0);
     static_fields = DialogMessageMaster_TypeInfo->static_fields;
     v36 = v19[4];
     SAVE_REMIND_KEY = static_fields->SAVE_REMIND_KEY;
-    v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v36);
+    v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v36);
     v35 = v19[19];
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v35);
-    v29 = System_String__Format_75484576(SAVE_REMIND_KEY, v27, v28, 0);
+    v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v35);
+    v29 = System_String__Format_75697880(SAVE_REMIND_KEY, v27, v28, 0);
     UnityEngine_PlayerPrefs__DeleteKey(v29, 0);
     v6 = v41;
     if ( !v41 )
@@ -218,7 +218,7 @@ LABEL_18:
     else
     {
 LABEL_30:
-      v34 = sub_2237E2C(v41, System_IDisposable_TypeInfo, 0);
+      v34 = sub_224BC3C(v41, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(v30, *(_QWORD *)(v34 + 8));
   }
@@ -286,42 +286,42 @@ DialogMessageEntity_array *DialogMessageMaster__GetDialogList(
   bool v58; // w7
   System_Collections_Generic_IEnumerator_T__o *v60; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_59384D3 & 1) == 0 )
+  if ( (byte_5970683 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
-    sub_21FFC50(&System_Comparison_DialogMessageEntity__TypeInfo);
-    sub_21FFC50(&DialogMessageEntity_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_DialogMessageMaster___c__GetDialogList_b__6_0__);
-    sub_21FFC50(&DialogMessageMaster___c_TypeInfo);
-    byte_59384D3 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
+    sub_2213A60(&System_Comparison_DialogMessageEntity__TypeInfo);
+    sub_2213A60(&DialogMessageEntity_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_DialogMessageEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_DialogMessageMaster___c__GetDialogList_b__6_0__);
+    sub_2213A60(&DialogMessageMaster___c_TypeInfo);
+    byte_5970683 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_DialogMessageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_DialogMessageEntity___ctor__);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6);
   Time = NetworkManager__getTime(0);
-  v8 = (DialogMessageEntity_o *)sub_21FFEBC(DialogMessageEntity_TypeInfo);
+  v8 = (DialogMessageEntity_o *)sub_2213CCC(DialogMessageEntity_TypeInfo);
   DialogMessageEntity___ctor(v8, v9);
   list = this->fields.list;
   if ( !list )
     goto LABEL_52;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_DialogMessageEntity__GetEnumerator__);
   v60 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(0, v13);
+    sub_2213CDC(0, v13);
   for ( i = Enumerator; ; i = v60 )
   {
     klass = i->klass;
@@ -341,7 +341,7 @@ DialogMessageEntity_array *DialogMessageMaster__GetDialogList(
     else
     {
 LABEL_12:
-      v18 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v18 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             i,
@@ -349,7 +349,7 @@ LABEL_12:
     if ( (v19 & 1) == 0 )
       break;
     if ( !v60 )
-      sub_21FFECC(v19, v10);
+      sub_2213CDC(v19, v10);
     v20 = v60->klass;
     v21 = *(unsigned __int16 *)&v60->klass->_2.rank;
     if ( *(_WORD *)&v60->klass->_2.rank )
@@ -367,7 +367,7 @@ LABEL_12:
     else
     {
 LABEL_20:
-      v23 = sub_2237E2C(v60, System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo, 0);
+      v23 = sub_224BC3C(v60, System_Collections_Generic_IEnumerator_DialogMessageEntity__TypeInfo, 0);
     }
     v24 = (DialogMessageEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
                                      v60,
@@ -388,7 +388,7 @@ LABEL_20:
                 ++v5->fields._version,
                 !items) )
           {
-            sub_21FFECC(IsOpenCondition, v34);
+            sub_2213CDC(IsOpenCondition, v34);
           }
           size = v5->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -396,14 +396,14 @@ LABEL_20:
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               (Il2CppObject *)v26,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
           }
           else
           {
             v44 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v44[4] = (Il2CppClass *)v26;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v44 + 4), (int32_t)v26, v35, v36, v37, v38, v39, v40);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v44 + 4), (int32_t)v26, v35, v36, v37, v38, v39, v40);
           }
         }
       }
@@ -428,7 +428,7 @@ LABEL_20:
     else
     {
 LABEL_39:
-      v48 = sub_2237E2C(v60, System_IDisposable_TypeInfo, 0);
+      v48 = sub_224BC3C(v60, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v48)(v60, *(_QWORD *)(v48 + 8));
   }
@@ -448,22 +448,22 @@ LABEL_39:
       static_fields = DialogMessageMaster___c_TypeInfo->static_fields;
     }
     v51 = (Il2CppObject *)static_fields->__9;
-    _9__6_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_DialogMessageEntity__TypeInfo);
+    _9__6_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_DialogMessageEntity__TypeInfo);
     System_Comparison_object____ctor(_9__6_0, v51, Method_DialogMessageMaster___c__GetDialogList_b__6_0__, 0);
     v52 = DialogMessageMaster___c_TypeInfo->static_fields;
     v52->__9__6_0 = (struct System_Comparison_DialogMessageEntity__o *)_9__6_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v52->__9__6_0, (int32_t)_9__6_0, v53, v54, v55, v56, v57, v58);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v52->__9__6_0, (int32_t)_9__6_0, v53, v54, v55, v56, v57, v58);
   }
   if ( !v5 )
 LABEL_52:
-    sub_21FFECC(list, v10);
-  System_Collections_Generic_List_object___Sort_71636404(
+    sub_2213CDC(list, v10);
+  System_Collections_Generic_List_object___Sort_71849708(
     v5,
     _9__6_0,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_DialogMessageEntity__Sort__);
   return (DialogMessageEntity_array *)System_Collections_Generic_List_object___ToArray(
                                         v5,
-                                        (const MethodInfo_445164C *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
+                                        (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_DialogMessageEntity__ToArray__);
 }
 
 
@@ -525,15 +525,15 @@ bool DialogMessageMaster__IsSavedAsSeen(
   int32_t id; // [xsp+Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_59384D6 & 1) == 0 )
+  if ( (byte_5970686 & 1) == 0 )
   {
-    sub_21FFC50(&DialogMessageMaster_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
-    this = (DialogMessageMaster_o *)sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59384D6 = 1;
+    sub_2213A60(&DialogMessageMaster_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Contains__);
+    this = (DialogMessageMaster_o *)sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5970686 = 1;
   }
   if ( !entity )
-    sub_21FFECC(this, entity);
+    sub_2213CDC(this, entity);
   frequencyType = entity->fields.frequencyType;
   if ( frequencyType == 7 )
   {
@@ -545,10 +545,10 @@ bool DialogMessageMaster__IsSavedAsSeen(
     }
     SAVE_KEY = v12->static_fields->SAVE_KEY;
     id = entity->fields.id;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
     openedAt = entity->fields.openedAt;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-    v16 = System_String__Format_75484576(SAVE_KEY, v14, v15, 0);
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+    v16 = System_String__Format_75697880(SAVE_KEY, v14, v15, 0);
     Int = UnityEngine_PlayerPrefs__GetInt(v16, 0, 0);
     v19 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
     if ( Int < 1 )
@@ -571,10 +571,10 @@ bool DialogMessageMaster__IsSavedAsSeen(
       }
       SAVE_REMIND_KEY = v32->static_fields->SAVE_REMIND_KEY;
       id = entity->fields.id;
-      v34 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+      v34 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
       openedAt = entity->fields.remindAt;
-      v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-      v36 = System_String__Format_75484576(SAVE_REMIND_KEY, v34, v35, 0);
+      v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+      v36 = System_String__Format_75697880(SAVE_REMIND_KEY, v34, v35, 0);
       if ( UnityEngine_PlayerPrefs__GetInt(v36, 0, 0) > 0 )
         goto LABEL_36;
       v38 = DialogMessageMaster_TypeInfo;
@@ -585,8 +585,8 @@ bool DialogMessageMaster__IsSavedAsSeen(
       }
       v39 = v38->static_fields->SAVE_REMIND_KEY;
       id = entity->fields.id;
-      v40 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
-      v41 = qword_594C070;
+      v40 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
+      v41 = qword_5984348;
       p_openedAt = &openedAt;
       openedAt = entity->fields.remindAt;
     }
@@ -610,10 +610,10 @@ bool DialogMessageMaster__IsSavedAsSeen(
       }
       v24 = v23->static_fields->SAVE_REMIND_KEY;
       id = entity->fields.id;
-      v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+      v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
       openedAt = entity->fields.remindAt;
-      v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-      v27 = System_String__Format_75484576(v24, v25, v26, 0);
+      v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+      v27 = System_String__Format_75697880(v24, v25, v26, 0);
       if ( UnityEngine_PlayerPrefs__GetInt(v27, 0, 0) > 0 )
       {
 LABEL_22:
@@ -628,21 +628,21 @@ LABEL_22:
       }
       v44 = v43->static_fields->SAVE_KEY;
       id = entity->fields.id;
-      v45 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+      v45 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
       openedAt = entity->fields.openedAt;
-      v46 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-      v47 = System_String__Format_75484576(v44, v45, v46, 0);
+      v46 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+      v47 = System_String__Format_75697880(v44, v45, v46, 0);
       UnityEngine_PlayerPrefs__DeleteKey(v47, 0);
       static_fields = DialogMessageMaster_TypeInfo->static_fields;
       v53 = entity->fields.id;
       v39 = static_fields->SAVE_REMIND_KEY;
-      v40 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v53);
-      v41 = qword_594C070;
+      v40 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v53);
+      v41 = qword_5984348;
       p_openedAt = &remindAt;
       remindAt = entity->fields.remindAt;
     }
     v49 = (Il2CppObject *)j_il2cpp_value_box_0(v41, p_openedAt);
-    v50 = System_String__Format_75484576(v39, v40, v49, 0);
+    v50 = System_String__Format_75697880(v39, v40, v49, 0);
     UnityEngine_PlayerPrefs__SetInt(v50, 1, 0);
 LABEL_36:
     LOBYTE(seenList) = 0;
@@ -660,10 +660,10 @@ LABEL_36:
     }
     v7 = v6->static_fields->SAVE_KEY;
     id = entity->fields.id;
-    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
     openedAt = entity->fields.openedAt;
-    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-    v10 = System_String__Format_75484576(v7, v8, v9, 0);
+    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+    v10 = System_String__Format_75697880(v7, v8, v9, 0);
     if ( UnityEngine_PlayerPrefs__GetInt(v10, 0, 0) < 1 )
       goto LABEL_36;
     goto LABEL_22;
@@ -673,7 +673,7 @@ LABEL_36:
     LOBYTE(seenList) = System_Collections_Generic_List_int___Contains(
                          seenList,
                          entity->fields.id,
-                         (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__);
+                         (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__);
   return (char)seenList;
 }
 
@@ -708,13 +708,13 @@ void DialogMessageMaster__SaveAsSeen(
 
   v3 = entity;
   v4 = this;
-  if ( (byte_59384D5 & 1) == 0 )
+  if ( (byte_5970685 & 1) == 0 )
   {
-    sub_21FFC50(&DialogMessageMaster_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    this = (DialogMessageMaster_o *)sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    byte_59384D5 = 1;
+    sub_2213A60(&DialogMessageMaster_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    this = (DialogMessageMaster_o *)sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    byte_5970685 = 1;
   }
   if ( !v3 )
     goto LABEL_17;
@@ -731,12 +731,12 @@ void DialogMessageMaster__SaveAsSeen(
     p_seenList = (MissionNaviTransitionBoardItem_o *)&v4->fields.seenList;
     this = seenList;
     if ( seenList
-      || (v13 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo),
+      || (v13 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo),
           System_Collections_Generic_List_int____ctor(
             v13,
-            (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__),
+            (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__),
           p_seenList->klass = (MissionNaviTransitionBoardItem_c *)v13,
-          sub_21FFBF4(p_seenList, (int32_t)v13, v14, v15, v16, v17, v18, v19),
+          sub_2213A04(p_seenList, (int32_t)v13, v14, v15, v16, v17, v18, v19),
           (this = (DialogMessageMaster_o *)p_seenList->klass) != 0) )
     {
       v20 = *(_QWORD *)&this->fields._MasterKind_k__BackingField;
@@ -751,7 +751,7 @@ void DialogMessageMaster__SaveAsSeen(
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)this,
             (int32_t)entity,
-            *(const MethodInfo_4433138 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_4467270 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
@@ -762,7 +762,7 @@ void DialogMessageMaster__SaveAsSeen(
       }
     }
 LABEL_17:
-    sub_21FFECC(this, entity);
+    sub_2213CDC(this, entity);
   }
 LABEL_7:
   v6 = DialogMessageMaster_TypeInfo;
@@ -773,10 +773,10 @@ LABEL_7:
   }
   SAVE_KEY = v6->static_fields->SAVE_KEY;
   id = v3->fields.id;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &id);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &id);
   openedAt = v3->fields.openedAt;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &openedAt);
-  v10 = System_String__Format_75484576(SAVE_KEY, v8, v9, 0);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &openedAt);
+  v10 = System_String__Format_75697880(SAVE_KEY, v8, v9, 0);
   UnityEngine_PlayerPrefs__SetInt(v10, 1, 0);
 }
 
@@ -835,25 +835,25 @@ void DialogMessageMaster__ShowChain(
   System_Action_o *v35; // x21
   const MethodInfo *v36; // x2
 
-  if ( (byte_59384D4 & 1) == 0 )
+  if ( (byte_5970684 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DialogMessageMaster___c__DisplayClass8_0__ShowChain_b__0__);
-    sub_21FFC50(&DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
-    byte_59384D4 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DialogMessageMaster___c__DisplayClass8_0__ShowChain_b__0__);
+    sub_2213A60(&DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
+    byte_5970684 = 1;
   }
-  v9 = sub_21FFEBC(DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
+  v9 = sub_2213CCC(DialogMessageMaster___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_11;
   *(_QWORD *)(v9 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = entitys;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)entitys, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)entitys, v18, v19, v20, v21, v22, v23);
   *(_QWORD *)(v9 + 40) = callBack;
   v24 = v9 + 40;
   *(_DWORD *)(v9 + 32) = idx;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 40), (int32_t)callBack, v25, v26, v27, v28, v29, v30);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 40), (int32_t)callBack, v25, v26, v27, v28, v29, v30);
   v31 = *(_QWORD *)(v9 + 24);
   if ( !v31 )
     goto LABEL_11;
@@ -862,9 +862,9 @@ void DialogMessageMaster__ShowChain(
   if ( (int)v32 < v33 )
   {
     if ( (unsigned int)v32 >= v33 )
-      sub_21FFED4(v10);
+      sub_2213CE4(v10);
     v34 = *(DialogMessageEntity_o **)(v31 + 8 * v32 + 32);
-    v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v35, (Il2CppObject *)v9, Method_DialogMessageMaster___c__DisplayClass8_0__ShowChain_b__0__, 0);
     if ( v34 )
     {
@@ -872,7 +872,7 @@ void DialogMessageMaster__ShowChain(
       return;
     }
 LABEL_11:
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   if ( !*(_QWORD *)v24 )
     goto LABEL_11;
@@ -892,15 +892,15 @@ void DialogMessageMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59384D8 & 1) == 0 )
+  if ( (byte_5970688 & 1) == 0 )
   {
-    sub_21FFC50(&DialogMessageMaster___c_TypeInfo);
-    byte_59384D8 = 1;
+    sub_2213A60(&DialogMessageMaster___c_TypeInfo);
+    byte_5970688 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(DialogMessageMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(DialogMessageMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   DialogMessageMaster___c_TypeInfo->static_fields->__9 = (struct DialogMessageMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)DialogMessageMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -925,7 +925,7 @@ int32_t DialogMessageMaster___c___GetDialogList_b__6_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -954,14 +954,14 @@ void DialogMessageMaster___c__DisplayClass8_0___ShowChain_b__0(
   idx = this->fields.idx;
   v5 = this;
   if ( (unsigned int)idx >= LODWORD(entitys->max_length) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   this = (DialogMessageMaster___c__DisplayClass8_0_o *)this->fields.__4__this;
   if ( !this
     || (DialogMessageMaster__SaveAsSeen((DialogMessageMaster_o *)this, entitys->m_Items[idx], v2),
         (this = (DialogMessageMaster___c__DisplayClass8_0_o *)v5->fields.__4__this) == 0) )
   {
 LABEL_6:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   DialogMessageMaster__ShowChain(
     (DialogMessageMaster_o *)this,

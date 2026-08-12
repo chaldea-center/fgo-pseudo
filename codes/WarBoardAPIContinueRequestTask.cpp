@@ -6,7 +6,7 @@ void WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_45133660(
+  WarBoardAPIRequestTask___ctor_45157924(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -30,14 +30,14 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
   bool v13; // w7
   int32_t id; // w0
 
-  if ( (byte_593622E & 1) == 0 )
+  if ( (byte_596E388 & 1) == 0 )
   {
-    sub_21FFC50(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_593622E = 1;
+    sub_2213A60(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E388 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -45,7 +45,7 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v5);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+               (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_11;
   v7 = (WarBoardContinueRequest_o *)Instance;
@@ -59,9 +59,9 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
       goto LABEL_10;
     }
 LABEL_11:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
 LABEL_10:
   this->fields.request = (struct RequestBase_o *)v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }

@@ -13,7 +13,7 @@ void UIScaleSame__SetCamera(UIScaleSame_o *this, UnityEngine_Camera_o *cam, cons
   bool v7; // w7
 
   this->fields.mCamera = cam;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mCamera,
     (int32_t)cam,
     (System_String_o *)method,
@@ -35,10 +35,10 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v9; // x1
 
-  if ( (byte_5934F51 & 1) == 0 )
+  if ( (byte_596D081 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934F51 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D081 = 1;
   }
   mCamera = (UnityEngine_Object_o *)this->fields.mCamera;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -47,9 +47,9 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   {
     v6 = this->fields.mCamera;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     orthographicSize = UnityEngine_Camera__get_orthographicSize(v6, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    GameObjectExtensions__SetLocalScale_42878188(gameObject, orthographicSize, orthographicSize, v9);
+    GameObjectExtensions__SetLocalScale_42893584(gameObject, orthographicSize, orthographicSize, v9);
   }
 }

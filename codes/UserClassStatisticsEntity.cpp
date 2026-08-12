@@ -1,13 +1,13 @@
 void UserClassStatisticsEntity___ctor(UserClassStatisticsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939AD3 & 1) == 0 )
+  if ( (byte_5971BB6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5939AD3 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971BB6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *UserClassStatisticsEntity__CreatePK(
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_5939AD2 & 1) == 0 )
+  if ( (byte_5971BB5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_5939AD2 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_5971BB5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            type,
-           (const MethodInfo_38215B8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_3854A80 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 

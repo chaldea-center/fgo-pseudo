@@ -1,9 +1,9 @@
 void UIButtonKeys___ctor(UIButtonKeys_o *this, const MethodInfo *method)
 {
-  if ( (byte_593CCBC & 1) == 0 )
+  if ( (byte_5974F93 & 1) == 0 )
   {
-    sub_21FFC50(&UIKeyNavigation_TypeInfo);
-    byte_593CCBC = 1;
+    sub_2213A60(&UIKeyNavigation_TypeInfo);
+    byte_5974F93 = 1;
   }
   if ( !*(&UIKeyNavigation_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UIKeyNavigation_TypeInfo, method);
@@ -111,11 +111,11 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
   bool v89; // w7
   __int64 v90; // x1
 
-  if ( (byte_593CCBB & 1) == 0 )
+  if ( (byte_5974F92 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CCBB = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974F92 = 1;
   }
   onClick = (UnityEngine_Object_o *)this->fields.onClick;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -133,7 +133,7 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       gameObject = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onClick = gameObject;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.onClick,
         (int32_t)gameObject,
         v9,
@@ -143,7 +143,7 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         v13,
         v14);
       *p_selectOnClick = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnClick, 0, v15, v16, v17, v18, v19, v20);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnClick, 0, v15, v16, v17, v18, v19, v20);
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v21);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -165,9 +165,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v25 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onLeft = v25;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onLeft, (int32_t)v25, v26, v27, v28, v29, v30, v31);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onLeft, (int32_t)v25, v26, v27, v28, v29, v30, v31);
       *p_selectOnLeft = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnLeft, 0, v32, v33, v34, v35, v36, v37);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnLeft, 0, v32, v33, v34, v35, v36, v37);
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v38);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -189,9 +189,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v42 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onRight = v42;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onRight, (int32_t)v42, v43, v44, v45, v46, v47, v48);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onRight, (int32_t)v42, v43, v44, v45, v46, v47, v48);
       *p_selectOnRight = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnRight, 0, v49, v50, v51, v52, v53, v54);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnRight, 0, v49, v50, v51, v52, v53, v54);
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v55);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -213,9 +213,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v59 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onUp = v59;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onUp, (int32_t)v59, v60, v61, v62, v63, v64, v65);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onUp, (int32_t)v59, v60, v61, v62, v63, v64, v65);
       *p_selectOnUp = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnUp, 0, v66, v67, v68, v69, v70, v71);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnUp, 0, v66, v67, v68, v69, v70, v71);
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v72);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -237,7 +237,7 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
       {
         v77 = UnityEngine_Component__get_gameObject(v7, 0);
         this->fields.onDown = v77;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.onDown,
           (int32_t)v77,
           v78,
@@ -247,14 +247,14 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
           v82,
           v83);
         *p_selectOnDown = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnDown, 0, v84, v85, v86, v87, v88, v89);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.selectOnDown, 0, v84, v85, v86, v87, v88, v89);
         if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v90);
         NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
         return;
       }
 LABEL_54:
-      sub_21FFECC(v7, v4);
+      sub_2213CDC(v7, v4);
     }
   }
 }

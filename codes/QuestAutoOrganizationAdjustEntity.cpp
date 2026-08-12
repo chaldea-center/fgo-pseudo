@@ -1,13 +1,13 @@
 void QuestAutoOrganizationAdjustEntity___ctor(QuestAutoOrganizationAdjustEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938CB4 & 1) == 0 )
+  if ( (byte_5970E73 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5938CB4 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5970E73 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -50,7 +50,7 @@ float QuestAutoOrganizationAdjustEntity__GetAdjustRatePerThousand(
 }
 
 
-float QuestAutoOrganizationAdjustEntity__GetAdjustRate_49416112(
+float QuestAutoOrganizationAdjustEntity__GetAdjustRate_49476276(
         QuestAutoOrganizationAdjustEntity_o *this,
         System_Int32_array *individualities,
         const MethodInfo *method)
@@ -58,15 +58,15 @@ float QuestAutoOrganizationAdjustEntity__GetAdjustRate_49416112(
   bool v5; // w0
   float result; // s0
 
-  if ( (byte_5938CB3 & 1) == 0 )
+  if ( (byte_5970E72 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_5938CB3 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_5970E72 = 1;
   }
   v5 = System_Linq_Enumerable__Contains_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)individualities,
          this->fields.individuality,
-         (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+         (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
   result = 1.0;
   if ( v5 )
     return (float)this->fields.adjustRate / 1000.0;
@@ -87,30 +87,30 @@ bool QuestAutoOrganizationAdjustEntity__IsMatchingIndividualityBySvtId(
   __int64 v11; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5938CB2 & 1) == 0 )
+  if ( (byte_5970E71 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    byte_5938CB2 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    byte_5970E71 = 1;
   }
   v9 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v9 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&svtId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           svtId,
-          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
 LABEL_11:
-    sub_21FFECC(Master_object, v11);
+    sub_2213CDC(Master_object, v11);
   return ServantEntity__IsIndividuality(
            (ServantEntity_o *)entity,
            limitCount,

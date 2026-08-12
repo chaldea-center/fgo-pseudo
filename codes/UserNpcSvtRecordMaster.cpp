@@ -1,14 +1,14 @@
 void UserNpcSvtRecordMaster___ctor(UserNpcSvtRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939603 & 1) == 0 )
+  if ( (byte_59717C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
-    byte_5939603 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    byte_59717C4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     419,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserNpcSvtRecordEntity_o *UserNpcSvtRecordMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5939604 & 1) == 0 )
+  if ( (byte_59717C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
-    byte_5939604 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+    byte_59717C5 = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserNpcSvtRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+                                       (const MethodInfo_3F157EC *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
 }
 
 
@@ -46,18 +46,18 @@ System_Int32_array *UserNpcSvtRecordMaster__GetTdPlayed(
   __int64 v8; // x1
   UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5939606 & 1) == 0 )
+  if ( (byte_59717C7 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5939606 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59717C7 = 1;
   }
   entity = 0;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&svtId);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v6 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -69,7 +69,7 @@ System_Int32_array *UserNpcSvtRecordMaster__GetTdPlayed(
   if ( !v7 )
     return 0;
   if ( !entity )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   return entity->fields.tdPlayed;
 }
 
@@ -83,15 +83,15 @@ bool UserNpcSvtRecordMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5939605 & 1) == 0 )
+  if ( (byte_59717C6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
-    byte_5939605 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+    byte_59717C6 = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
 }

@@ -12,18 +12,18 @@ System_Int32_array *PartyOneOtherTargetAggregator__GetCandidate(
   System_Func_int__bool__o *v4; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
 
-  if ( (byte_593BC3E & 1) == 0 )
+  if ( (byte_5973E4A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_int___);
-    sub_21FFC50(&System_Func_int__bool__TypeInfo);
-    sub_21FFC50(&Method_PartyOneOtherTargetAggregator__GetCandidate_b__0_0__);
-    byte_593BC3E = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_int___);
+    sub_2213A60(&System_Func_int__bool__TypeInfo);
+    sub_2213A60(&Method_PartyOneOtherTargetAggregator__GetCandidate_b__0_0__);
+    byte_5973E4A = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)PartyAllFieldTargetAggregator__GetCandidate(
                                                                      (PartyAllFieldTargetAggregator_o *)this,
                                                                      method);
-  v4 = (System_Func_int__bool__o *)sub_21FFEBC(System_Func_int__bool__TypeInfo);
+  v4 = (System_Func_int__bool__o *)sub_2213CCC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v4,
     (Il2CppObject *)this,
@@ -32,10 +32,10 @@ System_Int32_array *PartyOneOtherTargetAggregator__GetCandidate(
   v5 = System_Linq_Enumerable__Where_int_(
          Candidate,
          (System_Func_TSource__bool__o *)v4,
-         (const MethodInfo_386F9A8 *)Method_System_Linq_Enumerable_Where_int___);
+         (const MethodInfo_38A2E70 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v5,
-           (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -49,6 +49,6 @@ bool PartyOneOtherTargetAggregator___GetCandidate_b__0_0(
 
   args = this->fields.args;
   if ( !args )
-    sub_21FFECC(this, *(_QWORD *)&x);
+    sub_2213CDC(this, *(_QWORD *)&x);
   return args->fields._ptTargetId_k__BackingField != x;
 }

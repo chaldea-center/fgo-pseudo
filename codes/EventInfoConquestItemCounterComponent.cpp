@@ -16,7 +16,7 @@ void EventInfoConquestItemCounterComponent__PlayAnim(
   if ( this->fields.addProductNum )
   {
     v3 = EventInfoConquestItemCounterComponent__anim(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v3, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v3, 0);
   }
 }
 
@@ -33,10 +33,10 @@ void EventInfoConquestItemCounterComponent__SetItem(
   __int64 v9; // x1
   struct UISprite_o *v10; // x0
 
-  if ( (byte_5939912 & 1) == 0 )
+  if ( (byte_5971C85 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    byte_5939912 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    byte_5971C85 = 1;
   }
   this->fields._itemId_k__BackingField = itemId;
   if ( spriteData )
@@ -48,7 +48,7 @@ void EventInfoConquestItemCounterComponent__SetItem(
     AtlasManager__SetEventUI(baseSprite, spriteName, 0);
     v10 = this->fields.baseSprite;
     if ( !v10 )
-      sub_21FFECC(0, v9);
+      sub_2213CDC(0, v9);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v10->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v10,
       v10->klass->vtable._33_MakePixelPerfect.method);
@@ -74,27 +74,27 @@ void EventInfoConquestItemCounterComponent__SetLabel(
   int v17; // [xsp+4h] [xbp-4Ch] BYREF
   int64_t v18; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5939913 & 1) == 0 )
+  if ( (byte_5971C86 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5756/*"EVENT_CONQUEST_ITEM_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5759/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/);
-    byte_5939913 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5768/*"EVENT_CONQUEST_ITEM_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5771/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/);
+    byte_5971C86 = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, itemNum);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5756/*"EVENT_CONQUEST_ITEM_FORMAT"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5768/*"EVENT_CONQUEST_ITEM_FORMAT"*/, 0);
   v18 = itemNum;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v18);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v18);
   v12 = System_String__Format(v10, v11, 0);
   if ( !itemNumLabel )
     goto LABEL_10;
   UILabel__set_text(itemNumLabel, v12, 0);
   productNumLabel = this->fields.productNumLabel;
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5759/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/, 0);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5771/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/, 0);
   v17 = productNum - addNum;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v17);
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v17);
   v12 = System_String__Format(v15, v16, 0);
   if ( !productNumLabel
     || (UILabel__set_text(productNumLabel, v12, 0), (v12 = (System_String_o *)this->fields.itemNumLabel) == 0)
@@ -102,7 +102,7 @@ void EventInfoConquestItemCounterComponent__SetLabel(
         (v12 = (System_String_o *)this->fields.productNumLabel) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   }
   UILabel__SetCondensedScale((UILabel_o *)v12, this->fields.numLabelMaxWidth, 0, 0);
 }
@@ -147,13 +147,13 @@ void EventInfoConquestItemCounterComponent__Start(
   __int64 v9; // x1
   UILabel_o *v10; // x20
 
-  if ( (byte_5939911 & 1) == 0 )
+  if ( (byte_5971C84 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5760/*"EVENT_CONQUEST_PRODUCT_NUM"*/);
-    sub_21FFC50(&StringLiteral_5757/*"EVENT_CONQUEST_ITEM_NUM"*/);
-    byte_5939911 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5772/*"EVENT_CONQUEST_PRODUCT_NUM"*/);
+    sub_2213A60(&StringLiteral_5769/*"EVENT_CONQUEST_ITEM_NUM"*/);
+    byte_5971C84 = 1;
   }
   itemNumTitleLabel = (UnityEngine_Object_o *)this->fields.itemNumTitleLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -163,7 +163,7 @@ void EventInfoConquestItemCounterComponent__Start(
     v5 = this->fields.itemNumTitleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5757/*"EVENT_CONQUEST_ITEM_NUM"*/, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5769/*"EVENT_CONQUEST_ITEM_NUM"*/, 0);
     if ( !v5 )
       goto LABEL_20;
     UILabel__set_text(v5, v6, 0);
@@ -180,7 +180,7 @@ void EventInfoConquestItemCounterComponent__Start(
     v10 = this->fields.productNumTitleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5760/*"EVENT_CONQUEST_PRODUCT_NUM"*/, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5772/*"EVENT_CONQUEST_PRODUCT_NUM"*/, 0);
     if ( v10 )
     {
       UILabel__set_text(v10, v6, 0);
@@ -192,7 +192,7 @@ void EventInfoConquestItemCounterComponent__Start(
       }
     }
 LABEL_20:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
 LABEL_19:
   ((void (__fastcall *)(EventInfoConquestItemCounterComponent_o *, int64_t, _QWORD, _QWORD, const MethodInfo *))this->klass->vtable._5_SetLabel.methodPtr)(
@@ -216,16 +216,16 @@ System_Collections_IEnumerator_o *EventInfoConquestItemCounterComponent__anim(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5939914 & 1) == 0 )
+  if ( (byte_5971C87 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoConquestItemCounterComponent__anim_d__21_TypeInfo);
-    byte_5939914 = 1;
+    sub_2213A60(&EventInfoConquestItemCounterComponent__anim_d__21_TypeInfo);
+    byte_5971C87 = 1;
   }
-  v3 = sub_21FFEBC(EventInfoConquestItemCounterComponent__anim_d__21_TypeInfo);
+  v3 = sub_2213CCC(EventInfoConquestItemCounterComponent__anim_d__21_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -283,16 +283,15 @@ bool EventInfoConquestItemCounterComponent__anim_d__21__MoveNext(
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
-  bool result; // w0
   EventInfoConquestItemCounterComponent_c *klass; // x8
   int64_t itemNum; // x1
   __int64 productNum; // x2
 
   v2 = this;
-  if ( (byte_5939915 & 1) == 0 )
+  if ( (byte_5971C88 & 1) == 0 )
   {
-    this = (EventInfoConquestItemCounterComponent__anim_d__21_o *)sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    byte_5939915 = 1;
+    this = (EventInfoConquestItemCounterComponent__anim_d__21_o *)sub_2213A60(&UnityEngine_Application_TypeInfo);
+    byte_5971C88 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -320,7 +319,7 @@ bool EventInfoConquestItemCounterComponent__anim_d__21__MoveNext(
   {
     if ( !_4__this )
 LABEL_19:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     klass = _4__this->klass;
     itemNum = _4__this->fields.itemNum;
     productNum = (unsigned int)_4__this->fields.productNum;
@@ -348,10 +347,9 @@ LABEL_19:
     _4__this->klass->vtable._5_SetLabel.method);
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-  sub_21FFBF4(p__2__current, 0, v10, v11, v12, v13, v14, v15);
-  result = 1;
+  sub_2213A04(p__2__current, 0, v10, v11, v12, v13, v14, v15);
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return result;
+  return 1;
 }
 
 
@@ -371,11 +369,11 @@ void __noreturn EventInfoConquestItemCounterComponent__anim_d__21__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_EventInfoConquestItemCounterComponent__anim_d__21_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_EventInfoConquestItemCounterComponent__anim_d__21_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

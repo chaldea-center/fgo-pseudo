@@ -35,7 +35,7 @@ UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEnt
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0);
     p_userGameEntity->klass = (MissionNaviTransitionBoardItem_c *)userGameEntity;
-    sub_21FFBF4(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
+    sub_2213A04(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

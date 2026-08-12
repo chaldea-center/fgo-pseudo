@@ -14,16 +14,16 @@ void ClassBoardLockReleaseConditionDialog__EndClose(
   __int64 v3; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_593C49F & 1) == 0 )
+  if ( (byte_59746D7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C49F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59746D7 = 1;
   }
   ActionExtensions__Call(this->fields.closeFunc, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
 }
 
 
@@ -42,7 +42,7 @@ void ClassBoardLockReleaseConditionDialog__Init(ClassBoardLockReleaseConditionDi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   ClassBoardBaseDialog__Init((ClassBoardBaseDialog_o *)this, 0);
 }
@@ -56,23 +56,23 @@ void ClassBoardLockReleaseConditionDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_593C4A0 & 1) == 0 )
+  if ( (byte_59746D8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ClassBoardLockReleaseConditionDialog_EndClose__);
-    sub_21FFC50(&Method_ClassBoardLockReleaseConditionDialog_OnClickClose__);
-    byte_593C4A0 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ClassBoardLockReleaseConditionDialog_EndClose__);
+    sub_2213A60(&Method_ClassBoardLockReleaseConditionDialog_OnClickClose__);
+    byte_59746D8 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ClassBoardLockReleaseConditionDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassBoardLockReleaseConditionDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ClassBoardLockReleaseConditionDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ClassBoardLockReleaseConditionDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.isButtonEnable = 0;
     ClassBoardBaseDialog__SetDisableClickItemIcon((ClassBoardBaseDialog_o *)this, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_ClassBoardLockReleaseConditionDialog_EndClose__, 0);
     ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v5, 0);
   }
@@ -85,15 +85,15 @@ void ClassBoardLockReleaseConditionDialog__OnClickItemInfoListWindow(
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_593C4A1 & 1) == 0 )
+  if ( (byte_59746D9 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ClassBoardLockReleaseConditionDialog__OnClickItemInfoListWindow_b__11_0__);
-    byte_593C4A1 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ClassBoardLockReleaseConditionDialog__OnClickItemInfoListWindow_b__11_0__);
+    byte_59746D9 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
-    v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v3,
       (Il2CppObject *)this,
@@ -129,36 +129,35 @@ void ClassBoardLockReleaseConditionDialog__Open(
   ClassBoardLockModel_o *v22; // x23
   __int64 v23; // x1
   UILabel_o *titleLabel; // x22
-  __int128 v25; // x0 OVERLAPPED
-  int v26; // w2
   IClassBoardSquareModel_c *klass; // x8
-  __int64 v28; // x9
+  __int64 v26; // x9
   IClassBoardSquareModel_c **p_offset; // x10
-  __int64 v30; // x0
-  System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *v31; // x0
-  __int64 v32; // x1
+  __int64 v28; // x0
+  System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *v29; // x0
+  __int64 v30; // x1
   UILabel_o *explanationLabel; // x21
-  int v34; // w8
-  __int64 *v35; // x8
-  __int64 v36; // x1
+  int v32; // w8
+  __int64 *v33; // x8
+  __int64 v34; // x1
   UILabel_o *closeBtnLabel; // x20
-  System_Action_o *v38; // x20
+  System_Action_o *v36; // x20
+  ClassBoardCondData_o CondData; // 0:kr00_12.12
 
-  if ( (byte_593C49E & 1) == 0 )
+  if ( (byte_59746D6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&ClassBoardLockModel_TypeInfo);
-    sub_21FFC50(&Method_ClassBoardLockReleaseConditionDialog_EndOpen__);
-    sub_21FFC50(&IClassBoardSquareModel_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3542/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3541/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/);
-    sub_21FFC50(&StringLiteral_3539/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3540/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/);
-    byte_593C49E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&ClassBoardLockModel_TypeInfo);
+    sub_2213A60(&Method_ClassBoardLockReleaseConditionDialog_EndOpen__);
+    sub_2213A60(&IClassBoardSquareModel_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3547/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_3546/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/);
+    sub_2213A60(&StringLiteral_3544/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3545/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/);
+    byte_59746D6 = 1;
   }
   this->fields.classBoardSquare = square;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.classBoardSquare,
     (int32_t)square,
     (System_String_o *)isOpened,
@@ -184,7 +183,7 @@ void ClassBoardLockReleaseConditionDialog__Open(
     v22 = 0;
   }
   this->fields.closeFunc = decideFunc;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeFunc,
     (int32_t)decideFunc,
     v14,
@@ -196,75 +195,70 @@ void ClassBoardLockReleaseConditionDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v23);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3542/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/, 0);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3547/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_33;
   UILabel__set_text(titleLabel, v12, 0);
   if ( !v22 )
     goto LABEL_33;
-  *(ClassBoardCondData_o *)&v25 = ClassBoardLockModel__get_CondData(v22, 0);
-  v26 = DWORD2(v25);
-  *((_QWORD *)&v25 + 1) = v25;
-  ClassBoardBaseDialog__SetUpLockReleaseCondition(
-    (ClassBoardBaseDialog_o *)this,
-    *(ClassBoardCondData_o *)((char *)&v25 + 8),
-    0);
+  CondData = ClassBoardLockModel__get_CondData(v22, 0);
+  ClassBoardBaseDialog__SetUpLockReleaseCondition((ClassBoardBaseDialog_o *)this, CondData, 0);
   if ( !SquareModel_k__BackingField )
     goto LABEL_33;
   klass = SquareModel_k__BackingField->klass;
-  v28 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+  v26 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
   {
     p_offset = (IClassBoardSquareModel_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != IClassBoardSquareModel_TypeInfo )
     {
-      --v28;
+      --v26;
       p_offset += 2;
-      if ( !v28 )
+      if ( !v26 )
         goto LABEL_19;
     }
-    v30 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 6];
+    v28 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 6];
   }
   else
   {
 LABEL_19:
-    v30 = sub_2237E2C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
+    v28 = sub_224BC3C(SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 6);
   }
-  v31 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v30)(
+  v29 = (System_Collections_Generic_IReadOnlyCollection_IClassBoardItemModel__o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD))v28)(
                                                                                     SquareModel_k__BackingField,
-                                                                                    *(_QWORD *)(v30 + 8));
-  ClassBoardBaseDialog__SetUpItemList((ClassBoardBaseDialog_o *)this, v31, 0);
+                                                                                    *(_QWORD *)(v28 + 8));
+  ClassBoardBaseDialog__SetUpItemList((ClassBoardBaseDialog_o *)this, v29, 0);
   explanationLabel = this->fields.explanationLabel;
-  v34 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+  v32 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   if ( isOpened )
   {
-    if ( !v34 )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32);
-    v35 = &StringLiteral_3540/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/;
+    if ( !v32 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v30);
+    v33 = &StringLiteral_3545/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/;
   }
   else
   {
-    if ( !v34 )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32);
-    v35 = &StringLiteral_3541/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/;
+    if ( !v32 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v30);
+    v33 = &StringLiteral_3546/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/;
   }
-  v12 = LocalizationManager__Get((System_String_o *)*v35, 0);
+  v12 = LocalizationManager__Get((System_String_o *)*v33, 0);
   if ( !explanationLabel )
     goto LABEL_33;
   UILabel__set_text(explanationLabel, v12, 0);
   closeBtnLabel = this->fields.closeBtnLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v36);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3539/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/, 0);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3544/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/, 0);
   if ( !closeBtnLabel )
 LABEL_33:
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   UILabel__set_text(closeBtnLabel, v12, 0);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0);
-  v38 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
-  System_Action___ctor(v38, (Il2CppObject *)this, Method_ClassBoardLockReleaseConditionDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v38, 0, 0, 0);
+  v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v36, (Il2CppObject *)this, Method_ClassBoardLockReleaseConditionDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v36, 0, 0, 0);
 }
 
 
@@ -280,10 +274,10 @@ System_String_o *ClassBoardLockReleaseConditionDialog__get_closeBtnPath(
         ClassBoardLockReleaseConditionDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593C4A2 & 1) == 0 )
+  if ( (byte_59746DA & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16228/*"Window/CloseBtn"*/);
-    byte_593C4A2 = 1;
+    sub_2213A60(&StringLiteral_16260/*"Window/CloseBtn"*/);
+    byte_59746DA = 1;
   }
-  return (System_String_o *)StringLiteral_16228/*"Window/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_16260/*"Window/CloseBtn"*/;
 }

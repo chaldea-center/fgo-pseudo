@@ -7,14 +7,14 @@ void NguiTouchEffectManager__Drag(UnityEngine_Vector2_o v, const MethodInfo *met
 
   y = v.fields.y;
   x = v.fields.x;
-  if ( (byte_593CC63 & 1) == 0 )
+  if ( (byte_5974F3A & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC63 = 1;
+    method = (const MethodInfo *)sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F3A = 1;
   }
   dragAction = NguiTouchEffectManager_TypeInfo->static_fields->dragAction;
   if ( !dragAction )
-    sub_21FFECC(method, v2);
+    sub_2213CDC(method, v2);
   ((void (__fastcall *)(intptr_t, intptr_t, float, float))dragAction->fields.invoke_impl)(
     dragAction->fields.method_code,
     dragAction->fields.method,
@@ -32,14 +32,14 @@ void NguiTouchEffectManager__Press(UnityEngine_Vector2_o p, const MethodInfo *me
 
   y = p.fields.y;
   x = p.fields.x;
-  if ( (byte_593CC61 & 1) == 0 )
+  if ( (byte_5974F38 & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC61 = 1;
+    method = (const MethodInfo *)sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F38 = 1;
   }
   pressAction = NguiTouchEffectManager_TypeInfo->static_fields->pressAction;
   if ( !pressAction )
-    sub_21FFECC(method, v2);
+    sub_2213CDC(method, v2);
   ((void (__fastcall *)(intptr_t, intptr_t, float, float))pressAction->fields.invoke_impl)(
     pressAction->fields.method_code,
     pressAction->fields.method,
@@ -58,14 +58,14 @@ void NguiTouchEffectManager__RegisterDragFunc(System_Action_Vector2__o *dragActi
   bool v7; // w7
   struct NguiTouchEffectManager_StaticFields *static_fields; // x0
 
-  if ( (byte_593CC60 & 1) == 0 )
+  if ( (byte_5974F37 & 1) == 0 )
   {
-    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC60 = 1;
+    sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F37 = 1;
   }
   static_fields = NguiTouchEffectManager_TypeInfo->static_fields;
   static_fields->dragAction = dragAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->dragAction,
     (int32_t)dragAction,
     v2,
@@ -86,13 +86,13 @@ void NguiTouchEffectManager__RegisterPressFunc(System_Action_Vector2__o *pressAc
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593CC5E & 1) == 0 )
+  if ( (byte_5974F35 & 1) == 0 )
   {
-    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC5E = 1;
+    sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F35 = 1;
   }
   NguiTouchEffectManager_TypeInfo->static_fields->pressAction = pressAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)NguiTouchEffectManager_TypeInfo->static_fields,
     (int32_t)pressAction,
     v2,
@@ -114,14 +114,14 @@ void NguiTouchEffectManager__RegisterUnPressFunc(System_Action_o *unPressAction,
   bool v7; // w7
   struct NguiTouchEffectManager_StaticFields *static_fields; // x0
 
-  if ( (byte_593CC5F & 1) == 0 )
+  if ( (byte_5974F36 & 1) == 0 )
   {
-    sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC5F = 1;
+    sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F36 = 1;
   }
   static_fields = NguiTouchEffectManager_TypeInfo->static_fields;
   static_fields->unPressAction = unPressAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->unPressAction,
     (int32_t)unPressAction,
     v2,
@@ -138,14 +138,14 @@ void NguiTouchEffectManager__UnPress(const MethodInfo *method)
   __int64 v1; // x1
   struct System_Action_o *unPressAction; // x8
 
-  if ( (byte_593CC62 & 1) == 0 )
+  if ( (byte_5974F39 & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_21FFC50(&NguiTouchEffectManager_TypeInfo);
-    byte_593CC62 = 1;
+    method = (const MethodInfo *)sub_2213A60(&NguiTouchEffectManager_TypeInfo);
+    byte_5974F39 = 1;
   }
   unPressAction = NguiTouchEffectManager_TypeInfo->static_fields->unPressAction;
   if ( !unPressAction )
-    sub_21FFECC(method, v1);
+    sub_2213CDC(method, v1);
   ((void (__fastcall *)(intptr_t, intptr_t))unPressAction->fields.invoke_impl)(
     unPressAction->fields.method_code,
     unPressAction->fields.method);

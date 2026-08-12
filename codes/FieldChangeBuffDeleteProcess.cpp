@@ -19,19 +19,19 @@ void FieldChangeBuffDeleteProcess__Exec(
   PlayFieldMotionBattleLogicTask_o *v12; // x20
   const MethodInfo *v13; // x4
 
-  if ( (byte_593B32E & 1) == 0 )
+  if ( (byte_597351D & 1) == 0 )
   {
-    sub_21FFC50(&PlayFieldMotionBattleLogicTask_TypeInfo);
-    sub_21FFC50(&UpdateAllViewBattleLogicTask_TypeInfo);
-    sub_21FFC50(&StringLiteral_9128/*"MOTION_UPDATE_FIELD"*/);
-    byte_593B32E = 1;
+    sub_2213A60(&PlayFieldMotionBattleLogicTask_TypeInfo);
+    sub_2213A60(&UpdateAllViewBattleLogicTask_TypeInfo);
+    sub_2213A60(&StringLiteral_9141/*"MOTION_UPDATE_FIELD"*/);
+    byte_597351D = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
   if ( !FieldEnvData_k__BackingField )
     goto LABEL_11;
   BattleFieldEnvironmentData__RemoveRelateBuff(FieldEnvData_k__BackingField, buff, (const MethodInfo *)isAddAfterTask);
   v8 = this->fields._FieldEnvData_k__BackingField;
-  v9 = (UpdateAllViewBattleLogicTask_o *)sub_21FFEBC(UpdateAllViewBattleLogicTask_TypeInfo);
+  v9 = (UpdateAllViewBattleLogicTask_o *)sub_2213CCC(UpdateAllViewBattleLogicTask_TypeInfo);
   UpdateAllViewBattleLogicTask___ctor(v9, 0);
   if ( !v8 )
     goto LABEL_11;
@@ -44,15 +44,15 @@ void FieldChangeBuffDeleteProcess__Exec(
     if ( BattleFieldEnvironmentData__IsNeedChangeField(FieldEnvData_k__BackingField, (const MethodInfo *)buff) )
     {
       v11 = this->fields._FieldEnvData_k__BackingField;
-      v12 = (PlayFieldMotionBattleLogicTask_o *)sub_21FFEBC(PlayFieldMotionBattleLogicTask_TypeInfo);
-      PlayFieldMotionBattleLogicTask___ctor(v12, (System_String_o *)StringLiteral_9128/*"MOTION_UPDATE_FIELD"*/, 0, 0);
+      v12 = (PlayFieldMotionBattleLogicTask_o *)sub_2213CCC(PlayFieldMotionBattleLogicTask_TypeInfo);
+      PlayFieldMotionBattleLogicTask___ctor(v12, (System_String_o *)StringLiteral_9141/*"MOTION_UPDATE_FIELD"*/, 0, 0);
       if ( v11 )
       {
         BattleFieldEnvironmentData__AddRemoveProcTask(v11, (BattleLogicTask_o *)v12, 1, 1, v13);
         return;
       }
 LABEL_11:
-      sub_21FFECC(FieldEnvData_k__BackingField, buff);
+      sub_2213CDC(FieldEnvData_k__BackingField, buff);
     }
   }
 }

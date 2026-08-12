@@ -2,10 +2,10 @@ void ResultReplayIntroDialog___ctor(ResultReplayIntroDialog_o *this, const Metho
 {
   __int64 v2; // x2
 
-  if ( (byte_593291E & 1) == 0 )
+  if ( (byte_596AA1E & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593291E = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596AA1E = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -17,13 +17,13 @@ void ResultReplayIntroDialog__Close(ResultReplayIntroDialog_o *this, const Metho
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_593291C & 1) == 0 )
+  if ( (byte_596AA1C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ResultReplayIntroDialog_EndClose__);
-    byte_593291C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ResultReplayIntroDialog_EndClose__);
+    byte_596AA1C = 1;
   }
-  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ResultReplayIntroDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0);
 }
@@ -46,7 +46,7 @@ void ResultReplayIntroDialog__EndClose(ResultReplayIntroDialog_o *this, const Me
   ResultReplayIntroDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   onCloseCallback = this->fields.onCloseCallback;
   p_onCloseCallback = (MissionNaviTransitionBoardItem_o *)&this->fields.onCloseCallback;
@@ -54,7 +54,7 @@ void ResultReplayIntroDialog__EndClose(ResultReplayIntroDialog_o *this, const Me
   if ( onCloseCallback )
   {
     p_onCloseCallback->klass = 0;
-    sub_21FFBF4(p_onCloseCallback, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04(p_onCloseCallback, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -76,11 +76,11 @@ void ResultReplayIntroDialog__Init(ResultReplayIntroDialog_o *this, const Method
   UILabel_o *v14; // x20
   System_String_o *cancelTextCode; // x21
 
-  if ( (byte_5932919 & 1) == 0 )
+  if ( (byte_596AA19 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932919 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AA19 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -114,7 +114,7 @@ void ResultReplayIntroDialog__Init(ResultReplayIntroDialog_o *this, const Method
       goto LABEL_19;
     }
 LABEL_20:
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   }
 LABEL_19:
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -127,15 +127,15 @@ void ResultReplayIntroDialog__OnClickClose(ResultReplayIntroDialog_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_593291B & 1) == 0 )
+  if ( (byte_596AA1B & 1) == 0 )
   {
-    sub_21FFC50(&Method_ResultReplayIntroDialog_OnClickClose__);
-    byte_593291B = 1;
+    sub_2213A60(&Method_ResultReplayIntroDialog_OnClickClose__);
+    byte_596AA1B = 1;
   }
   v3 = Method_ResultReplayIntroDialog_OnClickClose__;
   if ( (*((_BYTE *)Method_ResultReplayIntroDialog_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_ResultReplayIntroDialog_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_ResultReplayIntroDialog_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   ResultReplayIntroDialog__Close(this, v5);
 }
@@ -165,15 +165,15 @@ void ResultReplayIntroDialog__Open(
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_593291A & 1) == 0 )
+  if ( (byte_596AA1A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ResultReplayIntroDialog___c__Open_b__7_0__);
-    sub_21FFC50(&ResultReplayIntroDialog___c_TypeInfo);
-    byte_593291A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ResultReplayIntroDialog___c__Open_b__7_0__);
+    sub_2213A60(&ResultReplayIntroDialog___c_TypeInfo);
+    byte_596AA1A = 1;
   }
   this->fields.onCloseCallback = onCloseCallback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onCloseCallback,
     (int32_t)onCloseCallback,
     (System_String_o *)method,
@@ -198,11 +198,11 @@ void ResultReplayIntroDialog__Open(
       static_fields = ResultReplayIntroDialog___c_TypeInfo->static_fields;
     }
     v15 = (Il2CppObject *)static_fields->__9;
-    _9__7_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__7_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__7_0, v15, Method_ResultReplayIntroDialog___c__Open_b__7_0__, 0);
     v16 = ResultReplayIntroDialog___c_TypeInfo->static_fields;
     v16->__9__7_0 = _9__7_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v16->__9__7_0, (int32_t)_9__7_0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16->__9__7_0, (int32_t)_9__7_0, v17, v18, v19, v20, v21, v22);
   }
   BaseDialog__Open((BaseDialog_o *)this, _9__7_0, 0, 0, 0);
 }
@@ -217,10 +217,10 @@ UnityEngine_GameObject_o *ResultReplayIntroDialog__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_593291D & 1) == 0 )
+  if ( (byte_596AA1D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593291D = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AA1D = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -229,7 +229,7 @@ UnityEngine_GameObject_o *ResultReplayIntroDialog__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
@@ -244,15 +244,15 @@ void ResultReplayIntroDialog___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593291F & 1) == 0 )
+  if ( (byte_596AA1F & 1) == 0 )
   {
-    sub_21FFC50(&ResultReplayIntroDialog___c_TypeInfo);
-    byte_593291F = 1;
+    sub_2213A60(&ResultReplayIntroDialog___c_TypeInfo);
+    byte_596AA1F = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ResultReplayIntroDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ResultReplayIntroDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ResultReplayIntroDialog___c_TypeInfo->static_fields->__9 = (struct ResultReplayIntroDialog___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ResultReplayIntroDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

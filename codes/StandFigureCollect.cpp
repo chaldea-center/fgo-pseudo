@@ -19,9 +19,9 @@ void StandFigureCollect___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._entity_k__BackingField = entity;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)entity, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)entity, v7, v8, v9, v10, v11, v12);
   this->fields._standFigure_k__BackingField = standFigure;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._standFigure_k__BackingField,
     (int32_t)standFigure,
     v13,
@@ -57,7 +57,7 @@ void StandFigureCollect__set_entity(
   bool v7; // w7
 
   this->fields._entity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -78,7 +78,7 @@ void StandFigureCollect__set_standFigure(StandFigureCollect_o *this, UIStandFigu
   bool v7; // w7
 
   this->fields._standFigure_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._standFigure_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

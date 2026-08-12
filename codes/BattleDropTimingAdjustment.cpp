@@ -13,20 +13,20 @@ BattleDropTimingAdjustment_FixedDropTimingData_o *BattleDropTimingAdjustment__Ge
   struct System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__o *giftIdToTimingDataMap; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593B22B & 1) == 0 )
+  if ( (byte_597341A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TryGetValue__);
-    byte_593B22B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TryGetValue__);
+    byte_597341A = 1;
   }
   giftIdToTimingDataMap = this->fields.giftIdToTimingDataMap;
   value = 0;
   if ( !giftIdToTimingDataMap )
-    sub_21FFECC(0, *(_QWORD *)&giftId);
+    sub_2213CDC(0, *(_QWORD *)&giftId);
   System_Collections_Generic_Dictionary_int__object___TryGetValue(
     (System_Collections_Generic_Dictionary_int__object__o *)giftIdToTimingDataMap,
     giftId,
     &value,
-    (const MethodInfo_3F6A7E4 *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TryGetValue__);
+    (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TryGetValue__);
   return (BattleDropTimingAdjustment_FixedDropTimingData_o *)value;
 }
 
@@ -148,33 +148,33 @@ void BattleDropTimingAdjustment__Initialize(
   __int64 v117; // x8
   unsigned __int64 v118; // x25
 
-  if ( (byte_593B22A & 1) == 0 )
+  if ( (byte_5973419 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropTimingAdjustmentSetting_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__set_Item__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Sum_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
-    sub_21FFC50(&BattleDropTimingAdjustment_FixedDropTimingData_TypeInfo);
-    sub_21FFC50(&System_Func_int__int__TypeInfo);
-    sub_21FFC50(&System_Func_IGrouping_int__DropInfo___int__TypeInfo);
-    sub_21FFC50(&System_Func_DropInfo__int__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_0__);
-    sub_21FFC50(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_1__);
-    sub_21FFC50(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_2__);
-    sub_21FFC50(&Method_BattleDropTimingAdjustment___c__DisplayClass4_0__Initialize_b__3__);
-    sub_21FFC50(&BattleDropTimingAdjustment___c__DisplayClass4_0_TypeInfo);
-    sub_21FFC50(&BattleDropTimingAdjustment___c_TypeInfo);
-    byte_593B22A = 1;
+    sub_2213A60(&BattleDropTimingAdjustmentSetting_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__set_Item__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Sum_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
+    sub_2213A60(&BattleDropTimingAdjustment_FixedDropTimingData_TypeInfo);
+    sub_2213A60(&System_Func_int__int__TypeInfo);
+    sub_2213A60(&System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+    sub_2213A60(&System_Func_DropInfo__int__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_0__);
+    sub_2213A60(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_1__);
+    sub_2213A60(&Method_BattleDropTimingAdjustment___c__Initialize_b__4_2__);
+    sub_2213A60(&Method_BattleDropTimingAdjustment___c__DisplayClass4_0__Initialize_b__3__);
+    sub_2213A60(&BattleDropTimingAdjustment___c__DisplayClass4_0_TypeInfo);
+    sub_2213A60(&BattleDropTimingAdjustment___c_TypeInfo);
+    byte_5973419 = 1;
   }
-  v7 = sub_21FFEBC(BattleDropTimingAdjustment___c__DisplayClass4_0_TypeInfo);
+  v7 = sub_2213CCC(BattleDropTimingAdjustment___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
@@ -198,13 +198,13 @@ void BattleDropTimingAdjustment__Initialize(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0, 0) )
     {
-      v12 = (System_Collections_Generic_Dictionary_int__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
+      v12 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
       System_Collections_Generic_Dictionary_int__object____ctor(
         v12,
-        (const MethodInfo_3F68354 *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
+        (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
       this->fields.giftIdToTimingDataMap = (struct System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__o *)v12;
       p_giftIdToTimingDataMap = &this->fields.giftIdToTimingDataMap;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.giftIdToTimingDataMap,
         (int32_t)v12,
         v14,
@@ -229,16 +229,16 @@ void BattleDropTimingAdjustment__Initialize(
           static_fields = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         }
         v24 = (Il2CppObject *)static_fields->__9;
-        _9__4_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_DropInfo__int__TypeInfo);
+        _9__4_0 = (System_Func_object__int__o *)sub_2213CCC(System_Func_DropInfo__int__TypeInfo);
         System_Func_object__int____ctor(_9__4_0, v24, Method_BattleDropTimingAdjustment___c__Initialize_b__4_0__, 0);
         v25 = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         v25->__9__4_0 = (struct System_Func_DropInfo__int__o *)_9__4_0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->__9__4_0, (int32_t)_9__4_0, v26, v27, v28, v29, v30, v31);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->__9__4_0, (int32_t)_9__4_0, v26, v27, v28, v29, v30, v31);
       }
       v32 = System_Linq_Enumerable__GroupBy_object__int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)dropInfoArray,
               (System_Func_TSource__TKey__o *)_9__4_0,
-              (const MethodInfo_384FD10 *)Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
+              (const MethodInfo_38831D8 *)Method_System_Linq_Enumerable_GroupBy_DropInfo__int___);
       v34 = BattleDropTimingAdjustment___c_TypeInfo;
       v35 = (System_Collections_Generic_IEnumerable_TSource__o *)v32;
       if ( !*(&BattleDropTimingAdjustment___c_TypeInfo->_2.cctor_finished + 1) )
@@ -256,11 +256,11 @@ void BattleDropTimingAdjustment__Initialize(
           v36 = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         }
         v38 = (Il2CppObject *)v36->__9;
-        _9__4_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+        _9__4_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
         System_Func_object__int____ctor(_9__4_1, v38, Method_BattleDropTimingAdjustment___c__Initialize_b__4_1__, 0);
         v39 = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         v39->__9__4_1 = (struct System_Func_IGrouping_int__DropInfo___int__o *)_9__4_1;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v39->__9__4_1, (int32_t)_9__4_1, v40, v41, v42, v43, v44, v45);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v39->__9__4_1, (int32_t)_9__4_1, v40, v41, v42, v43, v44, v45);
         v34 = BattleDropTimingAdjustment___c_TypeInfo;
       }
       if ( !*(&v34->_2.cctor_finished + 1) )
@@ -278,38 +278,38 @@ void BattleDropTimingAdjustment__Initialize(
           v46 = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         }
         v48 = (Il2CppObject *)v46->__9;
-        _9__4_2 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
+        _9__4_2 = (System_Func_object__int__o *)sub_2213CCC(System_Func_IGrouping_int__DropInfo___int__TypeInfo);
         System_Func_object__int____ctor(_9__4_2, v48, Method_BattleDropTimingAdjustment___c__Initialize_b__4_2__, 0);
         v49 = BattleDropTimingAdjustment___c_TypeInfo->static_fields;
         v49->__9__4_2 = (struct System_Func_IGrouping_int__DropInfo___int__o *)_9__4_2;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->__9__4_2, (int32_t)_9__4_2, v50, v51, v52, v53, v54, v55);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v49->__9__4_2, (int32_t)_9__4_2, v50, v51, v52, v53, v54, v55);
       }
       monitor = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToDictionary_object__int__int_(
                                                                v35,
                                                                (System_Func_TSource__TKey__o *)_9__4_1,
                                                                (System_Func_TSource__TElement__o *)_9__4_2,
-                                                               (const MethodInfo_3868FB0 *)Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
+                                                               (const MethodInfo_389C478 *)Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__DropInfo___int__int___);
       if ( !v7 )
         goto LABEL_80;
       *(_QWORD *)(v7 + 16) = monitor;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)monitor, v58, v59, v60, v61, v62, v63);
-      v64 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)monitor, v58, v59, v60, v61, v62, v63);
+      v64 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v64,
-        (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
+        (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData___ctor__);
       this->fields.fixedDropTimingDataList = (struct System_Collections_Generic_List_BattleDropTimingAdjustment_FixedDropTimingData__o *)v64;
       p_fields = &this->fields;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v64, v66, v67, v68, v69, v70, v71);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v64, v66, v67, v68, v69, v70, v71);
       if ( !v11
         || (monitor = (System_Collections_Generic_List_object__o *)v11[1].monitor) == 0
         || (monitor = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                                      monitor,
-                                                                     (const MethodInfo_445164C *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__ToArray__),
+                                                                     (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__ToArray__),
             this->fields.waitDropTime = *(float *)&v11[1].klass,
             !monitor) )
       {
 LABEL_80:
-        sub_21FFECC(monitor, v57);
+        sub_2213CDC(monitor, v57);
       }
       size = monitor->fields._size;
       v73 = monitor;
@@ -329,19 +329,19 @@ LABEL_80:
             v77 = *(System_Func_int__int__o **)(v7 + 24);
             if ( !v77 )
             {
-              v77 = (System_Func_int__int__o *)sub_21FFEBC(System_Func_int__int__TypeInfo);
+              v77 = (System_Func_int__int__o *)sub_2213CCC(System_Func_int__int__TypeInfo);
               System_Func_int__int____ctor(
                 v77,
                 (Il2CppObject *)v7,
                 Method_BattleDropTimingAdjustment___c__DisplayClass4_0__Initialize_b__3__,
                 0);
               *(_QWORD *)(v7 + 24) = v77;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v77, v78, v79, v80, v81, v82, v83);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)v77, v78, v79, v80, v81, v82, v83);
             }
             monitor = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__Sum_int_(
                                                                      v76,
                                                                      (System_Func_TSource__int__o *)v77,
-                                                                     (const MethodInfo_3866A50 *)Method_System_Linq_Enumerable_Sum_int___);
+                                                                     (const MethodInfo_3899F18 *)Method_System_Linq_Enumerable_Sum_int___);
             if ( (_DWORD)monitor )
             {
               v84 = v75[3];
@@ -372,14 +372,14 @@ LABEL_80:
                 while ( (v85 & ~(v85 >> 31)) != v87 );
                 if ( v88 )
                 {
-                  v94 = sub_21FFEBC(BattleDropTimingAdjustment_FixedDropTimingData_TypeInfo);
+                  v94 = sub_2213CCC(BattleDropTimingAdjustment_FixedDropTimingData_TypeInfo);
                   System_Object___ctor((Il2CppObject *)v94, 0);
                   if ( !v94 )
                     goto LABEL_80;
                   v101 = v75[2];
                   *(_QWORD *)(v94 + 16) = v101;
                   v102 = (__int64 *)(v94 + 16);
-                  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v94 + 16), v101, v95, v96, v97, v98, v99, v100);
+                  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v94 + 16), v101, v95, v96, v97, v98, v99, v100);
                   v109 = v75[4];
                   v110 = *(unsigned __int8 *)(v88 + 24);
                   *(_DWORD *)(v94 + 36) = 0;
@@ -400,14 +400,14 @@ LABEL_80:
                     System_Collections_Generic_List_object___AddWithResize(
                       monitor,
                       (Il2CppObject *)v94,
-                      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v113[4] + 192LL) + 112LL));
+                      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v113[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v115 = &items->obj.klass + v114;
                     monitor->fields._size = v114 + 1;
                     v115[4] = (Il2CppClass *)v94;
-                    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v115 + 4), v94, v103, v104, v105, v106, v107, v108);
+                    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v115 + 4), v94, v103, v104, v105, v106, v107, v108);
                   }
                   v116 = *v102;
                   if ( *v102 )
@@ -435,13 +435,13 @@ LABEL_78:
             (System_Collections_Generic_Dictionary_int__object__o *)monitor,
             *(_DWORD *)(v116 + 32 + 4 * v118),
             (Il2CppObject *)v94,
-            (const MethodInfo_3F68CF4 *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__set_Item__);
+            (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__BattleDropTimingAdjustment_FixedDropTimingData__set_Item__);
           LODWORD(v117) = *(_DWORD *)(v116 + 24);
           if ( (__int64)++v118 >= (int)v117 )
             goto LABEL_78;
         }
 LABEL_81:
-        sub_21FFED4(monitor);
+        sub_2213CE4(monitor);
       }
     }
   }
@@ -480,15 +480,15 @@ void BattleDropTimingAdjustment___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593B22C & 1) == 0 )
+  if ( (byte_597341B & 1) == 0 )
   {
-    sub_21FFC50(&BattleDropTimingAdjustment___c_TypeInfo);
-    byte_593B22C = 1;
+    sub_2213A60(&BattleDropTimingAdjustment___c_TypeInfo);
+    byte_597341B = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BattleDropTimingAdjustment___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BattleDropTimingAdjustment___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleDropTimingAdjustment___c_TypeInfo->static_fields->__9 = (struct BattleDropTimingAdjustment___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleDropTimingAdjustment___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -512,7 +512,7 @@ int32_t BattleDropTimingAdjustment___c___Initialize_b__4_0(
         const MethodInfo *method)
 {
   if ( !dropInfo )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return dropInfo->fields.mstGiftId;
 }
 
@@ -527,13 +527,13 @@ int32_t BattleDropTimingAdjustment___c___Initialize_b__4_1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_593B22D & 1) == 0 )
+  if ( (byte_597341C & 1) == 0 )
   {
-    this = (BattleDropTimingAdjustment___c_o *)sub_21FFC50(&System_Linq_IGrouping_int__DropInfo__TypeInfo);
-    byte_593B22D = 1;
+    this = (BattleDropTimingAdjustment___c_o *)sub_2213A60(&System_Linq_IGrouping_int__DropInfo__TypeInfo);
+    byte_597341C = 1;
   }
   if ( !g )
-    sub_21FFECC(this, g);
+    sub_2213CDC(this, g);
   klass = g->klass;
   v5 = *(unsigned __int16 *)&g->klass->_2.rank;
   if ( *(_WORD *)&g->klass->_2.rank )
@@ -551,9 +551,9 @@ int32_t BattleDropTimingAdjustment___c___Initialize_b__4_1(
   else
   {
 LABEL_8:
-    v7 = sub_2237E2C(g, System_Linq_IGrouping_int__DropInfo__TypeInfo, 0);
+    v7 = sub_224BC3C(g, System_Linq_IGrouping_int__DropInfo__TypeInfo, 0);
   }
-  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
+  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
 }
 
 
@@ -562,14 +562,14 @@ int32_t BattleDropTimingAdjustment___c___Initialize_b__4_2(
         System_Linq_IGrouping_int__DropInfo__o *g,
         const MethodInfo *method)
 {
-  if ( (byte_593B22E & 1) == 0 )
+  if ( (byte_597341D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Count_DropInfo___);
-    byte_593B22E = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Count_DropInfo___);
+    byte_597341D = 1;
   }
   return System_Linq_Enumerable__Count_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)g,
-           (const MethodInfo_384633C *)Method_System_Linq_Enumerable_Count_DropInfo___);
+           (const MethodInfo_3879804 *)Method_System_Linq_Enumerable_Count_DropInfo___);
 }
 
 
@@ -586,14 +586,14 @@ int32_t BattleDropTimingAdjustment___c__DisplayClass4_0___Initialize_b__3(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_593B22F & 1) == 0 )
+  if ( (byte_597341E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
-    byte_593B22F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
+    byte_597341E = 1;
   }
   return System_Collections_Generic_CollectionExtensions__GetValueOrDefault_int__int_(
            (System_Collections_Generic_IReadOnlyDictionary_TKey__TValue__o *)this->fields.giftIdCountDict,
            giftId,
            0,
-           (const MethodInfo_37EAB28 *)Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
+           (const MethodInfo_381DFF0 *)Method_System_Collections_Generic_CollectionExtensions_GetValueOrDefault_int__int___);
 }

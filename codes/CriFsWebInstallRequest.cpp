@@ -15,30 +15,30 @@ void CriFsWebInstallRequest___ctor(
   __int64 v16; // x1
   const MethodInfo *v17; // x2
 
-  if ( (byte_59314FD & 1) == 0 )
+  if ( (byte_596969D & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    sub_21FFC50(&CriFsWebInstaller_TypeInfo);
-    byte_59314FD = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    sub_2213A60(&CriFsWebInstaller_TypeInfo);
+    byte_596969D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._sourcePath_k__BackingField = srcPath;
-  sub_21FFBF4(&this->fields._sourcePath_k__BackingField, srcPath);
+  sub_2213A04(&this->fields._sourcePath_k__BackingField, srcPath);
   this->fields._destinationPath_k__BackingField = dstPath;
-  sub_21FFBF4(&this->fields._destinationPath_k__BackingField, dstPath);
+  sub_2213A04(&this->fields._destinationPath_k__BackingField, dstPath);
   this->fields._doneDelegate_k__BackingField = doneDelegate;
-  sub_21FFBF4(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  sub_2213A04(&this->fields._doneDelegate_k__BackingField, doneDelegate);
   v9 = CriFsWebInstaller_TypeInfo;
   this->fields._progress_k__BackingField = 0.0;
-  v10 = (CriFsWebInstaller_o *)sub_21FFEBC(v9);
+  v10 = (CriFsWebInstaller_o *)sub_2213CCC(v9);
   CriFsWebInstaller___ctor(v10, v11);
   this->fields.installer = v10;
-  sub_21FFBF4(&this->fields.installer, v10);
+  sub_2213A04(&this->fields.installer, v10);
   System_IO_File__Delete(dstPath, 0);
   installer = this->fields.installer;
   if ( !installer )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   CriFsWebInstaller__criFsWebInstaller_Copy(installer->fields.handle, srcPath, dstPath, v14);
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v16, v17);
@@ -53,10 +53,10 @@ void CriFsWebInstallRequest__Dispose(CriFsWebInstallRequest_o *this, bool dispos
   struct CriFsWebInstaller_o **p_installer; // x19
   struct CriFsWebInstaller_o *installer; // t1
 
-  if ( (byte_59314FF & 1) == 0 )
+  if ( (byte_596969F & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    byte_59314FF = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    byte_596969F = 1;
   }
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
@@ -70,7 +70,7 @@ void CriFsWebInstallRequest__Dispose(CriFsWebInstallRequest_o *this, bool dispos
       v4,
       v4->klass->vtable._5_Dispose.method);
     *p_installer = 0;
-    sub_21FFBF4(p_installer, 0);
+    sub_2213A04(p_installer, 0);
   }
 }
 
@@ -117,11 +117,11 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
   CriFsWebInstaller_StatusInfo_o v14; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_59314FE & 1) == 0 )
+  if ( (byte_596969E & 1) == 0 )
   {
-    sub_21FFC50(&CriFsWebInstaller_Error_TypeInfo);
-    sub_21FFC50(&StringLiteral_16504/*"[CriFsWebInstallerError]"*/);
-    byte_59314FE = 1;
+    sub_2213A60(&CriFsWebInstaller_Error_TypeInfo);
+    sub_2213A60(&StringLiteral_16536/*"[CriFsWebInstallerError]"*/);
+    byte_596969E = 1;
   }
   p_installer = &this->fields.installer;
   installer = this->fields.installer;
@@ -143,14 +143,14 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
         *(_QWORD *)&v14.fields.status = CriFsWebInstaller_Error_TypeInfo;
         *(_QWORD *)&v14.fields.httpStatusCode = -1;
         v11 = System_Enum__ToString((System_Enum_o *)&v14, 0);
-        v12 = System_String__Concat_75438412((System_String_o *)StringLiteral_16504/*"[CriFsWebInstallerError]"*/, v11, 0);
+        v12 = System_String__Concat_75651716((System_String_o *)StringLiteral_16536/*"[CriFsWebInstallerError]"*/, v11, 0);
         this->fields._error_k__BackingField = v12;
-        StatusInfo = sub_21FFBF4(&this->fields._error_k__BackingField, v12);
+        StatusInfo = sub_2213A04(&this->fields._error_k__BackingField, v12);
       }
-      if ( !byte_5931819 )
+      if ( !byte_59699B9 )
       {
-        StatusInfo = sub_21FFC50(&CriFsWebInstaller_TypeInfo);
-        byte_5931819 = 1;
+        StatusInfo = sub_2213A60(&CriFsWebInstaller_TypeInfo);
+        byte_59699B9 = 1;
       }
       if ( status == 2 && CriFsWebInstaller_TypeInfo->static_fields->_isCrcEnabled_k__BackingField )
       {
@@ -168,7 +168,7 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
           StatusInfo,
           *(_QWORD *)(*(_QWORD *)StatusInfo + 400LL));
         this->fields.installer = 0;
-        sub_21FFBF4(&this->fields.installer, 0);
+        sub_2213A04(&this->fields.installer, 0);
         doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
         this->fields._isDone_k__BackingField = 1;
         if ( doneDelegate_k__BackingField )
@@ -179,7 +179,7 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
         return;
       }
 LABEL_19:
-      sub_21FFECC(StatusInfo, v6);
+      sub_2213CDC(StatusInfo, v6);
     }
   }
 }

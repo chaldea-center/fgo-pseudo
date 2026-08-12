@@ -1,14 +1,14 @@
 void UserQuestInfoMaster___ctor(UserQuestInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939633 & 1) == 0 )
+  if ( (byte_59717F4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string___ctor__);
-    byte_5939633 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string___ctor__);
+    byte_59717F4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     63,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserQuestInfoEntity_o *UserQuestInfoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5939631 & 1) == 0 )
+  if ( (byte_59717F2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__GetEntity__);
-    byte_5939631 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__GetEntity__);
+    byte_59717F2 = 1;
   }
   PK = (Il2CppObject *)UserQuestInfoEntity__CreatePK(userId, questId, *(const MethodInfo **)&questId);
   return (UserQuestInfoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_3EE2044 *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__GetEntity__);
+                                    (const MethodInfo_3F157EC *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool UserQuestInfoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5939632 & 1) == 0 )
+  if ( (byte_59717F3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__TryGetEntity__);
-    byte_5939632 = 1;
+    sub_2213A60(&Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__TryGetEntity__);
+    byte_59717F3 = 1;
   }
   PK = (Il2CppObject *)UserQuestInfoEntity__CreatePK(userId, questId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_UserQuestInfoMaster__UserQuestInfoEntity__string__TryGetEntity__);
 }

@@ -2,10 +2,10 @@ void RecommendSupportQuestSelectListMenu___ctor(RecommendSupportQuestSelectListM
 {
   __int64 v2; // x2
 
-  if ( (byte_59343C0 & 1) == 0 )
+  if ( (byte_596C4EF & 1) == 0 )
   {
-    sub_21FFC50(&BaseMenu_TypeInfo);
-    byte_59343C0 = 1;
+    sub_2213A60(&BaseMenu_TypeInfo);
+    byte_596C4EF = 1;
   }
   if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, method, v2);
@@ -19,7 +19,7 @@ void RecommendSupportQuestSelectListMenu__Init(RecommendSupportQuestSelectListMe
 
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   RecommendSupportQuestBoardListViewManager__Init(listViewManager, method);
   BaseMenu__Init((BaseMenu_o *)this, 0);
 }
@@ -35,12 +35,12 @@ void RecommendSupportQuestSelectListMenu__Open(RecommendSupportQuestSelectListMe
   Il2CppObject *v8; // x0
   int v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59343BF & 1) == 0 )
+  if ( (byte_596C4EE & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    sub_21FFC50(&StringLiteral_11509/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/);
-    byte_59343BF = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_2213A60(&StringLiteral_11529/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/);
+    byte_596C4EE = 1;
   }
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
@@ -49,16 +49,16 @@ void RecommendSupportQuestSelectListMenu__Open(RecommendSupportQuestSelectListMe
   explanationLabel = this->fields.explanationLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_11509/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, 0);
-  listViewManager = (RecommendSupportQuestBoardListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, 0);
+  listViewManager = (RecommendSupportQuestBoardListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !listViewManager
     || (v9 = LODWORD(listViewManager->fields.dragParentObject) + 1,
-        v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9),
+        v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v9),
         listViewManager = (RecommendSupportQuestBoardListViewManager_o *)System_String__Format(v7, v8, 0),
         !explanationLabel) )
   {
 LABEL_9:
-    sub_21FFECC(listViewManager, method);
+    sub_2213CDC(listViewManager, method);
   }
   UILabel__set_text(explanationLabel, (System_String_o *)listViewManager, 0);
   BaseMenu__Open((BaseMenu_o *)this, 0, 0);
@@ -92,7 +92,7 @@ void RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields.warEntity = warEnt;
   v8 = (RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo_o *)((char *)v8 + 16);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v8, (int32_t)warEnt, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v8, (int32_t)warEnt, v9, v10, v11, v12, v13, v14);
   LODWORD(v8->monitor) = parentId;
   LOBYTE(v8->fields.parentWarId) = isQusetParentFolder;
 }
@@ -114,10 +114,10 @@ bool RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_IsExpired
   __int64 v4; // x2
   int64_t ClosedAt_k__BackingField; // x19
 
-  if ( (byte_59343C2 & 1) == 0 )
+  if ( (byte_596C4F1 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59343C2 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596C4F1 = 1;
   }
   if ( RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_IsNoneExpire(this, method) )
     return 0;
@@ -136,10 +136,10 @@ bool RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_IsNoneExp
   int64_t ClosedAt_k__BackingField; // x8
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_59343C1 & 1) == 0 )
+  if ( (byte_596C4F0 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_59343C1 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596C4F0 = 1;
   }
   ClosedAt_k__BackingField = this->fields._ClosedAt_k__BackingField;
   if ( !ClosedAt_k__BackingField )
@@ -213,9 +213,9 @@ void RecommendSupportQuestSelectListMenu_RecommendQuestInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.questEntity = questEnt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)questEnt, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)questEnt, v13, v14, v15, v16, v17, v18);
   this->fields.warEntity = warEnt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.warEntity,
     (int32_t)warEnt,
     v19,
@@ -225,7 +225,7 @@ void RecommendSupportQuestSelectListMenu_RecommendQuestInfo___ctor(
     v23,
     v24);
   this->fields.message = questMessage;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.message,
     (int32_t)questMessage,
     v25,
@@ -237,7 +237,7 @@ void RecommendSupportQuestSelectListMenu_RecommendQuestInfo___ctor(
   this->fields.phase = questPhase;
   this->fields.priority = dispPriority;
   if ( !questEnt )
-    sub_21FFECC(v31, v32);
+    sub_2213CDC(v31, v32);
   this->fields._ClosedAt_k__BackingField = QuestEntity__getClosedAt(questEnt, 0);
 }
 
@@ -258,10 +258,10 @@ bool RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_IsExpired(
   __int64 v4; // x2
   int64_t ClosedAt_k__BackingField; // x19
 
-  if ( (byte_59343C4 & 1) == 0 )
+  if ( (byte_596C4F3 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_59343C4 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596C4F3 = 1;
   }
   if ( RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_IsNoneExpire(this, method) )
     return 0;
@@ -279,10 +279,10 @@ bool RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_IsNoneExpire(
   __int64 v2; // x2
   BalanceConfig_c *v4; // x0
 
-  if ( (byte_59343C3 & 1) == 0 )
+  if ( (byte_596C4F2 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_59343C3 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596C4F2 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )

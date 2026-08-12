@@ -29,7 +29,7 @@ void ServantSellConfirmListViewItemDraw__Awake(ServantSellConfirmListViewItemDra
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.defaultMaskAtlas,
     (int32_t)mAtlas,
     v2,
@@ -44,7 +44,7 @@ void ServantSellConfirmListViewItemDraw__Awake(ServantSellConfirmListViewItemDra
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.defaultMaskName,
     (int32_t)mSpriteName,
     v11,
@@ -61,7 +61,7 @@ int32_t ServantSellConfirmListViewItemDraw__GetDispMode(int32_t initMode, const 
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_ECF9D8[initMode - 1];
+    return dword_ED8B08[initMode - 1];
 }
 
 
@@ -76,26 +76,26 @@ System_String_o *ServantSellConfirmListViewItemDraw__GetStatusText(
   UserServantEntity_o *UserServantEntity_k__BackingField; // x0
   __int64 *v9; // x8
 
-  if ( (byte_59345F6 & 1) == 0 )
+  if ( (byte_596C725 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12024/*"SELECT_LOCK"*/);
-    sub_21FFC50(&StringLiteral_12013/*"SELECT_FAVORITE"*/);
-    sub_21FFC50(&StringLiteral_13013/*"SUPPORT_MEMBER"*/);
-    sub_21FFC50(&StringLiteral_12006/*"SELECT_CANNOT"*/);
-    sub_21FFC50(&StringLiteral_12007/*"SELECT_CHOICE"*/);
-    sub_21FFC50(&StringLiteral_12038/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    sub_21FFC50(&StringLiteral_12034/*"SELECT_PARTY"*/);
-    sub_21FFC50(&StringLiteral_9690/*"NOT_SELECT_EQUIPED"*/);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59345F6 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12047/*"SELECT_LOCK"*/);
+    sub_2213A60(&StringLiteral_12036/*"SELECT_FAVORITE"*/);
+    sub_2213A60(&StringLiteral_13039/*"SUPPORT_MEMBER"*/);
+    sub_2213A60(&StringLiteral_12029/*"SELECT_CANNOT"*/);
+    sub_2213A60(&StringLiteral_12030/*"SELECT_CHOICE"*/);
+    sub_2213A60(&StringLiteral_12061/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_2213A60(&StringLiteral_12057/*"SELECT_PARTY"*/);
+    sub_2213A60(&StringLiteral_9703/*"NOT_SELECT_EQUIPED"*/);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C725 = 1;
   }
   if ( !isServant )
   {
     if ( item )
       goto LABEL_16;
 LABEL_11:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   if ( !item )
     goto LABEL_11;
@@ -104,14 +104,14 @@ LABEL_11:
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-    v9 = &StringLiteral_12038/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v9 = &StringLiteral_12061/*"SELECT_SERVANT_EVENT_JOIN"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields.attribute )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-    v9 = &StringLiteral_12006/*"SELECT_CANNOT"*/;
+    v9 = &StringLiteral_12029/*"SELECT_CANNOT"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
 LABEL_16:
@@ -119,14 +119,14 @@ LABEL_16:
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-    v9 = &StringLiteral_12007/*"SELECT_CHOICE"*/;
+    v9 = &StringLiteral_12030/*"SELECT_CHOICE"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields._IsLock_k__BackingField )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-    v9 = &StringLiteral_12024/*"SELECT_LOCK"*/;
+    v9 = &StringLiteral_12047/*"SELECT_LOCK"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( isServant )
@@ -135,21 +135,21 @@ LABEL_16:
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-      v9 = &StringLiteral_12013/*"SELECT_FAVORITE"*/;
+      v9 = &StringLiteral_12036/*"SELECT_FAVORITE"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsParty_k__BackingField )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-      v9 = &StringLiteral_12034/*"SELECT_PARTY"*/;
+      v9 = &StringLiteral_12057/*"SELECT_PARTY"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsUseSupportServant_k__BackingField )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-      v9 = &StringLiteral_13013/*"SUPPORT_MEMBER"*/;
+      v9 = &StringLiteral_13039/*"SUPPORT_MEMBER"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
   }
@@ -157,7 +157,7 @@ LABEL_16:
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, isServant);
-    v9 = &StringLiteral_9690/*"NOT_SELECT_EQUIPED"*/;
+    v9 = &StringLiteral_9703/*"NOT_SELECT_EQUIPED"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
@@ -195,12 +195,12 @@ void ServantSellConfirmListViewItemDraw__SetDisp(
   UISprite_o *v28; // x21
 
   v6 = this;
-  if ( (byte_59345F8 & 1) == 0 )
+  if ( (byte_596C727 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_21FFC50(&StringLiteral_24272/*"ribbon_noblephantasmup_01"*/);
-    byte_59345F8 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_2213A60(&StringLiteral_24320/*"ribbon_noblephantasmup_01"*/);
+    byte_596C727 = 1;
   }
   if ( !item )
     goto LABEL_26;
@@ -261,7 +261,7 @@ void ServantSellConfirmListViewItemDraw__SetDisp(
       v28 = v6->fields.materialTdSprite;
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item, v27);
-      AtlasManager__SetEventSprite(v28, (System_String_o *)StringLiteral_24272/*"ribbon_noblephantasmup_01"*/, 0);
+      AtlasManager__SetEventSprite(v28, (System_String_o *)StringLiteral_24320/*"ribbon_noblephantasmup_01"*/, 0);
     }
   }
   this = (ServantSellConfirmListViewItemDraw_o *)v6->fields.dragSelect;
@@ -270,7 +270,7 @@ void ServantSellConfirmListViewItemDraw__SetDisp(
         (this = (ServantSellConfirmListViewItemDraw_o *)v6->fields.dragSelect) == 0) )
   {
 LABEL_26:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   DragSelectComponent__Set(
     (DragSelectComponent_o *)this,
@@ -292,10 +292,10 @@ void ServantSellConfirmListViewItemDraw__SetInput(
   const MethodInfo *v9; // x3
   struct UICommonButton_o *v10; // x0
 
-  if ( (byte_59345F7 & 1) == 0 )
+  if ( (byte_596C726 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59345F7 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C726 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -310,7 +310,7 @@ void ServantSellConfirmListViewItemDraw__SetInput(
             v10->klass->vtable._5_set_isEnabled.method),
           (v10 = this->fields.baseButton) == 0) )
     {
-      sub_21FFECC(v10, v8);
+      sub_2213CDC(v10, v8);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v10->klass->vtable._14_SetState.methodPtr)(
       v10,
@@ -347,10 +347,10 @@ void ServantSellConfirmListViewItemDraw__SetItem(
   const MethodInfo *v23; // x3
   const MethodInfo *v24; // x5
 
-  if ( (byte_59345F2 & 1) == 0 )
+  if ( (byte_596C721 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59345F2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C721 = 1;
   }
   if ( item )
   {
@@ -394,7 +394,7 @@ void ServantSellConfirmListViewItemDraw__SetItem(
             if ( !servantFaceIcon )
               goto LABEL_24;
           }
-          FlashingIconComponent__Set_47916600((FlashingIconComponent_o *)servantFaceIcon, IsParty_k__BackingField, 0);
+          FlashingIconComponent__Set_47864696((FlashingIconComponent_o *)servantFaceIcon, IsParty_k__BackingField, 0);
         }
         ServantSellConfirmListViewItemDraw__SetSpriteActive(
           (ServantSellConfirmListViewItemDraw_o *)v18,
@@ -415,7 +415,7 @@ void ServantSellConfirmListViewItemDraw__SetItem(
                 (servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.baseButton) == 0) )
           {
 LABEL_24:
-            sub_21FFECC(servantFaceIcon, IsParty_k__BackingField);
+            sub_2213CDC(servantFaceIcon, IsParty_k__BackingField);
           }
           ((void (__fastcall *)(ServantFaceIconComponent_o *, _QWORD, __int64, void *))servantFaceIcon->klass[1]._1.fields)(
             servantFaceIcon,
@@ -446,10 +446,10 @@ void ServantSellConfirmListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_59345F4 & 1) == 0 )
+  if ( (byte_596C723 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59345F4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C723 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, label, text);
@@ -457,7 +457,7 @@ void ServantSellConfirmListViewItemDraw__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     UILabel__set_text(label, text, 0);
   }
 }
@@ -477,7 +477,7 @@ void ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
       this = (ServantSellConfirmListViewItemDraw_o *)this->fields.servantFaceIcon;
       if ( this )
       {
-        ServantFaceIconComponent__Set_48018228(
+        ServantFaceIconComponent__Set_48049524(
           (ServantFaceIconComponent_o *)this,
           item->fields._UserServantEntity_k__BackingField,
           item->fields.iconLabelInfo1,
@@ -488,7 +488,7 @@ void ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
       }
     }
 LABEL_10:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
   if ( isCommandCode )
   {
@@ -497,7 +497,7 @@ LABEL_10:
     this = (ServantSellConfirmListViewItemDraw_o *)this->fields.servantFaceIcon;
     if ( !this )
       goto LABEL_10;
-    ServantFaceIconComponent__Set_48025688(
+    ServantFaceIconComponent__Set_48056984(
       (ServantFaceIconComponent_o *)this,
       item->fields._UserCommandCodeEntity_k__BackingField,
       item->fields.iconLabelInfo1,
@@ -517,10 +517,10 @@ void ServantSellConfirmListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_59345F3 & 1) == 0 )
+  if ( (byte_596C722 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59345F3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C722 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, sprite, isActive);
@@ -528,7 +528,7 @@ void ServantSellConfirmListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
-      sub_21FFECC(gameObject, v7);
+      sub_2213CDC(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
@@ -551,11 +551,11 @@ void ServantSellConfirmListViewItemDraw__SetWarningText(
   ServantSellConfirmListViewItemDraw_o *v15; // x2
 
   v10 = this;
-  if ( (byte_59345F5 & 1) == 0 )
+  if ( (byte_596C724 & 1) == 0 )
   {
-    sub_21FFC50(&TutorialFlag_TypeInfo);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59345F5 = 1;
+    sub_2213A60(&TutorialFlag_TypeInfo);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C724 = 1;
   }
   if ( !item )
     goto LABEL_17;
@@ -573,7 +573,7 @@ LABEL_15:
       goto LABEL_12;
     if ( !*(&TutorialFlag_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, item, v12);
-    this = (ServantSellConfirmListViewItemDraw_o *)TutorialFlag__Get_47357952(126, 0);
+    this = (ServantSellConfirmListViewItemDraw_o *)TutorialFlag__Get_47388504(126, 0);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
 LABEL_12:
@@ -590,7 +590,7 @@ LABEL_12:
         }
       }
 LABEL_17:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
   }
   v13 = v10->fields.warningLabel;

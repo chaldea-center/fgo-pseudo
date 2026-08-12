@@ -17,23 +17,23 @@ void DiggingAssetManager___ctor(DiggingAssetManager_o *this, const MethodInfo *m
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5932946 & 1) == 0 )
+  if ( (byte_596AA46 & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_6522/*"EventUI/Prefabs/80367"*/);
-    byte_5932946 = 1;
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_6534/*"EventUI/Prefabs/80367"*/);
+    byte_596AA46 = 1;
   }
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   v11 = (struct System_String_array *)v3;
   if ( !*(_DWORD *)(v3 + 24) )
-    sub_21FFED4(v3);
-  v12 = StringLiteral_6522/*"EventUI/Prefabs/80367"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_6522/*"EventUI/Prefabs/80367"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+    sub_2213CE4(v3);
+  v12 = StringLiteral_6534/*"EventUI/Prefabs/80367"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_6534/*"EventUI/Prefabs/80367"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
   this->fields.loadAssetNames = v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetNames,
     (int32_t)v11,
     v13,
@@ -53,7 +53,7 @@ void DiggingAssetManager__GetAssets(
         const MethodInfo *method)
 {
   __int64 v7; // x21
-  AssetData_array *AssetStorage_47473732; // x0
+  AssetData_array *AssetStorage_47505140; // x0
   __int64 v9; // x1
   System_String_o *v10; // x2
   System_String_o *v11; // x3
@@ -65,7 +65,7 @@ void DiggingAssetManager__GetAssets(
   __int64 v17; // x2
   System_String_array *loadAssetNames; // x22
   AssetData_o *v19; // x22
-  Il2CppObject *Object_object__58323140; // x0
+  Il2CppObject *Object_object__58532980; // x0
   System_String_o *v21; // x2
   System_String_o *v22; // x3
   int32_t v23; // w4
@@ -125,63 +125,63 @@ void DiggingAssetManager__GetAssets(
   __int64 v77; // x1
   __int64 v78; // x2
 
-  if ( (byte_5932944 & 1) == 0 )
+  if ( (byte_596AA44 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_AssetData_GetObject_DiggingSettings___);
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__);
-    sub_21FFC50(&DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_3308/*"BlockPrefab"*/);
-    sub_21FFC50(&StringLiteral_5454/*"DiggingRewardDialog"*/);
-    sub_21FFC50(&StringLiteral_5455/*"DiggingSettings"*/);
-    sub_21FFC50(&StringLiteral_5451/*"DiggingCompleteImagePrefab"*/);
-    sub_21FFC50(&StringLiteral_5453/*"DiggingPointRewardDialog"*/);
-    sub_21FFC50(&StringLiteral_5452/*"DiggingConfirmDialog"*/);
-    sub_21FFC50(&StringLiteral_11881/*"RewardPrefab"*/);
-    sub_21FFC50(&StringLiteral_2598/*"AutoDiggingDialog"*/);
-    byte_5932944 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_DiggingSettings___);
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__);
+    sub_2213A60(&DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
+    sub_2213A60(&StringLiteral_3313/*"BlockPrefab"*/);
+    sub_2213A60(&StringLiteral_5466/*"DiggingRewardDialog"*/);
+    sub_2213A60(&StringLiteral_5467/*"DiggingSettings"*/);
+    sub_2213A60(&StringLiteral_5463/*"DiggingCompleteImagePrefab"*/);
+    sub_2213A60(&StringLiteral_5465/*"DiggingPointRewardDialog"*/);
+    sub_2213A60(&StringLiteral_5464/*"DiggingConfirmDialog"*/);
+    sub_2213A60(&StringLiteral_11904/*"RewardPrefab"*/);
+    sub_2213A60(&StringLiteral_2599/*"AutoDiggingDialog"*/);
+    byte_596AA44 = 1;
   }
-  v7 = sub_21FFEBC(DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
+  v7 = sub_2213CCC(DiggingAssetManager___c__DisplayClass33_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_12;
   *(_QWORD *)(v7 + 16) = finishCallback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)finishCallback, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)finishCallback, v10, v11, v12, v13, v14, v15);
   loadAssetNames = this->fields.loadAssetNames;
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v16, v17);
-  AssetStorage_47473732 = AssetManager__getAssetStorage_47473732(loadAssetNames, 0);
-  if ( !AssetStorage_47473732 )
+  AssetStorage_47505140 = AssetManager__getAssetStorage_47505140(loadAssetNames, 0);
+  if ( !AssetStorage_47505140 )
     goto LABEL_12;
-  if ( !LODWORD(AssetStorage_47473732->max_length) )
-    sub_21FFED4(AssetStorage_47473732);
-  v19 = AssetStorage_47473732->m_Items[0];
+  if ( !LODWORD(AssetStorage_47505140->max_length) )
+    sub_2213CE4(AssetStorage_47505140);
+  v19 = AssetStorage_47505140->m_Items[0];
   if ( !v19 )
 LABEL_12:
-    sub_21FFECC(AssetStorage_47473732, v9);
-  Object_object__58323140 = AssetData__GetObject_object__58323140(
-                              AssetStorage_47473732->m_Items[0],
-                              (System_String_o *)StringLiteral_3308/*"BlockPrefab"*/,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
-  this->fields._blockPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)Object_object__58323140;
-  sub_21FFBF4(
+    sub_2213CDC(AssetStorage_47505140, v9);
+  Object_object__58532980 = AssetData__GetObject_object__58532980(
+                              AssetStorage_47505140->m_Items[0],
+                              (System_String_o *)StringLiteral_3313/*"BlockPrefab"*/,
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
+  this->fields._blockPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)Object_object__58532980;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
-    (int32_t)Object_object__58323140,
+    (int32_t)Object_object__58532980,
     v21,
     v22,
     v23,
     v24,
     v25,
     v26);
-  v27 = AssetData__GetObject_object__58323140(
+  v27 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_11881/*"RewardPrefab"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_11904/*"RewardPrefab"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._rewardPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v27;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._rewardPrefab_k__BackingField,
     (int32_t)v27,
     v28,
@@ -190,12 +190,12 @@ LABEL_12:
     v31,
     v32,
     v33);
-  v34 = AssetData__GetObject_object__58323140(
+  v34 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_2598/*"AutoDiggingDialog"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_2599/*"AutoDiggingDialog"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._AutoDiggingDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v34;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AutoDiggingDialogPrefab_k__BackingField,
     (int32_t)v34,
     v35,
@@ -204,12 +204,12 @@ LABEL_12:
     v38,
     v39,
     v40);
-  v41 = AssetData__GetObject_object__58323140(
+  v41 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_5452/*"DiggingConfirmDialog"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_5464/*"DiggingConfirmDialog"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._DiggingConfirmDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v41;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingConfirmDialogPrefab_k__BackingField,
     (int32_t)v41,
     v42,
@@ -218,12 +218,12 @@ LABEL_12:
     v45,
     v46,
     v47);
-  v48 = AssetData__GetObject_object__58323140(
+  v48 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_5453/*"DiggingPointRewardDialog"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_5465/*"DiggingPointRewardDialog"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._DiggingPointRewardDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v48;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingPointRewardDialogPrefab_k__BackingField,
     (int32_t)v48,
     v49,
@@ -232,12 +232,12 @@ LABEL_12:
     v52,
     v53,
     v54);
-  v55 = AssetData__GetObject_object__58323140(
+  v55 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_5454/*"DiggingRewardDialog"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_5466/*"DiggingRewardDialog"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._DiggingRewardDialogPrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v55;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingRewardDialogPrefab_k__BackingField,
     (int32_t)v55,
     v56,
@@ -246,12 +246,12 @@ LABEL_12:
     v59,
     v60,
     v61);
-  v62 = AssetData__GetObject_object__58323140(
+  v62 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_5451/*"DiggingCompleteImagePrefab"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+          (System_String_o *)StringLiteral_5463/*"DiggingCompleteImagePrefab"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   this->fields._DiggingCompleteImagePrefab_k__BackingField = (struct UnityEngine_GameObject_o *)v62;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingCompleteImagePrefab_k__BackingField,
     (int32_t)v62,
     v63,
@@ -260,12 +260,12 @@ LABEL_12:
     v66,
     v67,
     v68);
-  v69 = AssetData__GetObject_object__58323140(
+  v69 = AssetData__GetObject_object__58532980(
           v19,
-          (System_String_o *)StringLiteral_5455/*"DiggingSettings"*/,
-          (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_DiggingSettings___);
+          (System_String_o *)StringLiteral_5467/*"DiggingSettings"*/,
+          (const MethodInfo_37D2474 *)Method_AssetData_GetObject_DiggingSettings___);
   this->fields._Settings_k__BackingField = (struct DiggingSettings_o *)v69;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Settings_k__BackingField,
     (int32_t)v69,
     v70,
@@ -274,11 +274,11 @@ LABEL_12:
     v73,
     v74,
     v75);
-  v76 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v76 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v76, (Il2CppObject *)v7, Method_DiggingAssetManager___c__DisplayClass33_0__GetAssets_b__0__, 0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v77, v78);
-  AtlasManager__LoadEventUI_47538036(eventId, v76, 1, 0);
+  AtlasManager__LoadEventUI_47569188(eventId, v76, 1, 0);
 }
 
 
@@ -328,18 +328,18 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
   bool v45; // w6
   bool v46; // w7
 
-  if ( (byte_5932945 & 1) == 0 )
+  if ( (byte_596AA45 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    byte_5932945 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    byte_596AA45 = 1;
   }
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&eventId, method);
-  AtlasManager__ReleaseEventUI_47538200(eventId, 0);
+  AtlasManager__ReleaseEventUI_47569360(eventId, 0);
   this->fields._blockPrefab_k__BackingField = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, 0, v5, v6, v7, v8, v9, v10);
   this->fields._rewardPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._rewardPrefab_k__BackingField,
     0,
     v11,
@@ -349,7 +349,7 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
     v15,
     v16);
   this->fields._AutoDiggingDialogPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AutoDiggingDialogPrefab_k__BackingField,
     0,
     v17,
@@ -359,7 +359,7 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
     v21,
     v22);
   this->fields._DiggingConfirmDialogPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingConfirmDialogPrefab_k__BackingField,
     0,
     v23,
@@ -369,7 +369,7 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
     v27,
     v28);
   this->fields._DiggingPointRewardDialogPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingPointRewardDialogPrefab_k__BackingField,
     0,
     v29,
@@ -379,7 +379,7 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
     v33,
     v34);
   this->fields._DiggingRewardDialogPrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingRewardDialogPrefab_k__BackingField,
     0,
     v35,
@@ -389,7 +389,7 @@ void DiggingAssetManager__Release(DiggingAssetManager_o *this, int32_t eventId, 
     v39,
     v40);
   this->fields._DiggingCompleteImagePrefab_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingCompleteImagePrefab_k__BackingField,
     0,
     v41,
@@ -471,7 +471,7 @@ void DiggingAssetManager__set_AutoDiggingDialogPrefab(
   bool v7; // w7
 
   this->fields._AutoDiggingDialogPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AutoDiggingDialogPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -495,7 +495,7 @@ void DiggingAssetManager__set_DiggingCompleteImagePrefab(
   bool v7; // w7
 
   this->fields._DiggingCompleteImagePrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingCompleteImagePrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -519,7 +519,7 @@ void DiggingAssetManager__set_DiggingConfirmDialogPrefab(
   bool v7; // w7
 
   this->fields._DiggingConfirmDialogPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingConfirmDialogPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -543,7 +543,7 @@ void DiggingAssetManager__set_DiggingPointRewardDialogPrefab(
   bool v7; // w7
 
   this->fields._DiggingPointRewardDialogPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingPointRewardDialogPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -567,7 +567,7 @@ void DiggingAssetManager__set_DiggingRewardDialogPrefab(
   bool v7; // w7
 
   this->fields._DiggingRewardDialogPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DiggingRewardDialogPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -588,7 +588,7 @@ void DiggingAssetManager__set_Settings(DiggingAssetManager_o *this, DiggingSetti
   bool v7; // w7
 
   this->fields._Settings_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Settings_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -612,7 +612,7 @@ void DiggingAssetManager__set_blockPrefab(
   bool v7; // w7
 
   this->fields._blockPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -636,7 +636,7 @@ void DiggingAssetManager__set_rewardPrefab(
   bool v7; // w7
 
   this->fields._rewardPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._rewardPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

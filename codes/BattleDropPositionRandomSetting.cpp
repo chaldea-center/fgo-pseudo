@@ -56,17 +56,11 @@ UnityEngine_Vector3_o BattleDropPositionRandomSetting_PositionRandom__get_RectBa
         BattleDropPositionRandomSetting_PositionRandom_o *this,
         const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  x = this->fields.rectBasePoint.fields.x;
-  y = this->fields.rectBasePoint.fields.y;
-  z = this->fields.rectBasePoint.fields.z;
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.rectBasePoint.fields.x;
+  result.fields.y = this->fields.rectBasePoint.fields.y;
+  result.fields.z = this->fields.rectBasePoint.fields.z;
   return result;
 }
 

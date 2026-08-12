@@ -2,10 +2,10 @@ void ExRoomMissionReceiveConfirmListViewItemDraw___cctor(const MethodInfo *metho
 {
   struct ExRoomMissionReceiveConfirmListViewItemDraw_StaticFields *static_fields; // x8
 
-  if ( (byte_5932E2F & 1) == 0 )
+  if ( (byte_596AF35 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveConfirmListViewItemDraw_TypeInfo);
-    byte_5932E2F = 1;
+    sub_2213A60(&ExRoomMissionReceiveConfirmListViewItemDraw_TypeInfo);
+    byte_596AF35 = 1;
   }
   static_fields = ExRoomMissionReceiveConfirmListViewItemDraw_TypeInfo->static_fields;
   static_fields->RewardTextWidth = 630.0;
@@ -39,7 +39,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
 {
   ExRoomMissionReceiveConfirmListViewItemDraw_o *v8; // x19
   System_String_o *v9; // x22
-  UnityEngine_Vector2_o printedSize; // kr00_8
+  UnityEngine_Vector2_o printedSize; // kr10_8
   int32_t v11; // w22
   __int64 v12; // x1
   __int64 v13; // x2
@@ -72,7 +72,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   __int64 v40; // x1
   __int64 v41; // x2
   ExRoomMissionReceiveConfirmListViewItemDraw_c *v42; // x0
-  UnityEngine_Vector2_o v43; // kr08_8
+  UnityEngine_Vector2_o v43; // kr18_8
   int y; // w8
   int v45; // w21
   UnityEngine_GameObject_o *v46; // x0
@@ -80,7 +80,6 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   __int64 v48; // x2
   UnityEngine_Object_o *boxCollider; // x20
   int32_t LineHeight; // w22
-  float v51; // s1
   bool v52; // [xsp+4h] [xbp-8Ch]
   System_String_o **v53; // [xsp+8h] [xbp-88h]
   struct System_String_array *v54; // [xsp+10h] [xbp-80h]
@@ -88,16 +87,17 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   struct System_String_array *RewardCountOperatorStrings_k__BackingField; // [xsp+20h] [xbp-70h]
   int v57; // [xsp+28h] [xbp-68h]
   int32_t num; // [xsp+2Ch] [xbp-64h] BYREF
-  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:kr00_12.12
+  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
-  if ( (byte_5932E2E & 1) == 0 )
+  if ( (byte_596AF34 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveConfirmListViewItemDraw_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)sub_21FFC50(&StringLiteral_8913/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/);
-    byte_5932E2E = 1;
+    sub_2213A60(&ExRoomMissionReceiveConfirmListViewItemDraw_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)sub_2213A60(&StringLiteral_8926/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/);
+    byte_596AF34 = 1;
   }
   v8->fields.dispMode = mode;
   if ( mode && !v8->fields.isInit )
@@ -109,18 +109,18 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
                                                                     (const MethodInfo *)item),
           (v9 = (System_String_o *)this) == 0) )
     {
-      v9 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v9 = **(System_String_o ***)(qword_5984390 + 184);
       if ( !v9 )
         goto LABEL_71;
     }
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
-    UIWidget__set_height((UIWidget_o *)this, this[5].fields.dispMode * v9->fields._stringLength, 0);
+    UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)this + 106) * v9->fields._stringLength, 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
-    WrapControlText__textAdjust((UILabel_o *)this, v9, this[5].fields.dispMode, this[5].fields.dispMode, 0);
+    WrapControlText__textAdjust((UILabel_o *)this, v9, *((_DWORD *)this + 106), *((_DWORD *)this + 106), 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
@@ -158,7 +158,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12, v13);
     v52 = isLineDisp;
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8913/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/,
+                                                              (System_String_o *)StringLiteral_8926/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/,
                                                               0);
     rewardLabel = v8->fields.rewardLabel;
     format = (System_String_o *)this;
@@ -180,7 +180,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
         {
           if ( v25 >= LODWORD(RewardGiftEntities_k__BackingField->max_length) )
 LABEL_72:
-            sub_21FFED4(this);
+            sub_2213CE4(this);
           v27 = RewardGiftEntities_k__BackingField->m_Items[v25];
           if ( v27 )
           {
@@ -236,7 +236,7 @@ LABEL_43:
           goto LABEL_51;
         }
 LABEL_50:
-        v34 = *(Il2CppObject ***)(qword_594C0B8 + 184);
+        v34 = *(Il2CppObject ***)(qword_5984390 + 184);
 LABEL_51:
         if ( !v29 )
           goto LABEL_71;
@@ -251,8 +251,8 @@ LABEL_51:
           goto LABEL_71;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
         num = v27->fields.num;
-        v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &num);
-        v39 = System_String__Format_75484644(format, v36, v31, v38, 0);
+        v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &num);
+        v39 = System_String__Format_75697948(format, v36, v31, v38, 0);
         UILabel__set_text((UILabel_o *)v29, v39, 0);
         v42 = *v35;
         v14 = v35;
@@ -262,7 +262,7 @@ LABEL_51:
           v42 = *v35;
         }
         RewardDisplayNames_k__BackingField = v54;
-        UILabel__SetCondensedScale_56386440((UILabel_o *)v29, v42->static_fields->RewardTextWidth, 0.0, 0);
+        UILabel__SetCondensedScale_56591096((UILabel_o *)v29, v42->static_fields->RewardTextWidth, 0.0, 0);
         v43 = UILabel__get_printedSize((UILabel_o *)v29, 0);
         y = (int)v43.fields.y;
         if ( v43.fields.y == INFINITY )
@@ -280,7 +280,7 @@ LABEL_59:
     }
     if ( !v8->fields.lineSprite )
       goto LABEL_71;
-    v45 = LODWORD(this[2].fields.messageLabel->monitor) + v57;
+    v45 = *(_DWORD *)(*((_QWORD *)this + 23) + 8LL) + v57;
     v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8->fields.lineSprite, 0);
     GameObjectExtensions__SetLocalPositionY(v46, (float)-v45, 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.lineSprite;
@@ -302,16 +302,18 @@ LABEL_59:
       if ( this )
       {
         size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
+        v60.fields.x = size.fields.x;
+        v60.fields.z = size.fields.z;
         this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.boxCollider;
         if ( this )
         {
-          v51 = (float)(LineHeight + v45);
-          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, size, 0);
+          v60.fields.y = (float)(LineHeight + v45);
+          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v60, 0);
           return;
         }
       }
 LABEL_71:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
   }
 }

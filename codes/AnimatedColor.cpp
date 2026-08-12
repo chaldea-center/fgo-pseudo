@@ -9,7 +9,7 @@ void AnimatedColor___ctor(AnimatedColor_o *this, const MethodInfo *method)
 void AnimatedColor__LateUpdate(AnimatedColor_o *this, const MethodInfo *method)
 {
   if ( !this->fields.mWidget )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   UIWidget__set_color(this->fields.mWidget, this->fields.color, method);
 }
 
@@ -25,16 +25,16 @@ void AnimatedColor__OnEnable(AnimatedColor_o *this, const MethodInfo *method)
   bool v9; // w7
   const MethodInfo *v10; // x1
 
-  if ( (byte_593CF04 & 1) == 0 )
+  if ( (byte_59751DB & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_593CF04 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_59751DB = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
     (int32_t)Component_object,
     v4,

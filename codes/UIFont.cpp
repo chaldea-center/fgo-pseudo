@@ -16,25 +16,25 @@ void UIFont___ctor(UIFont_o *this, const MethodInfo *method)
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CF82 & 1) == 0 )
+  if ( (byte_5975259 & 1) == 0 )
   {
-    sub_21FFC50(&BMFont_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BMSymbol__TypeInfo);
-    byte_593CF82 = 1;
+    sub_2213A60(&BMFont_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BMSymbol__TypeInfo);
+    byte_5975259 = 1;
   }
   v3 = BMFont_TypeInfo;
-  this->fields.mUVRect = (struct UnityEngine_Rect_o)xmmword_E92B70;
-  v4 = (BMFont_o *)sub_21FFEBC(v3);
+  this->fields.mUVRect = (struct UnityEngine_Rect_o)xmmword_E9BD10;
+  v4 = (BMFont_o *)sub_2213CCC(v3);
   BMFont___ctor(v4, 0);
   this->fields.mFont = v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BMSymbol__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BMSymbol__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BMSymbol___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BMSymbol___ctor__);
   this->fields.mSymbols = (struct System_Collections_Generic_List_BMSymbol__o *)v11;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSymbols, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSymbols, (int32_t)v11, v12, v13, v14, v15, v16, v17);
   this->fields.mDynamicFontSize = 16;
   *(_QWORD *)&this->fields.mPMA = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -59,9 +59,9 @@ void UIFont__AddSymbol(
 
   Symbol = UIFont__GetSymbol(this, sequence, 1, method);
   if ( !Symbol )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   Symbol->fields.spriteName = spriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&Symbol->fields.spriteName,
     (int32_t)spriteName,
     v8,
@@ -83,10 +83,10 @@ bool UIFont__CheckIfRelated(UIFont_o *a, UIFont_o *b, const MethodInfo *method)
   const MethodInfo *v10; // x2
   const MethodInfo *v11; // x2
 
-  if ( (byte_593CF7A & 1) == 0 )
+  if ( (byte_5975251 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF7A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975251 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, b);
@@ -123,7 +123,7 @@ bool UIFont__CheckIfRelated(UIFont_o *a, UIFont_o *b, const MethodInfo *method)
         goto LABEL_28;
       if ( !*((_DWORD *)isDynamic + 6) )
 LABEL_29:
-        sub_21FFED4(isDynamic);
+        sub_2213CE4(isDynamic);
       if ( System_String__op_Equality(v9, *((System_String_o **)isDynamic + 4), 0) )
         return 1;
     }
@@ -137,7 +137,7 @@ LABEL_29:
     return 1;
   if ( !b )
 LABEL_28:
-    sub_21FFECC(isDynamic, v7);
+    sub_2213CDC(isDynamic, v7);
   return UIFont__References(b, a, v11);
 }
 
@@ -171,13 +171,13 @@ BMSymbol_o *UIFont__GetSymbol(
   intptr_t v26; // x8
 
   v6 = this;
-  if ( (byte_593CF7E & 1) == 0 )
+  if ( (byte_5975255 & 1) == 0 )
   {
-    sub_21FFC50(&BMSymbol_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-    this = (UIFont_o *)sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
-    byte_593CF7E = 1;
+    sub_2213A60(&BMSymbol_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+    this = (UIFont_o *)sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+    byte_5975255 = 1;
   }
   mSymbols = v6->fields.mSymbols;
   if ( !mSymbols )
@@ -194,7 +194,7 @@ BMSymbol_o *UIFont__GetSymbol(
       this = (UIFont_o *)System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)this,
                            v9,
-                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
       if ( !this )
         break;
       v10 = this;
@@ -204,17 +204,17 @@ BMSymbol_o *UIFont__GetSymbol(
         goto LABEL_10;
     }
 LABEL_19:
-    sub_21FFECC(this, sequence);
+    sub_2213CDC(this, sequence);
   }
 LABEL_10:
   if ( !createIfMissing )
     return 0;
-  v10 = (UIFont_o *)sub_21FFEBC(BMSymbol_TypeInfo);
+  v10 = (UIFont_o *)sub_2213CCC(BMSymbol_TypeInfo);
   BMSymbol___ctor((BMSymbol_o *)v10, 0);
   if ( !v10 )
     goto LABEL_19;
   v10->fields.m_CachedPtr = (intptr_t)sequence;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->fields, (int32_t)sequence, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->fields, (int32_t)sequence, v11, v12, v13, v14, v15, v16);
   this = (UIFont_o *)v6->fields.mSymbols;
   if ( !this )
     goto LABEL_19;
@@ -229,14 +229,14 @@ LABEL_10:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v10,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
     v26 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
     *(_QWORD *)(v26 + 32) = v10;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 32), (int32_t)v10, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 32), (int32_t)v10, v17, v18, v19, v20, v21, v22);
   }
   return (BMSymbol_o *)v10;
 }
@@ -267,14 +267,14 @@ void UIFont__MarkAsChanged(UIFont_o *this, const MethodInfo *method)
   int v23; // w21
   int32_t v24; // w20
 
-  if ( (byte_593CF7C & 1) == 0 )
+  if ( (byte_5975253 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
-    sub_21FFC50(&Method_NGUITools_FindActive_UILabel___);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF7C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+    sub_2213A60(&Method_NGUITools_FindActive_UILabel___);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975253 = 1;
   }
   mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -287,13 +287,13 @@ void UIFont__MarkAsChanged(UIFont_o *this, const MethodInfo *method)
     UIFont__MarkAsChanged(Active_object, v4);
   }
   this->fields.mSprite = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v5, v6, v7, v8, v9, v10);
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v12);
-  Active_object = (UIFont_o *)NGUITools__FindActive_object_((const MethodInfo_38BD5C4 *)Method_NGUITools_FindActive_UILabel___);
+  Active_object = (UIFont_o *)NGUITools__FindActive_object_((const MethodInfo_38F0A8C *)Method_NGUITools_FindActive_UILabel___);
   if ( !Active_object )
 LABEL_29:
-    sub_21FFECC(Active_object, v4);
+    sub_2213CDC(Active_object, v4);
   m_CancellationTokenSource = Active_object->fields.m_CancellationTokenSource;
   v14 = Active_object;
   if ( (int)m_CancellationTokenSource >= 1 )
@@ -302,7 +302,7 @@ LABEL_29:
     do
     {
       if ( (unsigned int)v15 >= LODWORD(v14->fields.m_CancellationTokenSource) )
-        sub_21FFED4(Active_object);
+        sub_2213CE4(Active_object);
       v16 = *((_QWORD *)&v14->fields.mMat + v15);
       if ( !v16 )
         goto LABEL_29;
@@ -314,7 +314,7 @@ LABEL_29:
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v16, 0);
         if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v17);
-        Active_object = (UIFont_o *)NGUITools__GetActive_56206348(gameObject, 0);
+        Active_object = (UIFont_o *)NGUITools__GetActive_56411004(gameObject, 0);
         if ( ((unsigned __int8)Active_object & 1) != 0 )
         {
           Active_object = (UIFont_o *)UIFont__CheckIfRelated(this, *(UIFont_o **)(v16 + 408), v19);
@@ -344,7 +344,7 @@ LABEL_29:
       Active_object = (UIFont_o *)System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)Active_object,
                                     v24,
-                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
       if ( !Active_object )
         break;
       BMSymbol__MarkAsChanged((BMSymbol_o *)Active_object, 0);
@@ -374,11 +374,11 @@ BMSymbol_o *UIFont__MatchSymbol(
   UIAtlas_o *atlas; // x0
 
   v8 = this;
-  if ( (byte_593CF7F & 1) == 0 )
+  if ( (byte_5975256 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-    this = (UIFont_o *)sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
-    byte_593CF7F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+    this = (UIFont_o *)sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+    byte_5975256 = 1;
   }
   mSymbols = v8->fields.mSymbols;
   if ( !mSymbols )
@@ -396,7 +396,7 @@ BMSymbol_o *UIFont__MatchSymbol(
       this = (UIFont_o *)System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)this,
                            v11,
-                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
       if ( !this )
         goto LABEL_20;
       v13 = (BMSymbol_o *)this;
@@ -423,7 +423,7 @@ BMSymbol_o *UIFont__MatchSymbol(
               }
             }
 LABEL_20:
-            sub_21FFECC(this, text);
+            sub_2213CDC(this, text);
           }
 LABEL_16:
           atlas = UIFont__get_atlas(v8, (const MethodInfo *)text);
@@ -449,10 +449,10 @@ bool UIFont__References(UIFont_o *this, UIFont_o *font, const MethodInfo *method
 
   while ( 1 )
   {
-    if ( (byte_593CF79 & 1) == 0 )
+    if ( (byte_5975250 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF79 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975250 = 1;
     }
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, font);
@@ -470,7 +470,7 @@ bool UIFont__References(UIFont_o *this, UIFont_o *font, const MethodInfo *method
       return 0;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v8, font);
+      sub_2213CDC(v8, font);
   }
   return 1;
 }
@@ -485,10 +485,10 @@ void UIFont__RemoveSymbol(UIFont_o *this, System_String_o *sequence, const Metho
   System_Collections_Generic_List_object__o *symbols; // x0
   __int64 v10; // x1
 
-  if ( (byte_593CF80 & 1) == 0 )
+  if ( (byte_5975257 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__Remove__);
-    byte_593CF80 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__Remove__);
+    byte_5975257 = 1;
   }
   Symbol = UIFont__GetSymbol(this, sequence, 0, v3);
   if ( Symbol )
@@ -496,11 +496,11 @@ void UIFont__RemoveSymbol(UIFont_o *this, System_String_o *sequence, const Metho
     v8 = (Il2CppObject *)Symbol;
     symbols = (System_Collections_Generic_List_object__o *)UIFont__get_symbols(this, v7);
     if ( !symbols )
-      sub_21FFECC(0, v10);
+      sub_2213CDC(0, v10);
     System_Collections_Generic_List_object___Remove(
       symbols,
       v8,
-      (const MethodInfo_445101C *)Method_System_Collections_Generic_List_BMSymbol__Remove__);
+      (const MethodInfo_4485154 *)Method_System_Collections_Generic_List_BMSymbol__Remove__);
   }
   UIFont__MarkAsChanged(this, v7);
 }
@@ -521,7 +521,7 @@ void UIFont__RenameSymbol(UIFont_o *this, System_String_o *before, System_String
   if ( Symbol )
   {
     Symbol->fields.sequence = after;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&Symbol->fields, (int32_t)after, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&Symbol->fields, (int32_t)after, v8, v9, v10, v11, v12, v13);
   }
   UIFont__MarkAsChanged(this, v7);
 }
@@ -541,53 +541,51 @@ void UIFont__Trim(UIFont_o *this, const MethodInfo *method)
   const MethodInfo *v12; // x1
   int32_t v13; // w0
   struct UISpriteData_o *mSprite; // x8
-  float v15; // s9
   int y; // s13
-  float v17; // s8
   int height; // s11
   int width; // s14
   float x; // s12
-  float v21; // s15
-  double v22; // d10
-  __int64 v23; // x1
-  double v24; // d0
-  double v25; // d0
-  double v26; // d1
-  double v27; // d1
-  float v28; // s13
-  int32_t v29; // w20
-  float v30; // s15
-  double v31; // d10
-  float v32; // s14
-  __int64 v33; // x1
-  double v34; // d0
-  double v35; // d0
-  double v36; // d1
-  double v37; // d1
-  int32_t v38; // w21
-  float v39; // s12
-  double v40; // d9
-  __int64 v41; // x1
-  double v42; // d0
-  double v43; // d0
-  double v44; // d1
-  double v45; // d1
-  int32_t v46; // w22
-  float v47; // s9
-  double v48; // d8
-  double v49; // d0
-  double v50; // d0
-  double v51; // d1
-  double v52; // d1
-  int32_t v53; // w4
+  float v19; // s15
+  double v20; // d10
+  __int64 v21; // x1
+  double v22; // d0
+  double v23; // d0
+  double v24; // d1
+  double v25; // d1
+  float v26; // s13
+  int32_t v27; // w20
+  float v28; // s15
+  double v29; // d10
+  float v30; // s14
+  __int64 v31; // x1
+  double v32; // d0
+  double v33; // d0
+  double v34; // d1
+  double v35; // d1
+  int32_t v36; // w21
+  float v37; // s12
+  double v38; // d9
+  __int64 v39; // x1
+  double v40; // d0
+  double v41; // d0
+  double v42; // d1
+  double v43; // d1
+  int32_t v44; // w22
+  float v45; // s9
+  double v46; // d8
+  double v47; // d0
+  double v48; // d0
+  double v49; // d1
+  double v50; // d1
+  int32_t v51; // w4
+  __int64 v52; // kr00_8
   double iptr; // [xsp+48h] [xbp-38h] BYREF
-  UnityEngine_Rect_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CF78 & 1) == 0 )
+  if ( (byte_597524F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF78 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597524F = 1;
   }
   mAtlas = this->fields.mAtlas;
   if ( !mAtlas )
@@ -611,182 +609,180 @@ void UIFont__Trim(UIFont_o *this, const MethodInfo *method)
     v13 = ((__int64 (__fastcall *)(UIAtlas_o *, _QWORD))mAtlas->klass[1]._1.byval_arg.data)(
             mAtlas,
             *(_QWORD *)&mAtlas->klass[1]._1.byval_arg.bits);
-    v55.fields.m_XMin = m_XMin;
-    v55.fields.m_YMin = m_YMin;
-    v55.fields.m_Width = m_Width;
-    v55.fields.m_Height = m_Height;
-    v56 = NGUIMath__ConvertToPixels(v55, v11, v13, 1, 0);
+    v54.fields.m_XMin = m_XMin;
+    v54.fields.m_YMin = m_YMin;
+    v54.fields.m_Width = m_Width;
+    v54.fields.m_Height = m_Height;
+    v52 = *(_OWORD *)&NGUIMath__ConvertToPixels(v54, v11, v13, 1, 0);
     mSprite = this->fields.mSprite;
     if ( !mSprite )
       goto LABEL_82;
-    v15 = v56.fields.m_XMin;
     y = mSprite->fields.y;
-    v17 = v56.fields.m_YMin;
     width = mSprite->fields.width;
     height = mSprite->fields.height;
     x = (float)mSprite->fields.x;
-    if ( !byte_593220B )
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
-    v21 = x - v15;
+    v19 = x - *(float *)&v52;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method);
-    v22 = v21;
-    v24 = modf(v21, &iptr);
-    if ( v21 >= 0.0 )
+    v20 = v19;
+    v22 = modf(v19, &iptr);
+    if ( v19 >= 0.0 )
     {
-      if ( v24 != 0.5 )
+      if ( v22 != 0.5 )
       {
-        v25 = floor(v22 + 0.5);
+        v23 = floor(v20 + 0.5);
         goto LABEL_26;
       }
-      v26 = 1.0;
-      v25 = iptr;
+      v24 = 1.0;
+      v23 = iptr;
     }
     else
     {
-      if ( v24 != -0.5 )
+      if ( v22 != -0.5 )
       {
-        v25 = ceil(v22 + -0.5);
+        v23 = ceil(v20 + -0.5);
         goto LABEL_26;
       }
-      v25 = iptr;
-      v26 = -1.0;
+      v23 = iptr;
+      v24 = -1.0;
     }
-    v27 = v25 + v26;
-    if ( ((__int64)v25 & 1) != 0 )
-      v25 = v27;
+    v25 = v23 + v24;
+    if ( ((__int64)v23 & 1) != 0 )
+      v23 = v25;
 LABEL_26:
-    v28 = (float)y;
-    if ( v25 == INFINITY )
-      v29 = 0x80000000;
+    v26 = (float)y;
+    if ( v23 == INFINITY )
+      v27 = 0x80000000;
     else
-      v29 = (int)v25;
-    if ( !byte_593220B )
+      v27 = (int)v23;
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
-    v30 = v28 - v17;
+    v28 = v26 - *((float *)&v52 + 1);
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v23);
-    v31 = v30;
-    v32 = (float)width;
-    v34 = modf(v30, &iptr);
-    if ( v30 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v21);
+    v29 = v28;
+    v30 = (float)width;
+    v32 = modf(v28, &iptr);
+    if ( v28 >= 0.0 )
     {
-      if ( v34 != 0.5 )
+      if ( v32 != 0.5 )
       {
-        v35 = floor(v31 + 0.5);
+        v33 = floor(v29 + 0.5);
         goto LABEL_43;
       }
-      v36 = 1.0;
-      v35 = iptr;
+      v34 = 1.0;
+      v33 = iptr;
     }
     else
     {
-      if ( v34 != -0.5 )
+      if ( v32 != -0.5 )
       {
-        v35 = ceil(v31 + -0.5);
+        v33 = ceil(v29 + -0.5);
         goto LABEL_43;
       }
-      v35 = iptr;
-      v36 = -1.0;
+      v33 = iptr;
+      v34 = -1.0;
     }
-    v37 = v35 + v36;
-    if ( ((__int64)v35 & 1) != 0 )
-      v35 = v37;
+    v35 = v33 + v34;
+    if ( ((__int64)v33 & 1) != 0 )
+      v33 = v35;
 LABEL_43:
-    if ( v35 == INFINITY )
-      v38 = 0x80000000;
+    if ( v33 == INFINITY )
+      v36 = 0x80000000;
     else
-      v38 = (int)v35;
-    if ( !byte_593220B )
+      v36 = (int)v33;
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
-    v39 = (float)(x + v32) - v15;
+    v37 = (float)(x + v30) - *(float *)&v52;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v33);
-    v40 = v39;
-    v42 = modf(v39, &iptr);
-    if ( v39 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31);
+    v38 = v37;
+    v40 = modf(v37, &iptr);
+    if ( v37 >= 0.0 )
     {
-      if ( v42 != 0.5 )
+      if ( v40 != 0.5 )
       {
-        v43 = floor(v40 + 0.5);
+        v41 = floor(v38 + 0.5);
         goto LABEL_60;
       }
-      v44 = 1.0;
-      v43 = iptr;
+      v42 = 1.0;
+      v41 = iptr;
     }
     else
     {
-      if ( v42 != -0.5 )
+      if ( v40 != -0.5 )
       {
-        v43 = ceil(v40 + -0.5);
+        v41 = ceil(v38 + -0.5);
         goto LABEL_60;
       }
-      v43 = iptr;
-      v44 = -1.0;
+      v41 = iptr;
+      v42 = -1.0;
     }
-    v45 = v43 + v44;
-    if ( ((__int64)v43 & 1) != 0 )
-      v43 = v45;
+    v43 = v41 + v42;
+    if ( ((__int64)v41 & 1) != 0 )
+      v41 = v43;
 LABEL_60:
-    if ( v43 == INFINITY )
-      v46 = 0x80000000;
+    if ( v41 == INFINITY )
+      v44 = 0x80000000;
     else
-      v46 = (int)v43;
-    if ( !byte_593220B )
+      v44 = (int)v41;
+    if ( !byte_596A30A )
     {
-      sub_21FFC50(&System_Math_TypeInfo);
-      byte_593220B = 1;
+      sub_2213A60(&System_Math_TypeInfo);
+      byte_596A30A = 1;
     }
-    v47 = (float)(v28 + (float)height) - v17;
+    v45 = (float)(v26 + (float)height) - *((float *)&v52 + 1);
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v41);
-    v48 = v47;
-    v49 = modf(v47, &iptr);
-    if ( v47 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v39);
+    v46 = v45;
+    v47 = modf(v45, &iptr);
+    if ( v45 >= 0.0 )
     {
-      if ( v49 != 0.5 )
+      if ( v47 != 0.5 )
       {
-        v50 = floor(v48 + 0.5);
+        v48 = floor(v46 + 0.5);
         goto LABEL_77;
       }
-      v51 = 1.0;
-      v50 = iptr;
+      v49 = 1.0;
+      v48 = iptr;
     }
     else
     {
-      if ( v49 != -0.5 )
+      if ( v47 != -0.5 )
       {
-        v50 = ceil(v48 + -0.5);
+        v48 = ceil(v46 + -0.5);
         goto LABEL_77;
       }
-      v50 = iptr;
-      v51 = -1.0;
+      v48 = iptr;
+      v49 = -1.0;
     }
-    v52 = v50 + v51;
-    if ( ((__int64)v50 & 1) != 0 )
-      v50 = v52;
+    v50 = v48 + v49;
+    if ( ((__int64)v48 & 1) != 0 )
+      v48 = v50;
 LABEL_77:
     mAtlas = (UIAtlas_o *)this->fields.mFont;
     if ( mAtlas )
     {
-      if ( v50 == INFINITY )
-        v53 = 0x80000000;
+      if ( v48 == INFINITY )
+        v51 = 0x80000000;
       else
-        v53 = (int)v50;
-      BMFont__Trim((BMFont_o *)mAtlas, v29, v38, v46, v53, 0);
+        v51 = (int)v48;
+      BMFont__Trim((BMFont_o *)mAtlas, v27, v36, v44, v51, 0);
       return;
     }
 LABEL_82:
-    sub_21FFECC(mAtlas, method);
+    sub_2213CDC(mAtlas, method);
   }
 }
 
@@ -808,13 +804,13 @@ void UIFont__UpdateUVRect(UIFont_o *this, const MethodInfo *method)
   int32_t v15; // w21
   int32_t v16; // w0
   const MethodInfo *v17; // x1
-  UnityEngine_Rect_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v18; // 0:kr00_16.16
   UnityEngine_Rect_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CF7D & 1) == 0 )
+  if ( (byte_5975254 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF7D = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975254 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -851,13 +847,13 @@ void UIFont__UpdateUVRect(UIFont_o *this, const MethodInfo *method)
           v16 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))texture->klass[1]._1.byval_arg.data)(
                   texture,
                   *(_QWORD *)&texture->klass[1]._1.byval_arg.bits);
-          v18.fields.m_XMin = v11;
-          v18.fields.m_YMin = v12;
-          v18.fields.m_Width = v13;
-          v18.fields.m_Height = v14;
-          v19 = NGUIMath__ConvertToTexCoords(v18, v15, v16, 0);
+          v19.fields.m_XMin = v11;
+          v19.fields.m_YMin = v12;
+          v19.fields.m_Width = v13;
+          v19.fields.m_Height = v14;
+          v18 = NGUIMath__ConvertToTexCoords(v19, v15, v16, 0);
           v5 = (UIAtlas_o *)this->fields.mSprite;
-          this->fields.mUVRect = v19;
+          this->fields.mUVRect = v18;
           if ( v5 )
           {
             if ( UISpriteData__get_hasPadding((UISpriteData_o *)v5, 0) )
@@ -867,7 +863,7 @@ void UIFont__UpdateUVRect(UIFont_o *this, const MethodInfo *method)
         }
       }
 LABEL_16:
-      sub_21FFECC(v5, v4);
+      sub_2213CDC(v5, v4);
     }
   }
 }
@@ -884,23 +880,23 @@ bool UIFont__UsesSprite(UIFont_o *this, System_String_o *s, const MethodInfo *me
   int v11; // w22
   int32_t v12; // w21
 
-  if ( (byte_593CF81 & 1) == 0 )
+  if ( (byte_5975258 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
-    byte_593CF81 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+    byte_5975258 = 1;
   }
   if ( System_String__IsNullOrEmpty(s, 0) )
     return 0;
   spriteName = UIFont__get_spriteName(this, v5);
   if ( !s )
     goto LABEL_17;
-  if ( System_String__Equals_75473208(s, (System_String_o *)spriteName, 0) )
+  if ( System_String__Equals_75686512(s, (System_String_o *)spriteName, 0) )
     return 1;
   spriteName = UIFont__get_symbols(this, v9);
   if ( !spriteName )
 LABEL_17:
-    sub_21FFECC(spriteName, v8);
+    sub_2213CDC(spriteName, v8);
   v10 = *((_DWORD *)spriteName + 6);
   v11 = v10 - 1;
   if ( v10 >= 1 )
@@ -914,10 +910,10 @@ LABEL_17:
       spriteName = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)spriteName,
                      v12,
-                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
       if ( !spriteName )
         break;
-      v6 = System_String__Equals_75473208(s, *((System_String_o **)spriteName + 3), 0);
+      v6 = System_String__Equals_75686512(s, *((System_String_o **)spriteName + 3), 0);
       if ( !v6 && v11 != v12++ )
         continue;
       return v6;
@@ -935,10 +931,10 @@ UIAtlas_o *UIFont__get_atlas(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF63 & 1) == 0 )
+    if ( (byte_597523A & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF63 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597523A = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -948,7 +944,7 @@ UIAtlas_o *UIFont__get_atlas(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   return this->fields.mAtlas;
 }
@@ -961,10 +957,10 @@ BMFont_o *UIFont__get_bmFont(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF5B & 1) == 0 )
+    if ( (byte_5975232 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF5B = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975232 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -974,7 +970,7 @@ BMFont_o *UIFont__get_bmFont(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   return this->fields.mFont;
 }
@@ -989,10 +985,10 @@ int32_t UIFont__get_defaultSize(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF6F & 1) == 0 )
+    if ( (byte_5975246 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF6F = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975246 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1002,7 +998,7 @@ int32_t UIFont__get_defaultSize(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   if ( UIFont__get_isDynamic(this, method) || (mFont = this->fields.mFont) == 0 )
     p_mDynamicFontSize = &this->fields.mDynamicFontSize;
@@ -1019,10 +1015,10 @@ UnityEngine_Font_o *UIFont__get_dynamicFont(UIFont_o *this, const MethodInfo *me
 
   while ( 1 )
   {
-    if ( (byte_593CF74 & 1) == 0 )
+    if ( (byte_597524B & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF74 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597524B = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1032,7 +1028,7 @@ UnityEngine_Font_o *UIFont__get_dynamicFont(UIFont_o *this, const MethodInfo *me
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   return this->fields.mDynamicFont;
 }
@@ -1045,10 +1041,10 @@ int32_t UIFont__get_dynamicFontStyle(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF76 & 1) == 0 )
+    if ( (byte_597524D & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF76 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597524D = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1058,7 +1054,7 @@ int32_t UIFont__get_dynamicFontStyle(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   return this->fields.mDynamicFontStyle;
 }
@@ -1071,10 +1067,10 @@ UnityEngine_Texture_o *UIFont__get_dynamicTexture(UIFont_o *this, const MethodIn
 
   while ( 1 )
   {
-    if ( (byte_593CF7B & 1) == 0 )
+    if ( (byte_5975252 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF7B = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975252 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1091,7 +1087,7 @@ UnityEngine_Texture_o *UIFont__get_dynamicTexture(UIFont_o *this, const MethodIn
   mDynamicFont = this->fields.mDynamicFont;
   if ( !mDynamicFont || (mDynamicFont = (UnityEngine_Font_o *)UnityEngine_Font__get_material(mDynamicFont, 0)) == 0 )
 LABEL_7:
-    sub_21FFECC(mDynamicFont, method);
+    sub_2213CDC(mDynamicFont, method);
   return UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)mDynamicFont, 0);
 }
 
@@ -1104,11 +1100,11 @@ bool UIFont__get_hasSymbols(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF61 & 1) == 0 )
+    if ( (byte_5975238 & 1) == 0 )
     {
-      sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF61 = 1;
+      sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975238 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1118,7 +1114,7 @@ bool UIFont__get_hasSymbols(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   mSymbols = this->fields.mSymbols;
   return mSymbols && mSymbols->fields._size != 0;
@@ -1133,10 +1129,10 @@ bool UIFont__get_isDynamic(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF73 & 1) == 0 )
+    if ( (byte_597524A & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF73 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597524A = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1146,7 +1142,7 @@ bool UIFont__get_isDynamic(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   mDynamicFont = (UnityEngine_Object_o *)this->fields.mDynamicFont;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1161,10 +1157,10 @@ bool UIFont__get_isValid(UIFont_o *this, const MethodInfo *method)
   __int64 v4; // x1
   BMFont_o *mFont; // x0
 
-  if ( (byte_593CF6E & 1) == 0 )
+  if ( (byte_5975245 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF6E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975245 = 1;
   }
   mDynamicFont = (UnityEngine_Object_o *)this->fields.mDynamicFont;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1173,7 +1169,7 @@ bool UIFont__get_isValid(UIFont_o *this, const MethodInfo *method)
     return 1;
   mFont = this->fields.mFont;
   if ( !mFont )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return BMFont__get_isValid(mFont, 0);
 }
 
@@ -1197,10 +1193,10 @@ UnityEngine_Material_o *UIFont__get_material(UIFont_o *this, const MethodInfo *m
 
   while ( 1 )
   {
-    if ( (byte_593CF65 & 1) == 0 )
+    if ( (byte_597523C & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF65 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597523C = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1221,7 +1217,7 @@ UnityEngine_Material_o *UIFont__get_material(UIFont_o *this, const MethodInfo *m
     if ( mainTexture )
       return UIAtlas__get_spriteMaterial(mainTexture, method);
 LABEL_7:
-    sub_21FFECC(mainTexture, method);
+    sub_2213CDC(mainTexture, method);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1291,11 +1287,11 @@ bool UIFont__get_packedFontShader(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF68 & 1) == 0 )
+    if ( (byte_597523F & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      sub_21FFC50(&StringLiteral_10927/*"Packed"*/);
-      byte_593CF68 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      sub_2213A60(&StringLiteral_10940/*"Packed"*/);
+      byte_597523F = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1334,14 +1330,14 @@ bool UIFont__get_packedFontShader(UIFont_o *this, const MethodInfo *method)
           name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0);
           if ( name )
           {
-            mPacked = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_10927/*"Packed"*/, 0);
+            mPacked = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_10940/*"Packed"*/, 0);
 LABEL_24:
             this->fields.mPacked = mPacked;
             return mPacked == 1;
           }
         }
 LABEL_7:
-        sub_21FFECC(name, method);
+        sub_2213CDC(name, method);
       }
     }
     mPacked = 0;
@@ -1371,11 +1367,11 @@ bool UIFont__get_premultipliedAlphaShader(UIFont_o *this, const MethodInfo *meth
 
   while ( 1 )
   {
-    if ( (byte_593CF67 & 1) == 0 )
+    if ( (byte_597523E & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      sub_21FFC50(&StringLiteral_11170/*"Premultiplied"*/);
-      byte_593CF67 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      sub_2213A60(&StringLiteral_11190/*"Premultiplied"*/);
+      byte_597523E = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1396,7 +1392,7 @@ bool UIFont__get_premultipliedAlphaShader(UIFont_o *this, const MethodInfo *meth
     if ( name )
       return UIAtlas__get_premultipliedAlpha(name, method);
 LABEL_7:
-    sub_21FFECC(name, method);
+    sub_2213CDC(name, method);
   }
   mPMA = this->fields.mPMA;
   if ( mPMA == -1 )
@@ -1420,7 +1416,7 @@ LABEL_7:
       name = (UIAtlas_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)name, 0);
       if ( !name )
         goto LABEL_7;
-      mPMA = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_11170/*"Premultiplied"*/, 0);
+      mPMA = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_11190/*"Premultiplied"*/, 0);
     }
     else
     {
@@ -1483,12 +1479,12 @@ UISpriteData_o *UIFont__get_sprite(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF71 & 1) == 0 )
+    if ( (byte_5975248 & 1) == 0 )
     {
-      sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
-      sub_21FFC50(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF71 = 1;
+      sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Count__);
+      sub_2213A60(&Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975248 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1523,7 +1519,7 @@ UISpriteData_o *UIFont__get_sprite(UIFont_o *this, const MethodInfo *method)
           goto LABEL_7;
         Sprite = UIAtlas__GetSprite((UIAtlas_o *)IsNullOrEmpty, v9->fields.mSpriteName, v8);
         *p_mSprite = Sprite;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.mSprite,
           (int32_t)Sprite,
           v11,
@@ -1540,7 +1536,7 @@ UISpriteData_o *UIFont__get_sprite(UIFont_o *this, const MethodInfo *method)
           goto LABEL_7;
         v19 = UIAtlas__GetSprite(v17, (System_String_o *)IsNullOrEmpty, v18);
         *p_mSprite = v19;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.mSprite,
           (int32_t)v19,
           v20,
@@ -1560,7 +1556,7 @@ LABEL_19:
           if ( !IsNullOrEmpty )
             goto LABEL_7;
           *((_QWORD *)IsNullOrEmpty + 4) = 0;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)IsNullOrEmpty + 32), 0, v26, v27, v28, v29, v30, v31);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)IsNullOrEmpty + 32), 0, v26, v27, v28, v29, v30, v31);
         }
         mSymbols = this->fields.mSymbols;
         if ( !mSymbols )
@@ -1577,7 +1573,7 @@ LABEL_19:
             IsNullOrEmpty = System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
                               v34,
-                              (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
+                              (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BMSymbol__get_Item__);
             if ( !IsNullOrEmpty )
               break;
             BMSymbol__MarkAsChanged((BMSymbol_o *)IsNullOrEmpty, 0);
@@ -1585,7 +1581,7 @@ LABEL_19:
               return *p_mSprite;
           }
 LABEL_7:
-          sub_21FFECC(IsNullOrEmpty, method);
+          sub_2213CDC(IsNullOrEmpty, method);
         }
       }
     }
@@ -1602,10 +1598,10 @@ System_String_o *UIFont__get_spriteName(UIFont_o *this, const MethodInfo *method
 
   while ( 1 )
   {
-    if ( (byte_593CF6C & 1) == 0 )
+    if ( (byte_5975243 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF6C = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975243 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1620,7 +1616,7 @@ System_String_o *UIFont__get_spriteName(UIFont_o *this, const MethodInfo *method
   mFont = this->fields.mFont;
   if ( !mFont )
 LABEL_7:
-    sub_21FFECC(v4, method);
+    sub_2213CDC(v4, method);
   return mFont->fields.mSpriteName;
 }
 
@@ -1632,10 +1628,10 @@ System_Collections_Generic_List_BMSymbol__o *UIFont__get_symbols(UIFont_o *this,
 
   while ( 1 )
   {
-    if ( (byte_593CF62 & 1) == 0 )
+    if ( (byte_5975239 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF62 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975239 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1645,7 +1641,7 @@ System_Collections_Generic_List_BMSymbol__o *UIFont__get_symbols(UIFont_o *this,
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   return this->fields.mSymbols;
 }
@@ -1659,10 +1655,10 @@ int32_t UIFont__get_texHeight(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF5F & 1) == 0 )
+    if ( (byte_5975236 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF5F = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975236 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1672,7 +1668,7 @@ int32_t UIFont__get_texHeight(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   mFont = this->fields.mFont;
   if ( mFont )
@@ -1690,10 +1686,10 @@ int32_t UIFont__get_texWidth(UIFont_o *this, const MethodInfo *method)
 
   while ( 1 )
   {
-    if ( (byte_593CF5D & 1) == 0 )
+    if ( (byte_5975234 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF5D = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975234 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1703,7 +1699,7 @@ int32_t UIFont__get_texWidth(UIFont_o *this, const MethodInfo *method)
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v4, method);
+      sub_2213CDC(v4, method);
   }
   mFont = this->fields.mFont;
   if ( mFont )
@@ -1723,11 +1719,11 @@ UnityEngine_Texture2D_o *UIFont__get_texture(UIFont_o *this, const MethodInfo *m
 
   while ( 1 )
   {
-    if ( (byte_593CF69 & 1) == 0 )
+    if ( (byte_5975240 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      sub_21FFC50(&UnityEngine_Texture2D_TypeInfo);
-      byte_593CF69 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      sub_2213A60(&UnityEngine_Texture2D_TypeInfo);
+      byte_5975240 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1748,7 +1744,7 @@ UnityEngine_Texture2D_o *UIFont__get_texture(UIFont_o *this, const MethodInfo *m
   {
     if ( !material )
 LABEL_7:
-      sub_21FFECC(result, method);
+      sub_2213CDC(result, method);
     result = (UnityEngine_Texture2D_o *)UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)material, 0);
     if ( result )
     {
@@ -1770,14 +1766,13 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
   UnityEngine_Object_o *mAtlas; // x20
   const MethodInfo *v9; // x1
   UISpriteData_o *sprite; // x0
-  float v11; // s0
-  float v12; // s2
+  UnityEngine_Rect_o uvRect; // 0:kr00_16.16
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CF6A & 1) == 0 )
+  if ( (byte_5975241 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF6A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975241 = 1;
   }
   mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1786,10 +1781,12 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
   {
     v5 = this->fields.mReplacement;
     if ( !v5 )
-      sub_21FFECC(0, v4);
-    result = UIFont__get_uvRect(v5, v4);
-    m_XMin = result.fields.m_XMin;
-    m_Width = result.fields.m_Width;
+      sub_2213CDC(0, v4);
+    uvRect = UIFont__get_uvRect(v5, v4);
+    result.fields.m_YMin = uvRect.fields.m_YMin;
+    result.fields.m_Height = uvRect.fields.m_Height;
+    m_XMin = uvRect.fields.m_XMin;
+    m_Width = uvRect.fields.m_Width;
   }
   else
   {
@@ -1817,10 +1814,8 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
       result.fields.m_Height = 1.0;
     }
   }
-  v11 = m_XMin;
-  v12 = m_Width;
-  result.fields.m_Width = v12;
-  result.fields.m_XMin = v11;
+  result.fields.m_XMin = m_XMin;
+  result.fields.m_Width = m_Width;
   return result;
 }
 
@@ -1850,10 +1845,10 @@ void UIFont__set_atlas(UIFont_o *this, UIAtlas_o *value, const MethodInfo *metho
 
   while ( 1 )
   {
-    if ( (byte_593CF64 & 1) == 0 )
+    if ( (byte_597523B & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF64 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597523B = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1873,7 +1868,7 @@ void UIFont__set_atlas(UIFont_o *this, UIAtlas_o *value, const MethodInfo *metho
   {
     this->fields.mPMA = -1;
     this->fields.mAtlas = value;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, (int32_t)value, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, (int32_t)value, v9, v10, v11, v12, v13, v14);
     v16 = (UnityEngine_Object_o *)this->fields.mAtlas;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
@@ -1882,10 +1877,10 @@ void UIFont__set_atlas(UIFont_o *this, UIAtlas_o *value, const MethodInfo *metho
       v6 = *p_mAtlas;
       if ( !*p_mAtlas )
 LABEL_7:
-        sub_21FFECC(v6, value);
+        sub_2213CDC(v6, value);
       spriteMaterial = UIAtlas__get_spriteMaterial(v6, (const MethodInfo *)value);
       this->fields.mMat = spriteMaterial;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mMat,
         (int32_t)spriteMaterial,
         v18,
@@ -1915,10 +1910,10 @@ void UIFont__set_bmFont(UIFont_o *this, BMFont_o *value, const MethodInfo *metho
 
   while ( 1 )
   {
-    if ( (byte_593CF5C & 1) == 0 )
+    if ( (byte_5975233 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF5C = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975233 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1928,10 +1923,10 @@ void UIFont__set_bmFont(UIFont_o *this, BMFont_o *value, const MethodInfo *metho
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, value);
+      sub_2213CDC(v6, value);
   }
   this->fields.mFont = value;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, (int32_t)value, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, (int32_t)value, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -1943,10 +1938,10 @@ void UIFont__set_defaultSize(UIFont_o *this, int32_t value, const MethodInfo *me
 
   while ( 1 )
   {
-    if ( (byte_593CF70 & 1) == 0 )
+    if ( (byte_5975247 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF70 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975247 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1956,7 +1951,7 @@ void UIFont__set_defaultSize(UIFont_o *this, int32_t value, const MethodInfo *me
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, *(_QWORD *)&value);
+      sub_2213CDC(v6, *(_QWORD *)&value);
   }
   this->fields.mDynamicFontSize = value;
 }
@@ -1979,10 +1974,10 @@ void UIFont__set_dynamicFont(UIFont_o *this, UnityEngine_Font_o *value, const Me
 
   while ( 1 )
   {
-    if ( (byte_593CF75 & 1) == 0 )
+    if ( (byte_597524C & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF75 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597524C = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1992,7 +1987,7 @@ void UIFont__set_dynamicFont(UIFont_o *this, UnityEngine_Font_o *value, const Me
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, value);
+      sub_2213CDC(v6, value);
   }
   mDynamicFont = (UnityEngine_Object_o *)this->fields.mDynamicFont;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2005,7 +2000,7 @@ void UIFont__set_dynamicFont(UIFont_o *this, UnityEngine_Font_o *value, const Me
     if ( UnityEngine_Object__op_Inequality(v9, 0, 0) )
       UIFont__set_material(this, 0, v10);
     this->fields.mDynamicFont = value;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mDynamicFont,
       (int32_t)value,
       (System_String_o *)v10,
@@ -2027,10 +2022,10 @@ void UIFont__set_dynamicFontStyle(UIFont_o *this, int32_t value, const MethodInf
 
   while ( 1 )
   {
-    if ( (byte_593CF77 & 1) == 0 )
+    if ( (byte_597524E & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF77 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597524E = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2040,7 +2035,7 @@ void UIFont__set_dynamicFontStyle(UIFont_o *this, int32_t value, const MethodInf
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, *(_QWORD *)&value);
+      sub_2213CDC(v6, *(_QWORD *)&value);
   }
   if ( this->fields.mDynamicFontStyle != value )
   {
@@ -2065,10 +2060,10 @@ void UIFont__set_material(UIFont_o *this, UnityEngine_Material_o *value, const M
 
   while ( 1 )
   {
-    if ( (byte_593CF66 & 1) == 0 )
+    if ( (byte_597523D & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF66 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597523D = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2078,7 +2073,7 @@ void UIFont__set_material(UIFont_o *this, UnityEngine_Material_o *value, const M
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, value);
+      sub_2213CDC(v6, value);
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2087,7 +2082,7 @@ void UIFont__set_material(UIFont_o *this, UnityEngine_Material_o *value, const M
   {
     this->fields.mPMA = -1;
     this->fields.mMat = value;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMat, (int32_t)value, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMat, (int32_t)value, v8, v9, v10, v11, v12, v13);
     UIFont__MarkAsChanged(this, v14);
   }
 }
@@ -2135,10 +2130,10 @@ void UIFont__set_replacement(UIFont_o *this, UIFont_o *value, const MethodInfo *
   bool v41; // w7
 
   v3 = (UnityEngine_Object_o *)value;
-  if ( (byte_593CF72 & 1) == 0 )
+  if ( (byte_5975249 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF72 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5975249 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, value);
@@ -2157,7 +2152,7 @@ void UIFont__set_replacement(UIFont_o *this, UIFont_o *value, const MethodInfo *
     if ( v10 )
     {
       if ( !v3 )
-        sub_21FFECC(v10, v11);
+        sub_2213CDC(v10, v11);
       klass = (UnityEngine_Object_o *)v3[3].klass;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
@@ -2170,7 +2165,7 @@ void UIFont__set_replacement(UIFont_o *this, UIFont_o *value, const MethodInfo *
     if ( UnityEngine_Object__op_Inequality(v14, 0, 0) )
       UIFont__MarkAsChanged(this, v15);
     *p_mReplacement = (struct UIFont_o *)v3;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mReplacement,
       (int32_t)v3,
       v16,
@@ -2185,11 +2180,11 @@ void UIFont__set_replacement(UIFont_o *this, UIFont_o *value, const MethodInfo *
     {
       this->fields.mPMA = -1;
       this->fields.mMat = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mMat, 0, v24, v25, v26, v27, v28, v29);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mMat, 0, v24, v25, v26, v27, v28, v29);
       this->fields.mFont = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, 0, v30, v31, v32, v33, v34, v35);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mFont, 0, v30, v31, v32, v33, v34, v35);
       this->fields.mDynamicFont = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mDynamicFont, 0, v36, v37, v38, v39, v40, v41);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mDynamicFont, 0, v36, v37, v38, v39, v40, v41);
     }
     UIFont__MarkAsChanged(this, v23);
   }
@@ -2218,10 +2213,10 @@ void UIFont__set_spriteName(UIFont_o *this, System_String_o *value, const Method
 
   while ( 1 )
   {
-    if ( (byte_593CF6D & 1) == 0 )
+    if ( (byte_5975244 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF6D = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975244 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2241,9 +2236,9 @@ void UIFont__set_spriteName(UIFont_o *this, System_String_o *value, const Method
   v6 = this->fields.mFont;
   if ( !v6 )
 LABEL_7:
-    sub_21FFECC(v6, value);
+    sub_2213CDC(v6, value);
   v6->fields.mSpriteName = value;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v6->fields.mSpriteName, (int32_t)value, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->fields.mSpriteName, (int32_t)value, v8, v9, v10, v11, v12, v13);
   UIFont__MarkAsChanged(this, v14);
 }
 
@@ -2257,10 +2252,10 @@ void UIFont__set_texHeight(UIFont_o *this, int32_t value, const MethodInfo *meth
 
   while ( 1 )
   {
-    if ( (byte_593CF60 & 1) == 0 )
+    if ( (byte_5975237 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF60 = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975237 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2270,7 +2265,7 @@ void UIFont__set_texHeight(UIFont_o *this, int32_t value, const MethodInfo *meth
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, *(_QWORD *)&value);
+      sub_2213CDC(v6, *(_QWORD *)&value);
   }
   mFont = this->fields.mFont;
   if ( mFont )
@@ -2287,10 +2282,10 @@ void UIFont__set_texWidth(UIFont_o *this, int32_t value, const MethodInfo *metho
 
   while ( 1 )
   {
-    if ( (byte_593CF5E & 1) == 0 )
+    if ( (byte_5975235 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF5E = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975235 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2300,7 +2295,7 @@ void UIFont__set_texWidth(UIFont_o *this, int32_t value, const MethodInfo *metho
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v6, *(_QWORD *)&value);
+      sub_2213CDC(v6, *(_QWORD *)&value);
   }
   mFont = this->fields.mFont;
   if ( mFont )
@@ -2325,10 +2320,10 @@ void UIFont__set_uvRect(UIFont_o *this, UnityEngine_Rect_o value, const MethodIn
   m_YMin = value.fields.m_YMin;
   while ( 1 )
   {
-    if ( (byte_593CF6B & 1) == 0 )
+    if ( (byte_5975242 & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593CF6B = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_5975242 = 1;
     }
     mReplacement = (UnityEngine_Object_o *)this->fields.mReplacement;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -2338,7 +2333,7 @@ void UIFont__set_uvRect(UIFont_o *this, UnityEngine_Rect_o value, const MethodIn
       break;
     this = this->fields.mReplacement;
     if ( !this )
-      sub_21FFECC(v5, method);
+      sub_2213CDC(v5, method);
   }
   if ( !UIFont__get_sprite(this, method) )
   {

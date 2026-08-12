@@ -1,10 +1,10 @@
-void DataEntityBase_long____ctor(DataEntityBase_long__o *this, const MethodInfo_3EDADB8 *method)
+void DataEntityBase_long____ctor(DataEntityBase_long__o *this, const MethodInfo_3F0E560 *method)
 {
   DataEntityBase___ctor((DataEntityBase_o *)this, 0);
 }
 
 
-System_String_o *DataEntityBase_long___get_PrimaryKey(DataEntityBase_long__o *this, const MethodInfo_3EDAD78 *method)
+System_String_o *DataEntityBase_long___get_PrimaryKey(DataEntityBase_long__o *this, const MethodInfo_3F0E520 *method)
 {
   DataEntityBase_long__c *klass; // x8
   __int64 v4; // x0

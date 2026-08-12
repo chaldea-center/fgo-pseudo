@@ -20,7 +20,7 @@ int32_t WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const MethodInfo *
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ratingBase->fields.id;
 }
 
@@ -44,7 +44,7 @@ int32_t WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, const Metho
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ratingBase->fields.viewPoint;
 }
 
@@ -61,7 +61,7 @@ void WarBoardRatingBase__Init(
   bool v7; // w7
 
   this->fields.ratingBase = ratingBase;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)ratingBase,
     (System_String_o *)method,
@@ -79,7 +79,7 @@ int32_t WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_o *this, co
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ratingBase->fields.adjustmentValueA1;
 }
 
@@ -90,6 +90,6 @@ int32_t WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o *this, con
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return ratingBase->fields.adjustmentValueB;
 }

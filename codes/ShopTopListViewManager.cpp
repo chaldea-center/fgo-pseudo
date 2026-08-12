@@ -172,442 +172,442 @@ void ShopTopListViewManager___cctor(const MethodInfo *method)
   bool v170; // w7
   __int64 v171; // x0
 
-  if ( (byte_593480D & 1) == 0 )
+  if ( (byte_596C93C & 1) == 0 )
   {
-    sub_21FFC50(&ShopTopItemInfo___TypeInfo);
-    sub_21FFC50(&ShopTopItemInfo_TypeInfo);
-    sub_21FFC50(&ShopTopListViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12579/*"SHOP_BUY_STONE_FRAGMENTS"*/);
-    sub_21FFC50(&StringLiteral_22483/*"mask00"*/);
-    sub_21FFC50(&StringLiteral_12544/*"SHOP_BUY_ANONYMOUS"*/);
-    sub_21FFC50(&StringLiteral_12590/*"SHOP_CLASS_BOARD_RESET"*/);
-    sub_21FFC50(&StringLiteral_12574/*"SHOP_BUY_REVIVAL_ITEM"*/);
-    sub_21FFC50(&StringLiteral_21513/*"img_shop_15"*/);
-    sub_21FFC50(&StringLiteral_12671/*"SHOP_START_UP_SUMMON"*/);
-    sub_21FFC50(&StringLiteral_21509/*"img_shop_11"*/);
-    sub_21FFC50(&StringLiteral_12663/*"SHOP_SELL_SERVANT"*/);
-    sub_21FFC50(&StringLiteral_21519/*"img_shop_22"*/);
-    sub_21FFC50(&StringLiteral_12561/*"SHOP_BUY_GRAIL_FRAGMENTS"*/);
-    sub_21FFC50(&StringLiteral_12572/*"SHOP_BUY_RARE_PRI"*/);
-    sub_21FFC50(&StringLiteral_12596/*"SHOP_EVENT_SVT_EQUIP"*/);
-    sub_21FFC50(&StringLiteral_21520/*"img_shop_23"*/);
-    sub_21FFC50(&StringLiteral_12546/*"SHOP_BUY_BANK_ITEM"*/);
-    sub_21FFC50(&StringLiteral_12672/*"SHOP_TRADE_AP"*/);
-    sub_21FFC50(&StringLiteral_21511/*"img_shop_13"*/);
-    sub_21FFC50(&StringLiteral_21525/*"img_shop_9"*/);
-    sub_21FFC50(&StringLiteral_12567/*"SHOP_BUY_MANA_ITEM"*/);
-    sub_21FFC50(&StringLiteral_12585/*"SHOP_BUY_SVT_COSTUME"*/);
-    sub_21FFC50(&StringLiteral_21508/*"img_shop_10"*/);
-    sub_21FFC50(&StringLiteral_21514/*"img_shop_16"*/);
-    sub_21FFC50(&StringLiteral_21515/*"img_shop_17"*/);
-    sub_21FFC50(&StringLiteral_21517/*"img_shop_20"*/);
-    sub_21FFC50(&StringLiteral_21524/*"img_shop_8"*/);
-    sub_21FFC50(&StringLiteral_12591/*"SHOP_COIN_ROOM"*/);
-    sub_21FFC50(&StringLiteral_21522/*"img_shop_4"*/);
-    sub_21FFC50(&StringLiteral_21518/*"img_shop_21"*/);
-    sub_21FFC50(&StringLiteral_21516/*"img_shop_18"*/);
-    sub_21FFC50(&StringLiteral_12576/*"SHOP_BUY_SERVANT_STORAGE"*/);
-    sub_21FFC50(&StringLiteral_12558/*"SHOP_BUY_EVENT_ITEM"*/);
-    sub_21FFC50(&StringLiteral_21521/*"img_shop_3"*/);
-    sub_21FFC50(&StringLiteral_12578/*"SHOP_BUY_SPECIAL_ITEM"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_21512/*"img_shop_14"*/);
-    sub_21FFC50(&StringLiteral_21507/*"img_shop_1"*/);
-    sub_21FFC50(&StringLiteral_12571/*"SHOP_BUY_PURE_PRI"*/);
-    sub_21FFC50(&StringLiteral_12575/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/);
-    sub_21FFC50(&StringLiteral_21510/*"img_shop_12"*/);
-    byte_593480D = 1;
+    sub_2213A60(&ShopTopItemInfo___TypeInfo);
+    sub_2213A60(&ShopTopItemInfo_TypeInfo);
+    sub_2213A60(&ShopTopListViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12605/*"SHOP_BUY_STONE_FRAGMENTS"*/);
+    sub_2213A60(&StringLiteral_22527/*"mask00"*/);
+    sub_2213A60(&StringLiteral_12570/*"SHOP_BUY_ANONYMOUS"*/);
+    sub_2213A60(&StringLiteral_12616/*"SHOP_CLASS_BOARD_RESET"*/);
+    sub_2213A60(&StringLiteral_12600/*"SHOP_BUY_REVIVAL_ITEM"*/);
+    sub_2213A60(&StringLiteral_21554/*"img_shop_15"*/);
+    sub_2213A60(&StringLiteral_12697/*"SHOP_START_UP_SUMMON"*/);
+    sub_2213A60(&StringLiteral_21550/*"img_shop_11"*/);
+    sub_2213A60(&StringLiteral_12689/*"SHOP_SELL_SERVANT"*/);
+    sub_2213A60(&StringLiteral_21560/*"img_shop_22"*/);
+    sub_2213A60(&StringLiteral_12587/*"SHOP_BUY_GRAIL_FRAGMENTS"*/);
+    sub_2213A60(&StringLiteral_12598/*"SHOP_BUY_RARE_PRI"*/);
+    sub_2213A60(&StringLiteral_12622/*"SHOP_EVENT_SVT_EQUIP"*/);
+    sub_2213A60(&StringLiteral_21561/*"img_shop_23"*/);
+    sub_2213A60(&StringLiteral_12572/*"SHOP_BUY_BANK_ITEM"*/);
+    sub_2213A60(&StringLiteral_12698/*"SHOP_TRADE_AP"*/);
+    sub_2213A60(&StringLiteral_21552/*"img_shop_13"*/);
+    sub_2213A60(&StringLiteral_21566/*"img_shop_9"*/);
+    sub_2213A60(&StringLiteral_12593/*"SHOP_BUY_MANA_ITEM"*/);
+    sub_2213A60(&StringLiteral_12611/*"SHOP_BUY_SVT_COSTUME"*/);
+    sub_2213A60(&StringLiteral_21549/*"img_shop_10"*/);
+    sub_2213A60(&StringLiteral_21555/*"img_shop_16"*/);
+    sub_2213A60(&StringLiteral_21556/*"img_shop_17"*/);
+    sub_2213A60(&StringLiteral_21558/*"img_shop_20"*/);
+    sub_2213A60(&StringLiteral_21565/*"img_shop_8"*/);
+    sub_2213A60(&StringLiteral_12617/*"SHOP_COIN_ROOM"*/);
+    sub_2213A60(&StringLiteral_21563/*"img_shop_4"*/);
+    sub_2213A60(&StringLiteral_21559/*"img_shop_21"*/);
+    sub_2213A60(&StringLiteral_21557/*"img_shop_18"*/);
+    sub_2213A60(&StringLiteral_12602/*"SHOP_BUY_SERVANT_STORAGE"*/);
+    sub_2213A60(&StringLiteral_12584/*"SHOP_BUY_EVENT_ITEM"*/);
+    sub_2213A60(&StringLiteral_21562/*"img_shop_3"*/);
+    sub_2213A60(&StringLiteral_12604/*"SHOP_BUY_SPECIAL_ITEM"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_21553/*"img_shop_14"*/);
+    sub_2213A60(&StringLiteral_21548/*"img_shop_1"*/);
+    sub_2213A60(&StringLiteral_12597/*"SHOP_BUY_PURE_PRI"*/);
+    sub_2213A60(&StringLiteral_12601/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/);
+    sub_2213A60(&StringLiteral_21551/*"img_shop_12"*/);
+    byte_596C93C = 1;
   }
-  v1 = (struct ShopTopItemInfo_array *)sub_21FFD10(ShopTopItemInfo___TypeInfo, 20);
-  v2 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  v1 = (struct ShopTopItemInfo_array *)sub_2213B20(ShopTopItemInfo___TypeInfo, 20);
+  v2 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v2,
     5,
-    (System_String_o *)StringLiteral_12558/*"SHOP_BUY_EVENT_ITEM"*/,
-    (System_String_o *)StringLiteral_21524/*"img_shop_8"*/,
+    (System_String_o *)StringLiteral_12584/*"SHOP_BUY_EVENT_ITEM"*/,
+    (System_String_o *)StringLiteral_21565/*"img_shop_8"*/,
     7,
     1,
     v3);
   if ( !v1 )
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   if ( v2 )
   {
-    v4 = sub_21FFDA4(v2, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v2, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( !LODWORD(v1->max_length) )
     goto LABEL_65;
   v1->m_Items[0] = v2;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v1->m_Items, (int32_t)v2, v6, v7, v8, v9, v10, v11);
-  v13 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v1->m_Items, (int32_t)v2, v6, v7, v8, v9, v10, v11);
+  v13 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v13,
     9,
-    (System_String_o *)StringLiteral_12671/*"SHOP_START_UP_SUMMON"*/,
-    (System_String_o *)StringLiteral_21515/*"img_shop_17"*/,
+    (System_String_o *)StringLiteral_12697/*"SHOP_START_UP_SUMMON"*/,
+    (System_String_o *)StringLiteral_21556/*"img_shop_17"*/,
     16,
     12,
     v14);
   if ( v13 )
   {
-    v4 = sub_21FFDA4(v13, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v13, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( (v1->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_65;
   v1->m_Items[1] = v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[1], (int32_t)v13, v15, v16, v17, v18, v19, v20);
-  v21 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[1], (int32_t)v13, v15, v16, v17, v18, v19, v20);
+  v21 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v21,
     8,
-    (System_String_o *)StringLiteral_12663/*"SHOP_SELL_SERVANT"*/,
-    (System_String_o *)StringLiteral_21522/*"img_shop_4"*/,
+    (System_String_o *)StringLiteral_12689/*"SHOP_SELL_SERVANT"*/,
+    (System_String_o *)StringLiteral_21563/*"img_shop_4"*/,
     9,
     0,
     v22);
   if ( v21 )
   {
-    v4 = sub_21FFDA4(v21, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v21, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 2 )
     goto LABEL_65;
   v1->m_Items[2] = v21;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[2], (int32_t)v21, v23, v24, v25, v26, v27, v28);
-  v29 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[2], (int32_t)v21, v23, v24, v25, v26, v27, v28);
+  v29 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v29,
     3,
-    (System_String_o *)StringLiteral_12567/*"SHOP_BUY_MANA_ITEM"*/,
-    (System_String_o *)StringLiteral_21521/*"img_shop_3"*/,
+    (System_String_o *)StringLiteral_12593/*"SHOP_BUY_MANA_ITEM"*/,
+    (System_String_o *)StringLiteral_21562/*"img_shop_3"*/,
     2,
     2,
     v30);
   if ( v29 )
   {
-    v4 = sub_21FFDA4(v29, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v29, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( (v1->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_65;
   v1->m_Items[3] = v29;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[3], (int32_t)v29, v31, v32, v33, v34, v35, v36);
-  v37 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[3], (int32_t)v29, v31, v32, v33, v34, v35, v36);
+  v37 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v37,
     19,
-    (System_String_o *)StringLiteral_12571/*"SHOP_BUY_PURE_PRI"*/,
-    (System_String_o *)StringLiteral_21516/*"img_shop_18"*/,
+    (System_String_o *)StringLiteral_12597/*"SHOP_BUY_PURE_PRI"*/,
+    (System_String_o *)StringLiteral_21557/*"img_shop_18"*/,
     18,
     13,
     v38);
   if ( v37 )
   {
-    v4 = sub_21FFDA4(v37, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v37, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 4 )
     goto LABEL_65;
   v1->m_Items[4] = v37;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[4], (int32_t)v37, v39, v40, v41, v42, v43, v44);
-  v45 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[4], (int32_t)v37, v39, v40, v41, v42, v43, v44);
+  v45 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v45,
     14,
-    (System_String_o *)StringLiteral_12572/*"SHOP_BUY_RARE_PRI"*/,
-    (System_String_o *)StringLiteral_21509/*"img_shop_11"*/,
+    (System_String_o *)StringLiteral_12598/*"SHOP_BUY_RARE_PRI"*/,
+    (System_String_o *)StringLiteral_21550/*"img_shop_11"*/,
     3,
     3,
     v46);
   if ( v45 )
   {
-    v4 = sub_21FFDA4(v45, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v45, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 5 )
     goto LABEL_65;
   v1->m_Items[5] = v45;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[5], (int32_t)v45, v47, v48, v49, v50, v51, v52);
-  v53 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[5], (int32_t)v45, v47, v48, v49, v50, v51, v52);
+  v53 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v53,
     21,
-    (System_String_o *)StringLiteral_12574/*"SHOP_BUY_REVIVAL_ITEM"*/,
-    (System_String_o *)StringLiteral_21518/*"img_shop_21"*/,
+    (System_String_o *)StringLiteral_12600/*"SHOP_BUY_REVIVAL_ITEM"*/,
+    (System_String_o *)StringLiteral_21559/*"img_shop_21"*/,
     20,
     15,
     v54);
   if ( v53 )
   {
-    v4 = sub_21FFDA4(v53, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v53, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 6 )
     goto LABEL_65;
   v1->m_Items[6] = v53;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[6], (int32_t)v53, v55, v56, v57, v58, v59, v60);
-  v61 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[6], (int32_t)v53, v55, v56, v57, v58, v59, v60);
+  v61 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v61,
     20,
-    (System_String_o *)StringLiteral_12672/*"SHOP_TRADE_AP"*/,
-    (System_String_o *)StringLiteral_21517/*"img_shop_20"*/,
+    (System_String_o *)StringLiteral_12698/*"SHOP_TRADE_AP"*/,
+    (System_String_o *)StringLiteral_21558/*"img_shop_20"*/,
     19,
     14,
     v62);
   if ( v61 )
   {
-    v4 = sub_21FFDA4(v61, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v61, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( (v1->max_length & 0xFFFFFFF8) == 0 )
     goto LABEL_65;
   v1->m_Items[7] = v61;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[7], (int32_t)v61, v63, v64, v65, v66, v67, v68);
-  v69 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[7], (int32_t)v61, v63, v64, v65, v66, v67, v68);
+  v69 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v69,
     17,
-    (System_String_o *)StringLiteral_12585/*"SHOP_BUY_SVT_COSTUME"*/,
-    (System_String_o *)StringLiteral_21514/*"img_shop_16"*/,
+    (System_String_o *)StringLiteral_12611/*"SHOP_BUY_SVT_COSTUME"*/,
+    (System_String_o *)StringLiteral_21555/*"img_shop_16"*/,
     15,
     11,
     v70);
   if ( v69 )
   {
-    v4 = sub_21FFDA4(v69, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v69, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 8 )
     goto LABEL_65;
   v1->m_Items[8] = v69;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[8], (int32_t)v69, v71, v72, v73, v74, v75, v76);
-  v77 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[8], (int32_t)v69, v71, v72, v73, v74, v75, v76);
+  v77 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v77,
     22,
-    (System_String_o *)StringLiteral_12596/*"SHOP_EVENT_SVT_EQUIP"*/,
-    (System_String_o *)StringLiteral_21519/*"img_shop_22"*/,
+    (System_String_o *)StringLiteral_12622/*"SHOP_EVENT_SVT_EQUIP"*/,
+    (System_String_o *)StringLiteral_21560/*"img_shop_22"*/,
     21,
     16,
     v78);
   if ( v77 )
   {
-    v4 = sub_21FFDA4(v77, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v77, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 9 )
     goto LABEL_65;
   v1->m_Items[9] = v77;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[9], (int32_t)v77, v79, v80, v81, v82, v83, v84);
-  v85 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[9], (int32_t)v77, v79, v80, v81, v82, v83, v84);
+  v85 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v85,
     6,
-    (System_String_o *)StringLiteral_12576/*"SHOP_BUY_SERVANT_STORAGE"*/,
-    (System_String_o *)StringLiteral_21510/*"img_shop_12"*/,
+    (System_String_o *)StringLiteral_12602/*"SHOP_BUY_SERVANT_STORAGE"*/,
+    (System_String_o *)StringLiteral_21551/*"img_shop_12"*/,
     11,
     0,
     v86);
   if ( v85 )
   {
-    v4 = sub_21FFDA4(v85, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v85, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0xA )
     goto LABEL_65;
   v1->m_Items[10] = v85;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[10], (int32_t)v85, v87, v88, v89, v90, v91, v92);
-  v93 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[10], (int32_t)v85, v87, v88, v89, v90, v91, v92);
+  v93 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v93,
     7,
-    (System_String_o *)StringLiteral_12575/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/,
-    (System_String_o *)StringLiteral_21511/*"img_shop_13"*/,
+    (System_String_o *)StringLiteral_12601/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/,
+    (System_String_o *)StringLiteral_21552/*"img_shop_13"*/,
     12,
     0,
     v94);
   if ( v93 )
   {
-    v4 = sub_21FFDA4(v93, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v93, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0xB )
     goto LABEL_65;
   v1->m_Items[11] = v93;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[11], (int32_t)v93, v95, v96, v97, v98, v99, v100);
-  v101 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[11], (int32_t)v93, v95, v96, v97, v98, v99, v100);
+  v101 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v101,
     12,
-    (System_String_o *)StringLiteral_12579/*"SHOP_BUY_STONE_FRAGMENTS"*/,
-    (System_String_o *)StringLiteral_21525/*"img_shop_9"*/,
+    (System_String_o *)StringLiteral_12605/*"SHOP_BUY_STONE_FRAGMENTS"*/,
+    (System_String_o *)StringLiteral_21566/*"img_shop_9"*/,
     4,
     0,
     v102);
   if ( v101 )
   {
-    v4 = sub_21FFDA4(v101, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v101, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0xC )
     goto LABEL_65;
   v1->m_Items[12] = v101;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[12], (int32_t)v101, v103, v104, v105, v106, v107, v108);
-  v109 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[12], (int32_t)v101, v103, v104, v105, v106, v107, v108);
+  v109 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v109,
     1,
-    (System_String_o *)StringLiteral_12546/*"SHOP_BUY_BANK_ITEM"*/,
-    (System_String_o *)StringLiteral_21507/*"img_shop_1"*/,
+    (System_String_o *)StringLiteral_12572/*"SHOP_BUY_BANK_ITEM"*/,
+    (System_String_o *)StringLiteral_21548/*"img_shop_1"*/,
     10,
     0,
     v110);
   if ( v109 )
   {
-    v4 = sub_21FFDA4(v109, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v109, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0xD )
     goto LABEL_65;
   v1->m_Items[13] = v109;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[13], (int32_t)v109, v111, v112, v113, v114, v115, v116);
-  v117 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[13], (int32_t)v109, v111, v112, v113, v114, v115, v116);
+  v117 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v117,
     16,
-    (System_String_o *)StringLiteral_12561/*"SHOP_BUY_GRAIL_FRAGMENTS"*/,
-    (System_String_o *)StringLiteral_21513/*"img_shop_15"*/,
+    (System_String_o *)StringLiteral_12587/*"SHOP_BUY_GRAIL_FRAGMENTS"*/,
+    (System_String_o *)StringLiteral_21554/*"img_shop_15"*/,
     14,
     0,
     v118);
   if ( v117 )
   {
-    v4 = sub_21FFDA4(v117, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v117, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0xE )
     goto LABEL_65;
   v1->m_Items[14] = v117;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[14], (int32_t)v117, v119, v120, v121, v122, v123, v124);
-  v125 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[14], (int32_t)v117, v119, v120, v121, v122, v123, v124);
+  v125 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v125,
     18,
-    (System_String_o *)StringLiteral_12591/*"SHOP_COIN_ROOM"*/,
-    (System_String_o *)StringLiteral_21515/*"img_shop_17"*/,
+    (System_String_o *)StringLiteral_12617/*"SHOP_COIN_ROOM"*/,
+    (System_String_o *)StringLiteral_21556/*"img_shop_17"*/,
     17,
     0,
     v126);
   if ( v125 )
   {
-    v4 = sub_21FFDA4(v125, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v125, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( (v1->max_length & 0xFFFFFFF0) == 0 )
     goto LABEL_65;
   v1->m_Items[15] = v125;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[15], (int32_t)v125, v127, v128, v129, v130, v131, v132);
-  v133 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[15], (int32_t)v125, v127, v128, v129, v130, v131, v132);
+  v133 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v133,
     23,
-    (System_String_o *)StringLiteral_12590/*"SHOP_CLASS_BOARD_RESET"*/,
-    (System_String_o *)StringLiteral_21520/*"img_shop_23"*/,
+    (System_String_o *)StringLiteral_12616/*"SHOP_CLASS_BOARD_RESET"*/,
+    (System_String_o *)StringLiteral_21561/*"img_shop_23"*/,
     22,
     0,
     v134);
   if ( v133 )
   {
-    v4 = sub_21FFDA4(v133, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v133, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0x10 )
     goto LABEL_65;
   v1->m_Items[16] = v133;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[16], (int32_t)v133, v135, v136, v137, v138, v139, v140);
-  v141 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[16], (int32_t)v133, v135, v136, v137, v138, v139, v140);
+  v141 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v141,
     15,
-    (System_String_o *)StringLiteral_12578/*"SHOP_BUY_SPECIAL_ITEM"*/,
-    (System_String_o *)StringLiteral_21512/*"img_shop_14"*/,
+    (System_String_o *)StringLiteral_12604/*"SHOP_BUY_SPECIAL_ITEM"*/,
+    (System_String_o *)StringLiteral_21553/*"img_shop_14"*/,
     5,
     0,
     v142);
   if ( v141 )
   {
-    v4 = sub_21FFDA4(v141, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v141, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0x11 )
     goto LABEL_65;
   v1->m_Items[17] = v141;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[17], (int32_t)v141, v143, v144, v145, v146, v147, v148);
-  v149 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[17], (int32_t)v141, v143, v144, v145, v146, v147, v148);
+  v149 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v149,
     13,
-    (System_String_o *)StringLiteral_12544/*"SHOP_BUY_ANONYMOUS"*/,
-    (System_String_o *)StringLiteral_21508/*"img_shop_10"*/,
+    (System_String_o *)StringLiteral_12570/*"SHOP_BUY_ANONYMOUS"*/,
+    (System_String_o *)StringLiteral_21549/*"img_shop_10"*/,
     6,
     0,
     v150);
   if ( v149 )
   {
-    v4 = sub_21FFDA4(v149, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v149, v1->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_66;
   }
   if ( LODWORD(v1->max_length) <= 0x12 )
     goto LABEL_65;
   v1->m_Items[18] = v149;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[18], (int32_t)v149, v151, v152, v153, v154, v155, v156);
-  v157 = (ShopTopItemInfo_o *)sub_21FFEBC(ShopTopItemInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[18], (int32_t)v149, v151, v152, v153, v154, v155, v156);
+  v157 = (ShopTopItemInfo_o *)sub_2213CCC(ShopTopItemInfo_TypeInfo);
   ShopTopItemInfo___ctor(
     v157,
     24,
     (System_String_o *)StringLiteral_1/*""*/,
-    (System_String_o *)StringLiteral_22483/*"mask00"*/,
+    (System_String_o *)StringLiteral_22527/*"mask00"*/,
     0,
     0,
     v158);
   if ( v157 )
   {
-    v4 = sub_21FFDA4(v157, v1->obj.klass->_1.element_class);
+    v4 = sub_2213BB4(v157, v1->obj.klass->_1.element_class);
     if ( !v4 )
     {
 LABEL_66:
-      v171 = sub_21FFEF0(v4, v12);
-      sub_21FFD90(v171, 0);
+      v171 = sub_2213D00(v4, v12);
+      sub_2213BA0(v171, 0);
     }
   }
   if ( LODWORD(v1->max_length) <= 0x13 )
 LABEL_65:
-    sub_21FFED4(v4);
+    sub_2213CE4(v4);
   v1->m_Items[19] = v157;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v1->m_Items[19], (int32_t)v157, v159, v160, v161, v162, v163, v164);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v1->m_Items[19], (int32_t)v157, v159, v160, v161, v162, v163, v164);
   ShopTopListViewManager_TypeInfo->static_fields->shopTopItemInfos = v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ShopTopListViewManager_TypeInfo->static_fields,
     (int32_t)v1,
     v165,
@@ -691,26 +691,26 @@ void ShopTopListViewManager__CreateList(
   bool v62; // w0
   System_Collections_Generic_List_long__o *v63; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_5934800 & 1) == 0 )
+  if ( (byte_596C92F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&CoinRoomUtility_TypeInfo);
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ShopMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_List_long__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ShopNoticeRemainTime_TypeInfo);
-    sub_21FFC50(&ShopNoticeTween_TypeInfo);
-    sub_21FFC50(&ShopRootConstants_TypeInfo);
-    sub_21FFC50(&ShopTopListViewItem_TypeInfo);
-    sub_21FFC50(&ShopTopListViewManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12525/*"SHOP04_SHOP_STATE"*/);
-    byte_5934800 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&CoinRoomUtility_TypeInfo);
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ShopMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_long__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_2213A60(&System_Collections_Generic_List_long__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ShopNoticeRemainTime_TypeInfo);
+    sub_2213A60(&ShopNoticeTween_TypeInfo);
+    sub_2213A60(&ShopRootConstants_TypeInfo);
+    sub_2213A60(&ShopTopListViewItem_TypeInfo);
+    sub_2213A60(&ShopTopListViewManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12551/*"SHOP04_SHOP_STATE"*/);
+    byte_596C92F = 1;
   }
   Value = ShopTopListViewManager_TypeInfo;
   if ( !*(&ShopTopListViewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -722,16 +722,16 @@ void ShopTopListViewManager__CreateList(
   if ( !v7 )
     goto LABEL_65;
   ListViewManager__CreateList((ListViewManager_o *)this, *(_DWORD *)(v7 + 24), 0);
-  v63 = (System_Collections_Generic_List_long__o *)sub_21FFEBC(System_Collections_Generic_List_long__TypeInfo);
+  v63 = (System_Collections_Generic_List_long__o *)sub_2213CCC(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v63,
-    (const MethodInfo_44378D8 *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_446BA10 *)Method_System_Collections_Generic_List_long___ctor__);
   if ( !this->fields.shopNoticeTween )
   {
-    v14 = (ShopNoticeTween_o *)sub_21FFEBC(ShopNoticeTween_TypeInfo);
+    v14 = (ShopNoticeTween_o *)sub_2213CCC(ShopNoticeTween_TypeInfo);
     ShopNoticeTween___ctor(v14, (UnityEngine_MonoBehaviour_o *)this, 0);
     this->fields.shopNoticeTween = v14;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.shopNoticeTween,
       (int32_t)v14,
       v15,
@@ -757,14 +757,14 @@ void ShopTopListViewManager__CreateList(
     while ( 1 )
     {
       if ( v23 >= v22 )
-        sub_21FFED4(Value);
+        sub_2213CE4(Value);
       v24 = *(ShopTopItemInfo_o **)(v21 + 8LL * (int)v23 + 32);
       if ( !v24 )
         goto LABEL_65;
       Kind_k__BackingField = v24->fields._Kind_k__BackingField;
       if ( Kind_k__BackingField == 17 )
       {
-        Value = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_12525/*"SHOP04_SHOP_STATE"*/, 0);
+        Value = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_12551/*"SHOP04_SHOP_STATE"*/, 0);
         if ( (_DWORD)Value == -1 )
           goto LABEL_54;
         Kind_k__BackingField = v24->fields._Kind_k__BackingField;
@@ -773,10 +773,10 @@ void ShopTopListViewManager__CreateList(
         goto LABEL_24;
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&kind, v8);
-      Value = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ShopMaster___);
+      Value = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopMaster___);
       if ( !Value )
         goto LABEL_65;
-      Value = (void *)ShopMaster__IsEnableEventShop_49829504((ShopMaster_o *)Value, 0);
+      Value = (void *)ShopMaster__IsEnableEventShop_49892788((ShopMaster_o *)Value, 0);
       if ( ((unsigned __int8)Value & 1) != 0 )
         break;
 LABEL_54:
@@ -797,7 +797,7 @@ LABEL_24:
       ClassBoardReleaseQuestId = v26->static_fields->ClassBoardReleaseQuestId;
       if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo, *(_QWORD *)&kind, v8);
-      Value = (void *)CondType__IsQuestClear_47254560(ClassBoardReleaseQuestId, -1, 0, 0);
+      Value = (void *)CondType__IsQuestClear_47284152(ClassBoardReleaseQuestId, -1, 0, 0);
       if ( ((unsigned __int8)Value & 1) == 0 )
         goto LABEL_54;
     }
@@ -823,7 +823,7 @@ LABEL_24:
         System_Collections_Generic_List_long___AddWithResize(
           v63,
           *(int64_t *)&kind,
-          *(const MethodInfo_4438164 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+          *(const MethodInfo_446C29C **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
       }
       else
       {
@@ -850,7 +850,7 @@ LABEL_48:
         v37 = itemList->fields._size;
         v38 = this;
         shopNoticeTween = this->fields.shopNoticeTween;
-        v40 = (ShopTopListViewItem_o *)sub_21FFEBC(ShopTopListViewItem_TypeInfo);
+        v40 = (ShopTopListViewItem_o *)sub_2213CCC(ShopTopListViewItem_TypeInfo);
         ShopTopListViewItem___ctor(v40, v37, v24, v35 & 1, v30, shopNoticeTween, v41);
         v48 = itemList->fields._items;
         v49 = Method_System_Collections_Generic_List_ListViewItem__Add__;
@@ -863,14 +863,14 @@ LABEL_48:
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v40,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
         }
         else
         {
           v51 = &v48->obj.klass + v50;
           itemList->fields._size = v50 + 1;
           v51[4] = (Il2CppClass *)v40;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v51 + 4), (int32_t)v40, v42, v43, v44, v45, v46, v47);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v51 + 4), (int32_t)v40, v42, v43, v44, v45, v46, v47);
         }
         this = v38;
         goto LABEL_54;
@@ -886,10 +886,10 @@ LABEL_55:
   Value = this->fields.shopNoticeRemainTime;
   if ( !Value )
   {
-    v52 = (ShopNoticeRemainTime_o *)sub_21FFEBC(ShopNoticeRemainTime_TypeInfo);
+    v52 = (ShopNoticeRemainTime_o *)sub_2213CCC(ShopNoticeRemainTime_TypeInfo);
     ShopNoticeRemainTime___ctor(v52, (UnityEngine_MonoBehaviour_o *)this, 0);
     this->fields.shopNoticeRemainTime = v52;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.shopNoticeRemainTime,
       (int32_t)v52,
       v53,
@@ -903,7 +903,7 @@ LABEL_55:
       goto LABEL_65;
   }
   *((_QWORD *)Value + 3) = v63;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)Value + 24), (int32_t)v63, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)Value + 24), (int32_t)v63, v8, v9, v10, v11, v12, v13);
   Value = this->fields.shopNoticeRemainTime;
   if ( !Value )
     goto LABEL_65;
@@ -922,7 +922,7 @@ LABEL_55:
       return;
     }
 LABEL_65:
-    sub_21FFECC(Value, *(_QWORD *)&kind);
+    sub_2213CDC(Value, *(_QWORD *)&kind);
   }
 }
 
@@ -933,7 +933,7 @@ void ShopTopListViewManager__DestroyList(ShopTopListViewManager_o *this, const M
 
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UIScrollView__ResetPosition(scrollView, 0);
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
 }
@@ -945,32 +945,32 @@ ShopListNotice_o *ShopTopListViewManager__GetShopListNotice(int32_t type, const 
   __int64 v4; // x1
   ShopMaster_o *v5; // x20
   ShopEntity_array *EnableEntitiyList; // x0
-  ShopEntity_array *EnableEntitiyList_49818968; // x21
+  ShopEntity_array *EnableEntitiyList_49882252; // x21
   ShopListNotice_o *v8; // x19
 
-  if ( (byte_593480A & 1) == 0 )
+  if ( (byte_596C939 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_21FFC50(&ShopListNotice_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593480A = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_2213A60(&ShopListNotice_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C939 = 1;
   }
   if ( !type )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ShopMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   v5 = (ShopMaster_o *)Instance;
   EnableEntitiyList = ShopMaster__GetEnableEntitiyList((ShopMaster_o *)Instance, 0, type, 0);
-  if ( !EnableEntitiyList || (EnableEntitiyList_49818968 = EnableEntitiyList, !EnableEntitiyList->max_length) )
-    EnableEntitiyList_49818968 = ShopMaster__GetEnableEntitiyList_49818968(v5, 0, type, 0x20000, 0);
-  v8 = (ShopListNotice_o *)sub_21FFEBC(ShopListNotice_TypeInfo);
-  ShopListNotice___ctor(v8, EnableEntitiyList_49818968, 0);
+  if ( !EnableEntitiyList || (EnableEntitiyList_49882252 = EnableEntitiyList, !EnableEntitiyList->max_length) )
+    EnableEntitiyList_49882252 = ShopMaster__GetEnableEntitiyList_49882252(v5, 0, type, 0x20000, 0);
+  v8 = (ShopListNotice_o *)sub_2213CCC(ShopListNotice_TypeInfo);
+  ShopListNotice___ctor(v8, EnableEntitiyList_49882252, 0);
   return v8;
 }
 
@@ -987,13 +987,13 @@ ShopNotice_o *ShopTopListViewManager__GetShopNotice(const MethodInfo *method)
   __int64 v8; // x8
   int32_t v9; // w20
 
-  if ( (byte_593480B & 1) == 0 )
+  if ( (byte_596C93A & 1) == 0 )
   {
-    sub_21FFC50(&ShopNotice_TypeInfo);
-    sub_21FFC50(&ShopTopListViewManager_TypeInfo);
-    byte_593480B = 1;
+    sub_2213A60(&ShopNotice_TypeInfo);
+    sub_2213A60(&ShopTopListViewManager_TypeInfo);
+    byte_596C93A = 1;
   }
-  v1 = (ShopNotice_o *)sub_21FFEBC(ShopNotice_TypeInfo);
+  v1 = (ShopNotice_o *)sub_2213CCC(ShopNotice_TypeInfo);
   ShopNotice___ctor(v1, 0);
   ShopListNotice = (ShopListNotice_o *)ShopTopListViewManager_TypeInfo;
   if ( !*(&ShopTopListViewManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1011,7 +1011,7 @@ ShopNotice_o *ShopTopListViewManager__GetShopNotice(const MethodInfo *method)
     while ( 1 )
     {
       if ( v7 >= v6 )
-        sub_21FFED4(ShopListNotice);
+        sub_2213CE4(ShopListNotice);
       v8 = *(_QWORD *)(v5 + 8LL * (int)v7 + 32);
       if ( !v8 )
         break;
@@ -1027,7 +1027,7 @@ ShopNotice_o *ShopTopListViewManager__GetShopNotice(const MethodInfo *method)
         return v1;
     }
 LABEL_15:
-    sub_21FFECC(ShopListNotice, v2);
+    sub_2213CDC(ShopListNotice, v2);
   }
   return v1;
 }
@@ -1040,11 +1040,11 @@ void ShopTopListViewManager__InvalidateList(ShopTopListViewManager_o *this, cons
   System_Collections_Generic_List_object__o *v5; // x19
   int32_t v6; // w20
 
-  if ( (byte_5934803 & 1) == 0 )
+  if ( (byte_596C932 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
-    byte_5934803 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+    byte_596C932 = 1;
   }
   ObjectList = (System_Collections_Generic_List_object__o *)ShopTopListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
@@ -1058,7 +1058,7 @@ void ShopTopListViewManager__InvalidateList(ShopTopListViewManager_o *this, cons
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   v5,
                                                                   v6,
-                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+                                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
       if ( !ObjectList )
         break;
       ShopTopListViewObject__SetupDisp((ShopTopListViewObject_o *)ObjectList, v4);
@@ -1066,7 +1066,7 @@ void ShopTopListViewManager__InvalidateList(ShopTopListViewManager_o *this, cons
         return;
     }
 LABEL_9:
-    sub_21FFECC(ObjectList, v4);
+    sub_2213CDC(ObjectList, v4);
   }
 }
 
@@ -1080,13 +1080,13 @@ void ShopTopListViewManager__LoadCoinRoomAsset(ShopTopListViewManager_o *this, c
   __int64 v7; // x1
   __int64 v8; // x2
 
-  if ( (byte_5934801 & 1) == 0 )
+  if ( (byte_596C930 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&CoinRoomUtility_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&Method_ShopTopListViewManager__LoadCoinRoomAsset_b__17_0__);
-    byte_5934801 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&CoinRoomUtility_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&Method_ShopTopListViewManager__LoadCoinRoomAsset_b__17_0__);
+    byte_596C930 = 1;
   }
   if ( !this->fields.coinRoomAsset )
   {
@@ -1097,7 +1097,7 @@ void ShopTopListViewManager__LoadCoinRoomAsset(ShopTopListViewManager_o *this, c
       v4 = CoinRoomUtility_TypeInfo;
     }
     ASSET_NAME = v4->static_fields->ASSET_NAME;
-    v6 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v6 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v6,
       (Il2CppObject *)this,
@@ -1129,10 +1129,10 @@ void ShopTopListViewManager__OnClickListView(
   struct UnityEngine_GameObject_o *v15; // x8
 
   v4 = (MissionNaviTransitionBoardItem_o *)this;
-  if ( (byte_5934809 & 1) == 0 )
+  if ( (byte_596C938 & 1) == 0 )
   {
-    this = (ShopTopListViewManager_o *)sub_21FFC50(&ShopTopListViewObject_TypeInfo);
-    byte_5934809 = 1;
+    this = (ShopTopListViewManager_o *)sub_2213A60(&ShopTopListViewObject_TypeInfo);
+    byte_596C938 = 1;
   }
   if ( !obj )
     goto LABEL_13;
@@ -1157,7 +1157,7 @@ void ShopTopListViewManager__OnClickListView(
       if ( klass )
       {
         v4[2].klass = 0;
-        sub_21FFBF4(v4 + 2, 0, v6, v7, v8, v9, v10, v11);
+        sub_2213A04(v4 + 2, 0, v6, v7, v8, v9, v10, v11);
         v15 = v13->fields.dragParentObject;
         if ( v15 )
         {
@@ -1168,7 +1168,7 @@ void ShopTopListViewManager__OnClickListView(
           return;
         }
 LABEL_13:
-        sub_21FFECC(this, obj);
+        sub_2213CDC(this, obj);
       }
     }
   }
@@ -1193,10 +1193,10 @@ void ShopTopListViewManager__OnMoveEnd(ShopTopListViewManager_o *this, const Met
   struct UIScrollView_o *v16; // x0
   struct System_Action_o *onMoveEnd; // x20
 
-  if ( (byte_5934808 & 1) == 0 )
+  if ( (byte_596C937 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934808 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C937 = 1;
   }
   v3 = this->fields.callbackCount - 1;
   this->fields.callbackCount = v3;
@@ -1217,7 +1217,7 @@ void ShopTopListViewManager__OnMoveEnd(ShopTopListViewManager_o *this, const Met
     {
       v16 = this->fields.scrollView;
       if ( !v16 )
-        sub_21FFECC(0, v9);
+        sub_2213CDC(0, v9);
       ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v16->klass->vtable._8_UpdateScrollbars.methodPtr)(
         v16,
         1,
@@ -1227,7 +1227,7 @@ void ShopTopListViewManager__OnMoveEnd(ShopTopListViewManager_o *this, const Met
     if ( onMoveEnd )
     {
       this->fields.onMoveEnd = 0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onMoveEnd, 0, v10, v11, v12, v13, v14, v15);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onMoveEnd, 0, v10, v11, v12, v13, v14, v15);
       ((void (__fastcall *)(intptr_t, intptr_t))onMoveEnd->fields.invoke_impl)(
         onMoveEnd->fields.method_code,
         onMoveEnd->fields.method);
@@ -1247,19 +1247,19 @@ void ShopTopListViewManager__ReleaseCoinRoomAsset(ShopTopListViewManager_o *this
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5934802 & 1) == 0 )
+  if ( (byte_596C931 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5934802 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_596C931 = 1;
   }
   coinRoomAsset = this->fields.coinRoomAsset;
   if ( coinRoomAsset )
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
-    AssetManager__releaseAsset_47465556(coinRoomAsset, 0);
+    AssetManager__releaseAsset_47496972(coinRoomAsset, 0);
     this->fields.coinRoomAsset = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.coinRoomAsset, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.coinRoomAsset, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -1283,14 +1283,14 @@ void ShopTopListViewManager__RequestListObject(
   const MethodInfo *v15; // x3
   System_String_o *v16; // x1
 
-  if ( (byte_5934807 & 1) == 0 )
+  if ( (byte_596C936 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
-    sub_21FFC50(&Method_ShopTopListViewManager_OnMoveEnd__);
-    sub_21FFC50(&StringLiteral_10331/*"OnMoveEnd"*/);
-    byte_5934807 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+    sub_2213A60(&Method_ShopTopListViewManager_OnMoveEnd__);
+    sub_2213A60(&StringLiteral_10344/*"OnMoveEnd"*/);
+    byte_596C936 = 1;
   }
   if ( initMode == 1 )
   {
@@ -1321,8 +1321,8 @@ void ShopTopListViewManager__RequestListObject(
         Item = System_Collections_Generic_List_object___get_Item(
                  v9,
                  v12,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
-        v14 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+        v14 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(v14, (Il2CppObject *)this, Method_ShopTopListViewManager_OnMoveEnd__, 0);
         if ( !Item )
           break;
@@ -1331,14 +1331,14 @@ void ShopTopListViewManager__RequestListObject(
           goto LABEL_15;
       }
 LABEL_18:
-      sub_21FFECC(ObjectList, v6);
+      sub_2213CDC(ObjectList, v6);
     }
 LABEL_15:
     ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(this, initMode, v7);
   }
   else if ( initMode != 6 )
   {
-    v16 = (System_String_o *)StringLiteral_10331/*"OnMoveEnd"*/;
+    v16 = (System_String_o *)StringLiteral_10344/*"OnMoveEnd"*/;
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, v16, 0.0, 0);
   }
@@ -1379,22 +1379,22 @@ void ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(
   bool v31; // w7
   const MethodInfo *v32; // x1
 
-  if ( (byte_593480C & 1) == 0 )
+  if ( (byte_596C93B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_long__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_long__TypeInfo);
-    sub_21FFC50(&ShopTopListViewManager_TypeInfo);
-    byte_593480C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_long__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_long__TypeInfo);
+    sub_2213A60(&ShopTopListViewManager_TypeInfo);
+    byte_596C93B = 1;
   }
   if ( initMode == 5 )
   {
-    v5 = (System_Collections_Generic_List_long__o *)sub_21FFEBC(System_Collections_Generic_List_long__TypeInfo);
+    v5 = (System_Collections_Generic_List_long__o *)sub_2213CCC(System_Collections_Generic_List_long__TypeInfo);
     System_Collections_Generic_List_long____ctor(
       v5,
-      (const MethodInfo_44378D8 *)Method_System_Collections_Generic_List_long___ctor__);
+      (const MethodInfo_446BA10 *)Method_System_Collections_Generic_List_long___ctor__);
     ClippingObjectList = (int64_t)ShopTopListViewManager__get_ClippingObjectList(this, v6);
     if ( !ClippingObjectList )
       goto LABEL_25;
@@ -1407,7 +1407,7 @@ void ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(
       ClippingObjectList = (int64_t)System_Collections_Generic_List_object___get_Item(
                                       (System_Collections_Generic_List_object__o *)ClippingObjectList,
                                       v15,
-                                      (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
+                                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__);
       if ( !ClippingObjectList )
         goto LABEL_25;
       v16 = (ShopTopListViewObject_o *)ClippingObjectList;
@@ -1447,7 +1447,7 @@ void ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(
           System_Collections_Generic_List_long___AddWithResize(
             v5,
             ClippingObjectList,
-            *(const MethodInfo_4438164 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_446C29C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1458,7 +1458,7 @@ void ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(
         if ( !ClippingObjectList )
           goto LABEL_25;
         *(_QWORD *)(ClippingObjectList + 128) = v21;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(ClippingObjectList + 128), v21, v26, v27, v28, v29, v30, v31);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(ClippingObjectList + 128), v21, v26, v27, v28, v29, v30, v31);
         ShopTopListViewObject__ResetShopListNotice(v16, v32);
       }
       ++v15;
@@ -1469,9 +1469,9 @@ void ShopTopListViewManager__ResetShopListNoticeOnShopListViewItemDraw(
     ClippingObjectList = (int64_t)this->fields.shopNoticeRemainTime;
     if ( !ClippingObjectList )
 LABEL_25:
-      sub_21FFECC(ClippingObjectList, v8);
+      sub_2213CDC(ClippingObjectList, v8);
     *(_QWORD *)(ClippingObjectList + 24) = v5;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(ClippingObjectList + 24), (int32_t)v5, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(ClippingObjectList + 24), (int32_t)v5, v9, v10, v11, v12, v13, v14);
   }
 }
 
@@ -1499,7 +1499,7 @@ void ShopTopListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.onClickListViewItem = onClickListViewItem;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClickListViewItem,
     (int32_t)onClickListViewItem,
     (System_String_o *)onClickListViewItem,
@@ -1508,11 +1508,11 @@ void ShopTopListViewManager__SetMode(
     v5,
     v6,
     v7);
-  ShopTopListViewManager__SetMode_42068900(this, initMode, v10);
+  ShopTopListViewManager__SetMode_42083964(this, initMode, v10);
 }
 
 
-void ShopTopListViewManager__SetMode_42068900(
+void ShopTopListViewManager__SetMode_42083964(
         ShopTopListViewManager_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -1548,7 +1548,7 @@ LABEL_8:
 }
 
 
-void ShopTopListViewManager__SetMode_42069084(
+void ShopTopListViewManager__SetMode_42084148(
         ShopTopListViewManager_o *this,
         int32_t initMode,
         System_Action_o *onMoveEnd,
@@ -1561,7 +1561,7 @@ void ShopTopListViewManager__SetMode_42069084(
   const MethodInfo *v10; // x2
 
   this->fields.onMoveEnd = onMoveEnd;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onMoveEnd,
     (int32_t)onMoveEnd,
     (System_String_o *)onMoveEnd,
@@ -1570,7 +1570,7 @@ void ShopTopListViewManager__SetMode_42069084(
     v5,
     v6,
     v7);
-  ShopTopListViewManager__SetMode_42068900(this, initMode, v10);
+  ShopTopListViewManager__SetMode_42083964(this, initMode, v10);
 }
 
 
@@ -1584,10 +1584,10 @@ void ShopTopListViewManager__SetObjectItem(
   ListViewObject_o *v7; // x0
   int32_t v8; // w1
 
-  if ( (byte_5934804 & 1) == 0 )
+  if ( (byte_596C933 & 1) == 0 )
   {
-    sub_21FFC50(&ShopTopListViewObject_TypeInfo);
-    byte_5934804 = 1;
+    sub_2213A60(&ShopTopListViewObject_TypeInfo);
+    byte_596C933 = 1;
   }
   if ( obj
     && (naturalAligment = ShopTopListViewObject_TypeInfo->_2.naturalAligment,
@@ -1610,7 +1610,7 @@ void ShopTopListViewManager__SetObjectItem(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_21FFECC(v7, obj);
+    sub_2213CDC(v7, obj);
   }
   if ( !v7 )
     goto LABEL_15;
@@ -1630,10 +1630,10 @@ void ShopTopListViewManager__SetScrollBarActive(
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_5934805 & 1) == 0 )
+  if ( (byte_596C934 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934805 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C934 = 1;
   }
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1644,7 +1644,7 @@ void ShopTopListViewManager__SetScrollBarActive(
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isActive, 0);
   }
@@ -1681,10 +1681,10 @@ void ShopTopListViewManager__SetScrollViewUnPressed(
   __int64 v6; // x1
   UIScrollView_o *v7; // x0
 
-  if ( (byte_5934806 & 1) == 0 )
+  if ( (byte_596C935 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934806 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C935 = 1;
   }
   if ( initMode == 5 || initMode == 2 )
   {
@@ -1695,7 +1695,7 @@ void ShopTopListViewManager__SetScrollViewUnPressed(
     {
       v7 = this->fields.scrollView;
       if ( !v7 )
-        sub_21FFECC(0, v6);
+        sub_2213CDC(0, v6);
       UIScrollView__Press(v7, 0, 0);
     }
   }
@@ -1730,7 +1730,7 @@ void ShopTopListViewManager___LoadCoinRoomAsset_b__17_0(
   bool v7; // w7
 
   this->fields.coinRoomAsset = assetData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.coinRoomAsset,
     (int32_t)assetData,
     (System_String_o *)method,
@@ -1765,32 +1765,32 @@ System_Collections_Generic_List_ShopTopListViewObject__o *ShopTopListViewManager
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_59347FE & 1) == 0 )
+  if ( (byte_596C92D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59347FE = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C92D = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
 LABEL_21:
-    sub_21FFECC(objectList, v4);
+    sub_2213CDC(objectList, v4);
   v6 = 0;
   while ( v6 < objectList->fields._size )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              objectList,
              v6,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -1801,12 +1801,12 @@ LABEL_21:
       objectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   objectList,
                                                                   v6,
-                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !objectList )
         goto LABEL_21;
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)objectList,
-                                                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
+                                                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
       if ( !objectList )
         goto LABEL_21;
       v10 = (Il2CppObject *)objectList;
@@ -1817,7 +1817,7 @@ LABEL_21:
       {
         v4 = (const MethodInfo *)objectList;
         if ( !LOBYTE(objectList[2].fields._items)
-          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_50765052(
+          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_50835204(
                                                                           (ListViewManager_o *)this,
                                                                           (ListViewItem_o *)objectList,
                                                                           0),
@@ -1836,14 +1836,14 @@ LABEL_21:
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               v10,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v3->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v10;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v10, v11, v12, v13, v14, v15, v16);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v10, v11, v12, v13, v14, v15, v16);
           }
         }
       }
@@ -1880,32 +1880,32 @@ System_Collections_Generic_List_ShopTopListViewObject__o *ShopTopListViewManager
   System_Collections_Generic_List_object__o *v19; // x1
   Il2CppClass **v20; // x0
 
-  if ( (byte_59347FD & 1) == 0 )
+  if ( (byte_596C92C & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59347FD = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C92C = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ShopTopListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ShopTopListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
 LABEL_17:
-    sub_21FFECC(objectList, v4);
+    sub_2213CDC(objectList, v4);
   v6 = 0;
   while ( v6 < objectList->fields._size )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              objectList,
              v6,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
@@ -1916,12 +1916,12 @@ LABEL_17:
       objectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   objectList,
                                                                   v6,
-                                                                  (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !objectList )
         goto LABEL_17;
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)objectList,
-                                                                  (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
+                                                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___);
       if ( !v3 )
         goto LABEL_17;
       items = v3->fields._items;
@@ -1936,14 +1936,14 @@ LABEL_17:
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           (Il2CppObject *)objectList,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v19;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)v19, v10, v11, v12, v13, v14, v15);
       }
     }
     objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
@@ -1968,10 +1968,10 @@ float ShopTopListViewManager__get_currentScrollBarValue(ShopTopListViewManager_o
   __int64 v5; // x1
   UIProgressBar_o *v7; // x0
 
-  if ( (byte_59347FF & 1) == 0 )
+  if ( (byte_596C92E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59347FF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596C92E = 1;
   }
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1980,6 +1980,6 @@ float ShopTopListViewManager__get_currentScrollBarValue(ShopTopListViewManager_o
     return -1.0;
   v7 = (UIProgressBar_o *)this->fields.scrollBar;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UIProgressBar__get_value(v7, 0);
 }

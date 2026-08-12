@@ -1,13 +1,13 @@
 void TreasureDeviceSequenceWeightEntity___ctor(TreasureDeviceSequenceWeightEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59393F6 & 1) == 0 )
+  if ( (byte_59715B6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59393F6 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59715B6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *TreasureDeviceSequenceWeightEntity__CreatePK(
         int32_t npChargeStage,
         const MethodInfo *method)
 {
-  if ( (byte_59393F5 & 1) == 0 )
+  if ( (byte_59715B5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_59393F5 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_59715B5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            treasureDeviceId,
            limitCount,
            npChargeStage,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -63,21 +63,21 @@ System_Tuple_int__int__o *TreasureDeviceSequenceWeightEntity__GetSeqIdAndGroupSe
   int32_t v15; // w19
   System_Tuple_int__int__o *v16; // x21
 
-  if ( (byte_59393F4 & 1) == 0 )
+  if ( (byte_59715B4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Array_IndexOf_int___);
-    sub_21FFC50(&Method_BasicHelper_IndexValue_int____91487608);
-    sub_21FFC50(&Method_System_Tuple_int__int___ctor__);
-    sub_21FFC50(&System_Tuple_int__int__TypeInfo);
-    sub_21FFC50(&Method_WeightRate_int___ctor__);
-    sub_21FFC50(&Method_WeightRate_int__getData__);
-    sub_21FFC50(&Method_WeightRate_int__getTotalWeight__);
-    sub_21FFC50(&Method_WeightRate_int__setWeight__);
-    sub_21FFC50(&WeightRate_int__TypeInfo);
-    byte_59393F4 = 1;
+    sub_2213A60(&Method_System_Array_IndexOf_int___);
+    sub_2213A60(&Method_BasicHelper_IndexValue_int____91713824);
+    sub_2213A60(&Method_System_Tuple_int__int___ctor__);
+    sub_2213A60(&System_Tuple_int__int__TypeInfo);
+    sub_2213A60(&Method_WeightRate_int___ctor__);
+    sub_2213A60(&Method_WeightRate_int__getData__);
+    sub_2213A60(&Method_WeightRate_int__getTotalWeight__);
+    sub_2213A60(&Method_WeightRate_int__setWeight__);
+    sub_2213A60(&WeightRate_int__TypeInfo);
+    byte_59715B4 = 1;
   }
-  v3 = (WeightRate_int__o *)sub_21FFEBC(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v3, (const MethodInfo_3D6E5DC *)Method_WeightRate_int___ctor__);
+  v3 = (WeightRate_int__o *)sub_2213CCC(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v3, (const MethodInfo_3DA1D84 *)Method_WeightRate_int___ctor__);
   targetSeqIds = this->fields.targetSeqIds;
   if ( !targetSeqIds )
     goto LABEL_11;
@@ -92,14 +92,14 @@ System_Tuple_int__int__o *TreasureDeviceSequenceWeightEntity__GetSeqIdAndGroupSe
     if ( weights )
     {
       if ( v9 >= LODWORD(weights->max_length) || v9 >= max_length_low )
-        sub_21FFED4(Data);
+        sub_2213CE4(Data);
       if ( v3 )
       {
         WeightRate_int___setWeight(
           v3,
           *((_DWORD *)&weights->obj.klass + v7),
           *((_DWORD *)&targetSeqIds->obj.klass + v7),
-          (const MethodInfo_3D6DA50 *)Method_WeightRate_int__setWeight__);
+          (const MethodInfo_3DA11F8 *)Method_WeightRate_int__setWeight__);
         targetSeqIds = this->fields.targetSeqIds;
         ++v7;
         if ( targetSeqIds )
@@ -109,12 +109,12 @@ System_Tuple_int__int__o *TreasureDeviceSequenceWeightEntity__GetSeqIdAndGroupSe
     goto LABEL_11;
   }
   if ( !v3
-    || (v11 = UnityEngine_Random__Range_83187376(0, v3->fields.totalweight, 0),
-        Data = WeightRate_int___getData(v3, v11, (const MethodInfo_3D6DEE8 *)Method_WeightRate_int__getData__),
+    || (v11 = UnityEngine_Random__Range_83400680(0, v3->fields.totalweight, 0),
+        Data = WeightRate_int___getData(v3, v11, (const MethodInfo_3DA1690 *)Method_WeightRate_int__getData__),
         (groupSeqIds = this->fields.groupSeqIds) == 0) )
   {
 LABEL_11:
-    sub_21FFECC(Data, v5);
+    sub_2213CDC(Data, v5);
   }
   v13 = Data;
   if ( groupSeqIds->max_length )
@@ -122,18 +122,18 @@ LABEL_11:
     v14 = System_Array__IndexOf_int_(
             this->fields.targetSeqIds,
             Data,
-            (const MethodInfo_39FAFC4 *)Method_System_Array_IndexOf_int___);
+            (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___);
     v15 = BasicHelper__IndexValue_int_(
             this->fields.groupSeqIds,
             v14,
             0,
-            (const MethodInfo_37E1834 *)Method_BasicHelper_IndexValue_int____91487608);
+            (const MethodInfo_3814BE4 *)Method_BasicHelper_IndexValue_int____91713824);
   }
   else
   {
     v15 = 0;
   }
-  v16 = (System_Tuple_int__int__o *)sub_21FFEBC(System_Tuple_int__int__TypeInfo);
-  System_Tuple_int__int____ctor(v16, v13, v15, (const MethodInfo_3BCFD68 *)Method_System_Tuple_int__int___ctor__);
+  v16 = (System_Tuple_int__int__o *)sub_2213CCC(System_Tuple_int__int__TypeInfo);
+  System_Tuple_int__int____ctor(v16, v13, v15, (const MethodInfo_3C03510 *)Method_System_Tuple_int__int___ctor__);
   return v16;
 }

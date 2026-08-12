@@ -12,7 +12,7 @@ uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, ui
   if ( offset < len )
   {
     if ( !bytes )
-      sub_21FFECC(0, *(_QWORD *)&offset);
+      sub_2213CDC(0, *(_QWORD *)&offset);
     max_length = bytes->max_length;
     v6 = max_length >= offset;
     v7 = max_length - offset;
@@ -25,7 +25,7 @@ uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, ui
     do
     {
       if ( v10 <= ~offset + len )
-        sub_21FFED4(bytes);
+        sub_2213CE4(bytes);
       v11 = *v9++;
       --v8;
       hash = 16777619 * (hash ^ v11);
@@ -36,7 +36,7 @@ uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, ui
 }
 
 
-uint32_t FNV1a__Hash32_48198728(System_String_o *str, const MethodInfo *method)
+uint32_t FNV1a__Hash32_48234332(System_String_o *str, const MethodInfo *method)
 {
   System_Text_Encoding_o *UTF8; // x0
   __int64 v4; // x1
@@ -49,7 +49,7 @@ uint32_t FNV1a__Hash32_48198728(System_String_o *str, const MethodInfo *method)
                                            str,
                                            UTF8->klass->vtable._18_GetBytes.method)) == 0 )
   {
-    sub_21FFECC(UTF8, v4);
+    sub_2213CDC(UTF8, v4);
   }
   return FNV1a__Hash32((System_Byte_array *)UTF8, 0, (int32_t)UTF8->fields.dataItem, 0x811C9DC5, v5);
 }
@@ -69,7 +69,7 @@ uint64_t FNV1a__Hash64(System_Byte_array *bytes, int32_t offset, int32_t len, ui
   if ( offset < len )
   {
     if ( !bytes )
-      sub_21FFECC(0, *(_QWORD *)&offset);
+      sub_2213CDC(0, *(_QWORD *)&offset);
     max_length = bytes->max_length;
     v6 = max_length >= offset;
     v7 = max_length - offset;
@@ -82,7 +82,7 @@ uint64_t FNV1a__Hash64(System_Byte_array *bytes, int32_t offset, int32_t len, ui
     do
     {
       if ( v10 <= ~offset + len )
-        sub_21FFED4(bytes);
+        sub_2213CE4(bytes);
       v11 = *v9++;
       --v8;
       hash = 0x100000001B3LL * (hash ^ v11);

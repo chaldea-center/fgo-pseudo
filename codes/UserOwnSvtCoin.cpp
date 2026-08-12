@@ -15,16 +15,16 @@ void UserOwnSvtCoin___ctor(
   __int64 v15; // x1
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5939C5A & 1) == 0 )
+  if ( (byte_5971E1E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5939C5A = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5971E1E = 1;
   }
   entity = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -35,7 +35,7 @@ void UserOwnSvtCoin___ctor(
     v12);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !userGameEntity || !itemEntity || !Master_object )
     goto LABEL_12;
   Master_object = (Il2CppObject *)UserSvtCoinMaster__TryGetEntity(
@@ -48,6 +48,6 @@ void UserOwnSvtCoin___ctor(
     return;
   if ( !entity )
 LABEL_12:
-    sub_21FFECC(Master_object, v15);
+    sub_2213CDC(Master_object, v15);
   this->fields._Num_k__BackingField = entity->fields.num;
 }

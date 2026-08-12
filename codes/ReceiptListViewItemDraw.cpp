@@ -4,7 +4,6 @@ void ReceiptListViewItemDraw___ctor(ReceiptListViewItemDraw_o *this, const Metho
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ReceiptListViewItemDraw__SetItem(
         ReceiptListViewItemDraw_o *this,
         ReceiptListViewItem_o *item,
@@ -19,17 +18,14 @@ void ReceiptListViewItemDraw__SetItem(
   __int64 v12; // x1
   __int64 v13; // x2
   Il2CppObject *Component_object; // x21
-  float v15; // s0 OVERLAPPED
-  float v16; // s3
-  float v17; // s1
-  float v18; // s2
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_5935B3F & 1) == 0 )
+  if ( (byte_596DC81 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1837/*"?"*/);
-    byte_5935B3F = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1838/*"?"*/);
+    byte_596DC81 = 1;
   }
   if ( item && mode )
   {
@@ -46,14 +42,14 @@ void ReceiptListViewItemDraw__SetItem(
     {
       if ( !titleTextLabel )
         goto LABEL_25;
-      v10 = (System_String_o *)StringLiteral_1837/*"?"*/;
+      v10 = (System_String_o *)StringLiteral_1838/*"?"*/;
     }
     UILabel__set_text(titleTextLabel, v10, 0);
     timeTextLabel = this->fields.timeTextLabel;
-    if ( (byte_5935B3E & 1) == 0 )
+    if ( (byte_596DC80 & 1) == 0 )
     {
-      TitleText = sub_21FFC50(&StringLiteral_1/*""*/);
-      byte_5935B3E = 1;
+      TitleText = sub_2213A60(&StringLiteral_1/*""*/);
+      byte_596DC80 = 1;
     }
     if ( timeTextLabel )
     {
@@ -66,7 +62,7 @@ void ReceiptListViewItemDraw__SetItem(
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)TitleText,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12, v13);
           TitleText = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -79,19 +75,19 @@ void ReceiptListViewItemDraw__SetItem(
           TitleText = (__int64)this->fields.baseImageTexture;
           if ( TitleText )
           {
-            v15 = 1.0;
-            v16 = 1.0;
+            v16.fields.r = 1.0;
+            v16.fields.a = 1.0;
             if ( mode == 1 )
-              v15 = 0.5;
-            v17 = v15;
-            v18 = v15;
-            UIWidget__set_color((UIWidget_o *)TitleText, *(UnityEngine_Color_o *)&v15, 0);
+              v16.fields.r = 0.5;
+            v16.fields.g = v16.fields.r;
+            v16.fields.b = v16.fields.r;
+            UIWidget__set_color((UIWidget_o *)TitleText, v16, 0);
             return;
           }
         }
       }
     }
 LABEL_25:
-    sub_21FFECC(TitleText, v8);
+    sub_2213CDC(TitleText, v8);
   }
 }

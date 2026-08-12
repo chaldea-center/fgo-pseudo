@@ -17,12 +17,12 @@ void DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5938191 & 1) == 0 )
+  if ( (byte_5970337 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&long___TypeInfo);
-    byte_5938191 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&long___TypeInfo);
+    byte_5970337 = 1;
   }
   this->fields.followerType = -1;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -32,14 +32,14 @@ void DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v3);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct System_Int64_array *)sub_21FFD10(long___TypeInfo, (unsigned int)v4->static_fields->SvtEquipMax);
+  v5 = (struct System_Int64_array *)sub_2213B20(long___TypeInfo, (unsigned int)v4->static_fields->SvtEquipMax);
   this->fields.userSvtEquipIds = v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.userSvtEquipIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
-  v12 = (struct System_Int32_array *)sub_21FFD10(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.userSvtEquipIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (struct System_Int32_array *)sub_2213B20(
                                        int___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipMax);
   this->fields.svtEquipIds = v12;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.svtEquipIds, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.svtEquipIds, (int32_t)v12, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -72,18 +72,17 @@ DeckServantData_o *DeckServantData__Clone(DeckServantData_o *this, const MethodI
   bool v27; // w6
   bool v28; // w7
   bool isFollowerSvt; // w8
-  DeckServantData_o *result; // x0
   int64_t npcFollowerSvtId; // x9
   int32_t equipTarget2SkillChange; // w8
 
-  if ( (byte_5938192 & 1) == 0 )
+  if ( (byte_5970338 & 1) == 0 )
   {
-    sub_21FFC50(&DeckServantData_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&long___TypeInfo);
-    byte_5938192 = 1;
+    sub_2213A60(&DeckServantData_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&long___TypeInfo);
+    byte_5970338 = 1;
   }
-  v3 = sub_21FFEBC(DeckServantData_TypeInfo);
+  v3 = sub_2213CCC(DeckServantData_TypeInfo);
   DeckServantData___ctor((DeckServantData_o *)v3, v4);
   if ( !v3 )
     goto LABEL_7;
@@ -95,29 +94,28 @@ DeckServantData_o *DeckServantData__Clone(DeckServantData_o *this, const MethodI
   *(_DWORD *)(v3 + 32) = svtId;
   if ( !userSvtEquipIds
     || (v9 = System_Array__Clone(userSvtEquipIds, 0),
-        v10 = sub_21FFDA4(v9, long___TypeInfo),
+        v10 = sub_2213BB4(v9, long___TypeInfo),
         v11 = long___TypeInfo,
         *(_QWORD *)(v3 + 40) = v10,
-        v12 = sub_21FFDA4(v9, v11),
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 40), v12, v13, v14, v15, v16, v17, v18),
+        v12 = sub_2213BB4(v9, v11),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 40), v12, v13, v14, v15, v16, v17, v18),
         (userSvtEquipIds = (System_Array_o *)this->fields.svtEquipIds) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(userSvtEquipIds, v6);
+    sub_2213CDC(userSvtEquipIds, v6);
   }
   v19 = System_Array__Clone(userSvtEquipIds, 0);
-  v20 = sub_21FFDA4(v19, int___TypeInfo);
+  v20 = sub_2213BB4(v19, int___TypeInfo);
   v21 = int___TypeInfo;
   *(_QWORD *)(v3 + 48) = v20;
-  v22 = sub_21FFDA4(v19, v21);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 48), v22, v23, v24, v25, v26, v27, v28);
+  v22 = sub_2213BB4(v19, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 48), v22, v23, v24, v25, v26, v27, v28);
   isFollowerSvt = this->fields.isFollowerSvt;
-  result = (DeckServantData_o *)v3;
   npcFollowerSvtId = this->fields.npcFollowerSvtId;
   *(_QWORD *)(v3 + 72) = *(_QWORD *)&this->fields.followerType;
   *(_BYTE *)(v3 + 56) = isFollowerSvt;
   equipTarget2SkillChange = this->fields.equipTarget2SkillChange;
   *(_QWORD *)(v3 + 64) = npcFollowerSvtId;
   *(_DWORD *)(v3 + 80) = equipTarget2SkillChange;
-  return result;
+  return (DeckServantData_o *)v3;
 }

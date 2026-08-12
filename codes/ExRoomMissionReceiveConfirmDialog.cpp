@@ -29,24 +29,24 @@ void ExRoomMissionReceiveConfirmDialog___ctor(
   __int64 size; // x10
   Il2CppClass **v29; // x0
 
-  if ( (byte_5932E22 & 1) == 0 )
+  if ( (byte_596AF28 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomMissionReceiveConfirmDialogItem_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__TypeInfo);
-    byte_5932E22 = 1;
+    sub_2213A60(&ExRoomMissionReceiveConfirmDialogItem_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__TypeInfo);
+    byte_596AF28 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v5 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem___ctor__);
   this->fields._Items_k__BackingField = (struct System_Collections_Generic_List_ExRoomMissionReceiveConfirmDialogItem__o *)v5;
   p_fields = (MissionNaviTransitionBoardItem_o *)&this->fields;
-  sub_21FFBF4(p_fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_2213A04(p_fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   if ( sourceMissions && sourceMissions->fields._size >= 1 )
   {
     v13 = 0;
@@ -56,8 +56,8 @@ void ExRoomMissionReceiveConfirmDialog___ctor(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)sourceMissions,
                v13,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
-      v16 = (ExRoomMissionReceiveConfirmDialogItem_o *)sub_21FFEBC(ExRoomMissionReceiveConfirmDialogItem_TypeInfo);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
+      v16 = (ExRoomMissionReceiveConfirmDialogItem_o *)sub_2213CCC(ExRoomMissionReceiveConfirmDialogItem_TypeInfo);
       ExRoomMissionReceiveConfirmDialogItem___ctor(v16, (ExRoomMissionListOutput_o *)Item, v17);
       if ( !klass
         || (items = klass->fields._items,
@@ -65,7 +65,7 @@ void ExRoomMissionReceiveConfirmDialog___ctor(
             ++klass->fields._version,
             !items) )
       {
-        sub_21FFECC(v18, v19);
+        sub_2213CDC(v18, v19);
       }
       size = klass->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -73,14 +73,14 @@ void ExRoomMissionReceiveConfirmDialog___ctor(
         System_Collections_Generic_List_object___AddWithResize(
           klass,
           (Il2CppObject *)v16,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
       }
       else
       {
         v29 = &items->obj.klass + size;
         klass->fields._size = size + 1;
         v29[4] = (Il2CppClass *)v16;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v16, v20, v21, v22, v23, v24, v25);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v16, v20, v21, v22, v23, v24, v25);
       }
       ++v13;
     }
@@ -109,7 +109,7 @@ void ExRoomMissionReceiveConfirmDialog__set_Items(
   bool v7; // w7
 
   this->fields._Items_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,

@@ -1,27 +1,27 @@
 void UserShopDailyEntity___ctor(UserShopDailyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593979D & 1) == 0 )
+  if ( (byte_597195E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593979D = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597195E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserShopDailyEntity__CreatePK(int64_t userId, int32_t shopId, const MethodInfo *method)
 {
-  if ( (byte_593979C & 1) == 0 )
+  if ( (byte_597195D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_593979C = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_597195D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            shopId,
-           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3854538 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

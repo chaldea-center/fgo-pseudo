@@ -28,10 +28,10 @@ void ExRoomMissionReceiveConfirmDialogItem___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.exRoomMissionListOutput = missionOutput;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)missionOutput, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)missionOutput, v5, v6, v7, v8, v9, v10);
   v12 = ExRoomMissionReceiveConfirmDialogItem__BuildRewardDisplayNames(this, v11);
   this->fields._RewardDisplayNames_k__BackingField = v12;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardDisplayNames_k__BackingField,
     (int32_t)v12,
     v13,
@@ -42,7 +42,7 @@ void ExRoomMissionReceiveConfirmDialogItem___ctor(
     v18);
   v20 = ExRoomMissionReceiveConfirmDialogItem__BuildRewardCountOperatorStrings(this, v19);
   this->fields._RewardCountOperatorStrings_k__BackingField = v20;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCountOperatorStrings_k__BackingField,
     (int32_t)v20,
     v21,
@@ -83,10 +83,10 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardCountOper
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5932E26 & 1) == 0 )
+  if ( (byte_596AF2C & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    byte_5932E26 = 1;
+    sub_2213A60(&string___TypeInfo);
+    byte_596AF2C = 1;
   }
   exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
   if ( !exRoomMissionListOutput )
@@ -97,7 +97,7 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardCountOper
   max_length = RewardGiftEntities_k__BackingField->max_length;
   if ( !max_length )
     return 0;
-  v6 = sub_21FFD10(string___TypeInfo, max_length);
+  v6 = sub_2213B20(string___TypeInfo, max_length);
   v7 = v6;
   if ( SLODWORD(RewardGiftEntities_k__BackingField->max_length) >= 1 )
   {
@@ -107,14 +107,14 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardCountOper
       CrossOperatorString = (ExRoomMissionListOutput_o *)ItemType__get_CrossOperatorString(0);
       if ( !v7 )
 LABEL_25:
-        sub_21FFECC(CrossOperatorString, v11);
+        sub_2213CDC(CrossOperatorString, v11);
       if ( v8 >= *(unsigned int *)(v7 + 24)
         || (i->klass = (MissionNaviTransitionBoardItem_c *)CrossOperatorString,
-            sub_21FFBF4(i, (int32_t)CrossOperatorString, v12, v13, v14, v15, v16, v17),
+            sub_2213A04(i, (int32_t)CrossOperatorString, v12, v13, v14, v15, v16, v17),
             v8 >= LODWORD(RewardGiftEntities_k__BackingField->max_length)) )
       {
 LABEL_24:
-        sub_21FFED4(CrossOperatorString);
+        sub_2213CE4(CrossOperatorString);
       }
       v18 = RewardGiftEntities_k__BackingField->m_Items[v8];
       if ( !v18 )
@@ -145,7 +145,7 @@ LABEL_18:
     if ( v8 >= *(unsigned int *)(v7 + 24) )
       goto LABEL_24;
     i->klass = (MissionNaviTransitionBoardItem_c *)CrossOperatorString;
-    sub_21FFBF4(i, (int32_t)CrossOperatorString, v21, v22, v23, v24, v25, v26);
+    sub_2213A04(i, (int32_t)CrossOperatorString, v21, v22, v23, v24, v25, v26);
     goto LABEL_20;
   }
   return (System_String_array *)v7;
@@ -173,10 +173,10 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardDisplayNa
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5932E25 & 1) == 0 )
+  if ( (byte_596AF2B & 1) == 0 )
   {
-    sub_21FFC50(&string___TypeInfo);
-    byte_5932E25 = 1;
+    sub_2213A60(&string___TypeInfo);
+    byte_596AF2B = 1;
   }
   exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
   if ( !exRoomMissionListOutput )
@@ -187,7 +187,7 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardDisplayNa
   max_length = RewardGiftEntities_k__BackingField->max_length;
   if ( !max_length )
     return 0;
-  v6 = (System_String_o *)sub_21FFD10(string___TypeInfo, max_length);
+  v6 = (System_String_o *)sub_2213B20(string___TypeInfo, max_length);
   v8 = RewardGiftEntities_k__BackingField->max_length;
   v9 = v6;
   if ( (int)v8 >= 1 )
@@ -204,12 +204,12 @@ System_String_array *ExRoomMissionReceiveConfirmDialogItem__BuildRewardDisplayNa
              RewardGiftEntities_k__BackingField->m_Items[v10],
              v7);
       if ( !v9 )
-        sub_21FFECC(v6, v12);
+        sub_2213CDC(v6, v12);
       if ( v10 >= LODWORD(v9[1].klass) )
 LABEL_15:
-        sub_21FFED4(v6);
+        sub_2213CE4(v6);
       *((_QWORD *)&v9[1].monitor + v10) = v6;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)((char *)v9 + v11), (int32_t)v6, v13, v14, v15, v16, v17, v18);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v9 + v11), (int32_t)v6, v13, v14, v15, v16, v17, v18);
       LODWORD(v8) = RewardGiftEntities_k__BackingField->max_length;
       ++v10;
       v11 += 8;
@@ -249,19 +249,19 @@ System_String_o *ExRoomMissionReceiveConfirmDialogItem__ResolveRewardDisplayName
 
   while ( 1 )
   {
-    if ( (byte_5932E27 & 1) == 0 )
+    if ( (byte_596AF2D & 1) == 0 )
     {
-      sub_21FFC50(&LocalizationManager_TypeInfo);
-      sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-      sub_21FFC50(&StringLiteral_6793/*"FRIENDSHIP_NAME"*/);
-      sub_21FFC50(&StringLiteral_15412/*"USER_EXP_NAME"*/);
-      byte_5932E27 = 1;
+      sub_2213A60(&LocalizationManager_TypeInfo);
+      sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+      sub_2213A60(&StringLiteral_6805/*"FRIENDSHIP_NAME"*/);
+      sub_2213A60(&StringLiteral_15442/*"USER_EXP_NAME"*/);
+      byte_596AF2D = 1;
     }
     if ( !giftEntity )
-      return **(System_String_o ***)(qword_594C0B8 + 184);
+      return **(System_String_o ***)(qword_5984390 + 184);
     exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
     if ( !exRoomMissionListOutput )
-      return **(System_String_o ***)(qword_594C0B8 + 184);
+      return **(System_String_o ***)(qword_5984390 + 184);
     RewardResolvedReward = ExRoomMissionListOutput__GetRewardResolvedReward(exRoomMissionListOutput, index, 0);
     v11 = RewardResolvedReward;
     if ( RewardResolvedReward )
@@ -288,12 +288,12 @@ System_String_o *ExRoomMissionReceiveConfirmDialogItem__ResolveRewardDisplayName
       case 4:
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-        v26 = (System_String_o *)StringLiteral_15412/*"USER_EXP_NAME"*/;
+        v26 = (System_String_o *)StringLiteral_15442/*"USER_EXP_NAME"*/;
         return LocalizationManager__Get(v26, 0);
       case 3:
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-        v26 = (System_String_o *)StringLiteral_6793/*"FRIENDSHIP_NAME"*/;
+        v26 = (System_String_o *)StringLiteral_6805/*"FRIENDSHIP_NAME"*/;
         return LocalizationManager__Get(v26, 0);
     }
     IsEquip = Gift__IsEquip(type, 0);
@@ -319,7 +319,7 @@ LABEL_19:
     }
     v22 = this->fields.exRoomMissionListOutput;
     if ( !v22 )
-      sub_21FFECC(IsCostumeRelease, v20);
+      sub_2213CDC(IsCostumeRelease, v20);
     IconGiftEntity_k__BackingField = v22->fields._IconGiftEntity_k__BackingField;
     if ( IconGiftEntity_k__BackingField )
     {
@@ -328,12 +328,12 @@ LABEL_19:
       if ( !v24 )
         continue;
     }
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   }
   name = RewardEquipEntity_k__BackingField->fields.name;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v16, v17);
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_55828364(name, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_56033020(name, 0);
 }
 
 
@@ -345,23 +345,23 @@ System_String_o *ExRoomMissionReceiveConfirmDialogItem__get_MissionConditionText
   struct ExRoomMissionListOutput_o *exRoomMissionListOutput; // x8
   System_Collections_Generic_List_object__o *ConditionEntities_k__BackingField; // x19
 
-  if ( (byte_5932E24 & 1) == 0 )
+  if ( (byte_596AF2A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
-    sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    byte_5932E24 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    sub_2213A60(&MissionInfoMaker_TypeInfo);
+    byte_596AF2A = 1;
   }
   exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
   if ( !exRoomMissionListOutput )
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   ConditionEntities_k__BackingField = (System_Collections_Generic_List_object__o *)exRoomMissionListOutput->fields._ConditionEntities_k__BackingField;
   if ( !ConditionEntities_k__BackingField )
   {
-    ConditionEntities_k__BackingField = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    ConditionEntities_k__BackingField = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       ConditionEntities_k__BackingField,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   }
   if ( !*(&MissionInfoMaker_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, method, v2);
@@ -377,15 +377,14 @@ int32_t ExRoomMissionReceiveConfirmDialogItem__get_MissionId(
 {
   struct ExRoomMissionListOutput_o *exRoomMissionListOutput; // x8
   struct EventMissionEntity_o *EventMissionEntity_k__BackingField; // x8
-  System_Nullable_int__o v5; // x0
   int32_t id; // w1
-  __int64 v8; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v7; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_5932E23 & 1) == 0 )
+  if ( (byte_596AF29 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_int___ctor__);
-    byte_5932E23 = 1;
+    sub_2213A60(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_int___ctor__);
+    byte_596AF29 = 1;
   }
   exRoomMissionListOutput = this->fields.exRoomMissionListOutput;
   if ( !exRoomMissionListOutput )
@@ -393,11 +392,13 @@ int32_t ExRoomMissionReceiveConfirmDialogItem__get_MissionId(
   EventMissionEntity_k__BackingField = exRoomMissionListOutput->fields._EventMissionEntity_k__BackingField;
   if ( !EventMissionEntity_k__BackingField )
     return 0;
-  v5 = (System_Nullable_int__o)&v8;
   id = EventMissionEntity_k__BackingField->fields.id;
-  v8 = 0;
-  System_Nullable_int____ctor(v5, id, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
-  return HIDWORD(v8);
+  v7 = 0;
+  System_Nullable_int____ctor(
+    (System_Nullable_int__o)&v7,
+    id,
+    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  return HIDWORD(v7);
 }
 
 
@@ -443,7 +444,7 @@ void ExRoomMissionReceiveConfirmDialogItem__set_RewardCountOperatorStrings(
   bool v7; // w7
 
   this->fields._RewardCountOperatorStrings_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardCountOperatorStrings_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -467,7 +468,7 @@ void ExRoomMissionReceiveConfirmDialogItem__set_RewardDisplayNames(
   bool v7; // w7
 
   this->fields._RewardDisplayNames_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._RewardDisplayNames_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

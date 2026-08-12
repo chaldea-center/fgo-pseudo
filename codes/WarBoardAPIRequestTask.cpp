@@ -33,23 +33,23 @@ void WarBoardAPIRequestTask___ctor(
   bool v34; // w6
   bool v35; // w7
 
-  if ( (byte_5936221 & 1) == 0 )
+  if ( (byte_596E37B & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_WarBoardAPIRequestTask_requestComplete__);
-    byte_5936221 = 1;
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_WarBoardAPIRequestTask_requestComplete__);
+    byte_596E37B = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)request);
   this->fields.request = request;
   this->fields.onStartBeginRequest = onStartBeginRequest;
   this->fields.requestDone = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)request, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)request, v9, v10, v11, v12, v13, v14);
   v17 = this->fields.request;
   if ( !v17 )
-    sub_21FFECC(v15, v16);
+    sub_2213CDC(v15, v16);
   CallBack = (System_Delegate_o *)v17->fields.CallBack;
   p_fields = (MissionNaviTransitionBoardItem_o *)&v17->fields;
-  v20 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v20 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v20,
     (Il2CppObject *)this,
@@ -70,7 +70,7 @@ void WarBoardAPIRequestTask___ctor(
   {
     p_fields->klass = 0;
   }
-  sub_21FFBF4(p_fields, (int32_t)v21, v22, v23, v24, v25, v26, v27);
+  sub_2213A04(p_fields, (int32_t)v21, v22, v23, v24, v25, v26, v27);
   v30 = (System_Delegate_o *)this->fields.resultCallback;
   this = (WarBoardAPIRequestTask_o *)((char *)this + 72);
   v31 = (WarBoardAPIRequestTask_c *)System_Delegate__Combine(v30, (System_Delegate_o *)resultCallback, 0);
@@ -85,15 +85,15 @@ LABEL_13:
   if ( v31->_1.image != NetworkManager_ResultCallbackFunc_TypeInfo || (this->klass = v31, v31->_1.image != v29) )
   {
 LABEL_12:
-    sub_220024C(v28, v29, v22, v23);
+    sub_221405C(v28, v29, v22, v23);
     goto LABEL_13;
   }
 LABEL_14:
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)this, (int32_t)v28, v22, v23, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)this, (int32_t)v28, v22, v23, v32, v33, v34, v35);
 }
 
 
-void WarBoardAPIRequestTask___ctor_45133660(
+void WarBoardAPIRequestTask___ctor_45157924(
         WarBoardAPIRequestTask_o *this,
         NetworkManager_ResultCallbackFunc_o *resultCallback,
         bool onStartBeginRequest,
@@ -111,10 +111,10 @@ void WarBoardAPIRequestTask___ctor_45133660(
   int32_t v16; // w8
   NetworkManager_ResultCallbackFunc_c *v17; // x1
 
-  if ( (byte_5936222 & 1) == 0 )
+  if ( (byte_596E37C & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_5936222 = 1;
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_596E37C = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)resultCallback);
   v8 = (System_Delegate_o *)this->fields.resultCallback;
@@ -130,11 +130,11 @@ void WarBoardAPIRequestTask___ctor_45133660(
     || (p_resultCallback->klass = (MissionNaviTransitionBoardItem_c *)v9,
         (NetworkManager_ResultCallbackFunc_c *)v9->klass != v17) )
   {
-    sub_220024C(v9, v17, v10, v11);
+    sub_221405C(v9, v17, v10, v11);
 LABEL_7:
     p_resultCallback->klass = 0;
   }
-  sub_21FFBF4(p_resultCallback, v16, v10, v11, v12, v13, v14, v15);
+  sub_2213A04(p_resultCallback, v16, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -150,16 +150,16 @@ System_Collections_IEnumerator_o *WarBoardAPIRequestTask__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936224 & 1) == 0 )
+  if ( (byte_596E37E & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
-    byte_5936224 = 1;
+    sub_2213A60(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
+    byte_596E37E = 1;
   }
-  v3 = sub_21FFEBC(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
+  v3 = sub_2213CCC(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -171,10 +171,10 @@ void WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, const MethodI
   __int64 v5; // x1
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_5936225 & 1) == 0 )
+  if ( (byte_596E37F & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5936225 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596E37F = 1;
   }
   resultCallback = this->fields.resultCallback;
   if ( resultCallback )
@@ -184,9 +184,9 @@ void WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, const MethodI
       resultCallback->fields.method);
   if ( this->fields.isShowConnect )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0);
   }
   EndCallback = this->fields.EndCallback;
@@ -217,12 +217,12 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
   __int64 v17; // x1
   RequestBase_o *Instance; // x0
 
-  if ( (byte_5936223 & 1) == 0 )
+  if ( (byte_596E37D & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_WarBoardAPIRequestTask_requestComplete__);
-    byte_5936223 = 1;
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_WarBoardAPIRequestTask_requestComplete__);
+    byte_596E37D = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -238,7 +238,7 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
     goto LABEL_10;
   CallBack = (System_Delegate_o *)request->fields.CallBack;
   p_fields = (MissionNaviTransitionBoardItem_o *)&request->fields;
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v8, (Il2CppObject *)this, Method_WarBoardAPIRequestTask_requestComplete__, 0);
   v9 = System_Delegate__Combine(CallBack, (System_Delegate_o *)v8, 0);
   if ( v9 )
@@ -248,7 +248,7 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
       || (p_fields->klass = (MissionNaviTransitionBoardItem_c *)v9,
           (NetworkManager_ResultCallbackFunc_c *)v9->klass != v16) )
     {
-      v4 = sub_220024C(v9, v16, v10, v11);
+      v4 = sub_221405C(v9, v16, v10, v11);
 LABEL_10:
       ((void (__fastcall *)(WarBoardAPIRequestTask_o *, const MethodInfo *, long double))this->klass->vtable._6_OnEnd.methodPtr)(
         this,
@@ -261,7 +261,7 @@ LABEL_10:
   {
     p_fields->klass = 0;
   }
-  sub_21FFBF4(p_fields, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+  sub_2213A04(p_fields, (int32_t)v9, v10, v11, v12, v13, v14, v15);
   if ( !this->fields.requestDone )
   {
     Instance = this->fields.request;
@@ -292,7 +292,7 @@ LABEL_10:
           return;
       }
       this->fields.isShowConnect = 1;
-      Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0);
@@ -300,7 +300,7 @@ LABEL_10:
       }
     }
 LABEL_23:
-    sub_21FFECC(Instance, v17);
+    sub_2213CDC(Instance, v17);
   }
 }
 
@@ -332,7 +332,7 @@ void WarBoardAPIRequestTask__requestComplete(
   this->fields.responseStr = result;
   p_responseStr = &this->fields.responseStr;
   *((_BYTE *)p_responseStr - 15) = 1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_responseStr,
     (int32_t)result,
     (System_String_o *)method,
@@ -370,24 +370,24 @@ bool WarBoardAPIRequestTask__Execute_d__11__MoveNext(
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5936226 & 1) == 0 )
+  if ( (byte_596E380 & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    sub_21FFC50(&Method_WarBoardAPIRequestTask__Execute_b__11_0__);
-    byte_5936226 = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    sub_2213A60(&Method_WarBoardAPIRequestTask__Execute_b__11_0__);
+    byte_596E380 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( !_1__state )
   {
     _4__this = (Il2CppObject *)this->fields.__4__this;
     this->fields.__1__state = -1;
-    v6 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v6, _4__this, Method_WarBoardAPIRequestTask__Execute_b__11_0__, 0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     v4 = 1;
     goto LABEL_7;
   }
@@ -417,11 +417,11 @@ void __noreturn WarBoardAPIRequestTask__Execute_d__11__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

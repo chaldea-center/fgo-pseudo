@@ -6,11 +6,11 @@ void CriFsConfig___ctor(CriFsConfig_o *this, const MethodInfo *method)
   void *v6; // x1
   int32_t defaultInstallBufferSize; // w8
 
-  if ( (byte_59316F8 & 1) == 0 )
+  if ( (byte_5969898 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59316F8 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5969898 = 1;
   }
   v4 = CriFsPlugin_TypeInfo;
   *(_QWORD *)&this->fields.numberOfLoaders = 0x800000010LL;
@@ -26,7 +26,7 @@ void CriFsConfig___ctor(CriFsConfig_o *this, const MethodInfo *method)
   this->fields.userAgentString = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.installBufferSize = defaultInstallBufferSize / 1024;
   this->fields.maxPath = 256;
-  sub_21FFBF4(&this->fields.userAgentString, v6);
+  sub_2213A04(&this->fields.userAgentString, v6);
   this->fields.androidDeviceReadBitrate = 50000000;
   System_Object___ctor((Il2CppObject *)this, 0);
 }

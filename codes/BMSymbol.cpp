@@ -38,12 +38,12 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
   int32_t paddingTop; // w10
   __int64 v30; // d0
   UnityEngine_Rect_o rect; // [xsp+0h] [xbp-40h]
-  UnityEngine_Rect_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v32; // 0:kr00_16.16
 
-  if ( (byte_593CDD7 & 1) == 0 )
+  if ( (byte_59750AE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CDD7 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59750AE = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, atlas);
@@ -65,7 +65,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
     }
     this->fields.mSprite = Sprite;
     p_mSprite = &this->fields.mSprite;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v8, v9, v10, v11, v12, v13);
     if ( !this->fields.mSprite )
       return this->fields.mSprite != 0;
     if ( atlas )
@@ -77,7 +77,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       if ( v7 )
       {
         *p_mSprite = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v18, v19, v20, v21, v22, v23);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v18, v19, v20, v21, v22, v23);
         return this->fields.mSprite != 0;
       }
       if ( *p_mSprite )
@@ -111,7 +111,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
       }
     }
 LABEL_25:
-    sub_21FFECC(v7, Sprite);
+    sub_2213CDC(v7, Sprite);
   }
   return this->fields.mSprite != 0;
 }
@@ -139,7 +139,7 @@ int32_t BMSymbol__get_length(BMSymbol_o *this, const MethodInfo *method)
   {
     sequence = this->fields.sequence;
     if ( !sequence )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     mLength = sequence->fields._stringLength;
     this->fields.mLength = mLength;
   }
@@ -161,20 +161,12 @@ int32_t BMSymbol__get_offsetY(BMSymbol_o *this, const MethodInfo *method)
 
 UnityEngine_Rect_o BMSymbol__get_uvRect(BMSymbol_o *this, const MethodInfo *method)
 {
-  float m_XMin; // s0
-  float m_YMin; // s1
-  float m_Width; // s2
-  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  m_XMin = this->fields.mUV.fields.m_XMin;
-  m_YMin = this->fields.mUV.fields.m_YMin;
-  m_Width = this->fields.mUV.fields.m_Width;
-  m_Height = this->fields.mUV.fields.m_Height;
-  result.fields.m_Height = m_Height;
-  result.fields.m_Width = m_Width;
-  result.fields.m_YMin = m_YMin;
-  result.fields.m_XMin = m_XMin;
+  result.fields.m_XMin = this->fields.mUV.fields.m_XMin;
+  result.fields.m_YMin = this->fields.mUV.fields.m_YMin;
+  result.fields.m_Width = this->fields.mUV.fields.m_Width;
+  result.fields.m_Height = this->fields.mUV.fields.m_Height;
   return result;
 }
 

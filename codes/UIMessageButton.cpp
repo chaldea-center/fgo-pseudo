@@ -9,23 +9,23 @@ void UIMessageButton___ctor(UIMessageButton_o *this, const MethodInfo *method)
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5939FD5 & 1) == 0 )
+  if ( (byte_59721A9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_5939FD5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_59721A9 = 1;
   }
   v3 = System_Collections_Generic_List_EventDelegate__TypeInfo;
-  this->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_E93FD0;
-  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v3);
+  this->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_E9D170;
+  v4 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v3);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onClick, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onClick, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   __asm { FMOV            V0.4S, #1.0 }
-  this->fields.hover = (struct UnityEngine_Color_o)xmmword_E94790;
-  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_E94070;
+  this->fields.hover = (struct UnityEngine_Color_o)xmmword_E9D930;
+  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_E9D210;
   this->fields.normalColor = _Q0;
   this->fields.duration = 0.2;
   UIWidgetContainer___ctor((UIWidgetContainer_o *)this, 0);
@@ -43,10 +43,10 @@ void UIMessageButton__Fadeout(UIMessageButton_o *this, float d, const MethodInfo
   int32_t v11; // w21
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_5939FD4 & 1) == 0 )
+  if ( (byte_59721A8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FD4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721A8 = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -81,7 +81,7 @@ void UIMessageButton__Fadeout(UIMessageButton_o *this, float d, const MethodInfo
           return;
       }
 LABEL_15:
-      sub_21FFECC(transform, v6);
+      sub_2213CDC(transform, v6);
     }
   }
 }
@@ -104,11 +104,11 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5939FD2 & 1) == 0 )
+  if ( (byte_59721A6 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&UIMessageButton_TypeInfo);
-    byte_5939FD2 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&UIMessageButton_TypeInfo);
+    byte_59721A6 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -116,7 +116,7 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
       & 1) != 0 )
   {
     UIMessageButton_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIMessageButton_TypeInfo->static_fields,
       (int32_t)this,
       v3,
@@ -128,9 +128,9 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
     onClick = this->fields.onClick;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v9);
-    EventDelegate__Execute_56080488(onClick, 0);
+    EventDelegate__Execute_56285144(onClick, 0);
     UIMessageButton_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)UIMessageButton_TypeInfo->static_fields,
       0,
       v11,
@@ -152,11 +152,11 @@ void UIMessageButton__OnDragOut(UIMessageButton_o *this, const MethodInfo *metho
   __int64 v7; // x1
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_5939FD1 & 1) == 0 )
+  if ( (byte_59721A5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FD1 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721A5 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -173,7 +173,7 @@ void UIMessageButton__OnDragOut(UIMessageButton_o *this, const MethodInfo *metho
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_21FFECC(v4, v3);
+      sub_2213CDC(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -194,11 +194,11 @@ void UIMessageButton__OnDragOver(UIMessageButton_o *this, const MethodInfo *meth
   __int64 v7; // x1
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_5939FD0 & 1) == 0 )
+  if ( (byte_59721A4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FD0 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721A4 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -215,7 +215,7 @@ void UIMessageButton__OnDragOver(UIMessageButton_o *this, const MethodInfo *meth
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_21FFECC(v4, v3);
+      sub_2213CDC(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -243,11 +243,11 @@ void UIMessageButton__OnEnable(UIMessageButton_o *this, const MethodInfo *method
   UnityEngine_Object_o *gameObject; // x21
   bool v15; // w0
 
-  if ( (byte_5939FCF & 1) == 0 )
+  if ( (byte_59721A3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_5939FCF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_59721A3 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -377,14 +377,14 @@ void UIMessageButton__UpdateColor(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v19; // x1
   UnityEngine_Object_o *v20; // x24
-  UnityEngine_Color_o defaultColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o defaultColor; // 0:kr00_16.16
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_5939FD3 & 1) == 0 )
+  if ( (byte_59721A7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FD3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721A7 = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -457,7 +457,7 @@ LABEL_11:
         return;
     }
 LABEL_24:
-    sub_21FFECC(transform, v8);
+    sub_2213CDC(transform, v8);
   }
 }
 
@@ -469,24 +469,24 @@ bool UIMessageButton__get_isEnabled(UIMessageButton_o *this, const MethodInfo *m
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_5939FCD & 1) == 0 )
+  if ( (byte_59721A1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FCD = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721A1 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
     return 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
   v5 = UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0);
   if ( !v5 )
     return 0;
   if ( !Component_object )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_object, 0);
 }
 
@@ -499,22 +499,22 @@ void UIMessageButton__set_isEnabled(UIMessageButton_o *this, bool value, const M
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_5939FCE & 1) == 0 )
+  if ( (byte_59721A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939FCE = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59721A2 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v7 )
   {
     if ( !Component_object )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, value, 0);
   }
   else

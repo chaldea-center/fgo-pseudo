@@ -4,10 +4,10 @@ void SpringPanel___ctor(SpringPanel_o *this, const MethodInfo *method)
   __int64 v4; // d0
   float z; // s1
 
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v4 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -25,116 +25,112 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
   float unscaledDeltaTime; // s0
   UnityEngine_Transform_o *mTrans; // x0
   float v6; // s10
-  float x; // s8
-  float y; // s9
-  System_String_o *v9; // x2
-  System_String_o *v10; // x3
-  int32_t v11; // w4
-  int32_t v12; // w5
-  bool v13; // w6
-  bool v14; // w7
-  float v15; // s10
-  float v16; // s11
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  float x; // s10
+  float y; // s11
   float z; // s12
-  float v18; // s13
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
-  __int64 v25; // x1
+  float v16; // s13
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  __int64 v23; // x1
   UnityEngine_Object_o *mDrag; // x20
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
   struct SpringPanel_OnFinished_o *onFinished; // x8
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  unsigned __int64 localPosition; // kr00_8
+  UnityEngine_Vector3_o v39; // 0:kr20_12.12
   UnityEngine_Vector2_o v40; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593CE95 & 1) == 0 )
+  if ( (byte_597516C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SpringPanel_TypeInfo);
-    byte_593CE95 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SpringPanel_TypeInfo);
+    byte_597516C = 1;
   }
   unscaledDeltaTime = UnityEngine_Time__get_unscaledDeltaTime(0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_20;
   v6 = unscaledDeltaTime;
-  localPosition = UnityEngine_Transform__get_localPosition(mTrans, 0);
+  localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(mTrans, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_20;
-  x = localPosition.fields.x;
-  y = localPosition.fields.y;
   v42 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  v43 = NGUIMath__SpringLerp_56160220(v42, this->fields.target, this->fields.strength, v6, 0);
-  v15 = this->fields.target.fields.x;
-  v16 = this->fields.target.fields.y;
+  v39 = NGUIMath__SpringLerp_56364876(v42, this->fields.target, this->fields.strength, v6, 0);
+  x = this->fields.target.fields.x;
+  y = this->fields.target.fields.y;
   z = this->fields.target.fields.z;
-  v18 = (float)((float)((float)(v43.fields.x - v15) * (float)(v43.fields.x - v15))
-              + (float)((float)(v43.fields.y - v16) * (float)(v43.fields.y - v16)))
-      + (float)((float)(v43.fields.z - z) * (float)(v43.fields.z - z));
-  if ( v18 >= 0.01 )
+  v16 = (float)((float)((float)(v39.fields.x - x) * (float)(v39.fields.x - x))
+              + (float)((float)(v39.fields.y - y) * (float)(v39.fields.y - y)))
+      + (float)((float)(v39.fields.z - z) * (float)(v39.fields.z - z));
+  if ( v16 >= 0.01 )
   {
-    z = v43.fields.z;
-    v16 = v43.fields.y;
-    v15 = v43.fields.x;
+    z = v39.fields.z;
+    y = v39.fields.y;
+    x = v39.fields.x;
   }
   else
   {
     SpringPanel_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       (int32_t)this,
+      v7,
+      v8,
       v9,
       v10,
       v11,
-      v12,
-      v13,
-      v14);
+      v12);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
     SpringPanel_TypeInfo->static_fields->current = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       0,
+      v17,
+      v18,
       v19,
       v20,
       v21,
-      v22,
-      v23,
-      v24);
+      v22);
   }
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_20;
-  v44.fields.x = v15;
-  v44.fields.y = v16;
-  v44.fields.z = z;
-  UnityEngine_Transform__set_localPosition(mTrans, v44, 0);
+  v41.fields.x = x;
+  v41.fields.y = y;
+  v41.fields.z = z;
+  UnityEngine_Transform__set_localPosition(mTrans, v41, 0);
   mTrans = (UnityEngine_Transform_o *)this->fields.mPanel;
   if ( !mTrans )
     goto LABEL_20;
-  v40.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(v15 - x);
-  v40.fields.y = *(float *)&mTrans[14].klass - (float)(v16 - y);
+  v40.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(x - *(float *)&localPosition);
+  v40.fields.y = *(float *)&mTrans[14].klass - (float)(y - *((float *)&localPosition + 1));
   UIPanel__set_clipOffset((UIPanel_o *)mTrans, v40, 0);
   mDrag = (UnityEngine_Object_o *)this->fields.mDrag;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
   if ( UnityEngine_Object__op_Inequality(mDrag, 0, 0) )
   {
     mTrans = (UnityEngine_Transform_o *)this->fields.mDrag;
@@ -145,18 +141,18 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
       0,
       *(_QWORD *)&mTrans->klass[1]._1.this_arg.bits);
   }
-  if ( v18 < 0.01 && this->fields.onFinished )
+  if ( v16 < 0.01 && this->fields.onFinished )
   {
     SpringPanel_TypeInfo->static_fields->current = this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       (int32_t)this,
+      v25,
+      v26,
       v27,
       v28,
       v29,
-      v30,
-      v31,
-      v32);
+      v30);
     onFinished = this->fields.onFinished;
     if ( onFinished )
     {
@@ -164,19 +160,19 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
         onFinished->fields.method_code,
         onFinished->fields.method);
       SpringPanel_TypeInfo->static_fields->current = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         0,
+        v32,
+        v33,
         v34,
         v35,
         v36,
-        v37,
-        v38,
-        v39);
+        v37);
       return;
     }
 LABEL_20:
-    sub_21FFECC(mTrans, v3);
+    sub_2213CDC(mTrans, v3);
   }
 }
 
@@ -217,20 +213,20 @@ SpringPanel_o *SpringPanel__Begin(
   y = pos.fields.y;
   x = pos.fields.x;
   v8 = go;
-  if ( (byte_593CE96 & 1) == 0 )
+  if ( (byte_597516D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_SpringPanel___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SpringPanel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    go = (UnityEngine_GameObject_o *)sub_21FFC50(&SpringPanel_TypeInfo);
-    byte_593CE96 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_SpringPanel___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SpringPanel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    go = (UnityEngine_GameObject_o *)sub_2213A60(&SpringPanel_TypeInfo);
+    byte_597516D = 1;
   }
   if ( !v8 )
 LABEL_15:
-    sub_21FFECC(go, method);
+    sub_2213CDC(go, method);
   Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                v8,
-                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SpringPanel___);
+                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SpringPanel___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   go = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -238,7 +234,7 @@ LABEL_15:
   {
     go = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                        v8,
-                                       (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_SpringPanel___);
+                                       (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_SpringPanel___);
     Component_object = (char *)go;
     if ( !go )
       goto LABEL_15;
@@ -250,7 +246,7 @@ LABEL_15:
     if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0) )
     {
       SpringPanel_TypeInfo->static_fields->current = (struct SpringPanel_o *)Component_object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         (int32_t)Component_object,
         v11,
@@ -263,7 +259,7 @@ LABEL_15:
       if ( v23 )
         (*(void (__fastcall **)(_QWORD, _QWORD))(v23 + 24))(*(_QWORD *)(v23 + 64), *(_QWORD *)(v23 + 40));
       SpringPanel_TypeInfo->static_fields->current = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         0,
         v17,
@@ -279,9 +275,9 @@ LABEL_15:
   *((float *)Component_object + 10) = z;
   *((float *)Component_object + 11) = strength;
   *((_QWORD *)Component_object + 6) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Component_object + 48), 0, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(Component_object + 48), 0, v11, v12, v13, v14, v15, v16);
   *((_QWORD *)Component_object + 7) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Component_object + 56), 0, v24, v25, v26, v27, v28, v29);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(Component_object + 56), 0, v24, v25, v26, v27, v28, v29);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0);
   return (SpringPanel_o *)Component_object;
 }
@@ -306,11 +302,11 @@ void SpringPanel__OnDisable(SpringPanel_o *this, const MethodInfo *method)
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CE94 & 1) == 0 )
+  if ( (byte_597516B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SpringPanel_TypeInfo);
-    byte_593CE94 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SpringPanel_TypeInfo);
+    byte_597516B = 1;
   }
   if ( this->fields.onCanceled )
   {
@@ -320,7 +316,7 @@ void SpringPanel__OnDisable(SpringPanel_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Equality(current, 0, 0) )
     {
       SpringPanel_TypeInfo->static_fields->current = this;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         (int32_t)this,
         v4,
@@ -331,12 +327,12 @@ void SpringPanel__OnDisable(SpringPanel_o *this, const MethodInfo *method)
         v9);
       onCanceled = this->fields.onCanceled;
       if ( !onCanceled )
-        sub_21FFECC(v10, v11);
+        sub_2213CDC(v10, v11);
       ((void (__fastcall *)(intptr_t, intptr_t))onCanceled->fields.invoke_impl)(
         onCanceled->fields.method_code,
         onCanceled->fields.method);
       SpringPanel_TypeInfo->static_fields->current = 0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         0,
         v13,
@@ -374,17 +370,17 @@ void SpringPanel__Start(SpringPanel_o *this, const MethodInfo *method)
   bool v22; // w6
   bool v23; // w7
 
-  if ( (byte_593CE93 & 1) == 0 )
+  if ( (byte_597516A & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    byte_593CE93 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    byte_597516A = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mPanel,
     (int32_t)Component_object,
     v4,
@@ -395,12 +391,12 @@ void SpringPanel__Start(SpringPanel_o *this, const MethodInfo *method)
     v9);
   v10 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
   this->fields.mDrag = (struct UIScrollView_o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mDrag, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mDrag, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mTrans,
     (int32_t)transform,
     v18,
@@ -439,7 +435,7 @@ void SpringPanel_OnFinished___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -450,12 +446,12 @@ void SpringPanel_OnFinished___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -467,9 +463,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_20040DC;
+  this->fields.invoke_impl = (intptr_t)sub_20173C4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_200409C;
+  this->fields.extra_arg = (intptr_t)sub_2017384;
 }
 
 
@@ -479,9 +475,9 @@ System_IAsyncResult_o *SpringPanel_OnFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -490,7 +486,7 @@ void SpringPanel_OnFinished__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

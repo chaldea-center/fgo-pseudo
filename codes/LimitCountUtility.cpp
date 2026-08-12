@@ -11,12 +11,12 @@ bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, cons
   Il2CppObject *Master_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_5937B31 & 1) == 0 )
+  if ( (byte_596FC94 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&OptionManager_TypeInfo);
-    byte_5937B31 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&OptionManager_TypeInfo);
+    byte_596FC94 = 1;
   }
   if ( limitCountStage == 4 )
   {
@@ -38,9 +38,9 @@ bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, cons
     return 1;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   return ServantLimitSpoilerProtectionMaster__CheckLimitCount(
            (ServantLimitSpoilerProtectionMaster_o *)Master_object,
            svtId,
@@ -110,10 +110,10 @@ int32_t LimitCountUtility__ConvertStageToLimitCount(
   int v5; // w20
 
   v5 = limitCountStage;
-  if ( (byte_5937B2F & 1) == 0 )
+  if ( (byte_596FC92 & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5937B2F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596FC92 = 1;
   }
   if ( v5 > 4 )
     return v5;
@@ -133,18 +133,18 @@ int32_t LimitCountUtility__ConvertStageToLimitCount(
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, *(_QWORD *)&limitCountStage);
-  return System_Math__Min_76940292(v5, limitCount, 0);
+  return System_Math__Min_77153596(v5, limitCount, 0);
 }
 
 
-int32_t LimitCountUtility__ConvertStageToLimitCount_47970664(int32_t limitCountStage, const MethodInfo *method)
+int32_t LimitCountUtility__ConvertStageToLimitCount_48001960(int32_t limitCountStage, const MethodInfo *method)
 {
   if ( limitCountStage <= 4 )
   {
     if ( (unsigned int)(limitCountStage - 2) > 2 )
       return 0;
     else
-      return dword_ED1114[limitCountStage - 2];
+      return dword_EDA254[limitCountStage - 2];
   }
   return limitCountStage;
 }
@@ -190,23 +190,21 @@ System_Collections_Generic_IEnumerable_int__o *LimitCountUtility__GetLimitCountS
   bool v5; // w21
   __int64 v6; // x20
   int32_t CurrentManagedThreadId; // w0
-  System_Collections_Generic_IEnumerable_int__o *result; // x0
 
-  if ( (byte_5937B32 & 1) == 0 )
+  if ( (byte_596FC95 & 1) == 0 )
   {
-    sub_21FFC50(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
-    byte_5937B32 = 1;
+    sub_2213A60(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    byte_596FC95 = 1;
   }
   v5 = hasRewardStage;
-  v6 = sub_21FFEBC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+  v6 = sub_2213CCC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = -2;
   CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
   *(_DWORD *)(v6 + 36) = maxLimitCountStage;
   *(_DWORD *)(v6 + 24) = CurrentManagedThreadId;
-  result = (System_Collections_Generic_IEnumerable_int__o *)v6;
   *(_BYTE *)(v6 + 29) = v5;
-  return result;
+  return (System_Collections_Generic_IEnumerable_int__o *)v6;
 }
 
 
@@ -278,11 +276,11 @@ int32_t LimitCountUtility__GetSealAfter(
   __int64 v12; // x1
   int ServantLimitCountSealAfter; // w0
 
-  if ( (byte_5937B30 & 1) == 0 )
+  if ( (byte_596FC93 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5937B30 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_596FC93 = 1;
   }
   if ( limitCountStage <= 4 )
   {
@@ -293,9 +291,9 @@ int32_t LimitCountUtility__GetSealAfter(
             (const MethodInfo *)hasRewardStage);
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     if ( !Master_object )
-      sub_21FFECC(0, v12);
+      sub_2213CDC(0, v12);
     ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                    (ServantLimitImageMaster_o *)Master_object,
                                    svtId,
@@ -345,10 +343,10 @@ bool LimitCountUtility__IsOtherImage(int32_t value, const MethodInfo *method)
 {
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_5937B2E & 1) == 0 )
+  if ( (byte_596FC91 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    byte_5937B2E = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    byte_596FC91 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -455,12 +453,11 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   int32_t l__initialThreadId; // w20
   LimitCountUtility__GetLimitCountStageList_d__21_o *v4; // x20
   bool _3__hasRewardStage; // w9
-  System_Collections_Generic_IEnumerator_int__o *result; // x0
 
-  if ( (byte_5937B33 & 1) == 0 )
+  if ( (byte_596FC96 & 1) == 0 )
   {
-    sub_21FFC50(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
-    byte_5937B33 = 1;
+    sub_2213A60(&LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    byte_596FC96 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -471,16 +468,15 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   }
   else
   {
-    v4 = (LimitCountUtility__GetLimitCountStageList_d__21_o *)sub_21FFEBC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
+    v4 = (LimitCountUtility__GetLimitCountStageList_d__21_o *)sub_2213CCC(LimitCountUtility__GetLimitCountStageList_d__21_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
   _3__hasRewardStage = this->fields.__3__hasRewardStage;
-  result = (System_Collections_Generic_IEnumerator_int__o *)v4;
   v4->fields.maxLimitCountStage = this->fields.__3__maxLimitCountStage;
   v4->fields.hasRewardStage = _3__hasRewardStage;
-  return result;
+  return (System_Collections_Generic_IEnumerator_int__o *)v4;
 }
 
 
@@ -500,11 +496,11 @@ void __noreturn LimitCountUtility__GetLimitCountStageList_d__21__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_LimitCountUtility__GetLimitCountStageList_d__21_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_LimitCountUtility__GetLimitCountStageList_d__21_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -515,7 +511,7 @@ Il2CppObject *LimitCountUtility__GetLimitCountStageList_d__21__System_Collection
   int32_t _2__current; // [xsp+Ch] [xbp-4h] BYREF
 
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &_2__current);
+  return (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &_2__current);
 }
 
 

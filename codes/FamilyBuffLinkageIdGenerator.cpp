@@ -8,7 +8,7 @@ void FamilyBuffLinkageIdGenerator___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !servantData || (BuffData = BattleServantData__get_BuffData(servantData, 0)) == 0 )
-    sub_21FFECC(BuffData, v6);
+    sub_2213CDC(BuffData, v6);
   this->fields.current = BattleBuffData__GetFamilyLinkageIdMax(BuffData, 0);
 }
 

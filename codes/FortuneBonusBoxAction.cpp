@@ -22,46 +22,46 @@ void FortuneBonusBoxAction__Awake(FortuneBonusBoxAction_o *this, const MethodInf
   Il2CppObject *v15; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_5934EEB & 1) == 0 )
+  if ( (byte_596D01B & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_FortuneBonusBoxAction___ctor__);
-    sub_21FFC50(&Method_CStateManager_FortuneBonusBoxAction__add__);
-    sub_21FFC50(&CStateManager_FortuneBonusBoxAction__TypeInfo);
-    sub_21FFC50(&FortuneBonusBoxAction_StateNone_TypeInfo);
-    sub_21FFC50(&FortuneBonusBoxAction_StatePlay_TypeInfo);
-    byte_5934EEB = 1;
+    sub_2213A60(&Method_CStateManager_FortuneBonusBoxAction___ctor__);
+    sub_2213A60(&Method_CStateManager_FortuneBonusBoxAction__add__);
+    sub_2213A60(&CStateManager_FortuneBonusBoxAction__TypeInfo);
+    sub_2213A60(&FortuneBonusBoxAction_StateNone_TypeInfo);
+    sub_2213A60(&FortuneBonusBoxAction_StatePlay_TypeInfo);
+    byte_596D01B = 1;
   }
   if ( !this->fields.fsm )
   {
-    v3 = (CStateManager_T__o *)sub_21FFEBC(CStateManager_FortuneBonusBoxAction__TypeInfo);
+    v3 = (CStateManager_T__o *)sub_2213CCC(CStateManager_FortuneBonusBoxAction__TypeInfo);
     CStateManager_object____ctor(
       v3,
       (Il2CppObject *)this,
       2,
-      (const MethodInfo_3E505AC *)Method_CStateManager_FortuneBonusBoxAction___ctor__);
+      (const MethodInfo_3E83D54 *)Method_CStateManager_FortuneBonusBoxAction___ctor__);
     this->fields.fsm = (struct CStateManager_FortuneBonusBoxAction__o *)v3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fsm, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fsm, (int32_t)v3, v4, v5, v6, v7, v8, v9);
     fsm = (CStateManager_T__o *)this->fields.fsm;
-    v11 = (Il2CppObject *)sub_21FFEBC(FortuneBonusBoxAction_StateNone_TypeInfo);
+    v11 = (Il2CppObject *)sub_2213CCC(FortuneBonusBoxAction_StateNone_TypeInfo);
     System_Object___ctor(v11, 0);
     if ( !fsm
       || (CStateManager_object___add(
             fsm,
             0,
             (IState_T__o *)v11,
-            (const MethodInfo_3E5065C *)Method_CStateManager_FortuneBonusBoxAction__add__),
+            (const MethodInfo_3E83E04 *)Method_CStateManager_FortuneBonusBoxAction__add__),
           v14 = (CStateManager_T__o *)this->fields.fsm,
-          v15 = (Il2CppObject *)sub_21FFEBC(FortuneBonusBoxAction_StatePlay_TypeInfo),
+          v15 = (Il2CppObject *)sub_2213CCC(FortuneBonusBoxAction_StatePlay_TypeInfo),
           System_Object___ctor(v15, 0),
           !v14) )
     {
-      sub_21FFECC(v12, v13);
+      sub_2213CDC(v12, v13);
     }
     CStateManager_object___add(
       v14,
       1,
       (IState_T__o *)v15,
-      (const MethodInfo_3E5065C *)Method_CStateManager_FortuneBonusBoxAction__add__);
+      (const MethodInfo_3E83E04 *)Method_CStateManager_FortuneBonusBoxAction__add__);
     FortuneBonusBoxAction__SetState(this, 0, v16);
   }
 }
@@ -74,10 +74,10 @@ bool FortuneBonusBoxAction__IsPlayingAnim(FortuneBonusBoxAction_o *this, const M
   __int64 v5; // x1
   UnityEngine_Animation_o *v7; // x0
 
-  if ( (byte_5934EF0 & 1) == 0 )
+  if ( (byte_596D020 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EF0 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D020 = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -86,7 +86,7 @@ bool FortuneBonusBoxAction__IsPlayingAnim(FortuneBonusBoxAction_o *this, const M
     return 0;
   v7 = this->fields.anim;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Animation__IsPlaying(v7, this->fields.animationName, 0);
 }
 
@@ -103,13 +103,13 @@ void FortuneBonusBoxAction__Play(FortuneBonusBoxAction_o *this, System_Action_o 
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_5934EED & 1) == 0 )
+  if ( (byte_596D01D & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934EED = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D01D = 1;
   }
   this->fields.endAction = endAct;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.endAction,
     (int32_t)endAct,
     (System_String_o *)method,
@@ -122,9 +122,9 @@ void FortuneBonusBoxAction__Play(FortuneBonusBoxAction_o *this, System_Action_o 
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
         FortuneBonusBoxAction__SetAnimSpeed(this, 0.0, v12),
-        (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_21FFECC(gameObject, v11);
+    sub_2213CDC(gameObject, v11);
   }
   CommonUI__maskFadein((CommonUI_o *)gameObject, this->fields.fadeInTime, 0, 0);
   FortuneBonusBoxAction__SetState(this, 1, v13);
@@ -139,8 +139,8 @@ void FortuneBonusBoxAction__PlayAnim(FortuneBonusBoxAction_o *this, const Method
   FortuneBonusBoxAction__SetAnimSpeed(this, 1.0, method);
   commonEffectComponent = this->fields.commonEffectComponent;
   if ( !commonEffectComponent )
-    sub_21FFECC(0, v3);
-  CommonEffectComponent__Init_50672300(commonEffectComponent, this->fields.animationName, 0, 0, 0);
+    sub_2213CDC(0, v3);
+  CommonEffectComponent__Init_50738128(commonEffectComponent, this->fields.animationName, 0, 0, 0);
 }
 
 
@@ -151,10 +151,10 @@ void FortuneBonusBoxAction__SetAnimSpeed(FortuneBonusBoxAction_o *this, float sp
   __int64 v7; // x1
   UnityEngine_Animation_o *Item; // x0
 
-  if ( (byte_5934EEF & 1) == 0 )
+  if ( (byte_596D01F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EEF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D01F = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -165,7 +165,7 @@ void FortuneBonusBoxAction__SetAnimSpeed(FortuneBonusBoxAction_o *this, float sp
     if ( !Item
       || (Item = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(Item, this->fields.animationName, 0)) == 0 )
     {
-      sub_21FFECC(Item, v7);
+      sub_2213CDC(Item, v7);
     }
     UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)Item, speed, 0);
   }
@@ -177,18 +177,18 @@ void FortuneBonusBoxAction__SetState(FortuneBonusBoxAction_o *this, int32_t stat
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_5934EF1 & 1) == 0 )
+  if ( (byte_596D021 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_FortuneBonusBoxAction__setState__);
-    byte_5934EF1 = 1;
+    sub_2213A60(&Method_CStateManager_FortuneBonusBoxAction__setState__);
+    byte_596D021 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_21FFECC(0, *(_QWORD *)&state);
+    sub_2213CDC(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_3E506E4 *)Method_CStateManager_FortuneBonusBoxAction__setState__);
+    (const MethodInfo_3E83E8C *)Method_CStateManager_FortuneBonusBoxAction__setState__);
 }
 
 
@@ -201,7 +201,7 @@ void FortuneBonusBoxAction__Setup(FortuneBonusBoxAction_o *this, const MethodInf
   FortuneBonusBoxAction__SetupAnim(this, method);
   commonEffectComponent = this->fields.commonEffectComponent;
   if ( !commonEffectComponent )
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   commonEffectComponent->fields.isEndless = 1;
 }
 
@@ -213,10 +213,10 @@ void FortuneBonusBoxAction__SetupAnim(FortuneBonusBoxAction_o *this, const Metho
   __int64 v5; // x1
   UnityEngine_Animation_o *Item; // x0
 
-  if ( (byte_5934EEE & 1) == 0 )
+  if ( (byte_596D01E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EEE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D01E = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -230,7 +230,7 @@ void FortuneBonusBoxAction__SetupAnim(FortuneBonusBoxAction_o *this, const Metho
           (Item = this->fields.anim) == 0)
       || (Item = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(Item, this->fields.animationName, 0)) == 0 )
     {
-      sub_21FFECC(Item, v5);
+      sub_2213CDC(Item, v5);
     }
     UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)Item, 0.0, 0);
   }
@@ -241,14 +241,14 @@ void FortuneBonusBoxAction__Update(FortuneBonusBoxAction_o *this, const MethodIn
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_5934EEC & 1) == 0 )
+  if ( (byte_596D01C & 1) == 0 )
   {
-    sub_21FFC50(&Method_CStateManager_FortuneBonusBoxAction__update__);
-    byte_5934EEC = 1;
+    sub_2213A60(&Method_CStateManager_FortuneBonusBoxAction__update__);
+    byte_596D01C = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( fsm )
-    CStateManager_object___update(fsm, (const MethodInfo_3E506C4 *)Method_CStateManager_FortuneBonusBoxAction__update__);
+    CStateManager_object___update(fsm, (const MethodInfo_3E83E6C *)Method_CStateManager_FortuneBonusBoxAction__update__);
 }
 
 
@@ -297,7 +297,7 @@ void FortuneBonusBoxAction_StatePlay__begin(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   FortuneBonusBoxAction__PlayAnim(that, (const MethodInfo *)that);
 }
 
@@ -321,7 +321,7 @@ void FortuneBonusBoxAction_StatePlay__update(
   if ( this->fields.isStarted )
   {
     if ( !that )
-      sub_21FFECC(this, 0);
+      sub_2213CDC(this, 0);
     if ( !FortuneBonusBoxAction__IsPlayingAnim(that, (const MethodInfo *)that) )
     {
       ActionExtensions__Call(that->fields.endAction, 0);

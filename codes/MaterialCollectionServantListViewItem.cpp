@@ -36,27 +36,27 @@ void MaterialCollectionServantListViewItem___ctor(
   bool v37; // w7
   struct UserServantCollectionEntity_o *userSvtCollectionEntity; // x8
   int32_t DispLimitCountFromUserServantCollection; // w0
-  const MethodInfo_476E8C0 *v40; // x8
+  const MethodInfo_47A29F8 *v40; // x8
   ServantLimitMaster_o *v41; // x21
   struct ServantEntity_o *servantEntity; // x8
   struct UserServantCollectionEntity_o *v43; // x9
   int v44; // w8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v45; // 0:x0.16
 
-  if ( (byte_593358B & 1) == 0 )
+  if ( (byte_596B693 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&IconLabelInfo_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593358B = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&IconLabelInfo_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596B693 = 1;
   }
-  v9 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
+  v9 = (IconLabelInfo_o *)sub_2213CCC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v9, 0);
   this->fields.iconLabelInfo = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.iconLabelInfo,
     (int32_t)v9,
     v10,
@@ -65,12 +65,12 @@ void MaterialCollectionServantListViewItem___ctor(
     v13,
     v14,
     v15);
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, idx, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, idx, 0);
   this->fields.userSvtCollectionEntity = userServantCollectionEntity;
   p_userSvtCollectionEntity = &this->fields.userSvtCollectionEntity;
   this->fields.index = idx;
   this->fields.displayKind = kind;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userSvtCollectionEntity,
     (int32_t)userServantCollectionEntity,
     v17,
@@ -79,12 +79,12 @@ void MaterialCollectionServantListViewItem___ctor(
     v20,
     v21,
     v22);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
   v26 = *p_userSvtCollectionEntity;
   if ( !*p_userSvtCollectionEntity )
     goto LABEL_20;
@@ -95,16 +95,16 @@ void MaterialCollectionServantListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v24, v25);
   *(_QWORD *)&v45.fields.currentCryptoKey = v28;
   *(_QWORD *)&v45.fields.fakeValue = v29;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v45, 0);
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v45, 0);
   if ( !v27 )
     goto LABEL_20;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v27,
              (int32_t)Instance,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   this->fields.servantEntity = (struct ServantEntity_o *)Entity;
   p_servantEntity = &this->fields.servantEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.servantEntity,
     (int32_t)Entity,
     v32,
@@ -123,18 +123,18 @@ void MaterialCollectionServantListViewItem___ctor(
                                               (ServantEntity_o *)Instance,
                                               userSvtCollectionEntity->fields.maxLimitCount,
                                               0);
-  v40 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v40 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.dispLimitCount = DispLimitCountFromUserServantCollection;
   Instance = SingletonMonoBehaviour_object___get_Instance(v40);
   if ( !Instance )
     goto LABEL_20;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !*p_userSvtCollectionEntity )
     goto LABEL_20;
   v41 = (ServantLimitMaster_o *)Instance;
-  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                        (*p_userSvtCollectionEntity)->fields.svtId,
                        0);
   if ( !*p_userSvtCollectionEntity )
@@ -160,13 +160,13 @@ void MaterialCollectionServantListViewItem___ctor(
         !Instance) )
   {
 LABEL_20:
-    sub_21FFECC(Instance, v24);
+    sub_2213CDC(Instance, v24);
   }
   IconLabelInfo__Clear((IconLabelInfo_o *)Instance, 0);
 }
 
 
-void MaterialCollectionServantListViewItem___ctor_39960204(
+void MaterialCollectionServantListViewItem___ctor_39961612(
         MaterialCollectionServantListViewItem_o *this,
         int32_t index,
         UserCommandCodeCollectionEntity_o *userCommandCodeCollectionEntity,
@@ -206,19 +206,19 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
   int32_t v39; // w8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
-  if ( (byte_593358C & 1) == 0 )
+  if ( (byte_596B694 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_21FFC50(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_21FFC50(&IconLabelInfo_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593358C = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_2213A60(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_2213A60(&IconLabelInfo_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596B694 = 1;
   }
-  v9 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
+  v9 = (IconLabelInfo_o *)sub_2213CCC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v9, 0);
   this->fields.iconLabelInfo = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.iconLabelInfo,
     (int32_t)v9,
     v10,
@@ -227,12 +227,12 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
     v13,
     v14,
     v15);
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.userCommandCodeCollectionEntity = userCommandCodeCollectionEntity;
   p_userCommandCodeCollectionEntity = &this->fields.userCommandCodeCollectionEntity;
   this->fields.index = index;
   this->fields.displayKind = kind;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userCommandCodeCollectionEntity,
     (int32_t)userCommandCodeCollectionEntity,
     v17,
@@ -241,12 +241,12 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
     v20,
     v21,
     v22);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   v26 = *p_userCommandCodeCollectionEntity;
   if ( !*p_userCommandCodeCollectionEntity )
     goto LABEL_12;
@@ -257,15 +257,15 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v24, v25);
   *(_QWORD *)&v40.fields.currentCryptoKey = v28;
   *(_QWORD *)&v40.fields.fakeValue = v29;
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v40, 0);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v40, 0);
   if ( !v27 )
     goto LABEL_12;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v27,
              (int32_t)Instance,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   this->fields.commandCodeEntity = (struct CommandCodeEntity_o *)Entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.commandCodeEntity,
     (int32_t)Entity,
     v31,
@@ -279,7 +279,7 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
   if ( !commandCodeEntity
     || (v38 = this->fields.userCommandCodeCollectionEntity, this->fields.rarity = commandCodeEntity->fields.rarity, !v38)
     || (this->fields.collectiionStatus = v38->fields.status,
-        v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+        v39 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                 commandCodeEntity->fields.collectionNo,
                 0),
         Instance = (DataManager_o *)this->fields.iconLabelInfo,
@@ -287,7 +287,7 @@ void MaterialCollectionServantListViewItem___ctor_39960204(
         !Instance) )
   {
 LABEL_12:
-    sub_21FFECC(Instance, v24);
+    sub_2213CDC(Instance, v24);
   }
   IconLabelInfo__Clear((IconLabelInfo_o *)Instance, 0);
 }
@@ -307,7 +307,7 @@ bool MaterialCollectionServantListViewItem__IsMatchClassFilter(
         const MethodInfo *method)
 {
   if ( !sort )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return ListViewSort__IsMatchClassFilter(sort, this->fields.servantEntity, 0)
       || ListViewSort__GetFilter(sort, 64, 0)
       && ListViewSort__IsNotExistClassFilter(sort, this->fields.servantEntity, 0);
@@ -338,21 +338,21 @@ bool MaterialCollectionServantListViewItem__IsMatchServantEquipFilter(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_593358E & 1) == 0 )
+  if ( (byte_596B696 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewSort_FilterKind___TypeInfo);
-    byte_593358E = 1;
+    sub_2213A60(&ListViewSort_FilterKind___TypeInfo);
+    byte_596B696 = 1;
   }
-  v5 = sub_21FFD10(ListViewSort_FilterKind___TypeInfo, 1);
+  v5 = sub_2213B20(ListViewSort_FilterKind___TypeInfo, 1);
   if ( !v5 )
     goto LABEL_9;
   v6 = v5;
   if ( !*(_DWORD *)(v5 + 24) )
-    sub_21FFED4(v5);
+    sub_2213CE4(v5);
   *(_DWORD *)(v5 + 32) = 49;
   if ( !sort )
 LABEL_9:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   return ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)v5, 0)
       || this->fields.collectiionStatus != 0;
 }
@@ -382,11 +382,11 @@ bool MaterialCollectionServantListViewItem__IsMatchServantFilter(
   FilterKindList_c *v21; // x0
   ListViewSort_FilterKind_array *v22; // x21
 
-  if ( (byte_593358D & 1) == 0 )
+  if ( (byte_596B695 & 1) == 0 )
   {
-    sub_21FFC50(&FilterKindList_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
-    byte_593358D = 1;
+    sub_2213A60(&FilterKindList_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+    byte_596B695 = 1;
   }
   if ( !sort )
     return 0;
@@ -401,7 +401,7 @@ bool MaterialCollectionServantListViewItem__IsMatchServantFilter(
     goto LABEL_41;
   v7 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                           ClassGroupFilterKindList,
-                                          (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                          (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v7, 0) )
   {
     v9 = FilterKindList_TypeInfo;
@@ -415,13 +415,13 @@ bool MaterialCollectionServantListViewItem__IsMatchServantFilter(
     {
       v10 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                ClassGroupFilterKindList,
-                                               (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                               (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
       if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v10, 0) )
         goto LABEL_15;
       goto LABEL_12;
     }
 LABEL_41:
-    sub_21FFECC(ClassGroupFilterKindList, sort);
+    sub_2213CDC(ClassGroupFilterKindList, sort);
   }
   if ( ListViewSort__IsMatchClassGroupFilter(sort, this->fields.servantEntity, 0) )
     goto LABEL_15;
@@ -438,7 +438,7 @@ LABEL_41:
     goto LABEL_41;
   v20 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                            ClassGroupFilterKindList,
-                                           (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                           (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v20, 0) )
   {
     if ( !ListViewSort__IsNotExistClassFilter(sort, this->fields.servantEntity, 0) )
@@ -460,7 +460,7 @@ LABEL_15:
     goto LABEL_41;
   v13 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                            ClassGroupFilterKindList,
-                                           (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                           (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, v13, 0) )
     goto LABEL_33;
   collectiionStatus = this->fields.collectiionStatus;
@@ -495,7 +495,7 @@ LABEL_33:
     goto LABEL_41;
   v22 = (ListViewSort_FilterKind_array *)System_Collections_Generic_List_Int32Enum___ToArray(
                                            ClassGroupFilterKindList,
-                                           (const MethodInfo_44373D0 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                           (const MethodInfo_446B508 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   return ListViewSort__IsUnSelectedAllTargetFilters(sort, v22, 0)
       || ListViewSort__IsSelectedAllTargetFilters(sort, v22, 0)
       || ListViewSort__IsMatchRarityFilter(sort, this->fields.rarity, 0);
@@ -517,10 +517,10 @@ void MaterialCollectionServantListViewItem__SetCommandCodeSortParam(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v4 = this;
-  if ( (byte_593358F & 1) == 0 )
+  if ( (byte_596B697 & 1) == 0 )
   {
-    this = (MaterialCollectionServantListViewItem_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593358F = 1;
+    this = (MaterialCollectionServantListViewItem_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596B697 = 1;
   }
   commandCodeEntity = v4->fields.commandCodeEntity;
   if ( !commandCodeEntity )
@@ -531,14 +531,14 @@ void MaterialCollectionServantListViewItem__SetCommandCodeSortParam(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&sortKind, method);
   *(_QWORD *)&v10.fields.currentCryptoKey = v6;
   *(_QWORD *)&v10.fields.fakeValue = v7;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v10, 0);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v10, 0);
   v9 = sortKind == 2 ? v4->fields.rarity : v8;
   this = (MaterialCollectionServantListViewItem_o *)v4->fields.iconLabelInfo;
   v4->fields.sortValue1 = v9;
   if ( !this )
 LABEL_11:
-    sub_21FFECC(this, *(_QWORD *)&sortKind);
-  IconLabelInfo__Set_47932852((IconLabelInfo_o *)this, 57, v8, 0, 0, 0, 0, 0, 0, 0);
+    sub_2213CDC(this, *(_QWORD *)&sortKind);
+  IconLabelInfo__Set_47880948((IconLabelInfo_o *)this, 57, v8, 0, 0, 0, 0, 0, 0, 0);
 }
 
 
@@ -577,7 +577,7 @@ void MaterialCollectionServantListViewItem__SetServantSortParam(
     if ( !iconLabelInfo )
       goto LABEL_14;
 LABEL_11:
-    IconLabelInfo__Set_47932852(iconLabelInfo, 57, collectionNo, 0, 0, 0, 0, 0, 0, 0);
+    IconLabelInfo__Set_47880948(iconLabelInfo, 57, collectionNo, 0, 0, 0, 0, 0, 0, 0);
     return;
   }
   maxLimitCount = userSvtCollectionEntity->fields.maxLimitCount;
@@ -587,11 +587,11 @@ LABEL_11:
   {
     if ( v7 )
     {
-      IconLabelInfo__Set_47932852(v7, 9, maxLimitCount, 0, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948(v7, 9, maxLimitCount, 0, 0, 0, 0, 0, 0, 0);
       return;
     }
 LABEL_14:
-    sub_21FFECC(this, *(_QWORD *)&sortKind);
+    sub_2213CDC(this, *(_QWORD *)&sortKind);
   }
   if ( !v7 )
     goto LABEL_14;
@@ -624,7 +624,7 @@ bool MaterialCollectionServantListViewItem__SetSortValue(
   if ( (v6 & 1) == 0 )
     return v9 & 1;
   if ( !sort )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   sortKind = sort->fields.sortKind;
   if ( sortKind == 27 )
     goto LABEL_7;
@@ -746,7 +746,7 @@ LABEL_7:
         if ( userCommandCodeCollectionEntity )
           return userCommandCodeCollectionEntity[10] == 0;
 LABEL_12:
-        sub_21FFECC(servantEntity, method);
+        sub_2213CDC(servantEntity, method);
       }
       if ( !userCommandCodeCollectionEntity )
         goto LABEL_12;
@@ -781,7 +781,7 @@ bool MaterialCollectionServantListViewItem__get_IsCanSelectServant(
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
-  int32_t Value_48848000; // w0
+  int32_t Value_48903564; // w0
   unsigned int v6; // w20
   _BOOL4 v7; // w0
   UserServantCollectionEntity_o *userSvtCollectionEntity; // x0
@@ -789,29 +789,29 @@ bool MaterialCollectionServantListViewItem__get_IsCanSelectServant(
   UserServantCollectionEntity_o *v10; // x0
   UserServantCollectionEntity_o *v11; // x0
 
-  if ( (byte_5933590 & 1) == 0 )
+  if ( (byte_596B698 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ConstantMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_3422/*"CAN_SELECT_SVT_MATERIAL_FLAG"*/);
-    byte_5933590 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ConstantMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_3427/*"CAN_SELECT_SVT_MATERIAL_FLAG"*/);
+    byte_596B698 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ConstantMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ConstantMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
-  Value_48848000 = ConstantMaster__GetValue_48848000(
+  Value_48903564 = ConstantMaster__GetValue_48903564(
                      (ConstantMaster_o *)Instance,
-                     (System_String_o *)StringLiteral_3422/*"CAN_SELECT_SVT_MATERIAL_FLAG"*/,
+                     (System_String_o *)StringLiteral_3427/*"CAN_SELECT_SVT_MATERIAL_FLAG"*/,
                      0,
                      0);
   if ( !this->fields.userSvtCollectionEntity )
     goto LABEL_20;
-  v6 = Value_48848000;
+  v6 = Value_48903564;
   if ( !UserServantCollectionEntity__IsDataLostStateServant(this->fields.userSvtCollectionEntity, 0) )
   {
     userSvtCollectionEntity = this->fields.userSvtCollectionEntity;

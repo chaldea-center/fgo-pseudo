@@ -8,14 +8,14 @@ void BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *this, const M
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593AC20 & 1) == 0 )
+  if ( (byte_5972E00 & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    byte_593AC20 = 1;
+    sub_2213A60(&byte___TypeInfo);
+    byte_5972E00 = 1;
   }
-  v3 = (struct System_Byte_array *)sub_21FFD10(byte___TypeInfo, 1);
+  v3 = (struct System_Byte_array *)sub_2213B20(byte___TypeInfo, 1);
   this->fields.dummy = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 

@@ -17,37 +17,35 @@ void BattleConcatLabelSkillNameComponent__Adjust(BattleConcatLabelSkillNameCompo
   __int64 v10; // x1
   struct UISprite_o *bgSprite; // x8
   int v12; // w21
-  float x; // s10
-  float v14; // s11
-  UnityEngine_Vector2_o pivotOffset; // kr08_8
-  struct UISprite_o *v16; // x8
+  UnityEngine_Vector2_o pivotOffset; // kr18_8
+  struct UISprite_o *v14; // x8
   int mWidth; // s2
   float mHeight; // s4
-  float v19; // s0
+  float v17; // s0
   int32_t paddingRubbyLabelHeight; // w9
-  float v21; // s0
+  float v19; // s0
   System_Collections_Generic_IEnumerable_T__o *battleMessages; // x19
-  System_Action_object__o *v23; // x21
-  UnityEngine_Vector2_o v24; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_object__o *v21; // x21
+  unsigned __int64 localPosition; // kr10_8
+  UnityEngine_Vector2_o v23; // 0:s0.4,4:s1.4
 
-  if ( (byte_593BD0C & 1) == 0 )
+  if ( (byte_5973F19 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_WrapLineMessage__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_WrapLineMessage___);
-    sub_21FFC50(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass4_0__Adjust_b__0__);
-    sub_21FFC50(&BattleConcatLabelSkillNameComponent___c__DisplayClass4_0_TypeInfo);
-    byte_593BD0C = 1;
+    sub_2213A60(&System_Action_WrapLineMessage__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_WrapLineMessage___);
+    sub_2213A60(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass4_0__Adjust_b__0__);
+    sub_2213A60(&BattleConcatLabelSkillNameComponent___c__DisplayClass4_0_TypeInfo);
+    byte_5973F19 = 1;
   }
-  v3 = sub_21FFEBC(BattleConcatLabelSkillNameComponent___c__DisplayClass4_0_TypeInfo);
+  v3 = sub_2213CCC(BattleConcatLabelSkillNameComponent___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   v6 = BattleConcatLabelMessageComponent__ResizeLabel((BattleConcatLabelMessageComponent_o *)this, v4);
   y = v6.fields.y;
   if ( this->fields.paddingRubbyLabelHeight )
     y = v6.fields.y + BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(this, v5);
-  v24.fields.x = v6.fields.x;
-  v24.fields.y = y;
-  BattleConcatLabelMessageComponent__ResizeBg((BattleConcatLabelMessageComponent_o *)this, v24, v5);
+  v23.fields.x = v6.fields.x;
+  v23.fields.y = y;
+  BattleConcatLabelMessageComponent__ResizeBg((BattleConcatLabelMessageComponent_o *)this, v23, v5);
   TopRubyHeight = (UnityEngine_Component_o *)BattleConcatLabelSkillNameComponent__GetTopRubyHeight(this, v8);
   bgSprite = this->fields.bgSprite;
   if ( !bgSprite )
@@ -57,43 +55,43 @@ void BattleConcatLabelSkillNameComponent__Adjust(BattleConcatLabelSkillNameCompo
   TopRubyHeight = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !TopRubyHeight
     || (TopRubyHeight = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(TopRubyHeight, 0)) == 0
-    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)TopRubyHeight, 0),
+    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
+                                            (UnityEngine_Transform_o *)TopRubyHeight,
+                                            0),
         (TopRubyHeight = (UnityEngine_Component_o *)this->fields.bgSprite) == 0)
-    || (x = localPosition.fields.x,
-        v14 = localPosition.fields.y,
-        pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)TopRubyHeight, 0),
-        (v16 = this->fields.bgSprite) == 0)
+    || (pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)TopRubyHeight, 0), (v14 = this->fields.bgSprite) == 0)
     || !v3 )
   {
 LABEL_15:
-    sub_21FFECC(TopRubyHeight, v10);
+    sub_2213CDC(TopRubyHeight, v10);
   }
-  mWidth = v16->fields.mWidth;
-  mHeight = (float)v16->fields.mHeight;
+  mWidth = v14->fields.mWidth;
+  mHeight = (float)v14->fields.mHeight;
   *(_DWORD *)(v3 + 24) = 0;
-  v19 = (float)(v14 + (float)((float)(1.0 - pivotOffset.fields.y) * mHeight)) - (float)((float)(mHeight - y) * 0.5);
-  *(float *)(v3 + 16) = (float)(x + (float)((float)((float)mWidth - v6.fields.x) * 0.5))
+  v17 = (float)(*((float *)&localPosition + 1) + (float)((float)(1.0 - pivotOffset.fields.y) * mHeight))
+      - (float)((float)(mHeight - y) * 0.5);
+  *(float *)(v3 + 16) = (float)(*(float *)&localPosition + (float)((float)((float)mWidth - v6.fields.x) * 0.5))
                       - (float)(pivotOffset.fields.x * (float)mWidth);
-  *(float *)(v3 + 20) = v19;
+  *(float *)(v3 + 20) = v17;
   if ( v12 >= 1 )
   {
     paddingRubbyLabelHeight = this->fields.paddingRubbyLabelHeight;
-    v21 = v19 + (float)((float)v12 * -0.5);
-    *(float *)(v3 + 20) = v21;
+    v19 = v17 + (float)((float)v12 * -0.5);
+    *(float *)(v3 + 20) = v19;
     if ( paddingRubbyLabelHeight )
-      *(float *)(v3 + 20) = v21 - (float)paddingRubbyLabelHeight;
+      *(float *)(v3 + 20) = v19 - (float)paddingRubbyLabelHeight;
   }
   battleMessages = (System_Collections_Generic_IEnumerable_T__o *)this->fields.battleMessages;
-  v23 = (System_Action_object__o *)sub_21FFEBC(System_Action_WrapLineMessage__TypeInfo);
+  v21 = (System_Action_object__o *)sub_2213CCC(System_Action_WrapLineMessage__TypeInfo);
   System_Action_object____ctor(
-    v23,
+    v21,
     (Il2CppObject *)v3,
     Method_BattleConcatLabelSkillNameComponent___c__DisplayClass4_0__Adjust_b__0__,
     0);
   BasicHelper__ForEach_object_(
     battleMessages,
-    (System_Action_T__o *)v23,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_WrapLineMessage___);
+    (System_Action_T__o *)v21,
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_WrapLineMessage___);
 }
 
 
@@ -116,22 +114,22 @@ float BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(
   __int64 v15; // x8
   UnityEngine_GameObject_o *v16; // x22
   float v17; // s8
-  struct WrapLineMessage_array *v19; // [xsp+8h] [xbp-68h]
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  float v19; // s1
+  struct WrapLineMessage_array *v20; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_593BD0D & 1) == 0 )
+  if ( (byte_5973F1A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_float__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_float__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_float__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_float___ctor__);
-    sub_21FFC50(&System_Collections_Generic_HashSet_float__TypeInfo);
-    byte_593BD0D = 1;
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_float__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_float__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_float__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_float___ctor__);
+    sub_2213A60(&System_Collections_Generic_HashSet_float__TypeInfo);
+    byte_5973F1A = 1;
   }
-  v3 = (System_Collections_Generic_HashSet_float__o *)sub_21FFEBC(System_Collections_Generic_HashSet_float__TypeInfo);
+  v3 = (System_Collections_Generic_HashSet_float__o *)sub_2213CCC(System_Collections_Generic_HashSet_float__TypeInfo);
   System_Collections_Generic_HashSet_float____ctor(
     v3,
-    (const MethodInfo_428F388 *)Method_System_Collections_Generic_HashSet_float___ctor__);
+    (const MethodInfo_42C2F14 *)Method_System_Collections_Generic_HashSet_float___ctor__);
   battleMessages = this->fields.battleMessages;
   if ( !battleMessages )
     goto LABEL_31;
@@ -140,12 +138,12 @@ float BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(
   {
     v8 = 0;
     v9 = 0;
-    v19 = this->fields.battleMessages;
+    v20 = this->fields.battleMessages;
     while ( 1 )
     {
       if ( v8 >= max_length_low )
 LABEL_32:
-        sub_21FFED4(DispLabelArray);
+        sub_2213CE4(DispLabelArray);
       DispLabelArray = (ScriptLineMessage_o *)battleMessages->m_Items[v8];
       if ( !DispLabelArray )
         break;
@@ -190,25 +188,24 @@ LABEL_32:
                                                       0);
             if ( !DispLabelArray )
               goto LABEL_31;
-            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)DispLabelArray, 0);
-            GameObjectExtensions__SetLocalPositionY(
-              v16,
-              localPosition.fields.y + (float)this->fields.paddingRubbyLabelHeight,
-              0);
+            v19 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(
+                                         (UnityEngine_Transform_o *)DispLabelArray,
+                                         0).fields.y));
+            GameObjectExtensions__SetLocalPositionY(v16, v19 + (float)this->fields.paddingRubbyLabelHeight, 0);
             if ( !v3 )
               goto LABEL_31;
             v17 = *(float *)(v14 + 76);
             DispLabelArray = (ScriptLineMessage_o *)System_Collections_Generic_HashSet_float___Contains(
                                                       v3,
                                                       v17,
-                                                      (const MethodInfo_428FA8C *)Method_System_Collections_Generic_HashSet_float__Contains__);
+                                                      (const MethodInfo_42C3618 *)Method_System_Collections_Generic_HashSet_float__Contains__);
             if ( ((unsigned __int8)DispLabelArray & 1) == 0 )
             {
               ++v13;
               DispLabelArray = (ScriptLineMessage_o *)System_Collections_Generic_HashSet_float___Add(
                                                         v3,
                                                         v17,
-                                                        (const MethodInfo_42905A0 *)Method_System_Collections_Generic_HashSet_float__Add__);
+                                                        (const MethodInfo_42C412C *)Method_System_Collections_Generic_HashSet_float__Add__);
             }
           }
           m_CancellationTokenSource = (int)v11->fields.m_CancellationTokenSource;
@@ -222,15 +219,15 @@ LABEL_32:
         v9 = v13;
       System_Collections_Generic_HashSet_float___Clear(
         v3,
-        (const MethodInfo_428FA2C *)Method_System_Collections_Generic_HashSet_float__Clear__);
-      battleMessages = v19;
+        (const MethodInfo_42C35B8 *)Method_System_Collections_Generic_HashSet_float__Clear__);
+      battleMessages = v20;
       ++v8;
-      max_length_low = LODWORD(v19->max_length);
+      max_length_low = LODWORD(v20->max_length);
       if ( (int)v8 >= (int)max_length_low )
         return (float)(this->fields.paddingRubbyLabelHeight * v9);
     }
 LABEL_31:
-    sub_21FFECC(DispLabelArray, v5);
+    sub_2213CDC(DispLabelArray, v5);
   }
   v9 = 0;
   return (float)(this->fields.paddingRubbyLabelHeight * v9);
@@ -251,15 +248,15 @@ int32_t BattleConcatLabelSkillNameComponent__GetTopRubyHeight(
   System_Action_WrapLineMessage__c *v11; // x0
   System_Action_object__o *v12; // x21
 
-  if ( (byte_593BD0B & 1) == 0 )
+  if ( (byte_5973F18 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_WrapLineMessage__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_WrapLineMessage___);
-    sub_21FFC50(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass3_0__GetTopRubyHeight_b__0__);
-    sub_21FFC50(&BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_TypeInfo);
-    byte_593BD0B = 1;
+    sub_2213A60(&System_Action_WrapLineMessage__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_WrapLineMessage___);
+    sub_2213A60(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass3_0__GetTopRubyHeight_b__0__);
+    sub_2213A60(&BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_TypeInfo);
+    byte_5973F18 = 1;
   }
-  v3 = sub_21FFEBC(BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_TypeInfo);
+  v3 = sub_2213CCC(BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !this->fields.paddingIffFirstLineRubyExists )
     return 0;
@@ -287,17 +284,17 @@ int32_t BattleConcatLabelSkillNameComponent__GetTopRubyHeight(
     return 0;
   if ( !DispLabelArray )
 LABEL_15:
-    sub_21FFECC(IsNullOrEmpty, v5);
+    sub_2213CDC(IsNullOrEmpty, v5);
   if ( !LODWORD(DispLabelArray->max_length) )
 LABEL_16:
-    sub_21FFED4(IsNullOrEmpty);
+    sub_2213CE4(IsNullOrEmpty);
   v9 = DispLabelArray->m_Items[0];
   if ( !v9 )
     goto LABEL_15;
   v10 = (System_Collections_Generic_IEnumerable_T__o *)this->fields.battleMessages;
   v11 = System_Action_WrapLineMessage__TypeInfo;
   *(float *)(v3 + 16) = v9->fields.mainPosition.fields.y;
-  v12 = (System_Action_object__o *)sub_21FFEBC(v11);
+  v12 = (System_Action_object__o *)sub_2213CCC(v11);
   System_Action_object____ctor(
     v12,
     (Il2CppObject *)v3,
@@ -306,7 +303,7 @@ LABEL_16:
   BasicHelper__ForEach_object_(
     v10,
     (System_Action_T__o *)v12,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_WrapLineMessage___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_WrapLineMessage___);
   return *(_DWORD *)(v3 + 20);
 }
 
@@ -321,10 +318,10 @@ void BattleConcatLabelSkillNameComponent__SetSkillSpriteActive(
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_593BD0A & 1) == 0 )
+  if ( (byte_5973F17 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BD0A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973F17 = 1;
   }
   skillSprite = (UnityEngine_Object_o *)this->fields.skillSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -335,7 +332,7 @@ void BattleConcatLabelSkillNameComponent__SetSkillSpriteActive(
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_21FFECC(gameObject, v6);
+      sub_2213CDC(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, value, 0);
   }
@@ -352,15 +349,15 @@ void BattleConcatLabelSkillNameComponent___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593BD0E & 1) == 0 )
+  if ( (byte_5973F1B & 1) == 0 )
   {
-    sub_21FFC50(&BattleConcatLabelSkillNameComponent___c_TypeInfo);
-    byte_593BD0E = 1;
+    sub_2213A60(&BattleConcatLabelSkillNameComponent___c_TypeInfo);
+    byte_5973F1B = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(BattleConcatLabelSkillNameComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(BattleConcatLabelSkillNameComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleConcatLabelSkillNameComponent___c_TypeInfo->static_fields->__9 = (struct BattleConcatLabelSkillNameComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleConcatLabelSkillNameComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -386,7 +383,7 @@ int32_t BattleConcatLabelSkillNameComponent___c___GetTopRubyHeight_b__3_2(
         const MethodInfo *method)
 {
   if ( !label )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return label->fields.rubySize;
 }
 
@@ -431,39 +428,39 @@ void BattleConcatLabelSkillNameComponent___c__DisplayClass3_0___GetTopRubyHeight
   int32_t v28; // w0
 
   v4 = this;
-  if ( (byte_593BD0F & 1) == 0 )
+  if ( (byte_5973F1C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_ScriptMessageLabel__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_ScriptMessageLabel___);
-    sub_21FFC50(&System_Func_ScriptMessageLabel__int__TypeInfo);
-    sub_21FFC50(&System_Func_ScriptMessageLabel__bool__TypeInfo);
-    sub_21FFC50(&Method_BattleConcatLabelSkillNameComponent___c__GetTopRubyHeight_b__3_2__);
-    sub_21FFC50(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass3_0__GetTopRubyHeight_b__1__);
-    this = (BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_o *)sub_21FFC50(&BattleConcatLabelSkillNameComponent___c_TypeInfo);
-    byte_593BD0F = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_FirstOrDefault_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_ScriptMessageLabel__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_ScriptMessageLabel___);
+    sub_2213A60(&System_Func_ScriptMessageLabel__int__TypeInfo);
+    sub_2213A60(&System_Func_ScriptMessageLabel__bool__TypeInfo);
+    sub_2213A60(&Method_BattleConcatLabelSkillNameComponent___c__GetTopRubyHeight_b__3_2__);
+    sub_2213A60(&Method_BattleConcatLabelSkillNameComponent___c__DisplayClass3_0__GetTopRubyHeight_b__1__);
+    this = (BattleConcatLabelSkillNameComponent___c__DisplayClass3_0_o *)sub_2213A60(&BattleConcatLabelSkillNameComponent___c_TypeInfo);
+    byte_5973F1C = 1;
   }
   if ( !x )
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   DispLabelArray = (System_Collections_Generic_IEnumerable_TSource__o *)ScriptLineMessage__GetDispLabelArray(
                                                                           (ScriptLineMessage_o *)x,
                                                                           0);
   _9__1 = (System_Func_object__bool__o *)v4->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_ScriptMessageLabel__bool__TypeInfo);
+    _9__1 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_ScriptMessageLabel__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_BattleConcatLabelSkillNameComponent___c__DisplayClass3_0__GetTopRubyHeight_b__1__,
       0);
     v4->fields.__9__1 = (struct System_Func_ScriptMessageLabel__bool__o *)_9__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   v13 = System_Linq_Enumerable__Where_object_(
           DispLabelArray,
           (System_Func_TSource__bool__o *)_9__1,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_ScriptMessageLabel___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_ScriptMessageLabel___);
   v15 = BattleConcatLabelSkillNameComponent___c_TypeInfo;
   v16 = v13;
   if ( !*(&BattleConcatLabelSkillNameComponent___c_TypeInfo->_2.cctor_finished + 1) )
@@ -481,7 +478,7 @@ void BattleConcatLabelSkillNameComponent___c__DisplayClass3_0___GetTopRubyHeight
       static_fields = BattleConcatLabelSkillNameComponent___c_TypeInfo->static_fields;
     }
     v19 = (Il2CppObject *)static_fields->__9;
-    _9__3_2 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_ScriptMessageLabel__int__TypeInfo);
+    _9__3_2 = (System_Func_object__int__o *)sub_2213CCC(System_Func_ScriptMessageLabel__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__3_2,
       v19,
@@ -489,15 +486,15 @@ void BattleConcatLabelSkillNameComponent___c__DisplayClass3_0___GetTopRubyHeight
       0);
     v20 = BattleConcatLabelSkillNameComponent___c_TypeInfo->static_fields;
     v20->__9__3_2 = (struct System_Func_ScriptMessageLabel__int__o *)_9__3_2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v20->__9__3_2, (int32_t)_9__3_2, v21, v22, v23, v24, v25, v26);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->__9__3_2, (int32_t)_9__3_2, v21, v22, v23, v24, v25, v26);
   }
   v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v16,
                                                                (System_Func_TSource__TResult__o *)_9__3_2,
-                                                               (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_ScriptMessageLabel__int___);
+                                                               (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_ScriptMessageLabel__int___);
   v28 = System_Linq_Enumerable__FirstOrDefault_int_(
           v27,
-          (const MethodInfo_384DC94 *)Method_System_Linq_Enumerable_FirstOrDefault_int___);
+          (const MethodInfo_388115C *)Method_System_Linq_Enumerable_FirstOrDefault_int___);
   if ( v4->fields.rubyResult < v28 )
     v4->fields.rubyResult = v28;
 }
@@ -511,7 +508,7 @@ bool BattleConcatLabelSkillNameComponent___c__DisplayClass3_0___GetTopRubyHeight
   struct System_String_o *rubyText; // x8
 
   if ( !label || (rubyText = label->fields.rubyText) == 0 )
-    sub_21FFECC(this, label);
+    sub_2213CDC(this, label);
   return rubyText->fields._stringLength >= 1 && label->fields.mainPosition.fields.y >= this->fields.topY;
 }
 
@@ -530,6 +527,6 @@ void BattleConcatLabelSkillNameComponent___c__DisplayClass4_0___Adjust_b__0(
         const MethodInfo *method)
 {
   if ( !message )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   this->fields.pos = WrapLineMessage__SetOffsetMessage(message, this->fields.pos, 0);
 }

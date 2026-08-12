@@ -34,20 +34,20 @@ void EventInfoEquipSkillPartsListComponent__Setup(
   float Height_k__BackingField; // s8
   const MethodInfo *v17; // x1
 
-  if ( (byte_593993C & 1) == 0 )
+  if ( (byte_5971CAF & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593993C = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CAF = 1;
   }
   v5 = DataManager_TypeInfo;
   v6 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   this->fields._Height_k__BackingField = 0.0;
   if ( !v6 )
     j_il2cpp_runtime_class_init_0(v5, *(_QWORD *)&eventId);
-  Master_object = (EventEquipSkillPartsEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
+  Master_object = (EventEquipSkillPartsEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
   if ( !Master_object
     || (Master_object = EventEquipSkillPartsMaster__GetEventEquipSkillPartsEntityArray(
                           (EventEquipSkillPartsMaster_o *)Master_object,
@@ -56,7 +56,7 @@ void EventInfoEquipSkillPartsListComponent__Setup(
                           0)) == 0 )
   {
 LABEL_18:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   }
   max_length = Master_object->max_length;
   v10 = Master_object;
@@ -66,13 +66,13 @@ LABEL_18:
     do
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_21FFED4(Master_object);
+        sub_2213CE4(Master_object);
       v12 = v10->m_Items[v11];
       v14 = GameObjectHelper__Instantiate_object_(
               this->fields.equipSkillPrefab,
               this->fields.equipSkillParent,
               0,
-              (const MethodInfo_38853E4 *)Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
+              (const MethodInfo_38B88AC *)Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
       Master_object = (EventEquipSkillPartsEntity_array *)UnityEngine_Object__op_Equality(

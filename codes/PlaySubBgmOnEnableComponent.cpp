@@ -9,21 +9,21 @@ void PlaySubBgmOnEnableComponent___ctor(PlaySubBgmOnEnableComponent_o *this, con
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_5937C26 & 1) == 0 )
+  if ( (byte_596FD89 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_HashSet_string__TypeInfo);
-    byte_5937C26 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_HashSet_string__TypeInfo);
+    byte_596FD89 = 1;
   }
   v3 = System_Collections_Generic_HashSet_string__TypeInfo;
   this->fields.subBgmId = -1;
   this->fields.volume = 1.0;
-  v4 = (System_Collections_Generic_HashSet_object__o *)sub_21FFEBC(v3);
+  v4 = (System_Collections_Generic_HashSet_object__o *)sub_2213CCC(v3);
   System_Collections_Generic_HashSet_object____ctor(
     v4,
-    (const MethodInfo_4286740 *)Method_System_Collections_Generic_HashSet_string___ctor__);
+    (const MethodInfo_42BA2CC *)Method_System_Collections_Generic_HashSet_string___ctor__);
   this->fields.mainBgmNameList = (struct System_Collections_Generic_HashSet_string__o *)v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mainBgmNameList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mainBgmNameList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   this->fields.isWaitingForMainBgm = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
@@ -48,28 +48,28 @@ void PlaySubBgmOnEnableComponent__Awake(PlaySubBgmOnEnableComponent_o *this, con
   Il2CppObject *v17; // [xsp+0h] [xbp-60h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_5937C20 & 1) == 0 )
+  if ( (byte_596FD83 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_BgmMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_string__Add__);
-    byte_5937C20 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_string__Add__);
+    byte_596FD83 = 1;
   }
   v3 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   v17 = 0;
   entity = 0;
   if ( !v3 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BgmMaster___);
   if ( !Master_object )
     goto LABEL_28;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
                                                                   this->fields.subBgmId,
-                                                                  (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( !entity )
@@ -83,7 +83,7 @@ void PlaySubBgmOnEnableComponent__Awake(PlaySubBgmOnEnableComponent_o *this, con
         goto LABEL_28;
       monitor = (struct System_String_o *)entity[1].monitor;
       this->fields.subBgmName = monitor;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.subBgmName,
         (int32_t)monitor,
         v6,
@@ -97,7 +97,7 @@ void PlaySubBgmOnEnableComponent__Awake(PlaySubBgmOnEnableComponent_o *this, con
   mainBgmIdList = this->fields.mainBgmIdList;
   if ( !mainBgmIdList )
 LABEL_28:
-    sub_21FFECC(Master_object, v5);
+    sub_2213CDC(Master_object, v5);
   max_length = mainBgmIdList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -105,18 +105,18 @@ LABEL_28:
     do
     {
       if ( v15 >= (unsigned int)max_length )
-        sub_21FFED4(Master_object);
+        sub_2213CE4(Master_object);
       v16 = mainBgmIdList->m_Items[v15];
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BgmMaster___);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BgmMaster___);
       if ( !Master_object )
         goto LABEL_28;
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                       Master_object,
                                                                       &v17,
                                                                       v16,
-                                                                      (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                                                      (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( !v17 )
@@ -134,7 +134,7 @@ LABEL_28:
           Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_Collections_Generic_HashSet_object___Add(
                                                                           (System_Collections_Generic_HashSet_object__o *)Master_object,
                                                                           (Il2CppObject *)v17[1].monitor,
-                                                                          (const MethodInfo_4287934 *)Method_System_Collections_Generic_HashSet_string__Add__);
+                                                                          (const MethodInfo_42BB4C0 *)Method_System_Collections_Generic_HashSet_string__Add__);
         }
       }
       LODWORD(max_length) = mainBgmIdList->max_length;
@@ -155,10 +155,10 @@ void PlaySubBgmOnEnableComponent__ChangeKeepSubBgmStateIfNeed(
 {
   struct System_Int32_array *mainBgmIdList; // x8
 
-  if ( (byte_5937C25 & 1) == 0 )
+  if ( (byte_596FD88 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    byte_5937C25 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    byte_596FD88 = 1;
   }
   if ( !this->fields.isKeepSubBgmOriginal )
   {
@@ -185,16 +185,16 @@ System_Collections_IEnumerator_o *PlaySubBgmOnEnableComponent__CoWaitUntilMainBg
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5937C22 & 1) == 0 )
+  if ( (byte_596FD85 & 1) == 0 )
   {
-    sub_21FFC50(&PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_TypeInfo);
-    byte_5937C22 = 1;
+    sub_2213A60(&PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_TypeInfo);
+    byte_596FD85 = 1;
   }
-  v3 = sub_21FFEBC(PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_TypeInfo);
+  v3 = sub_2213CCC(PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -204,12 +204,12 @@ bool PlaySubBgmOnEnableComponent__IsPlayTargetMainBgm(PlaySubBgmOnEnableComponen
   System_Collections_Generic_HashSet_object__o *mainBgmNameList; // x19
   Il2CppObject *BgmName; // x1
 
-  if ( (byte_5937C24 & 1) == 0 )
+  if ( (byte_596FD87 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_string__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_HashSet_string__get_Count__);
-    byte_5937C24 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_string__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_HashSet_string__get_Count__);
+    byte_596FD87 = 1;
   }
   mainBgmNameList = (System_Collections_Generic_HashSet_object__o *)this->fields.mainBgmNameList;
   if ( !mainBgmNameList || mainBgmNameList->fields._count < 1 )
@@ -220,7 +220,7 @@ bool PlaySubBgmOnEnableComponent__IsPlayTargetMainBgm(PlaySubBgmOnEnableComponen
   return System_Collections_Generic_HashSet_object___Contains(
            mainBgmNameList,
            BgmName,
-           (const MethodInfo_4286E44 *)Method_System_Collections_Generic_HashSet_string__Contains__);
+           (const MethodInfo_42BA9D0 *)Method_System_Collections_Generic_HashSet_string__Contains__);
 }
 
 
@@ -264,10 +264,10 @@ void PlaySubBgmOnEnableComponent__PlayAfterMainBgmStart(PlaySubBgmOnEnableCompon
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5937C23 & 1) == 0 )
+  if ( (byte_596FD86 & 1) == 0 )
   {
-    sub_21FFC50(&SoundManager_TypeInfo);
-    byte_5937C23 = 1;
+    sub_2213A60(&SoundManager_TypeInfo);
+    byte_596FD86 = 1;
   }
   if ( PlaySubBgmOnEnableComponent__IsPlayTargetMainBgm(this, method) )
   {
@@ -276,14 +276,14 @@ void PlaySubBgmOnEnableComponent__PlayAfterMainBgmStart(PlaySubBgmOnEnableCompon
     subBgmName = this->fields.subBgmName;
     if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v3);
-    SoundManager__PlaySubBgm_48459416(subBgmName, volume, fadeTime, 0);
+    SoundManager__PlaySubBgm_48506544(subBgmName, volume, fadeTime, 0);
     this->fields.isWaitingForMainBgm = 0;
   }
   else
   {
     v7 = PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm(this, v3);
     this->fields.mainBgmWaitCoroutine = v7;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mainBgmWaitCoroutine,
       (int32_t)v7,
       v8,
@@ -292,7 +292,7 @@ void PlaySubBgmOnEnableComponent__PlayAfterMainBgmStart(PlaySubBgmOnEnableCompon
       v11,
       v12,
       v13);
-    UnityEngine_MonoBehaviour__StartCoroutine_83231452(
+    UnityEngine_MonoBehaviour__StartCoroutine_83444756(
       (UnityEngine_MonoBehaviour_o *)this,
       this->fields.mainBgmWaitCoroutine,
       0);
@@ -312,11 +312,11 @@ void PlaySubBgmOnEnableComponent__Update(PlaySubBgmOnEnableComponent_o *this, co
   float fadeTime; // s9
   System_String_o *v11; // x20
 
-  if ( (byte_5937C21 & 1) == 0 )
+  if ( (byte_596FD84 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    byte_5937C21 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    byte_596FD84 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.subBgmName, 0)
     && !this->fields.isWaitingForMainBgm
@@ -324,7 +324,7 @@ void PlaySubBgmOnEnableComponent__Update(PlaySubBgmOnEnableComponent_o *this, co
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_21FFECC(0, v4);
+      sub_2213CDC(0, v4);
     if ( UnityEngine_GameObject__get_activeSelf(gameObject, 0) )
     {
       subBgmName = this->fields.subBgmName;
@@ -337,7 +337,7 @@ void PlaySubBgmOnEnableComponent__Update(PlaySubBgmOnEnableComponent_o *this, co
         v11 = this->fields.subBgmName;
         if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v8);
-        SoundManager__PlaySubBgm_48459416(v11, volume, fadeTime, 0);
+        SoundManager__PlaySubBgm_48506544(v11, volume, fadeTime, 0);
       }
     }
   }
@@ -374,13 +374,13 @@ bool PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14__Mo
   bool v15; // w7
 
   v2 = this;
-  if ( (byte_5937C27 & 1) == 0 )
+  if ( (byte_596FD8A & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&Method_PlaySubBgmOnEnableComponent_IsPlayTargetMainBgm__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    this = (PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_o *)sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    byte_5937C27 = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&Method_PlaySubBgmOnEnableComponent_IsPlayTargetMainBgm__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    this = (PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_o *)sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    byte_596FD8A = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -390,25 +390,25 @@ bool PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14__Mo
     {
       v2->fields.__1__state = -1;
       if ( !_4__this )
-        sub_21FFECC(this, method);
+        sub_2213CDC(this, method);
       volume = _4__this->fields.volume;
       fadeTime = _4__this->fields.fadeTime;
       subBgmName = _4__this->fields.subBgmName;
       if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method);
-      SoundManager__PlaySubBgm_48459416(subBgmName, volume, fadeTime, 0);
+      SoundManager__PlaySubBgm_48506544(subBgmName, volume, fadeTime, 0);
       _4__this->fields.isWaitingForMainBgm = 0;
     }
   }
   else
   {
     v2->fields.__1__state = -1;
-    v8 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v8 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v8, (Il2CppObject *)_4__this, Method_PlaySubBgmOnEnableComponent_IsPlayTargetMainBgm__, 0);
-    v9 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v9 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v9, v8, 0);
     v2->fields.__2__current = (Il2CppObject *)v9;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     v2->fields.__1__state = 1;
   }
   return _1__state == 0;
@@ -431,11 +431,11 @@ void __noreturn PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBg
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_PlaySubBgmOnEnableComponent__CoWaitUntilMainBgmStartAndPlaySubBgm_d__14_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

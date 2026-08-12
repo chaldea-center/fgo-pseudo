@@ -18,7 +18,7 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)v3,
     v4,
@@ -29,7 +29,7 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
     v9);
   v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
   this->fields._IconInfo2_k__BackingField = v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)v11,
     v12,
@@ -48,15 +48,15 @@ IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
   __int64 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_5937997 & 1) == 0 )
+  if ( (byte_596FAFA & 1) == 0 )
   {
-    sub_21FFC50(&IconLabelInfo_TypeInfo);
-    byte_5937997 = 1;
+    sub_2213A60(&IconLabelInfo_TypeInfo);
+    byte_596FAFA = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_21FFEBC(IconLabelInfo_TypeInfo);
+  v1 = (IconLabelInfo_o *)sub_2213CCC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v1, 0);
   if ( !v1 )
-    sub_21FFECC(v2, v3);
+    sub_2213CDC(v2, v3);
   IconLabelInfo__Clear(v1, 0);
   return v1;
 }
@@ -76,7 +76,7 @@ void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, con
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_21FFECC(IconInfo1_k__BackingField, method);
+    sub_2213CDC(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
@@ -94,7 +94,7 @@ void CharaGraphSortLogicBase__SetListViewItem(
   bool v7; // w7
 
   this->fields.item = inputItem;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.item,
     (int32_t)inputItem,
     (System_String_o *)method,
@@ -118,7 +118,7 @@ void CharaGraphSortLogicBase__SetListViewSort(
   bool v7; // w7
 
   this->fields.sort = inputSort;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)inputSort,
     (System_String_o *)method,
@@ -172,7 +172,7 @@ void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this,
       return;
     }
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 }
 
@@ -258,7 +258,7 @@ void CharaGraphSortLogicBase__set_IconInfo1(
   bool v7; // w7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -282,7 +282,7 @@ void CharaGraphSortLogicBase__set_IconInfo2(
   bool v7; // w7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

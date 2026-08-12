@@ -12,7 +12,7 @@ void SummonServantListViewItem___ctor(
   bool v15; // w25
   bool v16; // w27
   bool v17; // w28
-  const MethodInfo_476E8C0 *v18; // x0
+  const MethodInfo_47A29F8 *v18; // x0
   Il2CppObject *Instance; // x0
   __int64 v20; // x1
   struct System_String_o *Name; // x0
@@ -29,18 +29,18 @@ void SummonServantListViewItem___ctor(
   v15 = commandCode;
   v16 = isNew;
   v17 = isRankUp;
-  if ( (byte_5934A17 & 1) == 0 )
+  if ( (byte_596CAC3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5934A17 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596CAC3 = 1;
   }
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
-  v18 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
+  v18 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.svtId = svtId;
   this->fields.usrSvtId = usrSvtId;
   this->fields.isNew = v16;
@@ -54,13 +54,13 @@ void SummonServantListViewItem___ctor(
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                   (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
       if ( Instance )
       {
         Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      svtId,
-                     (const MethodInfo_3EDD388 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+                     (const MethodInfo_3F10B30 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
         if ( Instance )
         {
           Name = CommandCodeEntity__GetName((CommandCodeEntity_o *)Instance, 0);
@@ -69,28 +69,28 @@ void SummonServantListViewItem___ctor(
       }
     }
 LABEL_15:
-    sub_21FFECC(Instance, v20);
+    sub_2213CDC(Instance, v20);
   }
   if ( !Instance )
     goto LABEL_15;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                svtId,
-               (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+               (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_15;
   v30 = ServantEntity__GetName((ServantEntity_o *)Instance, -1, 0, -1, 0, 0);
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v28, v29);
-  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_55828364(v30, 0);
+  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_56033020(v30, 0);
 LABEL_14:
   this->fields.name = Name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.name, (int32_t)Name, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.name, (int32_t)Name, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -201,7 +201,7 @@ void SummonServantListViewItem__set_ServantName(
   bool v7; // w7
 
   this->fields.name = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.name,
     (int32_t)value,
     (System_String_o *)method,

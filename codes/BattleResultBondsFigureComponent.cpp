@@ -8,18 +8,18 @@ void BattleResultBondsFigureComponent___ctor(BattleResultBondsFigureComponent_o 
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593C1F7 & 1) == 0 )
+  if ( (byte_597442F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
-    byte_593C1F7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    byte_597442F = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
   this->fields.figureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -52,7 +52,7 @@ void BattleResultBondsFigureComponent__CreateEndCallback(
     if ( createCallback )
     {
       p_createCallback->klass = 0;
-      sub_21FFBF4(p_createCallback, 0, v2, v3, v4, v5, v6, v7);
+      sub_2213A04(p_createCallback, 0, v2, v3, v4, v5, v6, v7);
       ((void (__fastcall *)(intptr_t, intptr_t))v11->fields.invoke_impl)(v11->fields.method_code, v11->fields.method);
     }
   }
@@ -117,7 +117,7 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
   Il2CppClass **v59; // x0
   System_Action_c *v60; // x0
   System_Action_o *v61; // x26
-  UIStandFigureR_o *RenderPrefab_47607168; // x0
+  UIStandFigureR_o *RenderPrefab_47638192; // x0
   System_Collections_Generic_List_object__o *figureCollectList; // x19
   UIStandFigureR_o *v64; // x21
   StandFigureCollect_o *v65; // x20
@@ -134,33 +134,33 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
   System_Collections_Generic_List_Enumerator_object__o v78; // [xsp+28h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v79; // [xsp+40h] [xbp-80h] BYREF
 
-  if ( (byte_593C1F6 & 1) == 0 )
+  if ( (byte_597442E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_BattleResultBondsFigureComponent_CreateEndCallback__);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StandFigureCollect_TypeInfo);
-    byte_593C1F6 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_BattleResultBondsFigureComponent_CreateEndCallback__);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StandFigureCollect_TypeInfo);
+    byte_597442E = 1;
   }
   memset(&v79, 0, sizeof(v79));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   v17 = (DataManager_o *)Instance;
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   Instance = DataManager__GetMasterData_object_(
                v17,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   if ( !Instance )
     goto LABEL_35;
   EntityListOrderBy = SvtMultiPortraitMaster__GetEntityListOrderBy(
@@ -171,7 +171,7 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
                         0);
   this->fields.createCallback = callBack;
   *(_QWORD *)&this->fields.createNumMax = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.createCallback,
     (int32_t)callBack,
     v19,
@@ -183,13 +183,13 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
   if ( !EntityListOrderBy
     || !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EntityListOrderBy,
-          (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
+          (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
   {
     v60 = System_Action_TypeInfo;
     ++this->fields.createNumMax;
-    v61 = (System_Action_o *)sub_21FFEBC(v60);
+    v61 = (System_Action_o *)sub_2213CCC(v60);
     System_Action___ctor(v61, (Il2CppObject *)this, Method_BattleResultBondsFigureComponent_CreateEndCallback__, 0);
-    RenderPrefab_47607168 = StandFigureManager__CreateRenderPrefab_47607168(
+    RenderPrefab_47638192 = StandFigureManager__CreateRenderPrefab_47638192(
                               parent,
                               svtId,
                               imageLimitCount,
@@ -202,8 +202,8 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
                               0,
                               0);
     figureCollectList = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-    v64 = RenderPrefab_47607168;
-    v65 = (StandFigureCollect_o *)sub_21FFEBC(StandFigureCollect_TypeInfo);
+    v64 = RenderPrefab_47638192;
+    v65 = (StandFigureCollect_o *)sub_2213CCC(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v65, 0, v64, 0);
     if ( figureCollectList )
     {
@@ -218,25 +218,25 @@ void BattleResultBondsFigureComponent__CreateFigurePrefab(
           System_Collections_Generic_List_object___AddWithResize(
             figureCollectList,
             (Il2CppObject *)v65,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
         }
         else
         {
           v75 = &items->obj.klass + size;
           figureCollectList->fields._size = size + 1;
           v75[4] = (Il2CppClass *)v65;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v75 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v75 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
         }
         return;
       }
     }
 LABEL_35:
-    sub_21FFECC(Instance, v16);
+    sub_2213CDC(Instance, v16);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v78,
     (System_Collections_Generic_List_object__o *)EntityListOrderBy,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
   v79 = v78;
   v78.fields._list = 0;
   *(_QWORD *)&v78.fields._index = &v79;
@@ -244,17 +244,17 @@ LABEL_35:
   {
     v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v79,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
     if ( !v25 )
       break;
     current = (SvtMultiPortraitEntity_o *)v79.fields._current;
     if ( !v79.fields._current )
-      sub_21FFECC(v25, v26);
+      sub_2213CDC(v25, v26);
     klass_high = HIDWORD(v79.fields._current[2].klass);
     v29 = System_Action_TypeInfo;
     ++this->fields.createNumMax;
     portraitImageId = current->fields.portraitImageId;
-    v31 = (System_Action_o *)sub_21FFEBC(v29);
+    v31 = (System_Action_o *)sub_2213CCC(v29);
     System_Action___ctor(v31, (Il2CppObject *)this, Method_BattleResultBondsFigureComponent_CreateEndCallback__, 0);
     PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                          parent,
@@ -269,9 +269,9 @@ LABEL_35:
                          0);
     v40 = (UnityEngine_Component_o *)PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_21FFECC(0, v33);
+      sub_2213CDC(0, v33);
     PrefabForImageId->fields.svtMultiPortraitEntity = current;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity,
       (int32_t)current,
       v34,
@@ -286,16 +286,16 @@ LABEL_35:
       gameObject = UnityEngine_Component__get_gameObject(v40, 0);
       v44 = current->fields.commonPosition;
       if ( !v44 )
-        sub_21FFECC(gameObject, v43);
+        sub_2213CDC(gameObject, v43);
       max_length = v44->max_length;
       if ( max_length == 1 )
-        sub_21FFED4(gameObject);
+        sub_2213CE4(gameObject);
       if ( !max_length )
-        sub_21FFED4(gameObject);
-      GameObjectExtensions__AddLocalPosition_42877056(gameObject, (float)v44->m_Items[0], (float)v44->m_Items[1], 0);
+        sub_2213CE4(gameObject);
+      GameObjectExtensions__AddLocalPosition_42892452(gameObject, (float)v44->m_Items[0], (float)v44->m_Items[1], 0);
     }
     v46 = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-    v47 = (StandFigureCollect_o *)sub_21FFEBC(StandFigureCollect_TypeInfo);
+    v47 = (StandFigureCollect_o *)sub_2213CCC(StandFigureCollect_TypeInfo);
     StandFigureCollect___ctor(v47, current, (UIStandFigureR_o *)v40, 0);
     if ( !v46
       || (v56 = v46->fields._items,
@@ -303,7 +303,7 @@ LABEL_35:
           ++v46->fields._version,
           !v56) )
     {
-      sub_21FFECC(v48, v49);
+      sub_2213CDC(v48, v49);
     }
     v58 = v46->fields._size;
     if ( (unsigned int)v58 >= LODWORD(v56->max_length) )
@@ -311,19 +311,19 @@ LABEL_35:
       System_Collections_Generic_List_object___AddWithResize(
         v46,
         (Il2CppObject *)v47,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
     }
     else
     {
       v59 = &v56->obj.klass + v58;
       v46->fields._size = v58 + 1;
       v59[4] = (Il2CppClass *)v47;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v59 + 4), (int32_t)v47, v50, v51, v52, v53, v54, v55);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v59 + 4), (int32_t)v47, v50, v51, v52, v53, v54, v55);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v79,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 }
 
 
@@ -348,15 +348,15 @@ void BattleResultBondsFigureComponent__DestroyFigure(
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_593C1F4 & 1) == 0 )
+  if ( (byte_597442C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C1F4 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597442C = 1;
   }
   figureCollectList = this->fields.figureCollectList;
   memset(&v18, 0, sizeof(v18));
@@ -365,7 +365,7 @@ void BattleResultBondsFigureComponent__DestroyFigure(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v17,
     (System_Collections_Generic_List_object__o *)figureCollectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v18 = v17;
   v17.fields._list = 0;
   *(_QWORD *)&v17.fields._index = &v18;
@@ -373,12 +373,12 @@ void BattleResultBondsFigureComponent__DestroyFigure(
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v18,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v4 )
       break;
     current = v18.fields._current;
     if ( !v18.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     monitor = (UnityEngine_Object_o *)v18.fields._current[1].monitor;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
@@ -386,24 +386,24 @@ void BattleResultBondsFigureComponent__DestroyFigure(
     {
       v9 = (UIStandFigureR_o *)current[1].monitor;
       if ( !v9 )
-        sub_21FFECC(0, v8);
+        sub_2213CDC(0, v8);
       UIStandFigureR__ReleaseCharacter(v9, 0);
       v11 = (UnityEngine_Component_o *)current[1].monitor;
       if ( !v11 )
-        sub_21FFECC(0, v10);
+        sub_2213CDC(0, v10);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v11, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
-      UnityEngine_Object__DestroyImmediate_83246828(gameObject, 0);
+      UnityEngine_Object__DestroyImmediate_83460132(gameObject, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v18,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
   v14 = this->fields.figureCollectList;
   if ( !v14 )
 LABEL_22:
-    sub_21FFECC(figureCollectList, method);
+    sub_2213CDC(figureCollectList, method);
   size = v14->fields._size;
   v16 = v14->fields._version + 1;
   v14->fields._size = 0;
@@ -429,23 +429,23 @@ void BattleResultBondsFigureComponent__SetupFigure(
   __int64 v19; // x1
   int32_t ServantImageLimitSealAfter; // w3
 
-  if ( (byte_593C1F5 & 1) == 0 )
+  if ( (byte_597442D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_21FFC50(&ImageLimitCount_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593C1F5 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_2213A60(&ImageLimitCount_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_597442D = 1;
   }
   if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, parent);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v19);
+    sub_2213CDC(Instance, v19);
   }
   ServantImageLimitSealAfter = ServantLimitImageMaster__GetServantImageLimitSealAfter(
                                  (ServantLimitImageMaster_o *)Instance,

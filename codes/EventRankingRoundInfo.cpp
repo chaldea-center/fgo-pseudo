@@ -16,16 +16,16 @@ void EventRankingRoundInfo___cctor(const MethodInfo *method)
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59328A2 & 1) == 0 )
+  if ( (byte_596A9A2 & 1) == 0 )
   {
-    sub_21FFC50(&EventRankingRoundInfo_TypeInfo);
-    sub_21FFC50(&StringLiteral_18171/*"btn_bg_20"*/);
-    sub_21FFC50(&StringLiteral_18173/*"btn_bg_21"*/);
-    byte_59328A2 = 1;
+    sub_2213A60(&EventRankingRoundInfo_TypeInfo);
+    sub_2213A60(&StringLiteral_18209/*"btn_bg_20"*/);
+    sub_2213A60(&StringLiteral_18211/*"btn_bg_21"*/);
+    byte_596A9A2 = 1;
   }
-  v7 = StringLiteral_18173/*"btn_bg_21"*/;
-  EventRankingRoundInfo_TypeInfo->static_fields->SELECTED_SPRITE_NAME = (struct System_String_o *)StringLiteral_18173/*"btn_bg_21"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_18211/*"btn_bg_21"*/;
+  EventRankingRoundInfo_TypeInfo->static_fields->SELECTED_SPRITE_NAME = (struct System_String_o *)StringLiteral_18211/*"btn_bg_21"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventRankingRoundInfo_TypeInfo->static_fields,
     v7,
     v1,
@@ -34,10 +34,10 @@ void EventRankingRoundInfo___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_18171/*"btn_bg_20"*/;
+  v8 = StringLiteral_18209/*"btn_bg_20"*/;
   static_fields = EventRankingRoundInfo_TypeInfo->static_fields;
-  static_fields->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_18171/*"btn_bg_20"*/;
-  sub_21FFBF4(
+  static_fields->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_18209/*"btn_bg_20"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->NON_SELECT_SPRITE_NAME,
     v8,
     v10,
@@ -63,24 +63,24 @@ void EventRankingRoundInfo__OnClikcButton(EventRankingRoundInfo_o *this, const M
   struct EventRankingRoundInfo_ClickFunc_o *onClickFunc; // x8
 
   v2 = this;
-  if ( (byte_59328A1 & 1) == 0 )
+  if ( (byte_596A9A1 & 1) == 0 )
   {
-    this = (EventRankingRoundInfo_o *)sub_21FFC50(&Method_EventRankingRoundInfo_OnClikcButton__);
-    byte_59328A1 = 1;
+    this = (EventRankingRoundInfo_o *)sub_2213A60(&Method_EventRankingRoundInfo_OnClikcButton__);
+    byte_596A9A1 = 1;
   }
   if ( v2->fields.isSelect )
   {
     v3 = Method_EventRankingRoundInfo_OnClikcButton__;
     if ( (*((_BYTE *)Method_EventRankingRoundInfo_OnClikcButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventRankingRoundInfo_OnClikcButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventRankingRoundInfo_OnClikcButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 2, 0, 0);
   }
   else
   {
     onClickFunc = v2->fields.onClickFunc;
     if ( !onClickFunc )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))onClickFunc->fields.invoke_impl)(
       onClickFunc->fields.method_code,
       (unsigned int)v2->fields.roundNum,
@@ -124,12 +124,12 @@ void EventRankingRoundInfo__SetRoundInfo(
          this->fields.roundNum = roundIndex,
          !baseButton)) )
   {
-    sub_21FFECC(baseButton, isOpen);
+    sub_2213CDC(baseButton, isOpen);
   }
   UILabel__set_text((UILabel_o *)baseButton, roundName, 0);
   this->fields.onClickFunc = callback;
   p_onClickFunc = &this->fields.onClickFunc;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_onClickFunc, (int32_t)callback, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_onClickFunc, (int32_t)callback, v14, v15, v16, v17, v18, v19);
   *((_BYTE *)p_onClickFunc - 4) = 0;
 }
 
@@ -156,10 +156,10 @@ void EventRankingRoundInfo__SetSelectInfo(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_59328A0 & 1) == 0 )
+  if ( (byte_596A9A0 & 1) == 0 )
   {
-    sub_21FFC50(&EventRankingRoundInfo_TypeInfo);
-    byte_59328A0 = 1;
+    sub_2213A60(&EventRankingRoundInfo_TypeInfo);
+    byte_596A9A0 = 1;
   }
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -203,7 +203,7 @@ void EventRankingRoundInfo__SetSelectInfo(
       }
     }
 LABEL_16:
-    sub_21FFECC(gameObject, v11);
+    sub_2213CDC(gameObject, v11);
   }
 }
 
@@ -227,7 +227,7 @@ void EventRankingRoundInfo_ClickFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -238,12 +238,12 @@ void EventRankingRoundInfo_ClickFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -255,9 +255,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FED330;
+  this->fields.invoke_impl = (intptr_t)sub_20001EC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FED2E8;
+  this->fields.extra_arg = (intptr_t)sub_20001A4;
 }
 
 
@@ -273,8 +273,8 @@ System_IAsyncResult_o *EventRankingRoundInfo_ClickFunc__BeginInvoke(
 
   v10 = num;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C070, &v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -283,7 +283,7 @@ void EventRankingRoundInfo_ClickFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

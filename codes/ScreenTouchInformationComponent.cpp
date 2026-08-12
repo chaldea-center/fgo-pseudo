@@ -31,12 +31,12 @@ void ScreenTouchInformationComponent__Awake(ScreenTouchInformationComponent_o *t
   __int64 v25; // x2
   UnityEngine_Object_o *tAlpha; // x21
 
-  if ( (byte_5934F17 & 1) == 0 )
+  if ( (byte_596D047 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934F17 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D047 = 1;
   }
   overSp = (UnityEngine_Component_o *)this->fields.overSp;
   if ( !overSp )
@@ -47,10 +47,10 @@ void ScreenTouchInformationComponent__Awake(ScreenTouchInformationComponent_o *t
   v4 = (UnityEngine_GameObject_o *)overSp;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)overSp,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   this->fields.tScale = (struct TweenScale_o *)Component_object;
   p_tScale = &this->fields.tScale;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.tScale,
     (int32_t)Component_object,
     v7,
@@ -71,10 +71,10 @@ void ScreenTouchInformationComponent__Awake(ScreenTouchInformationComponent_o *t
   }
   v16 = UnityEngine_GameObject__GetComponent_object_(
           v4,
-          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   this->fields.tAlpha = (struct TweenAlpha_o *)v16;
   p_tAlpha = &this->fields.tAlpha;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.tAlpha, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.tAlpha, (int32_t)v16, v18, v19, v20, v21, v22, v23);
   tAlpha = (UnityEngine_Object_o *)this->fields.tAlpha;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24, v25);
@@ -87,7 +87,7 @@ void ScreenTouchInformationComponent__Awake(ScreenTouchInformationComponent_o *t
       goto LABEL_15;
     }
 LABEL_16:
-    sub_21FFECC(overSp, method);
+    sub_2213CDC(overSp, method);
   }
 LABEL_15:
   *(_WORD *)&this->fields.isOnClick = 0;
@@ -108,7 +108,7 @@ void ScreenTouchInformationComponent__OnClickDecide(ScreenTouchInformationCompon
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
     callbackFunc->fields.method_code,
     callbackFunc->fields.method);
@@ -139,10 +139,10 @@ void ScreenTouchInformationComponent__ResetPlayTweener(
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_5934F19 & 1) == 0 )
+  if ( (byte_596D049 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934F19 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D049 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, tweener, method);
@@ -150,7 +150,7 @@ void ScreenTouchInformationComponent__ResetPlayTweener(
   if ( !v4 )
   {
     if ( !tweener )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     UITweener__ResetToBeginning(tweener, 0);
     UITweener__PlayForward(tweener, 0);
   }
@@ -172,7 +172,7 @@ void ScreenTouchInformationComponent__Setup(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_WORD *)p_callbackFunc + 4) = 256;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_callbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -191,10 +191,10 @@ void ScreenTouchInformationComponent__Update(ScreenTouchInformationComponent_o *
   __int64 v5; // x1
   struct System_Action_o *callbackFunc; // x8
 
-  if ( (byte_5934F18 & 1) == 0 )
+  if ( (byte_596D048 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_5934F18 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_596D048 = 1;
   }
   if ( this->fields.isExpand )
   {
@@ -206,7 +206,7 @@ void ScreenTouchInformationComponent__Update(ScreenTouchInformationComponent_o *
       callbackFunc = this->fields.callbackFunc;
       this->fields.isOnClick = 1;
       if ( !callbackFunc )
-        sub_21FFECC(isTouchPush, v5);
+        sub_2213CDC(isTouchPush, v5);
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
         callbackFunc->fields.method);

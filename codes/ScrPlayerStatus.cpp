@@ -31,14 +31,14 @@ void ScrPlayerStatus___cctor(const MethodInfo *method)
   bool v29; // w7
   struct ScrPlayerStatus_StaticFields *v30; // x8
 
-  if ( (byte_593556C & 1) == 0 )
+  if ( (byte_596D6AE & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&StringLiteral_17717/*"banner_icon_mission_limited_"*/);
-    sub_21FFC50(&StringLiteral_16583/*"[ffb505]"*/);
-    sub_21FFC50(&StringLiteral_8836/*"LocationInfoAgreement"*/);
-    byte_593556C = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&StringLiteral_17754/*"banner_icon_mission_limited_"*/);
+    sub_2213A60(&StringLiteral_16615/*"[ffb505]"*/);
+    sub_2213A60(&StringLiteral_8849/*"LocationInfoAgreement"*/);
+    byte_596D6AE = 1;
   }
   v8 = ManagerConfig_TypeInfo;
   static_fields = ScrPlayerStatus_TypeInfo->static_fields;
@@ -50,28 +50,28 @@ void ScrPlayerStatus___cctor(const MethodInfo *method)
     v8 = ManagerConfig_TypeInfo;
     static_fields = ScrPlayerStatus_TypeInfo->static_fields;
   }
-  v11 = StringLiteral_16583/*"[ffb505]"*/;
+  v11 = StringLiteral_16615/*"[ffb505]"*/;
   WIDTH = v8->static_fields->WIDTH;
-  static_fields->AP_OVER_TXT_COLOR_STR = (struct System_String_o *)StringLiteral_16583/*"[ffb505]"*/;
+  static_fields->AP_OVER_TXT_COLOR_STR = (struct System_String_o *)StringLiteral_16615/*"[ffb505]"*/;
   p_AP_OVER_TXT_COLOR_STR = (MissionNaviTransitionBoardItem_o *)&static_fields->AP_OVER_TXT_COLOR_STR;
   *((float *)&p_AP_OVER_TXT_COLOR_STR[-1].fields._BoardType_k__BackingField + 1) = (float)-WIDTH;
-  sub_21FFBF4(p_AP_OVER_TXT_COLOR_STR, v11, v2, v3, v4, v5, v6, v7);
-  v14 = StringLiteral_8836/*"LocationInfoAgreement"*/;
+  sub_2213A04(p_AP_OVER_TXT_COLOR_STR, v11, v2, v3, v4, v5, v6, v7);
+  v14 = StringLiteral_8849/*"LocationInfoAgreement"*/;
   v15 = ScrPlayerStatus_TypeInfo->static_fields;
-  v15->LOCATION_TOS_AGREED_KEY = (struct System_String_o *)StringLiteral_8836/*"LocationInfoAgreement"*/;
+  v15->LOCATION_TOS_AGREED_KEY = (struct System_String_o *)StringLiteral_8849/*"LocationInfoAgreement"*/;
   v15 = (struct ScrPlayerStatus_StaticFields *)((char *)v15 + 24);
   *(_QWORD *)&v15[-1].MISSION_ALERT_FADE_FRAME_NUM = 0xC1400000C1500000LL;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v15, v14, v16, v17, v18, v19, v20, v21);
-  v22 = StringLiteral_17717/*"banner_icon_mission_limited_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v15, v14, v16, v17, v18, v19, v20, v21);
+  v22 = StringLiteral_17754/*"banner_icon_mission_limited_"*/;
   v23 = (MissionNaviTransitionBoardItem_o *)ScrPlayerStatus_TypeInfo->static_fields;
-  v23->fields.sortStr1 = (struct System_String_o *)StringLiteral_17717/*"banner_icon_mission_limited_"*/;
+  v23->fields.sortStr1 = (struct System_String_o *)StringLiteral_17754/*"banner_icon_mission_limited_"*/;
   v23 = (MissionNaviTransitionBoardItem_o *)((char *)v23 + 56);
-  *(_OWORD *)&v23[-1].fields._ClosedMessage_k__BackingField = xmmword_E94450;
+  *(_OWORD *)&v23[-1].fields._ClosedMessage_k__BackingField = xmmword_E9D5F0;
   v23[-1].fields._BoardType_k__BackingField = 28;
-  sub_21FFBF4(v23, v22, v24, v25, v26, v27, v28, v29);
+  sub_2213A04(v23, v22, v24, v25, v26, v27, v28, v29);
   v30 = ScrPlayerStatus_TypeInfo->static_fields;
   *(_QWORD *)&v30->CMD_SPELL_SCROLLVIEW_DEPTH = 0x3E19999A000000DCLL;
-  *(_OWORD *)&v30->STONE_COUNT_MAX_WIDTH = xmmword_E94AC0;
+  *(_OWORD *)&v30->STONE_COUNT_MAX_WIDTH = xmmword_E9DC60;
 }
 
 
@@ -85,10 +85,10 @@ void ScrPlayerStatus___ctor(ScrPlayerStatus_o *this, const MethodInfo *method)
   bool v7; // w7
   struct System_String_o *v9; // x1
 
-  if ( (byte_593556B & 1) == 0 )
+  if ( (byte_596D6AD & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593556B = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D6AD = 1;
   }
   v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.miMasterUserEquipID = 1;
@@ -98,7 +98,7 @@ void ScrPlayerStatus___ctor(ScrPlayerStatus_o *this, const MethodInfo *method)
   this->fields.mfApParOld = -1.0;
   this->fields.mstMissionStartsAt = -1;
   this->fields.overwriteSpellIconId = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteSpellIconId,
     (int32_t)v9,
     v2,
@@ -122,14 +122,14 @@ void ScrPlayerStatus__Awake(ScrPlayerStatus_o *this, const MethodInfo *method)
   const MethodInfo *v9; // x2
   const MethodInfo *v10; // x2
   const MethodInfo *v11; // x1
-  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
   nextExpDialog = this->fields.nextExpDialog;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0);
   if ( !nextExpDialog )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   v13.fields.z = -LocalPosition.fields.z;
   v13.fields.y = -LocalPosition.fields.y;
   v13.fields.x = -LocalPosition.fields.x;
@@ -191,24 +191,24 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
   int32_t MissionAchiveCount_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_5935557 & 1) == 0 )
+  if ( (byte_596D699 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&MstMissionEntity_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_13941/*"TIME_REST_ACHIVE"*/);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_1198/*"0"*/);
-    byte_5935557 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&MstMissionEntity_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_13971/*"TIME_REST_ACHIVE"*/);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_1198/*"0"*/);
+    byte_596D699 = 1;
   }
   MissionAchiveCount_k__BackingField = 0;
   if ( !mstMissionInfo )
-    goto LABEL_60;
+    goto LABEL_62;
   MstMissionEntity_k__BackingField = mstMissionInfo->fields._MstMissionEntity_k__BackingField;
   if ( !MstMissionEntity_k__BackingField )
-    goto LABEL_60;
+    goto LABEL_62;
   MissionType = MstMissionEntity__getMissionType(mstMissionInfo->fields._MstMissionEntity_k__BackingField, 0);
   v7 = MstMissionEntity__getMissionType(MstMissionEntity_k__BackingField, 0);
   v8 = MstMissionEntity__getMissionType(MstMissionEntity_k__BackingField, 0);
@@ -217,21 +217,29 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
     ScrPlayerStatus__HideMstMissionIconLb(v4, (const MethodInfo *)mstMissionInfo);
     return;
   }
+  this = (ScrPlayerStatus_o *)v4->fields.masterMissionAlertRoot;
+  if ( !this )
+    goto LABEL_62;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+  this = (ScrPlayerStatus_o *)v4->fields.masterMissionCountRoot;
+  if ( !this )
+    goto LABEL_62;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionDailyBgObj;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, MissionType == 3, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionWeeklyBgObj;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v7 == 2, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionLimitedBgObj;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v8 == 5, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionAnimationLabelsRoot;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v8 == 5, 0);
   if ( v8 == 5 )
   {
@@ -244,7 +252,7 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
     }
     MASTER_MISSION_ICON_LIMITED_PREFIX = v12->static_fields->MASTER_MISSION_ICON_LIMITED_PREFIX;
     v14 = System_Int32__ToString((int)MstMissionEntity_k__BackingField + 56, 0);
-    v17 = System_String__Concat_75438412(MASTER_MISSION_ICON_LIMITED_PREFIX, v14, 0);
+    v17 = System_String__Concat_75651716(MASTER_MISSION_ICON_LIMITED_PREFIX, v14, 0);
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v15, v16);
     if ( !AtlasManager__SetBanner(masterMissionLimitedBgSp, v17, 0) )
@@ -256,7 +264,7 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
         j_il2cpp_runtime_class_init_0(ScrPlayerStatus_TypeInfo, mstMissionInfo, v18);
         v19 = ScrPlayerStatus_TypeInfo;
       }
-      v23 = System_String__Concat_75438412(
+      v23 = System_String__Concat_75651716(
               v19->static_fields->MASTER_MISSION_ICON_LIMITED_PREFIX,
               (System_String_o *)StringLiteral_1198/*"0"*/,
               0);
@@ -266,7 +274,7 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
     }
     this = (ScrPlayerStatus_o *)v4->fields.masterMissionLimitedBgSp;
     if ( !this )
-      goto LABEL_60;
+      goto LABEL_62;
     ((void (__fastcall *)(ScrPlayerStatus_o *, void *))this->klass[2]._1.parent)(this, this->klass[2]._1.generic_class);
     masterMissionDetailLb = v4->fields.masterMissionDetailLb;
     masterMissionDetailOverlapLb = v4->fields.masterMissionDetailOverlapLb;
@@ -283,25 +291,25 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
                                   0,
                                   0);
     if ( !masterMissionDetailLb )
-      goto LABEL_60;
+      goto LABEL_62;
     v30 = this;
     UILabel__set_text(masterMissionDetailLb, (System_String_o *)this, 0);
     if ( !masterMissionDetailOverlapLb )
-      goto LABEL_60;
+      goto LABEL_62;
     UILabel__set_text(masterMissionDetailOverlapLb, (System_String_o *)v30, 0);
   }
   masterMissionCountNumLb = v4->fields.masterMissionCountNumLb;
   MissionAchiveCount_k__BackingField = mstMissionInfo->fields._MissionAchiveCount_k__BackingField;
   this = (ScrPlayerStatus_o *)System_Int32__ToString((int32_t)&MissionAchiveCount_k__BackingField, 0);
   if ( !masterMissionCountNumLb )
-    goto LABEL_60;
+    goto LABEL_62;
   UILabel__set_text(masterMissionCountNumLb, (System_String_o *)this, 0);
   MissionCount_k__BackingField = mstMissionInfo->fields._MissionCount_k__BackingField;
   masterMissionCountNumLb2 = v4->fields.masterMissionCountNumLb2;
   MissionAchiveCount_k__BackingField = MissionCount_k__BackingField;
   this = (ScrPlayerStatus_o *)System_Int32__ToString((int32_t)&MissionAchiveCount_k__BackingField, 0);
   if ( !masterMissionCountNumLb2 )
-    goto LABEL_60;
+    goto LABEL_62;
   UILabel__set_text(masterMissionCountNumLb2, (System_String_o *)this, 0);
   if ( MstMissionEntity__getMissionType(MstMissionEntity_k__BackingField, 0) == 3 )
   {
@@ -322,11 +330,11 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
     0);
   masterMissionAlertNumLb = v4->fields.masterMissionAlertNumLb;
   if ( !masterMissionAlertNumLb )
-    goto LABEL_60;
+    goto LABEL_62;
   this = (ScrPlayerStatus_o *)v4->fields.mstMissionTimeNumStr;
   if ( !this )
-    goto LABEL_60;
-  this = (ScrPlayerStatus_o *)System_String__Equals_75473208(
+    goto LABEL_62;
+  this = (ScrPlayerStatus_o *)System_String__Equals_75686512(
                                 (System_String_o *)this,
                                 masterMissionAlertNumLb->fields.mText,
                                 0);
@@ -334,11 +342,11 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
   {
     masterMissionAlertUnitLb = v4->fields.masterMissionAlertUnitLb;
     if ( !masterMissionAlertUnitLb )
-      goto LABEL_60;
+      goto LABEL_62;
     this = (ScrPlayerStatus_o *)v4->fields.mstMissionTimeCntStr;
     if ( !this )
-      goto LABEL_60;
-    if ( System_String__Equals_75473208((System_String_o *)this, masterMissionAlertUnitLb->fields.mText, 0) )
+      goto LABEL_62;
+    if ( System_String__Equals_75686512((System_String_o *)this, masterMissionAlertUnitLb->fields.mText, 0) )
       return;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(v4->fields.mstMissionTimeNumStr, 0);
@@ -360,34 +368,34 @@ void ScrPlayerStatus__ChangeViewMstMissionLb(
           if ( this )
           {
             v43 = (ScrPlayerStatus_o *)StringLiteral_1/*""*/;
-            goto LABEL_58;
+            goto LABEL_60;
           }
         }
       }
     }
-LABEL_60:
-    sub_21FFECC(this, mstMissionInfo);
+LABEL_62:
+    sub_2213CDC(this, mstMissionInfo);
   }
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionAlertNumLb;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_1/*""*/, 0);
   this = (ScrPlayerStatus_o *)v4->fields.masterMissionAlertUnitLb;
   if ( !this )
-    goto LABEL_60;
+    goto LABEL_62;
   UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_1/*""*/, 0);
   masterMissionAlertMsgLb = (ScrPlayerStatus_o *)v4->fields.masterMissionAlertMsgLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v40, v41);
-  this = (ScrPlayerStatus_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13941/*"TIME_REST_ACHIVE"*/, 0);
+  this = (ScrPlayerStatus_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13971/*"TIME_REST_ACHIVE"*/, 0);
   if ( !masterMissionAlertMsgLb )
-    goto LABEL_60;
+    goto LABEL_62;
   v43 = this;
   this = masterMissionAlertMsgLb;
-LABEL_58:
+LABEL_60:
   UILabel__set_text((UILabel_o *)this, (System_String_o *)v43, 0);
 }
 
@@ -399,10 +407,10 @@ void ScrPlayerStatus__CheckAssert(ScrPlayerStatus_o *this, const MethodInfo *met
   __int64 v5; // x1
   CompleteMissionViewController_o *v6; // x0
 
-  if ( (byte_5935568 & 1) == 0 )
+  if ( (byte_596D6AA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935568 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D6AA = 1;
   }
   completeMissionViewController = (UnityEngine_Object_o *)this->fields.completeMissionViewController;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -411,7 +419,7 @@ void ScrPlayerStatus__CheckAssert(ScrPlayerStatus_o *this, const MethodInfo *met
   {
     v6 = this->fields.completeMissionViewController;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     CompleteMissionViewController__CheckAssert(v6, 0);
   }
 }
@@ -431,7 +439,7 @@ void ScrPlayerStatus__ClickBannerOpenMasterMission(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
-  const MethodInfo_476E8C0 *v14; // x0
+  const MethodInfo_47A29F8 *v14; // x0
   Il2CppObject *Instance; // x0
   __int64 v16; // x1
   __int64 v17; // x2
@@ -440,22 +448,22 @@ void ScrPlayerStatus__ClickBannerOpenMasterMission(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v21; // x21
 
-  if ( (byte_5935526 & 1) == 0 )
+  if ( (byte_596D668 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass136_0__ClickBannerOpenMasterMission_b__0__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass136_0_TypeInfo);
-    byte_5935526 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass136_0__ClickBannerOpenMasterMission_b__0__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass136_0_TypeInfo);
+    byte_596D668 = 1;
   }
-  v5 = sub_21FFEBC(ScrPlayerStatus___c__DisplayClass136_0_TypeInfo);
+  v5 = sub_2213CCC(ScrPlayerStatus___c__DisplayClass136_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
-  v14 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  v14 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
   *(_DWORD *)(v5 + 24) = typeIndex;
   Instance = SingletonMonoBehaviour_object___get_Instance(v14);
   v18 = AvalonSceneManager_TypeInfo;
@@ -466,7 +474,7 @@ void ScrPlayerStatus__ClickBannerOpenMasterMission(
     v18 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v18->static_fields->DEFAULT_FADE_TIME;
-  v21 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -474,7 +482,7 @@ void ScrPlayerStatus__ClickBannerOpenMasterMission(
     0);
   if ( !v19 )
 LABEL_8:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   CommonUI__maskFadeout(v19, 1, DEFAULT_FADE_TIME, v21, 0);
 }
 
@@ -500,7 +508,7 @@ void ScrPlayerStatus__ClickLoginDialogOpenMasterMission(
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
-  const MethodInfo_476E8C0 *v22; // x0
+  const MethodInfo_47A29F8 *v22; // x0
   Il2CppObject *Instance; // x0
   __int64 v24; // x1
   __int64 v25; // x2
@@ -509,24 +517,24 @@ void ScrPlayerStatus__ClickLoginDialogOpenMasterMission(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v29; // x20
 
-  if ( (byte_5935527 & 1) == 0 )
+  if ( (byte_596D669 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass137_0__ClickLoginDialogOpenMasterMission_b__0__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass137_0_TypeInfo);
-    byte_5935527 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass137_0__ClickLoginDialogOpenMasterMission_b__0__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass137_0_TypeInfo);
+    byte_596D669 = 1;
   }
-  v7 = sub_21FFEBC(ScrPlayerStatus___c__DisplayClass137_0_TypeInfo);
+  v7 = sub_2213CCC(ScrPlayerStatus___c__DisplayClass137_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_8;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = closeCallback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)closeCallback, v16, v17, v18, v19, v20, v21);
-  v22 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)closeCallback, v16, v17, v18, v19, v20, v21);
+  v22 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__;
   *(_DWORD *)(v7 + 32) = typeIndex;
   Instance = SingletonMonoBehaviour_object___get_Instance(v22);
   v26 = AvalonSceneManager_TypeInfo;
@@ -537,7 +545,7 @@ void ScrPlayerStatus__ClickLoginDialogOpenMasterMission(
     v26 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v26->static_fields->DEFAULT_FADE_TIME;
-  v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v29,
     (Il2CppObject *)v7,
@@ -545,7 +553,7 @@ void ScrPlayerStatus__ClickLoginDialogOpenMasterMission(
     0);
   if ( !v27 )
 LABEL_8:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   CommonUI__maskFadeout(v27, 1, DEFAULT_FADE_TIME, v29, 0);
 }
 
@@ -557,10 +565,10 @@ void ScrPlayerStatus__DisableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *m
   __int64 v5; // x1
   UnityEngine_GameObject_o *masterFaceBtnObj; // x0
 
-  if ( (byte_5935560 & 1) == 0 )
+  if ( (byte_596D6A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_5935560 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_596D6A2 = 1;
   }
   ScrPlayerStatus__SetApRecoverBtnEnable(this, 0, v2);
   ScrPlayerStatus__SetRpRecoverBtnEnable(this, 0, v4);
@@ -569,7 +577,7 @@ void ScrPlayerStatus__DisableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *m
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 0, 0);
@@ -582,7 +590,7 @@ void ScrPlayerStatus__DisableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *m
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 0, 0);
@@ -591,7 +599,7 @@ void ScrPlayerStatus__DisableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *m
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 0, 0);
@@ -613,7 +621,7 @@ void ScrPlayerStatus__DisableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *m
         (masterFaceBtnObj = (UnityEngine_GameObject_o *)this->fields.completeMissionViewController) == 0) )
   {
 LABEL_17:
-    sub_21FFECC(masterFaceBtnObj, v5);
+    sub_2213CDC(masterFaceBtnObj, v5);
   }
   CompleteMissionViewController__SetInteractable((CompleteMissionViewController_o *)masterFaceBtnObj, 0, 0);
 }
@@ -626,10 +634,10 @@ void ScrPlayerStatus__EnableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *me
   __int64 v5; // x1
   UnityEngine_GameObject_o *masterFaceBtnObj; // x0
 
-  if ( (byte_5935561 & 1) == 0 )
+  if ( (byte_596D6A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_5935561 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_596D6A3 = 1;
   }
   ScrPlayerStatus__SetApRecoverBtnEnable(this, 1, v2);
   ScrPlayerStatus__SetRpRecoverBtnEnable(this, 1, v4);
@@ -638,7 +646,7 @@ void ScrPlayerStatus__EnableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *me
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 1, 0);
@@ -651,7 +659,7 @@ void ScrPlayerStatus__EnableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *me
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 1, 0);
@@ -660,7 +668,7 @@ void ScrPlayerStatus__EnableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *me
     goto LABEL_17;
   masterFaceBtnObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    masterFaceBtnObj,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !masterFaceBtnObj )
     goto LABEL_17;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)masterFaceBtnObj, 1, 0);
@@ -682,7 +690,7 @@ void ScrPlayerStatus__EnableAllBtn(ScrPlayerStatus_o *this, const MethodInfo *me
         (masterFaceBtnObj = (UnityEngine_GameObject_o *)this->fields.completeMissionViewController) == 0) )
   {
 LABEL_17:
-    sub_21FFECC(masterFaceBtnObj, v5);
+    sub_2213CDC(masterFaceBtnObj, v5);
   }
   CompleteMissionViewController__SetInteractable((CompleteMissionViewController_o *)masterFaceBtnObj, 1, 0);
 }
@@ -714,37 +722,37 @@ void ScrPlayerStatus__EndLocationRequest(ScrPlayerStatus_o *this, System_String_
   CommonMultiItemGetDlg_OnClickDelegate_o *v25; // x27
 
   v4 = this;
-  if ( (byte_593553D & 1) == 0 )
+  if ( (byte_596D67F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_JsonManager_Deserialize_EventLocationRequest_LocationGift___);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&CommonMultiItemGetDlg_OnClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__EndLocationRequest_b__162_0__);
-    sub_21FFC50(&Method_ScrPlayerStatus__EndLocationRequest_b__162_1__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&StringLiteral_8646/*"LOCATION_GIFT_DLG_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_8648/*"LOCATION_GIFT_DLG_DETAIL"*/);
-    sub_21FFC50(&StringLiteral_8647/*"LOCATION_GIFT_DLG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_8641/*"LOCATION_DLG_FAIL_TITLE"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    sub_21FFC50(&StringLiteral_23291/*"ngParse"*/);
-    sub_21FFC50(&StringLiteral_8640/*"LOCATION_DLG_FAIL_MESSAGE"*/);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_8649/*"LOCATION_GIFT_DLG_TITLE"*/);
-    byte_593553D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_JsonManager_Deserialize_EventLocationRequest_LocationGift___);
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&CommonMultiItemGetDlg_OnClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__EndLocationRequest_b__162_0__);
+    sub_2213A60(&Method_ScrPlayerStatus__EndLocationRequest_b__162_1__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&StringLiteral_8659/*"LOCATION_GIFT_DLG_CANCEL"*/);
+    sub_2213A60(&StringLiteral_8661/*"LOCATION_GIFT_DLG_DETAIL"*/);
+    sub_2213A60(&StringLiteral_8660/*"LOCATION_GIFT_DLG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_8654/*"LOCATION_DLG_FAIL_TITLE"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    sub_2213A60(&StringLiteral_23337/*"ngParse"*/);
+    sub_2213A60(&StringLiteral_8653/*"LOCATION_DLG_FAIL_MESSAGE"*/);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_8662/*"LOCATION_GIFT_DLG_TITLE"*/);
+    byte_596D67F = 1;
   }
   if ( !result )
     goto LABEL_20;
-  if ( System_String__Equals_75473208(result, (System_String_o *)StringLiteral_23291/*"ngParse"*/, 0) )
+  if ( System_String__Equals_75686512(result, (System_String_o *)StringLiteral_23337/*"ngParse"*/, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8641/*"LOCATION_DLG_FAIL_TITLE"*/, 0);
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8640/*"LOCATION_DLG_FAIL_MESSAGE"*/, 0);
-    v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8654/*"LOCATION_DLG_FAIL_TITLE"*/, 0);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8653/*"LOCATION_DLG_FAIL_MESSAGE"*/, 0);
+    v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)v4, Method_ScrPlayerStatus__EndLocationRequest_b__162_0__, 0);
     if ( Instance )
     {
@@ -752,9 +760,9 @@ void ScrPlayerStatus__EndLocationRequest(ScrPlayerStatus_o *this, System_String_
       return;
     }
 LABEL_20:
-    sub_21FFECC(this, result);
+    sub_2213CDC(this, result);
   }
-  if ( System_String__Equals_75473208(result, (System_String_o *)StringLiteral_23290/*"ng"*/, 0) )
+  if ( System_String__Equals_75686512(result, (System_String_o *)StringLiteral_23336/*"ng"*/, 0) )
   {
     v4->fields.isLocationBusy = 0;
   }
@@ -764,14 +772,14 @@ LABEL_20:
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v11, v12);
     v13 = JsonManager__Deserialize_object_(
             (Il2CppObject *)result,
-            (const MethodInfo_38A041C *)Method_JsonManager_Deserialize_EventLocationRequest_LocationGift___);
-    v16 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            (const MethodInfo_38D38E4 *)Method_JsonManager_Deserialize_EventLocationRequest_LocationGift___);
+    v16 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14, v15);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8649/*"LOCATION_GIFT_DLG_TITLE"*/, 0);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8648/*"LOCATION_GIFT_DLG_DETAIL"*/, 0);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8646/*"LOCATION_GIFT_DLG_CANCEL"*/, 0);
-    this = (ScrPlayerStatus_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8647/*"LOCATION_GIFT_DLG_DECIDE"*/, 0);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8662/*"LOCATION_GIFT_DLG_TITLE"*/, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8661/*"LOCATION_GIFT_DLG_DETAIL"*/, 0);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8659/*"LOCATION_GIFT_DLG_CANCEL"*/, 0);
+    this = (ScrPlayerStatus_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8660/*"LOCATION_GIFT_DLG_DECIDE"*/, 0);
     if ( !v13 )
       goto LABEL_20;
     v21 = this;
@@ -783,7 +791,7 @@ LABEL_20:
       v23 = BalanceConfig_TypeInfo;
     }
     LocationRewardDlgColumn = v23->static_fields->LocationRewardDlgColumn;
-    v25 = (CommonMultiItemGetDlg_OnClickDelegate_o *)sub_21FFEBC(CommonMultiItemGetDlg_OnClickDelegate_TypeInfo);
+    v25 = (CommonMultiItemGetDlg_OnClickDelegate_o *)sub_2213CCC(CommonMultiItemGetDlg_OnClickDelegate_TypeInfo);
     CommonMultiItemGetDlg_OnClickDelegate___ctor(
       v25,
       (Il2CppObject *)v4,
@@ -817,15 +825,15 @@ void ScrPlayerStatus__ExitCompleteMission(ScrPlayerStatus_o *this, bool isDecide
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_5935545 & 1) == 0 )
+  if ( (byte_596D687 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitCompleteMission_b__171_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935545 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitCompleteMission_b__171_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D687 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -834,10 +842,10 @@ void ScrPlayerStatus__ExitCompleteMission(ScrPlayerStatus_o *this, bool isDecide
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitCompleteMission_b__171_0__, 0);
   if ( !v8 )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0);
 }
 
@@ -854,15 +862,15 @@ void ScrPlayerStatus__ExitMasterMission(ScrPlayerStatus_o *this, bool isDecide, 
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_5935544 & 1) == 0 )
+  if ( (byte_596D686 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitMasterMission_b__170_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935544 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitMasterMission_b__170_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D686 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -871,10 +879,10 @@ void ScrPlayerStatus__ExitMasterMission(ScrPlayerStatus_o *this, bool isDecide, 
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitMasterMission_b__170_0__, 0);
   if ( !v8 )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0);
 }
 
@@ -891,15 +899,15 @@ void ScrPlayerStatus__ExitMasterProfile(ScrPlayerStatus_o *this, const MethodInf
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_5935535 & 1) == 0 )
+  if ( (byte_596D677 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitMasterProfile_b__152_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935535 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitMasterProfile_b__152_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D677 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v6 = AvalonSceneManager_TypeInfo;
   v7 = (CommonUI_o *)Instance;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -908,10 +916,10 @@ void ScrPlayerStatus__ExitMasterProfile(ScrPlayerStatus_o *this, const MethodInf
     v6 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v6->static_fields->DEFAULT_FADE_TIME;
-  v9 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitMasterProfile_b__152_0__, 0);
   if ( !v7 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   CommonUI__maskFadeout(v7, 1, DEFAULT_FADE_TIME, v9, 0);
 }
 
@@ -930,19 +938,19 @@ void ScrPlayerStatus__FrameIn(ScrPlayerStatus_o *this, bool is_force, const Meth
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x1
 
-  if ( (byte_5935563 & 1) == 0 )
+  if ( (byte_596D6A5 & 1) == 0 )
   {
-    sub_21FFC50(&ScrTerminalListTop_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935563 = 1;
+    sub_2213A60(&ScrTerminalListTop_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6A5 = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, is_force, method);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   IsGrandQuestWarId = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -956,10 +964,10 @@ void ScrPlayerStatus__FrameIn(ScrPlayerStatus_o *this, bool is_force, const Meth
   mTerminalList = mInstance->fields.mTerminalList;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, is_force, method);
-  if ( !byte_5932644 )
+  if ( !byte_596A743 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5932644 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596A743 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -976,7 +984,7 @@ void ScrPlayerStatus__FrameIn(ScrPlayerStatus_o *this, bool is_force, const Meth
     if ( mTerminalList )
       goto LABEL_24;
 LABEL_26:
-    sub_21FFECC(IsGrandQuestWarId, is_force);
+    sub_2213CDC(IsGrandQuestWarId, is_force);
   }
   if ( !mTerminalList )
     goto LABEL_26;
@@ -1017,43 +1025,39 @@ void ScrPlayerStatus__FrameInOut(ScrPlayerStatus_o *this, bool is_framein, bool 
   ScrPlayerStatus_c *v23; // x0
   float MV_SPD_TIME; // s8
   float IntpTime_AutoResume; // s12
-  float y; // s9
-  float z; // s8
-  float v28; // s10
-  float v29; // s11
-  UnityEngine_GameObject_o *v30; // x21
-  float v31; // s0
-  float v32; // s1
-  float v33; // s2
-  float v34; // s3
-  float v35; // s4
-  float v36; // s0
-  UnityEngine_GameObject_o *v37; // x0
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  int32_t v44; // w1
-  System_String_o *v45; // x2
-  System_String_o *v46; // x3
-  int32_t v47; // w4
-  int32_t v48; // w5
-  bool v49; // w6
-  bool v50; // w7
-  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v26; // x21
+  float v27; // s0
+  float y; // s1
+  float z; // s2
+  float v30; // s3
+  float v31; // s4
+  float v32; // s0
+  UnityEngine_GameObject_o *v33; // x0
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  int32_t v40; // w1
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v48; // 0:kr14_12.12
 
-  if ( (byte_5935564 & 1) == 0 )
+  if ( (byte_596D6A6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&Method_UITweener_Begin_TweenPosition___);
-    sub_21FFC50(&StringLiteral_7135/*"FrameInOutEnd"*/);
-    byte_5935564 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&Method_UITweener_Begin_TweenPosition___);
+    sub_2213A60(&StringLiteral_7147/*"FrameInOutEnd"*/);
+    byte_596D6A6 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10 = ScrPlayerStatus_TypeInfo;
@@ -1083,72 +1087,68 @@ void ScrPlayerStatus__FrameInOut(ScrPlayerStatus_o *this, bool is_framein, bool 
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v8, v16);
     IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(MV_SPD_TIME, 0);
     LocalPosition = GameObjectExtensions__GetLocalPosition(v12, 0);
-    y = LocalPosition.fields.y;
-    z = LocalPosition.fields.z;
-    v52 = GameObjectExtensions__GetLocalPosition(v12, 0);
-    v28 = v52.fields.y;
-    v29 = v52.fields.z;
+    v48 = GameObjectExtensions__GetLocalPosition(v12, 0);
     gameObject = (UnityEngine_GameObject_o *)UITweener__Begin_object_(
                                                v12,
                                                IntpTime_AutoResume,
-                                               (const MethodInfo_39D1264 *)Method_UITweener_Begin_TweenPosition___);
+                                               (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
     if ( gameObject )
     {
-      v30 = gameObject;
+      v26 = gameObject;
       if ( is_framein )
-        v31 = FRAME_OUT_POS_X;
+        v27 = FRAME_OUT_POS_X;
       else
-        v31 = mFrameInPosX;
+        v27 = mFrameInPosX;
       if ( is_framein )
-        v32 = v28;
+        y = v48.fields.y;
       else
-        v32 = y;
+        y = LocalPosition.fields.y;
       if ( is_framein )
-        v33 = v29;
+        z = v48.fields.z;
       else
-        v33 = z;
+        z = LocalPosition.fields.z;
       if ( is_framein )
-        v34 = mFrameInPosX;
+        v30 = mFrameInPosX;
       else
-        v34 = FRAME_OUT_POS_X;
+        v30 = FRAME_OUT_POS_X;
       if ( is_framein )
-        v35 = y;
+        v31 = LocalPosition.fields.y;
       else
-        v35 = v28;
+        v31 = v48.fields.y;
       LODWORD(gameObject[1].monitor) = 2;
-      *(float *)&gameObject[5].monitor = v31;
-      *((float *)&gameObject[5].monitor + 1) = v32;
+      *(float *)&gameObject[5].monitor = v27;
+      *((float *)&gameObject[5].monitor + 1) = y;
       if ( is_framein )
-        v36 = z;
+        v32 = LocalPosition.fields.z;
       else
-        v36 = v29;
-      *(float *)&gameObject[5].fields.m_CachedPtr = v33;
-      *((float *)&gameObject[5].fields.m_CachedPtr + 1) = v34;
-      *(float *)&gameObject[6].klass = v35;
-      *((float *)&gameObject[6].klass + 1) = v36;
-      v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      v30[3].monitor = v37;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v30[3].monitor, (int32_t)v37, v38, v39, v40, v41, v42, v43);
-      v44 = StringLiteral_7135/*"FrameInOutEnd"*/;
-      v30[3].fields.m_CachedPtr = StringLiteral_7135/*"FrameInOutEnd"*/;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v30[3].fields, v44, v45, v46, v47, v48, v49, v50);
+        v32 = v48.fields.z;
+      *(float *)&gameObject[5].fields.m_CachedPtr = z;
+      *((float *)&gameObject[5].fields.m_CachedPtr + 1) = v30;
+      *(float *)&gameObject[6].klass = v31;
+      *((float *)&gameObject[6].klass + 1) = v32;
+      v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v26[3].monitor = v33;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[3].monitor, (int32_t)v33, v34, v35, v36, v37, v38, v39);
+      v40 = StringLiteral_7147/*"FrameInOutEnd"*/;
+      v26[3].fields.m_CachedPtr = StringLiteral_7147/*"FrameInOutEnd"*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[3].fields, v40, v41, v42, v43, v44, v45, v46);
       return;
     }
 LABEL_42:
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
   if ( !v12 )
     goto LABEL_42;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v12,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
-    UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
+    UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
   }
   GameObjectExtensions__SetLocalPositionX(v12, v15, 0);
   ScrPlayerStatus__FrameInOutEnd(this, v22);
@@ -1159,13 +1159,13 @@ void ScrPlayerStatus__FrameInOutEnd(ScrPlayerStatus_o *this, const MethodInfo *m
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_5935565 & 1) == 0 )
+  if ( (byte_596D6A7 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_7261/*"GO_NEXT"*/);
-    byte_5935565 = 1;
+    sub_2213A60(&StringLiteral_7273/*"GO_NEXT"*/);
+    byte_596D6A7 = 1;
   }
   ScrPlayerStatus__UpdatePanel(this, method);
-  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7261/*"GO_NEXT"*/, v3);
+  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7273/*"GO_NEXT"*/, v3);
 }
 
 
@@ -1195,18 +1195,18 @@ MasterMissionComponent_MasterMissionInfoItem_o *ScrPlayerStatus__GetDailyMission
   int32_t max_length; // w20
   int32_t v15; // w22
 
-  if ( (byte_5935552 & 1) == 0 )
+  if ( (byte_596D694 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventMissionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
-    byte_5935552 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventMissionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+    byte_596D694 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, mstMissionEntity, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMissionMaster___);
-  DailyMasterMissionList = (EventMissionEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMissionMaster___);
+  DailyMasterMissionList = (EventMissionEntity_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
   if ( !mstMissionEntity )
     goto LABEL_14;
   if ( !Master_object )
@@ -1235,12 +1235,12 @@ MasterMissionComponent_MasterMissionInfoItem_o *ScrPlayerStatus__GetDailyMission
       AchiveMissionNum = UserEventMissionMaster__getAchiveMissionNum(v7, mstMissionEntity->fields.id, 0);
       max_length = v10->max_length;
       v15 = AchiveMissionNum;
-      v12 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_21FFEBC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+      v12 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_2213CCC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
       MasterMissionComponent_MasterMissionInfoItem___ctor(v12, mstMissionEntity, max_length, MissionClearCount, v15, 0);
       return v12;
     }
 LABEL_14:
-    sub_21FFECC(DailyMasterMissionList, v6);
+    sub_2213CDC(DailyMasterMissionList, v6);
   }
   return v12;
 }
@@ -1259,12 +1259,12 @@ int32_t ScrPlayerStatus__GetEnabledMstMissionCount(ScrPlayerStatus_o *this, cons
   Il2CppObject *Item; // x0
   const MethodInfo *v12; // x3
 
-  if ( (byte_593555B & 1) == 0 )
+  if ( (byte_596D69D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593555B = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596D69D = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
@@ -1286,7 +1286,7 @@ int32_t ScrPlayerStatus__GetEnabledMstMissionCount(ScrPlayerStatus_o *this, cons
       Item = System_Collections_Generic_List_object___get_Item(
                Time,
                v10++,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
       v9 += ScrPlayerStatus__IsEnabledMstMission(
               (ScrPlayerStatus_o *)Item,
               (MasterMissionComponent_MasterMissionInfoItem_o *)Item,
@@ -1296,7 +1296,7 @@ int32_t ScrPlayerStatus__GetEnabledMstMissionCount(ScrPlayerStatus_o *this, cons
         return v9;
     }
 LABEL_13:
-    sub_21FFECC(Time, v5);
+    sub_2213CDC(Time, v5);
   }
   return 0;
 }
@@ -1315,12 +1315,12 @@ int32_t ScrPlayerStatus__GetFirstMstMissionIndex(ScrPlayerStatus_o *this, int32_
   ScrPlayerStatus_o *MissionType; // x0
   const MethodInfo *v13; // x3
 
-  if ( (byte_593555A & 1) == 0 )
+  if ( (byte_596D69C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593555A = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596D69C = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&targetType, method);
@@ -1341,7 +1341,7 @@ int32_t ScrPlayerStatus__GetFirstMstMissionIndex(ScrPlayerStatus_o *this, int32_
       Time = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             Time,
                                                             v10,
-                                                            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                                                            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
       if ( !Time )
         break;
       v11 = (MasterMissionComponent_MasterMissionInfoItem_o *)Time;
@@ -1355,7 +1355,7 @@ int32_t ScrPlayerStatus__GetFirstMstMissionIndex(ScrPlayerStatus_o *this, int32_
         return -1;
     }
 LABEL_16:
-    sub_21FFECC(Time, v6);
+    sub_2213CDC(Time, v6);
   }
   return -1;
 }
@@ -1379,12 +1379,12 @@ int32_t ScrPlayerStatus__GetMissionClearCount(
   __int64 v14; // x1
   __int64 v15; // x2
   bool IsIgnoreStartCondition; // w25
-  int32_t MissionProgressType_54785828; // w0
+  int32_t MissionProgressType_55002764; // w0
 
-  if ( (byte_5935554 & 1) == 0 )
+  if ( (byte_596D696 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    byte_5935554 = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&MissionInfoMaker_TypeInfo);
+    byte_596D696 = 1;
   }
   if ( !eventMissionList )
     goto LABEL_16;
@@ -1396,7 +1396,7 @@ int32_t ScrPlayerStatus__GetMissionClearCount(
     while ( 1 )
     {
       if ( v6 >= (unsigned int)max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v8 = &eventMissionList->obj.klass + v6;
       v9 = (EventMissionEntity_o *)v8[4];
       if ( !v9 )
@@ -1408,7 +1408,7 @@ int32_t ScrPlayerStatus__GetMissionClearCount(
       IsIgnoreStartCondition = EventMissionEntity__IsIgnoreStartCondition(v9, 0);
       if ( !*(&MissionInfoMaker_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, v14, v15);
-      MissionProgressType_54785828 = MissionInfoMaker__GetMissionProgressType_54785828(
+      MissionProgressType_55002764 = MissionInfoMaker__GetMissionProgressType_55002764(
                                        missionTargetId,
                                        id,
                                        v13,
@@ -1417,7 +1417,7 @@ int32_t ScrPlayerStatus__GetMissionClearCount(
       this = (ScrPlayerStatus_o *)MissionInfoMaker__GetProgStatus(
                                     v9->fields.missionTargetId,
                                     v9->fields.id,
-                                    MissionProgressType_54785828,
+                                    MissionProgressType_55002764,
                                     v13,
                                     0);
       max_length = eventMissionList->max_length;
@@ -1428,7 +1428,7 @@ int32_t ScrPlayerStatus__GetMissionClearCount(
         return v7;
     }
 LABEL_16:
-    sub_21FFECC(this, eventMissionList);
+    sub_2213CDC(this, eventMissionList);
   }
   return 0;
 }
@@ -1462,12 +1462,12 @@ int32_t ScrPlayerStatus__GetNextMstMissionIndex(ScrPlayerStatus_o *this, int32_t
   const MethodInfo *v12; // x3
 
   v3 = startIndex;
-  if ( (byte_5935559 & 1) == 0 )
+  if ( (byte_596D69B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5935559 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596D69B = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&startIndex, method);
@@ -1475,7 +1475,7 @@ int32_t ScrPlayerStatus__GetNextMstMissionIndex(ScrPlayerStatus_o *this, int32_t
   currentMissionList = this->fields.currentMissionList;
   if ( !currentMissionList )
 LABEL_16:
-    sub_21FFECC(Time, v6);
+    sub_2213CDC(Time, v6);
   size = currentMissionList->fields._size;
   v9 = (int64_t)Time;
   v10 = (size & ~(size >> 31)) + 1;
@@ -1491,7 +1491,7 @@ LABEL_16:
     Item = System_Collections_Generic_List_object___get_Item(
              Time,
              v3,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
     if ( ScrPlayerStatus__IsEnabledMstMission(
            (ScrPlayerStatus_o *)Item,
            (MasterMissionComponent_MasterMissionInfoItem_o *)Item,
@@ -1531,14 +1531,14 @@ System_String_o *ScrPlayerStatus__GetTimeApRecoverStr(
   int v22; // [xsp+Ch] [xbp-44h] BYREF
 
   v5 = time;
-  if ( (byte_593554E & 1) == 0 )
+  if ( (byte_596D690 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_15407/*"USER_ACTION_POINT_MAX_TIME"*/);
-    sub_21FFC50(&StringLiteral_15409/*"USER_ACTION_POINT_NEXT_TIME"*/);
-    sub_21FFC50(&StringLiteral_15408/*"USER_ACTION_POINT_MAX_TIME_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_15410/*"USER_ACTION_POINT_NEXT_TIME_FORMAT"*/);
-    byte_593554E = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_15437/*"USER_ACTION_POINT_MAX_TIME"*/);
+    sub_2213A60(&StringLiteral_15439/*"USER_ACTION_POINT_NEXT_TIME"*/);
+    sub_2213A60(&StringLiteral_15438/*"USER_ACTION_POINT_MAX_TIME_FORMAT"*/);
+    sub_2213A60(&StringLiteral_15440/*"USER_ACTION_POINT_NEXT_TIME_FORMAT"*/);
+    byte_596D690 = 1;
   }
   v6 = v5 / 3600;
   v7 = v5 / 60 - 60 * (v5 / 3600);
@@ -1548,29 +1548,29 @@ System_String_o *ScrPlayerStatus__GetTimeApRecoverStr(
   {
     if ( !v9 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, time, isGetMax);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15407/*"USER_ACTION_POINT_MAX_TIME"*/, 0);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_15408/*"USER_ACTION_POINT_MAX_TIME_FORMAT"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15437/*"USER_ACTION_POINT_MAX_TIME"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_15438/*"USER_ACTION_POINT_MAX_TIME_FORMAT"*/, 0);
     v22 = v6;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v22);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v22);
     v21 = v7;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21);
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21);
     v20 = v8;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v20);
-    v15 = System_String__Format_75484644(v11, v12, v13, v14, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v20);
+    v15 = System_String__Format_75697948(v11, v12, v13, v14, 0);
   }
   else
   {
     if ( !v9 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, time, isGetMax);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15409/*"USER_ACTION_POINT_NEXT_TIME"*/, 0);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15410/*"USER_ACTION_POINT_NEXT_TIME_FORMAT"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15439/*"USER_ACTION_POINT_NEXT_TIME"*/, 0);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15440/*"USER_ACTION_POINT_NEXT_TIME_FORMAT"*/, 0);
     v22 = v7;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v22);
+    v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v22);
     v21 = v8;
-    v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21);
-    v15 = System_String__Format_75484576(v16, v17, v18, 0);
+    v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21);
+    v15 = System_String__Format_75697880(v16, v17, v18, 0);
   }
-  return System_String__Concat_75438412(v10, v15, 0);
+  return System_String__Concat_75651716(v10, v15, 0);
 }
 
 
@@ -1587,17 +1587,17 @@ System_String_o *ScrPlayerStatus__GetTimeCommandSpellRecoverStr(
   int v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v3 = time;
-  if ( (byte_593554F & 1) == 0 )
+  if ( (byte_596D691 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_26422/*"{0:D}:{1:D2}"*/);
-    byte_593554F = 1;
+    sub_2213A60(&StringLiteral_26473/*"{0:D}:{1:D2}"*/);
+    byte_596D691 = 1;
   }
   v4 = v3 % 60;
   v9 = v3 / 60;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v9);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v9);
   v8 = v4;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v8);
-  return System_String__Format_75484576((System_String_o *)StringLiteral_26422/*"{0:D}:{1:D2}"*/, v5, v6, 0);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v8);
+  return System_String__Format_75697880((System_String_o *)StringLiteral_26473/*"{0:D}:{1:D2}"*/, v5, v6, 0);
 }
 
 
@@ -1623,7 +1623,7 @@ void ScrPlayerStatus__HideMstMissionIconLb(ScrPlayerStatus_o *this, const Method
         (masterMissionDailyBgObj = this->fields.masterMissionAnimationLabelsRoot) == 0) )
   {
 LABEL_8:
-    sub_21FFECC(masterMissionDailyBgObj, method);
+    sub_2213CDC(masterMissionDailyBgObj, method);
   }
   UnityEngine_GameObject__SetActive(masterMissionDailyBgObj, 0, 0);
 }
@@ -1649,12 +1649,12 @@ void ScrPlayerStatus__InitApRecoverLb(ScrPlayerStatus_o *this, const MethodInfo 
   __int64 v18; // x1
   AlphaTransitionCalculator_o *apRecoverStrAlphaCalculator; // x0
 
-  if ( (byte_5935549 & 1) == 0 )
+  if ( (byte_596D68B & 1) == 0 )
   {
-    sub_21FFC50(&AlphaTransitionCalculator_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&TitleInfoControl_TypeInfo);
-    byte_5935549 = 1;
+    sub_2213A60(&AlphaTransitionCalculator_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&TitleInfoControl_TypeInfo);
+    byte_596D68B = 1;
   }
   v4 = ScrPlayerStatus_TypeInfo;
   if ( !*(&ScrPlayerStatus_TypeInfo->_2.cctor_finished + 1) )
@@ -1674,10 +1674,10 @@ void ScrPlayerStatus__InitApRecoverLb(ScrPlayerStatus_o *this, const MethodInfo 
           v8->static_fields->EVENT_ALPHA_ANIM_SPD_RATE,
           (float)ScrPlayerStatus_TypeInfo->static_fields->AP_RECOVER_STR_FADE_FRAME_NUM,
           0);
-  v11 = (AlphaTransitionCalculator_o *)sub_21FFEBC(AlphaTransitionCalculator_TypeInfo);
+  v11 = (AlphaTransitionCalculator_o *)sub_2213CCC(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v11, v9, v10, 0);
   this->fields.apRecoverStrAlphaCalculator = v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.apRecoverStrAlphaCalculator,
     (int32_t)v11,
     v12,
@@ -1688,7 +1688,7 @@ void ScrPlayerStatus__InitApRecoverLb(ScrPlayerStatus_o *this, const MethodInfo 
     v17);
   apRecoverStrAlphaCalculator = this->fields.apRecoverStrAlphaCalculator;
   if ( !apRecoverStrAlphaCalculator )
-    sub_21FFECC(0, v18);
+    sub_2213CDC(0, v18);
   AlphaTransitionCalculator__MakeFadeInFinished(apRecoverStrAlphaCalculator, 0);
   this->fields.ApRecoverStrUpdateTimer = 0.0;
   this->fields.isDispMax = 1;
@@ -1702,7 +1702,7 @@ void ScrPlayerStatus__InitCompleteMissionLb(ScrPlayerStatus_o *this, const Metho
 
   completeMissionViewController = this->fields.completeMissionViewController;
   if ( !completeMissionViewController )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CompleteMissionViewController__Refresh(completeMissionViewController, 0);
   ScrPlayerStatus__UpdateCompleteMissionIconVisibility(this, v4);
 }
@@ -1732,14 +1732,14 @@ void ScrPlayerStatus__InitMstMissionLb(ScrPlayerStatus_o *this, const MethodInfo
   Il2CppObject *Item; // x1
   const MethodInfo *v23; // x2
 
-  if ( (byte_5935555 & 1) == 0 )
+  if ( (byte_596D697 & 1) == 0 )
   {
-    sub_21FFC50(&AlphaTransitionCalculator_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&TitleInfoControl_TypeInfo);
-    byte_5935555 = 1;
+    sub_2213A60(&AlphaTransitionCalculator_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&TitleInfoControl_TypeInfo);
+    byte_596D697 = 1;
   }
   masterMissionAlertPanel = (AlphaTransitionCalculator_o *)this->fields.masterMissionAlertPanel;
   this->fields.mstMissionIconUpdateTimer = 0.0;
@@ -1769,10 +1769,10 @@ void ScrPlayerStatus__InitMstMissionLb(ScrPlayerStatus_o *this, const MethodInfo
             v11->static_fields->EVENT_ALPHA_ANIM_SPD_RATE,
             (float)ScrPlayerStatus_TypeInfo->static_fields->MISSION_ALERT_FADE_FRAME_NUM,
             0);
-    v13 = (AlphaTransitionCalculator_o *)sub_21FFEBC(AlphaTransitionCalculator_TypeInfo);
+    v13 = (AlphaTransitionCalculator_o *)sub_2213CCC(AlphaTransitionCalculator_TypeInfo);
     AlphaTransitionCalculator___ctor(v13, v10, v12, 0);
     *p_missionAlertAlphaCalculator = v13;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.missionAlertAlphaCalculator,
       (int32_t)v13,
       v14,
@@ -1809,12 +1809,12 @@ void ScrPlayerStatus__InitMstMissionLb(ScrPlayerStatus_o *this, const MethodInfo
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)masterMissionAlertPanel,
                  this->fields.currentMissionIndex,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
         ScrPlayerStatus__ChangeViewMstMissionLb(this, (MasterMissionComponent_MasterMissionInfoItem_o *)Item, v23);
         return;
       }
 LABEL_19:
-      sub_21FFECC(masterMissionAlertPanel, method);
+      sub_2213CDC(masterMissionAlertPanel, method);
     }
   }
   ScrPlayerStatus__HideMstMissionIconLb(this, method);
@@ -1827,7 +1827,7 @@ bool ScrPlayerStatus__IsBPActive(ScrPlayerStatus_o *this, const MethodInfo *meth
 
   rpRoot = (UnityEngine_Component_o *)this->fields.rpRoot;
   if ( !rpRoot || (rpRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(rpRoot, 0)) == 0 )
-    sub_21FFECC(rpRoot, method);
+    sub_2213CDC(rpRoot, method);
   return UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)rpRoot, 0);
 }
 
@@ -1838,7 +1838,7 @@ bool ScrPlayerStatus__IsCommandSpellActive(ScrPlayerStatus_o *this, const Method
 
   commandSpellWindow = (BattleWindowComponent_o *)this->fields.commandSpellWindow;
   if ( !commandSpellWindow )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return BattleWindowComponent__isOpen(commandSpellWindow, 0);
 }
 
@@ -1854,7 +1854,7 @@ bool ScrPlayerStatus__IsEnabledMstMission(
   int64_t endedAt; // x8
 
   if ( !missionInfo || (MstMissionEntity_k__BackingField = missionInfo->fields._MstMissionEntity_k__BackingField) == 0 )
-    sub_21FFECC(this, missionInfo);
+    sub_2213CDC(this, missionInfo);
   MissionType = MstMissionEntity__getMissionType(missionInfo->fields._MstMissionEntity_k__BackingField, 0);
   if ( (unsigned int)(MissionType - 2) >= 2 )
   {
@@ -1885,19 +1885,19 @@ bool ScrPlayerStatus__IsEventMapAndSpotClosed(ScrPlayerStatus_o *this, const Met
   struct CompleteMissionViewController_o *completeMissionViewController; // x8
   TerminalPramsManager_c *v14; // x0
 
-  if ( (byte_5935567 & 1) == 0 )
+  if ( (byte_596D6A9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935567 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6A9 = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v2);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   mInstance = (TerminalSceneComponent_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -1915,10 +1915,10 @@ bool ScrPlayerStatus__IsEventMapAndSpotClosed(ScrPlayerStatus_o *this, const Met
     return 0;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v7);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v8 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -1933,10 +1933,10 @@ bool ScrPlayerStatus__IsEventMapAndSpotClosed(ScrPlayerStatus_o *this, const Met
     return 0;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v10);
-  if ( !byte_5932644 )
+  if ( !byte_596A743 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5932644 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596A743 = 1;
   }
   v11 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1948,15 +1948,15 @@ bool ScrPlayerStatus__IsEventMapAndSpotClosed(ScrPlayerStatus_o *this, const Met
   completeMissionViewController = this->fields.completeMissionViewController;
   if ( !completeMissionViewController )
 LABEL_37:
-    sub_21FFECC(mInstance, method);
+    sub_2213CDC(mInstance, method);
   if ( (_DWORD)mInstance != completeMissionViewController->fields.currentEventId )
     return 0;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v12);
-  if ( !byte_5934F8D )
+  if ( !byte_596D0BD )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934F8D = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D0BD = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1981,18 +1981,18 @@ bool ScrPlayerStatus__IsExRoomActive(ScrPlayerStatus_o *this, const MethodInfo *
   __int64 v10; // x2
   System_Collections_Generic_List_GameObject__c *v12; // x8
 
-  if ( (byte_593556A & 1) == 0 )
+  if ( (byte_596D6AC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_593556A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6AC = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v2);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2007,10 +2007,10 @@ bool ScrPlayerStatus__IsExRoomActive(ScrPlayerStatus_o *this, const MethodInfo *
     return 0;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v5, v6);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v7 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2028,10 +2028,10 @@ bool ScrPlayerStatus__IsExRoomActive(ScrPlayerStatus_o *this, const MethodInfo *
     return 0;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v5, v10);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v7 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2042,7 +2042,7 @@ bool ScrPlayerStatus__IsExRoomActive(ScrPlayerStatus_o *this, const MethodInfo *
   v12 = v7->fields.itemGetEffectInstances->klass;
   if ( !v12 || (v7 = *(ScrTerminalListTop_o **)&v12->_2.element_size) == 0 )
 LABEL_32:
-    sub_21FFECC(v7, v5);
+    sub_2213CDC(v7, v5);
   return ScrTerminalListTop__IsExRoomActive(v7, 0);
 }
 
@@ -2059,17 +2059,17 @@ bool ScrPlayerStatus__IsTouchable(ScrPlayerStatus_o *this, const MethodInfo *met
   ScrTerminalListTop_o *v3; // x0
   System_Collections_Generic_List_GameObject__c *klass; // x8
 
-  if ( (byte_5935533 & 1) == 0 )
+  if ( (byte_596D675 & 1) == 0 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935533 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D675 = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v2);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v3 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2079,7 +2079,7 @@ bool ScrPlayerStatus__IsTouchable(ScrPlayerStatus_o *this, const MethodInfo *met
   }
   klass = v3->fields.itemGetEffectInstances->klass;
   if ( !klass || (v3 = *(ScrTerminalListTop_o **)&klass->_2.element_size) == 0 )
-    sub_21FFECC(v3, method);
+    sub_2213CDC(v3, method);
   return !ScrTerminalListTop__IsListSliding(v3, 0);
 }
 
@@ -2097,13 +2097,13 @@ void ScrPlayerStatus__OnClickApRecoverBtn(ScrPlayerStatus_o *this, const MethodI
   __int64 v10; // x1
 
   v2 = this;
-  if ( (byte_593552E & 1) == 0 )
+  if ( (byte_596D670 & 1) == 0 )
   {
-    sub_21FFC50(&RecoverDlgComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickApRecoverBtn_b__144_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_593552E = 1;
+    sub_2213A60(&RecoverDlgComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickApRecoverBtn_b__144_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D670 = 1;
   }
   if ( v2->fields.mIsEnableApRecoverBtn && ScrPlayerStatus__IsTouchable(this, method) )
   {
@@ -2111,15 +2111,15 @@ void ScrPlayerStatus__OnClickApRecoverBtn(ScrPlayerStatus_o *this, const MethodI
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v3, v4);
     TerminalPramsManager__PlaySystemSE(0, 0);
     ScrPlayerStatus__SetVisibilitySpotWebView(v5, 0, v6);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v8 = (RecoverDlgComponent_CallbackFunc_o *)sub_21FFEBC(RecoverDlgComponent_CallbackFunc_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = (RecoverDlgComponent_CallbackFunc_o *)sub_2213CCC(RecoverDlgComponent_CallbackFunc_TypeInfo);
     RecoverDlgComponent_CallbackFunc___ctor(
       v8,
       (Il2CppObject *)v2,
       Method_ScrPlayerStatus__OnClickApRecoverBtn_b__144_0__,
       0);
     if ( !Instance )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     CommonUI__OpenApRecoverItemListDialog((CommonUI_o *)Instance, 0, v8, 1, 0);
   }
 }
@@ -2143,13 +2143,13 @@ void ScrPlayerStatus__OnClickCloseNextExp(ScrPlayerStatus_o *this, const MethodI
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5935537 & 1) == 0 )
+  if ( (byte_596D679 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__OnClickCloseNextExp_b__154_0__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935537 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__OnClickCloseNextExp_b__154_0__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D679 = 1;
   }
   if ( !this->fields.isDisableCloseNextExpBtn )
   {
@@ -2174,11 +2174,11 @@ void ScrPlayerStatus__OnClickCloseNextExp(ScrPlayerStatus_o *this, const MethodI
         static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
       }
       v10 = (Il2CppObject *)static_fields->__9;
-      _9__154_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      _9__154_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(_9__154_0, v10, Method_ScrPlayerStatus___c__OnClickCloseNextExp_b__154_0__, 0);
       v11 = ScrPlayerStatus___c_TypeInfo->static_fields;
       v11->__9__154_0 = _9__154_0;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v11->__9__154_0,
         (int32_t)_9__154_0,
         v12,
@@ -2189,7 +2189,7 @@ void ScrPlayerStatus__OnClickCloseNextExp(ScrPlayerStatus_o *this, const MethodI
         v17);
     }
     if ( !nextExpDialog )
-      sub_21FFECC(v7, v4);
+      sub_2213CDC(v7, v4);
     BaseDialog__Close(nextExpDialog, _9__154_0, 0);
   }
 }
@@ -2236,41 +2236,41 @@ void ScrPlayerStatus__OnClickCompleteMissionBtn(ScrPlayerStatus_o *this, const M
   bool v38; // w7
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_593552A & 1) == 0 )
+  if ( (byte_596D66C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_object___);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__OnClickCompleteMissionBtn_b__140_1__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_3848/*"COMPLETE_MISSION_END"*/);
-    byte_593552A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_object___);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__OnClickCompleteMissionBtn_b__140_1__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_3853/*"COMPLETE_MISSION_END"*/);
+    byte_596D66C = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_40;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMissionMaster___);
     if ( !Instance )
       goto LABEL_40;
     if ( EventMissionMaster__isActiveCompMission((EventMissionMaster_o *)Instance, 0) )
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v5);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       Instance = (DataManager_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2289,7 +2289,7 @@ void ScrPlayerStatus__OnClickCompleteMissionBtn(ScrPlayerStatus_o *this, const M
           if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v10);
           TerminalPramsManager__PlaySystemSE(0, 0);
-          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v14 = AvalonSceneManager_TypeInfo;
           if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
           {
@@ -2297,7 +2297,7 @@ void ScrPlayerStatus__OnClickCompleteMissionBtn(ScrPlayerStatus_o *this, const M
             v14 = AvalonSceneManager_TypeInfo;
           }
           DEFAULT_FADE_TIME = v14->static_fields->DEFAULT_FADE_TIME;
-          v16 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+          v16 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
           System_Action___ctor(v16, v2, Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_0__, 0);
           if ( v13 )
           {
@@ -2307,28 +2307,28 @@ void ScrPlayerStatus__OnClickCompleteMissionBtn(ScrPlayerStatus_o *this, const M
         }
       }
 LABEL_40:
-      sub_21FFECC(Instance, v4);
+      sub_2213CDC(Instance, v4);
     }
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v4, v5);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3848/*"COMPLETE_MISSION_END"*/, 0);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3853/*"COMPLETE_MISSION_END"*/, 0);
     v21 = Method_System_Array_Empty_object___;
     v22 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
     if ( !v22 )
     {
-      sub_2237B54(Method_System_Array_Empty_object___);
+      sub_224B964(Method_System_Array_Empty_object___);
       v22 = v21[7];
     }
     v23 = *(_QWORD *)(v22 + 16);
     if ( (*(_WORD *)(v23 + 309) & 1) == 0 )
-      v23 = sub_2237AF8(v20);
+      v23 = sub_224B908(v20);
     if ( !*(_DWORD *)(v23 + 228) )
       *(__n128 *)&v20 = j_il2cpp_runtime_class_init_0(v23, v17, v18);
     v24 = *(_QWORD *)(v21[7] + 16LL);
     if ( (*(_WORD *)(v24 + 309) & 1) == 0 )
-      v24 = sub_2237AF8(v20);
-    v25 = System_String__Format_75484712(v19, **(System_Object_array ***)(v24 + 184), 0);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v24 = sub_224B908(v20);
+    v25 = System_String__Format_75698016(v19, **(System_Object_array ***)(v24 + 184), 0);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v27 = (CommonUI_o *)Instance;
     v28 = ScrPlayerStatus___c_TypeInfo;
     if ( !*(&ScrPlayerStatus___c_TypeInfo->_2.cctor_finished + 1) )
@@ -2346,11 +2346,11 @@ LABEL_40:
         static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
       }
       v31 = (Il2CppObject *)static_fields->__9;
-      _9__140_1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      _9__140_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(_9__140_1, v31, Method_ScrPlayerStatus___c__OnClickCompleteMissionBtn_b__140_1__, 0);
       v32 = ScrPlayerStatus___c_TypeInfo->static_fields;
       v32->__9__140_1 = _9__140_1;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v32->__9__140_1,
         (int32_t)_9__140_1,
         v33,
@@ -2388,24 +2388,24 @@ void ScrPlayerStatus__OnClickDailyMissionInfoBtn(ScrPlayerStatus_o *this, const 
   System_Action_o *v18; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_593552B & 1) == 0 )
+  if ( (byte_596D66D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickDailyMissionInfoBtn_b__141_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_593552B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickDailyMissionInfoBtn_b__141_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D66D = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2420,10 +2420,10 @@ void ScrPlayerStatus__OnClickDailyMissionInfoBtn(ScrPlayerStatus_o *this, const 
     if ( !genericContainerHandle )
       goto LABEL_25;
     ScrTerminalMap__DestroyEventActionEffect(genericContainerHandle, 0);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2442,7 +2442,7 @@ void ScrPlayerStatus__OnClickDailyMissionInfoBtn(ScrPlayerStatus_o *this, const 
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v11, v12);
     TerminalPramsManager__PlaySystemSE(0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v16 = AvalonSceneManager_TypeInfo;
     if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -2450,11 +2450,11 @@ void ScrPlayerStatus__OnClickDailyMissionInfoBtn(ScrPlayerStatus_o *this, const 
       v16 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v16->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v18, v2, Method_ScrPlayerStatus__OnClickDailyMissionInfoBtn_b__141_0__, 0);
     if ( !Instance )
 LABEL_25:
-      sub_21FFECC(genericContainerHandle, v3);
+      sub_2213CDC(genericContainerHandle, v3);
     CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v18, 0);
   }
 }
@@ -2481,24 +2481,24 @@ void ScrPlayerStatus__OnClickLimitedMissionInfoBtn(ScrPlayerStatus_o *this, cons
   System_Action_o *v18; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_593552D & 1) == 0 )
+  if ( (byte_596D66F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickLimitedMissionInfoBtn_b__143_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_593552D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickLimitedMissionInfoBtn_b__143_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D66F = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2513,10 +2513,10 @@ void ScrPlayerStatus__OnClickLimitedMissionInfoBtn(ScrPlayerStatus_o *this, cons
     if ( !genericContainerHandle )
       goto LABEL_25;
     ScrTerminalMap__DestroyEventActionEffect(genericContainerHandle, 0);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2535,7 +2535,7 @@ void ScrPlayerStatus__OnClickLimitedMissionInfoBtn(ScrPlayerStatus_o *this, cons
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v11, v12);
     TerminalPramsManager__PlaySystemSE(0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v16 = AvalonSceneManager_TypeInfo;
     if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -2543,11 +2543,11 @@ void ScrPlayerStatus__OnClickLimitedMissionInfoBtn(ScrPlayerStatus_o *this, cons
       v16 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v16->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v18, v2, Method_ScrPlayerStatus__OnClickLimitedMissionInfoBtn_b__143_0__, 0);
     if ( !Instance )
 LABEL_25:
-      sub_21FFECC(genericContainerHandle, v3);
+      sub_2213CDC(genericContainerHandle, v3);
     CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v18, 0);
   }
 }
@@ -2558,10 +2558,10 @@ void ScrPlayerStatus__OnClickLocation(ScrPlayerStatus_o *this, const MethodInfo 
   __int64 v2; // x2
   const MethodInfo *v4; // x1
 
-  if ( (byte_5935538 & 1) == 0 )
+  if ( (byte_596D67A & 1) == 0 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5935538 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D67A = 1;
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
@@ -2600,24 +2600,24 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
   void *image; // x8
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_5935530 & 1) == 0 )
+  if ( (byte_596D672 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickMasterFaceBtn_b__146_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935530 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickMasterFaceBtn_b__146_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D672 = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2632,10 +2632,10 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
     if ( !genericContainerHandle )
       goto LABEL_35;
     ScrTerminalMap__DestroyEventActionEffect(genericContainerHandle, 0);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2654,7 +2654,7 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v10);
     TerminalPramsManager__PlaySystemSE(0, 0);
     ScrPlayerStatus__SetVisibilitySpotWebView(v11, 0, v12);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v16 = AvalonSceneManager_TypeInfo;
     if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -2662,7 +2662,7 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
       v16 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v16->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v18, v2, Method_ScrPlayerStatus__OnClickMasterFaceBtn_b__146_0__, 0);
     if ( !Instance )
       goto LABEL_35;
@@ -2671,10 +2671,10 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v21);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2697,7 +2697,7 @@ void ScrPlayerStatus__OnClickMasterFaceBtn(ScrPlayerStatus_o *this, const Method
         }
       }
 LABEL_35:
-      sub_21FFECC(genericContainerHandle, v3);
+      sub_2213CDC(genericContainerHandle, v3);
     }
   }
 }
@@ -2724,24 +2724,24 @@ void ScrPlayerStatus__OnClickMasterMissionBtn(ScrPlayerStatus_o *this, const Met
   System_Action_o *v18; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_5935525 & 1) == 0 )
+  if ( (byte_596D667 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935525 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D667 = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2756,10 +2756,10 @@ void ScrPlayerStatus__OnClickMasterMissionBtn(ScrPlayerStatus_o *this, const Met
     if ( !genericContainerHandle )
       goto LABEL_25;
     ScrTerminalMap__DestroyEventActionEffect(genericContainerHandle, 0);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2778,7 +2778,7 @@ void ScrPlayerStatus__OnClickMasterMissionBtn(ScrPlayerStatus_o *this, const Met
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v11, v12);
     TerminalPramsManager__PlaySystemSE(0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v16 = AvalonSceneManager_TypeInfo;
     if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -2786,11 +2786,11 @@ void ScrPlayerStatus__OnClickMasterMissionBtn(ScrPlayerStatus_o *this, const Met
       v16 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v16->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v18, v2, Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_0__, 0);
     if ( !Instance )
 LABEL_25:
-      sub_21FFECC(genericContainerHandle, v3);
+      sub_2213CDC(genericContainerHandle, v3);
     CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v18, 0);
   }
 }
@@ -2806,29 +2806,29 @@ void ScrPlayerStatus__OnClickOpenNextExp(ScrPlayerStatus_o *this, const MethodIn
   BaseDialog_o *nextExpDialog; // x20
   System_Action_o *v9; // x21
 
-  if ( (byte_5935536 & 1) == 0 )
+  if ( (byte_596D678 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickOpenNextExp_b__153_0__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_422/*"#,0"*/);
-    byte_5935536 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickOpenNextExp_b__153_0__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&StringLiteral_422/*"#,0"*/);
+    byte_596D678 = 1;
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
   TerminalPramsManager__PlaySystemSE(0, 0);
   nextExpValLabel = this->fields.nextExpValLabel;
-  v5 = System_Int64__ToString_76930560((int64_t)&this->fields.nextExpVal, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+  v5 = System_Int64__ToString_77143864((int64_t)&this->fields.nextExpVal, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
   if ( !nextExpValLabel
     || (UILabel__set_text(nextExpValLabel, v5, 0),
         v7 = System_Action_TypeInfo,
         nextExpDialog = this->fields.nextExpDialog,
         this->fields.isDisableCloseNextExpBtn = 1,
-        v9 = (System_Action_o *)sub_21FFEBC(v7),
+        v9 = (System_Action_o *)sub_2213CCC(v7),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_ScrPlayerStatus__OnClickOpenNextExp_b__153_0__, 0),
         !nextExpDialog) )
   {
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
   BaseDialog__Open(nextExpDialog, v9, 0, 0, 0);
 }
@@ -2847,13 +2847,13 @@ void ScrPlayerStatus__OnClickRpRecoverBtn(ScrPlayerStatus_o *this, const MethodI
   __int64 v10; // x1
 
   v2 = this;
-  if ( (byte_593552F & 1) == 0 )
+  if ( (byte_596D671 & 1) == 0 )
   {
-    sub_21FFC50(&RecoverDlgComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickRpRecoverBtn_b__145_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_593552F = 1;
+    sub_2213A60(&RecoverDlgComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickRpRecoverBtn_b__145_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D671 = 1;
   }
   if ( v2->fields.mIsEnableRpRecoverBtn && ScrPlayerStatus__IsTouchable(this, method) )
   {
@@ -2861,15 +2861,15 @@ void ScrPlayerStatus__OnClickRpRecoverBtn(ScrPlayerStatus_o *this, const MethodI
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v3, v4);
     TerminalPramsManager__PlaySystemSE(0, 0);
     ScrPlayerStatus__SetVisibilitySpotWebView(v5, 0, v6);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v8 = (RecoverDlgComponent_CallbackFunc_o *)sub_21FFEBC(RecoverDlgComponent_CallbackFunc_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = (RecoverDlgComponent_CallbackFunc_o *)sub_2213CCC(RecoverDlgComponent_CallbackFunc_TypeInfo);
     RecoverDlgComponent_CallbackFunc___ctor(
       v8,
       (Il2CppObject *)v2,
       Method_ScrPlayerStatus__OnClickRpRecoverBtn_b__145_0__,
       0);
     if ( !Instance )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     CommonUI__OpenRpRecoverItemListDialog((CommonUI_o *)Instance, 0, v8, 1, 0);
   }
 }
@@ -2888,10 +2888,10 @@ void ScrPlayerStatus__OnClickSpellBtn(ScrPlayerStatus_o *this, const MethodInfo 
   struct CommandSpellWindowComponent_o *commandSpellWindow; // x0
 
   v2 = this;
-  if ( (byte_5935531 & 1) == 0 )
+  if ( (byte_596D673 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&Method_ScrPlayerStatus_OnClickSpellBtn__);
-    byte_5935531 = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&Method_ScrPlayerStatus_OnClickSpellBtn__);
+    byte_596D673 = 1;
   }
   IsTouchable = ScrPlayerStatus__IsTouchable(this, method);
   if ( IsTouchable )
@@ -2900,8 +2900,8 @@ void ScrPlayerStatus__OnClickSpellBtn(ScrPlayerStatus_o *this, const MethodInfo 
     {
       v5 = Method_ScrPlayerStatus_OnClickSpellBtn__;
       if ( (*((_BYTE *)Method_ScrPlayerStatus_OnClickSpellBtn__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_21FFC68(Method_ScrPlayerStatus_OnClickSpellBtn__);
-      v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+        v5 = (_QWORD *)sub_2213A78(Method_ScrPlayerStatus_OnClickSpellBtn__);
+      v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
     }
     else
@@ -2909,13 +2909,13 @@ void ScrPlayerStatus__OnClickSpellBtn(ScrPlayerStatus_o *this, const MethodInfo 
       ScrPlayerStatus__SetVisibilitySpotWebView((ScrPlayerStatus_o *)IsTouchable, 0, v4);
       v7 = Method_ScrPlayerStatus_OnClickSpellBtn__;
       if ( (*((_BYTE *)Method_ScrPlayerStatus_OnClickSpellBtn__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_21FFC68(Method_ScrPlayerStatus_OnClickSpellBtn__);
-      v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v7, v7[4]);
+        v7 = (_QWORD *)sub_2213A78(Method_ScrPlayerStatus_OnClickSpellBtn__);
+      v8 = (System_Reflection_MethodBase_o *)sub_2213A44(v7, v7[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
       MainMenuBar__SetMenuBtnColliderEnable(0, 0, 0);
       commandSpellWindow = v2->fields.commandSpellWindow;
       if ( !commandSpellWindow )
-        sub_21FFECC(0, v9);
+        sub_2213CDC(0, v9);
       ((void (__fastcall *)(struct CommandSpellWindowComponent_o *, _QWORD, const MethodInfo *))commandSpellWindow->klass->vtable._10_Open.methodPtr)(
         commandSpellWindow,
         0,
@@ -2946,24 +2946,24 @@ void ScrPlayerStatus__OnClickWeeklyMissionInfoBtn(ScrPlayerStatus_o *this, const
   System_Action_o *v18; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_593552C & 1) == 0 )
+  if ( (byte_596D66E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickWeeklyMissionInfoBtn_b__142_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_593552C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickWeeklyMissionInfoBtn_b__142_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D66E = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -2978,10 +2978,10 @@ void ScrPlayerStatus__OnClickWeeklyMissionInfoBtn(ScrPlayerStatus_o *this, const
     if ( !genericContainerHandle )
       goto LABEL_25;
     ScrTerminalMap__DestroyEventActionEffect(genericContainerHandle, 0);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3000,7 +3000,7 @@ void ScrPlayerStatus__OnClickWeeklyMissionInfoBtn(ScrPlayerStatus_o *this, const
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v11, v12);
     TerminalPramsManager__PlaySystemSE(0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v16 = AvalonSceneManager_TypeInfo;
     if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -3008,11 +3008,11 @@ void ScrPlayerStatus__OnClickWeeklyMissionInfoBtn(ScrPlayerStatus_o *this, const
       v16 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v16->static_fields->DEFAULT_FADE_TIME;
-    v18 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v18 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v18, v2, Method_ScrPlayerStatus__OnClickWeeklyMissionInfoBtn_b__142_0__, 0);
     if ( !Instance )
 LABEL_25:
-      sub_21FFECC(genericContainerHandle, v3);
+      sub_2213CDC(genericContainerHandle, v3);
     CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v18, 0);
   }
 }
@@ -3029,10 +3029,10 @@ void ScrPlayerStatus__OnCloseSpellWindow(ScrPlayerStatus_o *this, const MethodIn
   const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_5935532 & 1) == 0 )
+  if ( (byte_596D674 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&Method_ScrPlayerStatus_OnCloseSpellWindow__);
-    byte_5935532 = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&Method_ScrPlayerStatus_OnCloseSpellWindow__);
+    byte_596D674 = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
@@ -3043,8 +3043,8 @@ void ScrPlayerStatus__OnCloseSpellWindow(ScrPlayerStatus_o *this, const MethodIn
     {
       v5 = Method_ScrPlayerStatus_OnCloseSpellWindow__;
       if ( (*((_BYTE *)Method_ScrPlayerStatus_OnCloseSpellWindow__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_21FFC68(Method_ScrPlayerStatus_OnCloseSpellWindow__);
-      v6 = (System_Reflection_MethodBase_o *)sub_21FFC34(v5, v5[4]);
+        v5 = (_QWORD *)sub_2213A78(Method_ScrPlayerStatus_OnCloseSpellWindow__);
+      v6 = (System_Reflection_MethodBase_o *)sub_2213A44(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0);
       MainMenuBar__SetMenuBtnColliderEnable(1, 0, 0);
       ScrPlayerStatus__SetVisibilitySpotWebView(v7, 1, v8);
@@ -3058,7 +3058,7 @@ void ScrPlayerStatus__OnCloseSpellWindow(ScrPlayerStatus_o *this, const MethodIn
         return;
       }
 LABEL_11:
-      sub_21FFECC(commandSpellWindow, v3);
+      sub_2213CDC(commandSpellWindow, v3);
     }
   }
 }
@@ -3074,37 +3074,37 @@ void ScrPlayerStatus__OnDestroy(ScrPlayerStatus_o *this, const MethodInfo *metho
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
 
-  if ( (byte_5935520 & 1) == 0 )
+  if ( (byte_596D662 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__getInstance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935520 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__getInstance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D662 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
   if ( (*(_WORD *)(v4 + 309) & 1) == 0 )
-    v4 = sub_2237AF8(v3);
+    v4 = sub_224B908(v3);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_WORD *)(v5 + 309) & 1) == 0 )
-    v5 = sub_2237AF8(v3);
+    v5 = sub_224B908(v3);
   v6 = **(UnityEngine_Object_o ***)(v5 + 184);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Inequality(v6, 0, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_15;
     if ( CommonUI__IsActive_UserPresentBoxWindow((CommonUI_o *)Instance, 0) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__CloseUsrPresentList((CommonUI_o *)Instance, 0);
         return;
       }
 LABEL_15:
-      sub_21FFECC(Instance, v8);
+      sub_2213CDC(Instance, v8);
     }
   }
 }
@@ -3147,22 +3147,22 @@ void ScrPlayerStatus__OpenCompleteMission(
   __int64 v25; // x2
   TerminalSceneComponent_c *v26; // x0
 
-  if ( (byte_5935529 & 1) == 0 )
+  if ( (byte_596D66B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&CompleteMissionComponent_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_ExitCompleteMission__);
-    sub_21FFC50(&Method_ScrPlayerStatus__OpenCompleteMission_b__139_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935529 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&CompleteMissionComponent_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_ExitCompleteMission__);
+    sub_2213A60(&Method_ScrPlayerStatus__OpenCompleteMission_b__139_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D66B = 1;
   }
   if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, callback, *(_QWORD *)&typeIndex);
   SoundManager__stopSe(0.0, 0);
   this->fields.mAfterCloseCompleteMission = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mAfterCloseCompleteMission,
     (int32_t)callback,
     v7,
@@ -3174,10 +3174,10 @@ void ScrPlayerStatus__OpenCompleteMission(
   ScrPlayerStatus__SetVisibilitySpotWebView(v13, 0, v14);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v15, v16);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3197,10 +3197,10 @@ void ScrPlayerStatus__OpenCompleteMission(
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v15, v20);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3219,27 +3219,27 @@ void ScrPlayerStatus__OpenCompleteMission(
       }
     }
 LABEL_32:
-    sub_21FFECC(genericContainerHandle, v15);
+    sub_2213CDC(genericContainerHandle, v15);
   }
 LABEL_23:
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v23 = (CompleteMissionComponent_ClickDelegate_o *)sub_21FFEBC(CompleteMissionComponent_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v23 = (CompleteMissionComponent_ClickDelegate_o *)sub_2213CCC(CompleteMissionComponent_ClickDelegate_TypeInfo);
   CompleteMissionComponent_ClickDelegate___ctor(
     v23,
     (Il2CppObject *)this,
     Method_ScrPlayerStatus_ExitCompleteMission__,
     0);
-  v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_ScrPlayerStatus__OpenCompleteMission_b__139_0__, 0);
   if ( !Instance )
     goto LABEL_32;
   CommonUI__OpenCompleteMission((CommonUI_o *)Instance, v23, v24, typeIndex, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v15, v25);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v26 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3269,7 +3269,7 @@ void ScrPlayerStatus__OpenMasterMission(
 
   this->fields.isFromCompleteMission = 0;
   this->fields.mAfterCloseMasterMission = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mAfterCloseMasterMission,
     (int32_t)callback,
     *(System_String_o **)&typeIndex,
@@ -3278,7 +3278,7 @@ void ScrPlayerStatus__OpenMasterMission(
     v5,
     v6,
     v7);
-  ScrPlayerStatus__OpenMasterMission_43770196(this, typeIndex, v10);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, typeIndex, v10);
 }
 
 
@@ -3287,12 +3287,12 @@ void ScrPlayerStatus__OpenMasterMissionFromCompleteMission(ScrPlayerStatus_o *th
   const MethodInfo *v2; // x2
 
   this->fields.isFromCompleteMission = 1;
-  ScrPlayerStatus__OpenMasterMission_43770196(this, -1, v2);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, -1, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_t typeIndex, const MethodInfo *method)
+void ScrPlayerStatus__OpenMasterMission_43791132(ScrPlayerStatus_o *this, int32_t typeIndex, const MethodInfo *method)
 {
   ScrPlayerStatus_o *v5; // x0
   const MethodInfo *v6; // x2
@@ -3318,16 +3318,16 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   System_String_c *v26; // x8
   Il2CppMethodPointer methodPtr; // x8
 
-  if ( (byte_5935524 & 1) == 0 )
+  if ( (byte_596D666 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&MasterMissionComponent_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_ExitMasterMission__);
-    sub_21FFC50(&Method_ScrPlayerStatus__OpenMasterMission_b__134_0__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935524 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&MasterMissionComponent_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_ExitMasterMission__);
+    sub_2213A60(&Method_ScrPlayerStatus__OpenMasterMission_b__134_0__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D666 = 1;
   }
   if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, *(_QWORD *)&typeIndex, method);
@@ -3335,10 +3335,10 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   ScrPlayerStatus__SetVisibilitySpotWebView(v5, 0, v6);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v8);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3358,10 +3358,10 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v12);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3377,20 +3377,20 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
       goto LABEL_59;
     TitleInfoControl__setDispParticleObj(genericContainerHandle, 0, 0);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v15 = (MasterMissionComponent_ClickDelegate_o *)sub_21FFEBC(MasterMissionComponent_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v15 = (MasterMissionComponent_ClickDelegate_o *)sub_2213CCC(MasterMissionComponent_ClickDelegate_TypeInfo);
   MasterMissionComponent_ClickDelegate___ctor(v15, (Il2CppObject *)this, Method_ScrPlayerStatus_ExitMasterMission__, 0);
-  v16 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_ScrPlayerStatus__OpenMasterMission_b__134_0__, 0);
   if ( !Instance )
     goto LABEL_59;
   CommonUI__OpenMasterMission((CommonUI_o *)Instance, v15, v16, typeIndex, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v17);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v18 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3402,10 +3402,10 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   if ( !genericContainerHandle )
     goto LABEL_59;
   TerminalSceneComponent__SetDispStandServant((TerminalSceneComponent_o *)genericContainerHandle, 0, 0);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3424,10 +3424,10 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v22);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3450,10 +3450,10 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v25);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3472,7 +3472,7 @@ void ScrPlayerStatus__OpenMasterMission_43770196(ScrPlayerStatus_o *this, int32_
       }
     }
 LABEL_59:
-    sub_21FFECC(genericContainerHandle, v7);
+    sub_2213CDC(genericContainerHandle, v7);
   }
 }
 
@@ -3498,23 +3498,23 @@ void ScrPlayerStatus__OpenMasterProfile(ScrPlayerStatus_o *this, const MethodInf
   __int64 v19; // x2
   TerminalSceneComponent_c *v20; // x0
 
-  if ( (byte_5935534 & 1) == 0 )
+  if ( (byte_596D676 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&MstProfileComponent_ClickDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_ExitMasterProfile__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_0__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935534 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&MstProfileComponent_ClickDelegate_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_ExitMasterProfile__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_0__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D676 = 1;
   }
   if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method, v2);
   SoundManager__stopSe(0.0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v5 = (MstProfileComponent_ClickDelegate_o *)sub_21FFEBC(MstProfileComponent_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = (MstProfileComponent_ClickDelegate_o *)sub_2213CCC(MstProfileComponent_ClickDelegate_TypeInfo);
   MstProfileComponent_ClickDelegate___ctor(v5, (Il2CppObject *)this, Method_ScrPlayerStatus_ExitMasterProfile__, 0);
   mInstance = ScrPlayerStatus___c_TypeInfo;
   if ( !*(&ScrPlayerStatus___c_TypeInfo->_2.cctor_finished + 1) )
@@ -3532,21 +3532,21 @@ void ScrPlayerStatus__OpenMasterProfile(ScrPlayerStatus_o *this, const MethodInf
       static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
     }
     v11 = (Il2CppObject *)static_fields->__9;
-    _9__151_0 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__151_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__151_0, v11, Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_0__, 0);
     v12 = ScrPlayerStatus___c_TypeInfo->static_fields;
     v12->__9__151_0 = _9__151_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__151_0, (int32_t)_9__151_0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__151_0, (int32_t)_9__151_0, v13, v14, v15, v16, v17, v18);
   }
   if ( !Instance )
     goto LABEL_20;
   CommonUI__OpenMasterProfile((CommonUI_o *)Instance, v5, _9__151_0, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6, v19);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v20 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -3557,7 +3557,7 @@ void ScrPlayerStatus__OpenMasterProfile(ScrPlayerStatus_o *this, const MethodInf
   mInstance = (ScrPlayerStatus___c_c *)v20->static_fields->mInstance;
   if ( !mInstance )
 LABEL_20:
-    sub_21FFECC(mInstance, v6);
+    sub_2213CDC(mInstance, v6);
   TerminalSceneComponent__SetDispStandServant((TerminalSceneComponent_o *)mInstance, 0, 0);
 }
 
@@ -3592,7 +3592,7 @@ void ScrPlayerStatus__ResetMasterFaceTexture(
   UnityEngine_GameObject_o *mcFaceObjP; // x23
   int32_t meMasterGender; // w24
   System_Action_o *v28; // x25
-  struct UIMasterFaceTexture_o *Prefab_47601316; // x1
+  struct UIMasterFaceTexture_o *Prefab_47632340; // x1
   System_String_o *v30; // x2
   System_String_o *v31; // x3
   int32_t v32; // w4
@@ -3601,16 +3601,16 @@ void ScrPlayerStatus__ResetMasterFaceTexture(
   bool v35; // w7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
 
-  if ( (byte_593554C & 1) == 0 )
+  if ( (byte_596D68E & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_21FFC50(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_mfFaceMngCallback__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_593554C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_2213A60(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_mfFaceMngCallback__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_596D68E = 1;
   }
   mcMasterCurTexP = (UnityEngine_Object_o *)this->fields.mcMasterCurTexP;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -3624,9 +3624,9 @@ void ScrPlayerStatus__ResetMasterFaceTexture(
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(MasterData_object, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
     *p_mcMasterCurTexP = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mcMasterCurTexP, 0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mcMasterCurTexP, 0, v13, v14, v15, v16, v17, v18);
   }
   miMasterUserEquipID = this->fields.miMasterUserEquipID;
   this->fields.overwriteMasterIconId = overWriteImageId;
@@ -3637,22 +3637,22 @@ void ScrPlayerStatus__ResetMasterFaceTexture(
   }
   v20 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_WORD *)(v20 + 309) & 1) == 0 )
-    v20 = sub_2237AF8(v8);
+    v20 = sub_224B908(v8);
   v21 = *(_QWORD *)(*(_QWORD *)(v20 + 192) + 16LL);
   if ( (*(_WORD *)(v21 + 309) & 1) == 0 )
-    v21 = sub_2237AF8(v8);
+    v21 = sub_224B908(v8);
   MasterData_object = **(UnityEngine_Component_o ***)(v21 + 184);
   if ( !MasterData_object
     || (MasterData_object = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                                          (DataManager_o *)MasterData_object,
-                                                         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserEquipMaster___)) == 0
+                                                         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserEquipMaster___)) == 0
     || (MasterData_object = (UnityEngine_Component_o *)DataMasterBase_object__object__long___GetEntity(
                                                          (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                                          this->fields.miMasterUserEquipID,
-                                                         (const MethodInfo_3EDF9E8 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__)) == 0 )
+                                                         (const MethodInfo_3F13190 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__)) == 0 )
   {
 LABEL_23:
-    sub_21FFECC(MasterData_object, v7);
+    sub_2213CDC(MasterData_object, v7);
   }
   monitor = MasterData_object[1].monitor;
   m_CachedPtr = MasterData_object[1].fields.m_CachedPtr;
@@ -3660,13 +3660,13 @@ LABEL_23:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7, v22);
   *(_QWORD *)&v36.fields.currentCryptoKey = monitor;
   *(_QWORD *)&v36.fields.fakeValue = m_CachedPtr;
-  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v36, 0);
+  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v36, 0);
 LABEL_22:
   mcFaceObjP = this->fields.mcFaceObjP;
   meMasterGender = this->fields.meMasterGender;
-  v28 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v28 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v28, (Il2CppObject *)this, Method_ScrPlayerStatus_mfFaceMngCallback__, 0);
-  Prefab_47601316 = MasterFaceManager__CreatePrefab_47601316(
+  Prefab_47632340 = MasterFaceManager__CreatePrefab_47632340(
                       mcFaceObjP,
                       1,
                       meMasterGender,
@@ -3675,10 +3675,10 @@ LABEL_22:
                       v28,
                       overWriteImageId,
                       0);
-  this->fields.mcMasterCurTexP = Prefab_47601316;
-  sub_21FFBF4(
+  this->fields.mcMasterCurTexP = Prefab_47632340;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mcMasterCurTexP,
-    (int32_t)Prefab_47601316,
+    (int32_t)Prefab_47632340,
     v30,
     v31,
     v32,
@@ -3700,7 +3700,7 @@ void ScrPlayerStatus__SetAfterCloseMasterMissionAct(
   bool v7; // w7
 
   this->fields.mAfterCloseMasterMission = act;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mAfterCloseMasterMission,
     (int32_t)act,
     (System_String_o *)method,
@@ -3720,35 +3720,34 @@ void ScrPlayerStatus__SetAllParam(ScrPlayerStatus_o *this, UserGameEntity_o *ent
   __int64 v7; // x2
   Il2CppType *v8; // x22
   int64_t v9; // x21
-  System_RuntimeTypeHandle_o v10; // x0
   System_Type_o *TypeFromHandle; // x0
-  __int64 v12; // x1
-  __int64 v13; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
   int32_t genderType; // w22
-  System_Type_o *v15; // x23
-  __int64 v16; // x2
-  __int64 v17; // x3
-  int32_t v18; // w8
+  System_Type_o *v14; // x23
+  __int64 v15; // x2
+  __int64 v16; // x3
+  int32_t v17; // w8
   int32_t Act; // w0
   int32_t actMax; // w8
-  float v21; // s0
+  float v20; // s0
   int32_t CommandSpell; // w20
   int32_t Value; // w0
-  const MethodInfo *v24; // x3
-  const MethodInfo *v25; // x1
-  ScrPlayerStatus_o *v26; // x0
-  int64_t v27; // x1
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  const MethodInfo *v23; // x3
+  const MethodInfo *v24; // x1
+  ScrPlayerStatus_o *v25; // x0
+  int64_t v26; // x1
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
   int64_t exp; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_593551E & 1) == 0 )
+  if ( (byte_596D660 & 1) == 0 )
   {
-    sub_21FFC50(&Gender_Type_var);
-    sub_21FFC50(&Gender_Type_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_8958/*"MAX_COMMAND_SPELL"*/);
-    byte_593551E = 1;
+    sub_2213A60(&Gender_Type_var);
+    sub_2213A60(&Gender_Type_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_8971/*"MAX_COMMAND_SPELL"*/);
+    byte_596D660 = 1;
   }
   exp = 0;
   if ( !entity )
@@ -3757,26 +3756,25 @@ void ScrPlayerStatus__SetAllParam(ScrPlayerStatus_o *this, UserGameEntity_o *ent
   ActiveUserEquipId = UserGameEntity__getActiveUserEquipId(entity, 0);
   v8 = Gender_Type_var;
   v9 = ActiveUserEquipId;
-  if ( !*(_DWORD *)(qword_594C108 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C108, v6, v7);
-  v10.fields.value = (intptr_t)v8;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
+  if ( !*(_DWORD *)(qword_59843E0 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, v6, v7);
+  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v8, 0);
   genderType = entity->fields.genderType;
-  v15 = TypeFromHandle;
-  if ( !*(_DWORD *)(qword_594C0C0 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C0C0, v12, v13);
-  this = (ScrPlayerStatus_o *)System_Enum__ToObject_77151288(v15, genderType, 0);
+  v14 = TypeFromHandle;
+  if ( !*(_DWORD *)(qword_5984398 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984398, v11, v12);
+  this = (ScrPlayerStatus_o *)System_Enum__ToObject_77364592(v14, genderType, 0);
   if ( !this )
 LABEL_17:
-    sub_21FFECC(this, entity);
+    sub_2213CDC(this, entity);
   if ( this->klass->_1.element_class == Gender_Type_TypeInfo->_1.element_class )
   {
-    v18 = *(_DWORD *)j_il2cpp_object_unbox_0(this, Gender_Type_TypeInfo, v16, v17);
-    if ( v4->fields.miMasterUserEquipID != v9 || v4->fields.meMasterGender != v18 )
+    v17 = *(_DWORD *)j_il2cpp_object_unbox_0(this, Gender_Type_TypeInfo, v15, v16);
+    if ( v4->fields.miMasterUserEquipID != v9 || v4->fields.meMasterGender != v17 )
     {
       v4->fields.miMasterUserEquipID = v9;
       v4->fields.isUpdateFaceTexture = 1;
-      v4->fields.meMasterGender = v18;
+      v4->fields.meMasterGender = v17;
     }
     UserGameEntity__getExpInfo(entity, &exp, &v4->fields.nextExpVal, &v4->fields.mfExpPar, 0);
     Act = UserGameEntity__getAct(entity, 0);
@@ -3784,19 +3782,19 @@ LABEL_17:
     v4->fields.miApNow = Act;
     v4->fields.miApMax = actMax;
     if ( Act < 1 )
-      v21 = 0.0;
+      v20 = 0.0;
     else
-      v21 = (float)Act / (float)actMax;
-    v4->fields.mfApPar = v21;
+      v20 = (float)Act / (float)actMax;
+    v4->fields.mfApPar = v20;
     CommandSpell = UserGameEntity__getCommandSpell(entity, 0);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8958/*"MAX_COMMAND_SPELL"*/, 0);
-    ScrPlayerStatus__mfSetSpell(v4, CommandSpell, Value, v24);
-    ScrPlayerStatus__mfSetStoneAndFragment(v4, v25);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8971/*"MAX_COMMAND_SPELL"*/, 0);
+    ScrPlayerStatus__mfSetSpell(v4, CommandSpell, Value, v23);
+    ScrPlayerStatus__mfSetStoneAndFragment(v4, v24);
   }
   else
   {
-    sub_220024C(this, Gender_Type_TypeInfo, v16, v17);
-    ScrPlayerStatus__mfSetFaceID(v26, v27, v28, v29);
+    sub_221405C(this, Gender_Type_TypeInfo, v15, v16);
+    ScrPlayerStatus__mfSetFaceID(v25, v26, v27, v28);
   }
 }
 
@@ -3805,22 +3803,19 @@ LABEL_17:
 void ScrPlayerStatus__SetApRecoverBtnEnable(ScrPlayerStatus_o *this, bool is_enable, const MethodInfo *method)
 {
   UIWidget_o *mApRecoverBtnSp; // x0
-  float v5; // s0 OVERLAPPED
-  float v6; // s3
-  float v7; // s1
-  float v8; // s2
+  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   mApRecoverBtnSp = (UIWidget_o *)this->fields.mApRecoverBtnSp;
   this->fields.mIsEnableApRecoverBtn = is_enable;
   if ( !mApRecoverBtnSp )
-    sub_21FFECC(0, is_enable);
-  v5 = 0.5;
-  v6 = 1.0;
+    sub_2213CDC(0, is_enable);
+  v6.fields.r = 0.5;
+  v6.fields.a = 1.0;
   if ( is_enable )
-    v5 = 1.0;
-  v7 = v5;
-  v8 = v5;
-  UIWidget__set_color(mApRecoverBtnSp, *(UnityEngine_Color_o *)&v5, 0);
+    v6.fields.r = 1.0;
+  v6.fields.g = v6.fields.r;
+  v6.fields.b = v6.fields.r;
+  UIWidget__set_color(mApRecoverBtnSp, v6, 0);
 }
 
 
@@ -3838,9 +3833,9 @@ void ScrPlayerStatus__SetCloseGiftAct(
 
   mcGiftButtonP = this->fields.mcGiftButtonP;
   if ( !mcGiftButtonP )
-    sub_21FFECC(0, act);
+    sub_2213CDC(0, act);
   mcGiftButtonP->fields.OnGiftCloseAdditionalAction = act;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&mcGiftButtonP->fields.OnGiftCloseAdditionalAction,
     (int32_t)act,
     (System_String_o *)method,
@@ -3903,72 +3898,72 @@ void ScrPlayerStatus__SetLocationCheck(ScrPlayerStatus_o *this, const MethodInfo
   Il2CppObject *v49; // [xsp+40h] [xbp-50h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_593553B & 1) == 0 )
+  if ( (byte_596D67D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_CampaignInfoMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventLocationCampaignMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_21FFC50(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
-    sub_21FFC50(&GeoLocation_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__0__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__1__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__2__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass160_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_8639/*"LOCATION_DLG_DEVICE_OPTION_TITLE"*/);
-    sub_21FFC50(&StringLiteral_8633/*"LOCATION_CAMPAIGN_INFO_DLG_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_8631/*"LOCATION_CAMPAIGN_INFO_DLG_ACCEPTED"*/);
-    sub_21FFC50(&StringLiteral_8641/*"LOCATION_DLG_FAIL_TITLE"*/);
-    sub_21FFC50(&StringLiteral_8642/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_8632/*"LOCATION_CAMPAIGN_INFO_DLG_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_8635/*"LOCATION_DLG_DEVICE_OPTION_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_8634/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/);
-    sub_21FFC50(&CampaignInfoDlg_onButtonDelgate_TypeInfo);
-    byte_593553B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_CampaignInfoMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventLocationCampaignMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_2213A60(&Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
+    sub_2213A60(&GeoLocation_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__0__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__1__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__2__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass160_0_TypeInfo);
+    sub_2213A60(&StringLiteral_8652/*"LOCATION_DLG_DEVICE_OPTION_TITLE"*/);
+    sub_2213A60(&StringLiteral_8646/*"LOCATION_CAMPAIGN_INFO_DLG_DECIDE"*/);
+    sub_2213A60(&StringLiteral_8644/*"LOCATION_CAMPAIGN_INFO_DLG_ACCEPTED"*/);
+    sub_2213A60(&StringLiteral_8654/*"LOCATION_DLG_FAIL_TITLE"*/);
+    sub_2213A60(&StringLiteral_8655/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_8645/*"LOCATION_CAMPAIGN_INFO_DLG_CANCEL"*/);
+    sub_2213A60(&StringLiteral_8648/*"LOCATION_DLG_DEVICE_OPTION_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_8647/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/);
+    sub_2213A60(&CampaignInfoDlg_onButtonDelgate_TypeInfo);
+    byte_596D67D = 1;
   }
   v49 = 0;
   entity = 0;
-  v3 = sub_21FFEBC(ScrPlayerStatus___c__DisplayClass160_0_TypeInfo);
+  v3 = sub_2213CCC(ScrPlayerStatus___c__DisplayClass160_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_39;
   *(_QWORD *)(v3 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
   if ( !*(&GeoLocation_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(GeoLocation_TypeInfo, v12, v13);
   if ( GeoLocation__IsLocationEnabledByUser(0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_39;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMaster___);
+                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMaster___);
     if ( !Instance )
       goto LABEL_39;
     EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 20, 0, 0, 0);
     *(_QWORD *)(v3 + 24) = EnableEntityList;
     v15 = (__int64 *)(v3 + 24);
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)EnableEntityList, v16, v17, v18, v19, v20, v21);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)EnableEntityList, v16, v17, v18, v19, v20, v21);
     if ( !*(_QWORD *)(v3 + 24) )
       goto LABEL_39;
     if ( *(_QWORD *)(*(_QWORD *)(v3 + 24) + 24LL) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_39;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventLocationCampaignMaster___);
+                   (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventLocationCampaignMaster___);
       v22 = *v15;
       if ( !*v15 )
         goto LABEL_39;
       if ( !*(_DWORD *)(v22 + 24) )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v23 = *(_QWORD *)(v22 + 32);
       if ( !v23 || !Instance )
         goto LABEL_39;
@@ -3976,38 +3971,38 @@ void ScrPlayerStatus__SetLocationCheck(ScrPlayerStatus_o *this, const MethodInfo
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              &entity,
              *(_DWORD *)(v23 + 16),
-             (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int__TryGetEntity__) )
+             (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventLocationCampaignMaster__EventLocationCampaignEntity__int__TryGetEntity__) )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_39;
         Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CampaignInfoMaster___);
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CampaignInfoMaster___);
         if ( !entity || !Instance )
           goto LABEL_39;
         if ( DataMasterBase_object__object__int___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                &v49,
                (int32_t)entity[2].monitor,
-               (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__) )
+               (const MethodInfo_3F10B80 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__) )
         {
-          v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v27 = v49;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24, v25);
-          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_8632/*"LOCATION_CAMPAIGN_INFO_DLG_CANCEL"*/, 0);
+          v30 = LocalizationManager__Get((System_String_o *)StringLiteral_8645/*"LOCATION_CAMPAIGN_INFO_DLG_CANCEL"*/, 0);
           if ( this->fields.mIsAcceptedLocationEvent )
-            v31 = (System_String_o **)&StringLiteral_8631/*"LOCATION_CAMPAIGN_INFO_DLG_ACCEPTED"*/;
+            v31 = (System_String_o **)&StringLiteral_8644/*"LOCATION_CAMPAIGN_INFO_DLG_ACCEPTED"*/;
           else
-            v31 = (System_String_o **)&StringLiteral_8633/*"LOCATION_CAMPAIGN_INFO_DLG_DECIDE"*/;
+            v31 = (System_String_o **)&StringLiteral_8646/*"LOCATION_CAMPAIGN_INFO_DLG_DECIDE"*/;
           v32 = *v31;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v28, v29);
           v33 = LocalizationManager__Get(v32, 0);
           mIsAcceptedLocationEvent = this->fields.mIsAcceptedLocationEvent;
           v35 = v33;
-          v36 = (CampaignInfoDlg_onButtonDelgate_o *)sub_21FFEBC(CampaignInfoDlg_onButtonDelgate_TypeInfo);
+          v36 = (CampaignInfoDlg_onButtonDelgate_o *)sub_2213CCC(CampaignInfoDlg_onButtonDelgate_TypeInfo);
           CampaignInfoDlg_onButtonDelgate___ctor(
             v36,
             (Il2CppObject *)v3,
@@ -4026,28 +4021,28 @@ void ScrPlayerStatus__SetLocationCheck(ScrPlayerStatus_o *this, const MethodInfo
             return;
           }
 LABEL_39:
-          sub_21FFECC(Instance, v5);
+          sub_2213CDC(Instance, v5);
         }
       }
     }
-    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v44, v45);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8641/*"LOCATION_DLG_FAIL_TITLE"*/, 0);
-    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8642/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/, 0);
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_8634/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
-    v41 = System_String__Concat_75438412(v46, v47, 0);
-    v42 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8654/*"LOCATION_DLG_FAIL_TITLE"*/, 0);
+    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8655/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/, 0);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_8647/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
+    v41 = System_String__Concat_75651716(v46, v47, 0);
+    v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     v43 = &Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__2__;
   }
   else
   {
-    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v37, v38);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8639/*"LOCATION_DLG_DEVICE_OPTION_TITLE"*/, 0);
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8635/*"LOCATION_DLG_DEVICE_OPTION_MESSAGE"*/, 0);
-    v42 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8652/*"LOCATION_DLG_DEVICE_OPTION_TITLE"*/, 0);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8648/*"LOCATION_DLG_DEVICE_OPTION_MESSAGE"*/, 0);
+    v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     v43 = &Method_ScrPlayerStatus___c__DisplayClass160_0__SetLocationCheck_b__0__;
   }
   v48 = v42;
@@ -4065,7 +4060,7 @@ void ScrPlayerStatus__SetLocationEventBtnShow(ScrPlayerStatus_o *this, bool onOf
 
   mLocationBtnRoot = this->fields.mLocationBtnRoot;
   if ( !mLocationBtnRoot )
-    sub_21FFECC(0, onOff);
+    sub_2213CDC(0, onOff);
   UnityEngine_GameObject__SetActive(mLocationBtnRoot, onOff, 0);
 }
 
@@ -4097,21 +4092,21 @@ void ScrPlayerStatus__SetOverwriteMasterInfo(ScrPlayerStatus_o *this, const Meth
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_593554A & 1) == 0 )
+  if ( (byte_596D68C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_WarAddMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_OverwriteMasterInfo_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593554A = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_WarAddMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_OverwriteMasterInfo_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D68C = 1;
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v2);
-  if ( !byte_5932644 )
+  if ( !byte_596A743 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5932644 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596A743 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4122,9 +4117,9 @@ void ScrPlayerStatus__SetOverwriteMasterInfo(ScrPlayerStatus_o *this, const Meth
   WarId_k__BackingField = v4->static_fields->_WarId_k__BackingField;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   v8 = (WarAddMaster_o *)Master_object;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Master_object, 20, WarId_k__BackingField, 0);
   if ( PrioredEntity )
@@ -4139,15 +4134,15 @@ void ScrPlayerStatus__SetOverwriteMasterInfo(ScrPlayerStatus_o *this, const Meth
   }
   v12 = *p_overwriteStr;
   PrioredID = WarAddMaster__GetPrioredID(v8, 21, WarId_k__BackingField, 0, 0);
-  v14 = sub_21FFEBC(ScrPlayerStatus_OverwriteMasterInfo_TypeInfo);
+  v14 = sub_2213CCC(ScrPlayerStatus_OverwriteMasterInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0);
   *(_DWORD *)(v14 + 16) = WarId_k__BackingField;
   *(_DWORD *)(v14 + 20) = PrioredID;
   *(_DWORD *)(v14 + 24) = v10;
   *(_QWORD *)(v14 + 32) = v12;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v14 + 32), (int32_t)v12, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v14 + 32), (int32_t)v12, v15, v16, v17, v18, v19, v20);
   this->fields.overwriteMasterInfo = (struct ScrPlayerStatus_OverwriteMasterInfo_o *)v14;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteMasterInfo, v14, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.overwriteMasterInfo, v14, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -4160,7 +4155,7 @@ void ScrPlayerStatus__SetRecoverAct(ScrPlayerStatus_o *this, System_Action_o *ac
   bool v7; // w7
 
   this->fields.mRecoverAct = act;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mRecoverAct,
     (int32_t)act,
     (System_String_o *)method,
@@ -4176,22 +4171,19 @@ void ScrPlayerStatus__SetRecoverAct(ScrPlayerStatus_o *this, System_Action_o *ac
 void ScrPlayerStatus__SetRpRecoverBtnEnable(ScrPlayerStatus_o *this, bool is_enable, const MethodInfo *method)
 {
   UIWidget_o *mRpRecoverBtnSp; // x0
-  float v5; // s0 OVERLAPPED
-  float v6; // s3
-  float v7; // s1
-  float v8; // s2
+  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   mRpRecoverBtnSp = (UIWidget_o *)this->fields.mRpRecoverBtnSp;
   this->fields.mIsEnableRpRecoverBtn = is_enable;
   if ( !mRpRecoverBtnSp )
-    sub_21FFECC(0, is_enable);
-  v5 = 0.5;
-  v6 = 1.0;
+    sub_2213CDC(0, is_enable);
+  v6.fields.r = 0.5;
+  v6.fields.a = 1.0;
   if ( is_enable )
-    v5 = 1.0;
-  v7 = v5;
-  v8 = v5;
-  UIWidget__set_color(mRpRecoverBtnSp, *(UnityEngine_Color_o *)&v5, 0);
+    v6.fields.r = 1.0;
+  v6.fields.g = v6.fields.r;
+  v6.fields.b = v6.fields.r;
+  UIWidget__set_color(mRpRecoverBtnSp, v6, 0);
 }
 
 
@@ -4208,18 +4200,18 @@ void ScrPlayerStatus__SetVisibilitySpotWebView(ScrPlayerStatus_o *this, bool ena
   __int64 v11; // x2
   UnityEngine_GameObject_c *v12; // x8
 
-  if ( (byte_5935569 & 1) == 0 )
+  if ( (byte_596D6AB & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935569 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6AB = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, enable, method);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -4234,10 +4226,10 @@ void ScrPlayerStatus__SetVisibilitySpotWebView(ScrPlayerStatus_o *this, bool ena
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6, v7);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     v8 = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -4255,10 +4247,10 @@ void ScrPlayerStatus__SetVisibilitySpotWebView(ScrPlayerStatus_o *this, bool ena
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v6, v11);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       v8 = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -4277,7 +4269,7 @@ void ScrPlayerStatus__SetVisibilitySpotWebView(ScrPlayerStatus_o *this, bool ena
         }
       }
 LABEL_32:
-      sub_21FFECC(v8, v6);
+      sub_2213CDC(v8, v6);
     }
   }
 }
@@ -4290,18 +4282,18 @@ void ScrPlayerStatus__SetupDispRaidPoint(ScrPlayerStatus_o *this, const MethodIn
   bool IsBPEnable; // w8
   const MethodInfo *v6; // x2
 
-  if ( (byte_5935543 & 1) == 0 )
+  if ( (byte_596D685 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5935543 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596D685 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_11;
   IsBPEnable = EventMaster__IsBPEnable((EventMaster_o *)Instance, 0);
@@ -4322,7 +4314,7 @@ void ScrPlayerStatus__SetupDispRaidPoint(ScrPlayerStatus_o *this, const MethodIn
       return;
     }
 LABEL_11:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
 }
 
@@ -4338,7 +4330,7 @@ void ScrPlayerStatus__SetupGradeIcon(ScrPlayerStatus_o *this, const MethodInfo *
 {
   __int64 v2; // x2
   UserGameEntity_o *userGameEntity; // x19
-  int32_t Kind_47358036; // w21
+  int32_t Kind_47388588; // w21
   System_String_o *MainMstIconBgImage; // x0
   __int64 v7; // x1
   System_String_o *v8; // x19
@@ -4347,29 +4339,29 @@ void ScrPlayerStatus__SetupGradeIcon(ScrPlayerStatus_o *this, const MethodInfo *
   __int64 v11; // x8
   UIAtlas_o *v12; // x21
 
-  if ( (byte_5935542 & 1) == 0 )
+  if ( (byte_596D684 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Grade_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935542 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Grade_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D684 = 1;
   }
   userGameEntity = this->fields.userGameEntity;
   if ( !*(&Grade_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(Grade_TypeInfo, method, v2);
-  Kind_47358036 = Grade__GetKind_47358036(userGameEntity, 0);
-  MainMstIconBgImage = Grade__GetMainMstIconBgImage(Kind_47358036, 0);
+  Kind_47388588 = Grade__GetKind_47388588(userGameEntity, 0);
+  MainMstIconBgImage = Grade__GetMainMstIconBgImage(Kind_47388588, 0);
   if ( !this->fields.masterIconGrade )
     goto LABEL_16;
   v8 = MainMstIconBgImage;
-  UserGradeComponent__Set(this->fields.masterIconGrade, Kind_47358036, 0);
+  UserGradeComponent__Set(this->fields.masterIconGrade, Kind_47388588, 0);
   masterIconBG = this->fields.masterIconBG;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v7, v9);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   MainMstIconBgImage = (System_String_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -4380,7 +4372,7 @@ void ScrPlayerStatus__SetupGradeIcon(ScrPlayerStatus_o *this, const MethodInfo *
   v11 = **(_QWORD **)&MainMstIconBgImage[7].fields;
   if ( !v11 )
 LABEL_16:
-    sub_21FFECC(MainMstIconBgImage, v7);
+    sub_2213CDC(MainMstIconBgImage, v7);
   v12 = *(UIAtlas_o **)(v11 + 304);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v7, v9);
@@ -4398,13 +4390,13 @@ void ScrPlayerStatus__ShowDisabledRuntimePermissionDialog(ScrPlayerStatus_o *thi
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_593553A & 1) == 0 )
+  if ( (byte_596D67C & 1) == 0 )
   {
-    sub_21FFC50(&TermsOfUseDlg_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ShowDisabledRuntimePermissionDialog_b__157_0__);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593553A = 1;
+    sub_2213A60(&TermsOfUseDlg_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ShowDisabledRuntimePermissionDialog_b__157_0__);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D67C = 1;
   }
   v4 = ScrPlayerStatus_TypeInfo;
   if ( !*(&ScrPlayerStatus_TypeInfo->_2.cctor_finished + 1) )
@@ -4414,15 +4406,15 @@ void ScrPlayerStatus__ShowDisabledRuntimePermissionDialog(ScrPlayerStatus_o *thi
   }
   if ( UnityEngine_PlayerPrefs__GetInt(v4->static_fields->LOCATION_TOS_AGREED_KEY, -1, 0) == -1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v7 = (TermsOfUseDlg_CallbackFunc_o *)sub_21FFEBC(TermsOfUseDlg_CallbackFunc_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = (TermsOfUseDlg_CallbackFunc_o *)sub_2213CCC(TermsOfUseDlg_CallbackFunc_TypeInfo);
     TermsOfUseDlg_CallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
       Method_ScrPlayerStatus__ShowDisabledRuntimePermissionDialog_b__157_0__,
       0);
     if ( !Instance )
-      sub_21FFECC(v8, v9);
+      sub_2213CDC(v8, v9);
     CommonUI__OpenLocationTermsOfUseDlg((CommonUI_o *)Instance, v7, 1, 0);
   }
   else
@@ -4456,32 +4448,32 @@ void ScrPlayerStatus__ShowEnabledRuntimePermissionDialog(ScrPlayerStatus_o *this
   Il2CppObject *Instance; // x19
   TermsOfUseDlg_CallbackFunc_o *v23; // x21
 
-  if ( (byte_5935539 & 1) == 0 )
+  if ( (byte_596D67B & 1) == 0 )
   {
-    sub_21FFC50(&TermsOfUseDlg_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass156_0__ShowEnabledRuntimePermissionDialog_b__0__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass156_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_17436/*"android.permission.ACCESS_FINE_LOCATION"*/);
-    byte_5935539 = 1;
+    sub_2213A60(&TermsOfUseDlg_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass156_0__ShowEnabledRuntimePermissionDialog_b__0__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass156_0_TypeInfo);
+    sub_2213A60(&StringLiteral_17472/*"android.permission.ACCESS_FINE_LOCATION"*/);
+    byte_596D67B = 1;
   }
-  v3 = sub_21FFEBC(ScrPlayerStatus___c__DisplayClass156_0_TypeInfo);
+  v3 = sub_2213CCC(ScrPlayerStatus___c__DisplayClass156_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_9;
   *(_QWORD *)(v3 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
-  v12 = StringLiteral_17436/*"android.permission.ACCESS_FINE_LOCATION"*/;
-  *(_QWORD *)(v3 + 16) = StringLiteral_17436/*"android.permission.ACCESS_FINE_LOCATION"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), v12, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  v12 = StringLiteral_17472/*"android.permission.ACCESS_FINE_LOCATION"*/;
+  *(_QWORD *)(v3 + 16) = StringLiteral_17472/*"android.permission.ACCESS_FINE_LOCATION"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 16), v12, v13, v14, v15, v16, v17, v18);
   v19 = AndroidPermissionManager__CheckPermission(*(System_String_o **)(v3 + 16), 0);
   ShouldShowRequestPermissionRationale = AndroidPermissionManager__ShouldShowRequestPermissionRationale(
                                            *(System_String_o **)(v3 + 16),
                                            0);
   if ( !v19 && !ShouldShowRequestPermissionRationale )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v23 = (TermsOfUseDlg_CallbackFunc_o *)sub_21FFEBC(TermsOfUseDlg_CallbackFunc_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v23 = (TermsOfUseDlg_CallbackFunc_o *)sub_2213CCC(TermsOfUseDlg_CallbackFunc_TypeInfo);
     TermsOfUseDlg_CallbackFunc___ctor(
       v23,
       (Il2CppObject *)v3,
@@ -4493,7 +4485,7 @@ void ScrPlayerStatus__ShowEnabledRuntimePermissionDialog(ScrPlayerStatus_o *this
       return;
     }
 LABEL_9:
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   }
   ScrPlayerStatus__SetLocationCheck(this, v21);
 }
@@ -4533,24 +4525,24 @@ void ScrPlayerStatus__SortLimitedMstMissionViewList(
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_5935553 & 1) == 0 )
+  if ( (byte_596D695 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_MasterMissionComponent_MasterMissionInfoItem__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__long___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_MasterMissionComponent_MasterMissionInfoItem___);
-    sub_21FFC50(&System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
-    sub_21FFC50(&System_Func_MasterMissionComponent_MasterMissionInfoItem__long__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__SortLimitedMstMissionViewList_b__188_0__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass188_0__SortLimitedMstMissionViewList_b__1__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass188_0__SortLimitedMstMissionViewList_b__2__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass188_0_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935553 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_OrderByDescending_MasterMissionComponent_MasterMissionInfoItem__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__long___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_MasterMissionComponent_MasterMissionInfoItem___);
+    sub_2213A60(&System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
+    sub_2213A60(&System_Func_MasterMissionComponent_MasterMissionInfoItem__long__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Count__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__SortLimitedMstMissionViewList_b__188_0__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass188_0__SortLimitedMstMissionViewList_b__1__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass188_0__SortLimitedMstMissionViewList_b__2__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass188_0_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D695 = 1;
   }
-  v3 = (Il2CppObject *)sub_21FFEBC(ScrPlayerStatus___c__DisplayClass188_0_TypeInfo);
+  v3 = (Il2CppObject *)sub_2213CCC(ScrPlayerStatus___c__DisplayClass188_0_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !*list )
     goto LABEL_16;
@@ -4561,7 +4553,7 @@ void ScrPlayerStatus__SortLimitedMstMissionViewList(
   Time = NetworkManager__getTime(0);
   if ( !v3 )
 LABEL_16:
-    sub_21FFECC(Time, v5);
+    sub_2213CDC(Time, v5);
   v8 = *list;
   v3[1].klass = (Il2CppClass *)Time;
   v9 = ScrPlayerStatus___c_TypeInfo;
@@ -4580,7 +4572,7 @@ LABEL_16:
       static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__188_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
+    _9__188_0 = (System_Func_object__int__o *)sub_2213CCC(System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__188_0,
       v12,
@@ -4588,13 +4580,13 @@ LABEL_16:
       0);
     v13 = ScrPlayerStatus___c_TypeInfo->static_fields;
     v13->__9__188_0 = (struct System_Func_MasterMissionComponent_MasterMissionInfoItem__int__o *)_9__188_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->__9__188_0, (int32_t)_9__188_0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__188_0, (int32_t)_9__188_0, v14, v15, v16, v17, v18, v19);
   }
   v20 = System_Linq_Enumerable__OrderByDescending_object__int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v8,
           (System_Func_TSource__TKey__o *)_9__188_0,
-          (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_MasterMissionComponent_MasterMissionInfoItem__int___);
-  v21 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
+          (const MethodInfo_38891C4 *)Method_System_Linq_Enumerable_OrderByDescending_MasterMissionComponent_MasterMissionInfoItem__int___);
+  v21 = (System_Func_object__int__o *)sub_2213CCC(System_Func_MasterMissionComponent_MasterMissionInfoItem__int__TypeInfo);
   System_Func_object__int____ctor(
     v21,
     v3,
@@ -4603,8 +4595,8 @@ LABEL_16:
   v22 = System_Linq_Enumerable__ThenBy_object__int_(
           v20,
           (System_Func_TSource__TKey__o *)v21,
-          (const MethodInfo_3867630 *)Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__int___);
-  v23 = (System_Func_object__long__o *)sub_21FFEBC(System_Func_MasterMissionComponent_MasterMissionInfoItem__long__TypeInfo);
+          (const MethodInfo_389AAF8 *)Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__int___);
+  v23 = (System_Func_object__long__o *)sub_2213CCC(System_Func_MasterMissionComponent_MasterMissionInfoItem__long__TypeInfo);
   System_Func_object__long____ctor(
     v23,
     v3,
@@ -4613,12 +4605,12 @@ LABEL_16:
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__long_(
                                                                v22,
                                                                (System_Func_TSource__TKey__o *)v23,
-                                                               (const MethodInfo_38676FC *)Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__long___);
+                                                               (const MethodInfo_389ABC4 *)Method_System_Linq_Enumerable_ThenBy_MasterMissionComponent_MasterMissionInfoItem__long___);
   v25 = (System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *)System_Linq_Enumerable__ToList_object_(
                                                                                              v24,
-                                                                                             (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_MasterMissionComponent_MasterMissionInfoItem___);
+                                                                                             (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_MasterMissionComponent_MasterMissionInfoItem___);
   *list = v25;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)list, (int32_t)v25, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)list, (int32_t)v25, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -4634,11 +4626,11 @@ void ScrPlayerStatus__Start(ScrPlayerStatus_o *this, const MethodInfo *method)
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593551D & 1) == 0 )
+  if ( (byte_596D65F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593551D = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D65F = 1;
   }
   mTargetFsm = (UnityEngine_Object_o *)this->fields.mTargetFsm;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -4647,9 +4639,9 @@ void ScrPlayerStatus__Start(ScrPlayerStatus_o *this, const MethodInfo *method)
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.mTargetFsm = (struct PlayMakerFSM_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mTargetFsm,
       (int32_t)Component_object,
       v6,
@@ -4692,12 +4684,12 @@ void ScrPlayerStatus__Update(ScrPlayerStatus_o *this, const MethodInfo *method)
   int64_t Time; // x1
   const MethodInfo *v29; // x2
 
-  if ( (byte_593551F & 1) == 0 )
+  if ( (byte_596D661 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593551F = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D661 = 1;
   }
   if ( this->fields.mtIsUpdate )
     ScrPlayerStatus__mfUpdatePrams(this, method);
@@ -4721,7 +4713,7 @@ void ScrPlayerStatus__Update(ScrPlayerStatus_o *this, const MethodInfo *method)
       userGameEntity = (UserGameEntity_o *)this->fields.rpRoot;
       if ( !userGameEntity )
 LABEL_73:
-        sub_21FFECC(userGameEntity, v3);
+        sub_2213CDC(userGameEntity, v3);
       ScrPlayerBP__UpdateRpTimeStr((ScrPlayerBP_o *)userGameEntity, v3);
     }
     userGameEntity = this->fields.userGameEntity;
@@ -4730,10 +4722,10 @@ LABEL_73:
     CommandSpell = UserGameEntity__getCommandSpell(userGameEntity, 0);
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v3, v6);
-    if ( !byte_5934F89 )
+    if ( !byte_596D0B9 )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_5934F89 = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596D0B9 = 1;
     }
     v13 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4749,10 +4741,10 @@ LABEL_73:
       targetWarId_k__BackingField = overwriteMasterInfo->fields._targetWarId_k__BackingField;
       if ( !*(&v13->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(v13, v3, v6);
-      if ( !byte_5932644 )
+      if ( !byte_596A743 )
       {
-        sub_21FFC50(&TerminalPramsManager_TypeInfo);
-        byte_5932644 = 1;
+        sub_2213A60(&TerminalPramsManager_TypeInfo);
+        byte_596A743 = 1;
       }
       userGameEntity = (UserGameEntity_o *)TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4786,7 +4778,7 @@ LABEL_29:
       }
       spellIconId_k__BackingField = v16->fields._spellIconId_k__BackingField;
       this->fields.overwriteSpellIconId = spellIconId_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteSpellIconId,
         (int32_t)spellIconId_k__BackingField,
         v6,
@@ -4797,10 +4789,10 @@ LABEL_29:
         v11);
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v3, v21);
-      if ( !byte_5935589 )
+      if ( !byte_596D6CB )
       {
-        sub_21FFC50(&TerminalPramsManager_TypeInfo);
-        byte_5935589 = 1;
+        sub_2213A60(&TerminalPramsManager_TypeInfo);
+        byte_596D6CB = 1;
       }
       userGameEntity = (UserGameEntity_o *)TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4844,10 +4836,10 @@ LABEL_67:
     {
       if ( !*(&v13->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(v13, v3, v6);
-      if ( !byte_5935589 )
+      if ( !byte_596D6CB )
       {
-        sub_21FFC50(&TerminalPramsManager_TypeInfo);
-        byte_5935589 = 1;
+        sub_2213A60(&TerminalPramsManager_TypeInfo);
+        byte_596D6CB = 1;
       }
       userGameEntity = (UserGameEntity_o *)TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4864,7 +4856,7 @@ LABEL_67:
       {
         v19 = (int)StringLiteral_1/*""*/;
         this->fields.overwriteSpellIconId = (struct System_String_o *)StringLiteral_1/*""*/;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.overwriteSpellIconId,
           v19,
           v6,
@@ -4920,14 +4912,14 @@ void ScrPlayerStatus__UpdateAp(ScrPlayerStatus_o *this, const MethodInfo *method
   TitleInfoControl_c *v16; // x0
   struct AlphaTransitionCalculator_o *v17; // x8
 
-  if ( (byte_5935547 & 1) == 0 )
+  if ( (byte_596D689 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TitleInfoControl_TypeInfo);
-    sub_21FFC50(&Method_TransitionCalculator_float__Update__);
-    sub_21FFC50(&Method_TransitionCalculator_float__get_Current__);
-    byte_5935547 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TitleInfoControl_TypeInfo);
+    sub_2213A60(&Method_TransitionCalculator_float__Update__);
+    sub_2213A60(&Method_TransitionCalculator_float__get_Current__);
+    byte_596D689 = 1;
   }
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
@@ -4960,13 +4952,13 @@ void ScrPlayerStatus__UpdateAp(ScrPlayerStatus_o *this, const MethodInfo *method
     {
       TransitionCalculator_float___Update(
         apRecoverStrAlphaCalculator,
-        (const MethodInfo_3BB5C64 *)Method_TransitionCalculator_float__Update__);
+        (const MethodInfo_3BE940C *)Method_TransitionCalculator_float__Update__);
       v11 = this->fields.mcApTimeP;
       userGameEntity = (UserGameEntity_o *)ScrPlayerStatus__mfGetApRecoverTimeStr(this, this->fields.isDispMax, v12);
       if ( v11 )
       {
         UILabel__set_text(v11, (System_String_o *)userGameEntity, 0);
-        userGameEntity = (UserGameEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        userGameEntity = (UserGameEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( userGameEntity )
         {
           if ( !CommonUI__maskFadeIsDisp((CommonUI_o *)userGameEntity, 0) )
@@ -5020,7 +5012,7 @@ void ScrPlayerStatus__UpdateAp(ScrPlayerStatus_o *this, const MethodInfo *method
         }
       }
 LABEL_30:
-      sub_21FFECC(userGameEntity, method);
+      sub_2213CDC(userGameEntity, method);
     }
   }
 }
@@ -5055,14 +5047,14 @@ void ScrPlayerStatus__UpdateApStatus(ScrPlayerStatus_o *this, const MethodInfo *
   Il2CppMethodPointer methodPtr; // x8
   ExRoomQuestComponent_o *v28; // x0
 
-  if ( (byte_5935548 & 1) == 0 )
+  if ( (byte_596D68A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_16416/*"[-]/"*/);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_5935548 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_16448/*"[-]/"*/);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_596D68A = 1;
   }
   mcApSldP = (UnityEngine_Object_o *)this->fields.mcApSldP;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -5093,14 +5085,14 @@ void ScrPlayerStatus__UpdateApStatus(ScrPlayerStatus_o *this, const MethodInfo *
     v7 = (UIProgressBar_o *)this->fields.mcApSldP2;
     if ( !v7 )
 LABEL_42:
-      sub_21FFECC(v7, v5);
+      sub_2213CDC(v7, v5);
     value = UIProgressBar__get_value(v7, 0);
     mcApStrP = this->fields.mcApStrP;
     if ( value <= 0.0 )
     {
       v21 = System_Int32__ToString((int)this + 544, 0);
       v22 = System_Int32__ToString((int)this + 548, 0);
-      v7 = (UIProgressBar_o *)System_String__Concat_75481624(v21, (System_String_o *)StringLiteral_1123/*"/"*/, v22, 0);
+      v7 = (UIProgressBar_o *)System_String__Concat_75694928(v21, (System_String_o *)StringLiteral_1123/*"/"*/, v22, 0);
       if ( !mcApStrP )
         goto LABEL_42;
     }
@@ -5115,10 +5107,10 @@ LABEL_42:
       AP_OVER_TXT_COLOR_STR = v17->static_fields->AP_OVER_TXT_COLOR_STR;
       v19 = System_Int32__ToString((int)this + 544, 0);
       v20 = System_Int32__ToString((int)this + 548, 0);
-      v7 = (UIProgressBar_o *)System_String__Concat_75483552(
+      v7 = (UIProgressBar_o *)System_String__Concat_75696856(
                                 AP_OVER_TXT_COLOR_STR,
                                 v19,
-                                (System_String_o *)StringLiteral_16416/*"[-]/"*/,
+                                (System_String_o *)StringLiteral_16448/*"[-]/"*/,
                                 v20,
                                 0);
       if ( !mcApStrP )
@@ -5128,10 +5120,10 @@ LABEL_42:
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v5, v10);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v7 = (UIProgressBar_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5149,10 +5141,10 @@ LABEL_42:
   if ( !v7 )
     goto LABEL_42;
   QuestBoardListViewManager__RequestConsumeColorReset((QuestBoardListViewManager_o *)v7, 0);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v7 = (UIProgressBar_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5204,27 +5196,27 @@ void ScrPlayerStatus__UpdateCompleteMissionIconVisibility(ScrPlayerStatus_o *thi
   __int64 v30; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5935566 & 1) == 0 )
+  if ( (byte_596D6A8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_21FFC50(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_EventEntity_ScriptData___);
-    sub_21FFC50(&System_Func_EventEntity_ScriptData__bool__TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__UpdateCompleteMissionIconVisibility_b__220_0__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935566 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_2213A60(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Linq_Enumerable_FirstOrDefault_EventEntity_ScriptData___);
+    sub_2213A60(&System_Func_EventEntity_ScriptData__bool__TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__UpdateCompleteMissionIconVisibility_b__220_0__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D6A8 = 1;
   }
   entity = 0;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v2);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5246,10 +5238,10 @@ void ScrPlayerStatus__UpdateCompleteMissionIconVisibility(ScrPlayerStatus_o *thi
     goto LABEL_40;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v6);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   mInstance = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5268,10 +5260,10 @@ void ScrPlayerStatus__UpdateCompleteMissionIconVisibility(ScrPlayerStatus_o *thi
     goto LABEL_40;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v6);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   mInstance = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5290,10 +5282,10 @@ void ScrPlayerStatus__UpdateCompleteMissionIconVisibility(ScrPlayerStatus_o *thi
     goto LABEL_40;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v6);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   mInstance = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5317,10 +5309,10 @@ LABEL_40:
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v6);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     mInstance = TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5344,7 +5336,7 @@ LABEL_40:
     goto LABEL_64;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v6);
-  mInstance = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+  mInstance = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
   v12 = this->fields.completeMissionViewController;
   if ( !v12 )
     goto LABEL_75;
@@ -5353,7 +5345,7 @@ LABEL_40:
   mInstance = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)mInstance,
                 v12->fields.currentEventId,
-                (const MethodInfo_3EDD388 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                (const MethodInfo_3F10B30 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( !mInstance )
     goto LABEL_75;
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)*((_QWORD *)mInstance + 15);
@@ -5373,7 +5365,7 @@ LABEL_40:
       static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
     }
     v18 = (Il2CppObject *)static_fields->__9;
-    _9__220_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_EventEntity_ScriptData__bool__TypeInfo);
+    _9__220_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_EventEntity_ScriptData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__220_0,
       v18,
@@ -5381,28 +5373,28 @@ LABEL_40:
       0);
     v19 = ScrPlayerStatus___c_TypeInfo->static_fields;
     v19->__9__220_0 = (struct System_Func_EventEntity_ScriptData__bool__o *)_9__220_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->__9__220_0, (int32_t)_9__220_0, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->__9__220_0, (int32_t)_9__220_0, v20, v21, v22, v23, v24, v25);
   }
-  v26 = System_Linq_Enumerable__FirstOrDefault_object__59044732(
+  v26 = System_Linq_Enumerable__FirstOrDefault_object__59254852(
           v14,
           (System_Func_TSource__bool__o *)_9__220_0,
-          (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_EventEntity_ScriptData___);
+          (const MethodInfo_3882844 *)Method_System_Linq_Enumerable_FirstOrDefault_EventEntity_ScriptData___);
   if ( v26 )
     v10 &= LOBYTE(v26[5].klass) == 0;
   if ( !ScrPlayerStatus__IsEventMapAndSpotClosed(this, v27) )
     goto LABEL_64;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v28);
-  mInstance = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  mInstance = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventDetailMaster___);
   v29 = this->fields.completeMissionViewController;
   if ( !v29 || !mInstance )
 LABEL_75:
-    sub_21FFECC(mInstance, method);
+    sub_2213CDC(mInstance, method);
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)mInstance,
          &entity,
          v29->fields.currentEventId,
-         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     mInstance = entity;
     if ( !entity )
@@ -5438,15 +5430,15 @@ void ScrPlayerStatus__UpdateDailyMissionInfoItem(ScrPlayerStatus_o *this, int32_
   UserEventMissionEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
   currentMissionIndex = index;
-  if ( (byte_5935558 & 1) == 0 )
+  if ( (byte_596D69A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventMissionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__set_Item__);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5935558 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventMissionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__set_Item__);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596D69A = 1;
   }
   currentMissionList = (System_Collections_Generic_List_object__o *)this->fields.currentMissionList;
   entity = 0;
@@ -5457,7 +5449,7 @@ void ScrPlayerStatus__UpdateDailyMissionInfoItem(ScrPlayerStatus_o *this, int32_
   currentMissionList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       currentMissionList,
                                                                       currentMissionIndex,
-                                                                      (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                                                                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
   if ( !currentMissionList )
     goto LABEL_34;
   v6 = currentMissionList;
@@ -5469,7 +5461,7 @@ void ScrPlayerStatus__UpdateDailyMissionInfoItem(ScrPlayerStatus_o *this, int32_
     items = (MstMissionEntity_o *)v6->fields._items;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v7, v8);
-    currentMissionList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMissionMaster___);
+    currentMissionList = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMissionMaster___);
     if ( !items )
       goto LABEL_34;
     if ( !currentMissionList )
@@ -5488,17 +5480,17 @@ void ScrPlayerStatus__UpdateDailyMissionInfoItem(ScrPlayerStatus_o *this, int32_
       while ( 1 )
       {
         if ( v13 >= size )
-          sub_21FFED4(currentMissionList);
+          sub_2213CE4(currentMissionList);
         v14 = *((_QWORD *)&v12->fields._syncRoot + (int)v13);
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&index, v10);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&index, v15);
-        if ( !byte_5931D52 )
+        if ( !byte_5969EF2 )
         {
-          sub_21FFC50(&NetworkManager_TypeInfo);
-          byte_5931D52 = 1;
+          sub_2213A60(&NetworkManager_TypeInfo);
+          byte_5969EF2 = 1;
         }
         currentMissionList = (System_Collections_Generic_List_object__o *)NetworkManager_TypeInfo;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -5531,7 +5523,7 @@ void ScrPlayerStatus__UpdateDailyMissionInfoItem(ScrPlayerStatus_o *this, int32_
           goto LABEL_31;
       }
 LABEL_34:
-      sub_21FFECC(currentMissionList, *(_QWORD *)&index);
+      sub_2213CDC(currentMissionList, *(_QWORD *)&index);
     }
 LABEL_31:
     v17 = (System_Collections_Generic_List_object__o *)this->fields.currentMissionList;
@@ -5546,7 +5538,7 @@ LABEL_31:
       v17,
       v18,
       (Il2CppObject *)currentMissionList,
-      (const MethodInfo_444F8B0 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__set_Item__);
+      (const MethodInfo_44839E8 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__set_Item__);
   }
 }
 
@@ -5558,10 +5550,10 @@ void ScrPlayerStatus__UpdateGiftBoxNum(ScrPlayerStatus_o *this, const MethodInfo
   __int64 v5; // x1
   GiftButtonCtrl_o *v6; // x0
 
-  if ( (byte_5935528 & 1) == 0 )
+  if ( (byte_596D66A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935528 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D66A = 1;
   }
   mcGiftButtonP = (UnityEngine_Object_o *)this->fields.mcGiftButtonP;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -5570,7 +5562,7 @@ void ScrPlayerStatus__UpdateGiftBoxNum(ScrPlayerStatus_o *this, const MethodInfo
   {
     v6 = this->fields.mcGiftButtonP;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     GiftButtonCtrl__InvalidateGiftInfo(v6, 0);
   }
 }
@@ -5599,16 +5591,16 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
   UnityEngine_Transform_o *v21; // x19
   __int64 v22; // x8
 
-  if ( (byte_5935556 & 1) == 0 )
+  if ( (byte_596D698 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    sub_21FFC50(&Method_TransitionCalculator_float__Update__);
-    sub_21FFC50(&Method_TransitionCalculator_float__get_Current__);
-    byte_5935556 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    sub_2213A60(&Method_TransitionCalculator_float__Update__);
+    sub_2213A60(&Method_TransitionCalculator_float__get_Current__);
+    byte_596D698 = 1;
   }
   if ( ScrPlayerStatus__GetEnabledMstMissionCount(this, method) >= 2 )
   {
@@ -5617,18 +5609,18 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
       return;
     TransitionCalculator_float___Update(
       missionAlertAlphaCalculator,
-      (const MethodInfo_3BB5C64 *)Method_TransitionCalculator_float__Update__);
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      (const MethodInfo_3BE940C *)Method_TransitionCalculator_float__Update__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_69;
     if ( !CommonUI__IsActive_UserPresentBoxWindow((CommonUI_o *)Instance, 0) )
     {
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !Instance )
         goto LABEL_69;
       if ( !CommonUI__IsActive_MasterMission((CommonUI_o *)Instance, 0) )
       {
-        Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !Instance )
           goto LABEL_69;
         if ( !CommonUI__maskFadeIsDisp((CommonUI_o *)Instance, 0) )
@@ -5642,7 +5634,7 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
           Instance = (__int64)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)Instance,
                                 this->fields.currentMissionIndex,
-                                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
           if ( !Instance )
             goto LABEL_69;
           Instance = *(_QWORD *)(Instance + 16);
@@ -5678,7 +5670,7 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Instance,
                this->fields.currentMissionIndex,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__get_Item__);
       ScrPlayerStatus__ChangeViewMstMissionLb(this, (MasterMissionComponent_MasterMissionInfoItem_o *)Item, v14);
     }
     v15 = this->fields.missionAlertAlphaCalculator;
@@ -5698,10 +5690,10 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v4, v5);
-  if ( !byte_5934F89 )
+  if ( !byte_596D0B9 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934F89 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596D0B9 = 1;
   }
   v16 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -5714,10 +5706,10 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
     masterMissionAnimationLabelsTween = (UnityEngine_Behaviour_o *)this->fields.masterMissionAnimationLabelsTween;
     if ( !*(&v16->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(v16, v4, v5);
-    if ( !byte_5934F89 )
+    if ( !byte_596D0B9 )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_5934F89 = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596D0B9 = 1;
     }
     v18 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -5729,10 +5721,10 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
       goto LABEL_51;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v5);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     Instance = (__int64)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5748,7 +5740,7 @@ void ScrPlayerStatus__UpdateMstMissionLb(ScrPlayerStatus_o *this, const MethodIn
       goto LABEL_69;
     if ( ScrTerminalListTop__get_IsActiveAnyEarth((ScrTerminalListTop_o *)Instance, 0) )
       goto LABEL_51;
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !Instance )
       goto LABEL_69;
     if ( QuestAfterAction__IsPlaying((QuestAfterAction_o *)Instance, 0) )
@@ -5762,10 +5754,10 @@ LABEL_51:
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v20);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       Instance = (__int64)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -5794,10 +5786,10 @@ LABEL_51:
       {
         Instance = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
         v21 = (UnityEngine_Transform_o *)Instance;
-        if ( !byte_5931940 )
+        if ( !byte_5969AE0 )
         {
-          Instance = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-          byte_5931940 = 1;
+          Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          byte_5969AE0 = 1;
         }
         if ( v21 )
         {
@@ -5807,7 +5799,7 @@ LABEL_51:
       }
     }
 LABEL_69:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
 }
 
@@ -5820,22 +5812,22 @@ void ScrPlayerStatus__UpdatePanel(ScrPlayerStatus_o *this, const MethodInfo *met
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_5935562 & 1) == 0 )
+  if ( (byte_596D6A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935562 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D6A4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v6 )
   {
     if ( !Component_object )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     ((void (__fastcall *)(Il2CppObject *, __int64, const MethodInfo *))Component_object->klass->vtable[12].methodPtr)(
       Component_object,
       1,
@@ -5859,13 +5851,13 @@ void ScrPlayerStatus___EndLocationRequest_b__162_1(ScrPlayerStatus_o *this, bool
   UnityEngine_Object_c *v9; // x0
   UnityEngine_Object_o *mcGiftButtonP; // x21
 
-  if ( (byte_5935574 & 1) == 0 )
+  if ( (byte_596D6B6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935574 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6B6 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   CommonUI__CloseMultiGiftGetDialg(Instance, 0);
@@ -5889,7 +5881,7 @@ void ScrPlayerStatus___EndLocationRequest_b__162_1(ScrPlayerStatus_o *this, bool
         goto LABEL_11;
       }
 LABEL_12:
-      sub_21FFECC(Instance, v6);
+      sub_2213CDC(Instance, v6);
     }
   }
 LABEL_11:
@@ -5901,30 +5893,31 @@ void ScrPlayerStatus___ExitCompleteMission_b__171_0(ScrPlayerStatus_o *this, con
 {
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
-  __int64 v5; // x2
+  const MethodInfo *v5; // x1
+  __int64 v6; // x2
   ErrorDialog_c *klass; // x8
-  Il2CppObject *v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  AvalonSceneManager_c *v10; // x8
-  CommonUI_o *v11; // x20
+  Il2CppObject *v8; // x0
+  __int64 v9; // x1
+  __int64 v10; // x2
+  AvalonSceneManager_c *v11; // x8
+  CommonUI_o *v12; // x20
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v13; // x21
-  __int64 v14; // x2
-  TerminalSceneComponent_c *v15; // x0
-  __int64 v16; // x2
-  TerminalSceneComponent_c *v17; // x0
+  System_Action_o *v14; // x21
+  __int64 v15; // x2
+  TerminalSceneComponent_c *v16; // x0
+  __int64 v17; // x2
+  TerminalSceneComponent_c *v18; // x0
 
-  if ( (byte_5935577 & 1) == 0 )
+  if ( (byte_596D6B9 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitCompleteMission_b__171_1__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935577 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitCompleteMission_b__171_1__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6B9 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   CommonUI__CloseCompleteMission(Instance, 0);
@@ -5932,71 +5925,72 @@ void ScrPlayerStatus___ExitCompleteMission_b__171_0(ScrPlayerStatus_o *this, con
   if ( !Instance )
     goto LABEL_31;
   CompleteMissionViewController__Release((CompleteMissionViewController_o *)Instance, 0);
+  ScrPlayerStatus__UpdateCompleteMissionIconVisibility(this, v5);
   if ( !this->fields.isTerminalEffectDisplay )
     goto LABEL_15;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v5);
-  if ( !byte_5931EF0 )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v6);
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v5);
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v6);
     Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
   }
   klass = Instance->fields.errorDialog->klass;
   if ( !klass || (Instance = (CommonUI_o *)klass->_2.genericContainerHandle) == 0 )
 LABEL_31:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   TitleInfoControl__setDispParticleObj((TitleInfoControl_o *)Instance, 1, 0);
   this->fields.isTerminalEffectDisplay = 0;
 LABEL_15:
-  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v10 = AvalonSceneManager_TypeInfo;
-  v11 = (CommonUI_o *)v7;
+  v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v11 = AvalonSceneManager_TypeInfo;
+  v12 = (CommonUI_o *)v8;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v8, v9);
-    v10 = AvalonSceneManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo, v9, v10);
+    v11 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-  v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitCompleteMission_b__171_1__, 0);
-  if ( !v11 )
+  DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
+  v14 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v14, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitCompleteMission_b__171_1__, 0);
+  if ( !v12 )
     goto LABEL_31;
-  CommonUI__maskFadein(v11, DEFAULT_FADE_TIME, v13, 0);
+  CommonUI__maskFadein(v12, DEFAULT_FADE_TIME, v14, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v14);
-  if ( !byte_5931EF0 )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v15);
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
-  v15 = TerminalSceneComponent_TypeInfo;
+  v16 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v14);
-    v15 = TerminalSceneComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v15);
+    v16 = TerminalSceneComponent_TypeInfo;
   }
-  Instance = (CommonUI_o *)v15->static_fields->mInstance;
+  Instance = (CommonUI_o *)v16->static_fields->mInstance;
   if ( !Instance )
     goto LABEL_31;
-  TerminalSceneComponent__playBgm_52290704((TerminalSceneComponent_o *)Instance, 0);
-  if ( !byte_5931EF0 )
+  TerminalSceneComponent__playBgm_52367936((TerminalSceneComponent_o *)Instance, 0);
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
-  v17 = TerminalSceneComponent_TypeInfo;
+  v18 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v16);
-    v17 = TerminalSceneComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v17);
+    v18 = TerminalSceneComponent_TypeInfo;
   }
-  Instance = (CommonUI_o *)v17->static_fields->mInstance;
+  Instance = (CommonUI_o *)v18->static_fields->mInstance;
   if ( !Instance )
     goto LABEL_31;
   TerminalSceneComponent__SetDispStandServant((TerminalSceneComponent_o *)Instance, 1, 0);
@@ -6005,14 +5999,7 @@ LABEL_15:
 
 void ScrPlayerStatus___ExitCompleteMission_b__171_1(ScrPlayerStatus_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  CompleteMissionViewController_o *completeMissionViewController; // x0
-
   ActionExtensions__Call(this->fields.mAfterCloseCompleteMission, 0);
-  completeMissionViewController = this->fields.completeMissionViewController;
-  if ( !completeMissionViewController )
-    sub_21FFECC(0, v3);
-  CompleteMissionViewController__SetVisible(completeMissionViewController, 1, 0);
 }
 
 
@@ -6041,16 +6028,16 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
   ErrorDialog_c *v23; // x8
   Il2CppMethodPointer methodPtr; // x8
 
-  if ( (byte_5935575 & 1) == 0 )
+  if ( (byte_596D6B7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitMasterMission_b__170_1__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935575 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitMasterMission_b__170_1__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6B7 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_52;
   CommonUI__CloseMasterMission(Instance, 0);
@@ -6058,10 +6045,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v5);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6078,7 +6065,7 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
     TitleInfoControl__setDispParticleObj((TitleInfoControl_o *)Instance, 1, 0);
     this->fields.isTerminalEffectDisplay = 0;
   }
-  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = AvalonSceneManager_TypeInfo;
   v11 = (CommonUI_o *)v7;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -6087,17 +6074,17 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
     v10 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-  v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitMasterMission_b__170_1__, 0);
   if ( !v11 )
     goto LABEL_52;
   CommonUI__maskFadein(v11, DEFAULT_FADE_TIME, v13, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v14);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v15 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6109,10 +6096,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
   if ( !Instance )
     goto LABEL_52;
   TerminalSceneComponent__SetDispStandServant((TerminalSceneComponent_o *)Instance, 1, 0);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6131,10 +6118,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v19);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6157,10 +6144,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v22);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6179,7 +6166,7 @@ void ScrPlayerStatus___ExitMasterMission_b__170_0(ScrPlayerStatus_o *this, const
       }
     }
 LABEL_52:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
 }
 
@@ -6193,10 +6180,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_1(ScrPlayerStatus_o *this, const
   ExRoomRootComponent_o *image; // x0
   ExRoomServant_c *klass; // x8
 
-  if ( (byte_5935576 & 1) == 0 )
+  if ( (byte_596D6B8 & 1) == 0 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935576 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6B8 = 1;
   }
   ActionExtensions__Call(this->fields.mAfterCloseMasterMission, 0);
   if ( this->fields.isFromCompleteMission )
@@ -6206,10 +6193,10 @@ void ScrPlayerStatus___ExitMasterMission_b__170_1(ScrPlayerStatus_o *this, const
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v5, v6);
-      if ( !byte_5931EF0 )
+      if ( !byte_596A090 )
       {
-        sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-        byte_5931EF0 = 1;
+        sub_2213A60(&TerminalSceneComponent_TypeInfo);
+        byte_596A090 = 1;
       }
       image = (ExRoomRootComponent_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6219,7 +6206,7 @@ void ScrPlayerStatus___ExitMasterMission_b__170_1(ScrPlayerStatus_o *this, const
       }
       klass = image[1].fields.servant->klass;
       if ( !klass || (image = (ExRoomRootComponent_o *)klass[1]._1.image) == 0 )
-        sub_21FFECC(image, v5);
+        sub_2213CDC(image, v5);
       ExRoomRootComponent__ResetPlayedVoiceAndPlayVoice(image, 0);
     }
   }
@@ -6241,21 +6228,21 @@ void ScrPlayerStatus___ExitMasterProfile_b__152_0(ScrPlayerStatus_o *this, const
   __int64 v13; // x2
   TerminalSceneComponent_c *v14; // x0
 
-  if ( (byte_5935571 & 1) == 0 )
+  if ( (byte_596D6B3 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__ExitMasterProfile_b__152_1__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935571 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__ExitMasterProfile_b__152_1__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6B3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   CommonUI__CloseMasterProfile((CommonUI_o *)Instance, 0);
   ScrPlayerStatus__mfInitUserData(this, v5);
-  v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v9 = AvalonSceneManager_TypeInfo;
   v10 = (CommonUI_o *)v6;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -6264,17 +6251,17 @@ void ScrPlayerStatus___ExitMasterProfile_b__152_0(ScrPlayerStatus_o *this, const
     v9 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v9->static_fields->DEFAULT_FADE_TIME;
-  v12 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ScrPlayerStatus__ExitMasterProfile_b__152_1__, 0);
   if ( !v10 )
     goto LABEL_15;
   CommonUI__maskFadein(v10, DEFAULT_FADE_TIME, v12, 0);
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v4, v13);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v14 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6285,7 +6272,7 @@ void ScrPlayerStatus___ExitMasterProfile_b__152_0(ScrPlayerStatus_o *this, const
   Instance = (Il2CppObject *)v14->static_fields->mInstance;
   if ( !Instance )
 LABEL_15:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   TerminalSceneComponent__SetDispStandServant((TerminalSceneComponent_o *)Instance, 1, 0);
 }
 
@@ -6300,20 +6287,20 @@ void ScrPlayerStatus___ExitMasterProfile_b__152_1(ScrPlayerStatus_o *this, const
   ExRoomRootComponent_o *image; // x0
   ExRoomServant_c *klass; // x8
 
-  if ( (byte_5935572 & 1) == 0 )
+  if ( (byte_596D6B4 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5935572 = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596D6B4 = 1;
   }
   ScrPlayerStatus__SetVisibilitySpotWebView(this, 1, v2);
   if ( ScrPlayerStatus__IsExRoomActive(v3, v4) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v5, v6);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     image = (ExRoomRootComponent_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6323,7 +6310,7 @@ void ScrPlayerStatus___ExitMasterProfile_b__152_1(ScrPlayerStatus_o *this, const
     }
     klass = image[1].fields.servant->klass;
     if ( !klass || (image = (ExRoomRootComponent_o *)klass[1]._1.image) == 0 )
-      sub_21FFECC(image, v5);
+      sub_2213CDC(image, v5);
     ExRoomRootComponent__ResetPlayedVoiceAndPlayVoice(image, 0);
   }
 }
@@ -6336,17 +6323,17 @@ void ScrPlayerStatus___OnClickApRecoverBtn_b__144_0(ScrPlayerStatus_o *this, int
   __int64 v6; // x1
 
   v4 = this;
-  if ( (byte_593556F & 1) == 0 )
+  if ( (byte_596D6B1 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593556F = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6B1 = 1;
   }
   ScrPlayerStatus__SetVisibilitySpotWebView(this, 1, method);
   if ( result == 2 )
     ActionExtensions__Call(v4->fields.mRecoverAct, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   CommonUI__CloseRecoverItemListDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -6356,13 +6343,13 @@ void ScrPlayerStatus___OnClickCompleteMissionBtn_b__140_0(ScrPlayerStatus_o *thi
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x3
 
-  if ( (byte_593556E & 1) == 0 )
+  if ( (byte_596D6B0 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_2__);
-    byte_593556E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_2__);
+    byte_596D6B0 = 1;
   }
-  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ScrPlayerStatus__OnClickCompleteMissionBtn_b__140_2__, 0);
   ScrPlayerStatus__OpenCompleteMission(this, v3, 0, v4);
 }
@@ -6380,7 +6367,7 @@ void ScrPlayerStatus___OnClickDailyMissionInfoBtn_b__141_0(ScrPlayerStatus_o *th
 {
   const MethodInfo *v2; // x2
 
-  ScrPlayerStatus__OpenMasterMission_43770196(this, 0, v2);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, 0, v2);
 }
 
 
@@ -6388,7 +6375,7 @@ void ScrPlayerStatus___OnClickLimitedMissionInfoBtn_b__143_0(ScrPlayerStatus_o *
 {
   const MethodInfo *v2; // x2
 
-  ScrPlayerStatus__OpenMasterMission_43770196(this, 3, v2);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, 3, v2);
 }
 
 
@@ -6403,17 +6390,17 @@ void ScrPlayerStatus___OnClickMasterMissionBtn_b__135_0(ScrPlayerStatus_o *this,
   bool v9; // w7
   const MethodInfo *v10; // x2
 
-  if ( (byte_593556D & 1) == 0 )
+  if ( (byte_596D6AF & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_1__);
-    byte_593556D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_1__);
+    byte_596D6AF = 1;
   }
-  v3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_ScrPlayerStatus__OnClickMasterMissionBtn_b__135_1__, 0);
   this->fields.isFromCompleteMission = 0;
   this->fields.mAfterCloseMasterMission = v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mAfterCloseMasterMission,
     (int32_t)v3,
     v4,
@@ -6422,7 +6409,7 @@ void ScrPlayerStatus___OnClickMasterMissionBtn_b__135_0(ScrPlayerStatus_o *this,
     v7,
     v8,
     v9);
-  ScrPlayerStatus__OpenMasterMission_43770196(this, -1, v10);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, -1, v10);
 }
 
 
@@ -6449,17 +6436,17 @@ void ScrPlayerStatus___OnClickRpRecoverBtn_b__145_0(ScrPlayerStatus_o *this, int
   __int64 v6; // x1
 
   v4 = this;
-  if ( (byte_5935570 & 1) == 0 )
+  if ( (byte_596D6B2 & 1) == 0 )
   {
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935570 = 1;
+    this = (ScrPlayerStatus_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6B2 = 1;
   }
   ScrPlayerStatus__SetVisibilitySpotWebView(this, 1, method);
   if ( result == 2 )
     ActionExtensions__Call(v4->fields.mRecoverAct, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   CommonUI__CloseRecoverItemListDialog((CommonUI_o *)Instance, 0);
 }
 
@@ -6468,7 +6455,7 @@ void ScrPlayerStatus___OnClickWeeklyMissionInfoBtn_b__142_0(ScrPlayerStatus_o *t
 {
   const MethodInfo *v2; // x2
 
-  ScrPlayerStatus__OpenMasterMission_43770196(this, 1, v2);
+  ScrPlayerStatus__OpenMasterMission_43791132(this, 1, v2);
 }
 
 
@@ -6496,15 +6483,15 @@ void ScrPlayerStatus___ShowDisabledRuntimePermissionDialog_b__157_0(
   ScrPlayerStatus_c *v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_5935573 & 1) == 0 )
+  if ( (byte_596D6B5 & 1) == 0 )
   {
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935573 = 1;
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6B5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_21FFECC(0, v6);
+    sub_2213CDC(0, v6);
   CommonUI__CloseLocationTermsOfUseDlg((CommonUI_o *)Instance, 0);
   if ( result )
   {
@@ -6536,21 +6523,21 @@ void ScrPlayerStatus__cbfGift_Push(ScrPlayerStatus_o *this, const MethodInfo *me
   const MethodInfo *v9; // x2
 
   v2 = this;
-  if ( (byte_5935523 & 1) == 0 )
+  if ( (byte_596D665 & 1) == 0 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_3127/*"BTN_GIFT"*/);
-    byte_5935523 = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_3130/*"BTN_GIFT"*/);
+    byte_596D665 = 1;
   }
   if ( ScrPlayerStatus__IsTouchable(this, method) )
   {
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v3, v4);
-    if ( !byte_5931EF0 )
+    if ( !byte_596A090 )
     {
-      sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-      byte_5931EF0 = 1;
+      sub_2213A60(&TerminalSceneComponent_TypeInfo);
+      byte_596A090 = 1;
     }
     v5 = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6560,12 +6547,12 @@ void ScrPlayerStatus__cbfGift_Push(ScrPlayerStatus_o *this, const MethodInfo *me
     }
     klass = v5->fields.subRootGimmickP->klass;
     if ( !klass || (v5 = *(ScrTerminalMap_o **)&klass->_2.static_fields_size) == 0 )
-      sub_21FFECC(v5, v3);
+      sub_2213CDC(v5, v3);
     ScrTerminalMap__DestroyEventActionEffect(v5, 0);
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v7, v8);
     TerminalPramsManager__PlaySystemSE(0, 0);
-    ScrPlayerStatus__mfCallFsmEvent(v2, (System_String_o *)StringLiteral_3127/*"BTN_GIFT"*/, v9);
+    ScrPlayerStatus__mfCallFsmEvent(v2, (System_String_o *)StringLiteral_3130/*"BTN_GIFT"*/, v9);
   }
 }
 
@@ -6574,12 +6561,12 @@ void ScrPlayerStatus__cbfSlide_In(ScrPlayerStatus_o *this, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_5935521 & 1) == 0 )
+  if ( (byte_596D663 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_12737/*"SLIDE_IN"*/);
-    byte_5935521 = 1;
+    sub_2213A60(&StringLiteral_12763/*"SLIDE_IN"*/);
+    byte_596D663 = 1;
   }
-  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_12737/*"SLIDE_IN"*/, v2);
+  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_12763/*"SLIDE_IN"*/, v2);
 }
 
 
@@ -6587,12 +6574,12 @@ void ScrPlayerStatus__cbfSlide_Out(ScrPlayerStatus_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_5935522 & 1) == 0 )
+  if ( (byte_596D664 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_12738/*"SLIDE_OUT"*/);
-    byte_5935522 = 1;
+    sub_2213A60(&StringLiteral_12764/*"SLIDE_OUT"*/);
+    byte_596D664 = 1;
   }
-  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_12738/*"SLIDE_OUT"*/, v2);
+  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_12764/*"SLIDE_OUT"*/, v2);
 }
 
 
@@ -6604,14 +6591,14 @@ void ScrPlayerStatus__cbfStatus_Init(
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_5935541 & 1) == 0 )
+  if ( (byte_596D683 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5965/*"EV_PRAM_INIT_FIN"*/);
-    byte_5935541 = 1;
+    sub_2213A60(&StringLiteral_5977/*"EV_PRAM_INIT_FIN"*/);
+    byte_596D683 = 1;
   }
   ScrPlayerStatus__mfInitUserData(this, (const MethodInfo *)oFsmObject);
   ScrPlayerStatus__SetupGradeIcon(this, v4);
-  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_5965/*"EV_PRAM_INIT_FIN"*/, v5);
+  ScrPlayerStatus__mfCallFsmEvent(this, (System_String_o *)StringLiteral_5977/*"EV_PRAM_INIT_FIN"*/, v5);
 }
 
 
@@ -6629,13 +6616,13 @@ void ScrPlayerStatus__checkLocationEventBtnShows(ScrPlayerStatus_o *this, int64_
   UnityEngine_GameObject_o *mLocationBtnRoot; // x8
 
   v4 = this;
-  if ( (byte_593555F & 1) == 0 )
+  if ( (byte_596D6A1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&StringLiteral_13592/*"State Roring"*/);
-    byte_593555F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&StringLiteral_13619/*"State Roring"*/);
+    byte_596D6A1 = 1;
   }
   mNextLocationEventTerm = v4->fields.mNextLocationEventTerm;
   if ( !mNextLocationEventTerm )
@@ -6651,10 +6638,10 @@ void ScrPlayerStatus__checkLocationEventBtnShows(ScrPlayerStatus_o *this, int64_
   {
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, now, method);
-    if ( !byte_5934F89 )
+    if ( !byte_596D0B9 )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_5934F89 = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596D0B9 = 1;
     }
     this = (ScrPlayerStatus_o *)TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -6678,10 +6665,10 @@ void ScrPlayerStatus__checkLocationEventBtnShows(ScrPlayerStatus_o *this, int64_
         {
           if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, now, method);
-          if ( !byte_5931EF0 )
+          if ( !byte_596A090 )
           {
-            sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-            byte_5931EF0 = 1;
+            sub_2213A60(&TerminalSceneComponent_TypeInfo);
+            byte_596A090 = 1;
           }
           this = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
           if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -6706,7 +6693,7 @@ void ScrPlayerStatus__checkLocationEventBtnShows(ScrPlayerStatus_o *this, int64_
             ActiveStateName = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)MyFsmP, 0);
             this = (ScrPlayerStatus_o *)System_String__op_Equality(
                                           ActiveStateName,
-                                          (System_String_o *)StringLiteral_13592/*"State Roring"*/,
+                                          (System_String_o *)StringLiteral_13619/*"State Roring"*/,
                                           0);
             goto LABEL_34;
           }
@@ -6721,11 +6708,11 @@ LABEL_34:
           return;
         }
 LABEL_38:
-        sub_21FFECC(this, now);
+        sub_2213CDC(this, now);
       }
     }
 LABEL_37:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   }
 }
 
@@ -6751,23 +6738,23 @@ void ScrPlayerStatus__locationRequest(ScrPlayerStatus_o *this, EventEntity_o *ev
   __int64 v21; // x1
   __int64 v22; // x2
 
-  if ( (byte_593553C & 1) == 0 )
+  if ( (byte_596D67E & 1) == 0 )
   {
-    sub_21FFC50(&GeoLocation_TypeInfo);
-    sub_21FFC50(&GeoLocation_LocationDelegate_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__0__);
-    sub_21FFC50(&ScrPlayerStatus___c__DisplayClass161_0_TypeInfo);
-    byte_593553C = 1;
+    sub_2213A60(&GeoLocation_TypeInfo);
+    sub_2213A60(&GeoLocation_LocationDelegate_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__0__);
+    sub_2213A60(&ScrPlayerStatus___c__DisplayClass161_0_TypeInfo);
+    byte_596D67E = 1;
   }
-  v5 = sub_21FFEBC(ScrPlayerStatus___c__DisplayClass161_0_TypeInfo);
+  v5 = sub_2213CCC(ScrPlayerStatus___c__DisplayClass161_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = eventEnt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)eventEnt, v14, v15, v16, v17, v18, v19);
-  v20 = (GeoLocation_LocationDelegate_o *)sub_21FFEBC(GeoLocation_LocationDelegate_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)eventEnt, v14, v15, v16, v17, v18, v19);
+  v20 = (GeoLocation_LocationDelegate_o *)sub_2213CCC(GeoLocation_LocationDelegate_TypeInfo);
   GeoLocation_LocationDelegate___ctor(
     v20,
     (Il2CppObject *)v5,
@@ -6796,11 +6783,11 @@ void ScrPlayerStatus__mfCallFsmEvent(ScrPlayerStatus_o *this, System_String_o *s
   __int64 v17; // x1
   PlayMakerFSM_o *Fsm; // x0
 
-  if ( (byte_593553E & 1) == 0 )
+  if ( (byte_596D680 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593553E = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D680 = 1;
   }
   p_mTargetFsm = &this->fields.mTargetFsm;
   mTargetFsm = (UnityEngine_Object_o *)this->fields.mTargetFsm;
@@ -6810,9 +6797,9 @@ void ScrPlayerStatus__mfCallFsmEvent(ScrPlayerStatus_o *this, System_String_o *s
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.mTargetFsm = (struct PlayMakerFSM_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mTargetFsm,
       (int32_t)Component_object,
       v10,
@@ -6829,8 +6816,8 @@ void ScrPlayerStatus__mfCallFsmEvent(ScrPlayerStatus_o *this, System_String_o *s
   {
     Fsm = *p_mTargetFsm;
     if ( !*p_mTargetFsm || (Fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_Fsm(Fsm, 0)) == 0 )
-      sub_21FFECC(Fsm, v17);
-    HutongGames_PlayMaker_Fsm__Event_78215652((HutongGames_PlayMaker_Fsm_o *)Fsm, sEventStr, 0);
+      sub_2213CDC(Fsm, v17);
+    HutongGames_PlayMaker_Fsm__Event_78428956((HutongGames_PlayMaker_Fsm_o *)Fsm, sEventStr, 0);
   }
 }
 
@@ -6893,7 +6880,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
   __int64 v56; // x10
   Il2CppClass **v57; // x0
   const MethodInfo *v58; // x3
-  const MethodInfo_444FB2C *v59; // x2
+  const MethodInfo_4483C64 *v59; // x2
   __int64 v60; // x8
   __int64 v61; // x2
   System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *v62; // x21
@@ -6931,28 +6918,28 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
   System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o **list; // [xsp+10h] [xbp-70h]
   ScrPlayerStatus_o *v95; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_5935551 & 1) == 0 )
+  if ( (byte_596D693 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_MstMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__RemoveAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
-    sub_21FFC50(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__mfCheckMasterMission_b__184_0__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935551 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_MstMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__RemoveAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    sub_2213A60(&MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__mfCheckMasterMission_b__184_0__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D693 = 1;
   }
   currentMissionList = this->fields.currentMissionList;
   this->fields.mstMissionStartsAt = 0;
@@ -6967,12 +6954,12 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
   }
   else
   {
-    v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v6,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
     this->fields.currentMissionList = (struct System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__o *)v6;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.currentMissionList,
       (int32_t)v6,
       v7,
@@ -6982,37 +6969,37 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
       v11,
       v12);
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
-  v93 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+  v93 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v93,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem___ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_96;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMissionMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMissionMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_96;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_MstMissionMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_MstMissionMaster___);
   if ( !Instance )
     goto LABEL_96;
   list = &this->fields.currentMissionList;
   v95 = this;
   EnableMissions = MstMissionMaster__GetEnableMissions((MstMissionMaster_o *)Instance, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_96;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !EnableMissions )
     goto LABEL_96;
   max_length = EnableMissions->max_length;
@@ -7024,7 +7011,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
     while ( 1 )
     {
       if ( v21 >= max_length )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       v23 = &EnableMissions->obj.klass + (int)v21;
       v24 = (MstMissionEntity_o *)v23[4];
       if ( !v24 )
@@ -7044,7 +7031,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
             goto LABEL_96;
           Instance = (DataManager_o *)System_Collections_Generic_List_object___ToArray(
                                         (System_Collections_Generic_List_object__o *)Instance,
-                                        (const MethodInfo_445164C *)Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
+                                        (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
           if ( !Instance )
             goto LABEL_96;
           if ( Instance->fields.m_CancellationTokenSource )
@@ -7069,7 +7056,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
             goto LABEL_96;
           Instance = (DataManager_o *)System_Collections_Generic_List_object___ToArray(
                                         (System_Collections_Generic_List_object__o *)Instance,
-                                        (const MethodInfo_445164C *)Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
+                                        (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_EventMissionEntity__ToArray__);
           if ( !Instance )
             goto LABEL_96;
           v36 = Instance;
@@ -7085,7 +7072,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
                                   (EventMissionEntity_array *)v36,
                                   v40,
                                   v41);
-            v43 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_21FFEBC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+            v43 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_2213CCC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
             MasterMissionComponent_MasterMissionInfoItem___ctor(
               v43,
               v24,
@@ -7107,7 +7094,7 @@ void ScrPlayerStatus__mfCheckMasterMission(ScrPlayerStatus_o *this, const Method
             {
               v60 = v45[4];
 LABEL_56:
-              v59 = *(const MethodInfo_444FB2C **)(*(_QWORD *)(v60 + 192) + 112LL);
+              v59 = *(const MethodInfo_4483C64 **)(*(_QWORD *)(v60 + 192) + 112LL);
               v15 = (Il2CppObject *)v43;
               goto LABEL_57;
             }
@@ -7118,7 +7105,7 @@ LABEL_56:
 LABEL_46:
             LODWORD(v15) = (_DWORD)v43;
 LABEL_47:
-            sub_21FFBF4(v35, (int32_t)v15, v18, v25, v26, v27, v28, v29);
+            sub_2213A04(v35, (int32_t)v15, v18, v25, v26, v27, v28, v29);
           }
         }
       }
@@ -7145,7 +7132,7 @@ LABEL_47:
           if ( (unsigned int)v33 >= LODWORD(items->max_length) )
           {
             Instance = (DataManager_o *)v13;
-            v59 = *(const MethodInfo_444FB2C **)(*(_QWORD *)(v32[4] + 192LL) + 112LL);
+            v59 = *(const MethodInfo_4483C64 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL);
 LABEL_57:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)Instance,
@@ -7187,7 +7174,7 @@ LABEL_57:
             v54 = (int32_t)v49->fields.m_CancellationTokenSource;
             if ( startedAt > v95->fields.mstMissionStartsAt )
               v95->fields.mstMissionStartsAt = startedAt;
-            v43 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_21FFEBC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
+            v43 = (MasterMissionComponent_MasterMissionInfoItem_o *)sub_2213CCC(MasterMissionComponent_MasterMissionInfoItem_TypeInfo);
             MasterMissionComponent_MasterMissionInfoItem___ctor(v43, v24, v54, v50, v53, 0);
             if ( !v93 )
               goto LABEL_96;
@@ -7228,14 +7215,14 @@ LABEL_61:
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)Instance,
     (System_Collections_Generic_IEnumerable_T__o *)v13,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
   Instance = (DataManager_o *)*list;
   if ( !*list )
     goto LABEL_96;
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)Instance,
     (System_Collections_Generic_IEnumerable_T__o *)v93,
-    (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
+    (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__AddRange__);
   Instance = (DataManager_o *)ScrPlayerStatus___c_TypeInfo;
   v62 = *list;
   if ( !*(&ScrPlayerStatus___c_TypeInfo->_2.cctor_finished + 1) )
@@ -7253,18 +7240,18 @@ LABEL_61:
       static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
     }
     v65 = (Il2CppObject *)static_fields->__9;
-    _9__184_0 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
+    _9__184_0 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_MasterMissionComponent_MasterMissionInfoItem__TypeInfo);
     System_Predicate_object____ctor(_9__184_0, v65, Method_ScrPlayerStatus___c__mfCheckMasterMission_b__184_0__, 0);
     v66 = ScrPlayerStatus___c_TypeInfo->static_fields;
     v66->__9__184_0 = (struct System_Predicate_MasterMissionComponent_MasterMissionInfoItem__o *)_9__184_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v66->__9__184_0, (int32_t)_9__184_0, v67, v68, v69, v70, v71, v72);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v66->__9__184_0, (int32_t)_9__184_0, v67, v68, v69, v70, v71, v72);
   }
   if ( !v62 )
     goto LABEL_96;
   System_Collections_Generic_List_object___RemoveAll(
     (System_Collections_Generic_List_object__o *)v62,
     (System_Predicate_T__o *)_9__184_0,
-    (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__RemoveAll__);
+    (const MethodInfo_4485290 *)Method_System_Collections_Generic_List_MasterMissionComponent_MasterMissionInfoItem__RemoveAll__);
   p_mMasterMissionNoticeNumber = (DataManager_o **)&v95->fields.mMasterMissionNoticeNumber;
   mMasterMissionNoticeNumber = (UnityEngine_Object_o *)v95->fields.mMasterMissionNoticeNumber;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -7276,8 +7263,8 @@ LABEL_61:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v77);
     v79 = UnityEngine_Object__Instantiate_object_(
             mNoticeNumberPrefab,
-            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    GameObjectExtensions__SafeSetParent_42881912(
+            (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    GameObjectExtensions__SafeSetParent_42897308(
       (UnityEngine_GameObject_o *)v79,
       v95->fields.masterMissionNoticeRoot,
       0);
@@ -7285,9 +7272,9 @@ LABEL_61:
       goto LABEL_96;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v79,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
     *p_mMasterMissionNoticeNumber = (DataManager_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v95->fields.mMasterMissionNoticeNumber,
       (int32_t)Component_object,
       v81,
@@ -7344,12 +7331,12 @@ LABEL_61:
   Instance = (DataManager_o *)v95->fields.masterMissionTween;
   if ( !Instance )
 LABEL_96:
-    sub_21FFECC(Instance, v15);
+    sub_2213CDC(Instance, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
 LABEL_95:
@@ -7368,18 +7355,18 @@ void ScrPlayerStatus__mfFaceMngCallback(ScrPlayerStatus_o *this, const MethodInf
   System_String_o *name; // x0
   UnityEngine_Transform_o *v10; // x22
 
-  if ( (byte_5935546 & 1) == 0 )
+  if ( (byte_596D688 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITexture___);
-    sub_21FFC50(&StringLiteral_3314/*"Body"*/);
-    byte_5935546 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_UITexture___);
+    sub_2213A60(&StringLiteral_3319/*"Body"*/);
+    byte_596D688 = 1;
   }
   mcFaceObjP = (__int64)this->fields.mcFaceObjP;
   if ( !mcFaceObjP )
     goto LABEL_17;
-  mcFaceObjP = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
+  mcFaceObjP = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
                           (UnityEngine_GameObject_o *)mcFaceObjP,
-                          (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITexture___);
+                          (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UITexture___);
   if ( !mcFaceObjP )
     goto LABEL_17;
   v4 = *(_DWORD *)(mcFaceObjP + 24);
@@ -7390,13 +7377,13 @@ void ScrPlayerStatus__mfFaceMngCallback(ScrPlayerStatus_o *this, const MethodInf
     while ( 1 )
     {
       if ( v6 >= v4 )
-        sub_21FFED4(mcFaceObjP);
+        sub_2213CE4(mcFaceObjP);
       v7 = v5 + 8LL * (int)v6;
       v8 = *(UIWidget_o **)(v7 + 32);
       if ( !v8 )
         break;
       name = UnityEngine_Object__get_name(*(UnityEngine_Object_o **)(v7 + 32), 0);
-      mcFaceObjP = System_String__op_Equality(name, (System_String_o *)StringLiteral_3314/*"Body"*/, 0);
+      mcFaceObjP = System_String__op_Equality(name, (System_String_o *)StringLiteral_3319/*"Body"*/, 0);
       if ( (mcFaceObjP & 1) != 0 )
       {
         UIWidget__SetDimensions(v8, 350, 350, 0);
@@ -7406,10 +7393,10 @@ void ScrPlayerStatus__mfFaceMngCallback(ScrPlayerStatus_o *this, const MethodInf
           break;
         mcFaceObjP = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)mcFaceObjP, 0);
         v10 = (UnityEngine_Transform_o *)mcFaceObjP;
-        if ( !byte_5931940 )
+        if ( !byte_5969AE0 )
         {
-          mcFaceObjP = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-          byte_5931940 = 1;
+          mcFaceObjP = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          byte_5969AE0 = 1;
         }
         if ( !v10 )
           break;
@@ -7420,7 +7407,7 @@ void ScrPlayerStatus__mfFaceMngCallback(ScrPlayerStatus_o *this, const MethodInf
         goto LABEL_16;
     }
 LABEL_17:
-    sub_21FFECC(mcFaceObjP, method);
+    sub_2213CDC(mcFaceObjP, method);
   }
 LABEL_16:
   this->fields.isUpdateFaceTexture = 0;
@@ -7438,10 +7425,10 @@ System_String_o *ScrPlayerStatus__mfGetApRecoverTimeStr(
   ScrPlayerStatus_o *ActNextRecoverTime; // x0
   const MethodInfo *v8; // x3
 
-  if ( (byte_593554D & 1) == 0 )
+  if ( (byte_596D68F & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593554D = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D68F = 1;
   }
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
@@ -7458,7 +7445,7 @@ System_String_o *ScrPlayerStatus__mfGetApRecoverTimeStr(
       return ScrPlayerStatus__GetTimeApRecoverStr(ActNextRecoverTime, (int64_t)ActNextRecoverTime, isGetMax, v8);
     }
 LABEL_12:
-    sub_21FFECC(userGameEntity, isGetMax);
+    sub_2213CDC(userGameEntity, isGetMax);
   }
   if ( !userGameEntity )
     goto LABEL_12;
@@ -7480,11 +7467,11 @@ System_String_o *ScrPlayerStatus__mfGetCommandSpellRecoverTimeStr(ScrPlayerStatu
   int64_t time; // [xsp+0h] [xbp-30h] BYREF
   int32_t count; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5935550 & 1) == 0 )
+  if ( (byte_596D692 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935550 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D692 = 1;
   }
   userGameEntity = this->fields.userGameEntity;
   count = 0;
@@ -7512,7 +7499,7 @@ System_String_o *ScrPlayerStatus__mfGetCommandSpellRecoverTimeStr(ScrPlayerStatu
       return ScrPlayerStatus__GetTimeCommandSpellRecoverStr((ScrPlayerStatus_o *)CmdSpellInfo, time, v10);
     }
 LABEL_10:
-    sub_21FFECC(userGameEntity, method);
+    sub_2213CDC(userGameEntity, method);
   }
   return v4;
 }
@@ -7538,11 +7525,11 @@ int32_t ScrPlayerStatus__mfGetFsmValueInt(
   __int64 v17; // x1
   PlayMakerFSM_o *Fsm; // x0
 
-  if ( (byte_5935540 & 1) == 0 )
+  if ( (byte_596D682 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935540 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D682 = 1;
   }
   p_mTargetFsm = &this->fields.mTargetFsm;
   mTargetFsm = (UnityEngine_Object_o *)this->fields.mTargetFsm;
@@ -7552,9 +7539,9 @@ int32_t ScrPlayerStatus__mfGetFsmValueInt(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.mTargetFsm = (struct PlayMakerFSM_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mTargetFsm,
       (int32_t)Component_object,
       v10,
@@ -7578,7 +7565,7 @@ int32_t ScrPlayerStatus__mfGetFsmValueInt(
                                   sValueStr,
                                   0)) == 0 )
   {
-    sub_21FFECC(Fsm, v17);
+    sub_2213CDC(Fsm, v17);
   }
   return HutongGames_PlayMaker_FsmInt__get_Value((HutongGames_PlayMaker_FsmInt_o *)Fsm, 0);
 }
@@ -7599,7 +7586,7 @@ void ScrPlayerStatus__mfInitUserData(ScrPlayerStatus_o *this, const MethodInfo *
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.userGameEntity = SelfUserGame;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userGameEntity,
     (int32_t)SelfUserGame,
     v4,
@@ -7612,7 +7599,7 @@ void ScrPlayerStatus__mfInitUserData(ScrPlayerStatus_o *this, const MethodInfo *
   nextExpDialog = this->fields.nextExpDialog;
   this->fields.mtIsUpdate = 1;
   if ( !nextExpDialog )
-    sub_21FFECC(0, v11);
+    sub_2213CDC(0, v11);
   BaseDialog__Init(nextExpDialog, 0);
 }
 
@@ -7668,11 +7655,11 @@ void ScrPlayerStatus__mfSetFsmValueInt(
   __int64 v19; // x1
   PlayMakerFSM_o *Fsm; // x0
 
-  if ( (byte_593553F & 1) == 0 )
+  if ( (byte_596D681 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593553F = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D681 = 1;
   }
   p_mTargetFsm = &this->fields.mTargetFsm;
   mTargetFsm = (UnityEngine_Object_o *)this->fields.mTargetFsm;
@@ -7682,9 +7669,9 @@ void ScrPlayerStatus__mfSetFsmValueInt(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.mTargetFsm = (struct PlayMakerFSM_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mTargetFsm,
       (int32_t)Component_object,
       v12,
@@ -7708,7 +7695,7 @@ void ScrPlayerStatus__mfSetFsmValueInt(
                                     sValueStr,
                                     0)) == 0 )
     {
-      sub_21FFECC(Fsm, v19);
+      sub_2213CDC(Fsm, v19);
     }
     LODWORD(Fsm->fields.addEventHandlers) = iValueInt;
   }
@@ -7762,14 +7749,14 @@ void ScrPlayerStatus__mfSetLocationEventTime(ScrPlayerStatus_o *this, int64_t no
   bool v34; // w7
 
   v4 = this;
-  if ( (byte_593555E & 1) == 0 )
+  if ( (byte_596D6A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserEventMaster___);
-    sub_21FFC50(&long___TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    this = (ScrPlayerStatus_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593555E = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserEventMaster___);
+    sub_2213A60(&long___TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    this = (ScrPlayerStatus_o *)sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596D6A0 = 1;
   }
   mNextLocationEventTerm = v4->fields.mNextLocationEventTerm;
   if ( !mNextLocationEventTerm )
@@ -7784,12 +7771,12 @@ void ScrPlayerStatus__mfSetLocationEventTime(ScrPlayerStatus_o *this, int64_t no
     if ( mNextLocationEventTerm->m_Items[1] < now )
     {
 LABEL_8:
-      this = (ScrPlayerStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (ScrPlayerStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_47;
       this = (ScrPlayerStatus_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)this,
-                                    (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventMaster___);
+                                    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMaster___);
       if ( !this )
         goto LABEL_47;
       this = (ScrPlayerStatus_o *)EventMaster__GetEnableEntityList((EventMaster_o *)this, 20, 0, 0, 0);
@@ -7818,7 +7805,7 @@ LABEL_8:
         }
         else
         {
-          this = (ScrPlayerStatus_o *)sub_21FFD10(long___TypeInfo, 2);
+          this = (ScrPlayerStatus_o *)sub_2213B20(long___TypeInfo, 2);
           if ( !LODWORD(v10->fields.m_CancellationTokenSource) )
             goto LABEL_48;
           v21 = v10->fields.mTargetFsm;
@@ -7836,7 +7823,7 @@ LABEL_8:
           fsm = (struct UnityEngine_GameObject_o *)v21[1].fields.fsm;
           *p_mNextLocationEventTerm = this;
           this->fields.mcFaceObjP = fsm;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v4->fields.mNextLocationEventTerm,
             (int32_t)this,
             v15,
@@ -7846,18 +7833,18 @@ LABEL_8:
             v19,
             v20);
         }
-        this = (ScrPlayerStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (ScrPlayerStatus_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !this )
           goto LABEL_47;
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)this,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserEventMaster___);
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7, v24);
-        if ( !byte_5931D52 )
+        if ( !byte_5969EF2 )
         {
-          sub_21FFC50(&NetworkManager_TypeInfo);
-          byte_5931D52 = 1;
+          sub_2213A60(&NetworkManager_TypeInfo);
+          byte_5969EF2 = 1;
         }
         this = (ScrPlayerStatus_o *)NetworkManager_TypeInfo;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -7885,10 +7872,10 @@ LABEL_8:
             }
           }
 LABEL_47:
-          sub_21FFECC(this, v7);
+          sub_2213CDC(this, v7);
         }
 LABEL_48:
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       }
       if ( v11 )
       {
@@ -7902,9 +7889,9 @@ LABEL_48:
       }
       else
       {
-        v28 = sub_21FFD10(long___TypeInfo, 2);
+        v28 = sub_2213B20(long___TypeInfo, 2);
         *p_mNextLocationEventTerm = v28;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v4->fields.mNextLocationEventTerm,
           v28,
           v29,
@@ -7958,15 +7945,15 @@ void ScrPlayerStatus__mfSetSpell(
   bool v35; // w6
   bool v36; // w7
 
-  if ( (byte_593555C & 1) == 0 )
+  if ( (byte_596D69E & 1) == 0 )
   {
-    sub_21FFC50(&CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_OnCloseSpellWindow__);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    byte_593555C = 1;
+    sub_2213A60(&CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_OnCloseSpellWindow__);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    byte_596D69E = 1;
   }
   v7 = UnityEngine_Object_TypeInfo;
   this->fields.miSpellNow = iSpellNow;
@@ -7990,14 +7977,14 @@ void ScrPlayerStatus__mfSetSpell(
     v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
-    UnityEngine_Object__Destroy_83246496(v15, 0);
+    UnityEngine_Object__Destroy_83459800(v15, 0);
   }
   commandSpellWindowPrefab = (Il2CppObject *)this->fields.commandSpellWindowPrefab;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
   v17 = UnityEngine_Object__Instantiate_object_(
           commandSpellWindowPrefab,
-          (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_23;
@@ -8007,9 +7994,9 @@ void ScrPlayerStatus__mfSetSpell(
     goto LABEL_23;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v17,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommandSpellWindowComponent___);
   *p_commandSpellWindow = (struct CommandSpellWindowComponent_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.commandSpellWindow,
     (int32_t)Component_object,
     v20,
@@ -8022,7 +8009,7 @@ void ScrPlayerStatus__mfSetSpell(
   if ( !*p_commandSpellWindow )
     goto LABEL_23;
   v26 = UnityEngine_Component__get_gameObject(gameObject, 0);
-  GameObjectExtensions__SafeSetParent_42881912(v26, this->fields.commandSpellWindowRoot, 0);
+  GameObjectExtensions__SafeSetParent_42897308(v26, this->fields.commandSpellWindowRoot, 0);
   gameObject = (UnityEngine_Component_o *)ScrPlayerStatus_TypeInfo;
   v28 = this->fields.commandSpellWindow;
   if ( !*(&ScrPlayerStatus_TypeInfo->_2.cctor_finished + 1) )
@@ -8043,17 +8030,17 @@ void ScrPlayerStatus__mfSetSpell(
         (v29 = *p_commandSpellWindow) == 0) )
   {
 LABEL_23:
-    sub_21FFECC(gameObject, v10);
+    sub_2213CDC(gameObject, v10);
   }
   v29->fields.mode = 0;
-  v30 = (CommandSpellWindowComponent_CloseButtonCallBack_o *)sub_21FFEBC(CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
+  v30 = (CommandSpellWindowComponent_CloseButtonCallBack_o *)sub_2213CCC(CommandSpellWindowComponent_CloseButtonCallBack_TypeInfo);
   CommandSpellWindowComponent_CloseButtonCallBack___ctor(
     v30,
     (Il2CppObject *)this,
     (intptr_t)Method_ScrPlayerStatus_OnCloseSpellWindow__,
     0);
   v29->fields.callback_close = v30;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v29->fields.callback_close,
     (int32_t)v30,
     v31,
@@ -8087,7 +8074,7 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
   int32_t MaxNum; // w20
   __int64 v21; // x1
   __int64 v22; // x2
-  bool _47357952; // w8
+  bool _47388504; // w8
   UILabel_o *stoneCountNumLb; // x22
   __int64 v25; // x2
   UILabel_o *v26; // x22
@@ -8113,49 +8100,49 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
   int32_t v46; // [xsp+4h] [xbp-5Ch] BYREF
   UserItemEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_593555D & 1) == 0 )
+  if ( (byte_596D69F & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&ClassBoardUtility_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&TutorialFlag_TypeInfo);
-    sub_21FFC50(&StringLiteral_20278/*"ffb505"*/);
-    sub_21FFC50(&StringLiteral_20279/*"ffffff"*/);
-    sub_21FFC50(&StringLiteral_22030/*"item_mini_49"*/);
-    sub_21FFC50(&StringLiteral_4000/*"COUNT_LIMITED"*/);
-    sub_21FFC50(&StringLiteral_16621/*"[{0}]{1:N0}[-]"*/);
-    byte_593555D = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&ClassBoardUtility_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&TutorialFlag_TypeInfo);
+    sub_2213A60(&StringLiteral_20319/*"ffb505"*/);
+    sub_2213A60(&StringLiteral_20320/*"ffffff"*/);
+    sub_2213A60(&StringLiteral_22073/*"item_mini_49"*/);
+    sub_2213A60(&StringLiteral_4005/*"COUNT_LIMITED"*/);
+    sub_2213A60(&StringLiteral_16653/*"[{0}]{1:N0}[-]"*/);
+    byte_596D69F = 1;
   }
   entity = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
   v8 = DataManager__GetMasterData_object_(
          Instance,
-         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v7);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -8172,11 +8159,11 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
                        0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
-  if ( !byte_5931D52 )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -8195,13 +8182,13 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
     v14,
     BalanceConfig_TypeInfo->static_fields->stormPodItemId,
     0);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ItemMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Instance )
     goto LABEL_66;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 BalanceConfig_TypeInfo->static_fields->stormPodItemId,
-                                (const MethodInfo_3EDD388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                (const MethodInfo_3F10B30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( !SelfUserGame || !EntityDefinitely )
     goto LABEL_66;
   if ( entity )
@@ -8221,9 +8208,9 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
   MaxNum = ItemEntity__GetMaxNum((ItemEntity_o *)Instance, 0);
   if ( !*(&TutorialFlag_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v18, v19);
-  _47357952 = TutorialFlag__Get_47357952(101, 0);
+  _47388504 = TutorialFlag__Get_47388504(101, 0);
   stoneCountNumLb = this->fields.stoneCountNumLb;
-  if ( !_47357952 )
+  if ( !_47388504 )
     stone = 0;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21, v22);
@@ -8287,21 +8274,21 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
             if ( Instance )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-              v30 = (Il2CppObject **)&StringLiteral_20279/*"ffffff"*/;
+              v30 = (Il2CppObject **)&StringLiteral_20320/*"ffffff"*/;
               if ( num >= MaxNum )
-                v30 = (Il2CppObject **)&StringLiteral_20278/*"ffb505"*/;
+                v30 = (Il2CppObject **)&StringLiteral_20319/*"ffb505"*/;
               v31 = *v30;
               v46 = num;
-              v32 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v46);
-              v33 = System_String__Format_75484576((System_String_o *)StringLiteral_16621/*"[{0}]{1:N0}[-]"*/, v31, v32, 0);
+              v32 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v46);
+              v33 = System_String__Format_75697880((System_String_o *)StringLiteral_16653/*"[{0}]{1:N0}[-]"*/, v31, v32, 0);
               stormPodCountNumLb = this->fields.stormPodCountNumLb;
               v37 = (Il2CppObject *)v33;
               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
-              v38 = LocalizationManager__Get((System_String_o *)StringLiteral_4000/*"COUNT_LIMITED"*/, 0);
+              v38 = LocalizationManager__Get((System_String_o *)StringLiteral_4005/*"COUNT_LIMITED"*/, 0);
               v45 = MaxNum;
-              v39 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v45);
-              Instance = (DataManager_o *)System_String__Format_75484576(v38, v37, v39, 0);
+              v39 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v45);
+              Instance = (DataManager_o *)System_String__Format_75697880(v38, v37, v39, 0);
               if ( stormPodCountNumLb )
               {
                 UILabel__set_text(stormPodCountNumLb, (System_String_o *)Instance, 0);
@@ -8319,7 +8306,7 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
                   stormPodIcon = this->fields.stormPodIcon;
                   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v42, v43);
-                  AtlasManager__SetEventSprite(stormPodIcon, (System_String_o *)StringLiteral_22030/*"item_mini_49"*/, 0);
+                  AtlasManager__SetEventSprite(stormPodIcon, (System_String_o *)StringLiteral_22073/*"item_mini_49"*/, 0);
                   return;
                 }
               }
@@ -8329,7 +8316,7 @@ void ScrPlayerStatus__mfSetStoneAndFragment(ScrPlayerStatus_o *this, const Metho
       }
     }
 LABEL_66:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   }
 }
 
@@ -8364,15 +8351,15 @@ void ScrPlayerStatus__mfUpdatePrams(ScrPlayerStatus_o *this, const MethodInfo *m
   int32_t count; // [xsp+1Ch] [xbp-24h] BYREF
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593554B & 1) == 0 )
+  if ( (byte_596D68D & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ScrPlayerStatus_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593554B = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserExpMaster___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ScrPlayerStatus_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D68D = 1;
   }
   count = 0;
   isUpdateFaceTexture = this->fields.isUpdateFaceTexture;
@@ -8380,12 +8367,12 @@ void ScrPlayerStatus__mfUpdatePrams(ScrPlayerStatus_o *this, const MethodInfo *m
   v26 = 0;
   if ( isUpdateFaceTexture )
     ScrPlayerStatus__ResetMasterFaceTexture(this, 0, v2);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_33;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserExpMaster___);
   if ( !Instance )
     goto LABEL_33;
   LevelMax = UserExpMaster__GetLevelMax((UserExpMaster_o *)Instance, 0);
@@ -8398,7 +8385,7 @@ void ScrPlayerStatus__mfUpdatePrams(ScrPlayerStatus_o *this, const MethodInfo *m
   UILabel__set_text(mcLevelStrP, v9, 0);
   mcLevelMaxP = this->fields.mcLevelMaxP;
   v11 = System_Int32__ToString((int32_t)&v26, 0);
-  Instance = (DataManager_o *)System_String__Concat_75438412((System_String_o *)StringLiteral_1123/*"/"*/, v11, 0);
+  Instance = (DataManager_o *)System_String__Concat_75651716((System_String_o *)StringLiteral_1123/*"/"*/, v11, 0);
   if ( !mcLevelMaxP )
     goto LABEL_33;
   UILabel__set_text(mcLevelMaxP, (System_String_o *)Instance, 0);
@@ -8454,7 +8441,7 @@ void ScrPlayerStatus__mfUpdatePrams(ScrPlayerStatus_o *this, const MethodInfo *m
         (Instance = (DataManager_o *)this->fields.userGameEntity) == 0) )
   {
 LABEL_33:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   UserGameEntity__getCmdSpellInfo((UserGameEntity_o *)Instance, &count, &recoverTime, 0);
   mcGiftButtonP = (UnityEngine_Object_o *)this->fields.mcGiftButtonP;
@@ -8501,7 +8488,7 @@ void ScrPlayerStatus_OverwriteMasterInfo___ctor(
   LODWORD(v10[-1].fields._NaviAction_k__BackingField) = warId;
   HIDWORD(v10[-1].fields._NaviAction_k__BackingField) = masterIcon;
   v10[-1].fields._BoardType_k__BackingField = count;
-  sub_21FFBF4(v10, (int32_t)spellIcon, v11, v12, v13, v14, v15, v16);
+  sub_2213A04(v10, (int32_t)spellIcon, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -8567,7 +8554,7 @@ void ScrPlayerStatus_OverwriteMasterInfo__set_spellIconId(
   bool v7; // w7
 
   this->fields._spellIconId_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._spellIconId_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -8598,15 +8585,15 @@ void ScrPlayerStatus___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5935578 & 1) == 0 )
+  if ( (byte_596D6BA & 1) == 0 )
   {
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935578 = 1;
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D6BA = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ScrPlayerStatus___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ScrPlayerStatus___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ScrPlayerStatus___c_TypeInfo->static_fields->__9 = (struct ScrPlayerStatus___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ScrPlayerStatus___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -8656,20 +8643,20 @@ void ScrPlayerStatus___c___OpenMasterProfile_b__151_0(ScrPlayerStatus___c_o *thi
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5935579 & 1) == 0 )
+  if ( (byte_596D6BB & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_1__);
-    sub_21FFC50(&ScrPlayerStatus___c_TypeInfo);
-    byte_5935579 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_1__);
+    sub_2213A60(&ScrPlayerStatus___c_TypeInfo);
+    byte_596D6BB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
-  v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v6 = AvalonSceneManager_TypeInfo;
   v7 = (CommonUI_o *)v4;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -8694,15 +8681,15 @@ void ScrPlayerStatus___c___OpenMasterProfile_b__151_0(ScrPlayerStatus___c_o *thi
       static_fields = ScrPlayerStatus___c_TypeInfo->static_fields;
     }
     v11 = (Il2CppObject *)static_fields->__9;
-    _9__151_1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__151_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(_9__151_1, v11, Method_ScrPlayerStatus___c__OpenMasterProfile_b__151_1__, 0);
     v12 = ScrPlayerStatus___c_TypeInfo->static_fields;
     v12->__9__151_1 = _9__151_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__151_1, (int32_t)_9__151_1, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__151_1, (int32_t)_9__151_1, v13, v14, v15, v16, v17, v18);
   }
   if ( !v7 )
 LABEL_14:
-    sub_21FFECC(Instance, v3);
+    sub_2213CDC(Instance, v3);
   CommonUI__maskFadein(v7, DEFAULT_FADE_TIME, _9__151_1, 0);
 }
 
@@ -8721,7 +8708,7 @@ int32_t ScrPlayerStatus___c___SortLimitedMstMissionViewList_b__188_0(
   struct MstMissionEntity_o *MstMissionEntity_k__BackingField; // x8
 
   if ( !info || (MstMissionEntity_k__BackingField = info->fields._MstMissionEntity_k__BackingField) == 0 )
-    sub_21FFECC(this, info);
+    sub_2213CDC(this, info);
   return MstMissionEntity_k__BackingField->fields.priority;
 }
 
@@ -8732,7 +8719,7 @@ bool ScrPlayerStatus___c___UpdateCompleteMissionIconVisibility_b__220_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.isHiddenTerminalCompleteMissionButton;
 }
 
@@ -8743,7 +8730,7 @@ bool ScrPlayerStatus___c___mfCheckMasterMission_b__184_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields._MissionAchiveCount_k__BackingField == x->fields._MissionCount_k__BackingField;
 }
 
@@ -8773,21 +8760,21 @@ void ScrPlayerStatus___c__DisplayClass136_0___ClickBannerOpenMasterMission_b__0(
   int32_t typeIndex; // w19
   const MethodInfo *v14; // x2
 
-  if ( (byte_593557A & 1) == 0 )
+  if ( (byte_596D6BC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_UpdateGiftBoxNum__);
-    byte_593557A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_UpdateGiftBoxNum__);
+    byte_596D6BC = 1;
   }
   _4__this = this->fields.__4__this;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)_4__this, Method_ScrPlayerStatus_UpdateGiftBoxNum__, 0);
   if ( !_4__this )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   typeIndex = this->fields.typeIndex;
   _4__this->fields.isFromCompleteMission = 0;
   _4__this->fields.mAfterCloseMasterMission = v4;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields.mAfterCloseMasterMission,
     (int32_t)v4,
     v7,
@@ -8796,7 +8783,7 @@ void ScrPlayerStatus___c__DisplayClass136_0___ClickBannerOpenMasterMission_b__0(
     v10,
     v11,
     v12);
-  ScrPlayerStatus__OpenMasterMission_43770196(_4__this, typeIndex, v14);
+  ScrPlayerStatus__OpenMasterMission_43791132(_4__this, typeIndex, v14);
 }
 
 
@@ -8831,31 +8818,31 @@ void ScrPlayerStatus___c__DisplayClass137_0___ClickLoginDialogOpenMasterMission_
   const MethodInfo *v18; // x2
 
   v8 = this;
-  if ( (byte_593557B & 1) == 0 )
+  if ( (byte_596D6BD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    this = (ScrPlayerStatus___c__DisplayClass137_0_o *)sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass137_0__ClickLoginDialogOpenMasterMission_b__1__);
-    byte_593557B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    this = (ScrPlayerStatus___c__DisplayClass137_0_o *)sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass137_0__ClickLoginDialogOpenMasterMission_b__1__);
+    byte_596D6BD = 1;
   }
   _9__1 = v8->fields.__9__1;
   _4__this = v8->fields.__4__this;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v8,
       Method_ScrPlayerStatus___c__DisplayClass137_0__ClickLoginDialogOpenMasterMission_b__1__,
       0);
     v8->fields.__9__1 = _9__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__9__1, (int32_t)_9__1, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__9__1, (int32_t)_9__1, v11, v12, v13, v14, v15, v16);
   }
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   typeIndex = v8->fields.typeIndex;
   _4__this->fields.isFromCompleteMission = 0;
   _4__this->fields.mAfterCloseMasterMission = _9__1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields.mAfterCloseMasterMission,
     (int32_t)_9__1,
     v2,
@@ -8864,7 +8851,7 @@ void ScrPlayerStatus___c__DisplayClass137_0___ClickLoginDialogOpenMasterMission_
     v5,
     v6,
     v7);
-  ScrPlayerStatus__OpenMasterMission_43770196(_4__this, typeIndex, v18);
+  ScrPlayerStatus__OpenMasterMission_43791132(_4__this, typeIndex, v18);
 }
 
 
@@ -8881,7 +8868,7 @@ void ScrPlayerStatus___c__DisplayClass137_0___ClickLoginDialogOpenMasterMission_
         ScrPlayerStatus__SetVisibilitySpotWebView((ScrPlayerStatus_o *)this, 1, v2),
         (this = (ScrPlayerStatus___c__DisplayClass137_0_o *)v3->fields.__4__this) == 0) )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   ScrPlayerStatus__UpdateGiftBoxNum((ScrPlayerStatus_o *)this, method);
   closeCallback = v3->fields.closeCallback;
@@ -8914,15 +8901,15 @@ void ScrPlayerStatus___c__DisplayClass156_0___ShowEnabledRuntimePermissionDialog
   System_Action_object__o *v11; // x21
   struct ScrPlayerStatus_o *v12; // x8
 
-  if ( (byte_593557C & 1) == 0 )
+  if ( (byte_596D6BE & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_string__TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_OnPermissionDenied__);
-    sub_21FFC50(&Method_ScrPlayerStatus_OnPermissionGranted__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593557C = 1;
+    sub_2213A60(&System_Action_string__TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_OnPermissionDenied__);
+    sub_2213A60(&Method_ScrPlayerStatus_OnPermissionGranted__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6BE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   CommonUI__CloseLocationTermsOfUseDlg((CommonUI_o *)Instance, 0);
@@ -8930,10 +8917,10 @@ void ScrPlayerStatus___c__DisplayClass156_0___ShowEnabledRuntimePermissionDialog
   {
     permissionName = this->fields.permissionName;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v9 = (System_Action_object__o *)sub_21FFEBC(System_Action_string__TypeInfo);
+    v9 = (System_Action_object__o *)sub_2213CCC(System_Action_string__TypeInfo);
     System_Action_object____ctor(v9, _4__this, Method_ScrPlayerStatus_OnPermissionGranted__, 0);
     v10 = (Il2CppObject *)this->fields.__4__this;
-    v11 = (System_Action_object__o *)sub_21FFEBC(System_Action_string__TypeInfo);
+    v11 = (System_Action_object__o *)sub_2213CCC(System_Action_string__TypeInfo);
     System_Action_object____ctor(v11, v10, Method_ScrPlayerStatus_OnPermissionDenied__, 0);
     AndroidPermissionManager__RequestPermission(
       permissionName,
@@ -8946,7 +8933,7 @@ void ScrPlayerStatus___c__DisplayClass156_0___ShowEnabledRuntimePermissionDialog
   v12 = this->fields.__4__this;
   if ( !v12 )
 LABEL_8:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   v12->fields.isLocationBusy = 0;
 }
 
@@ -8967,7 +8954,7 @@ void ScrPlayerStatus___c__DisplayClass160_0___SetLocationCheck_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   _4__this->fields.isLocationBusy = 0;
 }
 
@@ -8982,12 +8969,12 @@ void ScrPlayerStatus___c__DisplayClass160_0___SetLocationCheck_b__1(
   const MethodInfo *v7; // x2
   struct EventEntity_array *list; // x8
 
-  if ( (byte_593557D & 1) == 0 )
+  if ( (byte_596D6BF & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593557D = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6BF = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   CommonUI__CloseCampaignInfoDialg(Instance, 0);
@@ -8998,7 +8985,7 @@ void ScrPlayerStatus___c__DisplayClass160_0___SetLocationCheck_b__1(
     if ( list )
     {
       if ( !LODWORD(list->max_length) )
-        sub_21FFED4(Instance);
+        sub_2213CE4(Instance);
       if ( Instance )
       {
         ScrPlayerStatus__locationRequest((ScrPlayerStatus_o *)Instance, list->m_Items[0], v7);
@@ -9006,7 +8993,7 @@ void ScrPlayerStatus___c__DisplayClass160_0___SetLocationCheck_b__1(
       }
     }
 LABEL_11:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_11;
@@ -9022,7 +9009,7 @@ void ScrPlayerStatus___c__DisplayClass160_0___SetLocationCheck_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   _4__this->fields.isLocationBusy = 0;
 }
 
@@ -9086,29 +9073,29 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__0(
   System_String_o *v49; // x0
   UnityEngine_LocationInfo_o v50; // [xsp+40h] [xbp-70h] BYREF
 
-  if ( (byte_593557E & 1) == 0 )
+  if ( (byte_596D6C0 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_NetworkManager_getRequest_EventLocationRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_ScrPlayerStatus_EndLocationRequest__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__1__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__2__);
-    sub_21FFC50(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__3__);
-    sub_21FFC50(&StringLiteral_8644/*"LOCATION_DLG_TIMEOUT_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_8645/*"LOCATION_DLG_TIMEOUT_TITLE"*/);
-    sub_21FFC50(&StringLiteral_8643/*"LOCATION_DLG_TIMEOUT_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_8642/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_8638/*"LOCATION_DLG_DEVICE_OPTION_RETRY_TITLE"*/);
-    sub_21FFC50(&StringLiteral_8636/*"LOCATION_DLG_DEVICE_OPTION_RETRY_DECIDE"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_8637/*"LOCATION_DLG_DEVICE_OPTION_RETRY_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_8634/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/);
-    byte_593557E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_NetworkManager_getRequest_EventLocationRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_ScrPlayerStatus_EndLocationRequest__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__1__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__2__);
+    sub_2213A60(&Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__3__);
+    sub_2213A60(&StringLiteral_8657/*"LOCATION_DLG_TIMEOUT_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_8658/*"LOCATION_DLG_TIMEOUT_TITLE"*/);
+    sub_2213A60(&StringLiteral_8656/*"LOCATION_DLG_TIMEOUT_DECIDE"*/);
+    sub_2213A60(&StringLiteral_8655/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_8651/*"LOCATION_DLG_DEVICE_OPTION_RETRY_TITLE"*/);
+    sub_2213A60(&StringLiteral_8649/*"LOCATION_DLG_DEVICE_OPTION_RETRY_DECIDE"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_8650/*"LOCATION_DLG_DEVICE_OPTION_RETRY_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_8647/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/);
+    byte_596D6C0 = 1;
   }
   if ( result <= 2 )
   {
@@ -9116,18 +9103,18 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__0(
     {
       if ( result != 2 )
         return;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v7, v8);
-      v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8638/*"LOCATION_DLG_DEVICE_OPTION_RETRY_TITLE"*/, 0);
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8637/*"LOCATION_DLG_DEVICE_OPTION_RETRY_MESSAGE"*/, 0);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8636/*"LOCATION_DLG_DEVICE_OPTION_RETRY_DECIDE"*/, 0);
-      Request_object = (EventLocationRequest_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+      v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8651/*"LOCATION_DLG_DEVICE_OPTION_RETRY_TITLE"*/, 0);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8650/*"LOCATION_DLG_DEVICE_OPTION_RETRY_MESSAGE"*/, 0);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8649/*"LOCATION_DLG_DEVICE_OPTION_RETRY_DECIDE"*/, 0);
+      Request_object = (EventLocationRequest_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
       v15 = (System_String_o *)Request_object;
       _9__1 = this->fields.__9__1;
       if ( !_9__1 )
       {
-        _9__1 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+        _9__1 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
         CommonConfirmDialog_ClickDelegate___ctor(
           _9__1,
           (Il2CppObject *)this,
@@ -9137,7 +9124,7 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__0(
         v24 = (int)_9__1;
         this->fields.__9__1 = _9__1;
 LABEL_29:
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__9__1, v24, v17, v18, v19, v20, v21, v22);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)p__9__1, v24, v17, v18, v19, v20, v21, v22);
         goto LABEL_30;
       }
       goto LABEL_30;
@@ -9151,13 +9138,13 @@ LABEL_29:
       if ( result != 5 )
         return;
       _4__this = (Il2CppObject *)this->fields.__4__this;
-      v26 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v26 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(v26, _4__this, Method_ScrPlayerStatus_EndLocationRequest__, 0);
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v27, v28);
       Request_object = (EventLocationRequest_o *)NetworkManager__getRequest_object_(
                                                    v26,
-                                                   (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_EventLocationRequest___);
+                                                   (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_EventLocationRequest___);
       eventEnt = this->fields.eventEnt;
       if ( eventEnt && Request_object )
       {
@@ -9169,10 +9156,10 @@ LABEL_29:
         return;
       }
 LABEL_33:
-      sub_21FFECC(Request_object, v14);
+      sub_2213CDC(Request_object, v14);
     }
 LABEL_18:
-    Request_object = (EventLocationRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Request_object = (EventLocationRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v33 = this->fields.eventEnt;
     if ( v33 )
     {
@@ -9180,21 +9167,21 @@ LABEL_18:
       name = v33->fields.name;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14, v32);
-      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_8642/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/, 0);
-      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8634/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
-      Request_object = (EventLocationRequest_o *)System_String__Concat_75438412(v36, v37, 0);
+      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_8655/*"LOCATION_DLG_OUTOF_AREA_MESSAGE"*/, 0);
+      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8647/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
+      Request_object = (EventLocationRequest_o *)System_String__Concat_75651716(v36, v37, 0);
       v38 = (System_String_o *)Request_object;
       _9__3 = this->fields.__9__3;
       if ( !_9__3 )
       {
-        _9__3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        _9__3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__3,
           (Il2CppObject *)this,
           Method_ScrPlayerStatus___c__DisplayClass161_0__locationRequest_b__3__,
           0);
         this->fields.__9__3 = _9__3;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.__9__3,
           (int32_t)_9__3,
           v40,
@@ -9212,20 +9199,20 @@ LABEL_18:
     }
     goto LABEL_33;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v46, v47);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8645/*"LOCATION_DLG_TIMEOUT_TITLE"*/, 0);
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_8644/*"LOCATION_DLG_TIMEOUT_MESSAGE"*/, 0);
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8634/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
-  v11 = System_String__Concat_75438412(v48, v49, 0);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8643/*"LOCATION_DLG_TIMEOUT_DECIDE"*/, 0);
-  Request_object = (EventLocationRequest_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8658/*"LOCATION_DLG_TIMEOUT_TITLE"*/, 0);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_8657/*"LOCATION_DLG_TIMEOUT_MESSAGE"*/, 0);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8647/*"LOCATION_DLG_ADDITIONAL_WARN_MESSAGE"*/, 0);
+  v11 = System_String__Concat_75651716(v48, v49, 0);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8656/*"LOCATION_DLG_TIMEOUT_DECIDE"*/, 0);
+  Request_object = (EventLocationRequest_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   v15 = (System_String_o *)Request_object;
   _9__1 = this->fields.__9__2;
   if ( !_9__1 )
   {
-    _9__1 = (CommonConfirmDialog_ClickDelegate_o *)sub_21FFEBC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    _9__1 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
       _9__1,
       (Il2CppObject *)this,
@@ -9270,12 +9257,12 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__1(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_593557F & 1) == 0 )
+  if ( (byte_596D6C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593557F = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6C1 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   CommonUI__CloseConfirmDialog(Instance, 0);
@@ -9288,7 +9275,7 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__1(
       return;
     }
 LABEL_9:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_9;
@@ -9305,12 +9292,12 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__2(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_5935580 & 1) == 0 )
+  if ( (byte_596D6C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5935580 = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596D6C2 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   CommonUI__CloseConfirmDialog(Instance, 0);
@@ -9323,7 +9310,7 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__2(
       return;
     }
 LABEL_9:
-    sub_21FFECC(Instance, v6);
+    sub_2213CDC(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_9;
@@ -9339,7 +9326,7 @@ void ScrPlayerStatus___c__DisplayClass161_0___locationRequest_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   _4__this->fields.isLocationBusy = 0;
 }
 
@@ -9360,7 +9347,7 @@ int32_t ScrPlayerStatus___c__DisplayClass188_0___SortLimitedMstMissionViewList_b
   struct MstMissionEntity_o *MstMissionEntity_k__BackingField; // x8
 
   if ( !info || (MstMissionEntity_k__BackingField = info->fields._MstMissionEntity_k__BackingField) == 0 )
-    sub_21FFECC(this, info);
+    sub_2213CDC(this, info);
   return MstMissionEntity_k__BackingField->fields.endedAt >= this->fields.nowTime;
 }
 
@@ -9374,7 +9361,7 @@ int64_t ScrPlayerStatus___c__DisplayClass188_0___SortLimitedMstMissionViewList_b
   __int64 v4; // x9
 
   if ( !info || (MstMissionEntity_k__BackingField = info->fields._MstMissionEntity_k__BackingField) == 0 )
-    sub_21FFECC(this, info);
+    sub_2213CDC(this, info);
   v4 = 40;
   if ( MstMissionEntity_k__BackingField->fields.endedAt < this->fields.nowTime )
     v4 = 48;

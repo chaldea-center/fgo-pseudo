@@ -2,10 +2,10 @@ void FriendWarningDialog___ctor(FriendWarningDialog_o *this, const MethodInfo *m
 {
   __int64 v2; // x2
 
-  if ( (byte_59330DA & 1) == 0 )
+  if ( (byte_596B105 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_59330DA = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596B105 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -30,7 +30,7 @@ void FriendWarningDialog__Callback(FriendWarningDialog_o *this, bool result, con
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -43,11 +43,11 @@ void FriendWarningDialog__Close(FriendWarningDialog_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x2
 
-  FriendWarningDialog__Close_39525768(this, 0, v2);
+  FriendWarningDialog__Close_39404420(this, 0, v2);
 }
 
 
-void FriendWarningDialog__Close_39525768(
+void FriendWarningDialog__Close_39404420(
         FriendWarningDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -60,14 +60,14 @@ void FriendWarningDialog__Close_39525768(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_59330D7 & 1) == 0 )
+  if ( (byte_596B102 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_FriendWarningDialog_EndClose__);
-    byte_59330D7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_FriendWarningDialog_EndClose__);
+    byte_596B102 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -78,7 +78,7 @@ void FriendWarningDialog__Close_39525768(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_FriendWarningDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -103,7 +103,7 @@ void FriendWarningDialog__EndClose(FriendWarningDialog_o *this, const MethodInfo
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -119,17 +119,17 @@ void FriendWarningDialog__Init(FriendWarningDialog_o *this, const MethodInfo *me
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_59330D5 & 1) == 0 )
+  if ( (byte_596B100 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59330D5 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B100 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (messageLabel = this->fields.closeLabel) == 0) )
   {
-    sub_21FFECC(messageLabel, method);
+    sub_2213CDC(messageLabel, method);
   }
   UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -143,18 +143,18 @@ void FriendWarningDialog__OnClickClose(FriendWarningDialog_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_59330D8 & 1) == 0 )
+  if ( (byte_596B103 & 1) == 0 )
   {
-    sub_21FFC50(&Method_FriendWarningDialog_OnClickClose__);
-    byte_59330D8 = 1;
+    sub_2213A60(&Method_FriendWarningDialog_OnClickClose__);
+    byte_596B103 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FriendWarningDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_FriendWarningDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_FriendWarningDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_FriendWarningDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     FriendWarningDialog__Callback(this, 0, v5);
   }
@@ -204,35 +204,35 @@ void FriendWarningDialog__Open(
   int32_t friendKeep; // [xsp+8h] [xbp-38h] BYREF
   int32_t max_length; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_59330D6 & 1) == 0 )
+  if ( (byte_596B101 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_TblFriendMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserFollowMaster___);
-    sub_21FFC50(&Method_FriendWarningDialog_EndOpen__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_6811/*"FRIEND_NO_FRIEND_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6815/*"FRIEND_NO_OFFER_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6810/*"FRIEND_NO_FRIEND_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6818/*"FRIEND_NO_STRING_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6808/*"FRIEND_MAX_FRIEND_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6819/*"FRIEND_NO_STRING_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6809/*"FRIEND_MAX_FRIEND_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6812/*"FRIEND_NO_OFFERED_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6741/*"FOLLOW_MAX_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6814/*"FRIEND_NO_OFFER_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6817/*"FRIEND_NO_SEARCH_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6816/*"FRIEND_NO_SEARCH_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_6742/*"FOLLOW_MAX_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_6813/*"FRIEND_NO_OFFERED_MESSAGE"*/);
-    byte_59330D6 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_TblFriendMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserFollowMaster___);
+    sub_2213A60(&Method_FriendWarningDialog_EndOpen__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_6823/*"FRIEND_NO_FRIEND_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6827/*"FRIEND_NO_OFFER_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6822/*"FRIEND_NO_FRIEND_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6830/*"FRIEND_NO_STRING_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6820/*"FRIEND_MAX_FRIEND_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6831/*"FRIEND_NO_STRING_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6821/*"FRIEND_MAX_FRIEND_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6824/*"FRIEND_NO_OFFERED_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6753/*"FOLLOW_MAX_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6826/*"FRIEND_NO_OFFER_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6829/*"FRIEND_NO_SEARCH_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6828/*"FRIEND_NO_SEARCH_CLOSE"*/);
+    sub_2213A60(&StringLiteral_6754/*"FOLLOW_MAX_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_6825/*"FRIEND_NO_OFFERED_MESSAGE"*/);
+    byte_596B101 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (System_String_o *)callback,
@@ -251,34 +251,34 @@ void FriendWarningDialog__Open(
       {
         case 1:
           SelfUserGame = UserGameMaster__getSelfUserGame(0);
-          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !gameObject )
             goto LABEL_53;
           gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)gameObject,
-                                                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_TblFriendMaster___);
+                                                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_TblFriendMaster___);
           if ( !gameObject )
             goto LABEL_53;
           List = TblFriendMaster__GetList((TblFriendMaster_o *)gameObject, 3, 0);
           messageLabel = this->fields.messageLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v29, v30);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6809/*"FRIEND_MAX_FRIEND_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6821/*"FRIEND_MAX_FRIEND_MESSAGE"*/, 0);
           if ( !List )
             goto LABEL_53;
           v33 = (System_String_o *)gameObject;
           max_length = List->max_length;
-          gameObject = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_594C070, &max_length);
+          gameObject = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984348, &max_length);
           if ( !SelfUserGame )
             goto LABEL_53;
           v34 = (Il2CppObject *)gameObject;
           friendKeep = SelfUserGame->fields.friendKeep;
-          v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &friendKeep);
-          gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v33, v34, v35, 0);
+          v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &friendKeep);
+          gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v33, v34, v35, 0);
           if ( !messageLabel )
             goto LABEL_53;
           UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
-          v16 = &StringLiteral_6808/*"FRIEND_MAX_FRIEND_CLOSE"*/;
+          v16 = &StringLiteral_6820/*"FRIEND_MAX_FRIEND_CLOSE"*/;
 LABEL_49:
           closeLabel = this->fields.closeLabel;
           gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v16, 0);
@@ -288,26 +288,26 @@ LABEL_49:
             break;
           }
 LABEL_53:
-          sub_21FFECC(gameObject, v12);
+          sub_2213CDC(gameObject, v12);
         case 2:
           v38 = this->fields.messageLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6817/*"FRIEND_NO_SEARCH_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6829/*"FRIEND_NO_SEARCH_MESSAGE"*/, 0);
           if ( !v38 )
             goto LABEL_53;
           UILabel__set_text(v38, (System_String_o *)gameObject, 0);
-          v16 = &StringLiteral_6816/*"FRIEND_NO_SEARCH_CLOSE"*/;
+          v16 = &StringLiteral_6828/*"FRIEND_NO_SEARCH_CLOSE"*/;
           goto LABEL_49;
         case 3:
           v17 = this->fields.messageLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6819/*"FRIEND_NO_STRING_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6831/*"FRIEND_NO_STRING_MESSAGE"*/, 0);
           if ( !v17 )
             goto LABEL_53;
           UILabel__set_text(v17, (System_String_o *)gameObject, 0);
-          v16 = &StringLiteral_6818/*"FRIEND_NO_STRING_CLOSE"*/;
+          v16 = &StringLiteral_6830/*"FRIEND_NO_STRING_CLOSE"*/;
           goto LABEL_49;
       }
     }
@@ -320,22 +320,22 @@ LABEL_53:
           v36 = this->fields.messageLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6815/*"FRIEND_NO_OFFER_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6827/*"FRIEND_NO_OFFER_MESSAGE"*/, 0);
           if ( !v36 )
             goto LABEL_53;
           UILabel__set_text(v36, (System_String_o *)gameObject, 0);
-          v16 = &StringLiteral_6814/*"FRIEND_NO_OFFER_CLOSE"*/;
+          v16 = &StringLiteral_6826/*"FRIEND_NO_OFFER_CLOSE"*/;
         }
         else
         {
           v15 = this->fields.messageLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6813/*"FRIEND_NO_OFFERED_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6825/*"FRIEND_NO_OFFERED_MESSAGE"*/, 0);
           if ( !v15 )
             goto LABEL_53;
           UILabel__set_text(v15, (System_String_o *)gameObject, 0);
-          v16 = &StringLiteral_6812/*"FRIEND_NO_OFFERED_CLOSE"*/;
+          v16 = &StringLiteral_6824/*"FRIEND_NO_OFFERED_CLOSE"*/;
         }
         goto LABEL_49;
       }
@@ -344,30 +344,30 @@ LABEL_53:
         v37 = this->fields.messageLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6811/*"FRIEND_NO_FRIEND_MESSAGE"*/, 0);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6823/*"FRIEND_NO_FRIEND_MESSAGE"*/, 0);
         if ( !v37 )
           goto LABEL_53;
         UILabel__set_text(v37, (System_String_o *)gameObject, 0);
-        v16 = &StringLiteral_6810/*"FRIEND_NO_FRIEND_CLOSE"*/;
+        v16 = &StringLiteral_6822/*"FRIEND_NO_FRIEND_CLOSE"*/;
         goto LABEL_49;
       }
       if ( kind == 7 )
       {
-        gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !gameObject )
           goto LABEL_53;
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)gameObject,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserFollowMaster___);
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserFollowMaster___);
         v21 = this->fields.messageLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6742/*"FOLLOW_MAX_MESSAGE"*/, 0);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6754/*"FOLLOW_MAX_MESSAGE"*/, 0);
         if ( !MasterData_object )
           goto LABEL_53;
         v22 = (System_String_o *)gameObject;
         max_length = UserFollowMaster__GetFollowSum((UserFollowMaster_o *)MasterData_object, 0);
-        v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &max_length);
+        v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &max_length);
         v26 = BalanceConfig_TypeInfo;
         if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
         {
@@ -375,17 +375,17 @@ LABEL_53:
           v26 = BalanceConfig_TypeInfo;
         }
         friendKeep = v26->static_fields->FollowNum;
-        v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &friendKeep);
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v22, v25, v27, 0);
+        v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &friendKeep);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v22, v25, v27, 0);
         if ( !v21 )
           goto LABEL_53;
         UILabel__set_text(v21, (System_String_o *)gameObject, 0);
-        v16 = &StringLiteral_6741/*"FOLLOW_MAX_CLOSE"*/;
+        v16 = &StringLiteral_6753/*"FOLLOW_MAX_CLOSE"*/;
         goto LABEL_49;
       }
     }
     this->fields.state = 1;
-    v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v40, (Il2CppObject *)this, Method_FriendWarningDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v40, 0, 0, 0);
   }
@@ -409,10 +409,10 @@ void FriendWarningDialog__add_callbackFunc(
   FriendWarningDialog_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_59330D3 & 1) == 0 )
+  if ( (byte_596B0FE & 1) == 0 )
   {
-    sub_21FFC50(&FriendWarningDialog_CallbackFunc_TypeInfo);
-    byte_59330D3 = 1;
+    sub_2213A60(&FriendWarningDialog_CallbackFunc_TypeInfo);
+    byte_596B0FE = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -425,25 +425,25 @@ void FriendWarningDialog__add_callbackFunc(
       if ( (FriendWarningDialog_CallbackFunc_c *)v8->klass != FriendWarningDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (FriendWarningDialog_o *)sub_220024C(v8, FriendWarningDialog_CallbackFunc_TypeInfo, v9, v10);
+  v13 = (FriendWarningDialog_o *)sub_221405C(v8, FriendWarningDialog_CallbackFunc_TypeInfo, v9, v10);
   FriendWarningDialog__remove_callbackFunc(v13, v14, v15);
 }
 
 
 System_String_o *FriendWarningDialog__get_closeBtnPath(FriendWarningDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_59330D9 & 1) == 0 )
+  if ( (byte_596B104 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4819/*"ConfirmWindow/CloseButton"*/);
-    byte_59330D9 = 1;
+    sub_2213A60(&StringLiteral_4827/*"ConfirmWindow/CloseButton"*/);
+    byte_596B104 = 1;
   }
-  return (System_String_o *)StringLiteral_4819/*"ConfirmWindow/CloseButton"*/;
+  return (System_String_o *)StringLiteral_4827/*"ConfirmWindow/CloseButton"*/;
 }
 
 
@@ -463,10 +463,10 @@ void FriendWarningDialog__remove_callbackFunc(
   FriendWarningDialog_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_59330D4 & 1) == 0 )
+  if ( (byte_596B0FF & 1) == 0 )
   {
-    sub_21FFC50(&FriendWarningDialog_CallbackFunc_TypeInfo);
-    byte_59330D4 = 1;
+    sub_2213A60(&FriendWarningDialog_CallbackFunc_TypeInfo);
+    byte_596B0FF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -479,13 +479,13 @@ void FriendWarningDialog__remove_callbackFunc(
       if ( (FriendWarningDialog_CallbackFunc_c *)v8->klass != FriendWarningDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (FriendWarningDialog_o *)sub_220024C(v8, FriendWarningDialog_CallbackFunc_TypeInfo, v9, v10);
+  v13 = (FriendWarningDialog_o *)sub_221405C(v8, FriendWarningDialog_CallbackFunc_TypeInfo, v9, v10);
   FriendWarningDialog__EndOpen(v13, v14);
 }
 
@@ -509,7 +509,7 @@ void FriendWarningDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -520,12 +520,12 @@ void FriendWarningDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -537,9 +537,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FEE77C;
+  this->fields.invoke_impl = (intptr_t)sub_20010A4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FEE734;
+  this->fields.extra_arg = (intptr_t)sub_200105C;
 }
 
 
@@ -555,8 +555,8 @@ System_IAsyncResult_o *FriendWarningDialog_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -565,7 +565,7 @@ void FriendWarningDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

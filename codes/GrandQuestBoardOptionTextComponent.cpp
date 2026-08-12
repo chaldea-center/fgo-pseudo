@@ -22,10 +22,10 @@ void GrandQuestBoardOptionTextComponent__AdjustTextOffset(
   int32_t v12; // w0
   int v13; // w8
 
-  if ( (byte_593312C & 1) == 0 )
+  if ( (byte_596B232 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B232 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -35,7 +35,7 @@ void GrandQuestBoardOptionTextComponent__AdjustTextOffset(
   {
     data = this->fields.data;
     if ( !data )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     if ( data->fields._Alignment_k__BackingField == 2 )
     {
       BehindLabelWrappedWidth = GrandQuestBoardOptionTextComponent__GetBehindLabelWrappedWidth(this, v6);
@@ -64,10 +64,10 @@ int32_t GrandQuestBoardOptionTextComponent__GetBehindLabelWrappedWidth(
   struct UILabel_o *v7; // x0
   float FontWidth; // s0
 
-  if ( (byte_593312B & 1) == 0 )
+  if ( (byte_596B231 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B231 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -76,7 +76,7 @@ int32_t GrandQuestBoardOptionTextComponent__GetBehindLabelWrappedWidth(
     return 0;
   v7 = this->fields.behindLabel;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   FontWidth = WrapControlText__getFontWidth(v7, v7->fields.mText, v7->fields.mFontSize, 0);
   if ( FontWidth == INFINITY )
     return 0x80000000;
@@ -111,7 +111,7 @@ float GrandQuestBoardOptionTextComponent__GetBehindTextWidth(
              / (float)(ForwardText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   return 0.0;
 }
@@ -143,7 +143,7 @@ float GrandQuestBoardOptionTextComponent__GetForwardTextWidth(
              / (float)(BehindText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   return 0.0;
 }
@@ -187,10 +187,10 @@ void GrandQuestBoardOptionTextComponent__SetBehindText(
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_593312E & 1) == 0 )
+  if ( (byte_596B234 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B234 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -204,7 +204,7 @@ void GrandQuestBoardOptionTextComponent__SetBehindText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0),
           !gameObject) )
     {
-      sub_21FFECC(IsNullOrEmpty, v6);
+      sub_2213CDC(IsNullOrEmpty, v6);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0);
   }
@@ -235,10 +235,10 @@ void GrandQuestBoardOptionTextComponent__SetCondensedScale(
   float BehindTextWidth; // s0
   int32_t v21; // w1
 
-  if ( (byte_593312F & 1) == 0 )
+  if ( (byte_596B235 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B235 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -277,7 +277,7 @@ void GrandQuestBoardOptionTextComponent__SetCondensedScale(
       return;
     }
 LABEL_20:
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   }
 }
 
@@ -292,10 +292,10 @@ void GrandQuestBoardOptionTextComponent__SetForwardText(
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_593312D & 1) == 0 )
+  if ( (byte_596B233 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312D = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B233 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -309,7 +309,7 @@ void GrandQuestBoardOptionTextComponent__SetForwardText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0),
           !gameObject) )
     {
-      sub_21FFECC(IsNullOrEmpty, v6);
+      sub_2213CDC(IsNullOrEmpty, v6);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0);
   }
@@ -331,14 +331,14 @@ void GrandQuestBoardOptionTextComponent__SetItemIconAtlas(
   UISprite_o *gameObject; // x0
   bool v12; // w1
 
-  if ( (byte_5933130 & 1) == 0 )
+  if ( (byte_596B236 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_22030/*"item_mini_49"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933130 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_22073/*"item_mini_49"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B236 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -384,7 +384,7 @@ LABEL_24:
       {
         if ( !v10 )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v7);
-        AtlasManager__SetEventSprite(v9, (System_String_o *)StringLiteral_22030/*"item_mini_49"*/, 0);
+        AtlasManager__SetEventSprite(v9, (System_String_o *)StringLiteral_22073/*"item_mini_49"*/, 0);
       }
       else
       {
@@ -403,7 +403,7 @@ LABEL_24:
         }
       }
     }
-    sub_21FFECC(gameObject, v6);
+    sub_2213CDC(gameObject, v6);
   }
 }
 
@@ -450,7 +450,7 @@ void GrandQuestBoardOptionTextComponent__UpdateUI(
 
   this->fields.data = textData;
   p_data = &this->fields.data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.data,
     (int32_t)textData,
     (System_String_o *)method,
@@ -475,7 +475,7 @@ void GrandQuestBoardOptionTextComponent__UpdateUI(
     || (GrandQuestBoardOptionTextComponent__SetForwardText(this, data->fields._ForwardText_k__BackingField, v17),
         (v20 = this->fields.data) == 0) )
   {
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   }
   GrandQuestBoardOptionTextComponent__SetBehindText(this, v20->fields._BehindText_k__BackingField, v19);
   forwardLabel = this->fields.forwardLabel;
@@ -512,11 +512,11 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_BehindLabelText(
   struct UILabel_o *v7; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_5933125 & 1) == 0 )
+  if ( (byte_596B22B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933125 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B22B = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -526,7 +526,7 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_BehindLabelText(
   {
     v7 = this->fields.behindLabel;
     if ( !v7 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     p_mText = &v7->fields.mText;
   }
   else
@@ -548,11 +548,11 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_ForwardLabelText(
   struct UILabel_o *v7; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_5933124 & 1) == 0 )
+  if ( (byte_596B22A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933124 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B22A = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -562,7 +562,7 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_ForwardLabelText(
   {
     v7 = this->fields.forwardLabel;
     if ( !v7 )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     p_mText = &v7->fields.mText;
   }
   else
@@ -585,10 +585,10 @@ float GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(
   struct TerminalBoardOptionTextData_o *data; // x8
   struct UISprite_o *v9; // x8
 
-  if ( (byte_593312A & 1) == 0 )
+  if ( (byte_596B230 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593312A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B230 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -604,7 +604,7 @@ float GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(
       {
         v9 = this->fields.itemIconSprite;
         if ( !v9 )
-          sub_21FFECC(v5, v6);
+          sub_2213CDC(v5, v6);
         return (float)(this->fields.itemIconPaddingLeft + this->fields.itemIconPaddingRight + v9->fields.mWidth);
       }
     }
@@ -636,10 +636,10 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
   __int64 v12; // x2
   UnityEngine_Object_o *itemIconSprite; // x20
 
-  if ( (byte_5933126 & 1) == 0 )
+  if ( (byte_596B22C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933126 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B22C = 1;
   }
   v6 = UnityEngine_Object_TypeInfo;
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
@@ -684,7 +684,7 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
       return;
     }
 LABEL_19:
-    sub_21FFECC(v10, v8);
+    sub_2213CDC(v10, v8);
   }
 }
 
@@ -701,10 +701,10 @@ void GrandQuestBoardOptionTextComponent__set_LabelFontSize(
   UILabel_o *v8; // x0
   UnityEngine_Object_o *behindLabel; // x21
 
-  if ( (byte_5933129 & 1) == 0 )
+  if ( (byte_596B22F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933129 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B22F = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -728,7 +728,7 @@ void GrandQuestBoardOptionTextComponent__set_LabelFontSize(
       return;
     }
 LABEL_14:
-    sub_21FFECC(v8, v6);
+    sub_2213CDC(v8, v6);
   }
 }
 
@@ -755,10 +755,10 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientBottom(
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_5933128 & 1) == 0 )
+  if ( (byte_596B22E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933128 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B22E = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -790,7 +790,7 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientBottom(
       return;
     }
 LABEL_14:
-    sub_21FFECC(v12, v10);
+    sub_2213CDC(v12, v10);
   }
 }
 
@@ -817,10 +817,10 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientTop(
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_5933127 & 1) == 0 )
+  if ( (byte_596B22D & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933127 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596B22D = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -852,7 +852,7 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientTop(
       return;
     }
 LABEL_14:
-    sub_21FFECC(v12, v10);
+    sub_2213CDC(v12, v10);
   }
 }
 

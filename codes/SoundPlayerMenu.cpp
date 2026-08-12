@@ -8,15 +8,15 @@ void SoundPlayerMenu___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5933C16 & 1) == 0 )
+  if ( (byte_596BD2F & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerMenu_TypeInfo);
-    sub_21FFC50(&StringLiteral_13455/*"SoundPlayerNewKey"*/);
-    byte_5933C16 = 1;
+    sub_2213A60(&SoundPlayerMenu_TypeInfo);
+    sub_2213A60(&StringLiteral_13482/*"SoundPlayerNewKey"*/);
+    byte_596BD2F = 1;
   }
-  v7 = StringLiteral_13455/*"SoundPlayerNewKey"*/;
-  SoundPlayerMenu_TypeInfo->static_fields->SOUND_PLAYER_NEW_KEY = (struct System_String_o *)StringLiteral_13455/*"SoundPlayerNewKey"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)SoundPlayerMenu_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
+  v7 = StringLiteral_13482/*"SoundPlayerNewKey"*/;
+  SoundPlayerMenu_TypeInfo->static_fields->SOUND_PLAYER_NEW_KEY = (struct System_String_o *)StringLiteral_13482/*"SoundPlayerNewKey"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)SoundPlayerMenu_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
 }
 
 
@@ -39,24 +39,24 @@ void SoundPlayerMenu___ctor(SoundPlayerMenu_o *this, const MethodInfo *method)
   __int64 v17; // x1
   __int64 v18; // x2
 
-  if ( (byte_5933C15 & 1) == 0 )
+  if ( (byte_596BD2E & 1) == 0 )
   {
-    sub_21FFC50(&BaseMenu_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C15 = 1;
+    sub_2213A60(&BaseMenu_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD2E = 1;
   }
   v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   *(_QWORD *)&this->fields.LISTENING_TIME = 0x141200000LL;
   this->fields.playSoundName = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.playSoundName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.playSoundName, (int32_t)v9, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.isNewList = v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.isNewList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.isNewList, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, v17, v18);
   BaseMenu___ctor((BaseMenu_o *)this, 0);
@@ -79,25 +79,25 @@ void SoundPlayerMenu__EndOpen(SoundPlayerMenu_o *this, const MethodInfo *method)
   bool v14; // w7
   const MethodInfo *v15; // x2
 
-  if ( (byte_5933C07 & 1) == 0 )
+  if ( (byte_596BD20 & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu_OnSelectSound__);
-    byte_5933C07 = 1;
+    sub_2213A60(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu_OnSelectSound__);
+    byte_596BD20 = 1;
   }
   v3 = SoundPlayerListViewManager_CallbackFunc_TypeInfo;
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
   this->fields.state = 2;
-  v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_21FFEBC(v3);
+  v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_2213CCC(v3);
   SoundPlayerListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_SoundPlayerMenu_OnSelectSound__,
     v6);
   if ( !soundPlayerListViewManager )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   soundPlayerListViewManager->fields.callbackFunc = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&soundPlayerListViewManager->fields.callbackFunc,
     (int32_t)v5,
     v9,
@@ -106,7 +106,7 @@ void SoundPlayerMenu__EndOpen(SoundPlayerMenu_o *this, const MethodInfo *method)
     v12,
     v13,
     v14);
-  SoundPlayerListViewManager__SetMode_40638440(soundPlayerListViewManager, 2, v15);
+  SoundPlayerListViewManager__SetMode_40646528(soundPlayerListViewManager, 2, v15);
   ActionExtensions__Call(this->fields.openedAct, 0);
 }
 
@@ -129,17 +129,17 @@ void SoundPlayerMenu__Init(SoundPlayerMenu_o *this, const MethodInfo *method)
   __int64 v16; // x1
   ListViewManager_o *soundPlayerListViewManager; // x0
 
-  if ( (byte_5933C02 & 1) == 0 )
+  if ( (byte_596BD1B & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C02 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD1B = 1;
   }
   this->fields.state = 0;
   this->fields.retTrialListening = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.retTrialListening, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.retTrialListening, 0, v2, v3, v4, v5, v6, v7);
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.backupBgmName, v9, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.backupBgmName, v9, v10, v11, v12, v13, v14, v15);
   soundPlayerListViewManager = (ListViewManager_o *)this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager
     || (ListViewManager__DestroyList(soundPlayerListViewManager, 0),
@@ -148,7 +148,7 @@ void SoundPlayerMenu__Init(SoundPlayerMenu_o *this, const MethodInfo *method)
                                                             (UnityEngine_Component_o *)soundPlayerListViewManager,
                                                             0)) == 0 )
   {
-    sub_21FFECC(soundPlayerListViewManager, v16);
+    sub_2213CDC(soundPlayerListViewManager, v16);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)soundPlayerListViewManager, 0, 0);
   BaseMenu__Init((BaseMenu_o *)this, 0);
@@ -215,14 +215,14 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
   bool v45; // w7
   const MethodInfo *v46; // x2
 
-  if ( (byte_5933C08 & 1) == 0 )
+  if ( (byte_596BD21 & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu_OnSelectSound__);
-    byte_5933C08 = 1;
+    sub_2213A60(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu_OnSelectSound__);
+    byte_596BD21 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -239,8 +239,8 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
       SoundPlayerMenu__createOpenDlg(this, v10, v16);
       v17 = Method_SoundPlayerMenu_OnSelectSound__;
       if ( (*((_BYTE *)Method_SoundPlayerMenu_OnSelectSound__ + 83) & 2) != 0 )
-        v17 = (_QWORD *)sub_21FFC68(Method_SoundPlayerMenu_OnSelectSound__);
-      v18 = (System_Reflection_MethodBase_o *)sub_21FFC34(v17, v17[4]);
+        v17 = (_QWORD *)sub_2213A78(Method_SoundPlayerMenu_OnSelectSound__);
+      v18 = (System_Reflection_MethodBase_o *)sub_2213A44(v17, v17[4]);
       OverwriteAssetSoundName__PlaySystemSe(v18, 0, 0, 0);
     }
     else if ( kind == 1 )
@@ -275,7 +275,7 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
         if ( !System_Collections_Generic_List_int___Contains(
                 (System_Collections_Generic_List_int__o *)isNewList,
                 id,
-                (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__) )
+                (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
         {
           isNewList = (int *)this->fields.isNewList;
           if ( !isNewList )
@@ -291,7 +291,7 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)isNewList,
               id,
-              *(const MethodInfo_4433138 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+              *(const MethodInfo_4467270 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
           }
           else
           {
@@ -299,10 +299,10 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
             *(_DWORD *)(v28 + 4 * v30 + 32) = id;
           }
         }
-        if ( (byte_5933BDA & 1) == 0 )
+        if ( (byte_596BCF3 & 1) == 0 )
         {
-          sub_21FFC50(&StringLiteral_1/*""*/);
-          byte_5933BDA = 1;
+          sub_2213A60(&StringLiteral_1/*""*/);
+          byte_596BCF3 = 1;
         }
         v31 = v10->fields.bgmEntity;
         if ( v31 )
@@ -311,7 +311,7 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
           p_fileName = (struct System_String_o **)&StringLiteral_1/*""*/;
         v33 = *p_fileName;
         this->fields.playSoundName = *p_fileName;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.playSoundName,
           (int32_t)v33,
           v22,
@@ -327,7 +327,7 @@ void SoundPlayerMenu__OnSelectSound(SoundPlayerMenu_o *this, int32_t kind, int32
       }
 LABEL_34:
       soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
-      v38 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_21FFEBC(SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+      v38 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_2213CCC(SoundPlayerListViewManager_CallbackFunc_TypeInfo);
       SoundPlayerListViewManager_CallbackFunc___ctor(
         v38,
         (Il2CppObject *)this,
@@ -336,7 +336,7 @@ LABEL_34:
       if ( soundPlayerListViewManager )
       {
         soundPlayerListViewManager->fields.callbackFunc = v38;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&soundPlayerListViewManager->fields.callbackFunc,
           (int32_t)v38,
           v40,
@@ -345,11 +345,11 @@ LABEL_34:
           v43,
           v44,
           v45);
-        SoundPlayerListViewManager__SetMode_40638440(soundPlayerListViewManager, 2, v46);
+        SoundPlayerListViewManager__SetMode_40646528(soundPlayerListViewManager, 2, v46);
         return;
       }
 LABEL_36:
-      sub_21FFECC(isNewList, v13);
+      sub_2213CDC(isNewList, v13);
     }
   }
 }
@@ -362,7 +362,7 @@ void SoundPlayerMenu__SetEnableBlockTouchObj(SoundPlayerMenu_o *this, bool enabl
 
   maskColl = (UnityEngine_Collider_o *)this->fields.maskColl;
   if ( !maskColl )
-    sub_21FFECC(0, enable);
+    sub_2213CDC(0, enable);
   UnityEngine_Collider__set_enabled(maskColl, enable, 0);
 }
 
@@ -381,17 +381,17 @@ void SoundPlayerMenu___openEvent_b__37_0(SoundPlayerMenu_o *this, const MethodIn
   bool v12; // w7
   const MethodInfo *v13; // x2
 
-  if ( (byte_5933C17 & 1) == 0 )
+  if ( (byte_596BD30 & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu_OnSelectSound__);
-    byte_5933C17 = 1;
+    sub_2213A60(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu_OnSelectSound__);
+    byte_596BD30 = 1;
   }
   maskColl = (UnityEngine_Collider_o *)this->fields.maskColl;
   if ( !maskColl
     || (UnityEngine_Collider__set_enabled(maskColl, 0, 0),
         soundPlayerListViewManager = this->fields.soundPlayerListViewManager,
-        v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_21FFEBC(SoundPlayerListViewManager_CallbackFunc_TypeInfo),
+        v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_2213CCC(SoundPlayerListViewManager_CallbackFunc_TypeInfo),
         SoundPlayerListViewManager_CallbackFunc___ctor(
           v5,
           (Il2CppObject *)this,
@@ -399,10 +399,10 @@ void SoundPlayerMenu___openEvent_b__37_0(SoundPlayerMenu_o *this, const MethodIn
           v6),
         !soundPlayerListViewManager) )
   {
-    sub_21FFECC(maskColl, method);
+    sub_2213CDC(maskColl, method);
   }
   soundPlayerListViewManager->fields.callbackFunc = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&soundPlayerListViewManager->fields.callbackFunc,
     (int32_t)v5,
     v7,
@@ -411,7 +411,7 @@ void SoundPlayerMenu___openEvent_b__37_0(SoundPlayerMenu_o *this, const MethodIn
     v10,
     v11,
     v12);
-  SoundPlayerListViewManager__SetMode_40638440(soundPlayerListViewManager, 2, v13);
+  SoundPlayerListViewManager__SetMode_40646528(soundPlayerListViewManager, 2, v13);
 }
 
 
@@ -429,10 +429,10 @@ void SoundPlayerMenu__add_callbackFunc(SoundPlayerMenu_o *this, System_Action_o 
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5933C00 & 1) == 0 )
+  if ( (byte_596BD19 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5933C00 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596BD19 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -445,13 +445,13 @@ void SoundPlayerMenu__add_callbackFunc(SoundPlayerMenu_o *this, System_Action_o 
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (SoundPlayerMenu_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (SoundPlayerMenu_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   SoundPlayerMenu__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -473,13 +473,13 @@ void SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const MethodInfo *
   _QWORD *v15; // x10
   __int64 size; // x11
 
-  if ( (byte_5933C04 & 1) == 0 )
+  if ( (byte_596BD1D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_21FFC50(&SoundPlayerMenu_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C04 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_2213A60(&SoundPlayerMenu_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD1D = 1;
   }
   v4 = SoundPlayerMenu_TypeInfo;
   if ( !*(&SoundPlayerMenu_TypeInfo->_2.cctor_finished + 1) )
@@ -513,7 +513,7 @@ void SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const MethodInfo *
       while ( 1 )
       {
         if ( v11 >= LODWORD(v10->max_length) )
-          sub_21FFED4(IsNullOrEmpty);
+          sub_2213CE4(IsNullOrEmpty);
         IsNullOrEmpty = (System_String_array *)System_Int32__Parse(v10->m_Items[v11], 0);
         v13 = this->fields.isNewList;
         if ( !v13 )
@@ -529,7 +529,7 @@ void SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const MethodInfo *
           System_Collections_Generic_List_int___AddWithResize(
             v13,
             (int32_t)IsNullOrEmpty,
-            *(const MethodInfo_4433138 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+            *(const MethodInfo_4467270 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
         }
         else
         {
@@ -540,7 +540,7 @@ void SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const MethodInfo *
           return;
       }
 LABEL_19:
-      sub_21FFECC(IsNullOrEmpty, v7);
+      sub_2213CDC(IsNullOrEmpty, v7);
     }
   }
 }
@@ -558,12 +558,12 @@ void SoundPlayerMenu__attachSelectEffect(SoundPlayerMenu_o *this, const MethodIn
   __int64 naturalAligment; // x11
   intptr_t v11; // x20
 
-  if ( (byte_5933C0A & 1) == 0 )
+  if ( (byte_596BD23 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SoundPlayerListViewObject_TypeInfo);
-    byte_5933C0A = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SoundPlayerListViewObject_TypeInfo);
+    byte_596BD23 = 1;
   }
   selectEffect = (UnityEngine_Object_o *)this->fields.selectEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -605,7 +605,7 @@ void SoundPlayerMenu__attachSelectEffect(SoundPlayerMenu_o *this, const MethodIn
           {
             Item = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  Item,
-                                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
             if ( Item )
             {
               CommonEffectComponent__ForceStart((CommonEffectComponent_o *)Item, 0);
@@ -615,7 +615,7 @@ void SoundPlayerMenu__attachSelectEffect(SoundPlayerMenu_o *this, const MethodIn
         }
       }
 LABEL_22:
-      sub_21FFECC(Item, v7);
+      sub_2213CDC(Item, v7);
     }
   }
 }
@@ -631,16 +631,16 @@ System_Collections_IEnumerator_o *SoundPlayerMenu__busyWaitStopBgm(SoundPlayerMe
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5933C13 & 1) == 0 )
+  if ( (byte_596BD2C & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerMenu__busyWaitStopBgm_d__41_TypeInfo);
-    byte_5933C13 = 1;
+    sub_2213A60(&SoundPlayerMenu__busyWaitStopBgm_d__41_TypeInfo);
+    byte_596BD2C = 1;
   }
-  v3 = sub_21FFEBC(SoundPlayerMenu__busyWaitStopBgm_d__41_TypeInfo);
+  v3 = sub_2213CCC(SoundPlayerMenu__busyWaitStopBgm_d__41_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -737,31 +737,31 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
 
   v3 = item;
   v4 = this;
-  if ( (byte_5933C14 & 1) == 0 )
+  if ( (byte_596BD2D & 1) == 0 )
   {
-    sub_21FFC50(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ShopMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_21FFC50(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_SoundPlayerMenu_openCheckDlgCallback__);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_12753/*"SOUNDPLAYER_OPEN_CHECK"*/);
-    sub_21FFC50(&StringLiteral_12751/*"SOUNDPLAYER_ITEM_COST_WARNING"*/);
-    sub_21FFC50(&StringLiteral_12749/*"SOUNDPLAYER_DIALOG_OK"*/);
-    sub_21FFC50(&StringLiteral_12752/*"SOUNDPLAYER_ITEM_DISP"*/);
-    sub_21FFC50(&StringLiteral_12747/*"SOUNDPLAYER_DIALOG_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_86/*"\r"*/);
-    sub_21FFC50(&StringLiteral_12750/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/);
-    sub_21FFC50(&StringLiteral_12758/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/);
-    this = (SoundPlayerMenu_o *)sub_21FFC50(&StringLiteral_12748/*"SOUNDPLAYER_DIALOG_MIDDLE"*/);
-    byte_5933C14 = 1;
+    sub_2213A60(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ShopMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_2213A60(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_SoundPlayerMenu_openCheckDlgCallback__);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_12779/*"SOUNDPLAYER_OPEN_CHECK"*/);
+    sub_2213A60(&StringLiteral_12777/*"SOUNDPLAYER_ITEM_COST_WARNING"*/);
+    sub_2213A60(&StringLiteral_12775/*"SOUNDPLAYER_DIALOG_OK"*/);
+    sub_2213A60(&StringLiteral_12778/*"SOUNDPLAYER_ITEM_DISP"*/);
+    sub_2213A60(&StringLiteral_12773/*"SOUNDPLAYER_DIALOG_CANCEL"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_86/*"\r"*/);
+    sub_2213A60(&StringLiteral_12776/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/);
+    sub_2213A60(&StringLiteral_12784/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/);
+    this = (SoundPlayerMenu_o *)sub_2213A60(&StringLiteral_12774/*"SOUNDPLAYER_DIALOG_MIDDLE"*/);
+    byte_596BD2D = 1;
   }
   v88 = 0;
   entity = 0;
@@ -773,42 +773,42 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
   this = (SoundPlayerMenu_o *)bgmEntity->fields.name;
   if ( !this )
     goto LABEL_73;
-  this = (SoundPlayerMenu_o *)System_String__Replace_75490096(
+  this = (SoundPlayerMenu_o *)System_String__Replace_75703400(
                                 (System_String_o *)this,
                                 (System_String_o *)StringLiteral_86/*"\r"*/,
                                 (System_String_o *)StringLiteral_1/*""*/,
                                 0);
   if ( !this )
     goto LABEL_73;
-  v8 = (Il2CppObject *)System_String__Replace_75490096(
+  v8 = (Il2CppObject *)System_String__Replace_75703400(
                          (System_String_o *)this,
                          (System_String_o *)StringLiteral_43/*"\n"*/,
                          (System_String_o *)StringLiteral_1/*""*/,
                          0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v7);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12758/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12784/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/, 0);
   v10 = System_String__Format(v9, v8, 0);
   v11 = v3->fields.bgmEntity;
   v12 = v10;
-  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_73;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ShopMaster___);
-  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ShopMaster___);
+  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_73;
   v14 = DataManager__GetMasterData_object_(
           (DataManager_o *)this,
-          (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ItemMaster___);
-  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
+  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_73;
   this = (SoundPlayerMenu_o *)DataManager__GetMasterData_object_(
                                 (DataManager_o *)this,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !v11 )
     goto LABEL_73;
   title = v12;
@@ -821,11 +821,11 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
          (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
          &entity,
          v11->fields.shopId,
-         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__) )
+         (const MethodInfo_3F10B80 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__) )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-    this = (SoundPlayerMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12750/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/, 0);
+    this = (SoundPlayerMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12776/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/, 0);
     if ( !entity )
       goto LABEL_73;
     klass = entity[2].klass;
@@ -859,10 +859,10 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
           v26 = this;
           if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, item, v19);
-          if ( !byte_5931D52 )
+          if ( !byte_5969EF2 )
           {
-            sub_21FFC50(&NetworkManager_TypeInfo);
-            byte_5931D52 = 1;
+            sub_2213A60(&NetworkManager_TypeInfo);
+            byte_5969EF2 = 1;
           }
           this = (SoundPlayerMenu_o *)NetworkManager_TypeInfo;
           if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -938,12 +938,12 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v35, v36);
           v22 = v32 | v31;
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12752/*"SOUNDPLAYER_ITEM_DISP"*/, 0);
-          v39 = System_String__Format_75484576(v38, (Il2CppObject *)v26->fields.m_CancellationTokenSource, v34, 0);
-          str0 = System_String__Concat_75438412(str0, v39, 0);
-          v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12752/*"SOUNDPLAYER_ITEM_DISP"*/, 0);
-          v41 = System_String__Format_75484576(v40, (Il2CppObject *)v26->fields.m_CancellationTokenSource, CountText, 0);
-          this = (SoundPlayerMenu_o *)System_String__Concat_75438412(v30, v41, 0);
+          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12778/*"SOUNDPLAYER_ITEM_DISP"*/, 0);
+          v39 = System_String__Format_75697880(v38, (Il2CppObject *)v26->fields.m_CancellationTokenSource, v34, 0);
+          str0 = System_String__Concat_75651716(str0, v39, 0);
+          v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12778/*"SOUNDPLAYER_ITEM_DISP"*/, 0);
+          v41 = System_String__Format_75697880(v40, (Il2CppObject *)v26->fields.m_CancellationTokenSource, CountText, 0);
+          this = (SoundPlayerMenu_o *)System_String__Concat_75651716(v30, v41, 0);
           v16 = this;
         }
         ++v23;
@@ -951,7 +951,7 @@ void SoundPlayerMenu__createOpenDlg(SoundPlayerMenu_o *this, SoundPlayerListView
           goto LABEL_59;
       }
 LABEL_73:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
     LOBYTE(v22) = 0;
     str0 = (System_String_o *)v16;
@@ -960,7 +960,7 @@ LABEL_59:
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v19);
     v42 = v22;
     v44 = (struct UIPanel_array *)v83;
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12751/*"SOUNDPLAYER_ITEM_COST_WARNING"*/, 0);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12777/*"SOUNDPLAYER_ITEM_COST_WARNING"*/, 0);
   }
   else
   {
@@ -971,15 +971,15 @@ LABEL_59:
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12753/*"SOUNDPLAYER_OPEN_CHECK"*/, 0);
-  this = (SoundPlayerMenu_o *)sub_21FFD10(string___TypeInfo, 5);
+  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12779/*"SOUNDPLAYER_OPEN_CHECK"*/, 0);
+  this = (SoundPlayerMenu_o *)sub_2213B20(string___TypeInfo, 5);
   if ( !this )
     goto LABEL_73;
   v52 = this;
   if ( !LODWORD(this->fields.m_CancellationTokenSource) )
     goto LABEL_74;
   this->fields.basePanelList = v44;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.basePanelList,
     (int32_t)v44,
     v46,
@@ -990,7 +990,7 @@ LABEL_59:
     v51);
   if ( ((__int64)v52->fields.m_CancellationTokenSource & 0xFFFFFFFE) == 0
     || (v52->fields.baseWindow = (struct UnityEngine_GameObject_o *)str0,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v52->fields.baseWindow,
           (int32_t)str0,
           v53,
@@ -1001,7 +1001,7 @@ LABEL_59:
           v58),
         LODWORD(v52->fields.m_CancellationTokenSource) <= 2)
     || (v52->fields.closeTransform = (struct UnityEngine_Transform_o *)v43,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v52->fields.closeTransform,
           (int32_t)v43,
           v59,
@@ -1012,7 +1012,7 @@ LABEL_59:
           v64),
         ((__int64)v52->fields.m_CancellationTokenSource & 0xFFFFFFFC) == 0)
     || (v52->fields.enterTransform = (struct UnityEngine_Transform_o *)v16,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v52->fields.enterTransform,
           (int32_t)v16,
           v65,
@@ -1024,10 +1024,10 @@ LABEL_59:
         LODWORD(v52->fields.m_CancellationTokenSource) <= 4) )
   {
 LABEL_74:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   }
   *(_QWORD *)&v52->fields.isBasePosition = v45;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v52->fields.isBasePosition,
     (int32_t)v45,
     v71,
@@ -1036,12 +1036,12 @@ LABEL_74:
     v74,
     v75,
     v76);
-  v77 = System_String__Concat_75483816((System_String_array *)v52, 0);
-  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_12747/*"SOUNDPLAYER_DIALOG_CANCEL"*/, 0);
-  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12748/*"SOUNDPLAYER_DIALOG_MIDDLE"*/, 0);
-  v80 = LocalizationManager__Get((System_String_o *)StringLiteral_12749/*"SOUNDPLAYER_DIALOG_OK"*/, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v82 = (TripleButtonDlgComponent_CallbackFunc_o *)sub_21FFEBC(TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+  v77 = System_String__Concat_75697120((System_String_array *)v52, 0);
+  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_12773/*"SOUNDPLAYER_DIALOG_CANCEL"*/, 0);
+  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12774/*"SOUNDPLAYER_DIALOG_MIDDLE"*/, 0);
+  v80 = LocalizationManager__Get((System_String_o *)StringLiteral_12775/*"SOUNDPLAYER_DIALOG_OK"*/, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v82 = (TripleButtonDlgComponent_CallbackFunc_o *)sub_2213CCC(TripleButtonDlgComponent_CallbackFunc_TypeInfo);
   TripleButtonDlgComponent_CallbackFunc___ctor(v82, object, Method_SoundPlayerMenu_openCheckDlgCallback__, 0);
   if ( !Instance )
     goto LABEL_73;
@@ -1066,7 +1066,7 @@ LABEL_74:
     0,
     0,
     0);
-  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (SoundPlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_73;
   CommonUI__setStateTripleButtonDlgRightButton((CommonUI_o *)this, v42 & 1, 0);
@@ -1095,12 +1095,12 @@ void SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, const MethodIn
   bool v20; // w6
   bool v21; // w7
 
-  if ( (byte_5933C09 & 1) == 0 )
+  if ( (byte_596BD22 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_19683/*"ef_soundchoice"*/);
-    byte_5933C09 = 1;
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_19725/*"ef_soundchoice"*/);
+    byte_596BD22 = 1;
   }
   SoundPlayerMenu__releaseSelectEffect(this, method);
   p_selectEffect = &this->fields.selectEffect;
@@ -1114,7 +1114,7 @@ void SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, const MethodIn
       goto LABEL_15;
     EffetData = (Il2CppObject *)SoundPlayerListViewManager__getEffetData(
                                   soundPlayerListViewManager,
-                                  (System_String_o *)StringLiteral_19683/*"ef_soundchoice"*/,
+                                  (System_String_o *)StringLiteral_19725/*"ef_soundchoice"*/,
                                   v8);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
@@ -1124,9 +1124,9 @@ void SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, const MethodIn
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
       v15 = UnityEngine_Object__Instantiate_object_(
               EffetData,
-              (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
       *p_selectEffect = (struct UnityEngine_GameObject_o *)v15;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.selectEffect,
         (int32_t)v15,
         v16,
@@ -1139,11 +1139,11 @@ void SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, const MethodIn
       if ( *p_selectEffect )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)soundPlayerListViewManager, 0, 0);
-        GameObjectExtensions__SafeSetParent_42881912(this->fields.selectEffect, this->fields.selectEffectHideObj, 0);
+        GameObjectExtensions__SafeSetParent_42897308(this->fields.selectEffect, this->fields.selectEffectHideObj, 0);
         return;
       }
 LABEL_15:
-      sub_21FFECC(soundPlayerListViewManager, v7);
+      sub_2213CDC(soundPlayerListViewManager, v7);
     }
   }
 }
@@ -1156,10 +1156,10 @@ void SoundPlayerMenu__detachSelectEffect(SoundPlayerMenu_o *this, const MethodIn
   __int64 v5; // x1
   UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_5933C0B & 1) == 0 )
+  if ( (byte_596BD24 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933C0B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BD24 = 1;
   }
   selectEffect = (UnityEngine_Object_o *)this->fields.selectEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1168,9 +1168,9 @@ void SoundPlayerMenu__detachSelectEffect(SoundPlayerMenu_o *this, const MethodIn
   {
     v6 = this->fields.selectEffect;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     UnityEngine_GameObject__SetActive(v6, 0, 0);
-    GameObjectExtensions__SafeSetParent_42881912(this->fields.selectEffect, this->fields.selectEffectHideObj, 0);
+    GameObjectExtensions__SafeSetParent_42897308(this->fields.selectEffect, this->fields.selectEffectHideObj, 0);
   }
 }
 
@@ -1215,34 +1215,34 @@ void SoundPlayerMenu__endPurchaseRequest(SoundPlayerMenu_o *this, System_String_
   Il2CppObject *Instance; // x21
   System_Action_o *v41; // x22
 
-  if ( (byte_5933C0F & 1) == 0 )
+  if ( (byte_596BD28 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SoundPlayerMenu_OnSelectSound__);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__DisplayClass36_0__endPurchaseRequest_b__0__);
-    sub_21FFC50(&SoundPlayerMenu___c__DisplayClass36_0_TypeInfo);
-    sub_21FFC50(&StringLiteral_43/*"\n"*/);
-    sub_21FFC50(&StringLiteral_12757/*"SOUNDPLAYER_SOUND_OPEN"*/);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_86/*"\r"*/);
-    byte_5933C0F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SoundPlayerMenu_OnSelectSound__);
+    sub_2213A60(&Method_SoundPlayerMenu___c__DisplayClass36_0__endPurchaseRequest_b__0__);
+    sub_2213A60(&SoundPlayerMenu___c__DisplayClass36_0_TypeInfo);
+    sub_2213A60(&StringLiteral_43/*"\n"*/);
+    sub_2213A60(&StringLiteral_12783/*"SOUNDPLAYER_SOUND_OPEN"*/);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_86/*"\r"*/);
+    byte_596BD28 = 1;
   }
-  v5 = sub_21FFEBC(SoundPlayerMenu___c__DisplayClass36_0_TypeInfo);
+  v5 = sub_2213CCC(SoundPlayerMenu___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_16;
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
-  v6 = (System_String_o *)System_String__op_Equality(result, (System_String_o *)StringLiteral_23290/*"ng"*/, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  v6 = (System_String_o *)System_String__op_Equality(result, (System_String_o *)StringLiteral_23336/*"ng"*/, 0);
   if ( ((unsigned __int8)v6 & 1) != 0 )
   {
     SoundPlayerMenu__detachSelectEffect(this, v7);
     soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
-    v15 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_21FFEBC(SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    v15 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_2213CCC(SoundPlayerListViewManager_CallbackFunc_TypeInfo);
     SoundPlayerListViewManager_CallbackFunc___ctor(
       v15,
       (Il2CppObject *)this,
@@ -1251,7 +1251,7 @@ void SoundPlayerMenu__endPurchaseRequest(SoundPlayerMenu_o *this, System_String_
     if ( soundPlayerListViewManager )
     {
       soundPlayerListViewManager->fields.callbackFunc = v15;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&soundPlayerListViewManager->fields.callbackFunc,
         (int32_t)v15,
         v17,
@@ -1260,11 +1260,11 @@ void SoundPlayerMenu__endPurchaseRequest(SoundPlayerMenu_o *this, System_String_
         v20,
         v21,
         v22);
-      SoundPlayerListViewManager__SetMode_40638440(soundPlayerListViewManager, 2, v23);
+      SoundPlayerListViewManager__SetMode_40646528(soundPlayerListViewManager, 2, v23);
       return;
     }
 LABEL_16:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   v24 = this->fields.soundPlayerListViewManager;
   if ( !v24 )
@@ -1273,7 +1273,7 @@ LABEL_16:
   SoundPlayerMenu__setCanPlaySoundDisp(this, v7);
   Item = SoundPlayerMenu__getItem(this, this->fields.selectIndex, v25);
   *(_QWORD *)(v5 + 24) = Item;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)Item, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)Item, v27, v28, v29, v30, v31, v32);
   v33 = *(_QWORD *)(v5 + 24);
   if ( !v33 )
     goto LABEL_16;
@@ -1283,20 +1283,20 @@ LABEL_16:
   v6 = *(System_String_o **)(v34 + 32);
   if ( !v6 )
     goto LABEL_16;
-  v6 = System_String__Replace_75490096(v6, (System_String_o *)StringLiteral_86/*"\r"*/, (System_String_o *)StringLiteral_1/*""*/, 0);
+  v6 = System_String__Replace_75703400(v6, (System_String_o *)StringLiteral_86/*"\r"*/, (System_String_o *)StringLiteral_1/*""*/, 0);
   if ( !v6 )
     goto LABEL_16;
-  v37 = (Il2CppObject *)System_String__Replace_75490096(
+  v37 = (Il2CppObject *)System_String__Replace_75703400(
                           v6,
                           (System_String_o *)StringLiteral_43/*"\n"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v35, v36);
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12757/*"SOUNDPLAYER_SOUND_OPEN"*/, 0);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12783/*"SOUNDPLAYER_SOUND_OPEN"*/, 0);
   v39 = System_String__Format(v38, v37, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v41 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v41 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v41,
     (Il2CppObject *)v5,
@@ -1333,7 +1333,7 @@ SoundPlayerListViewItem_o *SoundPlayerMenu__getItem(SoundPlayerMenu_o *this, int
     return 0;
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager )
-    sub_21FFECC(0, *(_QWORD *)&idx);
+    sub_2213CDC(0, *(_QWORD *)&idx);
   return SoundPlayerListViewManager__GetItem(soundPlayerListViewManager, idx, method);
 }
 
@@ -1353,7 +1353,7 @@ void SoundPlayerMenu__hideMenu(SoundPlayerMenu_o *this, const MethodInfo *method
 
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   SoundPlayerListViewManager__releaseSoundPlayerEffect(soundPlayerListViewManager, method);
   SoundPlayerMenu__releaseSelectEffect(this, v4);
   SoundPlayerMenu__inputNewList(this, v5);
@@ -1383,24 +1383,24 @@ void SoundPlayerMenu__inputNewList(SoundPlayerMenu_o *this, const MethodInfo *me
   int32_t Item; // [xsp+Ch] [xbp-54h] BYREF
 
   v2 = this;
-  if ( (byte_5933C05 & 1) == 0 )
+  if ( (byte_596BD1E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_21FFC50(&SoundPlayerMenu_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    this = (SoundPlayerMenu_o *)sub_21FFC50(&StringLiteral_869/*","*/);
-    byte_5933C05 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_2213A60(&SoundPlayerMenu_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    this = (SoundPlayerMenu_o *)sub_2213A60(&StringLiteral_869/*","*/);
+    byte_596BD1E = 1;
   }
   isNewList = v2->fields.isNewList;
   Item = 0;
   if ( !isNewList )
 LABEL_14:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   size = (unsigned int)isNewList->fields._size;
   if ( (int)size >= 1 )
   {
-    v5 = sub_21FFD10(string___TypeInfo, (unsigned int)size);
+    v5 = sub_2213B20(string___TypeInfo, (unsigned int)size);
     v6 = 0;
     v7 = (MissionNaviTransitionBoardItem_o *)(v5 + 32);
     do
@@ -1411,14 +1411,14 @@ LABEL_14:
       Item = System_Collections_Generic_List_int___get_Item(
                (System_Collections_Generic_List_int__o *)this,
                v6,
-               (const MethodInfo_4432E40 *)Method_System_Collections_Generic_List_int__get_Item__);
+               (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
       this = (SoundPlayerMenu_o *)System_Int32__ToString((int32_t)&Item, 0);
       if ( !v5 )
         goto LABEL_14;
       if ( v6 >= *(unsigned int *)(v5 + 24) )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v7->klass = (MissionNaviTransitionBoardItem_c *)this;
-      sub_21FFBF4(v7, (int32_t)this, v8, v9, v10, v11, v12, v13);
+      sub_2213A04(v7, (int32_t)this, v8, v9, v10, v11, v12, v13);
       ++v6;
       v7 = (MissionNaviTransitionBoardItem_o *)((char *)v7 + 8);
     }
@@ -1468,29 +1468,29 @@ void SoundPlayerMenu__open(
   System_Action_o *v29; // x20
   const MethodInfo *v30; // x2
 
-  if ( (byte_5933C06 & 1) == 0 )
+  if ( (byte_596BD1F & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__DisplayClass27_0__open_b__0__);
-    sub_21FFC50(&SoundPlayerMenu___c__DisplayClass27_0_TypeInfo);
-    byte_5933C06 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu___c__DisplayClass27_0__open_b__0__);
+    sub_2213A60(&SoundPlayerMenu___c__DisplayClass27_0_TypeInfo);
+    byte_596BD1F = 1;
   }
-  v7 = sub_21FFEBC(SoundPlayerMenu___c__DisplayClass27_0_TypeInfo);
+  v7 = sub_2213CCC(SoundPlayerMenu___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_6;
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = opened_act;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)opened_act, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)opened_act, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v7 + 32) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)callback, v22, v23, v24, v25, v26, v27);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)callback, v22, v23, v24, v25, v26, v27);
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
-  v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v29, (Il2CppObject *)v7, Method_SoundPlayerMenu___c__DisplayClass27_0__open_b__0__, 0);
   if ( !soundPlayerListViewManager )
 LABEL_6:
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   SoundPlayerListViewManager__loadSoundPlayerEffect(soundPlayerListViewManager, v29, v30);
 }
 
@@ -1532,33 +1532,33 @@ void SoundPlayerMenu__openCheckDlgCallback(SoundPlayerMenu_o *this, int32_t resu
   const MethodInfo *v37; // x1
   System_Action_o *v38; // x21
 
-  if ( (byte_5933C0D & 1) == 0 )
+  if ( (byte_596BD26 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SoundPlayerMenu_openCheckDlgCallback__);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__0__);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__1__);
-    sub_21FFC50(&SoundPlayerMenu___c__DisplayClass34_0_TypeInfo);
-    byte_5933C0D = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SoundPlayerMenu_openCheckDlgCallback__);
+    sub_2213A60(&Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__0__);
+    sub_2213A60(&Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__1__);
+    sub_2213A60(&SoundPlayerMenu___c__DisplayClass34_0_TypeInfo);
+    byte_596BD26 = 1;
   }
-  v5 = sub_21FFEBC(SoundPlayerMenu___c__DisplayClass34_0_TypeInfo);
+  v5 = sub_2213CCC(SoundPlayerMenu___c__DisplayClass34_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_14;
   *(_QWORD *)(v5 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   Item = SoundPlayerMenu__getItem(this, this->fields.selectIndex, v14);
   *(_QWORD *)(v5 + 16) = Item;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Item, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Item, v16, v17, v18, v19, v20, v21);
   switch ( result )
   {
     case 2:
       SoundPlayerMenu__stopTrialListening(this, v22);
       SoundPlayerMenu__detachSelectEffect(this, v37);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v25 = &Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__1__;
 LABEL_11:
       v38 = v24;
@@ -1569,13 +1569,13 @@ LABEL_11:
         return;
       }
 LABEL_14:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     case 1:
       SoundPlayerMenu__stopTrialListening(this, v22);
       v27 = SoundPlayerMenu__trialListening(this, *(SoundPlayerListViewItem_o **)(v5 + 16), v26);
-      started = UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v27, 0);
+      started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v27, 0);
       this->fields.retTrialListening = started;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.retTrialListening,
         (int32_t)started,
         v29,
@@ -1584,8 +1584,8 @@ LABEL_14:
         v32,
         v33,
         v34);
-      v35 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v36 = (TripleButtonDlgComponent_CallbackFunc_o *)sub_21FFEBC(TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+      v35 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v36 = (TripleButtonDlgComponent_CallbackFunc_o *)sub_2213CCC(TripleButtonDlgComponent_CallbackFunc_TypeInfo);
       TripleButtonDlgComponent_CallbackFunc___ctor(
         v36,
         (Il2CppObject *)this,
@@ -1599,8 +1599,8 @@ LABEL_14:
       goto LABEL_14;
     case 0:
       SoundPlayerMenu__stopTrialListening(this, v22);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v25 = &Method_SoundPlayerMenu___c__DisplayClass34_0__openCheckDlgCallback_b__0__;
       goto LABEL_11;
   }
@@ -1613,20 +1613,20 @@ void SoundPlayerMenu__openEvent(SoundPlayerMenu_o *this, SoundPlayerListViewItem
   System_Action_o *v6; // x21
   const MethodInfo *v7; // x2
 
-  if ( (byte_5933C10 & 1) == 0 )
+  if ( (byte_596BD29 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu__openEvent_b__37_0__);
-    byte_5933C10 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu__openEvent_b__37_0__);
+    byte_596BD29 = 1;
   }
   maskColl = (UnityEngine_Collider_o *)this->fields.maskColl;
   if ( !maskColl
     || (UnityEngine_Collider__set_enabled(maskColl, 1, 0),
-        v6 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+        v6 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(v6, (Il2CppObject *)this, Method_SoundPlayerMenu__openEvent_b__37_0__, 0),
         !item) )
   {
-    sub_21FFECC(maskColl, item);
+    sub_2213CDC(maskColl, item);
   }
   SoundPlayerListViewItem__startOpenAnim(item, v6, v7);
 }
@@ -1648,10 +1648,10 @@ void SoundPlayerMenu__releaseSelectEffect(SoundPlayerMenu_o *this, const MethodI
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5933C0C & 1) == 0 )
+  if ( (byte_596BD25 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933C0C = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BD25 = 1;
   }
   selectEffect = this->fields.selectEffect;
   p_selectEffect = (MissionNaviTransitionBoardItem_o *)&this->fields.selectEffect;
@@ -1663,9 +1663,9 @@ void SoundPlayerMenu__releaseSelectEffect(SoundPlayerMenu_o *this, const MethodI
     klass = (UnityEngine_Object_o *)p_selectEffect->klass;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-    UnityEngine_Object__Destroy_83246496(klass, 0);
+    UnityEngine_Object__Destroy_83459800(klass, 0);
     p_selectEffect->klass = 0;
-    sub_21FFBF4(p_selectEffect, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_selectEffect, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -1683,10 +1683,10 @@ void SoundPlayerMenu__remove_callbackFunc(SoundPlayerMenu_o *this, System_Action
   SoundPlayerMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5933C01 & 1) == 0 )
+  if ( (byte_596BD1A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5933C01 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_596BD1A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1699,13 +1699,13 @@ void SoundPlayerMenu__remove_callbackFunc(SoundPlayerMenu_o *this, System_Action
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (SoundPlayerMenu_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (SoundPlayerMenu_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   SoundPlayerMenu__releaseSelectEffect(v13, v14);
 }
 
@@ -1720,15 +1720,15 @@ void SoundPlayerMenu__resetPlaySoundData(SoundPlayerMenu_o *this, const MethodIn
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_5933C03 & 1) == 0 )
+  if ( (byte_596BD1C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C03 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD1C = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.playSoundName = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.playSoundIdx = -1;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.playSoundName, v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.playSoundName, v9, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -1747,38 +1747,38 @@ void SoundPlayerMenu__setCanPlaySoundDisp(SoundPlayerMenu_o *this, const MethodI
   int32_t playSoundMax; // [xsp+8h] [xbp-28h] BYREF
   int32_t canPlaySoundNum; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5933C0E & 1) == 0 )
+  if ( (byte_596BD27 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_12754/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/);
-    sub_21FFC50(&StringLiteral_12755/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/);
-    byte_5933C0E = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_12780/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/);
+    sub_2213A60(&StringLiteral_12781/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/);
+    byte_596BD27 = 1;
   }
   canPlaySoundStr = this->fields.canPlaySoundStr;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12754/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12780/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/, 0);
   if ( !canPlaySoundStr )
     goto LABEL_10;
   UILabel__set_text(canPlaySoundStr, v5, 0);
   canPlaySoundCnt = this->fields.canPlaySoundCnt;
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12755/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12781/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/, 0);
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager )
     goto LABEL_10;
   v9 = v5;
   canPlaySoundNum = soundPlayerListViewManager->fields.canPlaySoundNum;
-  v5 = (System_String_o *)j_il2cpp_value_box_0(qword_594C070, &canPlaySoundNum);
+  v5 = (System_String_o *)j_il2cpp_value_box_0(qword_5984348, &canPlaySoundNum);
   v10 = this->fields.soundPlayerListViewManager;
   if ( !v10
     || (v11 = (Il2CppObject *)v5,
         playSoundMax = v10->fields.playSoundMax,
-        v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &playSoundMax),
-        v5 = System_String__Format_75484576(v9, v11, v12, 0),
+        v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &playSoundMax),
+        v5 = System_String__Format_75697880(v9, v11, v12, 0),
         !canPlaySoundCnt) )
   {
 LABEL_10:
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   }
   UILabel__set_text(canPlaySoundCnt, v5, 0);
 }
@@ -1810,25 +1810,25 @@ void SoundPlayerMenu__stopTrialListening(SoundPlayerMenu_o *this, const MethodIn
   System_String_o *klass; // x20
   int32_t v25; // w1
 
-  if ( (byte_5933C12 & 1) == 0 )
+  if ( (byte_596BD2B & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C12 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD2B = 1;
   }
   retTrialListening = this->fields.retTrialListening;
   if ( retTrialListening )
   {
-    UnityEngine_MonoBehaviour__StopCoroutine_83232056((UnityEngine_MonoBehaviour_o *)this, retTrialListening, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine_83445360((UnityEngine_MonoBehaviour_o *)this, retTrialListening, 0);
     this->fields.retTrialListening = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.retTrialListening, 0, v4, v5, v6, v7, v8, v9);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.retTrialListening, 0, v4, v5, v6, v7, v8, v9);
     if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v10, v11);
     if ( BgmManager__get_IsBusy(0) )
     {
       v14 = SoundPlayerMenu__busyWaitStopBgm(this, v12);
-      UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v14, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v14, 0);
     }
     else
     {
@@ -1846,7 +1846,7 @@ void SoundPlayerMenu__stopTrialListening(SoundPlayerMenu_o *this, const MethodIn
       }
       v25 = (int)StringLiteral_1/*""*/;
       p_backupBgmName->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-      sub_21FFBF4(p_backupBgmName, v25, v18, v19, v20, v21, v22, v23);
+      sub_2213A04(p_backupBgmName, v25, v18, v19, v20, v21, v22, v23);
     }
   }
 }
@@ -1871,18 +1871,18 @@ System_Collections_IEnumerator_o *SoundPlayerMenu__trialListening(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5933C11 & 1) == 0 )
+  if ( (byte_596BD2A & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerMenu__trialListening_d__39_TypeInfo);
-    byte_5933C11 = 1;
+    sub_2213A60(&SoundPlayerMenu__trialListening_d__39_TypeInfo);
+    byte_596BD2A = 1;
   }
-  v5 = sub_21FFEBC(SoundPlayerMenu__trialListening_d__39_TypeInfo);
+  v5 = sub_2213CCC(SoundPlayerMenu__trialListening_d__39_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = item;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)item, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)item, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1897,15 +1897,15 @@ void SoundPlayerMenu___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5933C18 & 1) == 0 )
+  if ( (byte_596BD31 & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerMenu___c_TypeInfo);
-    byte_5933C18 = 1;
+    sub_2213A60(&SoundPlayerMenu___c_TypeInfo);
+    byte_596BD31 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(SoundPlayerMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(SoundPlayerMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SoundPlayerMenu___c_TypeInfo->static_fields->__9 = (struct SoundPlayerMenu___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SoundPlayerMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1927,10 +1927,10 @@ bool SoundPlayerMenu___c___busyWaitStopBgm_b__41_0(SoundPlayerMenu___c_o *this, 
 {
   __int64 v2; // x2
 
-  if ( (byte_5933C1A & 1) == 0 )
+  if ( (byte_596BD33 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    byte_5933C1A = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    byte_596BD33 = 1;
   }
   if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method, v2);
@@ -1942,10 +1942,10 @@ bool SoundPlayerMenu___c___trialListening_b__39_0(SoundPlayerMenu___c_o *this, c
 {
   __int64 v2; // x2
 
-  if ( (byte_5933C19 & 1) == 0 )
+  if ( (byte_596BD32 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    byte_5933C19 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    byte_596BD32 = 1;
   }
   if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method, v2);
@@ -1997,13 +1997,13 @@ void SoundPlayerMenu___c__DisplayClass27_0___open_b__0(
   Il2CppObject *Component_object; // x20
   struct SoundPlayerMenu_o *v33; // x8
 
-  if ( (byte_5933C1B & 1) == 0 )
+  if ( (byte_596BD34 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu_EndOpen__);
-    byte_5933C1B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu_EndOpen__);
+    byte_596BD34 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2020,13 +2020,13 @@ void SoundPlayerMenu___c__DisplayClass27_0___open_b__0(
   {
     opened_act = this->fields.opened_act;
     v10->fields.openedAct = opened_act;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->fields.openedAct, (int32_t)opened_act, v4, v5, v6, v7, v8, v9);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->fields.openedAct, (int32_t)opened_act, v4, v5, v6, v7, v8, v9);
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_34;
     callback = this->fields.callback;
     *((_QWORD *)_4__this + 19) = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)((char *)_4__this + 152),
       (int32_t)callback,
       v13,
@@ -2065,7 +2065,7 @@ void SoundPlayerMenu___c__DisplayClass27_0___open_b__0(
     _4__this = v23->fields.soundPlayerListViewManager;
     if ( !_4__this )
       goto LABEL_34;
-    SoundPlayerListViewManager__SetMode_40638440((SoundPlayerListViewManager_o *)_4__this, 1, v22);
+    SoundPlayerListViewManager__SetMode_40646528((SoundPlayerListViewManager_o *)_4__this, 1, v22);
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_34;
@@ -2076,7 +2076,7 @@ void SoundPlayerMenu___c__DisplayClass27_0___open_b__0(
     v11 = System_Action_TypeInfo;
     v10->fields.state = 1;
   }
-  v24 = (System_Action_o *)sub_21FFEBC(v11);
+  v24 = (System_Action_o *)sub_2213CCC(v11);
   System_Action___ctor(v24, (Il2CppObject *)v10, Method_SoundPlayerMenu_EndOpen__, 0);
   BaseMenu__Open((BaseMenu_o *)v10, v24, 0);
   v26 = this->fields.__4__this;
@@ -2091,10 +2091,10 @@ void SoundPlayerMenu___c__DisplayClass27_0___open_b__0(
   v29 = this->fields.__4__this;
   if ( !v29 || (_4__this = v29->fields.baseWindow) == 0 )
 LABEL_34:
-    sub_21FFECC(_4__this, method);
+    sub_2213CDC(_4__this, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)_4__this,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
   _4__this = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -2144,14 +2144,14 @@ void SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__0(
   struct SoundPlayerMenu_o *v11; // x8
 
   v3 = this;
-  if ( (byte_5933C1C & 1) == 0 )
+  if ( (byte_596BD35 & 1) == 0 )
   {
-    sub_21FFC50(&Method_NetworkManager_getRequest_PurchaseRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu_endPurchaseRequest__);
-    this = (SoundPlayerMenu___c__DisplayClass34_0_o *)sub_21FFC50(&StringLiteral_23468/*"ok"*/);
-    byte_5933C1C = 1;
+    sub_2213A60(&Method_NetworkManager_getRequest_PurchaseRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu_endPurchaseRequest__);
+    this = (SoundPlayerMenu___c__DisplayClass34_0_o *)sub_2213A60(&StringLiteral_23515/*"ok"*/);
+    byte_596BD35 = 1;
   }
   item = v3->fields.item;
   if ( !item )
@@ -2163,13 +2163,13 @@ void SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__0(
   _4__this = (Il2CppObject *)v3->fields.__4__this;
   if ( shopId )
   {
-    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_21FFEBC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_2213CCC(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(v8, _4__this, Method_SoundPlayerMenu_endPurchaseRequest__, 0);
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9, v10);
     this = (SoundPlayerMenu___c__DisplayClass34_0_o *)NetworkManager__getRequest_object_(
                                                         v8,
-                                                        (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_PurchaseRequest___);
+                                                        (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_PurchaseRequest___);
     v11 = v3->fields.__4__this;
     if ( v11 && this )
     {
@@ -2177,11 +2177,11 @@ void SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__0(
       return;
     }
 LABEL_13:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( !_4__this )
     goto LABEL_13;
-  SoundPlayerMenu__endPurchaseRequest(v3->fields.__4__this, (System_String_o *)StringLiteral_23468/*"ok"*/, v2);
+  SoundPlayerMenu__endPurchaseRequest(v3->fields.__4__this, (System_String_o *)StringLiteral_23515/*"ok"*/, v2);
 }
 
 
@@ -2203,16 +2203,16 @@ void SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__1(
   const MethodInfo *v13; // x2
 
   v2 = this;
-  if ( (byte_5933C1D & 1) == 0 )
+  if ( (byte_596BD36 & 1) == 0 )
   {
-    sub_21FFC50(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
-    this = (SoundPlayerMenu___c__DisplayClass34_0_o *)sub_21FFC50(&Method_SoundPlayerMenu_OnSelectSound__);
-    byte_5933C1D = 1;
+    sub_2213A60(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    this = (SoundPlayerMenu___c__DisplayClass34_0_o *)sub_2213A60(&Method_SoundPlayerMenu_OnSelectSound__);
+    byte_596BD36 = 1;
   }
   _4__this = (Il2CppObject *)v2->fields.__4__this;
   if ( !_4__this
     || (klass = _4__this[6].klass,
-        v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_21FFEBC(SoundPlayerListViewManager_CallbackFunc_TypeInfo),
+        v5 = (SoundPlayerListViewManager_CallbackFunc_o *)sub_2213CCC(SoundPlayerListViewManager_CallbackFunc_TypeInfo),
         SoundPlayerListViewManager_CallbackFunc___ctor(
           v5,
           _4__this,
@@ -2220,11 +2220,11 @@ void SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__1(
           v6),
         !klass) )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   klass->vtable[3].method = (const MethodInfo *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&klass->vtable[3].method, (int32_t)v5, v7, v8, v9, v10, v11, v12);
-  SoundPlayerListViewManager__SetMode_40638440((SoundPlayerListViewManager_o *)klass, 2, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&klass->vtable[3].method, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  SoundPlayerListViewManager__SetMode_40646528((SoundPlayerListViewManager_o *)klass, 2, v13);
 }
 
 
@@ -2245,7 +2245,7 @@ void SoundPlayerMenu___c__DisplayClass36_0___endPurchaseRequest_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (SoundPlayerMenu__detachSelectEffect(_4__this, method), (_4__this = this->fields.__4__this) == 0) )
-    sub_21FFECC(_4__this, method);
+    sub_2213CDC(_4__this, method);
   SoundPlayerMenu__openEvent(_4__this, this->fields.item, v4);
 }
 
@@ -2300,15 +2300,15 @@ bool SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
   bool v36; // w6
   bool v37; // w7
 
-  if ( (byte_5933C1E & 1) == 0 )
+  if ( (byte_596BD37 & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__busyWaitStopBgm_b__41_0__);
-    sub_21FFC50(&SoundPlayerMenu___c_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5933C1E = 1;
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu___c__busyWaitStopBgm_b__41_0__);
+    sub_2213A60(&SoundPlayerMenu___c_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596BD37 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state )
@@ -2321,7 +2321,7 @@ bool SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method, v2);
       SoundManager__stopBgm(0);
       if ( !_4__this )
-        sub_21FFECC(v6, v7);
+        sub_2213CDC(v6, v7);
       backupBgmName = _4__this->fields.backupBgmName;
       p_backupBgmName = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.backupBgmName;
       if ( !System_String__IsNullOrEmpty(backupBgmName, 0) )
@@ -2333,7 +2333,7 @@ bool SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
       }
       v18 = (int)StringLiteral_1/*""*/;
       p_backupBgmName->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_1/*""*/;
-      sub_21FFBF4(p_backupBgmName, v18, v11, v12, v13, v14, v15, v16);
+      sub_2213A04(p_backupBgmName, v18, v11, v12, v13, v14, v15, v16);
     }
   }
   else
@@ -2355,17 +2355,17 @@ bool SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
         static_fields = SoundPlayerMenu___c_TypeInfo->static_fields;
       }
       v22 = (Il2CppObject *)static_fields->__9;
-      _9__41_0 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+      _9__41_0 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(_9__41_0, v22, Method_SoundPlayerMenu___c__busyWaitStopBgm_b__41_0__, 0);
       v23 = SoundPlayerMenu___c_TypeInfo->static_fields;
       v23->__9__41_0 = _9__41_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v23->__9__41_0, (int32_t)_9__41_0, v24, v25, v26, v27, v28, v29);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->__9__41_0, (int32_t)_9__41_0, v24, v25, v26, v27, v28, v29);
     }
-    v30 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+    v30 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v30, _9__41_0, 0);
     this->fields.__2__current = (Il2CppObject *)v30;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v30, v32, v33, v34, v35, v36, v37);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v30, v32, v33, v34, v35, v36, v37);
     *((_DWORD *)p__2__current - 2) = 1;
   }
   return _1__state == 0;
@@ -2388,11 +2388,11 @@ void __noreturn SoundPlayerMenu__busyWaitStopBgm_d__41__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundPlayerMenu__busyWaitStopBgm_d__41_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundPlayerMenu__busyWaitStopBgm_d__41_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -2457,7 +2457,6 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
   int32_t v31; // w5
   bool v32; // w6
   bool v33; // w7
-  bool result; // w0
   SoundPlayerMenu___c_c *v35; // x0
   struct SoundPlayerMenu___c_StaticFields *static_fields; // x8
   System_Func_bool__o *_9__39_0; // x20
@@ -2486,16 +2485,16 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
   bool v60; // w7
   System_String_o *backupBgmName; // x19
 
-  if ( (byte_5933C1F & 1) == 0 )
+  if ( (byte_596BD38 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_SoundPlayerMenu___c__trialListening_b__39_0__);
-    sub_21FFC50(&SoundPlayerMenu___c_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitUntil_TypeInfo);
-    byte_5933C1F = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_SoundPlayerMenu___c__trialListening_b__39_0__);
+    sub_2213A60(&SoundPlayerMenu___c_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitUntil_TypeInfo);
+    byte_596BD38 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -2515,7 +2514,7 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
       if ( _4__this )
       {
         _4__this->fields.backupBgmName = BgmName;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&_4__this->fields.backupBgmName,
           (int32_t)BgmName,
           v8,
@@ -2528,7 +2527,7 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
         {
           playSoundName = _4__this->fields.playSoundName;
           _4__this->fields.backupBgmName = playSoundName;
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&_4__this->fields.backupBgmName,
             (int32_t)playSoundName,
             v15,
@@ -2544,10 +2543,10 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
         item = this->fields.item;
         if ( item )
         {
-          if ( (byte_5933BDA & 1) == 0 )
+          if ( (byte_596BCF3 & 1) == 0 )
           {
-            sub_21FFC50(&StringLiteral_1/*""*/);
-            byte_5933BDA = 1;
+            sub_2213A60(&StringLiteral_1/*""*/);
+            byte_596BCF3 = 1;
           }
           bgmEntity = item->fields.bgmEntity;
           if ( bgmEntity )
@@ -2556,18 +2555,17 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
             p_fileName = (System_String_o **)&StringLiteral_1/*""*/;
           SoundManager__playBgm(*p_fileName, 0);
           LISTENING_TIME = _4__this->fields.LISTENING_TIME;
-          v26 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+          v26 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
           UnityEngine_WaitForSeconds___ctor(v26, LISTENING_TIME, 0);
           this->fields.__2__current = (Il2CppObject *)v26;
           p__2__current = &this->fields.__2__current;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v26, v28, v29, v30, v31, v32, v33);
-          result = 1;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v26, v28, v29, v30, v31, v32, v33);
           *((_DWORD *)p__2__current - 2) = 1;
-          return result;
+          return 1;
         }
       }
 LABEL_40:
-      sub_21FFECC(BgmName, v7);
+      sub_2213CDC(BgmName, v7);
     }
     return 0;
   }
@@ -2590,7 +2588,7 @@ LABEL_31:
       SoundManager__playBgm(backupBgmName, 0);
     }
     _4__this->fields.retTrialListening = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&_4__this->fields.retTrialListening,
       0,
       v55,
@@ -2617,20 +2615,19 @@ LABEL_31:
       static_fields = SoundPlayerMenu___c_TypeInfo->static_fields;
     }
     v38 = (Il2CppObject *)static_fields->__9;
-    _9__39_0 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    _9__39_0 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(_9__39_0, v38, Method_SoundPlayerMenu___c__trialListening_b__39_0__, 0);
     v39 = SoundPlayerMenu___c_TypeInfo->static_fields;
     v39->__9__39_0 = _9__39_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v39->__9__39_0, (int32_t)_9__39_0, v40, v41, v42, v43, v44, v45);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v39->__9__39_0, (int32_t)_9__39_0, v40, v41, v42, v43, v44, v45);
   }
-  v46 = (UnityEngine_WaitUntil_o *)sub_21FFEBC(UnityEngine_WaitUntil_TypeInfo);
+  v46 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v46, _9__39_0, 0);
   this->fields.__2__current = (Il2CppObject *)v46;
   v47 = &this->fields.__2__current;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v47, (int32_t)v46, v48, v49, v50, v51, v52, v53);
-  result = 1;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v47, (int32_t)v46, v48, v49, v50, v51, v52, v53);
   *((_DWORD *)v47 - 2) = 2;
-  return result;
+  return 1;
 }
 
 
@@ -2650,11 +2647,11 @@ void __noreturn SoundPlayerMenu__trialListening_d__39__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_SoundPlayerMenu__trialListening_d__39_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_SoundPlayerMenu__trialListening_d__39_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

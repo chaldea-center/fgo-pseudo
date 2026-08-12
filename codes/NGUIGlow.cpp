@@ -3,7 +3,7 @@ void NGUIGlow___ctor(NGUIGlow_o *this, const MethodInfo *method)
   this->fields.downSample = 2;
   *(_QWORD *)&this->fields.sigma = 0x3F80000041200000LL;
   this->fields.quality = 35;
-  *(_OWORD *)&this->fields.pingPongTimeMultiplier = xmmword_E92B30;
+  *(_OWORD *)&this->fields.pingPongTimeMultiplier = xmmword_E9BCD0;
   this->fields.colorStrength = 1.0;
   *(_QWORD *)&this->fields.glowColor.fields.b = 0x3F80000000000000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -37,11 +37,11 @@ void NGUIGlow__ApplyBloom(NGUIGlow_o *this, const MethodInfo *method)
   UnityEngine_RenderTexture_o *v25; // x19
   const MethodInfo *v26; // x2
 
-  if ( (byte_5931F97 & 1) == 0 )
+  if ( (byte_596A137 & 1) == 0 )
   {
-    sub_21FFC50(&NGUIGlowTextureGenerator_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931F97 = 1;
+    sub_2213A60(&NGUIGlowTextureGenerator_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A137 = 1;
   }
   rt = (UnityEngine_Object_o *)this->fields.rt;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -56,10 +56,10 @@ void NGUIGlow__ApplyBloom(NGUIGlow_o *this, const MethodInfo *method)
     glowCompute = this->fields.glowCompute;
     glowMaterial = this->fields.glowMaterial;
     maskSprite = this->fields.maskSprite;
-    v13 = sub_21FFEBC(NGUIGlowTextureGenerator_TypeInfo);
+    v13 = sub_2213CCC(NGUIGlowTextureGenerator_TypeInfo);
     NGUIGlowTextureGenerator___ctor((NGUIGlowTextureGenerator_o *)v13, maskSprite, glowCompute, glowMaterial, v14);
     if ( !v13 )
-      sub_21FFECC(v15, v16);
+      sub_2213CDC(v15, v16);
     v18 = pingPongLength + pingPongLength;
     *(_DWORD *)(v13 + 64) = this->fields.downSample;
     v19 = (float)(v9 * pingPongTimeMultiplier)
@@ -114,14 +114,14 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5931F98 & 1) == 0 )
+  if ( (byte_596A138 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Material_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Resources_Load_ComputeShader___);
-    sub_21FFC50(&StringLiteral_7629/*"Hidden/TwoPassGaussianBlur"*/);
-    sub_21FFC50(&StringLiteral_13353/*"Shaders/NGUIGlowCompute"*/);
-    byte_5931F98 = 1;
+    sub_2213A60(&UnityEngine_Material_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Resources_Load_ComputeShader___);
+    sub_2213A60(&StringLiteral_7641/*"Hidden/TwoPassGaussianBlur"*/);
+    sub_2213A60(&StringLiteral_13380/*"Shaders/NGUIGlowCompute"*/);
+    byte_596A138 = 1;
   }
   glowCompute = (UnityEngine_Object_o *)this->fields.glowCompute;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -129,10 +129,10 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Equality(glowCompute, 0, 0) )
   {
     object = UnityEngine_Resources__Load_object_(
-               (System_String_o *)StringLiteral_13353/*"Shaders/NGUIGlowCompute"*/,
-               (const MethodInfo_3945260 *)Method_UnityEngine_Resources_Load_ComputeShader___);
+               (System_String_o *)StringLiteral_13380/*"Shaders/NGUIGlowCompute"*/,
+               (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_ComputeShader___);
     this->fields.glowCompute = (struct UnityEngine_ComputeShader_o *)object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.glowCompute,
       (int32_t)object,
       v8,
@@ -149,15 +149,15 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Equality(v15, 0, 0) )
   {
-    v19 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7629/*"Hidden/TwoPassGaussianBlur"*/, 0);
+    v19 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7641/*"Hidden/TwoPassGaussianBlur"*/, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0) )
     {
-      v20 = (UnityEngine_Material_o *)sub_21FFEBC(UnityEngine_Material_TypeInfo);
+      v20 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v20, v19, 0);
       p_glowMaterial->klass = (MissionNaviTransitionBoardItem_c *)v20;
-      sub_21FFBF4(p_glowMaterial, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+      sub_2213A04(p_glowMaterial, (int32_t)v20, v21, v22, v23, v24, v25, v26);
       UnityEngine_Resources__UnloadAsset((UnityEngine_Object_o *)v19, 0);
     }
   }
@@ -207,10 +207,10 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
   bool v41; // w6
   bool v42; // w7
 
-  if ( (byte_5931F99 & 1) == 0 )
+  if ( (byte_596A139 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931F99 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A139 = 1;
   }
   p_rt = &this->fields.rt;
   rt = (UnityEngine_Object_o *)this->fields.rt;
@@ -226,14 +226,14 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Equality(v12, (UnityEngine_Object_o *)v11, 0) )
       UnityEngine_RenderTexture__set_active(0, 0);
     if ( !*p_rt )
-      sub_21FFECC(0, v13);
+      sub_2213CDC(0, v13);
     UnityEngine_RenderTexture__Release(*p_rt, 0);
     v16 = *p_rt;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
-    UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)v16, 0);
+    UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v16, 0);
     *p_rt = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rt, 0, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rt, 0, v17, v18, v19, v20, v21, v22);
   }
   p_glowMaterial = &this->fields.glowMaterial;
   glowMaterial = (UnityEngine_Object_o *)this->fields.glowMaterial;
@@ -244,9 +244,9 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
     v27 = (UnityEngine_Object_o *)*p_glowMaterial;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25, v26);
-    UnityEngine_Object__Destroy_83246496(v27, 0);
+    UnityEngine_Object__Destroy_83459800(v27, 0);
     *p_glowMaterial = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.glowMaterial, 0, v28, v29, v30, v31, v32, v33);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.glowMaterial, 0, v28, v29, v30, v31, v32, v33);
   }
   glowCompute = this->fields.glowCompute;
   p_glowCompute = (UnityEngine_Object_o **)&this->fields.glowCompute;
@@ -257,7 +257,7 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
   {
     UnityEngine_Resources__UnloadAsset(*p_glowCompute, 0);
     *p_glowCompute = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_glowCompute, 0, v37, v38, v39, v40, v41, v42);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_glowCompute, 0, v37, v38, v39, v40, v41, v42);
   }
 }
 
@@ -267,10 +267,10 @@ void NGUIGlow__OnValidate(NGUIGlow_o *this, const MethodInfo *method)
   __int64 v2; // x2
   const MethodInfo *v4; // x1
 
-  if ( (byte_5931F95 & 1) == 0 )
+  if ( (byte_596A135 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    byte_5931F95 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    byte_596A135 = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method, v2);
@@ -304,10 +304,10 @@ void NGUIGlow__UpdateTexture(NGUIGlow_o *this, const MethodInfo *method)
   bool v16; // w7
   const MethodInfo *v17; // x1
 
-  if ( (byte_5931F96 & 1) == 0 )
+  if ( (byte_596A136 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931F96 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A136 = 1;
   }
   texture = (UnityEngine_Object_o *)this->fields.texture;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -319,7 +319,7 @@ void NGUIGlow__UpdateTexture(NGUIGlow_o *this, const MethodInfo *method)
     if ( !v9
       || (NewRenderTexture = NGUIGlowTextureGenerator__CreateNewRenderTexture(v9->fields.mWidth, v9->fields.mHeight, v8),
           this->fields.rt = NewRenderTexture,
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&this->fields.rt,
             (int32_t)NewRenderTexture,
             v11,
@@ -331,7 +331,7 @@ void NGUIGlow__UpdateTexture(NGUIGlow_o *this, const MethodInfo *method)
           NGUIGlow__ApplyBloom(this, v17),
           (v6 = this->fields.texture) == 0) )
     {
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
     ((void (__fastcall *)(struct UITexture_o *, struct UnityEngine_RenderTexture_o *, const MethodInfo *))v6->klass->vtable._27_set_mainTexture.methodPtr)(
       v6,

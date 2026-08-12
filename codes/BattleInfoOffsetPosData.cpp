@@ -20,10 +20,10 @@ void BattleInfoOffsetPosData___ctor(
   z = offset.fields.z;
   y = offset.fields.y;
   x = offset.fields.x;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v10 = static_fields->zeroVector.fields.z;
@@ -32,7 +32,7 @@ void BattleInfoOffsetPosData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.obj = obj;
   p_fields = &this->fields;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_fields, (int32_t)obj, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_fields, (int32_t)obj, v12, v13, v14, v15, v16, v17);
   p_fields->offset.fields.x = x;
   p_fields->offset.fields.y = y;
   p_fields->offset.fields.z = z;
@@ -45,10 +45,10 @@ bool BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, cons
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_593B155 & 1) == 0 )
+  if ( (byte_5973344 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593B155 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973344 = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -57,7 +57,7 @@ bool BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, cons
     return 0;
   v5 = this->fields.obj;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UnityEngine_GameObject__get_activeInHierarchy(v5, 0);
 }
 
@@ -68,9 +68,6 @@ UnityEngine_Vector3_o BattleInfoOffsetPosData__get_Offset(BattleInfoOffsetPosDat
   __int64 v4; // x8
   __int64 v5; // x9
   __int64 v6; // x10
-  float v7; // s1
-  float v8; // s0
-  float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   IsActive = BattleInfoOffsetPosData__get_IsActive(this, method);
@@ -88,11 +85,8 @@ UnityEngine_Vector3_o BattleInfoOffsetPosData__get_Offset(BattleInfoOffsetPosDat
     v6 = 32;
   else
     v6 = 44;
-  v7 = *(float *)((char *)&this->klass + v5);
-  v8 = *(float *)((char *)&this->klass + v4);
-  v9 = *(float *)((char *)&this->klass + v6);
-  result.fields.z = v9;
-  result.fields.y = v7;
-  result.fields.x = v8;
+  result.fields.y = *(float *)((char *)&this->klass + v5);
+  result.fields.x = *(float *)((char *)&this->klass + v4);
+  result.fields.z = *(float *)((char *)&this->klass + v6);
   return result;
 }

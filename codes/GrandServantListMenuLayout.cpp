@@ -38,30 +38,30 @@ void GrandServantListMenuLayout__Initialize(
   System_Collections_Generic_IEnumerable_T__o *v33; // x21
   System_Action_object__o *v34; // x19
 
-  if ( (byte_593323B & 1) == 0 )
+  if ( (byte_596B342 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_21FFC50(&Method_GrandServantListMenuLayout___c__DisplayClass3_0__Initialize_b__0__);
-    sub_21FFC50(&GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
-    byte_593323B = 1;
+    sub_2213A60(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_2213A60(&Method_GrandServantListMenuLayout___c__DisplayClass3_0__Initialize_b__0__);
+    sub_2213A60(&GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
+    byte_596B342 = 1;
   }
-  v9 = sub_21FFEBC(GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
+  v9 = sub_2213CCC(GrandServantListMenuLayout___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   *(_QWORD *)(v9 + 16) = fsm;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)fsm, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)fsm, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = prefab;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)prefab, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 24), (int32_t)prefab, v18, v19, v20, v21, v22, v23);
   v24 = *(struct PlayMakerFSM_o **)(v9 + 16);
   this->fields.fsm = v24;
   p_fsm = &this->fields.fsm;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_fsm, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_fsm, (int32_t)v24, v26, v27, v28, v29, v30, v31);
   v32 = System_Action_GrandServantListItemSlot__TypeInfo;
   v33 = (System_Collections_Generic_IEnumerable_T__o *)*(p_fsm - 2);
   *((_BYTE *)p_fsm - 8) = displayKind;
-  v34 = (System_Action_object__o *)sub_21FFEBC(v32);
+  v34 = (System_Action_object__o *)sub_2213CCC(v32);
   System_Action_object____ctor(
     v34,
     (Il2CppObject *)v9,
@@ -70,7 +70,7 @@ void GrandServantListMenuLayout__Initialize(
   BasicHelper__ForEach_object_(
     v33,
     (System_Action_T__o *)v34,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
@@ -90,13 +90,13 @@ void GrandServantListMenuLayout__Release(GrandServantListMenuLayout_o *this, con
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_593323C & 1) == 0 )
+  if ( (byte_596B343 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_21FFC50(&Method_GrandServantListMenuLayout___c__Release_b__4_0__);
-    sub_21FFC50(&GrandServantListMenuLayout___c_TypeInfo);
-    byte_593323C = 1;
+    sub_2213A60(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_2213A60(&Method_GrandServantListMenuLayout___c__Release_b__4_0__);
+    sub_2213A60(&GrandServantListMenuLayout___c_TypeInfo);
+    byte_596B343 = 1;
   }
   v4 = GrandServantListMenuLayout___c_TypeInfo;
   slots = (System_Collections_Generic_IEnumerable_T__o *)this->fields.slots;
@@ -115,16 +115,16 @@ void GrandServantListMenuLayout__Release(GrandServantListMenuLayout_o *this, con
       static_fields = GrandServantListMenuLayout___c_TypeInfo->static_fields;
     }
     v8 = (Il2CppObject *)static_fields->__9;
-    _9__4_0 = (System_Action_object__o *)sub_21FFEBC(System_Action_GrandServantListItemSlot__TypeInfo);
+    _9__4_0 = (System_Action_object__o *)sub_2213CCC(System_Action_GrandServantListItemSlot__TypeInfo);
     System_Action_object____ctor(_9__4_0, v8, Method_GrandServantListMenuLayout___c__Release_b__4_0__, 0);
     v9 = GrandServantListMenuLayout___c_TypeInfo->static_fields;
     v9->__9__4_0 = (struct System_Action_GrandServantListItemSlot__o *)_9__4_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v9->__9__4_0, (int32_t)_9__4_0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->__9__4_0, (int32_t)_9__4_0, v10, v11, v12, v13, v14, v15);
   }
   BasicHelper__ForEach_object_(
     slots,
     (System_Action_T__o *)_9__4_0,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
@@ -148,11 +148,11 @@ void GrandServantListMenuLayout__SetItemSlotActive(
     if ( !slots )
       goto LABEL_6;
     if ( !LODWORD(slots->max_length) )
-      sub_21FFED4(IsNullOrEmpty);
+      sub_2213CE4(IsNullOrEmpty);
     IsNullOrEmpty = (UnityEngine_Component_o *)slots->m_Items[0];
     if ( !IsNullOrEmpty )
 LABEL_6:
-      sub_21FFECC(IsNullOrEmpty, v6);
+      sub_2213CDC(IsNullOrEmpty, v6);
     gameObject = UnityEngine_Component__get_gameObject(IsNullOrEmpty, 0);
     Parent = (UnityEngine_Component_o *)GameObjectExtensions__GetParent(gameObject, 0);
     BasicHelper__SetActiveSafely(Parent, value, 0);
@@ -177,22 +177,22 @@ void GrandServantListMenuLayout__UpdateView(
   System_Collections_Generic_IEnumerable_T__o *slots; // x19
   System_Action_object__o *v15; // x20
 
-  if ( (byte_593323D & 1) == 0 )
+  if ( (byte_596B344 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_GrandServantListItemSlot__TypeInfo);
-    sub_21FFC50(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
-    sub_21FFC50(&Method_GrandServantListMenuLayout___c__DisplayClass5_0__UpdateView_b__0__);
-    sub_21FFC50(&GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
-    byte_593323D = 1;
+    sub_2213A60(&System_Action_GrandServantListItemSlot__TypeInfo);
+    sub_2213A60(&Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    sub_2213A60(&Method_GrandServantListMenuLayout___c__DisplayClass5_0__UpdateView_b__0__);
+    sub_2213A60(&GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
+    byte_596B344 = 1;
   }
-  v5 = sub_21FFEBC(GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
+  v5 = sub_2213CCC(GrandServantListMenuLayout___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = grandServantListData;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)grandServantListData, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)grandServantListData, v8, v9, v10, v11, v12, v13);
   slots = (System_Collections_Generic_IEnumerable_T__o *)this->fields.slots;
-  v15 = (System_Action_object__o *)sub_21FFEBC(System_Action_GrandServantListItemSlot__TypeInfo);
+  v15 = (System_Action_object__o *)sub_2213CCC(System_Action_GrandServantListItemSlot__TypeInfo);
   System_Action_object____ctor(
     v15,
     (Il2CppObject *)v5,
@@ -201,7 +201,7 @@ void GrandServantListMenuLayout__UpdateView(
   BasicHelper__ForEach_object_(
     slots,
     (System_Action_T__o *)v15,
-    (const MethodInfo_37DF47C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
+    (const MethodInfo_381282C *)Method_BasicHelper_ForEach_GrandServantListItemSlot___);
 }
 
 
@@ -215,15 +215,15 @@ void GrandServantListMenuLayout___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593323E & 1) == 0 )
+  if ( (byte_596B345 & 1) == 0 )
   {
-    sub_21FFC50(&GrandServantListMenuLayout___c_TypeInfo);
-    byte_593323E = 1;
+    sub_2213A60(&GrandServantListMenuLayout___c_TypeInfo);
+    byte_596B345 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(GrandServantListMenuLayout___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(GrandServantListMenuLayout___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GrandServantListMenuLayout___c_TypeInfo->static_fields->__9 = (struct GrandServantListMenuLayout___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)GrandServantListMenuLayout___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -247,7 +247,7 @@ void GrandServantListMenuLayout___c___Release_b__4_0(
         const MethodInfo *method)
 {
   if ( !slot )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   GrandServantListItemSlot__Release(slot, (const MethodInfo *)slot);
 }
 
@@ -268,7 +268,7 @@ void GrandServantListMenuLayout___c__DisplayClass3_0___Initialize_b__0(
   const MethodInfo *v3; // x3
 
   if ( !slot )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   GrandServantListItemSlot__Initialize(slot, this->fields.fsm, this->fields.prefab, v3);
 }
 
@@ -287,6 +287,6 @@ void GrandServantListMenuLayout___c__DisplayClass5_0___UpdateView_b__0(
         const MethodInfo *method)
 {
   if ( !slot )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   GrandServantListItemSlot__UpdateView(slot, this->fields.grandServantListData, method);
 }

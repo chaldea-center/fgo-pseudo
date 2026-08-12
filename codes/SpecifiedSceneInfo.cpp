@@ -10,7 +10,7 @@ void SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const MethodInfo *met
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.nextSceneParam = 0;
   *(_QWORD *)&this->fields.eventId = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.nextSceneParam, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.nextSceneParam, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -27,5 +27,5 @@ void SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, const MethodI
   this->fields.nextSceneParam = 0;
   p_nextSceneParam = &this->fields.nextSceneParam;
   *(p_nextSceneParam - 1) = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_nextSceneParam, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_nextSceneParam, 0, v2, v3, v4, v5, v6, v7);
 }

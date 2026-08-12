@@ -4,14 +4,14 @@ void ClassBoardEffectListDialogSkillListComponent___cctor(const MethodInfo *meth
   struct ClassBoardEffectListDialogSkillListComponent_StaticFields *static_fields; // x10
   struct ClassBoardEffectListDialogSkillListComponent_StaticFields *v3; // x8
 
-  if ( (byte_593C465 & 1) == 0 )
+  if ( (byte_597469D & 1) == 0 )
   {
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    byte_593C465 = 1;
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    byte_597469D = 1;
   }
   v1 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
   static_fields = ClassBoardEffectListDialogSkillListComponent_TypeInfo->static_fields;
-  static_fields->DISABLED_COLOR = (struct UnityEngine_Color_o)xmmword_E93E50;
+  static_fields->DISABLED_COLOR = (struct UnityEngine_Color_o)xmmword_E9CFF0;
   v3 = v1->static_fields;
   *(_QWORD *)&static_fields->Extra1ClassBaseId = 0x900000008LL;
   *(_QWORD *)&v3->ExtraClassIconListObjHeight = 0x4282000042200000LL;
@@ -56,25 +56,25 @@ float ClassBoardEffectListDialogSkillListComponent__GetListItemHeight(
   const MethodInfo *v9; // x2
 
   v6 = this;
-  if ( (byte_593C460 & 1) == 0 )
+  if ( (byte_5974698 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
-    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
-    byte_593C460 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
+    byte_5974698 = 1;
   }
   if ( !obj
     || (this = (ClassBoardEffectListDialogSkillListComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                    obj,
-                                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___),
+                                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___),
         (skillDispDataList = (System_Collections_Generic_List_object__o *)v6->fields.skillDispDataList) == 0)
     || (v8 = (ClassBoardEffectListDialogSkillDetailComponent_o *)this,
         (this = (ClassBoardEffectListDialogSkillListComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                                     skillDispDataList,
                                                                     index,
-                                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__)) == 0)
+                                                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__)) == 0)
     || !v8 )
   {
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
   return ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(
            v8,
@@ -114,35 +114,35 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
   System_Collections_Generic_IEnumerable_T__o *v32; // x0
   ClassBoardSquareEntity_array *v33; // x22
 
-  if ( (byte_593C462 & 1) == 0 )
+  if ( (byte_597469A & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_ExcludeNull_ClassBoardSquareEntity___);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardSquareMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_int__ClassBoardSquareEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
-    sub_21FFC50(&System_Func_int__ClassBoardSquareEntity__TypeInfo);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0__GetOpenSkillList_b__0__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0__GetOpenSkillList_b__1__);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0_TypeInfo);
-    byte_593C462 = 1;
+    sub_2213A60(&Method_BasicHelper_ExcludeNull_ClassBoardSquareEntity___);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardSquareMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_int__ClassBoardSquareEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+    sub_2213A60(&System_Func_int__ClassBoardSquareEntity__TypeInfo);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0__GetOpenSkillList_b__0__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0__GetOpenSkillList_b__1__);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0_TypeInfo);
+    byte_597469A = 1;
   }
-  v13 = sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0_TypeInfo);
+  v13 = sub_2213CCC(ClassBoardEffectListDialogSkillListComponent___c__DisplayClass41_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
-    sub_21FFECC(v14, v15);
+    sub_2213CDC(v14, v15);
   v16 = DataManager_TypeInfo;
   v17 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   *(_DWORD *)(v13 + 24) = baseId;
   if ( !v17 )
     j_il2cpp_runtime_class_init_0(v16, v15);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
   *(_QWORD *)(v13 + 16) = Master_object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)Master_object, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)Master_object, v19, v20, v21, v22, v23, v24);
   if ( (unsigned __int64)openedSquareIdArray | (unsigned __int64)battleServantSquareIdArray )
   {
-    v28 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_int__ClassBoardSquareEntity__TypeInfo);
+    v28 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_int__ClassBoardSquareEntity__TypeInfo);
     v29 = (System_Func_TSource__TResult__o *)v28;
     if ( openedSquareIdArray )
     {
@@ -165,13 +165,13 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
     v31 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_int__object_(
                                                            v30,
                                                            v29,
-                                                           (const MethodInfo_385A9E0 *)Method_System_Linq_Enumerable_Select_int__ClassBoardSquareEntity___);
+                                                           (const MethodInfo_388DEA8 *)Method_System_Linq_Enumerable_Select_int__ClassBoardSquareEntity___);
     v32 = BasicHelper__ExcludeNull_object_(
             v31,
-            (const MethodInfo_37DD3BC *)Method_BasicHelper_ExcludeNull_ClassBoardSquareEntity___);
+            (const MethodInfo_381076C *)Method_BasicHelper_ExcludeNull_ClassBoardSquareEntity___);
     OpenedSquareEntityArray = (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)v32,
-                                                                (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+                                                                (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
   }
   else
   {
@@ -410,62 +410,62 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
   SkillLvEntity_o *v221; // [xsp+110h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+118h] [xbp-68h] BYREF
 
-  if ( (byte_593C463 & 1) == 0 )
+  if ( (byte_597469B & 1) == 0 )
   {
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_FuncDispMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_FunctionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData____ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_OrderByDescending_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_ClassBoardEffectListDialogSkillListComponent_SkillDispData___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Current__);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
-    sub_21FFC50(&System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Value__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_ClassBoardCommandSpellEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
-    sub_21FFC50(&Method_System_String_Join_int___);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__GetOpenSkillListLocal_b__42_0__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__GetOpenSkillListLocal_b__42_1__);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_869/*","*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593C463 = 1;
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_FuncDispMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_FunctionMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData____ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_OrderByDescending_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_ClassBoardEffectListDialogSkillListComponent_SkillDispData___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Current__);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
+    sub_2213A60(&System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Value__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_ClassBoardCommandSpellEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
+    sub_2213A60(&Method_System_String_Join_int___);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__GetOpenSkillListLocal_b__42_0__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__GetOpenSkillListLocal_b__42_1__);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
+    sub_2213A60(&StringLiteral_869/*","*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597469B = 1;
   }
   v221 = 0;
   entity = 0;
@@ -476,10 +476,10 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
   memset(&v216, 0, sizeof(v216));
   v215 = 0;
   memset(&v214, 0, sizeof(v214));
-  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor__);
   if ( !openedSquareArray )
     goto LABEL_158;
   if ( !openedSquareArray->max_length )
@@ -489,14 +489,14 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
   v210 = v7;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
-  v10 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  v207 = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
-  v11 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_FuncDispMaster___);
-  v209 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___TypeInfo);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillMaster___);
+  v10 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  v207 = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  v11 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_FuncDispMaster___);
+  v209 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v209,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData____ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData____ctor__);
   v12 = v206;
   max_length_low = LODWORD(openedSquareArray->max_length);
   if ( (int)max_length_low >= 1 )
@@ -506,12 +506,12 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
     while ( 1 )
     {
       if ( v14 >= max_length_low )
-        sub_21FFED4(IsPassive);
+        sub_2213CE4(IsPassive);
       v15 = openedSquareArray->m_Items[v14];
-      v16 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ClassBoardCommandSpellEntity__TypeInfo);
+      v16 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ClassBoardCommandSpellEntity__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v16,
-        (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity___ctor__);
+        (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity___ctor__);
       entitys = (System_Collections_Generic_List_ClassBoardCommandSpellEntity__o *)v16;
       if ( !v15 )
         goto LABEL_158;
@@ -527,7 +527,7 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
                                           Master_object,
                                           &entity,
                                           v15->fields.targetId,
-                                          (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                          (const MethodInfo_3F10B80 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)IsPassive & 1) == 0 )
         goto LABEL_62;
       if ( !v10 )
@@ -564,33 +564,33 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
         IsPassive = (System_Int32_array *)System_String__Join_int_(
                                             (System_String_o *)StringLiteral_869/*","*/,
                                             (System_Collections_Generic_IEnumerable_T__o *)v221->fields.funcId,
-                                            (const MethodInfo_3957568 *)Method_System_String_Join_int___);
+                                            (const MethodInfo_398AAF8 *)Method_System_String_Join_int___);
         if ( !v209 )
           goto LABEL_158;
         p_obj = &IsPassive->obj;
         if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                 v209,
                 &IsPassive->obj,
-                (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__) )
+                (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__) )
         {
-          v18 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
+          v18 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v18,
-            (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
+            (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
           System_Collections_Generic_Dictionary_object__object___set_Item(
             v209,
             p_obj,
             (Il2CppObject *)v18,
-            (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
+            (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
         }
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v209,
                  p_obj,
-                 (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
+                 (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
         v20 = v219;
         v21 = v221;
         v22 = (System_Collections_Generic_List_object__o *)Item;
-        v23 = (ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_o *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
+        v23 = (ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_o *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
         ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor(v23, v20, v21, 0, v15, v24);
         if ( !v22 )
           goto LABEL_158;
@@ -605,14 +605,14 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
           System_Collections_Generic_List_object___AddWithResize(
             v22,
             (Il2CppObject *)v23,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
         }
         else
         {
           v34 = &items->obj.klass + size;
           v22->fields._size = size + 1;
           v34[4] = (Il2CppClass *)v23;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v34 + 4), (int32_t)v23, v25, v26, v27, v28, v29, v30);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v34 + 4), (int32_t)v23, v25, v26, v27, v28, v29, v30);
         }
 LABEL_61:
         v12 = v206;
@@ -646,7 +646,7 @@ LABEL_61:
       id = v15->fields.id;
       iconId = v15->fields.iconId;
       v103 = Name;
-      v104 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
+      v104 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
       ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor(
         v104,
         v103,
@@ -671,14 +671,14 @@ LABEL_61:
         System_Collections_Generic_List_object___AddWithResize(
           v210,
           (Il2CppObject *)v104,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v113[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v113[4] + 192LL) + 112LL));
       }
       else
       {
         v115 = &v112->obj.klass + v114;
         v210->fields._size = v114 + 1;
         v115[4] = (Il2CppClass *)v104;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v115 + 4), (int32_t)v104, v106, v107, v108, v109, v110, v111);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v115 + 4), (int32_t)v104, v106, v107, v108, v109, v110, v111);
       }
 LABEL_62:
       max_length_low = LODWORD(openedSquareArray->max_length);
@@ -699,34 +699,33 @@ LABEL_62:
                                         0);
     if ( ((unsigned __int8)IsPassive & 1) == 0 )
       goto LABEL_62;
-    v35 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    v35 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v35,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
     IsPassive = (System_Int32_array *)entitys;
     if ( !entitys )
       goto LABEL_158;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v213,
       (System_Collections_Generic_List_object__o *)entitys,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
-    v218.fields._current = v213.fields._current.fields.key;
-    *(_OWORD *)&v218.fields._list = *(_OWORD *)&v213.fields._dictionary;
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
+    v218 = *(System_Collections_Generic_List_Enumerator_object__o *)&v213.fields._dictionary;
     v213.fields._dictionary = 0;
     *(_QWORD *)&v213.fields._version = &v218;
     while ( 1 )
     {
       v36 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v218,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__);
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__);
       v11 = (Il2CppObject *)v211;
       if ( !v36 )
         break;
       current = v218.fields._current;
       if ( !v218.fields._current )
-        sub_21FFECC(v36, v37);
+        sub_2213CDC(v36, v37);
       if ( !v211 )
-        sub_21FFECC(v36, v37);
+        sub_2213CDC(v36, v37);
       if ( FuncDispMaster__IsContainFuncIds(
              v211,
              &v217,
@@ -737,39 +736,39 @@ LABEL_62:
         v39 = (Il2CppObject *)System_String__Join_int_(
                                 (System_String_o *)StringLiteral_869/*","*/,
                                 (System_Collections_Generic_IEnumerable_T__o *)current[3].klass,
-                                (const MethodInfo_3957568 *)Method_System_String_Join_int___);
+                                (const MethodInfo_398AAF8 *)Method_System_String_Join_int___);
         if ( !v35 )
-          sub_21FFECC(v39, v40);
+          sub_2213CDC(v39, v40);
         v41 = v39;
         if ( !System_Collections_Generic_List_object___Contains(
                 v35,
                 v39,
-                (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_string__Contains__) )
+                (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_string__Contains__) )
         {
           if ( !v209 )
-            sub_21FFECC(0, v42);
+            sub_2213CDC(0, v42);
           if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                   v209,
                   v41,
-                  (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__) )
+                  (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ContainsKey__) )
           {
-            v43 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
+            v43 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__TypeInfo);
             System_Collections_Generic_List_object____ctor(
               v43,
-              (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
+              (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor__);
             System_Collections_Generic_Dictionary_object__object___set_Item(
               v209,
               v41,
               (Il2CppObject *)v43,
-              (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
+              (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___set_Item__);
           }
           v44 = System_Collections_Generic_Dictionary_object__object___get_Item(
                   v209,
                   v41,
-                  (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
+                  (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___get_Item__);
           v45 = v217;
           v46 = (System_Collections_Generic_List_object__o *)v44;
-          v47 = (ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_o *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
+          v47 = (ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_o *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData_TypeInfo);
           ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor(
             v47,
             v45,
@@ -783,7 +782,7 @@ LABEL_62:
                 ++v46->fields._version,
                 !v57) )
           {
-            sub_21FFECC(v49, v50);
+            sub_2213CDC(v49, v50);
           }
           v59 = v46->fields._size;
           if ( (unsigned int)v59 >= LODWORD(v57->max_length) )
@@ -791,34 +790,34 @@ LABEL_62:
             System_Collections_Generic_List_object___AddWithResize(
               v46,
               (Il2CppObject *)v47,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
           }
           else
           {
             v60 = &v57->obj.klass + v59;
             v46->fields._size = v59 + 1;
             v60[4] = (Il2CppClass *)v47;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v60 + 4), (int32_t)v47, v51, v52, v53, v54, v55, v56);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v60 + 4), (int32_t)v47, v51, v52, v53, v54, v55, v56);
           }
           v89 = v35->fields._items;
           v90 = Method_System_Collections_Generic_List_string__Add__;
           ++v35->fields._version;
           if ( !v89 )
-            sub_21FFECC(v61, v62);
+            sub_2213CDC(v61, v62);
           v91 = v35->fields._size;
           if ( (unsigned int)v91 >= LODWORD(v89->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v35,
               v41,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
           }
           else
           {
             v92 = &v89->obj.klass + v91;
             v35->fields._size = v91 + 1;
             v92[4] = (Il2CppClass *)v41;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v92 + 4), (int32_t)v41, v63, v64, v65, v66, v67, v68);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v92 + 4), (int32_t)v41, v63, v64, v65, v66, v67, v68);
           }
         }
       }
@@ -830,7 +829,7 @@ LABEL_62:
         v72 = v15->fields.skillType;
         v73 = v15->fields.id;
         v74 = v15->fields.iconId;
-        v75 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
+        v75 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
         ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor(v75, klass, monitor, v73, v71, v74, v72, v76);
         if ( !v210
           || (v85 = v210->fields._items,
@@ -838,7 +837,7 @@ LABEL_62:
               ++v210->fields._version,
               !v85) )
         {
-          sub_21FFECC(v77, v78);
+          sub_2213CDC(v77, v78);
         }
         v87 = v210->fields._size;
         if ( (unsigned int)v87 >= LODWORD(v85->max_length) )
@@ -846,75 +845,75 @@ LABEL_62:
           System_Collections_Generic_List_object___AddWithResize(
             v210,
             (Il2CppObject *)v75,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
         }
         else
         {
           v88 = &v85->obj.klass + v87;
           v210->fields._size = v87 + 1;
           v88[4] = (Il2CppClass *)v75;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v88 + 4), (int32_t)v75, v79, v80, v81, v82, v83, v84);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v88 + 4), (int32_t)v75, v79, v80, v81, v82, v83, v84);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v218,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
     goto LABEL_61;
   }
 LABEL_82:
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
-  DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_FunctionMaster___);
+  DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_FunctionMaster___);
   IsPassive = (System_Int32_array *)v209;
   if ( !v209 )
 LABEL_158:
-    sub_21FFECC(IsPassive, v9);
+    sub_2213CDC(IsPassive, v9);
   System_Collections_Generic_Dictionary_object__object___GetEnumerator(
     &v213,
     v209,
-    (const MethodInfo_3FCA89C *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___GetEnumerator__);
+    (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___GetEnumerator__);
   v216 = v213;
   while ( 1 )
   {
     v116 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
              &v216,
-             (const MethodInfo_4135514 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___MoveNext__);
+             (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___MoveNext__);
     if ( !v116 )
       break;
     value = v216.fields._current.fields.value;
     if ( !v216.fields._current.fields.value )
-      sub_21FFECC(v116, v117);
+      sub_2213CDC(v116, v117);
     if ( SLODWORD(v216.fields._current.fields.value[1].monitor) >= 1 )
     {
       data = (System_String_o *)StringLiteral_1/*""*/;
       v120 = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)v216.fields._current.fields.value,
                0,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
       if ( !v120 )
-        sub_21FFECC(0, v121);
+        sub_2213CDC(0, v121);
       if ( v120[1].monitor )
       {
         v122 = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)value,
                  0,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
         if ( !v122 )
-          sub_21FFECC(0, v123);
+          sub_2213CDC(0, v123);
         v124 = v122[1].monitor;
         if ( !v124 )
-          sub_21FFECC(v122, v123);
+          sub_2213CDC(v122, v123);
         if ( !Master_object )
-          sub_21FFECC(0, v123);
+          sub_2213CDC(0, v123);
         if ( DataMasterBase_object__object__int___TryGetEntity(
                Master_object,
                &v215,
                v124[4],
-               (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+               (const MethodInfo_3F10B80 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
         {
           if ( !v215 )
-            sub_21FFECC(0, v125);
+            sub_2213CDC(0, v125);
           data = SkillEntity__getName((SkillEntity_o *)v215, 0);
         }
       }
@@ -923,46 +922,45 @@ LABEL_158:
         v126 = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)value,
                  0,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
         if ( !v126 )
-          sub_21FFECC(0, v127);
+          sub_2213CDC(0, v127);
         if ( v126[2].klass )
         {
           v128 = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)value,
                    0,
-                   (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+                   (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
           if ( !v128 )
-            sub_21FFECC(0, v129);
+            sub_2213CDC(0, v129);
           v130 = v128[2].klass;
           if ( !v130 )
-            sub_21FFECC(v128, v129);
+            sub_2213CDC(v128, v129);
           data = (System_String_o *)v130->_1.byval_arg.data;
         }
       }
-      v131 = (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+      v131 = (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v213,
         (System_Collections_Generic_List_object__o *)value,
-        (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__GetEnumerator__);
+        (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__GetEnumerator__);
       v132 = 0;
-      v214.fields._current = v213.fields._current.fields.key;
-      *(_OWORD *)&v214.fields._list = *(_OWORD *)&v213.fields._dictionary;
+      v214 = *(System_Collections_Generic_List_Enumerator_object__o *)&v213.fields._dictionary;
       v213.fields._dictionary = 0;
       *(_QWORD *)&v213.fields._version = &v214;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v214,
-                (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__MoveNext__) )
+                (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__MoveNext__) )
       {
         v133 = v214.fields._current;
-        DispValFromSkill = (System_Int32_array *)sub_21FFD10(int___TypeInfo, 0);
+        DispValFromSkill = (System_Int32_array *)sub_2213B20(int___TypeInfo, 0);
         if ( !v133 )
-          sub_21FFECC(DispValFromSkill, v135);
+          sub_2213CDC(DispValFromSkill, v135);
         v136 = v133[1].monitor;
         if ( v136 )
         {
           if ( !v10 )
-            sub_21FFECC(DispValFromSkill, v135);
+            sub_2213CDC(DispValFromSkill, v135);
           DispValFromSkill = SkillLvMaster__GetDispValFromSkill(
                                (SkillLvMaster_o *)v10,
                                v136[4],
@@ -978,7 +976,7 @@ LABEL_158:
                                0);
         }
         if ( !v131 )
-          sub_21FFECC(DispValFromSkill, v135);
+          sub_2213CDC(DispValFromSkill, v135);
         max_length = v131->max_length;
         if ( max_length )
         {
@@ -989,9 +987,9 @@ LABEL_158:
             do
             {
               if ( !DispValFromSkill )
-                sub_21FFECC(0, v135);
+                sub_2213CDC(0, v135);
               if ( v138 >= LODWORD(DispValFromSkill->max_length) )
-                sub_21FFED4(DispValFromSkill);
+                sub_2213CE4(DispValFromSkill);
               v140 = (char *)v131 + 4 * v138;
               v141 = DispValFromSkill->m_Items[v138++];
               *((_DWORD *)v140 + 8) += v141;
@@ -1005,23 +1003,23 @@ LABEL_158:
         }
         v142 = v133[2].monitor;
         if ( !v142 )
-          sub_21FFECC(DispValFromSkill, v135);
+          sub_2213CDC(DispValFromSkill, v135);
         v143 = v142[20];
         if ( v143 > v132 )
           v132 = v143;
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v214,
-        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Dispose__);
+        (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__Dispose__);
       v144 = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)value,
                0,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
       if ( !v144 )
-        sub_21FFECC(0, v145);
+        sub_2213CDC(0, v145);
       v147 = v144[1].klass;
       if ( !v147 )
-        sub_21FFECC(v144, v145);
+        sub_2213CDC(v144, v145);
       v148 = *(System_String_o **)&v147->_1.byval_arg.bits;
       if ( !*(&ClassBoardEffectListDialogSkillListComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(ClassBoardEffectListDialogSkillListComponent_TypeInfo, v145);
@@ -1029,34 +1027,34 @@ LABEL_158:
       v150 = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)value,
                0,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
       if ( !v150 )
-        sub_21FFECC(0, v151);
+        sub_2213CDC(0, v151);
       v152 = v150[2].monitor;
       if ( !v152 )
-        sub_21FFECC(v150, v151);
+        sub_2213CDC(v150, v151);
       v153 = v152[5];
       v154 = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)value,
                0,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
       if ( !v154 )
-        sub_21FFECC(0, v155);
+        sub_2213CDC(0, v155);
       v156 = v154[2].monitor;
       if ( !v156 )
-        sub_21FFECC(v154, v155);
+        sub_2213CDC(v154, v155);
       v157 = v156[6];
       v158 = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)value,
                0,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__get_Item__);
       if ( !v158 )
-        sub_21FFECC(0, v159);
+        sub_2213CDC(0, v159);
       v160 = v158[2].monitor;
       if ( !v160 )
-        sub_21FFECC(v158, v159);
+        sub_2213CDC(v158, v159);
       v161 = v160[14];
-      v162 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
+      v162 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent_SkillDispData_TypeInfo);
       ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor(v162, data, v149, v153, v132, v157, v161, v163);
       if ( !v210
         || (v172 = v210->fields._items,
@@ -1064,7 +1062,7 @@ LABEL_158:
             ++v210->fields._version,
             !v172) )
       {
-        sub_21FFECC(v164, v165);
+        sub_2213CDC(v164, v165);
       }
       v174 = v210->fields._size;
       if ( (unsigned int)v174 >= LODWORD(v172->max_length) )
@@ -1072,20 +1070,20 @@ LABEL_158:
         System_Collections_Generic_List_object___AddWithResize(
           v210,
           (Il2CppObject *)v162,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v173[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v173[4] + 192LL) + 112LL));
       }
       else
       {
         v175 = &v172->obj.klass + v174;
         v210->fields._size = v174 + 1;
         v175[4] = (Il2CppClass *)v162;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v175 + 4), (int32_t)v162, v166, v167, v168, v169, v170, v171);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v175 + 4), (int32_t)v162, v166, v167, v168, v169, v170, v171);
       }
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
     &v216,
-    (const MethodInfo_4135634 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___Dispose__);
+    (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___Dispose__);
   v177 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo;
   if ( !*(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -1102,7 +1100,7 @@ LABEL_158:
       static_fields = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
     }
     v180 = (Il2CppObject *)static_fields->__9;
-    _9__42_0 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
+    _9__42_0 = (System_Func_object__int__o *)sub_2213CCC(System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__42_0,
       v180,
@@ -1110,7 +1108,7 @@ LABEL_158:
       0);
     v181 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
     v181->__9__42_0 = (struct System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__o *)_9__42_0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v181->__9__42_0,
       (int32_t)_9__42_0,
       v182,
@@ -1123,7 +1121,7 @@ LABEL_158:
   v188 = System_Linq_Enumerable__OrderByDescending_object__int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v210,
            (System_Func_TSource__TKey__o *)_9__42_0,
-           (const MethodInfo_3855CFC *)Method_System_Linq_Enumerable_OrderByDescending_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
+           (const MethodInfo_38891C4 *)Method_System_Linq_Enumerable_OrderByDescending_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
   v190 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo;
   v191 = v188;
   if ( !*(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->_2.cctor_finished + 1) )
@@ -1141,7 +1139,7 @@ LABEL_158:
       v192 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
     }
     v194 = (Il2CppObject *)v192->__9;
-    _9__42_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
+    _9__42_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__42_1,
       v194,
@@ -1149,7 +1147,7 @@ LABEL_158:
       0);
     v195 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
     v195->__9__42_1 = (struct System_Func_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int__o *)_9__42_1;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v195->__9__42_1,
       (int32_t)_9__42_1,
       v196,
@@ -1162,8 +1160,8 @@ LABEL_158:
   v202 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                 v191,
                                                                 (System_Func_TSource__TKey__o *)_9__42_1,
-                                                                (const MethodInfo_3867630 *)Method_System_Linq_Enumerable_ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
-  return (System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__o *)System_Linq_Enumerable__ToList_object_(v202, (const MethodInfo_386D928 *)Method_System_Linq_Enumerable_ToList_ClassBoardEffectListDialogSkillListComponent_SkillDispData___);
+                                                                (const MethodInfo_389AAF8 *)Method_System_Linq_Enumerable_ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int___);
+  return (System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__o *)System_Linq_Enumerable__ToList_object_(v202, (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_ClassBoardEffectListDialogSkillListComponent_SkillDispData___);
 }
 
 
@@ -1183,7 +1181,7 @@ void ClassBoardEffectListDialogSkillListComponent__Init(
 
   this->fields.dialog = dialog;
   p_dialog = &this->fields.dialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.dialog,
     (int32_t)dialog,
     (System_String_o *)method,
@@ -1199,7 +1197,7 @@ void ClassBoardEffectListDialogSkillListComponent__Init(
         (gameObject = (UnityEngine_Component_o *)this->fields.allClosedLabel) == 0)
     || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
   {
-    sub_21FFECC(gameObject, v10);
+    sub_2213CDC(gameObject, v10);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
 }
@@ -1219,18 +1217,18 @@ void ClassBoardEffectListDialogSkillListComponent__LoadEnd(
 {
   float targetFrameRate; // s0
 
-  if ( (byte_593C45C & 1) == 0 )
+  if ( (byte_5974694 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&StringLiteral_6558/*"ExecuteCallback"*/);
-    byte_593C45C = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&StringLiteral_6570/*"ExecuteCallback"*/);
+    byte_5974694 = 1;
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
   targetFrameRate = (float)UnityEngine_Application__get_targetFrameRate(0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6558/*"ExecuteCallback"*/,
+    (System_String_o *)StringLiteral_6570/*"ExecuteCallback"*/,
     1.0 / targetFrameRate,
     0);
 }
@@ -1273,21 +1271,21 @@ void ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset(
   bool v34; // w6
   bool v35; // w7
 
-  if ( (byte_593C45B & 1) == 0 )
+  if ( (byte_5974693 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action___TypeInfo);
-    sub_21FFC50(&System_Action_Action____TypeInfo);
-    sub_21FFC50(&System_Action_Action__TypeInfo);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManagerUnit_TypeInfo);
-    sub_21FFC50(&ChainableActionParallel_TypeInfo);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent_LoadEnd__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset_b__33_0__);
-    sub_21FFC50(&StringLiteral_7435/*"GrandGraphSystem/DownloadGrandGraphSystemAtlas"*/);
-    byte_593C45B = 1;
+    sub_2213A60(&System_Action___TypeInfo);
+    sub_2213A60(&System_Action_Action____TypeInfo);
+    sub_2213A60(&System_Action_Action__TypeInfo);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManagerUnit_TypeInfo);
+    sub_2213A60(&ChainableActionParallel_TypeInfo);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent_LoadEnd__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset_b__33_0__);
+    sub_2213A60(&StringLiteral_7447/*"GrandGraphSystem/DownloadGrandGraphSystemAtlas"*/);
+    byte_5974693 = 1;
   }
   this->fields.loadEndCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadEndCallback,
     (int32_t)callback,
     (System_String_o *)method,
@@ -1296,10 +1294,10 @@ void ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset(
     v5,
     v6,
     v7);
-  v10 = (AtlasManagerUnit_o *)sub_21FFEBC(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v10, (System_String_o *)StringLiteral_7435/*"GrandGraphSystem/DownloadGrandGraphSystemAtlas"*/, 0, 0);
+  v10 = (AtlasManagerUnit_o *)sub_2213CCC(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v10, (System_String_o *)StringLiteral_7447/*"GrandGraphSystem/DownloadGrandGraphSystemAtlas"*/, 0, 0);
   this->fields.boardUiAtlasManagerUnit = v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.boardUiAtlasManagerUnit,
     (int32_t)v10,
     v11,
@@ -1308,8 +1306,8 @@ void ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset(
     v14,
     v15,
     v16);
-  v17 = sub_21FFD10(System_Action_Action____TypeInfo, 1);
-  v18 = (System_Action_object__o *)sub_21FFEBC(System_Action_Action__TypeInfo);
+  v17 = sub_2213B20(System_Action_Action____TypeInfo, 1);
+  v18 = (System_Action_object__o *)sub_2213CCC(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v18,
     (Il2CppObject *)this,
@@ -1320,22 +1318,22 @@ void ClassBoardEffectListDialogSkillListComponent__LoadSystemAsset(
   if ( !*(_DWORD *)(v17 + 24) )
     goto LABEL_11;
   *(_QWORD *)(v17 + 32) = v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 32), (int32_t)v18, v21, v22, v23, v24, v25, v26);
-  v27 = (ChainableActionParallel_o *)sub_21FFEBC(ChainableActionParallel_TypeInfo);
-  ChainableActionParallel___ctor_55903544(v27, (System_Action_Action__array *)v17, 0);
-  v28 = sub_21FFD10(System_Action___TypeInfo, 1);
-  v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 32), (int32_t)v18, v21, v22, v23, v24, v25, v26);
+  v27 = (ChainableActionParallel_o *)sub_2213CCC(ChainableActionParallel_TypeInfo);
+  ChainableActionParallel___ctor_56108200(v27, (System_Action_Action__array *)v17, 0);
+  v28 = sub_2213B20(System_Action___TypeInfo, 1);
+  v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v29, (Il2CppObject *)this, Method_ClassBoardEffectListDialogSkillListComponent_LoadEnd__, 0);
   if ( !v28 )
     goto LABEL_10;
   if ( !*(_DWORD *)(v28 + 24) )
 LABEL_11:
-    sub_21FFED4(v19);
+    sub_2213CE4(v19);
   *(_QWORD *)(v28 + 32) = v29;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v28 + 32), (int32_t)v29, v30, v31, v32, v33, v34, v35);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 32), (int32_t)v29, v30, v31, v32, v33, v34, v35);
   if ( !v27 || (v19 = ChainableActionBase__Final((ChainableActionBase_o *)v27, (System_Action_array *)v28, 0)) == 0 )
 LABEL_10:
-    sub_21FFECC(v19, v20);
+    sub_2213CDC(v19, v20);
   ChainableActionBase__Execute(v19, 0);
 }
 
@@ -1348,10 +1346,10 @@ System_String_o *ClassBoardEffectListDialogSkillListComponent__ReplaceFractionFo
   __int64 v5; // x1
   System_String_o *v6; // x20
 
-  if ( (byte_593C464 & 1) == 0 )
+  if ( (byte_597469C & 1) == 0 )
   {
-    sub_21FFC50(&SkillDetailParamFormatResolver_TypeInfo);
-    byte_593C464 = 1;
+    sub_2213A60(&SkillDetailParamFormatResolver_TypeInfo);
+    byte_597469C = 1;
   }
   v6 = FuncDispMaster__ReplaceFractionFormat(text, funcVals, 0);
   if ( !*(&SkillDetailParamFormatResolver_TypeInfo->_2.cctor_finished + 1) )
@@ -1371,18 +1369,18 @@ void ClassBoardEffectListDialogSkillListComponent__SetClassIconList(
   __int64 v10; // x1
   Il2CppObject *Component_object; // x22
 
-  if ( (byte_593C45D & 1) == 0 )
+  if ( (byte_5974695 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C45D = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974695 = 1;
   }
   classInfoObject = this->fields.classInfoObject;
   if ( !classInfoObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        classInfoObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   classInfoObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -1403,7 +1401,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetClassIconList(
       return;
     }
 LABEL_10:
-    sub_21FFECC(classInfoObject, classBoardBaseEntity);
+    sub_2213CDC(classInfoObject, classBoardBaseEntity);
   }
 }
 
@@ -1418,7 +1416,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetDisp(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, isDisp, 0);
 }
 
@@ -1433,7 +1431,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetIcon(
 
   dialog = this->fields.dialog;
   if ( !dialog )
-    sub_21FFECC(0, sprite);
+    sub_2213CDC(0, sprite);
   ClassBoardEffectListDialog__SetIcon(dialog, sprite, name, method);
 }
 
@@ -1586,51 +1584,51 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
   int32_t v150; // [xsp+7Ch] [xbp-74h] BYREF
 
   v150 = baseId;
-  if ( (byte_593C461 & 1) == 0 )
+  if ( (byte_5974699 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_GameObject__TypeInfo);
-    sub_21FFC50(&System_Action_GameObject__int__TypeInfo);
-    sub_21FFC50(&Method_System_Array_Empty_int___);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent_GetListItemHeight__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent_SetupGrandExtraClassIconList__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent_SetupListItem__);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_All_ClassBoardClassEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Current__);
-    sub_21FFC50(&System_Func_ClassBoardClassEntity__bool__TypeInfo);
-    sub_21FFC50(&System_Func_GameObject__int__float__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
-    sub_21FFC50(&ScrollItemRecycler_HeightCalculatorVarious_TypeInfo);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardClassEntity__Find__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Count__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_ClassBoardClassEntity__TypeInfo);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__SetList_b__40_0__);
-    sub_21FFC50(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0__SetList_b__1__);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0_TypeInfo);
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_3523/*"CLASS_BOARD_EFFECT_LIST_NOT_OPEN_"*/);
-    sub_21FFC50(&StringLiteral_3522/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/);
-    sub_21FFC50(&StringLiteral_3529/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_GRAND"*/);
-    sub_21FFC50(&StringLiteral_3530/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_NORMAL"*/);
-    byte_593C461 = 1;
+    sub_2213A60(&System_Action_GameObject__TypeInfo);
+    sub_2213A60(&System_Action_GameObject__int__TypeInfo);
+    sub_2213A60(&Method_System_Array_Empty_int___);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent_GetListItemHeight__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent_SetupGrandExtraClassIconList__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent_SetupListItem__);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_All_ClassBoardClassEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Current__);
+    sub_2213A60(&System_Func_ClassBoardClassEntity__bool__TypeInfo);
+    sub_2213A60(&System_Func_GameObject__int__float__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+    sub_2213A60(&ScrollItemRecycler_HeightCalculatorVarious_TypeInfo);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardClassEntity__Find__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Count__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_ClassBoardClassEntity__TypeInfo);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__SetList_b__40_0__);
+    sub_2213A60(&Method_ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0__SetList_b__1__);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0_TypeInfo);
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
+    sub_2213A60(&StringLiteral_3528/*"CLASS_BOARD_EFFECT_LIST_NOT_OPEN_"*/);
+    sub_2213A60(&StringLiteral_3527/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/);
+    sub_2213A60(&StringLiteral_3534/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_GRAND"*/);
+    sub_2213A60(&StringLiteral_3535/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_NORMAL"*/);
+    byte_5974699 = 1;
   }
   entitys = 0;
   memset(&v148, 0, sizeof(v148));
   this->fields.supportGrandClassBoardInfo = supportGrandClassBoard;
   this->fields.baseId = baseId;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.supportGrandClassBoardInfo,
     (int32_t)supportGrandClassBoard,
     *(System_String_o **)&inputGrandClassId,
@@ -1649,7 +1647,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
   {
     if ( System_Linq_Enumerable__Any_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)supportGrandClassBoard->fields.squareIds,
-           (const MethodInfo_38327B4 *)Method_System_Linq_Enumerable_Any_int___) )
+           (const MethodInfo_3865C7C *)Method_System_Linq_Enumerable_Any_int___) )
     {
       classBoardBaseId = supportGrandClassBoard->fields.classBoardBaseId;
     }
@@ -1661,7 +1659,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v17);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !Master_object )
     goto LABEL_202;
   v144 = supportGrandClassBoard;
@@ -1684,7 +1682,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
         static_fields = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
       }
       v27 = (Il2CppObject *)static_fields->__9;
-      _9__40_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_ClassBoardClassEntity__bool__TypeInfo);
+      _9__40_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_ClassBoardClassEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__40_0,
         v27,
@@ -1692,12 +1690,12 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
         0);
       v28 = ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields;
       v28->__9__40_0 = (struct System_Func_ClassBoardClassEntity__bool__o *)_9__40_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v28->__9__40_0, (int32_t)_9__40_0, v29, v30, v31, v32, v33, v34);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v28->__9__40_0, (int32_t)_9__40_0, v29, v30, v31, v32, v33, v34);
     }
     v142 = System_Linq_Enumerable__All_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)v23,
              (System_Func_TSource__bool__o *)_9__40_0,
-             (const MethodInfo_3831808 *)Method_System_Linq_Enumerable_All_ClassBoardClassEntity___);
+             (const MethodInfo_3864CD0 *)Method_System_Linq_Enumerable_All_ClassBoardClassEntity___);
   }
   else
   {
@@ -1705,7 +1703,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v22);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   v35 = (ClassBoardBaseMaster_o *)Master_object;
   if ( !*(&ClassBoardEffectListDialogSkillListComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ClassBoardEffectListDialogSkillListComponent_TypeInfo, v21);
@@ -1719,7 +1717,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
           v35,
           ClassBoardEffectListDialogSkillListComponent_TypeInfo->static_fields->Extra2ClassBaseId,
           0);
-  Master_object = sub_21FFD10(int___TypeInfo, 4);
+  Master_object = sub_2213B20(int___TypeInfo, 4);
   if ( !Master_object )
     goto LABEL_202;
   v38 = *(_QWORD *)(Master_object + 24);
@@ -1736,13 +1734,13 @@ void ClassBoardEffectListDialogSkillListComponent__SetList(
          (v38 & 0xFFFFFFFC) == 0)) )
   {
 LABEL_203:
-    sub_21FFED4(Master_object);
+    sub_2213CE4(Master_object);
   }
   *(_DWORD *)(Master_object + 44) = v41;
   v44 = System_Linq_Enumerable__Contains_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)Master_object,
           baseId,
-          (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+          (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
   if ( !v44 && isAll )
   {
     Master_object = (__int64)this->fields.classInfoObject;
@@ -1766,7 +1764,7 @@ LABEL_203:
       v47 = 0;
       while ( 1 )
       {
-        v48 = sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0_TypeInfo);
+        v48 = sub_2213CCC(ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0_TypeInfo);
         System_Object___ctor((Il2CppObject *)v48, 0);
         if ( v47 >= LODWORD(battleServantList->max_length) )
           goto LABEL_203;
@@ -1775,9 +1773,9 @@ LABEL_203:
         v55 = battleServantList->m_Items[v47];
         *(_QWORD *)(v48 + 16) = v55;
         v56 = v48 + 16;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v48 + 16), (int32_t)v55, v49, v50, v51, v52, v53, v54);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v48 + 16), (int32_t)v55, v49, v50, v51, v52, v53, v54);
         v57 = (System_Collections_Generic_List_object__o *)entitys;
-        v58 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_ClassBoardClassEntity__TypeInfo);
+        v58 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_ClassBoardClassEntity__TypeInfo);
         System_Predicate_object____ctor(
           v58,
           (Il2CppObject *)v48,
@@ -1788,7 +1786,7 @@ LABEL_203:
         Master_object = (__int64)System_Collections_Generic_List_object___Find(
                                    v57,
                                    (System_Predicate_T__o *)v58,
-                                   (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__Find__);
+                                   (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__Find__);
         if ( Master_object )
           break;
         if ( (__int64)++v47 >= SLODWORD(battleServantList->max_length) )
@@ -1821,17 +1819,17 @@ LABEL_84:
     v62 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v62 )
     {
-      sub_2237B54(Method_System_Array_Empty_int___);
+      sub_224B964(Method_System_Array_Empty_int___);
       v62 = v61[7];
     }
     v63 = *(_QWORD *)(v62 + 16);
     if ( (*(_WORD *)(v63 + 309) & 1) == 0 )
-      v63 = sub_2237AF8(v45);
+      v63 = sub_224B908(v45);
     if ( !*(_DWORD *)(v63 + 228) )
       *(__n128 *)&v45 = j_il2cpp_runtime_class_init_0(v63, v21);
     v64 = *(_QWORD *)(v61[7] + 16LL);
     if ( (*(_WORD *)(v64 + 309) & 1) == 0 )
-      v64 = sub_2237AF8(v45);
+      v64 = sub_224B908(v45);
     squareIds = **(System_Int32_array ***)(v64 + 184);
     if ( !this->fields.isSupport )
     {
@@ -1846,17 +1844,17 @@ LABEL_84:
     v68 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v68 )
     {
-      sub_2237B54(Method_System_Array_Empty_int___);
+      sub_224B964(Method_System_Array_Empty_int___);
       v68 = v67[7];
     }
     v69 = *(_QWORD *)(v68 + 16);
     if ( (*(_WORD *)(v69 + 309) & 1) == 0 )
-      v69 = sub_2237AF8(v45);
+      v69 = sub_224B908(v45);
     if ( !*(_DWORD *)(v69 + 228) )
       *(__n128 *)&v45 = j_il2cpp_runtime_class_init_0(v69, v21);
     v70 = *(_QWORD *)(v67[7] + 16LL);
     if ( (*(_WORD *)(v70 + 309) & 1) == 0 )
-      v70 = sub_2237AF8(v45);
+      v70 = sub_224B908(v45);
     v66 = **(System_Int32_array ***)(v70 + 184);
   }
 LABEL_85:
@@ -1872,7 +1870,7 @@ LABEL_85:
                     v43);
   this->fields.skillDispDataList = OpenSkillList;
   p_skillDispDataList = &this->fields.skillDispDataList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.skillDispDataList,
     (int32_t)OpenSkillList,
     v73,
@@ -1915,7 +1913,7 @@ LABEL_85:
         System_Collections_Generic_List_object___AddRange(
           (System_Collections_Generic_List_object__o *)Master_object,
           v21,
-          (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
+          (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__AddRange__);
       }
     }
   }
@@ -1928,7 +1926,7 @@ LABEL_85:
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
-      Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3522/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/, 0);
+      Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3527/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/, 0);
       if ( !allClosedLabel )
         goto LABEL_202;
       UILabel__set_text(allClosedLabel, (System_String_o *)Master_object, 0);
@@ -1951,11 +1949,11 @@ LABEL_85:
       if ( v142 && v143 )
       {
         v127 = System_Int32__ToString((int32_t)&v150, 0);
-        v128 = System_String__Concat_75438412((System_String_o *)StringLiteral_3523/*"CLASS_BOARD_EFFECT_LIST_NOT_OPEN_"*/, v127, 0);
+        v128 = System_String__Concat_75651716((System_String_o *)StringLiteral_3528/*"CLASS_BOARD_EFFECT_LIST_NOT_OPEN_"*/, v127, 0);
       }
       else
       {
-        v128 = (System_String_o *)StringLiteral_3522/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/;
+        v128 = (System_String_o *)StringLiteral_3527/*"CLASS_BOARD_EFFECT_LIST_ALL_CLOSED"*/;
       }
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
@@ -1998,7 +1996,7 @@ LABEL_103:
     goto LABEL_202;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        *p_skillDetailObjForAll,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v85);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -2028,7 +2026,7 @@ LABEL_103:
           v92 = this->fields.normalScoreTitleLabel;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v91);
-          Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3530/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_NORMAL"*/, 0);
+          Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3535/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_NORMAL"*/, 0);
           if ( !v92 )
             goto LABEL_202;
           UILabel__set_text(v92, (System_String_o *)Master_object, 0);
@@ -2068,20 +2066,20 @@ LABEL_103:
           goto LABEL_202;
         v96->fields.paddingTop = v89 + this->fields.classIconSpaceOffsetY;
       }
-      v97 = (System_Func_T1__T2__TResult__o *)sub_21FFEBC(System_Func_GameObject__int__float__TypeInfo);
+      v97 = (System_Func_T1__T2__TResult__o *)sub_2213CCC(System_Func_GameObject__int__float__TypeInfo);
       System_Func_object__int__float____ctor(
         v97,
         (Il2CppObject *)this,
         Method_ClassBoardEffectListDialogSkillListComponent_GetListItemHeight__,
         0);
-      v98 = (ScrollItemRecycler_HeightCalculatorVarious_o *)sub_21FFEBC(ScrollItemRecycler_HeightCalculatorVarious_TypeInfo);
+      v98 = (ScrollItemRecycler_HeightCalculatorVarious_o *)sub_2213CCC(ScrollItemRecycler_HeightCalculatorVarious_TypeInfo);
       ScrollItemRecycler_HeightCalculatorVarious___ctor(v98, (System_Func_GameObject__int__float__o *)v97, 0);
       skillDispDataList = this->fields.skillDispDataList;
       if ( !skillDispDataList )
         goto LABEL_202;
       v100 = this->fields.recycler;
       size = skillDispDataList->fields._size;
-      v102 = (System_Action_T1__T2__o *)sub_21FFEBC(System_Action_GameObject__int__TypeInfo);
+      v102 = (System_Action_T1__T2__o *)sub_2213CCC(System_Action_GameObject__int__TypeInfo);
       System_Action_object__int____ctor(
         v102,
         (Il2CppObject *)this,
@@ -2134,7 +2132,7 @@ LABEL_103:
           v130 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
         }
         ExtraClassIconListObjHeight = v130->static_fields->ExtraClassIconListObjHeight;
-        v134 = (System_Action_object__o *)sub_21FFEBC(System_Action_GameObject__TypeInfo);
+        v134 = (System_Action_object__o *)sub_2213CCC(System_Action_GameObject__TypeInfo);
         System_Action_object____ctor(
           v134,
           (Il2CppObject *)this,
@@ -2190,7 +2188,7 @@ LABEL_103:
               v138 = this->fields.grandScoreTitleLabel;
               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v137);
-              Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3529/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_GRAND"*/, 0);
+              Master_object = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3534/*"CLASS_BOARD_EFFECT_LIST_VIEW_TITLE_GRAND"*/, 0);
               if ( v138 )
               {
                 UILabel__set_text(v138, (System_String_o *)Master_object, 0);
@@ -2223,7 +2221,7 @@ LABEL_103:
             }
           }
 LABEL_202:
-          sub_21FFECC(Master_object, v21);
+          sub_2213CDC(Master_object, v21);
         }
       }
 LABEL_198:
@@ -2246,28 +2244,28 @@ LABEL_198:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v147,
       (System_Collections_Generic_List_object__o *)Master_object,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__GetEnumerator__);
     v109 = 0.0;
     v148 = v147;
     v147.fields._list = 0;
     *(_QWORD *)&v147.fields._index = &v148;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v148,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__MoveNext__) )
     {
       current = v148.fields._current;
       Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v84, 0, 0, 0);
       v113 = Object;
       if ( !Object )
-        sub_21FFECC(0, v112);
+        sub_2213CDC(0, v112);
       v114 = UnityEngine_GameObject__GetComponent_object_(
                Object,
-               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
       v122 = (ClassBoardEffectListDialogSkillDetailComponent_o *)v114;
       if ( !v114 )
-        sub_21FFECC(0, v115);
+        sub_2213CDC(0, v115);
       v114[5].monitor = this;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v114[5].monitor,
         (int32_t)this,
         v116,
@@ -2277,7 +2275,7 @@ LABEL_198:
         v120,
         v121);
       if ( !current )
-        sub_21FFECC(v123, v124);
+        sub_2213CDC(v123, v124);
       v126 = ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
                v122,
                (System_String_o *)current[1].klass,
@@ -2286,20 +2284,20 @@ LABEL_198:
                HIDWORD(current[2].monitor),
                0,
                v125);
-      GameObjectExtensions__SetParent_42881836(v113, this->fields.skillListParent, 0);
-      if ( !byte_5931945 )
+      GameObjectExtensions__SetParent_42897232(v113, this->fields.skillListParent, 0);
+      if ( !byte_5969AE5 )
       {
-        sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-        byte_5931945 = 1;
+        sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        byte_5969AE5 = 1;
       }
       GameObjectExtensions__SetLocalScale(v113, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-      GameObjectExtensions__SetLocalPosition_42876224(v113, 0.0, -v109, 0.0, 0);
+      GameObjectExtensions__SetLocalPosition_42891620(v113, 0.0, -v109, 0.0, 0);
       UnityEngine_GameObject__SetActive(v113, 1, 0);
       v109 = v109 + v126;
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v148,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardEffectListDialogSkillListComponent_SkillDispData__Dispose__);
   }
 }
 
@@ -2316,35 +2314,35 @@ void ClassBoardEffectListDialogSkillListComponent__SetupGrandExtraClassIconList(
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_593C45F & 1) == 0 )
+  if ( (byte_5974697 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
-    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C45F = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
+    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974697 = 1;
   }
   entity = 0;
   if ( !obj )
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        obj,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardClassIconListComponent___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v7);
-    this = (ClassBoardEffectListDialogSkillListComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    this = (ClassBoardEffectListDialogSkillListComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
     if ( this )
     {
       this = (ClassBoardEffectListDialogSkillListComponent_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                                  &entity,
                                                                  v4->fields.grandClassId,
-                                                                 (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                 (const MethodInfo_3F10B80 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
       if ( Component_object )
       {
         ClassBoardClassIconListComponent__SetClassIconList(
@@ -2358,7 +2356,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupGrandExtraClassIconList(
       }
     }
 LABEL_13:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
 }
 
@@ -2388,22 +2386,22 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
   __int64 v22; // x1
 
   v6 = this;
-  if ( (byte_593C45E & 1) == 0 )
+  if ( (byte_5974696 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_20464/*"formation_copy_bg2"*/);
-    sub_21FFC50(&StringLiteral_22281/*"line_yellow"*/);
-    sub_21FFC50(&StringLiteral_22271/*"line"*/);
-    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_21FFC50(&StringLiteral_21503/*"img_score_list_grand_board"*/);
-    byte_593C45E = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_20505/*"formation_copy_bg2"*/);
+    sub_2213A60(&StringLiteral_22324/*"line_yellow"*/);
+    sub_2213A60(&StringLiteral_22314/*"line"*/);
+    this = (ClassBoardEffectListDialogSkillListComponent_o *)sub_2213A60(&StringLiteral_21544/*"img_score_list_grand_board"*/);
+    byte_5974696 = 1;
   }
   if ( !obj )
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        obj,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
   this = (ClassBoardEffectListDialogSkillListComponent_o *)UnityEngine_Object__op_Equality(
@@ -2415,7 +2413,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
     if ( Component_object )
     {
       Component_object[5].monitor = v6;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&Component_object[5].monitor,
         (int32_t)v6,
         v9,
@@ -2430,16 +2428,16 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)this,
                  index,
-                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
+                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__get_Item__);
         this = (ClassBoardEffectListDialogSkillListComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                    obj,
-                                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+                                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
         if ( this )
         {
           classInfoObject = (UISprite_o *)this->fields.classInfoObject;
           this = (ClassBoardEffectListDialogSkillListComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                      obj,
-                                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
+                                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardEffectListDialogSkillDetailComponent___);
           if ( this )
           {
             v18 = this;
@@ -2453,7 +2451,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
                 if ( !classInfoObject )
                   goto LABEL_27;
                 UISprite__set_atlas(classInfoObject, v6->fields.defaultAtlas, 0);
-                UISprite__set_spriteName(classInfoObject, (System_String_o *)StringLiteral_20464/*"formation_copy_bg2"*/, 0);
+                UISprite__set_spriteName(classInfoObject, (System_String_o *)StringLiteral_20505/*"formation_copy_bg2"*/, 0);
                 if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
                 this = (ClassBoardEffectListDialogSkillListComponent_o *)UnityEngine_Object__op_Inequality(
@@ -2465,7 +2463,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
                   if ( !skillDetailObj )
                     goto LABEL_27;
                   UISprite__set_atlas((UISprite_o *)skillDetailObj, v6->fields.defaultAtlas, 0);
-                  UISprite__set_spriteName((UISprite_o *)skillDetailObj, (System_String_o *)StringLiteral_22271/*"line"*/, 0);
+                  UISprite__set_spriteName((UISprite_o *)skillDetailObj, (System_String_o *)StringLiteral_22314/*"line"*/, 0);
                 }
               }
               else
@@ -2473,7 +2471,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
                 AtlasManagerUnit__SetUI(
                   (AtlasManagerUnit_o *)this,
                   classInfoObject,
-                  (System_String_o *)StringLiteral_21503/*"img_score_list_grand_board"*/,
+                  (System_String_o *)StringLiteral_21544/*"img_score_list_grand_board"*/,
                   0);
                 if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
@@ -2489,7 +2487,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
                   this = (ClassBoardEffectListDialogSkillListComponent_o *)AtlasManagerUnit__SetUI(
                                                                              (AtlasManagerUnit_o *)this,
                                                                              (UISprite_o *)skillDetailObj,
-                                                                             (System_String_o *)StringLiteral_22281/*"line_yellow"*/,
+                                                                             (System_String_o *)StringLiteral_22324/*"line_yellow"*/,
                                                                              0);
                 }
               }
@@ -2511,7 +2509,7 @@ void ClassBoardEffectListDialogSkillListComponent__SetupListItem(
       }
     }
 LABEL_27:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
 }
 
@@ -2525,7 +2523,7 @@ void ClassBoardEffectListDialogSkillListComponent___LoadSystemAsset_b__33_0(
 
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( !boardUiAtlasManagerUnit )
-    sub_21FFECC(0, f);
+    sub_2213CDC(0, f);
   AtlasManagerUnit__Load(boardUiAtlasManagerUnit, f, 3, 0);
 }
 
@@ -2565,9 +2563,9 @@ void ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.funcDispEntity = funcDispEntity;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)funcDispEntity, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)funcDispEntity, v11, v12, v13, v14, v15, v16);
   this->fields.skillLvEntity = skillLvEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.skillLvEntity,
     (int32_t)skillLvEntity,
     v17,
@@ -2577,7 +2575,7 @@ void ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor(
     v21,
     v22);
   this->fields.commandSpellEntity = commandSpellEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.commandSpellEntity,
     (int32_t)commandSpellEntity,
     v23,
@@ -2587,7 +2585,7 @@ void ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData___ctor(
     v27,
     v28);
   this->fields.classBoardSquareEntity = classBoardSquareEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.classBoardSquareEntity,
     (int32_t)classBoardSquareEntity,
     v29,
@@ -2626,10 +2624,10 @@ void ClassBoardEffectListDialogSkillListComponent_SkillDispData___ctor(
   v14 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v14->fields.name = name;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->fields, (int32_t)name, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->fields, (int32_t)name, v15, v16, v17, v18, v19, v20);
   v14->fields.detail = detail;
   v14 = (ClassBoardEffectListDialogSkillListComponent_SkillDispData_o *)((char *)v14 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v14, (int32_t)detail, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v14, (int32_t)detail, v21, v22, v23, v24, v25, v26);
   LODWORD(v14->monitor) = squareId;
   HIDWORD(v14->monitor) = priority;
   LODWORD(v14->fields.name) = iconId;
@@ -2647,15 +2645,15 @@ void ClassBoardEffectListDialogSkillListComponent___c___cctor(const MethodInfo *
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593C466 & 1) == 0 )
+  if ( (byte_597469E & 1) == 0 )
   {
-    sub_21FFC50(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
-    byte_593C466 = 1;
+    sub_2213A60(&ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
+    byte_597469E = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(ClassBoardEffectListDialogSkillListComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields->__9 = (struct ClassBoardEffectListDialogSkillListComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ClassBoardEffectListDialogSkillListComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -2681,7 +2679,7 @@ int32_t ClassBoardEffectListDialogSkillListComponent___c___GetOpenSkillListLocal
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.priority;
 }
 
@@ -2692,7 +2690,7 @@ int32_t ClassBoardEffectListDialogSkillListComponent___c___GetOpenSkillListLocal
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.squareId;
 }
 
@@ -2703,7 +2701,7 @@ bool ClassBoardEffectListDialogSkillListComponent___c___SetList_b__40_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return !ClassBoardClassEntity__IsOpen(entity, 0);
 }
 
@@ -2724,7 +2722,7 @@ bool ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0___SetLis
   int32_t classId; // w19
 
   if ( !e || (this = (ClassBoardEffectListDialogSkillListComponent___c__DisplayClass40_0_o *)this->fields.svt) == 0 )
-    sub_21FFECC(this, e);
+    sub_2213CDC(this, e);
   classId = e->fields.classId;
   return classId == BattleServantData__GetOriginalClassId((BattleServantData_o *)this, 0);
 }
@@ -2748,7 +2746,7 @@ ClassBoardSquareEntity_o *ClassBoardEffectListDialogSkillListComponent___c__Disp
 
   squareMaster = this->fields.squareMaster;
   if ( !squareMaster )
-    sub_21FFECC(0, *(_QWORD *)&id);
+    sub_2213CDC(0, *(_QWORD *)&id);
   return ClassBoardSquareMaster__GetEntity(squareMaster, this->fields.baseId, id, 0);
 }
 
@@ -2763,6 +2761,6 @@ ClassBoardSquareEntity_o *ClassBoardEffectListDialogSkillListComponent___c__Disp
 
   squareMaster = this->fields.squareMaster;
   if ( !squareMaster )
-    sub_21FFECC(0, *(_QWORD *)&id);
+    sub_2213CDC(0, *(_QWORD *)&id);
   return ClassBoardSquareMaster__GetEntity(squareMaster, this->fields.baseId, id, 0);
 }

@@ -1,28 +1,28 @@
 void EventQuestEntity___ctor(EventQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938848 & 1) == 0 )
+  if ( (byte_5970912 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938848 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970912 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventQuestEntity__CreatePK(int32_t eventId, int32_t questId, int32_t phase, const MethodInfo *method)
 {
-  if ( (byte_5938847 & 1) == 0 )
+  if ( (byte_5970911 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_5938847 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5970911 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            phase,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

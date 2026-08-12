@@ -1,14 +1,14 @@
 void GrandGraphMaster___ctor(GrandGraphMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938B04 & 1) == 0 )
+  if ( (byte_5970CB7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int___ctor__);
-    byte_5938B04 = 1;
+    sub_2213A60(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int___ctor__);
+    byte_5970CB7 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     551,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int___ctor__);
 }
 
 
@@ -79,36 +79,36 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
   System_Collections_Generic_IEnumerable_TSource__o *v64; // x0
   System_Collections_Generic_List_ClassBoardClassEntity__o *entitys; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5938B03 & 1) == 0 )
+  if ( (byte_5970CB6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_OrderBy_int__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_SelectMany_ClassBoardClassEntity__GrandGraphDetailEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_GrandGraphDetailEntity__int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_GrandGraphEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GrandGraphEntity___);
-    sub_21FFC50(&System_Func_GrandGraphEntity__bool__TypeInfo);
-    sub_21FFC50(&System_Func_int__int__TypeInfo);
-    sub_21FFC50(&System_Func_GrandGraphDetailEntity__int__TypeInfo);
-    sub_21FFC50(&System_Func_ClassBoardClassEntity__IEnumerable_GrandGraphDetailEntity___TypeInfo);
-    sub_21FFC50(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_0__);
-    sub_21FFC50(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_1__);
-    sub_21FFC50(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_2__);
-    sub_21FFC50(&Method_GrandGraphMaster___c__DisplayClass0_0__GetEntitiesByParentClassBoardBaseId_b__3__);
-    sub_21FFC50(&GrandGraphMaster___c__DisplayClass0_0_TypeInfo);
-    sub_21FFC50(&GrandGraphMaster___c_TypeInfo);
-    byte_5938B03 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_OrderBy_int__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_SelectMany_ClassBoardClassEntity__GrandGraphDetailEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_GrandGraphDetailEntity__int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_GrandGraphEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_GrandGraphEntity___);
+    sub_2213A60(&System_Func_GrandGraphEntity__bool__TypeInfo);
+    sub_2213A60(&System_Func_int__int__TypeInfo);
+    sub_2213A60(&System_Func_GrandGraphDetailEntity__int__TypeInfo);
+    sub_2213A60(&System_Func_ClassBoardClassEntity__IEnumerable_GrandGraphDetailEntity___TypeInfo);
+    sub_2213A60(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_0__);
+    sub_2213A60(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_1__);
+    sub_2213A60(&Method_GrandGraphMaster___c__GetEntitiesByParentClassBoardBaseId_b__0_2__);
+    sub_2213A60(&Method_GrandGraphMaster___c__DisplayClass0_0__GetEntitiesByParentClassBoardBaseId_b__3__);
+    sub_2213A60(&GrandGraphMaster___c__DisplayClass0_0_TypeInfo);
+    sub_2213A60(&GrandGraphMaster___c_TypeInfo);
+    byte_5970CB6 = 1;
   }
   entitys = 0;
-  v5 = sub_21FFEBC(GrandGraphMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_2213CCC(GrandGraphMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_32;
   result = (GrandGraphEntity_array *)ClassBoardBaseMaster__GetGrandClassBoardBaseEntity(
@@ -120,7 +120,7 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
   v11 = result;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v10);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !Master_object )
     goto LABEL_32;
   EntityList = ClassBoardClassMaster__TryGetEntityList(
@@ -148,7 +148,7 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       static_fields = GrandGraphMaster___c_TypeInfo->static_fields;
     }
     v18 = (Il2CppObject *)static_fields->__9;
-    _9__0_0 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_ClassBoardClassEntity__IEnumerable_GrandGraphDetailEntity___TypeInfo);
+    _9__0_0 = (System_Func_object__object__o *)sub_2213CCC(System_Func_ClassBoardClassEntity__IEnumerable_GrandGraphDetailEntity___TypeInfo);
     System_Func_object__object____ctor(
       _9__0_0,
       v18,
@@ -156,12 +156,12 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       0);
     v19 = GrandGraphMaster___c_TypeInfo->static_fields;
     v19->__9__0_0 = (struct System_Func_ClassBoardClassEntity__IEnumerable_GrandGraphDetailEntity___o *)_9__0_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v19->__9__0_0, (int32_t)_9__0_0, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->__9__0_0, (int32_t)_9__0_0, v20, v21, v22, v23, v24, v25);
   }
   v26 = System_Linq_Enumerable__SelectMany_object__object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v14,
           (System_Func_TSource__IEnumerable_TResult___o *)_9__0_0,
-          (const MethodInfo_38607E4 *)Method_System_Linq_Enumerable_SelectMany_ClassBoardClassEntity__GrandGraphDetailEntity___);
+          (const MethodInfo_3893CAC *)Method_System_Linq_Enumerable_SelectMany_ClassBoardClassEntity__GrandGraphDetailEntity___);
   v28 = GrandGraphMaster___c_TypeInfo;
   v29 = (System_Collections_Generic_IEnumerable_TSource__o *)v26;
   if ( !*(&GrandGraphMaster___c_TypeInfo->_2.cctor_finished + 1) )
@@ -179,7 +179,7 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       v30 = GrandGraphMaster___c_TypeInfo->static_fields;
     }
     v32 = (Il2CppObject *)v30->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_21FFEBC(System_Func_GrandGraphDetailEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_2213CCC(System_Func_GrandGraphDetailEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
       v32,
@@ -187,15 +187,15 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       0);
     v33 = GrandGraphMaster___c_TypeInfo->static_fields;
     v33->__9__0_1 = (struct System_Func_GrandGraphDetailEntity__int__o *)_9__0_1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->__9__0_1, (int32_t)_9__0_1, v34, v35, v36, v37, v38, v39);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->__9__0_1, (int32_t)_9__0_1, v34, v35, v36, v37, v38, v39);
   }
   v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v29,
                                                                (System_Func_TSource__TResult__o *)_9__0_1,
-                                                               (const MethodInfo_385D394 *)Method_System_Linq_Enumerable_Select_GrandGraphDetailEntity__int___);
+                                                               (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_GrandGraphDetailEntity__int___);
   v41 = System_Linq_Enumerable__Distinct_int_(
           v40,
-          (const MethodInfo_3849124 *)Method_System_Linq_Enumerable_Distinct_int___);
+          (const MethodInfo_387C5EC *)Method_System_Linq_Enumerable_Distinct_int___);
   v43 = GrandGraphMaster___c_TypeInfo;
   v44 = v41;
   if ( !*(&GrandGraphMaster___c_TypeInfo->_2.cctor_finished + 1) )
@@ -213,7 +213,7 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       v45 = GrandGraphMaster___c_TypeInfo->static_fields;
     }
     v47 = (Il2CppObject *)v45->__9;
-    _9__0_2 = (System_Func_int__int__o *)sub_21FFEBC(System_Func_int__int__TypeInfo);
+    _9__0_2 = (System_Func_int__int__o *)sub_2213CCC(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(
       _9__0_2,
       v47,
@@ -221,22 +221,22 @@ GrandGraphEntity_array *GrandGraphMaster__GetEntitiesByParentClassBoardBaseId(
       0);
     v48 = GrandGraphMaster___c_TypeInfo->static_fields;
     v48->__9__0_2 = _9__0_2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v48->__9__0_2, (int32_t)_9__0_2, v49, v50, v51, v52, v53, v54);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v48->__9__0_2, (int32_t)_9__0_2, v49, v50, v51, v52, v53, v54);
   }
   v55 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_int__int_(
                                                                v44,
                                                                (System_Func_TSource__TKey__o *)_9__0_2,
-                                                               (const MethodInfo_3855438 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+                                                               (const MethodInfo_3888900 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
   Master_object = System_Linq_Enumerable__ToArray_int_(
                     v55,
-                    (const MethodInfo_38684CC *)Method_System_Linq_Enumerable_ToArray_int___);
+                    (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !v5 )
 LABEL_32:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   *(_QWORD *)(v5 + 16) = Master_object;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v56, v57, v58, v59, v60, v61);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)Master_object, v56, v57, v58, v59, v60, v61);
   list = this->fields.list;
-  v63 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GrandGraphEntity__bool__TypeInfo);
+  v63 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GrandGraphEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v63,
     (Il2CppObject *)v5,
@@ -245,10 +245,10 @@ LABEL_32:
   v64 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v63,
-          (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GrandGraphEntity___);
+          (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_GrandGraphEntity___);
   return (GrandGraphEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                      v64,
-                                     (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_GrandGraphEntity___);
+                                     (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_GrandGraphEntity___);
 }
 
 
@@ -262,15 +262,15 @@ void GrandGraphMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5938B05 & 1) == 0 )
+  if ( (byte_5970CB8 & 1) == 0 )
   {
-    sub_21FFC50(&GrandGraphMaster___c_TypeInfo);
-    byte_5938B05 = 1;
+    sub_2213A60(&GrandGraphMaster___c_TypeInfo);
+    byte_5970CB8 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(GrandGraphMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(GrandGraphMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GrandGraphMaster___c_TypeInfo->static_fields->__9 = (struct GrandGraphMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)GrandGraphMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -297,17 +297,17 @@ System_Collections_Generic_IEnumerable_GrandGraphDetailEntity__o *GrandGraphMast
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_5938B06 & 1) == 0 )
+  if ( (byte_5970CB9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5938B06 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5970CB9 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !v || !Master_object )
-    sub_21FFECC(Master_object, v5);
+    sub_2213CDC(Master_object, v5);
   return (System_Collections_Generic_IEnumerable_GrandGraphDetailEntity__o *)GrandGraphDetailMaster__GetGrandGraphDetailEntitiesFromGrandClassId(
                                                                                (GrandGraphDetailMaster_o *)Master_object,
                                                                                v->fields.classId,
@@ -321,7 +321,7 @@ int32_t GrandGraphMaster___c___GetEntitiesByParentClassBoardBaseId_b__0_1(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return v->fields.grandGraphId;
 }
 
@@ -351,15 +351,15 @@ bool GrandGraphMaster___c__DisplayClass0_0___GetEntitiesByParentClassBoardBaseId
   GrandGraphMaster___c__DisplayClass0_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_5938B07 & 1) == 0 )
+  if ( (byte_5970CBA & 1) == 0 )
   {
-    this = (GrandGraphMaster___c__DisplayClass0_0_o *)sub_21FFC50(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_5938B07 = 1;
+    this = (GrandGraphMaster___c__DisplayClass0_0_o *)sub_2213A60(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_5970CBA = 1;
   }
   if ( !v )
-    sub_21FFECC(this, v);
+    sub_2213CDC(this, v);
   return System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.grandGraphIds,
            v->fields.id,
-           (const MethodInfo_3843178 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
 }

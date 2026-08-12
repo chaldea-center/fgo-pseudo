@@ -1,13 +1,13 @@
 void EventPointGroupAddEntity___ctor(EventPointGroupAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_593881B & 1) == 0 )
+  if ( (byte_59708E5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_593881B = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_59708E5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventPointGroupAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_5938819 & 1) == 0 )
+  if ( (byte_59708E3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_5938819 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_59708E3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            termId,
            groupId,
            priority,
-           (const MethodInfo_38218C0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3854D88 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -51,10 +51,10 @@ bool EventPointGroupAddEntity__IsAvailable(EventPointGroupAddEntity_o *this, con
   int32_t condTargetId; // w21
   int64_t condNum; // x19
 
-  if ( (byte_593881A & 1) == 0 )
+  if ( (byte_59708E4 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    byte_593881A = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    byte_59708E4 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

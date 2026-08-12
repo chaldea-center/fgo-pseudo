@@ -12,10 +12,10 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
   void *v5; // x0
   UnityEngine_Object_o *mPanel; // x20
 
-  if ( (byte_593CF03 & 1) == 0 )
+  if ( (byte_59751DA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CF03 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59751DA = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -45,7 +45,7 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
       return;
     }
 LABEL_14:
-    sub_21FFECC(v5, v4);
+    sub_2213CDC(v5, v4);
   }
 }
 
@@ -68,17 +68,17 @@ void AnimatedAlpha__OnEnable(AnimatedAlpha_o *this, const MethodInfo *method)
   bool v16; // w7
   const MethodInfo *v17; // x1
 
-  if ( (byte_593CF02 & 1) == 0 )
+  if ( (byte_59751D9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_593CF02 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_59751D9 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mWidget,
     (int32_t)Component_object,
     v4,
@@ -89,8 +89,8 @@ void AnimatedAlpha__OnEnable(AnimatedAlpha_o *this, const MethodInfo *method)
     v9);
   v10 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mPanel, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mPanel, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   AnimatedAlpha__LateUpdate(this, v17);
 }

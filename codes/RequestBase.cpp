@@ -15,26 +15,26 @@ void RequestBase___ctor(RequestBase_o *this, const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_593A2D0 & 1) == 0 )
+  if ( (byte_59724AD & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    byte_593A2D0 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    byte_59724AD = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v3,
-    (const MethodInfo_3FBFF60 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_3FF3708 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   this->fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.paramInteger, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_Dictionary_object__object__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.paramInteger, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_Dictionary_object__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v10,
-    (const MethodInfo_3FC9AD8 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.paramString, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.paramString, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.shouldShowConnect = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -44,11 +44,11 @@ void RequestBase__AddSignatureField(RequestBase_o *this, const MethodInfo *metho
 {
   __int64 v3; // x1
 
-  if ( (byte_593A2CF & 1) == 0 )
+  if ( (byte_59724AC & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&SignedData_TypeInfo);
-    byte_593A2CF = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&SignedData_TypeInfo);
+    byte_59724AC = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -63,24 +63,24 @@ void RequestBase__ClearField(RequestBase_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_object__int__o *paramInteger; // x0
 
-  if ( (byte_593A2B9 & 1) == 0 )
+  if ( (byte_5972496 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-    byte_593A2B9 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    byte_5972496 = 1;
   }
   paramInteger = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.paramInteger;
   if ( !paramInteger
     || (System_Collections_Generic_Dictionary_object__int___Clear(
           paramInteger,
-          (const MethodInfo_3FC0A7C *)Method_System_Collections_Generic_Dictionary_string__int__Clear__),
+          (const MethodInfo_3FF4224 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__),
         (paramInteger = (System_Collections_Generic_Dictionary_object__int__o *)this->fields.paramString) == 0) )
   {
-    sub_21FFECC(paramInteger, method);
+    sub_2213CDC(paramInteger, method);
   }
   System_Collections_Generic_Dictionary_object__object___Clear(
     (System_Collections_Generic_Dictionary_object__object__o *)paramInteger,
-    (const MethodInfo_3FCA5F0 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    (const MethodInfo_3FFDD98 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
 }
 
 
@@ -90,10 +90,10 @@ void RequestBase__ClearParameter(RequestBase_o *this, const MethodInfo *method)
   System_String_o *v4; // x0
   System_String_o *v5; // x19
 
-  if ( (byte_593A2CB & 1) == 0 )
+  if ( (byte_59724A8 & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_593A2CB = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_59724A8 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -132,12 +132,12 @@ void RequestBase__DeleteSaveData(int32_t fileNameKey, const MethodInfo *method)
   System_String_o *v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_593A2CC & 1) == 0 )
+  if ( (byte_59724A9 & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&DatFileName_TypeInfo);
-    sub_21FFC50(&System_IO_Path_TypeInfo);
-    byte_593A2CC = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&DatFileName_TypeInfo);
+    sub_2213A60(&System_IO_Path_TypeInfo);
+    byte_59724A9 = 1;
   }
   if ( !*(&DatFileName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo, method);
@@ -176,25 +176,25 @@ System_Byte_array *RequestBase__PackToMessagePack(RequestBase_o *this, Il2CppObj
   int32_t *v20; // x10
   __int64 v21; // x0
 
-  if ( (byte_593A2CE & 1) == 0 )
+  if ( (byte_59724AB & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_Compression_GZipStream_TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    byte_593A2CE = 1;
+    sub_2213A60(&System_IO_Compression_GZipStream_TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    byte_59724AB = 1;
   }
-  v4 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v4 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v4, 0);
   if ( !v4 )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   v7 = MiniMessagePack_MiniMessagePacker__PackClass(v4, json, 0);
-  v8 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v8 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v8, 0);
-  v9 = (System_IO_Compression_GZipStream_o *)sub_21FFEBC(System_IO_Compression_GZipStream_TypeInfo);
-  System_IO_Compression_GZipStream___ctor_82256812(v9, (System_IO_Stream_o *)v8, 0, 0);
+  v9 = (System_IO_Compression_GZipStream_o *)sub_2213CCC(System_IO_Compression_GZipStream_TypeInfo);
+  System_IO_Compression_GZipStream___ctor_82470116(v9, (System_IO_Stream_o *)v8, 0, 0);
   if ( !v7 || !v9 )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   ((void (__fastcall *)(System_IO_Compression_GZipStream_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))v9->klass->vtable._34_Write.methodPtr)(
     v9,
     v7,
@@ -218,11 +218,11 @@ System_Byte_array *RequestBase__PackToMessagePack(RequestBase_o *this, Il2CppObj
   else
   {
 LABEL_10:
-    v15 = sub_2237E2C(v9, System_IDisposable_TypeInfo, 0);
+    v15 = sub_224BC3C(v9, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_Compression_GZipStream_o *, _QWORD))v15)(v9, *(_QWORD *)(v15 + 8));
   if ( !v8 )
-    sub_21FFECC(0, v16);
+    sub_2213CDC(0, v16);
   v17 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, const MethodInfo *))v8->klass->vtable._40_ToArray.methodPtr)(
                                v8,
                                v8->klass->vtable._40_ToArray.method);
@@ -243,7 +243,7 @@ LABEL_10:
   else
   {
 LABEL_17:
-    v21 = sub_2237E2C(v8, System_IDisposable_TypeInfo, 0);
+    v21 = sub_224BC3C(v8, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v21)(v8, *(_QWORD *)(v21 + 8));
   return v17;
@@ -278,15 +278,15 @@ bool RequestBase__ReadParameter(RequestBase_o *this, bool isRefreshTime, const M
   __int64 v28; // x0
   System_IO_BinaryReader_o *v29; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_593A2C9 & 1) == 0 )
+  if ( (byte_59724A6 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryReader_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A2C9 = 1;
+    sub_2213A60(&System_IO_BinaryReader_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59724A6 = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -306,12 +306,12 @@ bool RequestBase__ReadParameter(RequestBase_o *this, bool isRefreshTime, const M
   if ( !System_IO_File__Exists(v8, 0) )
     return 0;
   v10 = (System_IO_Stream_o *)System_IO_File__OpenRead(v9, 0);
-  v11 = (System_IO_BinaryReader_o *)sub_21FFEBC(System_IO_BinaryReader_TypeInfo);
+  v11 = (System_IO_BinaryReader_o *)sub_2213CCC(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v11, v10, 0);
   v29 = v11;
   RequestBase__ClearField(this, v12);
   if ( !v11 )
-    sub_21FFECC(0, v13);
+    sub_2213CDC(0, v13);
   v14 = ((__int64 (*)(void))v11->klass->vtable._15_ReadInt32.methodPtr)();
   v16 = ((__int64 (*)(void))v29->klass->vtable._15_ReadInt32.methodPtr)();
   if ( v14 >= 1 )
@@ -319,17 +319,17 @@ bool RequestBase__ReadParameter(RequestBase_o *this, bool isRefreshTime, const M
     do
     {
       if ( !v29 )
-        sub_21FFECC(0, v15);
+        sub_2213CDC(0, v15);
       v17 = (Il2CppObject *)((__int64 (*)(void))v29->klass->vtable._22_ReadString.methodPtr)();
       v19 = (Il2CppObject *)((__int64 (*)(void))v29->klass->vtable._22_ReadString.methodPtr)();
       paramString = this->fields.paramString;
       if ( !paramString )
-        sub_21FFECC(0, v18);
+        sub_2213CDC(0, v18);
       System_Collections_Generic_Dictionary_object__object___Add(
         (System_Collections_Generic_Dictionary_object__object__o *)paramString,
         v17,
         v19,
-        (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+        (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
       --v14;
     }
     while ( v14 );
@@ -339,17 +339,17 @@ bool RequestBase__ReadParameter(RequestBase_o *this, bool isRefreshTime, const M
     do
     {
       if ( !v29 )
-        sub_21FFECC(0, v15);
+        sub_2213CDC(0, v15);
       v21 = (Il2CppObject *)((__int64 (*)(void))v29->klass->vtable._22_ReadString.methodPtr)();
       v23 = ((__int64 (*)(void))v29->klass->vtable._15_ReadInt32.methodPtr)();
       paramInteger = this->fields.paramInteger;
       if ( !paramInteger )
-        sub_21FFECC(0, v22);
+        sub_2213CDC(0, v22);
       System_Collections_Generic_Dictionary_object__int___Add(
         (System_Collections_Generic_Dictionary_object__int__o *)paramInteger,
         v21,
         v23,
-        (const MethodInfo_3FC08F4 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+        (const MethodInfo_3FF409C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
       --v16;
     }
     while ( v16 );
@@ -377,7 +377,7 @@ bool RequestBase__ReadParameter(RequestBase_o *this, bool isRefreshTime, const M
     else
     {
 LABEL_26:
-      v28 = sub_2237E2C(v29, System_IDisposable_TypeInfo, 0);
+      v28 = sub_224BC3C(v29, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v28)(v29, *(_QWORD *)(v28 + 8));
   }
@@ -403,14 +403,14 @@ Il2CppObject *RequestBase__UnpackToMessagePack(RequestBase_o *this, Il2CppObject
   __int64 v11; // x3
   MiniMessagePack_MiniMessagePacker_o *v12; // x19
 
-  if ( (byte_593A2CD & 1) == 0 )
+  if ( (byte_59724AA & 1) == 0 )
   {
-    sub_21FFC50(&byte___TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_IO_Compression_GZipStream_TypeInfo);
-    sub_21FFC50(&System_IO_MemoryStream_TypeInfo);
-    this = (RequestBase_o *)sub_21FFC50(&MiniMessagePack_MiniMessagePacker_TypeInfo);
-    byte_593A2CD = 1;
+    sub_2213A60(&byte___TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_IO_Compression_GZipStream_TypeInfo);
+    sub_2213A60(&System_IO_MemoryStream_TypeInfo);
+    this = (RequestBase_o *)sub_2213A60(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    byte_59724AA = 1;
   }
   if ( !obj )
     goto LABEL_15;
@@ -421,12 +421,12 @@ Il2CppObject *RequestBase__UnpackToMessagePack(RequestBase_o *this, Il2CppObject
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v4);
   v6 = System_Convert__FromBase64String(v5, 0);
-  v7 = sub_21FFD10(byte___TypeInfo, 1024);
-  v8 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_76663240(v8, v6, 0);
-  v9 = (System_IO_Compression_GZipStream_o *)sub_21FFEBC(System_IO_Compression_GZipStream_TypeInfo);
+  v7 = sub_2213B20(byte___TypeInfo, 1024);
+  v8 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_76876544(v8, v6, 0);
+  v9 = (System_IO_Compression_GZipStream_o *)sub_2213CCC(System_IO_Compression_GZipStream_TypeInfo);
   System_IO_Compression_GZipStream___ctor(v9, (System_IO_Stream_o *)v8, 0, 0);
-  v10 = (System_IO_MemoryStream_o *)sub_21FFEBC(System_IO_MemoryStream_TypeInfo);
+  v10 = (System_IO_MemoryStream_o *)sub_2213CCC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v10, 0);
   if ( !v7 || !v9 )
     goto LABEL_15;
@@ -458,10 +458,10 @@ Il2CppObject *RequestBase__UnpackToMessagePack(RequestBase_o *this, Il2CppObject
         goto LABEL_12;
     }
 LABEL_15:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
 LABEL_12:
-  v12 = (MiniMessagePack_MiniMessagePacker_o *)sub_21FFEBC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v12 = (MiniMessagePack_MiniMessagePacker_o *)sub_2213CCC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v12, 0);
   if ( !v10 )
     goto LABEL_15;
@@ -470,7 +470,7 @@ LABEL_12:
                             v10->klass->vtable._40_ToArray.method);
   if ( !v12 )
     goto LABEL_15;
-  return MiniMessagePack_MiniMessagePacker__Unpack_46621424(v12, (System_Byte_array *)this, 0);
+  return MiniMessagePack_MiniMessagePacker__Unpack_46651700(v12, (System_Byte_array *)this, 0);
 }
 
 
@@ -521,26 +521,26 @@ void RequestBase__WriteParameter(RequestBase_o *this, const MethodInfo *method)
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v45; // [xsp+60h] [xbp-50h] BYREF
   System_IO_BinaryWriter_o *v46; // [xsp+78h] [xbp-38h] BYREF
 
-  if ( (byte_593A2CA & 1) == 0 )
+  if ( (byte_59724A7 & 1) == 0 )
   {
-    sub_21FFC50(&System_IO_BinaryWriter_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__get_Current__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_593A2CA = 1;
+    sub_2213A60(&System_IO_BinaryWriter_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__get_Current__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_59724A7 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   v46 = 0;
@@ -561,69 +561,69 @@ void RequestBase__WriteParameter(RequestBase_o *this, const MethodInfo *method)
     if ( v5 )
     {
       v6 = (System_IO_Stream_o *)System_IO_File__OpenWrite(v5, 0);
-      v7 = (System_IO_BinaryWriter_o *)sub_21FFEBC(System_IO_BinaryWriter_TypeInfo);
-      System_IO_BinaryWriter___ctor_76739708(v7, v6, 0);
+      v7 = (System_IO_BinaryWriter_o *)sub_2213CCC(System_IO_BinaryWriter_TypeInfo);
+      System_IO_BinaryWriter___ctor_76953012(v7, v6, 0);
       paramString = this->fields.paramString;
       v46 = v7;
       v41 = 0;
       v42 = &v46;
       if ( !paramString )
-        sub_21FFECC(0, v8);
+        sub_2213CDC(0, v8);
       Count = System_Collections_Generic_Dictionary_object__object___get_Count(
                 (System_Collections_Generic_Dictionary_object__object__o *)paramString,
-                (const MethodInfo_3FCA120 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+                (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
       if ( !v7 )
-        sub_21FFECC(Count, (unsigned int)Count);
+        sub_2213CDC(Count, (unsigned int)Count);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
         (unsigned int)Count,
         v7->klass->vtable._17_Write.method);
       paramInteger = this->fields.paramInteger;
       if ( !paramInteger )
-        sub_21FFECC(0, v11);
+        sub_2213CDC(0, v11);
       v13 = v46;
       v14 = System_Collections_Generic_Dictionary_object__int___get_Count(
               (System_Collections_Generic_Dictionary_object__int__o *)paramInteger,
-              (const MethodInfo_3FC05AC *)Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
+              (const MethodInfo_3FF3D54 *)Method_System_Collections_Generic_Dictionary_string__int__get_Count__);
       if ( !v13 )
-        sub_21FFECC(v14, (unsigned int)v14);
+        sub_2213CDC(v14, (unsigned int)v14);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v13->klass->vtable._17_Write.methodPtr)(
         v13,
         (unsigned int)v14,
         v13->klass->vtable._17_Write.method);
       v16 = this->fields.paramString;
       if ( !v16 )
-        sub_21FFECC(0, v15);
+        sub_2213CDC(0, v15);
       Keys = System_Collections_Generic_Dictionary_object__object___get_Keys(
                (System_Collections_Generic_Dictionary_object__object__o *)v16,
-               (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
+               (const MethodInfo_3FFD8D8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
       if ( !Keys )
-        sub_21FFECC(0, v18);
+        sub_2213CDC(0, v18);
       System_Collections_Generic_Dictionary_KeyCollection_object__object___GetEnumerator(
         &v40,
         Keys,
-        (const MethodInfo_43555B8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
+        (const MethodInfo_43896F0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
       v45 = v40;
       v40.fields._dictionary = 0;
       *(_QWORD *)&v40.fields._index = &v45;
       while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
                 &v45,
-                (const MethodInfo_41361C4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__) )
+                (const MethodInfo_4169D50 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__) )
       {
         if ( !v46 )
-          sub_21FFECC(0, v19);
+          sub_2213CDC(0, v19);
         currentKey = v45.fields._currentKey;
         v46->klass->vtable._22_Write.methodPtr();
         v22 = this->fields.paramString;
         if ( !v22 )
-          sub_21FFECC(0, v21);
+          sub_2213CDC(0, v21);
         v23 = v46;
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  (System_Collections_Generic_Dictionary_object__object__o *)v22,
                  currentKey,
-                 (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                 (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
         if ( !v23 )
-          sub_21FFECC(Item, Item);
+          sub_2213CDC(Item, Item);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, Il2CppObject *, const MethodInfo *))v23->klass->vtable._22_Write.methodPtr)(
           v23,
           Item,
@@ -631,40 +631,40 @@ void RequestBase__WriteParameter(RequestBase_o *this, const MethodInfo *method)
       }
       System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___Dispose(
         &v45,
-        (const MethodInfo_41361C0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
+        (const MethodInfo_4169D4C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
       v26 = this->fields.paramInteger;
       if ( !v26 )
-        sub_21FFECC(0, v25);
+        sub_2213CDC(0, v25);
       v27 = System_Collections_Generic_Dictionary_object__int___get_Keys(
               (System_Collections_Generic_Dictionary_object__int__o *)v26,
-              (const MethodInfo_3FC05BC *)Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
+              (const MethodInfo_3FF3D64 *)Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
       if ( !v27 )
-        sub_21FFECC(0, v28);
+        sub_2213CDC(0, v28);
       System_Collections_Generic_Dictionary_KeyCollection_object__int___GetEnumerator(
         &v40,
         v27,
-        (const MethodInfo_4354358 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
+        (const MethodInfo_4388490 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
       v44 = v40;
       v40.fields._dictionary = 0;
       *(_QWORD *)&v40.fields._index = &v44;
       while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__int___MoveNext(
                 &v44,
-                (const MethodInfo_4133DA4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__) )
+                (const MethodInfo_4167930 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__) )
       {
         if ( !v46 )
-          sub_21FFECC(0, v29);
+          sub_2213CDC(0, v29);
         v30 = v44.fields._currentKey;
         v46->klass->vtable._22_Write.methodPtr();
         v32 = this->fields.paramInteger;
         if ( !v32 )
-          sub_21FFECC(0, v31);
+          sub_2213CDC(0, v31);
         v33 = v46;
         v34 = System_Collections_Generic_Dictionary_object__int___get_Item(
                 (System_Collections_Generic_Dictionary_object__int__o *)v32,
                 v30,
-                (const MethodInfo_3FC0874 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                (const MethodInfo_3FF401C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
         if ( !v33 )
-          sub_21FFECC(v34, (unsigned int)v34);
+          sub_2213CDC(v34, (unsigned int)v34);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v33->klass->vtable._17_Write.methodPtr)(
           v33,
           (unsigned int)v34,
@@ -672,7 +672,7 @@ void RequestBase__WriteParameter(RequestBase_o *this, const MethodInfo *method)
       }
       System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__int___Dispose(
         &v44,
-        (const MethodInfo_4133DA0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
+        (const MethodInfo_416792C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
       v35 = *v42;
       if ( *v42 )
       {
@@ -693,12 +693,12 @@ void RequestBase__WriteParameter(RequestBase_o *this, const MethodInfo *method)
         else
         {
 LABEL_32:
-          v39 = sub_2237E2C(*v42, System_IDisposable_TypeInfo, 0);
+          v39 = sub_224BC3C(*v42, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v39)(v35, *(_QWORD *)(v39 + 8));
       }
       if ( v41 )
-        sub_21FFEC4(v41);
+        sub_2213CD4(v41);
     }
   }
 }
@@ -706,10 +706,10 @@ LABEL_32:
 
 void RequestBase__addBaseField(RequestBase_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A2C0 & 1) == 0 )
+  if ( (byte_597249D & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A2C0 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_597249D = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -719,10 +719,10 @@ void RequestBase__addBaseField(RequestBase_o *this, const MethodInfo *method)
 
 void RequestBase__addDeviceInfoField(RequestBase_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A2C1 & 1) == 0 )
+  if ( (byte_597249E & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A2C1 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_597249E = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -734,77 +734,23 @@ void RequestBase__addField(RequestBase_o *this, System_String_o *fieldName, int3
 {
   struct System_Collections_Generic_Dictionary_string__int__o *paramInteger; // x0
 
-  if ( (byte_593A2BA & 1) == 0 )
+  if ( (byte_5972497 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    byte_593A2BA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    byte_5972497 = 1;
   }
   paramInteger = this->fields.paramInteger;
   if ( !paramInteger )
-    sub_21FFECC(0, fieldName);
+    sub_2213CDC(0, fieldName);
   System_Collections_Generic_Dictionary_object__int___Add(
     (System_Collections_Generic_Dictionary_object__int__o *)paramInteger,
     (Il2CppObject *)fieldName,
     data,
-    (const MethodInfo_3FC08F4 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_3FF409C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
 }
 
 
-void RequestBase__addField_51187332(
-        RequestBase_o *this,
-        System_String_o *fieldName,
-        System_String_o *data,
-        const MethodInfo *method)
-{
-  struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x0
-
-  if ( (byte_593A2BE & 1) == 0 )
-  {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    byte_593A2BE = 1;
-  }
-  paramString = this->fields.paramString;
-  if ( !paramString )
-    sub_21FFECC(0, fieldName);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    (System_Collections_Generic_Dictionary_object__object__o *)paramString,
-    (Il2CppObject *)fieldName,
-    (Il2CppObject *)data,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-}
-
-
-void RequestBase__addField_51191900(
-        RequestBase_o *this,
-        System_String_o *fieldName,
-        Il2CppObject *data,
-        const MethodInfo *method)
-{
-  Il2CppObject *v7; // x0
-  __int64 v8; // x1
-  struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x8
-
-  if ( (byte_593A2BF & 1) == 0 )
-  {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    byte_593A2BF = 1;
-  }
-  if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, fieldName);
-  v7 = (Il2CppObject *)JsonManager__toJson(data, 0, 0, 0);
-  paramString = this->fields.paramString;
-  if ( !paramString )
-    sub_21FFECC(v7, v8);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    (System_Collections_Generic_Dictionary_object__object__o *)paramString,
-    (Il2CppObject *)fieldName,
-    v7,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-}
-
-
-void RequestBase__addField_51200900(
+void RequestBase__addField_51256716(
         RequestBase_o *this,
         System_String_o *fieldName,
         int64_t data,
@@ -817,16 +763,16 @@ void RequestBase__addField_51200900(
   int64_t v10; // [xsp+8h] [xbp-28h] BYREF
 
   v10 = data;
-  if ( (byte_593A2BB & 1) == 0 )
+  if ( (byte_5972498 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2BB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5972498 = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Int64__ToString((int64_t)&v10, 0);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -835,11 +781,65 @@ void RequestBase__addField_51200900(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
 }
 
 
-void RequestBase__addField_51201052(
+void RequestBase__addField_51259092(
+        RequestBase_o *this,
+        System_String_o *fieldName,
+        Il2CppObject *data,
+        const MethodInfo *method)
+{
+  Il2CppObject *v7; // x0
+  __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x8
+
+  if ( (byte_597249C & 1) == 0 )
+  {
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&JsonManager_TypeInfo);
+    byte_597249C = 1;
+  }
+  if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, fieldName);
+  v7 = (Il2CppObject *)JsonManager__toJson(data, 0, 0, 0);
+  paramString = this->fields.paramString;
+  if ( !paramString )
+    sub_2213CDC(v7, v8);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    (System_Collections_Generic_Dictionary_object__object__o *)paramString,
+    (Il2CppObject *)fieldName,
+    v7,
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+}
+
+
+void RequestBase__addField_51259256(
+        RequestBase_o *this,
+        System_String_o *fieldName,
+        System_String_o *data,
+        const MethodInfo *method)
+{
+  struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x0
+
+  if ( (byte_597249B & 1) == 0 )
+  {
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    byte_597249B = 1;
+  }
+  paramString = this->fields.paramString;
+  if ( !paramString )
+    sub_2213CDC(0, fieldName);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    (System_Collections_Generic_Dictionary_object__object__o *)paramString,
+    (Il2CppObject *)fieldName,
+    (Il2CppObject *)data,
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+}
+
+
+void RequestBase__addField_51274628(
         RequestBase_o *this,
         System_String_o *fieldName,
         float data,
@@ -852,16 +852,16 @@ void RequestBase__addField_51201052(
   float v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = data;
-  if ( (byte_593A2BC & 1) == 0 )
+  if ( (byte_5972499 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2BC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5972499 = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Single__ToString(data, (const MethodInfo *)&v10);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -870,11 +870,11 @@ void RequestBase__addField_51201052(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
 }
 
 
-void RequestBase__addField_51201204(
+void RequestBase__addField_51274780(
         RequestBase_o *this,
         System_String_o *fieldName,
         double data,
@@ -887,16 +887,16 @@ void RequestBase__addField_51201204(
   double v10; // [xsp+8h] [xbp-28h] BYREF
 
   v10 = data;
-  if ( (byte_593A2BD & 1) == 0 )
+  if ( (byte_597249A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2BD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_597249A = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Double__ToString(data, (const MethodInfo *)&v10);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -905,7 +905,7 @@ void RequestBase__addField_51201204(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA468 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
 }
 
 
@@ -913,16 +913,16 @@ bool RequestBase__backgroundErrorRequest(RequestBase_o *this, System_String_o *e
 {
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_593A2B5 & 1) == 0 )
+  if ( (byte_5972492 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A2B5 = 1;
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972492 = 1;
   }
   CallBack = this->fields.CallBack;
   if ( CallBack )
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
       CallBack->fields.method_code,
-      StringLiteral_23290/*"ng"*/,
+      StringLiteral_23336/*"ng"*/,
       CallBack->fields.method);
   return 1;
 }
@@ -938,10 +938,10 @@ void RequestBase__beginRequest(RequestBase_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
 
-  if ( (byte_593A2B7 & 1) == 0 )
+  if ( (byte_5972494 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A2B7 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5972494 = 1;
   }
   RequestBase__addBaseField(this, method);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -955,10 +955,10 @@ bool RequestBase__beginRetryRequest(RequestBase_o *this, bool isRefreshTime, con
   __int64 v5; // x1
   bool Parameter; // w20
 
-  if ( (byte_593A2B8 & 1) == 0 )
+  if ( (byte_5972495 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A2B8 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5972495 = 1;
   }
   Parameter = RequestBase__ReadParameter(this, isRefreshTime, method);
   if ( Parameter )
@@ -994,16 +994,16 @@ bool RequestBase__errorRequest(RequestBase_o *this, System_String_o *errorCode, 
 {
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_593A2B6 & 1) == 0 )
+  if ( (byte_5972493 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A2B6 = 1;
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972493 = 1;
   }
   CallBack = this->fields.CallBack;
   if ( CallBack )
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
       CallBack->fields.method_code,
-      StringLiteral_23290/*"ng"*/,
+      StringLiteral_23336/*"ng"*/,
       CallBack->fields.method);
   return 1;
 }
@@ -1080,139 +1080,139 @@ UnityEngine_WWWForm_o *RequestBase__getWWWForm(
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v39; // [xsp+20h] [xbp-A0h] BYREF
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v40; // [xsp+40h] [xbp-80h] BYREF
 
-  if ( (byte_593A2C8 & 1) == 0 )
+  if ( (byte_59724A5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_SortedDictionary_string__string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_SortedDictionary_string__string__TypeInfo);
-    sub_21FFC50(&UnityEngine_WWWForm_TypeInfo);
-    byte_593A2C8 = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__get_Keys__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_SortedDictionary_string__string___ctor__);
+    sub_2213A60(&System_Collections_Generic_SortedDictionary_string__string__TypeInfo);
+    sub_2213A60(&UnityEngine_WWWForm_TypeInfo);
+    byte_59724A5 = 1;
   }
   memset(&v40, 0, sizeof(v40));
   memset(&v39, 0, sizeof(v39));
-  v5 = (UnityEngine_WWWForm_o *)sub_21FFEBC(UnityEngine_WWWForm_TypeInfo);
+  v5 = (UnityEngine_WWWForm_o *)sub_2213CCC(UnityEngine_WWWForm_TypeInfo);
   UnityEngine_WWWForm___ctor(v5, 0);
-  v6 = (System_Collections_Generic_SortedDictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_SortedDictionary_string__string__TypeInfo);
+  v6 = (System_Collections_Generic_SortedDictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_SortedDictionary_string__string__TypeInfo);
   System_Collections_Generic_SortedDictionary_object__object____ctor(
     v6,
-    (const MethodInfo_476EF9C *)Method_System_Collections_Generic_SortedDictionary_string__string___ctor__);
+    (const MethodInfo_47A30D4 *)Method_System_Collections_Generic_SortedDictionary_string__string___ctor__);
   *authParams = (System_Collections_Generic_SortedDictionary_string__string__o *)v6;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)authParams, (int32_t)v6, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)authParams, (int32_t)v6, v7, v8, v9, v10, v11, v12);
   paramString = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.paramString;
   if ( !paramString )
     goto LABEL_32;
   paramString = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Keys(
                                                                              paramString,
-                                                                             (const MethodInfo_3FCA130 *)Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
+                                                                             (const MethodInfo_3FFD8D8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Keys__);
   if ( !paramString )
     goto LABEL_32;
   System_Collections_Generic_Dictionary_KeyCollection_object__object___GetEnumerator(
     &v38,
     (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)paramString,
-    (const MethodInfo_43555B8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
+    (const MethodInfo_43896F0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__string__GetEnumerator__);
   v40 = v38;
   v38.fields._dictionary = 0;
   *(_QWORD *)&v38.fields._index = &v40;
   while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
             &v40,
-            (const MethodInfo_41361C4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__) )
+            (const MethodInfo_4169D50 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__MoveNext__) )
   {
     v16 = this->fields.paramString;
     if ( !v16 )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     currentKey = v40.fields._currentKey;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)v16,
              v40.fields._currentKey,
-             (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+             (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !v5 )
-      sub_21FFECC(Item, v19);
+      sub_2213CDC(Item, v19);
     UnityEngine_WWWForm__AddField(v5, (System_String_o *)currentKey, (System_String_o *)Item, 0);
     v21 = this->fields.paramString;
     if ( !v21 )
-      sub_21FFECC(0, v20);
+      sub_2213CDC(0, v20);
     v22 = (System_Collections_Generic_SortedDictionary_TKey__TValue__o *)*authParams;
     v23 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)v21,
             currentKey,
-            (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     if ( !v22 )
-      sub_21FFECC(v23, v24);
+      sub_2213CDC(v23, v24);
     System_Collections_Generic_SortedDictionary_object__object___Add(
       v22,
       currentKey,
       v23,
-      (const MethodInfo_476F54C *)Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
+      (const MethodInfo_47A3684 *)Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
   }
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___Dispose(
     &v40,
-    (const MethodInfo_41361C0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
+    (const MethodInfo_4169D4C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__string__Dispose__);
   paramString = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.paramInteger;
   if ( !paramString
     || (paramString = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__int___get_Keys(
                                                                                    (System_Collections_Generic_Dictionary_object__int__o *)paramString,
-                                                                                   (const MethodInfo_3FC05BC *)Method_System_Collections_Generic_Dictionary_string__int__get_Keys__)) == 0 )
+                                                                                   (const MethodInfo_3FF3D64 *)Method_System_Collections_Generic_Dictionary_string__int__get_Keys__)) == 0 )
   {
 LABEL_32:
-    sub_21FFECC(paramString, v13);
+    sub_2213CDC(paramString, v13);
   }
   System_Collections_Generic_Dictionary_KeyCollection_object__int___GetEnumerator(
     &v38,
     (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)paramString,
-    (const MethodInfo_4354358 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
+    (const MethodInfo_4388490 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__int__GetEnumerator__);
   v39 = v38;
   v38.fields._dictionary = 0;
   *(_QWORD *)&v38.fields._index = &v39;
   while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__int___MoveNext(
             &v39,
-            (const MethodInfo_4133DA4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__) )
+            (const MethodInfo_4167930 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__MoveNext__) )
   {
     paramInteger = this->fields.paramInteger;
     if ( !paramInteger )
-      sub_21FFECC(0, v25);
+      sub_2213CDC(0, v25);
     v27 = v39.fields._currentKey;
     v28 = System_Collections_Generic_Dictionary_object__int___get_Item(
             (System_Collections_Generic_Dictionary_object__int__o *)paramInteger,
             v39.fields._currentKey,
-            (const MethodInfo_3FC0874 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+            (const MethodInfo_3FF401C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
     if ( !v5 )
-      sub_21FFECC(v28, v29);
-    UnityEngine_WWWForm__AddField_86509532(v5, (System_String_o *)v27, v28, 0);
+      sub_2213CDC(v28, v29);
+    UnityEngine_WWWForm__AddField_86722836(v5, (System_String_o *)v27, v28, 0);
     v31 = this->fields.paramInteger;
     if ( !v31 )
-      sub_21FFECC(0, v30);
+      sub_2213CDC(0, v30);
     v32 = (System_Collections_Generic_SortedDictionary_TKey__TValue__o *)*authParams;
     v34 = System_Collections_Generic_Dictionary_object__int___get_Item(
             (System_Collections_Generic_Dictionary_object__int__o *)v31,
             v27,
-            (const MethodInfo_3FC0874 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+            (const MethodInfo_3FF401C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v33);
-    v35 = (Il2CppObject *)System_Convert__ToString_76481856(v34, 0);
+    v35 = (Il2CppObject *)System_Convert__ToString_76695160(v34, 0);
     if ( !v32 )
-      sub_21FFECC(v35, v36);
+      sub_2213CDC(v35, v36);
     System_Collections_Generic_SortedDictionary_object__object___Add(
       v32,
       v27,
       v35,
-      (const MethodInfo_476F54C *)Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
+      (const MethodInfo_47A3684 *)Method_System_Collections_Generic_SortedDictionary_string__string__Add__);
   }
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__int___Dispose(
     &v39,
-    (const MethodInfo_4133DA0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
+    (const MethodInfo_416792C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__int__Dispose__);
   return v5;
 }
 
@@ -1239,23 +1239,23 @@ void RequestBase__replaceField(RequestBase_o *this, System_String_o *fieldName, 
 {
   struct System_Collections_Generic_Dictionary_string__int__o *paramInteger; // x0
 
-  if ( (byte_593A2C2 & 1) == 0 )
+  if ( (byte_597249F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-    byte_593A2C2 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    byte_597249F = 1;
   }
   paramInteger = this->fields.paramInteger;
   if ( !paramInteger )
-    sub_21FFECC(0, fieldName);
+    sub_2213CDC(0, fieldName);
   System_Collections_Generic_Dictionary_object__int___set_Item(
     (System_Collections_Generic_Dictionary_object__int__o *)paramInteger,
     (Il2CppObject *)fieldName,
     data,
-    (const MethodInfo_3FC08E0 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    (const MethodInfo_3FF4088 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
 }
 
 
-void RequestBase__replaceField_51201548(
+void RequestBase__replaceField_51275124(
         RequestBase_o *this,
         System_String_o *fieldName,
         int64_t data,
@@ -1268,16 +1268,16 @@ void RequestBase__replaceField_51201548(
   int64_t v10; // [xsp+8h] [xbp-28h] BYREF
 
   v10 = data;
-  if ( (byte_593A2C3 & 1) == 0 )
+  if ( (byte_59724A0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2C3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59724A0 = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Int64__ToString((int64_t)&v10, 0);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -1286,11 +1286,11 @@ void RequestBase__replaceField_51201548(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 
-void RequestBase__replaceField_51201700(
+void RequestBase__replaceField_51275276(
         RequestBase_o *this,
         System_String_o *fieldName,
         float data,
@@ -1303,16 +1303,16 @@ void RequestBase__replaceField_51201700(
   float v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = data;
-  if ( (byte_593A2C4 & 1) == 0 )
+  if ( (byte_59724A1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2C4 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59724A1 = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Single__ToString(data, (const MethodInfo *)&v10);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -1321,11 +1321,11 @@ void RequestBase__replaceField_51201700(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 
-void RequestBase__replaceField_51201852(
+void RequestBase__replaceField_51275428(
         RequestBase_o *this,
         System_String_o *fieldName,
         double data,
@@ -1338,16 +1338,16 @@ void RequestBase__replaceField_51201852(
   double v10; // [xsp+8h] [xbp-28h] BYREF
 
   v10 = data;
-  if ( (byte_593A2C5 & 1) == 0 )
+  if ( (byte_59724A2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A2C5 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59724A2 = 1;
   }
   paramString = this->fields.paramString;
   v7 = System_Double__ToString(data, (const MethodInfo *)&v10);
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   if ( v7 )
     v9 = (Il2CppObject *)v7;
   else
@@ -1356,11 +1356,11 @@ void RequestBase__replaceField_51201852(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v9,
-    (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 
-void RequestBase__replaceField_51202004(
+void RequestBase__replaceField_51275580(
         RequestBase_o *this,
         System_String_o *fieldName,
         System_String_o *data,
@@ -1368,23 +1368,23 @@ void RequestBase__replaceField_51202004(
 {
   struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x0
 
-  if ( (byte_593A2C6 & 1) == 0 )
+  if ( (byte_59724A3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    byte_593A2C6 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    byte_59724A3 = 1;
   }
   paramString = this->fields.paramString;
   if ( !paramString )
-    sub_21FFECC(0, fieldName);
+    sub_2213CDC(0, fieldName);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     (Il2CppObject *)data,
-    (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 
-void RequestBase__replaceField_51202108(
+void RequestBase__replaceField_51275684(
         RequestBase_o *this,
         System_String_o *fieldName,
         Il2CppObject *data,
@@ -1394,23 +1394,23 @@ void RequestBase__replaceField_51202108(
   __int64 v8; // x1
   struct System_Collections_Generic_Dictionary_string__string__o *paramString; // x8
 
-  if ( (byte_593A2C7 & 1) == 0 )
+  if ( (byte_59724A4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_21FFC50(&JsonManager_TypeInfo);
-    byte_593A2C7 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_2213A60(&JsonManager_TypeInfo);
+    byte_59724A4 = 1;
   }
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, fieldName);
   v7 = (Il2CppObject *)JsonManager__toJson(data, 0, 0, 0);
   paramString = this->fields.paramString;
   if ( !paramString )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)paramString,
     (Il2CppObject *)fieldName,
     v7,
-    (const MethodInfo_3FCA454 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
 }
 
 

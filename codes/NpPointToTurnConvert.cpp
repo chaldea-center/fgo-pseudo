@@ -17,10 +17,10 @@ float NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *this, const 
 {
   BattleDataDefine_c *v2; // x0
 
-  if ( (byte_593BA68 & 1) == 0 )
+  if ( (byte_5973C72 & 1) == 0 )
   {
-    sub_21FFC50(&BattleDataDefine_TypeInfo);
-    byte_593BA68 = 1;
+    sub_2213A60(&BattleDataDefine_TypeInfo);
+    byte_5973C72 = 1;
   }
   v2 = BattleDataDefine_TypeInfo;
   if ( !*(&BattleDataDefine_TypeInfo->_2.cctor_finished + 1) )

@@ -17,10 +17,10 @@ void ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *m
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v2->fields.endCallback = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields, 0, v3, v4, v5, v6, v7, v8);
   v2->fields.nextAction = 0;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v2, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v2, 0, v9, v10, v11, v12, v13, v14);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -76,15 +76,15 @@ ChainableActionBase_o *ChainableActionBase__Final(
   System_Action_c *v14; // x1
 
   v4 = this;
-  if ( (byte_593CBE8 & 1) == 0 )
+  if ( (byte_5974EBF & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_21FFC50(&System_Action_TypeInfo);
-    byte_593CBE8 = 1;
+    this = (ChainableActionBase_o *)sub_2213A60(&System_Action_TypeInfo);
+    byte_5974EBF = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_21FFECC(this, endCallbacks);
+      sub_2213CDC(this, endCallbacks);
     max_length = endCallbacks->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -102,16 +102,16 @@ ChainableActionBase_o *ChainableActionBase__Final(
           if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
             || (v4->fields.endCallback = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v14) )
           {
-            sub_220024C(v7, v14, v8);
+            sub_221405C(v7, v14, v8);
 LABEL_16:
-            sub_21FFED4(this);
+            sub_2213CE4(this);
           }
         }
         else
         {
           v4->fields.endCallback = 0;
         }
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v4->fields, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields, (int32_t)v7, v8, v9, v10, v11, v12, v13);
         LODWORD(max_length) = endCallbacks->max_length;
       }
     }
@@ -132,7 +132,7 @@ void ChainableActionBase__SetNextAction(
   bool v7; // w7
 
   this->fields.nextAction = nextAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.nextAction,
     (int32_t)nextAction,
     (System_String_o *)method,

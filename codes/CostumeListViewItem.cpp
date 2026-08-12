@@ -45,7 +45,7 @@ void CostumeListViewItem___ctor(
   __int128 v45; // q1
   int64_t v46; // x0
   bool IsClearEventItemCostumeReleaseAllCond; // w0
-  const MethodInfo_476E8C0 *v48; // x8
+  const MethodInfo_47A29F8 *v48; // x8
   Il2CppObject *MasterData_object; // x23
   __int64 v50; // x1
   __int64 v51; // x2
@@ -61,18 +61,18 @@ void CostumeListViewItem___ctor(
   int32_t baseSvtId; // [xsp+6Ch] [xbp-44h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v62; // 0:x0.16
 
-  if ( (byte_5932151 & 1) == 0 )
+  if ( (byte_596A250 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_CombineCostumeMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventCombineCostumeMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932151 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_CombineCostumeMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_EventCombineCostumeMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A250 = 1;
   }
   baseSvtId = 0;
   ListViewItem___ctor((ListViewItem_o *)this, 0);
@@ -81,12 +81,12 @@ void CostumeListViewItem___ctor(
   *(_WORD *)&this->fields.isNotHaveReleaseItem = 0;
   this->fields.closedMessage = v7;
   this->fields.isHide = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closedMessage, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closedMessage, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   this->fields.baseSvt = baseSvt;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.baseSvt, (int32_t)baseSvt, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.baseSvt, (int32_t)baseSvt, v14, v15, v16, v17, v18, v19);
   this->fields.costumeEntity = data;
   p_costumeEntity = &this->fields.costumeEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.costumeEntity,
     (int32_t)data,
     v21,
@@ -95,12 +95,12 @@ void CostumeListViewItem___ctor(
     v24,
     v25,
     v26);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_47;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___);
   if ( !data )
     goto LABEL_47;
   v29 = (ServantCostumeReleaseMaster_o *)Instance;
@@ -118,7 +118,7 @@ void CostumeListViewItem___ctor(
     itemGetInfo = data->fields.itemGetInfo;
     this->fields.isHide = v37;
     this->fields.closedMessage = itemGetInfo;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.closedMessage,
       (int32_t)itemGetInfo,
       v31,
@@ -137,7 +137,7 @@ void CostumeListViewItem___ctor(
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v28, v30);
   v59 = v60;
-  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v59, 0);
+  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v59, 0);
   IsCostumeReleaseCondClear = ServantCostumeReleaseMaster__IsCostumeReleaseCondClear(v29, data, svtId, v41, 0);
   v43 = data->fields.svtId;
   v44 = !IsCostumeReleaseCondClear;
@@ -146,21 +146,21 @@ void CostumeListViewItem___ctor(
   v45 = *(_OWORD *)&baseSvt->fields.id.fields.fakeValue;
   *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)&baseSvt->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v58.fields.fakeValue = v45;
-  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v58, 0);
+  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v58, 0);
   IsClearEventItemCostumeReleaseAllCond = ServantCostumeReleaseMaster__IsClearEventItemCostumeReleaseAllCond(
                                             v29,
                                             data,
                                             v43,
                                             v46,
                                             0);
-  v48 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v48 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.isNotOpenEventCostume = !IsClearEventItemCostumeReleaseAllCond;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v48);
   if ( !Instance )
     goto LABEL_47;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_CombineCostumeMaster___);
+                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CombineCostumeMaster___);
   if ( !*p_costumeEntity || !Instance )
     goto LABEL_47;
   if ( !CombineCostumeMaster__IsClearCombineCondition(
@@ -169,12 +169,12 @@ void CostumeListViewItem___ctor(
           (*p_costumeEntity)->fields.id,
           0) )
     this->fields.isNotClearCond = 1;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_47;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   Instance = (DataManager_o *)ServantCostumeEntity__TryGetBaseSvtId(data, &baseSvtId, 0);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
@@ -188,7 +188,7 @@ void CostumeListViewItem___ctor(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v50, v51);
     *(_QWORD *)&v62.fields.currentCryptoKey = v53;
     *(_QWORD *)&v62.fields.fakeValue = v52;
-    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v62, 0);
+    Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v62, 0);
     v28 = (unsigned int)Instance;
   }
   if ( !MasterData_object )
@@ -228,7 +228,7 @@ LABEL_45:
       }
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v55, v56);
-      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventCombineCostumeMaster___);
+      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventCombineCostumeMaster___);
       if ( Instance )
       {
         ListBySvtIdAndCostumeId = EventCombineCostumeMaster__GetListBySvtIdAndCostumeId(
@@ -245,7 +245,7 @@ LABEL_45:
       }
     }
 LABEL_47:
-    sub_21FFECC(Instance, v28);
+    sub_2213CDC(Instance, v28);
   }
   v54 = 3;
 LABEL_32:
@@ -261,11 +261,11 @@ bool CostumeListViewItem__SetSortValue(CostumeListViewItem_o *this, ListViewSort
   costumeEntity = this->fields.costumeEntity;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !costumeEntity )
-    sub_21FFECC(this, sort);
+    sub_2213CDC(this, sort);
   releaseType = (unsigned int)this->fields.releaseType;
   this->fields.sortValue1 = costumeEntity->fields.priority;
   if ( (unsigned int)releaseType <= 5 )
-    this->fields.sortValue0 = qword_ECFA18[releaseType];
+    this->fields.sortValue0 = qword_ED8B48[releaseType];
   return 1;
 }
 
@@ -336,7 +336,7 @@ System_String_o *CostumeListViewItem__get_getCostumeDetail(CostumeListViewItem_o
 
   costumeEntity = this->fields.costumeEntity;
   if ( !costumeEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return costumeEntity->fields.detail;
 }
 
@@ -347,6 +347,6 @@ System_String_o *CostumeListViewItem__get_getCostumeName(CostumeListViewItem_o *
 
   costumeEntity = this->fields.costumeEntity;
   if ( !costumeEntity )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return costumeEntity->fields.name;
 }

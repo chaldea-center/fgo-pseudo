@@ -236,143 +236,143 @@ void UISkinnedEffectLoad___cctor(const MethodInfo *method)
   bool v234; // w7
   MissionNaviTransitionBoardItem_o v235; // [xsp+8h] [xbp-A8h] BYREF
 
-  if ( (byte_59373FF & 1) == 0 )
+  if ( (byte_596F557 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&UISkinnedEffectLoad_TypeInfo);
-    sub_21FFC50(&StringLiteral_19692/*"ef_terminal_back_31"*/);
-    sub_21FFC50(&StringLiteral_19620/*"ef_bg_cloud_21"*/);
-    sub_21FFC50(&StringLiteral_19623/*"ef_bg_particles_21"*/);
-    sub_21FFC50(&StringLiteral_19646/*"ef_common_back_31"*/);
-    sub_21FFC50(&StringLiteral_19625/*"ef_bg_particles_23"*/);
-    sub_21FFC50(&StringLiteral_19693/*"ef_terminal_particles_31"*/);
-    sub_21FFC50(&StringLiteral_19624/*"ef_bg_particles_22"*/);
-    sub_21FFC50(&StringLiteral_19621/*"ef_bg_particles_11"*/);
-    sub_21FFC50(&StringLiteral_19647/*"ef_common_particles_31"*/);
-    sub_21FFC50(&StringLiteral_19622/*"ef_bg_particles_12"*/);
-    sub_21FFC50(&UISkinnedEffectLoad_skinEffect___TypeInfo);
-    byte_59373FF = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&UISkinnedEffectLoad_TypeInfo);
+    sub_2213A60(&StringLiteral_19734/*"ef_terminal_back_31"*/);
+    sub_2213A60(&StringLiteral_19662/*"ef_bg_cloud_21"*/);
+    sub_2213A60(&StringLiteral_19665/*"ef_bg_particles_21"*/);
+    sub_2213A60(&StringLiteral_19688/*"ef_common_back_31"*/);
+    sub_2213A60(&StringLiteral_19667/*"ef_bg_particles_23"*/);
+    sub_2213A60(&StringLiteral_19735/*"ef_terminal_particles_31"*/);
+    sub_2213A60(&StringLiteral_19666/*"ef_bg_particles_22"*/);
+    sub_2213A60(&StringLiteral_19663/*"ef_bg_particles_11"*/);
+    sub_2213A60(&StringLiteral_19689/*"ef_common_particles_31"*/);
+    sub_2213A60(&StringLiteral_19664/*"ef_bg_particles_12"*/);
+    sub_2213A60(&UISkinnedEffectLoad_skinEffect___TypeInfo);
+    byte_596F557 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_3F88244 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
-  v2 = sub_21FFD10(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+    (const MethodInfo_3FBB9EC *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect_____ctor__);
+  v2 = sub_2213B20(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v11 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v12 = StringLiteral_19621/*"ef_bg_particles_11"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19621/*"ef_bg_particles_11"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_19663/*"ef_bg_particles_11"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19663/*"ef_bg_particles_11"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
   v235.fields.sortValue1B = v11;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue1B, v11, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue1B, v11, v13, v14, v15, v16, v17, v18);
   if ( !v2 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v2 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v2 + 32) = v235.fields.sortValue1B;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v2 + 32), 0, v19, v20, v21, v22, v23, v24);
-  v3 = sub_21FFD10(string___TypeInfo, 2);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v2 + 32), 0, v19, v20, v21, v22, v23, v24);
+  v3 = sub_2213B20(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v31 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v32 = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v32, v25, v26, v27, v28, v29, v30);
+  v32 = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v32, v25, v26, v27, v28, v29, v30);
   if ( (*(_DWORD *)(v31 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
-  v39 = StringLiteral_19625/*"ef_bg_particles_23"*/;
-  *(_QWORD *)(v31 + 40) = StringLiteral_19625/*"ef_bg_particles_23"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v31 + 40), v39, v33, v34, v35, v36, v37, v38);
+  v39 = StringLiteral_19667/*"ef_bg_particles_23"*/;
+  *(_QWORD *)(v31 + 40) = StringLiteral_19667/*"ef_bg_particles_23"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 40), v39, v33, v34, v35, v36, v37, v38);
   v235.fields.sortStr1 = (struct System_String_o *)v31;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields.sortStr1, v31, v40, v41, v42, v43, v44, v45);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields.sortStr1, v31, v40, v41, v42, v43, v44, v45);
   if ( (*(_DWORD *)(v2 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
   *(_QWORD *)(v2 + 40) = v235.fields.sortStr1;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v2 + 40), 0, v46, v47, v48, v49, v50, v51);
-  v3 = sub_21FFD10(string___TypeInfo, 2);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v2 + 40), 0, v46, v47, v48, v49, v50, v51);
+  v3 = sub_2213B20(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v58 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v59 = StringLiteral_19647/*"ef_common_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19647/*"ef_common_particles_31"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v59, v52, v53, v54, v55, v56, v57);
+  v59 = StringLiteral_19689/*"ef_common_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19689/*"ef_common_particles_31"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v59, v52, v53, v54, v55, v56, v57);
   if ( (*(_DWORD *)(v58 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
-  v66 = StringLiteral_19646/*"ef_common_back_31"*/;
-  *(_QWORD *)(v58 + 40) = StringLiteral_19646/*"ef_common_back_31"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v58 + 40), v66, v60, v61, v62, v63, v64, v65);
+  v66 = StringLiteral_19688/*"ef_common_back_31"*/;
+  *(_QWORD *)(v58 + 40) = StringLiteral_19688/*"ef_common_back_31"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v58 + 40), v66, v60, v61, v62, v63, v64, v65);
   v235.fields.sortValue1 = v58;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue1, v58, v67, v68, v69, v70, v71, v72);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue1, v58, v67, v68, v69, v70, v71, v72);
   if ( *(_DWORD *)(v2 + 24) <= 2u )
     goto LABEL_41;
   *(_QWORD *)(v2 + 48) = v235.fields.sortValue1;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v2 + 48), 0, v73, v74, v75, v76, v77, v78);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v2 + 48), 0, v73, v74, v75, v76, v77, v78);
   if ( !v1 )
     goto LABEL_42;
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
     (Il2CppObject *)v2,
-    (const MethodInfo_3F88BF8 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-  v79 = sub_21FFD10(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+    (const MethodInfo_3FBC3A0 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+  v79 = sub_2213B20(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v86 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v87 = StringLiteral_19621/*"ef_bg_particles_11"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19621/*"ef_bg_particles_11"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v87, v80, v81, v82, v83, v84, v85);
+  v87 = StringLiteral_19663/*"ef_bg_particles_11"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19663/*"ef_bg_particles_11"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v87, v80, v81, v82, v83, v84, v85);
   v235.fields.sortValue0B = v86;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue0B, v86, v88, v89, v90, v91, v92, v93);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue0B, v86, v88, v89, v90, v91, v92, v93);
   if ( !v79 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v79 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v79 + 32) = v235.fields.sortValue0B;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v79 + 32), 0, v94, v95, v96, v97, v98, v99);
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v79 + 32), 0, v94, v95, v96, v97, v98, v99);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v106 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v107 = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v107, v100, v101, v102, v103, v104, v105);
+  v107 = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v107, v100, v101, v102, v103, v104, v105);
   v235.fields.sortValue0 = v106;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue0, v106, v108, v109, v110, v111, v112, v113);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields.sortValue0, v106, v108, v109, v110, v111, v112, v113);
   if ( (*(_DWORD *)(v79 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
   *(_QWORD *)(v79 + 40) = v235.fields.sortValue0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v79 + 40), 0, v114, v115, v116, v117, v118, v119);
-  v3 = sub_21FFD10(string___TypeInfo, 2);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v79 + 40), 0, v114, v115, v116, v117, v118, v119);
+  v3 = sub_2213B20(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v126 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v127 = StringLiteral_19647/*"ef_common_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19647/*"ef_common_particles_31"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v127, v120, v121, v122, v123, v124, v125);
+  v127 = StringLiteral_19689/*"ef_common_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19689/*"ef_common_particles_31"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v127, v120, v121, v122, v123, v124, v125);
   if ( (*(_DWORD *)(v126 + 24) & 0xFFFFFFFE) == 0
-    || (v134 = StringLiteral_19646/*"ef_common_back_31"*/,
-        *(_QWORD *)(v126 + 40) = StringLiteral_19646/*"ef_common_back_31"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v126 + 40), v134, v128, v129, v130, v131, v132, v133),
+    || (v134 = StringLiteral_19688/*"ef_common_back_31"*/,
+        *(_QWORD *)(v126 + 40) = StringLiteral_19688/*"ef_common_back_31"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v126 + 40), v134, v128, v129, v130, v131, v132, v133),
         *(_QWORD *)&v235.fields.sortIndex = v126,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v235.fields.sortIndex,
           v126,
           v135,
@@ -384,86 +384,86 @@ void UISkinnedEffectLoad___cctor(const MethodInfo *method)
         *(_DWORD *)(v79 + 24) <= 2u) )
   {
 LABEL_41:
-    sub_21FFED4(v3);
+    sub_2213CE4(v3);
   }
   *(_QWORD *)(v79 + 48) = *(_QWORD *)&v235.fields.sortIndex;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v79 + 48), 0, v141, v142, v143, v144, v145, v146);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v79 + 48), 0, v141, v142, v143, v144, v145, v146);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     4,
     (Il2CppObject *)v79,
-    (const MethodInfo_3F88BF8 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
-  v147 = sub_21FFD10(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
-  v3 = sub_21FFD10(string___TypeInfo, 1);
+    (const MethodInfo_3FBC3A0 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+  v147 = sub_2213B20(UISkinnedEffectLoad_skinEffect___TypeInfo, 3);
+  v3 = sub_2213B20(string___TypeInfo, 1);
   if ( !v3 )
     goto LABEL_42;
   v154 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v155 = StringLiteral_19622/*"ef_bg_particles_12"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19622/*"ef_bg_particles_12"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v155, v148, v149, v150, v151, v152, v153);
+  v155 = StringLiteral_19664/*"ef_bg_particles_12"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19664/*"ef_bg_particles_12"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v155, v148, v149, v150, v151, v152, v153);
   *(_QWORD *)&v235.fields.selectNum = v154;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.fields, v154, v156, v157, v158, v159, v160, v161);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.fields, v154, v156, v157, v158, v159, v160, v161);
   if ( !v147 )
     goto LABEL_42;
   if ( !*(_DWORD *)(v147 + 24) )
     goto LABEL_41;
   *(_QWORD *)(v147 + 32) = *(_QWORD *)&v235.fields.selectNum;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v147 + 32), 0, v162, v163, v164, v165, v166, v167);
-  v3 = sub_21FFD10(string___TypeInfo, 3);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v147 + 32), 0, v162, v163, v164, v165, v166, v167);
+  v3 = sub_2213B20(string___TypeInfo, 3);
   if ( !v3 )
 LABEL_42:
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   v174 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v175 = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19623/*"ef_bg_particles_21"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v175, v168, v169, v170, v171, v172, v173);
+  v175 = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19665/*"ef_bg_particles_21"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v175, v168, v169, v170, v171, v172, v173);
   if ( (*(_DWORD *)(v174 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
-  v182 = StringLiteral_19624/*"ef_bg_particles_22"*/;
-  *(_QWORD *)(v174 + 40) = StringLiteral_19624/*"ef_bg_particles_22"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v174 + 40), v182, v176, v177, v178, v179, v180, v181);
+  v182 = StringLiteral_19666/*"ef_bg_particles_22"*/;
+  *(_QWORD *)(v174 + 40) = StringLiteral_19666/*"ef_bg_particles_22"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v174 + 40), v182, v176, v177, v178, v179, v180, v181);
   if ( *(_DWORD *)(v174 + 24) <= 2u )
     goto LABEL_41;
-  v189 = StringLiteral_19620/*"ef_bg_cloud_21"*/;
-  *(_QWORD *)(v174 + 48) = StringLiteral_19620/*"ef_bg_cloud_21"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v174 + 48), v189, v183, v184, v185, v186, v187, v188);
+  v189 = StringLiteral_19662/*"ef_bg_cloud_21"*/;
+  *(_QWORD *)(v174 + 48) = StringLiteral_19662/*"ef_bg_cloud_21"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v174 + 48), v189, v183, v184, v185, v186, v187, v188);
   v235.monitor = (void *)v174;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v235.monitor, v174, v190, v191, v192, v193, v194, v195);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v235.monitor, v174, v190, v191, v192, v193, v194, v195);
   if ( (*(_DWORD *)(v147 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
   *(_QWORD *)(v147 + 40) = v235.monitor;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v147 + 40), 0, v196, v197, v198, v199, v200, v201);
-  v3 = sub_21FFD10(string___TypeInfo, 2);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v147 + 40), 0, v196, v197, v198, v199, v200, v201);
+  v3 = sub_2213B20(string___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_42;
   v208 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_41;
-  v209 = StringLiteral_19693/*"ef_terminal_particles_31"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_19693/*"ef_terminal_particles_31"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), v209, v202, v203, v204, v205, v206, v207);
+  v209 = StringLiteral_19735/*"ef_terminal_particles_31"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_19735/*"ef_terminal_particles_31"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v209, v202, v203, v204, v205, v206, v207);
   if ( (*(_DWORD *)(v208 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_41;
-  v216 = StringLiteral_19692/*"ef_terminal_back_31"*/;
-  *(_QWORD *)(v208 + 40) = StringLiteral_19692/*"ef_terminal_back_31"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v208 + 40), v216, v210, v211, v212, v213, v214, v215);
+  v216 = StringLiteral_19734/*"ef_terminal_back_31"*/;
+  *(_QWORD *)(v208 + 40) = StringLiteral_19734/*"ef_terminal_back_31"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v208 + 40), v216, v210, v211, v212, v213, v214, v215);
   v235.klass = (MissionNaviTransitionBoardItem_c *)v208;
-  sub_21FFBF4(&v235, v208, v217, v218, v219, v220, v221, v222);
+  sub_2213A04(&v235, v208, v217, v218, v219, v220, v221, v222);
   if ( *(_DWORD *)(v147 + 24) <= 2u )
     goto LABEL_41;
   *(_QWORD *)(v147 + 48) = v235.klass;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v147 + 48), 0, v223, v224, v225, v226, v227, v228);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v147 + 48), 0, v223, v224, v225, v226, v227, v228);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     7,
     (Il2CppObject *)v147,
-    (const MethodInfo_3F88BF8 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
+    (const MethodInfo_3FBC3A0 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____Add__);
   UISkinnedEffectLoad_TypeInfo->static_fields->DefaultSkinEffects = (struct System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UISkinnedEffectLoad_TypeInfo->static_fields,
     (int32_t)v1,
     v229,
@@ -509,26 +509,26 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_59373FE & 1) == 0 )
+  if ( (byte_596F556 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_21FFC50(&ServantCommentManager_TypeInfo);
-    sub_21FFC50(&UISkinnedEffectLoad_TypeInfo);
-    sub_21FFC50(&StringLiteral_3025/*"BG1_SKIN_EFFECT_NAMES{0}"*/);
-    sub_21FFC50(&StringLiteral_13891/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/);
-    sub_21FFC50(&StringLiteral_3026/*"BG2_SKIN_EFFECT_NAMES{0}"*/);
-    byte_59373FE = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_2213A60(&ServantCommentManager_TypeInfo);
+    sub_2213A60(&UISkinnedEffectLoad_TypeInfo);
+    sub_2213A60(&StringLiteral_3028/*"BG1_SKIN_EFFECT_NAMES{0}"*/);
+    sub_2213A60(&StringLiteral_13921/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/);
+    sub_2213A60(&StringLiteral_3029/*"BG2_SKIN_EFFECT_NAMES{0}"*/);
+    byte_596F556 = 1;
   }
   v5 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   EffectNameList = 0;
   value = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&effectIndex, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_TerminalOverwriteMaster___);
   if ( Master_object
     && TerminalOverwriteMaster__TryGetOverwriteEffectNames(
          (TerminalOverwriteMaster_o *)Master_object,
@@ -540,31 +540,31 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
     if ( EffectNameList )
       return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                       (System_Collections_Generic_List_object__o *)EffectNameList,
-                                      (const MethodInfo_445164C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                      (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_37:
-    sub_21FFECC(IsNullOrEmpty, v7);
+    sub_2213CDC(IsNullOrEmpty, v7);
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v7, v8);
-  v11 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  v11 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   skinType = this->fields.skinType;
   v13 = (ConstantStrMaster_o *)v11;
   switch ( skinType )
   {
     case 2:
       v24 = effectIndex;
-      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-      v15 = &StringLiteral_3025/*"BG1_SKIN_EFFECT_NAMES{0}"*/;
+      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+      v15 = &StringLiteral_3028/*"BG1_SKIN_EFFECT_NAMES{0}"*/;
       break;
     case 4:
       v24 = effectIndex;
-      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-      v15 = &StringLiteral_3026/*"BG2_SKIN_EFFECT_NAMES{0}"*/;
+      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+      v15 = &StringLiteral_3029/*"BG2_SKIN_EFFECT_NAMES{0}"*/;
       break;
     case 7:
       v24 = effectIndex;
-      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v24);
-      v15 = &StringLiteral_13891/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/;
+      v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
+      v15 = &StringLiteral_13921/*"TERMINAL_BG_SKIN_EFFECT_NAMES{0}"*/;
       break;
     default:
       return 0;
@@ -604,7 +604,7 @@ LABEL_23:
         if ( max_length > (unsigned int)effectIndex )
           return skinEffects->m_Items[effectIndex].fields.EffectName;
 LABEL_34:
-        sub_21FFED4(IsNullOrEmpty);
+        sub_2213CE4(IsNullOrEmpty);
       }
       v21 = UISkinnedEffectLoad_TypeInfo;
       if ( !*(&UISkinnedEffectLoad_TypeInfo->_2.cctor_finished + 1) )
@@ -619,7 +619,7 @@ LABEL_34:
                                            (System_Collections_Generic_Dictionary_TKey__TValue__o *)IsNullOrEmpty,
                                            this->fields.skinType,
                                            &value,
-                                           (const MethodInfo_3F8A6D4 *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
+                                           (const MethodInfo_3FBDE7C *)Method_System_Collections_Generic_Dictionary_AtlasManager_SkinType__UISkinnedEffectLoad_skinEffect____TryGetValue__);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
         skinEffects = (struct UISkinnedEffectLoad_skinEffect_array *)value;
@@ -662,7 +662,7 @@ System_String_array *UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v7 = *i;
     if ( !*i )
-      sub_21FFECC(this, *(_QWORD *)&uiChangeType);
+      sub_2213CDC(this, *(_QWORD *)&uiChangeType);
     if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
     if ( !--max_length )
@@ -740,22 +740,22 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
   bool v56; // w7
   __int64 v57; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_59373FD & 1) == 0 )
+  if ( (byte_596F555 & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Where_GameObject___);
-    sub_21FFC50(&System_Func_GameObject__bool__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
-    sub_21FFC50(&Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__);
-    sub_21FFC50(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_59373FD = 1;
+    sub_2213A60(&CommonEffectManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Where_GameObject___);
+    sub_2213A60(&System_Func_GameObject__bool__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+    sub_2213A60(&Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__);
+    sub_2213A60(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_596F555 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   if ( !Instance )
     goto LABEL_49;
   v6 = Instance[20];
@@ -779,19 +779,19 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
       static_fields = UISkinnedEffectLoad___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__10_0 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_GameObject__bool__TypeInfo);
+    _9__10_0 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__10_0, v12, Method_UISkinnedEffectLoad___c__SetEffects_b__10_0__, 0);
     v13 = UISkinnedEffectLoad___c_TypeInfo->static_fields;
     v13->__9__10_0 = (struct System_Func_GameObject__bool__o *)_9__10_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->__9__10_0, (int32_t)_9__10_0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__10_0, (int32_t)_9__10_0, v14, v15, v16, v17, v18, v19);
   }
   Instance = System_Linq_Enumerable__Where_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)setEffectList,
                (System_Func_TSource__bool__o *)_9__10_0,
-               (const MethodInfo_386FFB0 *)Method_System_Linq_Enumerable_Where_GameObject___);
+               (const MethodInfo_38A3478 *)Method_System_Linq_Enumerable_Where_GameObject___);
   if ( !Instance )
 LABEL_49:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   v20 = *(_QWORD *)Instance;
   v21 = Instance;
   v22 = *(unsigned __int16 *)(*(_QWORD *)Instance + 302LL);
@@ -810,14 +810,14 @@ LABEL_49:
   else
   {
 LABEL_16:
-    v24 = sub_2237E2C(Instance, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
+    v24 = sub_224BC3C(Instance, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
   }
   v25 = (*(__int64 (__fastcall **)(_DWORD *, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
   v57 = v25;
   while ( 1 )
   {
     if ( !v57 )
-      sub_21FFECC(v25, v26);
+      sub_2213CDC(v25, v26);
     v27 = *(_QWORD *)v57;
     v28 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v57 + 302LL) )
@@ -835,7 +835,7 @@ LABEL_16:
     else
     {
 LABEL_24:
-      v30 = sub_2237E2C(v57, System_Collections_IEnumerator_TypeInfo, 0);
+      v30 = sub_224BC3C(v57, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v57, *(_QWORD *)(v30 + 8)) & 1) == 0 )
       break;
@@ -856,16 +856,16 @@ LABEL_24:
     else
     {
 LABEL_31:
-      v34 = sub_2237E2C(v57, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
+      v34 = sub_224BC3C(v57, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
     }
     v35 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v57, *(_QWORD *)(v34 + 8));
     v37 = (UnityEngine_Object_o *)v35;
     if ( !v35 )
-      sub_21FFECC(0, v36);
+      sub_2213CDC(0, v36);
     UnityEngine_GameObject__SetActive(v35, 0, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
-    UnityEngine_Object__Destroy_83246496(v37, 0);
+    UnityEngine_Object__Destroy_83459800(v37, 0);
   }
   v40 = *(_QWORD *)v57;
   v41 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
@@ -884,7 +884,7 @@ LABEL_31:
   else
   {
 LABEL_41:
-    v43 = sub_2237E2C(v57, System_IDisposable_TypeInfo, 0);
+    v43 = sub_224BC3C(v57, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v43)(v57, *(_QWORD *)(v43 + 8));
 LABEL_44:
@@ -896,7 +896,7 @@ LABEL_44:
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo, v46, v47);
   v50 = CommonEffectManager__SetSkinEffects(EffectNames, v49, SetDepthZero, 0);
   p_setEffectList->klass = (MissionNaviTransitionBoardItem_c *)v50;
-  sub_21FFBF4(p_setEffectList, (int32_t)v50, v51, v52, v53, v54, v55, v56);
+  sub_2213A04(p_setEffectList, (int32_t)v50, v51, v52, v53, v54, v55, v56);
 }
 
 
@@ -916,15 +916,15 @@ void UISkinnedEffectLoad___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5937402 & 1) == 0 )
+  if ( (byte_596F55A & 1) == 0 )
   {
-    sub_21FFC50(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_5937402 = 1;
+    sub_2213A60(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_596F55A = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(UISkinnedEffectLoad___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(UISkinnedEffectLoad___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UISkinnedEffectLoad___c_TypeInfo->static_fields->__9 = (struct UISkinnedEffectLoad___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)UISkinnedEffectLoad___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -947,10 +947,10 @@ bool UISkinnedEffectLoad___c___SetEffects_b__10_0(
         UnityEngine_GameObject_o *setEffect,
         const MethodInfo *method)
 {
-  if ( (byte_5937403 & 1) == 0 )
+  if ( (byte_596F55B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937403 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F55B = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, setEffect, method);
@@ -970,7 +970,7 @@ void UISkinnedEffectLoad_skinEffect___ctor(
   bool v7; // w7
 
   this.fields.EffectName->obj.klass = (Il2CppClass *)names;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)this.fields.EffectName,
     (int32_t)names,
     (System_String_o *)method,

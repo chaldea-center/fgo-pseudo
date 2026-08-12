@@ -32,18 +32,18 @@ void EventInfoJobOpenQuestInfoDialog___cctor(const MethodInfo *method)
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_59386C2 & 1) == 0 )
+  if ( (byte_5970A1D & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobOpenQuestInfoDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_5845/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_5844/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/);
-    sub_21FFC50(&StringLiteral_5843/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/);
-    byte_59386C2 = 1;
+    sub_2213A60(&EventInfoJobOpenQuestInfoDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_5857/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_5856/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/);
+    sub_2213A60(&StringLiteral_5855/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/);
+    byte_5970A1D = 1;
   }
-  v7 = StringLiteral_5845/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/;
-  EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields->TitleLocalizationKey = (struct System_String_o *)StringLiteral_5845/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_5857/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/;
+  EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields->TitleLocalizationKey = (struct System_String_o *)StringLiteral_5857/*"EVENT_JOB_OPEN_QUEST_DIALOG_TITLE"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields,
     v7,
     v1,
@@ -52,10 +52,10 @@ void EventInfoJobOpenQuestInfoDialog___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_5843/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/;
+  v8 = StringLiteral_5855/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/;
   static_fields = EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields;
-  static_fields->Description1LocalizationKey = (struct System_String_o *)StringLiteral_5843/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/;
-  sub_21FFBF4(
+  static_fields->Description1LocalizationKey = (struct System_String_o *)StringLiteral_5855/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_1"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->Description1LocalizationKey,
     v8,
     v10,
@@ -64,14 +64,14 @@ void EventInfoJobOpenQuestInfoDialog___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = StringLiteral_5844/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/;
+  v16 = StringLiteral_5856/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/;
   v17 = EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields;
-  v17->Description2LocalizationKey = (struct System_String_o *)StringLiteral_5844/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->Description2LocalizationKey, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/;
+  v17->Description2LocalizationKey = (struct System_String_o *)StringLiteral_5856/*"EVENT_JOB_OPEN_QUEST_DIALOG_DESCRIPTION_2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->Description2LocalizationKey, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/;
   v25 = EventInfoJobOpenQuestInfoDialog_TypeInfo->static_fields;
-  v25->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->CloseButtonLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
+  v25->CloseButtonLocalizationKey = (struct System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->CloseButtonLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -87,21 +87,21 @@ void EventInfoJobOpenQuestInfoDialog___ctor(EventInfoJobOpenQuestInfoDialog_o *t
   bool v10; // w7
   __int64 v11; // x1
 
-  if ( (byte_59386C1 & 1) == 0 )
+  if ( (byte_5970A1C & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__TypeInfo);
-    byte_59386C1 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__TypeInfo);
+    byte_5970A1C = 1;
   }
   v3 = System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__TypeInfo;
   this->fields.questCellHeight = 140;
-  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v3);
+  v4 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v3);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent___ctor__);
   this->fields.questItemList = (struct System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__o *)v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.questItemList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.questItemList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, v11);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -121,18 +121,18 @@ void EventInfoJobOpenQuestInfoDialog__ClearQuestListItems(
   UnityEngine_Object_o *gameObject; // x21
   int v10; // w8
 
-  if ( (byte_59386BD & 1) == 0 )
+  if ( (byte_5970A18 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386BD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A18 = 1;
   }
   questItemList = this->fields.questItemList;
   if ( !questItemList )
 LABEL_14:
-    sub_21FFECC(questItemList, method);
+    sub_2213CDC(questItemList, method);
   v4 = 0;
   while ( 1 )
   {
@@ -142,7 +142,7 @@ LABEL_14:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)questItemList,
              v4,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Item__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
     questItemList = (struct System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0);
@@ -153,7 +153,7 @@ LABEL_14:
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Item, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-      UnityEngine_Object__Destroy_83246496(gameObject, 0);
+      UnityEngine_Object__Destroy_83459800(gameObject, 0);
     }
     questItemList = this->fields.questItemList;
     ++v4;
@@ -180,10 +180,10 @@ void EventInfoJobOpenQuestInfoDialog__Init(EventInfoJobOpenQuestInfoDialog_o *th
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_59386BA & 1) == 0 )
+  if ( (byte_5970A15 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_59386BA = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_5970A15 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   questListGrid = this->fields.questListGrid;
@@ -192,13 +192,13 @@ void EventInfoJobOpenQuestInfoDialog__Init(EventInfoJobOpenQuestInfoDialog_o *th
         (questListGrid = (UIGrid_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
     || (questListGrid = (UIGrid_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)questListGrid, 0)) == 0 )
   {
-    sub_21FFECC(questListGrid, v3);
+    sub_2213CDC(questListGrid, v3);
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)questListGrid,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.basePanel,
     (int32_t)Component_object,
     v6,
@@ -216,21 +216,21 @@ void EventInfoJobOpenQuestInfoDialog__OnClickClose(EventInfoJobOpenQuestInfoDial
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_59386C0 & 1) == 0 )
+  if ( (byte_5970A1B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__);
-    sub_21FFC50(&Method_EventInfoJobOpenQuestInfoDialog__OnClickClose_b__29_0__);
-    byte_59386C0 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__);
+    sub_2213A60(&Method_EventInfoJobOpenQuestInfoDialog__OnClickClose_b__29_0__);
+    byte_5970A1B = 1;
   }
   if ( BaseDialog__IsInputState((BaseDialog_o *)this, 0) )
   {
     v3 = Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventInfoJobOpenQuestInfoDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoJobOpenQuestInfoDialog__OnClickClose_b__29_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -259,14 +259,14 @@ void EventInfoJobOpenQuestInfoDialog__Open(
   const MethodInfo *v20; // x2
   const MethodInfo *v21; // x1
 
-  if ( (byte_59386BB & 1) == 0 )
+  if ( (byte_5970A16 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobOpenQuestInfoDialog_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_59386BB = 1;
+    sub_2213A60(&EventInfoJobOpenQuestInfoDialog_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5970A16 = 1;
   }
   this->fields.closeAction = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)callback,
     (System_String_o *)callback,
@@ -308,7 +308,7 @@ void EventInfoJobOpenQuestInfoDialog__Open(
         !closeButtonLabel) )
   {
 LABEL_12:
-    sub_21FFECC(v15, v16);
+    sub_2213CDC(v15, v16);
   }
   UILabel__set_text(closeButtonLabel, v15, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
@@ -330,10 +330,10 @@ void EventInfoJobOpenQuestInfoDialog__ResetQuestNameScrollPosition(
   char v9; // w20
   struct UIScrollView_o *v10; // x8
 
-  if ( (byte_59386BE & 1) == 0 )
+  if ( (byte_5970A19 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386BE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A19 = 1;
   }
   questNameScrollView = (UnityEngine_Object_o *)this->fields.questNameScrollView;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -393,7 +393,7 @@ void EventInfoJobOpenQuestInfoDialog__ResetQuestNameScrollPosition(
           }
         }
 LABEL_22:
-        sub_21FFECC(gameObject, v4);
+        sub_2213CDC(gameObject, v4);
       }
     }
   }
@@ -431,14 +431,14 @@ void EventInfoJobOpenQuestInfoDialog__SetupQuestListView(
   Il2CppClass *castClass; // x1
   Il2CppClass *element_class; // x2
 
-  if ( (byte_59386BC & 1) == 0 )
+  if ( (byte_5970A17 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Item__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_EventInfoJobFreeQuestItemComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386BC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Item__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_EventInfoJobFreeQuestItemComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A17 = 1;
   }
   questListGrid = (UnityEngine_Object_o *)this->fields.questListGrid;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -472,11 +472,11 @@ void EventInfoJobOpenQuestInfoDialog__SetupQuestListView(
             v14 = (Il2CppObject *)this->fields.freeQuestItemPrefab;
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-            v15 = UnityEngine_Object__Instantiate_object__59507108(
+            v15 = UnityEngine_Object__Instantiate_object__59717228(
                     v14,
                     transform,
                     0,
-                    (const MethodInfo_38C01A4 *)Method_UnityEngine_Object_Instantiate_EventInfoJobFreeQuestItemComponent___);
+                    (const MethodInfo_38F366C *)Method_UnityEngine_Object_Instantiate_EventInfoJobFreeQuestItemComponent___);
             if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0, 0) )
             {
               questItemList = (UnityEngine_Component_o *)this->fields.questItemList;
@@ -493,19 +493,19 @@ void EventInfoJobOpenQuestInfoDialog__SetupQuestListView(
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)questItemList,
                   v15,
-                  *(const MethodInfo_444FB2C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                  *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
               }
               else
               {
                 v25 = m_CachedPtr + 8 * klass_low;
                 LODWORD(questItemList[1].klass) = klass_low + 1;
                 *(_QWORD *)(v25 + 32) = v15;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v25 + 32), (int32_t)v15, v16, v17, v18, v19, v20, v21);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 32), (int32_t)v15, v16, v17, v18, v19, v20, v21);
               }
               questItemList = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
                                                            (System_Collections_Generic_List_object__o *)questDisplayDataList,
                                                            v13,
-                                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Item__);
+                                                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventJobCautionComponent_JobFreeQuestDisplayData__get_Item__);
               if ( !v15 )
                 goto LABEL_37;
               v26 = questItemList;
@@ -556,7 +556,7 @@ void EventInfoJobOpenQuestInfoDialog__SetupQuestListView(
               return;
             }
 LABEL_37:
-            sub_21FFECC(questItemList, v7);
+            sub_2213CDC(questItemList, v7);
           }
         }
       }
@@ -582,11 +582,11 @@ void EventInfoJobOpenQuestInfoDialog__UpdateQuestNameScrollLayout(
   int32_t size; // w8
   float *p_listAdjustSecondPosY; // x8
 
-  if ( (byte_59386BF & 1) == 0 )
+  if ( (byte_5970A1A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Count__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386BF = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoJobFreeQuestItemComponent__get_Count__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A1A = 1;
   }
   questNameScrollView = (UnityEngine_Object_o *)this->fields.questNameScrollView;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -641,7 +641,7 @@ void EventInfoJobOpenQuestInfoDialog__UpdateQuestNameScrollLayout(
         }
       }
     }
-    sub_21FFECC(v5, v4);
+    sub_2213CDC(v5, v4);
   }
 }
 
@@ -663,7 +663,7 @@ void EventInfoJobOpenQuestInfoDialog___OnClickClose_b__29_0(
   EventInfoJobOpenQuestInfoDialog__ClearQuestListItems(this, v3);
   closeAction = this->fields.closeAction;
   this->fields.closeAction = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v5, v6, v7, v8, v9, v10);
   ActionExtensions__Call(closeAction, 0);
 }
 
@@ -684,10 +684,10 @@ UnityEngine_GameObject_o *EventInfoJobOpenQuestInfoDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_59386B9 & 1) == 0 )
+  if ( (byte_5970A14 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59386B9 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5970A14 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -696,6 +696,6 @@ UnityEngine_GameObject_o *EventInfoJobOpenQuestInfoDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

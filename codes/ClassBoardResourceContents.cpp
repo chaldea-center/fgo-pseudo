@@ -16,7 +16,7 @@ void ClassBoardResourceContents__SetBoardUIAtlas(
   bool v7; // w7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     (System_String_o *)method,
@@ -58,7 +58,7 @@ void ClassBoardResourceContents__SetContents(
   bool v29; // w7
 
   this->fields._Square_k__BackingField = square;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)square,
     (System_String_o *)line,
@@ -68,7 +68,7 @@ void ClassBoardResourceContents__SetContents(
     v6,
     v7);
   this->fields._Line_k__BackingField = line;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Line_k__BackingField,
     (int32_t)line,
     v12,
@@ -78,7 +78,7 @@ void ClassBoardResourceContents__SetContents(
     v16,
     v17);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Lock_k__BackingField,
     (int32_t)lockAsset,
     v18,
@@ -88,7 +88,7 @@ void ClassBoardResourceContents__SetContents(
     v22,
     v23);
   this->fields._Blank_k__BackingField = blank;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Blank_k__BackingField,
     (int32_t)blank,
     v24,
@@ -112,7 +112,7 @@ void ClassBoardResourceContents__SetContentsBgModel(
   bool v7; // w7
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)bgModel,
     (System_String_o *)method,
@@ -136,7 +136,7 @@ void ClassBoardResourceContents__SetContentsBoardSelectView(
   bool v7; // w7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)boardSelectViewPrefab,
     (System_String_o *)method,
@@ -184,7 +184,7 @@ void ClassBoardResourceContents__SetContentsDialog(
   bool v36; // w7
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)classBoardDisableOpenDialog,
     (System_String_o *)classBoardSquareOpenConfirmDialog,
@@ -194,7 +194,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     (bool)method,
     v7);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardSquareOpenConfirmDialog,
     v13,
@@ -204,7 +204,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v17,
     v18);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardLockOpenConfirmDialog,
     v19,
@@ -214,7 +214,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v23,
     v24);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)classBoardLockReleaseConditionDialog,
     v25,
@@ -224,7 +224,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v29,
     v30);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)classBoardSquareDetailDialog,
     v31,
@@ -248,7 +248,7 @@ void ClassBoardResourceContents__SetContentsFigure(
   bool v7; // w7
 
   this->fields._FigureController_k__BackingField = figureController;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)figureController,
     (System_String_o *)method,
@@ -272,7 +272,7 @@ void ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   bool v7; // w7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)prefab,
     (System_String_o *)method,
@@ -302,7 +302,7 @@ void ClassBoardResourceContents__SetContentsFullReleaseEffect(
   bool v15; // w7
 
   this->fields._FullReleaseEffectComponent_k__BackingField = fullReleaseEffectComponent;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)fullReleaseEffectComponent,
     (System_String_o *)grandFullReleaseEffectComponent,
@@ -312,7 +312,7 @@ void ClassBoardResourceContents__SetContentsFullReleaseEffect(
     v6,
     v7);
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = grandFullReleaseEffectComponent;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)grandFullReleaseEffectComponent,
     v10,
@@ -336,7 +336,7 @@ void ClassBoardResourceContents__SetContentsGrandBgModel(
   bool v7; // w7
 
   this->fields._GrandBgModel_k__BackingField = grandBgModel;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandBgModel_k__BackingField,
     (int32_t)grandBgModel,
     (System_String_o *)method,
@@ -360,7 +360,7 @@ void ClassBoardResourceContents__SetContentsGrandBoardDialog(
   bool v7; // w7
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = classBoardQuestOpenConfirmDialog;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardQuestOpenConfirmDialog,
     (System_String_o *)method,
@@ -384,7 +384,7 @@ void ClassBoardResourceContents__SetContentsGrandGraph(
   bool v7; // w7
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = grandGraphAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)grandGraphAtlasManagerUnit,
     (System_String_o *)method,
@@ -426,7 +426,7 @@ void ClassBoardResourceContents__SetContentsUI(
   bool v29; // w7
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)uiController,
     (System_String_o *)boardUiAtlasManagerUnit,
@@ -436,7 +436,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v6,
     v7);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     v12,
@@ -446,7 +446,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v16,
     v17);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)iconAtlasManagerUnit,
     v18,
@@ -456,7 +456,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v22,
     v23);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)classUiAtlasManagerUnit,
     v24,
@@ -498,7 +498,7 @@ void ClassBoardResourceContents__SetGrandContents(
   bool v29; // w7
 
   this->fields._GrandSquare_k__BackingField = square;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandSquare_k__BackingField,
     (int32_t)square,
     (System_String_o *)line,
@@ -508,7 +508,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v6,
     v7);
   this->fields._GrandLine_k__BackingField = line;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandLine_k__BackingField,
     (int32_t)line,
     v12,
@@ -518,7 +518,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v16,
     v17);
   this->fields._GrandLock_k__BackingField = lockAsset;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandLock_k__BackingField,
     (int32_t)lockAsset,
     v18,
@@ -528,7 +528,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v22,
     v23);
   this->fields._GrandBlank_k__BackingField = blank;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandBlank_k__BackingField,
     (int32_t)blank,
     v24,
@@ -754,7 +754,7 @@ void ClassBoardResourceContents__set_BgModel(
   bool v7; // w7
 
   this->fields._BgModel_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -778,7 +778,7 @@ void ClassBoardResourceContents__set_Blank(
   bool v7; // w7
 
   this->fields._Blank_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Blank_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -802,7 +802,7 @@ void ClassBoardResourceContents__set_BoardSelectViewPrefab(
   bool v7; // w7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -826,7 +826,7 @@ void ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   bool v7; // w7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -850,7 +850,7 @@ void ClassBoardResourceContents__set_BoardUiController(
   bool v7; // w7
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -874,7 +874,7 @@ void ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog(
   bool v7; // w7
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -898,7 +898,7 @@ void ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   bool v7; // w7
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -922,7 +922,7 @@ void ClassBoardResourceContents__set_DisableOpenDialog(
   bool v7; // w7
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -946,7 +946,7 @@ void ClassBoardResourceContents__set_FigureController(
   bool v7; // w7
 
   this->fields._FigureController_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -970,7 +970,7 @@ void ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   bool v7; // w7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -994,7 +994,7 @@ void ClassBoardResourceContents__set_FullReleaseEffectComponent(
   bool v7; // w7
 
   this->fields._FullReleaseEffectComponent_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1018,7 +1018,7 @@ void ClassBoardResourceContents__set_GrandBgModel(
   bool v7; // w7
 
   this->fields._GrandBgModel_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandBgModel_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1042,7 +1042,7 @@ void ClassBoardResourceContents__set_GrandBlank(
   bool v7; // w7
 
   this->fields._GrandBlank_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandBlank_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1066,7 +1066,7 @@ void ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
   bool v7; // w7
 
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1090,7 +1090,7 @@ void ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
   bool v7; // w7
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1114,7 +1114,7 @@ void ClassBoardResourceContents__set_GrandLine(
   bool v7; // w7
 
   this->fields._GrandLine_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandLine_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1138,7 +1138,7 @@ void ClassBoardResourceContents__set_GrandLock(
   bool v7; // w7
 
   this->fields._GrandLock_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandLock_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1162,7 +1162,7 @@ void ClassBoardResourceContents__set_GrandSquare(
   bool v7; // w7
 
   this->fields._GrandSquare_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GrandSquare_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1186,7 +1186,7 @@ void ClassBoardResourceContents__set_IconAtlasManagerUnit(
   bool v7; // w7
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1210,7 +1210,7 @@ void ClassBoardResourceContents__set_Line(
   bool v7; // w7
 
   this->fields._Line_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Line_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1234,7 +1234,7 @@ void ClassBoardResourceContents__set_Lock(
   bool v7; // w7
 
   this->fields._Lock_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Lock_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1258,7 +1258,7 @@ void ClassBoardResourceContents__set_LockOpenConfirmDialog(
   bool v7; // w7
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1282,7 +1282,7 @@ void ClassBoardResourceContents__set_LockReleaseConditionDialog(
   bool v7; // w7
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1306,7 +1306,7 @@ void ClassBoardResourceContents__set_Square(
   bool v7; // w7
 
   this->fields._Square_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -1330,7 +1330,7 @@ void ClassBoardResourceContents__set_SquareDetailDialog(
   bool v7; // w7
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1354,7 +1354,7 @@ void ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   bool v7; // w7
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

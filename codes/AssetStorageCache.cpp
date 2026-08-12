@@ -7,25 +7,29 @@ void AssetStorageCache___ctor(AssetStorageCache_o *this, const MethodInfo *metho
 void AssetStorageCache__ClearCache(bool isStandalone, const MethodInfo *method)
 {
   __int64 v2; // x2
+  AssetManager_c *v4; // x0
   System_String_o *CacheListFile; // x20
-  __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  AssetManager_c *v8; // x0
 
-  if ( (byte_593765F & 1) == 0 )
+  if ( (byte_596F7C0 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_593765F = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_596F7C0 = 1;
   }
+  v4 = AssetManager_TypeInfo;
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method, v2);
-  CacheListFile = AssetManager__get_CacheListFile(0);
+  CacheListFile = AssetManager__get_CacheListFile((const MethodInfo *)v4);
   if ( System_IO_File__Exists(CacheListFile, 0) )
     System_IO_File__Delete(CacheListFile, 0);
   if ( isStandalone )
   {
+    v8 = AssetManager_TypeInfo;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5, v6);
-    AssetManager__DeleteContinueData(0);
+      j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v6, v7);
+    AssetManager__DeleteContinueData((const MethodInfo *)v8);
     UnityEngine_PlayerPrefs__Save(0);
   }
 }
@@ -50,19 +54,21 @@ void AssetStorageCache__ClearCacheAllCommonProc(
 {
   __int64 v5; // x1
   __int64 v6; // x2
+  AssetManager_c *v7; // x0
 
-  if ( (byte_593765E & 1) == 0 )
+  if ( (byte_596F7BF & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_593765E = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_596F7BF = 1;
   }
   if ( System_IO_Directory__Exists(cachePath, 0) )
     System_IO_Directory__Delete(cachePath, 1, 0);
   if ( isStandalone )
   {
+    v7 = AssetManager_TypeInfo;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5, v6);
-    AssetManager__DeleteContinueData(0);
+    AssetManager__DeleteContinueData((const MethodInfo *)v7);
     UnityEngine_PlayerPrefs__Save(0);
   }
 }
@@ -135,25 +141,25 @@ System_String_o *AssetStorageCache__GetOldEnvPath(const MethodInfo *method)
   bool v47; // w7
   int32_t v48; // w1
 
-  if ( (byte_593765D & 1) == 0 )
+  if ( (byte_596F7BE & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&CacheFolderName_TypeInfo);
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_593765D = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&CacheFolderName_TypeInfo);
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_596F7BE = 1;
   }
-  v3 = sub_21FFD10(string___TypeInfo, 6);
+  v3 = sub_2213B20(string___TypeInfo, 6);
   if ( !*(&AndroidUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo, v1, v2);
   OldUnityPersistentDataPath = AndroidUtil__GetOldUnityPersistentDataPath(0);
   if ( !v3 )
-    sub_21FFECC(OldUnityPersistentDataPath, v5);
+    sub_2213CDC(OldUnityPersistentDataPath, v5);
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_17;
   *(_QWORD *)(v3 + 32) = OldUnityPersistentDataPath;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)(v3 + 32),
     (int32_t)OldUnityPersistentDataPath,
     v6,
@@ -166,14 +172,14 @@ System_String_o *AssetStorageCache__GetOldEnvPath(const MethodInfo *method)
     goto LABEL_17;
   v18 = StringLiteral_1123/*"/"*/;
   *(_QWORD *)(v3 + 40) = StringLiteral_1123/*"/"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
   if ( !*(&CacheFolderName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo, v19, v20);
   OldUnityPersistentDataPath = CacheFolderName__getFolderNameNotConverted(0, 0);
   if ( *(_DWORD *)(v3 + 24) <= 2u )
     goto LABEL_17;
   *(_QWORD *)(v3 + 48) = OldUnityPersistentDataPath;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)(v3 + 48),
     (int32_t)OldUnityPersistentDataPath,
     v21,
@@ -186,23 +192,23 @@ System_String_o *AssetStorageCache__GetOldEnvPath(const MethodInfo *method)
     goto LABEL_17;
   v33 = StringLiteral_1123/*"/"*/;
   *(_QWORD *)(v3 + 56) = StringLiteral_1123/*"/"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 56), v33, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 56), v33, v27, v28, v29, v30, v31, v32);
   OldUnityPersistentDataPath = ManagerConfig_TypeInfo;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v34, v35);
   if ( *(_DWORD *)(v3 + 24) <= 4u
     || (PlatformName = ManagerConfig_TypeInfo->static_fields->PlatformName,
         *(_QWORD *)(v3 + 64) = PlatformName,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 64), (int32_t)PlatformName, v35, v36, v37, v38, v39, v40),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 64), (int32_t)PlatformName, v35, v36, v37, v38, v39, v40),
         *(_DWORD *)(v3 + 24) <= 5u) )
   {
 LABEL_17:
-    sub_21FFED4(OldUnityPersistentDataPath);
+    sub_2213CE4(OldUnityPersistentDataPath);
   }
   v48 = StringLiteral_1123/*"/"*/;
   *(_QWORD *)(v3 + 72) = StringLiteral_1123/*"/"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 72), v48, v42, v43, v44, v45, v46, v47);
-  return System_String__Concat_75483816((System_String_array *)v3, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 72), v48, v42, v43, v44, v45, v46, v47);
+  return System_String__Concat_75697120((System_String_array *)v3, 0);
 }
 
 
@@ -215,12 +221,12 @@ System_String_o *AssetStorageCache__GetPath(const MethodInfo *method)
   System_String_o *DatFileSavePath; // x19
   System_String_o *FolderName; // x2
 
-  if ( (byte_593765C & 1) == 0 )
+  if ( (byte_596F7BD & 1) == 0 )
   {
-    sub_21FFC50(&AndroidUtil_TypeInfo);
-    sub_21FFC50(&CacheFolderName_TypeInfo);
-    sub_21FFC50(&StringLiteral_1123/*"/"*/);
-    byte_593765C = 1;
+    sub_2213A60(&AndroidUtil_TypeInfo);
+    sub_2213A60(&CacheFolderName_TypeInfo);
+    sub_2213A60(&StringLiteral_1123/*"/"*/);
+    byte_596F7BD = 1;
   }
   if ( !*(&AndroidUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo, v1, v2);
@@ -228,7 +234,7 @@ System_String_o *AssetStorageCache__GetPath(const MethodInfo *method)
   if ( !*(&CacheFolderName_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo, v3, v4);
   FolderName = CacheFolderName__getFolderName(0, 0);
-  return System_String__Concat_75483552(
+  return System_String__Concat_75696856(
            DatFileSavePath,
            (System_String_o *)StringLiteral_1123/*"/"*/,
            FolderName,

@@ -4,7 +4,7 @@ int32_t UserNameChangeResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return !ResponseData__checkError((ResponseData_o *)this, data->fields.resCode, method) || !data->fields.success;
 }
 

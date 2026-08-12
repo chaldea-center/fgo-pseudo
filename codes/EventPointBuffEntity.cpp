@@ -23,31 +23,31 @@ void EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const MethodInfo 
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_593880D & 1) == 0 )
+  if ( (byte_59708D7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593880D = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59708D7 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
   v3 = (struct System_String_o *)StringLiteral_1/*""*/;
   *(_QWORD *)&this->fields.id = 0;
   *(_QWORD *)&this->fields.groupId = 0;
   this->fields.name = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.name, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.name, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   v10 = (int)StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.detail, v10, v11, v12, v13, v14, v15, v16);
   v17 = int___TypeInfo;
   *(_QWORD *)&this->fields.imageId = 0;
   *(_QWORD *)&this->fields.skillIconId = 0;
   this->fields.value = 0;
-  v18 = (struct System_Int32_array *)sub_21FFD10(v17, 0);
+  v18 = (struct System_Int32_array *)sub_2213B20(v17, 0);
   this->fields.funcIds = v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.funcIds, (int32_t)v18, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.funcIds, (int32_t)v18, v19, v20, v21, v22, v23, v24);
 }
 
 

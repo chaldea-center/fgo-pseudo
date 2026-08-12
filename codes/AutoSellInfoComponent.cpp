@@ -9,10 +9,10 @@ void AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, const MethodInf
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_5934833 & 1) == 0 )
+  if ( (byte_596C962 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5934833 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596C962 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -31,7 +31,7 @@ void AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, const MethodInf
         (gameObject = (UnityEngine_GameObject_o *)this->fields.qpLabel) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
   UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -69,12 +69,12 @@ void AutoSellInfoComponent__SetData(
   System_String_o *v32; // x8
   int64_t v33; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_5934834 & 1) == 0 )
+  if ( (byte_596C963 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&StringLiteral_26553/*"{0}{1:#,0}"*/);
-    sub_21FFC50(&StringLiteral_16514/*"[FF0000]{0}{1:#,0}[-]"*/);
-    byte_5934834 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&StringLiteral_26605/*"{0}{1:#,0}"*/);
+    sub_2213A60(&StringLiteral_16546/*"[FF0000]{0}{1:#,0}[-]"*/);
+    byte_596C963 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -89,7 +89,7 @@ void AutoSellInfoComponent__SetData(
         (gameObject = this->fields.manaInfo) == 0) )
   {
 LABEL_35:
-    sub_21FFECC(gameObject, v12);
+    sub_2213CDC(gameObject, v12);
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   if ( befMana == -1 )
@@ -106,7 +106,7 @@ LABEL_35:
 LABEL_12:
     manaLabel = this->fields.manaLabel;
     LODWORD(v33) = mana;
-    v19 = qword_594C070;
+    v19 = qword_5984348;
   }
   else
   {
@@ -120,17 +120,17 @@ LABEL_12:
     if ( v20 <= 0 )
     {
       LODWORD(v33) = 0;
-      v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v33);
-      v22 = (System_String_o *)StringLiteral_16514/*"[FF0000]{0}{1:#,0}[-]"*/;
+      v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v33);
+      v22 = (System_String_o *)StringLiteral_16546/*"[FF0000]{0}{1:#,0}[-]"*/;
       goto LABEL_18;
     }
     LODWORD(v33) = v20;
-    v19 = qword_594C070;
+    v19 = qword_5984348;
   }
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(v19, &v33);
-  v22 = (System_String_o *)StringLiteral_26553/*"{0}{1:#,0}"*/;
+  v22 = (System_String_o *)StringLiteral_26605/*"{0}{1:#,0}"*/;
 LABEL_18:
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v22, v13, v21, 0);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v22, v13, v21, 0);
   if ( !manaLabel )
     goto LABEL_35;
   UILabel__set_text(manaLabel, (System_String_o *)gameObject, 0);
@@ -154,10 +154,10 @@ LABEL_20:
 LABEL_25:
     qpLabel = this->fields.qpLabel;
     v33 = qp;
-    v29 = qword_594C090;
+    v29 = qword_5984368;
 LABEL_30:
     v31 = (Il2CppObject *)j_il2cpp_value_box_0(v29, &v33);
-    v32 = (System_String_o *)StringLiteral_26553/*"{0}{1:#,0}"*/;
+    v32 = (System_String_o *)StringLiteral_26605/*"{0}{1:#,0}"*/;
     goto LABEL_31;
   }
   if ( !*(&v26->_2.cctor_finished + 1) )
@@ -170,14 +170,14 @@ LABEL_30:
   if ( v30 > 0 )
   {
     v33 = v30;
-    v29 = qword_594C090;
+    v29 = qword_5984368;
     goto LABEL_30;
   }
   v33 = 0;
-  v31 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v33);
-  v32 = (System_String_o *)StringLiteral_16514/*"[FF0000]{0}{1:#,0}[-]"*/;
+  v31 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v33);
+  v32 = (System_String_o *)StringLiteral_16546/*"[FF0000]{0}{1:#,0}[-]"*/;
 LABEL_31:
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75484576(v32, PlusOperatorString, v31, 0);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v32, PlusOperatorString, v31, 0);
   if ( !qpLabel )
     goto LABEL_35;
   UILabel__set_text(qpLabel, (System_String_o *)gameObject, 0);

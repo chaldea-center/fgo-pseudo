@@ -42,9 +42,9 @@ void BlankEarthShortcutButtonListViewItem___ctor(
   bool v44; // w6
   bool v45; // w7
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)ent,
     v12,
@@ -55,11 +55,11 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v17);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_21FFECC(v18, v19);
+    sub_2213CDC(v18, v19);
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   this->fields._Name_k__BackingField = name;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v20,
@@ -69,7 +69,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v24,
     v25);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)commonUiAtlas,
     v28,
@@ -79,7 +79,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v32,
     v33);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)iconAtlas,
     v34,
@@ -89,7 +89,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v38,
     v39);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)onClickAction,
     v40,
@@ -161,7 +161,7 @@ void BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   bool v7; // w7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -185,7 +185,7 @@ void BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   bool v7; // w7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -218,7 +218,7 @@ void BlankEarthShortcutButtonListViewItem__set_Name(
   bool v7; // w7
 
   this->fields._Name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -242,7 +242,7 @@ void BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   bool v7; // w7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -266,7 +266,7 @@ void BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenuEntity(
   bool v7; // w7
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

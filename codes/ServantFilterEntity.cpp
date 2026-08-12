@@ -1,13 +1,13 @@
 void ServantFilterEntity___ctor(ServantFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939024 & 1) == 0 )
+  if ( (byte_59711E3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_5939024 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_59711E3 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ bool ServantFilterEntity__IsEnable(ServantFilterEntity_o *this, int64_t nowTime,
   int64_t endedAt; // x8
 
   Time = nowTime;
-  if ( (byte_5939022 & 1) == 0 )
+  if ( (byte_59711E1 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5939022 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_59711E1 = 1;
   }
   if ( !Time )
   {
@@ -66,10 +66,10 @@ bool ServantFilterEntity__IsEnableServant(
   v3 = *(_QWORD *)&svtId.fields.fakeValue;
   v4 = *(_QWORD *)&svtId.fields.currentCryptoKey;
   v5 = this;
-  if ( (byte_5939023 & 1) == 0 )
+  if ( (byte_59711E2 & 1) == 0 )
   {
-    this = (ServantFilterEntity_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5939023 = 1;
+    this = (ServantFilterEntity_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_59711E2 = 1;
   }
   svtIds = v5->fields.svtIds;
   if ( svtIds && (max_length = svtIds->max_length, (int)max_length >= 1) )
@@ -81,9 +81,9 @@ bool ServantFilterEntity__IsEnableServant(
     {
       v11 = v5->fields.svtIds;
       if ( !v11 )
-        sub_21FFECC(this, *(_QWORD *)&svtId.fields.currentCryptoKey);
+        sub_2213CDC(this, *(_QWORD *)&svtId.fields.currentCryptoKey);
       if ( v9 >= LODWORD(v11->max_length) )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v12 = (char *)v11 + v8;
       v13 = *((_QWORD *)v12 + 4);
       v14 = *((_QWORD *)v12 + 5);
@@ -93,10 +93,10 @@ bool ServantFilterEntity__IsEnableServant(
           *(_QWORD *)&svtId.fields.currentCryptoKey);
       *(_QWORD *)&v18.fields.currentCryptoKey = v13;
       *(_QWORD *)&v18.fields.fakeValue = v14;
-      v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v18, 0);
+      v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v18, 0);
       *(_QWORD *)&v19.fields.currentCryptoKey = v4;
       *(_QWORD *)&v19.fields.fakeValue = v3;
-      v16 = v15 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v19, 0);
+      v16 = v15 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v19, 0);
       this = (ServantFilterEntity_o *)v16;
       if ( v16 )
         break;

@@ -1,14 +1,14 @@
 void RecommendAdviceMessageMaster___ctor(RecommendAdviceMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938EC5 & 1) == 0 )
+  if ( (byte_5971083 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int___ctor__);
-    byte_5938EC5 = 1;
+    sub_2213A60(&Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int___ctor__);
+    byte_5971083 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     522,
-    (const MethodInfo_3EDAF38 *)Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int___ctor__);
+    (const MethodInfo_3F0E6E0 *)Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int___ctor__);
 }
 
 
@@ -33,14 +33,14 @@ System_String_array *RecommendAdviceMessageMaster__GetConvertMessageToId(
   bool v18; // w7
   System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
 
-  if ( (byte_5938EC3 & 1) == 0 )
+  if ( (byte_5971081 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__string___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_string___);
-    sub_21FFC50(&System_Func_RecommendAdviceMessageEntity__string__TypeInfo);
-    sub_21FFC50(&Method_RecommendAdviceMessageMaster___c__GetConvertMessageToId_b__3_0__);
-    sub_21FFC50(&RecommendAdviceMessageMaster___c_TypeInfo);
-    byte_5938EC3 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__string___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_2213A60(&System_Func_RecommendAdviceMessageEntity__string__TypeInfo);
+    sub_2213A60(&Method_RecommendAdviceMessageMaster___c__GetConvertMessageToId_b__3_0__);
+    sub_2213A60(&RecommendAdviceMessageMaster___c_TypeInfo);
+    byte_5971081 = 1;
   }
   TargetEntity = RecommendAdviceMessageMaster__GetTargetEntity(this, ids, method);
   v7 = RecommendAdviceMessageMaster___c_TypeInfo;
@@ -60,7 +60,7 @@ System_String_array *RecommendAdviceMessageMaster__GetConvertMessageToId(
       static_fields = RecommendAdviceMessageMaster___c_TypeInfo->static_fields;
     }
     v11 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_RecommendAdviceMessageEntity__string__TypeInfo);
+    _9__3_0 = (System_Func_object__object__o *)sub_2213CCC(System_Func_RecommendAdviceMessageEntity__string__TypeInfo);
     System_Func_object__object____ctor(
       _9__3_0,
       v11,
@@ -68,15 +68,15 @@ System_String_array *RecommendAdviceMessageMaster__GetConvertMessageToId(
       0);
     v12 = RecommendAdviceMessageMaster___c_TypeInfo->static_fields;
     v12->__9__3_0 = (struct System_Func_RecommendAdviceMessageEntity__string__o *)_9__3_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v12->__9__3_0, (int32_t)_9__3_0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__3_0, (int32_t)_9__3_0, v13, v14, v15, v16, v17, v18);
   }
   v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                v8,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__string___);
+                                                               (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__string___);
   return (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                   v19,
-                                  (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                  (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_string___);
 }
 
 
@@ -86,23 +86,23 @@ RecommendAdviceMessageEntity_array *RecommendAdviceMessageMaster__GetEntities(
 {
   System_Collections_Generic_IEnumerable_TSource__o *v3; // x0
 
-  if ( (byte_5938EC2 & 1) == 0 )
+  if ( (byte_5971080 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_OfType_RecommendAdviceMessageEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
-    byte_5938EC2 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_OfType_RecommendAdviceMessageEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
+    byte_5971080 = 1;
   }
   v3 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.list,
-                                                              (const MethodInfo_3855054 *)Method_System_Linq_Enumerable_OfType_RecommendAdviceMessageEntity___);
+                                                              (const MethodInfo_388851C *)Method_System_Linq_Enumerable_OfType_RecommendAdviceMessageEntity___);
   return (RecommendAdviceMessageEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                  v3,
-                                                 (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
+                                                 (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
 }
 
 
 // attributes: thunk
-RecommendAdviceMessageEntity_array *RecommendAdviceMessageMaster__GetEntities_49544828(
+RecommendAdviceMessageEntity_array *RecommendAdviceMessageMaster__GetEntities_49608016(
         RecommendAdviceMessageMaster_o *this,
         System_Int32_array *ids,
         const MethodInfo *method)
@@ -119,15 +119,15 @@ RecommendAdviceMessageEntity_array *RecommendAdviceMessageMaster__GetTargetEntit
   System_Func_T__TResult__o *v5; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
 
-  if ( (byte_5938EC4 & 1) == 0 )
+  if ( (byte_5971082 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_int__RecommendAdviceMessageEntity___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
-    sub_21FFC50(&System_Func_int__RecommendAdviceMessageEntity__TypeInfo);
-    sub_21FFC50(&Method_RecommendAdviceMessageMaster__GetTargetEntity_b__4_0__);
-    byte_5938EC4 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_int__RecommendAdviceMessageEntity___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
+    sub_2213A60(&System_Func_int__RecommendAdviceMessageEntity__TypeInfo);
+    sub_2213A60(&Method_RecommendAdviceMessageMaster__GetTargetEntity_b__4_0__);
+    byte_5971082 = 1;
   }
-  v5 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_int__RecommendAdviceMessageEntity__TypeInfo);
+  v5 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_int__RecommendAdviceMessageEntity__TypeInfo);
   System_Func_int__object____ctor(
     v5,
     (Il2CppObject *)this,
@@ -136,10 +136,10 @@ RecommendAdviceMessageEntity_array *RecommendAdviceMessageMaster__GetTargetEntit
   v6 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)ids,
                                                               (System_Func_TSource__TResult__o *)v5,
-                                                              (const MethodInfo_385A9E0 *)Method_System_Linq_Enumerable_Select_int__RecommendAdviceMessageEntity___);
+                                                              (const MethodInfo_388DEA8 *)Method_System_Linq_Enumerable_Select_int__RecommendAdviceMessageEntity___);
   return (RecommendAdviceMessageEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                  v6,
-                                                 (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
+                                                 (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_RecommendAdviceMessageEntity___);
 }
 
 
@@ -152,22 +152,22 @@ RecommendAdviceMessageEntity_o *RecommendAdviceMessageMaster___GetTargetEntity_b
   const MethodInfo *v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5938EC6 & 1) == 0 )
+  if ( (byte_5971084 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int__TryGetEntity__);
-    sub_21FFC50(&RecommendAdviceMessageEntity_TypeInfo);
-    byte_5938EC6 = 1;
+    sub_2213A60(&Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int__TryGetEntity__);
+    sub_2213A60(&RecommendAdviceMessageEntity_TypeInfo);
+    byte_5971084 = 1;
   }
   entity = 0;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int__TryGetEntity__) )
+         (const MethodInfo_3F10B80 *)Method_DataMasterBase_RecommendAdviceMessageMaster__RecommendAdviceMessageEntity__int__TryGetEntity__) )
   {
     return (RecommendAdviceMessageEntity_o *)entity;
   }
-  v5 = (RecommendAdviceMessageEntity_o *)sub_21FFEBC(RecommendAdviceMessageEntity_TypeInfo);
+  v5 = (RecommendAdviceMessageEntity_o *)sub_2213CCC(RecommendAdviceMessageEntity_TypeInfo);
   RecommendAdviceMessageEntity___ctor(v5, v6);
   return v5;
 }
@@ -183,15 +183,15 @@ void RecommendAdviceMessageMaster___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5938EC7 & 1) == 0 )
+  if ( (byte_5971085 & 1) == 0 )
   {
-    sub_21FFC50(&RecommendAdviceMessageMaster___c_TypeInfo);
-    byte_5938EC7 = 1;
+    sub_2213A60(&RecommendAdviceMessageMaster___c_TypeInfo);
+    byte_5971085 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(RecommendAdviceMessageMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(RecommendAdviceMessageMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecommendAdviceMessageMaster___c_TypeInfo->static_fields->__9 = (struct RecommendAdviceMessageMaster___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)RecommendAdviceMessageMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -215,6 +215,6 @@ System_String_o *RecommendAdviceMessageMaster___c___GetConvertMessageToId_b__3_0
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return entity->fields.message;
 }

@@ -19,13 +19,13 @@ void PhotoTargetSelectDialog___ctor(PhotoTargetSelectDialog_o *this, const Metho
   __int64 v19; // x1
   __int64 v20; // x2
 
-  if ( (byte_5933B43 & 1) == 0 )
+  if ( (byte_596BC5C & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    sub_21FFC50(&UnityEngine_Vector2___TypeInfo);
-    byte_5933B43 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector2___TypeInfo);
+    byte_596BC5C = 1;
   }
-  v3 = sub_21FFD10(UnityEngine_Vector2___TypeInfo, 3);
+  v3 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 3);
   if ( !v3 )
     goto LABEL_16;
   v11 = *(_DWORD *)(v3 + 24);
@@ -34,15 +34,15 @@ void PhotoTargetSelectDialog___ctor(PhotoTargetSelectDialog_o *this, const Metho
     || (*(_QWORD *)(v3 + 40) = 0xC1C8000000000000LL, v11 <= 2) )
   {
 LABEL_15:
-    sub_21FFED4(v3);
+    sub_2213CE4(v3);
   }
   *(_QWORD *)(v3 + 48) = 0xC1C80000435E0000LL;
   this->fields.threeBtnPos = (struct UnityEngine_Vector2_array *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.threeBtnPos, v3, v5, v6, v7, v8, v9, v10);
-  v3 = sub_21FFD10(UnityEngine_Vector2___TypeInfo, 4);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.threeBtnPos, v3, v5, v6, v7, v8, v9, v10);
+  v3 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 4);
   if ( !v3 )
 LABEL_16:
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   v18 = *(_DWORD *)(v3 + 24);
   if ( !v18 )
     goto LABEL_15;
@@ -57,7 +57,7 @@ LABEL_16:
     goto LABEL_15;
   *(_QWORD *)(v3 + 56) = 0xC2780000430C0000LL;
   this->fields.fourBtnPos = (struct UnityEngine_Vector2_array *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fourBtnPos, v3, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fourBtnPos, v3, v12, v13, v14, v15, v16, v17);
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, v19, v20);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -93,24 +93,24 @@ void PhotoTargetSelectDialog__CloseDialog(
   System_Action_c *v20; // x0
   System_Action_o *v21; // x20
 
-  if ( (byte_5933B41 & 1) == 0 )
+  if ( (byte_596BC5A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_PhotoTargetSelectDialog___c__DisplayClass36_0__CloseDialog_b__0__);
-    sub_21FFC50(&PhotoTargetSelectDialog___c__DisplayClass36_0_TypeInfo);
-    byte_5933B41 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_PhotoTargetSelectDialog___c__DisplayClass36_0__CloseDialog_b__0__);
+    sub_2213A60(&PhotoTargetSelectDialog___c__DisplayClass36_0_TypeInfo);
+    byte_596BC5A = 1;
   }
-  v5 = sub_21FFEBC(PhotoTargetSelectDialog___c__DisplayClass36_0_TypeInfo);
+  v5 = sub_2213CCC(PhotoTargetSelectDialog___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
   v20 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v21 = (System_Action_o *)sub_21FFEBC(v20);
+  v21 = (System_Action_o *)sub_2213CCC(v20);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v5,
@@ -149,54 +149,54 @@ bool PhotoTargetSelectDialog__IsEnableSvtBtn(
   __int64 v20; // x1
   __int64 v21; // x2
   System_Object_array *OrganizationList; // x20
-  bool _47357952; // w0
+  bool _47388504; // w0
   System_Func_UserServantEntity__bool__c *v24; // x8
   System_Func_object__bool__o *v25; // x21
 
-  if ( (byte_5933B3E & 1) == 0 )
+  if ( (byte_596BC57 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_Any_UserServantEntity____91485376);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&System_Func_UserServantEntity__bool__TypeInfo);
-    sub_21FFC50(&TutorialFlag_TypeInfo);
-    sub_21FFC50(&Method_PhotoTargetSelectDialog___c__DisplayClass29_0__IsEnableSvtBtn_b__0__);
-    sub_21FFC50(&PhotoTargetSelectDialog___c__DisplayClass29_0_TypeInfo);
-    byte_5933B3E = 1;
+    sub_2213A60(&Method_BasicHelper_Any_UserServantEntity____91711592);
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&System_Func_UserServantEntity__bool__TypeInfo);
+    sub_2213A60(&TutorialFlag_TypeInfo);
+    sub_2213A60(&Method_PhotoTargetSelectDialog___c__DisplayClass29_0__IsEnableSvtBtn_b__0__);
+    sub_2213A60(&PhotoTargetSelectDialog___c__DisplayClass29_0_TypeInfo);
+    byte_596BC57 = 1;
   }
-  v8 = sub_21FFEBC(PhotoTargetSelectDialog___c__DisplayClass29_0_TypeInfo);
+  v8 = sub_2213CCC(PhotoTargetSelectDialog___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   if ( !v8 )
     goto LABEL_10;
   *(_QWORD *)(v8 + 24) = anotherStaff;
   *(_DWORD *)(v8 + 20) = anotherType;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v8 + 24), (int32_t)anotherStaff, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 24), (int32_t)anotherStaff, v11, v12, v13, v14, v15, v16);
   v19 = DataManager_TypeInfo;
   *(_DWORD *)(v8 + 32) = anotherSvtId;
   if ( !*(&v19->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v19, v17, v18);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
 LABEL_10:
-    sub_21FFECC(Master_object, v10);
+    sub_2213CDC(Master_object, v10);
   OrganizationList = (System_Object_array *)UserServantMaster__getOrganizationList(
                                               (UserServantMaster_o *)Master_object,
                                               0);
   if ( !*(&TutorialFlag_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v20, v21);
-  _47357952 = TutorialFlag__Get_47357952(126, 0);
+  _47388504 = TutorialFlag__Get_47388504(126, 0);
   v24 = System_Func_UserServantEntity__bool__TypeInfo;
-  *(_BYTE *)(v8 + 16) = _47357952;
-  v25 = (System_Func_object__bool__o *)sub_21FFEBC(v24);
+  *(_BYTE *)(v8 + 16) = _47388504;
+  v25 = (System_Func_object__bool__o *)sub_2213CCC(v24);
   System_Func_object__bool____ctor(
     v25,
     (Il2CppObject *)v8,
     Method_PhotoTargetSelectDialog___c__DisplayClass29_0__IsEnableSvtBtn_b__0__,
     0);
-  return BasicHelper__Any_object__58575580(
+  return BasicHelper__Any_object__58785420(
            OrganizationList,
            (System_Func_T__bool__o *)v25,
-           (const MethodInfo_37DCADC *)Method_BasicHelper_Any_UserServantEntity____91485376);
+           (const MethodInfo_380FE8C *)Method_BasicHelper_Any_UserServantEntity____91711592);
 }
 
 
@@ -227,33 +227,33 @@ void PhotoTargetSelectDialog__OnClickDecideButton(
   System_Action_o *v24; // x21
   const MethodInfo *v25; // x2
 
-  if ( (byte_5933B3F & 1) == 0 )
+  if ( (byte_596BC58 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_PhotoTargetSelectDialog_OnClickDecideButton__);
-    sub_21FFC50(&Method_PhotoTargetSelectDialog___c__DisplayClass34_0__OnClickDecideButton_b__0__);
-    sub_21FFC50(&PhotoTargetSelectDialog___c__DisplayClass34_0_TypeInfo);
-    byte_5933B3F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_PhotoTargetSelectDialog_OnClickDecideButton__);
+    sub_2213A60(&Method_PhotoTargetSelectDialog___c__DisplayClass34_0__OnClickDecideButton_b__0__);
+    sub_2213A60(&PhotoTargetSelectDialog___c__DisplayClass34_0_TypeInfo);
+    byte_596BC58 = 1;
   }
-  v5 = sub_21FFEBC(PhotoTargetSelectDialog___c__DisplayClass34_0_TypeInfo);
+  v5 = sub_2213CCC(PhotoTargetSelectDialog___c__DisplayClass34_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   state = this->fields.state;
   *(_DWORD *)(v5 + 24) = type;
   if ( state == 2 )
   {
     v9 = Method_PhotoTargetSelectDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_21FFC68(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
-    v10 = (System_Reflection_MethodBase_o *)sub_21FFC34(v9, v9[4]);
+      v9 = (_QWORD *)sub_2213A78(Method_PhotoTargetSelectDialog_OnClickDecideButton__);
+    v10 = (System_Reflection_MethodBase_o *)sub_2213A44(v9, v9[4]);
     OverwriteAssetSoundName__PlaySystemSe(v10, 8 * (*(_DWORD *)(v5 + 24) == 3), 0, 0);
     decideCallBack = this->fields.decideCallBack;
     *(_QWORD *)(v5 + 16) = decideCallBack;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)decideCallBack, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)decideCallBack, v12, v13, v14, v15, v16, v17);
     this->fields.decideCallBack = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.decideCallBack, 0, v18, v19, v20, v21, v22, v23);
-    v24 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.decideCallBack, 0, v18, v19, v20, v21, v22, v23);
+    v24 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v24,
       (Il2CppObject *)v5,
@@ -309,21 +309,21 @@ void PhotoTargetSelectDialog__OnclickCancelButton(PhotoTargetSelectDialog_o *thi
   bool v11; // w7
   const MethodInfo *v12; // x2
 
-  if ( (byte_5933B40 & 1) == 0 )
+  if ( (byte_596BC59 & 1) == 0 )
   {
-    sub_21FFC50(&Method_PhotoTargetSelectDialog_OnclickCancelButton__);
-    byte_5933B40 = 1;
+    sub_2213A60(&Method_PhotoTargetSelectDialog_OnclickCancelButton__);
+    byte_596BC59 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PhotoTargetSelectDialog_OnclickCancelButton__;
     if ( (*((_BYTE *)Method_PhotoTargetSelectDialog_OnclickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_PhotoTargetSelectDialog_OnclickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     cancelCallBack = this->fields.cancelCallBack;
     this->fields.cancelCallBack = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.cancelCallBack, 0, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.cancelCallBack, 0, v6, v7, v8, v9, v10, v11);
     PhotoTargetSelectDialog__CloseDialog(this, cancelCallBack, v12);
   }
 }
@@ -370,27 +370,27 @@ void PhotoTargetSelectDialog__Open(
   bool v44; // w7
   System_Action_o *v45; // x20
 
-  if ( (byte_5933B3C & 1) == 0 )
+  if ( (byte_596BC55 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_PhotoTargetSelectDialog___c__DisplayClass27_0__Open_b__0__);
-    sub_21FFC50(&PhotoTargetSelectDialog___c__DisplayClass27_0_TypeInfo);
-    byte_5933B3C = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_PhotoTargetSelectDialog___c__DisplayClass27_0__Open_b__0__);
+    sub_2213A60(&PhotoTargetSelectDialog___c__DisplayClass27_0_TypeInfo);
+    byte_596BC55 = 1;
   }
-  v17 = sub_21FFEBC(PhotoTargetSelectDialog___c__DisplayClass27_0_TypeInfo);
+  v17 = sub_2213CCC(PhotoTargetSelectDialog___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
-    sub_21FFECC(v18, v19);
+    sub_2213CDC(v18, v19);
   *(_QWORD *)(v17 + 16) = setMaskMethod;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)setMaskMethod, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)setMaskMethod, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v17 + 24) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)this, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)this, v26, v27, v28, v29, v30, v31);
   if ( !this->fields.state )
   {
     PhotoTargetSelectDialog__SetBtn(this, selectedTargetType, index, anotherStaff, anotherSvtId, v32);
     this->fields.decideCallBack = decide;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.decideCallBack,
       (int32_t)decide,
       v33,
@@ -400,7 +400,7 @@ void PhotoTargetSelectDialog__Open(
       v37,
       v38);
     this->fields.cancelCallBack = cancel;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.cancelCallBack,
       (int32_t)cancel,
       v39,
@@ -412,9 +412,9 @@ void PhotoTargetSelectDialog__Open(
     ActionExtensions__Call_bool_(
       *(System_Action_T__o **)(v17 + 16),
       1,
-      (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
     this->fields.state = 1;
-    v45 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v45 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v45, (Il2CppObject *)v17, Method_PhotoTargetSelectDialog___c__DisplayClass27_0__Open_b__0__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v45, 0, 0, 0);
   }
@@ -477,39 +477,39 @@ void PhotoTargetSelectDialog__SetBtn(
   struct UnityEngine_Vector2_array *v54; // x8
 
   v9 = type;
-  if ( (byte_5933B3D & 1) == 0 )
+  if ( (byte_596BC56 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_StaffPhotoMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&MyRoomControl_TypeInfo);
-    sub_21FFC50(&StringLiteral_10780/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_10791/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON_MASK_1"*/);
-    sub_21FFC50(&StringLiteral_10786/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/);
-    sub_21FFC50(&StringLiteral_10793/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT_ENABLE_DRAG"*/);
-    sub_21FFC50(&StringLiteral_10784/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT"*/);
-    sub_21FFC50(&StringLiteral_10783/*"PHOTO_TARGET_SELECT_DIALOG_MASTER_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_10794/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT"*/);
-    sub_21FFC50(&StringLiteral_10790/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_10795/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT_ENABLE_DRAG"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_10782/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/);
-    sub_21FFC50(&StringLiteral_10781/*"PHOTO_TARGET_CHANGE_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_10789/*"PHOTO_TARGET_SELECT_DIALOG_SERVANT_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_10788/*"PHOTO_TARGET_SELECT_DIALOG_NONE_BUTTON"*/);
-    sub_21FFC50(&StringLiteral_10785/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT_ENABLE_DRAG"*/);
-    sub_21FFC50(&StringLiteral_10792/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_10787/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT_ENABLE_DRAG"*/);
-    byte_5933B3D = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_StaffPhotoMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&MyRoomControl_TypeInfo);
+    sub_2213A60(&StringLiteral_10793/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_10804/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON_MASK_1"*/);
+    sub_2213A60(&StringLiteral_10799/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/);
+    sub_2213A60(&StringLiteral_10806/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT_ENABLE_DRAG"*/);
+    sub_2213A60(&StringLiteral_10797/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT"*/);
+    sub_2213A60(&StringLiteral_10796/*"PHOTO_TARGET_SELECT_DIALOG_MASTER_BUTTON"*/);
+    sub_2213A60(&StringLiteral_10807/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT"*/);
+    sub_2213A60(&StringLiteral_10803/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON"*/);
+    sub_2213A60(&StringLiteral_10808/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT_ENABLE_DRAG"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_10795/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/);
+    sub_2213A60(&StringLiteral_10794/*"PHOTO_TARGET_CHANGE_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_10802/*"PHOTO_TARGET_SELECT_DIALOG_SERVANT_BUTTON"*/);
+    sub_2213A60(&StringLiteral_10801/*"PHOTO_TARGET_SELECT_DIALOG_NONE_BUTTON"*/);
+    sub_2213A60(&StringLiteral_10798/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT_ENABLE_DRAG"*/);
+    sub_2213A60(&StringLiteral_10805/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_10800/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT_ENABLE_DRAG"*/);
+    byte_596BC56 = 1;
   }
   v11 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !*(&MyRoomControl_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo, *(_QWORD *)&type, *(_QWORD *)&index);
-  if ( !byte_5933779 )
+  if ( !byte_596B88E )
   {
-    sub_21FFC50(&MyRoomControl_TypeInfo);
-    byte_5933779 = 1;
+    sub_2213A60(&MyRoomControl_TypeInfo);
+    byte_596B88E = 1;
   }
   v12 = MyRoomControl_TypeInfo;
   if ( !*(&MyRoomControl_TypeInfo->_2.cctor_finished + 1) )
@@ -521,26 +521,26 @@ void PhotoTargetSelectDialog__SetBtn(
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&type, *(_QWORD *)&index);
-    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10781/*"PHOTO_TARGET_CHANGE_DIALOG_TITLE"*/, 0);
+    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10794/*"PHOTO_TARGET_CHANGE_DIALOG_TITLE"*/, 0);
     if ( !this->fields.titleLabel )
       goto LABEL_96;
     UILabel__set_text(this->fields.titleLabel, titleLabel, 0);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-    v24 = (System_String_o *)StringLiteral_10780/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/;
+    v24 = (System_String_o *)StringLiteral_10793/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/;
     goto LABEL_35;
   }
   IsEnableDragPhotoCampaign_k__BackingField = v12->static_fields->_IsEnableDragPhotoCampaign_k__BackingField;
   if ( index == 2 )
   {
-    v14 = (System_String_o **)&StringLiteral_10794/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT"*/;
-    v15 = (System_String_o **)&StringLiteral_10795/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT_ENABLE_DRAG"*/;
+    v14 = (System_String_o **)&StringLiteral_10807/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT"*/;
+    v15 = (System_String_o **)&StringLiteral_10808/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_RIGHT_ENABLE_DRAG"*/;
     goto LABEL_18;
   }
   if ( index == 1 )
   {
-    v14 = (System_String_o **)&StringLiteral_10792/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT"*/;
-    v15 = (System_String_o **)&StringLiteral_10793/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT_ENABLE_DRAG"*/;
+    v14 = (System_String_o **)&StringLiteral_10805/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT"*/;
+    v15 = (System_String_o **)&StringLiteral_10806/*"PHOTO_TARGET_SELECT_DIALOG_TITLE_LEFT_ENABLE_DRAG"*/;
 LABEL_18:
     if ( v12->static_fields->_IsEnableDragPhotoCampaign_k__BackingField )
       v14 = v15;
@@ -555,8 +555,8 @@ LABEL_18:
   UILabel__set_text((UILabel_o *)titleLabel, v11, 0);
   if ( index == 2 )
   {
-    v22 = (System_String_o **)&StringLiteral_10786/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/;
-    v23 = (System_String_o **)&StringLiteral_10787/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT_ENABLE_DRAG"*/;
+    v22 = (System_String_o **)&StringLiteral_10799/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/;
+    v23 = (System_String_o **)&StringLiteral_10800/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT_ENABLE_DRAG"*/;
   }
   else
   {
@@ -565,8 +565,8 @@ LABEL_18:
       *(_QWORD *)&type = StringLiteral_1/*""*/;
       goto LABEL_36;
     }
-    v22 = (System_String_o **)&StringLiteral_10784/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT"*/;
-    v23 = (System_String_o **)&StringLiteral_10785/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT_ENABLE_DRAG"*/;
+    v22 = (System_String_o **)&StringLiteral_10797/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT"*/;
+    v23 = (System_String_o **)&StringLiteral_10798/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_LEFT_ENABLE_DRAG"*/;
   }
   if ( IsEnableDragPhotoCampaign_k__BackingField )
     v22 = v23;
@@ -583,33 +583,33 @@ LABEL_36:
   servantButtonLabel = this->fields.servantButtonLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
-  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10789/*"PHOTO_TARGET_SELECT_DIALOG_SERVANT_BUTTON"*/, 0);
+  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10802/*"PHOTO_TARGET_SELECT_DIALOG_SERVANT_BUTTON"*/, 0);
   if ( !servantButtonLabel )
     goto LABEL_96;
   UILabel__set_text(servantButtonLabel, titleLabel, 0);
   masterButtonLabel = this->fields.masterButtonLabel;
-  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10783/*"PHOTO_TARGET_SELECT_DIALOG_MASTER_BUTTON"*/, 0);
+  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10796/*"PHOTO_TARGET_SELECT_DIALOG_MASTER_BUTTON"*/, 0);
   if ( !masterButtonLabel )
     goto LABEL_96;
   UILabel__set_text(masterButtonLabel, titleLabel, 0);
   staffButtonLabel = this->fields.staffButtonLabel;
-  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10790/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON"*/, 0);
+  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10803/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON"*/, 0);
   if ( !staffButtonLabel )
     goto LABEL_96;
   UILabel__set_text(staffButtonLabel, titleLabel, 0);
   noneButtonLabel = this->fields.noneButtonLabel;
-  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10788/*"PHOTO_TARGET_SELECT_DIALOG_NONE_BUTTON"*/, 0);
+  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10801/*"PHOTO_TARGET_SELECT_DIALOG_NONE_BUTTON"*/, 0);
   if ( !noneButtonLabel )
     goto LABEL_96;
   UILabel__set_text(noneButtonLabel, titleLabel, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelButtonLabel )
     goto LABEL_96;
   UILabel__set_text(cancelButtonLabel, titleLabel, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v32, v33);
-  titleLabel = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_StaffPhotoMaster___);
+  titleLabel = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_StaffPhotoMaster___);
   if ( !titleLabel )
     goto LABEL_96;
   titleLabel = (System_String_o *)StaffPhotoMaster__GetEnableEntityNum((StaffPhotoMaster_o *)titleLabel, -1, 0);
@@ -626,12 +626,12 @@ LABEL_36:
     }
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
-    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10791/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON_MASK_1"*/, 0);
+    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10804/*"PHOTO_TARGET_SELECT_DIALOG_STAFF_BUTTON_MASK_1"*/, 0);
     *(_QWORD *)&type = titleLabel;
     if ( staffButtonMaskLabel )
       goto LABEL_61;
 LABEL_96:
-    sub_21FFECC(titleLabel, *(_QWORD *)&type);
+    sub_2213CDC(titleLabel, *(_QWORD *)&type);
   }
   staffButtonMaskLabel = this->fields.staffButtonMaskLabel;
   this->fields.isEnableStaffBtn = (int)titleLabel > 1;
@@ -639,7 +639,7 @@ LABEL_96:
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
-    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10782/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/, 0);
+    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10795/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/, 0);
     *(_QWORD *)&type = titleLabel;
   }
   else
@@ -676,7 +676,7 @@ LABEL_61:
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v41, v42);
-    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10782/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/, 0);
+    titleLabel = LocalizationManager__Get((System_String_o *)StringLiteral_10795/*"PHOTO_TARGET_SELECT_DIALOG_BUTTON_MASK"*/, 0);
     *(_QWORD *)&type = titleLabel;
   }
   if ( !servantButtonMaskLabel )
@@ -694,25 +694,25 @@ LABEL_61:
       goto LABEL_96;
     if ( LODWORD(threeBtnPos->max_length) )
     {
-      GameObjectExtensions__SetLocalPosition_42876016(this->fields.servantButtonObj, threeBtnPos->m_Items[0], 0);
+      GameObjectExtensions__SetLocalPosition_42891412(this->fields.servantButtonObj, threeBtnPos->m_Items[0], 0);
       v46 = this->fields.threeBtnPos;
       if ( !v46 )
         goto LABEL_96;
       if ( (v46->max_length & 0xFFFFFFFE) != 0 )
       {
-        GameObjectExtensions__SetLocalPosition_42876016(this->fields.staffButtonObj, v46->m_Items[1], 0);
+        GameObjectExtensions__SetLocalPosition_42891412(this->fields.staffButtonObj, v46->m_Items[1], 0);
         v47 = this->fields.threeBtnPos;
         if ( !v47 )
           goto LABEL_96;
         if ( LODWORD(v47->max_length) > 2 )
         {
-          GameObjectExtensions__SetLocalPosition_42876016(this->fields.masterButtonObj, v47->m_Items[2], 0);
+          GameObjectExtensions__SetLocalPosition_42891412(this->fields.masterButtonObj, v47->m_Items[2], 0);
           v48 = this->fields.threeBtnPos;
           if ( !v48 )
             goto LABEL_96;
           if ( LODWORD(v48->max_length) > 2 )
           {
-            GameObjectExtensions__SetLocalPosition_42876016(this->fields.noneButtonObj, v48->m_Items[2], 0);
+            GameObjectExtensions__SetLocalPosition_42891412(this->fields.noneButtonObj, v48->m_Items[2], 0);
             titleLabel = (System_String_o *)this->fields.masterButtonObj;
             if ( !titleLabel )
               goto LABEL_96;
@@ -727,7 +727,7 @@ LABEL_61:
       }
     }
 LABEL_97:
-    sub_21FFED4(titleLabel);
+    sub_2213CE4(titleLabel);
   }
   titleLabel = (System_String_o *)this->fields.messageLabel;
   if ( !titleLabel )
@@ -739,25 +739,25 @@ LABEL_97:
     goto LABEL_96;
   if ( !LODWORD(fourBtnPos->max_length) )
     goto LABEL_97;
-  GameObjectExtensions__SetLocalPosition_42876016(this->fields.servantButtonObj, fourBtnPos->m_Items[0], 0);
+  GameObjectExtensions__SetLocalPosition_42891412(this->fields.servantButtonObj, fourBtnPos->m_Items[0], 0);
   v52 = this->fields.fourBtnPos;
   if ( !v52 )
     goto LABEL_96;
   if ( (v52->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_97;
-  GameObjectExtensions__SetLocalPosition_42876016(this->fields.staffButtonObj, v52->m_Items[1], 0);
+  GameObjectExtensions__SetLocalPosition_42891412(this->fields.staffButtonObj, v52->m_Items[1], 0);
   v53 = this->fields.fourBtnPos;
   if ( !v53 )
     goto LABEL_96;
   if ( LODWORD(v53->max_length) <= 2 )
     goto LABEL_97;
-  GameObjectExtensions__SetLocalPosition_42876016(this->fields.masterButtonObj, v53->m_Items[2], 0);
+  GameObjectExtensions__SetLocalPosition_42891412(this->fields.masterButtonObj, v53->m_Items[2], 0);
   v54 = this->fields.fourBtnPos;
   if ( !v54 )
     goto LABEL_96;
   if ( (v54->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_97;
-  GameObjectExtensions__SetLocalPosition_42876016(this->fields.noneButtonObj, v54->m_Items[3], 0);
+  GameObjectExtensions__SetLocalPosition_42891412(this->fields.noneButtonObj, v54->m_Items[3], 0);
   titleLabel = (System_String_o *)this->fields.masterButtonObj;
   if ( !titleLabel )
     goto LABEL_96;
@@ -780,10 +780,10 @@ UnityEngine_GameObject_o *PhotoTargetSelectDialog__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5933B42 & 1) == 0 )
+  if ( (byte_596BC5B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B42 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC5B = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -792,7 +792,7 @@ UnityEngine_GameObject_o *PhotoTargetSelectDialog__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
@@ -813,18 +813,18 @@ void PhotoTargetSelectDialog___c__DisplayClass27_0___Open_b__0(
   __int64 v4; // x1
   struct PhotoTargetSelectDialog_o *_4__this; // x8
 
-  if ( (byte_5933B44 & 1) == 0 )
+  if ( (byte_596BC5D & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    byte_5933B44 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    byte_596BC5D = 1;
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.setMaskMethod,
     0,
-    (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(v3, v4);
+    sub_2213CDC(v3, v4);
   _4__this->fields.state = 2;
 }
 
@@ -854,10 +854,10 @@ bool PhotoTargetSelectDialog___c__DisplayClass29_0___IsEnableSvtBtn_b__0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
   v4 = this;
-  if ( (byte_5933B45 & 1) == 0 )
+  if ( (byte_596BC5E & 1) == 0 )
   {
-    this = (PhotoTargetSelectDialog___c__DisplayClass29_0_o *)sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5933B45 = 1;
+    this = (PhotoTargetSelectDialog___c__DisplayClass29_0_o *)sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596BC5E = 1;
   }
   if ( v4->fields.isSvtLeave )
   {
@@ -875,14 +875,14 @@ bool PhotoTargetSelectDialog___c__DisplayClass29_0___IsEnableSvtBtn_b__0(
       return 1;
     if ( !svt )
 LABEL_20:
-      sub_21FFECC(this, svt);
+      sub_2213CDC(this, svt);
     v7 = *(_QWORD *)&svt->fields.svtId.fields.currentCryptoKey;
     v8 = *(_QWORD *)&svt->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, svt, method);
     *(_QWORD *)&v13.fields.currentCryptoKey = v7;
     *(_QWORD *)&v13.fields.fakeValue = v8;
-    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v13, 0);
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v13, 0);
     this = (PhotoTargetSelectDialog___c__DisplayClass29_0_o *)StaffPhotoEntity__IsRestrictionSvt(anotherStaff, v9, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
       return 0;
@@ -898,7 +898,7 @@ LABEL_20:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, svt, method);
   *(_QWORD *)&v14.fields.currentCryptoKey = v11;
   *(_QWORD *)&v14.fields.fakeValue = v10;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v14, 0) != v4->fields.anotherSvtId;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v14, 0) != v4->fields.anotherSvtId;
 }
 
 
@@ -914,15 +914,15 @@ void PhotoTargetSelectDialog___c__DisplayClass34_0___OnClickDecideButton_b__0(
         PhotoTargetSelectDialog___c__DisplayClass34_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_5933B46 & 1) == 0 )
+  if ( (byte_596BC5F & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_PhotoUtility_TargetType___);
-    byte_5933B46 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_PhotoUtility_TargetType___);
+    byte_596BC5F = 1;
   }
   ActionExtensions__Call_Int32Enum_(
     (System_Action_T__o *)this->fields.callback,
     this->fields.type,
-    (const MethodInfo_36CDEBC *)Method_ActionExtensions_Call_PhotoUtility_TargetType___);
+    (const MethodInfo_36FFE2C *)Method_ActionExtensions_Call_PhotoUtility_TargetType___);
 }
 
 
@@ -943,7 +943,7 @@ void PhotoTargetSelectDialog___c__DisplayClass36_0___CloseDialog_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   _4__this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)_4__this, 0);
   callback = this->fields.callback;

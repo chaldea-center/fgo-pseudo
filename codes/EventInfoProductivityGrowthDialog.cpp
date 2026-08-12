@@ -1,9 +1,9 @@
 void EventInfoProductivityGrowthDialog___ctor(EventInfoProductivityGrowthDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A410 & 1) == 0 )
+  if ( (byte_59725E7 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593A410 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_59725E7 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -27,12 +27,12 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
   int max_length; // w8
   __int64 v15; // x21
 
-  if ( (byte_593A40D & 1) == 0 )
+  if ( (byte_59725E4 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A40D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59725E4 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -42,7 +42,7 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
   closeLabel = this->fields.closeLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_14;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
@@ -56,7 +56,7 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
     while ( 1 )
     {
       if ( (unsigned int)v15 >= max_length )
-        sub_21FFED4(titleLabel);
+        sub_2213CE4(titleLabel);
       titleLabel = (UILabel_o *)dispObjList->m_Items[v15];
       if ( !titleLabel )
         break;
@@ -66,11 +66,11 @@ void EventInfoProductivityGrowthDialog__Init(EventInfoProductivityGrowthDialog_o
         goto LABEL_13;
     }
 LABEL_14:
-    sub_21FFECC(titleLabel, v3);
+    sub_2213CDC(titleLabel, v3);
   }
 LABEL_13:
   this->fields.closeAction = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.closeAction, 0, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -82,19 +82,19 @@ void EventInfoProductivityGrowthDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_593A40F & 1) == 0 )
+  if ( (byte_59725E6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-    sub_21FFC50(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
-    byte_593A40F = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+    sub_2213A60(&Method_EventInfoProductivityGrowthDialog__OnClickCloseButton_b__17_0__);
+    byte_59725E6 = 1;
   }
   v3 = Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_EventInfoProductivityGrowthDialog_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-  v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
     v5,
     (Il2CppObject *)this,
@@ -185,26 +185,26 @@ void EventInfoProductivityGrowthDialog__Open(
   int32_t productAdd; // [xsp+28h] [xbp-68h] BYREF
   int32_t productNum; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_593A40E & 1) == 0 )
+  if ( (byte_59725E5 & 1) == 0 )
   {
-    sub_21FFC50(&GiftEntity_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5768/*"EVENT_CONQUEST_UP_MESSAGE"*/);
-    sub_21FFC50(&StringLiteral_5767/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5766/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5769/*"EVENT_CONQUEST_UP_TITLE"*/);
-    byte_593A40E = 1;
+    sub_2213A60(&GiftEntity_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Text_StringBuilder_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5780/*"EVENT_CONQUEST_UP_MESSAGE"*/);
+    sub_2213A60(&StringLiteral_5779/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5778/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5781/*"EVENT_CONQUEST_UP_TITLE"*/);
+    byte_59725E5 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -220,14 +220,14 @@ void EventInfoProductivityGrowthDialog__Open(
   }
   action = closeAction;
   v77 = this;
-  v7 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-  v8 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+  v8 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   max_length = eventConquestInfos->max_length;
   if ( max_length >= 1 )
   {
@@ -235,7 +235,7 @@ void EventInfoProductivityGrowthDialog__Open(
     while ( (unsigned int)v18 < max_length )
     {
       v19 = eventConquestInfos->m_Items[v18];
-      v20 = sub_21FFEBC(GiftEntity_TypeInfo);
+      v20 = sub_2213CCC(GiftEntity_TypeInfo);
       GiftEntity___ctor((GiftEntity_o *)v20, 0);
       if ( !v19 )
         goto LABEL_64;
@@ -256,22 +256,22 @@ void EventInfoProductivityGrowthDialog__Open(
         System_Collections_Generic_List_object___AddWithResize(
           v7,
           (Il2CppObject *)v20,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
         v30 = &items->obj.klass + size;
         v7->fields._size = size + 1;
         v30[4] = (Il2CppClass *)v20;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v30 + 4), v20, v21, v22, v23, v24, v25, v26);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 4), v20, v21, v22, v23, v24, v25, v26);
       }
-      v31 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+      v31 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
       System_Text_StringBuilder___ctor(v31, 0);
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32);
-      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5767/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5779/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0);
       productNum = v19->fields.productNum;
-      Item = (void *)j_il2cpp_value_box_0(qword_594C070, &productNum);
+      Item = (void *)j_il2cpp_value_box_0(qword_5984348, &productNum);
       if ( !v31 )
         goto LABEL_64;
       System_Text_StringBuilder__AppendFormat(v31, v33, (Il2CppObject *)Item, 0);
@@ -279,9 +279,9 @@ void EventInfoProductivityGrowthDialog__Open(
       {
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34);
-        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5766/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5778/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0);
         productAdd = v19->fields.productAdd;
-        v36 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &productAdd);
+        v36 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &productAdd);
         System_Text_StringBuilder__AppendFormat(v31, v35, v36, 0);
       }
       Item = (void *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v31->klass->vtable._3_ToString.methodPtr)(
@@ -301,25 +301,25 @@ void EventInfoProductivityGrowthDialog__Open(
         System_Collections_Generic_List_object___AddWithResize(
           v8,
           (Il2CppObject *)Item,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
       }
       else
       {
         v47 = &v43->obj.klass + v45;
         v8->fields._size = v45 + 1;
         v47[4] = v46;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v47 + 4), (int32_t)v46, v37, v38, v39, v40, v41, v42);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v47 + 4), (int32_t)v46, v37, v38, v39, v40, v41, v42);
       }
       max_length = eventConquestInfos->max_length;
       if ( (int)++v18 >= max_length )
         goto LABEL_32;
     }
 LABEL_65:
-    sub_21FFED4(Item);
+    sub_2213CE4(Item);
   }
   if ( !v7 )
 LABEL_64:
-    sub_21FFECC(Item, v10);
+    sub_2213CDC(Item, v10);
 LABEL_32:
   v48 = v7->fields._size;
   if ( v48 <= 0 )
@@ -373,11 +373,11 @@ LABEL_42:
   v49->fields.messageLabel = v57;
   p_messageLabel = &v49->fields.messageLabel;
   v75 = v58;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->fields.messageLabel, (int32_t)v57, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v49->fields.messageLabel, (int32_t)v57, v11, v12, v13, v14, v15, v16);
   v59 = 0;
   do
   {
-    v60 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+    v60 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v60, 0);
     if ( !v55 )
       goto LABEL_64;
@@ -387,7 +387,7 @@ LABEL_42:
     Item = System_Collections_Generic_List_object___get_Item(
              v7,
              v59,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
     if ( !v56 )
       goto LABEL_64;
     if ( (unsigned int)v59 >= LODWORD(v56->max_length) )
@@ -398,13 +398,13 @@ LABEL_42:
     v63 = v56->m_Items[v59];
     if ( v62 <= 1 )
       v62 = -1;
-    ItemIconComponent__SetGift_47936840(v61, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v62, 0, 0);
+    ItemIconComponent__SetGift_47884936(v61, *((_DWORD *)Item + 5), *((_DWORD *)Item + 6), v62, 0, 0);
     if ( !v8 )
       goto LABEL_64;
     Item = System_Collections_Generic_List_object___get_Item(
              v8,
              v59,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !v63 )
       goto LABEL_64;
     UILabel__set_text(v63, (System_String_o *)Item, 0);
@@ -420,17 +420,17 @@ LABEL_42:
   titleLabel = v77->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v65);
-  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5769/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
+  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5781/*"EVENT_CONQUEST_UP_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_64;
   UILabel__set_text(titleLabel, (System_String_o *)Item, 0);
   v67 = *p_messageLabel;
-  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5768/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
+  Item = LocalizationManager__Get((System_String_o *)StringLiteral_5780/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0);
   if ( !v67 )
     goto LABEL_64;
   UILabel__set_text(v67, (System_String_o *)Item, 0);
   v77->fields.closeAction = action;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v77->fields.closeAction,
     (int32_t)action,
     v68,

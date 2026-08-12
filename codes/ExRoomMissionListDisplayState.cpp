@@ -52,39 +52,39 @@ void ExRoomMissionListDisplayState___ctor(
   int32_t v53; // [xsp+8h] [xbp-58h] BYREF
   int v54; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_5932DBA & 1) == 0 )
+  if ( (byte_596AEBE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_8906/*"MASTER_MISSION_COMPLETE_NUM"*/);
-    byte_5932DBA = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_8919/*"MASTER_MISSION_COMPLETE_NUM"*/);
+    byte_596AEBE = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !displayModels )
   {
-    displayModels = (System_Collections_Generic_List_ExRoomMissionListViewItem__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
+    displayModels = (System_Collections_Generic_List_ExRoomMissionListViewItem__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       (System_Collections_Generic_List_object__o *)displayModels,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
   }
   if ( !this )
     goto LABEL_22;
   this->fields._DisplayModels_k__BackingField = displayModels;
   p_fields = &this->fields;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)displayModels, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)displayModels, v11, v12, v13, v14, v15, v16);
   if ( !allModels )
   {
-    allModels = (System_Collections_Generic_List_ExRoomMissionListViewItem__o *)sub_21FFEBC(System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
+    allModels = (System_Collections_Generic_List_ExRoomMissionListViewItem__o *)sub_2213CCC(System_Collections_Generic_List_ExRoomMissionListViewItem__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       (System_Collections_Generic_List_object__o *)allModels,
-      (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
+      (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem___ctor__);
   }
   this->fields._AllModels_k__BackingField = allModels;
   p_AllModels_k__BackingField = &this->fields._AllModels_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AllModels_k__BackingField,
     (int32_t)allModels,
     v18,
@@ -96,7 +96,7 @@ void ExRoomMissionListDisplayState___ctor(
   this->fields._CurrentFilter_k__BackingField = filter;
   FilterLabelSpriteName = ExRoomMissionListDisplayState__GetFilterLabelSpriteName(v25, filter, v26);
   this->fields._FilterLabelSpriteName_k__BackingField = FilterLabelSpriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FilterLabelSpriteName_k__BackingField,
     (int32_t)FilterLabelSpriteName,
     v28,
@@ -115,7 +115,7 @@ void ExRoomMissionListDisplayState___ctor(
     Item = System_Collections_Generic_List_object___get_Item(
              AllModels_k__BackingField,
              v36,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
     if ( Item )
     {
       if ( LODWORD(Item[17].monitor) == 4 )
@@ -138,7 +138,7 @@ void ExRoomMissionListDisplayState___ctor(
     v40 = System_Collections_Generic_List_object___get_Item(
             AllModels_k__BackingField,
             v38,
-            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
+            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListViewItem__get_Item__);
     if ( v40 )
     {
       if ( LODWORD(v40[17].monitor) == 3 )
@@ -151,20 +151,20 @@ void ExRoomMissionListDisplayState___ctor(
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v10, v34);
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8906/*"MASTER_MISSION_COMPLETE_NUM"*/, 0);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8919/*"MASTER_MISSION_COMPLETE_NUM"*/, 0);
   v54 = v35;
-  AllModels_k__BackingField = (System_Collections_Generic_List_object__o *)j_il2cpp_value_box_0(qword_594C070, &v54);
+  AllModels_k__BackingField = (System_Collections_Generic_List_object__o *)j_il2cpp_value_box_0(qword_5984348, &v54);
   v42 = *p_AllModels_k__BackingField;
   if ( !*p_AllModels_k__BackingField )
 LABEL_22:
-    sub_21FFECC(AllModels_k__BackingField, v10);
+    sub_2213CDC(AllModels_k__BackingField, v10);
   v43 = (Il2CppObject *)AllModels_k__BackingField;
   v53 = v42->fields._size;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v53);
-  v45 = System_String__Format_75484576(v41, v43, v44, 0);
+  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v53);
+  v45 = System_String__Format_75697880(v41, v43, v44, 0);
   this->fields._MissionCountLabelText_k__BackingField = v45;
   p_MissionCountLabelText_k__BackingField = &this->fields._MissionCountLabelText_k__BackingField;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_MissionCountLabelText_k__BackingField,
     (int32_t)v45,
     v47,
@@ -184,17 +184,17 @@ System_String_o *ExRoomMissionListDisplayState__GetFilterLabelSpriteName(
 {
   System_String_o ***v4; // x8
 
-  if ( (byte_5932DBB & 1) == 0 )
+  if ( (byte_596AEBF & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18291/*"btn_txt_completed"*/);
-    sub_21FFC50(&StringLiteral_18325/*"btn_txt_receipt"*/);
-    sub_21FFC50(&StringLiteral_18324/*"btn_txt_progress"*/);
-    sub_21FFC50(&StringLiteral_18273/*"btn_txt_all"*/);
-    byte_5932DBB = 1;
+    sub_2213A60(&StringLiteral_18329/*"btn_txt_completed"*/);
+    sub_2213A60(&StringLiteral_18363/*"btn_txt_receipt"*/);
+    sub_2213A60(&StringLiteral_18362/*"btn_txt_progress"*/);
+    sub_2213A60(&StringLiteral_18311/*"btn_txt_all"*/);
+    byte_596AEBF = 1;
   }
-  v4 = (System_String_o ***)(qword_594C0B8 + 184);
+  v4 = (System_String_o ***)(qword_5984390 + 184);
   if ( (unsigned int)filter < 4 )
-    v4 = (System_String_o ***)&off_5296238[filter];
+    v4 = (System_String_o ***)&off_52CA3A8[filter];
   return **v4;
 }
 
@@ -257,7 +257,7 @@ void ExRoomMissionListDisplayState__set_AllModels(
   bool v7; // w7
 
   this->fields._AllModels_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._AllModels_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -299,7 +299,7 @@ void ExRoomMissionListDisplayState__set_DisplayModels(
   bool v7; // w7
 
   this->fields._DisplayModels_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)value,
     (System_String_o *)method,
@@ -323,7 +323,7 @@ void ExRoomMissionListDisplayState__set_FilterLabelSpriteName(
   bool v7; // w7
 
   this->fields._FilterLabelSpriteName_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._FilterLabelSpriteName_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -347,7 +347,7 @@ void ExRoomMissionListDisplayState__set_MissionCountLabelText(
   bool v7; // w7
 
   this->fields._MissionCountLabelText_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._MissionCountLabelText_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

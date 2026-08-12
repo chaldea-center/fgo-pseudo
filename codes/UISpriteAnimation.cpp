@@ -16,26 +16,26 @@ void UISpriteAnimation___ctor(UISpriteAnimation_o *this, const MethodInfo *metho
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_593CFEC & 1) == 0 )
+  if ( (byte_59752C3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593CFEC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59752C3 = 1;
   }
   v9 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.mFPS = 30;
   this->fields.mPrefix = v9;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mPrefix, (int32_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mPrefix, (int32_t)v9, v2, v3, v4, v5, v6, v7);
   v10 = System_Collections_Generic_List_string__TypeInfo;
   *(_WORD *)&this->fields.mLoop = 257;
   this->fields.mActive = 1;
-  v11 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v10);
+  v11 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v10);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.mSpriteNames = (struct System_Collections_Generic_List_string__o *)v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteNames,
     (int32_t)v11,
     v12,
@@ -93,16 +93,16 @@ void UISpriteAnimation__RebuildSpriteList(UISpriteAnimation_o *this, const Metho
   __int64 v31; // x10
   __int64 v32; // x8
 
-  if ( (byte_593CFEA & 1) == 0 )
+  if ( (byte_59752C1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFEA = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752C1 = 1;
   }
   p_mSprite = &this->fields.mSprite;
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
@@ -113,9 +113,9 @@ void UISpriteAnimation__RebuildSpriteList(UISpriteAnimation_o *this, const Metho
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.mSprite = (struct UISprite_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSprite,
       (int32_t)Component_object,
       v8,
@@ -166,7 +166,7 @@ void UISpriteAnimation__RebuildSpriteList(UISpriteAnimation_o *this, const Metho
                 Item = System_Collections_Generic_List_object___get_Item(
                          v20,
                          v21,
-                         (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
                 spriteList = (void *)System_String__IsNullOrEmpty(this->fields.mPrefix, 0);
                 if ( ((unsigned __int8)spriteList & 1) != 0 )
                   break;
@@ -199,14 +199,14 @@ LABEL_28:
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)spriteList,
                   klass,
-                  *(const MethodInfo_444FB2C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                  *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
               }
               else
               {
                 v32 = v29 + 8 * v31;
                 *((_DWORD *)spriteList + 6) = v31 + 1;
                 *(_QWORD *)(v32 + 32) = klass;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)(v32 + 32),
                   (int32_t)klass,
                   v23,
@@ -224,14 +224,14 @@ LABEL_34:
             {
               System_Collections_Generic_List_object___Sort(
                 (System_Collections_Generic_List_object__o *)spriteList,
-                (const MethodInfo_44514D4 *)Method_System_Collections_Generic_List_string__Sort__);
+                (const MethodInfo_448560C *)Method_System_Collections_Generic_List_string__Sort__);
               return;
             }
           }
         }
       }
 LABEL_37:
-      sub_21FFECC(spriteList, klass);
+      sub_2213CDC(spriteList, klass);
     }
   }
 }
@@ -246,12 +246,12 @@ void UISpriteAnimation__ResetToBeginning(UISpriteAnimation_o *this, const Method
   System_Collections_Generic_List_object__o *mSpriteNames; // x0
   UISprite_o *v8; // x20
 
-  if ( (byte_593CFEB & 1) == 0 )
+  if ( (byte_59752C2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFEB = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752C2 = 1;
   }
   v3 = UnityEngine_Object_TypeInfo;
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
@@ -271,7 +271,7 @@ void UISpriteAnimation__ResetToBeginning(UISpriteAnimation_o *this, const Method
       mSpriteNames = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     mSpriteNames,
                                                                     this->fields.mIndex,
-                                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( !v8 )
         goto LABEL_13;
       UISprite__set_spriteName(v8, (System_String_o *)mSpriteNames, 0);
@@ -286,7 +286,7 @@ void UISpriteAnimation__ResetToBeginning(UISpriteAnimation_o *this, const Method
           return;
         }
 LABEL_13:
-        sub_21FFECC(mSpriteNames, v6);
+        sub_2213CDC(mSpriteNames, v6);
       }
     }
   }
@@ -306,12 +306,12 @@ void UISpriteAnimation__Update(UISpriteAnimation_o *this, const MethodInfo *meth
   UISprite_o *mSprite; // x20
 
   v2 = this;
-  if ( (byte_593CFE9 & 1) == 0 )
+  if ( (byte_59752C0 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    this = (UISpriteAnimation_o *)sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    byte_593CFE9 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    this = (UISpriteAnimation_o *)sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    byte_59752C0 = 1;
   }
   if ( v2->fields.mActive )
   {
@@ -357,7 +357,7 @@ void UISpriteAnimation__Update(UISpriteAnimation_o *this, const MethodInfo *meth
             this = (UISpriteAnimation_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)this,
                                             (int32_t)method,
-                                            (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
             if ( !mSprite )
               goto LABEL_23;
             UISprite__set_spriteName(mSprite, (System_String_o *)this, 0);
@@ -372,7 +372,7 @@ void UISpriteAnimation__Update(UISpriteAnimation_o *this, const MethodInfo *meth
                 return;
               }
 LABEL_23:
-              sub_21FFECC(this, method);
+              sub_2213CDC(this, method);
             }
           }
         }
@@ -388,14 +388,14 @@ int32_t UISpriteAnimation__get_frames(UISpriteAnimation_o *this, const MethodInf
   struct System_Collections_Generic_List_string__o *mSpriteNames; // x8
 
   v2 = this;
-  if ( (byte_593CFE8 & 1) == 0 )
+  if ( (byte_59752BF & 1) == 0 )
   {
-    this = (UISpriteAnimation_o *)sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_593CFE8 = 1;
+    this = (UISpriteAnimation_o *)sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_59752BF = 1;
   }
   mSpriteNames = v2->fields.mSpriteNames;
   if ( !mSpriteNames )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return mSpriteNames->fields._size;
 }
 
@@ -451,7 +451,7 @@ void UISpriteAnimation__set_namePrefix(UISpriteAnimation_o *this, System_String_
   if ( System_String__op_Inequality(this->fields.mPrefix, value, 0) )
   {
     this->fields.mPrefix = value;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_mPrefix, (int32_t)value, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_mPrefix, (int32_t)value, v6, v7, v8, v9, v10, v11);
     UISpriteAnimation__RebuildSpriteList(this, v12);
   }
 }

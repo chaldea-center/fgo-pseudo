@@ -42,7 +42,7 @@ void RemainTimeComponent__AdjustLayout(
     || (remainLabel = this->fields.timeUnitLabel) == 0 )
   {
 LABEL_13:
-    sub_21FFECC(remainLabel, isRemainHours);
+    sub_2213CDC(remainLabel, isRemainHours);
   }
   ComponentHelper__SetLocalPositionX(
     (UnityEngine_Component_o *)remainLabel,
@@ -97,7 +97,7 @@ void RemainTimeComponent__SetLabelsColor(
         (remainLabel = (UIWidget_o *)this->fields.timeUnitLabel) == 0) )
   {
 LABEL_5:
-    sub_21FFECC(remainLabel, method);
+    sub_2213CDC(remainLabel, method);
   }
   v10.fields.b = b;
   v10.fields.a = a;
@@ -107,7 +107,6 @@ LABEL_5:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
@@ -127,46 +126,43 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
   UILabel_o *v17; // x20
   const MethodInfo *v18; // x2
   const MethodInfo *v19; // x1
-  float v20; // s0 OVERLAPPED
-  float v21; // s1
-  float v22; // s2
   UILabel_o *timeOverLabel; // x20
   UILabel_o *numLabel; // x20
-  __int64 v25; // x1
-  __int64 v26; // x2
+  __int64 v24; // x1
+  __int64 v25; // x2
   UILabel_o *timeUnitLabel; // x20
-  const MethodInfo *v28; // x2
-  __int64 v29; // x8
-  RemainTimeComponent_o *v30; // x0
-  bool v31; // w1
-  UILabel_o *v32; // x20
-  __int64 v33; // x1
-  __int64 v34; // x2
-  UILabel_o *v35; // x20
-  float v36; // s3
-  signed __int64 v37; // [xsp+0h] [xbp-40h] BYREF
-  unsigned __int64 v38; // [xsp+8h] [xbp-38h] BYREF
-  unsigned __int64 v39; // [xsp+18h] [xbp-28h] BYREF
+  const MethodInfo *v27; // x2
+  __int64 v28; // x8
+  RemainTimeComponent_o *v29; // x0
+  bool v30; // w1
+  UILabel_o *v31; // x20
+  __int64 v32; // x1
+  __int64 v33; // x2
+  UILabel_o *v34; // x20
+  signed __int64 v35; // [xsp+0h] [xbp-40h] BYREF
+  unsigned __int64 v36; // [xsp+8h] [xbp-38h] BYREF
+  unsigned __int64 v37; // [xsp+18h] [xbp-28h] BYREF
+  UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_59348C3 & 1) == 0 )
+  if ( (byte_596C9F2 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_13940/*"TIME_REST6_TIMEOVER"*/);
-    sub_21FFC50(&StringLiteral_13970/*"TIME_STR_MINUTES"*/);
-    sub_21FFC50(&StringLiteral_13968/*"TIME_STR_DAYS"*/);
-    sub_21FFC50(&StringLiteral_13936/*"TIME_REST6_HEAD"*/);
-    sub_21FFC50(&StringLiteral_13969/*"TIME_STR_HOURS"*/);
-    byte_59348C3 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_13970/*"TIME_REST6_TIMEOVER"*/);
+    sub_2213A60(&StringLiteral_14000/*"TIME_STR_MINUTES"*/);
+    sub_2213A60(&StringLiteral_13998/*"TIME_STR_DAYS"*/);
+    sub_2213A60(&StringLiteral_13966/*"TIME_REST6_HEAD"*/);
+    sub_2213A60(&StringLiteral_13999/*"TIME_STR_HOURS"*/);
+    byte_596C9F2 = 1;
   }
   remainLabel = this->fields.remainLabel;
-  v39 = 0;
-  v5 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
   v37 = 0;
-  v38 = 0;
+  v5 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+  v35 = 0;
+  v36 = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13936/*"TIME_REST6_HEAD"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13966/*"TIME_REST6_HEAD"*/, 0);
   if ( !remainLabel )
     goto LABEL_32;
   UILabel__set_text(remainLabel, v6, 0);
@@ -179,7 +175,7 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
     timeOverLabel = this->fields.timeOverLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v12);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13940/*"TIME_REST6_TIMEOVER"*/, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13970/*"TIME_REST6_TIMEOVER"*/, 0);
     if ( timeOverLabel )
     {
       UILabel__set_text(timeOverLabel, v6, 0);
@@ -192,78 +188,78 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
     }
     goto LABEL_32;
   }
-  v39 = v13 / 0x3C;
+  v37 = v13 / 0x3C;
   if ( v13 <= 0xE0F )
   {
     numLabel = this->fields.numLabel;
-    v6 = System_Int64__ToString((int64_t)&v39, 0);
+    v6 = System_Int64__ToString((int64_t)&v37, 0);
     if ( numLabel )
     {
       UILabel__set_text(numLabel, v6, 0);
       timeUnitLabel = this->fields.timeUnitLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
-      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13970/*"TIME_STR_MINUTES"*/, 0);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24, v25);
+      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_14000/*"TIME_STR_MINUTES"*/, 0);
       if ( timeUnitLabel )
       {
         UILabel__set_text(timeUnitLabel, v6, 0);
-        v29 = v39;
-        v30 = this;
-        v31 = 0;
+        v28 = v37;
+        v29 = this;
+        v30 = 0;
 LABEL_30:
-        RemainTimeComponent__AdjustLayout(v30, (float)v29, v31, v28);
-        v22 = 0.0;
-        v20 = 1.0;
-        v21 = 1.0;
+        RemainTimeComponent__AdjustLayout(v29, (float)v28, v30, v27);
+        v38.fields.b = 0.0;
+        v38.fields.r = 1.0;
+        v38.fields.g = 1.0;
         goto LABEL_31;
       }
     }
 LABEL_32:
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
-  v38 = v13 / 0xE10;
+  v36 = v13 / 0xE10;
   if ( v13 >> 7 <= 0x2A2 )
   {
-    v32 = this->fields.numLabel;
-    v6 = System_Int64__ToString((int64_t)&v38, 0);
-    if ( v32 )
+    v31 = this->fields.numLabel;
+    v6 = System_Int64__ToString((int64_t)&v36, 0);
+    if ( v31 )
     {
-      UILabel__set_text(v32, v6, 0);
-      v35 = this->fields.timeUnitLabel;
+      UILabel__set_text(v31, v6, 0);
+      v34 = this->fields.timeUnitLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v33, v34);
-      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13969/*"TIME_STR_HOURS"*/, 0);
-      if ( v35 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32, v33);
+      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13999/*"TIME_STR_HOURS"*/, 0);
+      if ( v34 )
       {
-        UILabel__set_text(v35, v6, 0);
-        v29 = v38;
-        v30 = this;
-        v31 = 1;
+        UILabel__set_text(v34, v6, 0);
+        v28 = v36;
+        v29 = this;
+        v30 = 1;
         goto LABEL_30;
       }
     }
     goto LABEL_32;
   }
   v14 = this->fields.numLabel;
-  v37 = v13 / 0x15180;
-  v6 = System_Int64__ToString((int64_t)&v37, 0);
+  v35 = v13 / 0x15180;
+  v6 = System_Int64__ToString((int64_t)&v35, 0);
   if ( !v14 )
     goto LABEL_32;
   UILabel__set_text(v14, v6, 0);
   v17 = this->fields.timeUnitLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v16);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13968/*"TIME_STR_DAYS"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13998/*"TIME_STR_DAYS"*/, 0);
   if ( !v17 )
     goto LABEL_32;
   UILabel__set_text(v17, v6, 0);
-  RemainTimeComponent__AdjustLayout(this, (float)v37, 0, v18);
-  v20 = 1.0;
-  v21 = 1.0;
-  v22 = 1.0;
+  RemainTimeComponent__AdjustLayout(this, (float)v35, 0, v18);
+  v38.fields.r = 1.0;
+  v38.fields.g = 1.0;
+  v38.fields.b = 1.0;
 LABEL_31:
-  v36 = 1.0;
-  RemainTimeComponent__SetLabelsColor(this, *(UnityEngine_Color_o *)&v20, v19);
+  v38.fields.a = 1.0;
+  RemainTimeComponent__SetLabelsColor(this, v38, v19);
 }
 
 
@@ -281,16 +277,16 @@ void RemainTimeComponent__StartTimeUpdate(RemainTimeComponent_o *this, int64_t l
   __int64 v14; // x2
   Il2CppObject *Component_object; // x22
 
-  if ( (byte_59348C4 & 1) == 0 )
+  if ( (byte_596C9F3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObjectList_GameObject___);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_13691/*"SummonBanners/DownloadSummonBanner"*/);
-    sub_21FFC50(&StringLiteral_21541/*"img_summon_limit_base"*/);
-    sub_21FFC50(&StringLiteral_13327/*"SetRemainTime"*/);
-    byte_59348C4 = 1;
+    sub_2213A60(&Method_AssetData_GetObjectList_GameObject___);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_13721/*"SummonBanners/DownloadSummonBanner"*/);
+    sub_2213A60(&StringLiteral_21582/*"img_summon_limit_base"*/);
+    sub_2213A60(&StringLiteral_13354/*"SetRemainTime"*/);
+    byte_596C9F3 = 1;
   }
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.timeOverLabel, 0, 0);
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.remainLabel, 1, 0);
@@ -298,12 +294,12 @@ void RemainTimeComponent__StartTimeUpdate(RemainTimeComponent_o *this, int64_t l
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.timeUnitLabel, 1, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5, v6);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13691/*"SummonBanners/DownloadSummonBanner"*/, 0);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_13721/*"SummonBanners/DownloadSummonBanner"*/, 0);
   if ( AssetStorage )
   {
     ObjectList_object = AssetData__GetObjectList_object_(
                           AssetStorage,
-                          (const MethodInfo_379F258 *)Method_AssetData_GetObjectList_GameObject___);
+                          (const MethodInfo_37D2608 *)Method_AssetData_GetObjectList_GameObject___);
     if ( !ObjectList_object )
       goto LABEL_22;
     v10 = *((_DWORD *)ObjectList_object + 6);
@@ -314,13 +310,13 @@ void RemainTimeComponent__StartTimeUpdate(RemainTimeComponent_o *this, int64_t l
       while ( 1 )
       {
         if ( v12 >= v10 )
-          sub_21FFED4(ObjectList_object);
+          sub_2213CE4(ObjectList_object);
         ObjectList_object = (void *)*((_QWORD *)v11 + (int)v12 + 4);
         if ( !ObjectList_object )
           goto LABEL_22;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)ObjectList_object,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
         ObjectList_object = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -330,7 +326,7 @@ void RemainTimeComponent__StartTimeUpdate(RemainTimeComponent_o *this, int64_t l
             goto LABEL_22;
           ObjectList_object = UIAtlas__GetSprite(
                                 (UIAtlas_o *)Component_object,
-                                (System_String_o *)StringLiteral_21541/*"img_summon_limit_base"*/,
+                                (System_String_o *)StringLiteral_21582/*"img_summon_limit_base"*/,
                                 0);
           if ( ObjectList_object )
             break;
@@ -346,19 +342,19 @@ void RemainTimeComponent__StartTimeUpdate(RemainTimeComponent_o *this, int64_t l
         ObjectList_object = this->fields.backGround;
         if ( ObjectList_object )
         {
-          UISprite__set_spriteName((UISprite_o *)ObjectList_object, (System_String_o *)StringLiteral_21541/*"img_summon_limit_base"*/, 0);
+          UISprite__set_spriteName((UISprite_o *)ObjectList_object, (System_String_o *)StringLiteral_21582/*"img_summon_limit_base"*/, 0);
           goto LABEL_21;
         }
       }
 LABEL_22:
-      sub_21FFECC(ObjectList_object, v9);
+      sub_2213CDC(ObjectList_object, v9);
     }
   }
 LABEL_21:
   this->fields.timeLimit = limit;
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_13327/*"SetRemainTime"*/,
+    (System_String_o *)StringLiteral_13354/*"SetRemainTime"*/,
     0.0,
     1.0,
     0);

@@ -1,14 +1,14 @@
 void EventRandomMissionMaster___ctor(EventRandomMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938890 & 1) == 0 )
+  if ( (byte_597095A & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
-    byte_5938890 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
+    byte_597095A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     404,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ EventRandomMissionEntity_o *EventRandomMissionMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938891 & 1) == 0 )
+  if ( (byte_597095B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
-    byte_5938891 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
+    byte_597095B = 1;
   }
   PK = (Il2CppObject *)EventRandomMissionEntity__CreatePK(missionId, *(const MethodInfo **)&missionId);
   return (EventRandomMissionEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
+                                         (const MethodInfo_3F157EC *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__GetEntity__);
 }
 
 
@@ -41,15 +41,15 @@ bool EventRandomMissionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938892 & 1) == 0 )
+  if ( (byte_597095C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
-    byte_5938892 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
+    byte_597095C = 1;
   }
   PK = (Il2CppObject *)EventRandomMissionEntity__CreatePK(missionId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventRandomMissionMaster__EventRandomMissionEntity__string__TryGetEntity__);
 }

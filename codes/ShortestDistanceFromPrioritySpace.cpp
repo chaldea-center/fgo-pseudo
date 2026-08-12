@@ -24,10 +24,10 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
   float evalValue_k__BackingField; // s2
 
   v9 = this;
-  if ( (byte_5935F2D & 1) == 0 )
+  if ( (byte_596E087 & 1) == 0 )
   {
-    this = (ShortestDistanceFromPrioritySpace_o *)sub_21FFC50(&AStarSearch_TypeInfo);
-    byte_5935F2D = 1;
+    this = (ShortestDistanceFromPrioritySpace_o *)sub_2213A60(&AStarSearch_TypeInfo);
+    byte_596E087 = 1;
   }
   if ( !targetSquare )
     goto LABEL_14;
@@ -46,7 +46,7 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
     ratingBase = v9->fields.ratingBase;
     if ( ratingBase )
     {
-      v14 = LODWORD(this[1].klass) - 1;
+      v14 = *((_DWORD *)this + 6) - 1;
       v15 = ratingBase->fields.adjustmentValueA1 + 1;
       evalValue_k__BackingField = (float)targetSquare->fields._evalValue_k__BackingField;
       if ( (float)((float)((float)v15 - (float)v14) * evalValue_k__BackingField) >= 0.0 )
@@ -55,7 +55,7 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
         return 0.0;
     }
 LABEL_14:
-    sub_21FFECC(this, *(_QWORD *)&forceId);
+    sub_2213CDC(this, *(_QWORD *)&forceId);
   }
   return v10;
 }

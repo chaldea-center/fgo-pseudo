@@ -1,14 +1,14 @@
 void RestrictionBaseMaster___ctor(RestrictionBaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939ABC & 1) == 0 )
+  if ( (byte_5971B9F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
-    byte_5939ABC = 1;
+    sub_2213A60(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
+    byte_5971B9F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     453,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ RestrictionBaseEntity_o *RestrictionBaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5939ABD & 1) == 0 )
+  if ( (byte_5971BA0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
-    byte_5939ABD = 1;
+    sub_2213A60(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
+    byte_5971BA0 = 1;
   }
   PK = (Il2CppObject *)RestrictionBaseEntity__CreatePK(questId, questPhase, 0);
   return (RestrictionBaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_3EE2044 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
+                                      (const MethodInfo_3F157EC *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__GetEntity__);
 }
 
 
@@ -42,15 +42,15 @@ bool RestrictionBaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5939ABE & 1) == 0 )
+  if ( (byte_5971BA1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
-    byte_5939ABE = 1;
+    sub_2213A60(&Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
+    byte_5971BA1 = 1;
   }
   PK = (Il2CppObject *)RestrictionBaseEntity__CreatePK(questId, questPhase, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_RestrictionBaseMaster__RestrictionBaseEntity__string__TryGetEntity__);
 }

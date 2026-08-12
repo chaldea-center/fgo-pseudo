@@ -27,10 +27,10 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   bool v18; // w6
   bool v19; // w7
 
-  if ( (byte_593C17E & 1) == 0 )
+  if ( (byte_59742D6 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C17E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59742D6 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -40,7 +40,7 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
     v13 = this->fields.outerPanel;
     if ( !v13
       || (v13->fields.clickCallBack = callBack,
-          sub_21FFBF4(
+          sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&v13->fields.clickCallBack,
             (int32_t)callBack,
             v7,
@@ -51,10 +51,10 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
             v12),
           (v13 = this->fields.outerPanel) == 0) )
     {
-      sub_21FFECC(v13, v6);
+      sub_2213CDC(v13, v6);
     }
     v13->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v13->fields.targetWindow,
       (int32_t)this,
       v14,

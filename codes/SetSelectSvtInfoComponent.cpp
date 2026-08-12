@@ -17,7 +17,7 @@ void SetSelectSvtInfoComponent__setSvtInfo(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtFaceInfo, 1, 0),
         (svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo) == 0) )
   {
-    sub_21FFECC(svtFaceInfo, usrSvtId);
+    sub_2213CDC(svtFaceInfo, usrSvtId);
   }
-  ServantFaceIconComponent__Set_48018012((ServantFaceIconComponent_o *)svtFaceInfo, usrSvtId, 0, 0, 0);
+  ServantFaceIconComponent__Set_48049308((ServantFaceIconComponent_o *)svtFaceInfo, usrSvtId, 0, 0, 0);
 }

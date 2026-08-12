@@ -8,7 +8,7 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  const MethodInfo_37ED7E0 *v5; // x1
+  const MethodInfo_3820CA8 *v5; // x1
   Il2CppObject *Component_object; // x0
   struct FSOffset_o **p_fsOffset; // x20
   System_String_o *v8; // x2
@@ -18,12 +18,12 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   bool v12; // w6
   bool v13; // w7
   const MethodInfo *v14; // x1
-  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
 
-  if ( (byte_5934A62 & 1) == 0 )
+  if ( (byte_596CB0E & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_FSOffset___);
-    byte_5934A62 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_FSOffset___);
+    byte_596CB0E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -33,12 +33,12 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   if ( !transform )
     goto LABEL_9;
   localScale = UnityEngine_Transform__get_localScale(transform, 0);
-  v5 = (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_FSOffset___;
+  v5 = (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_FSOffset___;
   this->fields.infoControlLayoutDefault.fields.Scale = localScale;
   Component_object = UnityEngine_Component__GetComponent_object_((UnityEngine_Component_o *)this, v5);
   this->fields.fsOffset = (struct FSOffset_o *)Component_object;
   p_fsOffset = &this->fields.fsOffset;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.fsOffset,
     (int32_t)Component_object,
     v8,
@@ -55,7 +55,7 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   transform = (UnityEngine_Transform_o *)*p_fsOffset;
   if ( !*p_fsOffset )
 LABEL_9:
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, 1, 0);
   SummonInfoLayout__UpdateOffset(this, v14);
 }
@@ -78,7 +78,7 @@ void SummonInfoLayout__UpdateCustom(SummonInfoLayout_o *this, const MethodInfo *
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutCustom.fields.Position, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutCustom.fields.Scale, 0);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -96,7 +96,7 @@ void SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const MethodInfo 
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutDefault.fields.Position, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutDefault.fields.Scale, 0);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -110,10 +110,10 @@ void SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const MethodInfo *
   __int64 v5; // x1
   FSOffset_o *v6; // x0
 
-  if ( (byte_5934A63 & 1) == 0 )
+  if ( (byte_596CB0F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934A63 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CB0F = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -122,7 +122,7 @@ void SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const MethodInfo *
   {
     v6 = this->fields.fsOffset;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     FSOffset__UpdateOffset(v6, 0);
   }
 }

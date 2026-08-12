@@ -13,9 +13,9 @@ void GalleryFullScreenListViewItem___ctor(
   __int64 v12; // x0
   __int64 v13; // x1
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
@@ -25,7 +25,7 @@ void GalleryFullScreenListViewItem___ctor(
     v10,
     v11);
   if ( !galleryResourceEntity )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 

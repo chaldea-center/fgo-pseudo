@@ -8,15 +8,15 @@ void EncryptedPlayerPrefs___cctor(const MethodInfo *method)
   bool v6; // w7
   int32_t v7; // w1
 
-  if ( (byte_5937D3B & 1) == 0 )
+  if ( (byte_596FEA8 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_25191/*"t68aZyLxlMWVjw8lWgdZ"*/);
-    byte_5937D3B = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_25239/*"t68aZyLxlMWVjw8lWgdZ"*/);
+    byte_596FEA8 = 1;
   }
-  v7 = StringLiteral_25191/*"t68aZyLxlMWVjw8lWgdZ"*/;
-  EncryptedPlayerPrefs_TypeInfo->static_fields->privateKey = (struct System_String_o *)StringLiteral_25191/*"t68aZyLxlMWVjw8lWgdZ"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_25239/*"t68aZyLxlMWVjw8lWgdZ"*/;
+  EncryptedPlayerPrefs_TypeInfo->static_fields->privateKey = (struct System_String_o *)StringLiteral_25239/*"t68aZyLxlMWVjw8lWgdZ"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EncryptedPlayerPrefs_TypeInfo->static_fields,
     v7,
     v1,
@@ -41,7 +41,7 @@ bool EncryptedPlayerPrefs__CheckEncryption(
         const MethodInfo *method)
 {
   System_String_o *v7; // x0
-  __int64 Int_83183516; // x0
+  __int64 Int_83396820; // x0
   __int64 v9; // x1
   EncryptedPlayerPrefs_c *v10; // x8
   unsigned int v11; // w22
@@ -113,21 +113,21 @@ bool EncryptedPlayerPrefs__CheckEncryption(
   System_String_o *v77; // x20
   System_String_o *v78; // x0
   System_String_o *v79; // x0
-  System_String_o *String_83184936; // x0
+  System_String_o *String_83398240; // x0
 
-  if ( (byte_5937D2D & 1) == 0 )
+  if ( (byte_596FE9A & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_17245/*"_used_key"*/);
-    sub_21FFC50(&StringLiteral_16714/*"_"*/);
-    sub_21FFC50(&StringLiteral_17183/*"_encryption_check"*/);
-    byte_5937D2D = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_17281/*"_used_key"*/);
+    sub_2213A60(&StringLiteral_16746/*"_"*/);
+    sub_2213A60(&StringLiteral_17219/*"_encryption_check"*/);
+    byte_596FE9A = 1;
   }
-  v7 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17245/*"_used_key"*/, 0);
-  Int_83183516 = UnityEngine_PlayerPrefs__GetInt_83183516(v7, 0);
+  v7 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17281/*"_used_key"*/, 0);
+  Int_83396820 = UnityEngine_PlayerPrefs__GetInt_83396820(v7, 0);
   v10 = EncryptedPlayerPrefs_TypeInfo;
-  v11 = Int_83183516;
+  v11 = Int_83396820;
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v9);
@@ -139,62 +139,62 @@ bool EncryptedPlayerPrefs__CheckEncryption(
   if ( v11 >= LODWORD(keys->max_length) )
     goto LABEL_20;
   v13 = keys->m_Items[v11];
-  Int_83183516 = sub_21FFD10(string___TypeInfo, 9);
-  if ( !Int_83183516 )
+  Int_83396820 = sub_2213B20(string___TypeInfo, 9);
+  if ( !Int_83396820 )
 LABEL_21:
-    sub_21FFECC(Int_83183516, v9);
-  v20 = Int_83183516;
-  if ( !*(_DWORD *)(Int_83183516 + 24) )
+    sub_2213CDC(Int_83396820, v9);
+  v20 = Int_83396820;
+  if ( !*(_DWORD *)(Int_83396820 + 24) )
     goto LABEL_20;
-  *(_QWORD *)(Int_83183516 + 32) = key;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(Int_83183516 + 32), (int32_t)key, v14, v15, v16, v17, v18, v19);
+  *(_QWORD *)(Int_83396820 + 32) = key;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(Int_83396820 + 32), (int32_t)key, v14, v15, v16, v17, v18, v19);
   if ( (*(_DWORD *)(v20 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_20;
-  v27 = StringLiteral_16714/*"_"*/;
-  *(_QWORD *)(v20 + 40) = StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 40), v27, v21, v22, v23, v24, v25, v26);
+  v27 = StringLiteral_16746/*"_"*/;
+  *(_QWORD *)(v20 + 40) = StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 40), v27, v21, v22, v23, v24, v25, v26);
   if ( *(_DWORD *)(v20 + 24) <= 2u )
     goto LABEL_20;
   *(_QWORD *)(v20 + 48) = type;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 48), (int32_t)type, v28, v29, v30, v31, v32, v33);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 48), (int32_t)type, v28, v29, v30, v31, v32, v33);
   if ( (*(_DWORD *)(v20 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_20;
-  v40 = StringLiteral_16714/*"_"*/;
-  *(_QWORD *)(v20 + 56) = StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 56), v40, v34, v35, v36, v37, v38, v39);
+  v40 = StringLiteral_16746/*"_"*/;
+  *(_QWORD *)(v20 + 56) = StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 56), v40, v34, v35, v36, v37, v38, v39);
   if ( *(_DWORD *)(v20 + 24) <= 4u )
     goto LABEL_20;
   static_fields = EncryptedPlayerPrefs_TypeInfo->static_fields;
   privateKey = static_fields->privateKey;
   *(_QWORD *)(v20 + 64) = static_fields->privateKey;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 64), (int32_t)privateKey, v41, v42, v43, v44, v45, v46);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 64), (int32_t)privateKey, v41, v42, v43, v44, v45, v46);
   if ( *(_DWORD *)(v20 + 24) <= 5u )
     goto LABEL_20;
-  v55 = StringLiteral_16714/*"_"*/;
-  *(_QWORD *)(v20 + 72) = StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 72), v55, v49, v50, v51, v52, v53, v54);
+  v55 = StringLiteral_16746/*"_"*/;
+  *(_QWORD *)(v20 + 72) = StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 72), v55, v49, v50, v51, v52, v53, v54);
   if ( *(_DWORD *)(v20 + 24) <= 6u
     || (*(_QWORD *)(v20 + 80) = v13,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 80), (int32_t)v13, v56, v57, v58, v59, v60, v61),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 80), (int32_t)v13, v56, v57, v58, v59, v60, v61),
         (*(_DWORD *)(v20 + 24) & 0xFFFFFFF8) == 0)
-    || (v68 = StringLiteral_16714/*"_"*/,
-        *(_QWORD *)(v20 + 88) = StringLiteral_16714/*"_"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 88), v68, v62, v63, v64, v65, v66, v67),
+    || (v68 = StringLiteral_16746/*"_"*/,
+        *(_QWORD *)(v20 + 88) = StringLiteral_16746/*"_"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 88), v68, v62, v63, v64, v65, v66, v67),
         *(_DWORD *)(v20 + 24) <= 8u) )
   {
 LABEL_20:
-    sub_21FFED4(Int_83183516);
+    sub_2213CE4(Int_83396820);
   }
   *(_QWORD *)(v20 + 96) = value;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 96), (int32_t)value, v69, v70, v71, v72, v73, v74);
-  v75 = System_String__Concat_75483816((System_String_array *)v20, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 96), (int32_t)value, v69, v70, v71, v72, v73, v74);
+  v75 = System_String__Concat_75697120((System_String_array *)v20, 0);
   v77 = EncryptedPlayerPrefs__Md5(v75, v76);
-  v78 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17183/*"_encryption_check"*/, 0);
+  v78 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17219/*"_encryption_check"*/, 0);
   if ( !UnityEngine_PlayerPrefs__HasKey(v78, 0) )
     return 0;
-  v79 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17183/*"_encryption_check"*/, 0);
-  String_83184936 = UnityEngine_PlayerPrefs__GetString_83184936(v79, 0);
-  return System_String__op_Equality(String_83184936, v77, 0);
+  v79 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17219/*"_encryption_check"*/, 0);
+  String_83398240 = UnityEngine_PlayerPrefs__GetString_83398240(v79, 0);
+  return System_String__op_Equality(String_83398240, v77, 0);
 }
 
 
@@ -203,54 +203,54 @@ void EncryptedPlayerPrefs__DeleteKey(System_String_o *key, const MethodInfo *met
   System_String_o *v3; // x0
   System_String_o *v4; // x0
 
-  if ( (byte_5937D3A & 1) == 0 )
+  if ( (byte_596FEA7 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17245/*"_used_key"*/);
-    sub_21FFC50(&StringLiteral_17183/*"_encryption_check"*/);
-    byte_5937D3A = 1;
+    sub_2213A60(&StringLiteral_17281/*"_used_key"*/);
+    sub_2213A60(&StringLiteral_17219/*"_encryption_check"*/);
+    byte_596FEA7 = 1;
   }
   UnityEngine_PlayerPrefs__DeleteKey(key, 0);
-  v3 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17183/*"_encryption_check"*/, 0);
+  v3 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17219/*"_encryption_check"*/, 0);
   UnityEngine_PlayerPrefs__DeleteKey(v3, 0);
-  v4 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17245/*"_used_key"*/, 0);
+  v4 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17281/*"_used_key"*/, 0);
   UnityEngine_PlayerPrefs__DeleteKey(v4, 0);
 }
 
 
 float EncryptedPlayerPrefs__GetFloat(System_String_o *key, const MethodInfo *method)
 {
-  if ( (byte_5937D34 & 1) == 0 )
+  if ( (byte_596FEA1 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    byte_5937D34 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    byte_596FEA1 = 1;
   }
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, method);
-  return EncryptedPlayerPrefs__GetFloat_48193320(key, 0.0, method);
+  return EncryptedPlayerPrefs__GetFloat_48228924(key, 0.0, method);
 }
 
 
-float EncryptedPlayerPrefs__GetFloat_48193320(System_String_o *key, float defaultValue, const MethodInfo *method)
+float EncryptedPlayerPrefs__GetFloat_48228924(System_String_o *key, float defaultValue, const MethodInfo *method)
 {
-  float Float_83184068; // s9
+  float Float_83397372; // s9
   __int64 v6; // x1
   const MethodInfo *v7; // x3
   System_String_o *v8; // x20
   float v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5937D38 & 1) == 0 )
+  if ( (byte_596FEA5 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_20380/*"float"*/);
-    byte_5937D38 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_20421/*"float"*/);
+    byte_596FEA5 = 1;
   }
-  Float_83184068 = UnityEngine_PlayerPrefs__GetFloat_83184068(key, 0);
-  v10 = floorf(Float_83184068 * 1000.0);
+  Float_83397372 = UnityEngine_PlayerPrefs__GetFloat_83397372(key, 0);
+  v10 = floorf(Float_83397372 * 1000.0);
   v8 = System_Single__ToString(v10, (const MethodInfo *)&v10);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v6);
-  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_20380/*"float"*/, v8, v7) )
-    return Float_83184068;
+  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_20421/*"float"*/, v8, v7) )
+    return Float_83397372;
   else
     return defaultValue;
 }
@@ -260,36 +260,36 @@ int32_t EncryptedPlayerPrefs__GetInt(System_String_o *key, const MethodInfo *met
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_5937D32 & 1) == 0 )
+  if ( (byte_596FE9F & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    byte_5937D32 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    byte_596FE9F = 1;
   }
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, method);
-  return EncryptedPlayerPrefs__GetInt_48192744(key, 0, v2);
+  return EncryptedPlayerPrefs__GetInt_48228348(key, 0, v2);
 }
 
 
-int32_t EncryptedPlayerPrefs__GetInt_48192744(System_String_o *key, int32_t defaultValue, const MethodInfo *method)
+int32_t EncryptedPlayerPrefs__GetInt_48228348(System_String_o *key, int32_t defaultValue, const MethodInfo *method)
 {
   __int64 v5; // x1
   const MethodInfo *v6; // x3
   System_String_o *v7; // x21
-  int32_t Int_83183516; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t Int_83396820; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5937D36 & 1) == 0 )
+  if ( (byte_596FEA3 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_21791/*"int"*/);
-    byte_5937D36 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_21833/*"int"*/);
+    byte_596FEA3 = 1;
   }
-  Int_83183516 = UnityEngine_PlayerPrefs__GetInt_83183516(key, 0);
-  v7 = System_Int32__ToString((int32_t)&Int_83183516, 0);
+  Int_83396820 = UnityEngine_PlayerPrefs__GetInt_83396820(key, 0);
+  v7 = System_Int32__ToString((int32_t)&Int_83396820, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_21791/*"int"*/, v7, v6) )
-    return Int_83183516;
+  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_21833/*"int"*/, v7, v6) )
+    return Int_83396820;
   else
     return defaultValue;
 }
@@ -299,39 +299,39 @@ int64_t EncryptedPlayerPrefs__GetLong(System_String_o *key, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_5937D33 & 1) == 0 )
+  if ( (byte_596FEA0 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    byte_5937D33 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    byte_596FEA0 = 1;
   }
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, method);
-  return EncryptedPlayerPrefs__GetLong_48193012(key, 0, v2);
+  return EncryptedPlayerPrefs__GetLong_48228616(key, 0, v2);
 }
 
 
-int64_t EncryptedPlayerPrefs__GetLong_48193012(System_String_o *key, int64_t defaultValue, const MethodInfo *method)
+int64_t EncryptedPlayerPrefs__GetLong_48228616(System_String_o *key, int64_t defaultValue, const MethodInfo *method)
 {
   __int64 v5; // x1
   const MethodInfo *v6; // x3
-  System_String_o *String_83184936; // x21
+  System_String_o *String_83398240; // x21
   const MethodInfo *v8; // x1
   int64_t result; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5937D37 & 1) == 0 )
+  if ( (byte_596FEA4 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_22382/*"long"*/);
-    byte_5937D37 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_22425/*"long"*/);
+    byte_596FEA4 = 1;
   }
   result = 0;
-  String_83184936 = UnityEngine_PlayerPrefs__GetString_83184936(key, 0);
+  String_83398240 = UnityEngine_PlayerPrefs__GetString_83398240(key, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_22382/*"long"*/, String_83184936, v6) )
+  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_22425/*"long"*/, String_83398240, v6) )
   {
     result = defaultValue;
-    System_Int64__TryParse(String_83184936, &result, 0);
+    System_Int64__TryParse(String_83398240, &result, 0);
     return result;
   }
   else
@@ -347,38 +347,38 @@ System_String_o *EncryptedPlayerPrefs__GetString(System_String_o *key, const Met
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_5937D35 & 1) == 0 )
+  if ( (byte_596FEA2 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5937D35 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596FEA2 = 1;
   }
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, method);
-  return EncryptedPlayerPrefs__GetString_48193632(key, (System_String_o *)StringLiteral_1/*""*/, v2);
+  return EncryptedPlayerPrefs__GetString_48229236(key, (System_String_o *)StringLiteral_1/*""*/, v2);
 }
 
 
-System_String_o *EncryptedPlayerPrefs__GetString_48193632(
+System_String_o *EncryptedPlayerPrefs__GetString_48229236(
         System_String_o *key,
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
   __int64 v5; // x1
   const MethodInfo *v6; // x3
-  System_String_o *String_83184936; // x21
+  System_String_o *String_83398240; // x21
 
-  if ( (byte_5937D39 & 1) == 0 )
+  if ( (byte_596FEA6 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_24959/*"string"*/);
-    byte_5937D39 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_25007/*"string"*/);
+    byte_596FEA6 = 1;
   }
-  String_83184936 = UnityEngine_PlayerPrefs__GetString_83184936(key, 0);
+  String_83398240 = UnityEngine_PlayerPrefs__GetString_83398240(key, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_24959/*"string"*/, String_83184936, v6) )
-    return String_83184936;
+  if ( EncryptedPlayerPrefs__CheckEncryption(key, (System_String_o *)StringLiteral_25007/*"string"*/, String_83398240, v6) )
+    return String_83398240;
   else
     return defaultValue;
 }
@@ -404,15 +404,15 @@ System_String_o *EncryptedPlayerPrefs__Md5(System_String_o *strToEncrypt, const 
   uint8_t v12; // w21
   System_String_o *v13; // x0
 
-  if ( (byte_5937D2B & 1) == 0 )
+  if ( (byte_596FE98 & 1) == 0 )
   {
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&System_Security_Cryptography_MD5CryptoServiceProvider_TypeInfo);
-    sub_21FFC50(&System_Text_UTF8Encoding_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5937D2B = 1;
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&System_Security_Cryptography_MD5CryptoServiceProvider_TypeInfo);
+    sub_2213A60(&System_Text_UTF8Encoding_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596FE98 = 1;
   }
-  v3 = (System_Text_UTF8Encoding_o *)sub_21FFEBC(System_Text_UTF8Encoding_TypeInfo);
+  v3 = (System_Text_UTF8Encoding_o *)sub_2213CCC(System_Text_UTF8Encoding_TypeInfo);
   System_Text_UTF8Encoding___ctor(v3, 0);
   if ( !v3 )
     goto LABEL_15;
@@ -420,7 +420,7 @@ System_String_o *EncryptedPlayerPrefs__Md5(System_String_o *strToEncrypt, const 
                               v3,
                               strToEncrypt,
                               v3->klass->vtable._18_GetBytes.method);
-  v7 = (System_Security_Cryptography_MD5CryptoServiceProvider_o *)sub_21FFEBC(System_Security_Cryptography_MD5CryptoServiceProvider_TypeInfo);
+  v7 = (System_Security_Cryptography_MD5CryptoServiceProvider_o *)sub_2213CCC(System_Security_Cryptography_MD5CryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_MD5CryptoServiceProvider___ctor(v7, 0);
   if ( !v7 )
     goto LABEL_15;
@@ -439,15 +439,15 @@ System_String_o *EncryptedPlayerPrefs__Md5(System_String_o *strToEncrypt, const 
     while ( 1 )
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_21FFED4(v4);
+        sub_2213CE4(v4);
       v12 = v8->m_Items[v11];
       if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v5);
-      v4 = System_Convert__ToString_76483960(v12, 16, 0);
+      v4 = System_Convert__ToString_76697264(v12, 16, 0);
       if ( !v4 )
         break;
       v13 = System_String__PadLeft(v4, 2, 0x30u, 0);
-      v4 = System_String__Concat_75438412(v10, v13, 0);
+      v4 = System_String__Concat_75651716(v10, v13, 0);
       LODWORD(max_length) = v8->max_length;
       ++v11;
       v10 = v4;
@@ -455,7 +455,7 @@ System_String_o *EncryptedPlayerPrefs__Md5(System_String_o *strToEncrypt, const 
         goto LABEL_13;
     }
 LABEL_15:
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   }
 LABEL_13:
   if ( !v10 )
@@ -542,14 +542,14 @@ void EncryptedPlayerPrefs__SaveEncryption(
   System_String_o *v76; // x0
   System_String_o *v77; // x0
 
-  if ( (byte_5937D2C & 1) == 0 )
+  if ( (byte_596FE99 & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&string___TypeInfo);
-    sub_21FFC50(&StringLiteral_17245/*"_used_key"*/);
-    sub_21FFC50(&StringLiteral_16714/*"_"*/);
-    sub_21FFC50(&StringLiteral_17183/*"_encryption_check"*/);
-    byte_5937D2C = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&string___TypeInfo);
+    sub_2213A60(&StringLiteral_17281/*"_used_key"*/);
+    sub_2213A60(&StringLiteral_16746/*"_"*/);
+    sub_2213A60(&StringLiteral_17219/*"_encryption_check"*/);
+    byte_596FE99 = 1;
   }
   v7 = EncryptedPlayerPrefs_TypeInfo;
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
@@ -560,7 +560,7 @@ void EncryptedPlayerPrefs__SaveEncryption(
   keys = v7->static_fields->keys;
   if ( !keys )
     goto LABEL_20;
-  v7 = (EncryptedPlayerPrefs_c *)UnityEngine_Random__Range_83187376(0, keys->max_length, 0);
+  v7 = (EncryptedPlayerPrefs_c *)UnityEngine_Random__Range_83400680(0, keys->max_length, 0);
   v9 = EncryptedPlayerPrefs_TypeInfo->static_fields->keys;
   if ( !v9 )
     goto LABEL_20;
@@ -568,35 +568,35 @@ void EncryptedPlayerPrefs__SaveEncryption(
   if ( (unsigned int)v7 >= LODWORD(v9->max_length) )
     goto LABEL_19;
   v11 = v9->m_Items[(int)v7];
-  v7 = (EncryptedPlayerPrefs_c *)sub_21FFD10(string___TypeInfo, 9);
+  v7 = (EncryptedPlayerPrefs_c *)sub_2213B20(string___TypeInfo, 9);
   if ( !v7 )
 LABEL_20:
-    sub_21FFECC(v7, type);
+    sub_2213CDC(v7, type);
   v18 = v7;
   if ( !LODWORD(v7->_1.namespaze) )
     goto LABEL_19;
   v7->_1.byval_arg.data = key;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v7->_1.byval_arg, (int32_t)key, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v7->_1.byval_arg, (int32_t)key, v12, v13, v14, v15, v16, v17);
   if ( ((__int64)v18->_1.namespaze & 0xFFFFFFFE) == 0 )
     goto LABEL_19;
-  v25 = StringLiteral_16714/*"_"*/;
-  *(_QWORD *)&v18->_1.byval_arg.bits = StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.byval_arg.bits, v25, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_16746/*"_"*/;
+  *(_QWORD *)&v18->_1.byval_arg.bits = StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.byval_arg.bits, v25, v19, v20, v21, v22, v23, v24);
   if ( LODWORD(v18->_1.namespaze) <= 2 )
     goto LABEL_19;
   v18->_1.this_arg.data = type;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.this_arg, (int32_t)type, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.this_arg, (int32_t)type, v26, v27, v28, v29, v30, v31);
   if ( ((__int64)v18->_1.namespaze & 0xFFFFFFFC) == 0 )
     goto LABEL_19;
-  v38 = StringLiteral_16714/*"_"*/;
-  *(_QWORD *)&v18->_1.this_arg.bits = StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.this_arg.bits, v38, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_16746/*"_"*/;
+  *(_QWORD *)&v18->_1.this_arg.bits = StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.this_arg.bits, v38, v32, v33, v34, v35, v36, v37);
   if ( LODWORD(v18->_1.namespaze) <= 4 )
     goto LABEL_19;
   static_fields = EncryptedPlayerPrefs_TypeInfo->static_fields;
   privateKey = static_fields->privateKey;
   v18->_1.element_class = (Il2CppClass *)static_fields->privateKey;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v18->_1.element_class,
     (int32_t)privateKey,
     v39,
@@ -607,12 +607,12 @@ LABEL_20:
     v44);
   if ( LODWORD(v18->_1.namespaze) <= 5 )
     goto LABEL_19;
-  v53 = StringLiteral_16714/*"_"*/;
-  v18->_1.castClass = (Il2CppClass *)StringLiteral_16714/*"_"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.castClass, v53, v47, v48, v49, v50, v51, v52);
+  v53 = StringLiteral_16746/*"_"*/;
+  v18->_1.castClass = (Il2CppClass *)StringLiteral_16746/*"_"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.castClass, v53, v47, v48, v49, v50, v51, v52);
   if ( LODWORD(v18->_1.namespaze) <= 6
     || (v18->_1.declaringType = (Il2CppClass *)v11,
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v18->_1.declaringType,
           (int32_t)v11,
           v54,
@@ -622,21 +622,21 @@ LABEL_20:
           v58,
           v59),
         ((__int64)v18->_1.namespaze & 0xFFFFFFF8) == 0)
-    || (v66 = StringLiteral_16714/*"_"*/,
-        v18->_1.parent = (Il2CppClass *)StringLiteral_16714/*"_"*/,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.parent, v66, v60, v61, v62, v63, v64, v65),
+    || (v66 = StringLiteral_16746/*"_"*/,
+        v18->_1.parent = (Il2CppClass *)StringLiteral_16746/*"_"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.parent, v66, v60, v61, v62, v63, v64, v65),
         LODWORD(v18->_1.namespaze) <= 8) )
   {
 LABEL_19:
-    sub_21FFED4(v7);
+    sub_2213CE4(v7);
   }
   v18->_1.generic_class = value;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v18->_1.generic_class, (int32_t)value, v67, v68, v69, v70, v71, v72);
-  v73 = System_String__Concat_75483816((System_String_array *)v18, 0);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v18->_1.generic_class, (int32_t)value, v67, v68, v69, v70, v71, v72);
+  v73 = System_String__Concat_75697120((System_String_array *)v18, 0);
   v75 = EncryptedPlayerPrefs__Md5(v73, v74);
-  v76 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17183/*"_encryption_check"*/, 0);
+  v76 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17219/*"_encryption_check"*/, 0);
   UnityEngine_PlayerPrefs__SetString(v76, v75, 0);
-  v77 = System_String__Concat_75438412(key, (System_String_o *)StringLiteral_17245/*"_used_key"*/, 0);
+  v77 = System_String__Concat_75651716(key, (System_String_o *)StringLiteral_17281/*"_used_key"*/, 0);
   UnityEngine_PlayerPrefs__SetInt(v77, v10, 0);
 }
 
@@ -648,18 +648,18 @@ void EncryptedPlayerPrefs__SetFloat(System_String_o *key, float value, const Met
   System_String_o *v7; // x20
   float v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5937D30 & 1) == 0 )
+  if ( (byte_596FE9D & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_20380/*"float"*/);
-    byte_5937D30 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_20421/*"float"*/);
+    byte_596FE9D = 1;
   }
   UnityEngine_PlayerPrefs__SetFloat(key, value, 0);
   v8 = floorf(value * 1000.0);
   v7 = System_Single__ToString(v8, (const MethodInfo *)&v8);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_20380/*"float"*/, v7, v6);
+  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_20421/*"float"*/, v7, v6);
 }
 
 
@@ -671,17 +671,17 @@ void EncryptedPlayerPrefs__SetInt(System_String_o *key, int32_t value, const Met
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = value;
-  if ( (byte_5937D2E & 1) == 0 )
+  if ( (byte_596FE9B & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_21791/*"int"*/);
-    byte_5937D2E = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_21833/*"int"*/);
+    byte_596FE9B = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(key, value, 0);
   v7 = System_Int32__ToString((int32_t)&v8, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_21791/*"int"*/, v7, v6);
+  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_21833/*"int"*/, v7, v6);
 }
 
 
@@ -694,18 +694,18 @@ void EncryptedPlayerPrefs__SetLong(System_String_o *key, int64_t value, const Me
   int64_t v8; // [xsp+8h] [xbp-28h] BYREF
 
   v8 = value;
-  if ( (byte_5937D2F & 1) == 0 )
+  if ( (byte_596FE9C & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_22382/*"long"*/);
-    byte_5937D2F = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_22425/*"long"*/);
+    byte_596FE9C = 1;
   }
   v4 = System_Int64__ToString((int64_t)&v8, 0);
   UnityEngine_PlayerPrefs__SetString(key, v4, 0);
   v7 = System_Int64__ToString((int64_t)&v8, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_22382/*"long"*/, v7, v6);
+  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_22425/*"long"*/, v7, v6);
 }
 
 
@@ -714,14 +714,14 @@ void EncryptedPlayerPrefs__SetString(System_String_o *key, System_String_o *valu
   __int64 v5; // x1
   const MethodInfo *v6; // x3
 
-  if ( (byte_5937D31 & 1) == 0 )
+  if ( (byte_596FE9E & 1) == 0 )
   {
-    sub_21FFC50(&EncryptedPlayerPrefs_TypeInfo);
-    sub_21FFC50(&StringLiteral_24959/*"string"*/);
-    byte_5937D31 = 1;
+    sub_2213A60(&EncryptedPlayerPrefs_TypeInfo);
+    sub_2213A60(&StringLiteral_25007/*"string"*/);
+    byte_596FE9E = 1;
   }
   UnityEngine_PlayerPrefs__SetString(key, value, 0);
   if ( !*(&EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo, v5);
-  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_24959/*"string"*/, value, v6);
+  EncryptedPlayerPrefs__SaveEncryption(key, (System_String_o *)StringLiteral_25007/*"string"*/, value, v6);
 }

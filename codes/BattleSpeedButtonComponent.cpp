@@ -22,7 +22,7 @@ void BattleSpeedButtonComponent__OnPress(BattleSpeedButtonComponent_o *this, boo
     v4 = 1.0;
     if ( !perf )
 LABEL_3:
-      sub_21FFECC(perf, isPressed);
+      sub_2213CDC(perf, isPressed);
   }
   BattlePerformance__setBattleSpeed(perf, v4, 0);
 }

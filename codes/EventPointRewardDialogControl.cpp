@@ -41,24 +41,24 @@ void EventPointRewardDialogControl__Open(
   System_Action_o *v40; // x21
   const MethodInfo *v41; // x2
 
-  if ( (byte_59329BB & 1) == 0 )
+  if ( (byte_596AABB & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
-    sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__1__);
-    sub_21FFC50(&EventPointRewardDialogControl___c__DisplayClass3_0_TypeInfo);
-    byte_59329BB = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
+    sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__1__);
+    sub_2213A60(&EventPointRewardDialogControl___c__DisplayClass3_0_TypeInfo);
+    byte_596AABB = 1;
   }
-  v17 = sub_21FFEBC(EventPointRewardDialogControl___c__DisplayClass3_0_TypeInfo);
+  v17 = sub_2213CCC(EventPointRewardDialogControl___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
     goto LABEL_16;
   *(_QWORD *)(v17 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v17 + 24) = onFinishedDialog;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)onFinishedDialog, v26, v27, v28, v29, v30, v31);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)onFinishedDialog, v26, v27, v28, v29, v30, v31);
   if ( itemArray )
   {
     backSprite = (UnityEngine_Component_o *)this->fields.backSprite;
@@ -81,7 +81,7 @@ void EventPointRewardDialogControl__Open(
       v32);
     if ( enableBackground )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v36 = AvalonSceneManager_TypeInfo;
       if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
       {
@@ -89,7 +89,7 @@ void EventPointRewardDialogControl__Open(
         v36 = AvalonSceneManager_TypeInfo;
       }
       DEFAULT_FADE_TIME = v36->static_fields->DEFAULT_FADE_TIME;
-      v38 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v38 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(
         v38,
         (Il2CppObject *)v17,
@@ -101,10 +101,10 @@ void EventPointRewardDialogControl__Open(
         return;
       }
 LABEL_16:
-      sub_21FFECC(backSprite, v19);
+      sub_2213CDC(backSprite, v19);
     }
     dialog = this->fields.dialog;
-    v40 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       v40,
       (Il2CppObject *)v17,
@@ -148,17 +148,17 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__0(
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_59329BC & 1) == 0 )
+  if ( (byte_596AABC & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
-    sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__2__);
-    byte_59329BC = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
+    sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__2__);
+    byte_596AABC = 1;
   }
   v3 = Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__;
   if ( (*((_BYTE *)Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
-  v4 = (SePlayer_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__0__);
+  v4 = (SePlayer_o *)sub_2213A44(v3, v3[4]);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_11;
@@ -170,18 +170,18 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__0(
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__2__,
       0);
     this->fields.__9__2 = _9__2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12, v13, v14, v15, v16);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12, v13, v14, v15, v16);
   }
   if ( !dialog )
 LABEL_11:
-    sub_21FFECC(v4, v5);
+    sub_2213CDC(v4, v5);
   EventPointRewardDialog__Open(dialog, _9__2, v7);
 }
 
@@ -195,7 +195,7 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (dialog = (BaseDialog_o *)_4__this->fields.dialog) == 0 )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   BaseDialog__Close(dialog, this->fields.onFinishedDialog, 0);
 }
 
@@ -216,11 +216,11 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__2(
   bool v11; // w7
 
   v2 = this;
-  if ( (byte_59329BD & 1) == 0 )
+  if ( (byte_596AABD & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    this = (EventPointRewardDialogControl___c__DisplayClass3_0_o *)sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__3__);
-    byte_59329BD = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    this = (EventPointRewardDialogControl___c__DisplayClass3_0_o *)sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__3__);
+    byte_596AABD = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -229,18 +229,18 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__2(
   _9__3 = v2->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__3,
       (Il2CppObject *)v2,
       Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__3__,
       0);
     v2->fields.__9__3 = _9__3;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v6, v7, v8, v9, v10, v11);
   }
   if ( !dialog )
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   BaseDialog__Close(dialog, _9__3, 0);
 }
 
@@ -263,15 +263,15 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__3(
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_59329BE & 1) == 0 )
+  if ( (byte_596AABE & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AvalonSceneManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__4__);
-    byte_59329BE = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AvalonSceneManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__4__);
+    byte_596AABE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v6 = AvalonSceneManager_TypeInfo;
   v7 = (CommonUI_o *)Instance;
   if ( !*(&AvalonSceneManager_TypeInfo->_2.cctor_finished + 1) )
@@ -283,17 +283,17 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__3(
   DEFAULT_FADE_TIME = v6->static_fields->DEFAULT_FADE_TIME;
   if ( !_9__4 )
   {
-    _9__4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__4,
       (Il2CppObject *)this,
       Method_EventPointRewardDialogControl___c__DisplayClass3_0__Open_b__4__,
       0);
     this->fields.__9__4 = _9__4;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.__9__4, (int32_t)_9__4, v10, v11, v12, v13, v14, v15);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__9__4, (int32_t)_9__4, v10, v11, v12, v13, v14, v15);
   }
   if ( !v7 )
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   CommonUI__maskFadeout(v7, 1, DEFAULT_FADE_TIME, _9__4, 0);
 }
 
@@ -312,7 +312,7 @@ void EventPointRewardDialogControl___c__DisplayClass3_0___Open_b__4(
     || (backSprite = (UnityEngine_Component_o *)_4__this->fields.backSprite) == 0
     || (backSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(backSprite, 0)) == 0 )
   {
-    sub_21FFECC(backSprite, v4);
+    sub_2213CDC(backSprite, v4);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)backSprite, 0, 0);
 }

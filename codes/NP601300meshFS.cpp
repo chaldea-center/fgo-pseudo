@@ -18,11 +18,11 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   float v11; // s11
   float startParentPosZ; // s13
   bool v13; // nf
-  float z; // s8
+  float v14; // s8
   float v15; // s12
   float v16; // s9
   float v17; // s8
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  float z; // s2
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -41,11 +41,11 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   if ( !transform )
     goto LABEL_14;
   v10 = (float)((float)(v7 * 9.0) * 0.0625) + -1.0;
-  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  z = UnityEngine_Transform__get_localPosition(transform, 0).fields.z;
   startParentPosZ = this->fields.startParentPosZ;
   v11 = this->fields.endParentPosZ;
   v13 = v6 < 1.7778;
-  z = localPosition.fields.z;
+  v14 = z;
   v15 = v13 ? 0.0 : v10;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -57,14 +57,14 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (v19.fields.z = 0.0,
-        v17 = (float)((float)(v15 * (float)(endParentPosZ - z)) / (float)(v11 - startParentPosZ)) + 1.0,
+        v17 = (float)((float)(v15 * (float)(endParentPosZ - v14)) / (float)(v11 - startParentPosZ)) + 1.0,
         v19.fields.y = 0.0,
         v19.fields.x = (float)(1.0 - v17) * v16,
         UnityEngine_Transform__set_localPosition(transform, v19, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_14:
-    sub_21FFECC(transform, v9);
+    sub_2213CDC(transform, v9);
   }
   v20.fields.x = v17;
   v20.fields.z = v17;

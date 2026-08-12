@@ -1,9 +1,9 @@
 void LotteryShopBulkResultDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_5932B4C & 1) == 0 )
+  if ( (byte_596AC50 & 1) == 0 )
   {
-    sub_21FFC50(&LotteryShopBulkResultDialog_TypeInfo);
-    byte_5932B4C = 1;
+    sub_2213A60(&LotteryShopBulkResultDialog_TypeInfo);
+    byte_596AC50 = 1;
   }
   LotteryShopBulkResultDialog_TypeInfo->static_fields->newLineItemCount = 5;
 }
@@ -13,10 +13,10 @@ void LotteryShopBulkResultDialog___ctor(LotteryShopBulkResultDialog_o *this, con
 {
   __int64 v2; // x2
 
-  if ( (byte_5932B4B & 1) == 0 )
+  if ( (byte_596AC4F & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5932B4B = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596AC4F = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -35,10 +35,10 @@ void LotteryShopBulkResultDialog__ClearGridAllChild(
   __int64 v7; // x2
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_5932B49 & 1) == 0 )
+  if ( (byte_596AC4D & 1) == 0 )
   {
-    this = (LotteryShopBulkResultDialog_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932B49 = 1;
+    this = (LotteryShopBulkResultDialog_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596AC4D = 1;
   }
   if ( !grid )
     goto LABEL_13;
@@ -63,12 +63,12 @@ void LotteryShopBulkResultDialog__ClearGridAllChild(
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
-      UnityEngine_Object__Destroy_83246496(gameObject, 0);
+      UnityEngine_Object__Destroy_83459800(gameObject, 0);
       if ( (unsigned int)--v5 <= 1 )
         return;
     }
 LABEL_13:
-    sub_21FFECC(this, grid);
+    sub_2213CDC(this, grid);
   }
 }
 
@@ -85,12 +85,12 @@ void LotteryShopBulkResultDialog__Init(LotteryShopBulkResultDialog_o *this, cons
   LotteryShopBulkResultDialog_o *v10; // x0
   const MethodInfo *v11; // x2
 
-  if ( (byte_5932B46 & 1) == 0 )
+  if ( (byte_596AC4A & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932B46 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596AC4A = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -104,10 +104,10 @@ void LotteryShopBulkResultDialog__Init(LotteryShopBulkResultDialog_o *this, cons
   closeLabel = this->fields.closeLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5, v6);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
 LABEL_9:
-    sub_21FFECC(titleLabel, v3);
+    sub_2213CDC(titleLabel, v3);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0);
   LotteryShopBulkResultDialog__ClearGridAllChild(v8, this->fields.oneLineGrid, v9);
   LotteryShopBulkResultDialog__ClearGridAllChild(v10, this->fields.twoLineGrid, v11);
@@ -120,22 +120,22 @@ void LotteryShopBulkResultDialog__OnClickCloseButton(LotteryShopBulkResultDialog
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_5932B48 & 1) == 0 )
+  if ( (byte_596AC4C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_LotteryShopBulkResultDialog_OnClickCloseButton__);
-    sub_21FFC50(&Method_LotteryShopBulkResultDialog__OnClickCloseButton_b__12_0__);
-    byte_5932B48 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_LotteryShopBulkResultDialog_OnClickCloseButton__);
+    sub_2213A60(&Method_LotteryShopBulkResultDialog__OnClickCloseButton_b__12_0__);
+    byte_596AC4C = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.state = 1;
     v3 = Method_LotteryShopBulkResultDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_LotteryShopBulkResultDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_LotteryShopBulkResultDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_LotteryShopBulkResultDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_LotteryShopBulkResultDialog__OnClickCloseButton_b__12_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -184,30 +184,30 @@ void LotteryShopBulkResultDialog__Open(
   _OWORD v40[2]; // [xsp+0h] [xbp-90h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v41; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_5932B47 & 1) == 0 )
+  if ( (byte_596AC4B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__bool__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_int__bool__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_LotteryShopResultItem___);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_int__bool__get_Key__);
-    sub_21FFC50(&Method_System_Collections_Generic_KeyValuePair_int__bool__get_Value__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_LotteryShopBulkResultDialog__Open_b__11_0__);
-    sub_21FFC50(&LotteryShopBulkResultDialog_TypeInfo);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_8676/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/);
-    sub_21FFC50(&StringLiteral_8675/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/);
-    byte_5932B47 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__bool__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_int__bool__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_LotteryShopResultItem___);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_int__bool__get_Key__);
+    sub_2213A60(&Method_System_Collections_Generic_KeyValuePair_int__bool__get_Value__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_LotteryShopBulkResultDialog__Open_b__11_0__);
+    sub_2213A60(&LotteryShopBulkResultDialog_TypeInfo);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_8689/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/);
+    sub_2213A60(&StringLiteral_8688/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/);
+    byte_596AC4B = 1;
   }
   this->fields.closeAction = onClose;
   memset(&v41, 0, 32);
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)onClose,
     (System_String_o *)onClose,
@@ -219,23 +219,23 @@ void LotteryShopBulkResultDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v12);
-  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_8676/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/, 0);
+  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_8689/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_29;
   UILabel__set_text(titleLabel, resultemPrefab, 0);
   messageLabel = this->fields.messageLabel;
-  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_8675/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/, 0);
+  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_8688/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_29;
   UILabel__set_text(messageLabel, resultemPrefab, 0);
   closeLabel = this->fields.closeLabel;
-  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  resultemPrefab = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_29;
   UILabel__set_text(closeLabel, resultemPrefab, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v18, v19);
-  DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GiftMaster___);
+  DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GiftMaster___);
   resultemPrefab = (System_String_o *)this->fields.resultemPrefab;
   if ( !resultemPrefab )
     goto LABEL_29;
@@ -244,7 +244,7 @@ void LotteryShopBulkResultDialog__Open(
     goto LABEL_29;
   Count = System_Collections_Generic_Dictionary_int__bool___get_Count(
             dataDic,
-            (const MethodInfo_3F55830 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Count__);
+            (const MethodInfo_3F88FD8 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Count__);
   v23 = LotteryShopBulkResultDialog_TypeInfo;
   v24 = Count;
   if ( !*(&LotteryShopBulkResultDialog_TypeInfo->_2.cctor_finished + 1) )
@@ -260,7 +260,7 @@ void LotteryShopBulkResultDialog__Open(
   System_Collections_Generic_Dictionary_int__bool___GetEnumerator(
     (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)v40,
     dataDic,
-    (const MethodInfo_3F55F84 *)Method_System_Collections_Generic_Dictionary_int__bool__GetEnumerator__);
+    (const MethodInfo_3F8972C *)Method_System_Collections_Generic_Dictionary_int__bool__GetEnumerator__);
   v28 = v40[0];
   *(_QWORD *)&v40[0] = 0;
   *((_QWORD *)&v40[0] + 1) = &v41;
@@ -270,22 +270,22 @@ void LotteryShopBulkResultDialog__Open(
   {
     v29 = System_Collections_Generic_Dictionary_Enumerator_int__bool___MoveNext(
             &v41,
-            (const MethodInfo_4121538 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__MoveNext__);
+            (const MethodInfo_41550C4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__MoveNext__);
     if ( !v29 )
       break;
     if ( !v27 )
-      sub_21FFECC(v29, v30);
+      sub_2213CDC(v29, v30);
     key = v41.fields._current.fields.key;
     v32 = this->fields.resultemPrefab;
     transform = UnityEngine_Component__get_transform(v27, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v32, transform, 0, 0);
     if ( !Object )
-      sub_21FFECC(0, v35);
+      sub_2213CDC(0, v35);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Object,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_LotteryShopResultItem___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_LotteryShopResultItem___);
     if ( !Component_object )
-      sub_21FFECC(0, v37);
+      sub_2213CDC(0, v37);
     LotteryShopResultItem__Set(
       (LotteryShopResultItem_o *)Component_object,
       (int32_t)key,
@@ -294,7 +294,7 @@ void LotteryShopBulkResultDialog__Open(
   }
   System_Collections_Generic_Dictionary_Enumerator_int__bool___Dispose(
     &v41,
-    (const MethodInfo_4121648 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__Dispose__);
+    (const MethodInfo_41551D4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__bool__Dispose__);
   resultemPrefab = (System_String_o *)this->fields.resultemPrefab;
   if ( !resultemPrefab
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resultemPrefab, 0, 0),
@@ -303,10 +303,10 @@ void LotteryShopBulkResultDialog__Open(
         (resultemPrefab = (System_String_o *)this->fields.twoLineGrid) == 0) )
   {
 LABEL_29:
-    sub_21FFECC(resultemPrefab, v15);
+    sub_2213CDC(resultemPrefab, v15);
   }
   UIGrid__set_repositionNow((UIGrid_o *)resultemPrefab, 1, 0);
-  v39 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v39 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v39, (Il2CppObject *)this, Method_LotteryShopBulkResultDialog__Open_b__11_0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0, 0);
 }
@@ -318,15 +318,15 @@ void LotteryShopBulkResultDialog___OnClickCloseButton_b__12_0(
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_5932B4D & 1) == 0 )
+  if ( (byte_596AC51 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_bool___);
-    byte_5932B4D = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_bool___);
+    byte_596AC51 = 1;
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.closeAction,
     0,
-    (const MethodInfo_36CDE1C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_36FFD8C *)Method_ActionExtensions_Call_bool___);
   LotteryShopBulkResultDialog__Init(this, v3);
 }
 
@@ -341,10 +341,10 @@ System_String_o *LotteryShopBulkResultDialog__get_closeBtnPath(
         LotteryShopBulkResultDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_5932B4A & 1) == 0 )
+  if ( (byte_596AC4E & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16229/*"Window/CloseButton"*/);
-    byte_5932B4A = 1;
+    sub_2213A60(&StringLiteral_16261/*"Window/CloseButton"*/);
+    byte_596AC4E = 1;
   }
-  return (System_String_o *)StringLiteral_16229/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_16261/*"Window/CloseButton"*/;
 }

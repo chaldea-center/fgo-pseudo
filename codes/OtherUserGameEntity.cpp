@@ -1,13 +1,13 @@
 void OtherUserGameEntity___ctor(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938C92 & 1) == 0 )
+  if ( (byte_5970E51 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_long___ctor__);
-    byte_5938C92 = 1;
+    sub_2213A60(&Method_DataEntityBase_long___ctor__);
+    byte_5970E51 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3EDADB8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3F0E560 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -42,11 +42,11 @@ void OtherUserGameEntity__GetAppendSkillInfo(
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5938C91 & 1) == 0 )
+  if ( (byte_5970E50 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&SkillInfo___TypeInfo);
-    byte_5938C91 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&SkillInfo___TypeInfo);
+    byte_5970E50 = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -54,7 +54,7 @@ void OtherUserGameEntity__GetAppendSkillInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_23:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v14);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v14);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId >= 1 )
   {
@@ -64,7 +64,7 @@ LABEL_23:
     do
     {
       if ( !v17 )
-        sub_21FFED4(ServantLeaderInfoByReturnType);
+        sub_2213CE4(ServantLeaderInfoByReturnType);
       ServantLeaderInfoByReturnType = *p_classId;
       if ( supportDeckId < 1 )
         goto LABEL_10;
@@ -91,7 +91,7 @@ LABEL_10:
             && ServantLeaderInfoByReturnType->fields.userSvtId )
           {
 LABEL_22:
-            ServantLeaderInfo__GetAppendPassiveSkillInfo_50536596(ServantLeaderInfoByReturnType, skillInfoList, 0, 0);
+            ServantLeaderInfo__GetAppendPassiveSkillInfo_50601788(ServantLeaderInfoByReturnType, skillInfoList, 0, 0);
             return;
           }
         }
@@ -108,11 +108,11 @@ LABEL_22:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v14);
     v19 = BalanceConfig_TypeInfo;
   }
-  v20 = (SkillInfo_array *)sub_21FFD10(
+  v20 = (SkillInfo_array *)sub_2213B20(
                              SkillInfo___TypeInfo,
                              (unsigned int)v19->static_fields->SvtAppendPassiveSkillListMax);
   *skillInfoList = v20;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)skillInfoList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)skillInfoList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -173,25 +173,25 @@ int32_t OtherUserGameEntity__GetReturnTypeByQuestId(int32_t questId, const Metho
   Il2CppObject *Entity; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_5938C8C & 1) == 0 )
+  if ( (byte_5970E4B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_21FFC50(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938C8C = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_2213A60(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5970E4B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              questId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   return Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, v6);
 }
 
@@ -220,13 +220,13 @@ ServantLeaderInfo_array *OtherUserGameEntity__GetServantLeaderInfoByReturnType(
   {
     if ( returnSupportServantType )
     {
-      v5 = sub_21FFC64(&System_ArgumentOutOfRangeException_TypeInfo);
-      v6 = (System_ArgumentOutOfRangeException_o *)sub_21FFEBC(v5);
-      v7 = (System_String_o *)sub_21FFC64(&StringLiteral_24252/*"returnSupportServantType"*/);
-      v8 = (System_String_o *)sub_21FFC64(&StringLiteral_26803/*"予期されないReturnSupportServantTypeです。"*/);
-      System_ArgumentOutOfRangeException___ctor_76416484(v6, v7, v8, 0);
-      v9 = sub_21FFC64(&Method_OtherUserGameEntity_GetServantLeaderInfoByReturnType__);
-      sub_21FFD90(v6, v9);
+      v5 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
+      v6 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v5);
+      v7 = (System_String_o *)sub_2213A74(&StringLiteral_24300/*"returnSupportServantType"*/);
+      v8 = (System_String_o *)sub_2213A74(&StringLiteral_26855/*"予期されないReturnSupportServantTypeです。"*/);
+      System_ArgumentOutOfRangeException___ctor_76629788(v6, v7, v8, 0);
+      v9 = sub_2213A74(&Method_OtherUserGameEntity_GetServantLeaderInfoByReturnType__);
+      sub_2213BA0(v6, v9);
     }
     p_userSvtGrandHash = &this->fields.userSvtLeaderHash;
   }
@@ -266,7 +266,7 @@ int32_t OtherUserGameEntity__getEquipAtk(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_21:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   max_length = ServantLeaderInfoByReturnType->max_length;
   if ( (int)max_length < 1 )
     return 0;
@@ -275,7 +275,7 @@ LABEL_21:
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     v16 = *i;
     if ( supportDeckId >= 1 )
     {
@@ -338,7 +338,7 @@ int32_t OtherUserGameEntity__getEquipHp(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_21:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   max_length = ServantLeaderInfoByReturnType->max_length;
   if ( (int)max_length < 1 )
     return 0;
@@ -347,7 +347,7 @@ LABEL_21:
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     v16 = *i;
     if ( supportDeckId >= 1 )
     {
@@ -411,7 +411,7 @@ EquipTargetInfo_o *OtherUserGameEntity__getEquipInfo(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_25:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v13);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v13);
   max_length = ServantLeaderInfoByReturnType->max_length;
   v15 = ServantLeaderInfoByReturnType;
   if ( (int)max_length < 1 )
@@ -420,7 +420,7 @@ LABEL_25:
   while ( 1 )
   {
     if ( v16 >= (unsigned int)max_length )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     m_Items = v15->m_Items;
     v18 = v15->m_Items[v16];
     if ( supportDeckId >= 1 )
@@ -488,10 +488,10 @@ int32_t OtherUserGameEntity__getEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v23; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_5938C8E & 1) == 0 )
+  if ( (byte_5970E4D & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_5938C8E = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_5970E4D = 1;
   }
   ServantLeaderInfoByReturnType = OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -507,7 +507,7 @@ int32_t OtherUserGameEntity__getEquipSvtId(
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     if ( !v15 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     v17 = *i;
     if ( supportDeckId >= 1 )
     {
@@ -533,7 +533,7 @@ int32_t OtherUserGameEntity__getEquipSvtId(
         goto LABEL_23;
       }
 LABEL_26:
-      sub_21FFECC(ServantLeaderInfoByReturnType, v12);
+      sub_2213CDC(ServantLeaderInfoByReturnType, v12);
     }
 LABEL_18:
     --v14;
@@ -557,7 +557,7 @@ LABEL_22:
 LABEL_23:
   *(_QWORD *)&v24.fields.currentCryptoKey = v21;
   *(_QWORD *)&v24.fields.fakeValue = v22;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v24, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v24, 0);
 }
 
 
@@ -587,10 +587,10 @@ int64_t OtherUserGameEntity__getEquipUserSvtId(
   __int128 v26; // [xsp+40h] [xbp-60h]
   __int128 v27; // [xsp+50h] [xbp-50h]
 
-  if ( (byte_5938C8D & 1) == 0 )
+  if ( (byte_5970E4C & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5938C8D = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_5970E4C = 1;
   }
   ServantLeaderInfoByReturnType = OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -606,7 +606,7 @@ int64_t OtherUserGameEntity__getEquipUserSvtId(
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     if ( !v15 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     v17 = *i;
     if ( supportDeckId >= 1 )
     {
@@ -632,10 +632,10 @@ int64_t OtherUserGameEntity__getEquipUserSvtId(
         v22 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v25;
         v25[0] = v26;
         v25[1] = v27;
-        return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(v22, 0);
+        return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(v22, 0);
       }
 LABEL_29:
-      sub_21FFECC(ServantLeaderInfoByReturnType, v12);
+      sub_2213CDC(ServantLeaderInfoByReturnType, v12);
     }
 LABEL_18:
     --v14;
@@ -658,7 +658,7 @@ LABEL_18:
   v22 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v24;
   v24[0] = v26;
   v24[1] = v27;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(v22, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(v22, 0);
 }
 
 
@@ -685,7 +685,7 @@ int32_t OtherUserGameEntity__getLv(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   max_length = ServantLeaderInfoByReturnType->max_length;
   if ( (int)max_length < 1 )
     return 0;
@@ -694,7 +694,7 @@ LABEL_19:
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     v16 = *i;
     if ( supportDeckId >= 1 )
     {
@@ -745,7 +745,7 @@ int32_t OtherUserGameEntity__getMaxLv(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId < 1 )
     return 0;
@@ -754,7 +754,7 @@ LABEL_19:
   for ( i = (ServantLeaderInfo_o **)&ServantLeaderInfoByReturnType->fields.classId; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     ServantLeaderInfoByReturnType = *i;
     if ( supportDeckId >= 1 )
     {
@@ -801,7 +801,7 @@ ServantLeaderInfo_o *OtherUserGameEntity__getServantLeaderInfo(
   int64_t userId; // x9
   __int64 v15; // x8
   __int64 v16; // x9
-  ServantLeaderInfo_o **p_classId; // x10
+  int32_t *p_classId; // x10
 
   result = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -809,18 +809,18 @@ ServantLeaderInfo_o *OtherUserGameEntity__getServantLeaderInfo(
                                     (const MethodInfo *)isExist);
   if ( !result )
 LABEL_19:
-    sub_21FFECC(result, v13);
+    sub_2213CDC(result, v13);
   userId = result->fields.userId;
   if ( (int)userId >= 1 )
   {
     v15 = (unsigned int)userId & ~((int)userId >> 31);
     v16 = (unsigned int)result->fields.userId;
-    p_classId = (ServantLeaderInfo_o **)&result->fields.classId;
+    p_classId = &result->fields.classId;
     do
     {
       if ( !v16 )
-        sub_21FFED4(result);
-      result = *p_classId;
+        sub_2213CE4(result);
+      result = *(ServantLeaderInfo_o **)p_classId;
       if ( returnSupportServantType == 2 )
       {
         if ( !result )
@@ -840,7 +840,7 @@ LABEL_19:
         }
       }
       --v15;
-      ++p_classId;
+      p_classId += 2;
       --v16;
     }
     while ( v15 );
@@ -874,11 +874,11 @@ void OtherUserGameEntity__getSkillInfo(
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5938C8F & 1) == 0 )
+  if ( (byte_5970E4E & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&SkillInfo___TypeInfo);
-    byte_5938C8F = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&SkillInfo___TypeInfo);
+    byte_5970E4E = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -886,7 +886,7 @@ void OtherUserGameEntity__getSkillInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_23:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v14);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v14);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId >= 1 )
   {
@@ -896,7 +896,7 @@ LABEL_23:
     do
     {
       if ( !v17 )
-        sub_21FFED4(ServantLeaderInfoByReturnType);
+        sub_2213CE4(ServantLeaderInfoByReturnType);
       ServantLeaderInfoByReturnType = *p_classId;
       if ( supportDeckId < 1 )
         goto LABEL_10;
@@ -940,9 +940,9 @@ LABEL_22:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v14);
     v19 = BalanceConfig_TypeInfo;
   }
-  v20 = (SkillInfo_array *)sub_21FFD10(SkillInfo___TypeInfo, (unsigned int)v19->static_fields->SvtSkillListMax);
+  v20 = (SkillInfo_array *)sub_2213B20(SkillInfo___TypeInfo, (unsigned int)v19->static_fields->SvtSkillListMax);
   *skillInfoList = v20;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)skillInfoList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)skillInfoList, (int32_t)v20, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -968,7 +968,7 @@ int32_t OtherUserGameEntity__getSvtId(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId < 1 )
     return 0;
@@ -977,7 +977,7 @@ LABEL_19:
   for ( i = (ServantLeaderInfo_o **)&ServantLeaderInfoByReturnType->fields.classId; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     ServantLeaderInfoByReturnType = *i;
     if ( supportDeckId >= 1 )
     {
@@ -1033,10 +1033,10 @@ bool OtherUserGameEntity__getTreasureDeviceInfo(
   bool v24; // w6
   bool v25; // w7
 
-  if ( (byte_5938C90 & 1) == 0 )
+  if ( (byte_5970E4F & 1) == 0 )
   {
-    sub_21FFC50(&TreasureDvcInfo_TypeInfo);
-    byte_5938C90 = 1;
+    sub_2213A60(&TreasureDvcInfo_TypeInfo);
+    byte_5970E4F = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -1044,15 +1044,15 @@ bool OtherUserGameEntity__getTreasureDeviceInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_21:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v14);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v14);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId < 1 )
   {
 LABEL_19:
-    v19 = (TreasureDvcInfo_o *)sub_21FFEBC(TreasureDvcInfo_TypeInfo);
+    v19 = (TreasureDvcInfo_o *)sub_2213CCC(TreasureDvcInfo_TypeInfo);
     TreasureDvcInfo___ctor(v19, 0);
     *tdInfo = v19;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)tdInfo, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)tdInfo, (int32_t)v19, v20, v21, v22, v23, v24, v25);
     return 0;
   }
   v16 = (unsigned int)userId & ~((int)userId >> 31);
@@ -1061,7 +1061,7 @@ LABEL_19:
   while ( 1 )
   {
     if ( !v17 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     ServantLeaderInfoByReturnType = *p_classId;
     if ( supportDeckId >= 1 )
     {
@@ -1116,7 +1116,7 @@ int32_t OtherUserGameEntity__getTreasureDeviceLevelIcon(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_21FFECC(ServantLeaderInfoByReturnType, v11);
+    sub_2213CDC(ServantLeaderInfoByReturnType, v11);
   userId = ServantLeaderInfoByReturnType->fields.userId;
   if ( (int)userId < 1 )
     return 0;
@@ -1125,7 +1125,7 @@ LABEL_19:
   for ( i = (ServantLeaderInfo_o **)&ServantLeaderInfoByReturnType->fields.classId; ; ++i )
   {
     if ( !v14 )
-      sub_21FFED4(ServantLeaderInfoByReturnType);
+      sub_2213CE4(ServantLeaderInfoByReturnType);
     ServantLeaderInfoByReturnType = *i;
     if ( supportDeckId >= 1 )
     {
@@ -1167,11 +1167,11 @@ int64_t OtherUserGameEntity__getUpdatedAt(OtherUserGameEntity_o *this, int32_t c
   if ( !userSvtLeaderHash )
     goto LABEL_5;
   if ( !LODWORD(userSvtLeaderHash->max_length) )
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   v4 = userSvtLeaderHash->m_Items[0];
   if ( !v4 )
 LABEL_5:
-    sub_21FFECC(this, *(_QWORD *)&classPos);
+    sub_2213CDC(this, *(_QWORD *)&classPos);
   return v4->fields.updatedAt;
 }
 
@@ -1198,7 +1198,7 @@ int64_t OtherUserGameEntity__getUserSvtId(
                       *(const MethodInfo **)&returnSupportServantType);
   if ( !result )
 LABEL_15:
-    sub_21FFECC(result, v9);
+    sub_2213CDC(result, v9);
   v10 = *(_QWORD *)(result + 24);
   if ( (int)v10 < 1 )
     return 0;
@@ -1207,7 +1207,7 @@ LABEL_15:
   for ( i = (__int64 *)(result + 32); ; ++i )
   {
     if ( !v12 )
-      sub_21FFED4(result);
+      sub_2213CE4(result);
     v14 = *i;
     if ( returnSupportServantType != 2 )
       break;

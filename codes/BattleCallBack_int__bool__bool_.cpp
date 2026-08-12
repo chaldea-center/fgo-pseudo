@@ -4,7 +4,7 @@ void BattleCallBack_int__bool__bool____ctor(
         bool arg2,
         bool arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_3E39DE4 *method)
+        const MethodInfo_3E6D58C *method)
 {
   BattleCallBack_int__bool__bool__o *v10; // x23
   System_String_o *v11; // x2
@@ -21,16 +21,16 @@ void BattleCallBack_int__bool__bool____ctor(
   LODWORD(v10[-1].fields.callBack) = arg1;
   BYTE4(v10[-1].fields.callBack) = arg2;
   BYTE5(v10[-1].fields.callBack) = arg3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v10, (int32_t)callBack, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v10, (int32_t)callBack, v11, v12, v13, v14, v15, v16);
 }
 
 
-void BattleCallBack_int__bool__bool___call(BattleCallBack_int__bool__bool__o *this, const MethodInfo_3E39E34 *method)
+void BattleCallBack_int__bool__bool___call(BattleCallBack_int__bool__bool__o *this, const MethodInfo_3E6D5DC *method)
 {
   ActionExtensions__Call_int__bool__bool_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
     this->fields.arg3,
-    (const MethodInfo_36CE524 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
+    (const MethodInfo_3700494 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
 }

@@ -15,16 +15,16 @@ System_Collections_IEnumerator_o *FGOMeshExplodeFader__FadeOut(FGOMeshExplodeFad
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_59373CF & 1) == 0 )
+  if ( (byte_596F52A & 1) == 0 )
   {
-    sub_21FFC50(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
-    byte_59373CF = 1;
+    sub_2213A60(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+    byte_596F52A = 1;
   }
-  v3 = sub_21FFEBC(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+  v3 = sub_2213CCC(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -34,7 +34,7 @@ void FGOMeshExplodeFader__Start(FGOMeshExplodeFader_o *this, const MethodInfo *m
   System_Collections_IEnumerator_o *v3; // x1
 
   v3 = FGOMeshExplodeFader__FadeOut(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v3, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v3, 0);
 }
 
 
@@ -62,17 +62,16 @@ bool FGOMeshExplodeFader__FadeOut_d__2__MoveNext(FGOMeshExplodeFader__FadeOut_d_
   float v11; // s0
   float t_5__2; // s8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  bool result; // w0
   __int64 v15; // x1
   __int64 v16; // x2
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_59373D0 & 1) == 0 )
+  if ( (byte_596F52B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59373D0 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F52B = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -85,7 +84,7 @@ bool FGOMeshExplodeFader__FadeOut_d__2__MoveNext(FGOMeshExplodeFader__FadeOut_d_
     if ( _4__this )
       goto LABEL_8;
 LABEL_14:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( _1__state )
     return 0;
@@ -94,7 +93,7 @@ LABEL_14:
     goto LABEL_14;
   UnityEngine_Component__GetComponent_object_(
     (UnityEngine_Component_o *)_4__this,
-    (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+    (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v11 = 0.0;
   v2->fields._t_5__2 = 0.0;
 LABEL_8:
@@ -102,15 +101,14 @@ LABEL_8:
   {
     v2->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-    sub_21FFBF4(p__2__current, 0, v5, v6, v7, v8, v9, v10);
-    result = 1;
+    sub_2213A04(p__2__current, 0, v5, v6, v7, v8, v9, v10);
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return result;
+    return 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
-  UnityEngine_Object__Destroy_83246496(gameObject, 0);
+  UnityEngine_Object__Destroy_83459800(gameObject, 0);
   return 0;
 }
 
@@ -131,11 +129,11 @@ void __noreturn FGOMeshExplodeFader__FadeOut_d__2__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

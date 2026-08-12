@@ -96,23 +96,23 @@ void EventMapManagerBase__Finish(EventMapManagerBase_o *this, const MethodInfo *
     this,
     this->klass->vtable._27_ReleaseAssets.method);
   this->fields.terminalMap = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.terminalMap, 0, v3, v4, v5, v6, v7, v8);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.terminalMap, 0, v3, v4, v5, v6, v7, v8);
   this->fields.mapCamera = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mapCamera, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mapCamera, 0, v9, v10, v11, v12, v13, v14);
   this->fields.rootRoadP = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rootRoadP, 0, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rootRoadP, 0, v15, v16, v17, v18, v19, v20);
   this->fields.rootSpotP = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rootSpotP, 0, v21, v22, v23, v24, v25, v26);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rootSpotP, 0, v21, v22, v23, v24, v25, v26);
   this->fields.rootPathP = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rootPathP, 0, v27, v28, v29, v30, v31, v32);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rootPathP, 0, v27, v28, v29, v30, v31, v32);
   this->fields.rootGimmickP = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rootGimmickP, 0, v33, v34, v35, v36, v37, v38);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rootGimmickP, 0, v33, v34, v35, v36, v37, v38);
   this->fields.rootEffectP = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.rootEffectP, 0, v39, v40, v41, v42, v43, v44);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.rootEffectP, 0, v39, v40, v41, v42, v43, v44);
   this->fields.warInfo = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.warInfo, 0, v45, v46, v47, v48, v49, v50);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.warInfo, 0, v45, v46, v47, v48, v49, v50);
   this->fields.mapInfo = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mapInfo, 0, v51, v52, v53, v54, v55, v56);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mapInfo, 0, v51, v52, v53, v54, v55, v56);
 }
 
 
@@ -146,17 +146,17 @@ void EventMapManagerBase__LocateDialogToUiRoot(
   TerminalSceneComponent_o *mInstance; // x0
   System_Nullable_Vector3__o v6; // 0:x2.16
 
-  if ( (byte_5934DCC & 1) == 0 )
+  if ( (byte_596CEFB & 1) == 0 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5934DCC = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596CEFB = 1;
   }
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, dialog, method);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -174,7 +174,7 @@ void EventMapManagerBase__LocateDialogToUiRoot(
                                                   (UnityEngine_Component_o *)dialog,
                                                   0)) == 0 )
   {
-    sub_21FFECC(mInstance, dialog);
+    sub_2213CDC(mInstance, dialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mInstance, 0, 0);
 }
@@ -225,21 +225,21 @@ void EventMapManagerBase__SetAllTouchBlock(EventMapManagerBase_o *this, bool val
   EventMapManagerBase_o *v4; // x20
   int32_t touchBlockNum; // w8
   int v6; // w8
-  const MethodInfo_476E8C0 *v7; // x0
+  const MethodInfo_47A29F8 *v7; // x0
 
   v4 = this;
-  if ( (byte_5934DCA & 1) == 0 )
+  if ( (byte_596CEF9 & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5934DCA = 1;
+    this = (EventMapManagerBase_o *)sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596CEF9 = 1;
   }
   if ( !v4
     || ((touchBlockNum = v4->fields.touchBlockNum, value) ? (v6 = touchBlockNum + 1) : (v6 = touchBlockNum - 1),
-        v7 = (const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
+        v7 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
         v4->fields.touchBlockNum = v6 & ~(v6 >> 31),
         (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_object___get_Instance(v7)) == 0) )
   {
-    sub_21FFECC(this, value);
+    sub_2213CDC(this, value);
   }
   CommonUI__SetEventFadeMaskCollider((CommonUI_o *)this, v4->fields.touchBlockNum > 0, 0);
   ((void (__fastcall *)(EventMapManagerBase_o *, bool, const MethodInfo *))v4->klass->vtable._31_SetCameraWorkBlock.methodPtr)(
@@ -262,10 +262,10 @@ void EventMapManagerBase__SetCameraWorkBlock(EventMapManagerBase_o *this, bool v
   struct MapCamera_o *v11; // x8
 
   v4 = this;
-  if ( (byte_5934DCB & 1) == 0 )
+  if ( (byte_596CEFA & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934DCB = 1;
+    this = (EventMapManagerBase_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CEFA = 1;
   }
   if ( !v4 )
     goto LABEL_13;
@@ -291,7 +291,7 @@ void EventMapManagerBase__SetCameraWorkBlock(EventMapManagerBase_o *this, bool v
       return;
     }
 LABEL_13:
-    sub_21FFECC(this, value);
+    sub_2213CDC(this, value);
   }
 }
 
@@ -365,7 +365,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
   bool v65; // w7
 
   this->fields.terminalMap = terminalMap;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.terminalMap,
     (int32_t)terminalMap,
     (System_String_o *)mapInfo,
@@ -375,11 +375,11 @@ void EventMapManagerBase__SetTerminalMapInfo(
     (bool)rootGimmickP,
     (bool)rootPathP);
   this->fields.mapInfo = mapInfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mapInfo, (int32_t)mapInfo, v18, v19, v20, v21, v22, v23);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mapInfo, (int32_t)mapInfo, v18, v19, v20, v21, v22, v23);
   this->fields.warInfo = warInfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.warInfo, (int32_t)warInfo, v24, v25, v26, v27, v28, v29);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.warInfo, (int32_t)warInfo, v24, v25, v26, v27, v28, v29);
   this->fields.mapCamera = mapCamera;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mapCamera,
     (int32_t)mapCamera,
     v30,
@@ -389,7 +389,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
     v34,
     v35);
   this->fields.rootEffectP = rootEffectP;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rootEffectP,
     (int32_t)rootEffectP,
     v36,
@@ -399,7 +399,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
     v40,
     v41);
   this->fields.rootGimmickP = rootGimmickP;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rootGimmickP,
     (int32_t)rootGimmickP,
     v42,
@@ -409,7 +409,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
     v46,
     v47);
   this->fields.rootPathP = rootPathP;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rootPathP,
     (int32_t)rootPathP,
     v48,
@@ -419,7 +419,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
     v52,
     v53);
   this->fields.rootRoadP = rootRoadP;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rootRoadP,
     (int32_t)rootRoadP,
     v54,
@@ -429,7 +429,7 @@ void EventMapManagerBase__SetTerminalMapInfo(
     v58,
     v59);
   this->fields.rootSpotP = rootSpotP;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.rootSpotP,
     (int32_t)rootSpotP,
     v60,

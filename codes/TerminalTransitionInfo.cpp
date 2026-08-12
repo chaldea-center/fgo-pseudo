@@ -30,20 +30,20 @@ void TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodIn
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_5935838 & 1) == 0 )
+  if ( (byte_596D97A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5935838 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596D97A = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.beforeActionVals, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.beforeActionVals, 0, v2, v3, v4, v5, v6, v7);
   this->fields.afterActionVals = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.afterActionVals, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.afterActionVals, 0, v9, v10, v11, v12, v13, v14);
   v15 = (int)StringLiteral_1/*""*/;
   this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_voiceAssetName = &this->fields.voiceAssetName;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_voiceAssetName, v15, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_voiceAssetName, v15, v17, v18, v19, v20, v21, v22);
   p_voiceAssetName[1] = 0;
   p_voiceAssetName[2] = 0;
 }
@@ -64,13 +64,13 @@ void TerminalTransitionInfo__SetParameters(
   struct System_String_o **p_voiceAssetName; // x0
 
   if ( !info )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   voiceAssetName = info->fields.voiceAssetName;
   missionId = info->fields.missionId;
   this->fields.voiceAssetName = voiceAssetName;
   p_voiceAssetName = &this->fields.voiceAssetName;
   *((_DWORD *)p_voiceAssetName - 6) = missionId;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_voiceAssetName,
     (int32_t)voiceAssetName,
     (System_String_o *)method,

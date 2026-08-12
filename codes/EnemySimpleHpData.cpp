@@ -6,7 +6,7 @@ void EnemySimpleHpData___ctor(EnemySimpleHpData_o *this, BattleServantData_o *sv
 
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, method);
   if ( !svtData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   maxtpturn = svtData->fields.maxtpturn;
   this->fields._NextTpTurn_k__BackingField = svtData->fields.nexttpturn;
   this->fields._MaxTpTurn_k__BackingField = maxtpturn;

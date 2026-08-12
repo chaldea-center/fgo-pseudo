@@ -17,13 +17,13 @@ BattleLogicTask_o *PlayerComboEndServantReactTaskCreator__Create(
   int32_t ProcState_k__BackingField; // w21
   PlayerComboEndServantAiTask_o *v8; // x22
 
-  if ( (byte_593BAE4 & 1) == 0 )
+  if ( (byte_5973CF0 & 1) == 0 )
   {
-    sub_21FFC50(&PlayerComboEndServantAiTask_TypeInfo);
-    byte_593BAE4 = 1;
+    sub_2213A60(&PlayerComboEndServantAiTask_TypeInfo);
+    byte_5973CF0 = 1;
   }
   ProcState_k__BackingField = this->fields._ProcState_k__BackingField;
-  v8 = (PlayerComboEndServantAiTask_o *)sub_21FFEBC(PlayerComboEndServantAiTask_TypeInfo);
+  v8 = (PlayerComboEndServantAiTask_o *)sub_2213CCC(PlayerComboEndServantAiTask_TypeInfo);
   PlayerComboEndServantAiTask___ctor(v8, ProcState_k__BackingField, svtData, logic, 0);
   return (BattleLogicTask_o *)v8;
 }

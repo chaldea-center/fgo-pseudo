@@ -12,7 +12,7 @@ void SupportSelectListViewDropObject__ActivateEquipOnly(
 
   memberObject = this->fields.memberObject;
   if ( !memberObject )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   SupportSelectObject__ActivateEquipOnly(memberObject, 0);
 }
 
@@ -28,17 +28,17 @@ UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject(
   struct SupportSelectObject_o *memberObject; // x8
   UnityEngine_GameObject_o *v8; // x20
 
-  if ( (byte_5934B35 & 1) == 0 )
+  if ( (byte_596CC64 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
-    byte_5934B35 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
+    byte_596CC64 = 1;
   }
   DragObject = ListViewDropObject__CreateDragObject((ListViewDropObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    DragObject,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___),
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___),
         (memberObject = this->fields.memberObject) == 0)
     || (v8 = DragObject) == 0
     || (SupportSelectListViewDropObject__SetData(
@@ -50,14 +50,14 @@ UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject(
           v6),
         (DragObject = (UnityEngine_GameObject_o *)v8[5].klass) == 0) )
   {
-    sub_21FFECC(DragObject, v4);
+    sub_2213CDC(DragObject, v4);
   }
   SupportSelectObject__ActivateEquipOnly((SupportSelectObject_o *)DragObject, 0);
   return v5;
 }
 
 
-UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject_42464004(
+UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject_42479216(
         SupportSelectListViewDropObject_o *this,
         int32_t addDepth,
         const MethodInfo *method)
@@ -73,11 +73,11 @@ UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject_4246
   const MethodInfo *v13; // x5
   UnityEngine_Object_c *v14; // x8
 
-  if ( (byte_5934B36 & 1) == 0 )
+  if ( (byte_596CC65 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B36 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC65 = 1;
   }
   v7 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(SupportSelectListViewDropObject_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
                                  this,
@@ -92,7 +92,7 @@ UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject_4246
       goto LABEL_16;
     Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  (UnityEngine_GameObject_o *)v7,
-                                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
+                                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewDropObject___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
     klass = (UnityEngine_Object_c *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
@@ -124,7 +124,7 @@ UnityEngine_GameObject_o *SupportSelectListViewDropObject__CreateDragObject_4246
         }
       }
 LABEL_16:
-      sub_21FFECC(klass, v9);
+      sub_2213CDC(klass, v9);
     }
   }
   return (UnityEngine_GameObject_o *)v7;
@@ -147,11 +147,11 @@ void SupportSelectListViewDropObject__DestroyDragObj(SupportSelectListViewDropOb
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5934B34 & 1) == 0 )
+  if ( (byte_596CC63 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B34 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC63 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -165,12 +165,11 @@ void SupportSelectListViewDropObject__DestroyDragObj(SupportSelectListViewDropOb
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void SupportSelectListViewDropObject__DoSwap(
         SupportSelectListViewDropObject_o *this,
         UnityEngine_Vector3_o targetPosition,
@@ -182,7 +181,7 @@ void SupportSelectListViewDropObject__DoSwap(
   float y; // s10
   float x; // s11
   MissionNaviTransitionBoardItem_o *v9; // x19
-  UnityEngine_GameObject_o *DragObject_42464004; // x0
+  UnityEngine_GameObject_o *DragObject_42479216; // x0
   System_String_o *v11; // x2
   System_String_o *v12; // x3
   int32_t v13; // w4
@@ -192,46 +191,29 @@ void SupportSelectListViewDropObject__DoSwap(
   UnityEngine_Transform_o *transform; // x0
   __int64 v18; // x1
   UnityEngine_GameObject_o *klass; // x19
-  float v20; // s4
-  float v21; // s5
-  float v22; // s3
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
 
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
   x = targetPosition.fields.x;
   v9 = (MissionNaviTransitionBoardItem_o *)this;
-  DragObject_42464004 = SupportSelectListViewDropObject__CreateDragObject_42464004(this, -100, v4);
-  v9->fields._Name_k__BackingField = (struct System_String_o *)DragObject_42464004;
+  DragObject_42479216 = SupportSelectListViewDropObject__CreateDragObject_42479216(this, -100, v4);
+  v9->fields._Name_k__BackingField = (struct System_String_o *)DragObject_42479216;
   v9 = (MissionNaviTransitionBoardItem_o *)((char *)v9 + 128);
-  sub_21FFBF4(v9, (int32_t)DragObject_42464004, v11, v12, v13, v14, v15, v16);
+  sub_2213A04(v9, (int32_t)DragObject_42479216, v11, v12, v13, v14, v15, v16);
   klass = (UnityEngine_GameObject_o *)v9->klass;
-  if ( !klass )
-    goto LABEL_6;
-  transform = UnityEngine_GameObject__get_transform(klass, 0);
-  if ( !transform )
-    goto LABEL_6;
-  transform = UnityEngine_Transform__get_parent(transform, 0);
-  if ( !transform )
-    goto LABEL_6;
-  v23.fields.x = x;
-  v23.fields.y = y;
-  v23.fields.z = z;
-  v24 = UnityEngine_Transform__InverseTransformPoint(transform, v23, 0);
-  v20 = v24.fields.y;
-  v21 = v24.fields.z;
-  v24.fields.y = v24.fields.x;
-  v24.fields.z = v20;
-  v22 = v21;
-  transform = (UnityEngine_Transform_o *)TweenPosition__Begin(
-                                           klass,
-                                           duration,
-                                           *(UnityEngine_Vector3_o *)&v24.fields.y,
-                                           0);
-  if ( !transform )
-LABEL_6:
-    sub_21FFECC(transform, v18);
+  if ( !klass
+    || (transform = UnityEngine_GameObject__get_transform(klass, 0)) == 0
+    || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0
+    || (v20.fields.x = x,
+        v20.fields.y = y,
+        v20.fields.z = z,
+        v21 = UnityEngine_Transform__InverseTransformPoint(transform, v20, 0),
+        (transform = (UnityEngine_Transform_o *)TweenPosition__Begin(klass, duration, v21, 0)) == 0) )
+  {
+    sub_2213CDC(transform, v18);
+  }
   LODWORD(transform[1].monitor) = 3;
 }
 
@@ -250,7 +232,7 @@ void SupportSelectListViewDropObject__HideEquip(SupportSelectListViewDropObject_
 
   memberObject = this->fields.memberObject;
   if ( !memberObject )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   SupportSelectObject__HideEquip(memberObject, 0);
 }
 
@@ -264,11 +246,11 @@ bool SupportSelectListViewDropObject__IsCanDrag(SupportSelectListViewDropObject_
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_5934B33 & 1) == 0 )
+  if ( (byte_596CC62 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&SupportSelectListViewManager_TypeInfo);
-    byte_5934B33 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&SupportSelectListViewManager_TypeInfo);
+    byte_596CC62 = 1;
   }
   manager = this->fields.manager;
   if ( manager
@@ -290,7 +272,7 @@ bool SupportSelectListViewDropObject__IsCanDrag(SupportSelectListViewDropObject_
   if ( !v7 )
     return 0;
   if ( !v6 )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   return LOBYTE(v6[1].fields.sortKindLabel) && this->fields.isEquipPress;
 }
 
@@ -311,11 +293,11 @@ void SupportSelectListViewDropObject__OnDestroy(SupportSelectListViewDropObject_
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_5934B32 & 1) == 0 )
+  if ( (byte_596CC61 & 1) == 0 )
   {
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B32 = 1;
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC61 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (MissionNaviTransitionBoardItem_o *)&this->fields.dragObject;
@@ -329,7 +311,7 @@ void SupportSelectListViewDropObject__OnDestroy(SupportSelectListViewDropObject_
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v7, v8);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_21FFBF4(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
+    sub_2213A04(p_dragObject, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -359,10 +341,10 @@ void SupportSelectListViewDropObject__SetData(
   __int64 v12; // x1
   SupportSelectObject_o *v13; // x0
 
-  if ( (byte_5934B37 & 1) == 0 )
+  if ( (byte_596CC66 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934B37 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CC66 = 1;
   }
   memberObject = (UnityEngine_Object_o *)this->fields.memberObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -371,7 +353,7 @@ void SupportSelectListViewDropObject__SetData(
   {
     v13 = this->fields.memberObject;
     if ( !v13 )
-      sub_21FFECC(0, v12);
+      sub_2213CDC(0, v12);
     SupportSelectObject__SetItem(v13, supportServantData, deckNum, classPos, friendPointCampaigns, 0, 0);
   }
 }
@@ -383,6 +365,6 @@ void SupportSelectListViewDropObject__ShowEquip(SupportSelectListViewDropObject_
 
   memberObject = this->fields.memberObject;
   if ( !memberObject )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   SupportSelectObject__ShowEquip(memberObject, 0);
 }

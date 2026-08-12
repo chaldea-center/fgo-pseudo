@@ -1,13 +1,13 @@
 void ProfileTransformLayout___ctor(ProfileTransformLayout_o *this, const MethodInfo *method)
 {
-  if ( (byte_5937C1D & 1) == 0 )
+  if ( (byte_596FD80 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BaseProfileLayout_ProfileTransformLayout_TransformLayout___ctor__);
-    byte_5937C1D = 1;
+    sub_2213A60(&Method_BaseProfileLayout_ProfileTransformLayout_TransformLayout___ctor__);
+    byte_596FD80 = 1;
   }
   BaseProfileLayout_object____ctor(
     (BaseProfileLayout_TLayout__o *)this,
-    (const MethodInfo_3E2564C *)Method_BaseProfileLayout_ProfileTransformLayout_TransformLayout___ctor__);
+    (const MethodInfo_3E58DF4 *)Method_BaseProfileLayout_ProfileTransformLayout_TransformLayout___ctor__);
 }
 
 
@@ -44,7 +44,7 @@ void ProfileTransformLayout__ApplyLayout(
         return;
       }
 LABEL_12:
-      sub_21FFECC(transform, v6);
+      sub_2213CDC(transform, v6);
     }
   }
 }

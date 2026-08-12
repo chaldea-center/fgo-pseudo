@@ -42,17 +42,17 @@ void RestrictionNotSatisfySlotIcons__SetClassIcons(
   __int64 v20; // x20
 
   v4 = this;
-  if ( (byte_5934239 & 1) == 0 )
+  if ( (byte_596C292 & 1) == 0 )
   {
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_21FFC50(&AtlasManager_TypeInfo);
-    byte_5934239 = 1;
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_2213A60(&AtlasManager_TypeInfo);
+    byte_596C292 = 1;
   }
   classIcons = v4->fields.classIcons;
   if ( classIcons )
   {
     if ( !classImageIds )
 LABEL_29:
-      sub_21FFECC(this, classImageIds);
+      sub_2213CDC(this, classImageIds);
     max_length = classImageIds->max_length;
     v7 = 0;
     while ( 1 )
@@ -140,7 +140,7 @@ LABEL_29:
           goto LABEL_37;
       }
 LABEL_45:
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     }
   }
 LABEL_37:
@@ -208,14 +208,14 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
   Il2CppObject *entity; // [xsp+78h] [xbp-68h] BYREF
 
   v12 = (UnityEngine_Component_o *)this;
-  if ( (byte_5934238 & 1) == 0 )
+  if ( (byte_596C291 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5934238 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596C291 = 1;
   }
   m_CachedPtr = v12[1].fields.m_CachedPtr;
   v35 = 0;
@@ -319,7 +319,7 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v19, v20);
-        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
         if ( v15 >= LODWORD(servantIds->max_length) )
           goto LABEL_92;
         if ( !this )
@@ -328,7 +328,7 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                      &entity,
                                                      m_Items[v15],
-                                                     (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                     (const MethodInfo_3F10B80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           this = (RestrictionNotSatisfySlotIcons_o *)entity;
@@ -350,7 +350,7 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
         }
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, servantIds, v21);
-        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
         if ( v15 >= LODWORD(servantIds->max_length) )
           goto LABEL_92;
         if ( !this )
@@ -359,7 +359,7 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                      &v35,
                                                      m_Items[v15],
-                                                     (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                     (const MethodInfo_3F10B80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_53;
         this = (RestrictionNotSatisfySlotIcons_o *)v35;
@@ -368,18 +368,18 @@ void RestrictionNotSatisfySlotIcons__SetServantIcons(
         this = (RestrictionNotSatisfySlotIcons_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)v35, 0);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !this )
             break;
           this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)this,
-                                                       (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                       (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantMaster___);
           if ( v15 >= LODWORD(servantIds->max_length) )
             goto LABEL_92;
           if ( !this )
             break;
           HeroineData = UserServantMaster__getHeroineData((UserServantMaster_o *)this, m_Items[v15], 0);
-          this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_50476804(
+          this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_50453148(
                                                        questRestrictionInfo,
                                                        HeroineData,
                                                        0);
@@ -412,7 +412,7 @@ LABEL_56:
         this = *(RestrictionNotSatisfySlotIcons_o **)(v26 + 8 * v15 + 32);
         if ( !this )
           break;
-        ServantFaceIconComponent__Set_48021296(
+        ServantFaceIconComponent__Set_48052592(
           (ServantFaceIconComponent_o *)this,
           m_Items[v15],
           limitCounts->m_Items[v15],
@@ -479,7 +479,7 @@ LABEL_81:
       while ( m_CachedPtr );
     }
 LABEL_82:
-    sub_21FFECC(this, servantIds);
+    sub_2213CDC(this, servantIds);
   }
 LABEL_83:
   monitor = v12[2].monitor;
@@ -505,7 +505,7 @@ LABEL_83:
           goto LABEL_90;
       }
 LABEL_92:
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     }
   }
 LABEL_90:

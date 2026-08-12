@@ -1,13 +1,13 @@
 void ServantCostumeEntity___ctor(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938FAE & 1) == 0 )
+  if ( (byte_597116C & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938FAE = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597116C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ bool ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntity_o *this, 
 {
   int64_t Time; // x0
 
-  if ( (byte_5938FA6 & 1) == 0 )
+  if ( (byte_5971164 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5938FA6 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5971164 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
@@ -29,15 +29,15 @@ bool ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntity_o *this, 
 
 System_String_o *ServantCostumeEntity__CreatePK(int32_t svtId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_5938FA5 & 1) == 0 )
+  if ( (byte_5971163 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_5938FA5 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_5971163 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            id,
-           (const MethodInfo_3820F68 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3854430 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -51,23 +51,23 @@ System_String_o *ServantCostumeEntity__CreatePrimaryKey(ServantCostumeEntity_o *
 
 int32_t ServantCostumeEntity__GetSupportBaseLimitCount(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938FAC & 1) == 0 )
+  if ( (byte_597116A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25068/*"supportBaseLimitCount"*/);
-    byte_5938FAC = 1;
+    sub_2213A60(&StringLiteral_25116/*"supportBaseLimitCount"*/);
+    byte_597116A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25068/*"supportBaseLimitCount"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25116/*"supportBaseLimitCount"*/, 0, 0);
 }
 
 
 int32_t ServantCostumeEntity__GetSupportLimitCountGroup(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938FAB & 1) == 0 )
+  if ( (byte_5971169 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_25070/*"supportLimitCountGroupIndex"*/);
-    byte_5938FAB = 1;
+    sub_2213A60(&StringLiteral_25118/*"supportLimitCountGroupIndex"*/);
+    byte_5971169 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25070/*"supportLimitCountGroupIndex"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_25118/*"supportLimitCountGroupIndex"*/, 0, 0);
 }
 
 
@@ -76,19 +76,19 @@ bool ServantCostumeEntity__IsEventCombineCostume(ServantCostumeEntity_o *this, c
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_5938FA7 & 1) == 0 )
+  if ( (byte_5971165 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5938FA7 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5971165 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0 )
+                     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0 )
   {
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   return EventCombineCostumeMaster__IsEventCombineCostume(
            (EventCombineCostumeMaster_o *)Instance,
@@ -110,12 +110,12 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
   UserServantCollectionEntity_o *EntityDefinitely; // x0
   int32_t baseSvtId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5938FAD & 1) == 0 )
+  if ( (byte_597116B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5938FAD = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_597116B = 1;
   }
   baseSvtId = 0;
   if ( ServantCostumeEntity__TryGetBaseSvtId(this, &baseSvtId, v2) )
@@ -125,13 +125,13 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
   svtId = p_baseSvtId->svtId;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v4);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v7);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v9 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -140,7 +140,7 @@ bool ServantCostumeEntity__IsHaveCostume(ServantCostumeEntity_o *this, const Met
     v9 = NetworkManager_TypeInfo;
   }
   if ( !Master_object )
-    sub_21FFECC(v9, v7);
+    sub_2213CDC(v9, v7);
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(
                        (UserServantCollectionMaster_o *)Master_object,
                        v9->static_fields->userIdNumber,
@@ -156,12 +156,12 @@ bool ServantCostumeEntity__TryGetBaseSvtId(ServantCostumeEntity_o *this, int32_t
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_5938FAA & 1) == 0 )
+  if ( (byte_5971168 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17734/*"baseSvtId"*/);
-    byte_5938FAA = 1;
+    sub_2213A60(&StringLiteral_17771/*"baseSvtId"*/);
+    byte_5971168 = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17734/*"baseSvtId"*/, baseSvtId, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17771/*"baseSvtId"*/, baseSvtId, v3);
 }
 
 
@@ -169,12 +169,12 @@ bool ServantCostumeEntity__checkBgmId(ServantCostumeEntity_o *this, int32_t *par
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_5938FA9 & 1) == 0 )
+  if ( (byte_5971167 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17845/*"bgmId"*/);
-    byte_5938FA9 = 1;
+    sub_2213A60(&StringLiteral_17883/*"bgmId"*/);
+    byte_5971167 = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17845/*"bgmId"*/, param, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17883/*"bgmId"*/, param, v3);
 }
 
 
@@ -194,16 +194,15 @@ bool ServantCostumeEntity__checkScript(
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
-  _QWORD *v11; // x8
-  ServantCostumeEntity_o *v12; // x0
-  int32_t *v13; // x1
-  const MethodInfo *v14; // x2
+  ServantCostumeEntity_o *v11; // x0
+  int32_t *v12; // x1
+  const MethodInfo *v13; // x2
 
-  if ( (byte_5938FA8 & 1) == 0 )
+  if ( (byte_5971166 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    byte_5938FA8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_5971166 = 1;
   }
   script = this->fields.script;
   *param = 0;
@@ -212,27 +211,26 @@ bool ServantCostumeEntity__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_3FCA65C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_3FCA3E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                                (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
       {
-        sub_21FFECC(Item, v8);
+        sub_2213CDC(Item, v8);
       }
-      if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_594C090 + 64) )
+      if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_5984368 + 64) )
       {
-        v11 = (_QWORD *)j_il2cpp_object_unbox_0(Item, qword_594C090, v10);
+        *param = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10);
         LOBYTE(script) = 1;
-        *param = *v11;
       }
       else
       {
-        sub_220024C(Item, qword_594C090, v10);
-        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v12, v13, v14);
+        sub_221405C(Item, qword_5984368, v10);
+        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v11, v12, v13);
       }
     }
     else

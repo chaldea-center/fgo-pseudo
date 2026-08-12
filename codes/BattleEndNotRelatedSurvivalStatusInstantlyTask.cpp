@@ -5,31 +5,28 @@ void BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int v7; // w0
-  int32_t FromProcState_k__BackingField; // w8
+  bool v7; // w8
+  int32_t FromProcState_k__BackingField; // w9
   bool v9; // w8
 
-  BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)arg);
-  this->fields.actiontype = 72;
-  if ( !arg )
-    sub_21FFECC(v5, v6);
-  if ( arg->fields._FromProcState_k__BackingField == 2 )
+  BaseAiActBattleLogicTask___ctor((BaseAiActBattleLogicTask_o *)this, 72, 0);
+  if ( !arg
+    || (arg->fields._FromProcState_k__BackingField != 2
+      ? (v7 = 0)
+      : (v5 = ((__int64 (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
+                arg,
+                arg->klass->vtable._4_get_UniqueId.method),
+         v7 = (_DWORD)v5 != -1),
+        !this) )
   {
-    v7 = ((__int64 (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
-           arg,
-           arg->klass->vtable._4_get_UniqueId.method);
-    FromProcState_k__BackingField = arg->fields._FromProcState_k__BackingField;
-    *(&this->fields.gimmickFixedReelOrder + 1) = v7 != -1;
-    v9 = FromProcState_k__BackingField == 2
-      && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
-           arg,
-           arg->klass->vtable._4_get_UniqueId.method) == -1;
+    sub_2213CDC(v5, v6);
   }
-  else
-  {
-    v9 = 0;
-    *(&this->fields.gimmickFixedReelOrder + 1) = 0;
-  }
+  FromProcState_k__BackingField = arg->fields._FromProcState_k__BackingField;
+  *(&this->fields.gimmickFixedReelOrder + 1) = v7;
+  v9 = FromProcState_k__BackingField == 2
+    && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
+         arg,
+         arg->klass->vtable._4_get_UniqueId.method) == -1;
   *(&this->fields.gimmickFixedReelOrder + 2) = v9;
 }
 
@@ -57,12 +54,12 @@ BattleActionData_o *BattleEndNotRelatedSurvivalStatusInstantlyTask__MakeActionDa
 {
   BattleEndNotRelatedSurvivalStatusInstantlyData_o *v3; // x19
 
-  if ( (byte_593BB43 & 1) == 0 )
+  if ( (byte_5973E27 & 1) == 0 )
   {
-    sub_21FFC50(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
-    byte_593BB43 = 1;
+    sub_2213A60(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+    byte_5973E27 = 1;
   }
-  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_21FFEBC(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_2213CCC(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
   BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

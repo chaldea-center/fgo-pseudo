@@ -24,11 +24,11 @@ void BattleServantSnapShotShiftServant___ctor(
   bool v23; // w7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_593B682 & 1) == 0 )
+  if ( (byte_597387B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593B682 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_597387B = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
@@ -41,12 +41,12 @@ void BattleServantSnapShotShiftServant___ctor(
     j_il2cpp_runtime_class_init_0(v7, v6);
   *(_QWORD *)&v24.fields.currentCryptoKey = v8;
   *(_QWORD *)&v24.fields.fakeValue = v9;
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v24, 0);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v24, 0);
   transformSvtId = svtData->fields.transformSvtId;
   this->fields._SvtId_k__BackingField = v10;
   this->fields._TransformSvtId_k__BackingField = transformSvtId;
   *(_QWORD *)&this->fields._TreasuredvcId_k__BackingField = *(_QWORD *)&svtData->fields.treasuredvcId;
-  this->fields._DispLimitCount_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+  this->fields._DispLimitCount_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                    svtData->fields._dispLimitCount_k__BackingField,
                                                    0);
   v12 = ((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *))svtData->klass->vtable._13_get_resultHp.methodPtr)(
@@ -62,13 +62,13 @@ void BattleServantSnapShotShiftServant___ctor(
   BuffData = BattleServantData__get_BuffData(svtData, 0);
   if ( !BuffData )
 LABEL_8:
-    sub_21FFECC(BuffData, v6);
+    sub_2213CDC(BuffData, v6);
   v16 = BattleBuffData__AllBuffEnumerable(BuffData, 0);
   v17 = System_Linq_Enumerable__ToArray_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v16,
-          (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+          (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
   this->fields._BuffArray_k__BackingField = (struct BattleBuffData_BuffData_array *)v17;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._BuffArray_k__BackingField,
     (int32_t)v17,
     v18,

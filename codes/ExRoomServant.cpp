@@ -1,71 +1,70 @@
 void ExRoomServant___ctor(ExRoomServant_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x0
-  System_RuntimeFieldHandle_o v4; // x1
-  struct ExRoomServant_VoiceType_array *v5; // x20
-  System_String_o *v6; // x2
-  System_String_o *v7; // x3
-  int32_t v8; // w4
-  int32_t v9; // w5
-  bool v10; // w6
-  bool v11; // w7
-  struct System_String_o *v12; // x1
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v19; // x20
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
+  System_Array_o *v3; // x20
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  struct System_String_o *v10; // x1
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v17; // x20
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
 
-  if ( (byte_5932D74 & 1) == 0 )
+  if ( (byte_596AE78 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string____ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
-    sub_21FFC50(&Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49);
-    sub_21FFC50(&ExRoomServant_VoiceType___TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932D74 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string____ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
+    sub_2213A60(&Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49);
+    sub_2213A60(&ExRoomServant_VoiceType___TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596AE78 = 1;
   }
-  v3 = (System_Array_o *)sub_21FFD10(ExRoomServant_VoiceType___TypeInfo, 6);
-  v4.fields.value = Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49;
-  v5 = (struct ExRoomServant_VoiceType_array *)v3;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v3, v4, 0);
-  this->fields.targetSavePlayedVoiceTypes = v5;
-  sub_21FFBF4(
+  v3 = (System_Array_o *)sub_2213B20(ExRoomServant_VoiceType___TypeInfo, 6);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v3,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49,
+    0);
+  this->fields.targetSavePlayedVoiceTypes = (struct ExRoomServant_VoiceType_array *)v3;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetSavePlayedVoiceTypes,
-    (int32_t)v5,
+    (int32_t)v3,
+    v4,
+    v5,
     v6,
     v7,
     v8,
-    v9,
-    v10,
-    v11);
-  v12 = (struct System_String_o *)StringLiteral_1/*""*/;
+    v9);
+  v10 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.currentFaceId = -1;
-  this->fields.currentVoiceDataName = v12;
+  this->fields.currentVoiceDataName = v10;
   *(_QWORD *)&this->fields.currentSvtId = -1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.currentVoiceDataName,
-    (int32_t)v12,
+    (int32_t)v10,
+    v11,
+    v12,
     v13,
     v14,
     v15,
-    v16,
-    v17,
-    v18);
-  v19 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
+    v16);
+  v17 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
-    v19,
-    (const MethodInfo_3F88244 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string____ctor__);
-  this->fields.playedVoice = (struct System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___o *)v19;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.playedVoice, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    v17,
+    (const MethodInfo_3FBB9EC *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string____ctor__);
+  this->fields.playedVoice = (struct System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___o *)v17;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.playedVoice, (int32_t)v17, v18, v19, v20, v21, v22, v23);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -83,7 +82,7 @@ void ExRoomServant__ClearServant(ExRoomServant_o *this, const MethodInfo *method
 
   servantFigure = this->fields.servantFigure;
   if ( !servantFigure )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   StandFigureBack__DestroyFigure(servantFigure, 0);
   ExRoomServant__ClearVoice(this, v4);
 }
@@ -103,11 +102,11 @@ void ExRoomServant__ClearVoice(ExRoomServant_o *this, const MethodInfo *method)
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5932D6E & 1) == 0 )
+  if ( (byte_596AE72 & 1) == 0 )
   {
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5932D6E = 1;
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596AE72 = 1;
   }
   ExRoomServant__StopVoice(this, method);
   p_currentVoiceDataName = &this->fields.currentVoiceDataName;
@@ -119,7 +118,7 @@ void ExRoomServant__ClearVoice(ExRoomServant_o *this, const MethodInfo *method)
     SoundManager__releaseAudioAssetStorage(v6, 0);
     v7 = (int)StringLiteral_1/*""*/;
     *p_currentVoiceDataName = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.currentVoiceDataName, v7, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.currentVoiceDataName, v7, v8, v9, v10, v11, v12, v13);
   }
   ExRoomServant__ResetPlayedVoice(this, v4);
 }
@@ -139,24 +138,24 @@ void ExRoomServant__FadeIn(ExRoomServant_o *this, System_Action_o *callback, con
   StandFigureBack_o *servantFigure; // x19
   System_Action_o *v15; // x20
 
-  if ( (byte_5932D70 & 1) == 0 )
+  if ( (byte_596AE74 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass18_0__FadeIn_b__0__);
-    sub_21FFC50(&ExRoomServant___c__DisplayClass18_0_TypeInfo);
-    byte_5932D70 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass18_0__FadeIn_b__0__);
+    sub_2213A60(&ExRoomServant___c__DisplayClass18_0_TypeInfo);
+    byte_596AE74 = 1;
   }
-  v5 = sub_21FFEBC(ExRoomServant___c__DisplayClass18_0_TypeInfo);
+  v5 = sub_2213CCC(ExRoomServant___c__DisplayClass18_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = callback,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13),
         servantFigure = this->fields.servantFigure,
-        v15 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+        v15 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(v15, (Il2CppObject *)v5, Method_ExRoomServant___c__DisplayClass18_0__FadeIn_b__0__, 0),
         !servantFigure) )
   {
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   }
   StandFigureBack__Fadein(servantFigure, v15, 0);
 }
@@ -199,19 +198,19 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
   void **v36; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5932D73 & 1) == 0 )
+  if ( (byte_596AE77 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TryGetValue__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Contains_ExRoomServant_VoiceType___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor___91439368);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    byte_5932D73 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Add__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TryGetValue__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Contains_ExRoomServant_VoiceType___);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor___91665496);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    byte_596AE77 = 1;
   }
   value = 0;
   VoiceIds = ExRoomServant_VoiceConstant__GetVoiceIds(voiceType, *(const MethodInfo **)&voiceType);
@@ -223,7 +222,7 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
     if ( System_Linq_Enumerable__Contains_Int32Enum_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.targetSavePlayedVoiceTypes,
            voiceType,
-           (const MethodInfo_3843278 *)Method_System_Linq_Enumerable_Contains_ExRoomServant_VoiceType___) )
+           (const MethodInfo_3876740 *)Method_System_Linq_Enumerable_Contains_ExRoomServant_VoiceType___) )
     {
       playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.playedVoice;
       if ( !playedVoice )
@@ -232,12 +231,12 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
               playedVoice,
               voiceType,
               &value,
-              (const MethodInfo_3F8A6D4 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TryGetValue__) )
+              (const MethodInfo_3FBDE7C *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TryGetValue__) )
       {
-        v9 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
+        v9 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
         System_Collections_Generic_List_object____ctor(
           v9,
-          (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_string___ctor__);
+          (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
         playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.playedVoice;
         value = (Il2CppObject *)v9;
         if ( !playedVoice )
@@ -246,13 +245,13 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
           playedVoice,
           voiceType,
           (Il2CppObject *)v9,
-          (const MethodInfo_3F88BF8 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Add__);
+          (const MethodInfo_3FBC3A0 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Add__);
       }
-      v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
-      System_Collections_Generic_List_object____ctor_71627580(
+      v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+      System_Collections_Generic_List_object____ctor_71840884(
         v10,
         v6->max_length,
-        (const MethodInfo_444F33C *)Method_System_Collections_Generic_List_string___ctor___91439368);
+        (const MethodInfo_4483474 *)Method_System_Collections_Generic_List_string___ctor___91665496);
       max_length = v6->max_length;
       if ( (int)max_length >= 1 )
       {
@@ -266,7 +265,7 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
           playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Collections_Generic_List_object___Contains(
                                                                                    (System_Collections_Generic_List_object__o *)value,
                                                                                    (Il2CppObject *)m_Items[v12],
-                                                                                   (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_string__Contains__);
+                                                                                   (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_string__Contains__);
           if ( ((unsigned __int8)playedVoice & 1) == 0 )
           {
             if ( v12 >= LODWORD(v6->max_length) )
@@ -285,14 +284,14 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
               System_Collections_Generic_List_object___AddWithResize(
                 v10,
                 v7,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
             }
             else
             {
               v23 = &items->obj.klass + size;
               v10->fields._size = size + 1;
               v23[4] = (Il2CppClass *)v7;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v7, v14, v15, v16, v17, v18, v19);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v7, v14, v15, v16, v17, v18, v19);
             }
           }
           LODWORD(max_length) = v6->max_length;
@@ -300,20 +299,20 @@ System_String_o *ExRoomServant__GetVoiceId(ExRoomServant_o *this, int32_t voiceT
             goto LABEL_22;
         }
 LABEL_34:
-        sub_21FFED4(playedVoice);
+        sub_2213CE4(playedVoice);
       }
 LABEL_22:
       if ( !v10 )
 LABEL_33:
-        sub_21FFECC(playedVoice, v7);
+        sub_2213CDC(playedVoice, v7);
       v24 = v10->fields._size;
       if ( v24 )
       {
-        v25 = UnityEngine_Random__Range_83187376(0, v24, 0);
+        v25 = UnityEngine_Random__Range_83400680(0, v24, 0);
         playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Collections_Generic_List_object___get_Item(
                                                                                  v10,
                                                                                  v25,
-                                                                                 (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
         v32 = (System_Collections_Generic_List_object__o *)value;
         if ( value )
         {
@@ -329,14 +328,14 @@ LABEL_33:
               System_Collections_Generic_List_object___AddWithResize(
                 v32,
                 (Il2CppObject *)playedVoice,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
             }
             else
             {
               v36 = &klass->_1.image + v35;
               v32->fields._size = v35 + 1;
               v36[4] = v6;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v36 + 4), (int32_t)v6, v26, v27, v28, v29, v30, v31);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v36 + 4), (int32_t)v6, v26, v27, v28, v29, v30, v31);
             }
             return (System_String_o *)v6;
           }
@@ -345,7 +344,7 @@ LABEL_33:
       }
       return 0;
     }
-    playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)UnityEngine_Random__Range_83187376(
+    playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)UnityEngine_Random__Range_83400680(
                                                                              0,
                                                                              v6->max_length,
                                                                              0);
@@ -380,12 +379,12 @@ void ExRoomServant__PlayVoice(ExRoomServant_o *this, int32_t voiceType, bool isF
   bool v24; // w6
   bool v25; // w7
 
-  if ( (byte_5932D71 & 1) == 0 )
+  if ( (byte_596AE75 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantVoiceMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_1227/*"0_"*/);
-    byte_5932D71 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantVoiceMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&StringLiteral_1227/*"0_"*/);
+    byte_596AE75 = 1;
   }
   if ( isForce )
   {
@@ -404,11 +403,11 @@ void ExRoomServant__PlayVoice(ExRoomServant_o *this, int32_t voiceType, bool isF
       SvtVoiceId = ServantVoiceMaster__getSvtVoiceId(this->fields.currentSvtId, 0);
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v10);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantVoiceMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantVoiceMaster___);
       currentLimitCount = this->fields.currentLimitCount;
-      v14 = System_String__Concat_75438412((System_String_o *)StringLiteral_1227/*"0_"*/, VoiceId, 0);
+      v14 = System_String__Concat_75651716((System_String_o *)StringLiteral_1227/*"0_"*/, VoiceId, 0);
       if ( !Master_object )
-        sub_21FFECC(v14, v15);
+        sub_2213CDC(v14, v15);
       EntityShopCombine = ServantVoiceMaster__getEntityShopCombine(
                             (ServantVoiceMaster_o *)Master_object,
                             15,
@@ -419,9 +418,9 @@ void ExRoomServant__PlayVoice(ExRoomServant_o *this, int32_t voiceType, bool isF
       if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)EntityShopCombine, 0) )
       {
         started = ExRoomServant__StartPlayVoice(this, EntityShopCombine, v17);
-        v19 = UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, started, 0);
+        v19 = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, started, 0);
         this->fields.playVoiceCoroutine = v19;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.playVoiceCoroutine,
           (int32_t)v19,
           v20,
@@ -437,7 +436,7 @@ void ExRoomServant__PlayVoice(ExRoomServant_o *this, int32_t voiceType, bool isF
 
 
 // local variable allocation has failed, the output may be wrong!
-void ExRoomServant__PlayVoice_39137616(
+void ExRoomServant__PlayVoice_39137056(
         ExRoomServant_o *this,
         int32_t currentState,
         int32_t prevState,
@@ -483,17 +482,17 @@ void ExRoomServant__ResetPlayedVoice(ExRoomServant_o *this, const MethodInfo *me
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *playedVoice; // x0
 
-  if ( (byte_5932D6F & 1) == 0 )
+  if ( (byte_596AE73 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Clear__);
-    byte_5932D6F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Clear__);
+    byte_596AE73 = 1;
   }
   playedVoice = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.playedVoice;
   if ( !playedVoice )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   System_Collections_Generic_Dictionary_Int32Enum__object___Clear(
     playedVoice,
-    (const MethodInfo_3F88D80 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Clear__);
+    (const MethodInfo_3FBC528 *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___Clear__);
 }
 
 
@@ -521,11 +520,11 @@ void ExRoomServant__SetServant(
         this->fields.currentFaceId = faceId,
         (servantFigure = (StandFigureBack_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_21FFECC(servantFigure, *(_QWORD *)&svtId);
+    sub_2213CDC(servantFigure, *(_QWORD *)&svtId);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFigure, 1, 0);
   started = ExRoomServant__StartSetServant(this, callback, v13);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, started, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, started, 0);
 }
 
 
@@ -548,18 +547,18 @@ System_Collections_IEnumerator_o *ExRoomServant__StartPlayVoice(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5932D72 & 1) == 0 )
+  if ( (byte_596AE76 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomServant__StartPlayVoice_d__22_TypeInfo);
-    byte_5932D72 = 1;
+    sub_2213A60(&ExRoomServant__StartPlayVoice_d__22_TypeInfo);
+    byte_596AE76 = 1;
   }
-  v5 = sub_21FFEBC(ExRoomServant__StartPlayVoice_d__22_TypeInfo);
+  v5 = sub_2213CCC(ExRoomServant__StartPlayVoice_d__22_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 32) = listVoiceDatas;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)listVoiceDatas, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)listVoiceDatas, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -583,18 +582,18 @@ System_Collections_IEnumerator_o *ExRoomServant__StartSetServant(
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5932D6D & 1) == 0 )
+  if ( (byte_596AE71 & 1) == 0 )
   {
-    sub_21FFC50(&ExRoomServant__StartSetServant_d__14_TypeInfo);
-    byte_5932D6D = 1;
+    sub_2213A60(&ExRoomServant__StartSetServant_d__14_TypeInfo);
+    byte_596AE71 = 1;
   }
-  v5 = sub_21FFEBC(ExRoomServant__StartSetServant_d__14_TypeInfo);
+  v5 = sub_2213CCC(ExRoomServant__StartSetServant_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)callback, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)callback, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -622,20 +621,20 @@ void ExRoomServant__StopVoice(ExRoomServant_o *this, const MethodInfo *method)
   playVoiceCoroutine = this->fields.playVoiceCoroutine;
   if ( playVoiceCoroutine )
   {
-    UnityEngine_MonoBehaviour__StopCoroutine_83232056((UnityEngine_MonoBehaviour_o *)this, playVoiceCoroutine, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine_83445360((UnityEngine_MonoBehaviour_o *)this, playVoiceCoroutine, 0);
     this->fields.playVoiceCoroutine = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_playVoiceCoroutine, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_playVoiceCoroutine, 0, v5, v6, v7, v8, v9, v10);
   }
   voicePlayer = this->fields.voicePlayer;
   if ( voicePlayer )
   {
     SePlayer__Destroy(voicePlayer, 0);
     this->fields.voicePlayer = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.voicePlayer, 0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.voicePlayer, 0, v12, v13, v14, v15, v16, v17);
   }
   servantFigure = this->fields.servantFigure;
   if ( !servantFigure )
-    sub_21FFECC(0, playVoiceCoroutine);
+    sub_2213CDC(0, playVoiceCoroutine);
   StandFigureBack__SetFaceType(servantFigure, this->fields.currentFaceId, 0.0, 0, 0);
 }
 
@@ -655,18 +654,18 @@ System_String_array *ExRoomServant_VoiceConstant__GetVoiceIds(int32_t voiceType,
   __int64 v7; // x1
   System_String_array *result; // x0
 
-  if ( (byte_5932D75 & 1) == 0 )
+  if ( (byte_596AE79 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ConstantStrMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_5932D75 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_596AE79 = 1;
   }
   VoiceKey = ExRoomServant_VoiceConstant__GetVoiceKey(voiceType, method);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   result = ConstantStrMaster__GetVoiceIds((ConstantStrMaster_o *)Master_object, VoiceKey, 0);
   if ( result )
   {
@@ -682,18 +681,18 @@ System_String_o *ExRoomServant_VoiceConstant__GetVoiceKey(int32_t voiceType, con
   System_String_o *result; // x0
   __int64 *v4; // x8
 
-  if ( (byte_5932D76 & 1) == 0 )
+  if ( (byte_596AE7A & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6064/*"EX_ROOM_SCENE_VOICE_BACK_SHOP"*/);
-    sub_21FFC50(&StringLiteral_6066/*"EX_ROOM_SCENE_VOICE_MISSION_GET_RARE"*/);
-    sub_21FFC50(&StringLiteral_6067/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME"*/);
-    sub_21FFC50(&StringLiteral_6070/*"EX_ROOM_SCENE_VOICE_SHOP_WELCOME"*/);
-    sub_21FFC50(&StringLiteral_6071/*"EX_ROOM_SCENE_VOICE_WELCOME"*/);
-    sub_21FFC50(&StringLiteral_6069/*"EX_ROOM_SCENE_VOICE_SHOP_EXCHANGE"*/);
-    sub_21FFC50(&StringLiteral_6063/*"EX_ROOM_SCENE_VOICE_BACK_QUEST"*/);
-    sub_21FFC50(&StringLiteral_6068/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME_BATTLE"*/);
-    sub_21FFC50(&StringLiteral_6065/*"EX_ROOM_SCENE_VOICE_MISSION_GET_NORMAL"*/);
-    byte_5932D76 = 1;
+    sub_2213A60(&StringLiteral_6076/*"EX_ROOM_SCENE_VOICE_BACK_SHOP"*/);
+    sub_2213A60(&StringLiteral_6078/*"EX_ROOM_SCENE_VOICE_MISSION_GET_RARE"*/);
+    sub_2213A60(&StringLiteral_6079/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME"*/);
+    sub_2213A60(&StringLiteral_6082/*"EX_ROOM_SCENE_VOICE_SHOP_WELCOME"*/);
+    sub_2213A60(&StringLiteral_6083/*"EX_ROOM_SCENE_VOICE_WELCOME"*/);
+    sub_2213A60(&StringLiteral_6081/*"EX_ROOM_SCENE_VOICE_SHOP_EXCHANGE"*/);
+    sub_2213A60(&StringLiteral_6075/*"EX_ROOM_SCENE_VOICE_BACK_QUEST"*/);
+    sub_2213A60(&StringLiteral_6080/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME_BATTLE"*/);
+    sub_2213A60(&StringLiteral_6077/*"EX_ROOM_SCENE_VOICE_MISSION_GET_NORMAL"*/);
+    byte_596AE7A = 1;
   }
   result = 0;
   if ( voiceType <= 4 )
@@ -701,40 +700,40 @@ System_String_o *ExRoomServant_VoiceConstant__GetVoiceKey(int32_t voiceType, con
     if ( voiceType > 2 )
     {
       if ( voiceType == 3 )
-        v4 = &StringLiteral_6064/*"EX_ROOM_SCENE_VOICE_BACK_SHOP"*/;
+        v4 = &StringLiteral_6076/*"EX_ROOM_SCENE_VOICE_BACK_SHOP"*/;
       else
-        v4 = &StringLiteral_6067/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME"*/;
+        v4 = &StringLiteral_6079/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME"*/;
     }
     else if ( voiceType == 1 )
     {
-      v4 = &StringLiteral_6071/*"EX_ROOM_SCENE_VOICE_WELCOME"*/;
+      v4 = &StringLiteral_6083/*"EX_ROOM_SCENE_VOICE_WELCOME"*/;
     }
     else
     {
       if ( voiceType != 2 )
         return result;
-      v4 = &StringLiteral_6063/*"EX_ROOM_SCENE_VOICE_BACK_QUEST"*/;
+      v4 = &StringLiteral_6075/*"EX_ROOM_SCENE_VOICE_BACK_QUEST"*/;
     }
   }
   else if ( voiceType <= 6 )
   {
     if ( voiceType == 5 )
-      v4 = &StringLiteral_6068/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME_BATTLE"*/;
+      v4 = &StringLiteral_6080/*"EX_ROOM_SCENE_VOICE_QUEST_WELCOME_BATTLE"*/;
     else
-      v4 = &StringLiteral_6070/*"EX_ROOM_SCENE_VOICE_SHOP_WELCOME"*/;
+      v4 = &StringLiteral_6082/*"EX_ROOM_SCENE_VOICE_SHOP_WELCOME"*/;
   }
   else
   {
     switch ( voiceType )
     {
       case 7:
-        v4 = &StringLiteral_6069/*"EX_ROOM_SCENE_VOICE_SHOP_EXCHANGE"*/;
+        v4 = &StringLiteral_6081/*"EX_ROOM_SCENE_VOICE_SHOP_EXCHANGE"*/;
         break;
       case 8:
-        v4 = &StringLiteral_6065/*"EX_ROOM_SCENE_VOICE_MISSION_GET_NORMAL"*/;
+        v4 = &StringLiteral_6077/*"EX_ROOM_SCENE_VOICE_MISSION_GET_NORMAL"*/;
         break;
       case 9:
-        v4 = &StringLiteral_6066/*"EX_ROOM_SCENE_VOICE_MISSION_GET_RARE"*/;
+        v4 = &StringLiteral_6078/*"EX_ROOM_SCENE_VOICE_MISSION_GET_RARE"*/;
         break;
       default:
         return result;
@@ -845,18 +844,18 @@ bool ExRoomServant__StartPlayVoice_d__22__MoveNext(
   bool v86; // w7
 
   v8 = this;
-  if ( (byte_5932D77 & 1) == 0 )
+  if ( (byte_596AE7B & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__0__);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__1__);
-    sub_21FFC50(&ExRoomServant___c__DisplayClass22_0_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (ExRoomServant__StartPlayVoice_d__22_o *)sub_21FFC50(&UnityEngine_WaitWhile_TypeInfo);
-    byte_5932D77 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__0__);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__1__);
+    sub_2213A60(&ExRoomServant___c__DisplayClass22_0_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (ExRoomServant__StartPlayVoice_d__22_o *)sub_2213A60(&UnityEngine_WaitWhile_TypeInfo);
+    byte_596AE7B = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -864,9 +863,9 @@ bool ExRoomServant__StartPlayVoice_d__22__MoveNext(
   {
     v8->fields.__1__state = -1;
     v8->fields.__8__1 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, 0, v2, v3, v4, v5, v6, v7);
     v8->fields._voiceData_5__4 = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields._voiceData_5__4, 0, v54, v55, v56, v57, v58, v59);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields._voiceData_5__4, 0, v54, v55, v56, v57, v58, v59);
     v24 = v8->fields.__7__wrap2 + 1;
     v8->fields.__7__wrap2 = v24;
     goto LABEL_16;
@@ -882,9 +881,9 @@ bool ExRoomServant__StartPlayVoice_d__22__MoveNext(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)this,
              0,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
     v8->fields.__7__wrap1 = (struct ServantVoiceData_array *)Item;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__7__wrap1, (int32_t)Item, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__7__wrap1, (int32_t)Item, v12, v13, v14, v15, v16, v17);
     v24 = 0;
     v8->fields.__7__wrap2 = 0;
 LABEL_16:
@@ -896,10 +895,10 @@ LABEL_16:
     if ( v24 < max_length )
     {
       if ( v24 >= (unsigned int)max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v62 = _7__wrap1->m_Items[v24];
       v8->fields._voiceData_5__4 = v62;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v8->fields._voiceData_5__4,
         (int32_t)v62,
         v18,
@@ -908,10 +907,10 @@ LABEL_16:
         v21,
         v22,
         v23);
-      v63 = (Il2CppObject *)sub_21FFEBC(ExRoomServant___c__DisplayClass22_0_TypeInfo);
+      v63 = (Il2CppObject *)sub_2213CCC(ExRoomServant___c__DisplayClass22_0_TypeInfo);
       System_Object___ctor(v63, 0);
       v8->fields.__8__1 = (struct ExRoomServant___c__DisplayClass22_0_o *)v63;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, (int32_t)v63, v64, v65, v66, v67, v68, v69);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields.__8__1, (int32_t)v63, v64, v65, v66, v67, v68, v69);
       _8__1 = v8->fields.__8__1;
       if ( _8__1 )
       {
@@ -921,20 +920,20 @@ LABEL_16:
         if ( voiceData_5__4 )
         {
           delay = voiceData_5__4->fields.delay;
-          v73 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+          v73 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
           UnityEngine_WaitForSeconds___ctor(v73, delay, 0);
           v8->fields.__2__current = (Il2CppObject *)v73;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
-          sub_21FFBF4(p__2__current, (int32_t)v73, v75, v76, v77, v78, v79, v80);
+          sub_2213A04(p__2__current, (int32_t)v73, v75, v76, v77, v78, v79, v80);
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
           return v53;
         }
       }
 LABEL_27:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     }
     this->klass = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)this, 0, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)this, 0, v18, v19, v20, v21, v22, v23);
     if ( !_4__this )
       goto LABEL_27;
     this = (ExRoomServant__StartPlayVoice_d__22_o *)_4__this->fields.servantFigure;
@@ -942,7 +941,7 @@ LABEL_27:
       goto LABEL_27;
     StandFigureBack__SetFaceType((StandFigureBack_o *)this, _4__this->fields.currentFaceId, 0.0, 0, 0);
     _4__this->fields.voicePlayer = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&_4__this->fields.voicePlayer, 0, v81, v82, v83, v84, v85, v86);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields.voicePlayer, 0, v81, v82, v83, v84, v85, v86);
     return 0;
   }
   v8->fields.__1__state = -1;
@@ -970,11 +969,11 @@ LABEL_27:
   }
   v33 = (Il2CppObject *)v8->fields.__8__1;
   DEFAULT_VOLUME = v32->static_fields->DEFAULT_VOLUME;
-  v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v35, v33, Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__0__, 0);
-  v36 = SoundManager__playVoice_48465348(currentVoiceDataName, id, DEFAULT_VOLUME, v35, 0, 0);
+  v36 = SoundManager__playVoice_48511684(currentVoiceDataName, id, DEFAULT_VOLUME, v35, 0, 0);
   _4__this->fields.voicePlayer = v36;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields.voicePlayer,
     (int32_t)v36,
     v37,
@@ -984,13 +983,13 @@ LABEL_27:
     v41,
     v42);
   v43 = (Il2CppObject *)v8->fields.__8__1;
-  v44 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+  v44 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v44, v43, Method_ExRoomServant___c__DisplayClass22_0__StartPlayVoice_b__1__, 0);
-  v45 = (UnityEngine_WaitWhile_o *)sub_21FFEBC(UnityEngine_WaitWhile_TypeInfo);
+  v45 = (UnityEngine_WaitWhile_o *)sub_2213CCC(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v45, v44, 0);
   v8->fields.__2__current = (Il2CppObject *)v45;
   v46 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
-  sub_21FFBF4(v46, (int32_t)v45, v47, v48, v49, v50, v51, v52);
+  sub_2213A04(v46, (int32_t)v45, v47, v48, v49, v50, v51, v52);
   v53 = 1;
   v46[-1].fields._BoardType_k__BackingField = 2;
   return v53;
@@ -1013,11 +1012,11 @@ void __noreturn ExRoomServant__StartPlayVoice_d__22__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_ExRoomServant__StartPlayVoice_d__22_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_ExRoomServant__StartPlayVoice_d__22_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 
@@ -1087,18 +1086,18 @@ bool ExRoomServant__StartSetServant_d__14__MoveNext(
   bool v36; // w7
   int32_t v38; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_5932D78 & 1) == 0 )
+  if ( (byte_596AE7C & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&System_Func_bool__TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__0__);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__1__);
-    sub_21FFC50(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__2__);
-    sub_21FFC50(&ExRoomServant___c__DisplayClass14_0_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitWhile_TypeInfo);
-    sub_21FFC50(&StringLiteral_4588/*"ChrVoice_"*/);
-    byte_5932D78 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&System_Func_bool__TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__0__);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__1__);
+    sub_2213A60(&Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__2__);
+    sub_2213A60(&ExRoomServant___c__DisplayClass14_0_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitWhile_TypeInfo);
+    sub_2213A60(&StringLiteral_4596/*"ChrVoice_"*/);
+    byte_596AE7C = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state )
@@ -1117,7 +1116,7 @@ bool ExRoomServant__StartSetServant_d__14__MoveNext(
   {
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
-    v6 = sub_21FFEBC(ExRoomServant___c__DisplayClass14_0_TypeInfo);
+    v6 = sub_2213CCC(ExRoomServant___c__DisplayClass14_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     if ( !v6
       || (*(_DWORD *)(v6 + 16) = 1, !_4__this)
@@ -1125,7 +1124,7 @@ bool ExRoomServant__StartSetServant_d__14__MoveNext(
           currentFaceId = _4__this->fields.currentFaceId,
           currentSvtId = _4__this->fields.currentSvtId,
           currentLimitCount = _4__this->fields.currentLimitCount,
-          v13 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo),
+          v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
           System_Action___ctor(
             v13,
             (Il2CppObject *)v6,
@@ -1133,34 +1132,34 @@ bool ExRoomServant__StartSetServant_d__14__MoveNext(
             0),
           !servantFigure) )
     {
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     }
     StandFigureBack__CreatedExRoomStandFigure(servantFigure, currentSvtId, currentLimitCount, 1, currentFaceId, v13, 0);
     v38 = _4__this->fields.currentSvtId;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v38);
-    v15 = System_String__Concat((Il2CppObject *)StringLiteral_4588/*"ChrVoice_"*/, v14, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v38);
+    v15 = System_String__Concat((Il2CppObject *)StringLiteral_4596/*"ChrVoice_"*/, v14, 0);
     _4__this->fields.currentVoiceDataName = v15;
     p_currentVoiceDataName = (MissionNaviTransitionBoardItem_o *)&_4__this->fields.currentVoiceDataName;
-    sub_21FFBF4(p_currentVoiceDataName, (int32_t)v15, v17, v18, v19, v20, v21, v22);
+    sub_2213A04(p_currentVoiceDataName, (int32_t)v15, v17, v18, v19, v20, v21, v22);
     v23 = System_Action_TypeInfo;
     klass = (System_String_o *)p_currentVoiceDataName->klass;
     ++*(_DWORD *)(v6 + 16);
-    v25 = (System_Action_o *)sub_21FFEBC(v23);
+    v25 = (System_Action_o *)sub_2213CCC(v23);
     System_Action___ctor(v25, (Il2CppObject *)v6, Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__1__, 0);
     if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v26, v27);
     SoundManager__loadAudioAssetStorage(klass, v25, 1, 0);
-    v28 = (System_Func_bool__o *)sub_21FFEBC(System_Func_bool__TypeInfo);
+    v28 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v28,
       (Il2CppObject *)v6,
       Method_ExRoomServant___c__DisplayClass14_0__StartSetServant_b__2__,
       0);
-    v29 = (UnityEngine_WaitWhile_o *)sub_21FFEBC(UnityEngine_WaitWhile_TypeInfo);
+    v29 = (UnityEngine_WaitWhile_o *)sub_2213CCC(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v29, v28, 0);
     this->fields.__2__current = (Il2CppObject *)v29;
     p__2__current = &this->fields.__2__current;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v29, v31, v32, v33, v34, v35, v36);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v29, v31, v32, v33, v34, v35, v36);
     *((_DWORD *)p__2__current - 2) = 1;
   }
   return _1__state == 0;
@@ -1183,11 +1182,11 @@ void __noreturn ExRoomServant__StartSetServant_d__14__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_ExRoomServant__StartSetServant_d__14_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_ExRoomServant__StartSetServant_d__14_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

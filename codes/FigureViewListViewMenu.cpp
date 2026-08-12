@@ -21,7 +21,7 @@ void FigureViewListViewMenu__Callback(FigureViewListViewMenu_o *this, bool resul
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v9->fields.invoke_impl)(
       v9->fields.method_code,
       result,
@@ -49,13 +49,13 @@ void FigureViewListViewMenu__Close(FigureViewListViewMenu_o *this, const MethodI
       goto LABEL_6;
     ListViewManager__DestroyList(listViewManager, 0);
     this->fields.figureAssetList = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.figureAssetList, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.figureAssetList, 0, v5, v6, v7, v8, v9, v10);
     this->fields.state = 0;
   }
   listViewManager = (ListViewManager_o *)this->fields.rootObject;
   if ( !listViewManager )
 LABEL_6:
-    sub_21FFECC(listViewManager, v3);
+    sub_2213CDC(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0);
 }
 
@@ -71,7 +71,7 @@ void FigureViewListViewMenu__EndInput(FigureViewListViewMenu_o *this, const Meth
       || (ListViewManager__set_IsInput(listViewManager, 0, 0),
           (listViewManager = (ListViewManager_o *)this->fields.cancelButton) == 0) )
     {
-      sub_21FFECC(listViewManager, method);
+      sub_2213CDC(listViewManager, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0);
   }
@@ -95,10 +95,10 @@ void FigureViewListViewMenu__OnClickClear(FigureViewListViewMenu_o *this, const 
 {
   __int64 v2; // x2
 
-  if ( (byte_5935B16 & 1) == 0 )
+  if ( (byte_596DC58 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptManager_TypeInfo);
-    byte_5935B16 = 1;
+    sub_2213A60(&ScriptManager_TypeInfo);
+    byte_596DC58 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -120,12 +120,12 @@ void FigureViewListViewMenu__OnClickItem(FigureViewListViewMenu_o *this, const M
   __int64 v9; // x1
   __int64 v10; // x2
 
-  if ( (byte_5935B14 & 1) == 0 )
+  if ( (byte_596DC56 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_FigureViewListViewMenu_OnEndFigureView__);
-    sub_21FFC50(&ScriptManager_TypeInfo);
-    byte_5935B14 = 1;
+    sub_2213A60(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_FigureViewListViewMenu_OnEndFigureView__);
+    sub_2213A60(&ScriptManager_TypeInfo);
+    byte_596DC56 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -142,10 +142,10 @@ void FigureViewListViewMenu__OnClickItem(FigureViewListViewMenu_o *this, const M
     this->fields.state = 3;
     if ( !listViewManager )
 LABEL_11:
-      sub_21FFECC(listViewManager, method);
+      sub_2213CDC(listViewManager, method);
     dragParentObject = (System_String_o *)listViewManager->fields.dragParentObject;
     figureAssetList = this->fields.figureAssetList;
-    v8 = (ScriptManager_CallbackFunc_o *)sub_21FFEBC(ScriptManager_CallbackFunc_TypeInfo);
+    v8 = (ScriptManager_CallbackFunc_o *)sub_2213CCC(ScriptManager_CallbackFunc_TypeInfo);
     ScriptManager_CallbackFunc___ctor(v8, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnEndFigureView__, 0);
     if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v9, v10);
@@ -162,23 +162,23 @@ void FigureViewListViewMenu__OnEndFigureView(FigureViewListViewMenu_o *this, boo
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_5935B15 & 1) == 0 )
+  if ( (byte_596DC57 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_FigureViewListViewMenu_OnClickItem__);
-    byte_5935B15 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_FigureViewListViewMenu_OnClickItem__);
+    byte_596DC57 = 1;
   }
   if ( this->fields.state == 3 )
   {
     listViewManager = this->fields.listViewManager;
     this->fields.state = 2;
-    v5 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnClickItem__, 0);
     if ( !listViewManager
-      || (FigureViewListViewManager__SetMode_44264244(listViewManager, 1, v5, v8),
+      || (FigureViewListViewManager__SetMode_44285232(listViewManager, 1, v5, v8),
           (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
     {
-      sub_21FFECC(cancelButton, v7);
+      sub_2213CDC(cancelButton, v7);
     }
     UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
   }
@@ -199,10 +199,10 @@ void FigureViewListViewMenu__OnSearchLabelChange(FigureViewListViewMenu_o *this,
 
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ListViewManager__DestroyList(listViewManager, 0);
   this->fields.figureAssetList = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.figureAssetList, 0, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.figureAssetList, 0, v4, v5, v6, v7, v8, v9);
   callbackFunc = this->fields.callbackFunc;
   this->fields.state = 0;
   FigureViewListViewMenu__Open(this, callbackFunc, v11);
@@ -263,31 +263,31 @@ void FigureViewListViewMenu__Open(
   const MethodInfo *v51; // x3
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_5935B12 & 1) == 0 )
+  if ( (byte_596DC54 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&System_Comparison_string__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__RemoveAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__Sort___91439504);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_string___ctor___91439360);
-    sub_21FFC50(&System_Collections_Generic_List_string__TypeInfo);
-    sub_21FFC50(&System_Predicate_string__TypeInfo);
-    sub_21FFC50(&Method_FigureViewListViewMenu___c__Open_b__12_1__);
-    sub_21FFC50(&Method_FigureViewListViewMenu___c__DisplayClass12_0__Open_b__0__);
-    sub_21FFC50(&FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
-    sub_21FFC50(&FigureViewListViewMenu___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_4542/*"CharaFigure"*/);
-    byte_5935B12 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&System_Comparison_string__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__RemoveAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__Sort___91665632);
+    sub_2213A60(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_string___ctor___91665488);
+    sub_2213A60(&System_Collections_Generic_List_string__TypeInfo);
+    sub_2213A60(&System_Predicate_string__TypeInfo);
+    sub_2213A60(&Method_FigureViewListViewMenu___c__Open_b__12_1__);
+    sub_2213A60(&Method_FigureViewListViewMenu___c__DisplayClass12_0__Open_b__0__);
+    sub_2213A60(&FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    sub_2213A60(&FigureViewListViewMenu___c_TypeInfo);
+    sub_2213A60(&StringLiteral_4550/*"CharaFigure"*/);
+    byte_596DC54 = 1;
   }
   state = this->fields.state;
   result = 0;
   if ( !state )
   {
-    v6 = sub_21FFEBC(FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
+    v6 = sub_2213CCC(FigureViewListViewMenu___c__DisplayClass12_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       v7,
@@ -299,13 +299,13 @@ void FigureViewListViewMenu__Open(
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v13, v14);
     AssetStorageList = (System_Collections_Generic_IEnumerable_T__o *)AssetManager__getAssetStorageList(
-                                                                        (System_String_o *)StringLiteral_4542/*"CharaFigure"*/,
+                                                                        (System_String_o *)StringLiteral_4550/*"CharaFigure"*/,
                                                                         0);
-    v16 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_71627776(
+    v16 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_71841080(
       v16,
       AssetStorageList,
-      (const MethodInfo_444F400 *)Method_System_Collections_Generic_List_string___ctor___91439360);
+      (const MethodInfo_4483538 *)Method_System_Collections_Generic_List_string___ctor___91665488);
     rootObject = this->fields.rootObject;
     if ( rootObject )
     {
@@ -326,7 +326,7 @@ void FigureViewListViewMenu__Open(
             {
               *(_QWORD *)(v6 + 16) = rootObject;
               v25 = (System_String_o **)(v6 + 16);
-              sub_21FFBF4(
+              sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)(v6 + 16),
                 (int32_t)rootObject,
                 v19,
@@ -340,11 +340,11 @@ void FigureViewListViewMenu__Open(
               if ( System_String__IsNullOrEmpty(v26, 0) || !System_Int32__TryParse(*v25, &result, 0) )
               {
                 *v25 = 0;
-                sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v6 + 16), 0, v27, v28, v29, v30, v31, v32);
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), 0, v27, v28, v29, v30, v31, v32);
               }
               if ( *v25 )
               {
-                v33 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_string__TypeInfo);
+                v33 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_string__TypeInfo);
                 System_Predicate_object____ctor(
                   v33,
                   (Il2CppObject *)v6,
@@ -355,7 +355,7 @@ void FigureViewListViewMenu__Open(
                 System_Collections_Generic_List_object___RemoveAll(
                   v16,
                   (System_Predicate_T__o *)v33,
-                  (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_string__RemoveAll__);
+                  (const MethodInfo_4485290 *)Method_System_Collections_Generic_List_string__RemoveAll__);
               }
               rootObject = FigureViewListViewMenu___c_TypeInfo;
               if ( !*(&FigureViewListViewMenu___c_TypeInfo->_2.cctor_finished + 1) )
@@ -373,11 +373,11 @@ void FigureViewListViewMenu__Open(
                   static_fields = FigureViewListViewMenu___c_TypeInfo->static_fields;
                 }
                 v36 = (Il2CppObject *)static_fields->__9;
-                _9__12_1 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_string__TypeInfo);
+                _9__12_1 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_string__TypeInfo);
                 System_Comparison_object____ctor(_9__12_1, v36, Method_FigureViewListViewMenu___c__Open_b__12_1__, 0);
                 v37 = FigureViewListViewMenu___c_TypeInfo->static_fields;
                 v37->__9__12_1 = (struct System_Comparison_string__o *)_9__12_1;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&v37->__9__12_1,
                   (int32_t)_9__12_1,
                   v38,
@@ -389,15 +389,15 @@ void FigureViewListViewMenu__Open(
               }
               if ( v16 )
               {
-                System_Collections_Generic_List_object___Sort_71636404(
+                System_Collections_Generic_List_object___Sort_71849708(
                   v16,
                   _9__12_1,
-                  (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_string__Sort___91439504);
+                  (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_string__Sort___91665632);
                 v44 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                                       v16,
-                                                      (const MethodInfo_445164C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                                      (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_string__ToArray__);
                 this->fields.figureAssetList = v44;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&this->fields.figureAssetList,
                   (int32_t)v44,
                   v45,
@@ -423,7 +423,7 @@ void FigureViewListViewMenu__Open(
       }
     }
 LABEL_27:
-    sub_21FFECC(rootObject, v17);
+    sub_2213CDC(rootObject, v17);
   }
 LABEL_26:
   FigureViewListViewMenu__StartInput(this, (const MethodInfo *)callback);
@@ -439,22 +439,22 @@ void FigureViewListViewMenu__StartInput(FigureViewListViewMenu_o *this, const Me
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_5935B13 & 1) == 0 )
+  if ( (byte_596DC55 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_FigureViewListViewMenu_OnClickItem__);
-    byte_5935B13 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_FigureViewListViewMenu_OnClickItem__);
+    byte_596DC55 = 1;
   }
   v3 = System_Action_TypeInfo;
   listViewManager = this->fields.listViewManager;
   this->fields.state = 2;
-  v5 = (System_Action_o *)sub_21FFEBC(v3);
+  v5 = (System_Action_o *)sub_2213CCC(v3);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_FigureViewListViewMenu_OnClickItem__, 0);
   if ( !listViewManager
-    || (FigureViewListViewManager__SetMode_44264244(listViewManager, 1, v5, v8),
+    || (FigureViewListViewManager__SetMode_44285232(listViewManager, 1, v5, v8),
         (cancelButton = (UnityEngine_Behaviour_o *)this->fields.cancelButton) == 0) )
   {
-    sub_21FFECC(cancelButton, v7);
+    sub_2213CDC(cancelButton, v7);
   }
   UnityEngine_Behaviour__set_enabled(cancelButton, 1, 0);
 }
@@ -466,16 +466,16 @@ void FigureViewListViewMenu__StartMenu(FigureViewListViewMenu_o *this, const Met
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_5935B11 & 1) == 0 )
+  if ( (byte_596DC53 & 1) == 0 )
   {
-    sub_21FFC50(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    sub_21FFC50(&Method_FigureViewListViewMenu__StartMenu_b__11_0__);
-    byte_5935B11 = 1;
+    sub_2213A60(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    sub_2213A60(&Method_FigureViewListViewMenu__StartMenu_b__11_0__);
+    byte_596DC53 = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (FigureViewListViewMenu_CallbackFunc_o *)sub_21FFEBC(FigureViewListViewMenu_CallbackFunc_TypeInfo);
+  v3 = (FigureViewListViewMenu_CallbackFunc_o *)sub_2213CCC(FigureViewListViewMenu_CallbackFunc_TypeInfo);
   FigureViewListViewMenu_CallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -502,10 +502,10 @@ void FigureViewListViewMenu__add_callbackFunc(
   FigureViewListViewMenu_CallbackFunc_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5935B0F & 1) == 0 )
+  if ( (byte_596DC51 & 1) == 0 )
   {
-    sub_21FFC50(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_5935B0F = 1;
+    sub_2213A60(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_596DC51 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -518,13 +518,13 @@ void FigureViewListViewMenu__add_callbackFunc(
       if ( (FigureViewListViewMenu_CallbackFunc_c *)v8->klass != FigureViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, FigureViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, FigureViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
   FigureViewListViewMenu__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -545,10 +545,10 @@ void FigureViewListViewMenu__remove_callbackFunc(
   FigureViewListViewMenu_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5935B10 & 1) == 0 )
+  if ( (byte_596DC52 & 1) == 0 )
   {
-    sub_21FFC50(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
-    byte_5935B10 = 1;
+    sub_2213A60(&FigureViewListViewMenu_CallbackFunc_TypeInfo);
+    byte_596DC52 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -561,13 +561,13 @@ void FigureViewListViewMenu__remove_callbackFunc(
       if ( (FigureViewListViewMenu_CallbackFunc_c *)v8->klass != FigureViewListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_220024C(v8, FigureViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
+  sub_221405C(v8, FigureViewListViewMenu_CallbackFunc_TypeInfo, v9, v10);
   FigureViewListViewMenu__StartMenu(v13, v14);
 }
 
@@ -591,7 +591,7 @@ void FigureViewListViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -602,12 +602,12 @@ void FigureViewListViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -619,9 +619,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FF52DC;
+  this->fields.invoke_impl = (intptr_t)sub_2008318;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FF5294;
+  this->fields.extra_arg = (intptr_t)&loc_20082D0;
 }
 
 
@@ -637,8 +637,8 @@ System_IAsyncResult_o *FigureViewListViewMenu_CallbackFunc__BeginInvoke(
 
   v10[0] = result;
   v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(qword_594C050, v10);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
+  return sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -647,7 +647,7 @@ void FigureViewListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -673,15 +673,15 @@ void FigureViewListViewMenu___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5935B17 & 1) == 0 )
+  if ( (byte_596DC59 & 1) == 0 )
   {
-    sub_21FFC50(&FigureViewListViewMenu___c_TypeInfo);
-    byte_5935B17 = 1;
+    sub_2213A60(&FigureViewListViewMenu___c_TypeInfo);
+    byte_596DC59 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(FigureViewListViewMenu___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(FigureViewListViewMenu___c_TypeInfo);
   System_Object___ctor(v1, 0);
   FigureViewListViewMenu___c_TypeInfo->static_fields->__9 = (struct FigureViewListViewMenu___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)FigureViewListViewMenu___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -710,7 +710,7 @@ int32_t FigureViewListViewMenu___c___Open_b__12_1(
   int32_t result; // w0
 
   if ( !a || !b )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   stringLength = a->fields._stringLength;
   v5 = b->fields._stringLength;
   result = stringLength - v5;
@@ -734,6 +734,6 @@ bool FigureViewListViewMenu___c__DisplayClass12_0___Open_b__0(
         const MethodInfo *method)
 {
   if ( !X )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return !System_String__Contains(X, this->fields.searchStr, 0);
 }

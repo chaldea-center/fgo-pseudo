@@ -16,17 +16,17 @@ void EventInfoUserEventPointControl__Awake(EventInfoUserEventPointControl_o *thi
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593AD9B & 1) == 0 )
+  if ( (byte_5973054 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventPointMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    byte_593AD9B = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    byte_5973054 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = (struct UserEventPointMaster_o *)Master_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userEventPointMaster,
     (int32_t)Master_object,
     v4,
@@ -50,21 +50,19 @@ System_Collections_IEnumerator_o *EventInfoUserEventPointControl__CountUpAnim(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_593ADA0 & 1) == 0 )
+  if ( (byte_5973059 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoUserEventPointControl__CountUpAnim_d__25_TypeInfo);
-    byte_593ADA0 = 1;
+    sub_2213A60(&EventInfoUserEventPointControl__CountUpAnim_d__25_TypeInfo);
+    byte_5973059 = 1;
   }
-  v5 = sub_21FFEBC(EventInfoUserEventPointControl__CountUpAnim_d__25_TypeInfo);
+  v5 = sub_2213CCC(EventInfoUserEventPointControl__CountUpAnim_d__25_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
-  result = (System_Collections_IEnumerator_o *)v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 32) = addCound;
-  return result;
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -78,20 +76,20 @@ int64_t EventInfoUserEventPointControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   NetworkManager_c *v8; // x0
 
-  if ( (byte_593AD9D & 1) == 0 )
+  if ( (byte_5973056 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593AD9D = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5973056 = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
     return 0;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   v8 = NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -115,7 +113,7 @@ void EventInfoUserEventPointControl__Initialization(
   bool v7; // w7
 
   this->fields.eventUiEntity = entity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiEntity,
     (int32_t)entity,
     (System_String_o *)method,
@@ -144,7 +142,7 @@ void EventInfoUserEventPointControl__PlayAnim(EventInfoUserEventPointControl_o *
     {
       EventInfoUserEventPointControl__PlayCountUpSe(this, method);
       v7 = EventInfoUserEventPointControl__CountUpAnim(this, v5, v6);
-      UnityEngine_MonoBehaviour__StartCoroutine_83231452((UnityEngine_MonoBehaviour_o *)this, v7, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v7, 0);
     }
   }
 }
@@ -164,10 +162,10 @@ void EventInfoUserEventPointControl__PlayCountUpSe(EventInfoUserEventPointContro
   SePlayer_o *v12; // x20
   float result; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_593ADA1 & 1) == 0 )
+  if ( (byte_597305A & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoUserEventPointControl_PlayCountUpSe__);
-    byte_593ADA1 = 1;
+    sub_2213A60(&Method_EventInfoUserEventPointControl_PlayCountUpSe__);
+    byte_597305A = 1;
   }
   countUpSEName = this->fields.countUpSEName;
   result = 0.0;
@@ -185,22 +183,22 @@ void EventInfoUserEventPointControl__PlayCountUpSe(EventInfoUserEventPointContro
         if ( v7 < 2 )
         {
           if ( (*((_BYTE *)Method_EventInfoUserEventPointControl_PlayCountUpSe__ + 83) & 2) != 0 )
-            v8 = (_QWORD *)sub_21FFC68(Method_EventInfoUserEventPointControl_PlayCountUpSe__);
-          v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+            v8 = (_QWORD *)sub_2213A78(Method_EventInfoUserEventPointControl_PlayCountUpSe__);
+          v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
           if ( *((_DWORD *)v6 + 6) )
           {
             OverwriteAssetSoundName__PlaySe(v9, *((System_String_o **)v6 + 4), 0, 0);
             return;
           }
 LABEL_20:
-          sub_21FFED4(v9);
+          sub_2213CE4(v9);
         }
         if ( (*((_BYTE *)Method_EventInfoUserEventPointControl_PlayCountUpSe__ + 83) & 2) != 0 )
-          v8 = (_QWORD *)sub_21FFC68(Method_EventInfoUserEventPointControl_PlayCountUpSe__);
-        v9 = (System_Reflection_MethodBase_o *)sub_21FFC34(v8, v8[4]);
+          v8 = (_QWORD *)sub_2213A78(Method_EventInfoUserEventPointControl_PlayCountUpSe__);
+        v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v8, v8[4]);
         if ( *((_DWORD *)v6 + 6) < 2u )
           goto LABEL_20;
-        v10 = OverwriteAssetSoundName__PlaySe_48366604(
+        v10 = OverwriteAssetSoundName__PlaySe_48402488(
                 v9,
                 *((System_String_o **)v6 + 4),
                 *((System_String_o **)v6 + 5),
@@ -223,7 +221,7 @@ LABEL_20:
         }
       }
     }
-    sub_21FFECC(v5, v4);
+    sub_2213CDC(v5, v4);
   }
 }
 
@@ -243,10 +241,10 @@ void EventInfoUserEventPointControl__Redisplay(EventInfoUserEventPointControl_o 
   TerminalPramsManager_c *v12; // x0
 
   v3 = this;
-  if ( (byte_593AD9C & 1) == 0 )
+  if ( (byte_5973055 & 1) == 0 )
   {
-    this = (EventInfoUserEventPointControl_o *)sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_593AD9C = 1;
+    this = (EventInfoUserEventPointControl_o *)sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_5973055 = 1;
   }
   eventUiValueEntityList = v3->fields.eventUiValueEntityList;
   if ( eventUiValueEntityList )
@@ -263,11 +261,11 @@ void EventInfoUserEventPointControl__Redisplay(EventInfoUserEventPointControl_o 
       do
       {
         if ( (unsigned int)v6 >= (unsigned int)max_length )
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         v8 = eventUiValueEntityList->m_Items[v6];
         if ( !v8 )
 LABEL_25:
-          sub_21FFECC(this, method);
+          sub_2213CDC(this, method);
         if ( v8->fields.type == 2 )
         {
           this = (EventInfoUserEventPointControl_o *)System_Int32__Parse(v8->fields.value, 0);
@@ -291,10 +289,10 @@ LABEL_25:
     {
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v7);
-      if ( !byte_5937192 )
+      if ( !byte_596F301 )
       {
-        sub_21FFC50(&TerminalPramsManager_TypeInfo);
-        byte_5937192 = 1;
+        sub_2213A60(&TerminalPramsManager_TypeInfo);
+        byte_596F301 = 1;
       }
       v12 = TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -323,11 +321,11 @@ void EventInfoUserEventPointControl__SetBgSprite(
   __int64 v8; // x1
   struct UISprite_o *v9; // x0
 
-  if ( (byte_593AD9F & 1) == 0 )
+  if ( (byte_5973058 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AD9F = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5973058 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -340,7 +338,7 @@ void EventInfoUserEventPointControl__SetBgSprite(
     AtlasManager__SetEventUI(v7, spriteName, 0);
     v9 = this->fields.bgSprite;
     if ( !v9 )
-      sub_21FFECC(0, v8);
+      sub_2213CDC(0, v8);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v9->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v9,
       v9->klass->vtable._33_MakePixelPerfect.method);
@@ -366,14 +364,14 @@ void EventInfoUserEventPointControl__SetPointLabel(
   __int64 v15; // x1
   int64_t v16; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_593AD9E & 1) == 0 )
+  if ( (byte_5973057 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_593AD9E = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_5973057 = 1;
   }
   pointLabel = (UnityEngine_Object_o *)this->fields.pointLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -383,7 +381,7 @@ void EventInfoUserEventPointControl__SetPointLabel(
     v7 = this->fields.pointLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v10 = BalanceConfig_TypeInfo;
     v11 = v8;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -394,8 +392,8 @@ void EventInfoUserEventPointControl__SetPointLabel(
     UserPointEventMax = v10->static_fields->UserPointEventMax;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v9);
-    v16 = System_Math__Min_76940304(point, UserPointEventMax, 0);
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v16);
+    v16 = System_Math__Min_77153608(point, UserPointEventMax, 0);
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v16);
     v14 = System_String__Format(v11, v13, 0);
     if ( !v7 )
       goto LABEL_17;
@@ -405,7 +403,7 @@ void EventInfoUserEventPointControl__SetPointLabel(
     v14 = (System_String_o *)this->fields.pointLabel;
     if ( !v14 )
 LABEL_17:
-      sub_21FFECC(v14, v15);
+      sub_2213CDC(v14, v15);
     UILabel__SetCondensedScale((UILabel_o *)v14, this->fields.pointLabelWidth, 0, 0);
   }
 }
@@ -426,7 +424,7 @@ void EventInfoUserEventPointControl__Setup(
   if ( entitys )
   {
     this->fields.eventUiValueEntityList = entitys;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.eventUiValueEntityList,
       (int32_t)entitys,
       (System_String_o *)method,
@@ -493,13 +491,12 @@ bool EventInfoUserEventPointControl__CountUpAnim_d__25__MoveNext(
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
-  bool result; // w0
   int64_t currentTotalPoint; // x1
 
-  if ( (byte_593ADA2 & 1) == 0 )
+  if ( (byte_597305B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Application_TypeInfo);
-    byte_593ADA2 = 1;
+    sub_2213A60(&UnityEngine_Application_TypeInfo);
+    byte_597305B = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -522,7 +519,7 @@ bool EventInfoUserEventPointControl__CountUpAnim_d__25__MoveNext(
     targetFrameRate = UnityEngine_Application__get_targetFrameRate(0);
     if ( !_4__this )
 LABEL_20:
-      sub_21FFECC(targetFrameRate, method);
+      sub_2213CDC(targetFrameRate, method);
     animTime = _4__this->fields.animTime;
     v9 = 0;
     this->fields._i_5__3 = 0;
@@ -548,10 +545,9 @@ LABEL_20:
   EventInfoUserEventPointControl__SetPointLabel(_4__this, v14 + _4__this->fields._oldTotalPoint_k__BackingField, v11);
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
-  result = 1;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
   *((_DWORD *)p__2__current - 2) = 1;
-  return result;
+  return 1;
 }
 
 
@@ -571,11 +567,11 @@ void __noreturn EventInfoUserEventPointControl__CountUpAnim_d__25__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_EventInfoUserEventPointControl__CountUpAnim_d__25_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_EventInfoUserEventPointControl__CountUpAnim_d__25_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

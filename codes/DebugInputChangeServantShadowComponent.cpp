@@ -15,7 +15,7 @@ bool DebugInputChangeServantShadowComponent__get_IsStatusAndCardHidden(
 
   statusAndCardToggle = this->fields.statusAndCardToggle;
   if ( !statusAndCardToggle )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UIToggle__get_value(statusAndCardToggle, 0);
 }
 
@@ -28,6 +28,6 @@ bool DebugInputChangeServantShadowComponent__get_IsTransparent(
 
   transparentToggle = this->fields.transparentToggle;
   if ( !transparentToggle )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UIToggle__get_value(transparentToggle, 0);
 }

@@ -21,15 +21,15 @@ void DebugListViewItem___ctor(
   struct FsmEventData_o *v20; // x8
   struct System_String_o *title; // x1
 
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.eventData = eventData;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7, v8, v9, v10, v11);
   v20 = this->fields.eventData;
   if ( !v20 )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   title = v20->fields.title;
   this->fields.titleText = title;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.titleText, (int32_t)title, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.titleText, (int32_t)title, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -58,11 +58,11 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
   int32_t v11; // w1
   const MethodInfo *v12; // x2
 
-  if ( (byte_5935A6E & 1) == 0 )
+  if ( (byte_596DBB0 & 1) == 0 )
   {
-    sub_21FFC50(&DebugListViewObject_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5935A6E = 1;
+    sub_2213A60(&DebugListViewObject_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596DBB0 = 1;
   }
   viewObject = (UnityEngine_Object_o *)this->fields.viewObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -78,7 +78,7 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
       if ( result->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (DebugListViewObject_c *)result->klass->_2.typeHierarchy[naturalAligment - 1] != DebugListViewObject_TypeInfo )
       {
-        sub_220024C(result, DebugListViewObject_TypeInfo, v5, v6);
+        sub_221405C(result, DebugListViewObject_TypeInfo, v5, v6);
         DebugListViewItem__SetIndex(v10, v11, v12);
       }
     }
@@ -93,7 +93,7 @@ System_String_o *DebugListViewItem__get_EventName(DebugListViewItem_o *this, con
 
   eventData = this->fields.eventData;
   if ( !eventData )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return eventData->fields.eventData;
 }
 
@@ -113,7 +113,7 @@ void DebugListViewItem__set_TitleText(DebugListViewItem_o *this, System_String_o
   bool v7; // w7
 
   this->fields.titleText = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.titleText,
     (int32_t)value,
     (System_String_o *)method,

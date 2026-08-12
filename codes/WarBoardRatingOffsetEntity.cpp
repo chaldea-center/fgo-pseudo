@@ -1,13 +1,13 @@
 void WarBoardRatingOffsetEntity___ctor(WarBoardRatingOffsetEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59398D4 & 1) == 0 )
+  if ( (byte_5971A95 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_int___ctor__);
-    byte_59398D4 = 1;
+    sub_2213A60(&Method_DataEntityBase_int___ctor__);
+    byte_5971A95 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3EDAD70 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3F0E518 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0;
   *(_QWORD *)&this->fields.category = 0;
   *(_QWORD *)&this->fields.value2 = 0;

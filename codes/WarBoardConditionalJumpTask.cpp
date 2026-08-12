@@ -26,7 +26,7 @@ void WarBoardConditionalJumpTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)conditionCheck);
   this->fields.conditionCheck = conditionCheck;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.conditionCheck,
     (int32_t)conditionCheck,
     v9,
@@ -36,7 +36,7 @@ void WarBoardConditionalJumpTask___ctor(
     v13,
     v14);
   this->fields.trueCase = trueCase;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.trueCase,
     (int32_t)trueCase,
     v15,
@@ -46,7 +46,7 @@ void WarBoardConditionalJumpTask___ctor(
     v19,
     v20);
   this->fields.falseCase = falseCase;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.falseCase,
     (int32_t)falseCase,
     v21,
@@ -70,16 +70,16 @@ System_Collections_IEnumerator_o *WarBoardConditionalJumpTask__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936239 & 1) == 0 )
+  if ( (byte_596E393 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
-    byte_5936239 = 1;
+    sub_2213A60(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+    byte_596E393 = 1;
   }
-  v3 = sub_21FFEBC(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+  v3 = sub_2213CCC(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -128,7 +128,7 @@ void WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask_o *this, c
                                               StartCallback->fields.method);
   conditionCheck = v3->fields.conditionCheck;
   if ( !conditionCheck )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v5 = ((__int64 (__fastcall *)(intptr_t, intptr_t))conditionCheck->fields.invoke_impl)(
          conditionCheck->fields.method_code,
          conditionCheck->fields.method);
@@ -138,7 +138,7 @@ void WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask_o *this, c
   v13 = *(struct WarBoardTaskBase_o **)((char *)&v3->klass + v12);
   v3->fields.runningTask = v13;
   p_runningTask = (MissionNaviTransitionBoardItem_o *)&v3->fields.runningTask;
-  sub_21FFBF4(p_runningTask, (int32_t)v13, v6, v7, v8, v9, v10, v11);
+  sub_2213A04(p_runningTask, (int32_t)v13, v6, v7, v8, v9, v10, v11);
   if ( p_runningTask->klass )
     (*((void (__fastcall **)(MissionNaviTransitionBoardItem_c *, _QWORD))p_runningTask->klass->_1.image + 49))(
       p_runningTask->klass,
@@ -185,7 +185,7 @@ bool WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
     _4__this = v3->fields.__4__this;
     v3->fields.__1__state = -1;
     if ( !_4__this )
-      sub_21FFECC(0, method);
+      sub_2213CDC(0, method);
     this = (WarBoardConditionalJumpTask__Execute_d__6_o *)_4__this->fields.runningTask;
     if ( this )
     {
@@ -193,7 +193,7 @@ bool WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
              this,
              this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method);
       v3->fields.__2__current = (Il2CppObject *)v5;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current, v5, v6, v7, v8, v9, v10, v11);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current, v5, v6, v7, v8, v9, v10, v11);
       v12 = 1;
       LOBYTE(this) = 1;
 LABEL_7:
@@ -220,11 +220,11 @@ void __noreturn WarBoardConditionalJumpTask__Execute_d__6__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

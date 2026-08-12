@@ -13,11 +13,11 @@ void CriFsBinder___ctor(CriFsBinder_o *this, const MethodInfo *method)
   System_String_o *v13; // x0
   __int64 v14; // x0
 
-  if ( (byte_5931468 & 1) == 0 )
+  if ( (byte_5969608 & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931468 = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_5969608 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v4 = System_Guid__NewGuid(0);
@@ -27,23 +27,23 @@ void CriFsBinder___ctor(CriFsBinder_o *this, const MethodInfo *method)
     inited = (CriFsPlugin_c *)j_il2cpp_runtime_class_init_0(inited, *(_QWORD *)&v4.fields._d, v3);
   if ( !CriFsPlugin__IsLibraryInitialized((const MethodInfo *)inited) )
   {
-    v9 = sub_21FFC64(&System_Exception_TypeInfo);
-    v10 = (System_Exception_o *)sub_21FFEBC(v9);
-    v11 = &StringLiteral_5045/*"CriFsPlugin is not initialized."*/;
+    v9 = sub_2213A74(&System_Exception_TypeInfo);
+    v10 = (System_Exception_o *)sub_2213CCC(v9);
+    v11 = &StringLiteral_5053/*"CriFsPlugin is not initialized."*/;
     goto LABEL_12;
   }
   this->fields.handle = 0;
   CriFsBinder__criFsBinder_Create(&this->fields.handle, v6);
   if ( !this->fields.handle )
   {
-    v12 = sub_21FFC64(&System_Exception_TypeInfo);
-    v10 = (System_Exception_o *)sub_21FFEBC(v12);
-    v11 = &StringLiteral_19119/*"criFsBinder_Create() failed."*/;
+    v12 = sub_2213A74(&System_Exception_TypeInfo);
+    v10 = (System_Exception_o *)sub_2213CCC(v12);
+    v11 = &StringLiteral_19160/*"criFsBinder_Create() failed."*/;
 LABEL_12:
-    v13 = (System_String_o *)sub_21FFC64(v11);
-    System_Exception___ctor_77161964(v10, v13, 0);
-    v14 = sub_21FFC64(&Method_CriFsBinder__ctor__);
-    sub_21FFD90(v10, v14);
+    v13 = (System_String_o *)sub_2213A74(v11);
+    System_Exception___ctor_77375268(v10, v13, 0);
+    v14 = sub_2213A74(&Method_CriFsBinder__ctor__);
+    sub_2213BA0(v10, v14);
   }
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, v7, v8);
@@ -159,8 +159,8 @@ int32_t CriFsBinder__CRIWARE368F9D49(uint32_t id, const MethodInfo *method)
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_59314E8;
-  if ( !off_59314E8 )
+  v3 = off_5969688;
+  if ( !off_5969688 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -169,10 +169,10 @@ int32_t CriFsBinder__CRIWARE368F9D49(uint32_t id, const MethodInfo *method)
     v5[4] = 0x200000000LL;
     v6 = 4;
     v7 = 0;
-    v3 = (void *)sub_2200304(v5);
-    off_59314E8 = v3;
+    v3 = (void *)sub_2214114(v5);
+    off_5969688 = v3;
   }
-  return ((__int64 (__fastcall *)(_QWORD, const MethodInfo *))v3)(id, method);
+  return ((int32_t (__fastcall *)(_QWORD, const MethodInfo *))v3)(id, method);
 }
 
 
@@ -182,12 +182,12 @@ void CriFsBinder__Dispose(CriFsBinder_o *this, const MethodInfo *method)
   __int64 v4; // x1
   __int64 v5; // x2
 
-  if ( (byte_5931469 & 1) == 0 )
+  if ( (byte_5969609 & 1) == 0 )
   {
-    sub_21FFC50(&System_GC_TypeInfo);
-    byte_5931469 = 1;
+    sub_2213A60(&System_GC_TypeInfo);
+    byte_5969609 = 1;
   }
-  CriFsBinder__Dispose_36913392(this, 0, v2);
+  CriFsBinder__Dispose_36994808(this, 0, v2);
   if ( !*(&System_GC_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo, v4, v5);
   System_GC__SuppressFinalize((Il2CppObject *)this, 0);
@@ -195,15 +195,15 @@ void CriFsBinder__Dispose(CriFsBinder_o *this, const MethodInfo *method)
 
 
 // local variable allocation has failed, the output may be wrong!
-void CriFsBinder__Dispose_36913392(CriFsBinder_o *this, bool disposing, const MethodInfo *method)
+void CriFsBinder__Dispose_36994808(CriFsBinder_o *this, bool disposing, const MethodInfo *method)
 {
   const MethodInfo *v4; // x1
   intptr_t handle; // x0
 
-  if ( (byte_593146A & 1) == 0 )
+  if ( (byte_596960A & 1) == 0 )
   {
-    sub_21FFC50(&CriDisposableObjectManager_TypeInfo);
-    byte_593146A = 1;
+    sub_2213A60(&CriDisposableObjectManager_TypeInfo);
+    byte_596960A = 1;
   }
   if ( !*(&CriDisposableObjectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo, disposing, method);
@@ -221,7 +221,7 @@ void CriFsBinder__Finalize(CriFsBinder_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  CriFsBinder__Dispose_36913392(this, 0, v2);
+  CriFsBinder__Dispose_36994808(this, 0, v2);
   System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
@@ -256,31 +256,31 @@ bool CriFsBinder__GetContentsFileInfo(
   CriStructMemory_CriFsBinder_ContentsFileInfo__o **v29; // [xsp+38h] [xbp-48h]
   CriStructMemory_CriFsBinder_ContentsFileInfo__o *v30; // [xsp+48h] [xbp-38h] BYREF
 
-  if ( (byte_593146D & 1) == 0 )
+  if ( (byte_596960D & 1) == 0 )
   {
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
-    sub_21FFC50(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    byte_593146D = 1;
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+    sub_2213A60(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    byte_596960D = 1;
   }
-  v7 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_21FFEBC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+  v7 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_2213CCC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
   CriStructMemory_CriFsBinder_ContentsFileInfo____ctor(
     v7,
-    (const MethodInfo_3ED9A1C *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
+    (const MethodInfo_3F0D1C4 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
   v30 = v7;
   v28 = 0;
   v29 = &v30;
   if ( !v7 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   handle = this->fields.handle;
   ptr = CriStructMemory_CriFsBinder_ContentsFileInfo___get_ptr(
           v7,
-          (const MethodInfo_3ED9A10 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+          (const MethodInfo_3F0D1B8 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
   ContentsFileInfo = CriFsBinder__criFsBinder_GetContentsFileInfo(handle, path, ptr, v12);
   if ( !v30 )
-    sub_21FFECC(ContentsFileInfo, v14);
+    sub_2213CDC(ContentsFileInfo, v14);
   bytes_k__BackingField = v30->fields._bytes_k__BackingField;
   v17 = ContentsFileInfo;
   memset(&v27, 0, sizeof(v27));
@@ -290,7 +290,7 @@ bool CriFsBinder__GetContentsFileInfo(
   *(_OWORD *)&info->fields.fileId = *(_OWORD *)&v27.fields.fileId;
   *(_OWORD *)&info->fields.directory = v18;
   *(_OWORD *)&info->fields.readSize = v19;
-  sub_21FFBF4(info, 0);
+  sub_2213A04(info, 0);
   v20 = v17 == 0;
   v21 = v30;
   if ( v30 )
@@ -312,7 +312,7 @@ bool CriFsBinder__GetContentsFileInfo(
     else
     {
 LABEL_10:
-      v25 = sub_2237E2C(v30, System_IDisposable_TypeInfo, 0);
+      v25 = sub_224BC3C(v30, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(CriStructMemory_CriFsBinder_ContentsFileInfo__o *, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8));
   }
@@ -343,72 +343,71 @@ bool CriFsBinder__GetContentsFileInfoByIndex(
   CriFsBinder_ContentsFileInfo_array *v22; // x29
   System_Byte_array *bytes_k__BackingField; // x21
   Il2CppType *v24; // x22
-  System_RuntimeTypeHandle_o v25; // x0
-  __int64 v26; // x1
-  __int64 v27; // x2
+  __int64 v25; // x1
+  __int64 v26; // x2
   System_Type_o *TypeFromHandle; // x22
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  __int64 v31; // x0
-  __int64 v32; // x1
-  __int128 v33; // q0
-  _OWORD *v34; // x0
-  __int128 v35; // q2
-  bool v36; // w20
-  CriStructMemory_CriFsBinder_ContentsFileInfo__o *v37; // x21
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
+  __int64 v30; // x0
+  __int64 v31; // x1
+  __int128 v32; // q0
+  _OWORD *v33; // x0
+  __int128 v34; // q2
+  bool v35; // w20
+  CriStructMemory_CriFsBinder_ContentsFileInfo__o *v36; // x21
   CriStructMemory_CriFsBinder_ContentsFileInfo__c *klass; // x8
-  __int64 v39; // x9
+  __int64 v38; // x9
   int *p_offset; // x10
-  __int64 v41; // x0
-  __int64 v43; // x0
-  System_Exception_o *v44; // x19
-  System_String_o *v45; // x0
-  __int64 v46; // x0
-  CriFsBinder_ContentsFileInfo_o v47; // [xsp+0h] [xbp-B0h] BYREF
-  __int64 v48; // [xsp+38h] [xbp-78h]
-  CriStructMemory_CriFsBinder_ContentsFileInfo__o **v49; // [xsp+40h] [xbp-70h]
-  CriStructMemory_CriFsBinder_ContentsFileInfo__o *v50; // [xsp+48h] [xbp-68h] BYREF
+  __int64 v40; // x0
+  __int64 v42; // x0
+  System_Exception_o *v43; // x19
+  System_String_o *v44; // x0
+  __int64 v45; // x0
+  CriFsBinder_ContentsFileInfo_o v46; // [xsp+0h] [xbp-B0h] BYREF
+  __int64 v47; // [xsp+38h] [xbp-78h]
+  CriStructMemory_CriFsBinder_ContentsFileInfo__o **v48; // [xsp+40h] [xbp-70h]
+  CriStructMemory_CriFsBinder_ContentsFileInfo__o *v49; // [xsp+48h] [xbp-68h] BYREF
 
-  if ( (byte_593146F & 1) == 0 )
+  if ( (byte_596960F & 1) == 0 )
   {
-    sub_21FFC50(&CriFsBinder_ContentsFileInfo___TypeInfo);
-    sub_21FFC50(&CriFsBinder_ContentsFileInfo_var);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor___91354744);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
-    sub_21FFC50(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Runtime_InteropServices_Marshal_TypeInfo);
-    byte_593146F = 1;
+    sub_2213A60(&CriFsBinder_ContentsFileInfo___TypeInfo);
+    sub_2213A60(&CriFsBinder_ContentsFileInfo_var);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor___91580536);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+    sub_2213A60(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Runtime_InteropServices_Marshal_TypeInfo);
+    byte_596960F = 1;
   }
-  v50 = 0;
+  v49 = 0;
   if ( index < 0 || numFiles <= 0 )
   {
-    v43 = sub_21FFC64(&System_Exception_TypeInfo);
-    v44 = (System_Exception_o *)sub_21FFEBC(v43);
-    v45 = (System_String_o *)sub_21FFC64(&StringLiteral_8229/*"Invalid parameters."*/);
-    System_Exception___ctor_77161964(v44, v45, 0);
-    v46 = sub_21FFC64(&Method_CriFsBinder_GetContentsFileInfoByIndex__);
-    sub_21FFD90(v44, v46);
+    v42 = sub_2213A74(&System_Exception_TypeInfo);
+    v43 = (System_Exception_o *)sub_2213CCC(v42);
+    v44 = (System_String_o *)sub_2213A74(&StringLiteral_8241/*"Invalid parameters."*/);
+    System_Exception___ctor_77375268(v43, v44, 0);
+    v45 = sub_2213A74(&Method_CriFsBinder_GetContentsFileInfoByIndex__);
+    sub_2213BA0(v43, v45);
   }
-  v9 = (CriFsBinder_ContentsFileInfo_array *)sub_21FFD10(
+  v9 = (CriFsBinder_ContentsFileInfo_array *)sub_2213B20(
                                                CriFsBinder_ContentsFileInfo___TypeInfo,
                                                (unsigned int)numFiles);
   *info = v9;
-  sub_21FFBF4(info, v9);
-  v10 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_21FFEBC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
-  CriStructMemory_CriFsBinder_ContentsFileInfo____ctor_65903376(
+  sub_2213A04(info, v9);
+  v10 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_2213CCC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+  CriStructMemory_CriFsBinder_ContentsFileInfo____ctor_66114232(
     v10,
     numFiles,
-    (const MethodInfo_3ED9B10 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor___91354744);
-  v48 = 0;
-  v49 = &v50;
-  v50 = v10;
+    (const MethodInfo_3F0D2B8 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor___91580536);
+  v47 = 0;
+  v48 = &v49;
+  v49 = v10;
   if ( !v10 )
-    sub_21FFECC(v11, v12);
+    sub_2213CDC(v11, v12);
   ptr = CriStructMemory_CriFsBinder_ContentsFileInfo___get_ptr(
           v10,
-          (const MethodInfo_3ED9A10 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+          (const MethodInfo_3F0D1B8 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
   ContentsFileInfoByIndex = CriFsBinder__criFsBinder_GetContentsFileInfoByIndex(bindId, index, ptr, numFiles, v14);
   v18 = ContentsFileInfoByIndex;
   v19 = 0;
@@ -416,65 +415,64 @@ bool CriFsBinder__GetContentsFileInfoByIndex(
   v21 = 32;
   do
   {
-    if ( !v50 )
-      sub_21FFECC(ContentsFileInfoByIndex, v16);
+    if ( !v49 )
+      sub_2213CDC(ContentsFileInfoByIndex, v16);
     v22 = *info;
-    bytes_k__BackingField = v50->fields._bytes_k__BackingField;
+    bytes_k__BackingField = v49->fields._bytes_k__BackingField;
     v24 = CriFsBinder_ContentsFileInfo_var;
-    if ( !*(_DWORD *)(qword_594C108 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_594C108, v16, v17);
-    v25.fields.value = (intptr_t)v24;
-    TypeFromHandle = System_Type__GetTypeFromHandle(v25, 0);
+    if ( !*(_DWORD *)(qword_59843E0 + 228) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v16, v17);
+    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v24, 0);
     if ( !*(&System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo, v26, v27);
-    v29 = System_Runtime_InteropServices_Marshal__SizeOf(TypeFromHandle, 0) * v19;
-    memset(&v47, 0, sizeof(v47));
-    CriFsBinder_ContentsFileInfo___ctor(&v47, bytes_k__BackingField, v29, v30);
+      j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo, v25, v26);
+    v28 = System_Runtime_InteropServices_Marshal__SizeOf(TypeFromHandle, 0) * v19;
+    memset(&v46, 0, sizeof(v46));
+    CriFsBinder_ContentsFileInfo___ctor(&v46, bytes_k__BackingField, v28, v29);
     if ( !v22 )
-      sub_21FFECC(v31, v32);
+      sub_2213CDC(v30, v31);
     if ( v19 >= LODWORD(v22->max_length) )
-      sub_21FFED4(v31);
-    v33 = *(_OWORD *)&v47.fields.fileId;
-    v34 = (_OWORD *)((char *)v22 + v21);
-    v35 = *(_OWORD *)&v47.fields.directory;
-    v34[1] = *(_OWORD *)&v47.fields.readSize;
-    v34[2] = v33;
-    *v34 = v35;
-    ContentsFileInfoByIndex = sub_21FFBF4((char *)v22 + v21, 0);
+      sub_2213CE4(v30);
+    v32 = *(_OWORD *)&v46.fields.fileId;
+    v33 = (_OWORD *)((char *)v22 + v21);
+    v34 = *(_OWORD *)&v46.fields.directory;
+    v33[1] = *(_OWORD *)&v46.fields.readSize;
+    v33[2] = v32;
+    *v33 = v34;
+    ContentsFileInfoByIndex = sub_2213A04((char *)v22 + v21, 0);
     ++v19;
     v21 += 48;
   }
   while ( v20 != v19 );
-  v36 = v18 == 0;
-  v37 = v50;
-  if ( v50 )
+  v35 = v18 == 0;
+  v36 = v49;
+  if ( v49 )
   {
-    klass = v50->klass;
-    v39 = *(unsigned __int16 *)&v50->klass->_2.rank;
-    if ( *(_WORD *)&v50->klass->_2.rank )
+    klass = v49->klass;
+    v38 = *(unsigned __int16 *)&v49->klass->_2.rank;
+    if ( *(_WORD *)&v49->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v39;
+        --v38;
         p_offset += 4;
-        if ( !v39 )
+        if ( !v38 )
           goto LABEL_20;
       }
-      v41 = (__int64)&klass->vtable + 16 * *p_offset;
+      v40 = (__int64)&klass->vtable + 16 * *p_offset;
     }
     else
     {
 LABEL_20:
-      v41 = sub_2237E2C(v50, System_IDisposable_TypeInfo, 0);
+      v40 = sub_224BC3C(v49, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(CriStructMemory_CriFsBinder_ContentsFileInfo__o *, _QWORD))v41)(v37, *(_QWORD *)(v41 + 8));
+    (*(void (__fastcall **)(CriStructMemory_CriFsBinder_ContentsFileInfo__o *, _QWORD))v40)(v36, *(_QWORD *)(v40 + 8));
   }
-  return v36;
+  return v35;
 }
 
 
-bool CriFsBinder__GetContentsFileInfo_36916896(
+bool CriFsBinder__GetContentsFileInfo_36998312(
         CriFsBinder_o *this,
         int32_t id,
         CriFsBinder_ContentsFileInfo_o *info,
@@ -504,31 +502,31 @@ bool CriFsBinder__GetContentsFileInfo_36916896(
   CriStructMemory_CriFsBinder_ContentsFileInfo__o **v29; // [xsp+38h] [xbp-48h]
   CriStructMemory_CriFsBinder_ContentsFileInfo__o *v30; // [xsp+48h] [xbp-38h] BYREF
 
-  if ( (byte_593146E & 1) == 0 )
+  if ( (byte_596960E & 1) == 0 )
   {
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
-    sub_21FFC50(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
-    sub_21FFC50(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    byte_593146E = 1;
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_bytes__);
+    sub_2213A60(&Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+    sub_2213A60(&CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    byte_596960E = 1;
   }
-  v7 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_21FFEBC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
+  v7 = (CriStructMemory_CriFsBinder_ContentsFileInfo__o *)sub_2213CCC(CriStructMemory_CriFsBinder_ContentsFileInfo__TypeInfo);
   CriStructMemory_CriFsBinder_ContentsFileInfo____ctor(
     v7,
-    (const MethodInfo_3ED9A1C *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
+    (const MethodInfo_3F0D1C4 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo___ctor__);
   v30 = v7;
   v28 = 0;
   v29 = &v30;
   if ( !v7 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   handle = this->fields.handle;
   ptr = CriStructMemory_CriFsBinder_ContentsFileInfo___get_ptr(
           v7,
-          (const MethodInfo_3ED9A10 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
+          (const MethodInfo_3F0D1B8 *)Method_CriStructMemory_CriFsBinder_ContentsFileInfo__get_ptr__);
   ContentsFileInfoById = CriFsBinder__criFsBinder_GetContentsFileInfoById(handle, id, ptr, v12);
   if ( !v30 )
-    sub_21FFECC(ContentsFileInfoById, v14);
+    sub_2213CDC(ContentsFileInfoById, v14);
   bytes_k__BackingField = v30->fields._bytes_k__BackingField;
   v17 = ContentsFileInfoById;
   memset(&v27, 0, sizeof(v27));
@@ -538,7 +536,7 @@ bool CriFsBinder__GetContentsFileInfo_36916896(
   *(_OWORD *)&info->fields.fileId = *(_OWORD *)&v27.fields.fileId;
   *(_OWORD *)&info->fields.directory = v18;
   *(_OWORD *)&info->fields.readSize = v19;
-  sub_21FFBF4(info, 0);
+  sub_2213A04(info, 0);
   v20 = v17 == 0;
   v21 = v30;
   if ( v30 )
@@ -560,7 +558,7 @@ bool CriFsBinder__GetContentsFileInfo_36916896(
     else
     {
 LABEL_10:
-      v25 = sub_2237E2C(v30, System_IDisposable_TypeInfo, 0);
+      v25 = sub_224BC3C(v30, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(CriStructMemory_CriFsBinder_ContentsFileInfo__o *, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8));
   }
@@ -589,7 +587,7 @@ int64_t CriFsBinder__GetFileSize(CriFsBinder_o *this, System_String_o *path, con
 }
 
 
-int64_t CriFsBinder__GetFileSize_36915440(CriFsBinder_o *this, int32_t id, const MethodInfo *method)
+int64_t CriFsBinder__GetFileSize_36996856(CriFsBinder_o *this, int32_t id, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   intptr_t handle; // x8
@@ -624,10 +622,10 @@ int32_t CriFsBinder__GetStatus(uint32_t bindId, const MethodInfo *method)
   const MethodInfo *v5; // x2
   int32_t status; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593146C & 1) == 0 )
+  if ( (byte_596960C & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_593146C = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_596960C = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   status = 4;
@@ -646,10 +644,10 @@ void CriFsBinder__SetPriority(uint32_t bindId, int32_t priority, const MethodInf
   CriFsPlugin_c *inited; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_5931470 & 1) == 0 )
+  if ( (byte_5969610 & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_5931470 = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_5969610 = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -665,10 +663,10 @@ void CriFsBinder__Unbind(uint32_t bindId, const MethodInfo *method)
   CriFsPlugin_c *inited; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_593146B & 1) == 0 )
+  if ( (byte_596960B & 1) == 0 )
   {
-    sub_21FFC50(&CriFsPlugin_TypeInfo);
-    byte_593146B = 1;
+    sub_2213A60(&CriFsPlugin_TypeInfo);
+    byte_596960B = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !*(&CriFsPlugin_TypeInfo->_2.cctor_finished + 1) )
@@ -700,7 +698,7 @@ uint32_t CriFsBinder__criFsBinder_BindCpk(
   char v23; // [xsp+2Ch] [xbp-44h]
 
   v11 = (int)path;
-  if ( !off_5931488 )
+  if ( !off_5969628 )
   {
     *(_QWORD *)v17 = "cri_ware_unity";
     v18 = 14;
@@ -709,11 +707,11 @@ uint32_t CriFsBinder__criFsBinder_BindCpk(
     v21 = 0x200000000LL;
     v22 = 44;
     v23 = 0;
-    off_5931488 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2200304(v17);
+    off_5969628 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2214114(v17);
   }
-  v14 = sub_22002E0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
-  v15 = off_5931488(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
-  sub_22002F8(v14);
+  v14 = sub_22140F0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
+  v15 = off_5969628(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
+  sub_2214108(v14);
   return v15;
 }
 
@@ -740,7 +738,7 @@ uint32_t CriFsBinder__criFsBinder_BindDirectory(
   char v23; // [xsp+2Ch] [xbp-44h]
 
   v11 = (int)path;
-  if ( !off_5931490 )
+  if ( !off_5969630 )
   {
     *(_QWORD *)v17 = "cri_ware_unity";
     v18 = 14;
@@ -749,11 +747,11 @@ uint32_t CriFsBinder__criFsBinder_BindDirectory(
     v21 = 0x200000000LL;
     v22 = 44;
     v23 = 0;
-    off_5931490 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2200304(v17);
+    off_5969630 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2214114(v17);
   }
-  v14 = sub_22002E0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
-  v15 = off_5931490(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
-  sub_22002F8(v14);
+  v14 = sub_22140F0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
+  v15 = off_5969630(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
+  sub_2214108(v14);
   return v15;
 }
 
@@ -780,7 +778,7 @@ uint32_t CriFsBinder__criFsBinder_BindFile(
   char v23; // [xsp+2Ch] [xbp-44h]
 
   v11 = (int)path;
-  if ( !off_5931498 )
+  if ( !off_5969638 )
   {
     *(_QWORD *)v17 = "cri_ware_unity";
     v18 = 14;
@@ -789,11 +787,11 @@ uint32_t CriFsBinder__criFsBinder_BindFile(
     v21 = 0x200000000LL;
     v22 = 44;
     v23 = 0;
-    off_5931498 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2200304(v17);
+    off_5969638 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2214114(v17);
   }
-  v14 = sub_22002E0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
-  v15 = off_5931498(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
-  sub_22002F8(v14);
+  v14 = sub_22140F0(v11, srcBinder, (int)path, work, worksize, (int)bindId, (int)method, v7, v17[0], v18, v19[0], v20);
+  v15 = off_5969638(binder, srcBinder, v14, work, (unsigned int)worksize, bindId);
+  sub_2214108(v14);
   return v15;
 }
 
@@ -836,7 +834,7 @@ uint32_t CriFsBinder__criFsBinder_BindFileSection(
 
   v12 = (int)sectionName;
   v15 = (int)path;
-  if ( !off_59314A0 )
+  if ( !off_5969640 )
   {
     *(_QWORD *)v33 = "cri_ware_unity";
     v34 = byte_9 + 5;
@@ -845,13 +843,13 @@ uint32_t CriFsBinder__criFsBinder_BindFileSection(
     v37 = 0x200000000LL;
     v38 = 64;
     v39 = 0;
-    off_59314A0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2200304(v33);
+    off_5969640 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_2214114(v33);
   }
-  v18 = sub_22002E0(v15, srcBinder, (int)path, offset, size, (int)sectionName, work, worksize, v29, v31, v33[0], v34);
-  v26 = sub_22002E0(v12, v19, v20, v21, v22, v23, v24, v25, v30, v32, v33[0], v34);
-  v27 = off_59314A0(binder, srcBinder, v18, offset, (unsigned int)size, v26, work, (unsigned int)worksize, bindId);
-  sub_22002F8(v18);
-  sub_22002F8(v26);
+  v18 = sub_22140F0(v15, srcBinder, (int)path, offset, size, (int)sectionName, work, worksize, v29, v31, v33[0], v34);
+  v26 = sub_22140F0(v12, v19, v20, v21, v22, v23, v24, v25, v30, v32, v33[0], v34);
+  v27 = off_5969640(binder, srcBinder, v18, offset, (unsigned int)size, v26, work, (unsigned int)worksize, bindId);
+  sub_2214108(v18);
+  sub_2214108(v26);
   return v27;
 }
 
@@ -863,8 +861,8 @@ uint32_t CriFsBinder__criFsBinder_Create(intptr_t *binder, const MethodInfo *met
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_5931478;
-  if ( !off_5931478 )
+  v3 = off_5969618;
+  if ( !off_5969618 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -873,10 +871,10 @@ uint32_t CriFsBinder__criFsBinder_Create(intptr_t *binder, const MethodInfo *met
     v5[4] = 0x200000000LL;
     v6 = 8;
     v7 = 0;
-    v3 = (void *)sub_2200304(v5);
-    off_5931478 = v3;
+    v3 = (void *)sub_2214114(v5);
+    off_5969618 = v3;
   }
-  return ((__int64 (__fastcall *)(intptr_t *, const MethodInfo *))v3)(binder, method);
+  return ((uint32_t (__fastcall *)(intptr_t *, const MethodInfo *))v3)(binder, method);
 }
 
 
@@ -887,8 +885,8 @@ uint32_t CriFsBinder__criFsBinder_Destroy(intptr_t binder, const MethodInfo *met
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_5931480;
-  if ( !off_5931480 )
+  v3 = off_5969620;
+  if ( !off_5969620 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -897,10 +895,10 @@ uint32_t CriFsBinder__criFsBinder_Destroy(intptr_t binder, const MethodInfo *met
     v5[4] = 0x200000000LL;
     v6 = 8;
     v7 = 0;
-    v3 = (void *)sub_2200304(v5);
-    off_5931480 = v3;
+    v3 = (void *)sub_2214114(v5);
+    off_5969620 = v3;
   }
-  return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v3)(binder, method);
+  return ((uint32_t (__fastcall *)(intptr_t, const MethodInfo *))v3)(binder, method);
 }
 
 
@@ -926,7 +924,7 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfo(
   char v20; // [xsp+2Ch] [xbp-34h]
 
   v9 = (int)path;
-  if ( !off_59314D0 )
+  if ( !off_5969670 )
   {
     *(_QWORD *)v14 = "cri_ware_unity";
     v15 = 14;
@@ -935,11 +933,11 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfo(
     v18 = 0x200000000LL;
     v19 = 24;
     v20 = 0;
-    off_59314D0 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_2200304(v14);
+    off_5969670 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_2214114(v14);
   }
-  v11 = sub_22002E0(v9, (int)path, info, (int)method, v4, v5, v6, v7, v14[0], v15, v16[0], v17);
-  v12 = off_59314D0(binder, v11, info);
-  sub_22002F8(v11);
+  v11 = sub_22140F0(v9, (int)path, info, (int)method, v4, v5, v6, v7, v14[0], v15, v16[0], v17);
+  v12 = off_5969670(binder, v11, info);
+  sub_2214108(v11);
   return v12;
 }
 
@@ -955,8 +953,8 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfoById(
   int v10; // [xsp+28h] [xbp-38h]
   char v11; // [xsp+2Ch] [xbp-34h]
 
-  v6 = off_59314D8;
-  if ( !off_59314D8 )
+  v6 = off_5969678;
+  if ( !off_5969678 )
   {
     v9[0] = "cri_ware_unity";
     v9[1] = 14;
@@ -965,10 +963,10 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfoById(
     v9[4] = 0x200000000LL;
     v10 = 20;
     v11 = 0;
-    v6 = (void *)sub_2200304(v9);
-    off_59314D8 = v6;
+    v6 = (void *)sub_2214114(v9);
+    off_5969678 = v6;
   }
-  return ((__int64 (__fastcall *)(intptr_t, _QWORD, intptr_t, const MethodInfo *))v6)(
+  return ((int32_t (__fastcall *)(intptr_t, _QWORD, intptr_t, const MethodInfo *))v6)(
            binder,
            (unsigned int)id,
            info,
@@ -988,8 +986,8 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfoByIndex(
   int v12; // [xsp+28h] [xbp-38h]
   char v13; // [xsp+2Ch] [xbp-34h]
 
-  v7 = off_59314E0;
-  if ( !off_59314E0 )
+  v7 = off_5969680;
+  if ( !off_5969680 )
   {
     v11[0] = "cri_ware_unity";
     v11[1] = 14;
@@ -998,10 +996,10 @@ int32_t CriFsBinder__criFsBinder_GetContentsFileInfoByIndex(
     v11[4] = 0x200000000LL;
     v12 = 20;
     v13 = 0;
-    v7 = (void *)sub_2200304(v11);
-    off_59314E0 = v7;
+    v7 = (void *)sub_2214114(v11);
+    off_5969680 = v7;
   }
-  return ((__int64 (__fastcall *)(_QWORD, _QWORD, intptr_t, _QWORD, const MethodInfo *))v7)(
+  return ((int32_t (__fastcall *)(_QWORD, _QWORD, intptr_t, _QWORD, const MethodInfo *))v7)(
            id,
            (unsigned int)index,
            info,
@@ -1032,7 +1030,7 @@ int32_t CriFsBinder__criFsBinder_GetFileSize(
   char v20; // [xsp+2Ch] [xbp-34h]
 
   v9 = (int)path;
-  if ( !off_59314B8 )
+  if ( !off_5969658 )
   {
     *(_QWORD *)v14 = "cri_ware_unity";
     v15 = 14;
@@ -1041,11 +1039,11 @@ int32_t CriFsBinder__criFsBinder_GetFileSize(
     v18 = 0x200000000LL;
     v19 = 24;
     v20 = 0;
-    off_59314B8 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_2200304(v14);
+    off_5969658 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD))sub_2214114(v14);
   }
-  v11 = sub_22002E0(v9, (int)path, (int)size, (int)method, v4, v5, v6, v7, v14[0], v15, v16[0], v17);
-  v12 = off_59314B8(binder, v11, size);
-  sub_22002F8(v11);
+  v11 = sub_22140F0(v9, (int)path, (int)size, (int)method, v4, v5, v6, v7, v14[0], v15, v16[0], v17);
+  v12 = off_5969658(binder, v11, size);
+  sub_2214108(v11);
   return v12;
 }
 
@@ -1057,8 +1055,8 @@ int32_t CriFsBinder__criFsBinder_GetFileSizeById(intptr_t binder, int32_t id, in
   int v10; // [xsp+28h] [xbp-38h]
   char v11; // [xsp+2Ch] [xbp-34h]
 
-  v6 = off_59314C0;
-  if ( !off_59314C0 )
+  v6 = off_5969660;
+  if ( !off_5969660 )
   {
     v9[0] = "cri_ware_unity";
     v9[1] = 14;
@@ -1067,10 +1065,10 @@ int32_t CriFsBinder__criFsBinder_GetFileSizeById(intptr_t binder, int32_t id, in
     v9[4] = 0x200000000LL;
     v10 = 20;
     v11 = 0;
-    v6 = (void *)sub_2200304(v9);
-    off_59314C0 = v6;
+    v6 = (void *)sub_2214114(v9);
+    off_5969660 = v6;
   }
-  return ((__int64 (__fastcall *)(intptr_t, _QWORD, int64_t *, const MethodInfo *))v6)(
+  return ((int32_t (__fastcall *)(intptr_t, _QWORD, int64_t *, const MethodInfo *))v6)(
            binder,
            (unsigned int)id,
            size,
@@ -1085,8 +1083,8 @@ int32_t CriFsBinder__criFsBinder_GetStatus(uint32_t bindId, int32_t *status, con
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v5 = off_59314B0;
-  if ( !off_59314B0 )
+  v5 = off_5969650;
+  if ( !off_5969650 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -1095,10 +1093,10 @@ int32_t CriFsBinder__criFsBinder_GetStatus(uint32_t bindId, int32_t *status, con
     v7[4] = 0x200000000LL;
     v8 = 12;
     v9 = 0;
-    v5 = (void *)sub_2200304(v7);
-    off_59314B0 = v5;
+    v5 = (void *)sub_2214114(v7);
+    off_5969650 = v5;
   }
-  return ((__int64 (__fastcall *)(_QWORD, int32_t *, const MethodInfo *))v5)(bindId, status, method);
+  return ((int32_t (__fastcall *)(_QWORD, int32_t *, const MethodInfo *))v5)(bindId, status, method);
 }
 
 
@@ -1109,8 +1107,8 @@ int32_t CriFsBinder__criFsBinder_SetPriority(uint32_t bindId, int32_t priority, 
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v5 = off_59314C8;
-  if ( !off_59314C8 )
+  v5 = off_5969668;
+  if ( !off_5969668 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -1119,10 +1117,10 @@ int32_t CriFsBinder__criFsBinder_SetPriority(uint32_t bindId, int32_t priority, 
     v7[4] = 0x200000000LL;
     v8 = 8;
     v9 = 0;
-    v5 = (void *)sub_2200304(v7);
-    off_59314C8 = v5;
+    v5 = (void *)sub_2214114(v7);
+    off_5969668 = v5;
   }
-  return ((__int64 (__fastcall *)(_QWORD, _QWORD, const MethodInfo *))v5)(bindId, (unsigned int)priority, method);
+  return ((int32_t (__fastcall *)(_QWORD, _QWORD, const MethodInfo *))v5)(bindId, (unsigned int)priority, method);
 }
 
 
@@ -1133,8 +1131,8 @@ int32_t CriFsBinder__criFsBinder_Unbind(uint32_t bindId, const MethodInfo *metho
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_59314A8;
-  if ( !off_59314A8 )
+  v3 = off_5969648;
+  if ( !off_5969648 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -1143,10 +1141,10 @@ int32_t CriFsBinder__criFsBinder_Unbind(uint32_t bindId, const MethodInfo *metho
     v5[4] = 0x200000000LL;
     v6 = 4;
     v7 = 0;
-    v3 = (void *)sub_2200304(v5);
-    off_59314A8 = v3;
+    v3 = (void *)sub_2214114(v5);
+    off_5969648 = v3;
   }
-  return ((__int64 (__fastcall *)(_QWORD, const MethodInfo *))v3)(bindId, method);
+  return ((int32_t (__fastcall *)(_QWORD, const MethodInfo *))v3)(bindId, method);
 }
 
 
@@ -1181,10 +1179,10 @@ void CriFsBinder_ContentsFileInfo___ctor(
   intptr_t v23; // [xsp+8h] [xbp-38h] BYREF
   intptr_t ptr; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_59314F0 & 1) == 0 )
+  if ( (byte_5969690 & 1) == 0 )
   {
-    sub_21FFC50(&System_Runtime_InteropServices_Marshal_TypeInfo);
-    byte_59314F0 = 1;
+    sub_2213A60(&System_Runtime_InteropServices_Marshal_TypeInfo);
+    byte_5969690 = 1;
   }
   if ( System_IntPtr__get_Size(0) == 4 )
   {
@@ -1195,13 +1193,13 @@ void CriFsBinder_ContentsFileInfo___ctor(
       j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo, v8, v9);
     v10 = System_Runtime_InteropServices_Marshal__PtrToStringAnsi(ptr, 0);
     this->fields.directory = v10;
-    sub_21FFBF4(this, v10);
+    sub_2213A04(this, v10);
     v11 = System_BitConverter__ToInt32(data, startIndex + 4, 0);
     v23 = 0;
     System_IntPtr___ctor((intptr_t)&v23, v11, 0);
     v12 = System_Runtime_InteropServices_Marshal__PtrToStringAnsi(v23, 0);
     this->fields.fileName = v12;
-    sub_21FFBF4(&this->fields.fileName, v12);
+    sub_2213A04(&this->fields.fileName, v12);
     this->fields.readSize = System_BitConverter__ToUInt32(data, startIndex + 8, 0);
     this->fields.extractSize = System_BitConverter__ToUInt32(data, startIndex + 12, 0);
     this->fields.offset = System_BitConverter__ToUInt64(data, startIndex + 16, 0);
@@ -1211,18 +1209,18 @@ void CriFsBinder_ContentsFileInfo___ctor(
   {
     v14 = System_BitConverter__ToInt64(data, startIndex, 0);
     ptr = 0;
-    System_IntPtr___ctor_77242236((intptr_t)&ptr, v14, 0);
+    System_IntPtr___ctor_77455540((intptr_t)&ptr, v14, 0);
     if ( !*(&System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo, v15, v16);
     v17 = System_Runtime_InteropServices_Marshal__PtrToStringAnsi(ptr, 0);
     this->fields.directory = v17;
-    sub_21FFBF4(this, v17);
+    sub_2213A04(this, v17);
     v18 = System_BitConverter__ToInt64(data, startIndex + 8, 0);
     v23 = 0;
-    System_IntPtr___ctor_77242236((intptr_t)&v23, v18, 0);
+    System_IntPtr___ctor_77455540((intptr_t)&v23, v18, 0);
     v19 = System_Runtime_InteropServices_Marshal__PtrToStringAnsi(v23, 0);
     this->fields.fileName = v19;
-    sub_21FFBF4(&this->fields.fileName, v19);
+    sub_2213A04(&this->fields.fileName, v19);
     this->fields.readSize = System_BitConverter__ToUInt32(data, startIndex + 16, 0);
     this->fields.extractSize = System_BitConverter__ToUInt32(data, startIndex + 20, 0);
     v20 = System_BitConverter__ToUInt64(data, startIndex + 24, 0);
@@ -1233,5 +1231,5 @@ void CriFsBinder_ContentsFileInfo___ctor(
   this->fields.userStr = 0;
   p_userStr = &this->fields.userStr;
   *((_DWORD *)p_userStr - 2) = v21;
-  sub_21FFBF4(p_userStr, 0);
+  sub_2213A04(p_userStr, 0);
 }

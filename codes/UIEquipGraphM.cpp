@@ -1,9 +1,9 @@
 void UIEquipGraphM___ctor(UIEquipGraphM_o *this, const MethodInfo *method)
 {
-  if ( (byte_5939F21 & 1) == 0 )
+  if ( (byte_59720F4 & 1) == 0 )
   {
-    sub_21FFC50(&UIEquipGraphRender_TypeInfo);
-    byte_5939F21 = 1;
+    sub_2213A60(&UIEquipGraphRender_TypeInfo);
+    byte_59720F4 = 1;
   }
   if ( !*(&UIEquipGraphRender_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UIEquipGraphRender_TypeInfo, method);
@@ -21,7 +21,7 @@ void UIEquipGraphM__Destroy(UIEquipGraphM_o *this, const MethodInfo *method)
 void UIEquipGraphM__EndLoadAsset(UIEquipGraphM_o *this, const MethodInfo *method)
 {
   System_String_array *loadNameList; // x20
-  AssetData_array *AssetStorage_47473732; // x0
+  AssetData_array *AssetStorage_47505140; // x0
   System_String_o *v5; // x2
   System_String_o *v6; // x3
   int32_t v7; // w4
@@ -48,29 +48,29 @@ void UIEquipGraphM__EndLoadAsset(UIEquipGraphM_o *this, const MethodInfo *method
   bool v28; // w7
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_5939F1F & 1) == 0 )
+  if ( (byte_59720F2 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939F1F = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_59720F2 = 1;
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
-    AssetStorage_47473732 = AssetManager__getAssetStorage_47473732(loadNameList, 0);
-    if ( AssetStorage_47473732 )
+    AssetStorage_47505140 = AssetManager__getAssetStorage_47505140(loadNameList, 0);
+    if ( AssetStorage_47505140 )
     {
-      max_length = AssetStorage_47473732->max_length;
-      v12 = AssetStorage_47473732;
+      max_length = AssetStorage_47505140->max_length;
+      v12 = AssetStorage_47505140;
       if ( max_length < 1 )
       {
 LABEL_11:
         assetDataList = this->fields.assetDataList;
         this->fields.loadNameList = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList, 0, v5, v6, v7, v8, v9, v10);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList, 0, v5, v6, v7, v8, v9, v10);
         this->fields.assetDataList = v12;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.assetDataList,
           (int32_t)v12,
           v15,
@@ -84,13 +84,13 @@ LABEL_11:
         {
           if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v22);
-          AssetManager__releaseAsset_47465764(assetDataList, 0);
+          AssetManager__releaseAsset_47497180(assetDataList, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         if ( callbackFunc )
         {
           this->fields.callbackFunc = 0;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v23, v24, v25, v26, v27, v28);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v23, v24, v25, v26, v27, v28);
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
             callbackFunc->fields.method);
@@ -98,7 +98,7 @@ LABEL_11:
       }
       else
       {
-        m_Items = AssetStorage_47473732->m_Items;
+        m_Items = AssetStorage_47505140->m_Items;
         while ( *m_Items )
         {
           --max_length;
@@ -131,10 +131,10 @@ void UIEquipGraphM__ReleaseCharacter(UIEquipGraphM_o *this, const MethodInfo *me
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_5939F1D & 1) == 0 )
+  if ( (byte_59720F0 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939F1D = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_59720F0 = 1;
   }
   UIEquipGraphRender__ReleaseCharacter((UIEquipGraphRender_o *)this, method);
   assetDataList = this->fields.assetDataList;
@@ -142,9 +142,9 @@ void UIEquipGraphM__ReleaseCharacter(UIEquipGraphM_o *this, const MethodInfo *me
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
-    AssetManager__releaseAsset_47465764(assetDataList, 0);
+    AssetManager__releaseAsset_47497180(assetDataList, 0);
     this->fields.assetDataList = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetDataList, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetDataList, 0, v5, v6, v7, v8, v9, v10);
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
@@ -152,9 +152,9 @@ void UIEquipGraphM__ReleaseCharacter(UIEquipGraphM_o *this, const MethodInfo *me
     p_loadNameList = (MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
-    AssetManager__releaseAssetStorage_47474708(loadNameList, 0);
+    AssetManager__releaseAssetStorage_47506132(loadNameList, 0);
     p_loadNameList->klass = 0;
-    sub_21FFBF4(p_loadNameList, 0, v13, v14, v15, v16, v17, v18);
+    sub_2213A04(p_loadNameList, 0, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -202,13 +202,13 @@ void UIEquipGraphM__SetCharacter(
   System_Action_o *v41; // x21
   __int64 v42; // x1
 
-  if ( (byte_5939F1E & 1) == 0 )
+  if ( (byte_59720F1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_UIEquipGraphM_EndLoadAsset__);
-    sub_21FFC50(&UIEquipGraphRender_TypeInfo);
-    byte_5939F1E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_UIEquipGraphM_EndLoadAsset__);
+    sub_2213A60(&UIEquipGraphRender_TypeInfo);
+    byte_59720F1 = 1;
   }
   if ( !*(&UIEquipGraphRender_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UIEquipGraphRender_TypeInfo, imageName);
@@ -234,7 +234,7 @@ void UIEquipGraphM__SetCharacter(
           || (p_callbackFunc->klass = (MissionNaviTransitionBoardItem_c *)v21, (System_Action_c *)v21->klass != v29) )
         {
 LABEL_27:
-          sub_220024C(v28, v29, v22);
+          sub_221405C(v28, v29, v22);
           return;
         }
       }
@@ -242,13 +242,13 @@ LABEL_27:
       {
         p_callbackFunc->klass = 0;
       }
-      sub_21FFBF4(p_callbackFunc, (int32_t)v21, v22, v23, v24, v25, v26, v27);
+      sub_2213A04(p_callbackFunc, (int32_t)v21, v22, v23, v24, v25, v26, v27);
       return;
     }
     v32 = this->fields.loadNameList;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v18);
-    AssetManager__releaseAssetStorage_47474708(v32, 0);
+    AssetManager__releaseAssetStorage_47506132(v32, 0);
   }
   else
   {
@@ -257,7 +257,7 @@ LABEL_27:
     {
       if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v9);
-      if ( AssetManager__compAssetStorageList_47463424(assetDataList, v17, 0) )
+      if ( AssetManager__compAssetStorageList_47494836(assetDataList, v17, 0) )
       {
         UIEquipGraphM__SetTextureStatus(this, v31);
         if ( callbackFunc )
@@ -286,7 +286,7 @@ LABEL_27:
     {
       *v33 = 0;
     }
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)v34,
       v22,
@@ -297,7 +297,7 @@ LABEL_27:
       v39);
   }
   this->fields.loadNameList = v17;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadNameList,
     (int32_t)v17,
     v10,
@@ -307,11 +307,11 @@ LABEL_27:
     v14,
     v15);
   v40 = this->fields.loadNameList;
-  v41 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v41 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v41, (Il2CppObject *)this, Method_UIEquipGraphM_EndLoadAsset__, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v42);
-  AssetManager__loadAssetStorage_47472372(v40, v41, 1, 0);
+  AssetManager__loadAssetStorage_47503780(v40, v41, 1, 0);
 }
 
 
@@ -322,7 +322,7 @@ void UIEquipGraphM__SetDispOffset(UIEquipGraphM_o *this, const MethodInfo *metho
 
   bodyFilter = (UnityEngine_Component_o *)this->fields.bodyFilter;
   if ( !bodyFilter || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0 )
-    sub_21FFECC(bodyFilter, method);
+    sub_2213CDC(bodyFilter, method);
   v4.fields.y = this->fields.dispOffset.fields.y;
   v4.fields.x = this->fields.dispOffset.fields.x;
   v4.fields.z = 0.0;
@@ -354,12 +354,12 @@ void UIEquipGraphM__SetTexture(UIEquipGraphM_o *this, const MethodInfo *method)
   const MethodInfo *v21; // x1
 
   v2 = this;
-  if ( (byte_5939F20 & 1) == 0 )
+  if ( (byte_59720F3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    sub_21FFC50(&UnityEngine_Texture2D___TypeInfo);
-    this = (UIEquipGraphM_o *)sub_21FFC50(&StringLiteral_17270/*"a"*/);
-    byte_5939F20 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    sub_2213A60(&UnityEngine_Texture2D___TypeInfo);
+    this = (UIEquipGraphM_o *)sub_2213A60(&StringLiteral_17306/*"a"*/);
+    byte_59720F3 = 1;
   }
   assetDataList = v2->fields.assetDataList;
   if ( !assetDataList )
@@ -369,25 +369,25 @@ void UIEquipGraphM__SetTexture(UIEquipGraphM_o *this, const MethodInfo *method)
   v4 = assetDataList->m_Items[0];
   if ( !v4
     || (LastName = AssetData__get_LastName(assetDataList->m_Items[0], 0),
-        v6 = sub_21FFD10(UnityEngine_Texture2D___TypeInfo, 1),
+        v6 = sub_2213B20(UnityEngine_Texture2D___TypeInfo, 1),
         v2->fields.textureList = (struct UnityEngine_Texture2D_array *)v6,
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v2->fields.textureList, v6, v7, v8, v9, v10, v11, v12),
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.textureList, v6, v7, v8, v9, v10, v11, v12),
         textureList = v2->fields.textureList,
-        v14 = System_String__Concat_75438412(LastName, (System_String_o *)StringLiteral_17270/*"a"*/, 0),
-        this = (UIEquipGraphM_o *)AssetData__GetObject_object__58323140(
+        v14 = System_String__Concat_75651716(LastName, (System_String_o *)StringLiteral_17306/*"a"*/, 0),
+        this = (UIEquipGraphM_o *)AssetData__GetObject_object__58532980(
                                     v4,
                                     v14,
-                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152),
+                                    (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360),
         !textureList) )
   {
 LABEL_9:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   if ( !LODWORD(textureList->max_length) )
 LABEL_10:
-    sub_21FFED4(this);
+    sub_2213CE4(this);
   textureList->m_Items[0] = (UnityEngine_Texture2D_o *)this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)textureList->m_Items, (int32_t)this, v15, v16, v17, v18, v19, v20);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)textureList->m_Items, (int32_t)this, v15, v16, v17, v18, v19, v20);
   UIEquipGraphM__SetTextureStatus(v2, v21);
 }
 
@@ -401,7 +401,7 @@ void UIEquipGraphM__SetTextureStatus(UIEquipGraphM_o *this, const MethodInfo *me
   UIEquipGraphRender__SetCharacterRender((UIEquipGraphRender_o *)this, method);
   bodyFilter = (UnityEngine_Component_o *)this->fields.bodyFilter;
   if ( !bodyFilter || (bodyFilter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bodyFilter, 0)) == 0 )
-    sub_21FFECC(bodyFilter, v3);
+    sub_2213CDC(bodyFilter, v3);
   v5.fields.y = this->fields.dispTop.fields.y;
   v5.fields.x = this->fields.dispTop.fields.x;
   v5.fields.z = 0.0;

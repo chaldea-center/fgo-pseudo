@@ -27,12 +27,12 @@ void BattleBranchSkillInfoData___ctor(
   bool isAnd; // w8
   bool *p_isAnd; // x20
 
-  if ( (byte_593B5AF & 1) == 0 )
+  if ( (byte_59737A7 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_9913/*"None"*/);
-    sub_21FFC50(&StringLiteral_7943/*"Individuality"*/);
-    sub_21FFC50(&StringLiteral_8401/*"IsSelfTarget"*/);
-    byte_593B5AF = 1;
+    sub_2213A60(&StringLiteral_9926/*"None"*/);
+    sub_2213A60(&StringLiteral_7955/*"Individuality"*/);
+    sub_2213A60(&StringLiteral_8414/*"IsSelfTarget"*/);
+    byte_59737A7 = 1;
   }
   this->fields.itemImageId = -1;
   *(_QWORD *)&this->fields.cutInId = -1;
@@ -42,12 +42,12 @@ void BattleBranchSkillInfoData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   BattleBranchSkillInfoData__InheritOriginalSkillInfo(this, original, v7);
   if ( !condBranchSkillInfoData )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   condValue = condBranchSkillInfoData->fields.condValue;
   skillId = condBranchSkillInfoData->fields.skillId;
   *(_QWORD *)&this->fields.condBranchType = condValue;
   this->fields._skillId = skillId;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.condBranchType,
     (int32_t)condValue,
     v10,
@@ -57,19 +57,19 @@ void BattleBranchSkillInfoData___ctor(
     v14,
     v15);
   condType = condBranchSkillInfoData->fields.condType;
-  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_8401/*"IsSelfTarget"*/, 0) )
+  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_8414/*"IsSelfTarget"*/, 0) )
   {
     stringLength = 1;
 LABEL_10:
     *((_DWORD *)&this->fields.hasAddBattlePointFunc + 1) = stringLength;
     goto LABEL_11;
   }
-  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_7943/*"Individuality"*/, 0) )
+  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_7955/*"Individuality"*/, 0) )
   {
     stringLength = 2;
     goto LABEL_10;
   }
-  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_9913/*"None"*/, 0) )
+  if ( System_String__op_Equality(condType, (System_String_o *)StringLiteral_9926/*"None"*/, 0) )
   {
     stringLength = 0;
     goto LABEL_10;
@@ -86,7 +86,7 @@ LABEL_11:
   *(_QWORD *)&this->fields.isAnd = detailText;
   p_isAnd = &this->fields.isAnd;
   *(p_isAnd - 8) = isAnd;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_isAnd, (int32_t)detailText, v19, v20, v21, v22, v23, v24);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_isAnd, (int32_t)detailText, v19, v20, v21, v22, v23, v24);
   *((_DWORD *)p_isAnd + 2) = condBranchSkillInfoData->fields.iconBuffId;
 }
 
@@ -106,7 +106,7 @@ void BattleBranchSkillInfoData__InheritOriginalSkillInfo(
   __int64 v12; // d0
 
   *(_QWORD *)&this->fields._IconBuffId_k__BackingField = original;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._IconBuffId_k__BackingField,
     (int32_t)original,
     (System_String_o *)method,
@@ -116,7 +116,7 @@ void BattleBranchSkillInfoData__InheritOriginalSkillInfo(
     v6,
     v7);
   if ( !original )
-    sub_21FFECC(v10, v11);
+    sub_2213CDC(v10, v11);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&original->fields.type;
   this->fields.svtUniqueId = original->fields.svtUniqueId;
   *(_WORD *)&this->fields.isPassive = *(_WORD *)&original->fields.isPassive;
@@ -148,29 +148,29 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
   __int64 v18; // x1
 
   v6 = this;
-  if ( (byte_593B5B0 & 1) == 0 )
+  if ( (byte_59737A8 & 1) == 0 )
   {
-    sub_21FFC50(&System_Func_int____int____bool__TypeInfo);
-    sub_21FFC50(&Method_Individuality_IsMatchArray__);
-    sub_21FFC50(&Method_Individuality_IsPartialMatchArray__);
-    this = (BattleBranchSkillInfoData_o *)sub_21FFC50(&Individuality_TypeInfo);
-    byte_593B5B0 = 1;
+    sub_2213A60(&System_Func_int____int____bool__TypeInfo);
+    sub_2213A60(&Method_Individuality_IsMatchArray__);
+    sub_2213A60(&Method_Individuality_IsPartialMatchArray__);
+    this = (BattleBranchSkillInfoData_o *)sub_2213A60(&Individuality_TypeInfo);
+    byte_59737A8 = 1;
   }
   v7 = *((_DWORD *)&v6->fields.hasAddBattlePointFunc + 1);
   if ( v7 == 2 )
   {
     condValue_low = LOBYTE(v6->fields.condValue);
     v11 = *(System_Int32_array **)&v6->fields.condBranchType;
-    v12 = (System_Func_T1__T2__TResult__o *)sub_21FFEBC(System_Func_int____int____bool__TypeInfo);
+    v12 = (System_Func_T1__T2__TResult__o *)sub_2213CCC(System_Func_int____int____bool__TypeInfo);
     v13 = (System_Func_int____int____bool__o *)v12;
     if ( condValue_low )
     {
       System_Func_object__object__bool____ctor(v12, 0, Method_Individuality_IsMatchArray__, 0);
-      v14 = (System_Func_T1__T2__TResult__o *)sub_21FFEBC(System_Func_int____int____bool__TypeInfo);
+      v14 = (System_Func_T1__T2__TResult__o *)sub_2213CCC(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v14, 0, Method_Individuality_IsPartialMatchArray__, 0);
       if ( !*(&Individuality_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo, v15);
-      return Individuality__CheckSignedIndividualities_47367148(
+      return Individuality__CheckSignedIndividualities_47397700(
                targetIndv,
                v11,
                v13,
@@ -180,7 +180,7 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
     else
     {
       System_Func_object__object__bool____ctor(v12, 0, Method_Individuality_IsPartialMatchArray__, 0);
-      v17 = (System_Func_T1__T2__TResult__o *)sub_21FFEBC(System_Func_int____int____bool__TypeInfo);
+      v17 = (System_Func_T1__T2__TResult__o *)sub_2213CCC(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v17, 0, Method_Individuality_IsMatchArray__, 0);
       if ( !*(&Individuality_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo, v18);
@@ -199,9 +199,9 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
     {
       v9 = *(_QWORD *)&v6->fields.condBranchType;
       if ( !v9 )
-        sub_21FFECC(this, isSelfTarget);
+        sub_2213CDC(this, isSelfTarget);
       if ( !*(_DWORD *)(v9 + 24) )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v8 = (*(_DWORD *)(v9 + 32) != 1) ^ isSelfTarget;
     }
     else
@@ -215,9 +215,9 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
 
 BaseMotionSkip_o *BattleBranchSkillInfoData__MakeSkillSkip(BattleBranchSkillInfoData_o *this, const MethodInfo *method)
 {
-  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleBranchSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
-                               this,
-                               this->klass->vtable._17_CommonMakeSkillSkip.method);
+  return ((BaseMotionSkip_o *(__fastcall *)(BattleBranchSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
+           this,
+           this->klass->vtable._17_CommonMakeSkillSkip.method);
 }
 
 
@@ -239,8 +239,8 @@ int32_t BattleBranchSkillInfoData__get_chargeTurn(BattleBranchSkillInfoData_o *t
 
   v2 = *(_QWORD *)&this->fields._IconBuffId_k__BackingField;
   if ( !v2 )
-    sub_21FFECC(0, method);
-  return (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 408LL))(v2, *(_QWORD *)(*(_QWORD *)v2 + 416LL));
+    sub_2213CDC(0, method);
+  return (*(int32_t (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 408LL))(v2, *(_QWORD *)(*(_QWORD *)v2 + 416LL));
 }
 
 
@@ -256,7 +256,7 @@ void BattleBranchSkillInfoData__set_DetailText(
   bool v7; // w7
 
   *(_QWORD *)&this->fields.isAnd = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.isAnd,
     (int32_t)value,
     (System_String_o *)method,
@@ -287,7 +287,7 @@ void BattleBranchSkillInfoData__set_chargeTurn(
 
   v3 = *(_QWORD *)&this->fields._IconBuffId_k__BackingField;
   if ( !v3 )
-    sub_21FFECC(0, *(_QWORD *)&value);
+    sub_2213CDC(0, *(_QWORD *)&value);
   (*(void (__fastcall **)(__int64, int32_t, _QWORD))(*(_QWORD *)v3 + 424LL))(
     v3,
     value,

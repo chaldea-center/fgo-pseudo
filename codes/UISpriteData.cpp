@@ -8,14 +8,14 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_593CFED & 1) == 0 )
+  if ( (byte_59752C4 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_13529/*"Sprite"*/);
-    byte_593CFED = 1;
+    sub_2213A60(&StringLiteral_13556/*"Sprite"*/);
+    byte_59752C4 = 1;
   }
-  v9 = StringLiteral_13529/*"Sprite"*/;
-  this->fields.name = (struct System_String_o *)StringLiteral_13529/*"Sprite"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_13556/*"Sprite"*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_13556/*"Sprite"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -23,7 +23,7 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 void UISpriteData__CopyBorderFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
   if ( !sd )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   *(_OWORD *)&this->fields.borderLeft = *(_OWORD *)&sd->fields.borderLeft;
 }
 
@@ -39,11 +39,11 @@ void UISpriteData__CopyFrom(UISpriteData_o *this, UISpriteData_o *sd, const Meth
   UISpriteData_Fields *p_fields; // x20
 
   if ( !sd )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   name = sd->fields.name;
   this->fields.name = name;
   p_fields = &this->fields;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields,
     (int32_t)name,
     (System_String_o *)method,

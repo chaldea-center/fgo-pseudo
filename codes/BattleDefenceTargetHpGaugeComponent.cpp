@@ -18,7 +18,7 @@ void BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamageGauge(
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_21FFECC(damageGauge, method);
+    sub_2213CDC(damageGauge, method);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -40,7 +40,7 @@ void BattleDefenceTargetHpGaugeComponent__SetHpGauge(
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_21FFECC(damageGauge, v4);
+    sub_2213CDC(damageGauge, v4);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -72,7 +72,7 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGauge(
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0);
 }
 
@@ -180,180 +180,180 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   __int64 v100; // [xsp+10h] [xbp-40h] BYREF
   __int64 v101; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_593BD10 & 1) == 0 )
+  if ( (byte_5973F1D & 1) == 0 )
   {
-    sub_21FFC50(&object___TypeInfo);
-    sub_21FFC50(&StringLiteral_20581/*"from"*/);
-    sub_21FFC50(&StringLiteral_25318/*"time"*/);
-    sub_21FFC50(&StringLiteral_23526/*"onupdate"*/);
-    sub_21FFC50(&StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/);
-    sub_21FFC50(&StringLiteral_19348/*"delay"*/);
-    sub_21FFC50(&StringLiteral_25358/*"to"*/);
-    sub_21FFC50(&StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/);
-    sub_21FFC50(&StringLiteral_23518/*"oncomplete"*/);
-    sub_21FFC50(&iTween_TypeInfo);
-    byte_593BD10 = 1;
+    sub_2213A60(&object___TypeInfo);
+    sub_2213A60(&StringLiteral_20622/*"from"*/);
+    sub_2213A60(&StringLiteral_25366/*"time"*/);
+    sub_2213A60(&StringLiteral_23573/*"onupdate"*/);
+    sub_2213A60(&StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/);
+    sub_2213A60(&StringLiteral_19390/*"delay"*/);
+    sub_2213A60(&StringLiteral_25406/*"to"*/);
+    sub_2213A60(&StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/);
+    sub_2213A60(&StringLiteral_23565/*"oncomplete"*/);
+    sub_2213A60(&iTween_TypeInfo);
+    byte_5973F1D = 1;
   }
   this->fields.nowval = nowHp;
   BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v6 = sub_21FFD10(object___TypeInfo, 12);
+  v6 = sub_2213B20(object___TypeInfo, 12);
   if ( !v6 )
-    sub_21FFECC(0, v7);
+    sub_2213CDC(0, v7);
   v14 = (System_Object_array *)v6;
-  v15 = StringLiteral_20581/*"from"*/;
-  if ( StringLiteral_20581/*"from"*/ )
+  v15 = StringLiteral_20622/*"from"*/;
+  if ( StringLiteral_20622/*"from"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_20581/*"from"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_20622/*"from"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( !LODWORD(v14->max_length) )
     goto LABEL_43;
-  v17 = StringLiteral_20581/*"from"*/;
-  v14->m_Items[0] = (Il2CppObject *)StringLiteral_20581/*"from"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v14->m_Items, v17, v8, v9, v10, v11, v12, v13);
+  v17 = StringLiteral_20622/*"from"*/;
+  v14->m_Items[0] = (Il2CppObject *)StringLiteral_20622/*"from"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v14->m_Items, v17, v8, v9, v10, v11, v12, v13);
   v101 = 0;
-  v15 = j_il2cpp_value_box_0(qword_594C0A8, &v101);
+  v15 = j_il2cpp_value_box_0(qword_5984380, &v101);
   v24 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_21FFDA4(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( (v14->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_43;
   v14->m_Items[1] = v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[1], (int32_t)v24, v18, v19, v20, v21, v22, v23);
-  v15 = StringLiteral_25358/*"to"*/;
-  if ( StringLiteral_25358/*"to"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[1], (int32_t)v24, v18, v19, v20, v21, v22, v23);
+  v15 = StringLiteral_25406/*"to"*/;
+  if ( StringLiteral_25406/*"to"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_25358/*"to"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_25406/*"to"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 2 )
     goto LABEL_43;
-  v31 = StringLiteral_25358/*"to"*/;
-  v14->m_Items[2] = (Il2CppObject *)StringLiteral_25358/*"to"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[2], v31, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_25406/*"to"*/;
+  v14->m_Items[2] = (Il2CppObject *)StringLiteral_25406/*"to"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[2], v31, v25, v26, v27, v28, v29, v30);
   v100 = 0x3FF0000000000000LL;
-  v15 = j_il2cpp_value_box_0(qword_594C0A8, &v100);
+  v15 = j_il2cpp_value_box_0(qword_5984380, &v100);
   v38 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_21FFDA4(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( (v14->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_43;
   v14->m_Items[3] = v38;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[3], (int32_t)v38, v32, v33, v34, v35, v36, v37);
-  v15 = StringLiteral_23526/*"onupdate"*/;
-  if ( StringLiteral_23526/*"onupdate"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[3], (int32_t)v38, v32, v33, v34, v35, v36, v37);
+  v15 = StringLiteral_23573/*"onupdate"*/;
+  if ( StringLiteral_23573/*"onupdate"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_23526/*"onupdate"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_23573/*"onupdate"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 4 )
     goto LABEL_43;
-  v45 = StringLiteral_23526/*"onupdate"*/;
-  v14->m_Items[4] = (Il2CppObject *)StringLiteral_23526/*"onupdate"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[4], v45, v39, v40, v41, v42, v43, v44);
-  v15 = StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/ )
+  v45 = StringLiteral_23573/*"onupdate"*/;
+  v14->m_Items[4] = (Il2CppObject *)StringLiteral_23573/*"onupdate"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[4], v45, v39, v40, v41, v42, v43, v44);
+  v15 = StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 5 )
     goto LABEL_43;
-  v52 = StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/;
-  v14->m_Items[5] = (Il2CppObject *)StringLiteral_15763/*"UpdateDefenceTargetDamageGauge"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[5], v52, v46, v47, v48, v49, v50, v51);
-  v15 = StringLiteral_23518/*"oncomplete"*/;
-  if ( StringLiteral_23518/*"oncomplete"*/ )
+  v52 = StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/;
+  v14->m_Items[5] = (Il2CppObject *)StringLiteral_15793/*"UpdateDefenceTargetDamageGauge"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[5], v52, v46, v47, v48, v49, v50, v51);
+  v15 = StringLiteral_23565/*"oncomplete"*/;
+  if ( StringLiteral_23565/*"oncomplete"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_23518/*"oncomplete"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_23565/*"oncomplete"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 6 )
     goto LABEL_43;
-  v59 = StringLiteral_23518/*"oncomplete"*/;
-  v14->m_Items[6] = (Il2CppObject *)StringLiteral_23518/*"oncomplete"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[6], v59, v53, v54, v55, v56, v57, v58);
-  v15 = StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/ )
+  v59 = StringLiteral_23565/*"oncomplete"*/;
+  v14->m_Items[6] = (Il2CppObject *)StringLiteral_23565/*"oncomplete"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[6], v59, v53, v54, v55, v56, v57, v58);
+  v15 = StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( (v14->max_length & 0xFFFFFFF8) == 0 )
     goto LABEL_43;
-  v66 = StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/;
-  v14->m_Items[7] = (Il2CppObject *)StringLiteral_4797/*"CompleteDefenceTargetDamageGauge"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[7], v66, v60, v61, v62, v63, v64, v65);
-  v15 = StringLiteral_19348/*"delay"*/;
-  if ( StringLiteral_19348/*"delay"*/ )
+  v66 = StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/;
+  v14->m_Items[7] = (Il2CppObject *)StringLiteral_4805/*"CompleteDefenceTargetDamageGauge"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[7], v66, v60, v61, v62, v63, v64, v65);
+  v15 = StringLiteral_19390/*"delay"*/;
+  if ( StringLiteral_19390/*"delay"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_19348/*"delay"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_19390/*"delay"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 8 )
     goto LABEL_43;
-  v73 = StringLiteral_19348/*"delay"*/;
-  v14->m_Items[8] = (Il2CppObject *)StringLiteral_19348/*"delay"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[8], v73, v67, v68, v69, v70, v71, v72);
+  v73 = StringLiteral_19390/*"delay"*/;
+  v14->m_Items[8] = (Il2CppObject *)StringLiteral_19390/*"delay"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[8], v73, v67, v68, v69, v70, v71, v72);
   v99 = 1056964608;
-  v15 = j_il2cpp_value_box_0(qword_594C0A0, &v99);
+  v15 = j_il2cpp_value_box_0(qword_5984378, &v99);
   v80 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_21FFDA4(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 9 )
     goto LABEL_43;
   v14->m_Items[9] = v80;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[9], (int32_t)v80, v74, v75, v76, v77, v78, v79);
-  v15 = StringLiteral_25318/*"time"*/;
-  if ( StringLiteral_25318/*"time"*/ )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[9], (int32_t)v80, v74, v75, v76, v77, v78, v79);
+  v15 = StringLiteral_25366/*"time"*/;
+  if ( StringLiteral_25366/*"time"*/ )
   {
-    v15 = sub_21FFDA4(StringLiteral_25318/*"time"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(StringLiteral_25366/*"time"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_44;
   }
   if ( LODWORD(v14->max_length) <= 0xA )
     goto LABEL_43;
-  v87 = StringLiteral_25318/*"time"*/;
-  v14->m_Items[10] = (Il2CppObject *)StringLiteral_25318/*"time"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[10], v87, v81, v82, v83, v84, v85, v86);
+  v87 = StringLiteral_25366/*"time"*/;
+  v14->m_Items[10] = (Il2CppObject *)StringLiteral_25366/*"time"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[10], v87, v81, v82, v83, v84, v85, v86);
   v98 = 1065353216;
-  v15 = j_il2cpp_value_box_0(qword_594C0A0, &v98);
+  v15 = j_il2cpp_value_box_0(qword_5984378, &v98);
   v94 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_21FFDA4(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_2213BB4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_44:
-      v97 = sub_21FFEF0(v15, v16);
-      sub_21FFD90(v97, 0);
+      v97 = sub_2213D00(v15, v16);
+      sub_2213BA0(v97, 0);
     }
   }
   if ( LODWORD(v14->max_length) <= 0xB )
 LABEL_43:
-    sub_21FFED4(v15);
+    sub_2213CE4(v15);
   v14->m_Items[11] = v94;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v14->m_Items[11], (int32_t)v94, v88, v89, v90, v91, v92, v93);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->m_Items[11], (int32_t)v94, v88, v89, v90, v91, v92, v93);
   if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v95);
   v96 = iTween__Hash(v14, 0);

@@ -16,11 +16,11 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934EFD & 1) == 0 )
+  if ( (byte_596D02D & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EFD = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D02D = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -29,9 +29,9 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mRenderer,
       (int32_t)Component_object,
       v6,
@@ -57,11 +57,11 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934EFE & 1) == 0 )
+  if ( (byte_596D02E & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EFE = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D02E = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -70,9 +70,9 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mRigidbody,
       (int32_t)Component_object,
       v6,
@@ -98,11 +98,11 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934EFF & 1) == 0 )
+  if ( (byte_596D02F & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934EFF = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596D02F = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -111,9 +111,9 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mTransform,
       (int32_t)Component_object,
       v6,

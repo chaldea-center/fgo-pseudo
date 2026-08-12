@@ -8,18 +8,18 @@ void ScriptSubLayer___ctor(ScriptSubLayer_o *this, const MethodInfo *method)
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593A75C & 1) == 0 )
+  if ( (byte_597293B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-    byte_593A75C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+    byte_597293B = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
   this->fields.listCharaData = (struct System_Collections_Generic_List_ScriptCharaData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.listCharaData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.listCharaData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   *(_QWORD *)&this->fields.shakeParam.fields.time = 0;
   *(_QWORD *)&this->fields.shakeParam.fields.x = 0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -45,19 +45,19 @@ void ScriptSubLayer__CreateEffectController(ScriptSubLayer_o *this, const Method
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593A758 & 1) == 0 )
+  if ( (byte_5972937 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptActionRenderEffectController_TypeInfo);
-    byte_593A758 = 1;
+    sub_2213A60(&ScriptActionRenderEffectController_TypeInfo);
+    byte_5972937 = 1;
   }
   meshRender = this->fields.meshRender;
   if ( !meshRender )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   material = ExUIMeshRenderer__get_material(meshRender, 0);
-  v5 = (ScriptActionRenderEffectController_o *)sub_21FFEBC(ScriptActionRenderEffectController_TypeInfo);
+  v5 = (ScriptActionRenderEffectController_o *)sub_2213CCC(ScriptActionRenderEffectController_TypeInfo);
   ScriptActionRenderEffectController___ctor(v5, material, 0);
   this->fields._effectController_k__BackingField = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._effectController_k__BackingField,
     (int32_t)v5,
     v6,
@@ -71,7 +71,7 @@ void ScriptSubLayer__CreateEffectController(ScriptSubLayer_o *this, const Method
 
 void ScriptSubLayer__CreateRenderTexture(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  struct UnityEngine_RenderTexture_o *Temporary_83129020; // x0
+  struct UnityEngine_RenderTexture_o *Temporary_83342324; // x0
   System_String_o *v4; // x2
   System_String_o *v5; // x3
   int32_t v6; // w4
@@ -81,16 +81,16 @@ void ScriptSubLayer__CreateRenderTexture(ScriptSubLayer_o *this, const MethodInf
   __int64 v10; // x1
   UnityEngine_Object_o *renderTexture_k__BackingField; // x0
 
-  if ( (byte_593A757 & 1) == 0 )
+  if ( (byte_5972936 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_14211/*"TempRenderTexture"*/);
-    byte_593A757 = 1;
+    sub_2213A60(&StringLiteral_14241/*"TempRenderTexture"*/);
+    byte_5972936 = 1;
   }
-  Temporary_83129020 = UnityEngine_RenderTexture__GetTemporary_83129020(1024, 1024, 0, 0, 0);
-  this->fields._renderTexture_k__BackingField = Temporary_83129020;
-  sub_21FFBF4(
+  Temporary_83342324 = UnityEngine_RenderTexture__GetTemporary_83342324(1024, 1024, 0, 0, 0);
+  this->fields._renderTexture_k__BackingField = Temporary_83342324;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._renderTexture_k__BackingField,
-    (int32_t)Temporary_83129020,
+    (int32_t)Temporary_83342324,
     v4,
     v5,
     v6,
@@ -99,10 +99,10 @@ void ScriptSubLayer__CreateRenderTexture(ScriptSubLayer_o *this, const MethodInf
     v9);
   renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField;
   if ( !renderTexture_k__BackingField
-    || (UnityEngine_Object__set_name(renderTexture_k__BackingField, (System_String_o *)StringLiteral_14211/*"TempRenderTexture"*/, 0),
+    || (UnityEngine_Object__set_name(renderTexture_k__BackingField, (System_String_o *)StringLiteral_14241/*"TempRenderTexture"*/, 0),
         (renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields.meshRender) == 0) )
   {
-    sub_21FFECC(renderTexture_k__BackingField, v10);
+    sub_2213CDC(renderTexture_k__BackingField, v10);
   }
   ExUIMeshRenderer__SetImage(
     (ExUIMeshRenderer_o *)renderTexture_k__BackingField,
@@ -153,12 +153,12 @@ void ScriptSubLayer__Init(ScriptSubLayer_o *this, const MethodInfo *method)
   const MethodInfo *v34; // x3
   const MethodInfo *v35; // x1
 
-  if ( (byte_593A756 & 1) == 0 )
+  if ( (byte_5972935 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__Clear__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A756 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__Clear__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5972935 = 1;
   }
   renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -173,12 +173,12 @@ void ScriptSubLayer__Init(ScriptSubLayer_o *this, const MethodInfo *method)
   }
   v12 = (int)StringLiteral_1/*""*/;
   this->fields._layerKey_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._layerKey_k__BackingField, v12, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._layerKey_k__BackingField, v12, v5, v6, v7, v8, v9, v10);
   this->fields._isRendering_k__BackingField = 0;
   this->fields._renderTexture_k__BackingField = 0;
   *(_QWORD *)&this->fields._backgroundColor_k__BackingField.fields.b = 0;
   *(_QWORD *)&this->fields._backgroundColor_k__BackingField.fields.r = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._renderTexture_k__BackingField,
     0,
     v13,
@@ -188,7 +188,7 @@ void ScriptSubLayer__Init(ScriptSubLayer_o *this, const MethodInfo *method)
     v17,
     v18);
   this->fields._effectController_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._effectController_k__BackingField,
     0,
     v19,
@@ -207,11 +207,11 @@ void ScriptSubLayer__Init(ScriptSubLayer_o *this, const MethodInfo *method)
   if ( (int)size >= 1 )
     System_Array__Clear((System_Array_o *)listCharaData->fields._items, 0, (int32_t)size, 0);
   this->fields.subLayerMask = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.subLayerMask, 0, size, v25, v26, v27, v28, v29);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.subLayerMask, 0, size, v25, v26, v27, v28, v29);
   meshRender = (ExUIMeshRenderer_o *)this->fields.renderRoot;
   if ( !meshRender )
 LABEL_13:
-    sub_21FFECC(meshRender, v4);
+    sub_2213CDC(meshRender, v4);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)meshRender, 0, 0);
   ScriptSubLayer__SetDepth(this, 1.0, v33);
   ScriptSubLayer__SetEdgeMaskSubMaterial(this, 0, 0, v34);
@@ -233,26 +233,26 @@ void ScriptSubLayer__MoveAlphaCharaData(
   UnityEngine_Object_o *v12; // x21
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_593A752 & 1) == 0 )
+  if ( (byte_5972931 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A752 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972931 = 1;
   }
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   memset(&v13, 0, sizeof(v13));
   if ( !listCharaData )
-    sub_21FFECC(0, isHideSkip);
+    sub_2213CDC(0, isHideSkip);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     listCharaData,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v13,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
     current = v13.fields._current;
     if ( v13.fields._current )
@@ -269,7 +269,7 @@ void ScriptSubLayer__MoveAlphaCharaData(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
@@ -282,11 +282,11 @@ void ScriptSubLayer__OnShake(ScriptSubLayer_o *this, const MethodInfo *method)
   float v7; // s0
   UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593A75B & 1) == 0 )
+  if ( (byte_597293A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_10351/*"OnShake"*/);
-    byte_593A75B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_10364/*"OnShake"*/);
+    byte_597293A = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
@@ -307,7 +307,7 @@ void ScriptSubLayer__OnShake(ScriptSubLayer_o *this, const MethodInfo *method)
             v7 = UnityEngine_Random__Range(-this->fields.shakeParam.fields.y, this->fields.shakeParam.fields.y, 0),
             !transform) )
       {
-        sub_21FFECC(shakeRoot, v3);
+        sub_2213CDC(shakeRoot, v3);
       }
       v8.fields.y = v7;
       v8.fields.z = 0.0;
@@ -315,7 +315,7 @@ void ScriptSubLayer__OnShake(ScriptSubLayer_o *this, const MethodInfo *method)
       UnityEngine_Transform__set_localPosition(transform, v8, 0);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_10351/*"OnShake"*/,
+        (System_String_o *)StringLiteral_10364/*"OnShake"*/,
         this->fields.shakeParam.fields.cycle,
         0);
     }
@@ -336,11 +336,11 @@ void ScriptSubLayer__RegistCharaData(ScriptSubLayer_o *this, ScriptCharaData_o *
   __int64 size; // x10
   Il2CppClass **v14; // x8
 
-  if ( (byte_593A74F & 1) == 0 )
+  if ( (byte_597292E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
-    sub_21FFC50(&StringLiteral_13142/*"ScriptRenderSub"*/);
-    byte_593A74F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
+    sub_2213A60(&StringLiteral_13169/*"ScriptRenderSub"*/);
+    byte_597292E = 1;
   }
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
@@ -356,14 +356,14 @@ void ScriptSubLayer__RegistCharaData(ScriptSubLayer_o *this, ScriptCharaData_o *
     System_Collections_Generic_List_object___AddWithResize(
       listCharaData,
       (Il2CppObject *)charaData,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     listCharaData->fields._size = size + 1;
     v14[4] = (Il2CppClass *)charaData;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)(v14 + 4),
       (int32_t)charaData,
       (System_String_o *)method,
@@ -374,11 +374,11 @@ void ScriptSubLayer__RegistCharaData(ScriptSubLayer_o *this, ScriptCharaData_o *
       v7);
   }
   listCharaData = (System_Collections_Generic_List_object__o *)UnityEngine_LayerMask__NameToLayer(
-                                                                 (System_String_o *)StringLiteral_13142/*"ScriptRenderSub"*/,
+                                                                 (System_String_o *)StringLiteral_13169/*"ScriptRenderSub"*/,
                                                                  0);
   if ( !charaData )
 LABEL_10:
-    sub_21FFECC(listCharaData, charaData);
+    sub_2213CDC(listCharaData, charaData);
   ScriptCharaData__SetLayer(charaData, (int32_t)listCharaData, 0);
 }
 
@@ -387,18 +387,18 @@ void ScriptSubLayer__RemoveCharaData(ScriptSubLayer_o *this, ScriptCharaData_o *
 {
   System_Collections_Generic_List_object__o *listCharaData; // x0
 
-  if ( (byte_593A74E & 1) == 0 )
+  if ( (byte_597292D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
-    byte_593A74E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
+    byte_597292D = 1;
   }
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
-    sub_21FFECC(0, charaData);
+    sub_2213CDC(0, charaData);
   System_Collections_Generic_List_object___Remove(
     listCharaData,
     (Il2CppObject *)charaData,
-    (const MethodInfo_445101C *)Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
+    (const MethodInfo_4485154 *)Method_System_Collections_Generic_List_ScriptCharaData__Remove__);
 }
 
 
@@ -426,36 +426,36 @@ void ScriptSubLayer__RemoveInvalidCharaData(ScriptSubLayer_o *this, const Method
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_593A750 & 1) == 0 )
+  if ( (byte_597292F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A750 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597292F = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ScriptCharaData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ScriptCharaData___ctor__);
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   if ( !listCharaData )
     goto LABEL_21;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     listCharaData,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
   v23 = v22;
   v22.fields._list = 0;
   *(_QWORD *)&v22.fields._index = &v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
     current = v23.fields._current;
     if ( v23.fields._current )
@@ -472,7 +472,7 @@ void ScriptSubLayer__RemoveInvalidCharaData(ScriptSubLayer_o *this, const Method
               ++v3->fields._version,
               !items) )
         {
-          sub_21FFECC(v9, v10);
+          sub_2213CDC(v9, v10);
         }
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -480,38 +480,38 @@ void ScriptSubLayer__RemoveInvalidCharaData(ScriptSubLayer_o *this, const Method
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             current,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v3->fields._size = size + 1;
           v20[4] = (Il2CppClass *)current;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)current, v11, v12, v13, v14, v15, v16);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 4), (int32_t)current, v11, v12, v13, v14, v15, v16);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
   if ( !v3 )
 LABEL_21:
-    sub_21FFECC(listCharaData, v4);
+    sub_2213CDC(listCharaData, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     v3,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
   v23 = v22;
   v22.fields._list = 0;
   *(_QWORD *)&v22.fields._index = &v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
     ScriptSubLayer__RemoveCharaData(this, (ScriptCharaData_o *)v23.fields._current, v21);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
@@ -521,28 +521,28 @@ void ScriptSubLayer__ResetShake(ScriptSubLayer_o *this, const MethodInfo *method
   UnityEngine_GameObject_o *shakeRoot; // x0
   UnityEngine_Transform_o *v5; // x20
 
-  if ( (byte_593A75A & 1) == 0 )
+  if ( (byte_5972939 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10351/*"OnShake"*/);
-    byte_593A75A = 1;
+    sub_2213A60(&StringLiteral_10364/*"OnShake"*/);
+    byte_5972939 = 1;
   }
-  UnityEngine_MonoBehaviour__CancelInvoke_83229692(
+  UnityEngine_MonoBehaviour__CancelInvoke_83442996(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10351/*"OnShake"*/,
+    (System_String_o *)StringLiteral_10364/*"OnShake"*/,
     0);
   shakeRoot = this->fields.shakeRoot;
   if ( !shakeRoot )
     goto LABEL_8;
   shakeRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(shakeRoot, 0);
   v5 = (UnityEngine_Transform_o *)shakeRoot;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    shakeRoot = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    shakeRoot = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v5 )
 LABEL_8:
-    sub_21FFECC(shakeRoot, v3);
+    sub_2213CDC(shakeRoot, v3);
   UnityEngine_Transform__set_localPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   *(_QWORD *)&this->fields.shakeParam.fields.time = 0;
   *(_QWORD *)&this->fields.shakeParam.fields.x = 0;
@@ -558,26 +558,23 @@ void ScriptSubLayer__SetBackgroundColor(ScriptSubLayer_o *this, UnityEngine_Colo
 void ScriptSubLayer__SetDepth(ScriptSubLayer_o *this, float depth, const MethodInfo *method)
 {
   UnityEngine_Component_o *meshRender; // x0
-  float x; // s9
-  float y; // s10
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  unsigned __int64 localPosition; // kr00_8
+  UnityEngine_Vector3_o v7; // 0:kr14_12.12
 
   meshRender = (UnityEngine_Component_o *)this->fields.meshRender;
   if ( !meshRender
     || (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0
-    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)meshRender, 0),
+    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
+                                            (UnityEngine_Transform_o *)meshRender,
+                                            0),
         (meshRender = (UnityEngine_Component_o *)this->fields.meshRender) == 0)
-    || (x = localPosition.fields.x,
-        y = localPosition.fields.y,
-        (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0) )
+    || (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0 )
   {
-    sub_21FFECC(meshRender, method);
+    sub_2213CDC(meshRender, method);
   }
-  v9.fields.z = -depth;
-  v9.fields.x = x;
-  v9.fields.y = y;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)meshRender, v9, 0);
+  *(_QWORD *)&v7.fields.x = localPosition;
+  v7.fields.z = -depth;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)meshRender, v7, 0);
 }
 
 
@@ -606,10 +603,10 @@ void ScriptSubLayer__SetEdgeMaskSubMaterial(
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_593A754 & 1) == 0 )
+  if ( (byte_5972933 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A754 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972933 = 1;
   }
   p_edgeMaskSubMaterial_k__BackingField = &this->fields._edgeMaskSubMaterial_k__BackingField;
   edgeMaskSubMaterial_k__BackingField = (UnityEngine_Object_o *)this->fields._edgeMaskSubMaterial_k__BackingField;
@@ -625,10 +622,10 @@ void ScriptSubLayer__SetEdgeMaskSubMaterial(
       v18 = (UnityEngine_Object_o *)*p_edgeMaskSubMaterial_k__BackingField;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
-      UnityEngine_Object__Destroy_83246496(v18, 0);
+      UnityEngine_Object__Destroy_83459800(v18, 0);
     }
     this->fields._edgeMaskSubMaterial_k__BackingField = mat;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._edgeMaskSubMaterial_k__BackingField,
       (int32_t)mat,
       v12,
@@ -638,7 +635,7 @@ void ScriptSubLayer__SetEdgeMaskSubMaterial(
       v16,
       v17);
     this->fields._edgeMaskSubMaterialParams_k__BackingField = paramsFloat;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields._edgeMaskSubMaterialParams_k__BackingField,
       (int32_t)paramsFloat,
       v19,
@@ -660,26 +657,26 @@ void ScriptSubLayer__SetFilterCharaData(ScriptSubLayer_o *this, System_String_o 
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-58h] BYREF
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593A753 & 1) == 0 )
+  if ( (byte_5972932 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A753 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972932 = 1;
   }
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   memset(&v9, 0, sizeof(v9));
   if ( !listCharaData )
-    sub_21FFECC(0, filterName);
+    sub_2213CDC(0, filterName);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     listCharaData,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v9,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
     current = v9.fields._current;
     if ( v9.fields._current )
@@ -699,7 +696,7 @@ void ScriptSubLayer__SetFilterCharaData(ScriptSubLayer_o *this, System_String_o 
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
@@ -712,26 +709,26 @@ void ScriptSubLayer__SetLayer(ScriptSubLayer_o *this, int32_t layer, const Metho
   UnityEngine_Object_o *v8; // x21
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_593A759 & 1) == 0 )
+  if ( (byte_5972938 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593A759 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972938 = 1;
   }
   listCharaData = (System_Collections_Generic_List_object__o *)this->fields.listCharaData;
   memset(&v9, 0, sizeof(v9));
   if ( !listCharaData )
-    sub_21FFECC(0, *(_QWORD *)&layer);
+    sub_2213CDC(0, *(_QWORD *)&layer);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     listCharaData,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ScriptCharaData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v9,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__MoveNext__) )
   {
     current = v9.fields._current;
     if ( v9.fields._current )
@@ -745,7 +742,7 @@ void ScriptSubLayer__SetLayer(ScriptSubLayer_o *this, int32_t layer, const Metho
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ScriptCharaData__Dispose__);
 }
 
 
@@ -754,12 +751,12 @@ void ScriptSubLayer__SetLayerActive(ScriptSubLayer_o *this, const MethodInfo *me
   int32_t v3; // w1
   const MethodInfo *v4; // x2
 
-  if ( (byte_593A751 & 1) == 0 )
+  if ( (byte_5972930 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_13142/*"ScriptRenderSub"*/);
-    byte_593A751 = 1;
+    sub_2213A60(&StringLiteral_13169/*"ScriptRenderSub"*/);
+    byte_5972930 = 1;
   }
-  v3 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_13142/*"ScriptRenderSub"*/, 0);
+  v3 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_13169/*"ScriptRenderSub"*/, 0);
   ScriptSubLayer__SetLayer(this, v3, v4);
 }
 
@@ -773,7 +770,7 @@ void ScriptSubLayer__SetLayerKey(ScriptSubLayer_o *this, System_String_o *key, c
   bool v7; // w7
 
   this->fields._layerKey_k__BackingField = key;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._layerKey_k__BackingField,
     (int32_t)key,
     (System_String_o *)method,
@@ -794,7 +791,7 @@ void ScriptSubLayer__SetMaskLayer(ScriptSubLayer_o *this, ScriptSubLayer_o *mask
   bool v7; // w7
 
   this->fields.subLayerMask = maskLayer;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.subLayerMask,
     (int32_t)maskLayer,
     (System_String_o *)method,
@@ -817,10 +814,10 @@ void ScriptSubLayer__SetRendering(ScriptSubLayer_o *this, bool rendering, const 
   v4 = rendering;
   while ( 1 )
   {
-    if ( (byte_593A74D & 1) == 0 )
+    if ( (byte_597292C & 1) == 0 )
     {
-      sub_21FFC50(&UnityEngine_Object_TypeInfo);
-      byte_593A74D = 1;
+      sub_2213A60(&UnityEngine_Object_TypeInfo);
+      byte_597292C = 1;
     }
     v5 = UnityEngine_Object_TypeInfo;
     subLayerMask = (UnityEngine_Object_o *)this->fields.subLayerMask;
@@ -832,7 +829,7 @@ void ScriptSubLayer__SetRendering(ScriptSubLayer_o *this, bool rendering, const 
       break;
     this = this->fields.subLayerMask;
     if ( !this )
-      sub_21FFECC(v7, rendering);
+      sub_2213CDC(v7, rendering);
   }
 }
 
@@ -865,7 +862,7 @@ void ScriptSubLayer__SetStretchObj(
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)subStretchBase, 0), !transform) )
   {
 LABEL_9:
-    sub_21FFECC(subStretchBase, stretchObj);
+    sub_2213CDC(subStretchBase, stretchObj);
   }
   UnityEngine_Transform__set_localScale(transform, localScale, 0);
 }
@@ -956,34 +953,34 @@ void ScriptSubLayer__StartSubStretch(
 
   y = stretchBaseRange.fields.y;
   x = stretchBaseRange.fields.x;
-  if ( (byte_593A755 & 1) == 0 )
+  if ( (byte_5972934 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_20919/*"horizontally"*/);
-    sub_21FFC50(&StringLiteral_6240/*"EndExecuteStretch"*/);
-    sub_21FFC50(&StringLiteral_20920/*"horizontallyLeft"*/);
-    sub_21FFC50(&StringLiteral_20597/*"full"*/);
-    sub_21FFC50(&StringLiteral_25987/*"verticalUp"*/);
-    sub_21FFC50(&StringLiteral_25982/*"verticalDown"*/);
-    sub_21FFC50(&StringLiteral_25977/*"vertical"*/);
-    sub_21FFC50(&StringLiteral_20921/*"horizontallyRight"*/);
-    byte_593A755 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_20960/*"horizontally"*/);
+    sub_2213A60(&StringLiteral_6252/*"EndExecuteStretch"*/);
+    sub_2213A60(&StringLiteral_20961/*"horizontallyLeft"*/);
+    sub_2213A60(&StringLiteral_20638/*"full"*/);
+    sub_2213A60(&StringLiteral_26035/*"verticalUp"*/);
+    sub_2213A60(&StringLiteral_26030/*"verticalDown"*/);
+    sub_2213A60(&StringLiteral_26025/*"vertical"*/);
+    sub_2213A60(&StringLiteral_20962/*"horizontallyRight"*/);
+    byte_5972934 = 1;
   }
   if ( !this->fields._IsExecuteStretch_k__BackingField )
   {
-    if ( !byte_5931945 )
+    if ( !byte_5969AE5 )
     {
-      sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931945 = 1;
+      sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE5 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v15 = static_fields->oneVector.fields.x;
     v16 = static_fields->oneVector.fields.y;
     z = static_fields->oneVector.fields.z;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     }
     v18 = static_fields->zeroVector.fields.z;
@@ -1045,7 +1042,7 @@ LABEL_10:
           if ( v22 )
           {
             v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)subStretchBase;
-            sub_21FFBF4(
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v22->fields.eventReceiver,
               (int32_t)subStretchBase,
               v24,
@@ -1054,9 +1051,9 @@ LABEL_10:
               v27,
               v28,
               v29);
-            v30 = StringLiteral_6240/*"EndExecuteStretch"*/;
-            v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6240/*"EndExecuteStretch"*/;
-            sub_21FFBF4(
+            v30 = StringLiteral_6252/*"EndExecuteStretch"*/;
+            v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6252/*"EndExecuteStretch"*/;
+            sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v22->fields.callWhenFinished,
               v30,
               v31,
@@ -1070,7 +1067,7 @@ LABEL_10:
           }
         }
       }
-      sub_21FFECC(subStretchBase, name);
+      sub_2213CDC(subStretchBase, name);
     }
     v37 = PrivateImplementationDetails___ComputeStringHash(name, 0);
     if ( v37 > 0x70027A90 )
@@ -1079,7 +1076,7 @@ LABEL_10:
       {
         if ( v37 == -454329761 )
         {
-          if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_20920/*"horizontallyLeft"*/, 0) )
+          if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_20961/*"horizontallyLeft"*/, 0) )
             goto LABEL_10;
           v38 = x * scale;
 LABEL_48:
@@ -1092,7 +1089,7 @@ LABEL_49:
           z = 1.0;
           goto LABEL_10;
         }
-        if ( v37 != -8801476 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_20597/*"full"*/, 0) )
+        if ( v37 != -8801476 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_20638/*"full"*/, 0) )
           goto LABEL_10;
         z = 1.0;
         v15 = scale;
@@ -1102,11 +1099,11 @@ LABEL_45:
       }
       if ( v37 == -2027301573 )
       {
-        if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_25977/*"vertical"*/, 0) )
+        if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_26025/*"vertical"*/, 0) )
           goto LABEL_10;
         goto LABEL_44;
       }
-      if ( v37 != -1900330578 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_25987/*"verticalUp"*/, 0) )
+      if ( v37 != -1900330578 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_26035/*"verticalUp"*/, 0) )
         goto LABEL_10;
       v39 = y * scale;
     }
@@ -1114,18 +1111,18 @@ LABEL_45:
     {
       if ( v37 == 264610898 )
       {
-        if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_20919/*"horizontally"*/, 0) )
+        if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_20960/*"horizontally"*/, 0) )
           goto LABEL_10;
         goto LABEL_49;
       }
       if ( v37 != 690205847 )
       {
-        if ( v37 != 1879210640 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_20921/*"horizontallyRight"*/, 0) )
+        if ( v37 != 1879210640 || !System_String__op_Equality(name, (System_String_o *)StringLiteral_20962/*"horizontallyRight"*/, 0) )
           goto LABEL_10;
         v38 = -(float)(x * scale);
         goto LABEL_48;
       }
-      if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_25982/*"verticalDown"*/, 0) )
+      if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_26030/*"verticalDown"*/, 0) )
         goto LABEL_10;
       v39 = -(float)(y * scale);
     }
@@ -1186,27 +1183,19 @@ UnityEngine_GameObject_o *ScriptSubLayer__get_SubStretchBase(ScriptSubLayer_o *t
 
   subStretchBase = (UnityEngine_Component_o *)this->fields.subStretchBase;
   if ( !subStretchBase )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   return UnityEngine_Component__get_gameObject(subStretchBase, 0);
 }
 
 
 UnityEngine_Color_o ScriptSubLayer__get_backgroundColor(ScriptSubLayer_o *this, const MethodInfo *method)
 {
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  r = this->fields._backgroundColor_k__BackingField.fields.r;
-  g = this->fields._backgroundColor_k__BackingField.fields.g;
-  b = this->fields._backgroundColor_k__BackingField.fields.b;
-  a = this->fields._backgroundColor_k__BackingField.fields.a;
-  result.fields.a = a;
-  result.fields.b = b;
-  result.fields.g = g;
-  result.fields.r = r;
+  result.fields.r = this->fields._backgroundColor_k__BackingField.fields.r;
+  result.fields.g = this->fields._backgroundColor_k__BackingField.fields.g;
+  result.fields.b = this->fields._backgroundColor_k__BackingField.fields.b;
+  result.fields.a = this->fields._backgroundColor_k__BackingField.fields.a;
   return result;
 }
 
@@ -1309,7 +1298,7 @@ void ScriptSubLayer__set_edgeMaskSubMaterial(
   bool v7; // w7
 
   this->fields._edgeMaskSubMaterial_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._edgeMaskSubMaterial_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1333,7 +1322,7 @@ void ScriptSubLayer__set_edgeMaskSubMaterialParams(
   bool v7; // w7
 
   this->fields._edgeMaskSubMaterialParams_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._edgeMaskSubMaterialParams_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1357,7 +1346,7 @@ void ScriptSubLayer__set_effectController(
   bool v7; // w7
 
   this->fields._effectController_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._effectController_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1384,7 +1373,7 @@ void ScriptSubLayer__set_layerKey(ScriptSubLayer_o *this, System_String_o *value
   bool v7; // w7
 
   this->fields._layerKey_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._layerKey_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1408,7 +1397,7 @@ void ScriptSubLayer__set_renderTexture(
   bool v7; // w7
 
   this->fields._renderTexture_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._renderTexture_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1428,10 +1417,7 @@ void ScriptSubLayer_ShakeParam___ctor(
         float shakeY,
         const MethodInfo *method)
 {
-  *(float *)&method->methodPointer = this.fields.time;
-  HIDWORD(method->methodPointer) = LODWORD(this.fields.cycle);
-  *(float *)&method->virtualMethodPointer = this.fields.x;
-  HIDWORD(method->virtualMethodPointer) = LODWORD(this.fields.y);
+  *(ScriptSubLayer_ShakeParam_o *)&method->methodPointer = this;
 }
 
 

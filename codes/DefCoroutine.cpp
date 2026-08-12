@@ -144,16 +144,16 @@ void DefCoroutine___cctor(const MethodInfo *method)
   bool v142; // w6
   bool v143; // w7
 
-  if ( (byte_5937A9F & 1) == 0 )
+  if ( (byte_596FB70 & 1) == 0 )
   {
-    sub_21FFC50(&DefCoroutine_TypeInfo);
-    sub_21FFC50(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_5937A9F = 1;
+    sub_2213A60(&DefCoroutine_TypeInfo);
+    sub_2213A60(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_596FB70 = 1;
   }
-  v1 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v1 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v1, 0.01, 0);
   DefCoroutine_TypeInfo->static_fields->milliSecPointOne = v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)DefCoroutine_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -162,11 +162,11 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v5,
     v6,
     v7);
-  v8 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v8 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v8, 0.1, 0);
   static_fields = DefCoroutine_TypeInfo->static_fields;
   static_fields->milliSecOne = v8;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->milliSecOne,
     (int32_t)v8,
     v10,
@@ -175,26 +175,26 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v16 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v16, 0.2, 0);
   v17 = DefCoroutine_TypeInfo->static_fields;
   v17->milliSecTwo = v16;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->milliSecTwo, (int32_t)v16, v18, v19, v20, v21, v22, v23);
-  v24 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->milliSecTwo, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+  v24 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v24, 0.266, 0);
   v25 = DefCoroutine_TypeInfo->static_fields;
   v25->milliSecTwoSixSix = v24;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->milliSecTwoSixSix, (int32_t)v24, v26, v27, v28, v29, v30, v31);
-  v32 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->milliSecTwoSixSix, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  v32 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v32, 0.3, 0);
   v33 = DefCoroutine_TypeInfo->static_fields;
   v33->milliSecThree = v32;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v33->milliSecThree, (int32_t)v32, v34, v35, v36, v37, v38, v39);
-  v40 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->milliSecThree, (int32_t)v32, v34, v35, v36, v37, v38, v39);
+  v40 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v40, 0.333, 0);
   v41 = DefCoroutine_TypeInfo->static_fields;
   v41->milliSecThreeThreeThree = v40;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v41->milliSecThreeThreeThree,
     (int32_t)v40,
     v42,
@@ -203,41 +203,41 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v45,
     v46,
     v47);
-  v48 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v48 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v48, 0.366, 0);
   v49 = DefCoroutine_TypeInfo->static_fields;
   v49->milliSecThreeSixSix = v48;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v49->milliSecThreeSixSix, (int32_t)v48, v50, v51, v52, v53, v54, v55);
-  v56 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v49->milliSecThreeSixSix, (int32_t)v48, v50, v51, v52, v53, v54, v55);
+  v56 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v56, 0.4, 0);
   v57 = DefCoroutine_TypeInfo->static_fields;
   v57->milliSecFour = v56;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v57->milliSecFour, (int32_t)v56, v58, v59, v60, v61, v62, v63);
-  v64 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v57->milliSecFour, (int32_t)v56, v58, v59, v60, v61, v62, v63);
+  v64 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v64, 0.5, 0);
   v65 = DefCoroutine_TypeInfo->static_fields;
   v65->milliSecFive = v64;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v65->milliSecFive, (int32_t)v64, v66, v67, v68, v69, v70, v71);
-  v72 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v65->milliSecFive, (int32_t)v64, v66, v67, v68, v69, v70, v71);
+  v72 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v72, 0.6, 0);
   v73 = DefCoroutine_TypeInfo->static_fields;
   v73->milliSecSix = v72;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v73->milliSecSix, (int32_t)v72, v74, v75, v76, v77, v78, v79);
-  v80 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v73->milliSecSix, (int32_t)v72, v74, v75, v76, v77, v78, v79);
+  v80 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v80, 0.7, 0);
   v81 = DefCoroutine_TypeInfo->static_fields;
   v81->milliSecSeven = v80;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v81->milliSecSeven, (int32_t)v80, v82, v83, v84, v85, v86, v87);
-  v88 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v81->milliSecSeven, (int32_t)v80, v82, v83, v84, v85, v86, v87);
+  v88 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v88, 0.8, 0);
   v89 = DefCoroutine_TypeInfo->static_fields;
   v89->milliSecEight = v88;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v89->milliSecEight, (int32_t)v88, v90, v91, v92, v93, v94, v95);
-  v96 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v89->milliSecEight, (int32_t)v88, v90, v91, v92, v93, v94, v95);
+  v96 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v96, 0.866, 0);
   v97 = DefCoroutine_TypeInfo->static_fields;
   v97->milliSecEightSixSix = v96;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v97->milliSecEightSixSix,
     (int32_t)v96,
     v98,
@@ -246,11 +246,11 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v101,
     v102,
     v103);
-  v104 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v104 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v104, 0.9, 0);
   v105 = DefCoroutine_TypeInfo->static_fields;
   v105->milliSecNine = v104;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v105->milliSecNine,
     (int32_t)v104,
     v106,
@@ -259,16 +259,16 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v109,
     v110,
     v111);
-  v112 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v112 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v112, 1.0, 0);
   v113 = DefCoroutine_TypeInfo->static_fields;
   v113->milliSecTen = v112;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v113->milliSecTen, (int32_t)v112, v114, v115, v116, v117, v118, v119);
-  v120 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v113->milliSecTen, (int32_t)v112, v114, v115, v116, v117, v118, v119);
+  v120 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v120, 1.1, 0);
   v121 = DefCoroutine_TypeInfo->static_fields;
   v121->milliSecEleven = v120;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v121->milliSecEleven,
     (int32_t)v120,
     v122,
@@ -277,11 +277,11 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v125,
     v126,
     v127);
-  v128 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v128 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v128, 1.2, 0);
   v129 = DefCoroutine_TypeInfo->static_fields;
   v129->milliSecTwelve = v128;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v129->milliSecTwelve,
     (int32_t)v128,
     v130,
@@ -290,11 +290,11 @@ void DefCoroutine___cctor(const MethodInfo *method)
     v133,
     v134,
     v135);
-  v136 = (UnityEngine_WaitForSeconds_o *)sub_21FFEBC(UnityEngine_WaitForSeconds_TypeInfo);
+  v136 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v136, 1.4, 0);
   v137 = DefCoroutine_TypeInfo->static_fields;
   v137->milliSecFourTeen = v136;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v137->milliSecFourTeen,
     (int32_t)v136,
     v138,

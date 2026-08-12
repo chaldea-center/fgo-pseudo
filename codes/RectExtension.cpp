@@ -31,7 +31,7 @@ bool RectExtension__HasAnyIntersects(
   bool v27; // cc
 
   if ( !rects )
-    sub_21FFECC(0, allowInverse);
+    sub_2213CDC(0, allowInverse);
   max_length = rects->max_length;
   v5 = (unsigned int)(max_length - 1);
   if ( (int)max_length - 1 < 0 )
@@ -58,7 +58,7 @@ bool RectExtension__HasAnyIntersects(
   while ( 1 )
   {
     if ( (unsigned int)rects->max_length <= v5 )
-      sub_21FFED4(rects);
+      sub_2213CE4(rects);
     v15 = *(p_m_Height - 3);
     v14 = *(p_m_Height - 2);
     v17 = *(p_m_Height - 1);

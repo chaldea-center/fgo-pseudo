@@ -14,30 +14,30 @@ void PurchaseRequest__beginRequest(
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x1
 
-  if ( (byte_593A2A8 & 1) == 0 )
+  if ( (byte_5972485 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_23421/*"num"*/);
-    sub_21FFC50(&StringLiteral_24438/*"selectSkill"*/);
-    sub_21FFC50(&StringLiteral_19285/*"dayKey"*/);
-    sub_21FFC50(&StringLiteral_17469/*"anotherPayUsedItem"*/);
-    sub_21FFC50(&StringLiteral_21192/*"id"*/);
-    sub_21FFC50(&StringLiteral_17467/*"anotherPayFlag"*/);
-    byte_593A2A8 = 1;
+    sub_2213A60(&StringLiteral_23468/*"num"*/);
+    sub_2213A60(&StringLiteral_24486/*"selectSkill"*/);
+    sub_2213A60(&StringLiteral_19326/*"dayKey"*/);
+    sub_2213A60(&StringLiteral_17505/*"anotherPayUsedItem"*/);
+    sub_2213A60(&StringLiteral_21233/*"id"*/);
+    sub_2213A60(&StringLiteral_17503/*"anotherPayFlag"*/);
+    byte_5972485 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_21192/*"id"*/,
+    (System_String_o *)StringLiteral_21233/*"id"*/,
     id,
     *(const MethodInfo **)&anotherPayFlag);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23421/*"num"*/, num, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23468/*"num"*/, num, v15);
   if ( anotherPayFlag >= 1 )
   {
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17467/*"anotherPayFlag"*/, anotherPayFlag, v16);
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17469/*"anotherPayUsedItem"*/, anotherPayUsedItem, v17);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17503/*"anotherPayFlag"*/, anotherPayFlag, v16);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17505/*"anotherPayUsedItem"*/, anotherPayUsedItem, v17);
     if ( selectSkill >= 1 )
-      RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24438/*"selectSkill"*/, selectSkill, v16);
+      RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24486/*"selectSkill"*/, selectSkill, v16);
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19285/*"dayKey"*/, dayKey, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19326/*"dayKey"*/, dayKey, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v18);
 }
 
@@ -46,16 +46,16 @@ System_String_o *PurchaseRequest__getURL(PurchaseRequest_o *this, const MethodIn
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A2A7 & 1) == 0 )
+  if ( (byte_5972484 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_24620/*"shop/purchase"*/);
-    byte_593A2A7 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_24668/*"shop/purchase"*/);
+    byte_5972484 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_24620/*"shop/purchase"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_24668/*"shop/purchase"*/, 0);
 }
 
 
@@ -73,12 +73,12 @@ void PurchaseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 v12; // x1
 
-  if ( (byte_593A2A9 & 1) == 0 )
+  if ( (byte_5972486 & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A2A9 = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_5972486 = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
@@ -90,7 +90,7 @@ void PurchaseRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v12 = StringLiteral_23290/*"ng"*/;
+    v12 = StringLiteral_23336/*"ng"*/;
     goto LABEL_14;
   }
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )

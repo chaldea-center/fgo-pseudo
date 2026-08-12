@@ -29,10 +29,10 @@ void UIButtonMessage__OnEnable(UIButtonMessage_o *this, const MethodInfo *method
   bool IsHighlighted; // w8
   const MethodInfo *v6; // x2
 
-  if ( (byte_593CCBD & 1) == 0 )
+  if ( (byte_5974F94 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CCBD = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_5974F94 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -95,10 +95,10 @@ void UIButtonMessage__OnSelect(UIButtonMessage_o *this, bool isSelected, const M
   const MethodInfo *v6; // x2
   UICamera_c *v7; // x0
 
-  if ( (byte_593CCBE & 1) == 0 )
+  if ( (byte_5974F95 & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    byte_593CCBE = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    byte_5974F95 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -121,7 +121,7 @@ void UIButtonMessage__Send(UIButtonMessage_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   UnityEngine_Object_o *target; // x21
-  UnityEngine_Component_o *ComponentsInChildren_object__59262092; // x0
+  UnityEngine_Component_o *ComponentsInChildren_object__59472212; // x0
   __int64 v6; // x1
   struct UnityEngine_GameObject_o *gameObject; // x0
   System_String_o *v8; // x2
@@ -139,23 +139,23 @@ void UIButtonMessage__Send(UIButtonMessage_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *v20; // x22
   System_String_o *v21; // x21
 
-  if ( (byte_593CCBF & 1) == 0 )
+  if ( (byte_5974F96 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponentsInChildren_Transform___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CCBF = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponentsInChildren_Transform___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974F96 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.functionName, 0) )
   {
     target = (UnityEngine_Object_o *)this->fields.target;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
-    ComponentsInChildren_object__59262092 = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(target, 0, 0);
-    if ( ((unsigned __int8)ComponentsInChildren_object__59262092 & 1) != 0 )
+    ComponentsInChildren_object__59472212 = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(target, 0, 0);
+    if ( ((unsigned __int8)ComponentsInChildren_object__59472212 & 1) != 0 )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       this->fields.target = gameObject;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.target,
         (int32_t)gameObject,
         v8,
@@ -170,56 +170,56 @@ void UIButtonMessage__Send(UIButtonMessage_o *this, const MethodInfo *method)
     {
       if ( !v14 )
         goto LABEL_20;
-      ComponentsInChildren_object__59262092 = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponentsInChildren_object__59262092(
+      ComponentsInChildren_object__59472212 = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
                                                                            this->fields.target,
-                                                                           (const MethodInfo_388448C *)Method_UnityEngine_GameObject_GetComponentsInChildren_Transform___);
-      if ( !ComponentsInChildren_object__59262092 )
+                                                                           (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Transform___);
+      if ( !ComponentsInChildren_object__59472212 )
         goto LABEL_20;
-      klass = ComponentsInChildren_object__59262092[1].klass;
-      v16 = ComponentsInChildren_object__59262092;
+      klass = ComponentsInChildren_object__59472212[1].klass;
+      v16 = ComponentsInChildren_object__59472212;
       if ( (int)klass >= 1 )
       {
         v17 = 0;
         while ( 1 )
         {
           if ( (unsigned int)v17 >= LODWORD(v16[1].klass) )
-            sub_21FFED4(ComponentsInChildren_object__59262092);
-          ComponentsInChildren_object__59262092 = (UnityEngine_Component_o *)*((_QWORD *)&v16[1].monitor + v17);
-          if ( !ComponentsInChildren_object__59262092 )
+            sub_2213CE4(ComponentsInChildren_object__59472212);
+          ComponentsInChildren_object__59472212 = (UnityEngine_Component_o *)*((_QWORD *)&v16[1].monitor + v17);
+          if ( !ComponentsInChildren_object__59472212 )
             break;
-          v18 = UnityEngine_Component__get_gameObject(ComponentsInChildren_object__59262092, 0);
+          v18 = UnityEngine_Component__get_gameObject(ComponentsInChildren_object__59472212, 0);
           functionName = this->fields.functionName;
           v20 = v18;
-          ComponentsInChildren_object__59262092 = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+          ComponentsInChildren_object__59472212 = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                                                (UnityEngine_Component_o *)this,
                                                                                0);
           if ( !v20 )
             break;
-          UnityEngine_GameObject__SendMessage_83220264(
+          UnityEngine_GameObject__SendMessage_83433568(
             v20,
             functionName,
-            (Il2CppObject *)ComponentsInChildren_object__59262092,
+            (Il2CppObject *)ComponentsInChildren_object__59472212,
             1,
             0);
           if ( (_DWORD)klass == (_DWORD)++v17 )
             return;
         }
 LABEL_20:
-        sub_21FFECC(ComponentsInChildren_object__59262092, v6);
+        sub_2213CDC(ComponentsInChildren_object__59472212, v6);
       }
     }
     else
     {
       v21 = this->fields.functionName;
-      ComponentsInChildren_object__59262092 = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+      ComponentsInChildren_object__59472212 = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                                            (UnityEngine_Component_o *)this,
                                                                            0);
       if ( !v14 )
         goto LABEL_20;
-      UnityEngine_GameObject__SendMessage_83220264(
+      UnityEngine_GameObject__SendMessage_83433568(
         v14,
         v21,
-        (Il2CppObject *)ComponentsInChildren_object__59262092,
+        (Il2CppObject *)ComponentsInChildren_object__59472212,
         1,
         0);
     }

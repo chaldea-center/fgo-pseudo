@@ -15,23 +15,23 @@ void PhotoGraphicTouchComponent___ctor(PhotoGraphicTouchComponent_o *this, const
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5933B07 & 1) == 0 )
+  if ( (byte_596BC20 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_PhotoGraphicTouchComponent__TypeInfo);
-    sub_21FFC50(&UnityEngine_RaycastHit___TypeInfo);
-    byte_5933B07 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_PhotoGraphicTouchComponent__TypeInfo);
+    sub_2213A60(&UnityEngine_RaycastHit___TypeInfo);
+    byte_596BC20 = 1;
   }
-  v3 = (struct UnityEngine_RaycastHit_array *)sub_21FFD10(UnityEngine_RaycastHit___TypeInfo, 10);
+  v3 = (struct UnityEngine_RaycastHit_array *)sub_2213B20(UnityEngine_RaycastHit___TypeInfo, 10);
   this->fields.raycastHitResult = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.raycastHitResult, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_PhotoGraphicTouchComponent__TypeInfo);
-  System_Collections_Generic_List_object____ctor_71627580(
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.raycastHitResult, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_PhotoGraphicTouchComponent__TypeInfo);
+  System_Collections_Generic_List_object____ctor_71840884(
     v10,
     10,
-    (const MethodInfo_444F33C *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent___ctor__);
+    (const MethodInfo_4483474 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent___ctor__);
   this->fields.hits = (struct System_Collections_Generic_List_PhotoGraphicTouchComponent__o *)v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.hits, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.hits, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.fallbackRight = 1.0;
   this->fields.fallbackTop = 1.0;
   this->fields.masterFigureFallbackRight = 1.0;
@@ -47,10 +47,10 @@ void PhotoGraphicTouchComponent__ExecuteOnDrag(PhotoGraphicTouchComponent_o *thi
   __int64 v5; // x1
   PhotoStandFigureDragProcess_o *v6; // x0
 
-  if ( (byte_5933B02 & 1) == 0 )
+  if ( (byte_596BC1B & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B02 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC1B = 1;
   }
   DragProcess_k__BackingField = (UnityEngine_Object_o *)this->fields._DragProcess_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -59,7 +59,7 @@ void PhotoGraphicTouchComponent__ExecuteOnDrag(PhotoGraphicTouchComponent_o *thi
   {
     v6 = this->fields._DragProcess_k__BackingField;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     PhotoStandFigureDragProcess__OnDragUpdate(v6, 0);
   }
 }
@@ -72,10 +72,10 @@ void PhotoGraphicTouchComponent__ExecuteOnPress(PhotoGraphicTouchComponent_o *th
   __int64 v5; // x1
   PhotoStandFigureDragProcess_o *v6; // x0
 
-  if ( (byte_5933B01 & 1) == 0 )
+  if ( (byte_596BC1A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B01 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC1A = 1;
   }
   DragProcess_k__BackingField = (UnityEngine_Object_o *)this->fields._DragProcess_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -84,7 +84,7 @@ void PhotoGraphicTouchComponent__ExecuteOnPress(PhotoGraphicTouchComponent_o *th
   {
     v6 = this->fields._DragProcess_k__BackingField;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     PhotoStandFigureDragProcess__OnPress(v6, 0);
   }
 }
@@ -103,11 +103,11 @@ void PhotoGraphicTouchComponent__ExecuteOnRelease(PhotoGraphicTouchComponent_o *
   bool v11; // w6
   bool v12; // w7
 
-  if ( (byte_5933B03 & 1) == 0 )
+  if ( (byte_596BC1C & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&PhotoGraphicTouchComponent_TypeInfo);
-    byte_5933B03 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&PhotoGraphicTouchComponent_TypeInfo);
+    byte_596BC1C = 1;
   }
   DragProcess_k__BackingField = (UnityEngine_Object_o *)this->fields._DragProcess_k__BackingField;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -116,10 +116,10 @@ void PhotoGraphicTouchComponent__ExecuteOnRelease(PhotoGraphicTouchComponent_o *
   {
     v6 = this->fields._DragProcess_k__BackingField;
     if ( !v6 )
-      sub_21FFECC(0, v5);
+      sub_2213CDC(0, v5);
     PhotoStandFigureDragProcess__OnRelease(v6, 0);
     PhotoGraphicTouchComponent_TypeInfo->static_fields->DragTarget = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)PhotoGraphicTouchComponent_TypeInfo->static_fields,
       0,
       v7,
@@ -198,49 +198,43 @@ System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o PhotoG
   float v12; // s8
   float v13; // s9
   float v14; // s10
-  float x; // s9
-  float y; // s8
-  UnityEngine_Vector2_o v17; // x2
-  const MethodInfo_3CCE438 *v18; // x5
-  UnityEngine_Vector2_o PivotOffset; // kr00_8
-  float v20; // s10
+  UnityEngine_Vector2_o v15; // x2
+  const MethodInfo_3D01BE0 *v16; // x5
+  UnityEngine_Vector2_o PivotOffset; // kr10_8
+  float v18; // s10
   float m_YMin; // s11
   float m_Height; // s12
   int32_t mHeight; // w23
-  float v24; // s13
-  float v25; // s13
-  _BOOL4 v26; // w8
-  unsigned int v27; // w10
-  float v28; // s0
-  float v29; // s8
-  int32_t v30; // w20
-  float v31; // s9
-  float v32; // s9
-  unsigned int v33; // w9
-  int32_t v34; // w2
-  __int64 v35; // x8
-  float v36; // s1
-  float v37; // s0
-  __int64 v38; // x8
-  __int64 v40; // x9
-  float v41; // s1
-  float v42; // s0
-  __int64 v43; // x9
-  int32_t v45; // w3
-  __int64 v46; // x0
-  int32_t v47; // w1
-  __int64 v48; // [xsp+0h] [xbp-80h] BYREF
-  int32_t v49; // [xsp+8h] [xbp-78h]
-  System_ValueTuple_int__int__Int32Enum__o v50; // 0:x0.12
+  float v22; // s13
+  float v23; // s13
+  _BOOL4 v24; // w8
+  unsigned int v25; // w10
+  float v26; // s8
+  int32_t v27; // w20
+  float v28; // s9
+  unsigned int v29; // w9
+  int32_t v30; // w2
+  __int64 v31; // x8
+  float v32; // s1
+  float v33; // s0
+  __int64 v34; // x8
+  __int64 v36; // x9
+  float v37; // s1
+  float v38; // s0
+  __int64 v39; // x9
+  int32_t v41; // w3
+  unsigned __int64 v44; // kr00_8
+  __int64 v45; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v46; // [xsp+8h] [xbp-78h]
+  System_ValueTuple_int__int__Int32Enum__o v47; // 0:x0.12
   System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o result; // 0:x0.12
-  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5933B06 & 1) == 0 )
+  if ( (byte_596BC1F & 1) == 0 )
   {
-    sub_21FFC50(&UICamera_TypeInfo);
-    sub_21FFC50(&Method_System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState___ctor__);
-    byte_5933B06 = 1;
+    sub_2213A60(&UICamera_TypeInfo);
+    sub_2213A60(&Method_System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState___ctor__);
+    byte_596BC1F = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -260,94 +254,90 @@ System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o PhotoG
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
   if ( !gameObject )
     goto LABEL_43;
-  v52.fields.x = v12;
-  v52.fields.y = v13;
-  v52.fields.z = v14;
-  v53 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)gameObject, v52, 0);
-  x = v53.fields.x;
-  y = v53.fields.y;
+  v49.fields.x = v12;
+  v49.fields.y = v13;
+  v49.fields.z = v14;
+  v44 = (unsigned __int64)UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)gameObject, v49, 0);
   PivotOffset = NGUIMath__GetPivotOffset(uiTexture->fields.mPivot, 0);
-  v20 = (float)texWidth;
+  v18 = (float)texWidth;
   m_YMin = uiTexture->fields.mRect.fields.m_YMin;
   m_Height = uiTexture->fields.mRect.fields.m_Height;
   mHeight = uiTexture->fields.mHeight;
-  v24 = uiTexture->fields.mRect.fields.m_XMin
-      + (float)((float)(PivotOffset.fields.x + (float)(x / (float)uiTexture->fields.mWidth))
+  v22 = uiTexture->fields.mRect.fields.m_XMin
+      + (float)((float)(PivotOffset.fields.x + (float)(*(float *)&v44 / (float)uiTexture->fields.mWidth))
               * uiTexture->fields.mRect.fields.m_Width);
-  if ( !byte_593193F )
+  if ( !byte_5969ADF )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593193F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5969ADF = 1;
   }
-  v25 = v24 * v20;
+  v23 = v22 * v18;
   if ( *(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
-    v26 = 0;
+    v24 = 0;
   }
   else
   {
-    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v17);
-    v26 = byte_593193F == 0;
+    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v15);
+    v24 = byte_5969ADF == 0;
   }
-  v27 = vcvtms_s32_f32(v25);
-  v28 = y / (float)mHeight;
-  v29 = (float)texHeight;
-  if ( floorf(v25) == INFINITY )
-    v30 = 0x80000000;
+  v25 = vcvtms_s32_f32(v23);
+  v26 = (float)texHeight;
+  if ( floorf(v23) == INFINITY )
+    v27 = 0x80000000;
   else
-    v30 = v27;
-  v31 = m_YMin + (float)((float)(PivotOffset.fields.y + v28) * m_Height);
-  if ( v26 )
+    v27 = v25;
+  if ( v24 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593193F = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5969ADF = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)System_Math_TypeInfo;
-  v32 = v31 * v29;
+  v28 = (float)(m_YMin
+              + (float)((float)(PivotOffset.fields.y + (float)(*((float *)&v44 + 1) / (float)mHeight)) * m_Height))
+      * v26;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v17);
-  v33 = vcvtms_s32_f32(v32);
-  v34 = floorf(v32) == INFINITY ? 0x80000000 : v33;
+    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v15);
+  v29 = vcvtms_s32_f32(v28);
+  v30 = floorf(v28) == INFINITY ? 0x80000000 : v29;
   if ( !targetTouchComponent )
 LABEL_43:
-    sub_21FFECC(gameObject, uiTexture);
-  v35 = 104;
-  v36 = (float)v30;
+    sub_2213CDC(gameObject, uiTexture);
+  v31 = 104;
+  v32 = (float)v27;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v35 = 88;
-  v37 = *(float *)((char *)&targetTouchComponent->klass + v35);
-  v38 = 108;
+    v31 = 88;
+  v33 = *(float *)((char *)&targetTouchComponent->klass + v31);
+  v34 = 108;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v38 = 92;
-  if ( (float)(v37 * v20) > v36 || (float)(*(float *)((char *)&targetTouchComponent->klass + v38) * v20) <= v36 )
+    v34 = 92;
+  if ( (float)(v33 * v18) > v32 || (float)(*(float *)((char *)&targetTouchComponent->klass + v34) * v18) <= v32 )
     goto LABEL_41;
-  v40 = 112;
+  v36 = 112;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v40 = 96;
-  v41 = (float)v34;
-  v42 = *(float *)((char *)&targetTouchComponent->klass + v40);
-  v43 = 116;
+    v36 = 96;
+  v37 = (float)v30;
+  v38 = *(float *)((char *)&targetTouchComponent->klass + v36);
+  v39 = 116;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v43 = 100;
-  if ( (float)(v42 * v29) > v41 || (float)(*(float *)((char *)&targetTouchComponent->klass + v43) * v29) <= v41 )
+    v39 = 100;
+  if ( (float)(v38 * v26) > v37 || (float)(*(float *)((char *)&targetTouchComponent->klass + v39) * v26) <= v37 )
 LABEL_41:
-    v45 = 0;
+    v41 = 0;
   else
-    v45 = 1;
-  *(_QWORD *)&v50.fields.Item1 = &v48;
-  v50.fields.Item3 = v30;
-  v49 = 0;
-  v48 = 0;
+    v41 = 1;
+  *(_QWORD *)&v47.fields.Item1 = &v45;
+  v47.fields.Item3 = v27;
+  v46 = 0;
+  v45 = 0;
   System_ValueTuple_int__int__Int32Enum____ctor(
-    v50,
-    v34,
-    v45,
+    v47,
+    v30,
+    v41,
     Method_System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState___ctor__,
-    v18);
-  v46 = v48;
-  v47 = v49;
-  *(_QWORD *)&result.fields.Item1 = v46;
-  result.fields.Item3 = v47;
+    v16);
+  *(_QWORD *)&result.fields.Item1 = v45;
+  result.fields.Item3 = v46;
   return result;
 }
 
@@ -404,19 +394,19 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
   UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_5933B04 & 1) == 0 )
+  if ( (byte_596BC1D & 1) == 0 )
   {
-    sub_21FFC50(&PhotoGraphicTouchComponent_DepthSort_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_TryGetComponent_PhotoGraphicTouchComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UnityEngine_Physics_TypeInfo);
-    this = (PhotoGraphicTouchComponent_o *)sub_21FFC50(&UICamera_TypeInfo);
-    byte_5933B04 = 1;
+    sub_2213A60(&PhotoGraphicTouchComponent_DepthSort_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_TryGetComponent_PhotoGraphicTouchComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_Physics_TypeInfo);
+    this = (PhotoGraphicTouchComponent_o *)sub_2213A60(&UICamera_TypeInfo);
+    byte_596BC1D = 1;
   }
   hits = v2->fields.hits;
   component = 0;
@@ -434,20 +424,20 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, method, size);
     this = (PhotoGraphicTouchComponent_o *)UICamera_TypeInfo;
   }
-  v6 = *(_QWORD *)&this[1].fields.isMasterFigure;
+  v6 = *((_QWORD *)this + 23);
   v7 = *(UnityEngine_Camera_o **)(v6 + 136);
   if ( !v7 )
     goto LABEL_43;
   v48.fields.z = 0.0;
   v48.fields.x = *(float *)(v6 + 60);
   v48.fields.y = *(float *)(v6 + 64);
-  UnityEngine_Camera__ScreenPointToRay_82985504(&v46, *(UnityEngine_Camera_o **)(v6 + 136), v48, 0);
+  UnityEngine_Camera__ScreenPointToRay_83198808(&v46, *(UnityEngine_Camera_o **)(v6 + 136), v48, 0);
   raycastHitResult = v2->fields.raycastHitResult;
   cullingMask = UnityEngine_Camera__get_cullingMask(v7, 0);
   if ( !*(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v9, v10);
   v45 = v46;
-  this = (PhotoGraphicTouchComponent_o *)UnityEngine_Physics__RaycastNonAlloc_83677328(
+  this = (PhotoGraphicTouchComponent_o *)UnityEngine_Physics__RaycastNonAlloc_83890632(
                                            &v45,
                                            raycastHitResult,
                                            100.0,
@@ -464,7 +454,7 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
       if ( !v15 )
         break;
       if ( v12 >= LODWORD(v15->max_length) )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       collider = (UnityEngine_Object_o *)UnityEngine_RaycastHit__get_collider(
                                            (UnityEngine_RaycastHit_o *)((char *)v15 + v14),
                                            0);
@@ -488,7 +478,7 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
           this = (PhotoGraphicTouchComponent_o *)UnityEngine_GameObject__TryGetComponent_object_(
                                                    (UnityEngine_GameObject_o *)gameObject,
                                                    &component,
-                                                   (const MethodInfo_3884A68 *)Method_UnityEngine_GameObject_TryGetComponent_PhotoGraphicTouchComponent___);
+                                                   (const MethodInfo_38B7F30 *)Method_UnityEngine_GameObject_TryGetComponent_PhotoGraphicTouchComponent___);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             this = (PhotoGraphicTouchComponent_o *)v2->fields.hits;
@@ -506,14 +496,14 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)method,
-                *(const MethodInfo_444FB2C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
             }
             else
             {
               v31 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
               *(_QWORD *)(v31 + 32) = method;
-              sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v31 + 32), (int32_t)method, v22, v23, v24, v25, v26, v27);
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 32), (int32_t)method, v22, v23, v24, v25, v26, v27);
             }
           }
         }
@@ -524,7 +514,7 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
         goto LABEL_30;
     }
 LABEL_43:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
 LABEL_30:
   v32 = 0;
@@ -535,10 +525,10 @@ LABEL_30:
   this = (PhotoGraphicTouchComponent_o *)j_il2cpp_value_box_0(PhotoGraphicTouchComponent_DepthSort_TypeInfo, &v46);
   if ( !v33 )
     goto LABEL_43;
-  System_Collections_Generic_List_object___Sort_71636208(
+  System_Collections_Generic_List_object___Sort_71849512(
     v33,
     (System_Collections_Generic_IComparer_T__o *)this,
-    (const MethodInfo_44514F0 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Sort__);
+    (const MethodInfo_4485628 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__Sort__);
   v34 = v2->fields.hits;
   if ( !v34 )
     goto LABEL_43;
@@ -559,7 +549,7 @@ LABEL_30:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v34,
              v35,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
     IsTouched = PhotoGraphicTouchComponent__IsTouched(v2, (PhotoGraphicTouchComponent_o *)Item, v38);
     if ( (IsTouched & 2) != 0 )
       break;
@@ -575,7 +565,7 @@ LABEL_30:
       this = (PhotoGraphicTouchComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)this,
                                                v35,
-                                               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
+                                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
       v32 = this;
     }
     v34 = v2->fields.hits;
@@ -589,7 +579,7 @@ LABEL_30:
   this = (PhotoGraphicTouchComponent_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)this,
                                            v35,
-                                           (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
+                                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_PhotoGraphicTouchComponent__get_Item__);
   v34 = v2->fields.hits;
   if ( !v34 )
     goto LABEL_43;
@@ -692,7 +682,7 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
   __int64 v33; // x26
   int32_t Item3; // w20
   int32_t Item1; // w21
-  UnityEngine_RenderTexture_o *Temporary_83129020; // x25
+  UnityEngine_RenderTexture_o *Temporary_83342324; // x25
   __int64 v37; // x1
   __int64 v38; // x2
   int v39; // w9
@@ -723,17 +713,16 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
   UnityEngine_Vector2_o v65; // 0:s2.4,4:s3.4
   UnityEngine_Rect_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o Pixel; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_5933B05 & 1) == 0 )
+  if ( (byte_596BC1E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Graphics_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UnityEngine_RenderTexture_TypeInfo);
-    sub_21FFC50(&UnityEngine_Texture2D_TypeInfo);
-    this = (PhotoGraphicTouchComponent_o *)sub_21FFC50(&StringLiteral_16884/*"_MaskTex"*/);
-    byte_5933B05 = 1;
+    sub_2213A60(&UnityEngine_Graphics_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_RenderTexture_TypeInfo);
+    sub_2213A60(&UnityEngine_Texture2D_TypeInfo);
+    this = (PhotoGraphicTouchComponent_o *)sub_2213A60(&StringLiteral_16919/*"_MaskTex"*/);
+    byte_596BC1E = 1;
   }
   v61 = 0;
   v59 = 0;
@@ -773,7 +762,7 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
             goto LABEL_73;
           Texture = UnityEngine_Material__GetTexture(
                       (UnityEngine_Material_o *)this,
-                      (System_String_o *)StringLiteral_16884/*"_MaskTex"*/,
+                      (System_String_o *)StringLiteral_16919/*"_MaskTex"*/,
                       0);
           if ( Texture )
           {
@@ -814,10 +803,10 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
               Item1 = PixelPosition.fields.Item1;
               if ( v29 <= PixelPosition.fields.Item1 || (PixelPosition.fields.Item2 | PixelPosition.fields.Item1) < 0 )
                 return Item3;
-              Temporary_83129020 = UnityEngine_RenderTexture__GetTemporary_83129020(1, 1, 0, 7, 0);
-              v61 = Temporary_83129020;
+              Temporary_83342324 = UnityEngine_RenderTexture__GetTemporary_83342324(1, 1, 0, 7, 0);
+              v61 = Temporary_83342324;
               active = UnityEngine_RenderTexture__get_active(0);
-              UnityEngine_RenderTexture__set_active(Temporary_83129020, 0);
+              UnityEngine_RenderTexture__set_active(Temporary_83342324, 0);
               v56 = 0;
               p_active = &active;
               v39 = *(&UnityEngine_Graphics_TypeInfo->_2.cctor_finished + 1);
@@ -828,20 +817,20 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
               v64.fields.y = 1.0 / (float)v31;
               v65.fields.x = v64.fields.x * (float)Item1;
               v65.fields.y = v64.fields.y * (float)(int)v33;
-              UnityEngine_Graphics__Blit_83030360((UnityEngine_Texture_o *)v15, Temporary_83129020, v64, v65, 0);
+              UnityEngine_Graphics__Blit_83243664((UnityEngine_Texture_o *)v15, Temporary_83342324, v64, v65, 0);
               pixelTexture = v4->fields.pixelTexture;
               if ( !pixelTexture )
-                sub_21FFECC(0, v40);
+                sub_2213CDC(0, v40);
               v66.fields.m_XMin = 0.0;
               v66.fields.m_YMin = 0.0;
               v66.fields.m_Width = 1.0;
               v66.fields.m_Height = 1.0;
-              UnityEngine_Texture2D__ReadPixels_83107796(pixelTexture, v66, 0, 0, 0);
+              UnityEngine_Texture2D__ReadPixels_83321100(pixelTexture, v66, 0, 0, 0);
               v43 = v4->fields.pixelTexture;
               if ( !v43 )
-                sub_21FFECC(0, v42);
-              UnityEngine_Texture2D__Apply_83107520(v43, 0);
-              sub_1FF0508(&v56);
+                sub_2213CDC(0, v42);
+              UnityEngine_Texture2D__Apply_83320824(v43, 0);
+              sub_2003480(&v56);
               this = (PhotoGraphicTouchComponent_o *)v4->fields.pixelTexture;
               if ( this )
               {
@@ -850,7 +839,7 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
               }
             }
 LABEL_73:
-            sub_21FFECC(this, photoGraphicTouchComponent);
+            sub_2213CDC(this, photoGraphicTouchComponent);
           }
         }
       }
@@ -937,22 +926,21 @@ LABEL_73:
   UnityEngine_RenderTexture__set_active((UnityEngine_RenderTexture_o *)v28, 0);
   v53 = v4->fields.pixelTexture;
   if ( !v53 )
-    sub_21FFECC(0, v52);
+    sub_2213CDC(0, v52);
   v67.fields.m_YMin = (float)(int)v50;
   v67.fields.m_XMin = (float)v51;
   v67.fields.m_Width = 1.0;
   v67.fields.m_Height = 1.0;
-  UnityEngine_Texture2D__ReadPixels_83107796(v53, v67, 0, 0, 0);
+  UnityEngine_Texture2D__ReadPixels_83321100(v53, v67, 0, 0, 0);
   v55 = v4->fields.pixelTexture;
   if ( !v55 )
-    sub_21FFECC(0, v54);
-  UnityEngine_Texture2D__Apply_83107520(v55, 0);
-  sub_1FF0544(&v56);
+    sub_2213CDC(0, v54);
+  UnityEngine_Texture2D__Apply_83320824(v55, 0);
+  sub_20034BC(&v56);
   this = (PhotoGraphicTouchComponent_o *)v4->fields.pixelTexture;
   if ( !this )
     goto LABEL_73;
-  Pixel = UnityEngine_Texture2D__GetPixel((UnityEngine_Texture2D_o *)this, 0, 0, 0);
-  v44 = Pixel.fields.a <= 0.0;
+  v44 = COERCE_FLOAT(LODWORD(UnityEngine_Texture2D__GetPixel((UnityEngine_Texture2D_o *)this, 0, 0, 0).fields.a)) <= 0.0;
 LABEL_70:
   if ( !v44 )
     return Item3 | 2;
@@ -975,11 +963,11 @@ void PhotoGraphicTouchComponent__OnDestroy(PhotoGraphicTouchComponent_o *this, c
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_5933AFC & 1) == 0 )
+  if ( (byte_596BC15 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&PhotoGraphicTouchComponent_TypeInfo);
-    byte_5933AFC = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&PhotoGraphicTouchComponent_TypeInfo);
+    byte_596BC15 = 1;
   }
   pixelTexture = (UnityEngine_Object_o *)this->fields.pixelTexture;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -989,7 +977,7 @@ void PhotoGraphicTouchComponent__OnDestroy(PhotoGraphicTouchComponent_o *this, c
     v7 = (UnityEngine_Object_o *)this->fields.pixelTexture;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
-    UnityEngine_Object__Destroy_83246496(v7, 0);
+    UnityEngine_Object__Destroy_83459800(v7, 0);
   }
   DragTarget = (UnityEngine_Object_o *)PhotoGraphicTouchComponent_TypeInfo->static_fields->DragTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -997,7 +985,7 @@ void PhotoGraphicTouchComponent__OnDestroy(PhotoGraphicTouchComponent_o *this, c
   if ( UnityEngine_Object__op_Equality(DragTarget, (UnityEngine_Object_o *)this, 0) )
   {
     PhotoGraphicTouchComponent_TypeInfo->static_fields->DragTarget = 0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)PhotoGraphicTouchComponent_TypeInfo->static_fields,
       0,
       v9,
@@ -1032,11 +1020,11 @@ void PhotoGraphicTouchComponent__OnPress(PhotoGraphicTouchComponent_o *this, boo
   bool v21; // w6
   bool v22; // w7
 
-  if ( (byte_5933B00 & 1) == 0 )
+  if ( (byte_596BC19 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&PhotoGraphicTouchComponent_TypeInfo);
-    byte_5933B00 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&PhotoGraphicTouchComponent_TypeInfo);
+    byte_596BC19 = 1;
   }
   if ( !isPressed )
     goto LABEL_7;
@@ -1053,7 +1041,7 @@ void PhotoGraphicTouchComponent__OnPress(PhotoGraphicTouchComponent_o *this, boo
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)PointedPhotoGraphicTouchComponent, 0, 0) )
     {
       PhotoGraphicTouchComponent_TypeInfo->static_fields->DragTarget = PointedPhotoGraphicTouchComponent;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)PhotoGraphicTouchComponent_TypeInfo->static_fields,
         (int32_t)PointedPhotoGraphicTouchComponent,
         v17,
@@ -1089,7 +1077,7 @@ LABEL_7:
           return;
         }
 LABEL_22:
-        sub_21FFECC(v13, v12);
+        sub_2213CDC(v13, v12);
       }
     }
   }
@@ -1102,7 +1090,7 @@ void PhotoGraphicTouchComponent__SetParentPhotoStandFigureComponent(
 {
   __int64 v3; // x1
   __int64 v4; // x2
-  Il2CppObject *ComponentInParent_object__58645868; // x20
+  Il2CppObject *ComponentInParent_object__58855988; // x20
   System_String_o *v6; // x2
   System_String_o *v7; // x3
   int32_t v8; // w4
@@ -1110,23 +1098,23 @@ void PhotoGraphicTouchComponent__SetParentPhotoStandFigureComponent(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5933AFE & 1) == 0 )
+  if ( (byte_596BC17 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInParent_PhotoStandFigureComponent___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933AFE = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInParent_PhotoStandFigureComponent___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC17 = 1;
   }
-  ComponentInParent_object__58645868 = UnityEngine_Component__GetComponentInParent_object__58645868(
+  ComponentInParent_object__58855988 = UnityEngine_Component__GetComponentInParent_object__58855988(
                                          (UnityEngine_Component_o *)this,
-                                         (const MethodInfo_37EDD6C *)Method_UnityEngine_Component_GetComponentInParent_PhotoStandFigureComponent___);
+                                         (const MethodInfo_3821234 *)Method_UnityEngine_Component_GetComponentInParent_PhotoStandFigureComponent___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58645868, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58855988, 0, 0) )
   {
-    this->fields.photoStandFigureComponent = (struct PhotoStandFigureComponent_o *)ComponentInParent_object__58645868;
-    sub_21FFBF4(
+    this->fields.photoStandFigureComponent = (struct PhotoStandFigureComponent_o *)ComponentInParent_object__58855988;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.photoStandFigureComponent,
-      (int32_t)ComponentInParent_object__58645868,
+      (int32_t)ComponentInParent_object__58855988,
       v6,
       v7,
       v8,
@@ -1141,7 +1129,7 @@ void PhotoGraphicTouchComponent__SetParentSelfPanel(PhotoGraphicTouchComponent_o
 {
   __int64 v3; // x1
   __int64 v4; // x2
-  Il2CppObject *ComponentInParent_object__58645868; // x20
+  Il2CppObject *ComponentInParent_object__58855988; // x20
   System_String_o *v6; // x2
   System_String_o *v7; // x3
   int32_t v8; // w4
@@ -1149,23 +1137,23 @@ void PhotoGraphicTouchComponent__SetParentSelfPanel(PhotoGraphicTouchComponent_o
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5933AFD & 1) == 0 )
+  if ( (byte_596BC16 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInParent_UIPanel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933AFD = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInParent_UIPanel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC16 = 1;
   }
-  ComponentInParent_object__58645868 = UnityEngine_Component__GetComponentInParent_object__58645868(
+  ComponentInParent_object__58855988 = UnityEngine_Component__GetComponentInParent_object__58855988(
                                          (UnityEngine_Component_o *)this,
-                                         (const MethodInfo_37EDD6C *)Method_UnityEngine_Component_GetComponentInParent_UIPanel___);
+                                         (const MethodInfo_3821234 *)Method_UnityEngine_Component_GetComponentInParent_UIPanel___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58645868, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58855988, 0, 0) )
   {
-    this->fields.selfPanel = (struct UIPanel_o *)ComponentInParent_object__58645868;
-    sub_21FFBF4(
+    this->fields.selfPanel = (struct UIPanel_o *)ComponentInParent_object__58855988;
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.selfPanel,
-      (int32_t)ComponentInParent_object__58645868,
+      (int32_t)ComponentInParent_object__58855988,
       v6,
       v7,
       v8,
@@ -1182,7 +1170,7 @@ void PhotoGraphicTouchComponent__SetUIMasterFigureTextureOld(
 {
   __int64 v3; // x1
   __int64 v4; // x2
-  Il2CppObject *ComponentInParent_object__58645868; // x20
+  Il2CppObject *ComponentInParent_object__58855988; // x20
   System_String_o *v6; // x2
   System_String_o *v7; // x3
   int32_t v8; // w4
@@ -1191,24 +1179,24 @@ void PhotoGraphicTouchComponent__SetUIMasterFigureTextureOld(
   bool v11; // w7
   struct UIMasterFigureTextureOld_o **p_masterFigureTextureOld; // x19
 
-  if ( (byte_5933AFF & 1) == 0 )
+  if ( (byte_596BC18 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponentInParent_UIMasterFigureTextureOld___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933AFF = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponentInParent_UIMasterFigureTextureOld___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC18 = 1;
   }
-  ComponentInParent_object__58645868 = UnityEngine_Component__GetComponentInParent_object__58645868(
+  ComponentInParent_object__58855988 = UnityEngine_Component__GetComponentInParent_object__58855988(
                                          (UnityEngine_Component_o *)this,
-                                         (const MethodInfo_37EDD6C *)Method_UnityEngine_Component_GetComponentInParent_UIMasterFigureTextureOld___);
+                                         (const MethodInfo_3821234 *)Method_UnityEngine_Component_GetComponentInParent_UIMasterFigureTextureOld___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58645868, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__58855988, 0, 0) )
   {
-    this->fields.masterFigureTextureOld = (struct UIMasterFigureTextureOld_o *)ComponentInParent_object__58645868;
+    this->fields.masterFigureTextureOld = (struct UIMasterFigureTextureOld_o *)ComponentInParent_object__58855988;
     p_masterFigureTextureOld = &this->fields.masterFigureTextureOld;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)p_masterFigureTextureOld,
-      (int32_t)ComponentInParent_object__58645868,
+      (int32_t)ComponentInParent_object__58855988,
       v6,
       v7,
       v8,
@@ -1233,15 +1221,15 @@ void PhotoGraphicTouchComponent__Start(PhotoGraphicTouchComponent_o *this, const
   const MethodInfo *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_5933AFA & 1) == 0 )
+  if ( (byte_596BC13 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Texture2D_TypeInfo);
-    byte_5933AFA = 1;
+    sub_2213A60(&UnityEngine_Texture2D_TypeInfo);
+    byte_596BC13 = 1;
   }
-  v3 = (UnityEngine_Texture2D_o *)sub_21FFEBC(UnityEngine_Texture2D_TypeInfo);
-  UnityEngine_Texture2D___ctor_83105640(v3, 1, 1, 5, 0, 0);
+  v3 = (UnityEngine_Texture2D_o *)sub_2213CCC(UnityEngine_Texture2D_TypeInfo);
+  UnityEngine_Texture2D___ctor_83318944(v3, 1, 1, 5, 0, 0);
   this->fields.pixelTexture = v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.pixelTexture, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.pixelTexture, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   PhotoGraphicTouchComponent__SetParentPhotoStandFigureComponent(this, v10);
   PhotoGraphicTouchComponent__SetParentSelfPanel(this, v11);
   PhotoGraphicTouchComponent__SetUIMasterFigureTextureOld(this, v12);
@@ -1256,11 +1244,11 @@ void PhotoGraphicTouchComponent__Update(PhotoGraphicTouchComponent_o *this, cons
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_5933AFB & 1) == 0 )
+  if ( (byte_596BC14 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&PhotoGraphicTouchComponent_TypeInfo);
-    byte_5933AFB = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&PhotoGraphicTouchComponent_TypeInfo);
+    byte_596BC14 = 1;
   }
   DragTarget = (UnityEngine_Object_o *)PhotoGraphicTouchComponent_TypeInfo->static_fields->DragTarget;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1296,7 +1284,7 @@ void PhotoGraphicTouchComponent__set_DragProcess(
   bool v7; // w7
 
   this->fields._DragProcess_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._DragProcess_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -1321,10 +1309,10 @@ __int64 __fastcall PhotoGraphicTouchComponent_DepthSort__Compare(__int64 a1, __i
   __int64 v14; // x8
   int v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5933B08 & 1) == 0 )
+  if ( (byte_596BC21 & 1) == 0 )
   {
-    a1 = sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5933B08 = 1;
+    a1 = sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596BC21 = 1;
   }
   v15 = 0;
   if ( !a2 )
@@ -1360,6 +1348,6 @@ __int64 __fastcall PhotoGraphicTouchComponent_DepthSort__Compare(__int64 a1, __i
   v12 = *(_QWORD *)(a3 + 32);
   if ( !v12 || (v13 = *(_DWORD *)(v12 + 320), v14 = *(_QWORD *)(a2 + 32), v15 = v13, !v14) )
 LABEL_24:
-    sub_21FFECC(a1, a2);
-  return System_Int32__CompareTo_76925088((int32_t)&v15, *(_DWORD *)(v14 + 320), 0);
+    sub_2213CDC(a1, a2);
+  return System_Int32__CompareTo_77138392((int32_t)&v15, *(_DWORD *)(v14 + 320), 0);
 }

@@ -2,10 +2,10 @@ void UISprite___ctor(UISprite_o *this, const MethodInfo *method)
 {
   UIBasicSprite_c *v3; // x0
 
-  if ( (byte_593CFE7 & 1) == 0 )
+  if ( (byte_59752BE & 1) == 0 )
   {
-    sub_21FFC50(&UIBasicSprite_TypeInfo);
-    byte_593CFE7 = 1;
+    sub_2213A60(&UIBasicSprite_TypeInfo);
+    byte_59752BE = 1;
   }
   v3 = UIBasicSprite_TypeInfo;
   this->fields.mFillCenter = 1;
@@ -42,19 +42,19 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   __int64 v25; // x1
   Il2CppObject *v26; // x19
 
-  if ( (byte_593CFE3 & 1) == 0 )
+  if ( (byte_59752BA & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Debug_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_308/*" seems to have a null sprite!"*/);
-    byte_593CFE3 = 1;
+    sub_2213A60(&UnityEngine_Debug_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_308/*" seems to have a null sprite!"*/);
+    byte_59752BA = 1;
   }
   if ( !this->fields.mSpriteSet )
   {
     this->fields.mSprite = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v2, v3, v4, v5, v6, v7);
   }
   if ( this->fields.mSprite )
     return this->fields.mSprite;
@@ -92,7 +92,7 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   result = (UISpriteData_o *)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)spriteList,
                                0,
-                               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
   if ( !result )
     return result;
   UISprite__SetAtlasSprite(this, result, v15);
@@ -101,7 +101,7 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   {
     name = mSprite->fields.name;
     this->fields.mSpriteName = name;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName,
       (int32_t)name,
       v16,
@@ -115,9 +115,9 @@ UISpriteData_o *UISprite__GetAtlasSprite(UISprite_o *this, const MethodInfo *met
   spriteList = this->fields.mAtlas;
   if ( !spriteList )
 LABEL_28:
-    sub_21FFECC(spriteList, v10);
+    sub_2213CDC(spriteList, v10);
   v24 = UnityEngine_Object__get_name((UnityEngine_Object_o *)spriteList, 0);
-  v26 = (Il2CppObject *)System_String__Concat_75438412(v24, (System_String_o *)StringLiteral_308/*" seems to have a null sprite!"*/, 0);
+  v26 = (Il2CppObject *)System_String__Concat_75651716(v24, (System_String_o *)StringLiteral_308/*" seems to have a null sprite!"*/, 0);
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v25);
   UnityEngine_Debug__LogError(v26, 0);
@@ -139,10 +139,10 @@ void UISprite__MakePixelPerfect(UISprite_o *this, const MethodInfo *method)
   float v12; // s0
   int v13; // w20
 
-  if ( (byte_593CFE5 & 1) == 0 )
+  if ( (byte_59752BC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFE5 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752BC = 1;
   }
   if ( UISprite__GetAtlasSprite(this, method) )
   {
@@ -170,11 +170,11 @@ void UISprite__MakePixelPerfect(UISprite_o *this, const MethodInfo *method)
               v10 = ((float (__fastcall *)(UISprite_o *, const MethodInfo *))this->klass->vtable._42_get_pixelSize.methodPtr)(
                       this,
                       this->klass->vtable._42_get_pixelSize.method);
-              v11 = sub_357AA88(0, v10 * (float)(v5->fields.paddingLeft + v5->fields.width + v5->fields.paddingRight));
+              v11 = sub_35AC9F8(0, v10 * (float)(v5->fields.paddingLeft + v5->fields.width + v5->fields.paddingRight));
               v12 = ((float (__fastcall *)(UISprite_o *, const MethodInfo *))this->klass->vtable._42_get_pixelSize.methodPtr)(
                       this,
                       this->klass->vtable._42_get_pixelSize.method);
-              v13 = sub_357AA88(0, v12 * (float)(v5->fields.paddingTop + v5->fields.height + v5->fields.paddingBottom));
+              v13 = sub_35AC9F8(0, v12 * (float)(v5->fields.paddingTop + v5->fields.height + v5->fields.paddingBottom));
               UIWidget__set_width((UIWidget_o *)this, (v11 & 1) + v11, 0);
               UIWidget__set_height((UIWidget_o *)this, (v13 & 1) + v13, 0);
             }
@@ -202,9 +202,9 @@ void UISprite__OnDestroy(UISprite_o *this, const MethodInfo *method)
   bool v14; // w7
 
   this->fields.mAtlas = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, 0, v2, v3, v4, v5, v6, v7);
   this->fields.mSprite = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -247,25 +247,19 @@ void UISprite__OnFill(
   float v38; // s9
   int32_t v39; // w24
   int32_t v40; // w0
-  float m_XMin; // s10
-  float m_YMin; // s11
-  float m_Width; // s12
-  float m_Height; // s13
-  int32_t v45; // w24
-  int32_t v46; // w0
+  int32_t v41; // w24
+  int32_t v42; // w0
   unsigned int size; // w23
   struct UIWidget_OnPostFillCallback_o *onPostFill; // x8
-  UnityEngine_Rect_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v54; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Rect_o v45; // 0:kr00_16.16
+  UnityEngine_Rect_o v46; // 0:kr10_16.16
+  UnityEngine_Rect_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CFE6 & 1) == 0 )
+  if ( (byte_59752BD & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFE6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752BD = 1;
   }
   v10 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UISprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                   this,
@@ -286,7 +280,7 @@ void UISprite__OnFill(
         goto LABEL_14;
       Sprite = UIAtlas__GetSprite(mAtlas, this->fields.mSpriteName, v13);
       this->fields.mSprite = Sprite;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mSprite,
         (int32_t)Sprite,
         v16,
@@ -324,35 +318,26 @@ void UISprite__OnFill(
       v40 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v49.fields.m_XMin = v34;
-      v49.fields.m_YMin = v37;
-      v49.fields.m_Width = v32;
-      v49.fields.m_Height = v31;
-      v50 = NGUIMath__ConvertToTexCoords(v49, v39, v40, 0);
-      m_XMin = v50.fields.m_XMin;
-      m_YMin = v50.fields.m_YMin;
-      m_Width = v50.fields.m_Width;
-      m_Height = v50.fields.m_Height;
-      v45 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
+      v47.fields.m_XMin = v34;
+      v47.fields.m_YMin = v37;
+      v47.fields.m_Width = v32;
+      v47.fields.m_Height = v31;
+      v45 = NGUIMath__ConvertToTexCoords(v47, v39, v40, 0);
+      v41 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
               v10,
               v10->klass[1]._1.gc_desc);
-      v46 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
+      v42 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v51.fields.m_XMin = v36;
-      v51.fields.m_YMin = v35;
-      v51.fields.m_Width = v38;
-      v51.fields.m_Height = v33;
-      v52 = NGUIMath__ConvertToTexCoords(v51, v45, v46, 0);
+      v48.fields.m_XMin = v36;
+      v48.fields.m_YMin = v35;
+      v48.fields.m_Width = v38;
+      v48.fields.m_Height = v33;
+      v46 = NGUIMath__ConvertToTexCoords(v48, v41, v42, 0);
       if ( verts )
       {
-        v54 = v52;
         size = verts->fields.size;
-        v53.fields.m_XMin = m_XMin;
-        v53.fields.m_YMin = m_YMin;
-        v53.fields.m_Width = m_Width;
-        v53.fields.m_Height = m_Height;
-        UIBasicSprite__Fill((UIBasicSprite_o *)this, verts, uvs, cols, v53, v54, 0);
+        UIBasicSprite__Fill((UIBasicSprite_o *)this, verts, uvs, cols, v45, v46, 0);
         onPostFill = this->fields.onPostFill;
         if ( onPostFill )
           ((void (__fastcall *)(intptr_t, UISprite_o *, _QWORD, BetterList_Vector3__o *, BetterList_Vector2__o *, BetterList_Color32__o *, intptr_t))onPostFill->fields.invoke_impl)(
@@ -367,7 +352,7 @@ void UISprite__OnFill(
       }
     }
 LABEL_14:
-    sub_21FFECC(mAtlas, v12);
+    sub_2213CDC(mAtlas, v12);
   }
 }
 
@@ -397,7 +382,7 @@ void UISprite__OnUpdate(UISprite_o *this, const MethodInfo *method)
   {
     this->fields.mSpriteSet = 1;
     this->fields.mSprite = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v3, v4, v5, v6, v7, v8);
     this->fields.mChanged = 1;
   }
 }
@@ -425,17 +410,17 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
   struct System_String_o **p_name; // x8
   struct System_String_o *v23; // x1
 
-  if ( (byte_593CFE4 & 1) == 0 )
+  if ( (byte_59752BB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593CFE4 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59752BB = 1;
   }
   this->fields.mChanged = 1;
   this->fields.mSpriteSet = 1;
   if ( sp )
   {
     this->fields.mSprite = sp;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSprite,
       (int32_t)sp,
       (System_String_o *)method,
@@ -446,7 +431,7 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
       v7);
     mSprite = this->fields.mSprite;
     if ( !mSprite )
-      sub_21FFECC(v10, v11);
+      sub_2213CDC(v10, v11);
     name = mSprite->fields.name;
     p_mSpriteName = (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName;
     this->fields.mSpriteName = name;
@@ -460,7 +445,7 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
       p_name = (struct System_String_o **)&StringLiteral_1/*""*/;
     v23 = *p_name;
     this->fields.mSpriteName = *p_name;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName,
       (int32_t)v23,
       (System_String_o *)method,
@@ -473,7 +458,7 @@ void UISprite__SetAtlasSprite(UISprite_o *this, UISpriteData_o *sp, const Method
     LODWORD(name) = 0;
     this->fields.mSprite = 0;
   }
-  sub_21FFBF4(p_mSpriteName, (int32_t)name, v12, v13, v14, v15, v16, v17);
+  sub_2213A04(p_mSpriteName, (int32_t)name, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -483,32 +468,28 @@ UIAtlas_o *UISprite__get_atlas(UISprite_o *this, const MethodInfo *method)
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector4_o UISprite__get_border(UISprite_o *this, const MethodInfo *method)
 {
   UISpriteData_o *AtlasSprite; // x0
-  float borderLeft; // s0 OVERLAPPED
-  float borderRight; // s2
-  float borderBottom; // s1
-  float borderTop; // s3
+  UnityEngine_Vector4_o border; // 0:kr00_16.16
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   AtlasSprite = UISprite__GetAtlasSprite(this, method);
   if ( AtlasSprite )
   {
-    borderLeft = (float)AtlasSprite->fields.borderLeft;
-    borderRight = (float)AtlasSprite->fields.borderRight;
-    borderBottom = (float)AtlasSprite->fields.borderBottom;
-    borderTop = (float)AtlasSprite->fields.borderTop;
+    result.fields.x = (float)AtlasSprite->fields.borderLeft;
+    result.fields.z = (float)AtlasSprite->fields.borderRight;
+    result.fields.y = (float)AtlasSprite->fields.borderBottom;
+    result.fields.w = (float)AtlasSprite->fields.borderTop;
   }
   else
   {
-    *(UnityEngine_Vector4_o *)&borderLeft = UIWidget__get_border((UIWidget_o *)this, 0);
+    border = UIWidget__get_border((UIWidget_o *)this, 0);
+    result.fields.x = border.fields.x;
+    result.fields.y = border.fields.y;
+    result.fields.z = border.fields.z;
+    result.fields.w = border.fields.w;
   }
-  result.fields.w = borderTop;
-  result.fields.z = borderRight;
-  result.fields.y = borderBottom;
-  result.fields.x = borderLeft;
   return result;
 }
 
@@ -546,9 +527,6 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   float32x4_t v38; // q5
   float32x4_t v39; // q3
   float32x4_t v40; // q0
-  float v41; // s1
-  float v42; // s2
-  float v43; // s3
   unsigned int v44; // [xsp+0h] [xbp-80h]
   unsigned int v45; // [xsp+10h] [xbp-70h]
   unsigned int v46; // [xsp+20h] [xbp-60h]
@@ -557,10 +535,10 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   float32x2_t v49; // [xsp+50h] [xbp-30h]
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593CFE1 & 1) == 0 )
+  if ( (byte_59752B8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFE1 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752B8 = 1;
   }
   pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
   v4.n64_u64[0] = vcvt_f32_s32(*(int32x2_t *)&this->fields.mWidth).n64_u64[0];
@@ -574,7 +552,7 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
     {
       mSprite = this->fields.mSprite;
       if ( !mSprite )
-        sub_21FFECC(AtlasSprite, v7);
+        sub_2213CDC(AtlasSprite, v7);
       paddingLeft = mSprite->fields.paddingLeft;
       paddingBottom = mSprite->fields.paddingBottom;
       v12.n64_u64[0] = *(unsigned __int64 *)&mSprite->fields.paddingRight;
@@ -635,10 +613,10 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   }
   else
   {
-    if ( !byte_5931C1E )
+    if ( !byte_5969DBE )
     {
-      sub_21FFC50(&UnityEngine_Vector4_TypeInfo);
-      byte_5931C1E = 1;
+      sub_2213A60(&UnityEngine_Vector4_TypeInfo);
+      byte_5969DBE = 1;
     }
     static_fields = UnityEngine_Vector4_TypeInfo->static_fields;
     v33.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.x;
@@ -657,13 +635,10 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
             vbicq_s8(
               vbslq_s8(vcgtq_f32((float32x4_t)this->fields.mDrawRegion, _Q1), _Q1, (int8x16_t)this->fields.mDrawRegion),
               vcltzq_f32((float32x4_t)this->fields.mDrawRegion))));
-  v41 = v40.n128_f32[1];
-  v43 = v40.n128_f32[3];
-  v42 = v40.n128_f32[2];
+  LODWORD(result.fields.y) = v40.n128_u32[1];
+  LODWORD(result.fields.w) = v40.n128_u32[3];
+  LODWORD(result.fields.z) = v40.n128_u32[2];
   result.fields.x = v40.n128_f32[0];
-  result.fields.w = v43;
-  result.fields.z = v42;
-  result.fields.y = v41;
   return result;
 }
 
@@ -686,10 +661,10 @@ UnityEngine_Material_o *UISprite__get_material(UISprite_o *this, const MethodInf
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_593CFDD & 1) == 0 )
+  if ( (byte_59752B4 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFDD = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752B4 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -698,7 +673,7 @@ UnityEngine_Material_o *UISprite__get_material(UISprite_o *this, const MethodInf
     return 0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UIAtlas__get_spriteMaterial(v5, v4);
 }
 
@@ -744,10 +719,10 @@ int32_t UISprite__get_minHeight(UISprite_o *this, const MethodInfo *method)
          this->klass->vtable._42_get_pixelSize.method);
   v9 = v4 * v8;
   v10 = v6 * v8;
-  if ( !byte_593220B )
+  if ( !byte_596A30A )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593220B = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A30A = 1;
   }
   v11 = v9 + v10;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -832,10 +807,10 @@ int32_t UISprite__get_minWidth(UISprite_o *this, const MethodInfo *method)
          this->klass->vtable._42_get_pixelSize.method);
   v8 = v3 * v7;
   v9 = v5 * v7;
-  if ( !byte_593220B )
+  if ( !byte_596A30A )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593220B = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A30A = 1;
   }
   v10 = v8 + v9;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -887,10 +862,10 @@ float UISprite__get_pixelSize(UISprite_o *this, const MethodInfo *method)
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_593CFE0 & 1) == 0 )
+  if ( (byte_59752B7 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFE0 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752B7 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -899,7 +874,7 @@ float UISprite__get_pixelSize(UISprite_o *this, const MethodInfo *method)
     return 1.0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UIAtlas__get_pixelSize(v5, v4);
 }
 
@@ -910,10 +885,10 @@ bool UISprite__get_premultipliedAlpha(UISprite_o *this, const MethodInfo *method
   const MethodInfo *v4; // x1
   UIAtlas_o *v5; // x0
 
-  if ( (byte_593CFE2 & 1) == 0 )
+  if ( (byte_59752B9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFE2 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752B9 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -922,7 +897,7 @@ bool UISprite__get_premultipliedAlpha(UISprite_o *this, const MethodInfo *method
     return 0;
   v5 = this->fields.mAtlas;
   if ( !v5 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   return UIAtlas__get_premultipliedAlpha(v5, v4);
 }
 
@@ -972,13 +947,13 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
   int32_t v39; // w1
   const MethodInfo *v40; // x2
 
-  if ( (byte_593CFDE & 1) == 0 )
+  if ( (byte_59752B5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593CFDE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59752B5 = 1;
   }
   mAtlas = (UnityEngine_Object_o *)this->fields.mAtlas;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -987,10 +962,10 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mAtlas = value;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, (int32_t)value, v6, v7, v8, v9, v10, v11);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mAtlas, (int32_t)value, v6, v7, v8, v9, v10, v11);
     this->fields.mSpriteSet = 0;
     this->fields.mSprite = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v12, v13, v14, v15, v16, v17);
     if ( !System_String__IsNullOrEmpty(this->fields.mSpriteName, 0) )
       goto LABEL_17;
     v19 = (UnityEngine_Object_o *)this->fields.mAtlas;
@@ -1015,14 +990,14 @@ void UISprite__set_atlas(UISprite_o *this, UIAtlas_o *value, const MethodInfo *m
             Item = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)spriteList,
                      0,
-                     (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
+                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UISpriteData__get_Item__);
             UISprite__SetAtlasSprite(this, (UISpriteData_o *)Item, v23);
             mSprite = this->fields.mSprite;
             if ( mSprite )
             {
               name = mSprite->fields.name;
               this->fields.mSpriteName = name;
-              sub_21FFBF4(
+              sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName,
                 (int32_t)name,
                 v24,
@@ -1037,7 +1012,7 @@ LABEL_17:
                 mSpriteName = this->fields.mSpriteName;
                 v39 = (int)StringLiteral_1/*""*/;
                 this->fields.mSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-                sub_21FFBF4(
+                sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName,
                   v39,
                   v32,
@@ -1057,7 +1032,7 @@ LABEL_17:
         }
       }
     }
-    sub_21FFECC(spriteList, v20);
+    sub_2213CDC(spriteList, v20);
   }
 }
 
@@ -1094,10 +1069,10 @@ void UISprite__set_spriteName(UISprite_o *this, System_String_o *value, const Me
   bool v17; // w6
   bool v18; // w7
 
-  if ( (byte_593CFDF & 1) == 0 )
+  if ( (byte_59752B6 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593CFDF = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59752B6 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0);
   mSpriteName = this->fields.mSpriteName;
@@ -1112,9 +1087,9 @@ void UISprite__set_spriteName(UISprite_o *this, System_String_o *value, const Me
     return;
   }
   this->fields.mSpriteName = value;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName, (int32_t)value, v7, v8, v9, v10, v11, v12);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSpriteName, (int32_t)value, v7, v8, v9, v10, v11, v12);
   this->fields.mSprite = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mSprite, 0, v13, v14, v15, v16, v17, v18);
   this->fields.mSpriteSet = 0;
   this->fields.mChanged = 1;
 }

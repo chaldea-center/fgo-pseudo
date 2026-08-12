@@ -130,13 +130,13 @@ void ExRoomMissionListViewItem___ctor(
   bool v129; // w7
   unsigned __int32 v130; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_5932E02 & 1) == 0 )
+  if ( (byte_596AF08 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
-    sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    byte_5932E02 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__);
+    sub_2213A60(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    sub_2213A60(&MissionInfoMaker_TypeInfo);
+    byte_596AF08 = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0);
   if ( exRoomMissionListOutput )
@@ -145,7 +145,7 @@ void ExRoomMissionListViewItem___ctor(
     if ( EventMissionEntity_k__BackingField )
     {
       this->fields.eventMissionEnt = EventMissionEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.eventMissionEnt,
         (int32_t)EventMissionEntity_k__BackingField,
         v5,
@@ -181,10 +181,10 @@ void ExRoomMissionListViewItem___ctor(
       this->fields.isColliderEnable = 1;
       if ( !ConditionEntities_k__BackingField )
       {
-        ConditionEntities_k__BackingField = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+        ConditionEntities_k__BackingField = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
         System_Collections_Generic_List_object____ctor(
           ConditionEntities_k__BackingField,
-          (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+          (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
       }
       if ( !*(&MissionInfoMaker_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, v23, v24);
@@ -192,7 +192,7 @@ void ExRoomMissionListViewItem___ctor(
                            (System_Collections_Generic_List_EventMissionConditionEntity__o *)ConditionEntities_k__BackingField,
                            0);
       this->fields.condMsg = ConditionMessage;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.condMsg,
         (int32_t)ConditionMessage,
         v27,
@@ -205,7 +205,7 @@ void ExRoomMissionListViewItem___ctor(
                         (System_Collections_Generic_List_EventMissionConditionEntity__o *)ConditionEntities_k__BackingField,
                         0);
       this->fields.closedMessage = ClosedMessage;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.closedMessage,
         (int32_t)ClosedMessage,
         v34,
@@ -216,13 +216,13 @@ void ExRoomMissionListViewItem___ctor(
         v39);
       if ( !ConditionEntities_k__BackingField )
 LABEL_24:
-        sub_21FFECC(eventMissionEnt, v12);
+        sub_2213CDC(eventMissionEnt, v12);
       if ( ConditionEntities_k__BackingField->fields._size < 1 )
       {
-        v56 = *(struct System_String_o ***)(qword_594C0B8 + 184);
+        v56 = *(struct System_String_o ***)(qword_5984390 + 184);
         v57 = *v56;
         this->fields.progTxt = *v56;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.progTxt,
           (int32_t)v57,
           v40,
@@ -247,7 +247,7 @@ LABEL_24:
                          &this->fields.targetNum,
                          0);
         this->fields.progTxt = ProgressText;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.progTxt,
           (int32_t)ProgressText,
           v48,
@@ -270,7 +270,7 @@ LABEL_24:
       RewardGiftEntities_k__BackingField = exRoomMissionListOutput->fields._RewardGiftEntities_k__BackingField;
       this->fields.isNew = IsShowNew;
       this->fields.giftEnts = RewardGiftEntities_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.giftEnts,
         (int32_t)RewardGiftEntities_k__BackingField,
         v62,
@@ -281,7 +281,7 @@ LABEL_24:
         v67);
       SubGiftEntity_k__BackingField = exRoomMissionListOutput->fields._SubGiftEntity_k__BackingField;
       this->fields.subGiftEntity = SubGiftEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.subGiftEntity,
         (int32_t)SubGiftEntity_k__BackingField,
         v69,
@@ -296,7 +296,7 @@ LABEL_24:
               this->fields.subGiftEntity,
               v76);
       this->fields.rewardDisplayGiftEntities = v77;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.rewardDisplayGiftEntities,
         (int32_t)v77,
         v78,
@@ -307,7 +307,7 @@ LABEL_24:
         v83);
       RewardItemEntity_k__BackingField = exRoomMissionListOutput->fields._RewardItemEntity_k__BackingField;
       this->fields.itemEnt = RewardItemEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.itemEnt,
         (int32_t)RewardItemEntity_k__BackingField,
         v85,
@@ -318,7 +318,7 @@ LABEL_24:
         v90);
       RewardServantEntity_k__BackingField = exRoomMissionListOutput->fields._RewardServantEntity_k__BackingField;
       this->fields.svtEnt = RewardServantEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.svtEnt,
         (int32_t)RewardServantEntity_k__BackingField,
         v92,
@@ -329,7 +329,7 @@ LABEL_24:
         v97);
       RewardCommandCodeEntity_k__BackingField = exRoomMissionListOutput->fields._RewardCommandCodeEntity_k__BackingField;
       this->fields.cmdEnt = RewardCommandCodeEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.cmdEnt,
         (int32_t)RewardCommandCodeEntity_k__BackingField,
         v99,
@@ -340,7 +340,7 @@ LABEL_24:
         v104);
       RewardServantCostumeEntity_k__BackingField = exRoomMissionListOutput->fields._RewardServantCostumeEntity_k__BackingField;
       this->fields.servantCostumeEnt = RewardServantCostumeEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.servantCostumeEnt,
         (int32_t)RewardServantCostumeEntity_k__BackingField,
         v106,
@@ -352,12 +352,12 @@ LABEL_24:
       IconGiftEntity_k__BackingField = exRoomMissionListOutput->fields._IconGiftEntity_k__BackingField;
       if ( IconGiftEntity_k__BackingField )
         LODWORD(IconGiftEntity_k__BackingField) = IconGiftEntity_k__BackingField->fields.objectId;
-      v119 = qword_594C0B8;
+      v119 = qword_5984390;
       this->fields.rewardObjectId = (int)IconGiftEntity_k__BackingField;
       v120 = *(struct System_String_o ***)(v119 + 184);
       v121 = *v120;
       this->fields.nameTxt = *v120;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.nameTxt,
         (int32_t)v121,
         v112,
@@ -366,10 +366,10 @@ LABEL_24:
         v115,
         v116,
         v117);
-      v122 = *(struct System_String_o ***)(qword_594C0B8 + 184);
+      v122 = *(struct System_String_o ***)(qword_5984390 + 184);
       v123 = *v122;
       this->fields.rewardExtraDetailTxt = *v122;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.rewardExtraDetailTxt,
         (int32_t)v123,
         v124,
@@ -407,13 +407,13 @@ GiftEntity_array *ExRoomMissionListViewItem__BuildDisplayGiftEntities(
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_5932E05 & 1) == 0 )
+  if ( (byte_596AF0B & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity___ctor___91425792);
-    sub_21FFC50(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    byte_5932E05 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity___ctor___91651912);
+    sub_2213A60(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    byte_596AF0B = 1;
   }
   if ( !source )
     return source;
@@ -421,11 +421,11 @@ GiftEntity_array *ExRoomMissionListViewItem__BuildDisplayGiftEntities(
     return 0;
   if ( !subGift )
     return source;
-  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GiftEntity__TypeInfo);
-  System_Collections_Generic_List_object____ctor_71627580(
+  v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  System_Collections_Generic_List_object____ctor_71840884(
     v6,
     source->max_length,
-    (const MethodInfo_444F33C *)Method_System_Collections_Generic_List_GiftEntity___ctor___91425792);
+    (const MethodInfo_4483474 *)Method_System_Collections_Generic_List_GiftEntity___ctor___91651912);
   max_length = source->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -434,7 +434,7 @@ GiftEntity_array *ExRoomMissionListViewItem__BuildDisplayGiftEntities(
     do
     {
       if ( v16 >= (unsigned int)max_length )
-        sub_21FFED4(v7);
+        sub_2213CE4(v7);
       v8 = source->m_Items[v16];
       if ( !(v17 & 1 | (v8 == 0))
         && v8->fields.id == subGift->fields.id
@@ -458,14 +458,14 @@ GiftEntity_array *ExRoomMissionListViewItem__BuildDisplayGiftEntities(
           System_Collections_Generic_List_object___AddWithResize(
             v6,
             (Il2CppObject *)v8,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v6->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v8;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v8, v9, v10, v11, v12, v13, v14);
         }
       }
       LODWORD(max_length) = source->max_length;
@@ -475,10 +475,10 @@ GiftEntity_array *ExRoomMissionListViewItem__BuildDisplayGiftEntities(
   }
   if ( !v6 )
 LABEL_24:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   return (GiftEntity_array *)System_Collections_Generic_List_object___ToArray(
                                v6,
-                               (const MethodInfo_445164C *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+                               (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
 }
 
 
@@ -516,16 +516,16 @@ System_String_o *ExRoomMissionListViewItem__GetRemainingTimeTextKey(
 {
   __int64 *v3; // x8
 
-  if ( (byte_5932E03 & 1) == 0 )
+  if ( (byte_596AF09 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_13953/*"TIME_REST_QUEST"*/);
-    sub_21FFC50(&StringLiteral_13941/*"TIME_REST_ACHIVE"*/);
-    byte_5932E03 = 1;
+    sub_2213A60(&StringLiteral_13983/*"TIME_REST_QUEST"*/);
+    sub_2213A60(&StringLiteral_13971/*"TIME_REST_ACHIVE"*/);
+    byte_596AF09 = 1;
   }
   if ( this->fields.progStatus == 3 )
-    v3 = &StringLiteral_13941/*"TIME_REST_ACHIVE"*/;
+    v3 = &StringLiteral_13971/*"TIME_REST_ACHIVE"*/;
   else
-    v3 = &StringLiteral_13953/*"TIME_REST_QUEST"*/;
+    v3 = &StringLiteral_13983/*"TIME_REST_QUEST"*/;
   return (System_String_o *)*v3;
 }
 
@@ -560,16 +560,16 @@ GiftEntity_o *ExRoomMissionListViewItem__GetRewardEntityForDisplay(
         int32_t animationIndex,
         const MethodInfo *method)
 {
-  if ( (byte_5932E04 & 1) == 0 )
+  if ( (byte_596AF0A & 1) == 0 )
   {
-    sub_21FFC50(&Method_ArrayHelper_GetClampedValueSafely_GiftEntity___);
-    byte_5932E04 = 1;
+    sub_2213A60(&Method_ArrayHelper_GetClampedValueSafely_GiftEntity___);
+    byte_596AF0A = 1;
   }
   return (GiftEntity_o *)ArrayHelper__GetClampedValueSafely_object_(
                            (System_Object_array *)this->fields.rewardDisplayGiftEntities,
                            animationIndex,
                            0,
-                           (const MethodInfo_379BA00 *)Method_ArrayHelper_GetClampedValueSafely_GiftEntity___);
+                           (const MethodInfo_37CEDB0 *)Method_ArrayHelper_GetClampedValueSafely_GiftEntity___);
 }
 
 
@@ -579,57 +579,75 @@ ExRoomMissionListViewItem_RewardIconDrawInfo_o *ExRoomMissionListViewItem__GetRe
         int32_t animationIndex,
         const MethodInfo *method)
 {
-  ExRoomMissionListViewItem_RewardIconDrawInfo_o *result; // x0
-  int ObjectId_k__BackingField; // w8
-  int GiftType_k__BackingField; // w9
-  int32_t ItemImageId_k__BackingField; // w10
+  struct EventMissionEntity_o *eventMissionEnt; // x9
+  int32_t giftIconId; // w8
+  int loopIndex; // w8
+  int sortValue0B_high; // w9
+  int32_t index; // w10
 
-  result = (ExRoomMissionListViewItem_RewardIconDrawInfo_o *)ExRoomMissionListViewItem__GetRewardEntityForDisplay(
-                                                               this,
-                                                               animationIndex,
-                                                               method);
-  if ( !result )
+  eventMissionEnt = this->fields.eventMissionEnt;
+  if ( eventMissionEnt )
   {
-    *(_WORD *)(&retstr->fields._ShouldUseSetItemImage_k__BackingField + 1) = 0;
-    *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
-    *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0xFFFFFFFF00000000LL;
-    retstr->fields._ShouldUseSetItemImage_k__BackingField = 1;
-    *(&retstr->fields._ShouldUseSetItemImage_k__BackingField + 3) = 0;
-    return result;
+    giftIconId = eventMissionEnt->fields.giftIconId;
+    if ( giftIconId >= 1 )
+    {
+      *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
+      *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
+      retstr->fields._ItemImageId_k__BackingField = giftIconId;
+      retstr->fields._GiftType_k__BackingField = 8;
+      retstr->fields._ObjectId_k__BackingField = giftIconId;
+      *(_QWORD *)&retstr->fields._Count_k__BackingField = 0xFFFFFFFFLL;
+LABEL_13:
+      retstr->fields._ShouldUseSetItemImage_k__BackingField = 1;
+      return (ExRoomMissionListViewItem_RewardIconDrawInfo_o *)this;
+    }
   }
-  ObjectId_k__BackingField = result[1].fields._ObjectId_k__BackingField;
-  GiftType_k__BackingField = result[2].fields._GiftType_k__BackingField;
-  if ( ObjectId_k__BackingField <= 1 )
-    ObjectId_k__BackingField = -1;
-  if ( GiftType_k__BackingField >= 1 )
+  this = (ExRoomMissionListViewItem_o *)ExRoomMissionListViewItem__GetRewardEntityForDisplay(
+                                          this,
+                                          animationIndex,
+                                          method);
+  if ( this )
   {
-    *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
-    *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
-LABEL_9:
+    loopIndex = this->fields.loopIndex;
+    sortValue0B_high = HIDWORD(this->fields.sortValue0B);
+    if ( loopIndex <= 1 )
+      loopIndex = -1;
+    if ( sortValue0B_high < 1 )
+    {
+      index = this->fields.index;
+      sortValue0B_high = this->fields.sortIndex;
+      if ( index != 8 )
+      {
+        *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
+        *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
+        retstr->fields._GiftType_k__BackingField = index;
+        retstr->fields._ObjectId_k__BackingField = sortValue0B_high;
+        retstr->fields._Count_k__BackingField = loopIndex;
+        *(_DWORD *)&retstr->fields._ShouldUseSetItemImage_k__BackingField = 0;
+        retstr->fields._ShouldUseSetItemImage_k__BackingField = 0;
+        return (ExRoomMissionListViewItem_RewardIconDrawInfo_o *)this;
+      }
+      *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
+      *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
+    }
+    else
+    {
+      *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
+      *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
+    }
     *(_DWORD *)&retstr->fields._ShouldUseSetItemImage_k__BackingField = 0;
-    retstr->fields._ObjectId_k__BackingField = GiftType_k__BackingField;
-    retstr->fields._Count_k__BackingField = ObjectId_k__BackingField;
-    retstr->fields._ItemImageId_k__BackingField = GiftType_k__BackingField;
+    retstr->fields._ItemImageId_k__BackingField = sortValue0B_high;
     retstr->fields._GiftType_k__BackingField = 8;
-    retstr->fields._ShouldUseSetItemImage_k__BackingField = 1;
-    return result;
+    retstr->fields._ObjectId_k__BackingField = sortValue0B_high;
+    retstr->fields._Count_k__BackingField = loopIndex;
+    goto LABEL_13;
   }
-  ItemImageId_k__BackingField = result[1].fields._ItemImageId_k__BackingField;
-  GiftType_k__BackingField = result[1].fields._GiftType_k__BackingField;
-  if ( ItemImageId_k__BackingField == 8 )
-  {
-    *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
-    *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
-    goto LABEL_9;
-  }
+  *(_WORD *)(&retstr->fields._ShouldUseSetItemImage_k__BackingField + 1) = 0;
   *(_QWORD *)&retstr->fields._ItemImageId_k__BackingField = 0;
-  *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0;
-  retstr->fields._GiftType_k__BackingField = ItemImageId_k__BackingField;
-  retstr->fields._ObjectId_k__BackingField = GiftType_k__BackingField;
-  retstr->fields._Count_k__BackingField = ObjectId_k__BackingField;
-  *(_DWORD *)&retstr->fields._ShouldUseSetItemImage_k__BackingField = 0;
-  retstr->fields._ShouldUseSetItemImage_k__BackingField = 0;
-  return result;
+  *(_QWORD *)&retstr->fields._ObjectId_k__BackingField = 0xFFFFFFFF00000000LL;
+  retstr->fields._ShouldUseSetItemImage_k__BackingField = 1;
+  *(&retstr->fields._ShouldUseSetItemImage_k__BackingField + 3) = 0;
+  return (ExRoomMissionListViewItem_RewardIconDrawInfo_o *)this;
 }
 
 
@@ -665,7 +683,7 @@ void ExRoomMissionListViewItem__SetCurrentDisplayRewardEntity(
 
   RewardEntityForDisplay = ExRoomMissionListViewItem__GetRewardEntityForDisplay(this, animationIndex, method);
   this->fields.currentDisplayRewardGiftEntity = RewardEntityForDisplay;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.currentDisplayRewardGiftEntity,
     (int32_t)RewardEntityForDisplay,
     v5,
@@ -691,17 +709,15 @@ bool ExRoomMissionListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  bool result; // w0
   int64_t displayOrder; // x9
 
-  result = 1;
   displayOrder = this->fields.displayOrder;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = 0;
   this->fields.sortValue2 = 0;
   this->fields.sortValue1 = displayOrder;
   this->fields.sortValueLast = 0;
-  return result;
+  return 1;
 }
 
 
@@ -738,6 +754,15 @@ bool ExRoomMissionListViewItem__ShouldShowTimeOver(
   return eventMissionEnt
       && (unsigned int)(this->fields.progStatus - 3) >= 2
       && eventMissionEnt->fields.endedAt <= nowTime;
+}
+
+
+bool ExRoomMissionListViewItem__get_IsHideRewardDetail(ExRoomMissionListViewItem_o *this, const MethodInfo *method)
+{
+  struct EventMissionEntity_o *eventMissionEnt; // x8
+
+  eventMissionEnt = this->fields.eventMissionEnt;
+  return eventMissionEnt && eventMissionEnt->fields.giftIconId > 0;
 }
 
 

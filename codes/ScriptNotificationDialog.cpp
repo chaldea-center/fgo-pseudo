@@ -1,9 +1,9 @@
 void ScriptNotificationDialog___ctor(ScriptNotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A70D & 1) == 0 )
+  if ( (byte_59728EC & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593A70D = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_59728EC = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
@@ -29,7 +29,7 @@ void ScriptNotificationDialog__Callback(ScriptNotificationDialog_o *this, const 
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_21FFBF4(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -39,11 +39,11 @@ void ScriptNotificationDialog__Close(ScriptNotificationDialog_o *this, const Met
 {
   const MethodInfo *v2; // x2
 
-  ScriptNotificationDialog__Close_51824116(this, 0, v2);
+  ScriptNotificationDialog__Close_51898660(this, 0, v2);
 }
 
 
-void ScriptNotificationDialog__Close_51824116(
+void ScriptNotificationDialog__Close_51898660(
         ScriptNotificationDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -56,14 +56,14 @@ void ScriptNotificationDialog__Close_51824116(
   System_Action_c *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_593A70A & 1) == 0 )
+  if ( (byte_59728E9 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_ScriptNotificationDialog_EndClose__);
-    byte_593A70A = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_ScriptNotificationDialog_EndClose__);
+    byte_59728E9 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (System_String_o *)method,
@@ -74,7 +74,7 @@ void ScriptNotificationDialog__Close_51824116(
     v7);
   v10 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_21FFEBC(v10);
+  v11 = (System_Action_o *)sub_2213CCC(v10);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ScriptNotificationDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0);
 }
@@ -99,7 +99,7 @@ void ScriptNotificationDialog__EndClose(ScriptNotificationDialog_o *this, const 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_2213A04(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -115,10 +115,10 @@ void ScriptNotificationDialog__Init(ScriptNotificationDialog_o *this, const Meth
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_593A707 & 1) == 0 )
+  if ( (byte_59728E6 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A707 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59728E6 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -128,7 +128,7 @@ void ScriptNotificationDialog__Init(ScriptNotificationDialog_o *this, const Meth
         (titleLabel = this->fields.messageLabel) == 0)
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.closeLabel) == 0) )
   {
-    sub_21FFECC(titleLabel, method);
+    sub_2213CDC(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -142,17 +142,17 @@ void ScriptNotificationDialog__OnClickClose(ScriptNotificationDialog_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_593A70B & 1) == 0 )
+  if ( (byte_59728EA & 1) == 0 )
   {
-    sub_21FFC50(&Method_ScriptNotificationDialog_OnClickClose__);
-    byte_593A70B = 1;
+    sub_2213A60(&Method_ScriptNotificationDialog_OnClickClose__);
+    byte_59728EA = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_ScriptNotificationDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ScriptNotificationDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_ScriptNotificationDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_ScriptNotificationDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.state = 3;
     ScriptNotificationDialog__Callback(this, v5);
@@ -177,18 +177,18 @@ void ScriptNotificationDialog__Open(
   UILabel_o *closeLabel; // x21
   System_Action_o *v19; // x20
 
-  if ( (byte_593A708 & 1) == 0 )
+  if ( (byte_59728E7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_ScriptNotificationDialog_EndOpen__);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_593A708 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_ScriptNotificationDialog_EndOpen__);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_59728E7 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       message,
@@ -213,14 +213,14 @@ void ScriptNotificationDialog__Open(
     closeLabel = this->fields.closeLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17);
-    titledMessageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    titledMessageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
     if ( !closeLabel )
 LABEL_10:
-      sub_21FFECC(titledMessageLabel, v14);
+      sub_2213CDC(titledMessageLabel, v14);
     UILabel__set_text(closeLabel, (System_String_o *)titledMessageLabel, 0);
     BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0);
     this->fields.state = 1;
-    v19 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    v19 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v19, (Il2CppObject *)this, Method_ScriptNotificationDialog_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
   }
@@ -238,10 +238,10 @@ void ScriptNotificationDialog__SetMessage(
   UILabel_o *messageLabel; // x0
   System_String_o *v10; // x1
 
-  if ( (byte_593A709 & 1) == 0 )
+  if ( (byte_59728E8 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A709 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_59728E8 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(title, 0);
   messageLabel = this->fields.messageLabel;
@@ -263,7 +263,7 @@ void ScriptNotificationDialog__SetMessage(
       }
     }
 LABEL_13:
-    sub_21FFECC(messageLabel, v7);
+    sub_2213CDC(messageLabel, v7);
   }
   if ( !messageLabel )
     goto LABEL_13;
@@ -297,10 +297,10 @@ void ScriptNotificationDialog__add_callbackFunc(
   ScriptNotificationDialog_CallbackFunc_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_593A705 & 1) == 0 )
+  if ( (byte_59728E4 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptNotificationDialog_CallbackFunc_TypeInfo);
-    byte_593A705 = 1;
+    sub_2213A60(&ScriptNotificationDialog_CallbackFunc_TypeInfo);
+    byte_59728E4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -313,25 +313,25 @@ void ScriptNotificationDialog__add_callbackFunc(
       if ( (ScriptNotificationDialog_CallbackFunc_c *)v8->klass != ScriptNotificationDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, ScriptNotificationDialog_CallbackFunc_TypeInfo, v9);
+  sub_221405C(v8, ScriptNotificationDialog_CallbackFunc_TypeInfo, v9);
   ScriptNotificationDialog__remove_callbackFunc(v12, v13, v14);
 }
 
 
 System_String_o *ScriptNotificationDialog__get_closeBtnPath(ScriptNotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A70C & 1) == 0 )
+  if ( (byte_59728EB & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16229/*"Window/CloseButton"*/);
-    byte_593A70C = 1;
+    sub_2213A60(&StringLiteral_16261/*"Window/CloseButton"*/);
+    byte_59728EB = 1;
   }
-  return (System_String_o *)StringLiteral_16229/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_16261/*"Window/CloseButton"*/;
 }
 
 
@@ -350,10 +350,10 @@ void ScriptNotificationDialog__remove_callbackFunc(
   ScriptNotificationDialog_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593A706 & 1) == 0 )
+  if ( (byte_59728E5 & 1) == 0 )
   {
-    sub_21FFC50(&ScriptNotificationDialog_CallbackFunc_TypeInfo);
-    byte_593A706 = 1;
+    sub_2213A60(&ScriptNotificationDialog_CallbackFunc_TypeInfo);
+    byte_59728E5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -366,13 +366,13 @@ void ScriptNotificationDialog__remove_callbackFunc(
       if ( (ScriptNotificationDialog_CallbackFunc_c *)v8->klass != ScriptNotificationDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v10 = sub_223767C(p_callbackFunc, v8, v6);
+    v10 = sub_224B48C(p_callbackFunc, v8, v6);
     v11 = v10 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v8, ScriptNotificationDialog_CallbackFunc_TypeInfo, v9);
+  sub_221405C(v8, ScriptNotificationDialog_CallbackFunc_TypeInfo, v9);
   ScriptNotificationDialog__Init(v12, v13);
 }
 
@@ -396,7 +396,7 @@ void ScriptNotificationDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -407,12 +407,12 @@ void ScriptNotificationDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -424,9 +424,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFCFDC;
+  this->fields.invoke_impl = (intptr_t)sub_2010018;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1FFCF9C;
+  this->fields.extra_arg = (intptr_t)sub_200FFD8;
 }
 
 
@@ -436,9 +436,9 @@ System_IAsyncResult_o *ScriptNotificationDialog_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -447,7 +447,7 @@ void ScriptNotificationDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

@@ -12,14 +12,14 @@ void WarBoardAPITurnEndRequestTask__SetRequest(WarBoardAPITurnEndRequestTask_o *
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5936229 & 1) == 0 )
+  if ( (byte_596E383 & 1) == 0 )
   {
-    sub_21FFC50(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_5936229 = 1;
+    sub_2213A60(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_596E383 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -27,14 +27,14 @@ void WarBoardAPITurnEndRequestTask__SetRequest(WarBoardAPITurnEndRequestTask_o *
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v5);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_38BE6B0 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+               (const MethodInfo_38F1B78 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
   if ( !monitor
     || (v7 = (WarBoardTurnEndRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0), !v7) )
   {
 LABEL_9:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   WarBoardTurnEndRequest__beginRequest(v7, (int32_t)Instance, monitor, 0);
   this->fields.request = (struct RequestBase_o *)v7;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.request, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }

@@ -24,29 +24,29 @@ void ChangeBgmBuffDeleteProcess__Exec(
   const MethodInfo *v17; // x2
   __int64 v18; // x0
 
-  if ( (byte_593B32F & 1) == 0 )
+  if ( (byte_597351E & 1) == 0 )
   {
-    sub_21FFC50(&BattleBuffData_BuffData___TypeInfo);
-    byte_593B32F = 1;
+    sub_2213A60(&BattleBuffData_BuffData___TypeInfo);
+    byte_597351E = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_21FFD10(BattleBuffData_BuffData___TypeInfo, 1);
+  v7 = (BattleFieldEnvironmentData_o *)sub_2213B20(BattleBuffData_BuffData___TypeInfo, 1);
   if ( !v7 )
     goto LABEL_10;
   v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_21FFDA4(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_2213BB4(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v18 = sub_21FFEF0(0, v16);
-      sub_21FFD90(v18, 0);
+      v18 = sub_2213D00(0, v16);
+      sub_2213BA0(v18, 0);
     }
   }
   if ( !LODWORD(v15->fields._Data_k__BackingField) )
-    sub_21FFED4(v7);
+    sub_2213CE4(v7);
   v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v15->fields._Perf_k__BackingField,
     (int32_t)buff,
     v9,
@@ -63,7 +63,7 @@ void ChangeBgmBuffDeleteProcess__Exec(
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0) )
   {
 LABEL_10:
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

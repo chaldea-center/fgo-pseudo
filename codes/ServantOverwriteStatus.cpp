@@ -17,26 +17,26 @@ void ServantOverwriteStatus___ctor(
   const MethodInfo *v17; // x7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
-  if ( (byte_593397B & 1) == 0 )
+  if ( (byte_596BB1A & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593397B = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596BB1A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !userServantEntity )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   v10 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
   v11 = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8, v9);
   *(_QWORD *)&v18.fields.currentCryptoKey = v10;
   *(_QWORD *)&v18.fields.fakeValue = v11;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v18, 0);
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.limitCount, 0);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v18, 0);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.limitCount, 0);
   ServantOverwriteStatus__Set(this, v12, v13, userServantEntity->fields.hp, userServantEntity->fields.atk, v14);
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.svtId, 0);
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.limitCount, 0);
-  ServantOverwriteStatus__Overwrite_40385972(
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.svtId, 0);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.limitCount, 0);
+  ServantOverwriteStatus__Overwrite_40470648(
     this,
     v15,
     v16,
@@ -48,7 +48,7 @@ void ServantOverwriteStatus___ctor(
 }
 
 
-void ServantOverwriteStatus___ctor_40386416(
+void ServantOverwriteStatus___ctor_40471092(
         ServantOverwriteStatus_o *this,
         UserServantEntity_o *userServantEntity,
         int32_t svtId,
@@ -77,15 +77,15 @@ void ServantOverwriteStatus___ctor_40386416(
   const MethodInfo *v28; // x7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
 
-  if ( (byte_593397C & 1) == 0 )
+  if ( (byte_596BB1B & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantExpMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593397C = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantExpMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596BB1B = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !userServantEntity )
@@ -96,23 +96,23 @@ void ServantOverwriteStatus___ctor_40386416(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10, v11);
   *(_QWORD *)&v29.fields.currentCryptoKey = v12;
   *(_QWORD *)&v29.fields.fakeValue = v13;
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v29, 0);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v29, 0);
   ServantOverwriteStatus__Set(this, svtId, v14, userServantEntity->fields.hp, userServantEntity->fields.atk, v15);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v16, v17);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object
     || (Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                    svtId,
-                   (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
-        v19 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___),
-        Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(
+                   (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+        v19 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___),
+        Master_object = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                   userServantEntity->fields.limitCount,
                                   0),
         !v19)
     || (v20 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)v19, svtId, (int32_t)Master_object, 0),
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantExpMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantExpMaster___),
         !Entity)
     || !Master_object
     || (Master_object = ServantExpMaster__GetEntity(
@@ -124,7 +124,7 @@ void ServantOverwriteStatus___ctor_40386416(
     || (v21 = Master_object) == 0 )
   {
 LABEL_15:
-    sub_21FFECC(Master_object, v10);
+    sub_2213CDC(Master_object, v10);
   }
   v22 = CombineUtility__CalculateHp(
           v20->fields.hpBase,
@@ -138,8 +138,8 @@ LABEL_15:
   adjustAtk = userServantEntity->fields.adjustAtk;
   this->fields._Hp_k__BackingField = v22;
   this->fields._Atk_k__BackingField = CombineUtility__CalculateAtk(atkBase, atkMax, v25, adjustAtk, 0);
-  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userServantEntity->fields.limitCount, 0);
-  ServantOverwriteStatus__Overwrite_40385972(
+  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userServantEntity->fields.limitCount, 0);
+  ServantOverwriteStatus__Overwrite_40470648(
     this,
     svtId,
     v27,
@@ -151,7 +151,7 @@ LABEL_15:
 }
 
 
-void ServantOverwriteStatus___ctor_40386940(
+void ServantOverwriteStatus___ctor_40471616(
         ServantOverwriteStatus_o *this,
         ServantLeaderInfo_o *servantLeaderInfo,
         int32_t stageLimitCount,
@@ -168,21 +168,21 @@ void ServantOverwriteStatus___ctor_40386940(
   const MethodInfo *v15; // x4
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_593397D & 1) == 0 )
+  if ( (byte_596BB1C & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593397D = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596BB1C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !servantLeaderInfo )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   v10 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.currentCryptoKey;
   v11 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8, v9);
   *(_QWORD *)&v16.fields.currentCryptoKey = v10;
   *(_QWORD *)&v16.fields.fakeValue = v11;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v16, 0);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v16, 0);
   ServantOverwriteStatus__Set(
     this,
     v12,
@@ -190,12 +190,12 @@ void ServantOverwriteStatus___ctor_40386940(
     servantLeaderInfo->fields.hp,
     servantLeaderInfo->fields.atk,
     v13);
-  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(servantLeaderInfo->fields.svtId, 0);
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(servantLeaderInfo->fields.svtId, 0);
   ServantOverwriteStatus__Overwrite(this, v14, servantLeaderInfo->fields.limitCount, stageLimitCount, v15);
 }
 
 
-void ServantOverwriteStatus___ctor_40387480(
+void ServantOverwriteStatus___ctor_40472156(
         ServantOverwriteStatus_o *this,
         ServantLeaderInfo_o *servantLeaderInfo,
         int32_t svtId,
@@ -210,7 +210,7 @@ void ServantOverwriteStatus___ctor_40387480(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !servantLeaderInfo || (afterTransformSvtInfo = servantLeaderInfo->fields.afterTransformSvtInfo) == 0 )
-    sub_21FFECC(v9, v10);
+    sub_2213CDC(v9, v10);
   ServantOverwriteStatus__Set(
     this,
     svtId,
@@ -222,7 +222,7 @@ void ServantOverwriteStatus___ctor_40387480(
 }
 
 
-void ServantOverwriteStatus___ctor_40387584(
+void ServantOverwriteStatus___ctor_40472260(
         ServantOverwriteStatus_o *this,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
         int32_t stageLimitCount,
@@ -242,16 +242,16 @@ void ServantOverwriteStatus___ctor_40387584(
   int32_t hp[2]; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_593397E & 1) == 0 )
+  if ( (byte_596BB1D & 1) == 0 )
   {
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_593397E = 1;
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_596BB1D = 1;
   }
   *(_QWORD *)hp = 0;
   atk = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !userSvtCollectionEntity )
-    sub_21FFECC(v7, v8);
+    sub_2213CDC(v7, v8);
   UserServantCollectionEntity__getCollectionStatus(userSvtCollectionEntity, &hp[1], hp, &atk, 0);
   v11 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.currentCryptoKey;
   v12 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.fakeValue;
@@ -259,10 +259,10 @@ void ServantOverwriteStatus___ctor_40387584(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9, v10);
   *(_QWORD *)&v19.fields.currentCryptoKey = v11;
   *(_QWORD *)&v19.fields.fakeValue = v12;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(v19, 0);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v19, 0);
   ServantOverwriteStatus__Set(this, v13, userSvtCollectionEntity->fields.maxLimitCount, hp[0], atk, v14);
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55792412(userSvtCollectionEntity->fields.svtId, 0);
-  ServantOverwriteStatus__Overwrite_40385972(
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(userSvtCollectionEntity->fields.svtId, 0);
+  ServantOverwriteStatus__Overwrite_40470648(
     this,
     v15,
     userSvtCollectionEntity->fields.maxLimitCount,
@@ -274,7 +274,7 @@ void ServantOverwriteStatus___ctor_40387584(
 }
 
 
-void ServantOverwriteStatus___ctor_40387824(
+void ServantOverwriteStatus___ctor_40472500(
         ServantOverwriteStatus_o *this,
         UserServantCollectionEntity_o *userSvtCollectionEntity,
         int32_t svtId,
@@ -286,27 +286,28 @@ void ServantOverwriteStatus___ctor_40387824(
   const MethodInfo *v11; // x5
   const MethodInfo *v12; // x7
   int32_t atk; // [xsp+Ch] [xbp-34h] BYREF
-  int32_t hp[2]; // [xsp+18h] [xbp-28h] BYREF
+  int32_t hp; // [xsp+18h] [xbp-28h] BYREF
+  int32_t lv; // [xsp+1Ch] [xbp-24h] BYREF
 
   atk = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !userSvtCollectionEntity )
-    sub_21FFECC(v9, v10);
-  UserServantCollectionEntity__getCollectionStatus_50084788(userSvtCollectionEntity, svtId, &hp[1], hp, &atk, 0);
-  ServantOverwriteStatus__Set(this, svtId, userSvtCollectionEntity->fields.maxLimitCount, hp[0], atk, v11);
-  ServantOverwriteStatus__Overwrite_40385972(
+    sub_2213CDC(v9, v10);
+  UserServantCollectionEntity__getCollectionStatus_50148372(userSvtCollectionEntity, svtId, &lv, &hp, &atk, 0);
+  ServantOverwriteStatus__Set(this, svtId, userSvtCollectionEntity->fields.maxLimitCount, hp, atk, v11);
+  ServantOverwriteStatus__Overwrite_40470648(
     this,
     svtId,
     userSvtCollectionEntity->fields.maxLimitCount,
     stageLimitCount,
-    hp[1],
+    lv,
     0,
     0,
     v12);
 }
 
 
-void ServantOverwriteStatus___ctor_40387980(
+void ServantOverwriteStatus___ctor_40472656(
         ServantOverwriteStatus_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -332,7 +333,7 @@ void ServantOverwriteStatus__ApplyGrandServantEffect(
   int32_t Atk_k__BackingField; // w22
 
   if ( !grandInfo )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   Hp_k__BackingField = this->fields._Hp_k__BackingField;
   AddedHp = UserServantGrandInfo__get_AddedHp(grandInfo, 0);
   Atk_k__BackingField = this->fields._Atk_k__BackingField;
@@ -354,28 +355,28 @@ bool ServantOverwriteStatus__Equals(
   int32_t Hp_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_5933984 & 1) == 0 )
+  if ( (byte_596BB23 & 1) == 0 )
   {
-    this = (ServantOverwriteStatus_o *)sub_21FFC50(&Method_System_Linq_Enumerable_SequenceEqual_int___);
-    byte_5933984 = 1;
+    this = (ServantOverwriteStatus_o *)sub_2213A60(&Method_System_Linq_Enumerable_SequenceEqual_int___);
+    byte_596BB23 = 1;
   }
   Hp_k__BackingField = v4->fields._Hp_k__BackingField;
   if ( !targetStatus )
-    sub_21FFECC(this, targetStatus);
-  v8 = System_Int32__Equals_76925180((int32_t)&Hp_k__BackingField, targetStatus->fields._Hp_k__BackingField, 0)
+    sub_2213CDC(this, targetStatus);
+  v8 = System_Int32__Equals_77138484((int32_t)&Hp_k__BackingField, targetStatus->fields._Hp_k__BackingField, 0)
     && (Atk_k__BackingField = targetStatus->fields._Atk_k__BackingField,
         Hp_k__BackingField = v4->fields._Atk_k__BackingField,
-        System_Int32__Equals_76925180((int32_t)&Hp_k__BackingField, Atk_k__BackingField, 0))
+        System_Int32__Equals_77138484((int32_t)&Hp_k__BackingField, Atk_k__BackingField, 0))
     && (Cost_k__BackingField = targetStatus->fields._Cost_k__BackingField,
         Hp_k__BackingField = v4->fields._Cost_k__BackingField,
-        System_Int32__Equals_76925180((int32_t)&Hp_k__BackingField, Cost_k__BackingField, 0))
+        System_Int32__Equals_77138484((int32_t)&Hp_k__BackingField, Cost_k__BackingField, 0))
     && (Rarity_k__BackingField = targetStatus->fields._Rarity_k__BackingField,
         Hp_k__BackingField = v4->fields._Rarity_k__BackingField,
-        System_Int32__Equals_76925180((int32_t)&Hp_k__BackingField, Rarity_k__BackingField, 0))
+        System_Int32__Equals_77138484((int32_t)&Hp_k__BackingField, Rarity_k__BackingField, 0))
     && System_Linq_Enumerable__SequenceEqual_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields._ClassPassive_k__BackingField,
          (System_Collections_Generic_IEnumerable_TSource__o *)targetStatus->fields._ClassPassive_k__BackingField,
-         (const MethodInfo_3860F84 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+         (const MethodInfo_389444C *)Method_System_Linq_Enumerable_SequenceEqual_int___);
   return v8;
 }
 
@@ -386,7 +387,7 @@ bool ServantOverwriteStatus__IsEqualForSort(
         const MethodInfo *method)
 {
   if ( !target )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return this->fields._Hp_k__BackingField == target->fields._Hp_k__BackingField
       && this->fields._Atk_k__BackingField == target->fields._Atk_k__BackingField
       && this->fields._Rarity_k__BackingField == target->fields._Rarity_k__BackingField
@@ -414,20 +415,20 @@ void ServantOverwriteStatus__Overwrite(
   const MethodInfo *v18; // x3
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5933980 & 1) == 0 )
+  if ( (byte_596BB1F & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    byte_5933980 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    byte_596BB1F = 1;
   }
   v9 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v9 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&svtId, *(_QWORD *)&limitCount);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   if ( !Master_object )
     goto LABEL_13;
   if ( !ServantLimitAddMaster__TryGetEntity(
@@ -439,16 +440,16 @@ void ServantOverwriteStatus__Overwrite(
     return;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v12, v13);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object
     || (v14 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                 svtId,
-                (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
-        (Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___)) == 0) )
+                (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___)) == 0) )
   {
 LABEL_13:
-    sub_21FFECC(Master_object, v11);
+    sub_2213CDC(Master_object, v11);
   }
   v15 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Master_object, svtId, limitCount, 0);
   ServantOverwriteStatus__OverwriteRarity(this, v15, entity, v16);
@@ -476,11 +477,11 @@ void ServantOverwriteStatus__OverwriteAtk(
   int32_t OverwriteAtkBase; // w22
 
   v12 = this;
-  if ( (byte_5933983 & 1) == 0 )
+  if ( (byte_596BB22 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantExpMaster___);
-    this = (ServantOverwriteStatus_o *)sub_21FFC50(&DataManager_TypeInfo);
-    byte_5933983 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantExpMaster___);
+    this = (ServantOverwriteStatus_o *)sub_2213A60(&DataManager_TypeInfo);
+    byte_596BB22 = 1;
   }
   if ( !servantLimitAddEntity )
     goto LABEL_15;
@@ -508,7 +509,7 @@ void ServantOverwriteStatus__OverwriteAtk(
           OverwriteAtkBase = ServantLimitAddEntity__GetOverwriteAtkBase(servantLimitAddEntity, atkBase, 0);
           if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v17, v18);
-          this = (ServantOverwriteStatus_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantExpMaster___);
+          this = (ServantOverwriteStatus_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantExpMaster___);
           if ( this )
           {
             this = (ServantOverwriteStatus_o *)ServantExpMaster__GetEntity((ServantExpMaster_o *)this, v13, level, 0);
@@ -526,7 +527,7 @@ void ServantOverwriteStatus__OverwriteAtk(
         }
       }
 LABEL_15:
-      sub_21FFECC(this, servantEntity);
+      sub_2213CDC(this, servantEntity);
     }
   }
 }
@@ -547,13 +548,13 @@ void ServantOverwriteStatus__OverwriteClassPassive(
   bool v11; // w7
 
   if ( !servantEntity || !servantLimitAddEntity )
-    sub_21FFECC(this, servantEntity);
+    sub_2213CDC(this, servantEntity);
   OverwriteClassPassive = ServantLimitAddEntity__GetOverwriteClassPassive(
                             servantLimitAddEntity,
                             servantEntity->fields.classPassive,
                             0);
   this->fields._ClassPassive_k__BackingField = OverwriteClassPassive;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassPassive_k__BackingField,
     (int32_t)OverwriteClassPassive,
     v6,
@@ -572,7 +573,7 @@ void ServantOverwriteStatus__OverwriteCost(
         const MethodInfo *method)
 {
   if ( !servantEntity || !servantLimitAddEntity )
-    sub_21FFECC(this, servantEntity);
+    sub_2213CDC(this, servantEntity);
   this->fields._Cost_k__BackingField = ServantLimitAddEntity__GetOverwriteCost(
                                          servantLimitAddEntity,
                                          servantEntity->fields.cost,
@@ -599,11 +600,11 @@ void ServantOverwriteStatus__OverwriteHp(
   int32_t OverwriteHpBase; // w22
 
   v12 = this;
-  if ( (byte_5933982 & 1) == 0 )
+  if ( (byte_596BB21 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantExpMaster___);
-    this = (ServantOverwriteStatus_o *)sub_21FFC50(&DataManager_TypeInfo);
-    byte_5933982 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantExpMaster___);
+    this = (ServantOverwriteStatus_o *)sub_2213A60(&DataManager_TypeInfo);
+    byte_596BB21 = 1;
   }
   if ( !servantLimitAddEntity )
     goto LABEL_15;
@@ -631,7 +632,7 @@ void ServantOverwriteStatus__OverwriteHp(
           OverwriteHpBase = ServantLimitAddEntity__GetOverwriteHpBase(servantLimitAddEntity, hpBase, 0);
           if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v17, v18);
-          this = (ServantOverwriteStatus_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantExpMaster___);
+          this = (ServantOverwriteStatus_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantExpMaster___);
           if ( this )
           {
             this = (ServantOverwriteStatus_o *)ServantExpMaster__GetEntity((ServantExpMaster_o *)this, v13, level, 0);
@@ -649,7 +650,7 @@ void ServantOverwriteStatus__OverwriteHp(
         }
       }
 LABEL_15:
-      sub_21FFECC(this, servantEntity);
+      sub_2213CDC(this, servantEntity);
     }
   }
 }
@@ -662,7 +663,7 @@ void ServantOverwriteStatus__OverwriteRarity(
         const MethodInfo *method)
 {
   if ( !servantLimitEntity || !servantLimitAddEntity )
-    sub_21FFECC(this, servantLimitEntity);
+    sub_2213CDC(this, servantLimitEntity);
   this->fields._Rarity_k__BackingField = ServantLimitAddEntity__GetOverwriteRarity(
                                            servantLimitAddEntity,
                                            servantLimitEntity->fields.rarity,
@@ -671,7 +672,7 @@ void ServantOverwriteStatus__OverwriteRarity(
 
 
 // local variable allocation has failed, the output may be wrong!
-void ServantOverwriteStatus__Overwrite_40385972(
+void ServantOverwriteStatus__Overwrite_40470648(
         ServantOverwriteStatus_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -695,20 +696,20 @@ void ServantOverwriteStatus__Overwrite_40385972(
   const MethodInfo *v26; // x3
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_5933981 & 1) == 0 )
+  if ( (byte_596BB20 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    byte_5933981 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    byte_596BB20 = 1;
   }
   v15 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   entity = 0;
   if ( !v15 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&svtId, *(_QWORD *)&limitCount);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   if ( !Master_object )
     goto LABEL_13;
   if ( !ServantLimitAddMaster__TryGetEntity(
@@ -720,16 +721,16 @@ void ServantOverwriteStatus__Overwrite_40385972(
     return;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v18, v19);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object
     || (v20 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                 svtId,
-                (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
-        (Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___)) == 0) )
+                (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___)) == 0) )
   {
 LABEL_13:
-    sub_21FFECC(Master_object, v17);
+    sub_2213CDC(Master_object, v17);
   }
   v21 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Master_object, svtId, limitCount, 0);
   ServantOverwriteStatus__OverwriteHp(this, (ServantEntity_o *)v20, v21, entity, level, adjustHp, v22);
@@ -762,24 +763,24 @@ void ServantOverwriteStatus__Set(
   struct System_Int32_array *monitor; // x1
   int32_t v22; // w8
 
-  if ( (byte_593397F & 1) == 0 )
+  if ( (byte_596BB1E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    byte_593397F = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    byte_596BB1E = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&svtId, *(_QWORD *)&limitCount);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_10;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              svtId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitMaster___);
   if ( !Master_object
     || (Master_object = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Master_object, svtId, limitCount, 0),
         this->fields._Hp_k__BackingField = hp,
@@ -791,13 +792,13 @@ void ServantOverwriteStatus__Set(
         !Entity) )
   {
 LABEL_10:
-    sub_21FFECC(Master_object, v12);
+    sub_2213CDC(Master_object, v12);
   }
   monitor = (struct System_Int32_array *)Entity[10].monitor;
   v22 = (int32_t)Entity[9].monitor;
   this->fields._ClassPassive_k__BackingField = monitor;
   this->fields._Cost_k__BackingField = v22;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassPassive_k__BackingField,
     (int32_t)monitor,
     v14,
@@ -869,7 +870,7 @@ void ServantOverwriteStatus__set_ClassPassive(
   bool v7; // w7
 
   this->fields._ClassPassive_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ClassPassive_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

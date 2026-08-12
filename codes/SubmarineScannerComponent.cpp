@@ -14,27 +14,27 @@ void SubmarineScannerComponent___cctor(const MethodInfo *method)
   struct System_Int32_array *v12; // x1
   struct SubmarineScannerComponent_StaticFields *v13; // x0
 
-  if ( (byte_5934DE5 & 1) == 0 )
+  if ( (byte_596CF14 & 1) == 0 )
   {
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&SubmarineScannerComponent_TypeInfo);
-    byte_5934DE5 = 1;
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&SubmarineScannerComponent_TypeInfo);
+    byte_596CF14 = 1;
   }
   v1 = int___TypeInfo;
   static_fields = SubmarineScannerComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEFAULT_JUMP_DURATION = 0x3F0000003F800000LL;
   static_fields->DEFAULT_SELECTED_PANEL_EFFECT_FINISH_TIME = 1.5;
-  v3 = sub_21FFD10(v1, 2);
+  v3 = sub_2213B20(v1, 2);
   if ( !v3 )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   v11 = *(_DWORD *)(v3 + 24);
   v12 = (struct System_Int32_array *)v3;
   if ( !v11 || (*(_DWORD *)(v3 + 32) = 246, v11 == 1) )
-    sub_21FFED4(v3);
+    sub_2213CE4(v3);
   v13 = SubmarineScannerComponent_TypeInfo->static_fields;
   v12->m_Items[1] = 492;
   v13->ANIM_CHANGE_DIST_BORDERS = v12;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v13->ANIM_CHANGE_DIST_BORDERS, (int32_t)v12, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->ANIM_CHANGE_DIST_BORDERS, (int32_t)v12, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -64,10 +64,10 @@ int32_t SubmarineScannerComponent__GetDistIndex(
   struct System_Int32_array *v10; // x8
   int *v11; // x8
 
-  if ( (byte_5934DDF & 1) == 0 )
+  if ( (byte_596CF0E & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineScannerComponent_TypeInfo);
-    byte_5934DDF = 1;
+    sub_2213A60(&SubmarineScannerComponent_TypeInfo);
+    byte_596CF0E = 1;
   }
   v5 = SubmarineScannerComponent_TypeInfo;
   if ( !*(&SubmarineScannerComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -78,7 +78,7 @@ int32_t SubmarineScannerComponent__GetDistIndex(
   ANIM_CHANGE_DIST_BORDERS = v5->static_fields->ANIM_CHANGE_DIST_BORDERS;
   if ( !ANIM_CHANGE_DIST_BORDERS )
 LABEL_16:
-    sub_21FFECC(v5, method);
+    sub_2213CDC(v5, method);
   max_length = ANIM_CHANGE_DIST_BORDERS->max_length;
   v8 = max_length + 2;
   v9 = (unsigned int)max_length - 1LL;
@@ -93,7 +93,7 @@ LABEL_16:
     if ( !v10 )
       goto LABEL_16;
     if ( (unsigned int)(v8 - 3) >= LODWORD(v10->max_length) )
-      sub_21FFED4(v5);
+      sub_2213CE4(v5);
     v11 = (int *)((char *)v10 + 4 * (unsigned int)v9);
     --v8;
     --v9;
@@ -121,10 +121,10 @@ float SubmarineScannerComponent__GetEventTimeByFunctionName(
   UnityEngine_AnimationEvent_o *v15; // x21
   System_String_o *functionName; // x0
 
-  if ( (byte_5934DE4 & 1) == 0 )
+  if ( (byte_596CF13 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934DE4 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CF13 = 1;
   }
   state = this->fields.state;
   if ( state )
@@ -142,7 +142,7 @@ float SubmarineScannerComponent__GetEventTimeByFunctionName(
     || (events = (UnityEngine_AnimationClip_o *)UnityEngine_AnimationClip__get_events(events, 0)) == 0 )
   {
 LABEL_20:
-    sub_21FFECC(events, v10);
+    sub_2213CDC(events, v10);
   }
   v12 = *(_DWORD *)&events->fields._isAnimatorMotion_k__BackingField;
   v13 = events;
@@ -152,7 +152,7 @@ LABEL_20:
   while ( 1 )
   {
     if ( (unsigned int)v14 >= v12 )
-      sub_21FFED4(events);
+      sub_2213CE4(events);
     v15 = (UnityEngine_AnimationEvent_o *)*((_QWORD *)&v13[1].klass + v14);
     if ( !v15 )
       goto LABEL_20;
@@ -179,19 +179,19 @@ float SubmarineScannerComponent__GetJumpDuration(SubmarineScannerComponent_o *th
   float result; // s0
   SubmarineScannerComponent_c *v9; // x0
 
-  if ( (byte_5934DE0 & 1) == 0 )
+  if ( (byte_596CF0F & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineScannerComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_10306/*"OnJumpEnd"*/);
-    sub_21FFC50(&StringLiteral_10307/*"OnJumpStart"*/);
-    byte_5934DE0 = 1;
+    sub_2213A60(&SubmarineScannerComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_10319/*"OnJumpEnd"*/);
+    sub_2213A60(&StringLiteral_10320/*"OnJumpStart"*/);
+    byte_596CF0F = 1;
   }
   EventTimeByFunctionName = SubmarineScannerComponent__GetEventTimeByFunctionName(
                               this,
-                              (System_String_o *)StringLiteral_10307/*"OnJumpStart"*/,
+                              (System_String_o *)StringLiteral_10320/*"OnJumpStart"*/,
                               0.0,
                               v2);
-  result = SubmarineScannerComponent__GetEventTimeByFunctionName(this, (System_String_o *)StringLiteral_10306/*"OnJumpEnd"*/, 0.0, v5)
+  result = SubmarineScannerComponent__GetEventTimeByFunctionName(this, (System_String_o *)StringLiteral_10319/*"OnJumpEnd"*/, 0.0, v5)
          - EventTimeByFunctionName;
   if ( result <= 0.0 )
   {
@@ -212,11 +212,11 @@ float SubmarineScannerComponent__GetJumpStartTime(SubmarineScannerComponent_o *t
   const MethodInfo *v2; // x2
   SubmarineScannerComponent_c *v4; // x0
 
-  if ( (byte_5934DE1 & 1) == 0 )
+  if ( (byte_596CF10 & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineScannerComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_10307/*"OnJumpStart"*/);
-    byte_5934DE1 = 1;
+    sub_2213A60(&SubmarineScannerComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_10320/*"OnJumpStart"*/);
+    byte_596CF10 = 1;
   }
   v4 = SubmarineScannerComponent_TypeInfo;
   if ( !*(&SubmarineScannerComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -226,7 +226,7 @@ float SubmarineScannerComponent__GetJumpStartTime(SubmarineScannerComponent_o *t
   }
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_10307/*"OnJumpStart"*/,
+           (System_String_o *)StringLiteral_10320/*"OnJumpStart"*/,
            v4->static_fields->DEFAULT_JUMP_START_TIME,
            v2);
 }
@@ -239,11 +239,11 @@ float SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(
   const MethodInfo *v2; // x2
   SubmarineScannerComponent_c *v4; // x0
 
-  if ( (byte_5934DE2 & 1) == 0 )
+  if ( (byte_596CF11 & 1) == 0 )
   {
-    sub_21FFC50(&SubmarineScannerComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_7000/*"FinishEffectSelectedPanel"*/);
-    byte_5934DE2 = 1;
+    sub_2213A60(&SubmarineScannerComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_7012/*"FinishEffectSelectedPanel"*/);
+    byte_596CF11 = 1;
   }
   v4 = SubmarineScannerComponent_TypeInfo;
   if ( !*(&SubmarineScannerComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -253,7 +253,7 @@ float SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(
   }
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_7000/*"FinishEffectSelectedPanel"*/,
+           (System_String_o *)StringLiteral_7012/*"FinishEffectSelectedPanel"*/,
            v4->static_fields->DEFAULT_SELECTED_PANEL_EFFECT_FINISH_TIME,
            v2);
 }
@@ -270,11 +270,11 @@ float SubmarineScannerComponent__GetTimeToStartOpenPanel(SubmarineScannerCompone
   float length; // s0
   const MethodInfo *v11; // x2
 
-  if ( (byte_5934DE3 & 1) == 0 )
+  if ( (byte_596CF12 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_13578/*"StartOpenPanel"*/);
-    byte_5934DE3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_13605/*"StartOpenPanel"*/);
+    byte_596CF12 = 1;
   }
   state = this->fields.state;
   if ( state )
@@ -288,11 +288,11 @@ float SubmarineScannerComponent__GetTimeToStartOpenPanel(SubmarineScannerCompone
     return 0.0;
   v9 = this->fields.state;
   if ( !v9 || (v6 = v9->fields.clip) == 0 )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   length = UnityEngine_AnimationClip__get_length(v6, 0);
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_13578/*"StartOpenPanel"*/,
+           (System_String_o *)StringLiteral_13605/*"StartOpenPanel"*/,
            length,
            v11);
 }
@@ -363,17 +363,17 @@ void SubmarineScannerComponent__PrepareAnimation(
   struct SimpleAnimation_EditorState_o *data; // x1
   struct SimpleAnimation_EditorState_o **p_state; // x19
 
-  if ( (byte_5934DDE & 1) == 0 )
+  if ( (byte_596CF0D & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo);
-    sub_21FFC50(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_21FFC50(&StringLiteral_5482/*"DistIndex"*/);
-    sub_21FFC50(&StringLiteral_13116/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/);
-    byte_5934DDE = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo);
+    sub_2213A60(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_2213A60(&StringLiteral_5494/*"DistIndex"*/);
+    sub_2213A60(&StringLiteral_13143/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/);
+    byte_596CF0D = 1;
   }
   AnimationComponent = (System_Text_RegularExpressions_Group_o *)SubmarineScannerComponent__get_AnimationComponent(
                                                                    this,
@@ -385,13 +385,13 @@ void SubmarineScannerComponent__PrepareAnimation(
     goto LABEL_29;
   if ( !klass->_1.namespaze )
     return;
-  v8 = (System_Text_RegularExpressions_Regex_o *)sub_21FFEBC(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_81846528(v8, (System_String_o *)StringLiteral_13116/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/, 0);
+  v8 = (System_Text_RegularExpressions_Regex_o *)sub_2213CCC(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_82059832(v8, (System_String_o *)StringLiteral_13143/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/, 0);
   DistIndex = SubmarineScannerComponent__GetDistIndex(v9, dist, v10);
-  v12 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_SimpleAnimation_EditorState___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_SimpleAnimation_EditorState___ctor__);
   namespaze = (int)klass->_1.namespaze;
   if ( namespaze >= 1 )
   {
@@ -403,7 +403,7 @@ void SubmarineScannerComponent__PrepareAnimation(
         goto LABEL_29;
       if ( !v8 )
         goto LABEL_29;
-      AnimationComponent = (System_Text_RegularExpressions_Group_o *)System_Text_RegularExpressions_Regex__Match_81842168(
+      AnimationComponent = (System_Text_RegularExpressions_Group_o *)System_Text_RegularExpressions_Regex__Match_82055472(
                                                                        v8,
                                                                        *(System_String_o **)(v21 + 24),
                                                                        0);
@@ -420,9 +420,9 @@ void SubmarineScannerComponent__PrepareAnimation(
                                                                          v22->klass[1]._1.namespaze);
         if ( !AnimationComponent )
           goto LABEL_29;
-        AnimationComponent = System_Text_RegularExpressions_GroupCollection__get_Item_81825376(
+        AnimationComponent = System_Text_RegularExpressions_GroupCollection__get_Item_82038680(
                                (System_Text_RegularExpressions_GroupCollection_o *)AnimationComponent,
-                               (System_String_o *)StringLiteral_5482/*"DistIndex"*/,
+                               (System_String_o *)StringLiteral_5494/*"DistIndex"*/,
                                0);
         if ( !AnimationComponent )
           goto LABEL_29;
@@ -445,14 +445,14 @@ void SubmarineScannerComponent__PrepareAnimation(
             System_Collections_Generic_List_object___AddWithResize(
               v12,
               (Il2CppObject *)v21,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
           }
           else
           {
             v27 = &items->obj.klass + size;
             v12->fields._size = size + 1;
             v27[4] = (Il2CppClass *)v21;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v27 + 4), v21, v13, v14, v15, v16, v17, v18);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 4), v21, v13, v14, v15, v16, v17, v18);
           }
         }
       }
@@ -461,12 +461,12 @@ void SubmarineScannerComponent__PrepareAnimation(
         goto LABEL_22;
     }
 LABEL_30:
-    sub_21FFED4(AnimationComponent);
+    sub_2213CE4(AnimationComponent);
   }
 LABEL_22:
   if ( !v12 )
 LABEL_29:
-    sub_21FFECC(AnimationComponent, v6);
+    sub_2213CDC(AnimationComponent, v6);
   v28 = v12->fields._size;
   if ( v28 <= 0 )
   {
@@ -478,16 +478,16 @@ LABEL_29:
   }
   else
   {
-    v29 = UnityEngine_Random__Range_83187376(0, v28, 0);
+    v29 = UnityEngine_Random__Range_83400680(0, v28, 0);
     Item = System_Collections_Generic_List_object___get_Item(
              v12,
              v29,
-             (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Item__);
+             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Item__);
     LODWORD(data) = (_DWORD)Item;
     this->fields.state = (struct SimpleAnimation_EditorState_o *)Item;
     p_state = &this->fields.state;
   }
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_state, (int32_t)data, v13, v14, v15, v16, v17, v18);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p_state, (int32_t)data, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -516,10 +516,10 @@ System_String_o *SubmarineScannerComponent__get_AnimName(SubmarineScannerCompone
   struct SimpleAnimation_EditorState_o *state; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_5934DDD & 1) == 0 )
+  if ( (byte_596CF0C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5934DDD = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596CF0C = 1;
   }
   state = this->fields.state;
   if ( state )
@@ -544,11 +544,11 @@ SimpleAnimation_o *SubmarineScannerComponent__get_AnimationComponent(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5934DDC & 1) == 0 )
+  if ( (byte_596CF0B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5934DDC = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596CF0B = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -557,9 +557,9 @@ SimpleAnimation_o *SubmarineScannerComponent__get_AnimationComponent(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mAnimation,
       (int32_t)Component_object,
       v6,

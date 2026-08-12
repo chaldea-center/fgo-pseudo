@@ -14,10 +14,10 @@ void ServantStatusCharaGraphListViewItem___ctor(
   bool v13; // w7
 
   v7 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = limitCountStage;
 }
 
@@ -47,7 +47,7 @@ bool ServantStatusCharaGraphListViewItem__get_IsSealed(
       }
     }
 LABEL_7:
-    sub_21FFECC(mainInfo, method);
+    sub_2213CDC(mainInfo, method);
   }
   return 0;
 }
@@ -92,7 +92,7 @@ int32_t ServantStatusCharaGraphListViewItem__get_LimitCountStageSealAfterIndexZe
         !this->fields.mainInfo) )
   {
 LABEL_8:
-    sub_21FFECC(mainInfo, method);
+    sub_2213CDC(mainInfo, method);
   }
   v4 = (int)mainInfo;
   LimitCount = ServantStatusListViewItem__get_LimitCount(this->fields.mainInfo, 0);

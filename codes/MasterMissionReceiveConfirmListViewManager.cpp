@@ -1,9 +1,9 @@
 void MasterMissionReceiveConfirmListViewManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_593C088 & 1) == 0 )
+  if ( (byte_5974385 & 1) == 0 )
   {
-    sub_21FFC50(&MasterMissionReceiveConfirmListViewManager_TypeInfo);
-    byte_593C088 = 1;
+    sub_2213A60(&MasterMissionReceiveConfirmListViewManager_TypeInfo);
+    byte_5974385 = 1;
   }
   MasterMissionReceiveConfirmListViewManager_TypeInfo->static_fields->LIST_BLANK = 5;
 }
@@ -24,24 +24,24 @@ void MasterMissionReceiveConfirmListViewManager___ctor(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( (byte_593C087 & 1) == 0 )
+  if ( (byte_5974384 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
-    byte_593C087 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
+    byte_5974384 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (unsigned __int8)byte_5931940;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (unsigned __int8)byte_5969AE0;
   this->fields.isInput = 1;
   if ( !v10 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -106,21 +106,21 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
   float width; // s8
   float height; // s0
   UnityEngine_Vector3_o v54; // [xsp+0h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593C084 & 1) == 0 )
+  if ( (byte_5974381 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewObject___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C084 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewObject___);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974381 = 1;
   }
   v54.fields.z = 0.0;
   *(_QWORD *)&v54.fields.x = 0;
@@ -135,7 +135,7 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
       goto LABEL_46;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)transform,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     transform = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -151,22 +151,22 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
       if ( !transform )
         goto LABEL_46;
-      v55.fields.x = -v11;
-      v55.fields.y = -v12;
-      v55.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v55, 0);
+      v56.fields.x = -v11;
+      v56.fields.y = -v12;
+      v56.fields.z = 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v56, 0);
       transform = this->fields.scrollView;
       if ( !transform )
         goto LABEL_46;
       UIScrollView__ResetPosition((UIScrollView_o *)transform, 0);
     }
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__o *)v13;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.objectList, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.objectList, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)&v54.fields.x = 0;
   v54.fields.z = 0.0;
   if ( !confirmItemList )
@@ -179,14 +179,14 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)confirmItemList,
                i,
-               (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Item__);
+               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MasterMissionListViewItem__get_Item__);
       prefabObject = (Il2CppObject *)this->fields.prefabObject;
       v25 = Item;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
       v26 = UnityEngine_Object__Instantiate_object_(
               prefabObject,
-              (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
       transform = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v26, 0, 0);
       if ( ((unsigned __int8)transform & 1) != 0 )
       {
@@ -194,7 +194,7 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
           goto LABEL_46;
         transform = UnityEngine_GameObject__GetComponent_object_(
                       (UnityEngine_GameObject_o *)v26,
-                      (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewObject___);
+                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveConfirmListViewObject___);
         if ( !v25 )
           goto LABEL_46;
         monitor = v25[7].monitor;
@@ -206,7 +206,7 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
         v35 = v25[12].monitor;
         v36 = monitor[21];
         *((_QWORD *)transform + 5) = v35;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)((char *)transform + 40),
           (int32_t)v35,
           v27,
@@ -233,14 +233,14 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)transform,
             (Il2CppObject *)v34,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
         }
         else
         {
           v48 = v45 + 8 * v47;
           *((_DWORD *)transform + 6) = v47 + 1;
           *(_QWORD *)(v48 + 32) = v34;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v48 + 32), (int32_t)v34, v39, v40, v41, v42, v43, v44);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v48 + 32), (int32_t)v34, v39, v40, v41, v42, v43, v44);
         }
       }
     }
@@ -255,7 +255,7 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
     {
       v51 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)transform,
-              (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v50);
       transform = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v51, 0, 0);
@@ -295,7 +295,7 @@ LABEL_45:
       }
     }
 LABEL_46:
-    sub_21FFECC(transform, v7);
+    sub_2213CDC(transform, v7);
   }
 }
 
@@ -315,15 +315,15 @@ void MasterMissionReceiveConfirmListViewManager__DestroyList(
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_593C083 & 1) == 0 )
+  if ( (byte_5974380 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__Clear__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C083 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__Clear__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974380 = 1;
   }
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   memset(&v12, 0, sizeof(v12));
@@ -332,26 +332,26 @@ void MasterMissionReceiveConfirmListViewManager__DestroyList(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     objectList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
   v12 = v11;
   v11.fields._list = 0;
   *(_QWORD *)&v11.fields._index = &v12;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v12,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__) )
   {
     if ( !v12.fields._current )
-      sub_21FFECC(0, v4);
+      sub_2213CDC(0, v4);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)v12.fields._current,
                                            0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v12,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
   v7 = this->fields.objectList;
   if ( !v7 )
     goto LABEL_20;
@@ -373,7 +373,7 @@ void MasterMissionReceiveConfirmListViewManager__DestroyList(
       return;
     }
 LABEL_20:
-    sub_21FFECC(objectList, method);
+    sub_2213CDC(objectList, method);
   }
 }
 
@@ -389,31 +389,31 @@ void MasterMissionReceiveConfirmListViewManager__RequestListObject(
   const MethodInfo *v7; // x2
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_593C086 & 1) == 0 )
+  if ( (byte_5974383 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__get_Count__);
-    byte_593C086 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__get_Count__);
+    byte_5974383 = 1;
   }
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   memset(&v8, 0, sizeof(v8));
   if ( !objectList )
-    sub_21FFECC(0, *(_QWORD *)&mode);
+    sub_2213CDC(0, *(_QWORD *)&mode);
   if ( objectList->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v8,
       objectList,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MasterMissionReceiveConfirmListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v8,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__MoveNext__) )
     {
       if ( !v8.fields._current )
-        sub_21FFECC(0, v6);
+        sub_2213CDC(0, v6);
       MasterMissionReceiveConfirmListViewObject__Init(
         (MasterMissionReceiveConfirmListViewObject_o *)v8.fields._current,
         mode,
@@ -421,7 +421,7 @@ void MasterMissionReceiveConfirmListViewManager__RequestListObject(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v8,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MasterMissionReceiveConfirmListViewObject__Dispose__);
   }
 }
 
@@ -469,10 +469,10 @@ void MasterMissionReceiveConfirmListViewManager__SetObjectPosition(
   float y; // s8
 
   v6 = this;
-  if ( (byte_593C085 & 1) == 0 )
+  if ( (byte_5974382 & 1) == 0 )
   {
-    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_21FFC50(&MasterMissionReceiveConfirmListViewManager_TypeInfo);
-    byte_593C085 = 1;
+    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_2213A60(&MasterMissionReceiveConfirmListViewManager_TypeInfo);
+    byte_5974382 = 1;
   }
   if ( !obj )
     goto LABEL_18;
@@ -497,10 +497,10 @@ void MasterMissionReceiveConfirmListViewManager__SetObjectPosition(
                                                            (UnityEngine_Component_o *)obj,
                                                            0);
   v9 = this;
-  if ( !byte_5931946 )
+  if ( !byte_5969AE6 )
   {
-    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_21FFC50(&UnityEngine_Quaternion_TypeInfo);
-    byte_5931946 = 1;
+    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
+    byte_5969AE6 = 1;
   }
   if ( !v9 )
     goto LABEL_18;
@@ -512,10 +512,10 @@ void MasterMissionReceiveConfirmListViewManager__SetObjectPosition(
                                                            (UnityEngine_Component_o *)obj,
                                                            0);
   v10 = this;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    this = (MasterMissionReceiveConfirmListViewManager_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v10
     || (UnityEngine_Transform__set_localScale(
@@ -533,7 +533,7 @@ void MasterMissionReceiveConfirmListViewManager__SetObjectPosition(
         !v11) )
   {
 LABEL_18:
-    sub_21FFECC(this, basePosition);
+    sub_2213CDC(this, basePosition);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v11, (int32_t)this, 0);
   MasterMissionReceiveConfirmListViewObject__SetBaseTransform(obj, v12);
@@ -572,10 +572,10 @@ void MasterMissionReceiveConfirmListViewManager__set_IsInput(
   float alpha; // s0
 
   v4 = value;
-  if ( (byte_593C082 & 1) == 0 )
+  if ( (byte_597437F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C082 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597437F = 1;
   }
   v5 = UnityEngine_Object_TypeInfo;
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
@@ -587,7 +587,7 @@ void MasterMissionReceiveConfirmListViewManager__set_IsInput(
   {
     v9 = (UIProgressBar_o *)this->fields.scrollBar;
     if ( !v9 )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     alpha = UIProgressBar__get_alpha(v9, 0);
     UIProgressBar__set_alpha(v9, alpha, 0);
   }

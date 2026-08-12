@@ -26,7 +26,7 @@ void IconLabelInfo__Set(IconLabelInfo_o *this, IconLabelInfo_o *info, const Meth
   int64_t time; // x8
 
   if ( !info )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   time = info->fields.time;
   *(_OWORD *)&this->fields.iconKind = *(_OWORD *)&info->fields.iconKind;
   this->fields.time = time;
@@ -69,7 +69,7 @@ void IconLabelInfo__SetTime(
 }
 
 
-void IconLabelInfo__Set_47932852(
+void IconLabelInfo__Set_47880948(
         IconLabelInfo_o *this,
         int32_t iconKind,
         int32_t data,

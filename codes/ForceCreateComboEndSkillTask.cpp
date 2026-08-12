@@ -1,6 +1,6 @@
 void ForceCreateComboEndSkillTask___ctor(ForceCreateComboEndSkillTask_o *this, const MethodInfo *method)
 {
-  CreateSkillTaskFromBuffAction___ctor((CreateSkillTaskFromBuffAction_o *)this, 0);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 

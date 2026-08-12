@@ -29,10 +29,10 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
   bool v23; // w6
   bool v24; // w7
 
-  if ( (byte_5939DF5 & 1) == 0 )
+  if ( (byte_5971FC8 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939DF5 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_5971FC8 = 1;
   }
   ((void (__fastcall *)(ExUITexture_o *, _QWORD, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
     this,
@@ -43,9 +43,9 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
-    AssetManager__releaseAsset_47465556(assetData, 0);
+    AssetManager__releaseAsset_47496972(assetData, 0);
     this->fields.assetData = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v5, v6, v7, v8, v9, v10);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v5, v6, v7, v8, v9, v10);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -54,10 +54,10 @@ void ExUITexture__ClearImage(ExUITexture_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v3);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v12, v13, v14, v15, v16, v17);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v19, v20, v21, v22, v23, v24);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v19, v20, v21, v22, v23, v24);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -82,7 +82,7 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
-  Il2CppObject *Object_object__58323140; // x0
+  Il2CppObject *Object_object__58532980; // x0
   __int64 v20; // x1
   System_String_o *v21; // x2
   System_String_o *v22; // x3
@@ -92,11 +92,11 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
   bool v26; // w7
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_5939DF8 & 1) == 0 )
+  if ( (byte_5971FCB & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939DF8 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_5971FCB = 1;
   }
   if ( data )
   {
@@ -105,11 +105,11 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
     {
       if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, data);
-      if ( AssetManager__compAssetStorage_47463144(data, loadAssetName, 0) )
+      if ( AssetManager__compAssetStorage_47494556(data, loadAssetName, 0) )
       {
         assetData = this->fields.assetData;
         this->fields.assetData = data;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.assetData,
           (int32_t)data,
           v6,
@@ -119,24 +119,24 @@ void ExUITexture__EndLoad(ExUITexture_o *this, AssetData_o *data, const MethodIn
           v10,
           v11);
         this->fields.loadAssetName = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
-        Object_object__58323140 = AssetData__GetObject_object__58323140(
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
+        Object_object__58532980 = AssetData__GetObject_object__58532980(
                                     data,
                                     this->fields.assetLabel,
-                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+                                    (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360);
         ((void (__fastcall *)(ExUITexture_o *, Il2CppObject *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
           this,
-          Object_object__58323140,
+          Object_object__58532980,
           this->klass->vtable._27_set_mainTexture.method);
         if ( assetData )
         {
           if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v20);
-          AssetManager__releaseAsset_47465556(assetData, 0);
+          AssetManager__releaseAsset_47496972(assetData, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         this->fields.callbackFunc = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v21, v22, v23, v24, v25, v26);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v21, v22, v23, v24, v25, v26);
         if ( callbackFunc )
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
@@ -155,11 +155,11 @@ bool ExUITexture__SetAssetImage(
 {
   const MethodInfo *v4; // x4
 
-  return ExUITexture__SetAssetImage_50744444(this, assetName, 0, callback, v4);
+  return ExUITexture__SetAssetImage_50814596(this, assetName, 0, callback, v4);
 }
 
 
-bool ExUITexture__SetAssetImage_50744444(
+bool ExUITexture__SetAssetImage_50814596(
         ExUITexture_o *this,
         System_String_o *assetName,
         System_String_o *assetLabel,
@@ -192,7 +192,7 @@ bool ExUITexture__SetAssetImage_50744444(
   AssetData_o *assetData; // x23
   __int64 v33; // x1
   AssetData_o *v34; // x0
-  Il2CppObject *Object_object__58323140; // x0
+  Il2CppObject *Object_object__58532980; // x0
   System_String_o *klass; // x23
   System_Delegate_o *v37; // x0
   System_String_o *v38; // x3
@@ -203,17 +203,17 @@ bool ExUITexture__SetAssetImage_50744444(
   AssetLoader_LoadEndDataHandler_o *v43; // x21
   __int64 v44; // x1
 
-  if ( (byte_5939DF7 & 1) == 0 )
+  if ( (byte_5971FCA & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_AssetData_GetObject_Texture2D____91482152);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&Method_ExUITexture_EndLoad__);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_5939DF7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_AssetData_GetObject_Texture2D____91708360);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&Method_ExUITexture_EndLoad__);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_5971FCA = 1;
   }
   this->fields.assetLabel = assetLabel;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.assetLabel,
     (int32_t)assetLabel,
     assetLabel,
@@ -249,7 +249,7 @@ bool ExUITexture__SetAssetImage_50744444(
         {
           this->klass = 0;
         }
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)this, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)this, (int32_t)v23, v24, v25, v26, v27, v28, v29);
       }
       return 1;
     }
@@ -265,18 +265,18 @@ bool ExUITexture__SetAssetImage_50744444(
     {
       if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v12);
-      if ( AssetManager__compAssetStorage_47463144(assetData, assetName, 0) )
+      if ( AssetManager__compAssetStorage_47494556(assetData, assetName, 0) )
       {
         v34 = this->fields.assetData;
         if ( !v34 )
-          sub_21FFECC(0, v33);
-        Object_object__58323140 = AssetData__GetObject_object__58323140(
+          sub_2213CDC(0, v33);
+        Object_object__58532980 = AssetData__GetObject_object__58532980(
                                     v34,
                                     this->fields.assetLabel,
-                                    (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_Texture2D____91482152);
+                                    (const MethodInfo_37D2474 *)Method_AssetData_GetObject_Texture2D____91708360);
         ((void (__fastcall *)(ExUITexture_o *, Il2CppObject *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
           this,
-          Object_object__58323140,
+          Object_object__58532980,
           this->klass->vtable._27_set_mainTexture.method);
         if ( callback )
           ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
@@ -287,7 +287,7 @@ bool ExUITexture__SetAssetImage_50744444(
     }
   }
   p_loadAssetName->klass = (MissionNaviTransitionBoardItem_c *)assetName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName,
     (int32_t)assetName,
     v13,
@@ -306,7 +306,7 @@ bool ExUITexture__SetAssetImage_50744444(
 LABEL_27:
       p_loadAssetName->klass = 0;
 LABEL_28:
-      sub_21FFBF4(p_loadAssetName, (int32_t)v30, v24, v38, v39, v40, v41, v42);
+      sub_2213A04(p_loadAssetName, (int32_t)v30, v24, v38, v39, v40, v41, v42);
       goto LABEL_29;
     }
     v31 = System_Action_TypeInfo;
@@ -317,11 +317,11 @@ LABEL_28:
         goto LABEL_28;
     }
 LABEL_26:
-    sub_220024C(v30, v31, v24);
+    sub_221405C(v30, v31, v24);
     goto LABEL_27;
   }
 LABEL_29:
-  v43 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v43 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v43, (Il2CppObject *)this, Method_ExUITexture_EndLoad__, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v44);
@@ -354,10 +354,10 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
   bool v25; // w6
   bool v26; // w7
 
-  if ( (byte_5939DF6 & 1) == 0 )
+  if ( (byte_5971FC9 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    byte_5939DF6 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    byte_5971FC9 = 1;
   }
   ((void (__fastcall *)(ExUITexture_o *, UnityEngine_Texture_o *, const MethodInfo *))this->klass->vtable._27_set_mainTexture.methodPtr)(
     this,
@@ -368,9 +368,9 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
   {
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5);
-    AssetManager__releaseAsset_47465556(assetData, 0);
+    AssetManager__releaseAsset_47496972(assetData, 0);
     this->fields.assetData = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetData, 0, v7, v8, v9, v10, v11, v12);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -379,10 +379,10 @@ void ExUITexture__SetImage(ExUITexture_o *this, UnityEngine_Texture_o *tex, cons
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v5);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.loadAssetName, 0, v14, v15, v16, v17, v18, v19);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v21, v22, v23, v24, v25, v26);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc, 0, v21, v22, v23, v24, v25, v26);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,

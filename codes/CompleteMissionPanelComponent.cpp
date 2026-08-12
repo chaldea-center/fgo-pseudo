@@ -36,12 +36,12 @@ void CompleteMissionPanelComponent__Awake(CompleteMissionPanelComponent_o *this,
   const MethodInfo *v29; // x2
   __int64 v30; // x0
 
-  if ( (byte_593706F & 1) == 0 )
+  if ( (byte_596F1DE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&UnityEngine_Transform___TypeInfo);
-    byte_593706F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&UnityEngine_Transform___TypeInfo);
+    byte_596F1DE = 1;
   }
   panelCount = this->fields.panelCount;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -56,9 +56,9 @@ void CompleteMissionPanelComponent__Awake(CompleteMissionPanelComponent_o *this,
     v8 = v7;
   else
     v8 = 0;
-  v9 = (struct UnityEngine_Transform_array *)sub_21FFD10(UnityEngine_Transform___TypeInfo, (unsigned int)v8);
+  v9 = (struct UnityEngine_Transform_array *)sub_2213B20(UnityEngine_Transform___TypeInfo, (unsigned int)v8);
   this->fields.cachedPanelTransforms = v9;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.cachedPanelTransforms,
     (int32_t)v9,
     v10,
@@ -83,17 +83,17 @@ void CompleteMissionPanelComponent__Awake(CompleteMissionPanelComponent_o *this,
       v25 = transform;
       if ( transform )
       {
-        transform = (void *)sub_21FFDA4(transform, *(_QWORD *)(*(_QWORD *)cachedPanelTransforms + 64LL));
+        transform = (void *)sub_2213BB4(transform, *(_QWORD *)(*(_QWORD *)cachedPanelTransforms + 64LL));
         if ( !transform )
         {
-          v30 = sub_21FFEF0(0, v26);
-          sub_21FFD90(v30, 0);
+          v30 = sub_2213D00(0, v26);
+          sub_2213BA0(v30, 0);
         }
       }
       if ( v16 >= cachedPanelTransforms[6] )
-        sub_21FFED4(transform);
+        sub_2213CE4(transform);
       *(_QWORD *)&cachedPanelTransforms[v17] = v25;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&cachedPanelTransforms[v17],
         (int32_t)v25,
         v19,
@@ -108,11 +108,11 @@ void CompleteMissionPanelComponent__Awake(CompleteMissionPanelComponent_o *this,
         goto LABEL_18;
     }
 LABEL_24:
-    sub_21FFECC(transform, v5);
+    sub_2213CDC(transform, v5);
   }
 LABEL_18:
   completeMissionFrameSprite = this->fields.completeMissionFrameSprite;
-  transform = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  transform = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !transform )
     goto LABEL_24;
   v28 = *((_QWORD *)transform + 173);
@@ -124,7 +124,7 @@ LABEL_18:
   transform = System_Collections_Generic_List_object___get_Item(
                 (System_Collections_Generic_List_object__o *)transform,
                 0,
-                (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
+                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventMissionEntity__get_Item__);
   if ( !transform || !completeMissionFrameSprite )
     goto LABEL_24;
   CompleteMissionSprite__InitFrame(completeMissionFrameSprite, *((_DWORD *)transform + 7), v29);
@@ -148,14 +148,14 @@ void CompleteMissionPanelComponent__MoveMissionBoard(
   _QWORD *v14; // x8
   UnityEngine_Transform_o *panel; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_5937070 & 1) == 0 )
+  if ( (byte_596F1DF & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionEntity__get_Count__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5937070 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionEntity__get_Count__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596F1DF = 1;
   }
   panel = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   monitor = Instance[86].monitor;
@@ -181,7 +181,7 @@ void CompleteMissionPanelComponent__MoveMissionBoard(
       if ( v11 )
       {
         v12 = v11;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( Instance )
         {
           v14 = Instance[86].monitor;
@@ -200,7 +200,7 @@ void CompleteMissionPanelComponent__MoveMissionBoard(
           }
         }
 LABEL_16:
-        sub_21FFECC(Instance, v6);
+        sub_2213CDC(Instance, v6);
       }
     }
   }
@@ -217,7 +217,7 @@ void CompleteMissionPanelComponent__OnClickPanel(
   const MethodInfo *v6; // x2
 
   if ( !DispNum )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)DispNum, 0);
   v5 = System_Int32__Parse(name, 0);
   CompleteMissionPanelComponent__MoveMissionBoard(this, v5, v6);
@@ -230,7 +230,7 @@ void CompleteMissionPanelComponent__OnDestroy(CompleteMissionPanelComponent_o *t
 
   completeMissionFrameSprite = this->fields.completeMissionFrameSprite;
   if ( !completeMissionFrameSprite )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   CompleteMissionSprite__ReleaseEventUI(completeMissionFrameSprite, method);
 }
 
@@ -261,13 +261,13 @@ bool CompleteMissionPanelComponent__TryGetChild(
   __int64 v23; // x2
   UnityEngine_Object_o *v24; // x19
 
-  if ( (byte_5937073 & 1) == 0 )
+  if ( (byte_596F1E2 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937073 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F1E2 = 1;
   }
   *child = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)child,
     0,
     *(System_String_o **)&index,
@@ -282,12 +282,12 @@ bool CompleteMissionPanelComponent__TryGetChild(
   if ( index < 0 || v13 )
     return 0;
   if ( !parent )
-    sub_21FFECC(v13, v14);
+    sub_2213CDC(v13, v14);
   if ( UnityEngine_Transform__get_childCount(parent, 0) <= index )
     return 0;
   v15 = UnityEngine_Transform__GetChild(parent, index, 0);
   *child = v15;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)child, (int32_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)child, (int32_t)v15, v16, v17, v18, v19, v20, v21);
   v24 = (UnityEngine_Object_o *)*child;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
@@ -300,7 +300,7 @@ bool CompleteMissionPanelComponent__TryGetPanelChildComponent_object_(
         int32_t index,
         int32_t childIndex,
         Il2CppObject **component,
-        const MethodInfo_37ED578 *method)
+        const MethodInfo_3820A40 *method)
 {
   __int64 v10; // x1
   Il2CppObject *Component_object; // x0
@@ -317,9 +317,9 @@ bool CompleteMissionPanelComponent__TryGetPanelChildComponent_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_2237B54();
+      sub_224B964();
   }
   v22 = 0;
   panel = 0;
@@ -328,12 +328,12 @@ bool CompleteMissionPanelComponent__TryGetPanelChildComponent_object_(
     && CompleteMissionPanelComponent__TryGetChild(this, panel, childIndex, (UnityEngine_Transform_o **)&v22, 0) )
   {
     if ( !v22 )
-      sub_21FFECC(0, v10);
+      sub_2213CDC(0, v10);
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v22,
-                         (const MethodInfo_37ED7E0 *)method->rgctx_data->_2_UnityEngine_Component_GetComponent_T_);
+                         (const MethodInfo_3820CA8 *)method->rgctx_data->_2_UnityEngine_Component_GetComponent_T_);
     *component = Component_object;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)component, (int32_t)Component_object, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)component, (int32_t)Component_object, v12, v13, v14, v15, v16, v17);
     v19 = *component;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
@@ -374,15 +374,15 @@ bool CompleteMissionPanelComponent__TryGetPanelChildGameObject(
   UnityEngine_Component_o *v28; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_Transform_o *panel; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_5937072 & 1) == 0 )
+  if ( (byte_596F1E1 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937072 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F1E1 = 1;
   }
   v28 = 0;
   panel = 0;
   *childGameObject = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)childGameObject,
     0,
     *(System_String_o **)&childIndex,
@@ -401,10 +401,10 @@ bool CompleteMissionPanelComponent__TryGetPanelChildGameObject(
          v14) )
   {
     if ( !v28 )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     gameObject = UnityEngine_Component__get_gameObject(v28, 0);
     *childGameObject = gameObject;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)childGameObject, (int32_t)gameObject, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)childGameObject, (int32_t)gameObject, v17, v18, v19, v20, v21, v22);
     v25 = (UnityEngine_Object_o *)*childGameObject;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
@@ -425,7 +425,7 @@ bool CompleteMissionPanelComponent__TryGetPanelEffectChildComponent_object_(
         int32_t rowlingPanelChildIndex,
         int32_t childIndex,
         Il2CppObject **component,
-        const MethodInfo_37ED670 *method)
+        const MethodInfo_3820B38 *method)
 {
   __int64 v16; // x1
   Il2CppObject *Component_object; // x0
@@ -445,9 +445,9 @@ bool CompleteMissionPanelComponent__TryGetPanelEffectChildComponent_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_2237B54();
+      sub_224B964();
   }
   panel = 0;
   parent = 0;
@@ -462,12 +462,12 @@ bool CompleteMissionPanelComponent__TryGetPanelEffectChildComponent_object_(
     && CompleteMissionPanelComponent__TryGetChild(this, v29, childIndex, (UnityEngine_Transform_o **)&v28, 0) )
   {
     if ( !v28 )
-      sub_21FFECC(0, v16);
+      sub_2213CDC(0, v16);
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v28,
-                         (const MethodInfo_37ED7E0 *)method->rgctx_data->_2_UnityEngine_Component_GetComponent_T_);
+                         (const MethodInfo_3820CA8 *)method->rgctx_data->_2_UnityEngine_Component_GetComponent_T_);
     *component = Component_object;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)component, (int32_t)Component_object, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)component, (int32_t)Component_object, v18, v19, v20, v21, v22, v23);
     v25 = *component;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
@@ -512,13 +512,13 @@ bool CompleteMissionPanelComponent__TryGetPanelTransformByIndex(
   __int64 v20; // x2
   UnityEngine_Object_o *v21; // x19
 
-  if ( (byte_5937071 & 1) == 0 )
+  if ( (byte_596F1E0 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5937071 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F1E0 = 1;
   }
   *panel = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)panel,
     0,
     (System_String_o *)panel,
@@ -534,7 +534,7 @@ bool CompleteMissionPanelComponent__TryGetPanelTransformByIndex(
     return 0;
   v18 = cachedPanelTransforms->m_Items[index];
   *panel = v18;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)panel, (int32_t)v18, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)panel, (int32_t)v18, v11, v12, v13, v14, v15, v16);
   v21 = (UnityEngine_Object_o *)*panel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
@@ -569,35 +569,35 @@ EventMissionEntity_o *CompleteMissionPanelComponent__targetCompleteMissionId(
   System_Collections_Generic_List_Enumerator_object__o *v12; // [xsp+10h] [xbp-50h]
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_5937074 & 1) == 0 )
+  if ( (byte_596F1E3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventMissionEntity__GetEnumerator__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5937074 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventMissionEntity__GetEnumerator__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596F1E3 = 1;
   }
   memset(&v13, 0, sizeof(v13));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance || (monitor = Instance[86].monitor) == 0 || (Instance = (Il2CppObject *)*((_QWORD *)monitor + 17)) == 0 )
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventMissionEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventMissionEntity__GetEnumerator__);
   v11 = 0;
   v12 = &v13;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v13,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__MoveNext__);
     if ( !v7 )
       break;
     current = v13.fields._current;
     if ( !v13.fields._current )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     if ( *(_DWORD *)((char *)&v13.fields._current->klass + (unsigned __int64)&qword_20) == dispNum )
       goto LABEL_12;
   }
@@ -605,6 +605,6 @@ EventMissionEntity_o *CompleteMissionPanelComponent__targetCompleteMissionId(
 LABEL_12:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventMissionEntity__Dispose__);
   return (EventMissionEntity_o *)current;
 }

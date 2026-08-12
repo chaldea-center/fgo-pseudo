@@ -15,7 +15,7 @@ void UserOwnQp___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void UserOwnQp___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_21FFECC(v13, v14);
+    sub_2213CDC(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.qp;
 }

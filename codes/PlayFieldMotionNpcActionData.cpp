@@ -4,10 +4,10 @@ void PlayFieldMotionNpcActionData___ctor(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_593AF13 & 1) == 0 )
+  if ( (byte_59730F8 & 1) == 0 )
   {
-    sub_21FFC50(&BattleActionData_TypeInfo);
-    byte_593AF13 = 1;
+    sub_2213A60(&BattleActionData_TypeInfo);
+    byte_59730F8 = 1;
   }
   if ( !*(&BattleActionData_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo, *(_QWORD *)&targetId);
@@ -33,10 +33,10 @@ void PlayFieldMotionNpcActionData__PreActionProcess(
   bool v14; // w6
   bool v15; // w7
 
-  if ( (byte_593AF14 & 1) == 0 )
+  if ( (byte_59730F9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593AF14 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59730F9 = 1;
   }
   BattleActionData__PreActionProcess((BattleActionData_o *)this, data, 0);
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
@@ -46,10 +46,10 @@ void PlayFieldMotionNpcActionData__PreActionProcess(
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
     if ( !data || (perf = data->fields.perf) == 0 )
-      sub_21FFECC(perf, v8);
+      sub_2213CDC(perf, v8);
     ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0);
     this->fields.targetObject = ServantGameObject;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.targetObject,
       (int32_t)ServantGameObject,
       v10,

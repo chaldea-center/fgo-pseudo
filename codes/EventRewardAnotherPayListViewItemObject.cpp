@@ -4,10 +4,10 @@ void EventRewardAnotherPayListViewItemObject___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5932AE6 & 1) == 0 )
+  if ( (byte_596ABE9 & 1) == 0 )
   {
-    sub_21FFC50(&ListViewObject_TypeInfo);
-    byte_5932AE6 = 1;
+    sub_2213A60(&ListViewObject_TypeInfo);
+    byte_596ABE9 = 1;
   }
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method, v2);
@@ -29,20 +29,20 @@ void EventRewardAnotherPayListViewItemObject__Awake(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_5932AE3 & 1) == 0 )
+  if ( (byte_596ABE6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
-    byte_5932AE3 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
+    byte_596ABE6 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
   this->fields.itemDraw = (struct EventRewardAnotherPayListViewItemDraw_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemDraw,
     (int32_t)Component_object,
     v6,
@@ -61,10 +61,10 @@ EventRewardAnotherPayListViewItem_o *EventRewardAnotherPayListViewItemObject__Ge
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_5932AE5 & 1) == 0 )
+  if ( (byte_596ABE8 & 1) == 0 )
   {
-    sub_21FFC50(&EventRewardAnotherPayListViewItem_TypeInfo);
-    byte_5932AE5 = 1;
+    sub_2213A60(&EventRewardAnotherPayListViewItem_TypeInfo);
+    byte_596ABE8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -87,22 +87,22 @@ void EventRewardAnotherPayListViewItemObject__SetItem(
   EventRewardAnotherPayListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_5932AE4 & 1) == 0 )
+  if ( (byte_596ABE7 & 1) == 0 )
   {
-    sub_21FFC50(&EventRewardAnotherPayListViewItem_TypeInfo);
-    byte_5932AE4 = 1;
+    sub_2213A60(&EventRewardAnotherPayListViewItem_TypeInfo);
+    byte_596ABE7 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_21FFECC(itemDraw, item);
+    sub_2213CDC(itemDraw, item);
   if ( item )
   {
     naturalAligment = EventRewardAnotherPayListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (EventRewardAnotherPayListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventRewardAnotherPayListViewItem_TypeInfo )
     {
-      itemDraw = (EventRewardAnotherPayListViewItemDraw_o *)sub_220024C(
+      itemDraw = (EventRewardAnotherPayListViewItemDraw_o *)sub_221405C(
                                                               item,
                                                               EventRewardAnotherPayListViewItem_TypeInfo,
                                                               seed,
@@ -114,7 +114,7 @@ LABEL_9:
     itemDraw,
     (EventRewardAnotherPayListViewItem_o *)item,
     (const MethodInfo *)seed);
-  ListViewObject__SetItem_50780416((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_50850568((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -129,7 +129,7 @@ void EventRewardAnotherPayListViewItemObject__SetSelectedFrame(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw || (this = (EventRewardAnotherPayListViewItemObject_o *)itemDraw->fields.frameObj) == 0 )
-    sub_21FFECC(this, isSelected);
+    sub_2213CDC(this, isSelected);
   *(_QWORD *)&v3 = 0;
   if ( isSelected )
     *(float *)&v3 = 1.0;

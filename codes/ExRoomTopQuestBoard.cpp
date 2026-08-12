@@ -13,140 +13,138 @@ void ExRoomTopQuestBoard__Awake(ExRoomTopQuestBoard_o *this, const MethodInfo *m
 
 void ExRoomTopQuestBoard__GetExRoomMissionCounts(
         int32_t *totalCount,
-        int32_t *completedCount,
+        int32_t *achievedCount,
         int32_t *receivableCount,
         const MethodInfo *method)
 {
-  DataManager_c *v7; // x0
-  int v8; // w8
+  DataManager_c *v6; // x0
+  int v7; // w8
   Il2CppObject *Master_object; // x19
-  Il2CppObject *v10; // x0
-  __int64 v11; // x1
-  __int64 v12; // x2
-  UserEventMissionMaster_o *v13; // x22
+  Il2CppObject *v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  UserEventMissionMaster_o *v12; // x22
   int64_t Time; // x24
-  Il2CppObject *v15; // x25
-  _BOOL8 v16; // x0
-  __int64 v17; // x1
+  Il2CppObject *v14; // x25
+  _BOOL8 v15; // x0
+  __int64 v16; // x1
   System_Collections_ObjectModel_Collection_T__o *monitor; // x26
   int32_t i; // w27
   EventMissionEntity_o *Item; // x0
-  EventMissionEntity_o *v21; // x28
-  __int64 v22; // x1
-  __int64 v23; // x2
+  EventMissionEntity_o *v20; // x28
+  __int64 v21; // x1
+  __int64 v22; // x2
   int32_t MissionProgressType; // w0
-  __int64 v25; // x1
-  __int64 v26; // x2
-  int32_t v27; // w19
-  NetworkManager_c *v28; // x0
-  const MethodInfo *v29; // x5
-  int32_t v30; // w0
+  __int64 v24; // x1
+  __int64 v25; // x2
+  int32_t v26; // w19
+  NetworkManager_c *v27; // x0
+  const MethodInfo *v28; // x5
+  int32_t v29; // w0
+  int32_t *v30; // x8
   int32_t *v31; // [xsp+8h] [xbp-88h]
-  bool IsEventPeriod; // [xsp+20h] [xbp-70h]
-  bool IsReceivablePeriod; // [xsp+24h] [xbp-6Ch]
+  bool IsReceivablePeriod; // [xsp+20h] [xbp-70h]
+  bool IsEventPeriod; // [xsp+24h] [xbp-6Ch]
   UserEventMissionEntity_o *entity; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_5932DA5 & 1) == 0 )
+  if ( (byte_596AEA9 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Item__);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMissionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserEventMissionMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__getEntityList__);
-    sub_21FFC50(&ExRoomMissionStatusResolver_TypeInfo);
-    sub_21FFC50(&MissionInfoMaker_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5932DA5 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Item__);
+    sub_2213A60(&Method_DataManager_GetMaster_EventMissionMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_UserEventMissionMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__getEntityList__);
+    sub_2213A60(&ExRoomMissionStatusResolver_TypeInfo);
+    sub_2213A60(&MissionInfoMaker_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_596AEA9 = 1;
   }
-  v7 = DataManager_TypeInfo;
-  v31 = completedCount;
+  v6 = DataManager_TypeInfo;
+  v31 = totalCount;
   *totalCount = 0;
-  *completedCount = 0;
+  *achievedCount = 0;
   *receivableCount = 0;
-  v8 = *(&v7->_2.cctor_finished + 1);
+  v7 = *(&v6->_2.cctor_finished + 1);
   entity = 0;
-  if ( !v8 )
-    j_il2cpp_runtime_class_init_0(v7, completedCount, receivableCount);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMissionMaster___);
-  v10 = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
+  if ( !v7 )
+    j_il2cpp_runtime_class_init_0(v6, achievedCount, receivableCount);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMissionMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserEventMissionMaster___);
   if ( Master_object )
   {
-    v13 = (UserEventMissionMaster_o *)v10;
-    if ( v10 )
+    v12 = (UserEventMissionMaster_o *)v9;
+    if ( v9 )
     {
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v12);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v10, v11);
       Time = NetworkManager__getTime(0);
-      v15 = (Il2CppObject *)sub_21FFEBC(ExRoomMissionStatusResolver_TypeInfo);
-      System_Object___ctor(v15, 0);
+      v14 = (Il2CppObject *)sub_2213CCC(ExRoomMissionStatusResolver_TypeInfo);
+      System_Object___ctor(v14, 0);
       monitor = (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].monitor;
       if ( !monitor )
-LABEL_31:
-        sub_21FFECC(v16, v17);
+LABEL_30:
+        sub_2213CDC(v15, v16);
       if ( System_Collections_ObjectModel_Collection_object___get_Count(
              (System_Collections_ObjectModel_Collection_T__o *)Master_object[2].monitor,
-             (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__) >= 1 )
+             (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__) >= 1 )
       {
         for ( i = 0;
               i < System_Collections_ObjectModel_Collection_object___get_Count(
                     monitor,
-                    (const MethodInfo_3E60A6C *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__);
+                    (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Count__);
               ++i )
         {
           Item = (EventMissionEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                            monitor,
                                            i,
-                                           (const MethodInfo_3E60B00 *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Item__);
+                                           (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventMissionEntity__get_Item__);
           if ( Item )
           {
-            v21 = Item;
+            v20 = Item;
             if ( Item->fields.type == 8 )
             {
               IsEventPeriod = EventMissionEntity__IsEventPeriod(Item, Time, 0);
-              IsReceivablePeriod = EventMissionEntity__IsReceivablePeriod(v21, Time, 0);
+              IsReceivablePeriod = EventMissionEntity__IsReceivablePeriod(v20, Time, 0);
               if ( !*(&MissionInfoMaker_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, v22, v23);
-              MissionProgressType = MissionInfoMaker__GetMissionProgressType(v21, 0);
+                j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, v21, v22);
+              MissionProgressType = MissionInfoMaker__GetMissionProgressType(v20, 0);
               if ( MissionProgressType )
               {
-                v27 = MissionProgressType;
+                v26 = MissionProgressType;
                 if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v25, v26);
-                if ( !byte_5931D52 )
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v24, v25);
+                if ( !byte_5969EF2 )
                 {
-                  sub_21FFC50(&NetworkManager_TypeInfo);
-                  byte_5931D52 = 1;
+                  sub_2213A60(&NetworkManager_TypeInfo);
+                  byte_5969EF2 = 1;
                 }
-                v28 = NetworkManager_TypeInfo;
+                v27 = NetworkManager_TypeInfo;
                 if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
                 {
-                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v25, v26);
-                  v28 = NetworkManager_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v24, v25);
+                  v27 = NetworkManager_TypeInfo;
                 }
-                v16 = UserEventMissionMaster__TryGetEntity(
-                        v13,
+                v15 = UserEventMissionMaster__TryGetEntity(
+                        v12,
                         &entity,
-                        v28->static_fields->userIdNumber,
-                        v21->fields.id,
+                        v27->static_fields->userIdNumber,
+                        v20->fields.id,
                         0);
-                if ( !v15 )
-                  goto LABEL_31;
-                v30 = ExRoomMissionStatusResolver__Resolve(
-                        (ExRoomMissionStatusResolver_o *)v16,
-                        v21,
+                if ( !v14 )
+                  goto LABEL_30;
+                v29 = ExRoomMissionStatusResolver__Resolve(
+                        (ExRoomMissionStatusResolver_o *)v15,
+                        v20,
                         entity,
-                        v27,
+                        v26,
                         Time,
-                        v29);
-                if ( IsEventPeriod )
+                        v28);
+                if ( IsEventPeriod && (++*v31, v30 = achievedCount, v29 == 4)
+                  || (v30 = receivableCount, IsReceivablePeriod && v29 == 3) )
                 {
-                  ++*totalCount;
-                  if ( (unsigned int)(v30 - 3) <= 1 )
-                    ++*v31;
+                  ++*v30;
                 }
-                if ( IsReceivablePeriod && v30 == 3 )
-                  ++*receivableCount;
               }
             }
           }
@@ -172,23 +170,23 @@ int64_t ExRoomTopQuestBoard__GetNotClearQuestCloseTime(const MethodInfo *method)
   Il2CppObject *current; // x20
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_5932DA3 & 1) == 0 )
+  if ( (byte_596AEA7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5932DA3 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596AEA7 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v1, v2);
-  if ( !byte_5931EF0 )
+  if ( !byte_596A090 )
   {
-    sub_21FFC50(&TerminalSceneComponent_TypeInfo);
-    byte_5931EF0 = 1;
+    sub_2213A60(&TerminalSceneComponent_TypeInfo);
+    byte_596A090 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -209,12 +207,12 @@ int64_t ExRoomTopQuestBoard__GetNotClearQuestCloseTime(const MethodInfo *method)
                                     (ScrTerminalListTop_o *)m_CachedPtr,
                                     0)) == 0 )
     {
-      sub_21FFECC(m_CachedPtr, v6);
+      sub_2213CDC(m_CachedPtr, v6);
     }
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       (System_Collections_Generic_List_object__o *)m_CachedPtr,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
     v8 = 0;
 LABEL_16:
     v7 = v8;
@@ -222,12 +220,12 @@ LABEL_16:
     {
       v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v13,
-             (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
       if ( !v9 )
         break;
       current = v13.fields._current;
       if ( !v13.fields._current )
-        sub_21FFECC(v9, v10);
+        sub_2213CDC(v9, v10);
       if ( !MapControl_QuestInfo__IsClear((MapControl_QuestInfo_o *)v13.fields._current, 0) )
       {
         v8 = *(__int64 *)((char *)&qword_90 + (_QWORD)current);
@@ -237,7 +235,7 @@ LABEL_16:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
   }
   return v7;
 }
@@ -254,22 +252,22 @@ void ExRoomTopQuestBoard__InitInfo(ExRoomTopQuestBoard_o *this, const MethodInfo
   UISprite_o *infoFrameSprite; // x19
 
   v2 = this;
-  if ( (byte_5932DA2 & 1) == 0 )
+  if ( (byte_596AEA6 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    this = (ExRoomTopQuestBoard_o *)sub_21FFC50(&StringLiteral_18435/*"caldeagate_notice_00"*/);
-    byte_5932DA2 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    this = (ExRoomTopQuestBoard_o *)sub_2213A60(&StringLiteral_18473/*"caldeagate_notice_00"*/);
+    byte_596AEA6 = 1;
   }
   NotClearQuestCloseTime = ExRoomTopQuestBoard__GetNotClearQuestCloseTime((const MethodInfo *)this);
   infoRoot = v2->fields.infoRoot;
   v2->fields.targetTime = NotClearQuestCloseTime;
   if ( !infoRoot )
-    sub_21FFECC(NotClearQuestCloseTime, v4);
+    sub_2213CDC(NotClearQuestCloseTime, v4);
   UnityEngine_GameObject__SetActive(infoRoot, NotClearQuestCloseTime > 0, 0);
   infoFrameSprite = v2->fields.infoFrameSprite;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v7);
-  AtlasManager__SetBanner(infoFrameSprite, (System_String_o *)StringLiteral_18435/*"caldeagate_notice_00"*/, 0);
+  AtlasManager__SetBanner(infoFrameSprite, (System_String_o *)StringLiteral_18473/*"caldeagate_notice_00"*/, 0);
 }
 
 
@@ -313,29 +311,29 @@ void ExRoomTopQuestBoard__InitSet(
   struct ExRoomRootComponent_o *v37; // x8
   struct ExRoomResourceCatalogAssetBundle_o *v38; // x8
   System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+0h] [xbp-90h] BYREF
-  int32_t completedCount[2]; // [xsp+18h] [xbp-78h] BYREF
+  int32_t achievedCount[2]; // [xsp+18h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+20h] [xbp-70h] BYREF
   int32_t receivableCount; // [xsp+3Ch] [xbp-54h] BYREF
 
-  if ( (byte_5932DA1 & 1) == 0 )
+  if ( (byte_596AEA5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_21058/*"icon_balloon_exroom_quest"*/);
-    sub_21FFC50(&StringLiteral_18549/*"chaldea_category_1007"*/);
-    byte_5932DA1 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_21099/*"icon_balloon_exroom_quest"*/);
+    sub_2213A60(&StringLiteral_18587/*"chaldea_category_1007"*/);
+    byte_596AEA5 = 1;
   }
   receivableCount = 0;
   this->fields.topDisp = topComponent;
   p_topDisp = &this->fields.topDisp;
   memset(&v41, 0, sizeof(v41));
-  *(_QWORD *)completedCount = 0;
-  sub_21FFBF4(
+  *(_QWORD *)achievedCount = 0;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.topDisp,
     (int32_t)topComponent,
     (System_String_o *)method,
@@ -355,7 +353,7 @@ void ExRoomTopQuestBoard__InitSet(
   exRoomAtlasManagerUnit = ResourceCatalog_k__BackingField->fields.exRoomAtlasManagerUnit;
   if ( !exRoomAtlasManagerUnit )
     goto LABEL_42;
-  AtlasManagerUnit__SetUI(exRoomAtlasManagerUnit, this->fields.boardSprite, (System_String_o *)StringLiteral_18549/*"chaldea_category_1007"*/, 0);
+  AtlasManagerUnit__SetUI(exRoomAtlasManagerUnit, this->fields.boardSprite, (System_String_o *)StringLiteral_18587/*"chaldea_category_1007"*/, 0);
   exRoomAtlasManagerUnit = (AtlasManagerUnit_o *)this->fields.boardSprite;
   if ( !exRoomAtlasManagerUnit )
     goto LABEL_42;
@@ -382,7 +380,7 @@ void ExRoomTopQuestBoard__InitSet(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v39,
     (System_Collections_Generic_List_object__o *)exRoomAtlasManagerUnit,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
   v15 = 0;
   v16 = 0;
   v41 = v39;
@@ -390,17 +388,17 @@ void ExRoomTopQuestBoard__InitSet(
   *(_QWORD *)&v39.fields._index = &v41;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v41,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__) )
   {
     if ( !v41.fields._current )
-      sub_21FFECC(0, v17);
+      sub_2213CDC(0, v17);
     v16 += LOBYTE(v41.fields._current[2].monitor);
     v15 += !MapControl_QuestInfo__IsClear((MapControl_QuestInfo_o *)v41.fields._current, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v41,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
-  ExRoomTopQuestBoard__GetExRoomMissionCounts(&completedCount[1], completedCount, &receivableCount, v18);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+  ExRoomTopQuestBoard__GetExRoomMissionCounts(&achievedCount[1], achievedCount, &receivableCount, v18);
   p_noticeNumber = &this->fields.noticeNumber;
   noticeNumber = (UnityEngine_Object_o *)this->fields.noticeNumber;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -418,7 +416,7 @@ void ExRoomTopQuestBoard__InitSet(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12, v23);
     exRoomAtlasManagerUnit = (AtlasManagerUnit_o *)UnityEngine_Object__Instantiate_object_(
                                                      noticeNumberPrefab,
-                                                     (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                     (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !this->fields.noticeNumberRoot )
       goto LABEL_42;
     v26 = (UnityEngine_GameObject_o *)exRoomAtlasManagerUnit;
@@ -428,9 +426,9 @@ void ExRoomTopQuestBoard__InitSet(
       goto LABEL_42;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          v26,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
     *p_noticeNumber = (struct NoticeNumberComponent_o *)Component_object;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.noticeNumber,
       (int32_t)Component_object,
       v29,
@@ -471,7 +469,7 @@ void ExRoomTopQuestBoard__InitSet(
                 AtlasManagerUnit__SetUI(
                   exRoomAtlasManagerUnit,
                   this->fields.balloonSprite,
-                  (System_String_o *)StringLiteral_21058/*"icon_balloon_exroom_quest"*/,
+                  (System_String_o *)StringLiteral_21099/*"icon_balloon_exroom_quest"*/,
                   0);
                 exRoomAtlasManagerUnit = (AtlasManagerUnit_o *)this->fields.balloonSprite;
                 if ( exRoomAtlasManagerUnit )
@@ -488,7 +486,7 @@ void ExRoomTopQuestBoard__InitSet(
       }
     }
 LABEL_42:
-    sub_21FFECC(exRoomAtlasManagerUnit, v12);
+    sub_2213CDC(exRoomAtlasManagerUnit, v12);
   }
   if ( !exRoomAtlasManagerUnit )
     goto LABEL_42;
@@ -507,7 +505,7 @@ void ExRoomTopQuestBoard__OnClickQuest(ExRoomTopQuestBoard_o *this, const Method
 
   topDisp = this->fields.topDisp;
   if ( !topDisp )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ExRoomTopComponent__OnClickQuest(topDisp, method);
 }
 
@@ -531,26 +529,26 @@ void ExRoomTopQuestBoard__UpdateInfo(ExRoomTopQuestBoard_o *this, const MethodIn
   float FontWidth; // s0
   int v11; // w9
 
-  if ( (byte_5932DA4 & 1) == 0 )
+  if ( (byte_596AEA8 & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_13953/*"TIME_REST_QUEST"*/);
-    byte_5932DA4 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_13983/*"TIME_REST_QUEST"*/);
+    byte_596AEA8 = 1;
   }
   if ( this->fields.targetTime >= 1 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
-    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_13953/*"TIME_REST_QUEST"*/, 0);
+    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_13983/*"TIME_REST_QUEST"*/, 0);
     RestTime = LocalizationManager__GetRestTime(this->fields.targetTime, 0);
-    infoFrameSprite = System_String__Concat_75438412(v4, RestTime, 0);
+    infoFrameSprite = System_String__Concat_75651716(v4, RestTime, 0);
     infoLabel = this->fields.infoLabel;
     if ( !infoLabel )
       goto LABEL_16;
     v9 = (System_String_o *)infoFrameSprite;
     if ( !infoFrameSprite )
       goto LABEL_16;
-    if ( System_String__Equals_75473208((System_String_o *)infoFrameSprite, infoLabel->fields.mText, 0) )
+    if ( System_String__Equals_75686512((System_String_o *)infoFrameSprite, infoLabel->fields.mText, 0) )
       return;
     infoFrameSprite = this->fields.infoLabel;
     if ( !infoFrameSprite
@@ -563,7 +561,7 @@ void ExRoomTopQuestBoard__UpdateInfo(ExRoomTopQuestBoard_o *this, const MethodIn
           (infoFrameSprite = this->fields.infoFrameSprite) == 0) )
     {
 LABEL_16:
-      sub_21FFECC(infoFrameSprite, v7);
+      sub_2213CDC(infoFrameSprite, v7);
     }
     v11 = (int)FontWidth;
     if ( FontWidth == INFINITY )

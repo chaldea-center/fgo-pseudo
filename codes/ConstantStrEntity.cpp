@@ -1,13 +1,13 @@
 void ConstantStrEntity___ctor(ConstantStrEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_59384AE & 1) == 0 )
+  if ( (byte_597065E & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_59384AE = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_597065E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 

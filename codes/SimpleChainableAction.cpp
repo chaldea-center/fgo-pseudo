@@ -12,7 +12,7 @@ void SimpleChainableAction___ctor(
 
   ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)action);
   this->fields.sysChainAction = action;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.sysChainAction,
     (int32_t)action,
     v5,
@@ -54,17 +54,17 @@ SimpleChainableAction_array *SimpleChainableAction__ConvertToChainableActionArra
   __int64 v26; // x0
 
   v2 = sysActions;
-  if ( (byte_593CBED & 1) == 0 )
+  if ( (byte_5974EC4 & 1) == 0 )
   {
-    sub_21FFC50(&SimpleChainableAction___TypeInfo);
-    sysActions = (System_Action_Action__array *)sub_21FFC50(&SimpleChainableAction_TypeInfo);
-    byte_593CBED = 1;
+    sub_2213A60(&SimpleChainableAction___TypeInfo);
+    sysActions = (System_Action_Action__array *)sub_2213A60(&SimpleChainableAction_TypeInfo);
+    byte_5974EC4 = 1;
   }
   if ( !v2 )
 LABEL_13:
-    sub_21FFECC(sysActions, method);
+    sub_2213CDC(sysActions, method);
   max_length = v2->max_length;
-  v4 = sub_21FFD10(SimpleChainableAction___TypeInfo, (unsigned int)max_length);
+  v4 = sub_2213B20(SimpleChainableAction___TypeInfo, (unsigned int)max_length);
   v5 = (unsigned int *)v4;
   if ( (int)max_length >= 1 )
   {
@@ -76,23 +76,23 @@ LABEL_13:
       if ( v6 >= LODWORD(v2->max_length) )
         goto LABEL_12;
       v9 = *(__int64 *)((char *)&v2->obj.klass + v8 * 4);
-      v10 = sub_21FFEBC(SimpleChainableAction_TypeInfo);
+      v10 = sub_2213CCC(SimpleChainableAction_TypeInfo);
       ChainableActionBase___ctor((ChainableActionBase_o *)v10, v11);
       *(_QWORD *)(v10 + 40) = v9;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v10 + 40), v9, v12, v13, v14, v15, v16, v17);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 40), v9, v12, v13, v14, v15, v16, v17);
       if ( !v5 )
         goto LABEL_13;
-      v4 = sub_21FFDA4(v10, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
+      v4 = sub_2213BB4(v10, *(_QWORD *)(*(_QWORD *)v5 + 64LL));
       if ( !v4 )
       {
-        v26 = sub_21FFEF0(0, v18);
-        sub_21FFD90(v26, 0);
+        v26 = sub_2213D00(0, v18);
+        sub_2213BA0(v26, 0);
       }
       if ( v6 >= v5[6] )
 LABEL_12:
-        sub_21FFED4(v4);
+        sub_2213CE4(v4);
       *(_QWORD *)&v5[v8] = v10;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v5[v8], v10, v19, v20, v21, v22, v23, v24);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[v8], v10, v19, v20, v21, v22, v23, v24);
       ++v6;
       v8 += 2;
     }
@@ -107,17 +107,17 @@ void SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *this, const
   System_Action_T__o *sysChainAction; // x20
   System_Action_o *v4; // x21
 
-  if ( (byte_593CBEC & 1) == 0 )
+  if ( (byte_5974EC3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_Action___);
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_593CBEC = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_Action___);
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5974EC3 = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v4 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, (intptr_t)this->klass->vtable._5_End.method, 0);
   ActionExtensions__Call_object_(
     sysChainAction,
     (Il2CppObject *)v4,
-    (const MethodInfo_36CDF5C *)Method_ActionExtensions_Call_Action___);
+    (const MethodInfo_36FFECC *)Method_ActionExtensions_Call_Action___);
 }

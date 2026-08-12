@@ -2,10 +2,10 @@ void BattleServantSuperBossParamComponent___ctor(
         BattleServantSuperBossParamComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593C12C & 1) == 0 )
+  if ( (byte_5974284 & 1) == 0 )
   {
-    sub_21FFC50(&BattleServantParamComponent_TypeInfo);
-    byte_593C12C = 1;
+    sub_2213A60(&BattleServantParamComponent_TypeInfo);
+    byte_5974284 = 1;
   }
   if ( !*(&BattleServantParamComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BattleServantParamComponent_TypeInfo, method);
@@ -77,7 +77,7 @@ void BattleServantSuperBossParamComponent__UpdateTotalHp(
           superBosshplabel = v4->fields.superBosshplabel;
           SuperBossHPFormat = BattleServantSuperBossParamComponent__get_SuperBossHPFormat(v4, v8);
           v15 = NowHp;
-          v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v15);
+          v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v15);
           this = (BattleServantSuperBossParamComponent_o *)System_String__Format(SuperBossHPFormat, v12, 0);
           if ( !superBosshplabel )
             goto LABEL_14;
@@ -92,7 +92,7 @@ void BattleServantSuperBossParamComponent__UpdateTotalHp(
       }
     }
 LABEL_14:
-    sub_21FFECC(this, svtData);
+    sub_2213CDC(this, svtData);
   }
 }
 
@@ -121,11 +121,11 @@ System_String_o *BattleServantSuperBossParamComponent__get_SuperBossHPFormat(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_593C127 & 1) == 0 )
+  if ( (byte_597427F & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3000/*"BATTLE_SUPERBOSS_TOTALHP"*/);
-    byte_593C127 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3003/*"BATTLE_SUPERBOSS_TOTALHP"*/);
+    byte_597427F = 1;
   }
   result = this->fields.hpformat;
   if ( !result )
@@ -133,9 +133,9 @@ System_String_o *BattleServantSuperBossParamComponent__get_SuperBossHPFormat(
     p_hpformat = (MissionNaviTransitionBoardItem_o *)&this->fields.hpformat;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_3000/*"BATTLE_SUPERBOSS_TOTALHP"*/, 0);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_3003/*"BATTLE_SUPERBOSS_TOTALHP"*/, 0);
     p_hpformat->klass = (MissionNaviTransitionBoardItem_c *)v5;
-    sub_21FFBF4(p_hpformat, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+    sub_2213A04(p_hpformat, (int32_t)v5, v6, v7, v8, v9, v10, v11);
     return (System_String_o *)p_hpformat->klass;
   }
   return result;
@@ -165,15 +165,15 @@ void BattleServantSuperBossParamComponent__setData(
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TextEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_593C128 & 1) == 0 )
+  if ( (byte_5974280 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
-    sub_21FFC50(&Method_DataManager_GetMaster_BattleMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_593C128 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+    sub_2213A60(&Method_DataManager_GetMaster_BattleMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_5974280 = 1;
   }
   if ( !battleServantData )
   {
@@ -182,18 +182,18 @@ void BattleServantSuperBossParamComponent__setData(
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, battleServantData);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_BattleMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BattleMaster___);
   if ( !Master_object )
     goto LABEL_37;
   SingleEntity = DataMasterBase_object__object__long___GetSingleEntity(
                    Master_object,
-                   (const MethodInfo_3EDFA94 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                   (const MethodInfo_3F1323C *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_37;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                   (DataManager_o *)Master_object,
-                                                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+                                                                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
   if ( !SingleEntity || !Master_object )
     goto LABEL_37;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)EventBossStatusUiMaster__GetEntityFromEventIdAndIndex(
@@ -275,7 +275,7 @@ void BattleServantSuperBossParamComponent__setData(
                                                                         0)) == 0 )
   {
 LABEL_37:
-    sub_21FFECC(Master_object, v8);
+    sub_2213CDC(Master_object, v8);
   }
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Master_object, this->fields.shiftBuffPos, 0);
 LABEL_32:
@@ -308,14 +308,14 @@ void BattleServantSuperBossParamComponent__setDownMessage(
 {
   UILabel_o *superBosshplabel; // x0
 
-  if ( (byte_593C12A & 1) == 0 )
+  if ( (byte_5974282 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1198/*"0"*/);
-    byte_593C12A = 1;
+    sub_2213A60(&StringLiteral_1198/*"0"*/);
+    byte_5974282 = 1;
   }
   superBosshplabel = this->fields.superBosshplabel;
   if ( !superBosshplabel )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   UILabel__set_text(superBosshplabel, (System_String_o *)StringLiteral_1198/*"0"*/, 0);
 }
 
@@ -330,7 +330,7 @@ void BattleServantSuperBossParamComponent__setSplitHp(
 
   changeGauge = this->fields.changeGauge;
   if ( !changeGauge )
-    sub_21FFECC(0, split);
+    sub_2213CDC(0, split);
   BattleServantChangeBarComponent__setSplitHp(changeGauge, split, maxhp, 0);
 }
 
@@ -348,10 +348,10 @@ void BattleServantSuperBossParamComponent__updateStateString(
   System_String_o **p_fields; // x8
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593C12B & 1) == 0 )
+  if ( (byte_5974283 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593C12B = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5974283 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -365,7 +365,7 @@ void BattleServantSuperBossParamComponent__updateStateString(
     || !stateLabel )
   {
 LABEL_16:
-    sub_21FFECC(stateLabel, method);
+    sub_2213CDC(stateLabel, method);
   }
   v10.fields.z = 0.0;
   v10.fields.x = (float)(mText->fields._stringLength * shortNameLabel->fields.mFontSize) + 10.0;
@@ -414,7 +414,7 @@ void BattleServantSuperBossParamComponent__updateSuperBossHp(
 
   newinfo = this->fields.newinfo;
   this->fields.previnfo = newinfo;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.previnfo, (int32_t)newinfo, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.previnfo, (int32_t)newinfo, v2, v3, v4, v5, v6, v7);
   data = this->fields.data;
   BattleServantSuperBossParamComponent__UpdateTotalHp(this, data, v11);
   BattleServantParamComponent__changeHp((BattleServantParamComponent_o *)this, data, 0);
@@ -433,10 +433,10 @@ void BattleServantSuperBossParamComponent__updateSuperBossHpbar(
   BattleHpGaugeBarComponent_o *v10; // x0
   int64_t v11; // x1
 
-  if ( (byte_593C129 & 1) == 0 )
+  if ( (byte_5974281 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593C129 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974281 = 1;
   }
   superbosshpGauge = (UnityEngine_Object_o *)this->fields.superbosshpGauge;
   v8 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
@@ -453,7 +453,7 @@ void BattleServantSuperBossParamComponent__updateSuperBossHpbar(
         goto LABEL_14;
       }
 LABEL_16:
-      sub_21FFECC(v10, v9);
+      sub_2213CDC(v10, v9);
     }
   }
   else
@@ -467,7 +467,7 @@ LABEL_16:
       {
         v11 = now;
 LABEL_14:
-        BattleHpGaugeBarComponent__setValue_54419896(v10, v11, max, 0, 0);
+        BattleHpGaugeBarComponent__setValue_54523052(v10, v11, max, 0, 0);
         return;
       }
       goto LABEL_16;
@@ -494,7 +494,7 @@ void BattleServantSuperBossParamComponent__updateSuperBossInfo(
   if ( fixUpdate )
   {
     this->fields.newinfo = info;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)p_newinfo,
       (int32_t)info,
       (System_String_o *)fixUpdate,
@@ -510,12 +510,12 @@ void BattleServantSuperBossParamComponent__updateSuperBossInfo(
     if ( !*p_newinfo )
       goto LABEL_6;
     if ( !info )
-      sub_21FFECC(p_newinfo, 0);
+      sub_2213CDC(p_newinfo, 0);
     if ( info->fields.totalDamage != (*p_newinfo)->fields.totalDamage )
     {
 LABEL_6:
       *p_newinfo = info;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)p_newinfo,
         (int32_t)info,
         (System_String_o *)fixUpdate,

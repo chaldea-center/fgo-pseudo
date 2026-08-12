@@ -33,9 +33,9 @@ void GardenItem___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.atlas = atlas;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)atlas, v11, v12, v13, v14, v15, v16);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)atlas, v11, v12, v13, v14, v15, v16);
   this->fields.imagePartsGroupEntity = imagePartsGroupEntity;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.imagePartsGroupEntity,
     (int32_t)imagePartsGroupEntity,
     v17,
@@ -45,7 +45,7 @@ void GardenItem___ctor(
     v21,
     v22);
   this->fields.imageName = imageName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.imageName,
     (int32_t)imageName,
     v23,
@@ -55,7 +55,7 @@ void GardenItem___ctor(
     v27,
     v28);
   this->fields.maskTexture = maskTexture;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.maskTexture,
     (int32_t)maskTexture,
     v29,

@@ -6,12 +6,12 @@ void ServantFriendshipExceedRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_593A2EC & 1) == 0 )
+  if ( (byte_59724C9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17739/*"baseUserSvtId"*/);
-    byte_593A2EC = 1;
+    sub_2213A60(&StringLiteral_17776/*"baseUserSvtId"*/);
+    byte_59724C9 = 1;
   }
-  RequestBase__addField_51200900((RequestBase_o *)this, (System_String_o *)StringLiteral_17739/*"baseUserSvtId"*/, baseUserSvtId, v3);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_17776/*"baseUserSvtId"*/, baseUserSvtId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -22,16 +22,16 @@ System_String_o *ServantFriendshipExceedRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A2EB & 1) == 0 )
+  if ( (byte_59724C8 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_18502/*"card/friendshipExceed"*/);
-    byte_593A2EB = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_18540/*"card/friendshipExceed"*/);
+    byte_59724C8 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_18502/*"card/friendshipExceed"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_18540/*"card/friendshipExceed"*/, 0);
 }
 
 
@@ -49,12 +49,12 @@ void ServantFriendshipExceedRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 v12; // x1
 
-  if ( (byte_593A2ED & 1) == 0 )
+  if ( (byte_59724CA & 1) == 0 )
   {
-    sub_21FFC50(&JsonManager_TypeInfo);
-    sub_21FFC50(&ResponseCommandKind_TypeInfo);
-    sub_21FFC50(&StringLiteral_23290/*"ng"*/);
-    byte_593A2ED = 1;
+    sub_2213A60(&JsonManager_TypeInfo);
+    sub_2213A60(&ResponseCommandKind_TypeInfo);
+    sub_2213A60(&StringLiteral_23336/*"ng"*/);
+    byte_59724CA = 1;
   }
   if ( !*(&ResponseCommandKind_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
@@ -64,7 +64,7 @@ void ServantFriendshipExceedRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v12 = StringLiteral_23290/*"ng"*/;
+    v12 = StringLiteral_23336/*"ng"*/;
     goto LABEL_13;
   }
   success = (Il2CppObject *)v7->fields.success;

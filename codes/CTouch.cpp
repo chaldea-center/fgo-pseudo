@@ -19,27 +19,27 @@ void CTouch___cctor(const MethodInfo *method)
   bool v17; // w7
   struct CTouch_StaticFields *v18; // x8
 
-  if ( (byte_593CC17 & 1) == 0 )
+  if ( (byte_5974EEE & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&UnityEngine_Touch___TypeInfo);
-    byte_593CC17 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&UnityEngine_Touch___TypeInfo);
+    byte_5974EEE = 1;
   }
   v1 = UnityEngine_Touch___TypeInfo;
   *(_QWORD *)&CTouch_TypeInfo->static_fields->FLICK_LEN = 0x4170000040A00000LL;
-  v2 = sub_21FFD10(v1, 1);
+  v2 = sub_2213B20(v1, 1);
   static_fields = CTouch_TypeInfo->static_fields;
   static_fields->mTouch = (struct UnityEngine_Touch_array *)v2;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->mTouch, v2, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->mTouch, v2, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_44328A8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
   v11 = CTouch_TypeInfo->static_fields;
   v11->ignoreFingerIDList = v10;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v11->ignoreFingerIDList, (int32_t)v10, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->ignoreFingerIDList, (int32_t)v10, v12, v13, v14, v15, v16, v17);
   v18 = CTouch_TypeInfo->static_fields;
   *(_WORD *)&v18->mIsTchNow = 0;
   v18->mState = 0;
@@ -53,10 +53,10 @@ System_Collections_Generic_List_int__o *CTouch__GetIgnoreFingerIDList(const Meth
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC15 & 1) == 0 )
+  if ( (byte_5974EEC & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC15 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EEC = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -80,22 +80,20 @@ UnityEngine_Vector2_o CTouch__GetTouchPos(const MethodInfo *method)
   int32_t ValidTouchLastID; // w0
   UnityEngine_Vector2_o position; // kr00_8
   struct UnityEngine_Vector2_StaticFields *v10; // x8
-  float v11; // s0
-  float v12; // s1
   UnityEngine_Touch_o src; // [xsp+Ch] [xbp-C4h] BYREF
   UnityEngine_Touch_o dest; // [xsp+50h] [xbp-80h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC0A & 1) == 0 )
+  if ( (byte_5974EE1 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC0A = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE1 = 1;
   }
   memset(&dest, 0, sizeof(dest));
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-    byte_5931820 = 1;
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+    byte_59699C0 = 1;
   }
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -111,10 +109,10 @@ UnityEngine_Vector2_o CTouch__GetTouchPos(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v6);
       if ( CTouch__GetValidTouchLastID(1, v6) < 0 )
       {
-        if ( !byte_5931820 )
+        if ( !byte_59699C0 )
         {
-          sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-          byte_5931820 = 1;
+          sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+          byte_59699C0 = 1;
         }
         v10 = UnityEngine_Vector2_TypeInfo->static_fields;
         x = v10->zeroVector.fields.x;
@@ -133,10 +131,8 @@ UnityEngine_Vector2_o CTouch__GetTouchPos(const MethodInfo *method)
       }
     }
   }
-  v11 = x;
-  v12 = y;
-  result.fields.y = v12;
-  result.fields.x = v11;
+  result.fields.x = x;
+  result.fields.y = y;
   return result;
 }
 
@@ -149,11 +145,11 @@ int32_t CTouch__GetValidTouchCount(const MethodInfo *method)
   int v4; // w19
   struct System_Collections_Generic_List_int__o *ignoreFingerIDList; // x8
 
-  if ( (byte_593CC14 & 1) == 0 )
+  if ( (byte_5974EEB & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
-    byte_593CC14 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Count__);
+    byte_5974EEB = 1;
   }
   touchCount = UnityEngine_Input__get_touchCount(0);
   v3 = CTouch_TypeInfo;
@@ -165,7 +161,7 @@ int32_t CTouch__GetValidTouchCount(const MethodInfo *method)
   }
   ignoreFingerIDList = v3->static_fields->ignoreFingerIDList;
   if ( !ignoreFingerIDList )
-    sub_21FFECC(touchCount, v2);
+    sub_2213CDC(touchCount, v2);
   return v4 - ignoreFingerIDList->fields._size;
 }
 
@@ -184,11 +180,11 @@ int32_t CTouch__GetValidTouchLastID(bool isReverse, const MethodInfo *method)
   CTouch_c *v12; // x0
   System_Collections_Generic_List_int__o *v13; // x20
 
-  if ( (byte_593CC16 & 1) == 0 )
+  if ( (byte_5974EED & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__Contains__);
-    byte_593CC16 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__Contains__);
+    byte_5974EED = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -225,7 +221,7 @@ int32_t CTouch__GetValidTouchLastID(bool isReverse, const MethodInfo *method)
         if ( !System_Collections_Generic_List_int___Contains(
                 ignoreFingerIDList,
                 (int32_t)touches,
-                (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__) )
+                (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
           return v5;
       }
       goto LABEL_26;
@@ -252,17 +248,17 @@ LABEL_26:
         goto LABEL_28;
       if ( v5 >= LODWORD(touches->max_length) )
 LABEL_29:
-        sub_21FFED4(touches);
+        sub_2213CE4(touches);
       touches = (UnityEngine_Touch_array *)UnityEngine_Touch__get_fingerId(
                                              (UnityEngine_Touch_o *)((char *)touches + v11),
                                              0);
       if ( !v13 )
 LABEL_28:
-        sub_21FFECC(touches, v10);
+        sub_2213CDC(touches, v10);
       if ( !System_Collections_Generic_List_int___Contains(
               v13,
               (int32_t)touches,
-              (const MethodInfo_44334B8 *)Method_System_Collections_Generic_List_int__Contains__) )
+              (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
         break;
       ++v5;
       v11 += 68;
@@ -278,10 +274,10 @@ void CTouch__SetClassEnabled(bool isEnabled, const MethodInfo *method)
 {
   CTouch_c *v3; // x0
 
-  if ( (byte_593CBEE & 1) == 0 )
+  if ( (byte_5974EC5 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBEE = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EC5 = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -297,10 +293,10 @@ void CTouch__SetMultiTouchEnabled(bool isEnabled, const MethodInfo *method)
 {
   CTouch_c *v3; // x0
 
-  if ( (byte_593CBEF & 1) == 0 )
+  if ( (byte_5974EC6 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBEF = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EC6 = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -326,11 +322,11 @@ void CTouch__add_MOnTouchPressEvent(CTouch_TouchEventHandler_o *value, const Met
   CTouch_TouchEventHandler_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593CBF4 & 1) == 0 )
+  if ( (byte_5974ECB & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&CTouch_TouchEventHandler_TypeInfo);
-    byte_593CBF4 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&CTouch_TouchEventHandler_TypeInfo);
+    byte_5974ECB = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -355,13 +351,13 @@ void CTouch__add_MOnTouchPressEvent(CTouch_TouchEventHandler_o *value, const Met
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v6);
       v9 = CTouch_TypeInfo;
     }
-    v10 = sub_223767C(&v9->static_fields->MOnTouchPressEvent, v8, MOnTouchPressEvent);
+    v10 = sub_224B48C(&v9->static_fields->MOnTouchPressEvent, v8, MOnTouchPressEvent);
     v11 = v10 == (_QWORD)MOnTouchPressEvent;
     MOnTouchPressEvent = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
+  sub_221405C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
   CTouch__remove_MOnTouchPressEvent(v12, v13);
 }
 
@@ -380,11 +376,11 @@ void CTouch__add_MOnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, const M
   CTouch_TouchEventHandler_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593CBF0 & 1) == 0 )
+  if ( (byte_5974EC7 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&CTouch_TouchEventHandler_TypeInfo);
-    byte_593CBF0 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&CTouch_TouchEventHandler_TypeInfo);
+    byte_5974EC7 = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -409,23 +405,23 @@ void CTouch__add_MOnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, const M
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v6);
       v9 = CTouch_TypeInfo;
     }
-    v10 = sub_223767C(&v9->static_fields->MOnTouchReleaseEvent, v8, MOnTouchReleaseEvent);
+    v10 = sub_224B48C(&v9->static_fields->MOnTouchReleaseEvent, v8, MOnTouchReleaseEvent);
     v11 = v10 == (_QWORD)MOnTouchReleaseEvent;
     MOnTouchReleaseEvent = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
+  sub_221405C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
   CTouch__remove_MOnTouchReleaseEvent(v12, v13);
 }
 
 
 void CTouch__add_OnTouchPressEvent(CTouch_TouchEventHandler_o *value, const MethodInfo *method)
 {
-  if ( (byte_593CBF6 & 1) == 0 )
+  if ( (byte_5974ECD & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF6 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ECD = 1;
   }
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
@@ -435,10 +431,10 @@ void CTouch__add_OnTouchPressEvent(CTouch_TouchEventHandler_o *value, const Meth
 
 void CTouch__add_OnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, const MethodInfo *method)
 {
-  if ( (byte_593CBF2 & 1) == 0 )
+  if ( (byte_5974EC9 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF2 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EC9 = 1;
   }
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
@@ -451,10 +447,10 @@ int32_t CTouch__getDragFrameCnt(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC08 & 1) == 0 )
+  if ( (byte_5974EDF & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC08 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDF = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -482,10 +478,10 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
   float v13; // [xsp+10h] [xbp-60h]
   float v14; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_593CC04 & 1) == 0 )
+  if ( (byte_5974EDB & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC04 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDB = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -494,10 +490,10 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
     return 0;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v3);
-  if ( !byte_5934CC5 )
+  if ( !byte_596CDF4 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_5934CC5 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_596CDF4 = 1;
   }
   v4 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -507,11 +503,11 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
   }
   v5.n64_u64[0] = (unsigned __int64)v4->static_fields->mScrPosDelta;
   v12 = v5.n64_u64[0];
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
     v5.n64_u64[0] = v12;
-    byte_5931820 = 1;
+    byte_59699C0 = 1;
   }
   v6 = -1.0;
   y = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector.fields.y;
@@ -523,13 +519,13 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
   }
   v13 = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector.fields.y;
   v14 = v6;
-  if ( !byte_5931941 )
+  if ( !byte_5969AE1 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
     v5.n64_u64[0] = v12;
     y = v13;
     v6 = v14;
-    byte_5931941 = 1;
+    byte_5969AE1 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -542,12 +538,12 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
   inited.n128_f32[0] = sqrtf(vaddv_f32((float32x2_t)inited.n128_u64[0]));
   if ( inited.n128_f32[0] <= 0.00001 )
   {
-    if ( !byte_5931820 )
+    if ( !byte_59699C0 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       y = v13;
       v6 = v14;
-      byte_5931820 = 1;
+      byte_59699C0 = 1;
     }
     zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
@@ -556,12 +552,12 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
     inited.n128_u64[0] = vdup_lane_s32((int32x2_t)inited.n128_u64[0], 0).n64_u64[0];
     zeroVector = (struct UnityEngine_Vector2_o)vdiv_f32(v5, (float32x2_t)inited.n128_u64[0]).n64_u64[0];
   }
-  if ( !byte_5931941 )
+  if ( !byte_5969AE1 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
     y = v13;
     v6 = v14;
-    byte_5931941 = 1;
+    byte_5969AE1 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -572,11 +568,11 @@ int32_t CTouch__getFlickDirX(const MethodInfo *method)
   inited.n128_f32[0] = sqrtf((float)(y * y) + (float)(v6 * v6));
   if ( inited.n128_f32[0] <= 0.00001 )
   {
-    if ( !byte_5931820 )
+    if ( !byte_59699C0 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       v6 = v14;
-      byte_5931820 = 1;
+      byte_59699C0 = 1;
     }
     v10 = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
@@ -609,10 +605,10 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
   float x; // [xsp+10h] [xbp-60h]
   float v14; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_593CC05 & 1) == 0 )
+  if ( (byte_5974EDC & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC05 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDC = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -621,10 +617,10 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
     return 0;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v3);
-  if ( !byte_5934CC5 )
+  if ( !byte_596CDF4 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_5934CC5 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_596CDF4 = 1;
   }
   v4 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -634,11 +630,11 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
   }
   v5.n64_u64[0] = (unsigned __int64)v4->static_fields->mScrPosDelta;
   v12 = v5.n64_u64[0];
-  if ( !byte_5931820 )
+  if ( !byte_59699C0 )
   {
-    sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+    sub_2213A60(&UnityEngine_Vector2_TypeInfo);
     v5.n64_u64[0] = v12;
-    byte_5931820 = 1;
+    byte_59699C0 = 1;
   }
   v6 = -1.0;
   v7.n64_u32[0] = LODWORD(UnityEngine_Vector2_TypeInfo->static_fields->zeroVector.fields.x);
@@ -650,13 +646,13 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
   }
   x = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector.fields.x;
   v14 = v6;
-  if ( !byte_5931941 )
+  if ( !byte_5969AE1 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
     v5.n64_u64[0] = v12;
     v7.n64_f32[0] = x;
     v6 = v14;
-    byte_5931941 = 1;
+    byte_5969AE1 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -669,12 +665,12 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
   inited.n128_f32[0] = sqrtf(vaddv_f32((float32x2_t)inited.n128_u64[0]));
   if ( inited.n128_f32[0] <= 0.00001 )
   {
-    if ( !byte_5931820 )
+    if ( !byte_59699C0 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       v7.n64_f32[0] = x;
       v6 = v14;
-      byte_5931820 = 1;
+      byte_59699C0 = 1;
     }
     zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
@@ -683,12 +679,12 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
     inited.n128_u64[0] = vdup_lane_s32((int32x2_t)inited.n128_u64[0], 0).n64_u64[0];
     zeroVector = (struct UnityEngine_Vector2_o)vdiv_f32(v5, (float32x2_t)inited.n128_u64[0]).n64_u64[0];
   }
-  if ( !byte_5931941 )
+  if ( !byte_5969AE1 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
     v7.n64_f32[0] = x;
     v6 = v14;
-    byte_5931941 = 1;
+    byte_5969AE1 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -699,11 +695,11 @@ int32_t CTouch__getFlickDirY(const MethodInfo *method)
   inited.n128_f32[0] = sqrtf((float)(v7.n64_f32[0] * v7.n64_f32[0]) + (float)(v6 * v6));
   if ( inited.n128_f32[0] <= 0.00001 )
   {
-    if ( !byte_5931820 )
+    if ( !byte_59699C0 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       v6 = v14;
-      byte_5931820 = 1;
+      byte_59699C0 = 1;
     }
     v10 = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
@@ -724,14 +720,12 @@ UnityEngine_Vector2_o CTouch__getPosNow(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC09 & 1) == 0 )
+  if ( (byte_5974EE0 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC09 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE0 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -740,10 +734,8 @@ UnityEngine_Vector2_o CTouch__getPosNow(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  x = static_fields->mPosNow.fields.x;
-  y = static_fields->mPosNow.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->mPosNow.fields.x;
+  result.fields.y = static_fields->mPosNow.fields.y;
   return result;
 }
 
@@ -753,14 +745,12 @@ UnityEngine_Vector2_o CTouch__getScrPosDelta(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC0F & 1) == 0 )
+  if ( (byte_5974EE6 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC0F = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE6 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -769,10 +759,8 @@ UnityEngine_Vector2_o CTouch__getScrPosDelta(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  x = static_fields->mScrPosDelta.fields.x;
-  y = static_fields->mScrPosDelta.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->mScrPosDelta.fields.x;
+  result.fields.y = static_fields->mScrPosDelta.fields.y;
   return result;
 }
 
@@ -782,10 +770,10 @@ float CTouch__getScrPosDeltaLen(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC11 & 1) == 0 )
+  if ( (byte_5974EE8 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC11 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE8 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -802,10 +790,10 @@ float CTouch__getScrPosDeltaLenOld(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC12 & 1) == 0 )
+  if ( (byte_5974EE9 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC12 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE9 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -822,14 +810,12 @@ UnityEngine_Vector2_o CTouch__getScrPosDeltaOld(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC10 & 1) == 0 )
+  if ( (byte_5974EE7 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC10 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE7 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -838,10 +824,8 @@ UnityEngine_Vector2_o CTouch__getScrPosDeltaOld(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  x = static_fields->mScrPosDeltaOld.fields.x;
-  y = static_fields->mScrPosDeltaOld.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->mScrPosDeltaOld.fields.x;
+  result.fields.y = static_fields->mScrPosDeltaOld.fields.y;
   return result;
 }
 
@@ -851,14 +835,12 @@ UnityEngine_Vector2_o CTouch__getScreenPosition(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC0B & 1) == 0 )
+  if ( (byte_5974EE2 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC0B = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE2 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -867,32 +849,28 @@ UnityEngine_Vector2_o CTouch__getScreenPosition(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  x = static_fields->mScrPosNow.fields.x;
-  y = static_fields->mScrPosNow.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = static_fields->mScrPosNow.fields.x;
+  result.fields.y = static_fields->mScrPosNow.fields.y;
   return result;
 }
 
 
-UnityEngine_Vector2_o CTouch__getScreenPosition_55911772(UnityEngine_Vector2_o tch_pos, const MethodInfo *method)
+UnityEngine_Vector2_o CTouch__getScreenPosition_56116428(UnityEngine_Vector2_o tch_pos, const MethodInfo *method)
 {
   const MethodInfo *v2; // x1
   float y; // s8
   float x; // s9
   CTouch_c *v5; // x0
-  float v6; // s0
-  float v7; // s1
-  UnityEngine_Vector2_o ScreenPosition_55911884; // kr00_8
+  UnityEngine_Vector2_o ScreenPosition_56116540; // kr00_8
   UnityEngine_Vector2_o v9; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   y = tch_pos.fields.y;
   x = tch_pos.fields.x;
-  if ( (byte_593CC0C & 1) == 0 )
+  if ( (byte_5974EE3 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC0C = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE3 = 1;
   }
   v5 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -902,16 +880,14 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_55911772(UnityEngine_Vector2_o t
   }
   v9.fields.x = x;
   v9.fields.y = y;
-  ScreenPosition_55911884 = CTouch__getScreenPosition_55911884(v9, v5->static_fields->mScreenCam, v2);
-  v7 = ScreenPosition_55911884.fields.y;
-  v6 = ScreenPosition_55911884.fields.x;
-  result.fields.y = v7;
-  result.fields.x = v6;
+  ScreenPosition_56116540 = CTouch__getScreenPosition_56116540(v9, v5->static_fields->mScreenCam, v2);
+  result.fields.y = ScreenPosition_56116540.fields.y;
+  result.fields.x = ScreenPosition_56116540.fields.x;
   return result;
 }
 
 
-UnityEngine_Vector2_o CTouch__getScreenPosition_55911884(
+UnityEngine_Vector2_o CTouch__getScreenPosition_56116540(
         UnityEngine_Vector2_o tch_pos,
         UnityEngine_Camera_o *cam,
         const MethodInfo *method)
@@ -920,40 +896,37 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_55911884(
   float x; // s9
   __int64 v6; // x1
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
-  float v8; // s1
   float v9; // s8
   CTouch_c *v10; // x0
   UnityEngine_Camera_o *mScreenCam; // x0
   float v12; // s9
   float v13; // s10
+  float v14; // s8
   unsigned int lossyScale; // s0
-  float v15; // s8
-  float v16; // s0
   UnityEngine_Ray_o v17; // [xsp+8h] [xbp-58h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   y = tch_pos.fields.y;
   x = tch_pos.fields.x;
-  if ( (byte_593CC0E & 1) == 0 )
+  if ( (byte_5974EE5 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CC0E = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974EE5 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)cam, 0, 0) || x == 3.4028e38 || y == 3.4028e38 )
   {
-    if ( !byte_5931820 )
+    if ( !byte_59699C0 )
     {
-      sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-      byte_5931820 = 1;
+      sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+      byte_59699C0 = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     v9 = static_fields->zeroVector.fields.x;
-    v8 = static_fields->zeroVector.fields.y;
+    result.fields.y = static_fields->zeroVector.fields.y;
   }
   else
   {
@@ -969,7 +942,7 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_55911884(
     v19.fields.z = 0.0;
     v19.fields.x = x;
     v19.fields.y = y;
-    UnityEngine_Camera__ScreenPointToRay_82985504(&v17, mScreenCam, v19, 0);
+    UnityEngine_Camera__ScreenPointToRay_83198808(&v17, mScreenCam, v19, 0);
     mScreenCam = CTouch_TypeInfo->static_fields->mScreenCam;
     if ( !mScreenCam
       || (v13 = v17.fields.m_Origin.fields.x,
@@ -979,49 +952,45 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_55911884(
                                                   0)) == 0)
       || (lossyScale = (unsigned int)UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mScreenCam, 0),
           (mScreenCam = CTouch_TypeInfo->static_fields->mScreenCam) == 0)
-      || (v15 = *(float *)&lossyScale,
+      || (v14 = *(float *)&lossyScale,
           (mScreenCam = (UnityEngine_Camera_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)mScreenCam,
                                                   0)) == 0) )
     {
 LABEL_20:
-      sub_21FFECC(mScreenCam, v6);
+      sub_2213CDC(mScreenCam, v6);
     }
-    v9 = v13 / v15;
-    v20 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mScreenCam, 0);
-    v8 = v12 / v20.fields.y;
+    v9 = v13 / v14;
+    result.fields.y = v12
+                    / COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(
+                                             (UnityEngine_Transform_o *)mScreenCam,
+                                             0).fields.y));
   }
-  v16 = v9;
-  result.fields.y = v8;
-  result.fields.x = v16;
+  result.fields.x = v9;
   return result;
 }
 
 
-UnityEngine_Vector2_o CTouch__getScreenPosition_55912272(UnityEngine_Camera_o *cam, const MethodInfo *method)
+UnityEngine_Vector2_o CTouch__getScreenPosition_56116928(UnityEngine_Camera_o *cam, const MethodInfo *method)
 {
   CTouch_c *v2; // x0
   const MethodInfo *v3; // x1
-  float x; // s0
-  float y; // s1
-  UnityEngine_Vector2_o ScreenPosition_55911884; // kr00_8
+  UnityEngine_Vector2_o ScreenPosition_56116540; // kr00_8
   UnityEngine_Vector2_o TouchPos; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593CC0D & 1) == 0 )
+  if ( (byte_5974EE4 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC0D = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EE4 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
   TouchPos = CTouch__GetTouchPos((const MethodInfo *)v2);
-  ScreenPosition_55911884 = CTouch__getScreenPosition_55911884(TouchPos, CTouch_TypeInfo->static_fields->mScreenCam, v3);
-  y = ScreenPosition_55911884.fields.y;
-  x = ScreenPosition_55911884.fields.x;
-  result.fields.y = y;
-  result.fields.x = x;
+  ScreenPosition_56116540 = CTouch__getScreenPosition_56116540(TouchPos, CTouch_TypeInfo->static_fields->mScreenCam, v3);
+  result.fields.y = ScreenPosition_56116540.fields.y;
+  result.fields.x = ScreenPosition_56116540.fields.x;
   return result;
 }
 
@@ -1031,10 +1000,10 @@ int32_t CTouch__getTouchState(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CBFD & 1) == 0 )
+  if ( (byte_5974ED4 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFD = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED4 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1052,10 +1021,10 @@ void CTouch__init(const MethodInfo *method)
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
 
-  if ( (byte_593CBF9 & 1) == 0 )
+  if ( (byte_5974ED0 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF9 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED0 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1084,10 +1053,10 @@ bool CTouch__isDrag(const MethodInfo *method)
   __int64 v3; // x1
   CTouch_c *v4; // x0
 
-  if ( (byte_593CC07 & 1) == 0 )
+  if ( (byte_5974EDE & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC07 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDE = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1106,10 +1075,10 @@ bool CTouch__isDragMode(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC06 & 1) == 0 )
+  if ( (byte_5974EDD & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC06 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDD = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1126,10 +1095,10 @@ bool CTouch__isFlick(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC02 & 1) == 0 )
+  if ( (byte_5974ED9 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC02 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED9 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1137,21 +1106,21 @@ bool CTouch__isFlick(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v1);
     v2 = CTouch_TypeInfo;
   }
-  return CTouch__isFlick_55909004(v2->static_fields->FLICK_LEN, (const MethodInfo *)v2);
+  return CTouch__isFlick_56113660(v2->static_fields->FLICK_LEN, (const MethodInfo *)v2);
 }
 
 
-bool CTouch__isFlick_55909004(float flickLen, const MethodInfo *method)
+bool CTouch__isFlick_56113660(float flickLen, const MethodInfo *method)
 {
   __int64 v2; // x1
   CTouch_c *v4; // x0
   __int64 v5; // x1
   CTouch_c *v6; // x0
 
-  if ( (byte_593CC03 & 1) == 0 )
+  if ( (byte_5974EDA & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC03 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EDA = 1;
   }
   v4 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1160,10 +1129,10 @@ bool CTouch__isFlick_55909004(float flickLen, const MethodInfo *method)
     return 0;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v5);
-  if ( !byte_593CC1C )
+  if ( !byte_5974EF3 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC1C = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EF3 = 1;
   }
   v6 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1180,10 +1149,10 @@ bool CTouch__isTouchKeep(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC00 & 1) == 0 )
+  if ( (byte_5974ED7 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC00 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED7 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1200,10 +1169,10 @@ bool CTouch__isTouchNone(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CBFE & 1) == 0 )
+  if ( (byte_5974ED5 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFE = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED5 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1220,10 +1189,10 @@ bool CTouch__isTouchPush(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CBFF & 1) == 0 )
+  if ( (byte_5974ED6 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFF = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED6 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1240,10 +1209,10 @@ bool CTouch__isTouchRelease(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CC01 & 1) == 0 )
+  if ( (byte_5974ED8 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC01 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED8 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1272,10 +1241,10 @@ void CTouch__process(const MethodInfo *method)
   bool v13; // w0
   CTouch_c *v14; // x0
 
-  if ( (byte_593CBFC & 1) == 0 )
+  if ( (byte_5974ED3 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFC = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED3 = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1368,7 +1337,7 @@ void CTouch__processSingleTouch(const MethodInfo *method)
   const MethodInfo *Touch; // x0
   __int64 v10; // x1
   const MethodInfo *v11; // x0
-  UnityEngine_Vector2_o ScreenPosition_55911772; // kr08_8
+  UnityEngine_Vector2_o ScreenPosition_56116428; // kr08_8
   CTouch_c *v13; // x0
   __int64 v14; // x8
   __int64 v15; // x1
@@ -1415,10 +1384,10 @@ void CTouch__processSingleTouch(const MethodInfo *method)
   float32x2_t v56; // d8
   UnityEngine_Touch_o src; // [xsp+Ch] [xbp-84h] BYREF
 
-  if ( (byte_593CC13 & 1) == 0 )
+  if ( (byte_5974EEA & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CC13 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974EEA = 1;
   }
   v2 = (const MethodInfo *)CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1461,11 +1430,11 @@ LABEL_17:
       v11 = (const MethodInfo *)CTouch_TypeInfo;
     }
     *(_QWORD *)((char *)v11[2].virtualMethodPointer + 68) = *(_QWORD *)((char *)v11[2].virtualMethodPointer + 52);
-    ScreenPosition_55911772 = CTouch__getScreenPosition_55911772(
+    ScreenPosition_56116428 = CTouch__getScreenPosition_56116428(
                                 *(UnityEngine_Vector2_o *)((char *)v11[2].virtualMethodPointer + 32),
                                 v11);
     v13 = CTouch_TypeInfo;
-    CTouch_TypeInfo->static_fields->mScrPosNow = ScreenPosition_55911772;
+    CTouch_TypeInfo->static_fields->mScrPosNow = ScreenPosition_56116428;
     if ( !v13->static_fields->mIsTchNow )
     {
       if ( !*(&v13->_2.cctor_finished + 1) )
@@ -1512,17 +1481,17 @@ LABEL_30:
           static_fields->mIsTchNow = 1;
           static_fields->mState = 1;
           static_fields->mPosPush = mPosNow;
-          v20 = CTouch__getScreenPosition_55911772(v17->static_fields->mPosPush, (const MethodInfo *)v17);
+          v20 = CTouch__getScreenPosition_56116428(v17->static_fields->mPosPush, (const MethodInfo *)v17);
           Touch = (const MethodInfo *)CTouch_TypeInfo;
-          v21 = (unsigned __int8)byte_5931820;
+          v21 = (unsigned __int8)byte_59699C0;
           CTouch_TypeInfo->static_fields->mScrPosPush = v20;
           *(_QWORD *)((char *)Touch[2].virtualMethodPointer + 68) = *(_QWORD *)((char *)Touch[2].virtualMethodPointer
                                                                               + 52);
           if ( !v21 )
           {
-            sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
+            sub_2213A60(&UnityEngine_Vector2_TypeInfo);
             Touch = (const MethodInfo *)CTouch_TypeInfo;
-            byte_5931820 = 1;
+            byte_59699C0 = 1;
           }
           v22 = UnityEngine_Vector2_TypeInfo;
           *(struct UnityEngine_Vector2_o *)((char *)Touch[2].virtualMethodPointer + 84) = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -1661,10 +1630,10 @@ LABEL_84:
             }
             v43.n64_u64[0] = (unsigned __int64)v42->mScrPosNow;
             v44.n64_u64[0] = (unsigned __int64)v42->mScrPosPush;
-            if ( !byte_5931941 )
+            if ( !byte_5969AE1 )
             {
-              sub_21FFC50(&System_Math_TypeInfo);
-              byte_5931941 = 1;
+              sub_2213A60(&System_Math_TypeInfo);
+              byte_5969AE1 = 1;
             }
             v45.n64_u64[0] = vsub_f32(v43, v44).n64_u64[0];
             if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -1692,7 +1661,7 @@ LABEL_84:
           v41 = CTouch_TypeInfo;
         }
         v41->static_fields->mScrPosDeltaOld = v41->static_fields->mScrPosDelta;
-        v49 = (unsigned __int8)byte_5931820;
+        v49 = (unsigned __int8)byte_59699C0;
         v41->static_fields->mScrPosDelta = (struct UnityEngine_Vector2_o)vsub_f32(
                                                                            (float32x2_t)v41->static_fields->mScrPosNow,
                                                                            (float32x2_t)v41->static_fields->mScrPosOld).n64_u64[0];
@@ -1703,8 +1672,8 @@ LABEL_84:
         v50->mScrPosDeltaLenOld = mScrPosDeltaLen;
         if ( !v49 )
         {
-          sub_21FFC50(&UnityEngine_Vector2_TypeInfo);
-          byte_5931820 = 1;
+          sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+          byte_59699C0 = 1;
         }
         v53.n64_u64[0] = vsub_f32(v52, (float32x2_t)UnityEngine_Vector2_TypeInfo->static_fields->zeroVector).n64_u64[0];
         if ( vaddv_f32(vmul_f32(v53, v53)) >= 1.0e-10 )
@@ -1716,10 +1685,10 @@ LABEL_84:
             v54 = CTouch_TypeInfo;
           }
           v55 = v54->static_fields;
-          if ( !byte_5931941 )
+          if ( !byte_5969AE1 )
           {
-            sub_21FFC50(&System_Math_TypeInfo);
-            byte_5931941 = 1;
+            sub_2213A60(&System_Math_TypeInfo);
+            byte_5969AE1 = 1;
           }
           v56.n64_u64[0] = (unsigned __int64)v55->mScrPosDelta;
           if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
@@ -1774,11 +1743,11 @@ LABEL_80:
           goto LABEL_79;
         }
 LABEL_123:
-        sub_21FFED4(Touch);
+        sub_2213CE4(Touch);
       }
     }
 LABEL_122:
-    sub_21FFECC(Touch, v10);
+    sub_2213CDC(Touch, v10);
   }
 }
 
@@ -1788,10 +1757,10 @@ void CTouch__reboot(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
 
-  if ( (byte_593CBF8 & 1) == 0 )
+  if ( (byte_5974ECF & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF8 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ECF = 1;
   }
   v2 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1817,11 +1786,11 @@ void CTouch__remove_MOnTouchPressEvent(CTouch_TouchEventHandler_o *value, const 
   CTouch_TouchEventHandler_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593CBF5 & 1) == 0 )
+  if ( (byte_5974ECC & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&CTouch_TouchEventHandler_TypeInfo);
-    byte_593CBF5 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&CTouch_TouchEventHandler_TypeInfo);
+    byte_5974ECC = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1846,13 +1815,13 @@ void CTouch__remove_MOnTouchPressEvent(CTouch_TouchEventHandler_o *value, const 
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v6);
       v9 = CTouch_TypeInfo;
     }
-    v10 = sub_223767C(&v9->static_fields->MOnTouchPressEvent, v8, MOnTouchPressEvent);
+    v10 = sub_224B48C(&v9->static_fields->MOnTouchPressEvent, v8, MOnTouchPressEvent);
     v11 = v10 == (_QWORD)MOnTouchPressEvent;
     MOnTouchPressEvent = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
+  sub_221405C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
   CTouch__add_OnTouchPressEvent(v12, v13);
 }
 
@@ -1871,11 +1840,11 @@ void CTouch__remove_MOnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, cons
   CTouch_TouchEventHandler_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_593CBF1 & 1) == 0 )
+  if ( (byte_5974EC8 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    sub_21FFC50(&CTouch_TouchEventHandler_TypeInfo);
-    byte_593CBF1 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    sub_2213A60(&CTouch_TouchEventHandler_TypeInfo);
+    byte_5974EC8 = 1;
   }
   v3 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1900,23 +1869,23 @@ void CTouch__remove_MOnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, cons
       j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, v6);
       v9 = CTouch_TypeInfo;
     }
-    v10 = sub_223767C(&v9->static_fields->MOnTouchReleaseEvent, v8, MOnTouchReleaseEvent);
+    v10 = sub_224B48C(&v9->static_fields->MOnTouchReleaseEvent, v8, MOnTouchReleaseEvent);
     v11 = v10 == (_QWORD)MOnTouchReleaseEvent;
     MOnTouchReleaseEvent = (System_Delegate_o *)v10;
     if ( v11 )
       return;
   }
-  sub_220024C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
+  sub_221405C(v5, CTouch_TouchEventHandler_TypeInfo, v7);
   CTouch__add_OnTouchReleaseEvent(v12, v13);
 }
 
 
 void CTouch__remove_OnTouchPressEvent(CTouch_TouchEventHandler_o *value, const MethodInfo *method)
 {
-  if ( (byte_593CBF7 & 1) == 0 )
+  if ( (byte_5974ECE & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF7 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ECE = 1;
   }
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
@@ -1926,10 +1895,10 @@ void CTouch__remove_OnTouchPressEvent(CTouch_TouchEventHandler_o *value, const M
 
 void CTouch__remove_OnTouchReleaseEvent(CTouch_TouchEventHandler_o *value, const MethodInfo *method)
 {
-  if ( (byte_593CBF3 & 1) == 0 )
+  if ( (byte_5974ECA & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBF3 = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ECA = 1;
   }
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
@@ -1949,10 +1918,10 @@ void CTouch__setParam(float flickLen, float dragLen, UnityEngine_Camera_o *scree
   struct CTouch_StaticFields *static_fields; // x8
   struct CTouch_StaticFields *v15; // x0
 
-  if ( (byte_593CBFA & 1) == 0 )
+  if ( (byte_5974ED1 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFA = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED1 = 1;
   }
   v13 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -1971,11 +1940,11 @@ void CTouch__setParam(float flickLen, float dragLen, UnityEngine_Camera_o *scree
     }
     static_fields->FLICK_LEN = flickLen;
     static_fields->DRAG_LEN = dragLen;
-    if ( !byte_5932645 )
+    if ( !byte_596A744 )
     {
-      sub_21FFC50(&CTouch_TypeInfo);
+      sub_2213A60(&CTouch_TypeInfo);
       v13 = CTouch_TypeInfo;
-      byte_5932645 = 1;
+      byte_596A744 = 1;
     }
     if ( !*(&v13->_2.cctor_finished + 1) )
     {
@@ -1984,7 +1953,7 @@ void CTouch__setParam(float flickLen, float dragLen, UnityEngine_Camera_o *scree
     }
     v15 = v13->static_fields;
     v15->mScreenCam = screenCam;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v15->mScreenCam, (int32_t)screenCam, v4, v5, v6, v7, v8, v9);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15->mScreenCam, (int32_t)screenCam, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -2000,10 +1969,10 @@ void CTouch__setScreenCamera(UnityEngine_Camera_o *cam, const MethodInfo *method
   CTouch_c *v9; // x0
   struct CTouch_StaticFields *static_fields; // x0
 
-  if ( (byte_593CBFB & 1) == 0 )
+  if ( (byte_5974ED2 & 1) == 0 )
   {
-    sub_21FFC50(&CTouch_TypeInfo);
-    byte_593CBFB = 1;
+    sub_2213A60(&CTouch_TypeInfo);
+    byte_5974ED2 = 1;
   }
   v9 = CTouch_TypeInfo;
   if ( !*(&CTouch_TypeInfo->_2.cctor_finished + 1) )
@@ -2013,7 +1982,7 @@ void CTouch__setScreenCamera(UnityEngine_Camera_o *cam, const MethodInfo *method
   }
   static_fields = v9->static_fields;
   static_fields->mScreenCam = cam;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->mScreenCam, (int32_t)cam, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->mScreenCam, (int32_t)cam, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -2036,7 +2005,7 @@ void CTouch_TouchEventHandler___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -2047,12 +2016,12 @@ void CTouch_TouchEventHandler___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -2064,9 +2033,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_2002E40;
+  this->fields.invoke_impl = (intptr_t)sub_2016128;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_2002E00;
+  this->fields.extra_arg = (intptr_t)&loc_20160E8;
 }
 
 
@@ -2076,9 +2045,9 @@ System_IAsyncResult_o *CTouch_TouchEventHandler__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
+  char v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return (System_IAsyncResult_o *)sub_21FFC04(this, &v5, callback, object);
+  return sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -2087,7 +2056,7 @@ void CTouch_TouchEventHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 

@@ -2,13 +2,13 @@ void TitleInfoEventSubmarineStatusComponent___cctor(const MethodInfo *method)
 {
   struct TitleInfoEventSubmarineStatusComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_5936F97 & 1) == 0 )
+  if ( (byte_596F0F1 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    byte_5936F97 = 1;
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    byte_596F0F1 = 1;
   }
   static_fields = TitleInfoEventSubmarineStatusComponent_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->ENTRY_ANIMATION_TIME = xmmword_E93070;
+  *(_OWORD *)&static_fields->ENTRY_ANIMATION_TIME = xmmword_E9C210;
   static_fields->MAP_CHANGE_WAIT_TIME = 0.3;
 }
 
@@ -25,18 +25,18 @@ void TitleInfoEventSubmarineStatusComponent___ctor(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936F96 & 1) == 0 )
+  if ( (byte_596F0F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    byte_5936F96 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_UIAtlas__TypeInfo);
+    byte_596F0F0 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.atlasList = (struct System_Collections_Generic_List_UIAtlas__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.atlasList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.atlasList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   TitleInfoEventInfoComponent___ctor((TitleInfoEventInfoComponent_o *)this, 0);
 }
 
@@ -76,13 +76,15 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__ConvertoPointToPos
   float v9; // s3
   int mWidth; // w8
   int32_t minPoint; // w10
-  float v12; // s0
+  UnityEngine_Vector3_o BasePosition; // 0:kr00_12.12
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result = TitleInfoEventSubmarineStatusComponent__get_BasePosition(this, *(const MethodInfo **)&point);
+  BasePosition = TitleInfoEventSubmarineStatusComponent__get_BasePosition(this, *(const MethodInfo **)&point);
+  result.fields.y = BasePosition.fields.y;
+  result.fields.z = BasePosition.fields.z;
   gaugeBar = this->fields.gaugeBar;
   if ( !gaugeBar )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   maxPoint = this->fields.maxPoint;
   v9 = 1.0;
   mWidth = gaugeBar->fields.mWidth;
@@ -93,8 +95,7 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__ConvertoPointToPos
     if ( point > minPoint )
       v9 = (float)(point - minPoint) / (float)(maxPoint - minPoint);
   }
-  v12 = result.fields.x - (float)(v9 * (float)mWidth);
-  result.fields.x = v12;
+  result.fields.x = BasePosition.fields.x - (float)(v9 * (float)mWidth);
   return result;
 }
 
@@ -106,7 +107,7 @@ UnityEngine_GameObject_o *TitleInfoEventSubmarineStatusComponent__CreateGoalAnim
   AssetData_o *mapAssetData; // x0
   __int64 v4; // x1
   __int64 v5; // x2
-  Il2CppObject *Object_object__58323140; // x20
+  Il2CppObject *Object_object__58532980; // x20
   const MethodInfo *v7; // x2
   UnityEngine_GameObject_o *v8; // x21
   struct System_String_o *GoalAnimName; // x0
@@ -123,28 +124,28 @@ UnityEngine_GameObject_o *TitleInfoEventSubmarineStatusComponent__CreateGoalAnim
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v21; // x0
 
-  if ( (byte_5936F85 & 1) == 0 )
+  if ( (byte_596F0DF & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5936F85 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F0DF = 1;
   }
   mapAssetData = this->fields.mapAssetData;
   if ( !mapAssetData )
     return 0;
-  Object_object__58323140 = AssetData__GetObject_object__58323140(
+  Object_object__58532980 = AssetData__GetObject_object__58532980(
                               mapAssetData,
                               this->fields.goalIconAnimPrefabName,
-                              (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                              (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
   v8 = 0;
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__58323140, 0, 0) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__58532980, 0, 0) )
   {
     GoalAnimName = TitleInfoEventSubmarineStatusComponent__GetGoalAnimName(this, 1, v7);
     this->fields.animClipName = GoalAnimName;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.animClipName,
       (int32_t)GoalAnimName,
       v10,
@@ -156,13 +157,13 @@ UnityEngine_GameObject_o *TitleInfoEventSubmarineStatusComponent__CreateGoalAnim
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
     v18 = UnityEngine_Object__Instantiate_object_(
-            Object_object__58323140,
-            (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            Object_object__58532980,
+            (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v18 )
-      sub_21FFECC(0, v19);
+      sub_2213CDC(0, v19);
     v8 = (UnityEngine_GameObject_o *)v18;
     gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v18, 0);
-    GameObjectExtensions__SafeSetParent_42881912(gameObject, this->fields.statusObj, 0);
+    GameObjectExtensions__SafeSetParent_42897308(gameObject, this->fields.statusObj, 0);
     v21 = UnityEngine_GameObject__get_gameObject(v8, 0);
     GameObjectExtensions__ResetLocalPosition(v21, 0);
   }
@@ -195,24 +196,24 @@ System_String_o *TitleInfoEventSubmarineStatusComponent__CreateSaveData(
   v18 = userPoint;
   v16 = progressQuestId;
   v15 = isLastGoalPlayed;
-  if ( (byte_5936F89 & 1) == 0 )
+  if ( (byte_596F0E3 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    byte_5936F89 = 1;
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    byte_596F0E3 = 1;
   }
   v5 = System_Int32__ToString((int32_t)&v18, 0);
   v6 = System_Int32__ToString((int32_t)&v17, 0);
   v9 = System_Int32__ToString((int32_t)&v16, 0);
-  if ( !*(_DWORD *)(qword_594C050 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_594C050, v7, v8);
+  if ( !*(_DWORD *)(qword_5984328 + 228) )
+    j_il2cpp_runtime_class_init_0(qword_5984328, v7, v8);
   v13 = System_Boolean__ToString((bool)&v15, 0);
   if ( !*(&TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v10, v11);
-  return TitleInfoEventSubmarineStatusComponent__CreateSaveData_46709132(v5, v6, v9, v13, v12);
+  return TitleInfoEventSubmarineStatusComponent__CreateSaveData_46736808(v5, v6, v9, v13, v12);
 }
 
 
-System_String_o *TitleInfoEventSubmarineStatusComponent__CreateSaveData_46709132(
+System_String_o *TitleInfoEventSubmarineStatusComponent__CreateSaveData_46736808(
         System_String_o *userPoint,
         System_String_o *currentQuestId,
         System_String_o *progressQuestId,
@@ -223,26 +224,26 @@ System_String_o *TitleInfoEventSubmarineStatusComponent__CreateSaveData_46709132
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_5936F8A & 1) == 0 )
+  if ( (byte_596F0E4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Text_StringBuilder_TypeInfo);
-    sub_21FFC50(&StringLiteral_869/*","*/);
-    byte_5936F8A = 1;
+    sub_2213A60(&System_Text_StringBuilder_TypeInfo);
+    sub_2213A60(&StringLiteral_869/*","*/);
+    byte_596F0E4 = 1;
   }
-  v9 = (System_Text_StringBuilder_o *)sub_21FFEBC(System_Text_StringBuilder_TypeInfo);
+  v9 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v9, 0);
   if ( !v9 )
-    sub_21FFECC(v10, v11);
-  System_Text_StringBuilder__Append_75521760(v9, userPoint, 0);
-  System_Text_StringBuilder__Append_75521760(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
-  System_Text_StringBuilder__Append_75521760(v9, currentQuestId, 0);
-  System_Text_StringBuilder__Append_75521760(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
-  System_Text_StringBuilder__Append_75521760(v9, progressQuestId, 0);
-  System_Text_StringBuilder__Append_75521760(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
-  System_Text_StringBuilder__Append_75521760(v9, isLastGoalPlayed, 0);
-  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
-                              v9,
-                              v9->klass->vtable._3_ToString.method);
+    sub_2213CDC(v10, v11);
+  System_Text_StringBuilder__Append_75735064(v9, userPoint, 0);
+  System_Text_StringBuilder__Append_75735064(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
+  System_Text_StringBuilder__Append_75735064(v9, currentQuestId, 0);
+  System_Text_StringBuilder__Append_75735064(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
+  System_Text_StringBuilder__Append_75735064(v9, progressQuestId, 0);
+  System_Text_StringBuilder__Append_75735064(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
+  System_Text_StringBuilder__Append_75735064(v9, isLastGoalPlayed, 0);
+  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
+           v9,
+           v9->klass->vtable._3_ToString.method);
 }
 
 
@@ -272,11 +273,11 @@ void TitleInfoEventSubmarineStatusComponent__DestroyGoalAnim(
   bool v22; // w6
   bool v23; // w7
 
-  if ( (byte_5936F87 & 1) == 0 )
+  if ( (byte_596F0E1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5936F87 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F0E1 = 1;
   }
   goalAnimObject = (UnityEngine_Object_o *)this->fields.goalAnimObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -285,7 +286,7 @@ void TitleInfoEventSubmarineStatusComponent__DestroyGoalAnim(
   {
     GoalAnimName = TitleInfoEventSubmarineStatusComponent__GetGoalAnimName(this, 0, v5);
     this->fields.animClipName = GoalAnimName;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.animClipName,
       (int32_t)GoalAnimName,
       v7,
@@ -298,17 +299,17 @@ void TitleInfoEventSubmarineStatusComponent__DestroyGoalAnim(
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
+                                                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
     {
-      sub_21FFECC(Component_object, v13);
+      sub_2213CDC(Component_object, v13);
     }
     UnityEngine_Animation__Stop((UnityEngine_Animation_o *)Component_object, 0);
     v17 = (UnityEngine_Object_o *)this->fields.goalAnimObject;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
-    UnityEngine_Object__Destroy_83246496(v17, 0);
+    UnityEngine_Object__Destroy_83459800(v17, 0);
     this->fields.goalAnimObject = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject, 0, v18, v19, v20, v21, v22, v23);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject, 0, v18, v19, v20, v21, v22, v23);
   }
 }
 
@@ -329,7 +330,7 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
   const MethodInfo *v12; // x2
   System_String_o *GoalAnimName; // x0
   const MethodInfo *v14; // x2
-  const MethodInfo_476EDF8 *v15; // x0
+  const MethodInfo_47A2F30 *v15; // x0
   __int64 v16; // x2
   TerminalPramsManager_c *v17; // x0
   int32_t userPoint; // w8
@@ -373,32 +374,32 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
   bool v56; // w6
   bool v57; // w7
 
-  if ( (byte_5936F81 & 1) == 0 )
+  if ( (byte_596F0DB & 1) == 0 )
   {
-    sub_21FFC50(&EventSaveData_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
-    sub_21FFC50(&System_Predicate_QuestReleaseEntity__TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0__EndAnimation_b__0__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0__EndAnimation_b__1__);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0_TypeInfo);
-    byte_5936F81 = 1;
+    sub_2213A60(&EventSaveData_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+    sub_2213A60(&System_Predicate_QuestReleaseEntity__TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0__EndAnimation_b__0__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0__EndAnimation_b__1__);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0_TypeInfo);
+    byte_596F0DB = 1;
   }
-  v3 = sub_21FFEBC(TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0_TypeInfo);
+  v3 = sub_2213CCC(TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_59;
   *(_QWORD *)(v3 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
   if ( this->fields.isGoalAnimToLoop )
   {
     this->fields.isGoalAnimToLoop = 0;
     GoalAnimName = TitleInfoEventSubmarineStatusComponent__GetGoalAnimName(this, 2, v12);
     TitleInfoEventSubmarineStatusComponent__PlayGoalAnim(this, GoalAnimName, v14);
   }
-  v15 = (const MethodInfo_476EDF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__;
+  v15 = (const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__;
   this->fields.isAfterTakingOver = 0;
   Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance(v15);
   if ( !Instance )
@@ -413,10 +414,10 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
   this->fields.oldQuestId = currentQuestId;
   if ( !v20 )
     j_il2cpp_runtime_class_init_0(v17, v5, v16);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   v21 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -426,14 +427,14 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
   }
   if ( !v21->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
   {
-    v22 = (EventSaveData_o *)sub_21FFEBC(EventSaveData_TypeInfo);
+    v22 = (EventSaveData_o *)sub_2213CCC(EventSaveData_TypeInfo);
     EventSaveData___ctor(v22, 0);
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v23, v24);
-    if ( !byte_5934EAC )
+    if ( !byte_596CFDB )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_5934EAC = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596CFDB = 1;
     }
     v30 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -443,15 +444,15 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
     }
     p_BeforeEventSubmarineSaveData_k__BackingField = (MissionNaviTransitionBoardItem_o *)&v30->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
     p_BeforeEventSubmarineSaveData_k__BackingField->klass = (MissionNaviTransitionBoardItem_c *)v22;
-    sub_21FFBF4(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v22, v24, v25, v26, v27, v28, v29);
+    sub_2213A04(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v22, v24, v25, v26, v27, v28, v29);
     v21 = TerminalPramsManager_TypeInfo;
   }
   if ( !*(&v21->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v21, v5, v16);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   v32 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -462,7 +463,7 @@ void TitleInfoEventSubmarineStatusComponent__EndAnimation(
   Instance = (MissionNotifyManager_o *)v32->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
   if ( !Instance )
 LABEL_59:
-    sub_21FFECC(Instance, v5);
+    sub_2213CDC(Instance, v5);
   ValueByArray = EventSaveData__GetValueByArray((EventSaveData_o *)Instance, 0x2Cu, 0);
   v34 = ValueByArray;
   if ( !ValueByArray )
@@ -485,7 +486,7 @@ LABEL_34:
   LODWORD(v34) = System_Int32__Parse(v34->m_Items[2], 0);
 LABEL_35:
   baseQuestReleaseEntList = this->fields.baseQuestReleaseEntList;
-  v37 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v37 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v37,
     (Il2CppObject *)v3,
@@ -496,7 +497,7 @@ LABEL_35:
   v38 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)baseQuestReleaseEntList,
           (System_Predicate_T__o *)v37,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   v39 = this->fields.currentQuestId;
   v40 = v38 == 0;
   v41 = System_Predicate_QuestReleaseEntity__TypeInfo;
@@ -506,7 +507,7 @@ LABEL_35:
   if ( (int)v34 > v39 )
     v39 = (int)v34;
   *(_DWORD *)(v3 + 24) = v39;
-  v43 = (System_Predicate_object__o *)sub_21FFEBC(v41);
+  v43 = (System_Predicate_object__o *)sub_2213CCC(v41);
   System_Predicate_object____ctor(
     v43,
     (Il2CppObject *)v3,
@@ -517,16 +518,16 @@ LABEL_35:
   if ( System_Collections_Generic_List_object___Find(
          (System_Collections_Generic_List_object__o *)v42,
          (System_Predicate_T__o *)v43,
-         (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__) )
+         (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__) )
   {
     LODWORD(v34) = *(_DWORD *)(v3 + 24);
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v44);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   Instance = (MissionNotifyManager_o *)TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -540,13 +541,13 @@ LABEL_35:
   klass = Instance[2].fields.mNoticeNumberComp[7].klass;
   if ( !klass )
     goto LABEL_59;
-  v48 = (unsigned __int8)byte_5934EAB;
+  v48 = (unsigned __int8)byte_596CFDA;
   LODWORD(klass->_1.name) = eventDetailEnt->fields.eventId;
   if ( !v48 )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
     Instance = (MissionNotifyManager_o *)TerminalPramsManager_TypeInfo;
-    byte_5934EAB = 1;
+    byte_596CFDA = 1;
   }
   if ( !HIDWORD(Instance[3].monitor) )
   {
@@ -567,7 +568,7 @@ LABEL_35:
   if ( !v51 )
     goto LABEL_59;
   v51->_1.namespaze = (const char *)Instance;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v51->_1.namespaze, (int32_t)Instance, v52, v53, v54, v55, v56, v57);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v51->_1.namespaze, (int32_t)Instance, v52, v53, v54, v55, v56, v57);
   TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveData(0);
   ActionExtensions__Call(this->fields.onEndAnim, 0);
 }
@@ -581,11 +582,11 @@ void TitleInfoEventSubmarineStatusComponent__EndExitAnimation(
   __int64 v4; // x2
   TitleInfoEventSubmarineStatusComponent_c *v5; // x0
 
-  if ( (byte_5936F7B & 1) == 0 )
+  if ( (byte_596F0D5 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_11087/*"PlayEntryAnimation"*/);
-    byte_5936F7B = 1;
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_11104/*"PlayEntryAnimation"*/);
+    byte_596F0D5 = 1;
   }
   TitleInfoEventSubmarineStatusComponent__DestroyGoalAnim(this, method);
   v5 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
@@ -596,7 +597,7 @@ void TitleInfoEventSubmarineStatusComponent__EndExitAnimation(
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_11087/*"PlayEntryAnimation"*/,
+    (System_String_o *)StringLiteral_11104/*"PlayEntryAnimation"*/,
     v5->static_fields->MAP_CHANGE_WAIT_TIME,
     0);
 }
@@ -647,12 +648,12 @@ void TitleInfoEventSubmarineStatusComponent__EndProgressAnimation(
   const MethodInfo *v41; // x2
   TitleInfoEventSubmarineStatusComponent_c *v42; // x0
 
-  if ( (byte_5936F7E & 1) == 0 )
+  if ( (byte_596F0D8 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_6224/*"EndAnimation"*/);
-    byte_5936F7E = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_6236/*"EndAnimation"*/);
+    byte_596F0D8 = 1;
   }
   minPoint = this->fields.minPoint;
   maxPoint = this->fields.maxPoint;
@@ -680,9 +681,9 @@ void TitleInfoEventSubmarineStatusComponent__EndProgressAnimation(
     v15 = (UnityEngine_Object_o *)this->fields.goalAnimObject;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
-    UnityEngine_Object__Destroy_83246496(v15, 0);
+    UnityEngine_Object__Destroy_83459800(v15, 0);
     this->fields.goalAnimObject = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject, 0, v16, v17, v18, v19, v20, v21);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject, 0, v16, v17, v18, v19, v20, v21);
   }
   ProgressQuestReleaseEnt = (TitleInfoEventSubmarineStatusComponent_o *)TitleInfoEventSubmarineStatusComponent__GetProgressQuestReleaseEnt(
                                                                           (TitleInfoEventSubmarineStatusComponent_o *)v9,
@@ -705,7 +706,7 @@ void TitleInfoEventSubmarineStatusComponent__EndProgressAnimation(
                                         0)) == 0 )
     {
 LABEL_32:
-      sub_21FFECC(gateNextPointCounterLabel, v10);
+      sub_2213CDC(gateNextPointCounterLabel, v10);
     }
     UnityEngine_GameObject__SetActive(gateNextPointCounterLabel, 0, 0);
   }
@@ -719,7 +720,7 @@ LABEL_32:
   this->fields.isGoalAnimToLoop = 1;
   v28 = TitleInfoEventSubmarineStatusComponent__CreateGoalAnimObject(this, v27);
   this->fields.goalAnimObject = v28;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject,
     (int32_t)v28,
     v29,
@@ -744,7 +745,7 @@ LABEL_32:
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6224/*"EndAnimation"*/,
+    (System_String_o *)StringLiteral_6236/*"EndAnimation"*/,
     v42->static_fields->GOAL_ANIMATION_TIME,
     0);
 }
@@ -762,43 +763,43 @@ QuestReleaseEntity_o *TitleInfoEventSubmarineStatusComponent__GetCurrentQuestRel
   int32_t v8; // w20
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_5936F8D & 1) == 0 )
+  if ( (byte_596F0E7 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
-    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-    byte_5936F8D = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
+    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    byte_596F0E7 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   if ( !baseList )
-    sub_21FFECC(this, baseList);
+    sub_2213CDC(this, baseList);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     (System_Collections_Generic_List_object__o *)baseList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v10,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v4 )
       break;
     current = v10.fields._current;
     if ( !v10.fields._current )
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     v8 = *(_DWORD *)((char *)&v10.fields._current->klass + (unsigned __int64)&word_10);
     if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v5, v6);
-    if ( !CondType__IsQuestClear_47254560(v8, -1, 0, 0) )
+    if ( !CondType__IsQuestClear_47284152(v8, -1, 0, 0) )
       goto LABEL_12;
   }
   current = 0;
 LABEL_12:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v10,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   return (QuestReleaseEntity_o *)current;
 }
 
@@ -810,14 +811,14 @@ System_String_o *TitleInfoEventSubmarineStatusComponent__GetEventUIAssetDataPath
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5936F8F & 1) == 0 )
+  if ( (byte_596F0E9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_6526/*"EventUI/Prefabs/{0}"*/);
-    byte_5936F8F = 1;
+    sub_2213A60(&StringLiteral_6538/*"EventUI/Prefabs/{0}"*/);
+    byte_596F0E9 = 1;
   }
   v5 = eventId;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v5);
-  return System_String__Format((System_String_o *)StringLiteral_6526/*"EventUI/Prefabs/{0}"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v5);
+  return System_String__Format((System_String_o *)StringLiteral_6538/*"EventUI/Prefabs/{0}"*/, v3, 0);
 }
 
 
@@ -828,17 +829,17 @@ UnityEngine_GameObject_o *TitleInfoEventSubmarineStatusComponent__GetGameObjectF
 {
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_5936F95 & 1) == 0 )
+  if ( (byte_596F0EF & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    byte_5936F95 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    byte_596F0EF = 1;
   }
   result = (UnityEngine_GameObject_o *)this->fields.eventAssetData;
   if ( result )
-    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58323140(
+    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__58532980(
                                          (AssetData_o *)result,
                                          name,
-                                         (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                         (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   return result;
 }
 
@@ -851,32 +852,32 @@ System_String_o *TitleInfoEventSubmarineStatusComponent__GetGoalAnimName(
   System_String_o *goalIconAnimPrefabName; // x0
   __int64 *v6; // x8
 
-  if ( (byte_5936F84 & 1) == 0 )
+  if ( (byte_596F0DE & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17201/*"_loop"*/);
-    sub_21FFC50(&StringLiteral_17220/*"_start"*/);
-    sub_21FFC50(&StringLiteral_17199/*"_last"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_17184/*"_end"*/);
-    byte_5936F84 = 1;
+    sub_2213A60(&StringLiteral_17237/*"_loop"*/);
+    sub_2213A60(&StringLiteral_17256/*"_start"*/);
+    sub_2213A60(&StringLiteral_17235/*"_last"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_17220/*"_end"*/);
+    byte_596F0DE = 1;
   }
   goalIconAnimPrefabName = this->fields.goalIconAnimPrefabName;
   if ( this->fields.isLastGoalPlayed )
-    goalIconAnimPrefabName = System_String__Concat_75438412(
+    goalIconAnimPrefabName = System_String__Concat_75651716(
                                goalIconAnimPrefabName,
-                               (System_String_o *)StringLiteral_17199/*"_last"*/,
+                               (System_String_o *)StringLiteral_17235/*"_last"*/,
                                0);
   switch ( animType )
   {
     case 3:
-      v6 = &StringLiteral_17184/*"_end"*/;
-      return System_String__Concat_75438412(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
+      v6 = &StringLiteral_17220/*"_end"*/;
+      return System_String__Concat_75651716(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
     case 2:
-      v6 = &StringLiteral_17201/*"_loop"*/;
-      return System_String__Concat_75438412(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
+      v6 = &StringLiteral_17237/*"_loop"*/;
+      return System_String__Concat_75651716(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
     case 1:
-      v6 = &StringLiteral_17220/*"_start"*/;
-      return System_String__Concat_75438412(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
+      v6 = &StringLiteral_17256/*"_start"*/;
+      return System_String__Concat_75651716(goalIconAnimPrefabName, (System_String_o *)*v6, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -895,42 +896,42 @@ QuestReleaseEntity_o *TitleInfoEventSubmarineStatusComponent__GetProgressQuestRe
   int32_t v9; // w20
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_5936F8C & 1) == 0 )
+  if ( (byte_596F0E6 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
-    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-    byte_5936F8C = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
+    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    byte_596F0E6 = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( !baseList )
-    sub_21FFECC(this, baseList);
+    sub_2213CDC(this, baseList);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)baseList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   current = 0;
   do
   {
     v5 = (QuestReleaseEntity_o *)current;
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v11,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v6 )
       break;
     current = v11.fields._current;
     if ( !v11.fields._current )
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     v9 = *(_DWORD *)((char *)&v11.fields._current->klass + (unsigned __int64)&word_10);
     if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v7, v8);
   }
-  while ( CondType__IsQuestClear_47254560(v9, -1, 0, 0) );
+  while ( CondType__IsQuestClear_47284152(v9, -1, 0, 0) );
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   return v5;
 }
 
@@ -972,30 +973,30 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
   System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_5936F8B & 1) == 0 )
+  if ( (byte_596F0E5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Comparison_QuestReleaseEntity__TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent___c__GetQuestReleaseList_b__80_0__);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
-    byte_5936F8B = 1;
+    sub_2213A60(&System_Comparison_QuestReleaseEntity__TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_QuestReleaseMaster___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent___c__GetQuestReleaseList_b__80_0__);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
+    byte_596F0E5 = 1;
   }
   memset(&v35, 0, sizeof(v35));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
   if ( !Instance )
     goto LABEL_25;
   ListByTargetAndCondType = QuestReleaseMaster__getListByTargetAndCondType(
@@ -1003,16 +1004,16 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
                               eventId,
                               85,
                               0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_QuestReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_QuestReleaseEntity___ctor__);
   if ( !ListByTargetAndCondType )
     goto LABEL_25;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v34,
     (System_Collections_Generic_List_object__o *)ListByTargetAndCondType,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   v35 = v34;
   v34.fields._list = 0;
   *(_QWORD *)&v34.fields._index = &v35;
@@ -1020,12 +1021,12 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v35,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v7 )
       break;
     current = v35.fields._current;
     if ( !v35.fields._current )
-      sub_21FFECC(v7, v8);
+      sub_2213CDC(v7, v8);
     QuestType = QuestMaster__GetQuestType((int32_t)v35.fields._current[1].klass, 0);
     if ( (_DWORD)QuestType == 2 )
     {
@@ -1035,7 +1036,7 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
             ++v6->fields._version,
             !items) )
       {
-        sub_21FFECC(QuestType, v11);
+        sub_2213CDC(QuestType, v11);
       }
       size = v6->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -1043,20 +1044,20 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
         System_Collections_Generic_List_object___AddWithResize(
           v6,
           current,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
       }
       else
       {
         v21 = &items->obj.klass + size;
         v6->fields._size = size + 1;
         v21[4] = (Il2CppClass *)current;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)current, v12, v13, v14, v15, v16, v17);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)current, v12, v13, v14, v15, v16, v17);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   Instance = TitleInfoEventSubmarineStatusComponent___c_TypeInfo;
   if ( !*(&TitleInfoEventSubmarineStatusComponent___c_TypeInfo->_2.cctor_finished + 1) )
   {
@@ -1073,7 +1074,7 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
       static_fields = TitleInfoEventSubmarineStatusComponent___c_TypeInfo->static_fields;
     }
     v25 = (Il2CppObject *)static_fields->__9;
-    _9__80_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_QuestReleaseEntity__TypeInfo);
+    _9__80_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_QuestReleaseEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__80_0,
       v25,
@@ -1081,15 +1082,15 @@ System_Collections_Generic_List_QuestReleaseEntity__o *TitleInfoEventSubmarineSt
       0);
     v26 = TitleInfoEventSubmarineStatusComponent___c_TypeInfo->static_fields;
     v26->__9__80_0 = (struct System_Comparison_QuestReleaseEntity__o *)_9__80_0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v26->__9__80_0, (int32_t)_9__80_0, v27, v28, v29, v30, v31, v32);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->__9__80_0, (int32_t)_9__80_0, v27, v28, v29, v30, v31, v32);
   }
   if ( !v6 )
 LABEL_25:
-    sub_21FFECC(Instance, v4);
-  System_Collections_Generic_List_object___Sort_71636404(
+    sub_2213CDC(Instance, v4);
+  System_Collections_Generic_List_object___Sort_71849708(
     v6,
     _9__80_0,
-    (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
+    (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_QuestReleaseEntity__Sort__);
   return (System_Collections_Generic_List_QuestReleaseEntity__o *)v6;
 }
 
@@ -1104,25 +1105,25 @@ int32_t TitleInfoEventSubmarineStatusComponent__GetUserEventPoint(
   Il2CppObject *MasterData_object; // x20
   struct EventDetailEntity_o *eventDetailEnt; // x8
 
-  if ( (byte_5936F82 & 1) == 0 )
+  if ( (byte_596F0DC & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMasterData_UserEventPointMaster___);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_5936F82 = 1;
+    sub_2213A60(&Method_DataManager_GetMasterData_UserEventPointMaster___);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_596F0DC = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                        (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v4, v5);
-  if ( !byte_5931D52 )
+  if ( !byte_5969EF2 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_5931D52 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5969EF2 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1133,7 +1134,7 @@ int32_t TitleInfoEventSubmarineStatusComponent__GetUserEventPoint(
   eventDetailEnt = this->fields.eventDetailEnt;
   if ( !eventDetailEnt || !MasterData_object )
 LABEL_13:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   return UserEventPointMaster__GetEventPointTotal(
            (UserEventPointMaster_o *)MasterData_object,
            *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -1156,24 +1157,24 @@ bool TitleInfoEventSubmarineStatusComponent__IsAllClear(
   __int64 v11; // x2
   int32_t klass; // w22
   int32_t v13; // w21
-  _BOOL8 IsQuestClear_47254560; // x0
+  _BOOL8 IsQuestClear_47284152; // x0
   __int64 v15; // x1
   bool v16; // w22
   int32_t v17; // w0
   bool v19; // w8
 
-  if ( (byte_5936F8E & 1) == 0 )
+  if ( (byte_596F0E8 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_LastOrDefault_QuestReleaseEntity___);
-    byte_5936F8E = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_LastOrDefault_QuestReleaseEntity___);
+    byte_596F0E8 = 1;
   }
   baseQuestReleaseEntList = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.baseQuestReleaseEntList;
   if ( baseQuestReleaseEntList )
   {
     baseQuestReleaseEntList = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__LastOrDefault_object_(
                                                                                      baseQuestReleaseEntList,
-                                                                                     (const MethodInfo_3852770 *)Method_System_Linq_Enumerable_LastOrDefault_QuestReleaseEntity___);
+                                                                                     (const MethodInfo_3885C38 *)Method_System_Linq_Enumerable_LastOrDefault_QuestReleaseEntity___);
     if ( baseQuestReleaseEntList )
     {
       v8 = baseQuestReleaseEntList;
@@ -1182,10 +1183,10 @@ bool TitleInfoEventSubmarineStatusComponent__IsAllClear(
       v13 = ValueInt;
       if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v10, v11);
-      IsQuestClear_47254560 = CondType__IsQuestClear_47254560(klass, -1, 0, 0);
+      IsQuestClear_47284152 = CondType__IsQuestClear_47284152(klass, -1, 0, 0);
       if ( !currentQuestReleaseEnt )
-        sub_21FFECC(IsQuestClear_47254560, v15);
-      v16 = IsQuestClear_47254560;
+        sub_2213CDC(IsQuestClear_47284152, v15);
+      v16 = IsQuestClear_47284152;
       v17 = QuestReleaseEntity__getValueInt(currentQuestReleaseEnt, 0);
       v19 = v13 <= nowPoint && v17 == v13;
       LOBYTE(baseQuestReleaseEntList) = v16 && v19;
@@ -1220,11 +1221,11 @@ bool TitleInfoEventSubmarineStatusComponent__IsPlayingGoalAnim(
   __int64 v5; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_5936F88 & 1) == 0 )
+  if ( (byte_596F0E2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5936F88 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F0E2 = 1;
   }
   goalAnimObject = (UnityEngine_Object_o *)this->fields.goalAnimObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1235,9 +1236,9 @@ bool TitleInfoEventSubmarineStatusComponent__IsPlayingGoalAnim(
   if ( !Component_object
     || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          Component_object,
-                                                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
+                                                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
   {
-    sub_21FFECC(Component_object, v5);
+    sub_2213CDC(Component_object, v5);
   }
   return UnityEngine_Animation__get_isPlaying((UnityEngine_Animation_o *)Component_object, 0);
 }
@@ -1271,27 +1272,27 @@ void TitleInfoEventSubmarineStatusComponent__LoadEventUIAssetData(
   __int64 v26; // x1
   __int64 v27; // x2
 
-  if ( (byte_5936F90 & 1) == 0 )
+  if ( (byte_596F0EA & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0__LoadEventUIAssetData_b__0__);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0_TypeInfo);
-    byte_5936F90 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0__LoadEventUIAssetData_b__0__);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0_TypeInfo);
+    byte_596F0EA = 1;
   }
-  v7 = sub_21FFEBC(TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0_TypeInfo);
+  v7 = sub_2213CCC(TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_21FFECC(v8, v9);
+    sub_2213CDC(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
   if ( !*(&TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v22, v23);
   EventUIAssetDataPath = TitleInfoEventSubmarineStatusComponent__GetEventUIAssetDataPath(eventId, v22);
-  v25 = (AssetLoader_LoadEndDataHandler_o *)sub_21FFEBC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v25 = (AssetLoader_LoadEndDataHandler_o *)sub_2213CCC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v25,
     (Il2CppObject *)v7,
@@ -1340,22 +1341,22 @@ void TitleInfoEventSubmarineStatusComponent__LoadLocalAtlas(
   int v31; // [xsp+Ch] [xbp-54h] BYREF
 
   v4 = this;
-  if ( (byte_5936F93 & 1) == 0 )
+  if ( (byte_596F0ED & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_26395/*"{0:D2}"*/);
-    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_21FFC50(&StringLiteral_5526/*"DownloadEventUIAtlas{0}{1}"*/);
-    byte_5936F93 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_26446/*"{0:D2}"*/);
+    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_2213A60(&StringLiteral_5538/*"DownloadEventUIAtlas{0}{1}"*/);
+    byte_596F0ED = 1;
   }
   if ( v4->fields.eventAssetData )
   {
     atlasList = v4->fields.atlasList;
     if ( !atlasList )
 LABEL_22:
-      sub_21FFECC(this, *(_QWORD *)&eventId);
+      sub_2213CDC(this, *(_QWORD *)&eventId);
     size = atlasList->fields._size;
     v7 = atlasList->fields._version + 1;
     atlasList->fields._size = 0;
@@ -1365,11 +1366,11 @@ LABEL_22:
     for ( i = 1; ; ++i )
     {
       v31 = i;
-      v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v31);
-      v10 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_26395/*"{0:D2}"*/, v9, 0);
+      v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v31);
+      v10 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_26446/*"{0:D2}"*/, v9, 0);
       v30 = eventId;
-      v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v30);
-      v12 = System_String__Format_75484576((System_String_o *)StringLiteral_5526/*"DownloadEventUIAtlas{0}{1}"*/, v11, v10, 0);
+      v11 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v30);
+      v12 = System_String__Format_75697880((System_String_o *)StringLiteral_5538/*"DownloadEventUIAtlas{0}{1}"*/, v11, v10, 0);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)TitleInfoEventSubmarineStatusComponent__GetGameObjectFromEventUIAssetData(
                                                                  v4,
                                                                  v12,
@@ -1386,7 +1387,7 @@ LABEL_22:
         goto LABEL_22;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)GameObjectFromEventUIAssetData,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
       if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -1405,14 +1406,14 @@ LABEL_22:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           Component_object,
-          *(const MethodInfo_444FB2C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
       }
       else
       {
         v29 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v29 + 32) = Component_object;
-        sub_21FFBF4(
+        sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v29 + 32),
           (int32_t)Component_object,
           v20,
@@ -1437,7 +1438,7 @@ void TitleInfoEventSubmarineStatusComponent__OnDestroy(
 
   eventDetailEnt = this->fields.eventDetailEnt;
   if ( !eventDetailEnt )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   TitleInfoEventSubmarineStatusComponent__ReleaseEventUIAssetData(this, eventDetailEnt->fields.eventId, v2);
   TitleInfoEventSubmarineStatusComponent__ReleaseLocalAtlas(this, v5);
 }
@@ -1491,20 +1492,20 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
   const MethodInfo *v34; // x1
   int32_t v35; // w8
 
-  if ( (byte_5936F79 & 1) == 0 )
+  if ( (byte_596F0D3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
-    sub_21FFC50(&System_Predicate_QuestReleaseEntity__TypeInfo);
-    sub_21FFC50(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_0__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_1__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_2__);
-    byte_5936F79 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+    sub_2213A60(&System_Predicate_QuestReleaseEntity__TypeInfo);
+    sub_2213A60(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_0__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_1__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__PlayAnimation_b__59_2__);
+    byte_596F0D3 = 1;
   }
   if ( this->fields.isAfterTakingOver )
   {
     this->fields.onEndAnim = onEndAnim;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.onEndAnim,
       (int32_t)onEndAnim,
       (System_String_o *)method,
@@ -1526,7 +1527,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
     return;
   }
   baseQuestReleaseEntList = this->fields.baseQuestReleaseEntList;
-  v16 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v16 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v16,
     (Il2CppObject *)this,
@@ -1537,10 +1538,10 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
   v19 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)baseQuestReleaseEntList,
           (System_Predicate_T__o *)v16,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   v20 = this->fields.baseQuestReleaseEntList;
   v21 = (QuestReleaseEntity_o *)v19;
-  v22 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v22 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v22,
     (Il2CppObject *)this,
@@ -1551,10 +1552,10 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
   v23 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)v20,
           (System_Predicate_T__o *)v22,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   v24 = this->fields.baseQuestReleaseEntList;
   v25 = (QuestReleaseEntity_o *)v23;
-  v26 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v26 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v26,
     (Il2CppObject *)this,
@@ -1565,7 +1566,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
   v33 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)v24,
           (System_Predicate_T__o *)v26,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   if ( v21 )
     LODWORD(v21) = QuestReleaseEntity__getValueInt(v21, 0);
   if ( v25 )
@@ -1578,7 +1579,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
     return;
   }
   this->fields.onEndAnim = onEndAnim;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onEndAnim,
     (int32_t)onEndAnim,
     v27,
@@ -1587,10 +1588,10 @@ void TitleInfoEventSubmarineStatusComponent__PlayAnimation(
     v30,
     v31,
     v32);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
 LABEL_28:
-    sub_21FFECC(Instance, v18);
+    sub_2213CDC(Instance, v18);
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)Instance, 0);
   if ( (int)v25 < (int)v33 )
   {
@@ -1654,16 +1655,16 @@ void TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
   float ENTRY_ANIMATION_TIME; // s0
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5936F7C & 1) == 0 )
+  if ( (byte_596F0D6 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_6234/*"EndEntryAnimation"*/);
-    byte_5936F7C = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_6246/*"EndEntryAnimation"*/);
+    byte_596F0D6 = 1;
   }
   shipPanelObj = this->fields.shipPanelObj;
   v38 = TitleInfoEventSubmarineStatusComponent__ConvertoPointToPosition(this, this->fields.minPoint, v2);
@@ -1673,21 +1674,21 @@ void TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
     goto LABEL_33;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gateNextIcon,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v10);
-    UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
+    UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
   }
   gateNextIcon = this->fields.shipPanelObj;
   if ( !gateNextIcon )
     goto LABEL_33;
   gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                gateNextIcon,
-                                               (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
+                                               (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
   if ( !gateNextIcon )
     goto LABEL_33;
   v12 = gateNextIcon;
@@ -1705,8 +1706,8 @@ void TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
   v18 = *static_fields;
   LODWORD(v12[1].monitor) = 3;
   LODWORD(v12[2].monitor) = v18;
-  v19 = (EventDelegate_o *)sub_21FFEBC(v16);
-  EventDelegate___ctor_56133096(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6234/*"EndEntryAnimation"*/, 0);
+  v19 = (EventDelegate_o *)sub_2213CCC(v16);
+  EventDelegate___ctor_56337752(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6246/*"EndEntryAnimation"*/, 0);
   if ( !klass )
     goto LABEL_33;
   items = klass->fields._items;
@@ -1720,14 +1721,14 @@ void TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
     System_Collections_Generic_List_object___AddWithResize(
       klass,
       (Il2CppObject *)v19,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
     v29 = &items->obj.klass + size;
     klass->fields._size = size + 1;
     v29[4] = (Il2CppClass *)v19;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 4), (int32_t)v19, v20, v21, v22, v23, v24, v25);
   }
   UITweener__PlayForward((UITweener_o *)v12, 0);
   gateNextIcon = (UnityEngine_GameObject_o *)this->fields.gateNextIcon;
@@ -1738,24 +1739,24 @@ void TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
     goto LABEL_33;
   v32 = UnityEngine_GameObject__GetComponent_object_(
           gateNextIcon,
-          (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v32, 0, 0) )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v33);
-    UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)v32, 0);
+    UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v32, 0);
   }
   gateNextIcon = (UnityEngine_GameObject_o *)this->fields.gateNextIcon;
   if ( !gateNextIcon
     || (gateNextIcon = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gateNextIcon, 0)) == 0
     || (gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                      gateNextIcon,
-                                                     (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___)) == 0 )
+                                                     (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___)) == 0 )
   {
 LABEL_33:
-    sub_21FFECC(gateNextIcon, v5);
+    sub_2213CDC(gateNextIcon, v5);
   }
   v35 = gateNextIcon;
   v36 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
@@ -1815,37 +1816,37 @@ void TitleInfoEventSubmarineStatusComponent__PlayExitAnimation(
   System_String_o *GoalAnimName; // x1
   const MethodInfo *v40; // x2
 
-  if ( (byte_5936F7A & 1) == 0 )
+  if ( (byte_596F0D4 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_6244/*"EndExitAnimation"*/);
-    byte_5936F7A = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_6256/*"EndExitAnimation"*/);
+    byte_596F0D4 = 1;
   }
   shipPanelObj = this->fields.shipPanelObj;
   if ( !shipPanelObj )
     goto LABEL_24;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        shipPanelObj,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v5);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v7);
-    UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
+    UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
   }
   shipPanelObj = this->fields.shipPanelObj;
   if ( !shipPanelObj )
     goto LABEL_24;
   shipPanelObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                shipPanelObj,
-                                               (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
+                                               (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenAlpha___);
   if ( !shipPanelObj )
     goto LABEL_24;
   v9 = shipPanelObj;
@@ -1863,8 +1864,8 @@ void TitleInfoEventSubmarineStatusComponent__PlayExitAnimation(
   EXIT_ANIMATION_TIME = static_fields->EXIT_ANIMATION_TIME;
   LODWORD(v9[1].monitor) = 3;
   *(float *)&v9[2].monitor = EXIT_ANIMATION_TIME;
-  v16 = (EventDelegate_o *)sub_21FFEBC(v13);
-  EventDelegate___ctor_56133096(v16, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6244/*"EndExitAnimation"*/, 0);
+  v16 = (EventDelegate_o *)sub_2213CCC(v13);
+  EventDelegate___ctor_56337752(v16, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6256/*"EndExitAnimation"*/, 0);
   if ( !klass
     || (items = klass->fields._items,
         v24 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -1872,7 +1873,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayExitAnimation(
         !items) )
   {
 LABEL_24:
-    sub_21FFECC(shipPanelObj, method);
+    sub_2213CDC(shipPanelObj, method);
   }
   size = klass->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -1880,14 +1881,14 @@ LABEL_24:
     System_Collections_Generic_List_object___AddWithResize(
       klass,
       (Il2CppObject *)v16,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
     v26 = &items->obj.klass + size;
     klass->fields._size = size + 1;
     v26[4] = (Il2CppClass *)v16;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v16, v17, v18, v19, v20, v21, v22);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 4), (int32_t)v16, v17, v18, v19, v20, v21, v22);
   }
   UITweener__PlayForward((UITweener_o *)v9, 0);
   goalAnimObject = (UnityEngine_Object_o *)this->fields.goalAnimObject;
@@ -1897,7 +1898,7 @@ LABEL_24:
   {
     v32 = TitleInfoEventSubmarineStatusComponent__CreateGoalAnimObject(this, v30);
     this->fields.goalAnimObject = v32;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject,
       (int32_t)v32,
       v33,
@@ -1927,11 +1928,11 @@ void TitleInfoEventSubmarineStatusComponent__PlayGoalAnim(
   __int64 v12; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_5936F86 & 1) == 0 )
+  if ( (byte_596F0E0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5936F86 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596F0E0 = 1;
   }
   goalAnimObject = (UnityEngine_Object_o *)this->fields.goalAnimObject;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1939,7 +1940,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayGoalAnim(
   if ( !UnityEngine_Object__op_Equality(goalAnimObject, 0, 0) )
   {
     this->fields.animClipName = animClipName;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.animClipName,
       (int32_t)animClipName,
       v6,
@@ -1952,11 +1953,11 @@ void TitleInfoEventSubmarineStatusComponent__PlayGoalAnim(
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
+                                                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0 )
     {
-      sub_21FFECC(Component_object, v12);
+      sub_2213CDC(Component_object, v12);
     }
-    UnityEngine_Animation__Play_82865240((UnityEngine_Animation_o *)Component_object, this->fields.animClipName, 0);
+    UnityEngine_Animation__Play_83078544((UnityEngine_Animation_o *)Component_object, this->fields.animClipName, 0);
   }
 }
 
@@ -1991,13 +1992,13 @@ void TitleInfoEventSubmarineStatusComponent__PlayLastMapAnimation(
   __int64 v27; // x2
   TitleInfoEventSubmarineStatusComponent_c *v28; // x0
 
-  if ( (byte_5936F7F & 1) == 0 )
+  if ( (byte_596F0D9 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_11094/*"PlayLastMapStartedAnimation"*/);
-    byte_5936F7F = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_11111/*"PlayLastMapStartedAnimation"*/);
+    byte_596F0D9 = 1;
   }
   if ( this->fields.isLastGoalPlayed )
     goto LABEL_14;
@@ -2012,7 +2013,7 @@ LABEL_14:
   else
   {
     this->fields.onEndAnim = onEndAnim;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.onEndAnim,
       (int32_t)onEndAnim,
       v6,
@@ -2028,7 +2029,7 @@ LABEL_14:
     {
       v17 = TitleInfoEventSubmarineStatusComponent__CreateGoalAnimObject(this, v15);
       this->fields.goalAnimObject = v17;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject,
         (int32_t)v17,
         v18,
@@ -2048,7 +2049,7 @@ LABEL_14:
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11094/*"PlayLastMapStartedAnimation"*/,
+      (System_String_o *)StringLiteral_11111/*"PlayLastMapStartedAnimation"*/,
       v28->static_fields->EXIT_ANIMATION_TIME,
       0);
   }
@@ -2066,11 +2067,11 @@ void TitleInfoEventSubmarineStatusComponent__PlayLastMapStartedAnimation(
   __int64 v7; // x2
   TitleInfoEventSubmarineStatusComponent_c *v8; // x0
 
-  if ( (byte_5936F80 & 1) == 0 )
+  if ( (byte_596F0DA & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_6224/*"EndAnimation"*/);
-    byte_5936F80 = 1;
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_6236/*"EndAnimation"*/);
+    byte_596F0DA = 1;
   }
   this->fields.isLastGoalPlayed = 1;
   this->fields.isGoalAnimToLoop = 1;
@@ -2084,7 +2085,7 @@ void TitleInfoEventSubmarineStatusComponent__PlayLastMapStartedAnimation(
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6224/*"EndAnimation"*/,
+    (System_String_o *)StringLiteral_6236/*"EndAnimation"*/,
     v8->static_fields->GOAL_ANIMATION_TIME,
     0);
 }
@@ -2094,194 +2095,180 @@ void TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
         TitleInfoEventSubmarineStatusComponent_o *this,
         const MethodInfo *method)
 {
-  float x; // s8
-  float y; // s9
-  float z; // s10
-  const MethodInfo *v6; // x2
+  const MethodInfo *v3; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
+  char *shipPanelObj; // x0
   __int64 v7; // x1
   __int64 v8; // x2
-  UnityEngine_GameObject_o *shipPanelObj; // x0
-  float v10; // s13
-  float v11; // s11
-  float v12; // s12
-  __int64 v13; // x1
-  __int64 v14; // x2
   Il2CppObject *Component_object; // x20
-  __int64 v16; // x2
-  __int64 v17; // x2
-  UnityEngine_GameObject_o *v18; // x20
-  TitleInfoEventSubmarineStatusComponent_c *v19; // x0
-  System_Collections_Generic_List_object__o *klass; // x21
+  __int64 v10; // x2
+  __int64 v11; // x2
+  char *v12; // x20
+  TitleInfoEventSubmarineStatusComponent_c *v13; // x0
+  System_Collections_Generic_List_object__o *v14; // x21
   float PROGRESS_ANIMATION_TIME; // s0
-  EventDelegate_c *v22; // x0
-  EventDelegate_o *v23; // x22
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
+  EventDelegate_c *v16; // x0
+  EventDelegate_o *v17; // x22
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v31; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v33; // x0
-  TitleInfoEventSubmarineStatusComponent_c *v34; // x0
-  __int64 v35; // x2
+  Il2CppClass **v27; // x0
+  TitleInfoEventSubmarineStatusComponent_c *v28; // x0
+  __int64 v29; // x2
   int32_t userOldPoint; // w8
-  int v37; // w9
+  int v31; // w9
   UnityEngine_Object_o *gateNextPointCounterLabel; // x20
   int32_t userPoint; // w8
-  int32_t v40; // w9
+  int32_t v34; // w9
   int32_t maxPoint; // w10
-  int v42; // w8
-  int v43; // w9
-  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  int v36; // w8
+  int v37; // w9
+  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v39; // 0:kr14_12.12
 
-  if ( (byte_5936F7D & 1) == 0 )
+  if ( (byte_596F0D7 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_6261/*"EndProgressAnimation"*/);
-    byte_5936F7D = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_6273/*"EndProgressAnimation"*/);
+    byte_596F0D7 = 1;
   }
   LocalPosition = GameObjectExtensions__GetLocalPosition(this->fields.shipPanelObj, 0);
-  x = LocalPosition.fields.x;
-  y = LocalPosition.fields.y;
-  z = LocalPosition.fields.z;
-  v45 = TitleInfoEventSubmarineStatusComponent__ConvertoPointToPosition(this, this->fields.userPoint, v6);
-  if ( x <= v45.fields.x )
+  v39 = TitleInfoEventSubmarineStatusComponent__ConvertoPointToPosition(this, this->fields.userPoint, v3);
+  if ( LocalPosition.fields.x <= v39.fields.x )
   {
-    v34 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+    v28 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     if ( !*(&TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v7, v8);
-      v34 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v4, v5);
+      v28 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_6261/*"EndProgressAnimation"*/,
-      v34->static_fields->PROGRESS_ANIMATION_TIME,
+      (System_String_o *)StringLiteral_6273/*"EndProgressAnimation"*/,
+      v28->static_fields->PROGRESS_ANIMATION_TIME,
       0);
   }
   else
   {
-    shipPanelObj = this->fields.shipPanelObj;
+    shipPanelObj = (char *)this->fields.shipPanelObj;
     if ( !shipPanelObj )
       goto LABEL_39;
-    v10 = v45.fields.x;
-    v11 = v45.fields.y;
-    v12 = v45.fields.z;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         shipPanelObj,
-                         (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                         (UnityEngine_GameObject_o *)shipPanelObj,
+                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     {
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v16);
-      UnityEngine_Object__Destroy_83246496((UnityEngine_Object_o *)Component_object, 0);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v10);
+      UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
     }
-    shipPanelObj = this->fields.shipPanelObj;
+    shipPanelObj = (char *)this->fields.shipPanelObj;
     if ( !shipPanelObj )
       goto LABEL_39;
-    shipPanelObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
-                                                 shipPanelObj,
-                                                 (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    shipPanelObj = (char *)UnityEngine_GameObject__AddComponent_object_(
+                             (UnityEngine_GameObject_o *)shipPanelObj,
+                             (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
     if ( !shipPanelObj )
       goto LABEL_39;
-    v18 = shipPanelObj;
-    *(float *)&shipPanelObj[5].monitor = x;
-    *((float *)&shipPanelObj[5].monitor + 1) = y;
-    *(float *)&shipPanelObj[5].fields.m_CachedPtr = z;
-    *((float *)&shipPanelObj[5].fields.m_CachedPtr + 1) = v10;
-    v19 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
-    *(float *)&v18[6].klass = v11;
-    *((float *)&v18[6].klass + 1) = v12;
-    if ( !*(&v19->_2.cctor_finished + 1) )
+    v12 = shipPanelObj;
+    *(UnityEngine_Vector3_o *)(shipPanelObj + 128) = LocalPosition;
+    *((_DWORD *)shipPanelObj + 35) = LODWORD(v39.fields.x);
+    v13 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+    *((_DWORD *)v12 + 36) = LODWORD(v39.fields.y);
+    *((_DWORD *)v12 + 37) = LODWORD(v39.fields.z);
+    if ( !*(&v13->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v19, v7, v17);
-      v19 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v13, v4, v11);
+      v13 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     }
-    klass = (System_Collections_Generic_List_object__o *)v18[3].klass;
-    PROGRESS_ANIMATION_TIME = v19->static_fields->PROGRESS_ANIMATION_TIME;
-    v22 = EventDelegate_TypeInfo;
-    LODWORD(v18[1].monitor) = 3;
-    *(float *)&v18[2].monitor = PROGRESS_ANIMATION_TIME;
-    v23 = (EventDelegate_o *)sub_21FFEBC(v22);
-    EventDelegate___ctor_56133096(v23, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6261/*"EndProgressAnimation"*/, 0);
-    if ( !klass )
+    v14 = (System_Collections_Generic_List_object__o *)*((_QWORD *)v12 + 9);
+    PROGRESS_ANIMATION_TIME = v13->static_fields->PROGRESS_ANIMATION_TIME;
+    v16 = EventDelegate_TypeInfo;
+    *((_DWORD *)v12 + 8) = 3;
+    *((float *)v12 + 14) = PROGRESS_ANIMATION_TIME;
+    v17 = (EventDelegate_o *)sub_2213CCC(v16);
+    EventDelegate___ctor_56337752(v17, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6273/*"EndProgressAnimation"*/, 0);
+    if ( !v14 )
       goto LABEL_39;
-    items = klass->fields._items;
-    v31 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-    ++klass->fields._version;
+    items = v14->fields._items;
+    v25 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+    ++v14->fields._version;
     if ( !items )
       goto LABEL_39;
-    size = klass->fields._size;
+    size = v14->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        klass,
-        (Il2CppObject *)v23,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+        v14,
+        (Il2CppObject *)v17,
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
-      v33 = &items->obj.klass + size;
-      klass->fields._size = size + 1;
-      v33[4] = (Il2CppClass *)v23;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v23, v24, v25, v26, v27, v28, v29);
+      v27 = &items->obj.klass + size;
+      v14->fields._size = size + 1;
+      v27[4] = (Il2CppClass *)v17;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 4), (int32_t)v17, v18, v19, v20, v21, v22, v23);
     }
-    UITweener__PlayForward((UITweener_o *)v18, 0);
+    UITweener__PlayForward((UITweener_o *)v12, 0);
   }
   if ( !this->fields.isCompleatedCount )
   {
     userOldPoint = this->fields.userOldPoint;
-    v37 = this->fields.userPoint - userOldPoint;
-    if ( v37 )
+    v31 = this->fields.userPoint - userOldPoint;
+    if ( v31 )
     {
-      shipPanelObj = (UnityEngine_GameObject_o *)this->fields.progressPointCounterLabel;
+      shipPanelObj = (char *)this->fields.progressPointCounterLabel;
       this->fields.isCompleatedCount = 1;
       if ( !shipPanelObj )
         goto LABEL_39;
-      LODWORD(shipPanelObj[2].monitor) = userOldPoint;
-      HIDWORD(shipPanelObj[2].monitor) = v37;
+      *((_DWORD *)shipPanelObj + 14) = userOldPoint;
+      *((_DWORD *)shipPanelObj + 15) = v31;
       UICounterLabel__PlayAnimation((UICounterLabel_o *)shipPanelObj, 0);
     }
   }
   gateNextPointCounterLabel = (UnityEngine_Object_o *)this->fields.gateNextPointCounterLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v35);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v29);
   if ( UnityEngine_Object__op_Inequality(gateNextPointCounterLabel, 0, 0) )
   {
-    v40 = this->fields.userOldPoint;
+    v34 = this->fields.userOldPoint;
     userPoint = this->fields.userPoint;
-    if ( v40 != userPoint )
+    if ( v34 != userPoint )
     {
       maxPoint = this->fields.maxPoint;
       if ( userPoint >= maxPoint )
         userPoint = this->fields.maxPoint;
-      v42 = userPoint - v40;
-      if ( v42 >= 1 )
+      v36 = userPoint - v34;
+      if ( v36 >= 1 )
       {
-        v43 = maxPoint - v40;
-        if ( v43 >= 1 )
+        v37 = maxPoint - v34;
+        if ( v37 >= 1 )
         {
-          shipPanelObj = (UnityEngine_GameObject_o *)this->fields.gateNextPointCounterLabel;
+          shipPanelObj = (char *)this->fields.gateNextPointCounterLabel;
           if ( shipPanelObj )
           {
-            LODWORD(shipPanelObj[2].monitor) = v43;
-            HIDWORD(shipPanelObj[2].monitor) = -v42;
+            *((_DWORD *)shipPanelObj + 14) = v37;
+            *((_DWORD *)shipPanelObj + 15) = -v36;
             UICounterLabel__PlayAnimation((UICounterLabel_o *)shipPanelObj, 0);
             return;
           }
 LABEL_39:
-          sub_21FFECC(shipPanelObj, v7);
+          sub_2213CDC(shipPanelObj, v4);
         }
       }
     }
@@ -2299,11 +2286,11 @@ void TitleInfoEventSubmarineStatusComponent__ReleaseEventUIAssetData(
   __int64 v6; // x2
   System_String_o *EventUIAssetDataPath; // x19
 
-  if ( (byte_5936F91 & 1) == 0 )
+  if ( (byte_596F0EB & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    byte_5936F91 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    byte_596F0EB = 1;
   }
   if ( this->fields.eventAssetData )
   {
@@ -2329,14 +2316,14 @@ void TitleInfoEventSubmarineStatusComponent__ReleaseLocalAtlas(
   int v5; // w9
 
   v2 = this;
-  if ( (byte_5936F92 & 1) == 0 )
+  if ( (byte_596F0EC & 1) == 0 )
   {
-    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
-    byte_5936F92 = 1;
+    this = (TitleInfoEventSubmarineStatusComponent_o *)sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__Clear__);
+    byte_596F0EC = 1;
   }
   atlasList = v2->fields.atlasList;
   if ( !atlasList )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   size = atlasList->fields._size;
   v5 = atlasList->fields._version + 1;
   atlasList->fields._size = 0;
@@ -2362,21 +2349,21 @@ bool TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_5936F94 & 1) == 0 )
+  if ( (byte_596F0EE & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Any_UIAtlas___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
-    byte_5936F94 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Any_UIAtlas___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    byte_596F0EE = 1;
   }
   memset(&v16, 0, sizeof(v16));
   IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_String__IsNullOrEmpty(spriteName, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0
     || (IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_Linq_Enumerable__Any_object_(
                                                                                (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.atlasList,
-                                                                               (const MethodInfo_3832C14 *)Method_System_Linq_Enumerable_Any_UIAtlas___),
+                                                                               (const MethodInfo_38660DC *)Method_System_Linq_Enumerable_Any_UIAtlas___),
         ((unsigned __int8)IsNullOrEmpty & 1) == 0) )
   {
     if ( sprite )
@@ -2392,7 +2379,7 @@ bool TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
   v16 = v15;
   v15.fields._list = 0;
   *(_QWORD *)&v15.fields._index = &v16;
@@ -2400,33 +2387,33 @@ bool TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v16,
-           (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+           (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
     if ( !v9 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v16,
-        (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+        (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
       if ( sprite )
       {
         UISprite__set_spriteName(sprite, 0, 0);
         return 0;
       }
 LABEL_19:
-      sub_21FFECC(IsNullOrEmpty, v8);
+      sub_2213CDC(IsNullOrEmpty, v8);
     }
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_21FFECC(v9, v10);
+      sub_2213CDC(v9, v10);
     v12 = UIAtlas__GetSprite((UIAtlas_o *)v16.fields._current, spriteName, 0);
   }
   while ( !v12 );
   if ( !sprite )
-    sub_21FFECC(v12, v13);
+    sub_2213CDC(v12, v13);
   UISprite__set_atlas(sprite, (UIAtlas_o *)current, 0);
   UISprite__set_spriteName(sprite, spriteName, 0);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
   return 1;
 }
 
@@ -2526,32 +2513,32 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   int32_t v93; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Vector3_o v94; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5936F77 & 1) == 0 )
+  if ( (byte_596F0D1 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__Setup_b__54_0__);
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_20060/*"event_goal"*/);
-    sub_21FFC50(&StringLiteral_20085/*"event_progressicon"*/);
-    sub_21FFC50(&StringLiteral_20083/*"event_progressgauge_front"*/);
-    sub_21FFC50(&StringLiteral_5940/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/);
-    sub_21FFC50(&StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_1525/*"94053407"*/);
-    sub_21FFC50(&StringLiteral_5941/*"EVENT_SUBMARINE_NEXT_POINT"*/);
-    sub_21FFC50(&StringLiteral_5948/*"EVENT_SUBMARINE_STATUS_TITLE"*/);
-    sub_21FFC50(&StringLiteral_20126/*"event_status_point"*/);
-    sub_21FFC50(&StringLiteral_20080/*"event_progress_point"*/);
-    sub_21FFC50(&StringLiteral_20072/*"event_next"*/);
-    sub_21FFC50(&StringLiteral_20082/*"event_progressgauge_back"*/);
-    sub_21FFC50(&StringLiteral_5937/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/);
-    sub_21FFC50(&StringLiteral_20081/*"event_progressgauge"*/);
-    sub_21FFC50(&StringLiteral_20084/*"event_progressgaugebg_80393"*/);
-    byte_5936F77 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__Setup_b__54_0__);
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_20102/*"event_goal"*/);
+    sub_2213A60(&StringLiteral_20127/*"event_progressicon"*/);
+    sub_2213A60(&StringLiteral_20125/*"event_progressgauge_front"*/);
+    sub_2213A60(&StringLiteral_5952/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/);
+    sub_2213A60(&StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/);
+    sub_2213A60(&StringLiteral_1526/*"94053407"*/);
+    sub_2213A60(&StringLiteral_5953/*"EVENT_SUBMARINE_NEXT_POINT"*/);
+    sub_2213A60(&StringLiteral_5960/*"EVENT_SUBMARINE_STATUS_TITLE"*/);
+    sub_2213A60(&StringLiteral_20168/*"event_status_point"*/);
+    sub_2213A60(&StringLiteral_20122/*"event_progress_point"*/);
+    sub_2213A60(&StringLiteral_20114/*"event_next"*/);
+    sub_2213A60(&StringLiteral_20124/*"event_progressgauge_back"*/);
+    sub_2213A60(&StringLiteral_5949/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/);
+    sub_2213A60(&StringLiteral_20123/*"event_progressgauge"*/);
+    sub_2213A60(&StringLiteral_20126/*"event_progressgaugebg_80393"*/);
+    byte_596F0D1 = 1;
   }
   this->fields.eventDetailEnt = eventDetailEntity;
   p_eventDetailEnt = &this->fields.eventDetailEnt;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventDetailEnt,
     (int32_t)eventDetailEntity,
     (System_String_o *)mapAssetData,
@@ -2561,7 +2548,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
     v6,
     v7);
   this->fields.mapAssetData = mapAssetData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mapAssetData,
     (int32_t)mapAssetData,
     v12,
@@ -2574,7 +2561,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   this->fields.isGoalAnimToLoop = 0;
   GoalAnimName = TitleInfoEventSubmarineStatusComponent__GetGoalAnimName(this, 0, v18);
   this->fields.animClipName = GoalAnimName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animClipName,
     (int32_t)GoalAnimName,
     v20,
@@ -2586,15 +2573,15 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   if ( !this->fields.eventDetailEnt )
     goto LABEL_48;
   eventId = this->fields.eventDetailEnt->fields.eventId;
-  v29 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v29, (Il2CppObject *)this, Method_TitleInfoEventSubmarineStatusComponent__Setup_b__54_0__, 0);
   TitleInfoEventSubmarineStatusComponent__LoadEventUIAssetData(this, eventId, v29, v30);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPosition_42876224(gameObject, 62.0, 0.0, 0.0, 0);
+  GameObjectExtensions__SetLocalPosition_42891620(gameObject, 62.0, 0.0, 0.0, 0);
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.statusBg,
-    (System_String_o *)StringLiteral_20084/*"event_progressgaugebg_80393"*/,
+    (System_String_o *)StringLiteral_20126/*"event_progressgaugebg_80393"*/,
     v32);
   statusBg = (System_String_o *)this->fields.statusBg;
   if ( !statusBg )
@@ -2605,12 +2592,12 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.areaIcon,
-    (System_String_o *)StringLiteral_1525/*"94053407"*/,
+    (System_String_o *)StringLiteral_1526/*"94053407"*/,
     v33);
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gaugeFrame,
-    (System_String_o *)StringLiteral_20081/*"event_progressgauge"*/,
+    (System_String_o *)StringLiteral_20123/*"event_progressgauge"*/,
     v34);
   statusBg = (System_String_o *)this->fields.gaugeFrame;
   if ( !statusBg )
@@ -2621,7 +2608,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gaugeBar,
-    (System_String_o *)StringLiteral_20083/*"event_progressgauge_front"*/,
+    (System_String_o *)StringLiteral_20125/*"event_progressgauge_front"*/,
     v35);
   statusBg = (System_String_o *)this->fields.gaugeBar;
   if ( !statusBg )
@@ -2632,7 +2619,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gaugeBg,
-    (System_String_o *)StringLiteral_20082/*"event_progressgauge_back"*/,
+    (System_String_o *)StringLiteral_20124/*"event_progressgauge_back"*/,
     v36);
   statusBg = (System_String_o *)this->fields.gaugeBg;
   if ( !statusBg )
@@ -2643,12 +2630,12 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.shipIcon,
-    (System_String_o *)StringLiteral_20085/*"event_progressicon"*/,
+    (System_String_o *)StringLiteral_20127/*"event_progressicon"*/,
     v37);
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.progressPointBg,
-    (System_String_o *)StringLiteral_20126/*"event_status_point"*/,
+    (System_String_o *)StringLiteral_20168/*"event_status_point"*/,
     v38);
   statusBg = (System_String_o *)this->fields.progressPointBg;
   if ( !statusBg )
@@ -2659,7 +2646,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gateNextIcon,
-    (System_String_o *)StringLiteral_20072/*"event_next"*/,
+    (System_String_o *)StringLiteral_20114/*"event_next"*/,
     v39);
   statusBg = (System_String_o *)this->fields.gateNextIcon;
   if ( !statusBg )
@@ -2670,7 +2657,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gateGoalIcon,
-    (System_String_o *)StringLiteral_20060/*"event_goal"*/,
+    (System_String_o *)StringLiteral_20102/*"event_goal"*/,
     v40);
   statusBg = (System_String_o *)this->fields.gateGoalIcon;
   if ( !statusBg )
@@ -2681,7 +2668,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gateNextPointBg,
-    (System_String_o *)StringLiteral_20080/*"event_progress_point"*/,
+    (System_String_o *)StringLiteral_20122/*"event_progress_point"*/,
     v41);
   statusBg = (System_String_o *)this->fields.gateNextPointBg;
   if ( !statusBg )
@@ -2692,12 +2679,12 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v42, v43);
-  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5948/*"EVENT_SUBMARINE_STATUS_TITLE"*/, 0);
+  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5960/*"EVENT_SUBMARINE_STATUS_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_48;
   UILabel__set_text(titleLabel, statusBg, 0);
   progressNameLabel = this->fields.progressNameLabel;
-  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5937/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/, 0);
+  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5949/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/, 0);
   if ( !progressNameLabel )
     goto LABEL_48;
   UILabel__set_text(progressNameLabel, statusBg, 0);
@@ -2708,7 +2695,7 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
     j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v27, v46);
   QuestReleaseList = TitleInfoEventSubmarineStatusComponent__GetQuestReleaseList(v47, v27);
   this->fields.baseQuestReleaseEntList = QuestReleaseList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.baseQuestReleaseEntList,
     (int32_t)QuestReleaseList,
     v49,
@@ -2756,14 +2743,14 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   userOldPoint = this->fields.userOldPoint;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v66, v67);
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_5940/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/, 0);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_5952/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/, 0);
   v93 = this->fields.maxPoint;
-  v71 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v93);
+  v71 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v93);
   v72 = System_String__Format(v70, v71, 0);
-  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_5941/*"EVENT_SUBMARINE_NEXT_POINT"*/, 0);
-  v74 = System_String__Concat_75438412(v72, v73, 0);
+  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_5953/*"EVENT_SUBMARINE_NEXT_POINT"*/, 0);
+  v74 = System_String__Concat_75651716(v72, v73, 0);
   this->fields.nextPointTextFormat = v74;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.nextPointTextFormat,
     (int32_t)v74,
     v75,
@@ -2811,13 +2798,13 @@ void TitleInfoEventSubmarineStatusComponent__Setup(
   PROGRESS_ANIMATION_TIME = v86->static_fields->PROGRESS_ANIMATION_TIME;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27, v85);
-  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5858/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+  statusBg = LocalizationManager__Get((System_String_o *)StringLiteral_5870/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
   if ( !progressPointCounterLabel
     || (UICounterLabel__Setup(progressPointCounterLabel, v88, PROGRESS_ANIMATION_TIME, statusBg, 0, 0),
         (statusBg = (System_String_o *)this->fields.progressPointCounterLabel) == 0) )
   {
 LABEL_48:
-    sub_21FFECC(statusBg, v27);
+    sub_2213CDC(statusBg, v27);
   }
   UICounterLabel__SetCountLabel((UICounterLabel_o *)statusBg, this->fields.userOldPoint, 0);
   shipPanelObj = this->fields.shipPanelObj;
@@ -2878,16 +2865,16 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
   UnityEngine_GameObject_c *klass; // x8
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_5936F78 & 1) == 0 )
+  if ( (byte_596F0D2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_QuestReleaseEntity__TypeInfo);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_0__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_1__);
-    sub_21FFC50(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_2__);
-    byte_5936F78 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_2213A60(&Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_QuestReleaseEntity__TypeInfo);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_0__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_1__);
+    sub_2213A60(&Method_TitleInfoEventSubmarineStatusComponent__SetupAnimation_b__58_2__);
+    byte_596F0D2 = 1;
   }
   gateNextIcon = (UnityEngine_GameObject_o *)this->fields.gateNextIcon;
   if ( this->fields.userOldPoint >= this->fields.maxPoint )
@@ -2905,7 +2892,7 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
     {
       v9 = TitleInfoEventSubmarineStatusComponent__CreateGoalAnimObject(this, v7);
       this->fields.goalAnimObject = v9;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject,
         (int32_t)v9,
         v10,
@@ -2928,7 +2915,7 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
       1.0);
   }
   baseQuestReleaseEntList = this->fields.baseQuestReleaseEntList;
-  v19 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v19 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v19,
     (Il2CppObject *)this,
@@ -2939,10 +2926,10 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
   v20 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)baseQuestReleaseEntList,
           (System_Predicate_T__o *)v19,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   v21 = this->fields.baseQuestReleaseEntList;
   v22 = (QuestReleaseEntity_o *)v20;
-  v23 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v23 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v23,
     (Il2CppObject *)this,
@@ -2953,10 +2940,10 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
   v24 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)v21,
           (System_Predicate_T__o *)v23,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   v25 = this->fields.baseQuestReleaseEntList;
   v26 = (QuestReleaseEntity_o *)v24;
-  v27 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_QuestReleaseEntity__TypeInfo);
+  v27 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_QuestReleaseEntity__TypeInfo);
   System_Predicate_object____ctor(
     v27,
     (Il2CppObject *)this,
@@ -2967,7 +2954,7 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
   v28 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)v25,
           (System_Predicate_T__o *)v27,
-          (const MethodInfo_4450188 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
+          (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_QuestReleaseEntity__Find__);
   if ( v22 )
     LODWORD(v22) = QuestReleaseEntity__getValueInt(v22, 0);
   if ( v26 )
@@ -2988,7 +2975,7 @@ void TitleInfoEventSubmarineStatusComponent__SetupAnimation(
       {
         gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      gateNextIcon,
-                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
         if ( gateNextIcon )
         {
           ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, double))gateNextIcon->klass[1]._1.element_class)(
@@ -3007,7 +2994,7 @@ LABEL_43:
         }
       }
 LABEL_44:
-      sub_21FFECC(gateNextIcon, method);
+      sub_2213CDC(gateNextIcon, method);
     }
 LABEL_40:
     gateNextIcon = this->fields.shipPanelObj;
@@ -3015,7 +3002,7 @@ LABEL_40:
     {
       gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    gateNextIcon,
-                                                   (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
       if ( gateNextIcon )
       {
         klass = gateNextIcon->klass;
@@ -3038,7 +3025,7 @@ LABEL_40:
     goto LABEL_44;
   gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gateNextIcon,
-                                               (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   if ( !gateNextIcon )
     goto LABEL_44;
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))gateNextIcon->klass[1]._1.element_class)(
@@ -3059,7 +3046,7 @@ LABEL_40:
   {
     v37 = TitleInfoEventSubmarineStatusComponent__CreateGoalAnimObject(this, v35);
     this->fields.goalAnimObject = v37;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.goalAnimObject,
       (int32_t)v37,
       v38,
@@ -3109,12 +3096,12 @@ void TitleInfoEventSubmarineStatusComponent__SetupOldData(
   int32_t targetQuestId; // w20
   int32_t v36; // w1
 
-  if ( (byte_5936F83 & 1) == 0 )
+  if ( (byte_596F0DD & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5936F83 = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596F0DD = 1;
   }
   *oldPoint = 0;
   *oldQuestId = 0;
@@ -3128,10 +3115,10 @@ void TitleInfoEventSubmarineStatusComponent__SetupOldData(
     goto LABEL_57;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v11, v12);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   gateNextIcon = (UnityEngine_GameObject_o *)TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3143,10 +3130,10 @@ void TitleInfoEventSubmarineStatusComponent__SetupOldData(
     goto LABEL_57;
   if ( !HIDWORD(gateNextIcon[9].monitor) )
     j_il2cpp_runtime_class_init_0(gateNextIcon, v11, v12);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   gateNextIcon = (UnityEngine_GameObject_o *)TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3165,10 +3152,10 @@ void TitleInfoEventSubmarineStatusComponent__SetupOldData(
 LABEL_57:
     if ( !HIDWORD(gateNextIcon[9].monitor) )
       j_il2cpp_runtime_class_init_0(gateNextIcon, v11, v12);
-    if ( !byte_593205C )
+    if ( !byte_596A92E )
     {
-      sub_21FFC50(&TerminalPramsManager_TypeInfo);
-      byte_593205C = 1;
+      sub_2213A60(&TerminalPramsManager_TypeInfo);
+      byte_596A92E = 1;
     }
     v31 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3195,7 +3182,7 @@ LABEL_57:
       {
         gateNextIcon = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      gateNextIcon,
-                                                     (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
         if ( gateNextIcon )
         {
           ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))gateNextIcon->klass[1]._1.element_class)(
@@ -3214,14 +3201,14 @@ LABEL_57:
       }
     }
 LABEL_53:
-    sub_21FFECC(gateNextIcon, v11);
+    sub_2213CDC(gateNextIcon, v11);
   }
   if ( !HIDWORD(gateNextIcon[9].monitor) )
     j_il2cpp_runtime_class_init_0(gateNextIcon, v11, v12);
-  if ( !byte_5934EAB )
+  if ( !byte_596CFDA )
   {
-    sub_21FFC50(&TerminalPramsManager_TypeInfo);
-    byte_5934EAB = 1;
+    sub_2213A60(&TerminalPramsManager_TypeInfo);
+    byte_596CFDA = 1;
   }
   v17 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
@@ -3240,7 +3227,7 @@ LABEL_53:
     if ( max_length )
     {
       if ( !(_DWORD)max_length )
-        sub_21FFED4(ValueByArray);
+        sub_2213CE4(ValueByArray);
       v21 = System_Int32__Parse(ValueByArray->m_Items[0], 0);
       v22 = v20->max_length;
       *oldPoint = v21;
@@ -3257,8 +3244,8 @@ LABEL_53:
           if ( v28 >= 4 )
           {
             v29 = v20->m_Items[3];
-            if ( !*(_DWORD *)(qword_594C050 + 228) )
-              j_il2cpp_runtime_class_init_0(qword_594C050, v26, v27);
+            if ( !*(_DWORD *)(qword_5984328 + 228) )
+              j_il2cpp_runtime_class_init_0(qword_5984328, v26, v27);
             v30 = System_Boolean__Parse(v29, 0);
 LABEL_51:
             *isLastGoalPlayed = v30;
@@ -3284,7 +3271,7 @@ bool TitleInfoEventSubmarineStatusComponent___PlayAnimation_b__59_0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.oldQuestId;
 }
 
@@ -3295,7 +3282,7 @@ bool TitleInfoEventSubmarineStatusComponent___PlayAnimation_b__59_1(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.progressQuestId;
 }
 
@@ -3306,7 +3293,7 @@ bool TitleInfoEventSubmarineStatusComponent___PlayAnimation_b__59_2(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.currentQuestId;
 }
 
@@ -3317,7 +3304,7 @@ bool TitleInfoEventSubmarineStatusComponent___SetupAnimation_b__58_0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.oldQuestId;
 }
 
@@ -3328,7 +3315,7 @@ bool TitleInfoEventSubmarineStatusComponent___SetupAnimation_b__58_1(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.progressQuestId;
 }
 
@@ -3339,7 +3326,7 @@ bool TitleInfoEventSubmarineStatusComponent___SetupAnimation_b__58_2(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.currentQuestId;
 }
 
@@ -3353,7 +3340,7 @@ void TitleInfoEventSubmarineStatusComponent___Setup_b__54_0(
 
   eventDetailEnt = this->fields.eventDetailEnt;
   if ( !eventDetailEnt )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   TitleInfoEventSubmarineStatusComponent__LoadLocalAtlas(this, eventDetailEnt->fields.eventId, v2);
 }
 
@@ -3365,19 +3352,20 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__get_BasePosition(
   UnityEngine_Component_o *gaugeBar; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   struct UISprite_o *v5; // x8
-  float v6; // s0
+  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   gaugeBar = (UnityEngine_Component_o *)this->fields.gaugeBar;
   if ( !gaugeBar
     || (gameObject = UnityEngine_Component__get_gameObject(gaugeBar, 0),
-        result = GameObjectExtensions__GetLocalPosition(gameObject, 0),
+        LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0),
+        result.fields.y = LocalPosition.fields.y,
+        result.fields.z = LocalPosition.fields.z,
         (v5 = this->fields.gaugeBar) == 0) )
   {
-    sub_21FFECC(gaugeBar, method);
+    sub_2213CDC(gaugeBar, method);
   }
-  v6 = result.fields.x + (float)v5->fields.mWidth;
-  result.fields.x = v6;
+  result.fields.x = LocalPosition.fields.x + (float)v5->fields.mWidth;
   return result;
 }
 
@@ -3390,7 +3378,7 @@ float TitleInfoEventSubmarineStatusComponent__get_GaugeWidth(
 
   gaugeBar = this->fields.gaugeBar;
   if ( !gaugeBar )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   return (float)gaugeBar->fields.mWidth;
 }
 
@@ -3405,15 +3393,15 @@ void TitleInfoEventSubmarineStatusComponent___c___cctor(const MethodInfo *method
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5936F98 & 1) == 0 )
+  if ( (byte_596F0F2 & 1) == 0 )
   {
-    sub_21FFC50(&TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
-    byte_5936F98 = 1;
+    sub_2213A60(&TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
+    byte_596F0F2 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(TitleInfoEventSubmarineStatusComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   TitleInfoEventSubmarineStatusComponent___c_TypeInfo->static_fields->__9 = (struct TitleInfoEventSubmarineStatusComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)TitleInfoEventSubmarineStatusComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -3440,7 +3428,7 @@ int32_t TitleInfoEventSubmarineStatusComponent___c___GetQuestReleaseList_b__80_0
         const MethodInfo *method)
 {
   if ( !a || (this = (TitleInfoEventSubmarineStatusComponent___c_o *)QuestReleaseEntity__getValueInt(a, 0), !b) )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   return (_DWORD)this - QuestReleaseEntity__getValueInt(b, 0);
 }
 
@@ -3461,7 +3449,7 @@ bool TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0___EndAnimation
   struct TitleInfoEventSubmarineStatusComponent_o *_4__this; // x8
 
   if ( !n || (_4__this = this->fields.__4__this) == 0 )
-    sub_21FFECC(this, n);
+    sub_2213CDC(this, n);
   return n->fields.questId == _4__this->fields.currentQuestId;
 }
 
@@ -3472,7 +3460,7 @@ bool TitleInfoEventSubmarineStatusComponent___c__DisplayClass68_0___EndAnimation
         const MethodInfo *method)
 {
   if ( !n )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return n->fields.questId == this->fields.tmpProgressQuestId;
 }
 
@@ -3499,9 +3487,9 @@ void TitleInfoEventSubmarineStatusComponent___c__DisplayClass85_0___LoadEventUIA
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_21FFECC(0, data);
+    sub_2213CDC(0, data);
   _4__this->fields.eventAssetData = data;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&_4__this->fields.eventAssetData,
     (int32_t)data,
     (System_String_o *)method,

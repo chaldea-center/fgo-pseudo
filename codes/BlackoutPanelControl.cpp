@@ -8,14 +8,14 @@ void BlackoutPanelControl___ctor(BlackoutPanelControl_o *this, const MethodInfo 
   bool v7; // w7
   int32_t v9; // w1
 
-  if ( (byte_593332E & 1) == 0 )
+  if ( (byte_596B435 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593332E = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596B435 = 1;
   }
   v9 = (int)StringLiteral_1/*""*/;
   this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.eventName, v9, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.eventName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -27,7 +27,7 @@ void BlackoutPanelControl__Hide(BlackoutPanelControl_o *this, const MethodInfo *
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -41,7 +41,7 @@ void BlackoutPanelControl__SetBlackoutText(
 
   blackoutLabel = this->fields.blackoutLabel;
   if ( !blackoutLabel )
-    sub_21FFECC(0, message);
+    sub_2213CDC(0, message);
   UILabel__set_text(blackoutLabel, message, 0);
 }
 
@@ -58,7 +58,7 @@ void BlackoutPanelControl__SetEventName(
   bool v7; // w7
 
   this->fields.eventName = eventName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventName,
     (int32_t)eventName,
     (System_String_o *)method,
@@ -82,10 +82,10 @@ void BlackoutPanelControl__SetTextCenter(
   if ( !blackoutLabel )
     goto LABEL_7;
   gameObject = UnityEngine_Component__get_gameObject(blackoutLabel, 0);
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   blackoutLabel = (UnityEngine_Component_o *)this->fields.blackoutLabel;
@@ -94,7 +94,7 @@ void BlackoutPanelControl__SetTextCenter(
         (blackoutLabel = (UnityEngine_Component_o *)this->fields.blackoutLabel) == 0) )
   {
 LABEL_7:
-    sub_21FFECC(blackoutLabel, message);
+    sub_2213CDC(blackoutLabel, message);
   }
   UILabel__set_text((UILabel_o *)blackoutLabel, message, 0);
 }
@@ -107,6 +107,6 @@ void BlackoutPanelControl__Show(BlackoutPanelControl_o *this, const MethodInfo *
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }

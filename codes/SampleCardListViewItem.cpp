@@ -5,9 +5,9 @@ void SampleCardListViewItem___ctor(SampleCardListViewItem_o *this, const MethodI
 }
 
 
-void SampleCardListViewItem___ctor_44445288(SampleCardListViewItem_o *this, int32_t index, const MethodInfo *method)
+void SampleCardListViewItem___ctor_44466276(SampleCardListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   this->fields.cardId = 0;
 }
 

@@ -39,10 +39,10 @@ void EventExpeditionListViewItemDraw__Awake(EventExpeditionListViewItemDraw_o *t
   bool v31; // w6
   bool v32; // w7
 
-  if ( (byte_59324A6 & 1) == 0 )
+  if ( (byte_596A5A5 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59324A6 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A5A5 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -55,13 +55,13 @@ void EventExpeditionListViewItemDraw__Awake(EventExpeditionListViewItemDraw_o *t
       goto LABEL_17;
     mAtlas = v13->fields.mAtlas;
     this->fields.baseAtlas = mAtlas;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v7, v8, v9, v10, v11, v12);
     v21 = this->fields.baseSprite;
     if ( !v21 )
       goto LABEL_17;
     mSpriteName = v21->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.baseSpriteName,
       (int32_t)mSpriteName,
       v15,
@@ -86,7 +86,7 @@ void EventExpeditionListViewItemDraw__Awake(EventExpeditionListViewItemDraw_o *t
         v25 = UnityEngine_Component__get_gameObject(Parent, 0);
         this->fields.MaskObj = v25;
         p_MaskObj = &this->fields.MaskObj;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_MaskObj, (int32_t)v25, v27, v28, v29, v30, v31, v32);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)p_MaskObj, (int32_t)v25, v27, v28, v29, v30, v31, v32);
         Parent = (UnityEngine_Component_o *)*p_MaskObj;
         if ( *p_MaskObj )
         {
@@ -96,7 +96,7 @@ void EventExpeditionListViewItemDraw__Awake(EventExpeditionListViewItemDraw_o *t
       }
     }
 LABEL_17:
-    sub_21FFECC(Parent, v6);
+    sub_2213CDC(Parent, v6);
   }
 }
 
@@ -130,13 +130,13 @@ void EventExpeditionListViewItemDraw__DestroyAnimObj(EventExpeditionListViewItem
   __int64 v27; // x0
   System_Collections_IEnumerator_o *v28; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_59324AA & 1) == 0 )
+  if ( (byte_596A5A9 & 1) == 0 )
   {
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UnityEngine_Transform_TypeInfo);
-    byte_59324AA = 1;
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UnityEngine_Transform_TypeInfo);
+    byte_596A5A9 = 1;
   }
   effectParent = this->fields.effectParent;
   if ( !effectParent )
@@ -146,7 +146,7 @@ void EventExpeditionListViewItemDraw__DestroyAnimObj(EventExpeditionListViewItem
   effectParent = this->fields.effectParent;
   if ( !effectParent )
 LABEL_39:
-    sub_21FFECC(effectParent, method);
+    sub_2213CDC(effectParent, method);
   Enumerator = UnityEngine_Transform__GetEnumerator(effectParent, 0);
   v28 = Enumerator;
   while ( 1 )
@@ -170,7 +170,7 @@ LABEL_39:
     else
     {
 LABEL_12:
-      v9 = sub_2237E2C(v28, System_Collections_IEnumerator_TypeInfo, 0);
+      v9 = sub_224BC3C(v28, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v9)(v28, *(_QWORD *)(v9 + 8)) & 1) == 0 )
       break;
@@ -191,27 +191,27 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v13 = sub_2237E2C(v28, System_Collections_IEnumerator_TypeInfo, 1);
+      v13 = sub_224BC3C(v28, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v14 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v13)(
                                        v28,
                                        *(_QWORD *)(v13 + 8));
     if ( !v14 )
-      sub_21FFECC(0, v15);
+      sub_2213CDC(0, v15);
     naturalAligment = UnityEngine_Transform_TypeInfo->_2.naturalAligment;
     if ( v14->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (UnityEngine_Transform_c *)v14->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
     {
-      Enumerator = (System_Collections_IEnumerator_o *)sub_220024C(v14, UnityEngine_Transform_TypeInfo, v16, v17);
+      Enumerator = (System_Collections_IEnumerator_o *)sub_221405C(v14, UnityEngine_Transform_TypeInfo, v16, v17);
 LABEL_37:
-      sub_21FFECC(Enumerator, v5);
+      sub_2213CDC(Enumerator, v5);
     }
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
-    UnityEngine_Object__Destroy_83246496(gameObject, 0);
+    UnityEngine_Object__Destroy_83459800(gameObject, 0);
   }
-  v22 = sub_21FFDA4(v28, System_IDisposable_TypeInfo);
+  v22 = sub_2213BB4(v28, System_IDisposable_TypeInfo);
   if ( v22 )
   {
     v23 = *(_QWORD *)v22;
@@ -232,7 +232,7 @@ LABEL_37:
     else
     {
 LABEL_32:
-      v27 = sub_2237E2C(v22, System_IDisposable_TypeInfo, 0);
+      v27 = sub_224BC3C(v22, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v27)(v24, *(_QWORD *)(v27 + 8));
   }
@@ -255,11 +255,11 @@ System_String_o *EventExpeditionListViewItemDraw__GetExpeditionTimeLabel(
   unsigned __int64 v13; // [xsp+10h] [xbp-40h] BYREF
   unsigned __int64 v14; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_59324AB & 1) == 0 )
+  if ( (byte_596A5AA & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_6036/*"EXPEDITION_TIME_FORMAT"*/);
-    byte_59324AB = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_6048/*"EXPEDITION_TIME_FORMAT"*/);
+    byte_596A5AA = 1;
   }
   if ( time < 1 )
   {
@@ -276,14 +276,14 @@ System_String_o *EventExpeditionListViewItemDraw__GetExpeditionTimeLabel(
   }
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, time, method);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_6036/*"EXPEDITION_TIME_FORMAT"*/, 0);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_6048/*"EXPEDITION_TIME_FORMAT"*/, 0);
   v14 = v4;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v14);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v14);
   v13 = v6;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v13);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v13);
   v12 = v5;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C090, &v12);
-  return System_String__Format_75484644(v7, v8, v9, v10, 0);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v12);
+  return System_String__Format_75697948(v7, v8, v9, v10, 0);
 }
 
 
@@ -310,19 +310,19 @@ void EventExpeditionListViewItemDraw__PlayRunningAnim(
   Il2CppObject *v20; // x0
   int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_59324A9 & 1) == 0 )
+  if ( (byte_596A5A8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_17977/*"bit_runningdog_{0}_1"*/);
-    byte_59324A9 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_18015/*"bit_runningdog_{0}_1"*/);
+    byte_596A5A8 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, effect, *(_QWORD *)&idx);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                              (Il2CppObject *)effect,
-                                             (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !gameObject )
     goto LABEL_16;
   v9 = gameObject;
@@ -331,9 +331,9 @@ void EventExpeditionListViewItemDraw__PlayRunningAnim(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                       (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   this->fields.runAnim = (struct UnityEngine_Animation_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.runAnim,
     (int32_t)Component_object,
     v11,
@@ -348,33 +348,33 @@ void EventExpeditionListViewItemDraw__PlayRunningAnim(
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)gameObject, this->fields.effectParent, 0);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v9, 0);
   v17 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v17 )
     goto LABEL_16;
   UnityEngine_Transform__set_localPosition(v17, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v9, 0);
   v18 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_5931945 )
+  if ( !byte_5969AE5 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931945 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE5 = 1;
   }
   if ( !v18
     || (UnityEngine_Transform__set_localScale(v18, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
         runAnim = this->fields.runAnim,
         v21 = idx,
-        v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v21),
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_17977/*"bit_runningdog_{0}_1"*/, v20, 0),
+        v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v21),
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format((System_String_o *)StringLiteral_18015/*"bit_runningdog_{0}_1"*/, v20, 0),
         !runAnim) )
   {
 LABEL_16:
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
-  UnityEngine_Animation__Play_82865240(runAnim, (System_String_o *)gameObject, 0);
+  UnityEngine_Animation__Play_83078544(runAnim, (System_String_o *)gameObject, 0);
   this->fields.runAnimIdx = idx;
 }
 
@@ -396,17 +396,17 @@ bool EventExpeditionListViewItemDraw__SetEventPeriodTime(
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_59324AC & 1) == 0 )
+  if ( (byte_596A5AB & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_EventMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_13947/*"TIME_REST_NONE"*/);
-    sub_21FFC50(&StringLiteral_6038/*"EXPEDITION_TIME_REST"*/);
-    this = (EventExpeditionListViewItemDraw_o *)sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_59324AC = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_EventMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_13977/*"TIME_REST_NONE"*/);
+    sub_2213A60(&StringLiteral_6050/*"EXPEDITION_TIME_REST"*/);
+    this = (EventExpeditionListViewItemDraw_o *)sub_2213A60(&StringLiteral_1/*""*/);
+    byte_596A5AB = 1;
   }
   entity = 0;
   if ( !item )
@@ -415,14 +415,14 @@ bool EventExpeditionListViewItemDraw__SetEventPeriodTime(
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, item, method);
-    this = (EventExpeditionListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventMaster___);
+    this = (EventExpeditionListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventMaster___);
     if ( !this )
       goto LABEL_26;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            &entity,
            item->fields.currentEventId,
-           (const MethodInfo_3EDD3D8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+           (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     {
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v5, v6);
@@ -439,7 +439,7 @@ bool EventExpeditionListViewItemDraw__SetEventPeriodTime(
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v12);
             this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_13947/*"TIME_REST_NONE"*/,
+                                                          (System_String_o *)StringLiteral_13977/*"TIME_REST_NONE"*/,
                                                           0);
             if ( eventPeriodRestTimeText )
             {
@@ -452,7 +452,7 @@ bool EventExpeditionListViewItemDraw__SetEventPeriodTime(
         {
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v7);
-          this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6038/*"EXPEDITION_TIME_REST"*/, 0);
+          this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6050/*"EXPEDITION_TIME_REST"*/, 0);
           if ( eventPeriodRestText )
           {
             UILabel__set_text(eventPeriodRestText, (System_String_o *)this, 0);
@@ -473,7 +473,7 @@ bool EventExpeditionListViewItemDraw__SetEventPeriodTime(
         }
       }
 LABEL_26:
-      sub_21FFECC(this, item);
+      sub_2213CDC(this, item);
     }
   }
   return 0;
@@ -547,28 +547,28 @@ void EventExpeditionListViewItemDraw__SetItem(
   UnityEngine_Color_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_59324A7 & 1) == 0 )
+  if ( (byte_596A5A6 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&System_Comparison_GiftEntity__TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_21FFC50(&EventRewardRootComponent_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__Sort__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&Method_EventExpeditionListViewItemDraw___c__SetItem_b__27_0__);
-    sub_21FFC50(&EventExpeditionListViewItemDraw___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_24631/*"shop_item_menu_{0}_2"*/);
-    sub_21FFC50(&StringLiteral_24630/*"shop_item_menu_mask"*/);
-    sub_21FFC50(&StringLiteral_20046/*"event_gauge_back"*/);
-    sub_21FFC50(&StringLiteral_20053/*"event_gauge_front"*/);
-    sub_21FFC50(&StringLiteral_6035/*"EXPEDITION_REWARD_TITLE_LABEL"*/);
-    sub_21FFC50(&StringLiteral_6027/*"EXPEDITION_EVENT_END"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    this = (EventExpeditionListViewItemDraw_o *)sub_21FFC50(&StringLiteral_20054/*"event_gauge_front_complete"*/);
-    byte_59324A7 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&System_Comparison_GiftEntity__TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_2213A60(&EventRewardRootComponent_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__Sort__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&Method_EventExpeditionListViewItemDraw___c__SetItem_b__27_0__);
+    sub_2213A60(&EventExpeditionListViewItemDraw___c_TypeInfo);
+    sub_2213A60(&StringLiteral_24679/*"shop_item_menu_{0}_2"*/);
+    sub_2213A60(&StringLiteral_24678/*"shop_item_menu_mask"*/);
+    sub_2213A60(&StringLiteral_20088/*"event_gauge_back"*/);
+    sub_2213A60(&StringLiteral_20095/*"event_gauge_front"*/);
+    sub_2213A60(&StringLiteral_6047/*"EXPEDITION_REWARD_TITLE_LABEL"*/);
+    sub_2213A60(&StringLiteral_6039/*"EXPEDITION_EVENT_END"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    this = (EventExpeditionListViewItemDraw_o *)sub_2213A60(&StringLiteral_20096/*"event_gauge_front_complete"*/);
+    byte_596A5A6 = 1;
   }
   num = 0;
   if ( item && mode )
@@ -578,7 +578,7 @@ void EventExpeditionListViewItemDraw__SetItem(
     if ( commonConsumeEntity && (max_length = commonConsumeEntity->max_length) != 0 )
     {
       if ( !(_DWORD)max_length )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       v9 = commonConsumeEntity->m_Items[0];
       if ( !v9 )
         goto LABEL_72;
@@ -591,8 +591,8 @@ void EventExpeditionListViewItemDraw__SetItem(
     }
     baseSprite = v6->fields.baseSprite;
     currentEventId = item->fields.currentEventId;
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &currentEventId);
-    v15 = System_String__Format((System_String_o *)StringLiteral_24631/*"shop_item_menu_{0}_2"*/, v12, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &currentEventId);
+    v15 = System_String__Format((System_String_o *)StringLiteral_24679/*"shop_item_menu_{0}_2"*/, v12, 0);
     if ( !*(&EventRewardRootComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo, v13, v14);
     EventRewardRootComponent__setRewardInfoImg(baseSprite, v15, 0);
@@ -600,10 +600,10 @@ void EventExpeditionListViewItemDraw__SetItem(
     maskSprite = v6->fields.maskSprite;
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v16, v17);
-    this = (EventExpeditionListViewItemDraw_o *)AtlasManager__SetEventUI_47538316(
+    this = (EventExpeditionListViewItemDraw_o *)AtlasManager__SetEventUI_47569484(
                                                   v18,
                                                   maskSprite,
-                                                  (System_String_o *)StringLiteral_24630/*"shop_item_menu_mask"*/,
+                                                  (System_String_o *)StringLiteral_24678/*"shop_item_menu_mask"*/,
                                                   0);
     eventExpeditionEnt = item->fields.eventExpeditionEnt;
     if ( !eventExpeditionEnt )
@@ -611,16 +611,16 @@ void EventExpeditionListViewItemDraw__SetItem(
     placeIconSprite = v6->fields.placeIconSprite;
     v22 = item->fields.currentEventId;
     v23 = System_Int32__ToString((int)eventExpeditionEnt + 32, 0);
-    AtlasManager__SetEventUI_47538316(v22, placeIconSprite, v23, 0);
-    AtlasManager__SetEventUI_47538316(
+    AtlasManager__SetEventUI_47569484(v22, placeIconSprite, v23, 0);
+    AtlasManager__SetEventUI_47569484(
       item->fields.currentEventId,
       v6->fields.progressGaugeF,
-      (System_String_o *)StringLiteral_20053/*"event_gauge_front"*/,
+      (System_String_o *)StringLiteral_20095/*"event_gauge_front"*/,
       0);
-    this = (EventExpeditionListViewItemDraw_o *)AtlasManager__SetEventUI_47538316(
+    this = (EventExpeditionListViewItemDraw_o *)AtlasManager__SetEventUI_47569484(
                                                   item->fields.currentEventId,
                                                   v6->fields.progressGaugeB,
-                                                  (System_String_o *)StringLiteral_20046/*"event_gauge_back"*/,
+                                                  (System_String_o *)StringLiteral_20088/*"event_gauge_back"*/,
                                                   0);
     v24 = item->fields.eventExpeditionEnt;
     if ( !v24 )
@@ -632,7 +632,7 @@ void EventExpeditionListViewItemDraw__SetItem(
     rewardTitleLabel = v6->fields.rewardTitleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
-    this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6035/*"EXPEDITION_REWARD_TITLE_LABEL"*/, 0);
+    this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6047/*"EXPEDITION_REWARD_TITLE_LABEL"*/, 0);
     if ( !rewardTitleLabel )
       goto LABEL_72;
     UILabel__set_text(rewardTitleLabel, (System_String_o *)this, 0);
@@ -667,12 +667,12 @@ void EventExpeditionListViewItemDraw__SetItem(
         goto LABEL_72;
       ItemIconComponent__SetItem((ItemIconComponent_o *)this, objectId, -1, 1, 0);
     }
-    this = (EventExpeditionListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (EventExpeditionListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_72;
     this = (EventExpeditionListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                                   (DataManager_o *)this,
-                                                  (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GiftMaster___);
     v32 = item->fields.eventExpeditionEnt;
     if ( !v32 || !this )
       goto LABEL_72;
@@ -694,25 +694,25 @@ void EventExpeditionListViewItemDraw__SetItem(
         static_fields = EventExpeditionListViewItemDraw___c_TypeInfo->static_fields;
       }
       v38 = (Il2CppObject *)static_fields->__9;
-      _9__27_0 = (System_Comparison_T__o *)sub_21FFEBC(System_Comparison_GiftEntity__TypeInfo);
+      _9__27_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_GiftEntity__TypeInfo);
       System_Comparison_object____ctor(_9__27_0, v38, Method_EventExpeditionListViewItemDraw___c__SetItem_b__27_0__, 0);
       v39 = EventExpeditionListViewItemDraw___c_TypeInfo->static_fields;
       v39->__9__27_0 = (struct System_Comparison_GiftEntity__o *)_9__27_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v39->__9__27_0, (int32_t)_9__27_0, v40, v41, v42, v43, v44, v45);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v39->__9__27_0, (int32_t)_9__27_0, v40, v41, v42, v43, v44, v45);
     }
     if ( !v34 )
 LABEL_72:
-      sub_21FFECC(this, item);
-    System_Collections_Generic_List_object___Sort_71636404(
+      sub_2213CDC(this, item);
+    System_Collections_Generic_List_object___Sort_71849708(
       v34,
       _9__27_0,
-      (const MethodInfo_44515B4 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
+      (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
     if ( v34->fields._size >= 1 )
     {
       this = (EventExpeditionListViewItemDraw_o *)System_Collections_Generic_List_object___get_Item(
                                                     v34,
                                                     0,
-                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
       if ( !this )
         goto LABEL_72;
       v47 = (int32_t *)this;
@@ -722,7 +722,7 @@ LABEL_72:
       v48 = v47[7];
       if ( v48 <= 1 )
         v48 = -1;
-      ItemIconComponent__SetGift_47936840((ItemIconComponent_o *)this, v47[5], v47[6], v48, 0, 0);
+      ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)this, v47[5], v47[6], v48, 0, 0);
       this = (EventExpeditionListViewItemDraw_o *)v6->fields.rewardCountLabel;
       if ( !this )
         goto LABEL_72;
@@ -738,7 +738,7 @@ LABEL_50:
           goto LABEL_72;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
         v6->fields.runAnim = 0;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v6->fields.runAnim, 0, v49, v50, v51, v52, v53, v54);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->fields.runAnim, 0, v49, v50, v51, v52, v53, v54);
         goto LABEL_59;
       }
       if ( mode == 2 )
@@ -776,7 +776,7 @@ LABEL_59:
               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v58, v59);
               this = (EventExpeditionListViewItemDraw_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_6027/*"EXPEDITION_EVENT_END"*/,
+                                                            (System_String_o *)StringLiteral_6039/*"EXPEDITION_EVENT_END"*/,
                                                             0);
               if ( eventEndText )
               {
@@ -809,7 +809,7 @@ LABEL_70:
       progressGaugeF = v6->fields.progressGaugeF;
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item, v46);
-      AtlasManager__SetEventUI_47538316(v55, progressGaugeF, (System_String_o *)StringLiteral_20054/*"event_gauge_front_complete"*/, 0);
+      AtlasManager__SetEventUI_47569484(v55, progressGaugeF, (System_String_o *)StringLiteral_20096/*"event_gauge_front_complete"*/, 0);
     }
     this = (EventExpeditionListViewItemDraw_o *)v6->fields.MaskObj;
     if ( !this )
@@ -895,24 +895,24 @@ void EventExpeditionListViewItemDraw__UpdateItem(
   int32_t v73; // [xsp+Ch] [xbp-74h] BYREF
   EventExpeditionPieceEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_59324A8 & 1) == 0 )
+  if ( (byte_596A5A7 & 1) == 0 )
   {
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
-    sub_21FFC50(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_21FFC50(&StringLiteral_6012/*"EXPEDITION_BEST_MATCH_LABEL"*/);
-    sub_21FFC50(&StringLiteral_17977/*"bit_runningdog_{0}_1"*/);
-    sub_21FFC50(&StringLiteral_6014/*"EXPEDITION_COMPLETE_LABEL"*/);
-    sub_21FFC50(&StringLiteral_17978/*"bit_runningdog_{0}_2"*/);
-    sub_21FFC50(&StringLiteral_13965/*"TIME_REST_TIMEOVER"*/);
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    sub_21FFC50(&StringLiteral_20054/*"event_gauge_front_complete"*/);
-    sub_21FFC50(&StringLiteral_6037/*"EXPEDITION_TIME_LABEL"*/);
-    byte_59324A8 = 1;
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventExpeditionMaster___);
+    sub_2213A60(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_2213A60(&StringLiteral_6024/*"EXPEDITION_BEST_MATCH_LABEL"*/);
+    sub_2213A60(&StringLiteral_18015/*"bit_runningdog_{0}_1"*/);
+    sub_2213A60(&StringLiteral_6026/*"EXPEDITION_COMPLETE_LABEL"*/);
+    sub_2213A60(&StringLiteral_18016/*"bit_runningdog_{0}_2"*/);
+    sub_2213A60(&StringLiteral_13995/*"TIME_REST_TIMEOVER"*/);
+    sub_2213A60(&StringLiteral_1/*""*/);
+    sub_2213A60(&StringLiteral_20096/*"event_gauge_front_complete"*/);
+    sub_2213A60(&StringLiteral_6049/*"EXPEDITION_TIME_LABEL"*/);
+    byte_596A5A7 = 1;
   }
   entity = 0;
   if ( item && item->fields.eventExpeditionEnt )
@@ -964,11 +964,11 @@ void EventExpeditionListViewItemDraw__UpdateItem(
           {
             v24 = this->fields.runAnim;
             v73 = v13;
-            v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v73);
-            ExpeditionInfo = System_String__Format((System_String_o *)StringLiteral_17977/*"bit_runningdog_{0}_1"*/, v25, 0);
+            v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v73);
+            ExpeditionInfo = System_String__Format((System_String_o *)StringLiteral_18015/*"bit_runningdog_{0}_1"*/, v25, 0);
             if ( !v24 )
               goto LABEL_92;
-            UnityEngine_Animation__Play_82865240(v24, (System_String_o *)ExpeditionInfo, 0);
+            UnityEngine_Animation__Play_83078544(v24, (System_String_o *)ExpeditionInfo, 0);
           }
         }
       }
@@ -990,10 +990,10 @@ void EventExpeditionListViewItemDraw__UpdateItem(
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v27);
       RestTime = LocalizationManager__GetRestTime(v28, 0);
-      ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_13965/*"TIME_REST_TIMEOVER"*/, 0);
+      ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_13995/*"TIME_REST_TIMEOVER"*/, 0);
       if ( !RestTime )
         goto LABEL_92;
-      if ( System_String__Equals_75473208(RestTime, (System_String_o *)ExpeditionInfo, 0) && v13 >= 1 )
+      if ( System_String__Equals_75686512(RestTime, (System_String_o *)ExpeditionInfo, 0) && v13 >= 1 )
       {
         ExpeditionInfo = this->fields.effectParent;
         if ( !ExpeditionInfo )
@@ -1015,11 +1015,11 @@ void EventExpeditionListViewItemDraw__UpdateItem(
           GameObjectExtensions__SetLocalPositionX(gameObject, -(float)this->fields.runningRange, 0);
           v37 = this->fields.runAnim;
           v73 = v13;
-          v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v73);
-          ExpeditionInfo = System_String__Format((System_String_o *)StringLiteral_17978/*"bit_runningdog_{0}_2"*/, v38, 0);
+          v38 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v73);
+          ExpeditionInfo = System_String__Format((System_String_o *)StringLiteral_18016/*"bit_runningdog_{0}_2"*/, v38, 0);
           if ( !v37 )
             goto LABEL_92;
-          UnityEngine_Animation__Play_82865240(v37, (System_String_o *)ExpeditionInfo, 0);
+          UnityEngine_Animation__Play_83078544(v37, (System_String_o *)ExpeditionInfo, 0);
         }
       }
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -1033,7 +1033,7 @@ void EventExpeditionListViewItemDraw__UpdateItem(
             (ExpeditionInfo = EventExpeditionListViewItem__GetExpeditionInfo(item, v11)) == 0) )
       {
 LABEL_92:
-        sub_21FFECC(ExpeditionInfo, v11);
+        sub_2213CDC(ExpeditionInfo, v11);
       }
       v43 = v41 - Time;
       if ( v22 <= 1 )
@@ -1075,12 +1075,12 @@ LABEL_92:
       if ( !ExpeditionInfo )
         goto LABEL_92;
       UILabel__set_text((UILabel_o *)ExpeditionInfo, (System_String_o *)StringLiteral_1/*""*/, 0);
-      ExpeditionInfo = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      ExpeditionInfo = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !ExpeditionInfo )
         goto LABEL_92;
       ExpeditionInfo = DataManager__GetMasterData_object_(
                          (DataManager_o *)ExpeditionInfo,
-                         (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
+                         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
       if ( !ExpeditionInfo )
         goto LABEL_92;
       if ( EventExpeditionPieceMaster__TryGetEntity(
@@ -1093,7 +1093,7 @@ LABEL_92:
         timeLeftLabel = this->fields.timeLeftLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v48);
-        ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_6037/*"EXPEDITION_TIME_LABEL"*/, 0);
+        ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_6049/*"EXPEDITION_TIME_LABEL"*/, 0);
         if ( !entity )
           goto LABEL_92;
         name = (Il2CppObject *)entity->fields.name;
@@ -1102,16 +1102,16 @@ LABEL_92:
                                                 (EventExpeditionListViewItemDraw_o *)ExpeditionInfo,
                                                 v43,
                                                 v50);
-        ExpeditionInfo = System_String__Format_75484576(v52, name, ExpeditionTimeLabel, 0);
+        ExpeditionInfo = System_String__Format_75697880(v52, name, ExpeditionTimeLabel, 0);
         if ( !timeLeftLabel )
           goto LABEL_92;
         UILabel__set_text(timeLeftLabel, (System_String_o *)ExpeditionInfo, 0);
-        ExpeditionInfo = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        ExpeditionInfo = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !ExpeditionInfo )
           goto LABEL_92;
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)ExpeditionInfo,
-                              (const MethodInfo_3822EA4 *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
+                              (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventExpeditionMaster___);
         currentEventId = item->fields.currentEventId;
         v56 = (EventExpeditionMaster_o *)MasterData_object;
         ExpeditionInfo = EventExpeditionListViewItem__GetExpeditionInfo(item, v57);
@@ -1131,8 +1131,8 @@ LABEL_92:
           mText = v59->fields.mText;
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v58);
-          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6012/*"EXPEDITION_BEST_MATCH_LABEL"*/, 0);
-          v62 = System_String__Concat_75438412(mText, v61, 0);
+          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6024/*"EXPEDITION_BEST_MATCH_LABEL"*/, 0);
+          v62 = System_String__Concat_75651716(mText, v61, 0);
           UILabel__set_text(v59, v62, 0);
         }
       }
@@ -1143,21 +1143,21 @@ LABEL_92:
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v63);
       v65 = LocalizationManager__GetRestTime(v64, 0);
-      ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_13965/*"TIME_REST_TIMEOVER"*/, 0);
+      ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_13995/*"TIME_REST_TIMEOVER"*/, 0);
       if ( !v65 )
         goto LABEL_92;
-      if ( System_String__Equals_75473208(v65, (System_String_o *)ExpeditionInfo, 0) )
+      if ( System_String__Equals_75686512(v65, (System_String_o *)ExpeditionInfo, 0) )
       {
         ActionExtensions__Call(item->fields.updateNoticeNum, 0);
         v68 = item->fields.currentEventId;
         progressGaugeF = this->fields.progressGaugeF;
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v66, v67);
-        AtlasManager__SetEventUI_47538316(v68, progressGaugeF, (System_String_o *)StringLiteral_20054/*"event_gauge_front_complete"*/, 0);
+        AtlasManager__SetEventUI_47569484(v68, progressGaugeF, (System_String_o *)StringLiteral_20096/*"event_gauge_front_complete"*/, 0);
         v72 = this->fields.timeLeftLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v70, v71);
-        ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_6014/*"EXPEDITION_COMPLETE_LABEL"*/, 0);
+        ExpeditionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_6026/*"EXPEDITION_COMPLETE_LABEL"*/, 0);
         if ( !v72 )
           goto LABEL_92;
         UILabel__set_text(v72, (System_String_o *)ExpeditionInfo, 0);
@@ -1187,15 +1187,15 @@ void EventExpeditionListViewItemDraw___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59324AD & 1) == 0 )
+  if ( (byte_596A5AC & 1) == 0 )
   {
-    sub_21FFC50(&EventExpeditionListViewItemDraw___c_TypeInfo);
-    byte_59324AD = 1;
+    sub_2213A60(&EventExpeditionListViewItemDraw___c_TypeInfo);
+    byte_596A5AC = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventExpeditionListViewItemDraw___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventExpeditionListViewItemDraw___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventExpeditionListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct EventExpeditionListViewItemDraw___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventExpeditionListViewItemDraw___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1220,6 +1220,6 @@ int32_t EventExpeditionListViewItemDraw___c___SetItem_b__27_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_21FFECC(this, a);
+    sub_2213CDC(this, a);
   return b->fields.priority - a->fields.priority;
 }

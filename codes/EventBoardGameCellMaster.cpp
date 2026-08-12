@@ -1,14 +1,14 @@
 void EventBoardGameCellMaster___ctor(EventBoardGameCellMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938512 & 1) == 0 )
+  if ( (byte_59706C5 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
-    byte_5938512 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
+    byte_59706C5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     314,
-    (const MethodInfo_3EDFBF4 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
+    (const MethodInfo_3F1339C *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
 }
 
 
@@ -23,22 +23,22 @@ int32_t EventBoardGameCellMaster__GetBoardSquareCount(
   System_Collections_ObjectModel_ObservableCollection_T__o *list; // x20
   System_Predicate_object__o *v9; // x19
 
-  if ( (byte_5938514 & 1) == 0 )
+  if ( (byte_59706C7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__getEntityList__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventBoardGameCellEntity__get_Count__);
-    sub_21FFC50(&Method_ObservableCollectionExtensions_FindAll_EventBoardGameCellEntity___);
-    sub_21FFC50(&System_Predicate_EventBoardGameCellEntity__TypeInfo);
-    sub_21FFC50(&Method_EventBoardGameCellMaster___c__DisplayClass5_0__GetBoardSquareCount_b__0__);
-    sub_21FFC50(&EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
-    byte_5938514 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__getEntityList__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventBoardGameCellEntity__get_Count__);
+    sub_2213A60(&Method_ObservableCollectionExtensions_FindAll_EventBoardGameCellEntity___);
+    sub_2213A60(&System_Predicate_EventBoardGameCellEntity__TypeInfo);
+    sub_2213A60(&Method_EventBoardGameCellMaster___c__DisplayClass5_0__GetBoardSquareCount_b__0__);
+    sub_2213A60(&EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
+    byte_59706C7 = 1;
   }
-  v5 = sub_21FFEBC(EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
+  v5 = sub_2213CCC(EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list,
         *(_DWORD *)(v5 + 16) = eventId,
-        v9 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_EventBoardGameCellEntity__TypeInfo),
+        v9 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_EventBoardGameCellEntity__TypeInfo),
         System_Predicate_object____ctor(
           v9,
           (Il2CppObject *)v5,
@@ -47,9 +47,9 @@ int32_t EventBoardGameCellMaster__GetBoardSquareCount(
         (All_object = ObservableCollectionExtensions__FindAll_object_(
                         list,
                         (System_Predicate_T__o *)v9,
-                        (const MethodInfo_38C1308 *)Method_ObservableCollectionExtensions_FindAll_EventBoardGameCellEntity___)) == 0) )
+                        (const MethodInfo_38F47D0 *)Method_ObservableCollectionExtensions_FindAll_EventBoardGameCellEntity___)) == 0) )
   {
-    sub_21FFECC(All_object, v7);
+    sub_2213CDC(All_object, v7);
   }
   return All_object->fields._size;
 }
@@ -64,16 +64,16 @@ EventBoardGameCellEntity_o *EventBoardGameCellMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_5938510 & 1) == 0 )
+  if ( (byte_59706C3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
-    byte_5938510 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
+    byte_59706C3 = 1;
   }
   PK = (Il2CppObject *)EventBoardGameCellEntity__CreatePK(eventId, cellId, *(const MethodInfo **)&cellId);
   return (EventBoardGameCellEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_3EE2044 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
+                                         (const MethodInfo_3F157EC *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
 }
 
 
@@ -107,24 +107,24 @@ EventBoardGameCellEntity_o *EventBoardGameCellMaster__GetEntityFromEventIdAndCel
   __int64 v27; // x0
   System_Collections_Generic_IEnumerator_T__o *v29; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_5938513 & 1) == 0 )
+  if ( (byte_59706C6 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_ObjectModel_Collection_EventBoardGameCellEntity__GetEnumerator__);
-    sub_21FFC50(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__getEntityList__);
-    sub_21FFC50(&System_IDisposable_TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_IEnumerator_EventBoardGameCellEntity__TypeInfo);
-    sub_21FFC50(&System_Collections_IEnumerator_TypeInfo);
-    byte_5938513 = 1;
+    sub_2213A60(&Method_System_Collections_ObjectModel_Collection_EventBoardGameCellEntity__GetEnumerator__);
+    sub_2213A60(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__getEntityList__);
+    sub_2213A60(&System_IDisposable_TypeInfo);
+    sub_2213A60(&System_Collections_Generic_IEnumerator_EventBoardGameCellEntity__TypeInfo);
+    sub_2213A60(&System_Collections_IEnumerator_TypeInfo);
+    byte_59706C6 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_21FFECC(0, *(_QWORD *)&eventId);
+    sub_2213CDC(0, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3E61068 *)Method_System_Collections_ObjectModel_Collection_EventBoardGameCellEntity__GetEnumerator__);
+                 (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_EventBoardGameCellEntity__GetEnumerator__);
   v29 = Enumerator;
   if ( !Enumerator )
-    sub_21FFECC(Enumerator, v9);
+    sub_2213CDC(Enumerator, v9);
   for ( i = Enumerator; ; i = v29 )
   {
     klass = i->klass;
@@ -144,7 +144,7 @@ EventBoardGameCellEntity_o *EventBoardGameCellMaster__GetEntityFromEventIdAndCel
     else
     {
 LABEL_10:
-      v14 = sub_2237E2C(i, System_Collections_IEnumerator_TypeInfo, 0);
+      v14 = sub_224BC3C(i, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
             i,
@@ -152,7 +152,7 @@ LABEL_10:
     if ( (v15 & 1) == 0 )
       break;
     if ( !v29 )
-      sub_21FFECC(v15, v16);
+      sub_2213CDC(v15, v16);
     v17 = v29->klass;
     v18 = *(unsigned __int16 *)&v29->klass->_2.rank;
     if ( *(_WORD *)&v29->klass->_2.rank )
@@ -170,14 +170,14 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v20 = sub_2237E2C(v29, System_Collections_Generic_IEnumerator_EventBoardGameCellEntity__TypeInfo, 0);
+      v20 = sub_224BC3C(v29, System_Collections_Generic_IEnumerator_EventBoardGameCellEntity__TypeInfo, 0);
     }
     v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             v29,
             *(_QWORD *)(v20 + 8));
     v23 = (EventBoardGameCellEntity_o *)v21;
     if ( !v21 )
-      sub_21FFECC(0, v22);
+      sub_2213CDC(0, v22);
     if ( *(_DWORD *)(v21 + 16) == eventId && *(_DWORD *)(v21 + 20) == cellId )
       goto LABEL_26;
   }
@@ -202,7 +202,7 @@ LABEL_26:
     else
     {
 LABEL_31:
-      v27 = sub_2237E2C(v29, System_IDisposable_TypeInfo, 0);
+      v27 = sub_224BC3C(v29, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(v29, *(_QWORD *)(v27 + 8));
   }
@@ -220,17 +220,17 @@ bool EventBoardGameCellMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_5938511 & 1) == 0 )
+  if ( (byte_59706C4 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
-    byte_5938511 = 1;
+    sub_2213A60(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
+    byte_59706C4 = 1;
   }
   PK = (Il2CppObject *)EventBoardGameCellEntity__CreatePK(eventId, cellId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3EE2090 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
+           (const MethodInfo_3F15838 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
 }
 
 
@@ -248,6 +248,6 @@ bool EventBoardGameCellMaster___c__DisplayClass5_0___GetBoardSquareCount_b__0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return ent->fields.eventId == this->fields.eventId;
 }

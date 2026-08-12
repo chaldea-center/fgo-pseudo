@@ -8,16 +8,16 @@ void BattleTreasureDeviceCommandData___ctor(
   int32_t DispLimitCount; // w0
   int32_t uniqueId; // w8
 
-  if ( (byte_593B66F & 1) == 0 )
+  if ( (byte_5973868 & 1) == 0 )
   {
-    sub_21FFC50(&BattleCommandData_TypeInfo);
-    byte_593B66F = 1;
+    sub_2213A60(&BattleCommandData_TypeInfo);
+    byte_5973868 = 1;
   }
   if ( !*(&BattleCommandData_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BattleCommandData_TypeInfo, svtData);
   BattleCommandData___ctor((BattleCommandData_o *)this, (const MethodInfo *)svtData);
   if ( !svtData )
-    sub_21FFECC(v5, v6);
+    sub_2213CDC(v5, v6);
   this->fields._type = BattleServantData__getTreasureDvcCardId(svtData, 0);
   DispLimitCount = BattleServantData__getDispLimitCount(svtData, 1, 0);
   uniqueId = svtData->fields.uniqueId;

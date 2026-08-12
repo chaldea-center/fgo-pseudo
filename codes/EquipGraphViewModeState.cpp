@@ -22,11 +22,11 @@ void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, cons
   UIEquipGraphV_o *uiEquipGraphV; // x0
   int32_t v9; // w1
 
-  if ( (byte_5935B00 & 1) == 0 )
+  if ( (byte_596DC42 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_2611/*"AutoPlayView"*/);
-    byte_5935B00 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_2612/*"AutoPlayView"*/);
+    byte_596DC42 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -39,7 +39,7 @@ void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, cons
       goto LABEL_16;
     }
 LABEL_21:
-    sub_21FFECC(uiEquipGraphV, method);
+    sub_2213CDC(uiEquipGraphV, method);
   }
   if ( AutoPlayMode == 1 )
   {
@@ -52,7 +52,7 @@ LABEL_21:
 LABEL_17:
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_2611/*"AutoPlayView"*/,
+        (System_String_o *)StringLiteral_2612/*"AutoPlayView"*/,
         this->fields.AutoPlayInterval,
         0);
       return;
@@ -108,7 +108,7 @@ void EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *this, const 
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ScriptManager__OnClickFowardView(scriptManager, 0);
 }
 
@@ -147,7 +147,7 @@ void EquipGraphViewModeState__OnClickAutoPlayButton(
       }
     }
 LABEL_10:
-    sub_21FFECC(autoPlaySprite, isSetting);
+    sub_2213CDC(autoPlaySprite, isSetting);
   }
   if ( !autoPlaySprite )
     goto LABEL_10;
@@ -166,10 +166,10 @@ void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
   int quickAutobtn_k__BackingField; // w8
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_5935AFF & 1) == 0 )
+  if ( (byte_596DC41 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_7128/*"FowardView"*/);
-    byte_5935AFF = 1;
+    sub_2213A60(&StringLiteral_7140/*"FowardView"*/);
+    byte_596DC41 = 1;
   }
   quickAutobtn_k__BackingField = this->fields._quickAutobtn_k__BackingField;
   if ( !isSetting )
@@ -191,14 +191,14 @@ void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
         UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_7128/*"FowardView"*/,
+          (System_String_o *)StringLiteral_7140/*"FowardView"*/,
           this->fields.AutoPlayInterval,
           0);
         return;
       }
     }
 LABEL_12:
-    sub_21FFECC(quickAutoPlaySprite, isSetting);
+    sub_2213CDC(quickAutoPlaySprite, isSetting);
   }
   if ( !quickAutoPlaySprite )
     goto LABEL_12;

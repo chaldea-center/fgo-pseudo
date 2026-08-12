@@ -22,10 +22,10 @@ void BattlePlayerAttackPreselectTargetWindow__ApplyDecideButtonState(
   struct UIButton_o *v11; // x8
   struct UIButton_o *v12; // x8
 
-  if ( (byte_593BF29 & 1) == 0 )
+  if ( (byte_5974138 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF29 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974138 = 1;
   }
   decideButton = (UnityEngine_Object_o *)this->fields.decideButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -69,7 +69,7 @@ void BattlePlayerAttackPreselectTargetWindow__ApplyDecideButtonState(
       }
     }
 LABEL_16:
-    sub_21FFECC(v10, v9);
+    sub_2213CDC(v10, v9);
   }
 }
 
@@ -83,12 +83,12 @@ void BattlePlayerAttackPreselectTargetWindow__CacheDecideButtonColors(
   UIButtonColor_o *v5; // x0
   struct UIButton_o *v6; // x8
   struct UnityEngine_Color_o pressed; // q0
-  UnityEngine_Color_o defaultColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o defaultColor; // 0:kr00_16.16
 
-  if ( (byte_593BF2A & 1) == 0 )
+  if ( (byte_5974139 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF2A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974139 = 1;
   }
   if ( !this->fields.hasDecideButtonColorCache )
   {
@@ -104,7 +104,7 @@ void BattlePlayerAttackPreselectTargetWindow__CacheDecideButtonColors(
             this->fields.decideButtonDefaultColor = defaultColor,
             !v6) )
       {
-        sub_21FFECC(v5, v4);
+        sub_2213CDC(v5, v4);
       }
       this->fields.decideButtonHoverColor = v6->fields.hover;
       pressed = v6->fields.pressed;
@@ -136,7 +136,7 @@ void BattlePlayerAttackPreselectTargetWindow__CompleteSelection(
     v10 = selectCallBack;
     *((_BYTE *)p_selectCallBack + 69) = 1;
     *p_selectCallBack = 0;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)p_selectCallBack, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_selectCallBack, 0, (System_String_o *)method, v3, v4, v5, v6, v7);
     if ( selectCallBack )
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v10->fields.invoke_impl)(
         v10->fields.method_code,
@@ -151,16 +151,16 @@ bool BattlePlayerAttackPreselectTargetWindow__ExistsServant(
         int32_t index,
         const MethodInfo *method)
 {
-  if ( (byte_593BF1C & 1) == 0 )
+  if ( (byte_597412B & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_IndexValue_BattleServantData___);
-    byte_593BF1C = 1;
+    sub_2213A60(&Method_BasicHelper_IndexValue_BattleServantData___);
+    byte_597412B = 1;
   }
   return BasicHelper__IndexValue_object_(
            (System_Object_array *)this->fields.servantList,
            index,
            0,
-           (const MethodInfo_37E18F8 *)Method_BasicHelper_IndexValue_BattleServantData___) != 0;
+           (const MethodInfo_3814CA8 *)Method_BasicHelper_IndexValue_BattleServantData___) != 0;
 }
 
 
@@ -190,18 +190,18 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__GetDescriptionText(
   const MethodInfo *v13; // x1
   Il2CppObject *SourceSkillDetail; // x2
 
-  if ( (byte_593BF20 & 1) == 0 )
+  if ( (byte_597412F & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_10806/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT"*/);
-    sub_21FFC50(&StringLiteral_10807/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_INVALID"*/);
-    byte_593BF20 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_10819/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT"*/);
+    sub_2213A60(&StringLiteral_10820/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_INVALID"*/);
+    byte_597412F = 1;
   }
   if ( !this->fields.sourceSkillId || this->fields.sourceSkillLv <= 0 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
-    v8 = (System_String_o *)StringLiteral_10807/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_INVALID"*/;
+    v8 = (System_String_o *)StringLiteral_10820/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_INVALID"*/;
     return LocalizationManager__Get(v8, 0);
   }
   SkillDescriptionTextKey = BattlePlayerAttackPreselectTargetWindow__GetSkillDescriptionTextKey(this, method);
@@ -218,10 +218,10 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__GetDescriptionText(
   }
   if ( !v7 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v5);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10806/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10819/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT"*/, 0);
   SourceSkillName = (Il2CppObject *)BattlePlayerAttackPreselectTargetWindow__GetSourceSkillName(this, v11);
   SourceSkillDetail = (Il2CppObject *)BattlePlayerAttackPreselectTargetWindow__GetSourceSkillDetail(this, v13);
-  return System_String__Format_75484576(v10, SourceSkillName, SourceSkillDetail, 0);
+  return System_String__Format_75697880(v10, SourceSkillName, SourceSkillDetail, 0);
 }
 
 
@@ -238,10 +238,10 @@ int32_t BattlePlayerAttackPreselectTargetWindow__GetDisplayServantCount(
   const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_593BF1B & 1) == 0 )
+  if ( (byte_597412A & 1) == 0 )
   {
-    this = (BattlePlayerAttackPreselectTargetWindow_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF1B = 1;
+    this = (BattlePlayerAttackPreselectTargetWindow_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597412A = 1;
   }
   servantButtonList = v2->fields.servantButtonList;
   if ( !servantButtonList )
@@ -254,7 +254,7 @@ int32_t BattlePlayerAttackPreselectTargetWindow__GetDisplayServantCount(
     if ( (__int64)v4 >= (int)max_length_low )
       break;
     if ( v4 >= max_length_low )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     v7 = (UnityEngine_Object_o *)servantButtonList->m_Items[v4];
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
@@ -270,7 +270,7 @@ int32_t BattlePlayerAttackPreselectTargetWindow__GetDisplayServantCount(
     servantButtonList = v2->fields.servantButtonList;
     ++v4;
     if ( !servantButtonList )
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
   }
   return v5;
 }
@@ -283,14 +283,14 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__GetSkillDescriptionTex
   Il2CppObject *v3; // x0
   int32_t sourceSkillId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_593BF21 & 1) == 0 )
+  if ( (byte_5974130 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_10808/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_{0}"*/);
-    byte_593BF21 = 1;
+    sub_2213A60(&StringLiteral_10821/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_{0}"*/);
+    byte_5974130 = 1;
   }
   sourceSkillId = this->fields.sourceSkillId;
-  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &sourceSkillId);
-  return System_String__Format((System_String_o *)StringLiteral_10808/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_{0}"*/, v3, 0);
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &sourceSkillId);
+  return System_String__Format((System_String_o *)StringLiteral_10821/*"PLAYER_ATTACK_PRESELECT_TARGET_WINDOW_DESCRIPTION_TEXT_{0}"*/, v3, 0);
 }
 
 
@@ -304,31 +304,31 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__GetSourceSkillDetail(
   __int64 v6; // x1
   LocalizationManager_c *v8; // x0
 
-  if ( (byte_593BF23 & 1) == 0 )
+  if ( (byte_5974132 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593BF23 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5974132 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   Entity = SkillLvMaster__GetEntity(
              (SkillLvMaster_o *)Master_object,
              this->fields.sourceSkillId,
              this->fields.sourceSkillLv,
              0);
   if ( Entity )
-    return SkillLvEntity__getDetail_49837896(Entity, this->fields.sourceSkillLv, 0, 0);
+    return SkillLvEntity__getDetail_49901180(Entity, this->fields.sourceSkillLv, 0, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-  if ( !byte_593385D )
+  if ( !byte_596B976 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593385D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596B976 = 1;
   }
   v8 = LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -350,31 +350,31 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__GetSourceSkillName(
   __int64 v6; // x1
   LocalizationManager_c *v8; // x0
 
-  if ( (byte_593BF22 & 1) == 0 )
+  if ( (byte_5974131 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593BF22 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_5974131 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields.sourceSkillId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getName((SkillEntity_o *)Entity, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-  if ( !byte_593385D )
+  if ( !byte_596B976 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    byte_593385D = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    byte_596B976 = 1;
   }
   v8 = LocalizationManager_TypeInfo;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -403,12 +403,12 @@ void BattlePlayerAttackPreselectTargetWindow__Initialize(
   const MethodInfo *v13; // x1
   const MethodInfo *v14; // x1
 
-  if ( (byte_593BF16 & 1) == 0 )
+  if ( (byte_5974125 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    byte_593BF16 = 1;
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    byte_5974125 = 1;
   }
   if ( !this->fields.isInitialized )
   {
@@ -416,7 +416,7 @@ void BattlePlayerAttackPreselectTargetWindow__Initialize(
     BattlePlayerAttackPreselectTargetWindow__UpdateText(this, v3);
     BattlePlayerAttackPreselectTargetWindow__InitializeServantButtons(this, v4);
     decideButton = this->fields.decideButton;
-    v6 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+    v6 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       v6,
       (Il2CppObject *)this,
@@ -424,7 +424,7 @@ void BattlePlayerAttackPreselectTargetWindow__Initialize(
       0);
     BattlePlayerAttackPreselectTargetWindow__InitializeButton(v7, decideButton, v6, v8);
     closeButton = this->fields.closeButton;
-    v10 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+    v10 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       v10,
       (Il2CppObject *)this,
@@ -461,13 +461,13 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeButton(
   __int64 v20; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_593BF1E & 1) == 0 )
+  if ( (byte_597412D & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF1E = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597412D = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, button);
@@ -488,8 +488,8 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeButton(
       System_Array__Clear((System_Array_o *)onClick->fields._items, 0, size, 0);
       onClick = button->fields.onClick;
     }
-    v11 = (EventDelegate_o *)sub_21FFEBC(EventDelegate_TypeInfo);
-    EventDelegate___ctor_56132624(v11, callback, 0);
+    v11 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+    EventDelegate___ctor_56337280(v11, callback, 0);
     if ( !onClick
       || (items = onClick->fields._items,
           v19 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -497,7 +497,7 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeButton(
           !items) )
     {
 LABEL_15:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
     v20 = onClick->fields._size;
     if ( (unsigned int)v20 >= LODWORD(items->max_length) )
@@ -505,14 +505,14 @@ LABEL_15:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)onClick,
         (Il2CppObject *)v11,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = &items->obj.klass + v20;
       onClick->fields._size = v20 + 1;
       v21[4] = (Il2CppClass *)v11;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v11, v12, v13, v14, v15, v16, v17);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 4), (int32_t)v11, v12, v13, v14, v15, v16, v17);
     }
   }
 }
@@ -539,12 +539,12 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeServantButtons(
   BattlePlayerAttackPreselectTargetWindow_o *v17; // x0
   const MethodInfo *v18; // x3
 
-  if ( (byte_593BF1D & 1) == 0 )
+  if ( (byte_597412C & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_Callback_TypeInfo);
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0__InitializeServantButtons_b__0__);
-    sub_21FFC50(&BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0_TypeInfo);
-    byte_593BF1D = 1;
+    sub_2213A60(&EventDelegate_Callback_TypeInfo);
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0__InitializeServantButtons_b__0__);
+    sub_2213A60(&BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0_TypeInfo);
+    byte_597412C = 1;
   }
   servantButtonList = this->fields.servantButtonList;
   if ( servantButtonList )
@@ -552,20 +552,20 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeServantButtons(
     v4 = 0;
     while ( (__int64)v4 < SLODWORD(servantButtonList->max_length) )
     {
-      v5 = sub_21FFEBC(BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0_TypeInfo);
+      v5 = sub_2213CCC(BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v5, 0);
       if ( v5 )
       {
         *(_QWORD *)(v5 + 24) = this;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
         v14 = this->fields.servantButtonList;
         *(_DWORD *)(v5 + 16) = v4;
         if ( v14 )
         {
           if ( v4 >= LODWORD(v14->max_length) )
-            sub_21FFED4(v6);
+            sub_2213CE4(v6);
           v15 = v14->m_Items[v4];
-          v16 = (EventDelegate_Callback_o *)sub_21FFEBC(EventDelegate_Callback_TypeInfo);
+          v16 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
           EventDelegate_Callback___ctor(
             v16,
             (Il2CppObject *)v5,
@@ -578,7 +578,7 @@ void BattlePlayerAttackPreselectTargetWindow__InitializeServantButtons(
             continue;
         }
       }
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
   }
 }
@@ -592,17 +592,17 @@ void BattlePlayerAttackPreselectTargetWindow__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_593BF26 & 1) == 0 )
+  if ( (byte_5974135 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
-    byte_593BF26 = 1;
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
+    byte_5974135 = 1;
   }
   if ( !this->fields.isSelectionCompleted )
   {
     v3 = Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlayCommonSe(v4, 12, 0, 0);
     BattlePlayerAttackPreselectTargetWindow__CompleteSelection(this, -1, v5);
   }
@@ -617,10 +617,10 @@ void BattlePlayerAttackPreselectTargetWindow__OnClickDecideButton(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_593BF25 & 1) == 0 )
+  if ( (byte_5974134 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
-    byte_593BF25 = 1;
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
+    byte_5974134 = 1;
   }
   if ( !this->fields.isSelectionCompleted )
   {
@@ -632,8 +632,8 @@ void BattlePlayerAttackPreselectTargetWindow__OnClickDecideButton(
     {
       v3 = Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__;
       if ( (*((_BYTE *)Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_21FFC68(Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
-      v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+        v3 = (_QWORD *)sub_2213A78(Method_BattlePlayerAttackPreselectTargetWindow_OnClickDecideButton__);
+      v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
       OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
       BattlePlayerAttackPreselectTargetWindow__CompleteSelection(this, this->fields.selectedUniqueId, v5);
     }
@@ -655,7 +655,7 @@ void BattlePlayerAttackPreselectTargetWindow__Open(
   const MethodInfo *v12; // x2
 
   this->fields.selectCallBack = selectCallBack;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.selectCallBack,
     (int32_t)selectCallBack,
     *(System_String_o **)&sourceSkillId,
@@ -674,7 +674,7 @@ void BattlePlayerAttackPreselectTargetWindow__Open(
 }
 
 
-void BattlePlayerAttackPreselectTargetWindow__Open_54597548(
+void BattlePlayerAttackPreselectTargetWindow__Open_54701724(
         BattlePlayerAttackPreselectTargetWindow_o *this,
         BattleWindowComponent_EndCall_o *call,
         const MethodInfo *method)
@@ -682,18 +682,18 @@ void BattlePlayerAttackPreselectTargetWindow__Open_54597548(
   const MethodInfo *v5; // x1
   BattleWindowOuterClickComponent_OuterClickCall_o *v6; // x20
 
-  if ( (byte_593BF18 & 1) == 0 )
+  if ( (byte_5974127 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
-    sub_21FFC50(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
-    byte_593BF18 = 1;
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_OnClickCloseButton__);
+    sub_2213A60(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+    byte_5974127 = 1;
   }
   this->fields.isSelectionCompleted = 0;
   this->fields.selectedUniqueId = -1;
   BattlePlayerAttackPreselectTargetWindow__UpdateSelectIcons(this, (const MethodInfo *)call);
   BattlePlayerAttackPreselectTargetWindow__UpdateDecideButton(this, v5);
   BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0);
-  v6 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_21FFEBC(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+  v6 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_2213CCC(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
   BattleWindowOuterClickComponent_OuterClickCall___ctor(
     v6,
     (Il2CppObject *)this,
@@ -713,10 +713,10 @@ void BattlePlayerAttackPreselectTargetWindow__RestoreDecideButtonColors(
   struct UIButton_o *v6; // x8
   struct UIButton_o *v7; // x8
 
-  if ( (byte_593BF2B & 1) == 0 )
+  if ( (byte_597413A & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF2B = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597413A = 1;
   }
   if ( this->fields.hasDecideButtonColorCache )
   {
@@ -731,7 +731,7 @@ void BattlePlayerAttackPreselectTargetWindow__RestoreDecideButtonColors(
             (v6 = this->fields.decideButton) == 0)
         || (v6->fields.hover = this->fields.decideButtonHoverColor, (v7 = this->fields.decideButton) == 0) )
       {
-        sub_21FFECC(v5, v4);
+        sub_2213CDC(v5, v4);
       }
       v7->fields.pressed = this->fields.decideButtonPressedColor;
     }
@@ -751,10 +751,10 @@ void BattlePlayerAttackPreselectTargetWindow__SelectCommon(
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_593BF24 & 1) == 0 )
+  if ( (byte_5974133 & 1) == 0 )
   {
-    sub_21FFC50(&Method_BattlePlayerAttackPreselectTargetWindow_SelectCommon__);
-    byte_593BF24 = 1;
+    sub_2213A60(&Method_BattlePlayerAttackPreselectTargetWindow_SelectCommon__);
+    byte_5974133 = 1;
   }
   if ( (index & 0x80000000) == 0 )
   {
@@ -769,8 +769,8 @@ void BattlePlayerAttackPreselectTargetWindow__SelectCommon(
           v7 = Method_BattlePlayerAttackPreselectTargetWindow_SelectCommon__;
           this->fields.selectedUniqueId = v6->fields.uniqueId;
           if ( (v7[83] & 2) != 0 )
-            v7 = (_BYTE *)sub_21FFC68(v7);
-          v8 = (System_Reflection_MethodBase_o *)sub_21FFC34(v7, *((_QWORD *)v7 + 4));
+            v7 = (_BYTE *)sub_2213A78(v7);
+          v8 = (System_Reflection_MethodBase_o *)sub_2213A44(v7, *((_QWORD *)v7 + 4));
           OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
           BattlePlayerAttackPreselectTargetWindow__UpdateSelectIcons(this, v9);
           BattlePlayerAttackPreselectTargetWindow__UpdateDecideButton(this, v10);
@@ -794,12 +794,12 @@ void BattlePlayerAttackPreselectTargetWindow__SetButtonColliderEnabled(
   __int64 v10; // x1
   Il2CppObject *v11; // x20
 
-  if ( (byte_593BF2C & 1) == 0 )
+  if ( (byte_597413B & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF2C = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597413B = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, button);
@@ -810,7 +810,7 @@ void BattlePlayerAttackPreselectTargetWindow__SetButtonColliderEnabled(
       goto LABEL_18;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)button,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
     v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -822,7 +822,7 @@ void BattlePlayerAttackPreselectTargetWindow__SetButtonColliderEnabled(
     }
     v11 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)button,
-            (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
     v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0, 0);
@@ -834,7 +834,7 @@ void BattlePlayerAttackPreselectTargetWindow__SetButtonColliderEnabled(
         return;
       }
 LABEL_18:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     }
   }
 }
@@ -882,14 +882,14 @@ void BattlePlayerAttackPreselectTargetWindow__SetServantData(
   const MethodInfo *v39; // x1
   __int64 v40; // x0
 
-  if ( (byte_593BF19 & 1) == 0 )
+  if ( (byte_5974128 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&ServantAssetLoadManager_TypeInfo);
-    byte_593BF19 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&ServantAssetLoadManager_TypeInfo);
+    byte_5974128 = 1;
   }
   this->fields.servantList = servantList;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.servantList,
     (int32_t)servantList,
     (System_String_o *)method,
@@ -952,24 +952,24 @@ void BattlePlayerAttackPreselectTargetWindow__SetServantData(
             v33 = gameObject;
             if ( gameObject )
             {
-              gameObject = sub_21FFDA4(gameObject, *(_QWORD *)(*(_QWORD *)v23 + 64LL));
+              gameObject = sub_2213BB4(gameObject, *(_QWORD *)(*(_QWORD *)v23 + 64LL));
               if ( !gameObject )
               {
-                v40 = sub_21FFEF0(0, v34);
-                sub_21FFD90(v40, 0);
+                v40 = sub_2213D00(0, v34);
+                sub_2213BA0(v40, 0);
               }
             }
             if ( v14 >= v23[6] )
               goto LABEL_39;
             v35 = &v23[2 * v14];
             *((_QWORD *)v35 + 4) = v33;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v35 + 8), v33, v27, v28, v29, v30, v31, v32);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v35 + 8), v33, v27, v28, v29, v30, v31, v32);
             v36 = this->fields.servantTop;
             if ( !v36 )
               goto LABEL_36;
             if ( v14 >= LODWORD(v36->max_length) )
 LABEL_39:
-              sub_21FFED4(gameObject);
+              sub_2213CE4(gameObject);
             gameObject = (__int64)v36->m_Items[v14];
             if ( !gameObject )
               goto LABEL_36;
@@ -978,14 +978,14 @@ LABEL_39:
               goto LABEL_36;
             gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
             v37 = (UnityEngine_Transform_o *)gameObject;
-            if ( !byte_5931945 )
+            if ( !byte_5969AE5 )
             {
-              gameObject = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-              byte_5931945 = 1;
+              gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+              byte_5969AE5 = 1;
             }
             if ( !v37 )
 LABEL_36:
-              sub_21FFECC(gameObject, v12);
+              sub_2213CDC(gameObject, v12);
             UnityEngine_Transform__set_localScale(v37, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
           }
         }
@@ -1024,14 +1024,14 @@ void BattlePlayerAttackPreselectTargetWindow__SetupDecideButtonTextSprite(
   UISprite_o *v8; // x0
   UIAtlas_o *atlas; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_593BF17 & 1) == 0 )
+  if ( (byte_5974126 & 1) == 0 )
   {
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&BattleDataDefine_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_3226/*"BattleAssetUIAtlas"*/);
-    sub_21FFC50(&StringLiteral_18354/*"btn_txt_target_select"*/);
-    byte_593BF17 = 1;
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&BattleDataDefine_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_3230/*"BattleAssetUIAtlas"*/);
+    sub_2213A60(&StringLiteral_18392/*"btn_txt_target_select"*/);
+    byte_5974126 = 1;
   }
   decideButtonTextSprite = (UnityEngine_Object_o *)this->fields.decideButtonTextSprite;
   atlas = 0;
@@ -1048,12 +1048,12 @@ void BattlePlayerAttackPreselectTargetWindow__SetupDecideButtonTextSprite(
     ASSET_BATTLE_COMMON = v5->static_fields->ASSET_BATTLE_COMMON;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v4);
-    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3226/*"BattleAssetUIAtlas"*/, 0) )
+    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_3230/*"BattleAssetUIAtlas"*/, 0) )
     {
       v8 = this->fields.decideButtonTextSprite;
       if ( !v8 || (UISprite__set_atlas(v8, atlas, 0), (v8 = this->fields.decideButtonTextSprite) == 0) )
-        sub_21FFECC(v8, v7);
-      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_18354/*"btn_txt_target_select"*/, 0);
+        sub_2213CDC(v8, v7);
+      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_18392/*"btn_txt_target_select"*/, 0);
     }
   }
 }
@@ -1066,10 +1066,10 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateDecideButton(
   UnityEngine_Object_o *decideButton; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_593BF28 & 1) == 0 )
+  if ( (byte_5974137 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF28 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974137 = 1;
   }
   decideButton = (UnityEngine_Object_o *)this->fields.decideButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1095,10 +1095,10 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateSelectIcons(
   bool v11; // w21
 
   v2 = this;
-  if ( (byte_593BF27 & 1) == 0 )
+  if ( (byte_5974136 & 1) == 0 )
   {
-    this = (BattlePlayerAttackPreselectTargetWindow_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF27 = 1;
+    this = (BattlePlayerAttackPreselectTargetWindow_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974136 = 1;
   }
   selectIconList = v2->fields.selectIconList;
   if ( selectIconList )
@@ -1126,7 +1126,7 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateSelectIcons(
           goto LABEL_15;
         if ( v6 >= v9 )
 LABEL_22:
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         v10 = *((_QWORD *)&servantList->obj.klass + v4);
         if ( v10 )
           v11 = *(_DWORD *)(v10 + 24) == v2->fields.selectedUniqueId;
@@ -1139,7 +1139,7 @@ LABEL_15:
                                                                     0)) == 0 )
         {
 LABEL_20:
-          sub_21FFECC(this, method);
+          sub_2213CDC(this, method);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v11, 0);
       }
@@ -1167,12 +1167,13 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateServantButtonPositions(
   const MethodInfo *v11; // x2
   char v12; // w22
   UnityEngine_Transform_o *v13; // x21
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_593BF1A & 1) == 0 )
+  if ( (byte_5974129 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF1A = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5974129 = 1;
   }
   if ( this->fields.servantButtonList )
   {
@@ -1182,7 +1183,7 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateServantButtonPositions(
     servantButtonList = this->fields.servantButtonList;
     if ( !servantButtonList )
 LABEL_18:
-      sub_21FFECC(DisplayServantCount, v4);
+      sub_2213CDC(DisplayServantCount, v4);
     v6 = 0;
     v7 = 0;
     v8 = vcvts_n_f32_s32((_DWORD)DisplayServantCount - 1, 1u);
@@ -1192,7 +1193,7 @@ LABEL_18:
       if ( (__int64)v6 >= (int)max_length_low )
         break;
       if ( v6 >= max_length_low )
-        sub_21FFED4(DisplayServantCount);
+        sub_2213CE4(DisplayServantCount);
       v10 = (UnityEngine_Object_o *)servantButtonList->m_Items[v6];
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
@@ -1222,8 +1223,10 @@ LABEL_18:
             goto LABEL_18;
           v13 = (UnityEngine_Transform_o *)DisplayServantCount;
           localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)DisplayServantCount, 0);
-          localPosition.fields.x = (float)((float)v7 - v8) * 250.0;
-          UnityEngine_Transform__set_localPosition(v13, localPosition, 0);
+          v15.fields.y = localPosition.fields.y;
+          v15.fields.z = localPosition.fields.z;
+          v15.fields.x = (float)((float)v7 - v8) * 250.0;
+          UnityEngine_Transform__set_localPosition(v13, v15, 0);
           ++v7;
         }
       }
@@ -1246,10 +1249,10 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateText(
   System_String_o *DescriptionText; // x0
   __int64 v7; // x1
 
-  if ( (byte_593BF1F & 1) == 0 )
+  if ( (byte_597412E & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593BF1F = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_597412E = 1;
   }
   descriptionLabel = (UnityEngine_Object_o *)this->fields.descriptionLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1259,7 +1262,7 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateText(
     v5 = this->fields.descriptionLabel;
     DescriptionText = BattlePlayerAttackPreselectTargetWindow__GetDescriptionText(this, v4);
     if ( !v5 )
-      sub_21FFECC(DescriptionText, v7);
+      sub_2213CDC(DescriptionText, v7);
     UILabel__set_text(v5, DescriptionText, 0);
   }
 }
@@ -1269,12 +1272,12 @@ System_String_o *BattlePlayerAttackPreselectTargetWindow__get_closeBtnPath(
         BattlePlayerAttackPreselectTargetWindow_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_593BF2D & 1) == 0 )
+  if ( (byte_597413C & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4675/*"CloseButton"*/);
-    byte_593BF2D = 1;
+    sub_2213A60(&StringLiteral_4683/*"CloseButton"*/);
+    byte_597413C = 1;
   }
-  return (System_String_o *)StringLiteral_4675/*"CloseButton"*/;
+  return (System_String_o *)StringLiteral_4683/*"CloseButton"*/;
 }
 
 
@@ -1291,14 +1294,14 @@ void BattlePlayerAttackPreselectTargetWindow__setInitialPos(
     goto LABEL_6;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
   v5 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !v5 )
 LABEL_6:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   UnityEngine_Transform__set_localPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   BattleWindowComponent__setInitialPos((BattleWindowComponent_o *)this, 0);
 }
@@ -1319,6 +1322,6 @@ void BattlePlayerAttackPreselectTargetWindow___c__DisplayClass35_0___InitializeS
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   BattlePlayerAttackPreselectTargetWindow__SelectCommon(this->fields.__4__this, this->fields.servantIndex, v2);
 }

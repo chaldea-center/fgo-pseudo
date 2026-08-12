@@ -10,14 +10,12 @@ UnityEngine_Vector2_o FSWindowUtil__GetSize(const MethodInfo *method)
   float v8; // s9
   float v9; // s8
   int v10; // w8
-  float v11; // s1
-  float v12; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_593A0D9 & 1) == 0 )
+  if ( (byte_59722B6 & 1) == 0 )
   {
-    sub_21FFC50(&ManagerConfig_TypeInfo);
-    byte_593A0D9 = 1;
+    sub_2213A60(&ManagerConfig_TypeInfo);
+    byte_59722B6 = 1;
   }
   width = UnityEngine_Screen__get_width(0);
   height = (float)UnityEngine_Screen__get_height(0);
@@ -57,7 +55,7 @@ UnityEngine_Vector2_o FSWindowUtil__GetSize(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(v4, v2);
       v4 = ManagerConfig_TypeInfo;
     }
-    v11 = (float)v4->static_fields->HEIGHT;
+    result.fields.y = (float)v4->static_fields->HEIGHT;
   }
   else
   {
@@ -66,10 +64,8 @@ UnityEngine_Vector2_o FSWindowUtil__GetSize(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(v4, v2);
       v4 = ManagerConfig_TypeInfo;
     }
-    v11 = (float)v4->static_fields->WIDTH / v8;
+    result.fields.y = (float)v4->static_fields->WIDTH / v8;
   }
-  v12 = v9;
-  result.fields.y = v11;
-  result.fields.x = v12;
+  result.fields.x = v9;
   return result;
 }

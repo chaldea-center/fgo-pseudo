@@ -1,13 +1,13 @@
 void GachaBonusSelectEntity___ctor(GachaBonusSelectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938A56 & 1) == 0 )
+  if ( (byte_5970C09 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938A56 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5970C09 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *GachaBonusSelectEntity__CreatePK(
         int32_t slot,
         const MethodInfo *method)
 {
-  if ( (byte_5938A53 & 1) == 0 )
+  if ( (byte_5970C06 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_5938A53 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_5970C06 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            gachaBonusId,
            slot,
-           (const MethodInfo_38213FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_38548C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -43,22 +43,22 @@ System_String_o *GachaBonusSelectEntity__GetClassIconId(GachaBonusSelectEntity_o
   const MethodInfo *v2; // x2
   int32_t ClassId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_5938A54 & 1) == 0 )
+  if ( (byte_5970C07 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_5130/*"D3"*/);
-    byte_5938A54 = 1;
+    sub_2213A60(&StringLiteral_5142/*"D3"*/);
+    byte_5970C07 = 1;
   }
   ClassId = GachaBonusSelectEntity__GetClassId(this, 1001, v2);
-  return System_Int32__ToString_76925352((int32_t)&ClassId, (System_String_o *)StringLiteral_5130/*"D3"*/, 0);
+  return System_Int32__ToString_77138656((int32_t)&ClassId, (System_String_o *)StringLiteral_5142/*"D3"*/, 0);
 }
 
 
 int32_t GachaBonusSelectEntity__GetClassId(GachaBonusSelectEntity_o *this, int32_t defId, const MethodInfo *method)
 {
-  if ( (byte_5938A55 & 1) == 0 )
+  if ( (byte_5970C08 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_18744/*"classId"*/);
-    byte_5938A55 = 1;
+    sub_2213A60(&StringLiteral_18782/*"classId"*/);
+    byte_5970C08 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18744/*"classId"*/, defId, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18782/*"classId"*/, defId, 0);
 }

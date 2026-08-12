@@ -1,13 +1,13 @@
 void ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_5938FBA & 1) == 0 )
+  if ( (byte_5971178 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    byte_5938FBA = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    byte_5971178 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_5938FB7 & 1) == 0 )
+  if ( (byte_5971175 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
-    byte_5938FB7 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+    byte_5971175 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -30,7 +30,7 @@ System_String_o *ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_3821E18 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_38552E0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -60,10 +60,10 @@ bool ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *thi
   int32_t v8; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_5938FB8 & 1) == 0 )
+  if ( (byte_5971176 & 1) == 0 )
   {
-    sub_21FFC50(&CondType_TypeInfo);
-    byte_5938FB8 = 1;
+    sub_2213A60(&CondType_TypeInfo);
+    byte_5971176 = 1;
   }
   condType = this->fields.condType;
   v4 = *(&CondType_TypeInfo->_2.cctor_finished + 1);
@@ -96,12 +96,12 @@ bool ServantCostumeReleaseEntity__TryGetBaseSvtId(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_5938FB9 & 1) == 0 )
+  if ( (byte_5971177 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17734/*"baseSvtId"*/);
-    byte_5938FB9 = 1;
+    sub_2213A60(&StringLiteral_17771/*"baseSvtId"*/);
+    byte_5971177 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17734/*"baseSvtId"*/, 0, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17771/*"baseSvtId"*/, 0, 0);
   *baseSvtId = IntValue;
   return IntValue != 0;
 }

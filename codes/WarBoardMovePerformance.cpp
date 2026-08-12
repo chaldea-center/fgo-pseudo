@@ -31,18 +31,18 @@ void WarBoardMovePerformance___ctor(
   v16 = from.fields.x;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   this->fields.target = target;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.target, (int32_t)target, v17, v18, v19, v20, v21, v22);
   this->fields.from.fields.x = v16;
   this->fields.from.fields.y = v14;
-  v25 = (unsigned __int8)byte_5931942;
+  v25 = (unsigned __int8)byte_5969AE2;
   this->fields.from.fields.z = v13;
   this->fields.to.fields.x = x;
   this->fields.to.fields.y = y;
   this->fields.to.fields.z = z;
   if ( !v25 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_5931942 = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_5969AE2 = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v23, v24);
@@ -67,16 +67,16 @@ System_Collections_IEnumerator_o *WarBoardMovePerformance__Execute(
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_5936248 & 1) == 0 )
+  if ( (byte_596E3A2 & 1) == 0 )
   {
-    sub_21FFC50(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
-    byte_5936248 = 1;
+    sub_2213A60(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
+    byte_596E3A2 = 1;
   }
-  v3 = sub_21FFEBC(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_2213CCC(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -88,7 +88,7 @@ void WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, const Metho
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_21FFECC(target, method);
+    sub_2213CDC(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -112,7 +112,7 @@ void WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this, const Met
       StartCallback->fields.method);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0)) == 0 )
-    sub_21FFECC(target, method);
+    sub_2213CDC(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0);
 }
 
@@ -148,7 +148,6 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
   float v16; // s8
   UnityEngine_Transform_o *transform; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  bool result; // w0
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   _1__state = this->fields.__1__state;
@@ -174,7 +173,7 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
     v20 = Easing__Func(_4__this->fields.from, _4__this->fields.to, v16, _4__this->fields.easeType, 0);
     if ( !transform )
 LABEL_17:
-      sub_21FFECC(this, method);
+      sub_2213CDC(this, method);
     UnityEngine_Transform__set_localPosition(transform, v20, 0);
     v11 = v10->fields._now_5__2;
   }
@@ -192,10 +191,9 @@ LABEL_17:
   {
     v10->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v10->fields.__2__current;
-    sub_21FFBF4(p__2__current, 0, v2, v3, v4, v5, v6, v7);
-    result = 1;
+    sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return result;
+    return 1;
   }
   return 0;
 }
@@ -217,11 +215,11 @@ void __noreturn WarBoardMovePerformance__Execute_d__7__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

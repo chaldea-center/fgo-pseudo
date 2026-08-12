@@ -28,26 +28,26 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
   bool v28; // w6
   bool v29; // w7
 
-  if ( (byte_5939657 & 1) == 0 )
+  if ( (byte_5971818 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
-    byte_5939657 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&ServantLeaderInfo_TypeInfo);
+    byte_5971818 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
   v3 = int___TypeInfo;
   *(_QWORD *)&this->fields.idx = 0;
   this->fields.questPhase = 0;
-  v4 = (struct System_Int32_array *)sub_21FFD10(v3, 0);
+  v4 = (struct System_Int32_array *)sub_2213B20(v3, 0);
   this->fields.adviceMessageIds = v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (ServantLeaderInfo_o *)sub_2213CCC(ServantLeaderInfo_TypeInfo);
   ServantLeaderInfo___ctor(v11, 0);
   this->fields.userSvtLeaderInfo = v11;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userSvtLeaderInfo,
     (int32_t)v11,
     v12,
@@ -57,7 +57,7 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
     v16,
     v17);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     0,
     v18,
@@ -67,7 +67,7 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
     v22,
     v23);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     0,
     v24,
@@ -79,7 +79,7 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
 }
 
 
-void UserRecommendSupportEntity___ctor_50078128(
+void UserRecommendSupportEntity___ctor_50141712(
         UserRecommendSupportEntity_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -112,23 +112,23 @@ void UserRecommendSupportEntity___ctor_50078128(
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_5939658 & 1) == 0 )
+  if ( (byte_5971819 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_string___ctor__);
-    sub_21FFC50(&int___TypeInfo);
-    sub_21FFC50(&ServantLeaderInfo_TypeInfo);
-    byte_5939658 = 1;
+    sub_2213A60(&Method_DataEntityBase_string___ctor__);
+    sub_2213A60(&int___TypeInfo);
+    sub_2213A60(&ServantLeaderInfo_TypeInfo);
+    byte_5971819 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3EDADE8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3F0E590 *)Method_DataEntityBase_string___ctor__);
   v5 = int___TypeInfo;
   this->fields.questId = 0;
   this->fields.questPhase = 0;
   this->fields.idx = index + 1;
-  v6 = (struct System_Int32_array *)sub_21FFD10(v5, 0);
+  v6 = (struct System_Int32_array *)sub_2213B20(v5, 0);
   this->fields.adviceMessageIds = v6;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.adviceMessageIds,
     (int32_t)v6,
     v7,
@@ -137,10 +137,10 @@ void UserRecommendSupportEntity___ctor_50078128(
     v10,
     v11,
     v12);
-  v13 = (ServantLeaderInfo_o *)sub_21FFEBC(ServantLeaderInfo_TypeInfo);
+  v13 = (ServantLeaderInfo_o *)sub_2213CCC(ServantLeaderInfo_TypeInfo);
   ServantLeaderInfo___ctor(v13, 0);
   this->fields.userSvtLeaderInfo = v13;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.userSvtLeaderInfo,
     (int32_t)v13,
     v14,
@@ -150,7 +150,7 @@ void UserRecommendSupportEntity___ctor_50078128(
     v18,
     v19);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     0,
     v20,
@@ -160,7 +160,7 @@ void UserRecommendSupportEntity___ctor_50078128(
     v24,
     v25);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     0,
     v26,
@@ -174,15 +174,15 @@ void UserRecommendSupportEntity___ctor_50078128(
 
 System_String_o *UserRecommendSupportEntity__CreatePK(int64_t userId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_5939656 & 1) == 0 )
+  if ( (byte_5971817 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_5939656 = 1;
+    sub_2213A60(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_5971817 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            idx,
-           (const MethodInfo_3821070 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3854538 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -198,7 +198,7 @@ System_String_o *UserRecommendSupportEntity__CreatePrimaryKey(
 
 int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_45B1ABC *v2; // x3
+  const MethodInfo_45E5BF4 *v2; // x3
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   struct EquipTargetInfo_o *equipTarget1; // x8
   __int128 v6; // q2
@@ -215,13 +215,13 @@ int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity
   System_Nullable_T__o v18; // 0:x0.16
 
   v17 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_5939659 & 1) == 0 )
+  if ( (byte_597181A & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_ObscuredLong___ctor__);
-    sub_21FFC50(&Method_System_Nullable_ObscuredLong__get_HasValue__);
-    sub_21FFC50(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_5939659 = 1;
+    sub_2213A60(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_ObscuredLong___ctor__);
+    sub_2213A60(&Method_System_Nullable_ObscuredLong__get_HasValue__);
+    sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_597181A = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   v14 = 0u;
@@ -267,7 +267,7 @@ LABEL_11:
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
   v8 = v12;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_55795956(&v8, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v8, 0);
 }
 
 
@@ -311,7 +311,7 @@ void UserRecommendSupportEntity__set_UserRecommendSupportInfo(
   bool v7; // w7
 
   this->fields._UserRecommendSupportInfo_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -335,7 +335,7 @@ void UserRecommendSupportEntity__set_UserServantEntity(
   bool v7; // w7
 
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

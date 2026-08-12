@@ -28,7 +28,7 @@ void ClassBoardEffectListDialogSkillDetailComponent__Init(
   bool v7; // w7
 
   this->fields.listComponent = listComponent;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.listComponent,
     (int32_t)listComponent,
     (System_String_o *)method,
@@ -59,10 +59,10 @@ float ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
   System_String_o *v21; // x2
 
-  if ( (byte_593C45A & 1) == 0 )
+  if ( (byte_5974692 & 1) == 0 )
   {
-    sub_21FFC50(&ClassBoardUtility_TypeInfo);
-    byte_593C45A = 1;
+    sub_2213A60(&ClassBoardUtility_TypeInfo);
+    byte_5974692 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -103,7 +103,7 @@ float ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
       }
     }
 LABEL_16:
-    sub_21FFECC(effectNameLabel, name);
+    sub_2213CDC(effectNameLabel, name);
   }
   return v16 + (float)this->fields.adjustSetPosY;
 }
@@ -135,7 +135,7 @@ float ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContent
         LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0),
         (v8 = this->fields.effectDetailLabel) == 0) )
   {
-    sub_21FFECC(effectDetailLabel, detail);
+    sub_2213CDC(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
   result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
@@ -152,7 +152,7 @@ void ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattleServantWin
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0);
 }
 

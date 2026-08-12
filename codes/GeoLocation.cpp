@@ -1,9 +1,9 @@
 void GeoLocation___cctor(const MethodInfo *method)
 {
-  if ( (byte_5937D55 & 1) == 0 )
+  if ( (byte_596FEC2 & 1) == 0 )
   {
-    sub_21FFC50(&GeoLocation_TypeInfo);
-    byte_5937D55 = 1;
+    sub_2213A60(&GeoLocation_TypeInfo);
+    byte_596FEC2 = 1;
   }
   GeoLocation_TypeInfo->static_fields->TEST_COUNT = 3;
 }
@@ -59,10 +59,10 @@ UnityEngine_LocationInfo_o *GeoLocation__GetAppropriateOne(
   char *v33; // x8
   __int128 v34; // q1
 
-  if ( (byte_5937D54 & 1) == 0 )
+  if ( (byte_596FEC1 & 1) == 0 )
   {
-    sub_21FFC50(&GeoLocation_TypeInfo);
-    byte_5937D54 = 1;
+    sub_2213A60(&GeoLocation_TypeInfo);
+    byte_596FEC1 = 1;
   }
   result = (UnityEngine_LocationInfo_o *)GeoLocation_TypeInfo;
   v4 = 0;
@@ -137,10 +137,10 @@ UnityEngine_LocationInfo_o *GeoLocation__GetAppropriateOne(
         goto LABEL_39;
       v29 = v27;
       v30 = UnityEngine_LocationInfo__get_altitude((UnityEngine_LocationInfo_o *)((char *)v28 + j), 0);
-      if ( !byte_593193E )
+      if ( !byte_5969ADE )
       {
-        sub_21FFC50(&System_Math_TypeInfo);
-        byte_593193E = 1;
+        sub_2213A60(&System_Math_TypeInfo);
+        byte_5969ADE = 1;
       }
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v2);
@@ -167,10 +167,10 @@ UnityEngine_LocationInfo_o *GeoLocation__GetAppropriateOne(
   v32 = v8->infoArray;
   if ( !v32 )
 LABEL_38:
-    sub_21FFECC(result, v2);
+    sub_2213CDC(result, v2);
   if ( v5 >= LODWORD(v32->max_length) )
 LABEL_39:
-    sub_21FFED4(result);
+    sub_2213CE4(result);
   v33 = (char *)v32 + 32 * (int)v5;
   v34 = *((_OWORD *)v33 + 3);
   *(_OWORD *)&retstr->fields.m_Timestamp = *((_OWORD *)v33 + 2);
@@ -193,12 +193,12 @@ void GeoLocation__GetLocation(
   struct GeoLocation_StaticFields *static_fields; // x0
   __int64 v11; // x1
 
-  if ( (byte_5937D52 & 1) == 0 )
+  if ( (byte_596FEBF & 1) == 0 )
   {
-    sub_21FFC50(&GeoLocation_TypeInfo);
-    sub_21FFC50(&UnityEngine_LocationInfo___TypeInfo);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_5937D52 = 1;
+    sub_2213A60(&GeoLocation_TypeInfo);
+    sub_2213A60(&UnityEngine_LocationInfo___TypeInfo);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596FEBF = 1;
   }
   v9 = GeoLocation_TypeInfo;
   if ( !*(&GeoLocation_TypeInfo->_2.cctor_finished + 1) )
@@ -208,7 +208,7 @@ void GeoLocation__GetLocation(
   }
   static_fields = v9->static_fields;
   static_fields->callBack = locDel;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->callBack,
     (int32_t)locDel,
     (System_String_o *)method,
@@ -225,18 +225,16 @@ void GeoLocation__GetLocation(
 System_Collections_IEnumerator_o *GeoLocation__GetLocationCoroutine(const MethodInfo *method)
 {
   __int64 v1; // x19
-  System_Collections_IEnumerator_o *result; // x0
 
-  if ( (byte_5937D53 & 1) == 0 )
+  if ( (byte_596FEC0 & 1) == 0 )
   {
-    sub_21FFC50(&GeoLocation__GetLocationCoroutine_d__7_TypeInfo);
-    byte_5937D53 = 1;
+    sub_2213A60(&GeoLocation__GetLocationCoroutine_d__7_TypeInfo);
+    byte_596FEC0 = 1;
   }
-  v1 = sub_21FFEBC(GeoLocation__GetLocationCoroutine_d__7_TypeInfo);
+  v1 = sub_2213CCC(GeoLocation__GetLocationCoroutine_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
-  result = (System_Collections_IEnumerator_o *)v1;
   *(_DWORD *)(v1 + 16) = 0;
-  return result;
+  return (System_Collections_IEnumerator_o *)v1;
 }
 
 
@@ -265,7 +263,7 @@ void GeoLocation_LocationDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     (System_String_o *)method,
@@ -276,12 +274,12 @@ void GeoLocation_LocationDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_21FFD28(method) & 1) == 0 )
+  if ( (sub_2213B38(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_21FFEE8(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_21FFD90(v14, 0);
+      v14 = sub_2213CF8(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_2213BA0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -293,9 +291,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1FFA60C;
+  this->fields.invoke_impl = (intptr_t)sub_200D618;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)&loc_1FFA5A4;
+  this->fields.extra_arg = (intptr_t)&loc_200D5B0;
 }
 
 
@@ -311,16 +309,16 @@ System_IAsyncResult_o *GeoLocation_LocationDelegate__BeginInvoke(
   int32_t v12; // [xsp+1Ch] [xbp-44h] BYREF
 
   v12 = result;
-  if ( (byte_5937D56 & 1) == 0 )
+  if ( (byte_596FEC3 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_LocationInfo_TypeInfo);
-    sub_21FFC50(&GeoLocation_ResultState_TypeInfo);
-    byte_5937D56 = 1;
+    sub_2213A60(&UnityEngine_LocationInfo_TypeInfo);
+    sub_2213A60(&GeoLocation_ResultState_TypeInfo);
+    byte_596FEC3 = 1;
   }
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(GeoLocation_ResultState_TypeInfo, &v12);
   v11[1] = j_il2cpp_value_box_0(UnityEngine_LocationInfo_TypeInfo, locInfo);
-  return (System_IAsyncResult_o *)sub_21FFC04(this, v11, callback, object);
+  return sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -329,7 +327,7 @@ void GeoLocation_LocationDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_21FFC08(result, 0, method);
+  sub_2213A18(result, 0, method);
 }
 
 
@@ -391,11 +389,11 @@ void __noreturn GeoLocation__GetLocationCoroutine_d__7__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_21FFC64(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_21FFEBC(v2);
+  v2 = sub_2213A74(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_2213CCC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_21FFC64(&Method_GeoLocation__GetLocationCoroutine_d__7_System_Collections_IEnumerator_Reset__);
-  sub_21FFD90(v3, v4);
+  v4 = sub_2213A74(&Method_GeoLocation__GetLocationCoroutine_d__7_System_Collections_IEnumerator_Reset__);
+  sub_2213BA0(v3, v4);
 }
 
 

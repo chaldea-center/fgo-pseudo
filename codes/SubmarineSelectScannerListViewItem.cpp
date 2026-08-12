@@ -17,13 +17,13 @@ void SubmarineSelectScannerListViewItem___ctor(
   bool v19; // w7
 
   v13 = this;
-  ListViewItem___ctor_50749276((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_50819428((ListViewItem_o *)this, index, 0);
   v13->fields._name_k__BackingField = name;
   v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 136);
   LODWORD(v13[-1].fields._name_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._name_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)v13, (int32_t)name, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)name, v14, v15, v16, v17, v18, v19);
   LOBYTE(v13->monitor) = enabled;
 }
 
@@ -107,7 +107,7 @@ void SubmarineSelectScannerListViewItem__set_name(
   bool v7; // w7
 
   this->fields._name_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._name_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,

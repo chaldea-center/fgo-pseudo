@@ -9,9 +9,6 @@ UnityEngine_Vector3_o PosCountNormalEnemyParamPosData__GetSvtBuffLocalPos(
         UnityEngine_Vector3_o defPos,
         const MethodInfo *method)
 {
-  float v3; // s1
-
-  v3 = -35.0;
-  defPos.fields.y = v3;
+  defPos.fields.y = -35.0;
   return defPos;
 }

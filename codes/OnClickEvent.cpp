@@ -15,24 +15,24 @@ void OnClickEvent___ctor(OnClickEvent_o *this, const MethodInfo *method)
   bool v15; // w6
   bool v16; // w7
 
-  if ( (byte_5932385 & 1) == 0 )
+  if ( (byte_596A484 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_5932385 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_596A484 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSingleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.onSingleClick, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onSingleClick, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDoubleClick = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onDoubleClick,
     (int32_t)v10,
     v11,
@@ -60,10 +60,10 @@ void OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodInfo *method)
   __int64 v2; // x2
   System_Collections_Generic_List_EventDelegate__o *onDoubleClick; // x20
 
-  if ( (byte_5932384 & 1) == 0 )
+  if ( (byte_596A483 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    byte_5932384 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    byte_596A483 = 1;
   }
   if ( this->fields.clickFlag )
   {
@@ -72,7 +72,7 @@ void OnClickEvent__OnDoubleClick(OnClickEvent_o *this, const MethodInfo *method)
     this->fields.clickTime = 0.0;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, method, v2);
-    EventDelegate__Execute_56080488(onDoubleClick, 0);
+    EventDelegate__Execute_56285144(onDoubleClick, 0);
   }
 }
 
@@ -90,17 +90,17 @@ void OnClickEvent__Update(OnClickEvent_o *this, const MethodInfo *method)
   __int64 v4; // x2
   System_Collections_Generic_List_EventDelegate__o *onSingleClick; // x20
 
-  if ( (byte_5932383 & 1) == 0 )
+  if ( (byte_596A482 & 1) == 0 )
   {
-    sub_21FFC50(&EventDelegate_TypeInfo);
-    byte_5932383 = 1;
+    sub_2213A60(&EventDelegate_TypeInfo);
+    byte_596A482 = 1;
   }
   if ( this->fields.clickFlag && UnityEngine_Time__get_time(0) > (float)(this->fields.clickTime + 0.36) )
   {
     onSingleClick = this->fields.onSingleClick;
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v3, v4);
-    EventDelegate__Execute_56080488(onSingleClick, 0);
+    EventDelegate__Execute_56285144(onSingleClick, 0);
     this->fields.clickFlag = 0;
     this->fields.clickTime = -1.0;
   }

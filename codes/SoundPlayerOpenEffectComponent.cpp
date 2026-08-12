@@ -2,10 +2,10 @@ void SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *thi
 {
   __int64 v2; // x2
 
-  if ( (byte_5933C20 & 1) == 0 )
+  if ( (byte_596BD39 & 1) == 0 )
   {
-    sub_21FFC50(&CommonEffectComponent_TypeInfo);
-    byte_5933C20 = 1;
+    sub_2213A60(&CommonEffectComponent_TypeInfo);
+    byte_596BD39 = 1;
   }
   if ( !*(&CommonEffectComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method, v2);
@@ -55,7 +55,7 @@ void SoundPlayerOpenEffectComponent__setAnimEndCallback(
   bool v7; // w7
 
   this->fields.animEndCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.animEndCallback,
     (int32_t)callback,
     (System_String_o *)method,
@@ -79,7 +79,7 @@ void SoundPlayerOpenEffectComponent__setChangeUiCallback(
   bool v7; // w7
 
   this->fields.changeUiCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.changeUiCallback,
     (int32_t)callback,
     (System_String_o *)method,
@@ -103,7 +103,7 @@ void SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
   bool v7; // w7
 
   this->fields.playIconAnimCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.playIconAnimCallback,
     (int32_t)callback,
     (System_String_o *)method,

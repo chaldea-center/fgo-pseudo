@@ -8,18 +8,18 @@ void BattleDropTimingAdjustmentSetting___ctor(BattleDropTimingAdjustmentSetting_
   bool v8; // w6
   bool v9; // w7
 
-  if ( (byte_593B230 & 1) == 0 )
+  if ( (byte_597341F & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
-    byte_593B230 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+    byte_597341F = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData___ctor__);
   this->fields.dropTimingDatas = (struct System_Collections_Generic_List_BattleDropTimingAdjustmentSetting_DropTimingData__o *)v3;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dropTimingDatas, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 

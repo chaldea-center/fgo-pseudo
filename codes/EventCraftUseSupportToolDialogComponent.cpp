@@ -4,10 +4,10 @@ void EventCraftUseSupportToolDialogComponent___ctor(
 {
   __int64 v2; // x2
 
-  if ( (byte_5932464 & 1) == 0 )
+  if ( (byte_596A563 & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5932464 = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596A563 = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -22,15 +22,15 @@ void EventCraftUseSupportToolDialogComponent__Close(
   System_Action_c *v3; // x0
   System_Action_o *v4; // x20
 
-  if ( (byte_5932462 & 1) == 0 )
+  if ( (byte_596A561 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_EventCraftUseSupportToolDialogComponent_Init__);
-    byte_5932462 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_EventCraftUseSupportToolDialogComponent_Init__);
+    byte_596A561 = 1;
   }
   v3 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_21FFEBC(v3);
+  v4 = (System_Action_o *)sub_2213CCC(v3);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_EventCraftUseSupportToolDialogComponent_Init__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0);
 }
@@ -54,18 +54,18 @@ void EventCraftUseSupportToolDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_5932461 & 1) == 0 )
+  if ( (byte_596A560 & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__);
-    byte_5932461 = 1;
+    sub_2213A60(&Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__);
+    byte_596A560 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventCraftUseSupportToolDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     EventCraftUseSupportToolDialogComponent__Close(this, v5);
   }
@@ -82,28 +82,28 @@ void EventCraftUseSupportToolDialogComponent__OnClickDecide(
   __int64 v6; // x1
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
 
-  if ( (byte_5932460 & 1) == 0 )
+  if ( (byte_596A55F & 1) == 0 )
   {
-    sub_21FFC50(&Method_ActionExtensions_Call_int__int___);
-    sub_21FFC50(&Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__);
-    byte_5932460 = 1;
+    sub_2213A60(&Method_ActionExtensions_Call_int__int___);
+    sub_2213A60(&Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__);
+    byte_596A55F = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_EventCraftUseSupportToolDialogComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     tradeGoodsEntity = this->fields.tradeGoodsEntity;
     if ( !tradeGoodsEntity )
-      sub_21FFECC(v5, v6);
+      sub_2213CDC(v5, v6);
     ActionExtensions__Call_int__int_(
       (System_Action_T1__T2__o *)this->fields.onDecide,
       this->fields.storeIdx,
       tradeGoodsEntity->fields.id,
-      (const MethodInfo_36CE234 *)Method_ActionExtensions_Call_int__int___);
+      (const MethodInfo_37001A4 *)Method_ActionExtensions_Call_int__int___);
   }
 }
 
@@ -169,21 +169,21 @@ void EventCraftUseSupportToolDialogComponent__Open(
 
   v11 = item;
   v12 = this;
-  if ( (byte_593245E & 1) == 0 )
+  if ( (byte_596A55D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_EventCraftUseSupportToolDialogComponent__Open_b__24_0__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3830/*"COMMON_CONFIRM_USE"*/);
-    sub_21FFC50(&StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_21FFC50(&StringLiteral_4050/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/);
-    sub_21FFC50(&StringLiteral_4051/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_4049/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_HEADER"*/);
-    this = (EventCraftUseSupportToolDialogComponent_o *)sub_21FFC50(&StringLiteral_4048/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_DESCRIPTION"*/);
-    byte_593245E = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_EventCraftUseSupportToolDialogComponent__Open_b__24_0__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3835/*"COMMON_CONFIRM_USE"*/);
+    sub_2213A60(&StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_2213A60(&StringLiteral_4055/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/);
+    sub_2213A60(&StringLiteral_4056/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_4054/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_HEADER"*/);
+    this = (EventCraftUseSupportToolDialogComponent_o *)sub_2213A60(&StringLiteral_4053/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_DESCRIPTION"*/);
+    byte_596A55D = 1;
   }
   state = v12->fields.state;
   entity = 0;
@@ -194,7 +194,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
     {
       TradeGoodsEntity_k__BackingField = v11->fields._TradeGoodsEntity_k__BackingField;
       v12->fields.tradeGoodsEntity = TradeGoodsEntity_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v12->fields.tradeGoodsEntity,
         (int32_t)TradeGoodsEntity_k__BackingField,
         *(System_String_o **)&storeIndex,
@@ -205,7 +205,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
         v7);
       TradeInfo_k__BackingField = v11->fields._TradeInfo_k__BackingField;
       v12->fields.eventTradeInfo = TradeInfo_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v12->fields.eventTradeInfo,
         (int32_t)TradeInfo_k__BackingField,
         v16,
@@ -216,7 +216,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
         v21);
       PickupInfoList_k__BackingField = v11->fields._PickupInfoList_k__BackingField;
       v12->fields.pickupInfoList = PickupInfoList_k__BackingField;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v12->fields.pickupInfoList,
         (int32_t)PickupInfoList_k__BackingField,
         v23,
@@ -227,7 +227,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
         v28);
       v12->fields.supportTool = support;
       p_supportTool = &v12->fields.supportTool;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v12->fields.supportTool,
         (int32_t)support,
         v30,
@@ -237,7 +237,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
         v34,
         v35);
       v12->fields.onDecide = decideAction;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v12->fields.onDecide,
         (int32_t)decideAction,
         v36,
@@ -250,42 +250,42 @@ void EventCraftUseSupportToolDialogComponent__Open(
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v42, v43);
       this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_4051/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_TITLE"*/,
+                                                            (System_String_o *)StringLiteral_4056/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_TITLE"*/,
                                                             0);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, (System_String_o *)this, 0);
         detailLabel = v12->fields.detailLabel;
         this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_4048/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_DESCRIPTION"*/,
+                                                              (System_String_o *)StringLiteral_4053/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_DESCRIPTION"*/,
                                                               0);
         if ( detailLabel )
         {
           UILabel__set_text(detailLabel, (System_String_o *)this, 0);
           craftCompletionHeaderLb = v12->fields.craftCompletionHeaderLb;
           this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_4049/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_HEADER"*/,
+                                                                (System_String_o *)StringLiteral_4054/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_HEADER"*/,
                                                                 0);
           if ( craftCompletionHeaderLb )
           {
             UILabel__set_text(craftCompletionHeaderLb, (System_String_o *)this, 0);
             supportToolLeftTimeHeaderLb = v12->fields.supportToolLeftTimeHeaderLb;
             this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_4050/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/,
+                                                                  (System_String_o *)StringLiteral_4055/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/,
                                                                   0);
             if ( supportToolLeftTimeHeaderLb )
             {
               UILabel__set_text(supportToolLeftTimeHeaderLb, (System_String_o *)this, 0);
               decideButtonLb = v12->fields.decideButtonLb;
               this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_3830/*"COMMON_CONFIRM_USE"*/,
+                                                                    (System_String_o *)StringLiteral_3835/*"COMMON_CONFIRM_USE"*/,
                                                                     0);
               if ( decideButtonLb )
               {
                 UILabel__set_text(decideButtonLb, (System_String_o *)this, 0);
                 cancelButtonLb = v12->fields.cancelButtonLb;
                 this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                                      (System_String_o *)StringLiteral_3822/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                      (System_String_o *)StringLiteral_3827/*"COMMON_CONFIRM_CANCEL"*/,
                                                                       0);
                 if ( cancelButtonLb )
                 {
@@ -307,13 +307,13 @@ void EventCraftUseSupportToolDialogComponent__Open(
                   ItemIconComponent__SetItem((ItemIconComponent_o *)this, (int32_t)item, -1, 1, 0);
                   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v51, v52);
-                  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserItemMaster___);
+                  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
                   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, item, v53);
-                  if ( !byte_5931D52 )
+                  if ( !byte_5969EF2 )
                   {
-                    sub_21FFC50(&NetworkManager_TypeInfo);
-                    byte_5931D52 = 1;
+                    sub_2213A60(&NetworkManager_TypeInfo);
+                    byte_5969EF2 = 1;
                   }
                   this = (EventCraftUseSupportToolDialogComponent_o *)NetworkManager_TypeInfo;
                   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
@@ -350,7 +350,7 @@ void EventCraftUseSupportToolDialogComponent__Open(
 LABEL_33:
                       EventCraftUseSupportToolDialogComponent__SetTimeLabel(v12, (const MethodInfo *)item);
                       v12->fields.state = 1;
-                      v56 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+                      v56 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                       System_Action___ctor(
                         v56,
                         (Il2CppObject *)v12,
@@ -368,7 +368,7 @@ LABEL_33:
       }
     }
 LABEL_35:
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   }
 }
 
@@ -434,39 +434,38 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
   __int64 v56; // x1
   __int64 v57; // x2
   int64_t v58; // x21
-  int32_t TradePickupTime; // w1
-  System_Nullable_int__o v60; // x0
-  const MethodInfo_45B0918 *v61; // x3
-  const MethodInfo_45B0918 *v62; // x3
-  int64_t v63; // x8
-  int64_t v64; // x21
+  int32_t TradePickupTime; // w0
+  const MethodInfo_45E4A50 *v60; // x3
+  const MethodInfo_45E4A50 *v61; // x3
+  int64_t v62; // x8
+  int64_t v63; // x21
   UILabel_o *supportToolLeftTimeLb; // x22
-  System_String_o *v66; // x0
-  __int64 v67; // [xsp+0h] [xbp-70h] BYREF
-  int64_t v68; // [xsp+8h] [xbp-68h]
+  System_String_o *v65; // x0
+  __int64 v66; // [xsp+0h] [xbp-70h] BYREF
+  int64_t v67; // [xsp+8h] [xbp-68h]
+  System_Nullable_long__o v68; // 0:x0.16
   System_Nullable_long__o v69; // 0:x0.16
-  System_Nullable_long__o v70; // 0:x0.16
 
   v4 = this;
-  if ( (byte_593245F & 1) == 0 )
+  if ( (byte_596A55E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    sub_21FFC50(&EventCraftTimeCalculation_TypeInfo);
-    sub_21FFC50(&System_Func_EventCraftPickupInfo__long__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&System_Math_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_int__GetValueOrDefault__);
-    sub_21FFC50(&Method_System_Nullable_long___ctor__);
-    sub_21FFC50(&Method_System_Nullable_int___ctor__);
-    sub_21FFC50(&Method_System_Nullable_long__get_HasValue__);
-    sub_21FFC50(&Method_System_Nullable_int__get_HasValue__);
-    sub_21FFC50(&Method_EventCraftUseSupportToolDialogComponent___c__SetTimeLabel_b__25_0__);
-    sub_21FFC50(&EventCraftUseSupportToolDialogComponent___c_TypeInfo);
-    sub_21FFC50(&StringLiteral_13920/*"TIME_FORMAT_1"*/);
-    this = (EventCraftUseSupportToolDialogComponent_o *)sub_21FFC50(&StringLiteral_14026/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/);
-    byte_593245F = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    sub_2213A60(&EventCraftTimeCalculation_TypeInfo);
+    sub_2213A60(&System_Func_EventCraftPickupInfo__long__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&System_Math_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_2213A60(&Method_System_Nullable_long___ctor__);
+    sub_2213A60(&Method_System_Nullable_int___ctor__);
+    sub_2213A60(&Method_System_Nullable_long__get_HasValue__);
+    sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
+    sub_2213A60(&Method_EventCraftUseSupportToolDialogComponent___c__SetTimeLabel_b__25_0__);
+    sub_2213A60(&EventCraftUseSupportToolDialogComponent___c_TypeInfo);
+    sub_2213A60(&StringLiteral_13950/*"TIME_FORMAT_1"*/);
+    this = (EventCraftUseSupportToolDialogComponent_o *)sub_2213A60(&StringLiteral_14056/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/);
+    byte_596A55E = 1;
   }
   eventTradeInfo = v4->fields.eventTradeInfo;
   if ( !eventTradeInfo )
@@ -494,14 +493,14 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
     if ( !v17 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
     this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_14026/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/,
+                                                          (System_String_o *)StringLiteral_14056/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/,
                                                           0);
   }
   else
   {
     if ( !v17 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13, v14);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_13920/*"TIME_FORMAT_1"*/, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
     this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v15, 0, v18, 0);
   }
   method = (const MethodInfo *)this;
@@ -529,14 +528,14 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
     if ( !v34 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v30, v31);
     this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_14026/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/,
+                                                          (System_String_o *)StringLiteral_14056/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/,
                                                           0);
   }
   else
   {
     if ( !v34 )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v30, v31);
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13920/*"TIME_FORMAT_1"*/, 0);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
     this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v32, 0, v35, 0);
   }
   method = (const MethodInfo *)this;
@@ -563,7 +562,7 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
         static_fields = EventCraftUseSupportToolDialogComponent___c_TypeInfo->static_fields;
       }
       v43 = (Il2CppObject *)static_fields->__9;
-      _9__25_0 = (System_Func_object__long__o *)sub_21FFEBC(System_Func_EventCraftPickupInfo__long__TypeInfo);
+      _9__25_0 = (System_Func_object__long__o *)sub_2213CCC(System_Func_EventCraftPickupInfo__long__TypeInfo);
       System_Func_object__long____ctor(
         _9__25_0,
         v43,
@@ -571,60 +570,62 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
         0);
       v44 = EventCraftUseSupportToolDialogComponent___c_TypeInfo->static_fields;
       v44->__9__25_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__25_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v44->__9__25_0, (int32_t)_9__25_0, v45, v46, v47, v48, v49, v50);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v44->__9__25_0, (int32_t)_9__25_0, v45, v46, v47, v48, v49, v50);
     }
     v51 = System_Linq_Enumerable__Select_object__long_(
             v39,
             (System_Func_TSource__TResult__o *)_9__25_0,
-            (const MethodInfo_385D9DC *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    v38 = System_Linq_Enumerable__Max_78395108((System_Collections_Generic_IEnumerable_long__o *)v51, 0);
+            (const MethodInfo_3890EA4 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    v38 = System_Linq_Enumerable__Max_78608412((System_Collections_Generic_IEnumerable_long__o *)v51, 0);
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v36, v37);
   Time = NetworkManager__getTime(0);
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v52, v53);
-  v55 = System_Math__Max_76939968(v38 - Time, 0, 0);
+  v55 = System_Math__Max_77153272(v38 - Time, 0, 0);
   if ( !v4->fields.supportTool )
     goto LABEL_45;
   v58 = v55;
   TradePickupTime = ItemEntity__GetTradePickupTime(v4->fields.supportTool, 0);
-  v60 = (System_Nullable_int__o)&v67;
-  v67 = 0;
-  System_Nullable_int____ctor(v60, TradePickupTime, (const MethodInfo_45B01D4 *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v67 )
+  v66 = 0;
+  System_Nullable_int____ctor(
+    (System_Nullable_int__o)&v66,
+    TradePickupTime,
+    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v66 )
     goto LABEL_45;
-  v69.fields.value = v67 >> 32;
-  *(_QWORD *)&v69.fields.hasValue = &v67;
+  v68.fields.value = v66 >> 32;
+  *(_QWORD *)&v68.fields.hasValue = &v66;
+  v66 = 0;
   v67 = 0;
-  v68 = 0;
-  System_Nullable_long____ctor(v69, Method_System_Nullable_long___ctor__, v61);
-  if ( (_BYTE)v67 )
+  System_Nullable_long____ctor(v68, Method_System_Nullable_long___ctor__, v60);
+  if ( (_BYTE)v66 )
   {
-    v63 = v68;
-    *(_QWORD *)&v70.fields.hasValue = &v67;
+    v62 = v67;
+    *(_QWORD *)&v69.fields.hasValue = &v66;
+    v66 = 0;
     v67 = 0;
-    v68 = 0;
-    v70.fields.value = v63 + v58;
-    System_Nullable_long____ctor(v70, Method_System_Nullable_long___ctor__, v62);
-    v64 = v68;
+    v69.fields.value = v62 + v58;
+    System_Nullable_long____ctor(v69, Method_System_Nullable_long___ctor__, v61);
+    v63 = v67;
   }
   else
   {
 LABEL_45:
-    v64 = 0;
+    v63 = 0;
   }
   supportToolLeftTimeLb = v4->fields.supportToolLeftTimeLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v56, v57);
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_13920/*"TIME_FORMAT_1"*/, 0);
-  this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v64, 0, v66, 0);
+  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
+  this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v63, 0, v65, 0);
   if ( !supportToolLeftTimeLb
     || (UILabel__set_text(supportToolLeftTimeLb, (System_String_o *)this, 0),
         (this = (EventCraftUseSupportToolDialogComponent_o *)v4->fields.decideButton) == 0) )
   {
 LABEL_51:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   ((void (__fastcall *)(EventCraftUseSupportToolDialogComponent_o *, bool, const MethodInfo *))this->klass->vtable._5_set_closeBtnObject.methodPtr)(
     this,
@@ -641,10 +642,10 @@ void EventCraftUseSupportToolDialogComponent__Update(
   __int64 v4; // x2
   float time; // s8
 
-  if ( (byte_593245D & 1) == 0 )
+  if ( (byte_596A55C & 1) == 0 )
   {
-    sub_21FFC50(&System_Math_TypeInfo);
-    byte_593245D = 1;
+    sub_2213A60(&System_Math_TypeInfo);
+    byte_596A55C = 1;
   }
   if ( (float)(UnityEngine_Time__get_time(0) - this->fields.updatedTime) >= 1.0 )
   {
@@ -674,10 +675,10 @@ UnityEngine_GameObject_o *EventCraftUseSupportToolDialogComponent__get_closeBtnO
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5932463 & 1) == 0 )
+  if ( (byte_596A562 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932463 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A562 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -686,7 +687,7 @@ UnityEngine_GameObject_o *EventCraftUseSupportToolDialogComponent__get_closeBtnO
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
@@ -701,15 +702,15 @@ void EventCraftUseSupportToolDialogComponent___c___cctor(const MethodInfo *metho
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_5932465 & 1) == 0 )
+  if ( (byte_596A564 & 1) == 0 )
   {
-    sub_21FFC50(&EventCraftUseSupportToolDialogComponent___c_TypeInfo);
-    byte_5932465 = 1;
+    sub_2213A60(&EventCraftUseSupportToolDialogComponent___c_TypeInfo);
+    byte_596A564 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventCraftUseSupportToolDialogComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventCraftUseSupportToolDialogComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventCraftUseSupportToolDialogComponent___c_TypeInfo->static_fields->__9 = (struct EventCraftUseSupportToolDialogComponent___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventCraftUseSupportToolDialogComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -735,6 +736,6 @@ int64_t EventCraftUseSupportToolDialogComponent___c___SetTimeLabel_b__25_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return x->fields.endedAt;
 }

@@ -1,11 +1,11 @@
 void TitleIlluminationManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_5935E13 & 1) == 0 )
+  if ( (byte_596DED5 & 1) == 0 )
   {
-    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
-    byte_5935E13 = 1;
+    sub_2213A60(&TitleIlluminationManager_TypeInfo);
+    byte_596DED5 = 1;
   }
-  *(_OWORD *)&TitleIlluminationManager_TypeInfo->static_fields->IlluminationPoolCount = xmmword_E931D0;
+  *(_OWORD *)&TitleIlluminationManager_TypeInfo->static_fields->IlluminationPoolCount = xmmword_E9C370;
 }
 
 
@@ -37,11 +37,11 @@ void TitleIlluminationManager__CreateIllumination(TitleIlluminationManager_o *th
   const MethodInfo *v17; // x3
 
   v3 = this;
-  if ( (byte_5935E10 & 1) == 0 )
+  if ( (byte_596DED2 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    this = (TitleIlluminationManager_o *)sub_21FFC50(&TitleIlluminationManager_TypeInfo);
-    byte_5935E10 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (TitleIlluminationManager_o *)sub_2213A60(&TitleIlluminationManager_TypeInfo);
+    byte_596DED2 = 1;
   }
   IlluminationObjects = v3->fields.IlluminationObjects;
   if ( !IlluminationObjects )
@@ -53,7 +53,7 @@ void TitleIlluminationManager__CreateIllumination(TitleIlluminationManager_o *th
   while ( 1 )
   {
     if ( max_length == v6 )
-      sub_21FFED4(this);
+      sub_2213CE4(this);
     v7 = IlluminationObjects->m_Items[v6];
     if ( !v7 )
       goto LABEL_26;
@@ -65,7 +65,7 @@ void TitleIlluminationManager__CreateIllumination(TitleIlluminationManager_o *th
   IlluminationPool = v3->fields.IlluminationPool;
   if ( !IlluminationPool )
 LABEL_26:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   if ( IlluminationPool->fields._size )
   {
     v9 = TitleIlluminationManager_TypeInfo;
@@ -79,7 +79,7 @@ LABEL_26:
       v11 = -IlluminationWidth;
     else
       v11 = 1 - IlluminationWidth;
-    v12 = UnityEngine_Random__Range_83187376(v11 >> 1, IlluminationWidth / 2, 0);
+    v12 = UnityEngine_Random__Range_83400680(v11 >> 1, IlluminationWidth / 2, 0);
     IlluminationHeight = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
     if ( IlluminationHeight <= 0 )
       v14 = -IlluminationHeight;
@@ -89,10 +89,10 @@ LABEL_26:
       v15 = TitleIlluminationManager_TypeInfo->static_fields->IlluminationHeight;
     else
       v15 = IlluminationHeight + 1;
-    v16 = UnityEngine_Random__Range_83187376(v14 >> 1, v15 >> 1, 0);
+    v16 = UnityEngine_Random__Range_83400680(v14 >> 1, v15 >> 1, 0);
     v7->fields.x = v12;
     v7->fields.y = v16;
-    v7->fields.restCount = UnityEngine_Random__Range_83187376(6, 9, 0);
+    v7->fields.restCount = UnityEngine_Random__Range_83400680(6, 9, 0);
     v7->fields.moveTime = 0.0;
     v7->fields.exists = 1;
     TitleIlluminationManager__SpawnIllumination(v3, v12, v16, v17);
@@ -160,39 +160,38 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
   bool v57; // w6
   bool v58; // w7
   System_Array_o *v59; // x19
-  System_RuntimeFieldHandle_o v60; // x1
-  __int64 v61; // x1
-  System_String_o *v62; // x2
-  System_String_o *v63; // x3
-  int32_t v64; // w4
-  int32_t v65; // w5
-  bool v66; // w6
-  bool v67; // w7
-  TitleIlluminationManager_c *v68; // x0
+  __int64 v60; // x1
+  System_String_o *v61; // x2
+  System_String_o *v62; // x3
+  int32_t v63; // w4
+  int32_t v64; // w5
+  bool v65; // w6
+  bool v66; // w7
+  TitleIlluminationManager_c *v67; // x0
   struct TitleIlluminationManager_StaticFields *static_fields; // x0
-  __int64 v70; // x0
-  __int128 v71; // [xsp+0h] [xbp-80h] BYREF
-  __int64 v72; // [xsp+10h] [xbp-70h]
+  __int64 v69; // x0
+  __int128 v70; // [xsp+0h] [xbp-80h] BYREF
+  __int64 v71; // [xsp+10h] [xbp-70h]
 
-  if ( (byte_5935E0E & 1) == 0 )
+  if ( (byte_596DED0 & 1) == 0 )
   {
-    sub_21FFC50(&TitleIlluminationManager_IlluminationInfo___TypeInfo);
-    sub_21FFC50(&TitleIlluminationManager_IlluminationInfo_TypeInfo);
-    sub_21FFC50(&int_____TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
-    sub_21FFC50(&Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4);
-    byte_5935E0E = 1;
+    sub_2213A60(&TitleIlluminationManager_IlluminationInfo___TypeInfo);
+    sub_2213A60(&TitleIlluminationManager_IlluminationInfo_TypeInfo);
+    sub_2213A60(&int_____TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&TitleIlluminationManager_TypeInfo);
+    sub_2213A60(&Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4);
+    byte_596DED0 = 1;
   }
-  v3 = (struct TitleIlluminationManager_IlluminationInfo_array *)sub_21FFD10(
+  v3 = (struct TitleIlluminationManager_IlluminationInfo_array *)sub_2213B20(
                                                                    TitleIlluminationManager_IlluminationInfo___TypeInfo,
                                                                    (unsigned int)this->fields.IlluminationCountMax);
   this->fields.IlluminationObjects = v3;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationObjects,
     (int32_t)v3,
     v4,
@@ -208,24 +207,24 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
     do
     {
       IlluminationObjects = (unsigned int *)this->fields.IlluminationObjects;
-      v13 = (Il2CppObject *)sub_21FFEBC(TitleIlluminationManager_IlluminationInfo_TypeInfo);
+      v13 = (Il2CppObject *)sub_2213CCC(TitleIlluminationManager_IlluminationInfo_TypeInfo);
       System_Object___ctor(v13, 0);
       if ( !IlluminationObjects )
 LABEL_37:
-        sub_21FFECC(transform, v15);
+        sub_2213CDC(transform, v15);
       if ( v13 )
       {
-        transform = sub_21FFDA4(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
+        transform = sub_2213BB4(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
         if ( !transform )
         {
-          v70 = sub_21FFEF0(0, v22);
-          sub_21FFD90(v70, 0);
+          v69 = sub_2213D00(0, v22);
+          sub_2213BA0(v69, 0);
         }
       }
       if ( v10 >= IlluminationObjects[6] )
-        sub_21FFED4(transform);
+        sub_2213CE4(transform);
       *(_QWORD *)&IlluminationObjects[v11] = v13;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&IlluminationObjects[v11],
         (int32_t)v13,
         v16,
@@ -239,13 +238,13 @@ LABEL_37:
     }
     while ( (__int64)v10 < this->fields.IlluminationCountMax );
   }
-  v23 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v23 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v23,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.IlluminationPool = (struct System_Collections_Generic_List_GameObject__o *)v23;
   p_IlluminationPool = &this->fields.IlluminationPool;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationPool,
     (int32_t)v23,
     v25,
@@ -269,7 +268,7 @@ LABEL_37:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31, v32);
     transform = (__int64)UnityEngine_Object__Instantiate_object_(
                            IlluminationPrefab,
-                           (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_37;
     v36 = (UnityEngine_GameObject_o *)transform;
@@ -283,30 +282,30 @@ LABEL_37:
     UnityEngine_Transform__set_parent(v37, (UnityEngine_Transform_o *)transform, 0);
     transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
     v38 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v38 )
       goto LABEL_37;
     UnityEngine_Transform__set_localPosition(v38, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
     v39 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v39 )
       goto LABEL_37;
     UnityEngine_Transform__set_localEulerAngles(v39, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
     v40 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_5931945 )
+    if ( !byte_5969AE5 )
     {
-      transform = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931945 = 1;
+      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE5 = 1;
     }
     if ( !v40 )
       goto LABEL_37;
@@ -326,38 +325,40 @@ LABEL_37:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)transform,
         (Il2CppObject *)v36,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
     }
     else
     {
       v50 = v47 + 8 * v49;
       *(_DWORD *)(transform + 24) = v49 + 1;
       *(_QWORD *)(v50 + 32) = v36;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v36, v41, v42, v43, v44, v45, v46);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v36, v41, v42, v43, v44, v45, v46);
     }
   }
-  v51 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v51 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v51,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.IlluminationDisp = (struct System_Collections_Generic_List_GameObject__o *)v51;
   p_IlluminationDisp = (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationDisp;
-  sub_21FFBF4(p_IlluminationDisp, (int32_t)v51, v53, v54, v55, v56, v57, v58);
+  sub_2213A04(p_IlluminationDisp, (int32_t)v51, v53, v54, v55, v56, v57, v58);
   p_IlluminationDisp->fields.index = 0;
-  v72 = 2;
-  v71 = xmmword_ED0728;
-  v59 = (System_Array_o *)sub_21FFD18(int_____TypeInfo, &v71);
-  v60.fields.value = Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76127424(v59, v60, 0);
-  v68 = TitleIlluminationManager_TypeInfo;
+  v71 = 2;
+  v70 = xmmword_ED9788;
+  v59 = (System_Array_o *)sub_2213B28(int_____TypeInfo, &v70);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v59,
+    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4,
+    0);
+  v67 = TitleIlluminationManager_TypeInfo;
   if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v61, v62);
-    v68 = TitleIlluminationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v60, v61);
+    v67 = TitleIlluminationManager_TypeInfo;
   }
-  static_fields = v68->static_fields;
+  static_fields = v67->static_fields;
   static_fields->DirTable = (struct System_Int32_array *)v59;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&static_fields->DirTable, (int32_t)v59, v62, v63, v64, v65, v66, v67);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->DirTable, (int32_t)v59, v61, v62, v63, v64, v65, v66);
 }
 
 
@@ -371,7 +372,7 @@ void TitleIlluminationManager__OnDestroy(TitleIlluminationManager_o *this, const
   bool v7; // w7
 
   this->fields.IlluminationPrefab = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationPrefab, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationPrefab, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -396,11 +397,11 @@ void TitleIlluminationManager__ReturnIllumination(
   Il2CppClass **v17; // x0
 
   v4 = this;
-  if ( (byte_5935E0F & 1) == 0 )
+  if ( (byte_596DED1 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    this = (TitleIlluminationManager_o *)sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Remove__);
-    byte_5935E0F = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    this = (TitleIlluminationManager_o *)sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Remove__);
+    byte_596DED1 = 1;
   }
   if ( !obj )
     goto LABEL_11;
@@ -414,7 +415,7 @@ void TitleIlluminationManager__ReturnIllumination(
     || (System_Collections_Generic_List_object___Remove(
           IlluminationDisp,
           (Il2CppObject *)this,
-          (const MethodInfo_445101C *)Method_System_Collections_Generic_List_GameObject__Remove__),
+          (const MethodInfo_4485154 *)Method_System_Collections_Generic_List_GameObject__Remove__),
         IlluminationPool = (System_Collections_Generic_List_object__o *)v4->fields.IlluminationPool,
         this = (TitleIlluminationManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)obj, 0),
         !IlluminationPool)
@@ -424,7 +425,7 @@ void TitleIlluminationManager__ReturnIllumination(
         !items) )
   {
 LABEL_11:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
   size = IlluminationPool->fields._size;
   v16 = this;
@@ -433,14 +434,14 @@ LABEL_11:
     System_Collections_Generic_List_object___AddWithResize(
       IlluminationPool,
       (Il2CppObject *)this,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     IlluminationPool->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v16;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 4), (int32_t)v16, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -470,15 +471,15 @@ void TitleIlluminationManager__SpawnIllumination(
   System_Collections_Generic_List_object__o *v22; // x1
   Il2CppClass **v23; // x0
 
-  if ( (byte_5935E11 & 1) == 0 )
+  if ( (byte_596DED3 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__RemoveAt__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_21FFC50(&TitleIlluminationManager_TypeInfo);
-    byte_5935E11 = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_2213A60(&TitleIlluminationManager_TypeInfo);
+    byte_596DED3 = 1;
   }
   IlluminationPool = (System_Collections_Generic_List_object__o *)this->fields.IlluminationPool;
   if ( !IlluminationPool )
@@ -488,19 +489,19 @@ void TitleIlluminationManager__SpawnIllumination(
   IlluminationPool = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     IlluminationPool,
                                                                     0,
-                                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   if ( !this->fields.IlluminationPool )
     goto LABEL_17;
   v8 = (UnityEngine_GameObject_o *)IlluminationPool;
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)this->fields.IlluminationPool,
     0,
-    (const MethodInfo_44512C4 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+    (const MethodInfo_44853FC *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
   if ( !v8 )
     goto LABEL_17;
   IlluminationPool = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     v8,
-                                                                    (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
+                                                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TitleIlluminationComponent___);
   v11 = (TitleIlluminationComponent_o *)IlluminationPool;
   if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, *(_QWORD *)&x, v9);
@@ -530,7 +531,7 @@ void TitleIlluminationManager__SpawnIllumination(
         !items) )
   {
 LABEL_17:
-    sub_21FFECC(IlluminationPool, *(_QWORD *)&x);
+    sub_2213CDC(IlluminationPool, *(_QWORD *)&x);
   }
   size = IlluminationDisp->fields._size;
   v22 = IlluminationPool;
@@ -539,14 +540,14 @@ LABEL_17:
     System_Collections_Generic_List_object___AddWithResize(
       IlluminationDisp,
       (Il2CppObject *)IlluminationPool,
-      *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v23 = &items->obj.klass + size;
     IlluminationDisp->fields._size = size + 1;
     v23[4] = (Il2CppClass *)v22;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v22, v13, v14, v15, v16, v17, v18);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v22, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -596,7 +597,7 @@ void TitleIlluminationManager__Update(TitleIlluminationManager_o *this, const Me
     IlluminationPopFrames = this->fields.IlluminationPopFrames;
     if ( !IlluminationPopFrames )
 LABEL_17:
-      sub_21FFECC(v6, v7);
+      sub_2213CDC(v6, v7);
     v11 = 8;
     while ( 1 )
     {
@@ -622,9 +623,9 @@ LABEL_17:
           goto LABEL_17;
         if ( v13 >= LODWORD(IlluminationPopProb->max_length) )
 LABEL_19:
-          sub_21FFED4(v6);
+          sub_2213CE4(v6);
         v20 = *((_DWORD *)&IlluminationPopProb->obj.klass + v11);
-        v6 = UnityEngine_Random__Range_83187376(0, 100, 0);
+        v6 = UnityEngine_Random__Range_83400680(0, 100, 0);
         if ( (int)v6 < v20 )
           TitleIlluminationManager__CreateIllumination(this, v7);
       }
@@ -674,10 +675,10 @@ void TitleIlluminationManager__UpdateIllumination(
   int32_t IlluminationCount; // w8
 
   v4 = this;
-  if ( (byte_5935E12 & 1) == 0 )
+  if ( (byte_596DED4 & 1) == 0 )
   {
-    this = (TitleIlluminationManager_o *)sub_21FFC50(&TitleIlluminationManager_TypeInfo);
-    byte_5935E12 = 1;
+    this = (TitleIlluminationManager_o *)sub_2213A60(&TitleIlluminationManager_TypeInfo);
+    byte_596DED4 = 1;
   }
   IlluminationObjects = v4->fields.IlluminationObjects;
   if ( IlluminationObjects )
@@ -690,11 +691,11 @@ void TitleIlluminationManager__UpdateIllumination(
       {
         if ( v7 >= max_length_low )
 LABEL_48:
-          sub_21FFED4(this);
+          sub_2213CE4(this);
         v8 = IlluminationObjects->m_Items[v7];
         if ( !v8 )
 LABEL_49:
-          sub_21FFECC(this, method);
+          sub_2213CDC(this, method);
         if ( v8->fields.exists )
         {
           MoveSpeed = v4->fields.MoveSpeed;
@@ -706,7 +707,7 @@ LABEL_49:
             v8->fields.moveTime = 0.0;
             while ( 1 )
             {
-              this = (TitleIlluminationManager_o *)UnityEngine_Random__Range_83187376(0, 3, 0);
+              this = (TitleIlluminationManager_o *)UnityEngine_Random__Range_83400680(0, 3, 0);
               v14 = TitleIlluminationManager_TypeInfo;
               v15 = (unsigned int)this;
               if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )

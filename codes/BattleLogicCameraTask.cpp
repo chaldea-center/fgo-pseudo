@@ -10,7 +10,7 @@ void BattleLogicCameraTask___ctor(BattleLogicCameraTask_o *this, System_String_o
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0);
   BattleLogicTask__setCamera((BattleLogicTask_o *)this, 0);
   this->fields.endCameraName = cameraName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.endCameraName,
     (int32_t)cameraName,
     v5,

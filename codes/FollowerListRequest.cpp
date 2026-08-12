@@ -2,10 +2,10 @@ void FollowerListRequest___cctor(const MethodInfo *method)
 {
   struct FollowerListRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_593A24B & 1) == 0 )
+  if ( (byte_5972428 & 1) == 0 )
   {
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    byte_593A24B = 1;
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    byte_5972428 = 1;
   }
   static_fields = FollowerListRequest_TypeInfo->static_fields;
   static_fields->refreshResetTime = -1;
@@ -31,22 +31,22 @@ int32_t FollowerListRequest__GetRequestListTypeByQuestId(
   __int64 v5; // x1
   Il2CppObject *Entity; // x0
 
-  if ( (byte_593A248 & 1) == 0 )
+  if ( (byte_5972425 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    byte_593A248 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    byte_5972425 = 1;
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&questId);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Master_object )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              questId,
-             (const MethodInfo_3EDD388 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+             (const MethodInfo_3F10B30 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, 0) )
     return 2;
   else
@@ -64,10 +64,10 @@ bool FollowerListRequest__IsNeedRequestList(FollowerListRequest_o *this, int32_t
   char v9; // w8
 
   v4 = this;
-  if ( (byte_593A247 & 1) == 0 )
+  if ( (byte_5972424 & 1) == 0 )
   {
-    this = (FollowerListRequest_o *)sub_21FFC50(&FollowerListRequest_TypeInfo);
-    byte_593A247 = 1;
+    this = (FollowerListRequest_o *)sub_2213A60(&FollowerListRequest_TypeInfo);
+    byte_5972424 = 1;
   }
   RequestListTypeByQuestId = FollowerListRequest__GetRequestListTypeByQuestId(this, questId, method);
   v7 = FollowerListRequest_TypeInfo;
@@ -108,20 +108,20 @@ void FollowerListRequest__beginRequest(
   FollowerListRequest_c *v19; // x8
   int32_t v20; // w20
 
-  if ( (byte_593A249 & 1) == 0 )
+  if ( (byte_5972426 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    sub_21FFC50(&StringLiteral_24154/*"refresh"*/);
-    sub_21FFC50(&StringLiteral_24008/*"questPhase"*/);
-    sub_21FFC50(&StringLiteral_24004/*"questId"*/);
-    byte_593A249 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    sub_2213A60(&StringLiteral_24202/*"refresh"*/);
+    sub_2213A60(&StringLiteral_24055/*"questPhase"*/);
+    sub_2213A60(&StringLiteral_24051/*"questId"*/);
+    byte_5972426 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24004/*"questId"*/, questId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24008/*"questPhase"*/, questPhase, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24051/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24055/*"questPhase"*/, questPhase, 0);
   if ( !this )
-    sub_21FFECC(v9, v10);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24154/*"refresh"*/, isEnfoceRefresh, 0);
+    sub_2213CDC(v9, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24202/*"refresh"*/, isEnfoceRefresh, 0);
   if ( !isEnfoceRefresh )
     goto LABEL_9;
   v13 = BalanceConfig_TypeInfo;
@@ -173,13 +173,13 @@ bool FollowerListRequest__checkExpirationDate(FollowerListRequest_o *this, const
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_593A246 & 1) == 0 )
+  if ( (byte_5972423 & 1) == 0 )
   {
-    sub_21FFC50(&Method_DataManager_GetMaster_UserFollowerMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    byte_593A246 = 1;
+    sub_2213A60(&Method_DataManager_GetMaster_UserFollowerMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__);
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    byte_5972423 = 1;
   }
   v2 = FollowerListRequest_TypeInfo;
   entity = 0;
@@ -192,14 +192,14 @@ bool FollowerListRequest__checkExpirationDate(FollowerListRequest_o *this, const
     return 0;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_UserFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserFollowerMaster___);
   if ( !Master_object )
 LABEL_14:
-    sub_21FFECC(Master_object, v4);
+    sub_2213CDC(Master_object, v4);
   if ( !DataMasterBase_object__object__long___TryGetSingleEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
-          (const MethodInfo_3EDFB14 *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__) )
+          (const MethodInfo_3F132BC *)Method_DataMasterBase_UserFollowerMaster__UserFollowerEntity__long__TryGetSingleEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
@@ -217,12 +217,12 @@ bool FollowerListRequest__checkRefreshRate(const MethodInfo *method)
   FollowerListRequest_c *v5; // x8
   int64_t v6; // x19
 
-  if ( (byte_593A242 & 1) == 0 )
+  if ( (byte_597241F & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A242 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_597241F = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -252,10 +252,10 @@ void FollowerListRequest__clearRefreshRate(const MethodInfo *method)
   FollowerListRequest_c *v2; // x0
   struct FollowerListRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_593A241 & 1) == 0 )
+  if ( (byte_597241E & 1) == 0 )
   {
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    byte_593A241 = 1;
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    byte_597241E = 1;
   }
   v2 = FollowerListRequest_TypeInfo;
   if ( !*(&FollowerListRequest_TypeInfo->_2.cctor_finished + 1) )
@@ -272,10 +272,10 @@ void FollowerListRequest__clearRefreshRate(const MethodInfo *method)
 
 System_String_o *FollowerListRequest__getMockData(FollowerListRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_593A245 & 1) == 0 )
+  if ( (byte_5972422 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_593A245 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5972422 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -289,12 +289,12 @@ int64_t FollowerListRequest__getRefreshRemain(const MethodInfo *method)
   int64_t refreshResetTime; // x20
   int64_t Time; // x0
 
-  if ( (byte_593A243 & 1) == 0 )
+  if ( (byte_5972420 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A243 = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5972420 = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -329,16 +329,16 @@ System_String_o *FollowerListRequest__getURL(FollowerListRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_593A244 & 1) == 0 )
+  if ( (byte_5972421 & 1) == 0 )
   {
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_20400/*"follower/list"*/);
-    byte_593A244 = 1;
+    sub_2213A60(&NetworkManager_TypeInfo);
+    sub_2213A60(&StringLiteral_20441/*"follower/list"*/);
+    byte_5972421 = 1;
   }
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_75438412(BaseUrl, (System_String_o *)StringLiteral_20400/*"follower/list"*/, 0);
+  return System_String__Concat_75651716(BaseUrl, (System_String_o *)StringLiteral_20441/*"follower/list"*/, 0);
 }
 
 
@@ -355,12 +355,12 @@ void FollowerListRequest__requestCompleted(
   __int64 FollowerRefreshRestTime; // x23
   struct FollowerListRequest_StaticFields *v11; // x8
 
-  if ( (byte_593A24A & 1) == 0 )
+  if ( (byte_5972427 & 1) == 0 )
   {
-    sub_21FFC50(&BalanceConfig_TypeInfo);
-    sub_21FFC50(&FollowerListRequest_TypeInfo);
-    sub_21FFC50(&NetworkManager_TypeInfo);
-    byte_593A24A = 1;
+    sub_2213A60(&BalanceConfig_TypeInfo);
+    sub_2213A60(&FollowerListRequest_TypeInfo);
+    sub_2213A60(&NetworkManager_TypeInfo);
+    byte_5972427 = 1;
   }
   v5 = FollowerListRequest_TypeInfo;
   if ( !*(&FollowerListRequest_TypeInfo->_2.cctor_finished + 1) )

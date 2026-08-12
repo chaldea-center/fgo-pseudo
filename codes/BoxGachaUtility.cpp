@@ -5,10 +5,10 @@ void BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v3; // x8
   int32x2_t *v4; // x8
 
-  if ( (byte_59325FB & 1) == 0 )
+  if ( (byte_596A6FA & 1) == 0 )
   {
-    sub_21FFC50(&BoxGachaUtility_TypeInfo);
-    byte_59325FB = 1;
+    sub_2213A60(&BoxGachaUtility_TypeInfo);
+    byte_596A6FA = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -30,16 +30,16 @@ void BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, cons
   __int64 v7; // x1
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_59325FA & 1) == 0 )
+  if ( (byte_596A6F9 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_21355/*"img_gachatxt_{0:D2}"*/);
-    byte_59325FA = 1;
+    sub_2213A60(&StringLiteral_21396/*"img_gachatxt_{0:D2}"*/);
+    byte_596A6F9 = 1;
   }
   v8 = num;
-  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v8);
-  v6 = System_String__Format((System_String_o *)StringLiteral_21355/*"img_gachatxt_{0:D2}"*/, v5, 0);
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v8);
+  v6 = System_String__Format((System_String_o *)StringLiteral_21396/*"img_gachatxt_{0:D2}"*/, v5, 0);
   if ( !sprite )
-    sub_21FFECC(v6, v7);
+    sub_2213CDC(v6, v7);
   UISprite__set_spriteName(sprite, v6, 0);
   ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     sprite,
@@ -72,10 +72,10 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v22; // x2
 
   v8 = gachaTime;
-  if ( (byte_59325F9 & 1) == 0 )
+  if ( (byte_596A6F8 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_21FFC50(&BoxGachaUtility_TypeInfo);
-    byte_59325F9 = 1;
+    *(_QWORD *)&gachaTime = sub_2213A60(&BoxGachaUtility_TypeInfo);
+    byte_596A6F8 = 1;
   }
   if ( (int)v8 < 10 )
     goto LABEL_9;
@@ -142,7 +142,7 @@ void BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_21FFECC(*(_QWORD *)&gachaTime, oneDigit);
+    sub_2213CDC(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;

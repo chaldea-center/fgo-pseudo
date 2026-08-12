@@ -15,21 +15,21 @@ void AiStateManager___ctor(AiStateManager_o *this, AiState_o *aiState, const Met
   bool v17; // w7
   const MethodInfo *v18; // x1
 
-  if ( (byte_593B70C & 1) == 0 )
+  if ( (byte_597390C & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int___ctor__);
-    sub_21FFC50(&System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__TypeInfo);
-    byte_593B70C = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int___ctor__);
+    sub_2213A60(&System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__TypeInfo);
+    byte_597390C = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_21FFEBC(System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__int____ctor(
     v5,
-    (const MethodInfo_3F81DB0 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int___ctor__);
+    (const MethodInfo_3FB5558 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int___ctor__);
   this->fields.dicTimingAiIdx = (struct System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__o *)v5;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mainAiState = aiState;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mainAiState,
     (int32_t)aiState,
     v12,
@@ -52,7 +52,7 @@ void AiStateManager__AfterMakeAiActTask(AiStateManager_o *this, const MethodInfo
   bool v7; // w7
 
   this->fields._CurAiState_k__BackingField = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField, 0, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -88,13 +88,13 @@ bool AiStateManager__ExistAiThinking(
   bool v33; // w7
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+18h] [xbp-78h] BYREF
 
-  if ( (byte_593B711 & 1) == 0 )
+  if ( (byte_5973911 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState__GetEnumerator__);
-    byte_593B711 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState__GetEnumerator__);
+    byte_5973911 = 1;
   }
   CurAiState_k__BackingField = this->fields._CurAiState_k__BackingField;
   p_CurAiState_k__BackingField = (MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField;
@@ -102,30 +102,30 @@ bool AiStateManager__ExistAiThinking(
   ClosedMessage_k__BackingField = (System_Collections_Generic_List_object__o *)p_CurAiState_k__BackingField[-1].fields._ClosedMessage_k__BackingField;
   memset(&v35, 0, sizeof(v35));
   if ( !ClosedMessage_k__BackingField )
-    sub_21FFECC(0, svtData);
+    sub_2213CDC(0, svtData);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v35,
     ClosedMessage_k__BackingField,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_AiState__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_AiState__GetEnumerator__);
   do
   {
     v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v35,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
     if ( !v23 )
       break;
     current = (int32_t)v35.fields._current;
     p_CurAiState_k__BackingField->klass = (MissionNaviTransitionBoardItem_c *)v35.fields._current;
-    sub_21FFBF4(p_CurAiState_k__BackingField, current, v17, v18, v19, v20, v21, v22);
+    sub_2213A04(p_CurAiState_k__BackingField, current, v17, v18, v19, v20, v21, v22);
     if ( !aiLogic )
-      sub_21FFECC(v25, v26);
+      sub_2213CDC(v25, v26);
   }
   while ( !AiLogic__checkThinking(aiLogic, svtData, procState, logicAi, timingPriority, v27) );
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
   p_CurAiState_k__BackingField->klass = v14;
-  sub_21FFBF4(p_CurAiState_k__BackingField, (int32_t)v14, v28, v29, v30, v31, v32, v33);
+  sub_2213A04(p_CurAiState_k__BackingField, (int32_t)v14, v28, v29, v30, v31, v32, v33);
   return v23;
 }
 
@@ -156,17 +156,17 @@ AiStateManager_SaveData_o *AiStateManager__GetSaveData(AiStateManager_o *this, c
   bool v24; // w6
   bool v25; // w7
 
-  if ( (byte_593B714 & 1) == 0 )
+  if ( (byte_5973914 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_AiState__AiState_SaveData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
-    sub_21FFC50(&System_Func_AiState__AiState_SaveData__TypeInfo);
-    sub_21FFC50(&AiStateManager_SaveData_TypeInfo);
-    sub_21FFC50(&Method_AiStateManager___c__GetSaveData_b__22_0__);
-    sub_21FFC50(&AiStateManager___c_TypeInfo);
-    byte_593B714 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_AiState__AiState_SaveData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
+    sub_2213A60(&System_Func_AiState__AiState_SaveData__TypeInfo);
+    sub_2213A60(&AiStateManager_SaveData_TypeInfo);
+    sub_2213A60(&Method_AiStateManager___c__GetSaveData_b__22_0__);
+    sub_2213A60(&AiStateManager___c_TypeInfo);
+    byte_5973914 = 1;
   }
-  v3 = sub_21FFEBC(AiStateManager_SaveData_TypeInfo);
+  v3 = sub_2213CCC(AiStateManager_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.addAiStates, 0) )
   {
@@ -187,23 +187,23 @@ AiStateManager_SaveData_o *AiStateManager__GetSaveData(AiStateManager_o *this, c
         static_fields = AiStateManager___c_TypeInfo->static_fields;
       }
       v9 = (Il2CppObject *)static_fields->__9;
-      _9__22_0 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_AiState__AiState_SaveData__TypeInfo);
+      _9__22_0 = (System_Func_object__object__o *)sub_2213CCC(System_Func_AiState__AiState_SaveData__TypeInfo);
       System_Func_object__object____ctor(_9__22_0, v9, Method_AiStateManager___c__GetSaveData_b__22_0__, 0);
       v10 = AiStateManager___c_TypeInfo->static_fields;
       v10->__9__22_0 = (struct System_Func_AiState__AiState_SaveData__o *)_9__22_0;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v10->__9__22_0, (int32_t)_9__22_0, v11, v12, v13, v14, v15, v16);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->__9__22_0, (int32_t)_9__22_0, v11, v12, v13, v14, v15, v16);
     }
     v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  addAiStates,
                                                                  (System_Func_TSource__TResult__o *)_9__22_0,
-                                                                 (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_AiState__AiState_SaveData___);
+                                                                 (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_AiState__AiState_SaveData___);
     v18 = System_Linq_Enumerable__ToArray_object_(
             v17,
-            (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
+            (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_AiState_SaveData___);
     if ( !v3 )
-      sub_21FFECC(v18, v19);
+      sub_2213CDC(v18, v19);
     *(_QWORD *)(v3 + 16) = v18;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)v18, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 16), (int32_t)v18, v20, v21, v22, v23, v24, v25);
   }
   return (AiStateManager_SaveData_o *)v3;
 }
@@ -232,17 +232,17 @@ void AiStateManager__InitAiStates(
   System_Object_array *v20; // x1
   const MethodInfo *v21; // x1
 
-  if ( (byte_593B70D & 1) == 0 )
+  if ( (byte_597390D & 1) == 0 )
   {
-    sub_21FFC50(&Method_AiState_MakeAiState__);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Clear__);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_int__AiState___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_AiState___);
-    sub_21FFC50(&System_Func_int__AiState__TypeInfo);
-    byte_593B70D = 1;
+    sub_2213A60(&Method_AiState_MakeAiState__);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Clear__);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_int__AiState___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_AiState___);
+    sub_2213A60(&System_Func_int__AiState__TypeInfo);
+    byte_597390D = 1;
   }
   this->fields._CurAiState_k__BackingField = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField,
     0,
     (System_String_o *)method,
@@ -253,28 +253,28 @@ void AiStateManager__InitAiStates(
     v7);
   dicTimingAiIdx = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicTimingAiIdx;
   if ( !dicTimingAiIdx )
-    sub_21FFECC(0, v10);
+    sub_2213CDC(0, v10);
   System_Collections_Generic_Dictionary_Int32Enum__int___Clear(
     dicTimingAiIdx,
-    (const MethodInfo_3F828D4 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Clear__);
+    (const MethodInfo_3FB607C *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Clear__);
   if ( aiIdList )
   {
-    v18 = (System_Func_T__TResult__o *)sub_21FFEBC(System_Func_int__AiState__TypeInfo);
+    v18 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_int__AiState__TypeInfo);
     System_Func_int__object____ctor(v18, 0, Method_AiState_MakeAiState__, 0);
     v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)aiIdList,
                                                                  (System_Func_TSource__TResult__o *)v18,
-                                                                 (const MethodInfo_385A9E0 *)Method_System_Linq_Enumerable_Select_int__AiState___);
+                                                                 (const MethodInfo_388DEA8 *)Method_System_Linq_Enumerable_Select_int__AiState___);
     v20 = System_Linq_Enumerable__ToArray_object_(
             v19,
-            (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_AiState___);
+            (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_AiState___);
   }
   else
   {
     v20 = 0;
   }
   this->fields.addAiStates = (struct AiState_array *)v20;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.addAiStates, (int32_t)v20, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.addAiStates, (int32_t)v20, v12, v13, v14, v15, v16, v17);
   AiStateManager__UpdateFixAiStateList(this, v21);
 }
 
@@ -284,18 +284,18 @@ void AiStateManager__InitTimingAiIdx(AiStateManager_o *this, int32_t procState, 
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *dicTimingAiIdx; // x0
 
-  if ( (byte_593B70E & 1) == 0 )
+  if ( (byte_597390E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Remove__);
-    byte_593B70E = 1;
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Remove__);
+    byte_597390E = 1;
   }
   dicTimingAiIdx = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicTimingAiIdx;
   if ( !dicTimingAiIdx )
-    sub_21FFECC(0, *(_QWORD *)&procState);
+    sub_2213CDC(0, *(_QWORD *)&procState);
   System_Collections_Generic_Dictionary_Int32Enum__int___Remove(
     dicTimingAiIdx,
     procState,
-    (const MethodInfo_3F83B28 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Remove__);
+    (const MethodInfo_3FB72D0 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__Remove__);
 }
 
 
@@ -316,17 +316,17 @@ BattleWarBoardInfo_TakeOverAiStateData_array *AiStateManager__MakeTakeOverAiStat
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
   v4 = this;
-  if ( (byte_593B712 & 1) == 0 )
+  if ( (byte_5973912 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AiState_MakeTakeOverAiState__);
-    sub_21FFC50(&Method_System_Array_Empty_BattleWarBoardInfo_TakeOverAiStateData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_AiState__BattleWarBoardInfo_TakeOverAiStateData___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_BattleWarBoardInfo_TakeOverAiStateData___);
-    this = (AiStateManager_o *)sub_21FFC50(&System_Func_AiState__BattleWarBoardInfo_TakeOverAiStateData__TypeInfo);
-    byte_593B712 = 1;
+    sub_2213A60(&Method_AiState_MakeTakeOverAiState__);
+    sub_2213A60(&Method_System_Array_Empty_BattleWarBoardInfo_TakeOverAiStateData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_AiState__BattleWarBoardInfo_TakeOverAiStateData___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_BattleWarBoardInfo_TakeOverAiStateData___);
+    this = (AiStateManager_o *)sub_2213A60(&System_Func_AiState__BattleWarBoardInfo_TakeOverAiStateData__TypeInfo);
+    byte_5973912 = 1;
   }
   if ( !aiResetChecker )
-    sub_21FFECC(this, aiResetChecker);
+    sub_2213CDC(this, aiResetChecker);
   if ( (((__int64 (__fastcall *)(AiResetChecker_o *, const MethodInfo *, const MethodInfo *))aiResetChecker->klass->vtable._4_IsReset.methodPtr)(
           aiResetChecker,
           aiResetChecker->klass->vtable._4_IsReset.method,
@@ -337,31 +337,31 @@ BattleWarBoardInfo_TakeOverAiStateData_array *AiStateManager__MakeTakeOverAiStat
     v8 = *((_QWORD *)Method_System_Array_Empty_BattleWarBoardInfo_TakeOverAiStateData___ + 7);
     if ( !v8 )
     {
-      sub_2237B54(Method_System_Array_Empty_BattleWarBoardInfo_TakeOverAiStateData___);
+      sub_224B964(Method_System_Array_Empty_BattleWarBoardInfo_TakeOverAiStateData___);
       v8 = v7[7];
     }
     v9 = *(_QWORD *)(v8 + 16);
     if ( (*(_WORD *)(v9 + 309) & 1) == 0 )
-      v9 = sub_2237AF8(v6);
+      v9 = sub_224B908(v6);
     if ( !*(_DWORD *)(v9 + 228) )
       *(__n128 *)&v6 = j_il2cpp_runtime_class_init_0(v9, v5);
     v10 = *(_QWORD *)(v7[7] + 16LL);
     if ( (*(_WORD *)(v10 + 309) & 1) == 0 )
-      v10 = sub_2237AF8(v6);
+      v10 = sub_224B908(v6);
     return **(BattleWarBoardInfo_TakeOverAiStateData_array ***)(v10 + 184);
   }
   else
   {
     fixAiStateList = (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.fixAiStateList;
-    v13 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_AiState__BattleWarBoardInfo_TakeOverAiStateData__TypeInfo);
+    v13 = (System_Func_object__object__o *)sub_2213CCC(System_Func_AiState__BattleWarBoardInfo_TakeOverAiStateData__TypeInfo);
     System_Func_object__object____ctor(v13, 0, Method_AiState_MakeTakeOverAiState__, 0);
     v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  fixAiStateList,
                                                                  (System_Func_TSource__TResult__o *)v13,
-                                                                 (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_AiState__BattleWarBoardInfo_TakeOverAiStateData___);
+                                                                 (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_AiState__BattleWarBoardInfo_TakeOverAiStateData___);
     return (BattleWarBoardInfo_TakeOverAiStateData_array *)System_Linq_Enumerable__ToArray_object_(
                                                              v14,
-                                                             (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_BattleWarBoardInfo_TakeOverAiStateData___);
+                                                             (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_BattleWarBoardInfo_TakeOverAiStateData___);
   }
 }
 
@@ -379,33 +379,33 @@ bool AiStateManager__NextAiState(AiStateManager_o *this, int32_t procState, cons
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_593B70F & 1) == 0 )
+  if ( (byte_597390F & 1) == 0 )
   {
-    sub_21FFC50(&Method_BasicHelper_GetValue_AiLogic_PROC_STATE__int___);
-    sub_21FFC50(&Method_BasicHelper_IndexValue_AiState___);
-    sub_21FFC50(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__set_Item__);
-    byte_593B70F = 1;
+    sub_2213A60(&Method_BasicHelper_GetValue_AiLogic_PROC_STATE__int___);
+    sub_2213A60(&Method_BasicHelper_IndexValue_AiState___);
+    sub_2213A60(&Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__set_Item__);
+    byte_597390F = 1;
   }
   Value_Int32Enum__int = BasicHelper__GetValue_Int32Enum__int_(
                            (System_Collections_Generic_Dictionary_K__V__o *)this->fields.dicTimingAiIdx,
                            procState,
                            -1,
-                           (const MethodInfo_37E1150 *)Method_BasicHelper_GetValue_AiLogic_PROC_STATE__int___);
+                           (const MethodInfo_3814500 *)Method_BasicHelper_GetValue_AiLogic_PROC_STATE__int___);
   if ( !this->fields.dicTimingAiIdx )
-    sub_21FFECC(Value_Int32Enum__int, v6);
+    sub_2213CDC(Value_Int32Enum__int, v6);
   v7 = Value_Int32Enum__int;
   System_Collections_Generic_Dictionary_Int32Enum__int___set_Item(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dicTimingAiIdx,
     procState,
     Value_Int32Enum__int + 1,
-    (const MethodInfo_3F82740 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__set_Item__);
-  v8 = BasicHelper__IndexValue_object__58595452(
+    (const MethodInfo_3FB5EE8 *)Method_System_Collections_Generic_Dictionary_AiLogic_PROC_STATE__int__set_Item__);
+  v8 = BasicHelper__IndexValue_object__58805292(
          (System_Collections_Generic_List_T__o *)this->fields.fixAiStateList,
          v7 + 1,
          0,
-         (const MethodInfo_37E187C *)Method_BasicHelper_IndexValue_AiState___);
+         (const MethodInfo_3814C2C *)Method_BasicHelper_IndexValue_AiState___);
   this->fields._CurAiState_k__BackingField = (struct AiState_o *)v8;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField,
     (int32_t)v8,
     v9,
@@ -431,28 +431,28 @@ void AiStateManager__SetSaveData(AiStateManager_o *this, AiStateManager_SaveData
   bool v13; // w6
   bool v14; // w7
 
-  if ( (byte_593B715 & 1) == 0 )
+  if ( (byte_5973915 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AiState_MakeAiState___91478368);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Select_AiState_SaveData__AiState___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToArray_AiState___);
-    sub_21FFC50(&System_Func_AiState_SaveData__AiState__TypeInfo);
-    byte_593B715 = 1;
+    sub_2213A60(&Method_AiState_MakeAiState___91704560);
+    sub_2213A60(&Method_System_Linq_Enumerable_Select_AiState_SaveData__AiState___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToArray_AiState___);
+    sub_2213A60(&System_Func_AiState_SaveData__AiState__TypeInfo);
+    byte_5973915 = 1;
   }
   if ( sv && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)sv->fields.aiStates, 0) )
   {
     aiStates = (System_Collections_Generic_IEnumerable_TSource__o *)sv->fields.aiStates;
-    v6 = (System_Func_object__object__o *)sub_21FFEBC(System_Func_AiState_SaveData__AiState__TypeInfo);
-    System_Func_object__object____ctor(v6, 0, Method_AiState_MakeAiState___91478368, 0);
+    v6 = (System_Func_object__object__o *)sub_2213CCC(System_Func_AiState_SaveData__AiState__TypeInfo);
+    System_Func_object__object____ctor(v6, 0, Method_AiState_MakeAiState___91704560, 0);
     v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                 aiStates,
                                                                 (System_Func_TSource__TResult__o *)v6,
-                                                                (const MethodInfo_385DD00 *)Method_System_Linq_Enumerable_Select_AiState_SaveData__AiState___);
+                                                                (const MethodInfo_38911C8 *)Method_System_Linq_Enumerable_Select_AiState_SaveData__AiState___);
     v8 = System_Linq_Enumerable__ToArray_object_(
            v7,
-           (const MethodInfo_3868664 *)Method_System_Linq_Enumerable_ToArray_AiState___);
+           (const MethodInfo_389BB2C *)Method_System_Linq_Enumerable_ToArray_AiState___);
     this->fields.addAiStates = (struct AiState_array *)v8;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.addAiStates, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.addAiStates, (int32_t)v8, v9, v10, v11, v12, v13, v14);
   }
   AiStateManager__UpdateFixAiStateList(this, (const MethodInfo *)sv);
 }
@@ -486,17 +486,17 @@ void AiStateManager__SetTakeOverAiState(
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_593B713 & 1) == 0 )
+  if ( (byte_5973913 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Linq_Enumerable_FirstOrDefault_BattleWarBoardInfo_TakeOverAiStateData___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_AiState__get_Current__);
-    sub_21FFC50(&System_Func_BattleWarBoardInfo_TakeOverAiStateData__bool__TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState__GetEnumerator__);
-    sub_21FFC50(&Method_AiStateManager___c__DisplayClass20_0__SetTakeOverAiState_b__0__);
-    sub_21FFC50(&AiStateManager___c__DisplayClass20_0_TypeInfo);
-    byte_593B713 = 1;
+    sub_2213A60(&Method_System_Linq_Enumerable_FirstOrDefault_BattleWarBoardInfo_TakeOverAiStateData___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_AiState__get_Current__);
+    sub_2213A60(&System_Func_BattleWarBoardInfo_TakeOverAiStateData__bool__TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState__GetEnumerator__);
+    sub_2213A60(&Method_AiStateManager___c__DisplayClass20_0__SetTakeOverAiState_b__0__);
+    sub_2213A60(&AiStateManager___c__DisplayClass20_0_TypeInfo);
+    byte_5973913 = 1;
   }
   memset(&v27, 0, sizeof(v27));
   IsNullOrEmpty = (struct System_Collections_Generic_List_AiState__o *)BasicHelper__IsNullOrEmpty(
@@ -514,38 +514,38 @@ void AiStateManager__SetTakeOverAiState(
     IsNullOrEmpty = this->fields.fixAiStateList;
     if ( !IsNullOrEmpty )
 LABEL_21:
-      sub_21FFECC(IsNullOrEmpty, v8);
+      sub_2213CDC(IsNullOrEmpty, v8);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v26,
       (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-      (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_AiState__GetEnumerator__);
+      (const MethodInfo_448473C *)Method_System_Collections_Generic_List_AiState__GetEnumerator__);
     v27 = v26;
     v26.fields._list = 0;
     *(_QWORD *)&v26.fields._index = &v27;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v27,
-              (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__) )
+              (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_AiState__MoveNext__) )
     {
-      v9 = sub_21FFEBC(AiStateManager___c__DisplayClass20_0_TypeInfo);
+      v9 = sub_2213CCC(AiStateManager___c__DisplayClass20_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v9, 0);
       if ( !v9 )
-        sub_21FFECC(v10, v11);
+        sub_2213CDC(v10, v11);
       current = (int32_t)v27.fields._current;
       *(_QWORD *)(v9 + 16) = v27.fields._current;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), current, v12, v13, v14, v15, v16, v17);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), current, v12, v13, v14, v15, v16, v17);
       v19 = *(_DWORD **)(v9 + 16);
-      v20 = (System_Func_object__bool__o *)sub_21FFEBC(System_Func_BattleWarBoardInfo_TakeOverAiStateData__bool__TypeInfo);
+      v20 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BattleWarBoardInfo_TakeOverAiStateData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v20,
         (Il2CppObject *)v9,
         Method_AiStateManager___c__DisplayClass20_0__SetTakeOverAiState_b__0__,
         0);
-      v21 = System_Linq_Enumerable__FirstOrDefault_object__59044732(
+      v21 = System_Linq_Enumerable__FirstOrDefault_object__59254852(
               (System_Collections_Generic_IEnumerable_TSource__o *)takeOverArray,
               (System_Func_TSource__bool__o *)v20,
-              (const MethodInfo_384F37C *)Method_System_Linq_Enumerable_FirstOrDefault_BattleWarBoardInfo_TakeOverAiStateData___);
+              (const MethodInfo_3882844 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleWarBoardInfo_TakeOverAiStateData___);
       if ( !v19 )
-        sub_21FFECC(v21, v22);
+        sub_2213CDC(v21, v22);
       if ( v21 )
       {
         klass_high = HIDWORD(v21[1].klass);
@@ -562,7 +562,7 @@ LABEL_21:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v27,
-      (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
+      (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_AiState__Dispose__);
   }
 }
 
@@ -590,22 +590,22 @@ void AiStateManager__UpdateFixAiStateList(AiStateManager_o *this, const MethodIn
   __int64 size; // x10
   Il2CppClass **v22; // x8
 
-  if ( (byte_593B710 & 1) == 0 )
+  if ( (byte_5973910 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState__AddRange__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_AiState__get_Count__);
-    sub_21FFC50(&System_Collections_Generic_List_AiState__TypeInfo);
-    byte_593B710 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState__AddRange__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_AiState__get_Count__);
+    sub_2213A60(&System_Collections_Generic_List_AiState__TypeInfo);
+    byte_5973910 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_AiState__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_AiState__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_AiState___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_AiState___ctor__);
   this->fields.fixAiStateList = (struct System_Collections_Generic_List_AiState__o *)v3;
   p_fixAiStateList = &this->fields.fixAiStateList;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.fixAiStateList, (int32_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.fixAiStateList, (int32_t)v3, v5, v6, v7, v8, v9, v10);
   mainAiState = this->fields.mainAiState;
   if ( !mainAiState )
     goto LABEL_15;
@@ -625,14 +625,14 @@ void AiStateManager__UpdateFixAiStateList(AiStateManager_o *this, const MethodIn
       System_Collections_Generic_List_object___AddWithResize(
         IsNullOrEmpty,
         (Il2CppObject *)mainAiState,
-        *(const MethodInfo_444FB2C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
     }
     else
     {
       v22 = &items->obj.klass + size;
       IsNullOrEmpty->fields._size = size + 1;
       v22[4] = (Il2CppClass *)mainAiState;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)mainAiState, v12, v13, v14, v15, v16, v17);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v22 + 4), (int32_t)mainAiState, v12, v13, v14, v15, v16, v17);
     }
   }
   IsNullOrEmpty = (System_Collections_Generic_List_object__o *)BasicHelper__IsNullOrEmpty(
@@ -646,11 +646,11 @@ void AiStateManager__UpdateFixAiStateList(AiStateManager_o *this, const MethodIn
     System_Collections_Generic_List_object___AddRange(
       IsNullOrEmpty,
       (System_Collections_Generic_IEnumerable_T__o *)this->fields.addAiStates,
-      (const MethodInfo_444FD3C *)Method_System_Collections_Generic_List_AiState__AddRange__);
+      (const MethodInfo_4483E74 *)Method_System_Collections_Generic_List_AiState__AddRange__);
   }
   if ( !*p_fixAiStateList )
 LABEL_15:
-    sub_21FFECC(IsNullOrEmpty, mainAiState);
+    sub_2213CDC(IsNullOrEmpty, mainAiState);
   this->fields._IsSetAiState_k__BackingField = (*p_fixAiStateList)->fields._size > 0;
 }
 
@@ -676,7 +676,7 @@ void AiStateManager__set_CurAiState(AiStateManager_o *this, AiState_o *value, co
   bool v7; // w7
 
   this->fields._CurAiState_k__BackingField = value;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._CurAiState_k__BackingField,
     (int32_t)value,
     (System_String_o *)method,
@@ -710,15 +710,15 @@ void AiStateManager___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_593B716 & 1) == 0 )
+  if ( (byte_5973916 & 1) == 0 )
   {
-    sub_21FFC50(&AiStateManager___c_TypeInfo);
-    byte_593B716 = 1;
+    sub_2213A60(&AiStateManager___c_TypeInfo);
+    byte_5973916 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(AiStateManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(AiStateManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AiStateManager___c_TypeInfo->static_fields->__9 = (struct AiStateManager___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)AiStateManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -742,7 +742,7 @@ AiState_SaveData_o *AiStateManager___c___GetSaveData_b__22_0(
         const MethodInfo *method)
 {
   if ( !state )
-    sub_21FFECC(this, 0);
+    sub_2213CDC(this, 0);
   return AiState__getSaveData(state, (const MethodInfo *)state);
 }
 
@@ -764,6 +764,6 @@ bool AiStateManager___c__DisplayClass20_0___SetTakeOverAiState_b__0(
 
   aiState = this->fields.aiState;
   if ( !aiState || !x )
-    sub_21FFECC(this, x);
+    sub_2213CDC(this, x);
   return BattleWarBoardInfo_TakeOverAiStateData__IsMatch(x, aiState->fields.firstAiGroupId, 0);
 }

@@ -2,10 +2,10 @@ void HeelPortraitDetailDialogComponent___ctor(HeelPortraitDetailDialogComponent_
 {
   __int64 v2; // x2
 
-  if ( (byte_593284A & 1) == 0 )
+  if ( (byte_596A94A & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593284A = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_596A94A = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -18,15 +18,15 @@ void HeelPortraitDetailDialogComponent__Close(HeelPortraitDetailDialogComponent_
   System_Action_c *v3; // x0
   System_Action_o *v4; // x20
 
-  if ( (byte_5932848 & 1) == 0 )
+  if ( (byte_596A948 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_HeelPortraitDetailDialogComponent__Close_b__12_0__);
-    byte_5932848 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_HeelPortraitDetailDialogComponent__Close_b__12_0__);
+    byte_596A948 = 1;
   }
   v3 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_21FFEBC(v3);
+  v4 = (System_Action_o *)sub_2213CCC(v3);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_HeelPortraitDetailDialogComponent__Close_b__12_0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0);
 }
@@ -51,7 +51,7 @@ void HeelPortraitDetailDialogComponent__EndOpen(HeelPortraitDetailDialogComponen
   if ( openCallback )
   {
     p_openCallback->klass = 0;
-    sub_21FFBF4(p_openCallback, 0, v2, v3, v4, v5, v6, v7);
+    sub_2213A04(p_openCallback, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -64,7 +64,7 @@ void HeelPortraitDetailDialogComponent__Init(HeelPortraitDetailDialogComponent_o
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v4);
+    sub_2213CDC(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -79,18 +79,18 @@ void HeelPortraitDetailDialogComponent__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_5932847 & 1) == 0 )
+  if ( (byte_596A947 & 1) == 0 )
   {
-    sub_21FFC50(&Method_HeelPortraitDetailDialogComponent_OnClickClose__);
-    byte_5932847 = 1;
+    sub_2213A60(&Method_HeelPortraitDetailDialogComponent_OnClickClose__);
+    byte_596A947 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_HeelPortraitDetailDialogComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_HeelPortraitDetailDialogComponent_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68(Method_HeelPortraitDetailDialogComponent_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78(Method_HeelPortraitDetailDialogComponent_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     HeelPortraitDetailDialogComponent__Close(this, v5);
   }
@@ -133,15 +133,15 @@ void HeelPortraitDetailDialogComponent__Open(
   UILabel_o *cancelButtonLb; // x20
   System_Action_o *v35; // x20
 
-  if ( (byte_5932846 & 1) == 0 )
+  if ( (byte_596A946 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&AtlasManager_TypeInfo);
-    sub_21FFC50(&System_Convert_TypeInfo);
-    sub_21FFC50(&Method_HeelPortraitDetailDialogComponent_EndOpen__);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_5932846 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&AtlasManager_TypeInfo);
+    sub_2213A60(&System_Convert_TypeInfo);
+    sub_2213A60(&Method_HeelPortraitDetailDialogComponent_EndOpen__);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_596A946 = 1;
   }
   if ( !this->fields.state )
   {
@@ -150,7 +150,7 @@ void HeelPortraitDetailDialogComponent__Open(
       goto LABEL_24;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     this->fields.openCallback = openCallback;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.openCallback,
       (int32_t)openCallback,
       v9,
@@ -181,10 +181,10 @@ void HeelPortraitDetailDialogComponent__Open(
       eventId = heelPortraitEntity->fields.eventId;
       if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v16, v17);
-      v24 = System_Convert__ToString_76481856(imageId, 0);
+      v24 = System_Convert__ToString_76695160(imageId, 0);
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v22, v23);
-      AtlasManager__SetEventUI_47538316(eventId, heelPortraitSprite, v24, 0);
+      AtlasManager__SetEventUI_47569484(eventId, heelPortraitSprite, v24, 0);
       if ( HeelPortraitEntity__IsSetOverwriteImageId(heelPortraitEntity, 0) )
       {
         OverwriteImageId = HeelPortraitEntity__GetOverwriteImageId(
@@ -193,30 +193,30 @@ void HeelPortraitDetailDialogComponent__Open(
                              0);
         if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v25, v26);
-        v28 = System_Convert__ToString_76481856(OverwriteImageId, 0);
+        v28 = System_Convert__ToString_76695160(OverwriteImageId, 0);
         v31 = heelPortraitEntity->fields.eventId;
         v32 = v28;
         v33 = this->fields.heelPortraitSprite;
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v29, v30);
-        AtlasManager__SetEventUI_47538316(v31, v33, v32, 0);
+        AtlasManager__SetEventUI_47569484(v31, v33, v32, 0);
       }
     }
     cancelButtonLb = this->fields.cancelButtonLb;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v15);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
     if ( cancelButtonLb )
     {
       UILabel__set_text(cancelButtonLb, (System_String_o *)gameObject, 0);
       this->fields.state = 1;
-      v35 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v35, (Il2CppObject *)this, Method_HeelPortraitDetailDialogComponent_EndOpen__, 0);
       BaseDialog__Open((BaseDialog_o *)this, v35, 0, 0, 0);
       return;
     }
 LABEL_24:
-    sub_21FFECC(gameObject, v8);
+    sub_2213CDC(gameObject, v8);
   }
 }
 
@@ -238,10 +238,10 @@ UnityEngine_GameObject_o *HeelPortraitDetailDialogComponent__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5932849 & 1) == 0 )
+  if ( (byte_596A949 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5932849 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_596A949 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -250,6 +250,6 @@ UnityEngine_GameObject_o *HeelPortraitDetailDialogComponent__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }

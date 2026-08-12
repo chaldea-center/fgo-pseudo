@@ -10,16 +10,16 @@ System_String_o *UILineInput__GetText(UILineInput_o *this, const MethodInfo *met
   UIInput_o *mInput; // x0
   System_String_o *value; // x19
 
-  if ( (byte_5939F93 & 1) == 0 )
+  if ( (byte_5972167 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_1/*""*/);
-    byte_5939F93 = 1;
+    sub_2213A60(&StringLiteral_1/*""*/);
+    byte_5972167 = 1;
   }
   if ( !UILineInput__Init(this, method) )
     return (System_String_o *)StringLiteral_1/*""*/;
   mInput = this->fields.mInput;
   if ( !mInput )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   value = UIInput__get_value(mInput, 0);
   if ( System_String__IsNullOrEmpty(value, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -45,11 +45,11 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
   __int64 v15; // x1
   bool v16; // w19
 
-  if ( (byte_5939F91 & 1) == 0 )
+  if ( (byte_5972165 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939F91 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5972165 = 1;
   }
   p_mInput = &this->fields.mInput;
   mInput = (UnityEngine_Object_o *)this->fields.mInput;
@@ -59,9 +59,9 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
     return 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   this->fields.mInput = (struct UIInput_o *)Component_object;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.mInput,
     (int32_t)Component_object,
     v6,
@@ -77,7 +77,7 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
   if ( ((unsigned __int8)label & 1) == 0 )
     return 0;
   if ( !*p_mInput || (label = (*p_mInput)->fields.label) == 0 )
-    sub_21FFECC(label, v15);
+    sub_2213CDC(label, v15);
   v16 = 1;
   UILabel__set_maxLineCount(label, 1, 0);
   return v16;
@@ -90,14 +90,14 @@ void UILineInput__SetInputEnable(UILineInput_o *this, bool flag, const MethodInf
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_5939F92 & 1) == 0 )
+  if ( (byte_5972166 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_5939F92 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_5972166 = 1;
   }
   Component_object = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                 (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
     goto LABEL_8;
   UnityEngine_Collider__set_enabled(Component_object, flag, 0);
@@ -110,6 +110,6 @@ void UILineInput__SetInputEnable(UILineInput_o *this, bool flag, const MethodInf
       return;
     }
 LABEL_8:
-    sub_21FFECC(Component_object, v6);
+    sub_2213CDC(Component_object, v6);
   }
 }

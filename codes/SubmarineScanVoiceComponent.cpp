@@ -39,15 +39,15 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
   struct System_String_array *v33; // x8
   struct System_String_o *v34; // x1
 
-  if ( (byte_5934DE6 & 1) == 0 )
+  if ( (byte_596CF15 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_4588/*"ChrVoice_"*/);
-    byte_5934DE6 = 1;
+    sub_2213A60(&StringLiteral_4596/*"ChrVoice_"*/);
+    byte_596CF15 = 1;
   }
   this->fields.assetName = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetName, 0, v2, v3, v4, v5, v6, v7);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetName, 0, v2, v3, v4, v5, v6, v7);
   this->fields.vcName = 0;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.vcName, 0, v9, v10, v11, v12, v13, v14);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.vcName, 0, v9, v10, v11, v12, v13, v14);
   p_svtId = &this->fields.svtId;
   if ( this->fields.svtId )
   {
@@ -57,22 +57,22 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
     if ( !vcNameList->max_length )
       return;
     v18 = System_Int32__ToString((int32_t)p_svtId, 0);
-    v19 = System_String__Concat_75438412((System_String_o *)StringLiteral_4588/*"ChrVoice_"*/, v18, 0);
+    v19 = System_String__Concat_75651716((System_String_o *)StringLiteral_4596/*"ChrVoice_"*/, v18, 0);
     this->fields.assetName = v19;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.assetName, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.assetName, (int32_t)v19, v20, v21, v22, v23, v24, v25);
     v26 = this->fields.vcNameList;
     if ( !v26
-      || (p_svtId = (int32_t *)UnityEngine_Random__Range_83187376(0, v26->max_length, 0),
+      || (p_svtId = (int32_t *)UnityEngine_Random__Range_83400680(0, v26->max_length, 0),
           (v33 = this->fields.vcNameList) == 0) )
     {
 LABEL_11:
-      sub_21FFECC(p_svtId, v15);
+      sub_2213CDC(p_svtId, v15);
     }
     if ( (unsigned int)p_svtId >= LODWORD(v33->max_length) )
-      sub_21FFED4(p_svtId);
+      sub_2213CE4(p_svtId);
     v34 = v33->m_Items[(int)p_svtId];
     this->fields.vcName = v34;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.vcName, (int32_t)v34, v27, v28, v29, v30, v31, v32);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.vcName, (int32_t)v34, v27, v28, v29, v30, v31, v32);
   }
 }
 
@@ -101,13 +101,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
   bool v16; // w6
   bool v17; // w7
 
-  if ( (byte_5934DE7 & 1) == 0 )
+  if ( (byte_596CF16 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&SeManager_TypeInfo);
-    sub_21FFC50(&SoundManager_TypeInfo);
-    sub_21FFC50(&Method_SubmarineScanVoiceComponent_StopVoice__);
-    byte_5934DE7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&SeManager_TypeInfo);
+    sub_2213A60(&SoundManager_TypeInfo);
+    sub_2213A60(&Method_SubmarineScanVoiceComponent_StopVoice__);
+    byte_596CF16 = 1;
   }
   assetName = this->fields.assetName;
   if ( assetName )
@@ -122,13 +122,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
         v6 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v6->static_fields->DEFAULT_VOLUME;
-      v8 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(v8, (Il2CppObject *)this, Method_SubmarineScanVoiceComponent_StopVoice__, 0);
       if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v9, v10);
-      v11 = SoundManager__playVoice_48465348(assetName, vcName, DEFAULT_VOLUME, v8, 0, 0);
+      v11 = SoundManager__playVoice_48511684(assetName, vcName, DEFAULT_VOLUME, v8, 0, 0);
       this->fields.sePlayer = v11;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.sePlayer,
         (int32_t)v11,
         v12,
@@ -156,10 +156,10 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
   bool v12; // w6
   bool v13; // w7
 
-  if ( (byte_5934DE8 & 1) == 0 )
+  if ( (byte_596CF17 & 1) == 0 )
   {
-    sub_21FFC50(&SoundManager_TypeInfo);
-    byte_5934DE8 = 1;
+    sub_2213A60(&SoundManager_TypeInfo);
+    byte_596CF17 = 1;
   }
   p_sePlayer = (MissionNaviTransitionBoardItem_o *)&this->fields.sePlayer;
   if ( this->fields.sePlayer )
@@ -171,6 +171,6 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method, v2);
     SoundManager__stopVoice(v6, vcName, 0.0, 0);
     p_sePlayer->klass = 0;
-    sub_21FFBF4(p_sePlayer, 0, v8, v9, v10, v11, v12, v13);
+    sub_2213A04(p_sePlayer, 0, v8, v9, v10, v11, v12, v13);
   }
 }

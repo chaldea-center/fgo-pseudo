@@ -30,29 +30,29 @@ void UILocalize__OnLocalize(UILocalize_o *this, const MethodInfo *method)
   System_String_o *v17; // x1
   const MethodInfo *v18; // x2
 
-  if ( (byte_593CFD1 & 1) == 0 )
+  if ( (byte_59752A8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UILabel___);
-    sub_21FFC50(&Localization_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593CFD1 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UILabel___);
+    sub_2213A60(&Localization_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59752A8 = 1;
   }
   p_key = &this->fields.key;
   if ( System_String__IsNullOrEmpty(this->fields.key, 0) )
   {
     Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                                                 (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UILabel___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
     v6 = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
     if ( v6 )
     {
       if ( !Component_object )
-        sub_21FFECC(v6, v7);
+        sub_2213CDC(v6, v7);
       monitor = (System_String_o *)Component_object[17].monitor;
       *p_key = monitor;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.key, (int32_t)monitor, v8, v9, v10, v11, v12, v13);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.key, (int32_t)monitor, v8, v9, v10, v11, v12, v13);
     }
   }
   if ( !System_String__IsNullOrEmpty(*p_key, 0) )
@@ -100,22 +100,22 @@ void UILocalize__set_value(UILocalize_o *this, System_String_o *value, const Met
   __int64 v27; // x1
   UnityEngine_Object_o *v28; // x23
 
-  if ( (byte_593CFD0 & 1) == 0 )
+  if ( (byte_59752A7 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_21FFC50(&Method_NGUITools_FindInParents_UIButton___);
-    sub_21FFC50(&Method_NGUITools_FindInParents_UIInput___);
-    sub_21FFC50(&NGUITools_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&UILabel_TypeInfo);
-    sub_21FFC50(&UISprite_TypeInfo);
-    byte_593CFD0 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_2213A60(&Method_NGUITools_FindInParents_UIButton___);
+    sub_2213A60(&Method_NGUITools_FindInParents_UIInput___);
+    sub_2213A60(&NGUITools_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&UILabel_TypeInfo);
+    sub_2213A60(&UISprite_TypeInfo);
+    byte_59752A7 = 1;
   }
   if ( !System_String__IsNullOrEmpty(value, 0) )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( Component_object )
     {
       klass = Component_object->klass;
@@ -152,7 +152,7 @@ LABEL_17:
               j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v15);
             v18 = (UnityEngine_Object_o *)NGUITools__FindInParents_object_(
                                             gameObject,
-                                            (const MethodInfo_38BD680 *)Method_NGUITools_FindInParents_UIInput___);
+                                            (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIInput___);
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17);
             v13 = UnityEngine_Object__op_Inequality(v18, 0, 0);
@@ -190,7 +190,7 @@ LABEL_46:
               j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v21);
             v24 = (UnityEngine_Object_o *)NGUITools__FindInParents_object_(
                                             v22,
-                                            (const MethodInfo_38BD680 *)Method_NGUITools_FindInParents_UIButton___);
+                                            (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIButton___);
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
             v13 = UnityEngine_Object__op_Inequality(v24, 0, 0);
@@ -213,7 +213,7 @@ LABEL_46:
           }
         }
 LABEL_47:
-        sub_21FFECC(v13, v14);
+        sub_2213CDC(v13, v14);
       }
     }
     else

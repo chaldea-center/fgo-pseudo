@@ -9,20 +9,20 @@ void EventInfoPassportListViewManager___ctor(EventInfoPassportListViewManager_o 
   bool v9; // w6
   bool v10; // w7
 
-  if ( (byte_59399CD & 1) == 0 )
+  if ( (byte_5971D43 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoPassport__TypeInfo);
-    byte_59399CD = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoPassport__TypeInfo);
+    byte_5971D43 = 1;
   }
   v3 = System_Collections_Generic_List_EventInfoPassport__TypeInfo;
   this->fields.requiredPassportCount = 10;
-  v4 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(v3);
+  v4 = (System_Collections_Generic_List_object__o *)sub_2213CCC(v3);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
   this->fields.passportList = (struct System_Collections_Generic_List_EventInfoPassport__o *)v4;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&this->fields.passportList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.passportList, (int32_t)v4, v5, v6, v7, v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -34,10 +34,10 @@ void EventInfoPassportListViewManager__Awake(EventInfoPassportListViewManager_o 
   UnityEngine_Behaviour_o *transform; // x0
   UnityEngine_Object_o *scrollView; // x20
 
-  if ( (byte_59399C3 & 1) == 0 )
+  if ( (byte_5971D39 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399C3 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D39 = 1;
   }
   grid = (UnityEngine_Object_o *)this->fields.grid;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -69,7 +69,7 @@ void EventInfoPassportListViewManager__Awake(EventInfoPassportListViewManager_o 
       }
     }
 LABEL_15:
-    sub_21FFECC(transform, v4);
+    sub_2213CDC(transform, v4);
   }
 }
 
@@ -169,30 +169,30 @@ void EventInfoPassportListViewManager__CreateList(
   System_Collections_Generic_List_Enumerator_object__o v90; // [xsp+30h] [xbp-80h] BYREF
 
   eventIda = eventId;
-  if ( (byte_59399C4 & 1) == 0 )
+  if ( (byte_5971D3A & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_EventJobPassportMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
-    sub_21FFC50(&EventJobPassportEntity_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__Contains__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__RemoveAll__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventJobPassportEntity__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_EventInfoPassport__TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&System_Predicate_EventInfoPassport__TypeInfo);
-    sub_21FFC50(&Method_EventInfoPassportListViewManager___c__CreateList_b__10_0__);
-    sub_21FFC50(&Method_EventInfoPassportListViewManager___c__DisplayClass10_0__CreateList_b__1__);
-    sub_21FFC50(&EventInfoPassportListViewManager___c__DisplayClass10_0_TypeInfo);
-    sub_21FFC50(&EventInfoPassportListViewManager___c_TypeInfo);
-    byte_59399C4 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_EventJobPassportMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
+    sub_2213A60(&EventJobPassportEntity_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__Contains__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__RemoveAll__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventJobPassportEntity__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_EventInfoPassport__TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&System_Predicate_EventInfoPassport__TypeInfo);
+    sub_2213A60(&Method_EventInfoPassportListViewManager___c__CreateList_b__10_0__);
+    sub_2213A60(&Method_EventInfoPassportListViewManager___c__DisplayClass10_0__CreateList_b__1__);
+    sub_2213A60(&EventInfoPassportListViewManager___c__DisplayClass10_0_TypeInfo);
+    sub_2213A60(&EventInfoPassportListViewManager___c_TypeInfo);
+    byte_5971D3A = 1;
   }
   Master_object = (EventJobPassportMaster_o *)EventInfoPassportListViewManager___c_TypeInfo;
   passportList = this->fields.passportList;
@@ -212,11 +212,11 @@ void EventInfoPassportListViewManager__CreateList(
       list = EventInfoPassportListViewManager___c_TypeInfo->static_fields;
     }
     v8 = (Il2CppObject *)list->__9;
-    _9__10_0 = (System_Predicate_object__o *)sub_21FFEBC(System_Predicate_EventInfoPassport__TypeInfo);
+    _9__10_0 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_EventInfoPassport__TypeInfo);
     System_Predicate_object____ctor(_9__10_0, v8, Method_EventInfoPassportListViewManager___c__CreateList_b__10_0__, 0);
     static_fields = EventInfoPassportListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Predicate_EventInfoPassport__o *)_9__10_0;
-    sub_21FFBF4(
+    sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__10_0,
       (int32_t)_9__10_0,
       v10,
@@ -231,14 +231,14 @@ void EventInfoPassportListViewManager__CreateList(
   System_Collections_Generic_List_object___RemoveAll(
     (System_Collections_Generic_List_object__o *)passportList,
     (System_Predicate_T__o *)_9__10_0,
-    (const MethodInfo_4451158 *)Method_System_Collections_Generic_List_EventInfoPassport__RemoveAll__);
-  v16 = (System_Collections_Generic_List_object__o *)sub_21FFEBC(System_Collections_Generic_List_EventInfoPassport__TypeInfo);
+    (const MethodInfo_4485290 *)Method_System_Collections_Generic_List_EventInfoPassport__RemoveAll__);
+  v16 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoPassport__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_444F2C4 *)Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoPassport___ctor__);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v17);
-  Master_object = (EventJobPassportMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_EventJobPassportMaster___);
+  Master_object = (EventJobPassportMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventJobPassportMaster___);
   if ( !Master_object )
     goto LABEL_63;
   Master_object = (EventJobPassportMaster_o *)EventJobPassportMaster__GetDisplayPassportEntityList(
@@ -258,20 +258,20 @@ void EventInfoPassportListViewManager__CreateList(
     v87 = v16;
     while ( 1 )
     {
-      v21 = sub_21FFEBC(EventInfoPassportListViewManager___c__DisplayClass10_0_TypeInfo);
+      v21 = sub_2213CCC(EventInfoPassportListViewManager___c__DisplayClass10_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v21, 0);
       if ( !v21 )
         goto LABEL_63;
       *(_QWORD *)(v21 + 24) = this;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 24), (int32_t)this, v22, v23, v24, v25, v26, v27);
-      v28 = (EventJobPassportEntity_o *)sub_21FFEBC(EventJobPassportEntity_TypeInfo);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 24), (int32_t)this, v22, v23, v24, v25, v26, v27);
+      v28 = (EventJobPassportEntity_o *)sub_2213CCC(EventJobPassportEntity_TypeInfo);
       EventJobPassportEntity___ctor(v28, 0);
       if ( v20 >= v18->fields._size )
         break;
       Master_object = (EventJobPassportMaster_o *)System_Collections_Generic_List_object___get_Item(
                                                     v18,
                                                     v20,
-                                                    (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_EventJobPassportEntity__get_Item__);
+                                                    (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventJobPassportEntity__get_Item__);
       if ( !Master_object )
         goto LABEL_63;
       v31 = (EventJobPassportEntity_o *)Master_object;
@@ -281,7 +281,7 @@ void EventInfoPassportListViewManager__CreateList(
                    v30);
       *(_QWORD *)(v21 + 16) = Passport;
       v33 = (EventInfoPassport_o **)(v21 + 16);
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 16), (int32_t)Passport, v34, v35, v36, v37, v38, v39);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 16), (int32_t)Passport, v34, v35, v36, v37, v38, v39);
       v41 = *(UnityEngine_Object_o **)(v21 + 16);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40);
@@ -289,7 +289,7 @@ void EventInfoPassportListViewManager__CreateList(
       {
         v44 = EventInfoPassportListViewManager__CreatePassport(this, v20, v31, 0, v43);
         *v33 = v44;
-        sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v21 + 16), (int32_t)v44, v45, v46, v47, v48, v49, v50);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 16), (int32_t)v44, v45, v46, v47, v48, v49, v50);
         v52 = (UnityEngine_Object_o *)*v33;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v51);
@@ -310,14 +310,14 @@ void EventInfoPassportListViewManager__CreateList(
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)Master_object,
               *(Il2CppObject **)&eventId,
-              *(const MethodInfo_444FB2C **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
           }
           else
           {
             v62 = v59 + 8 * MasterName_k__BackingField_low;
             LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
             *(_QWORD *)(v62 + 32) = *(_QWORD *)&eventId;
-            sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v62 + 32), eventId, v53, v54, v55, v56, v57, v58);
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v62 + 32), eventId, v53, v54, v55, v56, v57, v58);
           }
         }
       }
@@ -335,7 +335,7 @@ void EventInfoPassportListViewManager__CreateList(
           goto LABEL_63;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
         v72 = *(EventInfoPassport_o **)(v21 + 16);
-        v73 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+        v73 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
           v73,
           (Il2CppObject *)v21,
@@ -368,14 +368,14 @@ LABEL_46:
           System_Collections_Generic_List_object___AddWithResize(
             v16,
             *(Il2CppObject **)&eventId,
-            *(const MethodInfo_444FB2C **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
         }
         else
         {
           v77 = &items->obj.klass + size;
           v16->fields._size = size + 1;
           v77[4] = *(Il2CppClass **)&eventId;
-          sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v77 + 4), eventId, v63, v64, v65, v66, v67, v68);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v77 + 4), eventId, v63, v64, v65, v66, v67, v68);
         }
       }
       if ( requiredPassportCount == ++v20 )
@@ -402,13 +402,13 @@ LABEL_50:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v89,
     (System_Collections_Generic_List_object__o *)Master_object,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
   v90 = v89;
   v89.fields._list = 0;
   *(_QWORD *)&v89.fields._index = &v90;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v90,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
   {
     current = v90.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -417,29 +417,29 @@ LABEL_50:
     if ( v80 )
     {
       if ( !v16 )
-        sub_21FFECC(v80, v81);
+        sub_2213CDC(v80, v81);
       v82 = System_Collections_Generic_List_object___Contains(
               v16,
               current,
-              (const MethodInfo_444FEC8 *)Method_System_Collections_Generic_List_EventInfoPassport__Contains__);
+              (const MethodInfo_4484000 *)Method_System_Collections_Generic_List_EventInfoPassport__Contains__);
       if ( !v82 )
       {
         if ( !current )
-          sub_21FFECC(v82, v83);
+          sub_2213CDC(v82, v83);
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)current, 0);
         if ( !gameObject )
-          sub_21FFECC(0, v85);
+          sub_2213CDC(0, v85);
         UnityEngine_GameObject__SetActive(gameObject, 0, 0);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v90,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
   Master_object = (EventJobPassportMaster_o *)this->fields.grid;
   if ( !Master_object )
 LABEL_63:
-    sub_21FFECC(Master_object, *(_QWORD *)&eventId);
+    sub_2213CDC(Master_object, *(_QWORD *)&eventId);
   ((void (__fastcall *)(EventJobPassportMaster_o *, const MethodInfo *))Master_object->klass->vtable._8_ReplacedForThread.methodPtr)(
     Master_object,
     Master_object->klass->vtable._8_ReplacedForThread.method);
@@ -481,22 +481,22 @@ EventInfoPassport_o *EventInfoPassportListViewManager__CreatePassport(
   System_Action_o *v33; // x22
   const MethodInfo *v34; // x4
 
-  if ( (byte_59399C7 & 1) == 0 )
+  if ( (byte_5971D3D & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
-    sub_21FFC50(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&Method_EventInfoPassportListViewManager___c__DisplayClass14_0__CreatePassport_b__0__);
-    sub_21FFC50(&EventInfoPassportListViewManager___c__DisplayClass14_0_TypeInfo);
-    byte_59399C7 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
+    sub_2213A60(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&Method_EventInfoPassportListViewManager___c__DisplayClass14_0__CreatePassport_b__0__);
+    sub_2213A60(&EventInfoPassportListViewManager___c__DisplayClass14_0_TypeInfo);
+    byte_5971D3D = 1;
   }
-  v9 = sub_21FFEBC(EventInfoPassportListViewManager___c__DisplayClass14_0_TypeInfo);
+  v9 = sub_2213CCC(EventInfoPassportListViewManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_16;
   *(_QWORD *)(v9 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   result = this->fields.passportPrefab;
   if ( !result )
     goto LABEL_16;
@@ -505,7 +505,7 @@ EventInfoPassport_o *EventInfoPassportListViewManager__CreatePassport(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
   v20 = UnityEngine_Object__Instantiate_object_(
           gameObject,
-          (const MethodInfo_38C0004 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   v21 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v20, 0, 0);
   result = 0;
   if ( !v21 )
@@ -514,9 +514,9 @@ EventInfoPassport_o *EventInfoPassportListViewManager__CreatePassport(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v20,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPassport___);
       *(_QWORD *)(v9 + 24) = Component_object;
-      sub_21FFBF4(
+      sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)(v9 + 24),
         (int32_t)Component_object,
         v23,
@@ -532,7 +532,7 @@ EventInfoPassport_o *EventInfoPassportListViewManager__CreatePassport(
         return *(EventInfoPassport_o **)(v9 + 24);
       EventInfoPassportListViewManager__SetupPassportTransform(this, *(EventInfoPassport_o **)(v9 + 24), index, v31);
       v32 = *(EventInfoPassport_o **)(v9 + 24);
-      v33 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+      v33 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(
         v33,
         (Il2CppObject *)v9,
@@ -545,7 +545,7 @@ EventInfoPassport_o *EventInfoPassportListViewManager__CreatePassport(
       }
     }
 LABEL_16:
-    sub_21FFECC(result, v11);
+    sub_2213CDC(result, v11);
   }
   return result;
 }
@@ -564,26 +564,26 @@ EventInfoPassport_o *EventInfoPassportListViewManager__FindPassport(
   __int64 v9; // x1
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_59399C8 & 1) == 0 )
+  if ( (byte_5971D3E & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399C8 = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D3E = 1;
   }
   passportList = this->fields.passportList;
   memset(&v11, 0, sizeof(v11));
   if ( !passportList )
-    sub_21FFECC(0, *(_QWORD *)&jobId);
+    sub_2213CDC(0, *(_QWORD *)&jobId);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)passportList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v11,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
   {
     current = v11.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -592,7 +592,7 @@ EventInfoPassport_o *EventInfoPassportListViewManager__FindPassport(
     if ( v8 )
     {
       if ( !current )
-        sub_21FFECC(v8, v9);
+        sub_2213CDC(v8, v9);
       if ( *(int *)((char *)&dword_78 + (_QWORD)current) == jobId )
         goto LABEL_13;
     }
@@ -601,7 +601,7 @@ EventInfoPassport_o *EventInfoPassportListViewManager__FindPassport(
 LABEL_13:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
   return (EventInfoPassport_o *)current;
 }
 
@@ -626,14 +626,14 @@ void EventInfoPassportListViewManager__LockInputForDialogClosing(
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_59399CC & 1) == 0 )
+  if ( (byte_5971D42 & 1) == 0 )
   {
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399CC = 1;
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D42 = 1;
   }
   v3 = UnityEngine_Object_TypeInfo;
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
@@ -672,17 +672,17 @@ void EventInfoPassportListViewManager__LockInputForDialogClosing(
   passportList = (UnityEngine_Behaviour_o *)this->fields.passportList;
   if ( !passportList )
 LABEL_33:
-    sub_21FFECC(passportList, v6);
+    sub_2213CDC(passportList, v6);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)passportList,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoPassport__GetEnumerator__);
   v17 = v16;
   v16.fields._list = 0;
   *(_QWORD *)&v16.fields._index = &v17;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__MoveNext__) )
   {
     current = v17.fields._current;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -691,13 +691,13 @@ LABEL_33:
     if ( v12 )
     {
       if ( !current )
-        sub_21FFECC(v12, v13);
+        sub_2213CDC(v12, v13);
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)current, 0, 0);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoPassport__Dispose__);
   maximController = (UnityEngine_Object_o *)this->fields.maximController;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
@@ -726,10 +726,10 @@ void EventInfoPassportListViewManager__OnClickPassport(
   const MethodInfo *v6; // x2
 
   v4 = this;
-  if ( (byte_59399CB & 1) == 0 )
+  if ( (byte_5971D41 & 1) == 0 )
   {
-    this = (EventInfoPassportListViewManager_o *)sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399CB = 1;
+    this = (EventInfoPassportListViewManager_o *)sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D41 = 1;
   }
   if ( !v4->fields.isInputLocked )
   {
@@ -750,7 +750,7 @@ void EventInfoPassportListViewManager__OnClickPassport(
         return;
       }
     }
-    sub_21FFECC(this, passport);
+    sub_2213CDC(this, passport);
   }
 }
 
@@ -765,19 +765,19 @@ void EventInfoPassportListViewManager__OnScrollBarDragFinished(
 
   scrollView = this->fields.scrollView;
   v3 = this;
-  if ( !byte_5931940 )
+  if ( !byte_5969AE0 )
   {
-    this = (EventInfoPassportListViewManager_o *)sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-    byte_5931940 = 1;
+    this = (EventInfoPassportListViewManager_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
   if ( !scrollView
     || (UIScrollView__set_currentMomentum(scrollView, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0),
         (this = (EventInfoPassportListViewManager_o *)v3->fields.scrollView) == 0)
-    || (UIScrollView__RestrictWithinBounds_56088144((UIScrollView_o *)this, 1, 0, 1, 0),
+    || (UIScrollView__RestrictWithinBounds_56292800((UIScrollView_o *)this, 1, 0, 1, 0),
         EventInfoPassportListViewManager__ResetHorizontalOffset(v3, v4),
         (this = (EventInfoPassportListViewManager_o *)v3->fields.scrollView) == 0) )
   {
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   }
   ((void (__fastcall *)(EventInfoPassportListViewManager_o *, __int64, Il2CppClass *))this->klass[1]._1.element_class)(
     this,
@@ -800,11 +800,11 @@ void EventInfoPassportListViewManager__RefreshScrollView(
   bool v10; // w6
   bool v11; // w7
 
-  if ( (byte_59399C5 & 1) == 0 )
+  if ( (byte_5971D3B & 1) == 0 )
   {
-    sub_21FFC50(&Method_EventInfoPassportListViewManager_OnScrollBarDragFinished__);
-    sub_21FFC50(&UIProgressBar_OnDragFinished_TypeInfo);
-    byte_59399C5 = 1;
+    sub_2213A60(&Method_EventInfoPassportListViewManager_OnScrollBarDragFinished__);
+    sub_2213A60(&UIProgressBar_OnDragFinished_TypeInfo);
+    byte_5971D3B = 1;
   }
   scrollView = this->fields.scrollView;
   if ( !scrollView
@@ -814,7 +814,7 @@ void EventInfoPassportListViewManager__RefreshScrollView(
           1,
           scrollView->klass->vtable._8_UpdateScrollbars.method),
         scrollBar = this->fields.scrollBar,
-        v5 = (UIProgressBar_OnDragFinished_o *)sub_21FFEBC(UIProgressBar_OnDragFinished_TypeInfo),
+        v5 = (UIProgressBar_OnDragFinished_o *)sub_2213CCC(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(
           v5,
           (Il2CppObject *)this,
@@ -822,10 +822,10 @@ void EventInfoPassportListViewManager__RefreshScrollView(
           0),
         !scrollBar) )
   {
-    sub_21FFECC(scrollView, method);
+    sub_2213CDC(scrollView, method);
   }
   scrollBar->fields.onDragFinished = v5;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&scrollBar->fields.onDragFinished,
     (int32_t)v5,
     v6,
@@ -845,14 +845,15 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
   UnityEngine_Transform_o *v4; // x20
   __int64 v5; // x1
   Il2CppObject *Component_object; // x19
-  UnityEngine_Vector2_o v7; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector2_o v8; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_59399C6 & 1) == 0 )
+  if ( (byte_5971D3C & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399C6 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D3C = 1;
   }
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView )
@@ -862,14 +863,16 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
     goto LABEL_11;
   v4 = (UnityEngine_Transform_o *)scrollView;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
-  localPosition.fields.x = this->fields.initialScrollViewLocalPosition.fields.x;
-  UnityEngine_Transform__set_localPosition(v4, localPosition, 0);
+  v9.fields.y = localPosition.fields.y;
+  v9.fields.z = localPosition.fields.z;
+  v9.fields.x = this->fields.initialScrollViewLocalPosition.fields.x;
+  UnityEngine_Transform__set_localPosition(v4, v9, 0);
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_11;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        scrollView,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   scrollView = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(
@@ -880,13 +883,13 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
   {
     if ( Component_object )
     {
-      v7.fields.y = *(float *)&Component_object[21].klass;
-      v7.fields.x = 0.0;
-      UIPanel__set_clipOffset((UIPanel_o *)Component_object, v7, 0);
+      v8.fields.y = *(float *)&Component_object[21].klass;
+      v8.fields.x = 0.0;
+      UIPanel__set_clipOffset((UIPanel_o *)Component_object, v8, 0);
       return;
     }
 LABEL_11:
-    sub_21FFECC(scrollView, method);
+    sub_2213CDC(scrollView, method);
   }
 }
 
@@ -910,12 +913,12 @@ void EventInfoPassportListViewManager__SetupDragScrollView(
   bool v16; // w7
   struct UIScrollView_o *v17; // x1
 
-  if ( (byte_59399CA & 1) == 0 )
+  if ( (byte_5971D40 & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399CA = 1;
+    sub_2213A60(&Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D40 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, go);
@@ -931,7 +934,7 @@ void EventInfoPassportListViewManager__SetupDragScrollView(
         goto LABEL_17;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            go,
-                           (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
+                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
       v7 = (Il2CppObject *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -939,15 +942,15 @@ void EventInfoPassportListViewManager__SetupDragScrollView(
       {
         v7 = UnityEngine_GameObject__AddComponent_object_(
                go,
-               (const MethodInfo_38839E8 *)Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
+               (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
         Component_object = v7;
       }
       if ( !Component_object )
 LABEL_17:
-        sub_21FFECC(v7, v8);
+        sub_2213CDC(v7, v8);
       v17 = this->fields.scrollView;
       Component_object[2].klass = (Il2CppClass *)v17;
-      sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&Component_object[2], (int32_t)v17, v11, v12, v13, v14, v15, v16);
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&Component_object[2], (int32_t)v17, v11, v12, v13, v14, v15, v16);
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 1, 0);
     }
   }
@@ -969,10 +972,10 @@ void EventInfoPassportListViewManager__SetupPassportTransform(
   UnityEngine_Transform_o *v13; // x22
   const MethodInfo *v14; // x2
 
-  if ( (byte_59399C9 & 1) == 0 )
+  if ( (byte_5971D3F & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399C9 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D3F = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, passport);
@@ -995,37 +998,37 @@ void EventInfoPassportListViewManager__SetupPassportTransform(
     UnityEngine_Transform__set_parent(v10, (UnityEngine_Transform_o *)gameObject, 0);
     gameObject = (__int64)UnityEngine_GameObject__get_transform(v9, 0);
     v11 = (UnityEngine_Transform_o *)gameObject;
-    if ( !byte_5931940 )
+    if ( !byte_5969AE0 )
     {
-      gameObject = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931940 = 1;
+      gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE0 = 1;
     }
     if ( !v11 )
       goto LABEL_21;
     UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     gameObject = (__int64)UnityEngine_GameObject__get_transform(v9, 0);
     v12 = (UnityEngine_Transform_o *)gameObject;
-    if ( !byte_5931946 )
+    if ( !byte_5969AE6 )
     {
-      gameObject = sub_21FFC50(&UnityEngine_Quaternion_TypeInfo);
-      byte_5931946 = 1;
+      gameObject = sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
+      byte_5969AE6 = 1;
     }
     if ( !v12 )
       goto LABEL_21;
     UnityEngine_Transform__set_localRotation(v12, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0);
     gameObject = (__int64)UnityEngine_GameObject__get_transform(v9, 0);
     v13 = (UnityEngine_Transform_o *)gameObject;
-    if ( !byte_5931945 )
+    if ( !byte_5969AE5 )
     {
-      gameObject = sub_21FFC50(&UnityEngine_Vector3_TypeInfo);
-      byte_5931945 = 1;
+      gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      byte_5969AE5 = 1;
     }
     if ( !v13
       || (UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (gameObject = (__int64)UnityEngine_GameObject__get_transform(v9, 0)) == 0) )
     {
 LABEL_21:
-      sub_21FFECC(gameObject, v8);
+      sub_2213CDC(gameObject, v8);
     }
     UnityEngine_Transform__SetSiblingIndex((UnityEngine_Transform_o *)gameObject, index, 0);
     EventInfoPassportListViewManager__SetupDragScrollView(this, v9, v14);
@@ -1043,15 +1046,15 @@ void EventInfoPassportListViewManager___c___cctor(const MethodInfo *method)
   bool v6; // w6
   bool v7; // w7
 
-  if ( (byte_59399CE & 1) == 0 )
+  if ( (byte_5971D44 & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoPassportListViewManager___c_TypeInfo);
-    byte_59399CE = 1;
+    sub_2213A60(&EventInfoPassportListViewManager___c_TypeInfo);
+    byte_5971D44 = 1;
   }
-  v1 = (Il2CppObject *)sub_21FFEBC(EventInfoPassportListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_2213CCC(EventInfoPassportListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoPassportListViewManager___c_TypeInfo->static_fields->__9 = (struct EventInfoPassportListViewManager___c_o *)v1;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoPassportListViewManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1076,10 +1079,10 @@ bool EventInfoPassportListViewManager___c___CreateList_b__10_0(
         EventInfoPassport_o *passport,
         const MethodInfo *method)
 {
-  if ( (byte_59399CF & 1) == 0 )
+  if ( (byte_5971D45 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_59399CF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971D45 = 1;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, passport);
@@ -1102,7 +1105,7 @@ void EventInfoPassportListViewManager___c__DisplayClass10_0___CreateList_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   EventInfoPassportListViewManager__OnClickPassport(this->fields.__4__this, this->fields.passport, v2);
 }
 
@@ -1122,6 +1125,6 @@ void EventInfoPassportListViewManager___c__DisplayClass14_0___CreatePassport_b__
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   EventInfoPassportListViewManager__OnClickPassport(this->fields.__4__this, this->fields.passport, v2);
 }

@@ -30,17 +30,17 @@ void GalleryFullScreenPanel__Close(GalleryFullScreenPanel_o *this, const MethodI
   __int64 v8; // x1
   __int64 v9; // x2
 
-  if ( (byte_5933459 & 1) == 0 )
+  if ( (byte_596B561 & 1) == 0 )
   {
-    sub_21FFC50(&BgmManager_TypeInfo);
-    sub_21FFC50(&Method_GalleryFullScreenPanel_Close__);
-    sub_21FFC50(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_5933459 = 1;
+    sub_2213A60(&BgmManager_TypeInfo);
+    sub_2213A60(&Method_GalleryFullScreenPanel_Close__);
+    sub_2213A60(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_596B561 = 1;
   }
   v3 = Method_GalleryFullScreenPanel_Close__;
   if ( (*((_BYTE *)Method_GalleryFullScreenPanel_Close__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_21FFC68(Method_GalleryFullScreenPanel_Close__);
-  v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+    v3 = (_QWORD *)sub_2213A78(Method_GalleryFullScreenPanel_Close__);
+  v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   ActionExtensions__Call(this->fields.closeAction, 0);
   galleryFullScreenListViewManager = this->fields.galleryFullScreenListViewManager;
@@ -60,10 +60,10 @@ void GalleryFullScreenPanel__Close(GalleryFullScreenPanel_o *this, const MethodI
   if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v8, v9);
   BgmManager__PauseBgm(0, 0);
-  galleryFullScreenListViewManager = (GalleryFullScreenListViewManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  galleryFullScreenListViewManager = (GalleryFullScreenListViewManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !galleryFullScreenListViewManager )
 LABEL_12:
-    sub_21FFECC(galleryFullScreenListViewManager, v5);
+    sub_2213CDC(galleryFullScreenListViewManager, v5);
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)galleryFullScreenListViewManager, 0);
 }
 
@@ -90,7 +90,7 @@ bool GalleryFullScreenPanel__IsAbleToPinch(GalleryFullScreenPanel_o *this, const
   galleryFullScreenListViewManager = this->fields.galleryFullScreenListViewManager;
   if ( !galleryFullScreenListViewManager )
 LABEL_11:
-    sub_21FFECC(galleryFullScreenListViewManager, method);
+    sub_2213CDC(galleryFullScreenListViewManager, method);
   x = centerItem->fields.basePosition.fields.x;
   if ( x <= v5 )
     v7 = v5 - x;
@@ -104,13 +104,13 @@ void GalleryFullScreenPanel__OnEnable(GalleryFullScreenPanel_o *this, const Meth
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_593345A & 1) == 0 )
+  if ( (byte_596B562 & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_16240/*"Window/UIRoot/IdecatorPanel/CloseButton"*/);
-    byte_593345A = 1;
+    sub_2213A60(&StringLiteral_16272/*"Window/UIRoot/IdecatorPanel/CloseButton"*/);
+    byte_596B562 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_51910300(transform, (System_String_o *)StringLiteral_16240/*"Window/UIRoot/IdecatorPanel/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_51984988(transform, (System_String_o *)StringLiteral_16272/*"Window/UIRoot/IdecatorPanel/CloseButton"*/, 0);
 }
 
 
@@ -189,7 +189,7 @@ LABEL_22:
         goto LABEL_24;
       }
 LABEL_25:
-      sub_21FFECC(galleryFullScreenListViewManager, *(_QWORD *)&dispType);
+      sub_2213CDC(galleryFullScreenListViewManager, *(_QWORD *)&dispType);
     case 0:
       galleryFullScreenListViewManager = (GalleryFullScreenListViewManager_o *)this->fields.dragObjRootPanel;
       if ( galleryFullScreenListViewManager )
@@ -272,28 +272,28 @@ void GalleryFullScreenPanel__Setup(
   System_Action_o *v44; // x24
   const MethodInfo *v45; // x5
 
-  if ( (byte_5933458 & 1) == 0 )
+  if ( (byte_596B560 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_DataManager_GetMaster_GalleryResourceMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_21FFC50(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_21FFC50(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__0__);
-    sub_21FFC50(&GalleryFullScreenPanel___c__DisplayClass11_0_TypeInfo);
-    byte_5933458 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_DataManager_GetMaster_GalleryResourceMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_2213A60(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_2213A60(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__0__);
+    sub_2213A60(&GalleryFullScreenPanel___c__DisplayClass11_0_TypeInfo);
+    byte_596B560 = 1;
   }
-  v13 = sub_21FFEBC(GalleryFullScreenPanel___c__DisplayClass11_0_TypeInfo);
+  v13 = sub_2213CCC(GalleryFullScreenPanel___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_15;
   *(_QWORD *)(v13 + 16) = this;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)this, v16, v17, v18, v19, v20, v21);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 16), (int32_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 32) = endLoadAction;
   *(_DWORD *)(v13 + 24) = selectGalleryId;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)(v13 + 32), (int32_t)endLoadAction, v22, v23, v24, v25, v26, v27);
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_476EDF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 32), (int32_t)endLoadAction, v22, v23, v24, v25, v26, v27);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MissionNotifyManager__StartPause(Instance, 0);
@@ -304,7 +304,7 @@ void GalleryFullScreenPanel__Setup(
   GalleryFullScreenPanel__SetDispType(this, 0, v28);
   this->fields.closeAction = close;
   this->fields.enableChangeDispType = 0;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.closeAction,
     (int32_t)close,
     v29,
@@ -313,7 +313,7 @@ void GalleryFullScreenPanel__Setup(
     v32,
     v33,
     v34);
-  Instance = (MissionNotifyManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
@@ -331,7 +331,7 @@ void GalleryFullScreenPanel__Setup(
     v37);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v38, v39);
-  Instance = (MissionNotifyManager_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_GalleryResourceMaster___);
+  Instance = (MissionNotifyManager_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GalleryResourceMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = (MissionNotifyManager_o *)GalleryResourceMaster__GetEnableGalleryResourceEntityListByGalleryId(
@@ -343,14 +343,14 @@ void GalleryFullScreenPanel__Setup(
   Instance = (MissionNotifyManager_o *)System_Collections_Generic_List_object___get_Item(
                                          (System_Collections_Generic_List_object__o *)Instance,
                                          0,
-                                         (const MethodInfo_444F85C *)Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
+                                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
   if ( !Instance
     || (mNoDispInfos = (int)Instance->fields.mNoDispInfos,
         v41 = this->fields.galleryFullScreenListViewManager,
         v42 = *(_DWORD *)(v13 + 24),
         v43 = System_Action_TypeInfo,
         *(_BYTE *)(v13 + 28) = mNoDispInfos == 2,
-        v44 = (System_Action_o *)sub_21FFEBC(v43),
+        v44 = (System_Action_o *)sub_2213CCC(v43),
         System_Action___ctor(
           v44,
           (Il2CppObject *)v13,
@@ -359,7 +359,7 @@ void GalleryFullScreenPanel__Setup(
         !v41) )
   {
 LABEL_15:
-    sub_21FFECC(Instance, v15);
+    sub_2213CDC(Instance, v15);
   }
   GalleryFullScreenListViewManager__CreateList(v41, galleryIdList, v42, changeListViewAction, v44, v45);
 }
@@ -390,11 +390,11 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__0(
   bool v12; // w7
 
   v3 = this;
-  if ( (byte_593345B & 1) == 0 )
+  if ( (byte_596B563 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    this = (GalleryFullScreenPanel___c__DisplayClass11_0_o *)sub_21FFC50(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__1__);
-    byte_593345B = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    this = (GalleryFullScreenPanel___c__DisplayClass11_0_o *)sub_2213A60(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__1__);
+    byte_596B563 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -403,18 +403,18 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__0(
   _9__1 = v3->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__1__,
       0);
     v3->fields.__9__1 = _9__1;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   if ( !galleryFullScreenListViewManager )
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   GalleryFullScreenListViewManager__LoadAssetCache(galleryFullScreenListViewManager, 0, _9__1, 1, v2);
 }
 
@@ -438,11 +438,11 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__1(
   System_Collections_IEnumerator_o *v14; // x1
 
   v3 = this;
-  if ( (byte_593345C & 1) == 0 )
+  if ( (byte_596B564 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    this = (GalleryFullScreenPanel___c__DisplayClass11_0_o *)sub_21FFC50(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__2__);
-    byte_593345C = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    this = (GalleryFullScreenPanel___c__DisplayClass11_0_o *)sub_2213A60(&Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__2__);
+    byte_596B564 = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)v3->fields.__4__this;
   if ( !_4__this )
@@ -452,20 +452,20 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__1(
   selectGalleryId = v3->fields.selectGalleryId;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_GalleryFullScreenPanel___c__DisplayClass11_0__Setup_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v8, v9, v10, v11, v12, v13);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v8, v9, v10, v11, v12, v13);
   }
   if ( !klass )
 LABEL_8:
-    sub_21FFECC(this, method);
+    sub_2213CDC(this, method);
   v14 = GalleryFullScreenListViewManager__WaitSetDataSelectGallery(klass, selectGalleryId, _9__2, v2);
-  UnityEngine_MonoBehaviour__StartCoroutine_83231452(_4__this, v14, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756(_4__this, v14, 0);
 }
 
 
@@ -486,12 +486,12 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__2(
   const MethodInfo *v13; // x2
   struct GalleryFullScreenPanel_o *v14; // x8
 
-  if ( (byte_593345D & 1) == 0 )
+  if ( (byte_596B565 & 1) == 0 )
   {
-    sub_21FFC50(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_593345D = 1;
+    sub_2213A60(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_596B565 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_476E8C0 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   CommonUI__SetLoadMode(Instance, 0, 0);
@@ -523,7 +523,7 @@ void GalleryFullScreenPanel___c__DisplayClass11_0___Setup_b__2(
     || (Instance = (CommonUI_o *)v14->fields.galleryFullScreenListViewManager) == 0 )
   {
 LABEL_12:
-    sub_21FFECC(Instance, v4);
+    sub_2213CDC(Instance, v4);
   }
   GalleryFullScreenListViewManager__InitObjInLoadRange((GalleryFullScreenListViewManager_o *)Instance, 1, v13);
 }

@@ -2,10 +2,10 @@ void CenterEffectDetailDialog___ctor(CenterEffectDetailDialog_o *this, const Met
 {
   __int64 v2; // x2
 
-  if ( (byte_5931D1A & 1) == 0 )
+  if ( (byte_5969EBA & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_5931D1A = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5969EBA = 1;
   }
   if ( !*(&BaseDialog_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method, v2);
@@ -23,7 +23,7 @@ void CenterEffectDetailDialog__Callback(CenterEffectDetailDialog_o *this, const 
   p_callbackFunc = &this->fields.callbackFunc;
   v3 = callbackFunc;
   *p_callbackFunc = 0;
-  sub_21FFBF4(p_callbackFunc, 0);
+  sub_2213A04(p_callbackFunc, 0);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
 }
@@ -38,17 +38,17 @@ void CenterEffectDetailDialog__Close(
   System_Action_o *v6; // x20
   const MethodInfo *v7; // x2
 
-  if ( (byte_5931D17 & 1) == 0 )
+  if ( (byte_5969EB7 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CenterEffectDetailDialog_EndClose__);
-    byte_5931D17 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CenterEffectDetailDialog_EndClose__);
+    byte_5969EB7 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_21FFBF4(&this->fields.closeCallbackFunc, callback);
+  sub_2213A04(&this->fields.closeCallbackFunc, callback);
   v5 = System_Action_TypeInfo;
   this->fields.state = 4;
-  v6 = (System_Action_o *)sub_21FFEBC(v5);
+  v6 = (System_Action_o *)sub_2213CCC(v5);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_CenterEffectDetailDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
@@ -67,7 +67,7 @@ void CenterEffectDetailDialog__EndClose(CenterEffectDetailDialog_o *this, const 
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_21FFBF4(p_closeCallbackFunc, 0);
+    sub_2213A04(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -86,7 +86,7 @@ void CenterEffectDetailDialog__Init(CenterEffectDetailDialog_o *this, const Meth
 
   itemListViewManager = (ListViewManager_o *)this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_21FFECC(0, method);
+    sub_2213CDC(0, method);
   ListViewManager__DestroyList(itemListViewManager, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, v4);
@@ -99,17 +99,17 @@ void CenterEffectDetailDialog__OnClickCancel(CenterEffectDetailDialog_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_5931D18 & 1) == 0 )
+  if ( (byte_5969EB8 & 1) == 0 )
   {
-    sub_21FFC50(&Method_CenterEffectDetailDialog_OnClickCancel__);
-    byte_5931D18 = 1;
+    sub_2213A60(&Method_CenterEffectDetailDialog_OnClickCancel__);
+    byte_5969EB8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_CenterEffectDetailDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CenterEffectDetailDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_21FFC68();
-    v4 = (System_Reflection_MethodBase_o *)sub_21FFC34(v3, v3[4]);
+      v3 = (_QWORD *)sub_2213A78();
+    v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
     CenterEffectDetailDialog__Callback(this, v5);
@@ -161,50 +161,50 @@ void CenterEffectDetailDialog__Open(
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_5931D16 & 1) == 0 )
+  if ( (byte_5969EB6 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    sub_21FFC50(&Method_CenterEffectDetailDialog_EndOpen__);
-    sub_21FFC50(&Method_DataManager_GetMaster_StageMaster___);
-    sub_21FFC50(&DataManager_TypeInfo);
-    sub_21FFC50(&Method_System_Linq_Enumerable_Distinct_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
-    sub_21FFC50(&Method_System_Linq_Enumerable_ToList_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StageEntity__Dispose__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StageEntity__MoveNext__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_Enumerator_StageEntity__get_Current__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__Add__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_StageEntity__GetEnumerator__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___ctor__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int___ctor___91427360);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_21FFC50(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_21FFC50(&System_Collections_Generic_List_int__TypeInfo);
-    sub_21FFC50(&System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_3444/*"CENTER_EFFECT_DETAIL_DIALOG_TITLE"*/);
-    sub_21FFC50(&StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_21FFC50(&StringLiteral_3443/*"CENTER_EFFECT_DETAIL_DIALOG_MESSAGE"*/);
-    byte_5931D16 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    sub_2213A60(&Method_CenterEffectDetailDialog_EndOpen__);
+    sub_2213A60(&Method_DataManager_GetMaster_StageMaster___);
+    sub_2213A60(&DataManager_TypeInfo);
+    sub_2213A60(&Method_System_Linq_Enumerable_Distinct_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
+    sub_2213A60(&Method_System_Linq_Enumerable_ToList_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StageEntity__Dispose__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StageEntity__MoveNext__);
+    sub_2213A60(&Method_System_Collections_Generic_List_Enumerator_StageEntity__get_Current__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__Add__);
+    sub_2213A60(&Method_System_Collections_Generic_List_StageEntity__GetEnumerator__);
+    sub_2213A60(&Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___ctor__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int___ctor___91653480);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_2213A60(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_2213A60(&System_Collections_Generic_List_int__TypeInfo);
+    sub_2213A60(&System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_3449/*"CENTER_EFFECT_DETAIL_DIALOG_TITLE"*/);
+    sub_2213A60(&StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_2213A60(&StringLiteral_3448/*"CENTER_EFFECT_DETAIL_DIALOG_MESSAGE"*/);
+    byte_5969EB6 = 1;
   }
   *(_QWORD *)&v44.fields._index = 0;
   this->fields.callbackFunc = callback;
   v44.fields._list = 0;
   v44.fields._current = 0;
-  sub_21FFBF4(&this->fields.callbackFunc, callback);
+  sub_2213A04(&this->fields.callbackFunc, callback);
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9, v10);
-  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3444/*"CENTER_EFFECT_DETAIL_DIALOG_TITLE"*/, 0);
+  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3449/*"CENTER_EFFECT_DETAIL_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_34;
   UILabel__set_text(titleLabel, closeBtn, 0);
   titleDetailLabel = this->fields.titleDetailLabel;
-  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3443/*"CENTER_EFFECT_DETAIL_DIALOG_MESSAGE"*/, 0);
+  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3448/*"CENTER_EFFECT_DETAIL_DIALOG_MESSAGE"*/, 0);
   if ( !titleDetailLabel )
     goto LABEL_34;
   UILabel__set_text(titleDetailLabel, closeBtn, 0);
   closeLabel = this->fields.closeLabel;
-  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3823/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  closeBtn = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_34;
   UILabel__set_text(closeLabel, closeBtn, 0);
@@ -213,13 +213,13 @@ void CenterEffectDetailDialog__Open(
     goto LABEL_34;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)closeBtn, 0);
   AndroidBackKeyManager__AddBackBtn(gameObject, 0);
-  v17 = (System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__o *)sub_21FFEBC(System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__TypeInfo);
+  v17 = (System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__o *)sub_2213CCC(System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__TypeInfo);
   System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo____ctor(
     v17,
-    (const MethodInfo_44CF910 *)Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___ctor__);
+    (const MethodInfo_4503A48 *)Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___ctor__);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v18, v19);
-  closeBtn = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3822E50 *)Method_DataManager_GetMaster_StageMaster___);
+  closeBtn = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_StageMaster___);
   if ( !closeBtn )
     goto LABEL_34;
   closeBtn = (System_String_o *)StageMaster__GetEntityListIncludeRemap(
@@ -232,7 +232,7 @@ void CenterEffectDetailDialog__Open(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v43,
     (System_Collections_Generic_List_object__o *)closeBtn,
-    (const MethodInfo_4450604 *)Method_System_Collections_Generic_List_StageEntity__GetEnumerator__);
+    (const MethodInfo_448473C *)Method_System_Collections_Generic_List_StageEntity__GetEnumerator__);
   v44 = v43;
   v43.fields._list = 0;
   *(_QWORD *)&v43.fields._index = &v44;
@@ -240,30 +240,30 @@ void CenterEffectDetailDialog__Open(
   {
     v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v44,
-            (const MethodInfo_40C7F4C *)Method_System_Collections_Generic_List_Enumerator_StageEntity__MoveNext__);
+            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_StageEntity__MoveNext__);
     if ( !v20 )
       break;
     current = v44.fields._current;
     if ( !v44.fields._current )
-      sub_21FFECC(v20, v21);
+      sub_2213CDC(v20, v21);
     FieldPosSkillId = (System_Collections_Generic_IEnumerable_T__o *)StageEntity__GetFieldPosSkillId(
                                                                        (StageEntity_o *)v44.fields._current,
                                                                        0);
-    v24 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
-    System_Collections_Generic_List_int____ctor_71510500(
+    v24 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_71723804(
       v24,
       FieldPosSkillId,
-      (const MethodInfo_44329E4 *)Method_System_Collections_Generic_List_int___ctor___91427360);
+      (const MethodInfo_4466B1C *)Method_System_Collections_Generic_List_int___ctor___91653480);
     FieldPosSkillLv = (System_Collections_Generic_IEnumerable_T__o *)StageEntity__GetFieldPosSkillLv(
                                                                        (StageEntity_o *)current,
                                                                        0);
-    v26 = (System_Collections_Generic_List_int__o *)sub_21FFEBC(System_Collections_Generic_List_int__TypeInfo);
-    System_Collections_Generic_List_int____ctor_71510500(
+    v26 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_71723804(
       v26,
       FieldPosSkillLv,
-      (const MethodInfo_44329E4 *)Method_System_Collections_Generic_List_int___ctor___91427360);
+      (const MethodInfo_4466B1C *)Method_System_Collections_Generic_List_int___ctor___91653480);
     if ( !v24 )
-      sub_21FFECC(v27, v28);
+      sub_2213CDC(v27, v28);
     if ( v24->fields._size >= 1 )
     {
       v29 = 0;
@@ -272,21 +272,21 @@ void CenterEffectDetailDialog__Open(
         Item = System_Collections_Generic_List_int___get_Item(
                  v24,
                  v29,
-                 (const MethodInfo_4432E40 *)Method_System_Collections_Generic_List_int__get_Item__);
+                 (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
         if ( !v26 )
-          sub_21FFECC(Item, v31);
+          sub_2213CDC(Item, v31);
         v32 = Item;
         v33 = System_Collections_Generic_List_int___get_Item(
                 v26,
                 v29,
-                (const MethodInfo_4432E40 *)Method_System_Collections_Generic_List_int__get_Item__);
+                (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
         if ( !v17
           || (items = v17->fields._items,
               v36 = Method_System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo__Add__,
               ++v17->fields._version,
               !items) )
         {
-          sub_21FFECC(v33, v34);
+          sub_2213CDC(v33, v34);
         }
         size = v17->fields._size;
         v38.fields.id = v32;
@@ -296,7 +296,7 @@ void CenterEffectDetailDialog__Open(
           System_Collections_Generic_List_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___AddWithResize(
             v17,
             v38,
-            *(const MethodInfo_44D019C **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_45042D4 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
@@ -310,13 +310,13 @@ void CenterEffectDetailDialog__Open(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_40C7F48 *)Method_System_Collections_Generic_List_Enumerator_StageEntity__Dispose__);
+    (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_StageEntity__Dispose__);
   v39 = System_Linq_Enumerable__Distinct_CenterEffectDetailDialog_CenterEffectDetailSkillInfo_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-          (const MethodInfo_3849298 *)Method_System_Linq_Enumerable_Distinct_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
+          (const MethodInfo_387C760 *)Method_System_Linq_Enumerable_Distinct_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
   closeBtn = (System_String_o *)System_Linq_Enumerable__ToList_CenterEffectDetailDialog_CenterEffectDetailSkillInfo_(
                                   v39,
-                                  (const MethodInfo_386DBAC *)Method_System_Linq_Enumerable_ToList_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
+                                  (const MethodInfo_38A1074 *)Method_System_Linq_Enumerable_ToList_CenterEffectDetailDialog_CenterEffectDetailSkillInfo___);
   if ( !this->fields.itemListViewManager
     || (CenterEffectDetailItemListViewManager__CreateList(
           this->fields.itemListViewManager,
@@ -325,11 +325,11 @@ void CenterEffectDetailDialog__Open(
         (closeBtn = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_34:
-    sub_21FFECC(closeBtn, v13);
+    sub_2213CDC(closeBtn, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)closeBtn, 1, 0);
   this->fields.state = 1;
-  v41 = (System_Action_o *)sub_21FFEBC(System_Action_TypeInfo);
+  v41 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v41, (Il2CppObject *)this, Method_CenterEffectDetailDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v41, 0, 0, v42);
 }
@@ -352,10 +352,10 @@ void CenterEffectDetailDialog__add_callbackFunc(
   System_Action_o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_5931D14 & 1) == 0 )
+  if ( (byte_5969EB4 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5931D14 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5969EB4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -368,13 +368,13 @@ void CenterEffectDetailDialog__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (CenterEffectDetailDialog_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (CenterEffectDetailDialog_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   CenterEffectDetailDialog__remove_callbackFunc(v13, v14, v15);
 }
 
@@ -388,10 +388,10 @@ UnityEngine_GameObject_o *CenterEffectDetailDialog__get_closeBtnObject(
   __int64 v5; // x1
   UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_5931D19 & 1) == 0 )
+  if ( (byte_5969EB9 & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5931D19 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5969EB9 = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -400,7 +400,7 @@ UnityEngine_GameObject_o *CenterEffectDetailDialog__get_closeBtnObject(
     return 0;
   v7 = (UnityEngine_Component_o *)this->fields.closeBtn;
   if ( !v7 )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   return UnityEngine_Component__get_gameObject(v7, 0);
 }
 
@@ -421,10 +421,10 @@ void CenterEffectDetailDialog__remove_callbackFunc(
   CenterEffectDetailDialog_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_5931D15 & 1) == 0 )
+  if ( (byte_5969EB5 & 1) == 0 )
   {
-    sub_21FFC50(&System_Action_TypeInfo);
-    byte_5931D15 = 1;
+    sub_2213A60(&System_Action_TypeInfo);
+    byte_5969EB5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -437,12 +437,12 @@ void CenterEffectDetailDialog__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v11 = sub_223767C(p_callbackFunc, v8, v6);
+    v11 = sub_224B48C(p_callbackFunc, v8, v6);
     v12 = v11 == (_QWORD)v6;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  v13 = (CenterEffectDetailDialog_o *)sub_220024C(v8, System_Action_TypeInfo, v9, v10);
+  v13 = (CenterEffectDetailDialog_o *)sub_221405C(v8, System_Action_TypeInfo, v9, v10);
   CenterEffectDetailDialog__Init(v13, v14);
 }

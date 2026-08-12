@@ -32,18 +32,18 @@ void EventInfoJobFreeQuestItemComponent___cctor(const MethodInfo *method)
   bool v30; // w6
   bool v31; // w7
 
-  if ( (byte_593996B & 1) == 0 )
+  if ( (byte_5971CDE & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobFreeQuestItemComponent_TypeInfo);
-    sub_21FFC50(&StringLiteral_5840/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5839/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5838/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/);
-    sub_21FFC50(&StringLiteral_5842/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/);
-    byte_593996B = 1;
+    sub_2213A60(&EventInfoJobFreeQuestItemComponent_TypeInfo);
+    sub_2213A60(&StringLiteral_5852/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5851/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5850/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/);
+    sub_2213A60(&StringLiteral_5854/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/);
+    byte_5971CDE = 1;
   }
-  v7 = StringLiteral_5839/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/;
-  EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields->QuestTextLocalizationKey = (struct System_String_o *)StringLiteral_5839/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/;
-  sub_21FFBF4(
+  v7 = StringLiteral_5851/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/;
+  EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields->QuestTextLocalizationKey = (struct System_String_o *)StringLiteral_5851/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_NAME_FORMAT"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields,
     v7,
     v1,
@@ -52,10 +52,10 @@ void EventInfoJobFreeQuestItemComponent___cctor(const MethodInfo *method)
     v4,
     v5,
     v6);
-  v8 = StringLiteral_5838/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/;
+  v8 = StringLiteral_5850/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/;
   static_fields = EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields;
-  static_fields->GetItemBonusLocalizationKey = (struct System_String_o *)StringLiteral_5838/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/;
-  sub_21FFBF4(
+  static_fields->GetItemBonusLocalizationKey = (struct System_String_o *)StringLiteral_5850/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_BONUS_FORMAT"*/;
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->GetItemBonusLocalizationKey,
     v8,
     v10,
@@ -64,14 +64,14 @@ void EventInfoJobFreeQuestItemComponent___cctor(const MethodInfo *method)
     v13,
     v14,
     v15);
-  v16 = StringLiteral_5842/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/;
+  v16 = StringLiteral_5854/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/;
   v17 = EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields;
-  v17->JobQuestLevelLocalizationKey = (struct System_String_o *)StringLiteral_5842/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v17->JobQuestLevelLocalizationKey, v16, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_5840/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/;
+  v17->JobQuestLevelLocalizationKey = (struct System_String_o *)StringLiteral_5854/*"EVENT_JOB_EXPLANATION_RECOMMEND_LV"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->JobQuestLevelLocalizationKey, v16, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_5852/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/;
   v25 = EventInfoJobFreeQuestItemComponent_TypeInfo->static_fields;
-  v25->JobQuestSkillLocalizationKey = (struct System_String_o *)StringLiteral_5840/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/;
-  sub_21FFBF4((MissionNaviTransitionBoardItem_o *)&v25->JobQuestSkillLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
+  v25->JobQuestSkillLocalizationKey = (struct System_String_o *)StringLiteral_5852/*"EVENT_JOB_EXPLANATION_DIALOG_QUEST_SKILL_FORMAT"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->JobQuestSkillLocalizationKey, v24, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -79,10 +79,10 @@ void EventInfoJobFreeQuestItemComponent___ctor(EventInfoJobFreeQuestItemComponen
 {
   BaseDialog_c *v3; // x0
 
-  if ( (byte_593996A & 1) == 0 )
+  if ( (byte_5971CDD & 1) == 0 )
   {
-    sub_21FFC50(&BaseDialog_TypeInfo);
-    byte_593996A = 1;
+    sub_2213A60(&BaseDialog_TypeInfo);
+    byte_5971CDD = 1;
   }
   v3 = BaseDialog_TypeInfo;
   this->fields.itemGridCellWidth = 60;
@@ -99,7 +99,7 @@ void EventInfoJobFreeQuestItemComponent__Close(EventInfoJobFreeQuestItemComponen
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v3);
+    sub_2213CDC(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -117,11 +117,11 @@ System_String_o *EventInfoJobFreeQuestItemComponent__GetPointBonusText(
   System_String_o *v10; // x19
   Il2CppObject *NumberFormat; // x1
 
-  if ( (byte_5939968 & 1) == 0 )
+  if ( (byte_5971CDB & 1) == 0 )
   {
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&StringLiteral_5869/*"EVENT_POINT_RATE_INFO"*/);
-    byte_5939968 = 1;
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&StringLiteral_5881/*"EVENT_POINT_RATE_INFO"*/);
+    byte_5971CDB = 1;
   }
   if ( bonusType == 2 )
   {
@@ -130,7 +130,7 @@ System_String_o *EventInfoJobFreeQuestItemComponent__GetPointBonusText(
     v9 = v7 >> 34;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&bonusType);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5869/*"EVENT_POINT_RATE_INFO"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5881/*"EVENT_POINT_RATE_INFO"*/, 0);
     NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat((int)v9 + (int)v8, 0);
     return System_String__Format(v10, NumberFormat, 0);
   }
@@ -142,7 +142,7 @@ System_String_o *EventInfoJobFreeQuestItemComponent__GetPointBonusText(
   }
   else
   {
-    return **(System_String_o ***)(qword_594C0B8 + 184);
+    return **(System_String_o ***)(qword_5984390 + 184);
   }
 }
 
@@ -154,10 +154,10 @@ void EventInfoJobFreeQuestItemComponent__Open(EventInfoJobFreeQuestItemComponent
   __int64 v5; // x1
   UnityEngine_Object_o *itemGrid; // x20
 
-  if ( (byte_5939969 & 1) == 0 )
+  if ( (byte_5971CDC & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939969 = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CDC = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -175,7 +175,7 @@ void EventInfoJobFreeQuestItemComponent__Open(EventInfoJobFreeQuestItemComponent
       return;
     }
 LABEL_10:
-    sub_21FFECC(gameObject, v4);
+    sub_2213CDC(gameObject, v4);
   }
 }
 
@@ -240,12 +240,12 @@ void EventInfoJobFreeQuestItemComponent__Setup(
   int32_t v63; // w22
   int32_t v64; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_5939967 & 1) == 0 )
+  if ( (byte_5971CDA & 1) == 0 )
   {
-    sub_21FFC50(&EventInfoJobFreeQuestItemComponent_TypeInfo);
-    sub_21FFC50(&LocalizationManager_TypeInfo);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_5939967 = 1;
+    sub_2213A60(&EventInfoJobFreeQuestItemComponent_TypeInfo);
+    sub_2213A60(&LocalizationManager_TypeInfo);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_5971CDA = 1;
   }
   questNameLabel = (UnityEngine_Object_o *)this->fields.questNameLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -266,7 +266,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
     IsNullOrEmpty = System_String__Format(v24, (Il2CppObject *)questName, 0);
     v26 = IsNullOrEmpty;
     if ( !IsNullOrEmpty )
-      v26 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v26 = **(System_String_o ***)(qword_5984390 + 184);
     if ( !v21 )
       goto LABEL_82;
     UILabel__set_text(v21, v26, 0);
@@ -290,7 +290,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
     IsNullOrEmpty = System_String__Format(v32, (Il2CppObject *)skillName, 0);
     v26 = IsNullOrEmpty;
     if ( !IsNullOrEmpty )
-      v26 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v26 = **(System_String_o ***)(qword_5984390 + 184);
     if ( !v29 )
       goto LABEL_82;
     UILabel__set_text(v29, v26, 0);
@@ -314,7 +314,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
     IsNullOrEmpty = System_String__Format(v38, (Il2CppObject *)questLevel, 0);
     v26 = IsNullOrEmpty;
     if ( !IsNullOrEmpty )
-      v26 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v26 = **(System_String_o ***)(qword_5984390 + 184);
     if ( !v35 )
       goto LABEL_82;
     UILabel__set_text(v35, v26, 0);
@@ -337,7 +337,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
       && (IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty((System_String_o *)v47, 0),
           ((unsigned __int8)IsNullOrEmpty & 1) != 0) )
     {
-      v26 = **(System_String_o ***)(qword_594C0B8 + 184);
+      v26 = **(System_String_o ***)(qword_5984390 + 184);
     }
     else
     {
@@ -352,8 +352,8 @@ void EventInfoJobFreeQuestItemComponent__Setup(
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v48);
       v51 = LocalizationManager__Get(GetItemBonusLocalizationKey, 0);
       v64 = maxLevel;
-      v52 = (Il2CppObject *)j_il2cpp_value_box_0(qword_594C070, &v64);
-      IsNullOrEmpty = System_String__Format_75484644(v51, (Il2CppObject *)PointBonusText, v47, v52, 0);
+      v52 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v64);
+      IsNullOrEmpty = System_String__Format_75697948(v51, (Il2CppObject *)PointBonusText, v47, v52, 0);
       v26 = IsNullOrEmpty;
     }
     if ( !v46 )
@@ -408,7 +408,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
           if ( v60 >= (int)max_length_low )
             break;
           if ( v60 >= max_length_low )
-            sub_21FFED4(IsNullOrEmpty);
+            sub_2213CE4(IsNullOrEmpty);
           v62 = (UnityEngine_Object_o *)itemIcons->m_Items[v60];
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26);
@@ -455,7 +455,7 @@ void EventInfoJobFreeQuestItemComponent__Setup(
       }
     }
 LABEL_82:
-    sub_21FFECC(IsNullOrEmpty, v26);
+    sub_2213CDC(IsNullOrEmpty, v26);
   }
 }
 

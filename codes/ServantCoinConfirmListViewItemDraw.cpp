@@ -10,7 +10,7 @@ void ServantCoinConfirmListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   if ( !item || (this = (ServantCoinConfirmListViewItemDraw_o *)this->fields.itemIcon) == 0 )
-    sub_21FFECC(this, item);
+    sub_2213CDC(this, item);
   ItemIconComponent__SetItem(
     (ItemIconComponent_o *)this,
     item->fields._ItemId_k__BackingField,

@@ -23,7 +23,7 @@ void CombineListItemInfo___ctor(
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.spriteName,
     (int32_t)spriteName,
     v11,
@@ -33,7 +33,7 @@ void CombineListItemInfo___ctor(
     v15,
     v16);
   this->fields.eventData = eventData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.eventData,
     (int32_t)eventData,
     v17,

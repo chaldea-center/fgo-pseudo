@@ -26,7 +26,7 @@ void ExtraBattleUserInterfaceComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_21FFECC(0, v5);
+    sub_2213CDC(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, value, 0);
 }
 
@@ -43,7 +43,7 @@ void ExtraBattleUserInterfaceComponent__SetOnTapCallback(
   bool v7; // w7
 
   this->fields.onTapCallback = callback;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onTapCallback,
     (int32_t)callback,
     (System_String_o *)method,
@@ -67,7 +67,7 @@ void ExtraBattleUserInterfaceComponent__SetupBattleAssetUiAtlas(
   System_String_o *ASSET_BATTLE_COMMON; // x20
   AssetData_o *AssetStorage; // x0
   __int64 v10; // x1
-  Il2CppObject *Object_object__58323140; // x20
+  Il2CppObject *Object_object__58532980; // x20
   _BOOL8 v12; // x0
   __int64 v13; // x1
   Il2CppObject *Component_object; // x1
@@ -78,15 +78,15 @@ void ExtraBattleUserInterfaceComponent__SetupBattleAssetUiAtlas(
   bool v19; // w6
   bool v20; // w7
 
-  if ( (byte_593B6F0 & 1) == 0 )
+  if ( (byte_59738F0 & 1) == 0 )
   {
-    sub_21FFC50(&Method_AssetData_GetObject_GameObject____91482112);
-    sub_21FFC50(&AssetManager_TypeInfo);
-    sub_21FFC50(&BattleDataDefine_TypeInfo);
-    sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    sub_21FFC50(&StringLiteral_3226/*"BattleAssetUIAtlas"*/);
-    byte_593B6F0 = 1;
+    sub_2213A60(&Method_AssetData_GetObject_GameObject____91708320);
+    sub_2213A60(&AssetManager_TypeInfo);
+    sub_2213A60(&BattleDataDefine_TypeInfo);
+    sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    sub_2213A60(&StringLiteral_3230/*"BattleAssetUIAtlas"*/);
+    byte_59738F0 = 1;
   }
   battleAssetUiAtlas = this->fields.battleAssetUiAtlas;
   p_battleAssetUiAtlas = (MissionNaviTransitionBoardItem_o *)&this->fields.battleAssetUiAtlas;
@@ -107,22 +107,22 @@ void ExtraBattleUserInterfaceComponent__SetupBattleAssetUiAtlas(
     AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
     if ( AssetStorage )
     {
-      Object_object__58323140 = AssetData__GetObject_object__58323140(
+      Object_object__58532980 = AssetData__GetObject_object__58532980(
                                   AssetStorage,
-                                  (System_String_o *)StringLiteral_3226/*"BattleAssetUIAtlas"*/,
-                                  (const MethodInfo_379F0C4 *)Method_AssetData_GetObject_GameObject____91482112);
+                                  (System_String_o *)StringLiteral_3230/*"BattleAssetUIAtlas"*/,
+                                  (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
-      v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__58323140, 0, 0);
+      v12 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__58532980, 0, 0);
       if ( !v12 )
       {
-        if ( !Object_object__58323140 )
-          sub_21FFECC(v12, v13);
+        if ( !Object_object__58532980 )
+          sub_2213CDC(v12, v13);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)Object_object__58323140,
-                             (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                             (UnityEngine_GameObject_o *)Object_object__58532980,
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
         p_battleAssetUiAtlas->klass = (MissionNaviTransitionBoardItem_c *)Component_object;
-        sub_21FFBF4(p_battleAssetUiAtlas, (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
+        sub_2213A04(p_battleAssetUiAtlas, (int32_t)Component_object, v15, v16, v17, v18, v19, v20);
       }
     }
   }
@@ -148,11 +148,11 @@ void ExtraBattleUserInterfaceComponent__SwitchDispAnimation(
       if ( (__int64)i >= (int)max_length_low )
         break;
       if ( i >= max_length_low )
-        sub_21FFED4(this);
+        sub_2213CE4(this);
       BasicHelper__SetActiveSafely((UnityEngine_Component_o *)animations->m_Items[i], isDisp, 0);
       animations = this->fields.animations;
       if ( !animations )
-        sub_21FFECC(this, v8);
+        sub_2213CDC(this, v8);
     }
   }
 }
@@ -187,17 +187,17 @@ void ExtraBattleUserInterfaceComponent__UpdateData(
   UnityEngine_Color_o color; // [xsp+8h] [xbp-68h] BYREF
   System_String_o *text; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_593B6EE & 1) == 0 )
+  if ( (byte_59738EE & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593B6EE = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59738EE = 1;
   }
   *(_QWORD *)&color.fields.b = 0;
   text = 0;
   b = 0;
   *(_QWORD *)&color.fields.r = 0;
   this->fields.exUiData = uiData;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.exUiData,
     (int32_t)uiData,
     (System_String_o *)battleData,
@@ -212,7 +212,7 @@ void ExtraBattleUserInterfaceComponent__UpdateData(
     labels = this->fields.labels;
     if ( !labels )
 LABEL_33:
-      sub_21FFECC(IsNullOrEmpty, v15);
+      sub_2213CDC(IsNullOrEmpty, v15);
     v18 = 0;
     while ( (signed int)v18 < SLODWORD(labels->max_length) )
     {
@@ -244,7 +244,7 @@ LABEL_33:
           goto LABEL_33;
         if ( v18 >= LODWORD(v22->max_length) )
 LABEL_35:
-          sub_21FFED4(IsNullOrEmpty);
+          sub_2213CE4(IsNullOrEmpty);
         IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)v22->m_Items[v18];
         if ( !IsNullOrEmpty )
           goto LABEL_33;
@@ -288,7 +288,7 @@ LABEL_35:
                 {
                   if ( !v26 )
                     goto LABEL_33;
-                  UnityEngine_Animation__Stop_82862600(
+                  UnityEngine_Animation__Stop_83075904(
                     (UnityEngine_Animation_o *)v26,
                     CurrentAnimationName_k__BackingField,
                     0);
@@ -298,7 +298,7 @@ LABEL_35:
                 {
                   if ( !v26 )
                     goto LABEL_33;
-                  IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)UnityEngine_Animation__Play_82865240(
+                  IsNullOrEmpty = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)UnityEngine_Animation__Play_83078544(
                                                                                        (UnityEngine_Animation_o *)v26,
                                                                                        b,
                                                                                        0);
@@ -330,10 +330,10 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
   ExtraBattleUserInterfaceComponent_SpriteParam_o *v9; // x24
   UnityEngine_Object_o *sprite; // x20
 
-  if ( (byte_593B6EF & 1) == 0 )
+  if ( (byte_59738EF & 1) == 0 )
   {
-    sub_21FFC50(&UnityEngine_Object_TypeInfo);
-    byte_593B6EF = 1;
+    sub_2213A60(&UnityEngine_Object_TypeInfo);
+    byte_59738EF = 1;
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.spriteParams, 0) )
   {
@@ -348,7 +348,7 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
       while ( 1 )
       {
         if ( v8 >= max_length )
-          sub_21FFED4(v4);
+          sub_2213CE4(v4);
         v9 = spriteParams->m_Items[v8];
         if ( !v9 )
           break;
@@ -372,7 +372,7 @@ void ExtraBattleUserInterfaceComponent__UpdateSprites(
           return;
       }
 LABEL_17:
-      sub_21FFECC(v4, v5);
+      sub_2213CDC(v4, v5);
     }
   }
 }
@@ -390,14 +390,10 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceComponent__get_OverKillPositionAdj
         ExtraBattleUserInterfaceComponent_o *this,
         const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  x = this->fields.overKillPositionAdjust.fields.x;
-  y = this->fields.overKillPositionAdjust.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.overKillPositionAdjust.fields.x;
+  result.fields.y = this->fields.overKillPositionAdjust.fields.y;
   return result;
 }
 
@@ -406,14 +402,10 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceComponent__get_SkillSkipPositionAd
         ExtraBattleUserInterfaceComponent_o *this,
         const MethodInfo *method)
 {
-  float x; // s0
-  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  x = this->fields.skillSkipPositionAdjust.fields.x;
-  y = this->fields.skillSkipPositionAdjust.fields.y;
-  result.fields.y = y;
-  result.fields.x = x;
+  result.fields.x = this->fields.skillSkipPositionAdjust.fields.x;
+  result.fields.y = this->fields.skillSkipPositionAdjust.fields.y;
   return result;
 }
 

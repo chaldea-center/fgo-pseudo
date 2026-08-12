@@ -13,50 +13,43 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
 {
   ListViewItemSeed_o *v4; // x19
   float y; // s8
-  float v6; // s0
-  float v7; // s1
-  float v8; // s2
   float x; // s8
-  float v10; // s0
-  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  float v10; // s1
+  float v11; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_5939E08 & 1) == 0 )
+  if ( (byte_5971FDB & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_21FFC50(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    byte_5939E08 = 1;
+    this = (ListViewItemSeed_o *)sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    byte_5971FDB = 1;
   }
   if ( !obj )
     goto LABEL_9;
   this = (ListViewItemSeed_o *)UnityEngine_GameObject__GetComponent_object_(
                                  obj,
-                                 (const MethodInfo_3883A78 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-  if ( !v4->fields.arrangement )
+                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+  if ( v4->fields.arrangement )
   {
     if ( this )
     {
-      x = v4->fields.arrangementPich.fields.x;
-      v10 = COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
-      v7 = 0.0;
-      v6 = x - v10;
-      v8 = 0.0;
-      goto LABEL_10;
+      y = v4->fields.arrangementPich.fields.y;
+      v10 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0).fields.y));
+      result.fields.x = 0.0;
+      result.fields.y = y - v10;
+      result.fields.z = 10.0;
+      return result;
     }
 LABEL_9:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
   if ( !this )
     goto LABEL_9;
-  y = v4->fields.arrangementPich.fields.y;
-  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-  v6 = 0.0;
-  v7 = y - size.fields.y;
-  v8 = 10.0;
-LABEL_10:
-  result.fields.z = v8;
-  result.fields.y = v7;
-  result.fields.x = v6;
+  x = v4->fields.arrangementPich.fields.x;
+  v11 = COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
+  result.fields.y = 0.0;
+  result.fields.x = x - v11;
+  result.fields.z = 0.0;
   return result;
 }
 
@@ -78,7 +71,7 @@ UnityEngine_Vector3_o ListViewItemSeed__GetLocalPosition(
         Position = ListViewItemSeed__GetPosition(this, index, v7),
         !transform) )
   {
-    sub_21FFECC(parent, *(_QWORD *)&index);
+    sub_2213CDC(parent, *(_QWORD *)&index);
   }
   return UnityEngine_Transform__InverseTransformPoint(transform, Position, 0);
 }
@@ -119,8 +112,8 @@ UnityEngine_Vector3_o ListViewItemSeed__GetPosition(ListViewItemSeed_o *this, in
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_21FFECC(0, v11);
-  return UnityEngine_Transform__TransformPoint_83283144(
+    sub_2213CDC(0, v11);
+  return UnityEngine_Transform__TransformPoint_83496448(
            transform,
            v7 * this->fields.arrangementPich.fields.x,
            v6 * this->fields.arrangementPich.fields.y,
@@ -145,10 +138,10 @@ void ListViewItemSeed__SetTransform(
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_5939E09 & 1) == 0 )
+  if ( (byte_5971FDC & 1) == 0 )
   {
-    this = (ListViewItemSeed_o *)sub_21FFC50(&StringLiteral_13297/*"SetBaseTransform"*/);
-    byte_5939E09 = 1;
+    this = (ListViewItemSeed_o *)sub_2213A60(&StringLiteral_13324/*"SetBaseTransform"*/);
+    byte_5971FDC = 1;
   }
   if ( !obj )
     goto LABEL_10;
@@ -167,8 +160,8 @@ void ListViewItemSeed__SetTransform(
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0), !v10) )
   {
 LABEL_10:
-    sub_21FFECC(this, obj);
+    sub_2213CDC(this, obj);
   }
   UnityEngine_Transform__set_localScale(v10, localScale, 0);
-  UnityEngine_GameObject__SendMessage_83224792(obj, (System_String_o *)StringLiteral_13297/*"SetBaseTransform"*/, 0);
+  UnityEngine_GameObject__SendMessage_83438096(obj, (System_String_o *)StringLiteral_13324/*"SetBaseTransform"*/, 0);
 }

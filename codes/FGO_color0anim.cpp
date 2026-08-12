@@ -19,18 +19,18 @@ void FGO_color0anim__Start(FGO_color0anim_o *this, const MethodInfo *method)
   __int64 v11; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_59373E4 & 1) == 0 )
+  if ( (byte_596F53C & 1) == 0 )
   {
-    sub_21FFC50(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_21FFC50(&StringLiteral_17180/*"_customColor0"*/);
-    byte_59373E4 = 1;
+    sub_2213A60(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_2213A60(&StringLiteral_17216/*"_customColor0"*/);
+    byte_596F53C = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_37ED7E0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_21FFBF4(
+  sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._renderer,
     (int32_t)Component_object,
     v5,
@@ -44,16 +44,16 @@ void FGO_color0anim__Start(FGO_color0anim_o *this, const MethodInfo *method)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0
     || (UnityEngine_Material__EnableKeyword(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_17180/*"_customColor0"*/,
+          (System_String_o *)StringLiteral_17216/*"_customColor0"*/,
           0),
         (renderer = *p_renderer) == 0)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
   {
-    sub_21FFECC(renderer, v11);
+    sub_2213CDC(renderer, v11);
   }
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_17180/*"_customColor0"*/,
+    (System_String_o *)StringLiteral_17216/*"_customColor0"*/,
     this->fields.customColor,
     0);
 }
@@ -63,17 +63,17 @@ void FGO_color0anim__Update(FGO_color0anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_59373E5 & 1) == 0 )
+  if ( (byte_596F53D & 1) == 0 )
   {
-    sub_21FFC50(&StringLiteral_17180/*"_customColor0"*/);
-    byte_59373E5 = 1;
+    sub_2213A60(&StringLiteral_17216/*"_customColor0"*/);
+    byte_596F53D = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_21FFECC(renderer, method);
+    sub_2213CDC(renderer, method);
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_17180/*"_customColor0"*/,
+    (System_String_o *)StringLiteral_17216/*"_customColor0"*/,
     this->fields.customColor,
     0);
 }
